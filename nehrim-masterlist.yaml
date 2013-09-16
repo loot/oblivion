@@ -3,13 +3,17 @@
 # This is a good example of the usefulness of YAML aliasing. It also contains examples of all plugin metadata fields besides Bash Tags.
 
 # BOSS ignores anything that doesn't come under 'globals' or 'plugins', so a section like this is useful for storing data that gets re-used.
-standard messages:
+common:
+  - &nehrimCond
+    active("Nehrim.esm")
   - &masterReassign
     type: say
     content: This plugin's master must be reassigned to "Nehrim.esm".
+    condition: *nehrimCond
   - &useNehrimVer
     type: error
     content: Use the Nehrim version instead.
+    condition: *nehrimCond
 
 
 plugins:
@@ -18,7 +22,7 @@ plugins:
     msg:
       - type: error
         content: This must not be activated. However, it can be useful when porting Oblivion mods to Nehrim.
-        condition: active("Oblivion.esm")
+        condition: active("Oblivion.esm") && active("Nehrim.esm")
 
   - name: HorseCombatMaster.esm
     msg: [ *masterReassign ]
@@ -36,6 +40,7 @@ plugins:
       - *masterReassign
       - type: say
         content: Unnecessary as many windows are already lit.
+        condition: *nehrimCond
 
   - name: Nehrim Blackscreenfix.esp
     msg:
@@ -62,6 +67,7 @@ plugins:
       - *masterReassign
       - type: warn
         content: The support plugin does not work. Shaders must be loaded using the shaderlist.
+        condition: *nehrimCond
 
   - name: Streamline 2.1.esp
     msg: [ *masterReassign ]
@@ -173,6 +179,7 @@ plugins:
     msg:
       - type: error
         content: Use the replacement plugin for Nehrim found "http://oblivion.nexusmods.com/mods/35157 here".
+        condition: *nehrimCond
 
   - name: Deadly Reflex 5 - Timed block and 150% damage.esp
     msg: [ *masterReassign ]
@@ -192,6 +199,7 @@ plugins:
     msg:
       - type: say
         content: Some menu functions may not work.
+        condition: *nehrimCond
 
   - name: ScreenControls.esp
     msg: [ *masterReassign ]
