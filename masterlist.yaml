@@ -71,12 +71,12 @@ plugins:
     msg:
       - type: error
         content: You can only use one of Silgrad_Tower.esm or Silgrad_Tower_T.esm, not both.
-		condition: file("Silgrad_Tower_T.esm")
+        condition: file("Silgrad_Tower_T.esm")
   - name: Silgrad_Tower_T.esm
     msg:
       - type: error
         content: You can only use one of Silgrad_Tower.esm or Silgrad_Tower_T.esm, not both.
-		condition: file("Silgrad_Tower.esm")
+        condition: file("Silgrad_Tower.esm")
   - name: Beautiful People 2ch-Ed.esm
     tag:
       - Eyes
@@ -142,12 +142,12 @@ plugins:
     msg:
       - type: error
         content: Do not use Tamrielic Ingredients and COBL at the same time.
-		condition: *coblCond
+        condition: *coblCond
   - name: Cobl Main.esm
     msg:
       - type: error
         content: Do not use Tamrielic Ingredients and COBL at the same time.
-		condition: file("Tamrielic Ingredients.esm")
+        condition: file("Tamrielic Ingredients.esm")
   - name: Item interchange.esm
     msg:
       - type: error
@@ -315,7 +315,7 @@ plugins:
     msg:
       - type: error
         content: Incompatible with Save Skill Books for Later, as it is included in this plugin.
-		condition: file("Skillbookssave.esp")
+        condition: file("Skillbookssave.esp")
       - type: say
         content: If not using Wrye Bash load this later (though then it will override some things).
     tag:
@@ -325,7 +325,7 @@ plugins:
     msg:
       - type: error
         content: Incompatible with Save Skill Books for Later, as it is included in this plugin.
-		condition: file("Skillbookssave.esp")
+        condition: file("Skillbookssave.esp")
       - type: say
         content: If not using Wrye Bash load this later (though then it will override some things).
     tag:
