@@ -288,16 +288,17 @@ plugins:
       - NoMerge
   - name: HrmnsOblivionScriptOptimizationv1.0.esp
     msg:
-      - type: say
-        content: Not recommended for use as there is no measureable performance improvement, and it breaks the Shivering Isles by changing some FormIDs, causing a script to be written into cell data.
+      - type: warn
+        content: Not recommended for use as there is no measurable performance improvement, and it breaks the Shivering Isles by changing some FormIDs, causing a script to be written into cell data.
         condition: checksum("HrmnsOblivionScriptOptimizationv1.0.esp",82FC20B8)
-      - type: say
-        content: Not recommended for use as there is no measureable performance improvement.
+      - type: warn
+        content: Not recommended for use as there is no measurable performance improvement.
         condition: checksum("HrmnsOblivionScriptOptimizationv1.0.esp",FEED7422)
+# Apparently needs to load bloody early. Doesn't seem like it matters, considering that it doesn't improve performance.
   - name: HrmnsOblivionScriptOptimizationv SI 1.0.esp
     msg:
       - type: warn
-        content: Not recommended for use as there is no measureable performance improvement.
+        content: Not recommended for use as there is no measurable performance improvement.
   - name: Skillbookssave.esp
     msg:
       - type: say
@@ -312,8 +313,9 @@ plugins:
       - Scripts
   - name: Book Jackets Oblivion - SSBFL.esp
     msg:
-      - type: say
-        content: "Incompatible with: 'Save Skill Books for Later' - included in this plugin."
+      - type: error
+        content: Incompatible with Save Skill Books for Later, as it is included in this plugin.
+		condition: file("Skillbookssave.esp")
       - type: say
         content: If not using Wrye Bash load this later (though then it will override some things).
     tag:
@@ -321,8 +323,9 @@ plugins:
       - Scripts
   - name: Book Jackets Oblivion - BP - SSBFL.esp
     msg:
-      - type: say
-        content: "Incompatible with: 'Save Skill Books for Later' and 'Book Placement' - included in this plugin."
+      - type: error
+        content: Incompatible with Save Skill Books for Later, as it is included in this plugin.
+		condition: file("Skillbookssave.esp")
       - type: say
         content: If not using Wrye Bash load this later (though then it will override some things).
     tag:
@@ -342,7 +345,7 @@ plugins:
       - NoMerge
   - name: Oblivion_SI Vwalk Full.esp
     msg:
-      - type: say
+      - type: error
         content: Outdated. Update to the latest version of Sensual Walks and use Wrye Bash to merge the Sensual Walks patches.
     tag:
       - Actors.Anims
@@ -374,6 +377,7 @@ plugins:
     tag:
       - Actors.Anims
       - NoMerge
+# The author of TRoN recommends that this mod loads early.
   - name: Underdark v1.1 Delayer.esp
     msg:
       - type: say
