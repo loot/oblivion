@@ -12,6 +12,10 @@ common:
     type: error
     content: Use the Nehrim version instead.
     condition: *nehrimCond
+  - &FCOMCond
+    active("FCOM_Convergence.esm")
+  - &coblCond
+	active("Cobl Main.esm")
     
 globals:
   - type: warn
@@ -65,12 +69,14 @@ plugins:
         content: This needs to load directly after Oblivion.esm to avoid landscape issues caused by a failure by the mod author to use TES4Gecko's "Move Worldspaces" function.
   - name: Silgrad_Tower.esm
     msg:
-      - type: say
-        content: Use either Silgrad_Tower.esm or Silgrad_Tower_T.esm but not both together.
+      - type: error
+        content: You can only use one of Silgrad_Tower.esm or Silgrad_Tower_T.esm, not both.
+		condition: file("Silgrad_Tower_T.esm")
   - name: Silgrad_Tower_T.esm
     msg:
-      - type: say
-        content: Use either Silgrad_Tower.esm or Silgrad_Tower_T.esm but not both together.
+      - type: error
+        content: You can only use one of Silgrad_Tower.esm or Silgrad_Tower_T.esm, not both.
+		condition: file("Silgrad_Tower.esm")
   - name: Beautiful People 2ch-Ed.esm
     tag:
       - Eyes
@@ -86,7 +92,7 @@ plugins:
       - Eyes
   - name: EnhancedWeatherSIOnly.esm
     msg:
-      - type: say
+      - type: error
         content: Obsolete. Remove this and install Enhanced Weather.
   - name: Francesco's Leveled Creatures-Items Mod.esm
     tag:
@@ -116,7 +122,7 @@ plugins:
     msg:
       - type: error
         content: Delete. Not compatible with FCOM. Already integrated into FCOM.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
     tag:
       - Actors.AIPackages
       - Delev
@@ -134,15 +140,17 @@ plugins:
     msg: [ *masterReassign ]
   - name: Tamrielic Ingredients.esm
     msg:
-      - type: say
+      - type: error
         content: Do not use Tamrielic Ingredients and COBL at the same time.
+		condition: *coblCond
   - name: Cobl Main.esm
     msg:
-      - type: say
+      - type: error
         content: Do not use Tamrielic Ingredients and COBL at the same time.
+		condition: file("Tamrielic Ingredients.esm")
   - name: Item interchange.esm
     msg:
-      - type: say
+      - type: error
         content: Outdated. All functions are now handled by Cobl.esm. Update to the latest versions of 'Item Interchange' and Cobl.
   - name: Qarls_Harvest.esm
     tag:
@@ -168,7 +176,7 @@ plugins:
       - Scripts
       - Stats
       - name: -Relations
-        condition: ( file("Mart's Monster Mod for OOO.esm") ) or file("FCOM_Convergence.esm")
+        condition: ( file("Mart's Monster Mod for OOO.esm") ) or *FCOMCond
   - name: Mart's Monster Mod.esm
     tag:
       - Actors.AIData
@@ -188,7 +196,7 @@ plugins:
     msg:
       - type: error
         content: Delete. Not compatible with FCOM.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
     tag:
       - Delev
       - Factions
@@ -5176,7 +5184,7 @@ plugins:
     msg:
       - type: error
         content: Delete. Use FCOM_RealSwords instead.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
       - type: say
         content: "Requires: Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran's."
     tag:
@@ -5185,7 +5193,7 @@ plugins:
     msg:
       - type: error
         content: Delete. Use FCOM_RealSwords instead.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
       - type: say
         content: "Requires: Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran's."
     tag:
@@ -5194,7 +5202,7 @@ plugins:
     msg:
       - type: error
         content: Delete. Use FCOM_RealSwords instead.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
       - type: say
         content: "Requires: Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran's."
     tag:
@@ -5203,7 +5211,7 @@ plugins:
     msg:
       - type: error
         content: Delete. Use FCOM_RealSwords instead.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
       - type: say
         content: "Requires: Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran's."
     tag:
@@ -5212,7 +5220,7 @@ plugins:
     msg:
       - type: error
         content: Delete. Use FCOM_RealSwords instead.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
       - type: say
         content: "Requires: Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran's."
     tag:
@@ -5221,7 +5229,7 @@ plugins:
     msg:
       - type: error
         content: Delete. Use FCOM_RealSwords instead.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
       - type: say
         content: "Requires: Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran's."
     tag:
@@ -5230,7 +5238,7 @@ plugins:
     msg:
       - type: error
         content: Delete. Use FCOM_RealSwords instead.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
       - type: say
         content: "Requires: Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran's."
     tag:
@@ -5239,7 +5247,7 @@ plugins:
     msg:
       - type: error
         content: Delete. Use FCOM_RealSwords instead.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
       - type: say
         content: "Requires: Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran's."
     tag:
@@ -5248,7 +5256,7 @@ plugins:
     msg:
       - type: error
         content: Delete. Use FCOM_RealSwords instead.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
       - type: say
         content: "Requires: Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran's."
     tag:
@@ -5257,7 +5265,7 @@ plugins:
     msg:
       - type: error
         content: Delete. Use FCOM_RealSwords instead.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
       - type: say
         content: "Requires: Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran's."
     tag:
@@ -5266,7 +5274,7 @@ plugins:
     msg:
       - type: error
         content: Delete. Use FCOM_RealSwords instead.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
       - type: say
         content: "Requires: Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran's."
     tag:
@@ -5275,7 +5283,7 @@ plugins:
     msg:
       - type: error
         content: Delete. Use FCOM_RealSwords instead.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
       - type: say
         content: "Requires: Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran's."
     tag:
@@ -5284,7 +5292,7 @@ plugins:
     msg:
       - type: error
         content: Delete. Use FCOM_RealSwords instead.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
       - type: say
         content: "Requires: Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran's."
     tag:
@@ -5293,7 +5301,7 @@ plugins:
     msg:
       - type: error
         content: Delete. Use FCOM_RealSwords instead.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
       - type: say
         content: "Requires: Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran's."
     tag:
@@ -5302,7 +5310,7 @@ plugins:
     msg:
       - type: error
         content: Delete. Use FCOM_RealSwords instead.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
       - type: say
         content: "Requires: Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran's."
     tag:
@@ -5311,7 +5319,7 @@ plugins:
     msg:
       - type: error
         content: Delete. Use FCOM_RealSwords instead.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
       - type: say
         content: "Requires: Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran's."
     tag:
@@ -5320,7 +5328,7 @@ plugins:
     msg:
       - type: error
         content: Delete. Use FCOM_RealSwords instead.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
       - type: say
         content: "Requires: Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran's."
     tag:
@@ -5329,7 +5337,7 @@ plugins:
     msg:
       - type: error
         content: Delete. Use FCOM_RealSwords instead.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
       - type: say
         content: "Requires: Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran's."
     tag:
@@ -5338,7 +5346,7 @@ plugins:
     msg:
       - type: error
         content: Delete. Use FCOM_RealSwords instead.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
       - type: say
         content: "Requires: Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran's."
     tag:
@@ -5347,7 +5355,7 @@ plugins:
     msg:
       - type: error
         content: Delete. Use FCOM_RealSwords instead.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
       - type: say
         content: "Requires: Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran's."
     tag:
@@ -5356,7 +5364,7 @@ plugins:
     msg:
       - type: error
         content: Delete. Use FCOM_RealSwords instead.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
       - type: say
         content: "Requires: Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran's."
     tag:
@@ -5365,7 +5373,7 @@ plugins:
     msg:
       - type: error
         content: Delete. Use FCOM_RealSwords instead.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
       - type: say
         content: "Requires: Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran's."
     tag:
@@ -5374,7 +5382,7 @@ plugins:
     msg:
       - type: error
         content: Delete. Use FCOM_RealSwords instead.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
       - type: say
         content: "Requires: Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran's."
     tag:
@@ -5383,7 +5391,7 @@ plugins:
     msg:
       - type: error
         content: Delete. Use FCOM_RealSwords instead.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
       - type: say
         content: "Requires: Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran's."
     tag:
@@ -5392,7 +5400,7 @@ plugins:
     msg:
       - type: error
         content: Delete. Use FCOM_RealSwords instead.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
       - type: say
         content: "Requires: Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran's."
     tag:
@@ -5401,7 +5409,7 @@ plugins:
     msg:
       - type: error
         content: Delete. Use FCOM_RealSwords instead.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
       - type: say
         content: "Requires: Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran's."
     tag:
@@ -5410,7 +5418,7 @@ plugins:
     msg:
       - type: error
         content: Delete. Use FCOM_RealSwords instead.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
       - type: say
         content: "Requires: Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran's."
     tag:
@@ -5419,7 +5427,7 @@ plugins:
     msg:
       - type: error
         content: Delete. Use FCOM_RealSwords instead.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
       - type: say
         content: "Requires: Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran's."
     tag:
@@ -5428,7 +5436,7 @@ plugins:
     msg:
       - type: error
         content: Delete. Use FCOM_RealSwords instead.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
       - type: say
         content: "Requires: Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran's."
     tag:
@@ -5437,7 +5445,7 @@ plugins:
     msg:
       - type: error
         content: Delete. Use FCOM_RealSwords instead.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
       - type: say
         content: "Requires: Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran's."
     tag:
@@ -5446,7 +5454,7 @@ plugins:
     msg:
       - type: error
         content: Delete. Use FCOM_RealSwords instead.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
       - type: say
         content: "Requires: Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran's."
     tag:
@@ -5455,7 +5463,7 @@ plugins:
     msg:
       - type: error
         content: Delete. Use FCOM_RealSwords instead.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
       - type: say
         content: "Requires: Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran's."
     tag:
@@ -5464,7 +5472,7 @@ plugins:
     msg:
       - type: error
         content: Delete. Use FCOM_RealSwords instead.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
       - type: say
         content: "Requires: Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran's."
     tag:
@@ -5473,7 +5481,7 @@ plugins:
     msg:
       - type: error
         content: Delete. Use FCOM_RealSwords instead.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
       - type: say
         content: "Requires: Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran's."
     tag:
@@ -5482,7 +5490,7 @@ plugins:
     msg:
       - type: error
         content: Delete. Use FCOM_RealSwords instead.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
       - type: say
         content: "Requires: Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran's."
     tag:
@@ -5491,7 +5499,7 @@ plugins:
     msg:
       - type: error
         content: Delete. Use FCOM_RealSwords instead.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
       - type: say
         content: "Requires: Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran's."
     tag:
@@ -5500,7 +5508,7 @@ plugins:
     msg:
       - type: error
         content: Delete. Use FCOM_RealSwords instead.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
       - type: say
         content: "Requires: Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran's."
     tag:
@@ -5509,7 +5517,7 @@ plugins:
     msg:
       - type: error
         content: Delete. Use FCOM_RealSwords instead.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
       - type: say
         content: "Requires: Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran's."
     tag:
@@ -6132,7 +6140,7 @@ plugins:
     msg:
       - type: error
         content: Delete. Not compatible with FCOM.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
   - name: Francesco's Optional Chance of Stronger Enemies.esp
     dirty:
       - crc: 0x4f003db0
@@ -6141,12 +6149,12 @@ plugins:
     msg:
       - type: error
         content: Delete. Already integrated into FCOM, MMM, OOO or other FCOM components.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
   - name: Francesco's Optional Dungeon Chest Locks.esp
     msg:
       - type: error
         content: Delete. Already integrated into FCOM, MMM, OOO or other FCOM components.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
   - name: Francesco's Optional Leveled Guards.esp
     tag:
       - Actors.ACBS
@@ -6155,32 +6163,32 @@ plugins:
     msg:
       - type: error
         content: Delete. Already integrated into FCOM, MMM, OOO or other FCOM components.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
   - name: Francesco's Optional New Adventurers.esp
     msg:
       - type: error
         content: Delete. Already integrated into FCOM, MMM, OOO or other FCOM components.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
   - name: Francesco's Optional Vendor Tweaks.esp
     msg:
       - type: error
         content: Delete. Not compatible with FCOM.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
   - name: Francesco's Optional Leveled Quests.esp
     msg:
       - type: error
         content: Delete. Already integrated into FCOM, MMM, OOO or other FCOM components.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
   - name: Francesco's Optional Leveled Arena.esp
     msg:
       - type: error
         content: Delete. Already integrated into FCOM, MMM, OOO or other FCOM components.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
   - name: Francesco's Optional Files.esp
     msg:
       - type: error
         content: Should not be used. Delete. Reinstall Fran's and select "Separate Files" when the option is presented.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
     tag:
       - Delev
       - Relev
@@ -6188,7 +6196,7 @@ plugins:
     msg:
       - type: error
         content: Should not be used. Delete. Reinstall Fran's and select "Separate Files" when the option is presented.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
     tag:
       - Delev
       - Relev
@@ -6196,7 +6204,7 @@ plugins:
     msg:
       - type: error
         content: Should not be used. Delete. Reinstall Fran's and select "Separate Files" when the option is presented.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
     tag:
       - Delev
       - Relev
@@ -6204,7 +6212,7 @@ plugins:
     msg:
       - type: error
         content: Should not be used. Delete. Reinstall Fran's and select "Separate Files" when the option is presented.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
     tag:
       - Delev
       - Relev
@@ -6212,7 +6220,7 @@ plugins:
     msg:
       - type: error
         content: Should not be used. Delete. Reinstall Fran's and select "Separate Files" when the option is presented.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
     tag:
       - Delev
       - Relev
@@ -6220,7 +6228,7 @@ plugins:
     msg:
       - type: error
         content: Delete. Already integrated into FCOM, MMM, OOO or other FCOM components.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
   - name: Francesco's Dark Seducer Weapons Patch.esp
     tag:
       - Delev
@@ -6277,7 +6285,7 @@ plugins:
     msg:
       - type: say
         content: If using Cobl 1.72 and a version of FCOM below 0.9.9, also use the FCOM patch 'FCOM_Cobl.esp'. If you are using UFCOM then use "OOO 1.32-Cobl.esp" and "MMM_cobl.esp" instead of 'FCOM_Cobl.esp'.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
     dirty:
       - crc: 0x8a79a499
         util: "\"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide TES4Edit\""
@@ -6307,12 +6315,12 @@ plugins:
     msg:
       - type: error
         content: Delete. Already included in 'FCOM_Cobl.esp' or latest "MMM_Cobl.esp".
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
   - name: COBL-FransCre.esp
     msg:
       - type: error
         content: Delete. Not compatible with FCOM.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
       - type: say
         content: "Requires: COBL and Fran's."
       - type: say
@@ -6321,7 +6329,7 @@ plugins:
     msg:
       - type: error
         content: Delete. Not compatible with FCOM.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
       - type: say
         content: "Requires: COBL and Fran's + Fran's addon."
       - type: say
@@ -6346,17 +6354,17 @@ plugins:
     msg:
       - type: error
         content: Delete. Only use 'Loth's Blunt Weapons For NPCs.esp' and 'FCOM_LothsBluntWeapons.esp'.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
   - name: Loth's Blunt Weapons- Mobs.esp
     msg:
       - type: error
         content: Delete. Only use 'Loth's Blunt Weapons For NPCs.esp' and 'FCOM_LothsBluntWeapons.esp'.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
   - name: Oblivion WarCry.esp
     msg:
       - type: error
         content: Delete. Use 'Oblivion WarCry EV.esp' instead.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
       - type: say
         content: German version.
       - type: say
@@ -6423,9 +6431,9 @@ plugins:
       - Scripts
       - Stats
       - name: -Factions
-        condition: ( file("Mart's Monster Mod for OOO.esm") ) or file("FCOM_Convergence.esm")
+        condition: ( file("Mart's Monster Mod for OOO.esm") ) or *FCOMCond
       - name: -Relations
-        condition: ( file("Mart's Monster Mod for OOO.esm") ) or file("FCOM_Convergence.esm")
+        condition: ( file("Mart's Monster Mod for OOO.esm") ) or *FCOMCond
   - name: OOO-Armor_Perks_WearRate_Repair.esp
     msg:
       - type: say
@@ -6500,17 +6508,17 @@ plugins:
     msg:
       - type: error
         content: Delete. Update to latest version of OOO.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
   - name: OOO132RC3Hotfixes.esp
     msg:
       - type: error
         content: Delete. Update to latest version of OOO.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
   - name: OOO132RC3MapMarkers.esp
     msg:
       - type: error
         content: Delete. Update to latest version of OOO.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
   - name: OOO-LightOfDawnFlamesWhenDrawnOBSE.esp
     msg:
       - type: say
@@ -6879,7 +6887,7 @@ plugins:
     msg:
       - type: error
         content: Outdated. Install FCOM version 1.0 or later.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
   - name: Mart's Monster Mod - Fran's Leveled Quests.esp
     msg:
       - type: error
@@ -6894,7 +6902,7 @@ plugins:
     msg:
       - type: error
         content: FCOM_Convergence.esm is missing. Re-install FCOM.
-        condition: not file("FCOM_Convergence.esm")
+        condition: not *FCOMCond
       - type: say
         content: "Contains dirty edits: Do not clean. \"Dirty\" edits are intentional and required for the mod to function."
     tag:
@@ -6919,18 +6927,18 @@ plugins:
     msg:
       - type: error
         content: Outdated. Install FCOM version 0.9.9 or later.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
       - type: error
         content: FCOM_Convergence.esm is missing. Re-install FCOM.
-        condition: not file("FCOM_Convergence.esm")
+        condition: not *FCOMCond
   - name: FCOM_OscurosOverhaul.esp
     msg:
       - type: say
         content: Only use when not using MMM.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
       - type: error
         content: FCOM_Convergence.esm is missing. Re-install FCOM.
-        condition: not file("FCOM_Convergence.esm")
+        condition: not *FCOMCond
   - name: Choices and Consequences - MMM.esp
     msg:
       - type: say
@@ -6958,17 +6966,17 @@ plugins:
     msg:
       - type: error
         content: FCOM_Convergence.esm is missing. Re-install FCOM.
-        condition: not file("FCOM_Convergence.esm")
+        condition: not *FCOMCond
   - name: FCOM_EntropicOrderHardcore.esp
     msg:
       - type: error
         content: FCOM_Convergence.esm is missing. Re-install FCOM.
-        condition: not file("FCOM_Convergence.esm")
+        condition: not *FCOMCond
   - name: FCOM_RealSwords.esp
     msg:
       - type: error
         content: FCOM_Convergence.esm is missing. Re-install FCOM.
-        condition: not file("FCOM_Convergence.esm")
+        condition: not *FCOMCond
     tag:
       - Delev
       - Relev
@@ -6976,7 +6984,7 @@ plugins:
     msg:
       - type: error
         content: FCOM_Convergence.esm is missing. Re-install FCOM.
-        condition: not file("FCOM_Convergence.esm")
+        condition: not *FCOMCond
   - name: Mart's Monster Mod - Durability & Damage.esp
     msg:
       - type: error
@@ -6985,14 +6993,14 @@ plugins:
     msg:
       - type: error
         content: FCOM_Convergence.esm is missing. Re-install FCOM.
-        condition: not file("FCOM_Convergence.esm")
+        condition: not *FCOMCond
   - name: FCOM_SpawnRatesReduced.esp
     msg:
       - type: say
         content: "Use only one Spawn Rates plugin: Reduced, SlightlyReduced or Stronger."
       - type: error
         content: FCOM_Convergence.esm is missing. Re-install FCOM.
-        condition: not file("FCOM_Convergence.esm")
+        condition: not *FCOMCond
     tag:
       - Delev
       - Relev
@@ -7002,7 +7010,7 @@ plugins:
         content: "Use only one Spawn Rates plugin: Reduced, SlightlyReduced or Stronger."
       - type: error
         content: FCOM_Convergence.esm is missing. Re-install FCOM.
-        condition: not file("FCOM_Convergence.esm")
+        condition: not *FCOMCond
     tag:
       - Delev
       - Relev
@@ -7010,13 +7018,13 @@ plugins:
     msg:
       - type: say
         content: "Use only one Spawn Rates plugin: Reduced, SlightlyReduced or Stronger."
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
       - type: say
         content: "'Stronger' is the same as 'Reduced' but spawns will be more powerful."
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
       - type: error
         content: FCOM_Convergence.esm is missing. Re-install FCOM.
-        condition: not file("FCOM_Convergence.esm")
+        condition: not *FCOMCond
     tag:
       - Delev
       - Relev
@@ -7046,7 +7054,7 @@ plugins:
     msg:
       - type: error
         content: FCOM_Convergence.esm is missing. Re-install FCOM.
-        condition: not file("FCOM_Convergence.esm")
+        condition: not *FCOMCond
     tag:
       - Delev
       - Relev
@@ -7058,7 +7066,7 @@ plugins:
     msg:
       - type: error
         content: FCOM_Convergence.esm is missing. Re-install FCOM.
-        condition: not file("FCOM_Convergence.esm")
+        condition: not *FCOMCond
   - name: Mart's Monster Mod - No Spiders.esp
     msg:
       - type: error
@@ -7067,7 +7075,7 @@ plugins:
     msg:
       - type: error
         content: FCOM_Convergence.esm is missing. Re-install FCOM.
-        condition: not file("FCOM_Convergence.esm")
+        condition: not *FCOMCond
   - name: Mart's Monster Mod - No Wyvern.esp
     msg:
       - type: error
@@ -7080,7 +7088,7 @@ plugins:
     msg:
       - type: error
         content: FCOM_Convergence.esm is missing. Re-install FCOM.
-        condition: not file("FCOM_Convergence.esm")
+        condition: not *FCOMCond
   - name: Mart's Monster Mod for OOO - NoReaversInGates.esp
     msg:
       - type: error
@@ -7091,12 +7099,12 @@ plugins:
         content: Use either 'NoReaversInGates' or 'LessReaversInGates' but not both.
       - type: error
         content: FCOM_Convergence.esm is missing. Re-install FCOM.
-        condition: not file("FCOM_Convergence.esm")
+        condition: not *FCOMCond
   - name: FCOM_NoAdventurersInGates.esp
     msg:
       - type: error
         content: FCOM_Convergence.esm is missing. Re-install FCOM.
-        condition: not file("FCOM_Convergence.esm")
+        condition: not *FCOMCond
   - name: Mart's Monster Mod for OOO - LessReaversInGates.esp
     msg:
       - type: error
@@ -7107,7 +7115,7 @@ plugins:
         content: Use either 'NoReaversInGates' or 'LessReaversInGates' but not both.
       - type: error
         content: FCOM_Convergence.esm is missing. Re-install FCOM.
-        condition: not file("FCOM_Convergence.esm")
+        condition: not *FCOMCond
   - name: Mart's Monster Mod - Increased Spawn Rates.esp
     msg:
       - type: error
@@ -7206,7 +7214,7 @@ plugins:
     msg:
       - type: error
         content: Delete. Not needed with FCOM.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
     tag:
       - Actors.AIData
       - Actors.AIPackages
@@ -7224,7 +7232,7 @@ plugins:
     msg:
       - type: error
         content: Delete. Not needed with FCOM.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
     tag:
       - Actors.AIData
       - Actors.AIPackages
@@ -7242,7 +7250,7 @@ plugins:
     msg:
       - type: error
         content: Delete. Not needed with FCOM.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
     tag:
       - Delev
       - Factions
@@ -7273,7 +7281,7 @@ plugins:
     msg:
       - type: error
         content: Delete. Not needed with FCOM.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
     tag:
       - Actors.AIData
       - Actors.AIPackages
@@ -7654,7 +7662,7 @@ plugins:
     msg:
       - type: error
         content: Delete. 'Use TamrielTravellers4OOO.esp' and 'FCOM_TamrielTravelers.esp' instead.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
     dirty:
       - crc: 0xeb4a4d83
         util: "\"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide TES4Edit\""
@@ -7666,7 +7674,7 @@ plugins:
     msg:
       - type: error
         content: Delete. 'Use TamrielTravellers4OOO.esp' and 'FCOM_TamrielTravelers.esp' instead.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
     dirty:
       - crc: 0xc0cecfea
         util: "\"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide TES4Edit\""
@@ -7678,12 +7686,12 @@ plugins:
     msg:
       - type: error
         content: Delete. Not compatible with FCOM.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
   - name: TamrielTravellersFactionAll.esp
     msg:
       - type: error
         content: Delete. Not compatible with FCOM.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
   - name: TamrielTravellers4OOO.esp
     dirty:
       - crc: 0x2cb068db
@@ -7716,7 +7724,7 @@ plugins:
     msg:
       - type: error
         content: Delete. Not compatible with FCOM.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
       - type: say
         content: Not overhaul mod compatible.
   - name: ShiveringIsleTravellers.esp
@@ -7813,17 +7821,17 @@ plugins:
     msg:
       - type: error
         content: Delete and use 'FCOM_FriendlierFactions.esp'.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
   - name: Mart's Monster Mod - Friendlier Factions OOO+FCOM.esp
     msg:
       - type: error
         content: Delete and use 'FCOM_FriendlierFactions.esp'.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
   - name: Mart's Monster Mod - Friendlier Factions OOO.esp
     msg:
       - type: error
         content: Delete and use 'FCOM_FriendlierFactions.esp'.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
   - name: FCOM_FriendlierFactions.esp
     tag:
       - NoMerge
@@ -7832,7 +7840,7 @@ plugins:
     msg:
       - type: error
         content: Delete. Outdated. Update to FCOM v0.9.9 or later.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
   - name: WAC - ItemLootFix4v1.0bTIE.esp
     tag:
       - Delev
@@ -8085,22 +8093,22 @@ plugins:
     msg:
       - type: error
         content: Delete. Not compatible with FCOM. Use cOMbo plugin instead.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
   - name: Tamrielic_Ingredients_OOO.esp
     msg:
       - type: error
         content: Delete. Not compatible with FCOM. Use cOMbo plugin instead.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
   - name: Tamrielic_Ingredients_FraM.esp
     msg:
       - type: error
         content: Delete. Not compatible with FCOM. Use cOMbo plugin instead.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
   - name: Tamrielic_Ingredients_Fran.esp
     msg:
       - type: error
         content: Delete. Not compatible with FCOM. Use cOMbo plugin instead.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
   - name: TGND2 OOO Replacer.esp
     tag:
       - Graphics
@@ -8506,7 +8514,7 @@ plugins:
     msg:
       - type: warn
         content: Use 'CNRP Bruma4OOO.esp' instead.
-        condition: ( file("FCOM_Convergence.esm") ) or file("Oscuro's_Oblivion_Overhaul.esm")
+        condition: ( *FCOMCond ) or file("Oscuro's_Oblivion_Overhaul.esm")
     tag:
       - Invent
   - name: CNRP Bruma4OOO.esp
@@ -8516,7 +8524,7 @@ plugins:
     msg:
       - type: warn
         content: Use 'CNRP Chorrol4OOO.esp' instead.
-        condition: ( file("FCOM_Convergence.esm") ) or file("Oscuro's_Oblivion_Overhaul.esm")
+        condition: ( *FCOMCond ) or file("Oscuro's_Oblivion_Overhaul.esm")
     tag:
       - Invent
   - name: CNRP Chorrol4OOO.esp
@@ -8526,7 +8534,7 @@ plugins:
     msg:
       - type: warn
         content: Use 'CNPR DB for OOO.esp' instead.
-        condition: ( file("FCOM_Convergence.esm") ) or file("Oscuro's_Oblivion_Overhaul.esm")
+        condition: ( *FCOMCond ) or file("Oscuro's_Oblivion_Overhaul.esm")
     tag:
       - Graphics
       - Invent
@@ -8545,7 +8553,7 @@ plugins:
     msg:
       - type: warn
         content: Use 'CNRP Cheydinhall4OOO.esp' instead.
-        condition: ( file("FCOM_Convergence.esm") ) or file("Oscuro's_Oblivion_Overhaul.esm")
+        condition: ( *FCOMCond ) or file("Oscuro's_Oblivion_Overhaul.esm")
     tag:
       - Invent
   - name: CNRP Cheydinhal4OOO.esp
@@ -8558,7 +8566,7 @@ plugins:
     msg:
       - type: warn
         content: Use 'CNRP FightersGuild4OOO.esp' instead.
-        condition: ( file("FCOM_Convergence.esm") ) or file("Oscuro's_Oblivion_Overhaul.esm")
+        condition: ( *FCOMCond ) or file("Oscuro's_Oblivion_Overhaul.esm")
     tag:
       - Invent
   - name: CNRP FightersGuild4OOO.esp
@@ -10396,7 +10404,7 @@ plugins:
     msg:
       - type: say
         content: "Requires: FCOM"
-        condition: not file("FCOM_Convergence.esm")
+        condition: not *FCOMCond
   - name: All Natural - Kvatch Rebuilt Weather Patch.esp
     msg:
       - type: say
@@ -12027,7 +12035,7 @@ plugins:
     msg:
       - type: say
         content: Use FCOM compatibility version instead.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
   - name: Lynges_Thieves_Highway.esp
     msg:
       - type: say
@@ -12302,7 +12310,7 @@ plugins:
     msg:
       - type: error
         content: Delete. Not compatible with FCOM. Use FCOM_knights.esp instead.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
     tag:
       - Actors.AIData
       - Actors.AIPackages
@@ -12316,7 +12324,7 @@ plugins:
     msg:
       - type: error
         content: Delete. Not compatible with FCOM. Use FCOM_knights.esp instead.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
     tag:
       - Actors.AIData
       - Actors.AIPackages
@@ -12330,7 +12338,7 @@ plugins:
     msg:
       - type: error
         content: Delete. Not compatible with FCOM. Use FCOM_knights.esp instead.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
     tag:
       - Actors.AIData
       - Actors.AIPackages
@@ -12344,7 +12352,7 @@ plugins:
     msg:
       - type: error
         content: Delete. Not compatible with FCOM. Use FCOM_knights.esp instead.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
     tag:
       - Actors.AIData
       - Actors.AIPackages
@@ -12365,7 +12373,7 @@ plugins:
     msg:
       - type: error
         content: Use "FCOM_Knights.esp" instead.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
   - name: DLC_MOBS.esp
     msg:
       - type: say
@@ -12781,12 +12789,12 @@ plugins:
     msg:
       - type: error
         content: Delete. Use 'FCOM_EnhancedDaedricInvasion.esp' instead.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
   - name: Enhanced Daedric Invasion for FranOOOMMM.esp
     msg:
       - type: error
         content: Delete. Use 'FCOM_EnhancedDaedricInvasion.esp' instead.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
   - name: ElsweyrAnequina.esp
     msg:
       - type: say
@@ -14648,7 +14656,7 @@ plugins:
     msg:
       - type: say
         content: If using FCOM, rename this to 'NPC new clothes V2.6.esp' or adjust the masterlist with Wrye Bash for 'FCOM_NewNPCClothes.esp'.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
   - name: FCOM_NewNPCClothes.esp
     msg:
       - type: say
@@ -15817,7 +15825,7 @@ plugins:
     msg:
       - type: error
         content: Delete. Use newer version of Lovers with PK. Integrated into 1.3.1 Rev38 and newer.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
   - name: LoversLoser.esp
     msg:
       - type: say
@@ -15830,7 +15838,7 @@ plugins:
     msg:
       - type: error
         content: Delete. Use newer version of Lovers with PK. Integrated into 1.3.1 Rev38 and newer.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
   - name: LoversMpc.esp
     msg:
       - type: say
@@ -15839,7 +15847,7 @@ plugins:
     msg:
       - type: error
         content: Delete. Use newer version of Lovers with PK. Integrated into 1.3.1 Rev38 and newer.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
   - name: Sexlivion_0.4a_Full_English_v1.esp
     msg:
       - type: say
@@ -16112,12 +16120,12 @@ plugins:
     msg:
       - type: error
         content: Use 'LCE-addon.esp' instead if using MMM/Frans etc.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
   - name: lorecreatures.esp
     msg:
       - type: error
         content: Use 'LCE-addon.esp' instead if using MMM/Frans etc.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
     dirty:
       - crc: 0x43bf6b9b
         util: "\"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide TES4Edit\""
@@ -17861,7 +17869,7 @@ plugins:
     msg:
       - type: error
         content: Delete. Use II's 'Item Interchange - Placement for FCOM.esp' instead.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
       - type: error
         content: Required Bashed Patch.
         condition: not regex("Bashed Patch.*\.esp")
@@ -17872,7 +17880,7 @@ plugins:
         condition: not regex("Bashed Patch.*\.esp")
       - type: say
         content: FCOM version; use 'Item interchange - Placement.esp' instead.
-        condition: not file("FCOM_Convergence.esm")
+        condition: not *FCOMCond
     tag:
       - Deactivate
       - Delev
@@ -21331,7 +21339,7 @@ plugins:
     msg:
       - type: error
         content: Delete. Not compatible with FCOM. Use 'bgBalancingEVOptionalFCOMAdditions.esp' instead.
-        condition: file("FCOM_Convergence.esm")
+        condition: *FCOMCond
   - name: bgBalancingOptionalNPCDiversityKvatchRebuilt, for Wrye Bash.esp
     msg:
       - type: say
