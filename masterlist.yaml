@@ -22,7 +22,9 @@ globals:
     condition: version("BOSS","2.1.1.0",<)
   - type: say
     content: The next major release of BOSS is now open for "https://github.com/boss-developers/boss-code/wiki/BOSSv3-Beta-Testing beta testing". Anyone wishing to help test must have a BethSoft forum account and be comfortable with using TES4Edit to view conflicts.
+    
 plugins:
+# ESMs
   - name: Oblivion.esm
     msg:
       - type: error
@@ -269,6 +271,8 @@ plugins:
     msg:
       - type: say
         content: "Requires: OBSE 19+, OBME 1+."
+# ENDGROUP: ESMs
+# BEGINGROUP: Earliest mods
   - name: Essential_Merchants.esp
     tag:
       - Actors.ACBS
@@ -371,6 +375,8 @@ plugins:
   - name: tes4-CHS-main.esp
     tag:
       - Names
+# ENDGROUP: Earliest mods
+# BEGINGROUP: NPC face mods
   - name: Better Looking NPC.esp
     tag:
       - NoMerge
@@ -764,6 +770,8 @@ plugins:
     tag:
       - NoMerge
       - NpcFaces
+# ENDGROUP: NPC face mods
+# BEGINGROUP: Vanilla fixes
   - name: OblivionMsg.esp
     tag:
       - Names
@@ -904,10 +912,12 @@ plugins:
       - type: say
         content: Use Wrye Bash Bashed Patch tweak instead.
         condition: regex("Bashed Patch.*\.esp")
+# ENDGROUP: Vanilla fixes
   - name: DLCShiveringIsles.esp
     dirty:
       - crc: 0xdaf51407
         util: "\"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide TES4Edit\""
+# BEGINGROUP: UOP
   - name: Unofficial Oblivion Patch.esp
     msg:
       - type: say
@@ -997,6 +1007,8 @@ plugins:
     msg:
       - type: say
         content: Recommend removing if using Wrye Bash. A tweak for this exists in "Tweak Settings".
+# ENDGROUP: UOP
+# BEGINGROUP: Post UOP fixes
   - name: Finger of the Mountain Fix.esp
     msg:
       - type: say
@@ -1012,6 +1024,8 @@ plugins:
     msg:
       - type: say
         content: Outdated. Update to newest version of Permanent Effects from Quest Items fix.
+# ENDGROUP: Post UOP fixes
+# BEGINGROUP: Non-English Language fixes
   - name: Obl-IM.esp
     tag:
       - Delev
@@ -1029,6 +1043,8 @@ plugins:
   - name: Oblivion_Deutsch_v5_0.esp
     tag:
       - Names
+# ENDGROUP: Non-English Language fixes
+# BEGINGROUP: Shivering Isles
   - name: Traduccion Mejorada S.I.esp
     tag:
       - Names
@@ -1175,6 +1191,8 @@ plugins:
       - Hair
       - NPC.Race
       - NpcFaces
+# ENDGROUP: Shivering Isles
+# BEGINGROUP: VWalk Post-UOP Files
   - name: Oblivion Vwalk UOS.esp
     tag:
       - Actors.Anims
@@ -1259,6 +1277,8 @@ plugins:
       - Actors.Anims
       - NoMerge
       - NpcFaces
+# ENDGROUP: VWalk Post-UOP Files
+# BEGINGROUP: BSA tricks
   - name: Better Cities .esp
     msg:
       - type: say
@@ -1305,6 +1325,8 @@ plugins:
     msg:
       - type: say
         content: Dummy file to load the TamRes BSA.
+# ENDGROUP: BSA tricks
+# BEGINGROUP: Post BSA
   - name: MrSiika'sFoxes.esp
     msg:
       - type: say
