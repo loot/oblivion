@@ -1,3 +1,18 @@
+# BOSS ignores anything that doesn't come under 'globals' or 'plugins', so a section like this is useful for storing data that gets re-used.
+common:
+  - &nehrimCond
+    active("Nehrim.esm")
+  - &tes4Cond
+    active("Oblivion.esm")
+  - &masterReassign
+    type: say
+    content: This plugin's master must be reassigned to "Nehrim.esm".
+    condition: *nehrimCond
+  - &useNehrimVer
+    type: error
+    content: Use the Nehrim version instead.
+    condition: *nehrimCond
+    
 globals:
   - type: warn
     content: An update for BOSS (v2.1.1) has been released. Download it at "http://code.google.com/p/better-oblivion-sorting-software/downloads/list"
@@ -8,6 +23,11 @@ globals:
   - type: say
     content: The next major release of BOSS is now open for "https://github.com/boss-developers/boss-code/wiki/BOSSv3-Beta-Testing beta testing". Anyone wishing to help test must have a BethSoft forum account and be comfortable with using TES4Edit to view conflicts.
 plugins:
+  - name: Oblivion.esm
+    msg:
+      - type: error
+        content: This must not be activated. However, it can be useful when porting Oblivion mods to Nehrim.
+        condition: active("Oblivion.esm") && active("Nehrim.esm")
   - name: Oblivion_1.1.esm
     msg:
       - type: say
@@ -108,6 +128,8 @@ plugins:
       - type: error
         content: Delete. Included in Retros Fletching and Imbueing 1.7.1_rus.esp
         condition: file("Retros Fletching and Imbueing 1.7.1_rus.esp")
+  - name: HorseCombatMaster.esm
+    msg: [ *masterReassign ]
   - name: Tamrielic Ingredients.esm
     msg:
       - type: say
@@ -3496,6 +3518,7 @@ plugins:
     msg:
       - type: say
         content: Outdated. Update to 3.1+.
+      - *masterReassign
   - name: Streamline 3.0.esp
     msg:
       - type: say
@@ -3590,6 +3613,7 @@ plugins:
       - type: say
         content: Don't use hotkeys to change Warcry-style 'set' equipment. Game bug.
         condition: regex("Oblivion WarCry( EV)?\.esp")
+      - *useNehrimVer
   - name: Improved Hotkeys.esp
     msg:
       - type: say
@@ -17154,10 +17178,12 @@ plugins:
     msg:
       - type: say
         content: Use no more than one Timed Block plugin.
+      - *masterReassign
   - name: Deadly Reflex 5 - Timed Block and 250% damage.esp
     msg:
       - type: say
         content: Use no more than one Timed Block plugin.
+      - *masterReassign
   - name: Deadly Reflex 5 - Timed block and 1.5x damage.esp
     msg:
       - type: say
@@ -17174,6 +17200,9 @@ plugins:
     msg:
       - type: say
         content: See "http://omploader.org/vMmJlbA/DRtestfix.zip" for a hotfix for CTD issues.
+      - type: error
+        content: Use the replacement plugin for Nehrim found "http://oblivion.nexusmods.com/mods/35157 here".
+        condition: *nehrimCond
   - name: DeadlyReflex 5 - Combat Moves.esp
     msg:
       - type: say
@@ -17290,6 +17319,7 @@ plugins:
         content: Don't need to use 'PTActorsCare.esp', 'PTDamageFinal.esp', 'PTDoorExploitBegone.esp', 'PTLessKnockback.esp' or NoRunningBackwards mod with this.
       - type: say
         content: "Requires: OBSE 17+"
+      - *masterReassign
   - name: BFG's Enhanced Armory.esp
     msg:
       - type: say
@@ -17394,16 +17424,18 @@ plugins:
         content: Deprecated. Do not use with v4.0+ of Sneaking Detection Recalibrated.
         condition: version("Sneaking Detection Recalibrated.esp","4.0",==)
   - name: SDR_Core.esp
-    msg:
-      - type: say
-        content: "Requires: \"SDR_obse.dll\", \"AddActorValues.dll\", \"OBSE\""
+    req:
+      - OBSE\Plugins\SDR_obse.dll
+      - OBSE\Plugins\AddActorValues.dll
+      - ..\obse_1_2_416.dll
   - name: SDR_NPC Behavior.esp
+    inc:
+      - name: SM Combat Hide.esp
+        display: SM Combat Hide
     msg:
       - type: say
         content: Deprecated. Do not use with v4.5.0+ of Sneaking Detection Recalibrated.
         condition: version("SDR_Core.esp","=4.5.0",>)
-      - type: say
-        content: "Incompatible with: SM Combat Hide, which is included in this plugin."
   - name: Oblivion XP - Journal Mod Patch.esp
     msg:
       - type: say
@@ -23402,3 +23434,153 @@ plugins:
       - type: error
         content: This plugin should never be active. Deactivate immediately.
         condition: active("FRLODToggleBasic.esp")
+
+  - name: NehrimEnglish.esp
+    after: [ All Natural Nehrim.esp ]
+    
+  - name: ASTnehrimHotfixes01(EN).esp
+    msg:
+      - type: error
+        content: Outdated. Use the update "http://oblivion.nexusmods.com/mods/39736 here" instead.
+
+  - name: WindowLightingSystem.esp
+    msg:
+      - *masterReassign
+      - type: say
+        content: Unnecessary as many windows are already lit.
+        condition: *nehrimCond
+
+  - name: Nehrim Blackscreenfix.esp
+    msg:
+      - type: warn
+        content: Only compatible with the German 1.0.3 version of Nehrim.
+
+  - name: BookTrackerOBSE.esp
+    msg: [ *masterReassign ]
+
+  - name: Duke Patricks - Who Goes There.esp
+    msg: [ *masterReassign ]
+
+  - name: Immersive Combat Music.esp
+    msg: [ *masterReassign ]
+
+  - name: Side's EAX Control.esp
+    msg: [ *masterReassign ]
+
+  - name: Spells Delete Only 3.2.esp
+    msg: [ *masterReassign ]
+
+  - name: Oblivion Graphics Extender Support.esp
+    msg:
+      - *masterReassign
+      - type: warn
+        content: The support plugin does not work. Shaders must be loaded using the shaderlist.
+        condition: *nehrimCond
+
+  - name: Enhanced Hotkeys.esp
+    msg: [ *masterReassign ]
+
+  - name: FastEquippingNehrim.esp
+    msg:
+      - type: say
+        content: Don't use hotkeys to change Warcry-style 'set' equipment. Game bug.
+
+  - name: DropLitTorchOBSE.esp
+    msg: [ *masterReassign ]
+
+  - name: ROM Drop Lit Torches.esp
+    msg: [ *masterReassign ]
+
+  - name: NehrimTEMP_ENGRISH_TEXT.esp
+    msg:
+      - type: warn
+        content: Outdated. Use "http://oblivion.nexusmods.com/mods/39736 this" instead.
+
+  - name: SM Encumbrance and Fatigue.esp
+    msg: [ *masterReassign ]
+
+  - name: Spell Delete And Item Remove.esp
+    msg: [ *masterReassign ]
+
+  - name: Spell Delete.esp
+    msg: [ *masterReassign ]
+
+  - name: Item Remove.esp
+    msg: [ *masterReassign ]
+
+  - name: attack and hide medium v2.1.esp
+    msg: [ *masterReassign ]
+
+  - name: attack and hide easier v2.1.esp
+    msg: [ *masterReassign ]
+
+  - name: attack and hide harder v2.1.esp
+    msg: [ *masterReassign ]
+
+  - name: SM Combat Hide.esp
+    msg: [ *masterReassign ]
+
+  - name: SDR Perks And Patches - Oblivion.esp
+    msg: [ *useNehrimVer ]
+
+  - name: SDR_Perks And Patches (Oblivion).esp
+    msg: [ *useNehrimVer ]
+
+  - name: StealthOverhaul.esp
+    msg: [ *masterReassign ]
+
+  - name: Realistic Sneak for NPCs.esp
+    msg: [ *masterReassign ]
+
+  - name: ZumbsLockpickingMod - OBSE.esp
+    msg: [ *masterReassign ]
+
+  - name: ZumbsLockpickingMod - Hide Difficulty Addon.esp
+    msg: [ *masterReassign ]
+
+  - name: Enhanced Grabbing.esp
+    msg: [ *masterReassign ]
+
+  - name: Armorer's Advantage.esp
+    msg: [ *masterReassign ]
+
+  - name: BetterBlocking.esp
+    msg: [ *masterReassign ]
+
+  - name: Denock Arrows.esp
+    msg: [ *masterReassign ]
+
+  - name: PTSneakPenalties.esp
+    msg: [ *masterReassign ]
+
+  - name: Intelligent Learning.esp
+    req: [ ..\obse_1_2_416.dll ]
+
+  - name: ExponentialLev(Easy|Moderate|Hard|Extreme)\.esp
+    msg:
+      - type: say
+        content: Use only one Exponential Leveling plugin.
+
+  - name: CompanionMaster.esp
+    msg:
+      - type: say
+        content: Some menu functions may not work.
+        condition: *nehrimCond
+
+  - name: ScreenControls.esp
+    msg: [ *masterReassign ]
+    
+  - name: Ostian Enhanced.esp
+    url: [ http://oblivion.nexusmods.com/mods/43632/ ]
+
+  - name: Nehrim Fast Travel 2011.esp
+    url: [ http://oblivion.nexusmods.com/mods/37374 ]
+    
+  - name: DynamicFootPositionNehrim.esp
+    url: [ http://oblivion.nexusmods.com/mods/42222 ]
+    
+  - name: kuerteeNehrimBattleFatigueAndInjuries.esp
+    url: [ http://oblivion.nexusmods.com/mods/24604 ]
+    
+  - name: Giliad House for Sale.esp
+    url: [ http://oblivion.nexusmods.com/mods/41868/ ]
