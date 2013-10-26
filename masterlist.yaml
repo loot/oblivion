@@ -5841,12 +5841,15 @@ plugins:
       - crc: 0xaba4972b
         util: "\"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide TES4Edit\""
 # ENDGROUP: Body Replacer Armour & Clothing
+# BEGINGROUP: Not For Free Armor
   - name: Dark_Mistress.esp
     dirty:
       - crc: 0x86f22d28
         util: "\"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide TES4Edit\""
       - crc: 0xc1861491
         util: "\"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide TES4Edit\""
+# ENDGROUP: Not For Free Armor
+# BEGINGROUP: Horse Mods
   - name: 1SI_Horses.esp
     msg:
       - type: say
@@ -6051,6 +6054,8 @@ plugins:
     tag:
       - Actors.ACBS
       - Actors.Stats
+# ENDGROUP: Horse Mods
+# BEGINGROUP: Pre Overhaul
   - name: AncientTowers Vwalk.esp
     tag:
       - Actors.Anims
@@ -6075,10 +6080,17 @@ plugins:
     tag:
       - Invent
       - Names
+# ENDGROUP: Pre Overhaul
+# BEGINGROUP: Only Name changing files
   - name: Ranokoas Organized Potions.esp
     tag:
       - Deactivate
       - Names
+  - name: Potion Sorter-2081.esp
+    tag:
+      - Names
+# ENDGROUP: Only Name changing files
+# BEGINGROUP: DLC 2
   - name: DLCThievesDen.esp
     tag:
       - Actors.ACBS
@@ -6154,6 +6166,8 @@ plugins:
   - name: ORM-TamriellicGlassDLC7.esp
     tag:
       - Graphics
+# ENDGROUP: DLC 2
+# BEGINGROUP: Overhauls
   - name: Fran Armor Add-on.esp
     msg:
       - type: say
@@ -8537,6 +8551,8 @@ plugins:
   - name: WAC - HGEC Equipment Replacer.esp
     tag:
       - Graphics
+# ENDGROUP: Overhauls
+# BEGINGROUP: Post Overhaul
   - name: beardy.esp
     tag:
       - NpcFaces
@@ -8708,6 +8724,8 @@ plugins:
     dirty:
       - crc: 0x13f4cf76
         util: "\"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide TES4Edit\""
+# ENDGROUP: Post Overhaul
+# BEGINGROUP: Morroblivion
   - name: Morroblivion_Chargen_And_Transport_Mod_v6.esp
     msg:
       - type: say
@@ -8715,6 +8733,8 @@ plugins:
   - name: Morroblivion item rebalance.esp
     tag:
       - Stats
+# ENDGROUP: Morroblivion
+# BEGINGROUP: Quests and Locations 1
   - name: Enhanced Quest Roleplaying.esp
     tag:
       - Factions
@@ -12016,6 +12036,8 @@ plugins:
     dirty:
       - crc: 0x81563088
         util: "\"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide TES4Edit\""
+# ENDGROUP: Quests and Locations 1
+# BEGINGROUP: DLC 3
   - name: DLCBattlehornCastle.esp
     dirty:
       - crc: 0x7048c609
@@ -12053,6 +12075,8 @@ plugins:
     dirty:
       - crc: 0x631088b
         util: "\"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide TES4Edit\""
+# ENDGROUP: DLC 3
+# BEGINGROUP: Quests and Locations 2
   - name: Falkreath.esp
     msg:
       - type: say
@@ -12097,6 +12121,8 @@ plugins:
       - type: say
         content: Delete 'Lynges Thieves Highway.esp and use this instead.
         condition: file("Oscuro's_Oblivion_Overhaul.esm")
+# ENDGROUP: Quests and Locations 2
+# BEGINGROUP: DLC 4
   - name: DLCFrostcrag.esp
     tag:
       - C.Name
@@ -12423,6 +12449,8 @@ plugins:
     msg:
       - type: say
         content: "Requires: Knights of the Nine"
+# ENDGROUP: DLC 4
+# BEGINGROUP: ROM
   - name: ROM Revised Oblivion Mod.esp
     tag:
       - Actors.ACBS
@@ -12473,6 +12501,23 @@ plugins:
   - name: ROM Patch - Bobs Armory.esp
     tag:
       - Stats
+  - name: ROMu.esp
+    tag:
+      - Actors.ACBS
+      - Actors.Stats
+      - Body-Size-F
+      - Body-Size-M
+      - Delev
+      - Factions
+      - Graphics
+      - Invent
+      - R.ChangeSpells
+      - R.Relations
+      - Relations
+      - Relev
+      - Scripts
+      - Stats
+# ENDGROUP: ROM
   - name: Cybiades.esp
     msg:
       - type: say
