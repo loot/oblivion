@@ -15,7 +15,7 @@ common:
   - &FCOMCond
     active("FCOM_Convergence.esm")
   - &coblCond
-	active("Cobl Main.esm")
+    active("Cobl Main.esm")
     
 globals:
   - type: warn
@@ -157,11 +157,11 @@ plugins:
       - Scripts
   - name: DEJ Harvest - Flora.esm
     msg:
-      - type: say
+      - type: error
         content: Obsolete. Update to 'Harvest [Flora]' v3.0.1+.
   - name: Tamriel's Glittering Geology.esm
     msg:
-      - type: say
+      - type: error
         content: Not compatible with OOO. Already included in OOO.
         condition: file("Oscuro's_Oblivion_Overhaul.esm")
   - name: Oscuro's_Oblivion_Overhaul.esm
@@ -205,7 +205,7 @@ plugins:
   - name: Waalx Animals & Creatures.esm
     msg:
       - type: say
-        content: "Incompatible with: Other overhaul mods."
+        content: Incompatible with other overhaul mods.
   - name: FCOM_Convergence.esm
     tag:
       - Delev
@@ -220,7 +220,7 @@ plugins:
       - Relev
   - name: ArmamentariumEnchanted.esm
     msg:
-      - type: say
+      - type: error
         content: Outdated, included in Armamentarium Complete.
   - name: bookplacing.esm
     msg:
@@ -233,8 +233,9 @@ plugins:
         condition: regex("Bashed Patch.*\.esp")
   - name: TLS Modded Mannequins.esm
     msg:
-      - type: say
-        content: "Incompatible with: Reznod's Mannequins."
+      - type: error
+        content: Incompatible with Reznod's Mannequins.
+		condition: file("Reznod_Mannequin.esp")
   - name: DKImperials.esm
     tag:
       - Eyes
