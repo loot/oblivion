@@ -1344,6 +1344,8 @@ plugins:
     msg:
       - type: say
         content: Do not use with MMM/FCOM. Already integrated.
+# ENDGROUP: Post BSA
+# BEGINGROUP: Initial Fran's files for FCOM
   - name: Francesco's Optional Chance of Stronger Enemies.esp
     dirty:
       - crc: 0x4f003db0
@@ -1399,6 +1401,8 @@ plugins:
     msg:
       - type: say
         content: Do not use with MMMforFrans. Already integrated.
+# ENDGROUP: Initial Fran's files for FCOM
+# BEGINGROUP: Loading Screen Alternatives
   - name: 7roads_screens.esp
     tag:
       - Graphics
@@ -1475,7 +1479,9 @@ plugins:
   - name: LoadingScreenQuotes.esp
     msg:
       - type: say
-        content: Make sure that any mod that replaces the graphics of the loading screens is tagged with Graphics, otherwise this mod will revert them to vanilla.
+        content: Make sure that any mod that replaces the graphics of the loading screens is tagged with Graphics, otherwise this mod will revert them to vanilla
+# ENDGROUP: Loading Screen Alternatives
+# BEGINGROUP: Weather mods and overhauls
   - name: oc_darker_nights.esp
     msg:
       - type: say
@@ -1773,6 +1779,8 @@ plugins:
       - type: say
         content: Use Wrye Bash Bashed Patch tweak instead.
         condition: regex("Bashed Patch.*\.esp")
+# ENDGROUP: Weather mods and overhauls
+# BEGINGROUP: Water and lava tweaks
   - name: AdvancedWater.esp
     tag:
       - C.Water
@@ -1832,6 +1840,8 @@ plugins:
   - name: Skyrimized Waters HD - SI Addon.esp
     tag:
       - C.Water
+# ENDGROUP: Water and lava tweaks
+# BEGINGROUP: Sound mods
   - name: Idle Dialogue.esp
     dirty:
       - crc: 0xf3ddd964
@@ -2091,6 +2101,8 @@ plugins:
     dirty:
       - crc: 0x71bddec0
         util: "\"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide TES4Edit\""
+# ENDGROUP: Sound mods
+# BEGINGROUP: Lighting
   - name: Real_Lights.esp
     msg:
       - type: say
@@ -2157,6 +2169,8 @@ plugins:
     msg:
       - type: say
         content: "Requires: OBSE and 'You Are Here'. ScreenEffects for versions below 1.3."
+# ENDGROUP: Lighting
+# BEGINGROUP: General Base Mods
   - name: 00crystalTorch.esp
     dirty:
       - crc: 0xe7a1bce7
@@ -3457,6 +3471,8 @@ plugins:
       - crc: 0x56c59ac2
         util: "\"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide TES4Edit\""
         udr: 50
+# ENDGROUP: General Base Mods
+# BEGINGROUP: Load Order Independent Mods
   - name: AutoEquip.esp
     msg:
       - type: say
@@ -3558,6 +3574,8 @@ plugins:
     dirty:
       - crc: 0xa08a9abe
         util: "\"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide TES4Edit\""
+# ENDGROUP: Load Order Independent Mods
+# BEGINGROUP: Map marker Tweaks
   - name: Map Marker Renamer.esp
     msg:
       - type: say
@@ -3591,6 +3609,8 @@ plugins:
     dirty:
       - crc: 0x1664da76
         util: "\"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide TES4Edit\""
+# ENDGROUP: Map marker Tweaks
+# BEGINGROUP: Hotkeys
   - name: Clock Hotkey.esp
     msg:
       - type: say
@@ -3670,6 +3690,8 @@ plugins:
       - type: say
         content: Don't use hotkeys to change Warcry-style 'set' equipment. Game bug.
         condition: regex("Oblivion WarCry( EV)?\.esp")
+# ENDGROUP: Hotkeys
+# BEGINGROUP: DLC 1
   - name: DLCHorseArmor.esp
     tag:
       - Scripts
@@ -3845,6 +3867,8 @@ plugins:
     tag:
       - Graphics
       - NoMerge
+# ENDGROUP: DLC 1
+# BEGINGROUP: Body replacers
   - name: Bab.esp
     tag:
       - Body-F
@@ -3935,6 +3959,8 @@ plugins:
     tag:
       - Graphics
       - NoMerge
+# ENDGROUP: Body replacers
+# BEGINGROUP: Items (armor and weapons)
   - name: Bonemold_Helmet.esp
     msg:
       - type: say
@@ -5539,6 +5565,8 @@ plugins:
     msg:
       - type: say
         content: Use either this or Mage Equipment, but not both. Franseco's leveled creatures/items mod.
+# ENDGROUP: Items (armor and weapons)
+# BEGINGROUP: Body Replacer Armour & Clothing
   - name: All Manly.esp
     tag:
       - Graphics
@@ -5812,6 +5840,7 @@ plugins:
     dirty:
       - crc: 0xaba4972b
         util: "\"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide TES4Edit\""
+# ENDGROUP: Body Replacer Armour & Clothing
   - name: Dark_Mistress.esp
     dirty:
       - crc: 0x86f22d28
