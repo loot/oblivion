@@ -55,12 +55,12 @@ plugins:
     msg:
       - type: warn
         content: This needs to load directly after Oblivion.esm to avoid landscape issues caused by a failure by the mod author to use TES4Gecko's "Move Worldspaces" function.
-        priority: -2
+        priority: -3
   - name: DibellasWatch.esm
     msg:
       - type: warn
         content: This needs to load directly after Oblivion.esm to avoid landscape issues caused by a failure by the mod author to use TES4Gecko's "Move Worldspaces" function.
-        priority: -2
+        priority: -3
   - name: Belas.esm
     msg:
       - type: error
@@ -69,7 +69,7 @@ plugins:
     msg:
       - type: warn
         content: This needs to load directly after Oblivion.esm to avoid landscape issues caused by a failure by the mod author to use TES4Gecko's "Move Worldspaces" function.
-        priority: -2
+        priority: -3
   - name: Silgrad_Tower.esm
     msg:
       - type: error
@@ -285,10 +285,13 @@ plugins:
         content: "Requires: OBSE 19+, OBME 1+."
 # ENDGROUP: ESMs
 # BEGINGROUP: Earliest mods
+#
+# Tag with priority: -2
   - name: Essential_Merchants.esp
     tag:
       - Actors.ACBS
       - NoMerge
+    priority: -2
   - name: HrmnsOblivionScriptOptimizationv1.0.esp
     msg:
       - type: warn
@@ -297,23 +300,27 @@ plugins:
       - type: warn
         content: Not recommended for use as there is no measurable performance improvement.
         condition: checksum("HrmnsOblivionScriptOptimizationv1.0.esp",FEED7422)
+    priority: -2
 # Apparently needs to load bloody early. Doesn't seem like it matters, considering that it doesn't improve performance.
   - name: HrmnsOblivionScriptOptimizationv SI 1.0.esp
     msg:
       - type: warn
         content: Not recommended for use as there is no measurable performance improvement.
+    priority: -2
   - name: Skillbookssave.esp
     msg:
       - type: say
         content: If not using Wrye Bash load this later (though then it will override some things).
     tag:
       - Scripts
+    priority: -2
   - name: OBSE Save Skill Books For Later DV.esp
     msg:
       - type: say
         content: If not using Wrye Bash load this later (though then it will override some things).
     tag:
       - Scripts
+    priority: -2
   - name: Book Jackets Oblivion - SSBFL.esp
     msg:
       - type: error
@@ -324,6 +331,7 @@ plugins:
     tag:
       - Graphics
       - Scripts
+    priority: -2
   - name: Book Jackets Oblivion - BP - SSBFL.esp
     msg:
       - type: error
@@ -334,18 +342,22 @@ plugins:
     tag:
       - Graphics
       - Scripts
+    priority: -2
   - name: Oblivion Vwalk.esp
     tag:
       - Actors.Anims
       - NoMerge
+    priority: -2
   - name: CyrodiilUpgradeResourcePack Vwalk.esp
     tag:
       - Actors.Anims
       - NoMerge
+    priority: -2
   - name: SoVvM Vwalk.esp
     tag:
       - Actors.Anims
       - NoMerge
+    priority: -2
   - name: Oblivion_SI Vwalk Full.esp
     msg:
       - type: error
@@ -353,15 +365,18 @@ plugins:
     tag:
       - Actors.Anims
       - NoMerge
+    priority: -2
   - name: TRoN.esp
     dirty:
       - crc: 0x8a09b1f1
         util: "\"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide TES4Edit\""
         udr: 3
+    priority: -2
   - name: TRoN 0-59-1b Vwalk.esp
     tag:
       - Actors.Anims
       - NoMerge
+    priority: -2
   - name: TRoN Rwalk.esp
     msg:
       - type: say
@@ -369,6 +384,7 @@ plugins:
     tag:
       - Actors.Anims
       - NoMerge
+    priority: -2
   - name: TRoN Swalk.esp
     msg:
       - type: say
@@ -376,31 +392,41 @@ plugins:
     tag:
       - Actors.Anims
       - NoMerge
+    priority: -2
   - name: TRoN Vwalk.esp
     tag:
       - Actors.Anims
       - NoMerge
-# The author of TRoN recommends that this mod loads early.
+    priority: -2
   - name: Underdark v1.1 Delayer.esp
     msg:
       - type: say
         content: Versions less than 3.1 may cause the quest being patched to restart if installed after the quest has started. Update to the latest delayer if you suspect a problem.
+    priority: -2
   - name: "!Oblivion_PL.esp"
     tag:
       - Names
+    priority: -2
   - name: tes4-CHS-main.esp
     tag:
       - Names
+    priority: -2
 # ENDGROUP: Earliest mods
 # BEGINGROUP: NPC face mods
+#
+# These should all be tagged with Deactivate, NoMerge, and NPCFaces, and should have priority -2.
   - name: Better Looking NPC.esp
     tag:
+      - Deactivate
       - NoMerge
       - NpcFaces
+    priority: -2
   - name: EURN.esp
     tag:
+      - Deactivate
       - NoMerge
       - NpcFaces
+    priority: -2
   - name: xeoex.esp
     tag:
       - Eyes
@@ -412,10 +438,12 @@ plugins:
       - R.Head
       - R.Mouth
       - R.Teeth
+    priority: -2
   - name: xeoex Vwalk.esp
     tag:
       - Actors.Anims
       - NoMerge
+    priority: -2
   - name: xeosp++.esp
     tag:
       - Body-F
@@ -427,82 +455,114 @@ plugins:
       - Hair
       - NPC.Race
       - NpcFaces
+    priority: -2
   - name: xeosp++ Vwalk.esp
     tag:
       - Actors.Anims
       - NoMerge
+    priority: -2
   - name: TNR - THE REDGUARDS.esp
     tag:
+      - Deactivate
       - NoMerge
       - NpcFaces
+    priority: -2
   - name: TNR - THE DUNMER.esp
     tag:
+      - Deactivate
       - NoMerge
       - NpcFaces
+    priority: -2
   - name: TNR - THE IMPERIALS.esp
     tag:
+      - Deactivate
       - NoMerge
       - NpcFaces
+    priority: -2
   - name: TNR - THE BRETONS.esp
     tag:
+      - Deactivate
       - NoMerge
       - NpcFaces
+    priority: -2
   - name: TNR - THE ALTMER.esp
     tag:
+      - Deactivate
       - NoMerge
       - NpcFaces
+    priority: -2
   - name: TNR - THE BOSMER.esp
     tag:
+      - Deactivate
       - NoMerge
       - NpcFaces
+    priority: -2
   - name: TNR - THE NORDS.esp
     tag:
+      - Deactivate
       - NoMerge
       - NpcFaces
+    priority: -2
   - name: TNR - THE ORCS.esp
     tag:
+      - Deactivate
       - NoMerge
       - NpcFaces
+    priority: -2
   - name: TNR - THE KHAJIIT.esp
     tag:
+      - Deactivate
       - NoMerge
       - NpcFaces
+    priority: -2
   - name: TNR - THE ARGONIANS.esp
     tag:
+      - Deactivate
       - NoMerge
       - NpcFaces
+    priority: -2
   - name: TNR - all.esp
     tag:
+      - Deactivate
       - NoMerge
       - NpcFaces
+    priority: -2
   - name: TNR- All Races.esp
     msg:
       - type: say
         content: "Incompatible with: Cobl Races TNR.esp"
     tag:
+      - Deactivate
       - NoMerge
       - NpcFaces
+    priority: -2
   - name: TNR ALL RACES FINAL.esp
     msg:
       - type: say
         content: "Incompatible with: Cobl Races TNR.esp"
     tag:
+      - Deactivate
       - NoMerge
       - NpcFaces
+    priority: -2
   - name: TNR - ALL RACES FINAL.esp
     msg:
       - type: say
         content: "Incompatible with: Cobl Races TNR.esp"
     tag:
+      - Deactivate
       - NoMerge
       - NpcFaces
+    priority: -2
   - name: TNR - ALL RACES FINAL DV.esp
     msg:
       - type: say
         content: "Incompatible with: Cobl Races TNR.esp"
     tag:
+      - Deactivate
       - NoMerge
       - NpcFaces
+    priority: -2
   - name: TNR ALL RACES FINAL Vwalk.esp
     tag:
       - Actors.Anims
@@ -512,27 +572,35 @@ plugins:
       - type: say
         content: "Incompatible with: Cobl Races TNR.esp"
     tag:
+      - Deactivate
       - NoMerge
       - NpcFaces
+    priority: -2
   - name: TNR - ShiveringIsles.esp
     msg:
       - type: say
         content: "Incompatible with: Cobl Races TNR SI.esp"
     tag:
+      - Deactivate
       - NoMerge
       - NpcFaces
+    priority: -2
   - name: TNR - ShiveringIsles no helms.esp
     tag:
+      - Deactivate
       - NoMerge
       - NpcFaces
+    priority: -2
   - name: TNR - ShiveringIsles no helms Vwalk.esp
     tag:
       - Actors.Anims
       - NoMerge
   - name: Tamriel NPCs Revamped.esp
     tag:
+      - Deactivate
       - NoMerge
       - NpcFaces
+    priority: -2
   - name: Oblivion_SI Vwalk Full TNR.esp
     msg:
       - type: say
@@ -545,97 +613,135 @@ plugins:
       - type: say
         content: "Requires: the Cobl Cosmetics Res 01 files installed."
     tag:
+      - Deactivate
       - NoMerge
       - NpcFaces
+    priority: -2
   - name: Cobl Races TNR SI.esp
     msg:
       - type: say
         content: "Requires: the Cobl Cosmetics Res 01 files installed."
     tag:
+      - Deactivate
       - NoMerge
       - NpcFaces
+    priority: -2
   - name: Cobl - NPCDiversity - TNR Merge.esp
     msg:
       - type: say
         content: Obsolete. Remove this and install either Cobl Races TNR.esp or Cobl Races TNR SI.esp.
     tag:
+      - Deactivate
       - Invent
       - NoMerge
       - NpcFaces
+    priority: -2
   - name: TweakedGenericFaces.esp
     tag:
+      - Deactivate
       - NoMerge
       - NpcFaces
+    priority: -2
   - name: TweakedGenericFaces-LITE.esp
     tag:
+      - Deactivate
       - NoMerge
       - NpcFaces
+    priority: -2
   - name: Better-Horse-Eyes.esp
     tag:
+      - Deactivate
       - Graphics
       - NoMerge
+      - NpcFaces
+    priority: -2
   - name: Younger Hotter NPC's 0.99.esp
     msg:
       - type: say
         content: Outdated. Update to version 1+.
     tag:
+      - Deactivate
       - NoMerge
       - NpcFaces
+    priority: -2
   - name: Younger Hotter NPC's v1.0.esp
     tag:
+      - Deactivate
       - NoMerge
       - NpcFaces
+    priority: -2
   - name: Younger Hotter NPC's v1.0 Vwalk.esp
     tag:
       - Actors.Anims
       - NoMerge
   - name: Younger Hotter NPC's v1.0_GE.esp
     tag:
+      - Deactivate
       - NoMerge
       - NpcFaces
+    priority: -2
   - name: YoungerHotterNPCwithPussies.esp
     tag:
+      - Deactivate
       - NoMerge
       - NpcFaces
+    priority: -2
   - name: YH Orcs v1.esp
     tag:
+      - Deactivate
       - NoMerge
       - NpcFaces
+    priority: -2
   - name: Ren's hair on Young Hot NPCs.esp
     tag:
+      - Deactivate
       - Hair
+      - NoMerge
       - NpcFaces
+    priority: -2
   - name: Ren's hair on Young Hot NPCs Vwalk.esp
     tag:
       - Actors.Anims
       - NoMerge
   - name: Younger  Women's_1C Gold.esp
     tag:
+      - Deactivate
       - NoMerge
       - NpcFaces
+    priority: -2
   - name: Beautiful_Women_NiceOnly.esp
     tag:
+      - Deactivate
       - NoMerge
       - NpcFaces
+    priority: -2
     dirty:
       - crc: 0x2c6e9200
         util: "\"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide TES4Edit\""
   - name: Beautiful_Women_DB_Addon.esp
     tag:
+      - Deactivate
       - NoMerge
       - NpcFaces
+    priority: -2
   - name: Beautiful_Women_SI.esp
     tag:
+      - Deactivate
       - NoMerge
       - NpcFaces
+    priority: -2
   - name: Beautiful_Women_Vampires.esp
     tag:
+      - Deactivate
       - NoMerge
       - NpcFaces
+    priority: -2
   - name: Beautiful_Women_Vampires_50.esp
     tag:
+      - Deactivate
       - NoMerge
       - NpcFaces
+    priority: -2
   - name: Beautiful_Women_DB_Addon Vwalk.esp
     tag:
       - Actors.Anims
@@ -646,8 +752,10 @@ plugins:
       - NoMerge
   - name: Beautiful_Women_NotSoNice_Bonus.esp
     tag:
+      - Deactivate
       - NoMerge
       - NpcFaces
+    priority: -2
   - name: Beautiful_Women_NotSoNice_Bonus Vwalk.esp
     tag:
       - Actors.Anims
@@ -673,119 +781,175 @@ plugins:
       - NoMerge
   - name: Beautiful_Women_Revised.esp
     tag:
+      - Deactivate
       - NoMerge
       - NpcFaces
+    priority: -2
   - name: Beautiful_Women_Revised_DB.esp
     tag:
+      - Deactivate
       - NoMerge
       - NpcFaces
+    priority: -2
   - name: Beautiful_Women_Revised_SI.esp
     tag:
+      - Deactivate
       - NoMerge
       - NpcFaces
+    priority: -2
   - name: Beautiful_Women_Revised_NotSoNice.esp
     tag:
+      - Deactivate
       - NoMerge
       - NpcFaces
+    priority: -2
   - name: Handsome_Gents_Addon.esp
     tag:
+      - Deactivate
       - NoMerge
       - NpcFaces
+    priority: -2
   - name: Handsome_Gents_DB_Addon.esp
     tag:
+      - Deactivate
       - NoMerge
       - NpcFaces
+    priority: -2
   - name: Handsome_Gents_SI.esp
     tag:
+      - Deactivate
       - NoMerge
       - NpcFaces
+    priority: -2
   - name: Handsome_Gents_Vampires.esp
     tag:
+      - Deactivate
       - NoMerge
       - NpcFaces
+    priority: -2
   - name: Handsome_Gents_Vampires_50.esp
     tag:
+      - Deactivate
       - NoMerge
       - NpcFaces
+    priority: -2
   - name: Handsome_Gents_Bonus.esp
     tag:
+      - Deactivate
       - NoMerge
       - NpcFaces
+    priority: -2
   - name: Handsome_Gents_Revised.esp
     tag:
+      - Deactivate
       - NoMerge
       - NpcFaces
+    priority: -2
   - name: Handsome_Gents_Revised_DB.esp
     tag:
+      - Deactivate
       - NoMerge
       - NpcFaces
+    priority: -2
   - name: Handsome_Gents_Revised_SI.esp
     tag:
+      - Deactivate
       - NoMerge
       - NpcFaces
+    priority: -2
   - name: emperorface.esp
     tag:
+      - Deactivate
       - NoMerge
       - NpcFaces
+    priority: -2
     dirty:
       - crc: 0xaa25a555
         util: "\"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide TES4Edit\""
   - name: Absolutely_Sexy_MarketDistrict.esp
     tag:
+      - Deactivate
       - Invent
-      - NpcFaces
-  - name: YoungerNPCs.esp
-    tag:
       - NoMerge
       - NpcFaces
+    priority: -2
+  - name: YoungerNPCs.esp
+    tag:
+      - Deactivate
+      - NoMerge
+      - NpcFaces
+    priority: -2
   - name: Colourwheels Sexy Female NPCs.esp
     tag:
       - Actors.Anims
+      - Deactivate
+      - NoMerge
       - NpcFaces
+    priority: -2
   - name: Colourwheels Sexy Female NPCs Vwalk.esp
     tag:
       - Actors.Anims
+      - Deactivate
       - NoMerge
+      - NpcFaces
+    priority: -2
   - name: ChangeSomeCyrodiilLadies.esp
     msg:
       - type: say
         content: Outdated. Update to CSCP.esp.
     tag:
+      - Deactivate
       - NoMerge
       - NpcFaces
+    priority: -2
   - name: CSCP.esp
     tag:
+      - Deactivate
       - NoMerge
       - NpcFaces
+    priority: -2
   - name: Beautiful Amazon.esp
     tag:
+      - Deactivate
       - NoMerge
       - NpcFaces
+    priority: -2
   - name: BeautifulJensine.esp
     tag:
+      - Deactivate
       - NoMerge
       - NpcFaces
+    priority: -2
   - name: Prettier Vampire Faces.esp
     tag:
+      - Deactivate
       - NoMerge
       - NpcFaces
+    priority: -2
   - name: Better Faces.esp
     tag:
+      - Deactivate
+      - NoMerge
       - NpcFaces
+    priority: -2
   - name: BPFace_Oblivion.esp
     tag:
       - Actors.ACBS
       - NoMerge
       - NPC.Race
       - NpcFaces
+    priority: -2
   - name: LD_Patrick_Stewart_Sean_Bean.esp
     tag:
       - NPC.Race
       - NpcFaces
+    priority: -2
   - name: TolkieneElderElf.esp
     tag:
+      - Deactivate
       - NoMerge
       - NpcFaces
+    priority: -2
 # ENDGROUP: NPC face mods
 # BEGINGROUP: Vanilla fixes
   - name: OblivionMsg.esp
