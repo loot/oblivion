@@ -2017,30 +2017,6 @@ plugins:
     dirty:
       - crc: 0xf3ddd964
         util: "\"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide TES4Edit\""
-  - name: Louder Nirnroot Sound.esp
-    tag:
-      - Sound
-  - name: Louder Nirnroots.esp
-    tag:
-      - Sound
-  - name: Louder Nirnroot.esp
-    tag:
-      - Sound
-  - name: Louder Nirnoot.esp
-    tag:
-      - Sound
-  - name: ln.esp
-    tag:
-      - Sound
-  - name: lninroot.esp
-    tag:
-      - Sound
-  - name: Louder Nirns.esp
-    tag:
-      - Sound
-  - name: Symphony of Violence.esp
-    tag:
-      - Sound
   - name: Echo_ChapelChant.esp
     dirty:
       - crc: 0x1463180e
@@ -2057,13 +2033,11 @@ plugins:
     msg:
       - type: say
         content: Make sure you are using More Immersive Sounds Edited to benefit from bug fixes.
-  - name: MIS Low Wind.esp
+  - name: 'MIS Low Wind.esp'
+    tag: [ 'Scripts' ]
     dirty:
       - crc: 0xf343d8ea
-        util: "\"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide TES4Edit\""
-  - name: MIS New Sounds Optional Part.esp
-    tag:
-      - Scripts
+        util: '"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide TES4Edit"'
   - name: Atmospheric Oblivion.esp
     tag:
       - Scripts
@@ -16664,13 +16638,14 @@ plugins:
       - R.Ears
       - R.Relations
       - R.Teeth
-  - name: StarX Vanilla Vampires Revised.esp
+  - name: 'StarX Vanilla Vampires Revised.esp'
     msg:
-      - type: say
-        content: Has problems with OOO (StarX vampires will fight OOO vampires, and some chests/weapons will be in skewed places).
-        condition: file("Oscuro's_Oblivion_Overhaul.esm")
+      - type: 'say'
+        content: 'Has problems with OOO (StarX vampires will fight OOO vampires, and some chests/weapons will be in skewed places).'
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
     tag:
-      - C.Light
+      - 'C.Light'
+      - 'Actors.ACBS'
   - name: LTDVampireOverhaul.esp
     dirty:
       - crc: 0xbc307c34
@@ -17930,16 +17905,9 @@ plugins:
         util: "\"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide TES4Edit\""
 # ENDGROUP: Pose and Animation Mods
 # BEGINGROUP: Semi-final overrides
-  - name: Immersive Caves.esp
-    tag:
-      - Names
-  - name: Immersive Caves Auto.esp
-    tag:
-      - Names
   - name: immersive_caves_auto.esp
     tag:
       - Graphics
-      - Names
   - name: Dark Dungeons.esp
     tag:
       - C.Light
@@ -21354,12 +21322,13 @@ plugins:
       - Graphics
       - R.Mouth
       - R.Teeth
-  - name: Oblivion_Character_Overhaul.esp
+  - name: 'Oblivion_Character_Overhaul.esp'
     tag:
-      - Eyes
-      - NpcFaces
-      - R.Head
-      - R.Mouth
+      - 'Eyes'
+      - 'NpcFaces'
+      - 'R.Head'
+      - 'R.Mouth'
+    url: [ 'http://oblivion.nexusmods.com/mods/43612' ]
   - name: Jjiinx_Long Ears.esp
     tag:
       - Body-F
@@ -24049,4 +24018,45 @@ plugins:
     url: [ 'http://oblivion.nexusmods.com/mods/14853' ]
     
   - name: 'SingingStablehandInn.esp'
-    url: [ 'http://www.tesnexus.com/downloads/file.php?id=14853' ]
+    url: [ 'http://oblivion.nexusmods.com/mods/14853' ]
+    
+  - name: 'AFKWeye_MTC_RRLRumare_HOH Patch.esp'
+    url: [ 'http://oblivion.nexusmods.com/mods/42718' ]
+    
+  - name: 'OCR+Werewolf Patch.esp'
+    url: [ 'http://oblivion.nexusmods.com/mods/32925' ]
+    
+  - name: 'UA OMG 7.3 Patch.esp'
+    dirty:
+      - crc: 0x2EBC4670
+        itm: 346
+        udr: 1528
+        util: '"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide TES4Edit"'
+    url: [ 'http://oblivion.nexusmods.com/mods/32432' ]
+    
+  - name: 'Guild Advancement-Universitum Arcanorum patch.esp'
+    url: [ 'http://oblivion.nexusmods.com/mods/42870' ]
+    
+  - name: 'Banes Guilds United LAME patch.esp'
+    url: [ 'http://oblivion.nexusmods.com/mods/42261' ]
+    
+  - name: 'Banes Guilds United Integration patch.esp'
+    url: [ 'http://oblivion.nexusmods.com/mods/42261' ]
+    
+  - name: 'Better Bell Sounds.esp'
+    tag: [ 'Scripts' ]
+    
+  - name: 'nu_female_player_idle.esp'
+    url: [ 'http://oblivion.nexusmods.com/mods/43567' ]
+    
+  - name: 'MTCEV-RoC Patch.esp'
+    url: [ 'http://oblivion.nexusmods.com/mods/20218' ]
+    
+  - name: 'QOTW Season Three.esp'
+    dirty:
+      - crc: 0x701E316B
+        itm: 140
+        udr: 1
+        util: '"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide TES4Edit"'
+    url: [ 'http://oblivion.nexusmods.com/mods/36336' ]
+        
