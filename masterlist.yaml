@@ -6271,7 +6271,7 @@ plugins:
       - C.Name
     dirty:
       - crc: 0x5db8ccc
-        util: "\"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide TES4Edit\""
+        util: "http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide TES4Edit"
         udr: 135
   - name: DLCThievesDen - Unofficial Patch.esp
     tag:
@@ -6324,11 +6324,17 @@ plugins:
       - Actors.Anims
       - NoMerge
   - name: SM Plugin Refurbish - ThievesDen.esp
+    inc:
+      - CDM-CGO Horse Armor Compatability.esp
+      - CDM-CGO Orrery Compatibility.esp
+      - CDM-CGO Thieves Den Compatibility.esp
+      - CDM-CGO Vile Lair Compatibility.esp
+      - CDM-CGO Battlehorn Compatibility.esp
+      - CDM-CGO Shivering Isles Compatibility.esp
+      - CDM-CGO Frostcrag Compatibility.esp
     msg:
       - type: say
-        content: "Incompatible with: 'CDM-CGO Compatibility plugins'."
-      - type: say
-        content: "Contains dirty edits: Do not clean. \"Dirty\" edits are intentional and required for the mod to function."
+        content: 'Do not clean. "Dirty" edits are intentional and required for the mod to function.'
   - name: ThievesDen_MOBS.esp
     tag:
       - Deactivate
