@@ -3923,11 +3923,15 @@ plugins:
       - type: error
         content: Do not use with mmmpld's original See You Sleep mod or any of its compatibility patches.
         condition: file("P1DseeYouSleep.esp")
-  - name: DLCMehrunesRazor.esp
+  - name: 'DLCMehrunesRazor.esp'
     dirty:
       - crc: 0xcb413740
-        util: "\"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide TES4Edit\""
+        util: '"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide TES4Edit"'
         udr: 15
+      - crc: 0x7C760195
+        itm: 13
+        udr: 15
+        util: '"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide TES4Edit"'
   - name: DLCMehrunesRazor - Unofficial Patch.esp
     tag:
       - Delev
@@ -17905,9 +17909,12 @@ plugins:
         util: "\"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide TES4Edit\""
 # ENDGROUP: Pose and Animation Mods
 # BEGINGROUP: Semi-final overrides
-  - name: immersive_caves_auto.esp
+  - name: 'immersive_caves_manual.esp'
+    tag: [ 'Sound' ]
+  - name: 'immersive_caves_auto.esp'
     tag:
-      - Graphics
+      - 'Graphics'
+      - 'Sound'
   - name: Dark Dungeons.esp
     tag:
       - C.Light
@@ -24059,4 +24066,92 @@ plugins:
         udr: 1
         util: '"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide TES4Edit"'
     url: [ 'http://oblivion.nexusmods.com/mods/36336' ]
+    
+  - name: 'DLCBattlehornCastleCOBL.esp'
+    url: [ 'http://oblivion.nexusmods.com/mods/43166' ]
+    
+  - name: 'CarahsCaravanRedux.esp'
+    url: [ 'http://oblivion.nexusmods.com/mods/43464' ]
         
+  - name: 'Better Elixir of Exploration.esp'
+    url: [ 'http://oblivion.nexusmods.com/mods/43674' ]
+    
+  - name: 'SummonMerchantSpell.esp'
+    url: [ 'http://oblivion.nexusmods.com/mods/30302' ]
+    
+  - name: 'Morrowind_ob - UCWUS.esp'
+    tag:
+      - 'Invent'
+      - 'Names'
+    dirty:
+      - crc: 0x9F7F8D5F
+        itm: 4
+        udr: 0
+        util: '"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide TES4Edit"'
+    url: [ 'http://morroblivion.com/forums/morroblivion/mods/2173' ]
+    
+  - name: 'Morrowind_ob - Silt Striders.esp'
+    url: [ 'http://morroblivion.com/forums/morroblivion/mods/2173' ]
+    
+  - name: 'Morrowind_ob - Unique Grass.esp'
+    url: [ 'http://morroblivion.com/forums/oblivion/morroblivion-mod-releases/3294' ]
+    
+  - name: 'Morrowind_ob - Morroblivion_Chargen_And_Transport_Mod_v10.esp'
+    dirty:
+      - crc: 0x51563805
+        itm: 3
+        udr: 0
+        util: '"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide TES4Edit"'
+    url: [ 'http://morroblivion.com/forums/morroblivion/mods/2173' ]
+        
+  - name: 'Morrowind_ob - MorroblivionTreeReplacer.esp'
+    dirty:
+      - crc: 0x7AF5966F
+        itm: 3043
+        udr: 0
+        util: '"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide TES4Edit"'
+    url: [ 'http://morroblivion.com/forums/morroblivion/mods/2173' ]
+    
+  - name: 'Morrowind_ob - ClothingReplacer.esp'
+    tag: [ 'Names' ]
+    url: [ 'http://morroblivion.com/forums/morroblivion/mods/2173' ]
+    
+  - name: 'Morrowind_ob - Conversation.esp'
+    tag:
+      - 'Factions'
+      - 'Invent'
+      - 'Names'
+    url: [ 'http://morroblivion.com/forums/morroblivion/mods/2173' ]
+    
+  - name: 'fg109EscortMission.esp'
+    url: [ 'http://oblivion.nexusmods.com/mods/37734' ]
+    
+  - name: 'JTP_GlassWeaponsRecolorsBLUE1.esp'
+    url: [ 'http://oblivion.nexusmods.com/mods/28207' ]
+    
+  - name: 'Blue-Glass Armor.esp'
+    dirty:
+      - crc: 0xE29C8B31
+        itm: 1
+        udr: 0
+    url: [ 'http://oblivion.nexusmods.com/mods/9291' ]
+    
+  - name: 'Chorrol_Dungeon.esp'
+    dirty:
+      - crc: 0x4B4E42AD
+        itm: 1
+        udr: 0
+        util: '"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide TES4Edit"'
+    
+  - name: 'Bandit_Creepy_Castle.esp'
+    dirty:
+      - crc: 0xFE34F837
+        itm: 20
+        udr: 0
+        util: '"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide TES4Edit"'
+
+  - name: 'Leveling Quick Fix 15.esp'
+    url: [ 'http://oblivion.nexusmods.com/mods/38941' ]
+
+  - name: 'Leveling Quick Fix 20.esp'
+    url: [ 'http://oblivion.nexusmods.com/mods/38941' ]
