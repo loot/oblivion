@@ -1,5 +1,8 @@
 # BOSS ignores anything that doesn't come under 'globals' or 'plugins', so a section like this is useful for storing data that gets re-used.
 common:
+  - &OBSE
+    name: '../obse_loader.exe'
+    display: '"http://obse.silverlock.org/ OBSE"'
   - &nehrimCond
     active("Nehrim.esm")
   - &tes4Cond
@@ -6346,35 +6349,32 @@ plugins:
 # ENDGROUP: DLC 2
 # BEGINGROUP: Overhauls
   - name: Fran Armor Add-on.esp
+    req:
+      - Francesco's Leveled Creatures-Items Mod.esm
     msg:
       - type: say
-        content: "Requires: the meshes from 'Bonemold Helmet' and 'Cryos Ordinator Indoril Armor' mods, but not the ESPs."
-      - type: say
-        content: "Requires: Francesco's Leveled Creatures-Items 4.5b."
+        content: 'Requires the meshes from ''Bonemold Helmet'' and ''Cryos Ordinator Indoril Armor'' mods, but not the ESPs.'
     tag:
       - Invent
   - name: Fran_Lv30Item_Maltz.esp
-    msg:
-      - type: say
-        content: "Requires: Francesco's Leveled Creatures-Items 4.5b."
+    req:
+      - Francesco's Leveled Creatures-Items Mod.esm
   - name: Francesco's More Wilderness Life.esp
-    msg:
-      - type: error
-        content: Delete. Not compatible with FCOM.
-        condition: *FCOMCond
+    inc:
+      - FCOM_Convergence.esm
   - name: Francesco's Optional Chance of Stronger Enemies.esp
     dirty:
       - crc: 0x4f003db0
-        util: "\"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide TES4Edit\""
+        util: "http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide TES4Edit"
   - name: Francesco's Optional Dungeon Chest Loot.esp
     msg:
       - type: error
-        content: Delete. Already integrated into FCOM, MMM, OOO or other FCOM components.
+        content: 'Delete. Already integrated into FCOM, MMM, OOO or other FCOM components.'
         condition: *FCOMCond
   - name: Francesco's Optional Dungeon Chest Locks.esp
     msg:
       - type: error
-        content: Delete. Already integrated into FCOM, MMM, OOO or other FCOM components.
+        content: 'Delete. Already integrated into FCOM, MMM, OOO or other FCOM components.'
         condition: *FCOMCond
   - name: Francesco's Optional Leveled Guards.esp
     tag:
@@ -6383,32 +6383,30 @@ plugins:
   - name: Francesco's Optional House Chest Loot.esp
     msg:
       - type: error
-        content: Delete. Already integrated into FCOM, MMM, OOO or other FCOM components.
+        content: 'Delete. Already integrated into FCOM, MMM, OOO or other FCOM components.'
         condition: *FCOMCond
   - name: Francesco's Optional New Adventurers.esp
     msg:
       - type: error
-        content: Delete. Already integrated into FCOM, MMM, OOO or other FCOM components.
+        content: 'Delete. Already integrated into FCOM, MMM, OOO or other FCOM components.'
         condition: *FCOMCond
   - name: Francesco's Optional Vendor Tweaks.esp
-    msg:
-      - type: error
-        content: Delete. Not compatible with FCOM.
-        condition: *FCOMCond
+    inc:
+      - FCOM_Convergence.esm
   - name: Francesco's Optional Leveled Quests.esp
     msg:
       - type: error
-        content: Delete. Already integrated into FCOM, MMM, OOO or other FCOM components.
+        content: 'Delete. Already integrated into FCOM, MMM, OOO or other FCOM components.'
         condition: *FCOMCond
   - name: Francesco's Optional Leveled Arena.esp
     msg:
       - type: error
-        content: Delete. Already integrated into FCOM, MMM, OOO or other FCOM components.
+        content: 'Delete. Already integrated into FCOM, MMM, OOO or other FCOM components.'
         condition: *FCOMCond
   - name: Francesco's Optional Files.esp
     msg:
       - type: error
-        content: Should not be used. Delete. Reinstall Fran's and select "Separate Files" when the option is presented.
+        content: 'Should not be used. Delete. Reinstall Fran''s and select "Separate Files" when the option is presented.'
         condition: *FCOMCond
     tag:
       - Delev
@@ -6416,7 +6414,7 @@ plugins:
   - name: Francesco's Optional Files 1.esp
     msg:
       - type: error
-        content: Should not be used. Delete. Reinstall Fran's and select "Separate Files" when the option is presented.
+        content: 'Should not be used. Delete. Reinstall Fran''s and select "Separate Files" when the option is presented.'
         condition: *FCOMCond
     tag:
       - Delev
@@ -6424,7 +6422,7 @@ plugins:
   - name: Francesco's Optional Files 2.esp
     msg:
       - type: error
-        content: Should not be used. Delete. Reinstall Fran's and select "Separate Files" when the option is presented.
+        content: 'Should not be used. Delete. Reinstall Fran''s and select "Separate Files" when the option is presented.'
         condition: *FCOMCond
     tag:
       - Delev
@@ -6432,7 +6430,7 @@ plugins:
   - name: Francesco's Optional Files 3.esp
     msg:
       - type: error
-        content: Should not be used. Delete. Reinstall Fran's and select "Separate Files" when the option is presented.
+        content: 'Should not be used. Delete. Reinstall Fran''s and select "Separate Files" when the option is presented.'
         condition: *FCOMCond
     tag:
       - Delev
@@ -6440,7 +6438,7 @@ plugins:
   - name: Francesco's Optional Files 4.esp
     msg:
       - type: error
-        content: Should not be used. Delete. Reinstall Fran's and select "Separate Files" when the option is presented.
+        content: 'Should not be used. Delete. Reinstall Fran''s and select "Separate Files" when the option is presented.'
         condition: *FCOMCond
     tag:
       - Delev
@@ -6448,7 +6446,7 @@ plugins:
   - name: LuckBasedLootForFrans.esp
     msg:
       - type: error
-        content: Delete. Already integrated into FCOM, MMM, OOO or other FCOM components.
+        content: 'Delete. Already integrated into FCOM, MMM, OOO or other FCOM components.'
         condition: *FCOMCond
   - name: Francesco's Dark Seducer Weapons Patch.esp
     tag:
@@ -6463,98 +6461,102 @@ plugins:
       - Delev
       - Relev
   - name: Fran-Ayleid Coin Add-on.esp
-    msg:
-      - type: say
-        content: Don't use with G&GD, COBL or OOO
+    inc:
+      - Mart's Monster Mod - Diverse Runeskulls Loot G&GD.esp
+      - Cobl Main.esm
+      - Oscuro's_Oblivion_Overhaul.esm
   - name: KDCircletsOOOOptimized - NPC Equip.esp
     msg:
       - type: say
-        content: Has bugs. Use Loot version or a patch or 'FCOM_KDCircletsOOOOptimizedNPCEquip.esp' if using FCOM.
+        content: 'Has bugs. Use Loot version or a patch or ''FCOM_KDCircletsOOOOptimizedNPCEquip.esp'' if using FCOM.'
       - type: say
-        content: Avoid using Potion Belt and KD Circlets at the same time. Character can wear belt or circlet, not both.
+        content: 'Avoid using Potion Belt and KD Circlets at the same time. Character can wear belt or circlet, not both.'
   - name: FCOM_KDCircletsOOOOptimizedNPCEquip.esp
+    req:
+      - KDCircletsOOOOptimized - NPC Equip.esp
     msg:
       - type: say
-        content: "Requires: 'KDCircletsOOOOptimized - NPC Equip'."
-      - type: say
-        content: Avoid using Potion Belt and KD Circlets at the same time. Character can wear belt or circlet, not both.
+        content: 'Avoid using Potion Belt and KD Circlets at the same time. Character can wear belt or circlet, not both.'
   - name: ExnemRuneskulls.esp
     msg:
       - type: say
-        content: Not need if use Mart's Monster Mod - Diverse Runeskulls*.esp
+        content: 'Not needed if using Mart''s Monster Mod - Diverse Runeskulls*.esp'
+        condition: regex("Mart's Monster Mod - Diverse Runeskulls.*\.esp")
   - name: ExnemRuneskulls_ru.esp
     msg:
       - type: say
-        content: Not need if use Mart's Monster Mod - Diverse Runeskulls*.esp
+        content: 'Not need if use Mart''s Monster Mod - Diverse Runeskulls*.esp'
+        condition: regex("Mart's Monster Mod - Diverse Runeskulls.*\.esp")
   - name: FCOM_ExnemRuneskulls.esp
     msg:
       - type: say
-        content: Not need if use Mart's Monster Mod - Diverse Runeskulls*.esp
+        content: 'Not need if use Mart''s Monster Mod - Diverse Runeskulls*.esp'
+        condition: regex("Mart's Monster Mod - Diverse Runeskulls.*\.esp")
   - name: Slof's Oblivion Robe Trader.esp
     tag:
       - Graphics
     dirty:
       - crc: 0x2613c2f9
-        util: "\"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide TES4Edit\""
+        util: '"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide TES4Edit"'
       - crc: 0x9d2961cb
-        util: "\"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide TES4Edit\""
+        util: '"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide TES4Edit"'
   - name: Cobl Main RUS.esp
     dirty:
       - crc: 0x8a79a499
-        util: "\"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide TES4Edit\""
+        util: '"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide TES4Edit"'
   - name: Cobl Glue.esp
     msg:
       - type: say
-        content: If using Cobl 1.72 and a version of FCOM below 0.9.9, also use the FCOM patch 'FCOM_Cobl.esp'. If you are using UFCOM then use "OOO 1.32-Cobl.esp" and "MMM_cobl.esp" instead of 'FCOM_Cobl.esp'.
+        content: 'If using Cobl 1.72 and a version of FCOM below 0.9.9, also use the FCOM patch ''FCOM_Cobl.esp''. If you are using UFCOM then use "OOO 1.32-Cobl.esp" and "MMM_cobl.esp" instead of ''FCOM_Cobl.esp''.'
         condition: *FCOMCond
     dirty:
       - crc: 0x8a79a499
-        util: "\"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide TES4Edit\""
+        util: '"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide TES4Edit"'
         udr: 14
       - crc: 0x9fa7eef9
-        util: "\"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide TES4Edit\""
+        util: '"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide TES4Edit"'
         udr: 14
       - crc: 0xeab63159
-        util: "\"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide TES4Edit\""
+        util: '"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide TES4Edit"'
         udr: 14
       - crc: 0xeab6315a
-        util: "\"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide TES4Edit\""
+        util: '"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide TES4Edit"'
         udr: 14
   - name: OC+COBL Luggage Patch.esp
     msg:
       - type: say
-        content: Outdated. Upgrade to Open Cities Classic or Open Cities Reborn and use the patch for whichever one you choose.
+        content: 'Outdated. Upgrade to Open Cities Classic or Open Cities Reborn and use the patch for whichever one you choose.'
   - name: Cobl Si.esp
-    msg:
-      - type: say
-        content: "Requires: Shivering Isles expansion."
+    req:
+      - DLCShiveringIsles.esp
   - name: FF_Real_Thirst, Cobl.esp
     msg:
       - type: say
-        content: Don't use with vampire mods.
+        content: 'Don''t use with vampire mods.'
   - name: Cobl Tweaks.esp
     msg:
       - type: error
-        content: Delete. Already included in 'FCOM_Cobl.esp' or latest "MMM_Cobl.esp".
+        content: 'Delete. Already included in ''FCOM_Cobl.esp'' or latest ''MMM_Cobl.esp''.'
         condition: *FCOMCond
   - name: COBL-FransCre.esp
+    req:
+      - Francesco's Leveled Creatures-Items Mod.esm
+      - Cobl Main.esm
+    inc:
+      - FCOM_Convergence.esm
     msg:
-      - type: error
-        content: Delete. Not compatible with FCOM.
-        condition: *FCOMCond
       - type: say
-        content: "Requires: COBL and Fran's."
-      - type: say
-        content: Remember to use the SI or no-SI versions as appropriate (same file names).
+        content: 'Remember to use the SI or no-SI versions as appropriate (same file names).'
   - name: COBL-FransNewCre.esp
+    inc:
+      - FCOM_Convergence.esm
+    req:
+      - Cobl Main.esm
+      - Francesco's Leveled Creatures-Items Mod.esm
+      - Francesco's Optional New Items Add-On.esm
     msg:
-      - type: error
-        content: Delete. Not compatible with FCOM.
-        condition: *FCOMCond
       - type: say
-        content: "Requires: COBL and Fran's + Fran's addon."
-      - type: say
-        content: Remember to use the SI or no-SI versions as appropriate (same file names).
+        content: 'Remember to use the SI or no-SI versions as appropriate (same file names).'
   - name: GM-PISC.esp
     msg:
       - type: say
@@ -6562,11 +6564,11 @@ plugins:
   - name: Bob's Armory Oblivion.esp
     dirty:
       - crc: 0xde136af6
-        util: "\"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide TES4Edit\""
+        util: '"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide TES4Edit"'
   - name: Cheat Bob's Armory Oblivion.esp
     dirty:
       - crc: 0x9d227096
-        util: "\"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide TES4Edit\""
+        util: '"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide TES4Edit"'
   - name: FCOM_BobsArmory.esp
     tag:
       - Delev
@@ -6574,22 +6576,22 @@ plugins:
   - name: Loth's Blunt Weapons.esp
     msg:
       - type: error
-        content: Delete. Only use 'Loth's Blunt Weapons For NPCs.esp' and 'FCOM_LothsBluntWeapons.esp'.
+        content: 'Delete. Only use ''Loth''s Blunt Weapons For NPCs.esp'' and ''FCOM_LothsBluntWeapons.esp''.'
         condition: *FCOMCond
   - name: Loth's Blunt Weapons- Mobs.esp
     msg:
       - type: error
-        content: Delete. Only use 'Loth's Blunt Weapons For NPCs.esp' and 'FCOM_LothsBluntWeapons.esp'.
+        content: 'Delete. Only use ''Loth''s Blunt Weapons For NPCs.esp'' and ''FCOM_LothsBluntWeapons.esp''.'
         condition: *FCOMCond
   - name: Oblivion WarCry.esp
     msg:
       - type: error
-        content: Delete. Use 'Oblivion WarCry EV.esp' instead.
+        content: 'German version not compatible with FCOM. Delete & Use ''Oblivion WarCry EV.esp'' instead.'
         condition: *FCOMCond
       - type: say
-        content: German version.
+        content: 'German version.'
       - type: say
-        content: "Contains dirty edits: Do not clean. \"Dirty\" edits are intentional and required for the mod to function."
+        content: 'Do not clean. "Dirty" edits are intentional and required for the mod to function.'
     tag:
       - Actors.ACBS
       - Actors.AIData
@@ -6603,7 +6605,7 @@ plugins:
   - name: Oblivion WarCry EV.esp
     msg:
       - type: say
-        content: "Contains dirty edits: Do not clean. \"Dirty\" edits are intentional and required for the mod to function."
+        content: 'Do not clean. "Dirty" edits are intentional and required for the mod to function.'
     tag:
       - Actors.ACBS
       - Actors.AIData
@@ -6614,26 +6616,24 @@ plugins:
       - Invent
       - Relev
       - Stats
-      - name: -Actors.DeathItem
-        condition: version("Oblivion WarCry EV.esp","1.09",<)
+      - name: '-Actors.DeathItem'
+        condition: 'version("Oblivion WarCry EV.esp","1.09",<)'
   - name: FCOM_WarCry.esp
-    msg:
-      - type: say
-        content: Use either 'FCOM_WarCry.esp' or 'FCOM_WarCryNoSpawn.esp', not both.
+    inc:
+      - FCOM_WarCryNoSpawn.esp
     tag:
       - Delev
       - Relev
       - Stats
   - name: FCOM_WarCryNoSpawn.esp
-    msg:
-      - type: say
-        content: Use either 'FCOM_WarCry.esp' or 'FCOM_WarCryNoSpawn.esp', not both.
+    inc:
+      - FCOM_WarCry.esp
     tag:
       - Stats
   - name: Oscuro's_Oblivion_Overhaul.esp
     msg:
       - type: say
-        content: "Contains dirty edits: Do not clean. \"Dirty\" edits are intentional and required for the mod to function."
+        content: 'Do not clean. "Dirty" edits are intentional and required for the mod to function.'
     tag:
       - Actors.ACBS
       - Actors.AIData
@@ -6651,107 +6651,106 @@ plugins:
       - Relev
       - Scripts
       - Stats
-      - name: -Factions
-        condition: ( file("Mart's Monster Mod for OOO.esm") ) or *FCOMCond
-      - name: -Relations
-        condition: ( file("Mart's Monster Mod for OOO.esm") ) or *FCOMCond
+      - name: '-Factions'
+        condition: 'file("Mart''s Monster Mod for OOO.esm") or file("FCOM_Convergence.esm")'
+      - name: '-Relations'
+        condition: 'file("Mart''s Monster Mod for OOO.esm") or file("FCOM_Convergence.esm")'
   - name: OOO-Armor_Perks_WearRate_Repair.esp
     msg:
       - type: say
-        content: Don't use with the FULL version of OOO, already included.
-        condition: file("Oscuro's_Oblivion_Overhaul.esm")
+        content: 'Don''t use with the FULL version of OOO, already included.'
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: OOO-Birthsigns.esp
     msg:
       - type: say
-        content: Don't use with the FULL version of OOO, already included.
-        condition: file("Oscuro's_Oblivion_Overhaul.esm")
+        content: 'Don''t use with the FULL version of OOO, already included.'
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: OOO-Combat_Skills_Perks_Marksmanship.esp
     msg:
       - type: say
-        content: Don't use with the FULL version of OOO, already included.
-        condition: file("Oscuro's_Oblivion_Overhaul.esm")
+        content: 'Don''t use with the FULL version of OOO, already included.'
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: OOO-DaedricLord_Quests.esp
     msg:
       - type: say
-        content: Don't use with the FULL version of OOO, already included.
-        condition: file("Oscuro's_Oblivion_Overhaul.esm")
+        content: 'Don''t use with the FULL version of OOO, already included.'
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: OOO-DaedraLord_Quests.esp
     msg:
       - type: say
-        content: Don't use with the FULL version of OOO, already included.
-        condition: file("Oscuro's_Oblivion_Overhaul.esm")
+        content: 'Don''t use with the FULL version of OOO, already included.'
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: OOO-Dangerous_traps.esp
     msg:
       - type: say
-        content: Don't use with the FULL version of OOO, already included.
-        condition: file("Oscuro's_Oblivion_Overhaul.esm")
+        content: 'Don''t use with the FULL version of OOO, already included.'
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: OOO-Deadly_Combat.esp
     msg:
       - type: say
-        content: Don't use with the FULL version of OOO, already included.
-        condition: file("Oscuro's_Oblivion_Overhaul.esm")
+        content: 'Don''t use with the FULL version of OOO, already included.'
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: OOO-DLT_Immersion.esp
     msg:
       - type: say
-        content: Don't use with the FULL version of OOO, already included.
-        condition: file("Oscuro's_Oblivion_Overhaul.esm")
+        content: 'Don''t use with the FULL version of OOO, already included.'
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: OOO-Magic_Effects+Enchantments.esp
     msg:
       - type: say
-        content: Don't use with the FULL version of OOO, already included.
-        condition: file("Oscuro's_Oblivion_Overhaul.esm")
+        content: 'Don''t use with the FULL version of OOO, already included.'
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: OOO-Magic_Effects+Spells.esp
     msg:
       - type: say
-        content: Don't use with the FULL version of OOO, already included.
-        condition: file("Oscuro's_Oblivion_Overhaul.esm")
+        content: 'Don''t use with the FULL version of OOO, already included.'
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: OOO-Magic_Game_Settings.esp
     msg:
       - type: say
-        content: Don't use with the FULL version of OOO, already included.
-        condition: file("Oscuro's_Oblivion_Overhaul.esm")
+        content: 'Don''t use with the FULL version of OOO, already included.'
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: OOO-Potions.esp
     msg:
       - type: say
-        content: Don't use with the FULL version of OOO, already included.
-        condition: file("Oscuro's_Oblivion_Overhaul.esm")
+        content: 'Don''t use with the FULL version of OOO, already included.'
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: OOO-Thief_Guild_Difficult.esp
     msg:
       - type: say
-        content: Don't use with the FULL version of OOO, already included.
-        condition: file("Oscuro's_Oblivion_Overhaul.esm")
+        content: 'Don''t use with the FULL version of OOO, already included.'
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: OOO-ThiefGuild_Difficult.esp
     msg:
       - type: say
-        content: Don't use with the FULL version of OOO, already included.
-        condition: file("Oscuro's_Oblivion_Overhaul.esm")
+        content: 'Don''t use with the FULL version of OOO, already included.'
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: OOO-Ayleid Coin Add-on.esp
     msg:
       - type: error
         content: Delete. Update to latest version of OOO.
-        condition: *FCOMCond
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm") or file("FCOM_Convergence.esm")'
   - name: OOO132RC3Hotfixes.esp
     msg:
       - type: error
         content: Delete. Update to latest version of OOO.
-        condition: *FCOMCond
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm") or file("FCOM_Convergence.esm")'
   - name: OOO132RC3MapMarkers.esp
     msg:
       - type: error
         content: Delete. Update to latest version of OOO.
-        condition: *FCOMCond
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm") or file("FCOM_Convergence.esm")'
   - name: OOO-LightOfDawnFlamesWhenDrawnOBSE.esp
-    msg:
-      - type: say
-        content: Use only one LightOfDawn plugin.
+    inc:
+      - OOO-LightOfDawnAlwaysFlames.esp
   - name: OOO-LightOfDawnAlwaysFlames.esp
-    msg:
-      - type: say
-        content: Use only one LightOfDawn plugin.
+    inc:
+      - OOO-LightOfDawnFlamesWhenDrawnOBSE.esp
   - name: MrSiikaRabbitsforOOO.esp
     msg:
-      - type: say
-        content: "Incompatible with: MMMforOOO/FCOM. Already integrated."
+      - type: error
+        content: "Incompatible with MMMforOOO/FCOM. Already integrated."
+        condition: 'file("Mart''s Monster Mod for OOO.esp") or file("FCOM_Convergence.esm")'
   - name: OMOBS_OOO_missing_Oblivion_Bow_Ammo.esp
     tag:
       - Stats
@@ -6803,11 +6802,11 @@ plugins:
       - Stats
     dirty:
       - crc: 0x397cb5dd
-        util: "\"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide TES4Edit\""
+        util: '"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide TES4Edit"'
   - name: Hemingweys Capes Improved Merchants.esp
     dirty:
       - crc: 0xfd2bf13d
-        util: "\"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide TES4Edit\""
+        util: '"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide TES4Edit"'
   - name: Hemingweys FCOM Boss Chest Cape Loot.esp
     tag:
       - Invent
@@ -6933,19 +6932,18 @@ plugins:
       - NoMerge
       - Stats
   - name: OMOBS_Optionial Combat Settings.esp
+    inc:
+      - Oscuro's_Oblivion_Overhaul.esm
+      - FCOM_Convergence.esm
     msg:
       - type: say
-        content: Upgrade to latest version.
-      - type: say
-        content: Do not use with OOO or FCOM.
+        content: 'Upgrade to latest version.'
   - name: OMOBS Optional Combat Settings.esp
-    msg:
-      - type: say
-        content: Do not use with OOO or FCOM.
+    inc:
+      - Oscuro's_Oblivion_Overhaul.esm
+      - FCOM_Convergence.esm
   - name: mg19obsefix.esp
-    msg:
-      - type: say
-        content: "Requires: OBSE"
+    req: [ *OBSE ]
   - name: OOO-Better_Priced_Clutter.esp
     tag:
       - Stats
@@ -6959,44 +6957,42 @@ plugins:
   - name: ArmamentariumLL.esp
     msg:
       - type: say
-        content: For non-OOO users. Remove this and use 'ArmamentariumLL4OOO.esp'.
-        condition: file("Oscuro's_Oblivion_Overhaul.esm")
+        content: 'Not for OOO. Remove this and use ''ArmamentariumLL4OOO.esp'' instead.'
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: C&C&EQR - OOO.esp
     msg:
       - type: say
-        content: Obsolete. Update to latest version.
+        content: 'Obsolete. Update to latest version.'
   - name: ArmamentariumLLVendors.esp
     msg:
       - type: say
-        content: Can be used with either 'ArmamentariumLL.esp' or 'ArmamentariumLL4OOO.esp'.
+        content: 'Can be used with either ''ArmamentariumLL.esp'' or ''ArmamentariumLL4OOO.esp''.'
   - name: ArmamentariumArtifacts.esp
     msg:
       - type: say
-        content: "Contains dirty edits: Do not clean. \"Dirty\" edits are intentional and required for the mod to function."
+        content: 'Do not clean. "Dirty" edits are intentional and required for the mod to function.'
   - name: ArmamentariumLLArmaVendor.esp
-    msg:
-      - type: say
-        content: Do not use with ArmamentariumLL4OOO.esp or ArmamentariumLLVendors.esp
+    inc:
+      - ArmamentariumLL4OOO.esp
+      - ArmamentariumLLVendors.esp
   - name: Better Hunting for OOO.esp
     tag:
       - Stats
   - name: John's Leveled List Overhaul.esp
     dirty:
       - crc: 0x1347a16b
-        util: "\"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide TES4Edit\""
+        util: '"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide TES4Edit"'
         udr: 6
   - name: John's Leveled List Overhaul - Vanilla Armours.esp
-    msg:
-      - type: say
-        content: Don't use with John's Leveled List Overhaul - Vanilla Complete.esp)
+    inc:
+      - John's Leveled List Overhaul - Vanilla Complete.esp
   - name: John's Leveled List Overhaul - Vanilla Weapons.esp
-    msg:
-      - type: say
-        content: Don't use with John's Leveled List Overhaul - Vanilla Complete.esp)
+    inc:
+      - John's Leveled List Overhaul - Vanilla Complete.esp
   - name: John's Leveled List Overhaul - Vanilla Complete.esp
-    msg:
-      - type: say
-        content: Dont use with either John's Leveled List Overhaul - Vanilla Weapons.esp or John's Leveled List Overhaul - Vanilla Armours.esp)
+    inc:
+      - John's Leveled List Overhaul - Vanilla Armours.esp
+      - John's Leveled List Overhaul - Vanilla Weapons.esp
   - name: John's Leveled List Overhaul for OOO.esp
     tag:
       - Delev
@@ -7004,128 +7000,130 @@ plugins:
   - name: John's Leveled List Overhaul - Bandits in Glass Begone.esp
     msg:
       - type: say
-        content: Remove this. Do not use with OOO/FCOM.
-        condition: file("Oscuro's_Oblivion_Overhaul.esm")
+        content: 'Remove this. Do not use with OOO/FCOM.'
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm") or file("FCOM_Convergence.esm")'
   - name: OOO 1.32-Cobl.esp
     tag:
       - Delev
       - Invent
     dirty:
       - crc: 0x10e32f6b
-        util: "\"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide TES4Edit\""
+        util: '"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide TES4Edit"'
   - name: FCOM_Cobl.esp
     msg:
+      - type: error
+        content: 'Do not use COBL and Tamerielic Ingredients at the same time.'
+        condition: 'regex("Tamerielic Ingredients.*\.es[mp]")'
       - type: say
-        content: Do not use COBL and Tamerielic Ingredients at the same time.
-      - type: say
-        content: Do not use with latest MMM/FCOM/COBL - superseded by MMM_Cobl.esp
+        content: 'Do not use with latest MMM/FCOM/COBL - superseded by MMM_Cobl.esp'
     tag:
       - Delev
       - Relev
   - name: Harvest[Containers].esp
     msg:
       - type: say
-        content: Included in OOO. Remove unless you want to lose OOO's container traps, security rebalance and lock bashing features (so you can use other mods for those).
-        condition: file("Oscuro's_Oblivion_Overhaul.esm")
+        content: 'Included in OOO. Remove unless you want to lose OOO''s container traps, security rebalance and lock bashing features (so you can use other mods for those).'
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: Harvest[Containers] - Vanilla.esp
     msg:
       - type: say
-        content: Included in OOO. Remove unless you want to lose OOO's container traps, security rebalance and lock bashing features (so you can use other mods for those).
-        condition: file("Oscuro's_Oblivion_Overhaul.esm")
+        content: 'Included in OOO. Remove unless you want to lose OOO''s container traps, security rebalance and lock bashing features (so you can use other mods for those).'
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
     dirty:
       - crc: 0xd7e2759e
-        util: "\"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide TES4Edit\""
+        util: '"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide TES4Edit"'
   - name: Harvest[Containers] - Player Home Add-on.esp
     msg:
       - type: say
-        content: Included in OOO. Remove unless you want to lose OOO's container traps, security rebalance and lock bashing features (so you can use other mods for those).
-        condition: file("Oscuro's_Oblivion_Overhaul.esm")
+        content: 'Included in OOO. Remove unless you want to lose OOO''s container traps, security rebalance and lock bashing features (so you can use other mods for those).'
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: DEJ Harvest - Containers [Combo] v0.99.08.esp
     msg:
       - type: say
-        content: Obsolete. Remove this and update to the latest version of Harvest[Containers].
+        content: 'Obsolete. Remove this and update to the latest version of Harvest[Containers].'
   - name: Harvest[Containers] - Flat-Top Barrels Add-on.esp
     msg:
       - type: say
-        content: Included in OOO. Remove unless you want to lose OOO's container traps, security rebalance and lock bashing features (so you can use other mods for those).
-        condition: file("Oscuro's_Oblivion_Overhaul.esm")
+        content: 'Included in OOO. Remove unless you want to lose OOO''s container traps, security rebalance and lock bashing features (so you can use other mods for those).'
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: Harvest[Containers] - Havok Crates Add-on.esp
     msg:
       - type: say
-        content: Included in OOO. Remove unless you want to lose OOO's container traps, security rebalance and lock bashing features (so you can use other mods for those).
-        condition: file("Oscuro's_Oblivion_Overhaul.esm")
+        content: 'Included in OOO. Remove unless you want to lose OOO''s container traps, security rebalance and lock bashing features (so you can use other mods for those).'
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: Hemingweys NPC Capes for OOO and FCOM.esp
     msg:
       - type: say
-        content: Obselete if using MMM or FCOM. Update to latest version and use 'Mart's Monster Mod - Hemingweys NPC and Guard Capes.esp' instead.
+        content: 'Obselete if using MMM or FCOM. Update to latest version and use ''Mart''s Monster Mod - Hemingweys NPC and Guard Capes.esp'' instead.'
+        condition: 'file("Mart''s Monster Mod.esm") or file("FCOM_Convergence.esm")'
       - type: say
-        content: If you are running only OOO, but not MMM or FCOM, keep this installed.
-        condition: file("Oscuro's_Oblivion_Overhaul.esm")
+        content: 'If you are running only OOO, but not MMM or FCOM, keep this installed.'
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: MTCDirtierBandits.esp
     tag:
       - Invent
     dirty:
       - crc: 0x2ab190d0
-        util: "\"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide TES4Edit\""
+        util: '"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide TES4Edit"'
         udr: 10
   - name: FranOOOMMM_FranItemLists.esp
     msg:
       - type: say
-        content: Obsolete. Remove this and install FCOM.
+        content: 'Obsolete. Remove this and install FCOM.'
   - name: FranOOOMMM_SpawnMerge.esp
     msg:
       - type: say
-        content: Obsolete. Remove this and install FCOM.
+        content: 'Obsolete. Remove this and install FCOM.'
   - name: FranOOOMMM_GuardFix.esp
     msg:
       - type: say
-        content: Obsolete. Remove this and install FCOM.
+        content: 'Obsolete. Remove this and install FCOM.'
   - name: FranOOOMMM_OOOItemLists.esp
     msg:
       - type: say
-        content: Obsolete. Remove this and install FCOM.
+        content: 'Obsolete. Remove this and install FCOM.'
   - name: FranOOOMMM_WarCry_BobsArmory.esp
     msg:
       - type: say
-        content: Obsolete. Remove this and install FCOM.
+        content: 'Obsolete. Remove this and install FCOM.'
   - name: Mart's Monster Mod - Diverse NPC faces nv.esp
     msg:
       - type: say
-        content: Obsolete. Remove this and install FCOM.
+        content: 'Obsolete. Remove this and install FCOM.'
   - name: Mart's Monster Mod for Fran's nvCNPC.esp
     msg:
       - type: say
-        content: Obsolete. Remove this and install FCOM.
+        content: 'Obsolete. Remove this and install FCOM.'
   - name: Mart's Monster Mod for Fran's nvNPC.esp
     msg:
       - type: say
-        content: Obsolete. Remove this and install FCOM.
+        content: 'Obsolete. Remove this and install FCOM.'
   - name: Oscuro's Combat Behavior.esp
     msg:
       - type: say
-        content: Obsolete. Remove this and install FCOM.
+        content: 'Obsolete. Remove this and install FCOM.'
   - name: Mart's Monster Mod for FCOM.esp
     msg:
-      - type: error
-        content: Outdated. Install FCOM version 1.0 or later.
+      - type: say
+        content: 'Outdated. Install FCOM version 1.0 or later.'
         condition: *FCOMCond
   - name: Mart's Monster Mod - Fran's Leveled Quests.esp
     msg:
       - type: error
-        content: Delete. Already integrated into FCOM.
+        content: 'Delete. Already integrated into FCOM.'
   - name: Mart's Monster Mod - Additional Enemy NPC Vars.esp
     msg:
       - type: say
-        content: Can increase the chances of a CTD in a heavily modded game due to increased processor load.
+        content: 'Can increase the chances of a CTD in a heavily modded game due to increased processor load.'
       - type: say
-        content: "Contains dirty edits: Do not clean. \"Dirty\" edits are intentional and required for the mod to function."
+        content: 'Do not clean. "Dirty" edits are intentional and required for the mod to function.'
   - name: FCOM_Convergence.esp
     msg:
       - type: error
-        content: FCOM_Convergence.esm is missing. Re-install FCOM.
-        condition: not *FCOMCond
+        content: 'FCOM_Convergence.esm is missing. Re-install FCOM.'
+        condition: 'not file("FCOM_Convergence.esm")'
       - type: say
-        content: "Contains dirty edits: Do not clean. \"Dirty\" edits are intentional and required for the mod to function."
+        content: 'Do not clean. "Dirty" edits are intentional and required for the mod to function.'
     tag:
       - Actors.ACBS
       - Actors.AIData
