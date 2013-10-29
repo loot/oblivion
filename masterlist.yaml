@@ -7129,39 +7129,40 @@ plugins:
   - name: FCOM_ConvergenceNoFran.esp
     msg:
       - type: error
-        content: Outdated. Install FCOM version 0.9.9 or later.
+        content: 'Outdated. Install FCOM version 0.9.9 or later.'
         condition: *FCOMCond
       - type: error
-        content: FCOM_Convergence.esm is missing. Re-install FCOM.
-        condition: not *FCOMCond
+        content: 'FCOM_Convergence.esm is missing. Re-install FCOM.'
+        condition: 'not file("FCOM_Convergence.esm")'
   - name: FCOM_OscurosOverhaul.esp
     msg:
       - type: say
-        content: Only use when not using MMM.
+        content: 'Only use when not using MMM.'
         condition: *FCOMCond
       - type: error
-        content: FCOM_Convergence.esm is missing. Re-install FCOM.
+        content: 'FCOM_Convergence.esm is missing. Re-install FCOM.'
         condition: not *FCOMCond
   - name: Choices and Consequences - MMM.esp
     msg:
       - type: say
-        content: Obsolete. Remove this and update to latest version.
+        content: 'Obsolete. Remove this and update to latest version.'
   - name: C&C&EQR - MMM.esp
     msg:
       - type: say
-        content: Obsolete. Remove this and update to latest version.
+        content: 'Obsolete. Remove this and update to latest version.'
   - name: Mart's Monster Mod - Blood Fix v3.esp
     msg:
       - type: say
-        content: Not needed in MMM 3.6beta3+. Already integrated.
+        content: 'Not needed in MMM 3.6beta3+. Already integrated.'
   - name: MMM - UberhulkParalyzeFix.esp
     msg:
       - type: say
-        content: Not needed in MMM 3.6beta3+. Already integrated.
+        content: 'Not needed in MMM 3.6beta3+. Already integrated.'
   - name: Mart's Monster Mod - Diverse Runeskulls.esp
     msg:
       - type: say
-        content: Replaces both 'FCOM_ExnemRuneskulls.esp' and 'ExnemRuneskulls.esp'.
+        content: 'Replaces both ''FCOM_ExnemRuneskulls.esp'' and ''ExnemRuneskulls.esp''.'
+        condition: 'file("FCOM_ExnemRuneskulls.esp") or file("ExnemRuneskulls.esp")'
     tag:
       - Delev
       - Relev
