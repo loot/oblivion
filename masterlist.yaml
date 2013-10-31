@@ -314,10 +314,9 @@ plugins:
       - Scripts
     priority: -2
   - name: Book Jackets Oblivion - SSBFL.esp
+    inc:
+      - Skillbookssave.esp
     msg:
-      - type: error
-        content: Incompatible with Save Skill Books for Later, as it is included in this plugin.
-        condition: file("Skillbookssave.esp")
       - type: say
         content: If not using Wrye Bash load this later (though then it will override some things).
     tag:
@@ -325,10 +324,9 @@ plugins:
       - Scripts
     priority: -2
   - name: Book Jackets Oblivion - BP - SSBFL.esp
+    inc:
+      - Skillbookssave.esp
     msg:
-      - type: error
-        content: Incompatible with Save Skill Books for Later, as it is included in this plugin.
-        condition: file("Skillbookssave.esp")
       - type: say
         content: If not using Wrye Bash load this later (though then it will override some things).
     tag:
