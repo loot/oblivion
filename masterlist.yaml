@@ -1072,6 +1072,7 @@ plugins:
       - crc: 0xdaf51407
         util: *dirtyUtil
 # BEGINGROUP: UOP
+# The patches need to load after DLCShiveringIsles.esp explicitly, to prevent the Russain GOTY version of the ESP from overwriting fixes.
   - name: Unofficial Oblivion Patch.esp
     after:
       - DLCShiveringIsles.esp
@@ -1167,9 +1168,8 @@ plugins:
 # ENDGROUP: UOP
 # BEGINGROUP: Post UOP fixes
   - name: Finger of the Mountain Fix.esp
-    msg:
-      - type: say
-        content: Obsolete. Included in the UOP.
+    inc:
+      - Unofficial Oblivion Patch.esp
   - name: Primate Rank Fix.esp
     tag:
       - Factions
@@ -1179,7 +1179,7 @@ plugins:
         content: Make sure you have version 1.1 or higher.
   - name: Permanent Effects from Quest Items fix Merge.esp
     msg:
-      - type: say
+      - type: error
         content: Outdated. Update to newest version of Permanent Effects from Quest Items fix.
 # ENDGROUP: Post UOP fixes
 # BEGINGROUP: Non-English Language fixes
@@ -1195,7 +1195,7 @@ plugins:
       - Stats
   - name: Oblivion_Deutsch_v3_2_1.esp
     msg:
-      - type: say
+      - type: error
         content: Old, update to latest version (V5+).
   - name: Oblivion_Deutsch_v5_0.esp
     tag:
@@ -1206,13 +1206,11 @@ plugins:
     tag:
       - Names
   - name: FormIDReferenceBugFix.esp
-    msg:
-      - type: say
-        content: Outdated. Included in Unofficial Shivering Isles Patch 1.4+
+    inc:
+      - Unofficial Shivering Isles Patch.esp
   - name: FormID_Reference_Bug_Fix.esp
-    msg:
-      - type: say
-        content: Outdated. Included in Unofficial Shivering Isles Patch 1.4+
+    inc:
+      - Unofficial Shivering Isles Patch.esp
   - name: tes4SI-CHS-alpha.esp
     tag:
       - Names
@@ -1224,6 +1222,7 @@ plugins:
     msg:
       - type: say
         content: "Use Standalone MOBS if using Frans or OMOBS if using FCOM/OOO. Both versions can be found here: \"http://oblivion.nexusmods.com/mods/28537\""
+        condition: file("FCOM_Convergence.esm") or file("Oscuro's_Oblivion_Overhaul.esm") or file("Francesco's Leveled Creatures-Items Mod.esm")
     tag:
       - Actors.ACBS
       - Actors.AIData
@@ -1266,35 +1265,35 @@ plugins:
       - Stats
   - name: USIPCutterFix.esp
     msg:
-      - type: say
+      - type: error
         content: Outdated. Included in Unofficial Shivering Isles Patch 1.5.1+
   - name: FIX_Unofficial Shivering Isles Patch_1.4_MOBS_FCOM.esp
     msg:
-      - type: say
+      - type: error
         content: Outdated. When using Francesco's and/or FCOM, use the non-MOBS version of this patch and the standalone MOBS/OMOBS mods.
   - name: Unofficial_Shivering_Isles_Patch_10MOBS.esp
     msg:
-      - type: say
+      - type: error
         content: Outdated. When using Francesco's and/or FCOM, use the non-MOBS version of this patch and the standalone MOBS/OMOBS mods.
   - name: Unofficial Shivering Isles Patch 10MOBS.esp
     msg:
-      - type: say
+      - type: error
         content: Outdated. When using Francesco's and/or FCOM, use the non-MOBS version of this patch and the standalone MOBS/OMOBS mods.
   - name: Unofficial Shivering Isles Patch MOBS.esp
     msg:
-      - type: say
+      - type: error
         content: Outdated. When using Francesco's and/or FCOM, use the non-MOBS version of this patch and the standalone MOBS/OMOBS mods.
   - name: Unofficial_Shivering_Isles_Patch_MOBS.esp
     msg:
-      - type: say
+      - type: error
         content: Outdated. When using Francesco's and/or FCOM, use the non-MOBS version of this patch and the standalone MOBS/OMOBS mods.
   - name: Unofficial Shivering Isles Patch-MOBS.esp
     msg:
-      - type: say
+      - type: error
         content: Outdated. When using Francesco's and/or FCOM, use the non-MOBS version of this patch and the standalone MOBS/OMOBS mods.
   - name: Unofficial Shivering Isles Patch-MOBS-FCOM.esp
     msg:
-      - type: say
+      - type: error
         content: Outdated. When using Francesco's and/or FCOM, use the non-MOBS version of this patch and the standalone MOBS/OMOBS mods.
   - name: S.I.C.A.F.U.I.S.v1.2.esp
     tag:
@@ -1303,10 +1302,15 @@ plugins:
       - Invent
       - Stats
   - name: SM Plugin Refurbish - SI.esp
-    msg:
-      - type: say
-        content: "Incompatible with: 'CDM-CGO Compatibility plugins'."
-      - *doNotClean
+    inc:
+      - CDM-CGO Horse Armor Compatability.esp
+      - CDM-CGO Orrery Compatibility.esp
+      - CDM-CGO Thieves Den Compatibility.esp
+      - CDM-CGO Vile Lair Compatibility.esp
+      - CDM-CGO Battlehorn Compatibility.esp
+      - CDM-CGO Shivering Isles Compatibility.esp
+      - CDM-CGO Frostcrag Compatibility.esp
+    msg: | *doNotClean |
   - name: SI Public Music.esp
     tag:
       - C.Music
@@ -1319,9 +1323,8 @@ plugins:
       - Actors.Anims
       - NoMerge
   - name: MOBS.esp
-    msg:
-      - type: say
-        content: Not needed if you use MOBS SI.esp
+    inc:
+      - MOBS SI.esp
     tag:
       - NoMerge
       - Stats
@@ -1330,13 +1333,13 @@ plugins:
       - NoMerge
       - Stats
   - name: MOBS Optional Combat Settings.esp
-    msg:
-      - type: say
-        content: Do not use with Frans or FCOM.
+    inc:
+      - Francesco's Leveled Creatures-Items Mod.esm
+      - FCOM_Convergence.esm
   - name: MOBS SI Optional Combat Settings.esp
-    msg:
-      - type: say
-        content: Do not use with Frans or FCOM.
+    inc:
+      - Francesco's Leveled Creatures-Items Mod.esm
+      - FCOM_Convergence.esm
   - name: xeoexpeople.esp
     msg:
       - type: say
