@@ -83,15 +83,11 @@ plugins:
         content: This needs to load directly after Oblivion.esm to avoid landscape issues caused by a failure by the mod author to use TES4Gecko's "Move Worldspaces" function.
         priority: -3
   - name: Silgrad_Tower.esm
-    msg:
-      - type: error
-        content: You can only use one of Silgrad_Tower.esm or Silgrad_Tower_T.esm, not both.
-        condition: file("Silgrad_Tower_T.esm")
+    inc:
+      - Silgrad_Tower_T.esm
   - name: Silgrad_Tower_T.esm
-    msg:
-      - type: error
-        content: You can only use one of Silgrad_Tower.esm or Silgrad_Tower_T.esm, not both.
-        condition: file("Silgrad_Tower.esm")
+    inc:
+      - Silgrad_Tower.esm
   - name: Beautiful People 2ch-Ed.esm
     tag:
       - Eyes
@@ -134,10 +130,8 @@ plugins:
       - crc: 0xdfd4fb97
         util: *dirtyUtil
   - name: Francesco's Optional New Creatures Add-On.esm
-    msg:
-      - type: error
-        content: Delete. Not compatible with FCOM. Already integrated into FCOM.
-        condition: *FCOMCond
+    inc:
+      - FCOM_Convergence.esm
     tag:
       - Actors.AIPackages
       - Delev
@@ -147,22 +141,16 @@ plugins:
       - Relev
       - Scripts
   - name: Crafting Skill Engine.esm
-    msg:
-      - type: error
-        content: Delete. Included in Retros Fletching and Imbueing 1.7.1_rus.esp
-        condition: file("Retros Fletching and Imbueing 1.7.1_rus.esp")
+    inc:
+      - Retros Fletching and Imbueing 1.7.1_rus.esp
   - name: HorseCombatMaster.esm
     msg: [ *masterReassign ]
   - name: Tamrielic Ingredients.esm
-    msg:
-      - type: error
-        content: Do not use Tamrielic Ingredients and COBL at the same time.
-        condition: *coblCond
+    inc:
+      - Cobl Main.esm
   - name: Cobl Main.esm
-    msg:
-      - type: error
-        content: Do not use Tamrielic Ingredients and COBL at the same time.
-        condition: file("Tamrielic Ingredients.esm")
+    inc:
+      - Tamrielic Ingredients.esm
   - name: Item interchange.esm
     msg:
       - type: error
@@ -175,10 +163,8 @@ plugins:
       - type: error
         content: Obsolete. Update to 'Harvest [Flora]' v3.0.1+.
   - name: Tamriel's Glittering Geology.esm
-    msg:
-      - type: error
-        content: Not compatible with OOO. Already included in OOO.
-        condition: file("Oscuro's_Oblivion_Overhaul.esm")
+    inc:
+      - Oscuro's_Oblivion_Overhaul.esm
   - name: Oscuro's_Oblivion_Overhaul.esm
     msg: [ *doNotClean ]
     tag:
@@ -206,19 +192,19 @@ plugins:
       - Scripts
       - Stats
   - name: Mart's Monster Mod for OOO.esm
-    msg:
-      - type: error
-        content: Delete. Not compatible with FCOM.
-        condition: *FCOMCond
+    inc:
+      - FCOM_Convergence.esm
     tag:
       - Delev
       - Factions
       - Relations
       - Relev
   - name: Waalx Animals & Creatures.esm
-    msg:
-      - type: say
-        content: Incompatible with other overhaul mods.
+    inc:
+      - FCOM_Convergence.esm
+      - Oscuro's_Oblivion_Overhaul.esm
+      - Francesco's Leveled Creatures-Items Mod.esm
+      - Mart's Monster Mod.esm
   - name: FCOM_Convergence.esm
     tag:
       - Delev
@@ -245,18 +231,17 @@ plugins:
         content: Use Wrye Bash Bashed Patch tweak instead.
         condition: regex("Bashed Patch.*\.esp")
   - name: TLS Modded Mannequins.esm
-    msg:
-      - type: error
-        content: Incompatible with Reznod's Mannequins.
-        condition: file("Reznod_Mannequin.esp")
+    inc:
+      - Reznod_Mannequin.esp
   - name: DKImperials.esm
     tag:
       - Eyes
       - Hair
   - name: Minotaur Race.esm
-    msg:
-      - type: say
-        content: "Requires: OBSE v18+, Race Repository"
+    req:
+      - *OBSE
+      - name: 'Race Repository.esm'
+        display: '"http://oblivion.nexusmods.com/mods/31821 Playable and NPC Creatures (only Race Repository.esm)"'
     dirty:
       - crc: 0x477340c8
         util: *dirtyUtil
@@ -282,17 +267,16 @@ plugins:
       - NpcFaces
       - R.Relations
   - name: SPTDiverseGuards-Resources.esm
-    msg:
-      - type: say
-        content: Probably not compatible with OOO. Untested.
-        condition: file("Oscuro's_Oblivion_Overhaul.esm")
+    inc:
+      - Oscuro's_Oblivion_Overhaul.esm
   - name: John's Leveled List Overhaul.esm
     tag:
       - Graphics
   - name: Diverse Magic Effects Resource.esm
-    msg:
-      - type: say
-        content: "Requires: OBSE 19+, OBME 1+."
+    req:
+      - *OBSE
+      - name: 'OBSE\Plugins\OBME.dll'
+        display: 'http://oblivion.nexusmods.com/mods/31981 Oblivion Magic Extender'
 # ENDGROUP: ESMs
 # BEGINGROUP: Earliest mods
 #
