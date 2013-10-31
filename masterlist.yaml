@@ -1078,6 +1078,7 @@ plugins:
     msg:
       - type: say
         content: "Use Standalone MOBS if using Frans or OMOBS if using FCOM/OOO. Both versions can be found here: \"http://oblivion.nexusmods.com/mods/28537\""
+        condition: file("FCOM_Convergence.esm") or file("Oscuro's_Oblivion_Overhaul.esm") or file("Francesco's Leveled Creatures-Items Mod.esm")
       - *doNotClean
     tag:
       - Actors.ACBS
@@ -1101,8 +1102,9 @@ plugins:
       - Relev
       - Scripts
       - Stats
-      - "-C.Water"
   - name: Unofficial Oblivion Patch DV.esp
+    after:
+      - DLCShiveringIsles.esp
     tag:
       - Actors.ACBS
       - Actors.AIData
@@ -1125,8 +1127,12 @@ plugins:
       - Relev
       - Scripts
       - Stats
-      - "-C.Water"
   - name: Unofficial Oblivion Patch-mobs.esp
+    after:
+      - DLCShiveringIsles.esp
+    msg:
+        type: error
+        content: "Remove and use regular MOBS/OMOBS instead, using Bash Patch to merge."
     tag:
       - Actors.ACBS
       - Actors.AIData
