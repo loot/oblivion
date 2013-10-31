@@ -1,12 +1,19 @@
 # BOSS ignores anything that doesn't come under 'globals' or 'plugins', so a section like this is useful for storing data that gets re-used.
 common:
+# Files
   - &OBSE
     name: '../obse_loader.exe'
     display: '"http://obse.silverlock.org/ OBSE"'
+# Conditions
   - &nehrimCond
     active("Nehrim.esm")
   - &tes4Cond
     active("Oblivion.esm")
+  - &FCOMCond
+    active("FCOM_Convergence.esm")
+  - &coblCond
+    active("Cobl Main.esm")
+# Messages
   - &masterReassign
     type: say
     content: The Oblivion.esm master must be reassigned to "Nehrim.esm".
@@ -15,10 +22,7 @@ common:
     type: error
     content: Use the Nehrim version instead.
     condition: *nehrimCond
-  - &FCOMCond
-    active("FCOM_Convergence.esm")
-  - &coblCond
-    active("Cobl Main.esm")
+# Other Strings
   - &dirtyUtil
     '"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide TES4Edit"'
     
