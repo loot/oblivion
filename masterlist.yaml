@@ -22,6 +22,9 @@ common:
     type: error
     content: Use the Nehrim version instead.
     condition: *nehrimCond
+  - &doNotClean
+    type: say
+    content: 'Do not clean ITM records, they are intentional and required for the mod to function.'
 # Other Strings
   - &dirtyUtil
     '"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide TES4Edit"'
@@ -177,9 +180,7 @@ plugins:
         content: Not compatible with OOO. Already included in OOO.
         condition: file("Oscuro's_Oblivion_Overhaul.esm")
   - name: Oscuro's_Oblivion_Overhaul.esm
-    msg:
-      - type: say
-        content: "Contains dirty edits: Do not clean. \"Dirty\" edits are intentional and required for the mod to function."
+    msg: [ *doNotClean ]
     tag:
       - Actors.Spells
       - Graphics
@@ -1111,9 +1112,7 @@ plugins:
     msg:
       - type: say
         content: "Use Standalone MOBS if using Frans or OMOBS if using FCOM/OOO. Both versions can be found here: \"http://oblivion.nexusmods.com/mods/28537\""
-      - type: say
-        content: "Contains dirty edits: Do not clean. \"Dirty\" edits are intentional and required for the mod to function."
-        condition: checksum("Unofficial Oblivion Patch.esp",64BCA292)
+      - *doNotClean
     tag:
       - Actors.ACBS
       - Actors.AIData
@@ -1335,8 +1334,7 @@ plugins:
     msg:
       - type: say
         content: "Incompatible with: 'CDM-CGO Compatibility plugins'."
-      - type: say
-        content: "Contains dirty edits: Do not clean. \"Dirty\" edits are intentional and required for the mod to function."
+      - *doNotClean
   - name: SI Public Music.esp
     tag:
       - C.Music
@@ -3021,9 +3019,7 @@ plugins:
     tag:
       - Graphics
   - name: personality_idles4.esp
-    msg:
-      - type: say
-        content: "Contains dirty edits: Do not clean. \"Dirty\" edits are intentional and required for the mod to function."
+    msg: [ *doNotClean ]
   - name: Personality Idles 4 - Cleanned version.esp
     msg:
       - type: say
@@ -3032,31 +3028,19 @@ plugins:
       - Actors.Anims
       - NoMerge
   - name: Personality Idles - Modified version.esp
-    msg:
-      - type: say
-        content: "Contains dirty edits: Do not clean. \"Dirty\" edits are intentional and required for the mod to function."
+    msg: [ *doNotClean ]
     tag:
       - Actors.Anims
   - name: personality_idles4_C.esp
-    msg:
-      - type: say
-        content: "Contains dirty edits: Do not clean. \"Dirty\" edits are intentional and required for the mod to function."
+    msg: [ *doNotClean ]
   - name: personality_idles4_nnpc_C.esp
-    msg:
-      - type: say
-        content: "Contains dirty edits: Do not clean. \"Dirty\" edits are intentional and required for the mod to function."
+    msg: [ *doNotClean ]
   - name: personality_idles4_nnpc.esp
-    msg:
-      - type: say
-        content: "Contains dirty edits: Do not clean. \"Dirty\" edits are intentional and required for the mod to function."
+    msg: [ *doNotClean ]
   - name: personality_idles4_nopc.esp
-    msg:
-      - type: say
-        content: "Contains dirty edits: Do not clean. \"Dirty\" edits are intentional and required for the mod to function."
+    msg: [ *doNotClean ]
   - name: personality_idles_custom.esp
-    msg:
-      - type: say
-        content: "Contains dirty edits: Do not clean. \"Dirty\" edits are intentional and required for the mod to function."
+    msg: [ *doNotClean ]
   - name: P1DseeYouSleep.esp
     dirty:
       - crc: 0x41c990c4
@@ -3856,8 +3840,7 @@ plugins:
     msg:
       - type: say
         content: "Incompatible with: 'CDM-CGO Compatibility plugins'."
-      - type: say
-        content: "Contains dirty edits: Do not clean. \"Dirty\" edits are intentional and required for the mod to function."
+      - *doNotClean
   - name: SellHorses_Incl_Saddlebags_and_CallSteed.esp
     msg:
       - type: error
@@ -3891,8 +3874,7 @@ plugins:
     msg:
       - type: say
         content: "Incompatible with: 'CDM-CGO Compatibility plugins'."
-      - type: say
-        content: "Contains dirty edits: Do not clean. \"Dirty\" edits are intentional and required for the mod to function."
+      - *doNotClean
   - name: C&C&EQR - SM Plugin Refurbish - Orrery.esp
     msg:
       - type: say
@@ -3913,8 +3895,7 @@ plugins:
     msg:
       - type: say
         content: "Incompatible with: 'CDM-CGO Compatibility plugins'."
-      - type: say
-        content: "Contains dirty edits: Do not clean. \"Dirty\" edits are intentional and required for the mod to function."
+      - *doNotClean
   - name: Lair_mobs.esp
     tag:
       - NoMerge
@@ -3995,9 +3976,7 @@ plugins:
       - Actors.Anims
       - NoMerge
   - name: SM Plugin Refurbish - MehrunesRazor.esp
-    msg:
-      - type: say
-        content: "Contains dirty edits: Do not clean. \"Dirty\" edits are intentional and required for the mod to function."
+    msg: [ *doNotClean ]
   - name: DLCSpellTomes.esp
     tag:
       - Relev
@@ -7245,8 +7224,7 @@ plugins:
     msg:
       - type: say
         content: Use either 'More Wilderness Life' or 'More Wilderness Life No Gates' but not both.
-      - type: say
-        content: "Contains dirty edits: Do not clean. \"Dirty\" edits are intentional and required for the mod to function."
+      - *doNotClean
   - name: Mart's Monster Mod - More Passive Wildlife.esp
     msg:
       - type: say
@@ -7386,17 +7364,13 @@ plugins:
       - type: say
         content: Obsolete. Update to MMM 3.6b3+ and use 'Dungeons of MMM.esp' instead.
   - name: Mart's Monster Mod - Gems & Gem Dust.esp
-    msg:
-      - type: say
-        content: "Contains dirty edits: Do not clean. \"Dirty\" edits are intentional and required for the mod to function."
+    msg: [ *doNotClean ]
   - name: Gems and Gem Dusts - MMM.esp
     msg:
       - type: say
         content: Will work with OOO 'light' but is not compatible with the 'full' installation of OOO.
   - name: Mart's Monster Mod - Hunting & Crafting.esp
-    msg:
-      - type: say
-        content: "Contains dirty edits: Do not clean. \"Dirty\" edits are intentional and required for the mod to function."
+    msg: [ *doNotClean ]
     tag:
       - Invent
       - Scripts
@@ -7551,8 +7525,7 @@ plugins:
     msg:
       - type: say
         content: Can increase the chances of a CTD in a heavily modded game.
-      - type: say
-        content: "Contains dirty edits: Do not clean. \"Dirty\" edits are intentional and required for the mod to function."
+      - *doNotClean
   - name: Mart's Monster Mod - Diverse Runeskulls.esp
     msg:
       - type: say
@@ -7588,12 +7561,9 @@ plugins:
     msg:
       - type: say
         content: Will work with OOO 'light' but is not compatible with the 'full' installation of OOO.
-      - type: say
-        content: "Contains dirty edits: Do not clean. \"Dirty\" edits are intentional and required for the mod to function."
+      - *doNotClean
   - name: Mart's Monster Mod - Hunting & Crafting.esp
-    msg:
-      - type: say
-        content: "Contains dirty edits: Do not clean. \"Dirty\" edits are intentional and required for the mod to function."
+    msg: [ *doNotClean ]
   - name: Mart's Monster Mod - Durability & Damage.esp
     msg:
       - type: say
@@ -7645,8 +7615,7 @@ plugins:
     msg:
       - type: say
         content: Use either 'More Wilderness Life' or 'More Wilderness Life No Gates' but not both.
-      - type: say
-        content: "Contains dirty edits: Do not clean. \"Dirty\" edits are intentional and required for the mod to function."
+      - *doNotClean
   - name: Mart's Monster Mod - More Passive Wildlife.esp
     msg:
       - type: say
@@ -7656,8 +7625,7 @@ plugins:
       - type: say
         content: Incompatible with Better Cities - City Defences.
         condition: file("Better Cities Resources.esm")
-      - type: say
-        content: "Contains dirty edits: Do not clean. \"Dirty\" edits are intentional and required for the mod to function."
+      - *doNotClean
   - name: Mart's Monster Mod - Friendlier Factions OOO+FCOM.esp
     msg:
       - type: say
@@ -9925,9 +9893,7 @@ plugins:
       - type: say
         content: "Needs TES4Edit cleaning: \"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide\""
   - name: DSoSFortNocturnaSuppressio.esp
-    msg:
-      - type: say
-        content: "Contains dirty edits: Do not clean. \"Dirty\" edits are intentional and required for the mod to function."
+    msg: [ *doNotClean ]
   - name: DSoSMalamath.esp
     msg:
       - type: say
@@ -10223,9 +10189,7 @@ plugins:
       - Scripts
       - Stats
   - name: FCOM_Hentai Mania.esp
-    msg:
-      - type: say
-        content: "Contains dirty edits: Do not clean. \"Dirty\" edits are intentional and required for the mod to function."
+    msg: [ *doNotClean ]
     tag:
       - Actors.ACBS
       - Actors.Stats
@@ -12221,8 +12185,7 @@ plugins:
     msg:
       - type: say
         content: "Incompatible with: 'CDM-CGO Compatibility plugins'."
-      - type: say
-        content: "Contains dirty edits: Do not clean. \"Dirty\" edits are intentional and required for the mod to function."
+      - *doNotClean
   - name: BattleHorn_MOBS.esp
     tag:
       - Deactivate
@@ -12330,8 +12293,7 @@ plugins:
     msg:
       - type: say
         content: "Incompatible with: 'CDM-CGO Compatibility plugins'."
-      - type: say
-        content: "Contains dirty edits: Do not clean. \"Dirty\" edits are intentional and required for the mod to function."
+      - *doNotClean
   - name: BrumaMGRestored.esp
     dirty:
       - crc: 0x2610b3ea
@@ -12498,8 +12460,7 @@ plugins:
     msg:
       - type: say
         content: "Incompatible with: 'CDM-CGO Compatibility plugins'."
-      - type: say
-        content: "Contains dirty edits: Do not clean. \"Dirty\" edits are intentional and required for the mod to function."
+      - *doNotClean
   - name: SM Plugin Refurbish(Merged).esp
     msg:
       - type: say
@@ -12508,8 +12469,7 @@ plugins:
         content: "Requires: all DLCs and Shivering Isles to be installed and active."
       - type: say
         content: "Incompatible with: 'CDM-CGO Compatibility plugins'."
-      - type: say
-        content: "Contains dirty edits: Do not clean. \"Dirty\" edits are intentional and required for the mod to function."
+      - *doNotClean
   - name: QuietFeet.esp
     msg:
       - type: say
@@ -12965,8 +12925,7 @@ plugins:
       - type: say
         content: Incompatible with Better Cities - City Defences.
         condition: file("Better Cities Resources.esm")
-      - type: say
-        content: "Contains dirty edits: Do not clean. \"Dirty\" edits are intentional and required for the mod to function."
+      - *doNotClean
   - name: FCOM_Knights.esp
     tag:
       - Delev
@@ -16384,9 +16343,7 @@ plugins:
         util: *dirtyUtil
         udr: 664
   - name: CB-DepositsForges.esp
-    msg:
-      - type: say
-        content: "Contains dirty edits: Do not clean. \"Dirty\" edits are intentional and required for the mod to function."
+    msg: [ *doNotClean ]
   - name: Erics Crafting Mod.esp
     msg:
       - type: say
@@ -16836,9 +16793,7 @@ plugins:
     tag:
       - Sound
   - name: SupremeMagicka.esp
-    msg:
-      - type: say
-        content: "Contains dirty edits: Do not clean. \"Dirty\" edits are intentional and required for the mod to function."
+    msg: [ *doNotClean ]
     tag:
       - Graphics
       - Names
@@ -21054,8 +21009,7 @@ plugins:
     msg:
       - type: say
         content: Do not use with COBL Races.
-      - type: say
-        content: "Contains dirty edits: Do not clean. \"Dirty\" edits are intentional and required for the mod to function."
+      - *doNotClean
     tag:
       - Body-Size-F
       - Body-Size-M
@@ -21074,8 +21028,7 @@ plugins:
         content: German version.
       - type: say
         content: Do not use with COBL Races
-      - type: say
-        content: "Contains dirty edits: Do not clean. \"Dirty\" edits are intentional and required for the mod to function."
+      - *doNotClean
     tag:
       - Body-Size-F
       - Body-Size-M
@@ -21405,8 +21358,7 @@ plugins:
     msg:
       - type: say
         content: German version.
-      - type: say
-        content: "Contains dirty edits: Do not clean. \"Dirty\" edits are intentional and required for the mod to function."
+      - *doNotClean
     tag:
       - C.RecordFlags
       - Delev
@@ -21417,8 +21369,7 @@ plugins:
     msg:
       - type: say
         content: Move Supreme Magica after LAME if you want Supreme Magica spell stats.
-      - type: say
-        content: "Contains dirty edits: Do not clean. \"Dirty\" edits are intentional and required for the mod to function."
+      - *doNotClean
     tag:
       - C.RecordFlags
       - Delev
@@ -21430,41 +21381,25 @@ plugins:
       - Actors.Anims
       - NoMerge
   - name: bgMagicSpellTomes_for_WryeBash.esp
-    msg:
-      - type: say
-        content: "Contains dirty edits: Do not clean. \"Dirty\" edits are intentional and required for the mod to function."
+    msg: [ *doNotClean ]
     tag:
       - Relev
   - name: bgMagicDVSpellTomes_for_WryeBash.esp
-    msg:
-      - type: say
-        content: "Contains dirty edits: Do not clean. \"Dirty\" edits are intentional and required for the mod to function."
+    msg: [ *doNotClean ]
   - name: bgMagicItemSigil.esp
-    msg:
-      - type: say
-        content: "Contains dirty edits: Do not clean. \"Dirty\" edits are intentional and required for the mod to function."
+    msg: [ *doNotClean ]
   - name: bgMagicDVItemSigil.esp
-    msg:
-      - type: say
-        content: "Contains dirty edits: Do not clean. \"Dirty\" edits are intentional and required for the mod to function."
+    msg: [ *doNotClean ]
   - name: bgMagicBonus.esp
-    msg:
-      - type: say
-        content: "Contains dirty edits: Do not clean. \"Dirty\" edits are intentional and required for the mod to function."
+    msg: [ *doNotClean ]
   - name: bgMagicDVBonus.esp
-    msg:
-      - type: say
-        content: "Contains dirty edits: Do not clean. \"Dirty\" edits are intentional and required for the mod to function."
+    msg: [ *doNotClean ]
   - name: bgMagicEVAddEnVar.esp
-    msg:
-      - type: say
-        content: "Contains dirty edits: Do not clean. \"Dirty\" edits are intentional and required for the mod to function."
+    msg: [ *doNotClean ]
     tag:
       - Relev
   - name: bgMagicDVAddEnVar.esp
-    msg:
-      - type: say
-        content: "Contains dirty edits: Do not clean. \"Dirty\" edits are intentional and required for the mod to function."
+    msg: [ *doNotClean ]
     tag:
       - Relev
   - name: bgMagicEVPaperChase.esp
@@ -21536,8 +21471,7 @@ plugins:
     msg:
       - type: say
         content: Use only one 'OptionalNPCDiversity' file.
-      - type: say
-        content: "Contains dirty edits: Do not clean. \"Dirty\" edits are intentional and required for the mod to function."
+      - *doNotClean
     tag:
       - NoMerge
       - NpcFaces
@@ -21614,48 +21548,38 @@ plugins:
         content: Delete. Not compatible with FCOM. Use 'bgBalancingEVOptionalFCOMAdditions.esp' instead.
         condition: *FCOMCond
   - name: bgBalancingOptionalNPCDiversityKvatchRebuilt, for Wrye Bash.esp
-    msg:
-      - type: say
-        content: "Contains dirty edits: Do not clean. \"Dirty\" edits are intentional and required for the mod to function."
+    msg: [ *doNotClean ]
   - name: bgBalancingEVLAMEAddition.esp
     msg:
       - type: say
         content: "Requires: LAME and Shivering Isles."
-      - type: say
-        content: "Contains dirty edits: Do not clean. \"Dirty\" edits are intentional and required for the mod to function."
+      - *doNotClean
     tag:
       - Relev
   - name: bgBalancingDVLAMEAddition.esp
     msg:
       - type: say
         content: "Requires: LAME and Shivering Isles."
-      - type: say
-        content: "Contains dirty edits: Do not clean. \"Dirty\" edits are intentional and required for the mod to function."
+      - *doNotClean
     tag:
       - Relev
   - name: bgBalancingEVLAMEGlue.esp
     msg:
       - type: say
         content: "Requires: LAME and Shivering Isles."
-      - type: say
-        content: "Contains dirty edits: Do not clean. \"Dirty\" edits are intentional and required for the mod to function."
+      - *doNotClean
   - name: bgBalancingDVLAMEGlue.esp
     msg:
       - type: say
         content: "Requires: LAME and Shivering Isles."
-      - type: say
-        content: "Contains dirty edits: Do not clean. \"Dirty\" edits are intentional and required for the mod to function."
+      - *doNotClean
   - name: bgBalancingEVOptionalNPCDiversityLAME.esp
-    msg:
-      - type: say
-        content: "Contains dirty edits: Do not clean. \"Dirty\" edits are intentional and required for the mod to function."
+    msg: [ *doNotClean ]
     tag:
       - NoMerge
       - NpcFaces
   - name: bgBalancingDVOptionalNPCDiversityLAME.esp
-    msg:
-      - type: say
-        content: "Contains dirty edits: Do not clean. \"Dirty\" edits are intentional and required for the mod to function."
+    msg: [ *doNotClean ]
     tag:
       - NoMerge
       - NpcFaces
@@ -21663,8 +21587,7 @@ plugins:
     msg:
       - type: say
         content: "Requires: Shivering Isles and Luchaire's Body Seam Reducer."
-      - type: say
-        content: "Contains dirty edits: Do not clean. \"Dirty\" edits are intentional and required for the mod to function."
+      - *doNotClean
     tag:
       - Body-M
   - name: bgBalancingDVOptionalSeamReducerHighElfFix.esp
@@ -21683,8 +21606,7 @@ plugins:
     msg:
       - type: say
         content: "Requires: LAME, Shivering Isles and Race Balancing Project."
-      - type: say
-        content: "Contains dirty edits: Do not clean. \"Dirty\" edits are intentional and required for the mod to function. It is safe to undelete records, but do not do anything other than that."
+      - *doNotClean
   - name: bgIntegrationEV - Alternative NPC Faces by LazyMonk.esp
     tag:
       - NoMerge
@@ -22631,23 +22553,17 @@ plugins:
       - Graphics
       - NoMerge
   - name: bgMagicEVShader.esp
-    msg:
-      - type: say
-        content: "Contains dirty edits: Do not clean. \"Dirty\" edits are intentional and required for the mod to function."
+    msg: [ *doNotClean ]
     tag:
       - Graphics
       - NoMerge
   - name: bgMagicDVShader.esp
-    msg:
-      - type: say
-        content: "Contains dirty edits: Do not clean. \"Dirty\" edits are intentional and required for the mod to function."
+    msg: [ *doNotClean ]
     tag:
       - Graphics
       - NoMerge
   - name: bgMagicShaderLifeDetect.esp
-    msg:
-      - type: say
-        content: "Contains dirty edits: Do not clean. \"Dirty\" edits are intentional and required for the mod to function."
+    msg: [ *doNotClean ]
   - name: kuerteeDetectLifeEffectNightEyeShader.esp
     msg:
       - type: say
@@ -22655,9 +22571,7 @@ plugins:
       - type: say
         content: "Requires: OBSE Night Eye Shader Switcher."
   - name: bgMagicLightningbolt.esp
-    msg:
-      - type: say
-        content: "Contains dirty edits: Do not clean. \"Dirty\" edits are intentional and required for the mod to function."
+    msg: [ *doNotClean ]
   - name: BNewShockBoltEffects20.esp
     dirty:
       - crc: 0x82b4bf9a
@@ -23643,13 +23557,9 @@ plugins:
       - type: say
         content: Obsolete. Remove and use newer version of Lovers with PK. Integrated into 1.3.1 Rev41 and newer.
   - name: Vanilla Weapon Stat Override.esp
-    msg:
-      - type: say
-        content: "Contains dirty edits: Do not clean. \"Dirty\" edits are intentional and required for the mod to function."
+    msg: [ *doNotClean ]
   - name: Vanilla Weapon Stat Override - SI.esp
-    msg:
-      - type: say
-        content: "Contains dirty edits: Do not clean. \"Dirty\" edits are intentional and required for the mod to function."
+    msg: [ *doNotClean ]
   - name: Duke Patrick ShiveringIsles patch 1.1.esp
     msg:
       - type: say
