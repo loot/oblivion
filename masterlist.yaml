@@ -4018,7 +4018,7 @@ plugins:
   - name: EVE_StockEquipmentReplacer.esp
     msg:
       - type: say
-        content: For Vanilla, do not use with OOO/MMM/FCOM, use that version instead.
+        content: 'For vanilla use. Do not use with OOO/MMM/FCOM, use the applicable version instead.'
     tag:
       - Graphics
       - NoMerge
@@ -4098,11 +4098,11 @@ plugins:
   - name: Bonemold_Helmet.esp
     msg:
       - type: say
-        content: Deactivate or delete this ESP file when using 'Unofficial Fran's Armor' (mesh and texture files are required, however).
+        content: 'Deactivate or delete this ESP file when using ''Unofficial Fran''s Armor'' (mesh and texture files are still required).'
   - name: Cryos Ordinator Lite.esp
     msg:
       - type: say
-        content: Deactivate or delete this ESP file when using 'Unofficial Fran's Armor' (mesh and texture files are required, however).
+        content: 'Deactivate or delete this ESP file when using ''Unofficial Fran''s Armor'' (mesh and texture files are still required).'
   - name: 01_SenTinel's Katanas.esp
     tag:
       - Invent
@@ -4112,7 +4112,7 @@ plugins:
   - name: 1SB_RavenousEleganceOutfit.esp
     msg:
       - type: say
-        content: "Requires: Biu's Adventuress Body (BAB)."
+        content: 'Requires: Biu''s Adventuress Body (BAB).'
   - name: AC Stock Armor.esp
     tag:
       - Graphics
@@ -4135,21 +4135,19 @@ plugins:
   - name: Alchemist's Tome.esp
     msg:
       - type: say
-        content: If using Wrye Bash use the bashed patch tweak instead.
+        content: 'If using Wrye Bash use the bashed patch tweak instead.'
   - name: Alir'sArmor.esp
     msg:
       - type: say
-        content: Will conflict with Better Imperial City.esp
+        content: 'Will conflict with Better Imperial City.esp'
       - type: say
-        content: May conflict with mods that alter the exterior of the IC Market District.
+        content: 'May conflict with mods that alter the exterior of the IC Market District.'
   - name: Alluring Books.esp
     tag:
       - Graphics
   - name: AlteredPistols!.esp
-    msg:
-      - type: say
-        content: "Incompatible with: The original Pistols! plugin."
-        condition: file("Pistols!.esp")
+    inc:
+      - 'Pistols!.esp'
   - name: ArenaEyeCandyArmor.esp
     tag:
       - Graphics
@@ -4176,38 +4174,46 @@ plugins:
       - crc: 0xab73f59d
         util: *dirtyUtil
         udr: 6
-  - name: Armor of Heaven's Fury-Gold-Heavy-Alt-helm.esp
-    msg:
-      - type: say
-        content: Make sure to use only one Light and one Heavy Armor from this Mod.
-  - name: Armor of Heaven's Fury-Gold-Heavy.esp
-    msg:
-      - type: say
-        content: Make sure to use only one Light and one Heavy Armor from this Mod.
-  - name: Armor of Heaven's Fury-Gold-Light-Alt-helm.esp
-    msg:
-      - type: say
-        content: Make sure to use only one Light and one Heavy Armor from this Mod.
-  - name: Armor of Heaven's Fury-Gold-Light.esp
-    msg:
-      - type: say
-        content: Make sure to use only one Light and one Heavy Armor from this Mod.
-  - name: Armor of Heaven's Fury-Heavy-Alt-helm.esp
-    msg:
-      - type: say
-        content: Make sure to use only one Light and one Heavy Armor from this Mod.
   - name: Armor of Heaven's Fury-Heavy.esp
-    msg:
-      - type: say
-        content: Make sure to use only one Light and one Heavy Armor from this Mod.
-  - name: Armor of Heaven's Fury-Light-Alt-helm.esp
-    msg:
-      - type: say
-        content: Make sure to use only one Light and one Heavy Armor from this Mod.
+    inc:
+      - Armor of Heaven's Fury-Gold-Heavy-Alt-helm.esp
+      - Armor of Heaven's Fury-Heavy-Alt-helm.esp
+      - Armor of Heaven's Fury-Gold-Heavy.esp
+  - name: Armor of Heaven's Fury-Heavy-Alt-helm.esp
+    inc:
+      - Armor of Heaven's Fury-Heavy.esp
+      - Armor of Heaven's Fury-Gold-Heavy-Alt-helm.esp
+      - Armor of Heaven's Fury-Gold-Heavy.esp
+  - name: Armor of Heaven's Fury-Gold-Heavy.esp
+    inc:
+      - Armor of Heaven's Fury-Heavy.esp
+      - Armor of Heaven's Fury-Heavy-Alt-helm.esp
+      - Armor of Heaven's Fury-Gold-Heavy-Alt-helm.esp
+  - name: Armor of Heaven's Fury-Gold-Heavy-Alt-helm.esp
+    inc:
+      - Armor of Heaven's Fury-Heavy.esp
+      - Armor of Heaven's Fury-Heavy-Alt-helm.esp
+      - Armor of Heaven's Fury-Gold-Heavy.esp
   - name: Armor of Heaven's Fury-Light.esp
-    msg:
-      - type: say
-        content: Make sure to use only one Light and one Heavy Armor from this Mod.
+    inc:
+      - Armor of Heaven's Fury-Gold-Light-Alt-helm.esp
+      - Armor of Heaven's Fury-Gold-Light.esp
+      - Armor of Heaven's Fury-Light-Alt-helm.esp
+  - name: Armor of Heaven's Fury-Light-Alt-helm.esp
+    inc:
+      - Armor of Heaven's Fury-Gold-Light-Alt-helm.esp
+      - Armor of Heaven's Fury-Gold-Light.esp
+      - Armor of Heaven's Fury-Light.esp
+  - name: Armor of Heaven's Fury-Gold-Light.esp
+    inc:
+      - Armor of Heaven's Fury-Gold-Light-Alt-helm.esp
+      - Armor of Heaven's Fury-Light.esp
+      - Armor of Heaven's Fury-Light-Alt-helm.esp
+  - name: Armor of Heaven's Fury-Gold-Light-Alt-helm.esp
+    inc:
+      - Armor of Heaven's Fury-Gold-Light.esp
+      - Armor of Heaven's Fury-Light.esp
+      - Armor of Heaven's Fury-Light-Alt-helm.esp
   - name: ArmorOfTheWhiteFox.esp
     tag:
       - Invent
@@ -4220,23 +4226,17 @@ plugins:
     tag:
       - Graphics
   - name: ACCCGR SI.esp
-    msg:
-      - type: say
-        content: Use either ACCCGR.esp or ACCCGR SI.esp but not both together.
+    inc:
+      - ACCCGR SI.esp
     dirty:
       - crc: 0xea8628a4
         util: *dirtyUtil
   - name: ACCCGR.esp
-    msg:
-      - type: say
-        content: Use either ACCCGR.esp or ACCCGR SI.esp but not both together.
+    inc:
+      - ACCCGR SI.esp
     dirty:
       - crc: 0x12cd76a5
         util: *dirtyUtil
-  - name: Armors of the Black Moon - EV.esp
-    msg:
-      - type: say
-        content: "Requires: Shivering Isles"
   - name: ArmamentariumTest.esp
     msg:
       - type: say
@@ -4304,7 +4304,7 @@ plugins:
   - name: BBBRoseoftheGuard.esp
     msg:
       - type: say
-        content: "Requires: A Maximum Compatability Skeleton such as Coronnera's."
+        content: 'Requires a Maximum Compatability Skeleton such as Coronnera''s.'
   - name: bbClothesFinal.esp
     tag:
       - Graphics
