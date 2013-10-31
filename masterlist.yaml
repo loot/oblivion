@@ -967,9 +967,8 @@ plugins:
       - type: say
         content: Alternatively, remove this and use UOP v3.0.1+ instead.
   - name: Arcana Restored.esp
-    msg:
-      - type: say
-        content: Obsolete. Remove this and use the latest version of the UOP instead.
+    inc:
+      - Unofficial Oblivion Patch.esp
     dirty:
       - crc: 0x69d1d5e0
         util: *dirtyUtil
@@ -978,72 +977,59 @@ plugins:
         util: *dirtyUtil
         udr: 3
   - name: Erthor_Fix-2593.esp
-    msg:
-      - type: say
-        content: Obsolete. Remove this and use UOP v3.0.1 or later instead.
+    inc:
+      - Unofficial Oblivion Patch.esp
   - name: Hermaeus Mora Daedric Quest Fix.esp
-    msg:
-      - type: say
-        content: Obsolete. Remove this and use UOP v3.0.1 or later instead.
+    inc:
+      - Unofficial Oblivion Patch.esp
   - name: UnRacefix.esp
-    msg:
-      - type: say
-        content: Obsolete. Remove this and use UOP v3.0.1 or later instead.
+    inc:
+      - Unofficial Oblivion Patch.esp
   - name: Ultimate_Heist_Fix-4880.esp
-    msg:
-      - type: say
-        content: Obsolete. Remove this and use UOP v3.0.1 or later instead.
+    inc:
+      - Unofficial Oblivion Patch.esp
   - name: fix_Brush_of_Death-3144.esp
-    msg:
-      - type: say
-        content: Obsolete. Remove this and use UOP v3.0.1 or later instead.
+    inc:
+      - Unofficial Oblivion Patch.esp
   - name: Fighters_Guild_Dissapearences_Mission_Bug_Fix-3483.esp
-    msg:
-      - type: say
-        content: Obsolete. Remove this and use UOP v3.0.1 or later instead.
+    inc:
+      - Unofficial Oblivion Patch.esp
   - name: FathisFix.esp
-    msg:
-      - type: say
-        content: Obsolete. Remove this and use UOP v3.0.1 or later instead.
+    inc:
+      - Unofficial Oblivion Patch.esp
   - name: Mages Guild Quest Fixes.esp
-    msg:
-      - type: say
-        content: Obsolete. Remove this and use UOP v3.0.1 or later instead.
+    inc:
+      - Unofficial Oblivion Patch.esp
   - name: id_CompetitionFix.esp
-    msg:
-      - type: say
-        content: Obsolete. Remove this and use UOP v3.0.1 or later instead.
+    inc:
+      - Unofficial Oblivion Patch.esp
   - name: SwampyCaveFix.esp
-    msg:
-      - type: say
-        content: Obsolete. Remove this and use UOP v3.2.0 or later instead.
+    inc:
+      - Unofficial Oblivion Patch.esp
   - name: ArenaChampionHotfix.esp
-    msg:
-      - type: say
-        content: Obsolete. Remove this and use UOP v3.2.0 or later instead.
+    inc:
+      - Unofficial Oblivion Patch.esp
   - name: 995-Specular Fix 1.1-TESSource.esp
     msg:
-      - type: say
-        content: Obsolete. Remove this. Bug fixed in the 1.2 official patch.
+      - type: error
+        content: Remove. The bug was fixed in the 1.2 official Oblivion update.
   - name: object_placement.esp
-    msg:
-      - type: say
-        content: Obsolete. Remove this and use the UOP instead.
+    inc:
+      - Unofficial Oblivion Patch.esp
     dirty:
       - crc: 0xe4858a00
         util: *dirtyUtil
         udr: 37
   - name: The Finger of the Mountain Fix.esp
-    msg:
-      - type: say
-        content: Obsolete. Included in the UOP.
+    inc:
+      - Unofficial Oblivion Patch.esp
   - name: Specular_Fix_1.1.esp
     tag:
       - Graphics
   - name: Umbacana_quest_fix-9117.esp
     msg:
-      - type: say
-        content: Possibly fixed in official patch 1.5.11+.
+      - type: error
+        content: Remove. Fixed in official patch 1.5.11+.
   - name: AdventurersItemMod.esp
     msg:
       - type: say
@@ -1085,6 +1071,8 @@ plugins:
         util: *dirtyUtil
 # BEGINGROUP: UOP
   - name: Unofficial Oblivion Patch.esp
+    after:
+      - DLCShiveringIsles.esp
     msg:
       - type: say
         content: "Use Standalone MOBS if using Frans or OMOBS if using FCOM/OOO. Both versions can be found here: \"http://oblivion.nexusmods.com/mods/28537\""
