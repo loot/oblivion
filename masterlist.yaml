@@ -4456,42 +4456,36 @@ plugins:
     dirty:
       - crc: 0xf34115d4
         util: *dirtyUtil
-  - name: DBShadowSet.esp
-    msg:
-      - type: say
-        content: Only use one DBSHadow Set esp
-  - name: DBShadowSet_NE.esp
-    msg:
-      - type: say
-        content: Only use one DBSHadow Set esp
-  - name: DBShadowSet_Argonian.esp
-    msg:
-      - type: say
-        content: Only use one DBSHadow Set esp
-  - name: DBShadowSet_Khajiit.esp
-    msg:
-      - type: say
-        content: Only use one DBSHadow Set esp
-  - name: DBShadowSet_Argonian_NE.esp
-    msg:
-      - type: say
-        content: Only use one DBSHadow Set esp
-  - name: DBShadowSet_Khajiit_NE.esp
-    msg:
-      - type: say
-        content: Only use one DBSHadow Set esp
-  - name: Daedric_Katana_0.4_leveled_only.esp
-    msg:
-      - type: say
-        content: Use only one of the three Daedric_Katana_0.4 ESPs.
-  - name: Daedric_Katana_0.4_vendors_and_leveled.esp
-    msg:
-      - type: say
-        content: Use only one of the three Daedric_Katana_0.4 ESPs.
-  - name: Daedric_Katana_0.4_vendors_only.esp
-    msg:
-      - type: say
-        content: Use only one of the three Daedric_Katana_0.4 ESPs.
+  - name: 'DBShadowSet.esp'
+    inc:
+      - 'DBShadowSet_NE.esp'
+  - name: 'DBShadowSet_NE.esp'
+    inc:
+      - 'DBShadowSet.esp'
+  - name: 'DBShadowSet_Argonian.esp'
+    inc:
+      - 'DBShadowSet_Argonian_NE.esp'
+  - name: 'DBShadowSet_Khajiit.esp'
+    inc:
+      - 'DBShadowSet_Khajiit_NE.esp'
+  - name: 'DBShadowSet_Argonian_NE.esp'
+    inc:
+      - 'DBShadowSet_Argonian.esp'
+  - name: 'DBShadowSet_Khajiit_NE.esp'
+    inc:
+      - 'DBShadowSet_Khajiit.esp'
+  - name: 'Daedric_Katana_0.4_leveled_only.esp'
+    inc:
+      - 'Daedric_Katana_0.4_vendors_and_leveled.esp'
+      - 'Daedric_Katana_0.4_vendors_only.esp'
+  - name: 'Daedric_Katana_0.4_vendors_and_leveled.esp'
+    inc:
+      - 'Daedric_Katana_0.4_leveled_only.esp'
+      - 'Daedric_Katana_0.4_vendors_only.esp'
+  - name: 'Daedric_Katana_0.4_vendors_only.esp'
+    inc:
+      - 'Daedric_Katana_0.4_leveled_only.esp'
+      - 'Daedric_Katana_0.4_vendors_and_leveled.esp'
   - name: daedric sky armor.esp
     tag:
       - Invent
@@ -4537,28 +4531,28 @@ plugins:
   - name: dwr.esp
     tag:
       - Invent
-  - name: Deceiver's Armour.esp
+  - name: 'Deceiver''s Armour.esp'
     dirty:
       - crc: 0xad8df1c2
         util: *dirtyUtil
   - name: dragon weapons.esp
     tag:
       - Invent
-  - name: doofdillas_potions_recolored_unsorted_v0_2_1.esp
+  - name: 'doofdillas_potions_recolored_unsorted_v0_2_1.esp'
     msg:
       - type: say
-        content: Old, update to version 0.3.1+.
+        content: 'Old, update to version 0.3.1+'
     tag:
       - Graphics
       - Names
-  - name: doofdillas_potions_recolored_sorted_v0_2_1.esp
+  - name: 'doofdillas_potions_recolored_sorted_v0_2_1.esp'
     msg:
       - type: say
-        content: Old, update to version 0.3.1+.
+        content: 'Old, update to version 0.3.1+'
     tag:
       - Graphics
       - Names
-  - name: doofdillas_potions_recolored_sorted_v0_3_1.esp
+  - name: 'doofdillas_potions_recolored_sorted_v0_3_1.esp'
     tag:
       - Graphics
       - Names
