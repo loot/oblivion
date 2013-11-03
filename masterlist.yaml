@@ -4213,45 +4213,79 @@ plugins:
       - crc: 0x12cd76a5
         util: *dirtyUtil
   - name: ArmamentariumTest.esp
+    inc:
+      - name: Armamentarium.esm
+        display: 'Armamentarium Complete'
     msg:
       - type: say
-        content: "Incompatible with: newer 'Armamentarium Complete' version. Consider updating."
+        content: 'Consider updating to the newer "http://oblivion.nexusmods.com/mods/18417 Armamentarium Complete" version.'
+        condition: not file("Armamentarium.esm")
   - name: ArmamentariumArmor.esp
+    inc:
+      - name: Armamentarium.esm
+        display: 'Armamentarium Complete'
     msg:
       - type: say
-        content: "Incompatible with: newer 'Armamentarium Complete' version. Consider updating."
+        content: 'Consider updating to the newer "http://oblivion.nexusmods.com/mods/18417 Armamentarium Complete" version.'
+        condition: not file("Armamentarium.esm")
   - name: ArmamentariumArmor4Npcs.esp
+    inc:
+      - name: Armamentarium.esm
+        display: 'Armamentarium Complete'
     msg:
       - type: say
-        content: "Incompatible with: newer 'Armamentarium Complete' version. Consider updating."
+        content: 'Consider updating to the newer "http://oblivion.nexusmods.com/mods/18417 Armamentarium Complete" version.'
+        condition: not file("Armamentarium.esm")
   - name: ArmamentariumWeapons4Npcs.esp
+    inc:
+      - Armamentarium_MOBS.esp
+      - name: Armamentarium.esm
+        display: 'Armamentarium Complete'
     msg:
       - type: say
-        content: Don't use with Armamentarium_MOBS.
-      - type: say
-        content: "Incompatible with: newer 'Armamentarium Complete' version. Consider updating."
+        content: 'Consider updating to the newer "http://oblivion.nexusmods.com/mods/18417 Armamentarium Complete" version.'
+        condition: not file("Armamentarium.esm")
   - name: Armamentarium_MOBS.esp
+    inc:
+      - ArmamentariumWeapons4Npcs.esp
+      - name: Armamentarium.esm
+        display: 'Armamentarium Complete'
     msg:
       - type: say
-        content: Don't use with ArmamentariumWeapons4Npcs.
-      - type: say
-        content: "Incompatible with: newer 'Armamentarium Complete' version. Consider updating."
+        content: 'Consider updating to the newer "http://oblivion.nexusmods.com/mods/18417 Armamentarium Complete" version.'
+        condition: not file("Armamentarium.esm")
   - name: ArmamentariumKatanas.esp
+    inc:
+      - name: Armamentarium.esm
+        display: 'Armamentarium Complete'
     msg:
       - type: say
-        content: "Incompatible with: newer 'Armamentarium Complete' version. Consider updating."
+        content: 'Consider updating to the newer "http://oblivion.nexusmods.com/mods/18417 Armamentarium Complete" version.'
+        condition: not file("Armamentarium.esm")
   - name: ArmamentariumKatanasRU.esp
+    inc:
+      - name: Armamentarium.esm
+        display: 'Armamentarium Complete'
     msg:
       - type: say
-        content: "Incompatible with: newer 'Armamentarium Complete' version. Consider updating."
+        content: 'Consider updating to the newer "http://oblivion.nexusmods.com/mods/18417 Armamentarium Complete" version.'
+        condition: not file("Armamentarium.esm")
   - name: ArmamentariumVendors.esp
+    inc:
+      - name: Armamentarium.esm
+        display: 'Armamentarium Complete'
     msg:
       - type: say
-        content: "Incompatible with: newer 'Armamentarium Complete' version. Consider updating."
+        content: 'Consider updating to the newer "http://oblivion.nexusmods.com/mods/18417 Armamentarium Complete" version.'
+        condition: not file("Armamentarium.esm")
   - name: ArmamentariumStaffs.esp
+    inc:
+      - name: Armamentarium.esm
+        display: 'Armamentarium Complete'
     msg:
       - type: say
-        content: "Incompatible with: newer 'Armamentarium Complete' version. Consider updating."
+        content: 'Consider updating to the newer "http://oblivion.nexusmods.com/mods/18417 Armamentarium Complete" version.'
+        condition: not file("Armamentarium.esm")
   - name: AGEHA Tortured Souls.esp
     tag:
       - Delev
@@ -4293,23 +4327,21 @@ plugins:
     tag:
       - Graphics
   - name: BlackGlovesEng.esp
-    msg:
-      - type: say
-        content: Only Use one BlackGlovesX.esp, this one does NPC changes
+    inc:
+      - BlackGlovesEng_noNPCchanges.esp
+      - BlackGlovesRus.esp
     tag:
       - Invent
   - name: BlackGlovesEng_noNPCchanges.esp
-    msg:
-      - type: say
-        content: Only Use one BlackGlovesX.esp, this one does not do any NPC changes
+    inc:
+      - BlackGlovesEng.esp
+      - BlackGlovesRus.esp
     tag:
       - Invent
   - name: BlackGlovesRus.esp
-    msg:
-      - type: say
-        content: Only Use one BlackGlovesX.esp, this one does NPC changes
-      - type: say
-        content: Only Use this for Russion version.
+    inc:
+      - BlackGlovesEng.esp
+      - BlackGlovesEng_noNPCchanges.esp
     tag:
       - Invent
   - name: Blade Of Woe Replacer.esp
@@ -4350,7 +4382,7 @@ plugins:
   - name: Banes Archer Paradox.esp
     msg:
       - type: say
-        content: Do not use with Cet's Dwarven Precision Bow or the Fletchers mod.
+        content: 'Do not use with Cet''s Dwarven Precision Bow or the Fletchers mod.'
   - name: Brigand's Gear.esp
     tag:
       - Invent
@@ -4378,21 +4410,25 @@ plugins:
       - Deactivate
       - Graphics
   - name: ConjurationTome.esp
-    msg:
-      - type: say
-        content: Only use one ConjurationTome*.esp
+    inc:
+      - ConjurationTomeOBSE.esp
+      - ConjurationTomeOOO.esp
+      - ConjurationTomeOOO-OBSE.esp
   - name: ConjurationTomeOBSE.esp
-    msg:
-      - type: say
-        content: Only use one ConjurationTome*.esp
+    inc:
+      - ConjurationTome.esp
+      - ConjurationTomeOOO.esp
+      - ConjurationTomeOOO-OBSE.esp
   - name: ConjurationTomeOOO.esp
-    msg:
-      - type: say
-        content: Only use one ConjurationTome*.esp
+    inc:
+      - ConjurationTome.esp
+      - ConjurationTomeOBSE.esp
+      - ConjurationTomeOOO-OBSE.esp
   - name: ConjurationTomeOOO-OBSE.esp
-    msg:
-      - type: say
-        content: Only use one ConjurationTome*.esp
+    inc:
+      - ConjurationTome.esp
+      - ConjurationTomeOBSE.esp
+      - ConjurationTomeOOO.esp
   - name: cowlredux.esp
     tag:
       - Graphics
@@ -4403,9 +4439,9 @@ plugins:
   - name: crimson dagger.esp
     msg:
       - type: say
-        content: Due to a poorly written script unless this mod is the second mod loaded (i.e no esms except for OB) the player will never get the weapon
+        content: 'Due to a poorly written script the player will never recieve this weapon unless the mod is loaded second (right after Oblivion.esm)'
       - type: say
-        content: To get the weapon open the console and enter player.additem xx000ED3 where xx is the hexadecimal mod index (LO number).
+        content: 'To aquire the weapon you must open the console and enter ''player.additem xx000ED3'' where xx is the hexadecimal mod index (LO number)'
   - name: crusadercg.esp
     tag:
       - Invent
