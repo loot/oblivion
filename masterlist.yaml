@@ -3,7 +3,7 @@ common:
 # Files
   - &OBSE
     name: '../obse_loader.exe'
-    display: '"http://obse.silverlock.org/ OBSE"'
+    display: '[OBSE](http://obse.silverlock.org/)'
 # Conditions
   - &nehrimCond
     active("Nehrim.esm")
@@ -25,9 +25,12 @@ common:
   - &doNotClean
     type: say
     content: 'Do not clean ITM records, they are intentional and required for the mod to function.'
+  - &needsCleaning
+    type: say
+    content: 'Needs [TES4Edit cleaning](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide).'
 # Other Strings
   - &dirtyUtil
-    '"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide TES4Edit"'
+    '[TES4Edit](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide)'
     
 globals:
   - type: warn
@@ -2027,9 +2030,7 @@ plugins:
     tag:
       - Sound
   - name: al-smm7-ru.esp
-    msg:
-      - type: say
-        content: "Needs TES4Edit cleaning: \"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide\""
+    msg: [ *needsCleaning ]
     tag:
       - Sound
   - name: PowerAttack Voicemod.esp
@@ -2655,8 +2656,7 @@ plugins:
       - Invent
   - name: Cryptic Festive Ayleid Dining Set.esp
     msg:
-      - type: say
-        content: "Needs TES4Edit cleaning: \"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide\""
+      - *needsCleaning
       - type: say
         content: Only use one 'Cryptic's X X X Dining Set' plugin.
     tag:
@@ -2697,8 +2697,7 @@ plugins:
       - Stats
   - name: Cryptic White Rose Ayleid Dining Set.esp
     msg:
-      - type: say
-        content: "Needs TES4Edit cleaning: \"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide\""
+      - *needsCleaning
       - type: say
         content: Only use one 'Cryptic's X X X Dining Set' plugin.
     tag:
@@ -3072,9 +3071,7 @@ plugins:
       - type: say
         content: German version?
   - name: Qarl's Harvest 1.1.esp
-    msg:
-      - type: say
-        content: "8 ITM and 105 UDR records. Needs TES4Edit cleaning: \"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide\""
+    msg: [ *needsCleaning ]
   - name: Qarls_Harvest.esp
     dirty:
       - crc: 0x31844e23
@@ -4814,9 +4811,7 @@ plugins:
         util: *dirtyUtil
         udr: 2
   - name: LSB Skull Weapons.esp
-    msg:
-      - type: say
-        content: "0 ITM, 2 UDR records. Needs TES4Edit cleaning: \"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide\""
+    msg: [ *needsCleaning ]
     tag:
       - Actors.ACBS
       - Actors.Spells
@@ -5034,9 +5029,7 @@ plugins:
       - Graphics
       - Invent
   - name: ROHJ2.esp
-    msg:
-      - type: say
-        content: "Needs TES4Edit cleaning: \"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide\""
+    msg: [ *needsCleaning ]
   - name: royal garb.esp
     tag:
       - Graphics
@@ -5263,8 +5256,10 @@ plugins:
       - Invent
   - name: Thori'Dal, The Stars' Furyl - Legends of Azeroth Armory.esp
     dirty:
-      - crc: 0x0
-        util: "\"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide \"http://cs.elderscrolls.com/index.php?title=TES4Edit\""
+      - crc: 0xD50A68CC
+        itm: 8
+        udr: 0
+        util: *dirtyUtil
   - name: TLS Modded Mannequins.esp
     msg:
       - type: say
@@ -8924,9 +8919,6 @@ plugins:
       - type: say
         content: Check you're using v1.3 or later.
   - name: cyrodiil transportation network 1.3 wz.esp
-    msg:
-      - type: say
-        content: "Needs TES4Edit cleaning: \"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide\""
     dirty:
       - crc: 0x675027d0
         util: *dirtyUtil
@@ -9014,8 +9006,7 @@ plugins:
         content: "Incompatible with: Kvatch Rebuilt, Hoarfrost Castle, Midas Magic, Mannimarco Complete, Reneer's Corpse Mod, Unique landscapes, KSE_v3.esp."
       - type: say
         content: "For compatibility with Knights of the Nine, get the patch: \"http://tamriel.ru/7roadsmod/Knights_Patch_02.zip\""
-      - type: say
-        content: "Needs TES4Edit cleaning: \"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide\""
+      - *needsCleaning
     tag:
       - Actors.ACBS
       - Actors.Stats
@@ -9223,9 +9214,7 @@ plugins:
       - type: say
         content: "Requires: Shivering Isles"
   - name: AR.esp
-    msg:
-      - type: warn
-        content: "Contains dirty edits: 31 ITM, 44 UDR records. Needs TES4Edit cleaning: \"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide\""
+    msg: [ *needsCleaning ]
   - name: Arcane Services.esp
     msg:
       - type: say
@@ -9262,17 +9251,20 @@ plugins:
         udr: 7
   - name: Artifacts of the Ancestors.esp
     msg:
+      - *needsCleaning
       - type: say
-        content: "Needs TES4Edit cleaning: \"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide\". Also see special cleaning instructions: \"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide#Artefacts_of_the_Ancestors.esp_Special_Cleaning_Instructions\""
+        content: 'Also see this plugin''s [special cleaning instructions](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide#Artefacts_of_the_Ancestors.esp_Special_Cleaning_Instructions)'
   - name: Artefacts of the Ancestors.esp
     dirty:
       - crc: 0xdb68939a
-        util: "\"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide\". TES4Edit\""
+        util: *dirtyUtil
         udr: 3
+        itm: 255
   - name: Artefakte der Ahnen.esp
     dirty:
       - crc: 0x39cbae14
-        util: "\"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide\". TES4Edit\""
+        util: *dirtyUtil
+        itm: 86
         udr: 2
   - name: Artifacts.esp
     dirty:
@@ -9319,20 +9311,28 @@ plugins:
       - type: say
         content: Incompatible with Better Cities IC Market District.
         condition: file("Better Cities Resources.esm")
-      - type: say
-        content: "Needs TES4Edit cleaning: \"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide\""
+      - *needsCleaning
   - name: Auriel's_Retreat.esp
     dirty:
       - crc: 0xcb6ef46d
         util: *dirtyUtil
+        itm: 2875
+      - crc: 0x4446B5C1
+        util: *dirtyUtil
+        itm: 2875
   - name: Auriel's_Retreat Vwalk.esp
     tag:
       - Actors.Anims
       - NoMerge
   - name: AuriCloudRulerAddons.esp
+    msg:
+      - type: warn
+        content: 'Contains a wild edit, see [special cleaning instructions](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide#AuriCloudRulerAddons.esp_Special_Cleaning_Instructions) for details.'
+        condition: 'checksum("AuriCloudRulerAddons.esp", 3BCDEE6F)'
     dirty:
       - crc: 0x3bcdee6f
-        util: "\"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide\". TES4Edit\""
+        itm: 1
+        util: *dirtyUtil
   - name: Automagicon.esp
     msg:
       - type: say
@@ -9354,9 +9354,14 @@ plugins:
         util: *dirtyUtil
         udr: 77
   - name: AyleidTemple.esp
+    msg: 
+      - type: warn
+        content: 'Makes a wild edit to the water level in Shagol gro-Bumph''s house (block 6,1).'
+        condition: 'checksum("AyleidTemple.esp", 4B14E3CD)'
     dirty:
       - crc: 0x4b14e3cd
-        util: "\"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide\". TES4Edit\""
+        util: *dirtyUtil
+        itm: 39
         udr: 24
   - name: AzurasServices_de.esp
     msg:
@@ -9519,8 +9524,7 @@ plugins:
     msg:
       - type: say
         content: "Requires: OBSE 20+"
-      - type: say
-        content: "12 ITM, 0 UDR records. Needs TES4Edit cleaning: \"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide\""
+      - *needsCleaning
   - name: BossPhaitDismal.esp
     msg:
       - type: say
@@ -9529,11 +9533,8 @@ plugins:
       - crc: 0x6d467eb0
         util: *dirtyUtil
   - name: BossPhaitStygainHalls.esp
-    msg:
-      - type: say
-        content: "Requires: OBSE 20+"
-      - type: say
-        content: "Needs TES4Edit cleaning: \"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide\""
+    req: [ *OBSE ]
+    msg: [ *needsCleaning ]
   - name: Bravil Docks.esp
     msg:
       - type: say
@@ -9799,10 +9800,18 @@ plugins:
     msg:
       - type: say
         content: Compatibility with other DB Sanctuary mods is unlikely due to the number of persistent references which have been deleted.
+      - type: say
+        content: 'TES4Edit displays "Target is not persistent" messages when undeleting and disabling references, just click "Undelete and Disable References" again until it processes all the records.'
+        condition: 'checksum("DBSRebuiltComplete.esp", 543D21FB) or checksum("DBSRebuiltComplete.esp", D49DA10B)'
     dirty:
-      - crc: 0x543d21fb
-        util: "\"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide\". TES4Edit\""
+      - crc: 0x543D21FB
+        util: *dirtyUtil
         udr: 299
+        itm: 1
+      - crc: 0xD49DA10B
+        util: *dirtyUtil
+        udr: 299
+        itm: 1
   - name: DarknessHollows.esp
     dirty:
       - crc: 0xa81a605c
@@ -9887,11 +9896,8 @@ plugins:
       - Actors.Stats
       - SpellStats
   - name: DruidsTree.esp
-    msg:
-      - type: say
-        content: "Requires: Shivering Isles"
-      - type: say
-        content: "Needs TES4Edit cleaning: \"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide\""
+    req: [ 'ShiveringIsles.esp' ]
+    msg: [ *needsCleaning ]
   - name: DSoSFortNocturnaSuppressio.esp
     msg: [ *doNotClean ]
   - name: DSoSMalamath.esp
@@ -9903,9 +9909,7 @@ plugins:
       - type: say
         content: Old, updated to latest version.
   - name: Dwarven Mines.esp
-    msg:
-      - type: say
-        content: "45 ITM, 0 UDR. Needs TES4Edit cleaning: \"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide\""
+    msg: [ *needsCleaning ]
   - name: Dwarven Mines Vwalk.esp
     tag:
       - Actors.Anims
@@ -10491,10 +10495,14 @@ plugins:
     msg:
       - type: say
         content: Not Better Cities compatible. Already included in Better Cities IC Talos District.
+      - type: warn
+        content: 'Makes a few wild edits, deleting the entirety of "Abandoned Mine Caverns" and modifies the door in "Abandoned Mine" not to point anywhere.'
+        condition: 'checksum("Jagnot- Imperial City Library V1.3.esp", FC58ACB0)'
     dirty:
       - crc: 0xfc58acb0
-        util: "\"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide\". TES4Edit\""
+        util: *dirtyUtil
         udr: 171
+        itm: 41
   - name: Jail Break Escape Routes.esp
     dirty:
       - crc: 0xfacd66b8
@@ -10539,24 +10547,28 @@ plugins:
         content: Outdated. Update to v4+.
       - type: say
         content: Compatible with MD_SaddleBags Lite.
-  - name: 300_White Stallion 4.esp
+  - name: '300_White Stallion 4.esp'
+    msg:
+      - type: warn
+        content: 'Makes wild edits, see [special cleaning instructions](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide#300_White_Stallion_4.esp_Special_Cleaning_Instructions).'
+        condition: 'checksum("300_White Stallion 4.esp", 400BDFF6)'
     dirty:
       - crc: 0x400bdff6
-        util: "\"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide\". TES4Edit\""
+        util: *dirtyUtil
         udr: 139
+        itm: 20
   - name: Feudal Empire 300.esp
+    inc: [ '300_White Stallion 4.esp' ]
     msg:
-      - type: say
-        content: "Needs TES4Edit cleaning, see special cleaning instructions: \"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide#300_White_Stallion_4.esp_Special_Cleaning_Instructions\""
-      - type: say
-        content: "Incompatible with: 300_White Stallion 4.esp"
+      - type: warn
+        content: 'Makes wild edits, see [special cleaning instructions](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide#300_White_Stallion_4.esp_Special_Cleaning_Instructions).'
     tag:
       - Graphics
       - Invent
   - name: 300 Feudal Empire.esp
     msg:
-      - type: say
-        content: "Needs TES4Edit cleaning, see special cleaning instructions: \"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide#300_White_Stallion_4.esp_Special_Cleaning_Instructions\""
+      - type: warn
+        content: 'Makes wild edits, see [special cleaning instructions](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide#300_White_Stallion_4.esp_Special_Cleaning_Instructions).'
     tag:
       - Graphics
       - Invent
@@ -10602,10 +10614,15 @@ plugins:
   - name: KvatchRising.esp
     tag:
       - Actors.AIPackages
+    msg:
+      - type: warn
+        content: 'Makes wild edits, see [special cleaning instructions](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide#KvatchRising.esp_Special_Cleaning_Instructions).'
+        condition: 'checksum("KvatchRising.esp", 6C91CBEB)'
     dirty:
       - crc: 0x6c91cbeb
         util: "\"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide\". TES4Edit\""
         udr: 3
+        itm: 202
   - name: Gold Road Cottage - Classy.esp
     msg:
       - type: say
@@ -10681,6 +10698,7 @@ plugins:
       - crc: 0x32e46bf4
         util: *dirtyUtil
         udr: 990
+        itm: 244
   - name: bladesfactionmod.esp
     tag:
       - Actors.ACBS
@@ -10690,10 +10708,15 @@ plugins:
       - Relations
       - Stats
   - name: GlenvarCastle.esp
+    msg:
+      - type: warn
+        content: 'Makes wild edits, see [special cleaning instructions](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide#GlenvarCastle.esp_Special_Cleaning_Instructions).'
+        condition: 'checksum("GlenvarCastle.esp", 718904AC)'
     dirty:
       - crc: 0x718904ac
-        util: "\"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide\". TES4Edit\""
+        util: *dirtyUtil
         udr: 712
+        itm: 38
   - name: GlenvarCastle Vwalk.esp
     tag:
       - Actors.Anims
@@ -10997,9 +11020,7 @@ plugins:
         util: *dirtyUtil
         udr: 20
   - name: NEW SHEOTH PALACE LOD FIX-TESSource.esp
-    msg:
-      - type: say
-        content: "Needs TES4Edit cleaning: \"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide\""
+    msg: [ *needsCleaning ]
   - name: NewMGQuests.esp
     tag:
       - Actors.AIPackages
@@ -11035,14 +11056,12 @@ plugins:
     msg:
       - type: say
         content: Obsolete. Upgrade to the latest version and delete this.
-      - type: say
-        content: "11 ITM, 0 UDR records. Needs TES4Edit cleaning: \"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide\""
+      - *needsCleaning
   - name: NNWARE Series 1.esp
     msg:
       - type: say
         content: Obsolete. Upgrade to the latest version and delete this.
-      - type: say
-        content: "20 ITM, 11 UDR records. Needs TES4Edit cleaning: \"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide\""
+      - *needsCleaning
   - name: NNWAREAyleidDungeons_Series1EV.esp
     dirty:
       - crc: 0x1f9c69a7
@@ -11175,6 +11194,10 @@ plugins:
       - crc: 0x590de30d
         util: *dirtyUtil
   - name: Pek_Halls_of_The_Phoenix_Order.esp
+    msg:
+      - type: warn
+        content: 'Makes wild edits to the FGC010 script.'
+        condition: 'checksum("Pek_Halls_of_The_Phoenix_Order.esp", D96DB828)'
     dirty:
       - crc: 0xd96db828
         util: "\"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide\". TES4Edit\""
