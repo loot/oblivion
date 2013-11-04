@@ -6557,8 +6557,7 @@ plugins:
         condition: *FCOMCond
       - type: say
         content: 'German version.'
-      - type: say
-        content: 'Do not clean. "Dirty" edits are intentional and required for the mod to function.'
+      - *doNotClean
     tag:
       - Actors.ACBS
       - Actors.AIData
@@ -6570,9 +6569,7 @@ plugins:
       - Relev
       - Stats
   - name: Oblivion WarCry EV.esp
-    msg:
-      - type: say
-        content: 'Do not clean. "Dirty" edits are intentional and required for the mod to function.'
+    msg: [ *doNotClean ]
     tag:
       - Actors.ACBS
       - Actors.AIData
@@ -6598,9 +6595,7 @@ plugins:
     tag:
       - Stats
   - name: Oscuro's_Oblivion_Overhaul.esp
-    msg:
-      - type: say
-        content: 'Do not clean. "Dirty" edits are intentional and required for the mod to function.'
+    msg: [ *doNotClean ]
     tag:
       - Actors.ACBS
       - Actors.AIData
@@ -6710,11 +6705,11 @@ plugins:
   - name: 'OOO-LightOfDawnFlamesWhenDrawnOBSE.esp'
     inc:
       - 'OOO-LightOfDawnAlwaysFlames.esp'
-    tag: [ 'Stats' ]
+    tag: [ Stats ]
   - name: 'OOO-LightOfDawnAlwaysFlames.esp'
     inc:
       - 'OOO-LightOfDawnFlamesWhenDrawnOBSE.esp'
-    tag: [ 'Stats' ]
+    tag: [ Stats ]
   - name: MrSiikaRabbitsforOOO.esp
     msg:
       - type: error
@@ -6937,9 +6932,7 @@ plugins:
       - type: say
         content: 'Can be used with either ''ArmamentariumLL.esp'' or ''ArmamentariumLL4OOO.esp''.'
   - name: ArmamentariumArtifacts.esp
-    msg:
-      - type: say
-        content: 'Do not clean. "Dirty" edits are intentional and required for the mod to function.'
+    msg: [ *doNotClean ]
   - name: ArmamentariumLLArmaVendor.esp
     inc:
       - ArmamentariumLL4OOO.esp
@@ -7084,15 +7077,13 @@ plugins:
     msg:
       - type: say
         content: 'Can increase the chances of a CTD in a heavily modded game due to increased processor load.'
-      - type: say
-        content: 'Do not clean. "Dirty" edits are intentional and required for the mod to function.'
+      - *doNotClean
   - name: FCOM_Convergence.esp
     msg:
       - type: error
         content: 'FCOM_Convergence.esm is missing. Re-install FCOM.'
         condition: 'not file("FCOM_Convergence.esm")'
-      - type: say
-        content: 'Do not clean. "Dirty" edits are intentional and required for the mod to function.'
+      - *doNotClean
     tag:
       - Actors.ACBS
       - Actors.AIData
@@ -7144,9 +7135,10 @@ plugins:
       - type: say
         content: 'Not needed in MMM 3.6beta3+. Already integrated.'
   - name: Mart's Monster Mod - Diverse Runeskulls.esp
+    condition: *FCOMCond
     msg:
       - type: say
-        content: 'Replaces both ''FCOM_ExnemRuneskulls.esp'' and ''ExnemRuneskulls.esp''.'
+        content: 'Replaces both ''FCOM_ExnemRuneskulls.esp'' and ''ExnemRuneskulls.esp'' - Please remove them.'
         condition: 'file("FCOM_ExnemRuneskulls.esp") or file("ExnemRuneskulls.esp")'
     tag:
       - Delev
@@ -7154,17 +7146,17 @@ plugins:
   - name: FCOM_EntropicOrderRebalance.esp
     msg:
       - type: error
-        content: FCOM_Convergence.esm is missing. Re-install FCOM.
+        content: 'FCOM_Convergence.esm is missing. Re-install FCOM.'
         condition: 'not file("FCOM_Convergence.esm")'
   - name: FCOM_EntropicOrderHardcore.esp
     msg:
       - type: error
-        content: FCOM_Convergence.esm is missing. Re-install FCOM.
+        content: 'FCOM_Convergence.esm is missing. Re-install FCOM.'
         condition: 'not file("FCOM_Convergence.esm")'
   - name: FCOM_RealSwords.esp
     msg:
       - type: error
-        content: FCOM_Convergence.esm is missing. Re-install FCOM.
+        content: 'FCOM_Convergence.esm is missing. Re-install FCOM.'
         condition: 'not file("FCOM_Convergence.esm")'
     tag:
       - Delev
@@ -7172,47 +7164,48 @@ plugins:
   - name: More Effective Enchantments FCOM.esp
     msg:
       - type: error
-        content: FCOM_Convergence.esm is missing. Re-install FCOM.
+        content: 'FCOM_Convergence.esm is missing. Re-install FCOM.'
         condition: 'not file("FCOM_Convergence.esm")'
   - name: Mart's Monster Mod - Durability & Damage.esp
     msg:
       - type: error
-        content: Delete and use 'FCOM_DurabilityAndDamage.esp'.
+        content: 'Delete and use ''FCOM_DurabilityAndDamage.esp''.'
   - name: FCOM_DurabilityAndDamage.esp
     msg:
       - type: error
-        content: FCOM_Convergence.esm is missing. Re-install FCOM.
+        content: 'FCOM_Convergence.esm is missing. Re-install FCOM.'
         condition: 'not file("FCOM_Convergence.esm")'
   - name: FCOM_SpawnRatesReduced.esp
+    inc:
+      - FCOM_SpawnRatesSlightlyReduced.esp
+      - FCOM_SpawnRatesStronger.esp
     msg:
-      - type: say
-        content: "Use only one Spawn Rates plugin: Reduced, SlightlyReduced or Stronger."
       - type: error
-        content: FCOM_Convergence.esm is missing. Re-install FCOM.
+        content: 'FCOM_Convergence.esm is missing. Re-install FCOM.'
         condition: 'not file("FCOM_Convergence.esm")'
     tag:
       - Delev
       - Relev
   - name: FCOM_SpawnRatesSlightlyReduced.esp
+    inc:
+      - FCOM_SpawnRatesStronger.esp
+      - FCOM_SpawnRatesReduced.esp
     msg:
-      - type: say
-        content: "Use only one Spawn Rates plugin: Reduced, SlightlyReduced or Stronger."
       - type: error
-        content: FCOM_Convergence.esm is missing. Re-install FCOM.
+        content: 'FCOM_Convergence.esm is missing. Re-install FCOM.'
         condition: 'not file("FCOM_Convergence.esm")'
     tag:
       - Delev
       - Relev
   - name: FCOM_SpawnRatesStronger.esp
+    inc:
+      - FCOM_SpawnRatesReduced.esp
+      - FCOM_SpawnRatesSlightlyReduced.esp
     msg:
       - type: say
-        content: "Use only one Spawn Rates plugin: Reduced, SlightlyReduced or Stronger."
-        condition: *FCOMCond
-      - type: say
-        content: "'Stronger' is the same as 'Reduced' but spawns will be more powerful."
-        condition: *FCOMCond
+        content: '''Stronger'' is the same as ''Reduced'' but spawns will be more powerful.'
       - type: error
-        content: FCOM_Convergence.esm is missing. Re-install FCOM.
+        content: 'FCOM_Convergence.esm is missing. Re-install FCOM.'
         condition: 'not file("FCOM_Convergence.esm")'
     tag:
       - Delev
@@ -7220,28 +7213,26 @@ plugins:
   - name: FCOM_MoreWildernessLife.esp
     msg:
       - type: say
-        content: Delete. Use Mart's Monster Mod - More Wilderness Life.esp or Mart's Monster Mod - More Wilderness Life No Gates.esp instead
+        content: 'Delete. Use Mart''s Monster Mod - More Wilderness Life.esp or Mart''s Monster Mod - More Wilderness Life No Gates.esp instead'
   - name: Mart's Monster Mod - More Wilderness Life.esp
-    msg:
-      - type: say
-        content: Use either 'More Wilderness Life' or 'More Wilderness Life No Gates' but not both.
+    inc:
+      - Mart's Monster Mod - More Wilderness Life No Gates.esp
   - name: Mart's Monster Mod - More Wilderness Life No Gates.esp
-    msg:
-      - type: say
-        content: Use either 'More Wilderness Life' or 'More Wilderness Life No Gates' but not both.
-      - *doNotClean
+    inc: 
+      - Mart's Monster Mod - More Wilderness Life.esp
+    msg: [ *doNotClean ]
   - name: Mart's Monster Mod - More Passive Wildlife.esp
     msg:
       - type: say
-        content: Not recommended, has bugs.
+        content: 'Not recommended, has bugs.'
   - name: Mart's Monster Mod - Safer Roads.esp
     msg:
       - type: error
-        content: Delete and use the 'FCOM_SaferRoads.esp'.
+        content: 'Delete and use the ''FCOM_SaferRoads.esp''.'
   - name: FCOM_SaferRoads.esp
     msg:
       - type: error
-        content: FCOM_Convergence.esm is missing. Re-install FCOM.
+        content: 'FCOM_Convergence.esm is missing. Re-install FCOM.'
         condition: 'not file("FCOM_Convergence.esm")'
     tag:
       - Delev
@@ -7249,131 +7240,131 @@ plugins:
   - name: Mart's Monster Mod - Less Rats.esp
     msg:
       - type: error
-        content: Delete and use 'FCOM_LessRats.esp'.
+        content: 'Delete and use ''FCOM_LessRats.esp''.'
   - name: FCOM_LessRats.esp
     msg:
       - type: error
-        content: FCOM_Convergence.esm is missing. Re-install FCOM.
+        content: 'FCOM_Convergence.esm is missing. Re-install FCOM.'
         condition: 'not file("FCOM_Convergence.esm")'
   - name: Mart's Monster Mod - No Spiders.esp
     msg:
       - type: error
-        content: Delete and use 'FCOM_NoSpiders.esp'.
+        content: 'Delete and use ''FCOM_NoSpiders.esp''.'
   - name: FCOM_NoSpiders.esp
     msg:
       - type: error
-        content: FCOM_Convergence.esm is missing. Re-install FCOM.
+        content: 'FCOM_Convergence.esm is missing. Re-install FCOM.'
         condition: 'not file("FCOM_Convergence.esm")'
   - name: Mart's Monster Mod - No Wyvern.esp
     msg:
       - type: error
-        content: Delete and use 'FCOM_NoWyverns.esp'.
+        content: 'Delete and use ''FCOM_NoWyverns.esp''.'
   - name: Mart's_Monster Mod -No Wyvern.esp
     msg:
       - type: error
-        content: Delete and use 'FCOM_NoWyverns.esp'.
+        content: 'Delete and use ''FCOM_NoWyverns.esp''.'
   - name: FCOM_NoWyverns.esp
     msg:
       - type: error
-        content: FCOM_Convergence.esm is missing. Re-install FCOM.
+        content: 'FCOM_Convergence.esm is missing. Re-install FCOM.'
         condition: 'not file("FCOM_Convergence.esm")'
   - name: Mart's Monster Mod for OOO - NoReaversInGates.esp
     msg:
       - type: error
-        content: Delete. Use 'FCOM_NoReaversInGates.esp' instead.
+        content: 'Delete. Use ''FCOM_NoReaversInGates.esp'' instead.'
   - name: FCOM_NoReaversInGates.esp
+    inc:
+      - FCOM_LessReaversInGates.esp
     msg:
-      - type: say
-        content: Use either 'NoReaversInGates' or 'LessReaversInGates' but not both.
       - type: error
-        content: FCOM_Convergence.esm is missing. Re-install FCOM.
+        content: 'FCOM_Convergence.esm is missing. Re-install FCOM.'
         condition: 'not file("FCOM_Convergence.esm")'
   - name: FCOM_NoAdventurersInGates.esp
     msg:
       - type: error
-        content: FCOM_Convergence.esm is missing. Re-install FCOM.
+        content: 'FCOM_Convergence.esm is missing. Re-install FCOM.'
         condition: 'not file("FCOM_Convergence.esm")'
   - name: Mart's Monster Mod for OOO - LessReaversInGates.esp
     msg:
       - type: error
-        content: Delete. Use FCOM_LessReaversInGates instead.
+        content: 'Delete. Use FCOM_LessReaversInGates instead.'
   - name: FCOM_LessReaversInGates.esp
+    inc:
+      - FCOM_NoReaversInGates.esp
     msg:
-      - type: say
-        content: Use either 'NoReaversInGates' or 'LessReaversInGates' but not both.
       - type: error
-        content: FCOM_Convergence.esm is missing. Re-install FCOM.
+        content: 'FCOM_Convergence.esm is missing. Re-install FCOM.'
         condition: 'not file("FCOM_Convergence.esm")'
   - name: Mart's Monster Mod - Increased Spawn Rates.esp
     msg:
       - type: error
-        content: Delete. Old version of MMM. Update MMM to 3.6beta3 or later.
+        content: 'Delete. Old version of MMM. Update MMM to 3.6beta3 or later.'
   - name: Mart's Monster Mod - Spawn Rates Increased.esp
     msg:
-      - type: error
-        content: Not recommended. Not fully tested with FCOM and creatures from other FCOM related mods may not appear.
+      - type: warn
+        content: 'Not recommended. Not fully tested with FCOM and creatures from other FCOM related mods may not appear.'
   - name: Mart's Monster Mod - Spawn Rates - Increased.esp
     msg:
-      - type: error
-        content: Not recommended. Not fully tested with FCOM and creatures from other FCOM related mods may not appear.
+      - type: warn
+        content: 'Not recommended. Not fully tested with FCOM and creatures from other FCOM related mods may not appear.'
   - name: Mart's Monster Mod - Spawn Rates - Moderate Increased.esp
     msg:
-      - type: error
-        content: Not recommended. Not fully tested with FCOM and creatures from other FCOM related mods may not appear.
+      - type: warn
+        content: 'Not recommended. Not fully tested with FCOM and creatures from other FCOM related mods may not appear.'
   - name: Mart's Monster Mod - Spawn Rates Moderate.esp
     msg:
-      - type: error
-        content: Not recommended. Not fully tested with FCOM and creatures from other FCOM related mods may not appear.
-      - type: error
-        content: Consider using 'FCOM_SpawnRatesReduced.esp', 'FCOM_SpawnRatesSlightlyReduced.esp' or 'FCOM_SpawnRatesStronger.esp' instead.
+      - type: warn
+        content: 'Not recommended. Not fully tested with FCOM and creatures from other FCOM related mods may not appear.'
+      - type: say
+        content: 'Consider using ''FCOM_SpawnRatesReduced.esp'', ''FCOM_SpawnRatesSlightlyReduced.esp'' or ''FCOM_SpawnRatesStronger.esp'' instead.'
   - name: Mart's Monster Mod - Spawn Rates - Reduced.esp
     msg:
       - type: error
-        content: Use 'FCOM_SpawnRatesReduced.esp' instead.
+        content: 'Use ''FCOM_SpawnRatesReduced.esp'' instead.'
   - name: Mart's Monster Mod - Spawn Rates Reduced Reduced.esp
     msg:
-      - type: error
-        content: Not recommended. Not fully tested with FCOM and creatures from other FCOM related mods may not appear.
-      - type: error
-        content: Consider using 'FCOM_SpawnRatesReduced.esp', 'FCOM_SpawnRatesSlightlyReduced.esp' or 'FCOM_SpawnRatesStronger.esp' instead.
+      - type: warn
+        content: 'Not recommended. Not fully tested with FCOM and creatures from other FCOM related mods may not appear.'
+      - type: say
+        content: 'Consider using ''FCOM_SpawnRatesReduced.esp'', ''FCOM_SpawnRatesSlightlyReduced.esp'' or ''FCOM_SpawnRatesStronger.esp'' instead.'
   - name: Mart's Monster Mod - Spawn Rates - Reduced Reduced.esp
     msg:
-      - type: error
-        content: Not recommended. Not fully tested with FCOM and creatures from other FCOM related mods may not appear.
-      - type: error
-        content: Consider using 'FCOM_SpawnRatesReduced.esp', 'FCOM_SpawnRatesSlightlyReduced.esp' or 'FCOM_SpawnRatesStronger.esp' instead.
+      - type: warn
+        content: 'Not recommended. Not fully tested with FCOM and creatures from other FCOM related mods may not appear.'
+      - type: say
+        content: 'Consider using ''FCOM_SpawnRatesReduced.esp'', ''FCOM_SpawnRatesSlightlyReduced.esp'' or ''FCOM_SpawnRatesStronger.esp'' instead.'
   - name: Mart's Monster Mod - Spawn Rates - Reduced Vanilla.esp
     msg:
-      - type: error
-        content: Not recommended. Not fully tested with FCOM and creatures from other FCOM related mods may not appear.
-      - type: error
-        content: Consider using 'FCOM_SpawnRatesReduced.esp', 'FCOM_SpawnRatesSlightlyReduced.esp' or 'FCOM_SpawnRatesStronger.esp' instead.
+      - type: warn
+        content: 'Not recommended. Not fully tested with FCOM and creatures from other FCOM related mods may not appear.'
+      - type: say
+        content: 'Consider using ''FCOM_SpawnRatesReduced.esp'', ''FCOM_SpawnRatesSlightlyReduced.esp'' or ''FCOM_SpawnRatesStronger.esp'' instead.'
   - name: Mart's Monster Mod - More Reavers.esp
     msg:
       - type: say
-        content: Old version. As from v3.6, integrated into of Additional Enemy NPC Vars.
+        content: 'Old version. As from v3.6, integrated into of Additional Enemy NPC Vars.'
   - name: Mart's Monster Mod - Extra Reavers.esp
     msg:
       - type: say
-        content: Old version. As from v3.6, integrated into of Additional Enemy NPC Vars.
+        content: 'Old version. As from v3.6, integrated into of Additional Enemy NPC Vars.'
   - name: Mart's Monster Mod for OOO - LessReavers.esp
     msg:
       - type: error
-        content: Delete. Use 'Mart's Monster Mod - Less Reavers.esp'.
+        content: 'Delete. Use ''Mart''s Monster Mod - Less Reavers.esp''.'
   - name: Mart's Monster Mod - Vindasel.esp
     msg:
       - type: say
-        content: Obsolete. Update to MMM 3.7b3+ and use 'Mart's Monster Mod - Safer Quest Locations.esp' instead.
+        content: 'Obsolete. Update to MMM 3.7b3+ and use ''Mart''s Monster Mod - Safer Quest Locations.esp'' instead.'
   - name: Mart's Monster Mod - Bats Addon.esp
     msg:
       - type: say
-        content: Obsolete. Update to MMM 3.6b3+ and use 'Dungeons of MMM.esp' instead.
+        content: 'Obsolete. Update to MMM 3.6b3+ and use ''Dungeons of MMM.esp'' instead.'
   - name: Mart's Monster Mod - Gems & Gem Dust.esp
     msg: [ *doNotClean ]
   - name: Gems and Gem Dusts - MMM.esp
     msg:
       - type: say
-        content: Will work with OOO 'light' but is not compatible with the 'full' installation of OOO.
+        content: 'Will work with OOO ''light'' but is not compatible with the ''full'' installation of OOO.'
   - name: Mart's Monster Mod - Hunting & Crafting.esp
     msg: [ *doNotClean ]
     tag:
@@ -7383,7 +7374,7 @@ plugins:
   - name: Mart's Monster Mod - Diverse Creature Skins.esp
     msg:
       - type: error
-        content: Obsolete. Remove this and update to MMM 3.7+ and associated version of FCOM.
+        content: 'Obsolete. Remove this and update to MMM 3.7+ and associated version of FCOM.'
   - name: Mart's Monster Mod - Farm Animals.esp
     dirty:
       - crc: 0xa00e61d1
@@ -7397,7 +7388,7 @@ plugins:
   - name: Mart's Monster Mod.esp
     msg:
       - type: error
-        content: Delete. Not needed with FCOM.
+        content: 'Delete. Not needed with FCOM.'
         condition: *FCOMCond
     tag:
       - Actors.AIData
@@ -7415,7 +7406,7 @@ plugins:
   - name: Mart's Monster Mod for Fran.esp
     msg:
       - type: error
-        content: Delete. Not needed with FCOM.
+        content: 'Delete. Not needed with FCOM.'
         condition: *FCOMCond
     tag:
       - Actors.AIData
@@ -7433,7 +7424,7 @@ plugins:
   - name: Mart's Monster Mod for Francescos.esp
     msg:
       - type: error
-        content: Delete. Not needed with FCOM.
+        content: 'Delete. Not needed with FCOM.'
         condition: *FCOMCond
     tag:
       - Delev
@@ -7448,23 +7439,21 @@ plugins:
       - NoMerge
       - NpcFaces
   - name: Mart's Monster Mod COBL Races TNR.esp
-    msg:
-      - type: say
-        content: "Incompatible with: COBL Races TNR."
+    inc:
+      - COBL Races TNR.esp
     tag:
       - NoMerge
       - NpcFaces
   - name: Mart's Monster Mod - COBL Races TNR.esp
-    msg:
-      - type: say
-        content: "Incompatible with: COBL Races TNR."
+    inc:
+      - COBL Races TNR.esp
     tag:
       - NoMerge
       - NpcFaces
   - name: Mart's Monster Mod for OOO.esp
     msg:
       - type: error
-        content: Delete. Not needed with FCOM.
+        content: 'Delete. Not needed with FCOM.'
         condition: *FCOMCond
     tag:
       - Actors.AIData
@@ -7480,23 +7469,20 @@ plugins:
       - Scripts
       - Stats
   - name: Mart's Monster Mod for OOO TNR Faces.esp
-    msg:
-      - type: say
-        content: "Incompatible with: COBL Races TNR."
+    inc:
+      - COBL Races TNR.esp
     tag:
       - NoMerge
       - NpcFaces
   - name: Mart's Monster Mod for OOO COBL Races TNR.esp
-    msg:
-      - type: say
-        content: "Incompatible with: COBL Races TNR."
+    inc:
+      - COBL Races TNR.esp
     tag:
       - NoMerge
       - NpcFaces
   - name: Mart's Monster Mod for OOO - COBL Races TNR.esp
-    msg:
-      - type: say
-        content: "Incompatible with: COBL Races TNR."
+    inc:
+      - COBL Races TNR.esp
     tag:
       - NoMerge
       - NpcFaces
@@ -7517,124 +7503,127 @@ plugins:
   - name: Choices and Consequences - MMM.esp
     msg:
       - type: say
-        content: Obsolete. Remove this and update to latest version.
+        content: 'Obsolete. Remove this and update to latest version.'
   - name: C&C&EQR - MMM.esp
     msg:
       - type: say
-        content: Obsolete. Remove this and update to latest version.
+        content: 'Obsolete. Remove this and update to latest version.'
   - name: Mart's Monster Mod - Blood Fix v3.esp
     msg:
       - type: say
-        content: Obsolete. Remove this and update to MMM v3.6beta3+.
+        content: 'Obsolete. Remove this and update to MMM v3.6beta3+.'
   - name: Mart's Monster Mod - Additional Enemy NPC Vars.esp
     msg:
       - type: say
-        content: Can increase the chances of a CTD in a heavily modded game.
+        content: 'Can increase the chances of a CTD in a heavily modded game.'
       - *doNotClean
   - name: Mart's Monster Mod - Diverse Runeskulls.esp
+    condition: 'not file("FCOM_Convergence.esm")'
     msg:
       - type: say
-        content: Do not use Exnem's original Runeskulls mod - Diverse Runeskulls replaces it.
+        content: 'Replaces both ''FCOM_ExnemRuneskulls.esp'' and ''ExnemRuneskulls.esp'' - Please remove them.'
+        condition: 'file("FCOM_ExnemRuneskulls.esp") or file("ExnemRuneskulls.esp")'
     tag:
       - Delev
       - Relev
   - name: Mart's Monster Mod - More Reavers.esp
     msg:
       - type: say
-        content: Obsolete. Remove this and update to MMM v3.6beta3+.
+        content: 'Obsolete. Remove this and update to MMM v3.6beta3+.'
   - name: Mart's Monster Mod - Extra Reavers.esp
     msg:
       - type: say
-        content: Obsolete. Remove this and update to MMM v3.6beta3+.
+        content: 'Obsolete. Remove this and update to MMM v3.6beta3+.'
   - name: Mart's Monster Mod - Diverse Imperial Armor.esp
     msg:
-      - type: say
-        content: Not compatible with OOO. Already included in OOO.
-        condition: file("Oscuro's_Oblivion_Overhaul.esm")
+      - type: error
+        content: 'Not compatible with OOO. Already included in OOO.'
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: Mart's Monster Mod - Diverse Creature Skins.esp
     msg:
+      - type: error
+        content: 'Not compatible with OOO. Already included in OOO.'
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
       - type: say
-        content: Not compatible with OOO. Already included in OOO.
-        condition: file("Oscuro's_Oblivion_Overhaul.esm")
-      - type: say
-        content: Outdated. Update to MMM 3.7+.
+        content: 'Outdated. Update to MMM 3.7+.'
   - name: Mart's Monster Mod - More Reaver Variants.esp
     msg:
       - type: say
-        content: Obsolete. Integrated into 'Mart's Monster Mod - Additional Enemy NPC Vars.esp'. Remove this and update to MMM v3.6beta3+.
+        content: 'Obsolete. Integrated into ''Mart''s Monster Mod - Additional Enemy NPC Vars.esp''. Remove this and update to MMM v3.6beta3+.'
   - name: Mart's Monster Mod - Gems & Gem Dust.esp
     msg:
       - type: say
-        content: Will work with OOO 'light' but is not compatible with the 'full' installation of OOO.
+        content: 'Will work with OOO ''light'' but is not compatible with the ''full'' installation of OOO.'
       - *doNotClean
   - name: Mart's Monster Mod - Hunting & Crafting.esp
     msg: [ *doNotClean ]
   - name: Mart's Monster Mod - Durability & Damage.esp
     msg:
       - type: say
-        content: Not compatible with OOO. Already included in OOO.
-        condition: file("Oscuro's_Oblivion_Overhaul.esm")
+        content: 'Not compatible with OOO. Already included in OOO.'
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: Mart's Monster Mod - Fran's leveled quests.esp
     msg:
       - type: say
-        content: "Requires: a Fran's install with the Leveled Quests option."
+        content: 'Requires: a Fran''s install with the Leveled Quests option.'
   - name: Mart's Monster Mod - LessReaversInGates.esp
     msg:
       - type: say
-        content: Use 'Mart's Monster Mod for OOO - LessReaversInGates.esp' instead.
-        condition: file("Oscuro's_Oblivion_Overhaul.esm")
+        content: 'Use ''Mart''s Monster Mod for OOO - LessReaversInGates.esp'' instead.'
+        condition: 'file("Oscuro's_Oblivion_Overhaul.esm")'
   - name: Mart's Monster Mod - Safer Roads.esp
     msg:
       - type: say
-        content: Remove if using 'Mart's Monster Mod - Spawn Rates - Reduced.esp', already included.
+        content: 'Remove: already included in ''Mart''s Monster Mod - Spawn Rates - Reduced.esp'''
+        condition: 'file("Mart''s Monster Mod - Spawn Rates - Reduced")'
       - type: say
-        content: Remove if using 'Mart's Monster Mod - Spawn Rates Reduced Reduced.esp', already included.
+        content: 'Remove: already included in ''Mart''s Monster Mod - Spawn Rates Reduced Reduced.esp'''
+        condition: 'file("Mart''s Monster Mod - Spawn Rates Reduced Reduced")'
       - type: say
-        content: Remove if using 'Mart's Monster Mod - Spawn Rates - Reduced Vanilla.esp', already included.
+        content: 'Remove: already included in ''Mart''s Monster Mod - Spawn Rates - Reduced Vanilla.esp'''
+        condition: 'file("Mart''s Monster Mod - Spawn Rates - Reduced Vanilla")'
   - name: Mart's Monster Mod - NoReaversInGates.esp
     msg:
       - type: say
-        content: Use 'Mart's Monster Mod for OOO - NoReaversInGates.esp' instead.
-        condition: file("Oscuro's_Oblivion_Overhaul.esm")
+        content: 'Use ''Mart''s Monster Mod for OOO - NoReaversInGates.esp'' instead.'
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: Mart's Monster Mod - No Reaver Hounds.esp
     msg:
       - type: say
-        content: Outdated. Update to MMM 3.6beta3+.
+        content: 'Outdated. Update to MMM 3.6beta3+.'
   - name: Mart's Monster Mod - Spawn Rates Reduced Reduced.esp
     msg:
       - type: say
-        content: Outdated. Update to MMM 3.6beta3+.
+        content: 'Outdated. Update to MMM 3.6beta3+.'
   - name: Mart's Monster Mod - Vindasel.esp
     msg:
       - type: say
-        content: Obsolete. Remove this and update to 3.7b3+. Use 'Mart's Monster Mod - Safer Quest Locations.esp' instead.
+        content: 'Obsolete. Remove this and update to 3.7b3+. Use ''Mart''s Monster Mod - Safer Quest Locations.esp'' instead.'
   - name: Mart's Monster Mod - Bats Addon.esp
     msg:
       - type: say
-        content: Obsolete. Remove this and update to 3.6beta3+. Use 'Dungeons of MMM.esp' instead.
+        content: 'Obsolete. Remove this and update to 3.6beta3+. Use ''Dungeons of MMM.esp'' instead.'
   - name: Mart's Monster Mod - More Wilderness Life.esp
-    msg:
-      - type: say
-        content: Use either 'More Wilderness Life' or 'More Wilderness Life No Gates' but not both.
+    inc:
+      - Mart's Monster Mod - More Wilderness Life No Gates.esp
   - name: Mart's Monster Mod - More Wilderness Life No Gates.esp
-    msg:
-      - type: say
-        content: Use either 'More Wilderness Life' or 'More Wilderness Life No Gates' but not both.
-      - *doNotClean
+    inc:
+      - Mart's Monster Mod - More Wilderness Life.esp
+    msg: [ *doNotClean ]
   - name: Mart's Monster Mod - More Passive Wildlife.esp
     msg:
       - type: say
-        content: Not recommended, has bugs.
+        content: 'Not recommended, has bugs.'
   - name: Mart's Monster Mod - City Defences.esp
     msg:
       - type: say
-        content: Incompatible with Better Cities - City Defences.
-        condition: file("Better Cities Resources.esm")
+        content: 'Incompatible with Better Cities - City Defences.'
+        condition: 'file("Better Cities Resources.esm")'
       - *doNotClean
   - name: Mart's Monster Mod - Friendlier Factions OOO+FCOM.esp
     msg:
       - type: say
-        content: Obsolete. Remove this and update to 3.7b3+. Use 'Mart's Monster Mod - Friendlier Factions OOO.esp' instead.
+        content: 'Obsolete. Remove this and update to 3.7b3+. Use ''Mart''s Monster Mod - Friendlier Factions OOO.esp'' instead.'
   - name: Mart's Monster Mod - Farm Animals.esp
     dirty:
       - crc: 0xa00e61d1
@@ -7648,39 +7637,40 @@ plugins:
   - name: MrSiika'sFarmAnimals.esp
     msg:
       - type: say
-        content: MMM users should use 'Mart's Monster Mod - Farm Animals'.
+        content: 'MMM users should use ''Mart''s Monster Mod - Farm Animals''.'
   - name: FarmAnimalsofCyrodiil.esp
     msg:
       - type: say
-        content: MMM users should use 'Mart's Monster Mod - Farm Animals'.
+        content: 'MMM users should use ''Mart''s Monster Mod - Farm Animals''.'
   - name: MrSiikasBats.esp
     msg:
       - type: say
-        content: "Incompatible with: MMM."
+        content: 'Incompatible with: MMM.'
   - name: OblivionDurzogs.esp
     msg:
       - type: say
-        content: "Incompatible with: MMM."
+        content: 'Incompatible with: MMM.'
   - name: Diverse Wisps - for Vanilla.esp
     msg:
       - type: say
-        content: MMM users should use 'Mart's Monster Mod - Diverse Wisps.esp'.
+        content: 'MMM users should use ''Mart''s Monster Mod - Diverse Wisps.esp''.'
   - name: VASE - Vanilla Cyrodiil.esp
     msg:
       - type: say
-        content: MMM users should use 'VASE - Cyrodiil for MMM.esp' instead.
+        content: 'MMM users should use ''VASE - Cyrodiil for MMM.esp'' instead.'
   - name: Mart's Monster Mod - Boar's Addon.esp
     msg:
       - type: say
-        content: Outdated. Update to MMM 3.7b3+.
+        content: 'Outdated. Update to MMM 3.7b3+.'
   - name: Mart's Monster Mod - Hairy Spiders Addon.esp
     msg:
       - type: say
-        content: Outdated. Update to MMM 3.7b3+.
+        content: 'Outdated. Update to MMM 3.7b3+.'
   - name: Mart's Monster Mod - Slof Horses Complete.esp
     msg:
       - type: say
-        content: "Incompatible with: Slof's Horses, Slof's Extra Horses if not using a Bashed Patch."
+        content: 'Requires a Bashed Patch to be compatible with Slof''s Horses or Slof''s Extra Horses'
+        condition: 'regex("Slof.*Horse.*\.esp")'
     tag:
       - Actors.AIPackages
       - Graphics
@@ -7693,47 +7683,52 @@ plugins:
     tag:
       - Graphics
   - name: Mart's Monster Mod - Diverse RuneSkull Loot.esp
-    msg:
-      - type: say
-        content: "Incompatible with: MMM Gems & Gem Dust or MMMforOOO."
+    inc:
+      - Mart's Monster Mod for OOO.esp
+      - Mart's Monster Mod - Gems & Gem Dust.esp
     tag:
       - Delev
   - name: Mart's Monster Mod - Diverse Runeskulls Loot.esp
-    msg:
-      - type: say
-        content: "Incompatible with: MMM Gems & Gem Dust or MMMforOOO."
+    inc:
+      - Mart's Monster Mod for OOO.esp
+      - Mart's Monster Mod - Gems & Gem Dust.esp
     tag:
       - Delev
   - name: Mart's Monster Mod - Diverse RuneSkull MMM Loot.esp
+    req:
+      - Mart's Monster Mod - Gems & Gem Dust.esp
     msg:
       - type: say
-        content: "Requires: MMM and MMM Gems & Gem Dust."
+        content: 'Requires: MMM'
     tag:
       - Delev
   - name: Mart's Monster Mod - Diverse Runeskulls Loot G&GD.esp
+    req:
+      - Mart's Monster Mod - Gems & Gem Dust.esp
     msg:
       - type: say
-        content: "Requires: MMM and MMM Gems & Gem Dust."
+        content: 'Requires: MMM'
     tag:
       - Delev
   - name: Mart's Monster Mod - Diverse RuneSkull OOO Loot.esp
+    inc:
+      - Mart's Monster Mod - Gems & Gem Dust.esp
     msg:
       - type: say
-        content: "Requires: Oscuro's Oblivion Overhaul."
-      - type: say
-        content: "Requires: MMMforOOO or FCOM."
-      - type: say
-        content: "Incompatible with: MMM Gems & Gem Dust."
+        content: 'Requires: Oscuro''s Oblivion Overhaul.'
+      - type: error
+        content: 'Requires: MMMforOOO or FCOM.'
+        condition: 'file("Mart''s Monster Mod for OOO.esp") or file("FCOM_Convergence.esm")'
     tag:
       - Delev
   - name: Mart's Monster Mod - Diverse Runeskulls Loot OOO.esp
+    inc:
+      - Mart's Monster Mod - Gems & Gem Dust.esp
     msg:
       - type: say
         content: "Requires: Oscuro's Oblivion Overhaul."
       - type: say
         content: "Requires: MMMforOOO or FCOM."
-      - type: say
-        content: "Incompatible with: MMM Gems & Gem Dust."
     tag:
       - Delev
   - name: OMOBS_MMM.esp
