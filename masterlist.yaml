@@ -10620,7 +10620,7 @@ plugins:
         condition: 'checksum("KvatchRising.esp", 6C91CBEB)'
     dirty:
       - crc: 0x6c91cbeb
-        util: "\"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide\". TES4Edit\""
+        util: *dirtyUtil
         udr: 3
         itm: 202
   - name: Gold Road Cottage - Classy.esp
@@ -11200,7 +11200,9 @@ plugins:
         condition: 'checksum("Pek_Halls_of_The_Phoenix_Order.esp", D96DB828)'
     dirty:
       - crc: 0xd96db828
-        util: "\"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide\". TES4Edit\""
+        util: *dirtyUtil
+        itm: 2
+        udr: 0
   - name: Pine Lodge.esp
     msg:
       - type: say
@@ -11319,8 +11321,9 @@ plugins:
       - NpcFaces
     dirty:
       - crc: 0x9654b520
-        util: "\"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide\". TES4Edit\""
+        util: *dirtyUtil
         udr: 1
+        itm: 4440
   - name: RumpleMod Rwalk.esp
     msg:
       - type: say
@@ -11482,9 +11485,7 @@ plugins:
       - type: say
         content: Versions less than 3.1 may cause the quest being patched to restart if installed after the quest has started. Update to the latest delayer if you suspect a problem.
   - name: stWorldMonsters.esp
-    msg:
-      - type: say
-        content: "Needs TES4Edit cleaning: \"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide\""
+    msg: [ *needsCleaning ]
   - name: SunderedKeep.esp
     dirty:
       - crc: 0x70719f5b
@@ -11748,8 +11749,9 @@ plugins:
   - name: TolawaylAyleidCity_Quest.esp
     dirty:
       - crc: 0xc5c868bd
-        util: "\"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide\". TES4Edit\""
+        util: *dirtyUtil
         udr: 18
+        itm: 26
   - name: Tomb of the Unknown Knight.esp
     dirty:
       - crc: 0x52629a3f
@@ -11881,10 +11883,14 @@ plugins:
     msg:
       - type: say
         content: "Incompatible with: UL mod(s)."
+      - type: warn
+        content: 'Makes wild edits, see [special cleaning instructions](http://cs.elderscrolls.com/index.php/TES4Edit_Cleaning_Guide#Treasure_Maps_The_Legend_Of_Jauffres_Gold.esp_Special_Cleaning_Instructions).'
+        condition: 'checksum("Treasure_Maps_The_Legend_Of_Jauffres_Gold.esp", 9BEABF59)'
     dirty:
       - crc: 0x9beabf59
-        util: "\"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide\". TES4Edit\""
+        util: *dirtyUtil
         udr: 1
+        itm: 11
   - name: Treasure Maps Revenge Of The Nords.esp
     msg:
       - type: say
@@ -12033,10 +12039,15 @@ plugins:
         util: *dirtyUtil
         udr: 16
   - name: Waterfront Shack.esp
+    msg: 
+      - type: warn
+        content: 'Makes wild edits, see [special cleaning instructions](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide#Waterfront_Shack.esp_Special_Cleaning_Instructions).'
+        condition: 'checksum("Waterfront Shack.esp", 4FD37830)'
     dirty:
       - crc: 0x4fd37830
-        util: "\"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide\". TES4Edit\""
+        util: *dirtyUtil
         udr: 8
+        itm: 1
   - name: WeaponsOfTheNine.esp
     dirty:
       - crc: 0xda0ee588
@@ -12175,9 +12186,7 @@ plugins:
     tag:
       - Relations
   - name: IOM - Arena.esp
-    msg:
-      - type: say
-        content: "Needs TES4Edit cleaning: \"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide\""
+    msg: [ *needsCleaning ]
   - name: Visually Enhanced Arena.esp
     dirty:
       - crc: 0x81563088
@@ -12200,10 +12209,15 @@ plugins:
       - crc: 0x7048c609
         util: *dirtyUtil
   - name: BattlehornCastleEnhanced.esp
+    msg:
+      - type: warn
+        content: 'Makes wild edits, see [special cleaning instructions](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide#BattlehornCastleEnhanced.esp_Special_Cleaning_Instructions)'
+        condition: 'checksum("BattlehornCastleEnhanced.esp", 9E3F8559)'
     dirty:
       - crc: 0x9e3f8559
-        util: "\"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide\". TES4Edit\""
+        util: *dirtyUtil
         udr: 14
+        itm: 86
   - name: SM Plugin Refurbish - Battlehorn.esp
     msg:
       - type: say
@@ -12719,8 +12733,7 @@ plugins:
     msg:
       - type: say
         content: Update to latest version of Ruined Tail's Tale.
-      - type: say
-        content: "Needs TES4Edit cleaning: \"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide\""
+      - *needsCleaning
   - name: OCC-RTT-Patch.esp
     msg:
       - type: say
@@ -12746,10 +12759,15 @@ plugins:
         util: *dirtyUtil
         udr: 729
   - name: SoT_TheOrderofNibenay.esp
+    msg:
+      - type: warn
+        content: 'Makes wild edits to path grids.'
+        condition: 'checksum("SoT_TheOrderofNibenay.esp", CA79063C)'
     dirty:
       - crc: 0xca79063c
-        util: "\"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide\". TES4Edit\""
+        util: *dirtyUtil
         udr: 19
+        itm: 129
   - name: LostSpires_TheOrderofNibenay_patch.esp
     msg:
       - type: say
@@ -13696,8 +13714,7 @@ plugins:
     msg:
       - type: say
         content: Need to run TES4Edit "sort masters" function.
-      - type: say
-        content: "Needs TES4Edit cleaning: \"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide\""
+      - *needsCleaning
   - name: CUO_Bruma.esp
     msg:
       - type: say
@@ -13888,9 +13905,7 @@ plugins:
         util: *dirtyUtil
         udr: 556
   - name: HentaiMania2(Hentai).esp
-    msg:
-      - type: say
-        content: "Needs TES4Edit cleaning: \"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide\""
+    msg: [ *needsCleaning ]
   - name: HentaiMania2 Vwalk.esp
     tag:
       - Actors.Anims
@@ -13928,9 +13943,7 @@ plugins:
       - Actors.Anims
       - NoMerge
   - name: T-HMO.esp
-    msg:
-      - type: say
-        content: "Needs TES4Edit cleaning: \"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide\""
+    msg: [ *needsCleaning ]
   - name: xulBravilBarrowfields.esp
     dirty:
       - crc: 0xa29afdc3
@@ -15092,8 +15105,9 @@ plugins:
       - Invent
     dirty:
       - crc: 0xcfa556bc
-        util: "\"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide\". TES4Edit\""
+        util: *dirtyInfo
         udr: 1661
+        itm: 45
   - name: Banes Guilds UnitedOOO.esp
     msg:
       - type: error
@@ -15314,9 +15328,7 @@ plugins:
       - crc: 0xe138ff22
         util: *dirtyUtil
   - name: CUO_FightersGuildContracts_SAFE.esp
-    msg:
-      - type: say
-        content: "Needs TES4Edit cleaning: \"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide\""
+    msg: [ *needsCleaning ]
   - name: CUO_UnLeveledPotions.esp
     msg:
       - type: say
@@ -15540,13 +15552,18 @@ plugins:
     msg:
       - type: say
         content: "Incompatible with: (DC) Sutch Reborn landscape LOD."
+      - type: warn
+        content: 'Makes wild edits to merchant greetings, water height levels and a vanilla script.'
+        condition: 'checksum("Golden Perch Inn.esp", 4F0086B1)'
     dirty:
       - crc: 0x444f0e35
         util: *dirtyUtil
         udr: 2
+        itm: 25
       - crc: 0x4f0086b1
-        util: "\"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide\". TES4Edit\""
+        util: *dirtyUtil
         udr: 2
+        itm: 37
   - name: Golden Perch Inn - AN Patch.esp
     tag:
       - C.Climate
@@ -16311,9 +16328,7 @@ plugins:
       - type: say
         content: Obsolete. Upgrade to Kuertee's Alternatives To Death And Reload.
   - name: zzzNpcAIEnhanced.esp
-    msg:
-      - type: say
-        content: "Needs TES4Edit cleaning: \"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide\""
+    msg: [ *needsCleaning ]
   - name: EnchantedGems_Geomancy.esp
     msg:
       - type: say
@@ -16359,7 +16374,9 @@ plugins:
         content: If not using monster overhaul mods, use 'Lore Creatures.esp'.
     dirty:
       - crc: 0x46563387
-        util: "\"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide\". TES4Edit\""
+        util: *dirtyUtil
+        udr: 0
+        itm: 12
   - name: CLS-craftybits.esp
     dirty:
       - crc: 0x4c5bc5ec
@@ -16407,10 +16424,15 @@ plugins:
       - type: say
         content: Use .ini tweak or Wrye Bash Bashed Patch tweak instead where possible to avoid conflicts.
   - name: Shadow Ranger.esp
+    msg:
+      - type: warn
+        content: 'Makes wild edits, see [special cleaning instructions](http://cs.elderscrolls.com/index.php/TES4Edit_Cleaning_Guide#Shadow_Ranger.esp_Special_Cleaning_Instructions).'
+        condition: 'checksum("Shadow Ranger.esp", 1F83FEE1)'
     dirty:
       - crc: 0x1f83fee1
-        util: "\"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide\". TES4Edit\""
+        util: *dirtyUtil
         udr: 2
+        itm: 19
   - name: Shadow Ranger Redux.esp
     msg:
       - type: say
@@ -17079,9 +17101,7 @@ plugins:
       - type: say
         content: "Requires: OBSE."
   - name: Spells and Enchanting at guilds.esp
-    msg:
-      - type: say
-        content: "Needs TES4Edit cleaning: \"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide\""
+    msg: [ *needsCleaning ]
   - name: Soolie'sBetterEnchantmentEffects.esp
     dirty:
       - crc: 0x850a32b5
@@ -17809,8 +17829,7 @@ plugins:
     msg:
       - type: say
         content: Use 'SW01.esp' or 'SW01Plus.esp' but not both at the same time. SW01Plus affects the player as well.
-      - type: say
-        content: "Needs TES4Edit cleaning: \"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide\""
+      - *needsCleaning
     tag:
       - Actors.Anims
       - NoMerge
@@ -17818,8 +17837,7 @@ plugins:
     msg:
       - type: say
         content: Use 'SW01.esp' or 'SW01Plus.esp' but not both at the same time. SW01Plus affects the player as well.
-      - type: say
-        content: "Needs TES4Edit cleaning: \"http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide\""
+      - *needsCleaning
     tag:
       - Actors.Anims
       - NoMerge
