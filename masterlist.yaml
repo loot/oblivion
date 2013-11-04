@@ -34,13 +34,8 @@ common:
     
 globals:
   - type: warn
-    content: An update for BOSS (v2.1.1) has been released. Download it at "http://code.google.com/p/better-oblivion-sorting-software/downloads/list"
-    condition: version("BOSS","2.1.1.0",<)
-  - type: say
-    content: You are using the latest version of BOSS.
-    condition: version("BOSS","2.1.1.0",<)
-  - type: say
-    content: The next major release of BOSS is now open for "https://github.com/boss-developers/boss-code/wiki/BOSSv3-Beta-Testing beta testing". Anyone wishing to help test must have a BethSoft forum account and be comfortable with using TES4Edit to view conflicts.
+    content: 'An update for BOSS (v3.0.0) has been released. Download it [here](http://code.google.com/p/better-oblivion-sorting-software/downloads/list).'
+    condition: version("BOSS","3.0.0.0",<)
     
 plugins:
 # ESMs
@@ -244,7 +239,7 @@ plugins:
     req:
       - *OBSE
       - name: 'Race Repository.esm'
-        display: '"http://oblivion.nexusmods.com/mods/31821 Playable and NPC Creatures (only Race Repository.esm)"'
+        display: '[Playable and NPC Creatures (only Race Repository.esm)](http://oblivion.nexusmods.com/mods/31821)'
     dirty:
       - crc: 0x477340c8
         util: *dirtyUtil
@@ -279,7 +274,7 @@ plugins:
     req:
       - *OBSE
       - name: 'OBSE\Plugins\OBME.dll'
-        display: 'http://oblivion.nexusmods.com/mods/31981 Oblivion Magic Extender'
+        display: '[Oblivion Magic Extender](http://oblivion.nexusmods.com/mods/31981)'
 # ENDGROUP: ESMs
 # BEGINGROUP: Earliest mods
 #
@@ -1081,7 +1076,7 @@ plugins:
       - DLCShiveringIsles.esp
     msg:
       - type: say
-        content: "Use Standalone MOBS if using Frans or OMOBS if using FCOM/OOO. Both versions can be found here: \"http://oblivion.nexusmods.com/mods/28537\""
+        content: 'Use Standalone MOBS if using Frans or OMOBS if using FCOM/OOO. Both versions can be found [here](http://oblivion.nexusmods.com/mods/28537)'
         condition: file("FCOM_Convergence.esm") or file("Oscuro's_Oblivion_Overhaul.esm") or file("Francesco's Leveled Creatures-Items Mod.esm")
       - *doNotClean
     tag:
@@ -1224,7 +1219,7 @@ plugins:
   - name: Unofficial Shivering Isles Patch.esp
     msg:
       - type: say
-        content: "Use Standalone MOBS if using Frans or OMOBS if using FCOM/OOO. Both versions can be found here: \"http://oblivion.nexusmods.com/mods/28537\""
+        content: 'Use Standalone MOBS if using Frans or OMOBS if using FCOM/OOO. Both versions can be found [here](http://oblivion.nexusmods.com/mods/28537)'
         condition: file("FCOM_Convergence.esm") or file("Oscuro's_Oblivion_Overhaul.esm") or file("Francesco's Leveled Creatures-Items Mod.esm")
     tag:
       - Actors.ACBS
@@ -3627,7 +3622,7 @@ plugins:
   - name: MotionBlur.esp
     msg:
       - type: say
-        content: "Fix available for 'Over-Darkening' issue: \"http://tr.im/scy6\""
+        content: 'Fix available for ''Over-Darkening'' issue [here](http://tr.im/scy6).'
   - name: NameThatHorse.esp
     msg:
       - type: say
@@ -4215,7 +4210,7 @@ plugins:
         display: 'Armamentarium Complete'
     msg:
       - type: say
-        content: 'Consider updating to the newer "http://oblivion.nexusmods.com/mods/18417 Armamentarium Complete" version.'
+        content: 'Consider updating to the newer [Armamentarium Complete](http://oblivion.nexusmods.com/mods/18417) version.'
         condition: not file("Armamentarium.esm")
   - name: ArmamentariumArmor.esp
     inc:
@@ -4223,7 +4218,7 @@ plugins:
         display: 'Armamentarium Complete'
     msg:
       - type: say
-        content: 'Consider updating to the newer "http://oblivion.nexusmods.com/mods/18417 Armamentarium Complete" version.'
+        content: 'Consider updating to the newer [Armamentarium Complete](http://oblivion.nexusmods.com/mods/18417) version.'
         condition: not file("Armamentarium.esm")
   - name: ArmamentariumArmor4Npcs.esp
     inc:
@@ -4231,7 +4226,7 @@ plugins:
         display: 'Armamentarium Complete'
     msg:
       - type: say
-        content: 'Consider updating to the newer "http://oblivion.nexusmods.com/mods/18417 Armamentarium Complete" version.'
+        content: 'Consider updating to the newer [Armamentarium Complete](http://oblivion.nexusmods.com/mods/18417) version.'
         condition: not file("Armamentarium.esm")
   - name: ArmamentariumWeapons4Npcs.esp
     inc:
@@ -4240,7 +4235,7 @@ plugins:
         display: 'Armamentarium Complete'
     msg:
       - type: say
-        content: 'Consider updating to the newer "http://oblivion.nexusmods.com/mods/18417 Armamentarium Complete" version.'
+        content: 'Consider updating to the newer [Armamentarium Complete](http://oblivion.nexusmods.com/mods/18417) version.'
         condition: not file("Armamentarium.esm")
   - name: Armamentarium_MOBS.esp
     inc:
@@ -4249,7 +4244,7 @@ plugins:
         display: 'Armamentarium Complete'
     msg:
       - type: say
-        content: 'Consider updating to the newer "http://oblivion.nexusmods.com/mods/18417 Armamentarium Complete" version.'
+        content: 'Consider updating to the newer [Armamentarium Complete](http://oblivion.nexusmods.com/mods/18417) version.'
         condition: not file("Armamentarium.esm")
   - name: ArmamentariumKatanas.esp
     inc:
@@ -4257,7 +4252,7 @@ plugins:
         display: 'Armamentarium Complete'
     msg:
       - type: say
-        content: 'Consider updating to the newer "http://oblivion.nexusmods.com/mods/18417 Armamentarium Complete" version.'
+        content: 'Consider updating to the newer [Armamentarium Complete](http://oblivion.nexusmods.com/mods/18417) version.'
         condition: not file("Armamentarium.esm")
   - name: ArmamentariumKatanasRU.esp
     inc:
@@ -4265,7 +4260,7 @@ plugins:
         display: 'Armamentarium Complete'
     msg:
       - type: say
-        content: 'Consider updating to the newer "http://oblivion.nexusmods.com/mods/18417 Armamentarium Complete" version.'
+        content: 'Consider updating to the newer [Armamentarium Complete](http://oblivion.nexusmods.com/mods/18417) version.'
         condition: not file("Armamentarium.esm")
   - name: ArmamentariumVendors.esp
     inc:
@@ -4273,7 +4268,7 @@ plugins:
         display: 'Armamentarium Complete'
     msg:
       - type: say
-        content: 'Consider updating to the newer "http://oblivion.nexusmods.com/mods/18417 Armamentarium Complete" version.'
+        content: 'Consider updating to the newer [Armamentarium Complete](http://oblivion.nexusmods.com/mods/18417) version.'
         condition: not file("Armamentarium.esm")
   - name: ArmamentariumStaffs.esp
     inc:
@@ -4281,7 +4276,7 @@ plugins:
         display: 'Armamentarium Complete'
     msg:
       - type: say
-        content: 'Consider updating to the newer "http://oblivion.nexusmods.com/mods/18417 Armamentarium Complete" version.'
+        content: 'Consider updating to the newer [Armamentarium Complete](http://oblivion.nexusmods.com/mods/18417) version.'
         condition: not file("Armamentarium.esm")
   - name: AGEHA Tortured Souls.esp
     tag:
@@ -5045,7 +5040,7 @@ plugins:
   - name: RTFemaleReplacerV12.esp
     msg:
       - type: say
-        content: Robert's Female Body v. 1.2 users to make sure they download the "Rough Leather Shoes" fix ("http://oblivion.nexusmods.com/mods/28975")
+        content: 'Robert''s Female Body v. 1.2 users to make sure they download the "Rough Leather Shoes" [fix](http://oblivion.nexusmods.com/mods/28975).'
     tag:
       - Graphics
       - NoMerge
@@ -9005,7 +9000,7 @@ plugins:
       - type: say
         content: "Incompatible with: Kvatch Rebuilt, Hoarfrost Castle, Midas Magic, Mannimarco Complete, Reneer's Corpse Mod, Unique landscapes, KSE_v3.esp."
       - type: say
-        content: "For compatibility with Knights of the Nine, get the patch: \"http://tamriel.ru/7roadsmod/Knights_Patch_02.zip\""
+        content: 'For compatibility with Knights of the Nine, get the [patch](http://tamriel.ru/7roadsmod/Knights_Patch_02.zip).'
       - *needsCleaning
     tag:
       - Actors.ACBS
@@ -9471,7 +9466,7 @@ plugins:
       - type: say
         content: "Requires: Shivering Isles"
       - type: say
-        content: "Requires: Knights of the Nine, unless using the patch available from \"http://blackocean.ucoz.ru\""
+        content: 'Requires: Knights of the Nine, unless using the patch available from [here](http://blackocean.ucoz.ru).'
     dirty:
       - crc: 0xab24aeb2
         util: *dirtyUtil
@@ -9481,7 +9476,7 @@ plugins:
       - type: say
         content: "Requires: Shivering Isles"
       - type: say
-        content: "Requires: Knights of the Nine, unless using the patch available from \"http://blackocean.ucoz.ru\""
+        content: 'Requires: Knights of the Nine, unless using the patch available from [here](http://blackocean.ucoz.ru).'
   - name: BladeOfTheHaunted.esp
     tag:
       - Factions
@@ -10521,9 +10516,9 @@ plugins:
       - type: say
         content: Outdated. Update to v1.3+.
   - name: kingdomofAlmar.esp
-    msg:
-      - type: say
-        content: "Requires the OOO compatibility patch 'kingdomofAlamar_OOO.esp' found here: \"http://devnull.sweetdanger.net/mods/KingdomofAlmar_OOO.zip\""
+    req:
+      - name: 'kingdomofAlamar_OOO.esp'
+        display: '[OOO compatibility patch]((http://devnull.sweetdanger.net/mods/KingdomofAlmar_OOO.zip)'
         condition: file("Oscuro's_Oblivion_Overhaul.esm")
     dirty:
       - crc: 0x72392fc9
@@ -10922,13 +10917,13 @@ plugins:
   - name: MTCExpandedVillages.esp
     msg:
       - type: warn
-        content: "Incompatible with Ruined Tail's Tale unless using the patch available here: \"http://oblivion.nexusmods.com/mods/34010\""
+        content: "Incompatible with Ruined Tail's Tale unless using the patch available [here](http://oblivion.nexusmods.com/mods/34010)."
         condition: ( file("RTT.esp") ) and not file("RTT-Weye Relocation Patch.esp")
       - type: warn
-        content: "Incompatible with Faregyl Village unless using the patch available here: \"http://oblivion.nexusmods.com/mods/34010\""
+        content: "Incompatible with Faregyl Village unless using the patch available [here](http://oblivion.nexusmods.com/mods/34010)."
         condition: ( file("Faregyl.esp") ) and not file("MTCVillages-FaregylPatch.esp")
       - type: warn
-        content: "Incompatible with Lost Spires unless using the patch available here: \"http://oblivion.nexusmods.com/mods/42430\""
+        content: "Incompatible with Lost Spires unless using the patch available [here](http://oblivion.nexusmods.com/mods/42430)."
         condition: ( file("The Lost Spires.esp") ) and not file("MTCVillages-LostSpiresPatch.esp")
     dirty:
       - crc: 0x795046ef
@@ -11210,7 +11205,7 @@ plugins:
   - name: Potion Of the Gods.esp
     msg:
       - type: say
-        content: "Requires: Jojjo's Lich King's armour, shield, and Frostmourne sword. (\"http://oblivion.nexusmods.com/mods/17032\")"
+        content: "Requires: Jojjo's Lich King's armour, shield, and Frostmourne sword. (<http://oblivion.nexusmods.com/mods/17032>)"
   - name: Princess Passwall Home.esp
     dirty:
       - crc: 0xdfb2260b
@@ -11447,7 +11442,7 @@ plugins:
       - type: say
         content: "Requires: BBB systems"
       - type: say
-        content: Please install "http://oblivion.nexusmods.com/mods/37368 MBP" if you have issues with eyes
+        content: 'Please install [MBP](http://oblivion.nexusmods.com/mods/37368) if you have issues with eyes.'
       - type: say
         content: Change the next settings in Oblivion.ini
       - type: say
@@ -11718,7 +11713,7 @@ plugins:
   - name: TheStorytellersBrotherQuest.esp
     msg:
       - type: say
-        content: "A fixed version can be found here: \"http://oblivion.nexusmods.com/downloads/file.php?id=7809\""
+        content: "A fixed version can be found [here](http://oblivion.nexusmods.com/downloads/file.php?id=7809)."
     dirty:
       - crc: 0x2414a8ef
         util: *dirtyUtil
@@ -11979,7 +11974,7 @@ plugins:
   - name: VHBloodlines 1.2.esp
     msg:
       - type: say
-        content: "If you have SI installed, make sure you're using the update: \"http://oblivion.nexusmods.com/mods/36389\""
+        content: "If you have SI installed, make sure you're using the [update](http://oblivion.nexusmods.com/mods/36389)."
     tag:
       - Actors.AIData
       - Actors.AIPackages
@@ -12589,7 +12584,7 @@ plugins:
       - type: say
         content: Don't use BattleHorn_MOBS.esp, VileLair_MOBS.esp, MehrunesRazor_MOBS.esp, Knights_MOBS.esp or ThievesDen_MOBS.esp if using this as this includes all those.
       - type: say
-        content: "Recommended to use version 2.0 or greater: \"http://oblivion.nexusmods.com/mods/28537\""
+        content: "Recommended to use version 2.0 or greater: <http://oblivion.nexusmods.com/mods/28537>"
     tag:
       - Deactivate
       - Filter
@@ -13217,7 +13212,7 @@ plugins:
   - name: LetThePeopleDrink-NRB patch.esp
     msg:
       - type: error
-        content: "Do not use - has technical issues. Download the correct patch here: \"http://oblivion.nexusmods.com/mods/20218\""
+        content: "Do not use - has technical issues. Download the correct patch [here](http://oblivion.nexusmods.com/mods/20218)."
   - name: Roads of Cyrodiil.esp
     msg:
       - type: error
@@ -14167,7 +14162,7 @@ plugins:
   - name: LetThePeopleDrink-ImperialIsle-NRB4 patch.esp
     msg:
       - type: say
-        content: "Do not use - has technical issues. Download the correct patch here: \"http://oblivion.nexusmods.com/mods/20218\""
+        content: "Do not use - has technical issues. Download the correct patch [here](http://oblivion.nexusmods.com/mods/20218)."
   - name: xulBlackwoodForest.esp
     dirty:
       - crc: 0x781ac4eb
@@ -14655,10 +14650,10 @@ plugins:
         content: "Requires: Official Shivering Isles expansion."
     tag:
       - Actors.AIPackages
-  - name: Open Cities Bartholm.esp
-    msg:
-      - type: say
-        content: "Requires: Bartholm. \"http://oblivion.nexusmods.com/mods/5022\""
+  - name: 'Open Cities Bartholm.esp'
+    req:
+      - name: 'Bartholm.esp'
+        display: '[Bartholm](http://oblivion.nexusmods.com/mods/5022)'
   - name: Open Cities Anvil.esp
     msg:
       - type: say
@@ -14668,11 +14663,12 @@ plugins:
       - type: say
         content: Obsolete, unsupported. Please update to version 4.0+.
   - name: Open Cities Bravil Blood&Mud.esp
+    req:
+      - name: 'Blood&Mud.esp'
+        display: '[Bravil Blood & Mud](http://oblivion.nexusmods.com/mods/12016)'
     msg:
       - type: say
         content: Obsolete, unsupported. Please update to version 4.0+.
-      - type: say
-        content: "Requires: Bravil Blood&Mud. \"http://oblivion.nexusmods.com/mods/12016\""
   - name: Open Cities Bruma.esp
     msg:
       - type: say
@@ -14705,8 +14701,9 @@ plugins:
     msg:
       - type: say
         content: Obsolete, unsupported. Please update to version 4.0+.
-      - type: say
-        content: "Requires: Bravil Blood&Mud. \"http://oblivion.nexusmods.com/mods/12016\""
+    req:
+      - name: 'Blood&Mud.esp'
+        display: '[Bravil Blood & Mud](http://oblivion.nexusmods.com/mods/12016)'
   - name: Open_Cities_Complete-Leyawiin_Reborn.esp
     msg:
       - type: say
@@ -14719,8 +14716,9 @@ plugins:
     msg:
       - type: say
         content: Obsolete. Upgrade to Open Cities Reborn, and follow the readme for proper instructions.
-      - type: say
-        content: "Requires: Bravil Blood&Mud. \"http://oblivion.nexusmods.com/mods/12016\""
+    req:
+      - name: 'Blood&Mud.esp'
+        display: '[Bravil Blood & Mud](http://oblivion.nexusmods.com/mods/12016)'
   - name: Open Cities Reborn - Anvil.esp
     msg:
       - type: say
@@ -15099,13 +15097,13 @@ plugins:
         content: OOO users should be using "Banes Guilds UnitedOOO.esp" instead.
         condition: file("Oscuro's_Oblivion_Overhaul.esm")
       - type: warn
-        content: "Users are very strongly recommended to upgrade to v2+ of this mod to avoid serious issues. It can be found here: \"http://oblivion.nexusmods.com/mods/42261\""
+        content: "Users are very strongly recommended to upgrade to v2+ of this mod to avoid serious issues. It can be found [here](http://oblivion.nexusmods.com/mods/42261)."
         condition: checksum("Banes Guilds United.esp",CFA556BC)
     tag:
       - Invent
     dirty:
       - crc: 0xcfa556bc
-        util: *dirtyInfo
+        util: *dirtyUtil
         udr: 1661
         itm: 45
   - name: Banes Guilds UnitedOOO.esp
@@ -17251,7 +17249,7 @@ plugins:
   - name: TRN One of the Gang.esp
     msg:
       - type: say
-        content: If using The Elder Council use the patch ("http://oblivion.nexusmods.com/mods/23526").
+        content: 'If using The Elder Council use the [patch](http://oblivion.nexusmods.com/mods/23526).'
       - type: say
         content: If using Kuertee's Clothing Matters, edit Clothing Matters.ini and change kCMQuest.guardArmourCrimeGold and kCMQuest.guardArmourIsADisguise to 0
     dirty:
@@ -17485,14 +17483,14 @@ plugins:
   - name: Deadly Reflex 5 - Combat Moves.esp
     msg:
       - type: say
-        content: See "http://omploader.org/vMmJlbA/DRtestfix.zip" for a hotfix for CTD issues.
+        content: 'A [hotfix](http://omploader.org/vMmJlbA/DRtestfix.zip) exists for CTD issues.'
       - type: error
-        content: Use the replacement plugin for Nehrim found "http://oblivion.nexusmods.com/mods/35157 here".
+        content: 'Use the replacement plugin for Nehrim found [here](http://oblivion.nexusmods.com/mods/35157).'
         condition: *nehrimCond
   - name: DeadlyReflex 5 - Combat Moves.esp
     msg:
       - type: say
-        content: See "http://omploader.org/vMmJlbA/DRtestfix.zip" for a hotfix for CTD issues.
+        content: 'A [hotfix](http://omploader.org/vMmJlbA/DRtestfix.zip) exists for CTD issues.'
     dirty:
       - crc: 0xf63d656d
         util: *dirtyUtil
@@ -20448,7 +20446,7 @@ plugins:
   - name: 1em_Vilja_as_Custom_by_Gonzoguns.esp
     msg:
       - type: say
-        content: "Requires: Requires resources from Abriael Human Races Revamped (\"http://oblivion.nexusmods.com/mods/25524\"), the ESP file is not required."
+        content: "Requires: Requires resources from [Abriael Human Races Revamped](http://oblivion.nexusmods.com/mods/25524), the ESP file is not required."
       - type: say
         content: Choose only ONE customization for Vilja.
   - name: 1em_Vilja_as_Custom_by_Gonzoguns Vwalk.esp
@@ -20474,7 +20472,7 @@ plugins:
   - name: 1em_Vilja_as_High_Imperial.esp
     msg:
       - type: say
-        content: "Requires: Requires resources from Deathknowz's High Imperials Race (\"http://oblivion.nexusmods.com/mods/33044\") (all three files), the ESP file is not required."
+        content: "Requires: Requires resources from [Deathknowz's High Imperials Race](http://oblivion.nexusmods.com/mods/33044) (all three files), the ESP file is not required."
       - type: say
         content: Choose only ONE customization for Vilja.
   - name: 1em_Vilja_as_High_Imperial Vwalk.esp
@@ -20569,7 +20567,7 @@ plugins:
   - name: Baddy.esp
     msg:
       - type: say
-        content: "If you use Entius Gorge you need the compatibility patch found here: \"http://oblivion.nexusmods.com/mods/13834\""
+        content: "If you use Entius Gorge you need the compatibility patch found [here](http://oblivion.nexusmods.com/mods/13834)."
   - name: Companion-Hilda.esp
     msg:
       - type: say
@@ -23230,11 +23228,11 @@ plugins:
   - name: DeadlyReflex 6 - Combat Moves.esp
     msg:
       - type: say
-        content: "Requires: NifSE (\"http://oblivion.nexusmods.com/mods/21292\")"
+        content: "Requires: [NifSE](http://oblivion.nexusmods.com/mods/21292)"
       - type: say
-        content: "Requires: Drop Lit Torches OBSE (\"http://oblivion.nexusmods.com/mods/16282\")"
+        content: "Requires: [Drop Lit Torches OBSE](http://oblivion.nexusmods.com/mods/16282)"
       - type: say
-        content: For use both DR6b101 and NifSE 1.0+ use fix ("http://oblivion.nexusmods.com/mods/40336")
+        content: 'For use both DR6b101 and NifSE 1.0+ use [fix](http://oblivion.nexusmods.com/mods/40336).'
     tag:
       - Graphics
   - name: Real Hunger, Cobl.esp
@@ -23711,7 +23709,7 @@ plugins:
   - name: ASTnehrimHotfixes01(EN).esp
     msg:
       - type: error
-        content: Outdated. Use the update "http://oblivion.nexusmods.com/mods/39736 here" instead.
+        content: Outdated. Use the [update](http://oblivion.nexusmods.com/mods/39736) instead.
 
   - name: WindowLightingSystem.esp
     msg:
@@ -23764,7 +23762,7 @@ plugins:
   - name: NehrimTEMP_ENGRISH_TEXT.esp
     msg:
       - type: warn
-        content: Outdated. Use "http://oblivion.nexusmods.com/mods/39736 this" instead.
+        content: Outdated. Use [this](http://oblivion.nexusmods.com/mods/39736) instead.
 
   - name: SM Encumbrance and Fatigue.esp
     msg: [ *masterReassign ]
@@ -23841,19 +23839,19 @@ plugins:
     msg: [ *masterReassign ]
     
   - name: Ostian Enhanced.esp
-    url: [ http://oblivion.nexusmods.com/mods/43632/ ]
+    url: [ 'http://oblivion.nexusmods.com/mods/43632' ]
 
   - name: Nehrim Fast Travel 2011.esp
-    url: [ http://oblivion.nexusmods.com/mods/37374 ]
+    url: [ 'http://oblivion.nexusmods.com/mods/37374' ]
     
   - name: DynamicFootPositionNehrim.esp
-    url: [ http://oblivion.nexusmods.com/mods/42222 ]
+    url: [ 'http://oblivion.nexusmods.com/mods/42222' ]
     
   - name: kuerteeNehrimBattleFatigueAndInjuries.esp
-    url: [ http://oblivion.nexusmods.com/mods/24604 ]
+    url: [ 'http://oblivion.nexusmods.com/mods/24604' ]
     
   - name: Giliad House for Sale.esp
-    url: [ http://oblivion.nexusmods.com/mods/41868/ ]
+    url: [ 'http://oblivion.nexusmods.com/mods/41868' ]
 # ENDGROUP: Post Bashed Patch
 
   - name: 'Blacktache''s Secrets v3.esp'
@@ -23935,7 +23933,6 @@ plugins:
         itm: 1
         udr: 0
         util: *dirtyUtil
-    url: [ 'http://oblivion.nexusmods.com/downloads/file.php?id=0' ]
         
   - name: 'Knights - Revelation Vwalk.esp'
     tag:
