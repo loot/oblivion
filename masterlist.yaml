@@ -4581,9 +4581,8 @@ plugins:
     tag:
       - Graphics
   - name: Female Outfits by Koutetsu.esp
-    msg:
-      - type: say
-        content: "Incompatible with: Better Abandoned House."
+    inc:
+      - Better Abandoned House.esp
   - name: Fighters Guild Scalemail Full.esp
     tag:
       - Invent
@@ -4616,11 +4615,11 @@ plugins:
   - name: Griffon Fortress 0.3.esp
     msg:
       - type: say
-        content: Outdated. Update to version 0.5.
+        content: 'Outdated. Update to version 0.5.'
   - name: Griffon Fortress 0.4.esp
     msg:
       - type: say
-        content: Outdated. Update to version 0.5.
+        content: 'Outdated. Update to version 0.5.'
   - name: Growlfs Hot Clothes.esp
     tag:
       - Graphics
@@ -4669,9 +4668,7 @@ plugins:
     tag:
       - Invent
   - name: JediLightsabersWithSheathFIX.esp
-    msg:
-      - type: say
-        content: "Requires: OBSE"
+    req: [ *OBSE ]
   - name: JG Elven.esp
     tag:
       - Eyes
@@ -4688,15 +4685,15 @@ plugins:
   - name: KDCirclets.esp
     msg:
       - type: say
-        content: Avoid using Potion Belt and KD Circlets at the same time. Character can wear belt or circlet, not both.
+        content: 'Avoid using Potion Belt and KD Circlets at the same time. Character can wear belt or circlet, not both.'
   - name: KDClothCirclets.esp
     msg:
       - type: say
-        content: Avoid using Potion Belt and KD Circlets at the same time. Character can wear belt or circlet, not both.
+        content: 'Avoid using Potion Belt and KD Circlets at the same time. Character can wear belt or circlet, not both.'
   - name: KhergitScimitar.esp
     msg:
       - type: say
-        content: make sure to load an overhaul or something after or manually rename the cells that this edits.
+        content: 'Make sure to load an overhaul or something after. Or manually rename the cells that this edits.'
   - name: Knight of Skeleton.esp
     dirty:
       - crc: 0x79e857e0
@@ -4704,11 +4701,11 @@ plugins:
   - name: KohdiBladesofAnkewan Delayer.esp
     msg:
       - type: say
-        content: Old version, update to latest version.
+        content: 'Old version, update to latest version.'
   - name: KohdiBladesofAnkewan v1.6 Delayer.esp
     msg:
       - type: say
-        content: Versions less than 3.1 may cause the quest being patched to restart if installed after the quest has started. Update to the latest delayer if you suspect a problem.
+        content: 'Versions less than 3.1 may cause the quest being patched to restart if installed after the quest has started. Update to the latest delayer if you suspect a problem.'
   - name: KohdiArmoryofAnsephaer Delayer.esp
     msg:
       - type: say
@@ -4716,15 +4713,15 @@ plugins:
   - name: KohdiArmoryofAnsephaer v1.01 Delayer.esp
     msg:
       - type: say
-        content: Versions less than 3.1 may cause the quest being patched to restart if installed after the quest has started. Update to the latest delayer if you suspect a problem.
+        content: 'Versions less than 3.1 may cause the quest being patched to restart if installed after the quest has started. Update to the latest delayer if you suspect a problem.'
   - name: Kohdi Ankewan-Anesphar Delayer.esp
     msg:
       - type: say
-        content: Old, update to latest version.
+        content: 'Old, update to latest version.'
   - name: Kohdi Ankewan-Anesphar Delayer v2.esp
     msg:
       - type: say
-        content: Depreciated.
+        content: 'Depreciated.'
   - name: Kurese Recolours.esp
     dirty:
       - crc: 0x4355daba
@@ -4824,25 +4821,25 @@ plugins:
   - name: M&BAxes.esp
     msg:
       - type: say
-        content: make sure to load an overhaul or something after or manually rename the cells that this edits.
+        content: 'Make sure to load an overhaul or something after. Or manually rename the cells that this edits.'
     tag:
       - Invent
   - name: M&BClubs&Hammers.esp
     msg:
       - type: say
-        content: make sure to load an overhaul or something after or manually rename the cells that this edits.
+        content: 'Make sure to load an overhaul or something after. Or manually rename the cells that this edits.'
     tag:
       - Invent
   - name: M&BShields.esp
     msg:
       - type: say
-        content: make sure to load an overhaul or something after or manually rename the cells that this edits.
+        content: 'Make sure to load an overhaul or something after. Or manually rename the cells that this edits.'
     tag:
       - Invent
   - name: MandBSwords.esp
     msg:
       - type: say
-        content: make sure to load an overhaul or something after or manually rename the cells that this edits.
+        content: 'Make sure to load an overhaul or something after. Or manually rename the cells that this edits.'
     tag:
       - Invent
   - name: MODArnTemplar.esp
@@ -4857,11 +4854,11 @@ plugins:
   - name: M.O.E. - Unlocked Glenroy and Captain Renault Blades Armour.esp
     msg:
       - type: say
-        content: Use 'FCOM_MOECaptainRenaultArmor' to fix compatibility issues with FCOM.
+        content: 'Use ''FCOM_MOECaptainRenaultArmor'' to fix compatibility issues with FCOM.'
   - name: Wearable GS and DS armor.esp
     msg:
       - type: say
-        content: Use 'for OOO' version for better OOO/FCOM compatibility.
+        content: 'Use ''for OOO'' version for better OOO/FCOM compatibility.'
         condition: file("Oscuro's_Oblivion_Overhaul.esm")
   - name: Midnight Gymnastics.esp
     dirty:
@@ -4871,9 +4868,7 @@ plugins:
     tag:
       - Invent
   - name: MotoDualGoldbrandEbony.esp
-    msg:
-      - type: say
-        content: "Requires: OBSE"
+    req: [ *OBSE ]
     dirty:
       - crc: 0x9f9b8d08
         util: *dirtyUtil
@@ -4885,36 +4880,38 @@ plugins:
         util: *dirtyUtil
         udr: 11
   - name: MC_Staff_Pack_NoLL.esp
-    msg:
-      - type: say
-        content: "Incompatible with: MC_Staff_Pack.esp"
-        condition: file("MC_Staff_Pack.esp")
+    inc:
+      - MC_Staff_Pack.esp
   - name: Nature's_bounty.esp
     dirty:
       - crc: 0x97d180f0
         util: *dirtyUtil
-  - name: Neck Seam Concealers Expanded LL Amulets Only.esp
-    msg:
-      - type: say
-        content: Only use one "Neck Seam Concealers Expanded LL" plugin at a time.
+  - name: 'Neck Seam Concealers Expanded LL Amulets Only.esp'
+    inc:
+      - 'Neck Seam Concealers Expanded LL Amulets & Tail Slot.esp'
+      - 'Neck Seam Concealers Expanded LL Amulets Only SI.esp'
+      - 'Neck Seam Concealers Expanded LL Amulets & Tail Slot SI.esp'
     tag:
       - Relev
   - name: Neck Seam Concealers Expanded LL Amulets & Tail Slot.esp
-    msg:
-      - type: say
-        content: Only use one "Neck Seam Concealers Expanded LL" plugin at a time.
+    inc:
+      - 'Neck Seam Concealers Expanded LL Amulets Only.esp'
+      - 'Neck Seam Concealers Expanded LL Amulets Only SI.esp'
+      - 'Neck Seam Concealers Expanded LL Amulets & Tail Slot SI.esp'
     tag:
       - Relev
   - name: Neck Seam Concealers Expanded LL Amulets Only SI.esp
-    msg:
-      - type: say
-        content: Only use one "Neck Seam Concealers Expanded LL" plugin at a time.
+    inc:
+      - 'Neck Seam Concealers Expanded LL Amulets Only.esp'
+      - 'Neck Seam Concealers Expanded LL Amulets & Tail Slot.esp'
+      - 'Neck Seam Concealers Expanded LL Amulets & Tail Slot SI.esp'
     tag:
       - Relev
   - name: Neck Seam Concealers Expanded LL Amulets & Tail Slot SI.esp
-    msg:
-      - type: say
-        content: Only use one "Neck Seam Concealers Expanded LL" plugin at a time.
+    inc:
+      - 'Neck Seam Concealers Expanded LL Amulets Only.esp'
+      - 'Neck Seam Concealers Expanded LL Amulets & Tail Slot.esp'
+      - 'Neck Seam Concealers Expanded LL Amulets Only SI.esp'
     tag:
       - Relev
   - name: New Frostmourne Sword by Jojjo v1_0.esp
@@ -4942,51 +4939,47 @@ plugins:
   - name: NorseWeapons.esp
     msg:
       - type: say
-        content: May have landscape conflicts with Guards of Cyrodiil.
-  - name: Nicos Dreadweave Compilation.esp
-    msg:
-      - type: say
-        content: "Incompatible with: 'Nicos Daes Rakan Swords 1.2'"
-      - type: say
-        content: "Incompatible with: 'Nicos Dreweave Axes 1.2'"
-      - type: say
-        content: "Incompatible with: 'Nicos Dreweave armor 1.4'"
-      - type: say
-        content: "Incompatible with: 'Nicos Bow and Arrows 1.1'"
+        content: 'May have landscape conflicts with Guards of Cyrodiil.'
+  - name: 'Nicos Dreadweave Compilation.esp'
+    inc:
+      - 'Nico''s  Daes'' Rakan Swords.esp'
+      - 'Nico's Dreadweave Axes.esp'
+      - 'Nico's Dreadweave Armor_heavy.esp'
+      - 'Nicos Dreadweave Armor_Light.esp'
+      - 'Nico's Dreadweave Bow and Arrows.esp'
+    url: [ http://planetelderscrolls.gamespy.com/View.php?view=OblivionMods.Detail&id=104519&id=2622 ]
   - name: Obsidian armor.esp
     tag:
       - Graphics
   - name: Oddbasket Glass Replace(RU)?( NoEnch)?( ALT)?\.esp
     msg:
       - type: say
-        content: Use only one version of Oddbasket Glass Replace esp.
+        content: 'Use only one version of Oddbasket Glass Replace esp.'
     tag:
       - Graphics
-  - name: pale_rider's Armor of Dragon's Nightmare.esp
+  - name: 'pale_rider''s Armor of Dragon''s Nightmare.esp'
     msg:
       - type: say
-        content: Changes some cell names to German either load an overhaul after (or another mod that changes the testing hall & the best defence)
-      - type: say
-        content: or manually change the names back to English, or live with it.
-  - name: pale_rider's Paladin Equipment_enchanted_eng.esp
+        content: 'Changes some cell names to German either load an overhaul after (or another mod that changes the testing hall & the best defence). Or manually change the names back to English.'
+  - name: 'pale_rider''s Paladin Equipment_enchanted_eng.esp'
     dirty:
       - crc: 0x2e665f07
         util: *dirtyUtil
       - crc: 0xa277829d
         util: *dirtyUtil
-  - name: pale_rider's Paladin Equipment_enchanted_ger.esp
+  - name: 'pale_rider''s Paladin Equipment_enchanted_ger.esp'
     dirty:
       - crc: 0x6283824c
         util: *dirtyUtil
       - crc: 0xe3cf4e28
         util: *dirtyUtil
-  - name: pale_rider's Paladin Equipment_unenchanted_eng.esp
+  - name: 'pale_rider''s Paladin Equipment_unenchanted_eng.esp'
     dirty:
       - crc: 0x2f89323
         util: *dirtyUtil
       - crc: 0xd2f29b7a
         util: *dirtyUtil
-  - name: pale_rider's Paladin Equipment_unenchanted_ger.esp
+  - name: 'pale_rider''s Paladin Equipment_unenchanted_ger.esp'
     dirty:
       - crc: 0x99e1b373
         util: *dirtyUtil
@@ -5006,15 +4999,15 @@ plugins:
   - name: Potion Belt.esp
     msg:
       - type: say
-        content: Avoid using Potion Belt and KD Circlets at the same time. Character can wear belt or circlet, not both.
+        content: 'Avoid using Potion Belt and KD Circlets at the same time. Character can wear belt or circlet, not both.'
   - name: RavenousEleganceRoberts.esp
     msg:
       - type: say
-        content: "Requires: Robert's Female Body v12"
+        content: 'Requires Robert's Female Body v12'
   - name: RedgardWeaponsMod.esp
     msg:
       - type: say
-        content: Make sure to load an overhaul or something after or manually rename the cells that this edits.
+        content: 'Make sure to load an overhaul or something after. Or manually rename the cells that this edits.'
   - name: Retma Dresses.esp
     dirty:
       - crc: 0x2df18c43
@@ -5040,36 +5033,36 @@ plugins:
   - name: RTFemaleReplacerV12.esp
     msg:
       - type: say
-        content: 'Robert''s Female Body v. 1.2 users to make sure they download the "Rough Leather Shoes" [fix](http://oblivion.nexusmods.com/mods/28975).'
+        content: 'Robert''s Female Body v. 1.2 users need to make sure they download the "Rough Leather Shoes" [fix](http://oblivion.nexusmods.com/mods/28975).'
     tag:
       - Graphics
       - NoMerge
   - name: RingwraithArmorDaedric.esp
-    msg:
-      - type: say
-        content: Only have one ringwraith armor esp active at once.
+    inc:
+      - RingwraithArmorMithril.esp
+      - RingwraithArmorSteel.esp
+      - RingwraithArmorGlass.esp
   - name: RingwraithArmorMithril.esp
-    msg:
-      - type: say
-        content: Only have one ringwraith armor esp active at once.
+    inc:
+      - RingwraithArmorDaedric.esp
+      - RingwraithArmorSteel.esp
+      - RingwraithArmorGlass.esp
   - name: RingwraithArmorSteel.esp
-    msg:
-      - type: say
-        content: Only have one ringwraith armor esp active at once.
+    inc:
+      - RingwraithArmorDaedric.esp
+      - RingwraithArmorMithril.esp
+      - RingwraithArmorGlass.esp
   - name: RingwraithArmorGlass.esp
-    msg:
-      - type: say
-        content: Only have one ringwraith armor esp active at once.
+    inc:
+      - RingwraithArmorDaedric.esp
+      - RingwraithArmorMithril.esp
+      - RingwraithArmorSteel.esp
   - name: Ryk_Sandals.esp
-    msg:
-      - type: say
-        content: "Incompatible with: Ryk_Sandals_RHH.esp. Only use one of the Ryk_Sandals plugins."
-        condition: file("Ryk_Sandals_RHH.esp")
+    inc:
+      - Ryk_Sandals_RHH.esp
   - name: Ryk_Sandals_RHH.esp
-    msg:
-      - type: say
-        content: "Incompatible with: Ryk_Sandals.esp. Only use one of the Ryk_Sandals plugins."
-        condition: file("Ryk_Sandals.esp")
+    inc:
+      - Ryk_Sandals.esp
   - name: Saint Hiryu's Artifacts.esp
     tag:
       - Invent
@@ -5104,25 +5097,25 @@ plugins:
   - name: Shivering Armor Variety - Test.esp
     msg:
       - type: say
-        content: Outdated. Update to the release version.
+        content: 'Outdated. Update to the release version.'
   - name: Shrouded Armor X.esp
     tag:
       - Graphics
   - name: SilverwareWeapons.esp
     msg:
       - type: say
-        content: if using FCOM use Silverware Weapons - FCOM.esp instead
-  - name: Sin's Expanded Light Armor Kit [Chest].esp
+        content: 'If using FCOM it''s recommended that you use "Silverware Weapons - FCOM.esp" instead'
+  - name: 'Sin''s Expanded Light Armor Kit [Chest].esp'
     msg:
       - type: say
-        content: Not compatible with OOO. Already included in OOO.
+        content: 'Not compatible with OOO. Already included in OOO.'
         condition: file("Oscuro's_Oblivion_Overhaul.esm")
     tag:
       - Invent
-  - name: Sin's Expanded Light Armor Kit [NPC].esp
+  - name: 'Sin''s Expanded Light Armor Kit [NPC].esp'
     msg:
       - type: say
-        content: Not compatible with OOO. Already included in OOO.
+        content: 'Not compatible with OOO. Already included in OOO.'
         condition: file("Oscuro's_Oblivion_Overhaul.esm")
   - name: SK_Berserk_v0.6.esp
     dirty:
@@ -5134,21 +5127,22 @@ plugins:
       - crc: 0x8b6d4abc
         util: *dirtyUtil
   - name: Kit Rae Weaponry v0_2.esp
-    msg:
-      - type: say
-        content: Use after Shdw_weapon pack
+    after:
+      - Shdw_Weapon Set_Thorgeir.esp
+      - Shdw_weapon pack01.esp
+      - Shdw_weapon pack02.esp
   - name: Kit Rae Weaponry.esp
-    msg:
-      - type: say
-        content: Use after Shdw_weapon pack
+    after:
+      - Shdw_Weapon Set_Thorgeir.esp
+      - Shdw_weapon pack01.esp
+      - Shdw_weapon pack02.esp
   - name: Kit Rae Weaponry v0_4.esp
-    msg:
-      - type: say
-        content: Use after Shdw_weapon pack
+    after:
+      - Shdw_Weapon Set_Thorgeir.esp
+      - Shdw_weapon pack01.esp
+      - Shdw_weapon pack02.esp
   - name: SpeechcraftEnhanced.esp
-    msg:
-      - type: say
-        content: "Requires: OBSE."
+    req: [ *OBSE ]
   - name: SnowySignatureOutfit.esp
     dirty:
       - crc: 0x20498f08
@@ -5182,13 +5176,24 @@ plugins:
     tag:
       - Invent
   - name: SG010 Compilation.esp
-    msg:
-      - type: say
-        content: "Incompatible with: SG001_BunnyGirl.esp, SG002_Button.esp, SG003_Slit.esp, SG004_Stargazer.esp, SG005_DHuntress.esp, SG006_Nabiya.esp, SG007_Nobody.esp, SG008_Gee.esp, SG010_Attractive.esp, SG011_Seductive.esp, SG012_MoonLight_Suit.esp, SG013_Nazca.esp, SG014_SparkleSweetSummer.esp (Includes the contents of these esps)."
-  - name: Shaun's Weapon Replacers.esp
+    inc:
+      - SG001_BunnyGirl.esp
+      - SG002_Button.esp
+      - SG003_Slit.esp
+      - SG004_Stargazer.esp
+      - SG005_DHuntress.esp
+      - SG006_Nabiya.esp
+      - SG007_Nobody.esp
+      - SG008_Gee.esp
+      - SG010_Attractive.esp
+      - SG011_Seductive.esp
+      - SG012_MoonLight_Suit.esp
+      - SG013_Nazca.esp
+      - SG014_SparkleSweetSummer.esp
+  - name: 'Shaun''s Weapon Replacers.esp'
     tag:
       - Graphics
-  - name: Star's Fury.esp
+  - name: 'Star''s Fury.esp'
     dirty:
       - crc: 0xb25a64e
         util: *dirtyUtil
@@ -5214,17 +5219,15 @@ plugins:
     tag:
       - Invent
   - name: Tail_Amulet_Converter.esp
-    msg:
-      - type: say
-        content: "Requires: OBSE v11 +."
+    req: [ *OBSE ]
   - name: Talon of Akatosh Claymore v1.1 Delayer.esp
     msg:
       - type: say
-        content: Versions less than 3.1 may cause the quest being patched to restart if installed after the quest has started. Update to the latest delayer if you suspect a problem.
+        content: 'Versions less than 3.1 may cause the quest being patched to restart if installed after the quest has started. Update to the latest delayer if you suspect a problem.'
   - name: Talon of Akatosh Longsword v1.1 Delayer.esp
     msg:
       - type: say
-        content: Versions less than 3.1 may cause the quest being patched to restart if installed after the quest has started. Update to the latest delayer if you suspect a problem.
+        content: 'Versions less than 3.1 may cause the quest being patched to restart if installed after the quest has started. Update to the latest delayer if you suspect a problem.'
   - name: tda_Armoury.esp
     dirty:
       - crc: 0xe1b7e45f
@@ -5242,14 +5245,15 @@ plugins:
   - name: Conan Swords - Atlantean 2Hand Fur Scabbard.esp
     msg:
       - type: say
-        content: TheFatherSword.esp and 1.4TheAtlanteanSword mods included
+        content: 'TheFatherSword.esp and 1.4TheAtlanteanSword mods included'
+        condition: file("1.4TheAtlanteanSword.esp") or file("1.4TheAtlanteanSword_leather.esp") or file("1.4TheAtlanteanSword2h_leather.esp") or file("TheFatherSword.esp")
   - name: The Little Weapon Pack OB.esp
     tag:
       - Invent
   - name: The SilverDragonArmorQuest.esp
     tag:
       - Invent
-  - name: Thori'Dal, The Stars' Furyl - Legends of Azeroth Armory.esp
+  - name: 'Thori''Dal, The Stars'' Furyl - Legends of Azeroth Armory.esp'
     dirty:
       - crc: 0xD50A68CC
         itm: 8
@@ -5258,7 +5262,7 @@ plugins:
   - name: TLS Modded Mannequins.esp
     msg:
       - type: say
-        content: Do not use with Reznod's Mannequins.
+        content: 'Do not use with Reznod''s Mannequins.'
   - name: Town Guard Armor Replacers.esp
     tag:
       - Graphics
@@ -9401,6 +9405,7 @@ plugins:
       - C.Owner
       - Graphics
       - Names
+    url: [ http://oblivion.nexusmods.com/mods/25319 ]
   - name: Better Abandoned House - Interior Only.esp
     tag:
       - C.Name
