@@ -5284,22 +5284,21 @@ plugins:
     tag:
       - Delev
   - name: UK47_LOTR_Weapons_Merged.esp
-    msg:
-      - type: say
-        content: Reqires LOTR1 and LOTR2 plugins
-      - type: say
-        content: Unckeck or delete The lord of the ring weapon 1.esp , LOTR Weapons.esp ,  LOTR Weapon 2.esp
+    inc:
+      - The lord of the ring weapon 1.esp
+      - LOTR Weapons.esp
+      - LOTR Weapon 2.esp
   - name: Unique Enticing Skill Books.esp
     tag:
       - Graphics
   - name: UU! Female Undies.esp
     msg:
       - type: say
-        content: Consider upgrading to version 4.2.1+.
+        content: 'Consider upgrading to version 4.2.1+'
   - name: UU! Female Undies NPCs.esp
     msg:
       - type: say
-        content: Consider upgrading to version 4.2.1+.
+        content: 'Consider upgrading to version 4.2.1+'
   - name: VA_GlamdringSword.esp
     tag:
       - Invent
@@ -5324,14 +5323,12 @@ plugins:
   - name: XiaValentinesDayGift07.esp
     msg:
       - type: say
-        content: May not be compatible with anything that modifies the Tiber Septim Hotel.
+        content: 'May not be compatible with anything that modifies the Tiber Septim Hotel.'
   - name: Zatoichi.esp
     tag:
       - Invent
   - name: Thieves Arsenal.esp
-    msg:
-      - type: say
-        content: "Requires: OBSE."
+    req: [ *OBSE ]
     dirty:
       - crc: 0x2de5b6d1
         util: *dirtyUtil
@@ -5339,365 +5336,366 @@ plugins:
   - name: Robes Staves and Fists.esp
     msg:
       - type: say
-        content: "Requires: OBSE. Not compatible with any mod that uses 'ModPCSpellEffectiveness'."
+        content: 'Not compatible with any mod that uses "ModPCSpellEffectiveness".'
+    req: [ *OBSE ]
   - name: RealSwords - Argonian HI-NPC.esp
     msg:
       - type: error
-        content: Delete. Use FCOM_RealSwords instead.
+        content: 'Delete. Use FCOM_RealSwords instead.'
         condition: *FCOMCond
       - type: say
-        content: "Requires: Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran's."
+        content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
       - Invent
   - name: RealSwords - Argonian HI.esp
     msg:
       - type: error
-        content: Delete. Use FCOM_RealSwords instead.
+        content: 'Delete. Use FCOM_RealSwords instead.'
         condition: *FCOMCond
       - type: say
-        content: "Requires: Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran's."
+        content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
       - Invent
   - name: RealSwords - Argonian LO-NPC.esp
     msg:
       - type: error
-        content: Delete. Use FCOM_RealSwords instead.
+        content: 'Delete. Use FCOM_RealSwords instead.'
         condition: *FCOMCond
       - type: say
-        content: "Requires: Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran's."
+        content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
       - Invent
   - name: RealSwords - Argonian LO.esp
     msg:
       - type: error
-        content: Delete. Use FCOM_RealSwords instead.
+        content: 'Delete. Use FCOM_RealSwords instead.'
         condition: *FCOMCond
       - type: say
-        content: "Requires: Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran's."
+        content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
       - Invent
   - name: RealSwords - Bosmer HI-NPC.esp
     msg:
       - type: error
-        content: Delete. Use FCOM_RealSwords instead.
+        content: 'Delete. Use FCOM_RealSwords instead.'
         condition: *FCOMCond
       - type: say
-        content: "Requires: Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran's."
+        content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
       - Invent
   - name: RealSwords - Bosmer HI.esp
     msg:
       - type: error
-        content: Delete. Use FCOM_RealSwords instead.
+        content: 'Delete. Use FCOM_RealSwords instead.'
         condition: *FCOMCond
       - type: say
-        content: "Requires: Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran's."
+        content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
       - Invent
   - name: RealSwords - Bosmer LO.esp
     msg:
       - type: error
-        content: Delete. Use FCOM_RealSwords instead.
+        content: 'Delete. Use FCOM_RealSwords instead.'
         condition: *FCOMCond
       - type: say
-        content: "Requires: Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran's."
+        content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
       - Invent
   - name: RealSwords - Bosmer LO-NPC.esp
     msg:
       - type: error
-        content: Delete. Use FCOM_RealSwords instead.
+        content: 'Delete. Use FCOM_RealSwords instead.'
         condition: *FCOMCond
       - type: say
-        content: "Requires: Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran's."
+        content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
       - Invent
   - name: RealSwords - Breton LO-NPC.esp
     msg:
       - type: error
-        content: Delete. Use FCOM_RealSwords instead.
+        content: 'Delete. Use FCOM_RealSwords instead.'
         condition: *FCOMCond
       - type: say
-        content: "Requires: Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran's."
+        content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
       - Invent
   - name: RealSwords - Breton LO.esp
     msg:
       - type: error
-        content: Delete. Use FCOM_RealSwords instead.
+        content: 'Delete. Use FCOM_RealSwords instead.'
         condition: *FCOMCond
       - type: say
-        content: "Requires: Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran's."
+        content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
       - Invent
   - name: RealSwords - Breton HI-NPC.esp
     msg:
       - type: error
-        content: Delete. Use FCOM_RealSwords instead.
+        content: 'Delete. Use FCOM_RealSwords instead.'
         condition: *FCOMCond
       - type: say
-        content: "Requires: Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran's."
+        content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
       - Invent
   - name: RealSwords - Breton HI.esp
     msg:
       - type: error
-        content: Delete. Use FCOM_RealSwords instead.
+        content: 'Delete. Use FCOM_RealSwords instead.'
         condition: *FCOMCond
       - type: say
-        content: "Requires: Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran's."
+        content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
       - Invent
   - name: RealSwords - Dunmer LO-NPC.esp
     msg:
       - type: error
-        content: Delete. Use FCOM_RealSwords instead.
+        content: 'Delete. Use FCOM_RealSwords instead.'
         condition: *FCOMCond
       - type: say
-        content: "Requires: Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran's."
+        content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
       - Invent
   - name: RealSwords - Dunmer LO.esp
     msg:
       - type: error
-        content: Delete. Use FCOM_RealSwords instead.
+        content: 'Delete. Use FCOM_RealSwords instead.'
         condition: *FCOMCond
       - type: say
-        content: "Requires: Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran's."
+        content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
       - Invent
   - name: RealSwords - Dunmer HI-NPC.esp
     msg:
       - type: error
-        content: Delete. Use FCOM_RealSwords instead.
+        content: 'Delete. Use FCOM_RealSwords instead.'
         condition: *FCOMCond
       - type: say
-        content: "Requires: Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran's."
+        content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
       - Invent
   - name: RealSwords - Dunmer HI.esp
     msg:
       - type: error
-        content: Delete. Use FCOM_RealSwords instead.
+        content: 'Delete. Use FCOM_RealSwords instead.'
         condition: *FCOMCond
       - type: say
-        content: "Requires: Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran's."
+        content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
       - Invent
   - name: RealSwords - Goblin.esp
     msg:
       - type: error
-        content: Delete. Use FCOM_RealSwords instead.
+        content: 'Delete. Use FCOM_RealSwords instead.'
         condition: *FCOMCond
       - type: say
-        content: "Requires: Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran's."
+        content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
       - Invent
   - name: RealSwords - Combined.esp
     msg:
       - type: error
-        content: Delete. Use FCOM_RealSwords instead.
+        content: 'Delete. Use FCOM_RealSwords instead.'
         condition: *FCOMCond
       - type: say
-        content: "Requires: Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran's."
+        content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
       - Invent
   - name: RealSwords - Khajiit HI-NPC v1.3.esp
     msg:
       - type: error
-        content: Delete. Use FCOM_RealSwords instead.
+        content: 'Delete. Use FCOM_RealSwords instead.'
         condition: *FCOMCond
       - type: say
-        content: "Requires: Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran's."
+        content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
       - Invent
   - name: RealSwords - Khajiit LO-NPC v1.3.esp
     msg:
       - type: error
-        content: Delete. Use FCOM_RealSwords instead.
+        content: 'Delete. Use FCOM_RealSwords instead.'
         condition: *FCOMCond
       - type: say
-        content: "Requires: Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran's."
+        content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
       - Invent
   - name: RealSwords - Khajiit LO v1.3.esp
     msg:
       - type: error
-        content: Delete. Use FCOM_RealSwords instead.
+        content: 'Delete. Use FCOM_RealSwords instead.'
         condition: *FCOMCond
       - type: say
-        content: "Requires: Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran's."
+        content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
       - Invent
   - name: RealSwords - Khajiit HI v1.3.esp
     msg:
       - type: error
-        content: Delete. Use FCOM_RealSwords instead.
+        content: 'Delete. Use FCOM_RealSwords instead.'
         condition: *FCOMCond
       - type: say
-        content: "Requires: Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran's."
+        content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
       - Invent
   - name: RealSwords - Nord HI-NPC SI.esp
     msg:
       - type: error
-        content: Delete. Use FCOM_RealSwords instead.
+        content: 'Delete. Use FCOM_RealSwords instead.'
         condition: *FCOMCond
       - type: say
-        content: "Requires: Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran's."
+        content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
       - Invent
   - name: RealSwords - Nord HI-NPC.esp
     msg:
       - type: error
-        content: Delete. Use FCOM_RealSwords instead.
+        content: 'Delete. Use FCOM_RealSwords instead.'
         condition: *FCOMCond
       - type: say
-        content: "Requires: Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran's."
+        content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
       - Invent
   - name: RealSwords - Nord HI-SI.esp
     msg:
       - type: error
-        content: Delete. Use FCOM_RealSwords instead.
+        content: 'Delete. Use FCOM_RealSwords instead.'
         condition: *FCOMCond
       - type: say
-        content: "Requires: Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran's."
+        content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
       - Invent
   - name: RealSwords - Nord HI.esp
     msg:
       - type: error
-        content: Delete. Use FCOM_RealSwords instead.
+        content: 'Delete. Use FCOM_RealSwords instead.'
         condition: *FCOMCond
       - type: say
-        content: "Requires: Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran's."
+        content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
       - Invent
   - name: RealSwords - Nord LO-NPC SI.esp
     msg:
       - type: error
-        content: Delete. Use FCOM_RealSwords instead.
+        content: 'Delete. Use FCOM_RealSwords instead.'
         condition: *FCOMCond
       - type: say
-        content: "Requires: Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran's."
+        content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
       - Invent
   - name: RealSwords - Nord LO-NPC.esp
     msg:
       - type: error
-        content: Delete. Use FCOM_RealSwords instead.
+        content: 'Delete. Use FCOM_RealSwords instead.'
         condition: *FCOMCond
       - type: say
-        content: "Requires: Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran's."
+        content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
       - Invent
   - name: RealSwords - Nord LO-SI.esp
     msg:
       - type: error
-        content: Delete. Use FCOM_RealSwords instead.
+        content: 'Delete. Use FCOM_RealSwords instead.'
         condition: *FCOMCond
       - type: say
-        content: "Requires: Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran's."
+        content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
       - Invent
   - name: RealSwords - Nord LO.esp
     msg:
       - type: error
-        content: Delete. Use FCOM_RealSwords instead.
+        content: 'Delete. Use FCOM_RealSwords instead.'
         condition: *FCOMCond
       - type: say
-        content: "Requires: Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran's."
+        content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
       - Invent
   - name: RealSwords - Orc HI_NPC v1.0.esp
     msg:
       - type: error
-        content: Delete. Use FCOM_RealSwords instead.
+        content: 'Delete. Use FCOM_RealSwords instead.'
         condition: *FCOMCond
       - type: say
-        content: "Requires: Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran's."
+        content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
       - Invent
   - name: RealSwords - Orc HI v1.0.esp
     msg:
       - type: error
-        content: Delete. Use FCOM_RealSwords instead.
+        content: 'Delete. Use FCOM_RealSwords instead.'
         condition: *FCOMCond
       - type: say
-        content: "Requires: Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran's."
+        content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
       - Invent
   - name: RealSwords - Orc LO v1.0.esp
     msg:
       - type: error
-        content: Delete. Use FCOM_RealSwords instead.
+        content: 'Delete. Use FCOM_RealSwords instead.'
         condition: *FCOMCond
       - type: say
-        content: "Requires: Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran's."
+        content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
       - Invent
   - name: RealSwords - Orc LO-NPC v1.0.esp
     msg:
       - type: error
-        content: Delete. Use FCOM_RealSwords instead.
+        content: 'Delete. Use FCOM_RealSwords instead.'
         condition: *FCOMCond
       - type: say
-        content: "Requires: Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran's."
+        content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
       - Invent
   - name: RealSwords - Redguard HI-NPC.esp
     msg:
       - type: error
-        content: Delete. Use FCOM_RealSwords instead.
+        content: 'Delete. Use FCOM_RealSwords instead.'
         condition: *FCOMCond
       - type: say
-        content: "Requires: Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran's."
+        content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
       - Invent
   - name: RealSwords - Redguard LO-NPC.esp
     msg:
       - type: error
-        content: Delete. Use FCOM_RealSwords instead.
+        content: 'Delete. Use FCOM_RealSwords instead.'
         condition: *FCOMCond
       - type: say
-        content: "Requires: Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran's."
+        content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
       - Invent
   - name: RealSwords - Redguard HI.esp
     msg:
       - type: error
-        content: Delete. Use FCOM_RealSwords instead.
+        content: 'Delete. Use FCOM_RealSwords instead.'
         condition: *FCOMCond
       - type: say
-        content: "Requires: Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran's."
+        content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
       - Invent
   - name: RealSwords - Redguard LO.esp
     msg:
       - type: error
-        content: Delete. Use FCOM_RealSwords instead.
+        content: 'Delete. Use FCOM_RealSwords instead.'
         condition: *FCOMCond
       - type: say
-        content: "Requires: Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran's."
+        content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
       - Invent
   - name: Mage Equipment.esp
     msg:
       - type: say
-        content: Item sale prices will be excessive and unpredictable with OOO, FCOM and/or Living Economy
+        content: 'Item sale prices will be excessive and unpredictable with OOO, FCOM and/or Living Economy'
       - type: say
-        content: If using Mage Equipment Lite load after SRT.
+        content: 'If using Mage Equipment Lite load after SRT.'
   - name: Mage Equipment - No Manni.esp
     msg:
       - type: say
-        content: Item sale prices will be excessive and unpredictable with OOO, FCOM and/or Living Economy
+        content: 'Item sale prices will be excessive and unpredictable with OOO, FCOM and/or Living Economy'
       - type: say
-        content: If using Mage Equipment Lite load after SRT.
+        content: 'If using Mage Equipment Lite load after SRT.'
   - name: Francesco's Mage Equipment.esp
-    msg:
-      - type: say
-        content: Use either this or Mage Equipment, but not both. Franseco's leveled creatures/items mod.
+    inc:
+      - Mage Equipment - No Manni.esp
+      - Mage Equipment.esp
 # ENDGROUP: Items (armor and weapons)
 # BEGINGROUP: Body Replacer Armour & Clothing
   - name: All Manly.esp
