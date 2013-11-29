@@ -2009,9 +2009,10 @@ plugins:
   - name: More Immersive Sound.esp
     msg:
       - type: say
-        content: Make sure you are using More Immersive Sounds Edited to benefit from bug fixes.
+        content: 'Make sure you are using More Immersive Sounds Edited to benefit from bug fixes.'
   - name: 'MIS Low Wind.esp'
-    tag: [ 'Scripts' ]
+    tag:
+      - Scripts
     dirty:
       - crc: 0xf343d8ea
         util: *dirtyUtil
@@ -2021,67 +2022,78 @@ plugins:
     dirty:
       - crc: 0x9a266ec1
         util: *dirtyUtil
-  - name: al-smm7.esp
+  - name: 'al-smm7.esp'
     tag:
       - Sound
-  - name: al-smm7-ru.esp
+  - name: 'al-smm7-ru.esp'
     msg: [ *needsCleaning ]
     tag:
       - Sound
   - name: PowerAttack Voicemod.esp
     msg:
       - type: say
-        content: May cause unfixable animation bugs if used with 'Personality Idles' or similar.
+        content: 'May cause unfixable animation bugs if used with ''Personality Idles'' or similar.'
   - name: PTCombatSpeechcraftEasy.esp
-    msg:
-      - type: say
-        content: Use only one PTCombatSpeechcraft esp
+    inc:
+      - PTCombatSpeechcraftMedium.esp
+      - PTCombatSpeechcraftHard.esp
   - name: PTCombatSpeechcraftMedium.esp
-    msg:
-      - type: say
-        content: Use only one PTCombatSpeechcraft esp
+    inc:
+      - PTCombatSpeechcraftEasy.esp
+      - PTCombatSpeechcraftHard.esp
   - name: PTCombatSpeechcraftHard.esp
-    msg:
-      - type: say
-        content: Use only one PTCombatSpeechcraft esp
+    inc:
+      - PTCombatSpeechcraftEasy.esp
+      - PTCombatSpeechcraftMedium.esp
   - name: Footstep Sound Fix.esp
     msg:
       - type: say
-        content: Use Wrye Bash Bashed Patch tweak instead.
+        content: 'Use Wrye Bash Bashed Patch tweak instead.'
         condition: regex("Bashed Patch.*\.esp")
   - name: Quiet Feet Complete.esp
     msg:
       - type: say
-        content: Recommended to upgrade to Quiet Feet MAX 2.0, which does not require a plugin and is more compatible.
+        content: 'Recommended to upgrade to Quiet Feet MAX 2.0, which does not require a plugin and is more compatible.'
       - type: say
-        content: Use Wrye Bash Bashed Patch tweak instead.
+        content: 'Use Wrye Bash Bashed Patch tweak instead.'
         condition: regex("Bashed Patch.*\.esp")
   - name: QuietFeet Max.esp
     msg:
       - type: say
-        content: Update to v2.0, which does not require a plugin.
+        content: 'Update to v2.0, which does not require a plugin.'
       - type: say
-        content: Use Wrye Bash Bashed Patch tweak instead.
+        content: 'Use Wrye Bash Bashed Patch tweak instead.'
         condition: regex("Bashed Patch.*\.esp")
     tag:
       - Sound
   - name: QuietFeet HorseArmor.esp
     msg:
       - type: say
-        content: Use Wrye Bash Bashed Patch tweak instead.
+        content: 'Use Wrye Bash Bashed Patch tweak instead.'
         condition: regex("Bashed Patch.*\.esp")
     tag:
       - Sound
   - name: Sounds of Cyrodiil.esp
-    msg:
-      - type: say
-        content: "Incompatible with: \"More Immersive Sound\", \"Ambient Town Sounds\", \"Oblivifall - Ambient Dungeon SFX\""
+    inc:
+      - More Immersive Sound.esp
+      - Oblivifall - Ambiant Dungeon SFX.esp
+      - AmbientTownSounds.esp
     tag:
       - Sound
   - name: Storms & Sound.esp
-    msg:
-      - type: say
-        content: Use only one Storms and Sound mod file.
+    inc:
+      - Storms & Sound SI.esp
+      - AWS-Storms & Sound.esp
+      - AWS-Storms & Sound SI.esp
+      - NW-Storms & Sound.esp
+      - NW Storms & Sound SI.esp
+      - NW-Storms & Sound SI.esp
+      - ANW-Storms & Sound.esp
+      - ANW-Storms & Sound SI.esp
+      - EW-Storms & Sound.esp
+      - EW-Storms & Sound SI.esp
+      - OBSE-Storms & Sound.esp
+      - OBSE-Storms & Sound SI.esp
     tag:
       - C.Owner
     dirty:
@@ -2108,111 +2120,264 @@ plugins:
       - crc: 0xc439bdbb
         util: *dirtyUtil
   - name: Storms & Sound SI.esp
-    msg:
-      - type: say
-        content: Use only one Storms and Sound mod file.
+    inc:
+      - Storms & Sound.esp
+      - AWS-Storms & Sound.esp
+      - AWS-Storms & Sound SI.esp
+      - NW-Storms & Sound.esp
+      - NW Storms & Sound SI.esp
+      - NW-Storms & Sound SI.esp
+      - ANW-Storms & Sound.esp
+      - ANW-Storms & Sound SI.esp
+      - EW-Storms & Sound.esp
+      - EW-Storms & Sound SI.esp
+      - OBSE-Storms & Sound.esp
+      - OBSE-Storms & Sound SI.esp
     dirty:
       - crc: 0x9a124534
         util: *dirtyUtil
   - name: AWS-Storms & Sound.esp
-    msg:
-      - type: say
-        content: Use only one Storms and Sound mod file.
+    inc:
+      - Storms & Sound.esp
+      - Storms & Sound SI.esp
+      - AWS-Storms & Sound SI.esp
+      - NW-Storms & Sound.esp
+      - NW Storms & Sound SI.esp
+      - NW-Storms & Sound SI.esp
+      - ANW-Storms & Sound.esp
+      - ANW-Storms & Sound SI.esp
+      - EW-Storms & Sound.esp
+      - EW-Storms & Sound SI.esp
+      - OBSE-Storms & Sound.esp
+      - OBSE-Storms & Sound SI.esp
     dirty:
       - crc: 0x6e7bfab6
         util: *dirtyUtil
   - name: AWS-Storms & Sound SI.esp
-    msg:
-      - type: say
-        content: Use only one Storms and Sound mod file.
+    inc:
+      - Storms & Sound.esp
+      - Storms & Sound SI.esp
+      - AWS-Storms & Sound.esp
+      - NW-Storms & Sound.esp
+      - NW Storms & Sound SI.esp
+      - NW-Storms & Sound SI.esp
+      - ANW-Storms & Sound.esp
+      - ANW-Storms & Sound SI.esp
+      - EW-Storms & Sound.esp
+      - EW-Storms & Sound SI.esp
+      - OBSE-Storms & Sound.esp
+      - OBSE-Storms & Sound SI.esp
     dirty:
       - crc: 0x993a2165
         util: *dirtyUtil
   - name: NW-Storms & Sound.esp
-    msg:
-      - type: say
-        content: Use only one Storms and Sound mod file.
+    inc:
+      - Storms & Sound.esp
+      - Storms & Sound SI.esp
+      - AWS-Storms & Sound.esp
+      - AWS-Storms & Sound SI.esp
+      - NW Storms & Sound SI.esp
+      - NW-Storms & Sound SI.esp
+      - ANW-Storms & Sound.esp
+      - ANW-Storms & Sound SI.esp
+      - EW-Storms & Sound.esp
+      - EW-Storms & Sound SI.esp
+      - OBSE-Storms & Sound.esp
+      - OBSE-Storms & Sound SI.esp
     dirty:
       - crc: 0xac2ce763
         util: *dirtyUtil
   - name: NW Storms & Sound SI.esp
-    msg:
-      - type: say
-        content: Use only one Storms and Sound mod file.
+    inc:
+      - Storms & Sound.esp
+      - Storms & Sound SI.esp
+      - AWS-Storms & Sound.esp
+      - AWS-Storms & Sound SI.esp
+      - NW-Storms & Sound.esp
+      - NW-Storms & Sound SI.esp
+      - ANW-Storms & Sound.esp
+      - ANW-Storms & Sound SI.esp
+      - EW-Storms & Sound.esp
+      - EW-Storms & Sound SI.esp
+      - OBSE-Storms & Sound.esp
+      - OBSE-Storms & Sound SI.esp
   - name: NW-Storms & Sound SI.esp
-    msg:
-      - type: say
-        content: Use only one Storms and Sound mod file.
+    inc:
+      - Storms & Sound.esp
+      - Storms & Sound SI.esp
+      - AWS-Storms & Sound.esp
+      - AWS-Storms & Sound SI.esp
+      - NW-Storms & Sound.esp
+      - NW Storms & Sound SI.esp
+      - ANW-Storms & Sound.esp
+      - ANW-Storms & Sound SI.esp
+      - EW-Storms & Sound.esp
+      - EW-Storms & Sound SI.esp
+      - OBSE-Storms & Sound.esp
+      - OBSE-Storms & Sound SI.esp
     dirty:
       - crc: 0x6761aaf1
         util: *dirtyUtil
   - name: ANW-Storms & Sound.esp
-    msg:
-      - type: say
-        content: Use only one Storms and Sound mod file.
+    inc:
+      - Storms & Sound.esp
+      - Storms & Sound SI.esp
+      - AWS-Storms & Sound.esp
+      - AWS-Storms & Sound SI.esp
+      - NW-Storms & Sound.esp
+      - NW Storms & Sound SI.esp
+      - NW-Storms & Sound SI.esp
+      - ANW-Storms & Sound SI.esp
+      - EW-Storms & Sound.esp
+      - EW-Storms & Sound SI.esp
+      - OBSE-Storms & Sound.esp
+      - OBSE-Storms & Sound SI.esp
     dirty:
       - crc: 0xc23eeee9
         util: *dirtyUtil
   - name: ANW-Storms & Sound SI.esp
-    msg:
-      - type: say
-        content: Use only one Storms and Sound mod file.
+    inc:
+      - Storms & Sound.esp
+      - Storms & Sound SI.esp
+      - AWS-Storms & Sound.esp
+      - AWS-Storms & Sound SI.esp
+      - NW-Storms & Sound.esp
+      - NW Storms & Sound SI.esp
+      - NW-Storms & Sound SI.esp
+      - ANW-Storms & Sound.esp
+      - EW-Storms & Sound.esp
+      - EW-Storms & Sound SI.esp
+      - OBSE-Storms & Sound.esp
+      - OBSE-Storms & Sound SI.esp
     dirty:
       - crc: 0x30e0955f
         util: *dirtyUtil
   - name: EW-Storms & Sound.esp
-    msg:
-      - type: say
-        content: Use only one Storms and Sound mod file.
+    inc:
+      - Storms & Sound.esp
+      - Storms & Sound SI.esp
+      - AWS-Storms & Sound.esp
+      - AWS-Storms & Sound SI.esp
+      - NW-Storms & Sound.esp
+      - NW Storms & Sound SI.esp
+      - NW-Storms & Sound SI.esp
+      - ANW-Storms & Sound.esp
+      - ANW-Storms & Sound SI.esp
+      - EW-Storms & Sound SI.esp
+      - OBSE-Storms & Sound.esp
+      - OBSE-Storms & Sound SI.esp
     dirty:
       - crc: 0xc439bdbb
         util: *dirtyUtil
   - name: EW-Storms & Sound SI.esp
-    msg:
-      - type: say
-        content: Use only one Storms and Sound mod file.
+    inc:
+      - Storms & Sound.esp
+      - Storms & Sound SI.esp
+      - AWS-Storms & Sound.esp
+      - AWS-Storms & Sound SI.esp
+      - NW-Storms & Sound.esp
+      - NW Storms & Sound SI.esp
+      - NW-Storms & Sound SI.esp
+      - ANW-Storms & Sound.esp
+      - ANW-Storms & Sound SI.esp
+      - EW-Storms & Sound.esp
+      - OBSE-Storms & Sound.esp
+      - OBSE-Storms & Sound SI.esp
     dirty:
       - crc: 0xaacf47e6
         util: *dirtyUtil
   - name: OBSE-Storms & Sound.esp
+    inc:
+      - Storms & Sound.esp
+      - Storms & Sound SI.esp
+      - AWS-Storms & Sound.esp
+      - AWS-Storms & Sound SI.esp
+      - NW-Storms & Sound.esp
+      - NW Storms & Sound SI.esp
+      - NW-Storms & Sound SI.esp
+      - ANW-Storms & Sound.esp
+      - ANW-Storms & Sound SI.esp
+      - EW-Storms & Sound.esp
+      - EW-Storms & Sound SI.esp
+      - OBSE-Storms & Sound SI.esp
     msg:
       - type: say
-        content: Use only one Storms and Sound mod file.
-      - type: say
-        content: This one is compatible with all weather mods.
+        content: 'This one is compatible with all weather mods.'
     dirty:
       - crc: 0x5a07eb4e
         util: *dirtyUtil
   - name: OBSE-Storms & Sound SI.esp
+    inc:
+      - Storms & Sound.esp
+      - Storms & Sound SI.esp
+      - AWS-Storms & Sound.esp
+      - AWS-Storms & Sound SI.esp
+      - NW-Storms & Sound.esp
+      - NW Storms & Sound SI.esp
+      - NW-Storms & Sound SI.esp
+      - ANW-Storms & Sound.esp
+      - ANW-Storms & Sound SI.esp
+      - EW-Storms & Sound.esp
+      - EW-Storms & Sound SI.esp
+      - OBSE-Storms & Sound.esp
     msg:
       - type: say
-        content: Use only one Storms and Sound mod file.
-      - type: say
-        content: This one is compatible with all weather mods.
+        content: 'This one is compatible with all weather mods.'
     dirty:
       - crc: 0x3e9ac1e2
         util: *dirtyUtil
       - crc: 0xab61aa5a
         util: *dirtyUtil
-  - name: SnakeLightningSpeed.esp
+  - name: 'SnakeLightningSpeed.esp'
     tag:
       - Graphics
-  - name: weather inside [seasons] v1.2.esp
-    msg:
-      - type: say
-        content: Don't use the [silent seasons] version at the same time as the [seasons] version.
-      - type: say
-        content: "Incompatible with: later versions of Storms & Sound."
-  - name: weather inside [silent seasons] v1.2.esp
-    msg:
-      - type: say
-        content: Don't use the [silent seasons] version at the same time as the [seasons] version.
-      - type: say
-        content: "Incompatible with: later versions of Storms & Sound."
-  - name: Weather Inside.esp
-    msg:
-      - type: say
-        content: "Incompatible with: later versions of Storms & Sound."
+  - name: 'weather inside [seasons] v1.2.esp'
+    inc:
+      - Storms & Sound.esp
+      - Storms & Sound SI.esp
+      - AWS-Storms & Sound.esp
+      - AWS-Storms & Sound SI.esp
+      - NW-Storms & Sound.esp
+      - NW Storms & Sound SI.esp
+      - NW-Storms & Sound SI.esp
+      - ANW-Storms & Sound.esp
+      - ANW-Storms & Sound SI.esp
+      - EW-Storms & Sound.esp
+      - EW-Storms & Sound SI.esp
+      - OBSE-Storms & Sound.esp
+      - OBSE-Storms & Sound SI.esp
+      - 'weather inside [silent seasons] v1.2.esp'
+  - name: 'weather inside [silent seasons] v1.2.esp'
+    inc:
+      - Storms & Sound.esp
+      - Storms & Sound SI.esp
+      - AWS-Storms & Sound.esp
+      - AWS-Storms & Sound SI.esp
+      - NW-Storms & Sound.esp
+      - NW Storms & Sound SI.esp
+      - NW-Storms & Sound SI.esp
+      - ANW-Storms & Sound.esp
+      - ANW-Storms & Sound SI.esp
+      - EW-Storms & Sound.esp
+      - EW-Storms & Sound SI.esp
+      - OBSE-Storms & Sound.esp
+      - OBSE-Storms & Sound SI.esp
+      - 'weather inside [seasons] v1.2.esp'
+  - name: 'Weather Inside.esp'
+    inc:
+      - Storms & Sound.esp
+      - Storms & Sound SI.esp
+      - AWS-Storms & Sound.esp
+      - AWS-Storms & Sound SI.esp
+      - NW-Storms & Sound.esp
+      - NW Storms & Sound SI.esp
+      - NW-Storms & Sound SI.esp
+      - ANW-Storms & Sound.esp
+      - ANW-Storms & Sound SI.esp
+      - EW-Storms & Sound.esp
+      - EW-Storms & Sound SI.esp
+      - OBSE-Storms & Sound.esp
+      - OBSE-Storms & Sound SI.esp
   - name: Rainbows(_1C)?\.esp
     dirty:
       - crc: 0x71bddec0
