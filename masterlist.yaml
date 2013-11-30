@@ -1489,9 +1489,6 @@ plugins:
       - crc: 0x4f003db0
         util: *dirtyUtil
   - name: 'Francesco''s Optional Leveled Guards.esp'
-    msg:
-      - type: say
-        content: '"Requires: Shivering Isles expansion."'
     tag:
       - Actors.ACBS
       - Actors.Stats
@@ -1507,30 +1504,11 @@ plugins:
     tag:
       - Delev
       - Relev
-  - name: 'FCOM_Francescos.esp'
-    msg:
-      - type: say
-        content: '"Requires: Francesco''s Leveled Creatures-Items 4.5b."'
-  - name: 'FCOM_FrancescosItemsAddOn.esp'
-    msg:
-      - type: say
-        content: '"Requires: Francesco''s Leveled Creatures-Items 4.5b."'
-      - type: say
-        content: '"Requires: Francesco''s supplementary addon package."'
-  - name: 'FCOM_FrancescosNamedBosses.esp'
-    msg:
-      - type: say
-        content: '"Requires: Francesco''s Leveled Creatures-Items 4.5b."'
   - name: 'Fran Armor Add-on.esp'
-    msg:
-      - type: say
-        content: '"Requires: the meshes from ''Bonemold Helmet'' and ''Cryos Ordinator Indoril Armor'' mods, but not the ESPs."'
-      - type: say
-        content: '"Requires: Francesco''s Leveled Creatures-Items 4.5b."'
-  - name: 'Fran_Lv30Item_Maltz.esp'
-    msg:
-      - type: say
-        content: '"Requires: Francesco''s Leveled Creatures-Items 4.5b."'
+    req:
+      - name: 'meshes\armor\Bonemold\bone.nif'
+        display: 'Meshes from the "[Bonemold Helmet](http://oblivion.nexusmods.com/mods/6997)" and "Cryos Ordinator Indoril Armor" mods'
+        condition: 'not file("meshes\armor\Ordinator\helmet.nif")'
   - name: 'OMOBS_FRAN.esp'
     tag:
       - NoMerge
@@ -4226,6 +4204,8 @@ plugins:
 # ENDGROUP: Body replacers
 # BEGINGROUP: Items (armor and weapons)
   - name: 'Bonemold_Helmet.esp'
+    url:
+      - http://oblivion.nexusmods.com/mods/6997
     msg:
       - type: say
         content: 'Deactivate or delete this ESP file when using ''Unofficial Fran''s Armor'' (mesh and texture files are still required).'
