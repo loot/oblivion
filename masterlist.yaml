@@ -1554,16 +1554,19 @@ plugins:
   - name: 7roads_screens.esp
     tag:
       - Graphics
+
   - name: Atmospheric Loading Screens.esp
-    msg:
+    after:
       - type: say
-        content: Move after Race Balancing Project if using that.
+        content: 'Move after Race Balancing Project'
+        condition: file("bgBalancingEVCore.esp")
     tag:
       - Graphics
   - name: Atmospheric Loading Screens - Original Text.esp
-    msg:
+    after:
       - type: say
-        content: Move after Race Balancing Project if using that.
+        content: 'Move after Race Balancing Project'
+        condition: file("bgBalancingEVCore.esp")
     tag:
       - Graphics
   - name: Atmospheric Loading Screens - Random Quotes.esp
@@ -1627,7 +1630,7 @@ plugins:
   - name: LoadingScreenQuotes.esp
     msg:
       - type: say
-        content: Make sure that any mod that replaces the graphics of the loading screens is tagged with Graphics, otherwise this mod will revert them to vanilla
+        content: 'Make sure that any mod that replaces the graphics of the loading screens is tagged with Graphics, otherwise this mod will revert them to vanilla'
 # ENDGROUP: Loading Screen Alternatives
 # BEGINGROUP: Weather mods and overhauls
   - name: oc_darker_nights.esp
