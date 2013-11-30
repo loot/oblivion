@@ -17,11 +17,11 @@ common:
   - &masterReassign
     type: say
     content: 'The Oblivion.esm master must be reassigned to "Nehrim.esm".'
-    condition: *nehrimCond
+    condition: '*nehrimCond'
   - &useNehrimVer
     type: error
     content: 'Use the Nehrim version instead.'
-    condition: *nehrimCond
+    condition: '*nehrimCond'
   - &doNotClean
     type: say
     content: 'Do not clean ITM records, they are intentional and required for the mod to function.'
@@ -35,7 +35,7 @@ common:
 globals:
   - type: warn
     content: 'An update for BOSS (v3.0.0) has been released. Download it [here](http://code.google.com/p/better-oblivion-sorting-software/downloads/list).'
-    condition: version("BOSS","3.0.0.0",<)
+    condition: 'version("BOSS","3.0.0.0",<)'
     
 plugins:
 # ESMs
@@ -43,7 +43,7 @@ plugins:
     msg:
       - type: error
         content: 'This must not be activated. However, it can be useful when porting Oblivion mods to Nehrim.'
-        condition: active("Oblivion.esm") and active("Nehrim.esm")
+        condition: 'active("Oblivion.esm") and active("Nehrim.esm")'
   - name: 'Oblivion_1.1.esm'
     msg:
       - type: say
@@ -173,7 +173,7 @@ plugins:
       - Scripts
       - Stats
       - name: '-Relations'
-        condition: ( file("Mart''s Monster Mod for OOO.esm") ) or file("FCOM_Convergence.esm")
+        condition: '( file("Mart''s Monster Mod for OOO.esm") ) or file("FCOM_Convergence.esm")'
   - name: 'Mart''s Monster Mod.esm'
     tag:
       - Actors.AIData
@@ -227,7 +227,7 @@ plugins:
     msg:
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
-        condition: regex("Bashed Patch.*\.esp")
+        condition: 'regex("Bashed Patch.*\.esp")'
   - name: 'TLS Modded Mannequins.esm'
     inc:
       - 'Reznod_Mannequin.esp'
@@ -288,10 +288,10 @@ plugins:
     msg:
       - type: warn
         content: 'Not recommended for use as there is no measurable performance improvement, and it breaks the Shivering Isles by changing some FormIDs, causing a script to be written into cell data.'
-        condition: checksum("HrmnsOblivionScriptOptimizationv1.0.esp",82FC20B8)
+        condition: 'checksum("HrmnsOblivionScriptOptimizationv1.0.esp",82FC20B8)'
       - type: warn
         content: 'Not recommended for use as there is no measurable performance improvement.'
-        condition: checksum("HrmnsOblivionScriptOptimizationv1.0.esp",FEED7422)
+        condition: 'checksum("HrmnsOblivionScriptOptimizationv1.0.esp",FEED7422)'
     priority: -2
 # Apparently needs to load bloody early. Doesn''t seem like it matters, considering that it doesn''t improve performance.
   - name: 'HrmnsOblivionScriptOptimizationv SI 1.0.esp'
@@ -956,14 +956,14 @@ plugins:
     msg:
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
-        condition: regex("Bashed Patch.*\.esp")
+        condition: 'regex("Bashed Patch.*\.esp")'
       - type: say
         content: 'Alternatively, remove this and use UOP v3.0.1+ instead.'
   - name: 'Black Screen Fix.esp'
     msg:
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
-        condition: regex("Bashed Patch.*\.esp")
+        condition: 'regex("Bashed Patch.*\.esp")'
       - type: say
         content: 'Alternatively, remove this and use UOP v3.0.1+ instead.'
   - name: 'Arcana Restored.esp'
@@ -1063,7 +1063,7 @@ plugins:
     msg:
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
-        condition: regex("Bashed Patch.*\.esp")
+        condition: 'regex("Bashed Patch.*\.esp")'
 # ENDGROUP: Vanilla fixes
   - name: 'DLCShiveringIsles.esp'
     dirty:
@@ -1077,7 +1077,7 @@ plugins:
     msg:
       - type: say
         content: 'Use Standalone MOBS if using Frans or OMOBS if using FCOM/OOO. Both versions can be found [here](http://oblivion.nexusmods.com/mods/28537)'
-        condition: file("FCOM_Convergence.esm") or file("Oscuro''s_Oblivion_Overhaul.esm") or file("Francesco''s Leveled Creatures-Items Mod.esm")
+        condition: 'file("FCOM_Convergence.esm") or file("Oscuro''s_Oblivion_Overhaul.esm") or file("Francesco''s Leveled Creatures-Items Mod.esm")'
       - *doNotClean
     tag:
       - Actors.ACBS
@@ -1220,7 +1220,7 @@ plugins:
     msg:
       - type: say
         content: 'Use Standalone MOBS if using Frans or OMOBS if using FCOM/OOO. Both versions can be found [here](http://oblivion.nexusmods.com/mods/28537)'
-        condition: file("FCOM_Convergence.esm") or file("Oscuro''s_Oblivion_Overhaul.esm") or file("Francesco''s Leveled Creatures-Items Mod.esm")
+        condition: 'file("FCOM_Convergence.esm") or file("Oscuro''s_Oblivion_Overhaul.esm") or file("Francesco''s Leveled Creatures-Items Mod.esm")'
     tag:
       - Actors.ACBS
       - Actors.AIData
@@ -1559,14 +1559,14 @@ plugins:
     after:
       - type: say
         content: ''Move after Race Balancing Project''
-        condition: file("bgBalancingEVCore.esp")
+        condition: 'file("bgBalancingEVCore.esp")'
     tag:
       - Graphics
   - name: 'Atmospheric Loading Screens - Original Text.esp'
     after:
       - type: say
         content: ''Move after Race Balancing Project''
-        condition: file("bgBalancingEVCore.esp")
+        condition: 'file("bgBalancingEVCore.esp")'
     tag:
       - Graphics
   - name: 'Atmospheric Loading Screens - Random Quotes.esp'
@@ -1914,22 +1914,22 @@ plugins:
     msg:
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
-        condition: regex("Bashed Patch.*\.esp")
+        condition: 'regex("Bashed Patch.*\.esp")'
   - name: 'no_wind-2578.esp'
     msg:
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
-        condition: regex("Bashed Patch.*\.esp")
+        condition: 'regex("Bashed Patch.*\.esp")'
   - name: 'NoWind.esp'
     msg:
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
-        condition: regex("Bashed Patch.*\.esp")
+        condition: 'regex("Bashed Patch.*\.esp")'
   - name: 'No wind.esp'
     msg:
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
-        condition: regex("Bashed Patch.*\.esp")
+        condition: 'regex("Bashed Patch.*\.esp")'
 # ENDGROUP: Weather mods and overhauls
 # BEGINGROUP: Water and lava tweaks
   - name: 'AdvancedWater.esp'
@@ -2052,28 +2052,28 @@ plugins:
     msg:
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
-        condition: regex("Bashed Patch.*\.esp")
+        condition: 'regex("Bashed Patch.*\.esp")'
   - name: 'Quiet Feet Complete.esp'
     msg:
       - type: say
         content: 'Recommended to upgrade to Quiet Feet MAX 2.0, which does not require a plugin and is more compatible.'
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
-        condition: regex("Bashed Patch.*\.esp")
+        condition: 'regex("Bashed Patch.*\.esp")'
   - name: 'QuietFeet Max.esp'
     msg:
       - type: say
         content: 'Update to v2.0, which does not require a plugin.'
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
-        condition: regex("Bashed Patch.*\.esp")
+        condition: 'regex("Bashed Patch.*\.esp")'
     tag:
       - Sound
   - name: 'QuietFeet HorseArmor.esp'
     msg:
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
-        condition: regex("Bashed Patch.*\.esp")
+        condition: 'regex("Bashed Patch.*\.esp")'
     tag:
       - Sound
   - name: 'Sounds of Cyrodiil.esp'
@@ -2421,12 +2421,12 @@ plugins:
     msg:
       - type: say
         content: '"Incompatible with: All Natural''s Real Lights plugin (All Natural - Real Lights.esp)."'
-        condition: file("All Natural - Real Lights.esp")
+        condition: 'file("All Natural - Real Lights.esp")'
   - name: 'Illumination(Within|Without)( Rus)?\.esp'
     msg:
       - type: warn
         content: 'Use only one IlluminationWithin or IlluminationWithout esp.'
-        condition: ( regex("IlluminationWithin.*\.esp") ) and regex("IlluminationWithout.*\.esp")
+        condition: '( regex("IlluminationWithin.*\.esp") ) and regex("IlluminationWithout.*\.esp")'
   - name: 'IWR.?-.?Windows( Rus)?\.esp'
     msg:
       - type: say
@@ -2535,7 +2535,7 @@ plugins:
     msg:
       - type: say
         content: '"Requires: Cobl"'
-        condition: version("Ayleid Loot EXtension.esp","2.11",==)
+        condition: 'version("Ayleid Loot EXtension.esp","2.11",==)'
     tag:
       - Invent
   - name: 'Book Jackets Oblivion.esp'
@@ -2559,12 +2559,12 @@ plugins:
     msg:
       - type: say
         content: 'Probably not compatible with OOO. Untested.'
-        condition: file("Oscuro''s_Oblivion_Overhaul.esm")
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: 'Better Wine SI.esp'
     msg:
       - type: say
         content: 'Not compatible with OOO. OOO contains a similar mod.'
-        condition: file("Oscuro''s_Oblivion_Overhaul.esm")
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: 'bgShaderStandAloneEV.esp'
     msg:
       - type: say
@@ -2582,7 +2582,7 @@ plugins:
     msg:
       - type: say
         content: 'Not compatible with OOO. OOO contains a similar mod.'
-        condition: file("Oscuro''s_Oblivion_Overhaul.esm")
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: 'BAKAdventurerTorch.esp'
     msg:
       - type: say
@@ -2591,12 +2591,12 @@ plugins:
     msg:
       - type: say
         content: 'Not compatible with OOO. OOO contains a similar mod.'
-        condition: file("Oscuro''s_Oblivion_Overhaul.esm")
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: 'nmDLTIC-1-6.esp'
     msg:
       - type: say
         content: 'Not compatible with OOO. OOO contains a similar mod.'
-        condition: file("Oscuro''s_Oblivion_Overhaul.esm")
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: 'BPMerchantStorage.esp'
     tag:
       - Invent
@@ -2784,21 +2784,21 @@ plugins:
     msg:
       - type: say
         content: 'Deactivate CLocksOfCyrodiil.esp'
-        condition: file("ClocksOfCyrodiil.esp")
+        condition: 'file("ClocksOfCyrodiil.esp")'
       - type: say
         content: 'Obsolete. Use ''ClocksOfCyrodiil_BC_OBC_OC_OCLR_Vanilla.esp'' instead.'
   - name: 'ClocksOfCyrodiilOBC.esp'
     msg:
       - type: say
         content: 'Deactivate CLocksOfCyrodiil.esp'
-        condition: file("ClocksOfCyrodiil.esp")
+        condition: 'file("ClocksOfCyrodiil.esp")'
       - type: say
         content: 'Use ''ClocksOfCyrodiil_BC_OBC_OC_OCLR_Vanilla.esp'' instead.'
   - name: 'ClocksOfCyrodiil_BC_OBC_OC_OCLR_Vanilla.esp'
     msg:
       - type: warn
         content: 'Deactivate CLocksOfCyrodiil.esp'
-        condition: file("ClocksOfCyrodiil.esp")
+        condition: 'file("ClocksOfCyrodiil.esp")'
     dirty:
       - crc: 0xd83fbb37
         util: *dirtyUtil
@@ -2934,12 +2934,12 @@ plugins:
     msg:
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
-        condition: regex("Bashed Patch.*\.esp")
+        condition: 'regex("Bashed Patch.*\.esp")'
   - name: 'Fatality Cam.esp'
     msg:
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
-        condition: regex("Bashed Patch.*\.esp")
+        condition: 'regex("Bashed Patch.*\.esp")'
   - name: 'Fish! - v1.1.esp'
     dirty:
       - crc: 0x872545de
@@ -2968,7 +2968,7 @@ plugins:
     msg:
       - type: say
         content: 'Not compatible with OOO. Already included in OOO.'
-        condition: file("Oscuro''s_Oblivion_Overhaul.esm")
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: 'GW71_Soulgems.esp'
     tag:
       - Graphics
@@ -2980,12 +2980,12 @@ plugins:
     msg:
       - type: say
         content: 'Not compatible with OOO. Already included in OOO.'
-        condition: file("Oscuro''s_Oblivion_Overhaul.esm")
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: 'Inebriation Rus.esp'
     msg:
       - type: say
         content: 'Not compatible with OOO. Already included in OOO.'
-        condition: file("Oscuro''s_Oblivion_Overhaul.esm")
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: 'Insanity''s Beverage Replacer.esp'
     tag:
       - Graphics
@@ -3035,19 +3035,19 @@ plugins:
     msg:
       - type: say
         content: 'Not compatible with OOO. Already included in OOO.'
-        condition: file("Oscuro''s_Oblivion_Overhaul.esm")
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: 'Lock Bash v99.9.esp'
     msg:
       - type: say
         content: 'Not compatible with OOO. Already included in OOO.'
-        condition: file("Oscuro''s_Oblivion_Overhaul.esm")
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
       - type: say
         content: 'Newer version is available. Update to v99.91 or later.'
   - name: 'Lock Bash v99.91.esp'
     msg:
       - type: say
         content: 'Not compatible with OOO. Already included in OOO.'
-        condition: file("Oscuro''s_Oblivion_Overhaul.esm")
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: 'Morag Tong Assassins v1-1.esp'
     dirty:
       - crc: 0xebabfce8
@@ -3102,7 +3102,7 @@ plugins:
     msg:
       - type: say
         content: 'Probably not compatible with OOO. Untested.'
-        condition: file("Oscuro''s_Oblivion_Overhaul.esm")
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: 'More_Vegetables.esp'
     dirty:
       - crc: 0x2eaee466
@@ -3188,12 +3188,12 @@ plugins:
     msg:
       - type: error
         content: 'Do not use with mmmpld''s original See You Sleep mod or any of its compatibility patches.'
-        condition: file("P1DseeYouSleep.esp")
+        condition: 'file("P1DseeYouSleep.esp")'
   - name: 'See You Sleep DLL - Vampire Bedroll Anims.esp'
     msg:
       - type: error
         content: 'Do not use with mmmpld''s original See You Sleep mod or any of its compatibility patches.'
-        condition: file("P1DseeYouSleep.esp")
+        condition: 'file("P1DseeYouSleep.esp")'
   - name: 'P-Froggys Corpse Carry DV.esp'
     msg:
       - type: say
@@ -3537,7 +3537,7 @@ plugins:
     msg:
       - type: say
         content: 'Not compatible with OOO. OOO contains a similar mod.'
-        condition: file("Oscuro''s_Oblivion_Overhaul.esm")
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: 'Willful Resistance.esp'
     msg:
       - type: say
@@ -3571,7 +3571,7 @@ plugins:
     msg:
       - type: warn
         content: 'Don''t use ''Living Economy'' and ''Living Economy - SI'' together. Pick one.'
-        condition: file("Living Economy - SI.esp")
+        condition: 'file("Living Economy - SI.esp")'
   - name: 'Living Economy - SI.esp'
     msg:
       - type: say
@@ -3621,7 +3621,7 @@ plugins:
     msg:
       - type: say
         content: 'May be incompatible with Better Cities. Untested.'
-        condition: file("Better Cities Resources.esm")
+        condition: 'file("Better Cities Resources.esm")'
   - name: 'Oblivion Alive Vwalk.esp'
     tag:
       - Actors.Anims
@@ -3752,7 +3752,7 @@ plugins:
     msg:
       - type: error
         content: 'This should be deleted. It is already included in the "Dynamic Leveled Lists" mod'
-        condition: file("DynamicLeveledLists.esp")
+        condition: 'file("DynamicLeveledLists.esp")'
   - name: 'CDM - Shivering Time.esp'
     req: [ *OBSE ]
   - name: 'CBMS_V2.esp'
@@ -3767,7 +3767,7 @@ plugins:
         display: '[DarNified UI](http://oblivion.nexusmods.com/mods/10763) or [DarkUI''d DarN](http://oblivion.nexusmods.com/mods/11280)'
       - name: 'OBSE\Plugins\OBSE_Elys_Pluggy.dll'
         display: '[Pluggy](http://oblivion.nexusmods.com/mods/23979) or [Conscribe](http://oblivion.nexusmods.com/mods/26510)'
-        condition: not file("OBSE\Plugins\ConScribe.dll")
+        condition: ''not file("OBSE\Plugins\ConScribe.dll")''
   - name: 'Demolish Plugin - HUD Display.esp'
     req:
       - name: 'OBSE\Plugins\OBSE_Elys_Pluggy.dll'
@@ -3809,12 +3809,12 @@ plugins:
     msg:
       - type: warn
         content: 'You must rename "OBSE_Elys_Pluggy.dll" to "OBSE_Elys_Pluggy_Hud.dll"'
-        condition: file("OBSE\Plugins\OBSE_Elys_Pluggy.dll") and not file("OBSE\Plugins\OBSE_Elys_Pluggy_Hud.dll")
+        condition: ''file("OBSE\Plugins\OBSE_Elys_Pluggy.dll") and not file("OBSE\Plugins\OBSE_Elys_Pluggy_Hud.dll")''
     req:
       - *OBSE
       - name: 'OBSE\Plugins\OBSE_Elys_Pluggy.dll'
         display: '[Pluggy](http://oblivion.nexusmods.com/mods/23979)'
-        condition: not file("OBSE\Plugins\OBSE_Elys_Pluggy_Hud.dll")
+        condition: 'not file("OBSE\Plugins\OBSE_Elys_Pluggy_Hud.dll")'
   - name: 'VipCxj_RadarSystem.esp'
     req:
       - *OBSE
@@ -3847,27 +3847,27 @@ plugins:
     msg:
       - type: say
         content: 'Move this after OOO if you desire initial city map markers a la vanilla.'
-        condition: file("Oscuro''s_Oblivion_Overhaul.esm")
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: 'Landmarks, w Wells.esp'
     msg:
       - type: say
         content: 'Move this after OOO if you desire initial city map markers a la vanilla.'
-        condition: file("Oscuro''s_Oblivion_Overhaul.esm")
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: 'Landmarks, w Wells_DV.esp'
     msg:
       - type: say
         content: 'Move this after OOO if you desire initial city map markers a la vanilla.'
-        condition: file("Oscuro''s_Oblivion_Overhaul.esm")
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: 'Landmarks With Wells.esp'
     msg:
       - type: say
         content: 'Move this after OOO if you desire initial city map markers a la vanilla.'
-        condition: file("Oscuro''s_Oblivion_Overhaul.esm")
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: 'Landmarks_w_Wells.esp'
     msg:
       - type: say
         content: 'Move this after OOO if you desire initial city map markers a la vanilla.'
-        condition: file("Oscuro''s_Oblivion_Overhaul.esm")
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: 'HouseMapMarkersOnlyBought.esp'
     dirty:
       - crc: 0x1664da76
@@ -3882,77 +3882,77 @@ plugins:
     msg:
       - type: say
         content: 'Don''t use hotkeys to change Warcry-style ''set'' equipment. Game bug.'
-        condition: regex("Oblivion WarCry( EV)?\.esp")
+        condition: 'regex("Oblivion WarCry( EV)?\.esp")'
       - type: say
         content: 'Old, Update to V2a+.'
   - name: 'Expanded Hotkeys and Spell Delete V2.esp'
     msg:
       - type: say
         content: 'Don''t use hotkeys to change Warcry-style ''set'' equipment. Game bug.'
-        condition: regex("Oblivion WarCry( EV)?\.esp")
+        condition: 'regex("Oblivion WarCry( EV)?\.esp")'
       - type: say
         content: 'Old, Update to V2a+.'
   - name: 'Expanded Hotkeys and Spell Delete V2a.esp'
     msg:
       - type: say
         content: 'Don''t use hotkeys to change Warcry-style ''set'' equipment. Game bug.'
-        condition: regex("Oblivion WarCry( EV)?\.esp")
+        condition: 'regex("Oblivion WarCry( EV)?\.esp")'
   - name: 'Expanded Hotkeys Brief Equip Message.esp'
     msg:
       - type: say
         content: 'Don''t use hotkeys to change Warcry-style ''set'' equipment. Game bug.'
-        condition: regex("Oblivion WarCry( EV)?\.esp")
+        condition: 'regex("Oblivion WarCry( EV)?\.esp")'
   - name: 'Hov''s Hotkeys.esp'
     msg:
       - type: say
         content: 'Don''t use hotkeys to change Warcry-style ''set'' equipment. Game bug.'
-        condition: regex("Oblivion WarCry( EV)?\.esp")
+        condition: 'regex("Oblivion WarCry( EV)?\.esp")'
   - name: 'Lem - Hotkey Cyclers.esp'
     msg:
       - type: say
         content: 'Don''t use hotkeys to change Warcry-style ''set'' equipment. Game bug.'
-        condition: regex("Oblivion WarCry( EV)?\.esp")
+        condition: 'regex("Oblivion WarCry( EV)?\.esp")'
   - name: 'Uncommon Controls.esp'
     msg:
       - type: say
         content: 'Don''t use hotkeys to change Warcry-style ''set'' equipment. Game bug.'
-        condition: regex("Oblivion WarCry( EV)?\.esp")
+        condition: 'regex("Oblivion WarCry( EV)?\.esp")'
   - name: 'FastShortcuts.esp'
     msg:
       - type: say
         content: 'Don''t use hotkeys to change Warcry-style ''set'' equipment. Game bug.'
-        condition: regex("Oblivion WarCry( EV)?\.esp")
+        condition: 'regex("Oblivion WarCry( EV)?\.esp")'
   - name: 'FastEquipping.esp'
     msg:
       - type: say
         content: 'Don''t use hotkeys to change Warcry-style ''set'' equipment. Game bug.'
-        condition: regex("Oblivion WarCry( EV)?\.esp")
+        condition: 'regex("Oblivion WarCry( EV)?\.esp")'
       - *useNehrimVer
   - name: 'Improved Hotkeys.esp'
     msg:
       - type: say
         content: 'Don''t use hotkeys to change Warcry-style ''set'' equipment. Game bug.'
-        condition: regex("Oblivion WarCry( EV)?\.esp")
+        condition: 'regex("Oblivion WarCry( EV)?\.esp")'
   - name: 'Improved Hotkeys_Extended.esp'
     msg:
       - type: say
         content: 'Don''t use hotkeys to change Warcry-style ''set'' equipment. Game bug.'
-        condition: regex("Oblivion WarCry( EV)?\.esp")
+        condition: 'regex("Oblivion WarCry( EV)?\.esp")'
   - name: 'Quick Clothes and Spells.esp'
     msg:
       - type: say
         content: 'Don''t use hotkeys to change Warcry-style ''set'' equipment. Game bug.'
-        condition: regex("Oblivion WarCry( EV)?\.esp")
+        condition: 'regex("Oblivion WarCry( EV)?\.esp")'
   - name: 'sr_super_hotkeys.esp'
     msg:
       - type: say
         content: 'Don''t use hotkeys to change Warcry-style ''set'' equipment. Game bug.'
-        condition: regex("Oblivion WarCry( EV)?\.esp")
+        condition: 'regex("Oblivion WarCry( EV)?\.esp")'
   - name: 'STHotkeys.esp'
     msg:
       - type: say
         content: 'Don''t use hotkeys to change Warcry-style ''set'' equipment. Game bug.'
-        condition: regex("Oblivion WarCry( EV)?\.esp")
+        condition: 'regex("Oblivion WarCry( EV)?\.esp")'
 # ENDGROUP: Hotkeys
 # BEGINGROUP: DLC 1
   - name: 'DLCHorseArmor.esp'
@@ -4016,7 +4016,7 @@ plugins:
     msg:
       - type: say
         content: '"Incompatible with: Kumiko Manor esp"'
-        condition: regex("Kumiko.?Manor.+\.esp")
+        condition: 'regex("Kumiko.?Manor.+\.esp")'
     dirty:
       - crc: 0x74d2ca6f
         udr: 1
@@ -4046,7 +4046,7 @@ plugins:
     msg:
       - type: error
         content: 'Do not use with mmmpld''s original See You Sleep mod or any of its compatibility patches.'
-        condition: file("P1DseeYouSleep.esp")
+        condition: 'file("P1DseeYouSleep.esp")'
   - name: 'DLCMehrunesRazor.esp'
     dirty:
       - crc: 0xCB413740
@@ -4225,7 +4225,7 @@ plugins:
     msg:
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
-        condition: regex("Bashed Patch.*\.esp")
+        condition: 'regex("Bashed Patch.*\.esp")'
     tag:
       - Actors.Skeleton
       - NoMerge
@@ -4384,7 +4384,7 @@ plugins:
     msg:
       - type: say
         content: 'Consider updating to the newer [Armamentarium Complete](http://oblivion.nexusmods.com/mods/18417) version.'
-        condition: not file("Armamentarium.esm")
+        condition: 'not file("Armamentarium.esm")'
   - name: 'ArmamentariumArmor.esp'
     inc:
       - name: 'Armamentarium.esm'
@@ -4392,7 +4392,7 @@ plugins:
     msg:
       - type: say
         content: 'Consider updating to the newer [Armamentarium Complete](http://oblivion.nexusmods.com/mods/18417) version.'
-        condition: not file("Armamentarium.esm")
+        condition: 'not file("Armamentarium.esm")'
   - name: 'ArmamentariumArmor4Npcs.esp'
     inc:
       - name: 'Armamentarium.esm'
@@ -4400,7 +4400,7 @@ plugins:
     msg:
       - type: say
         content: 'Consider updating to the newer [Armamentarium Complete](http://oblivion.nexusmods.com/mods/18417) version.'
-        condition: not file("Armamentarium.esm")
+        condition: 'not file("Armamentarium.esm")'
   - name: 'ArmamentariumWeapons4Npcs.esp'
     inc:
       - 'Armamentarium_MOBS.esp'
@@ -4409,7 +4409,7 @@ plugins:
     msg:
       - type: say
         content: 'Consider updating to the newer [Armamentarium Complete](http://oblivion.nexusmods.com/mods/18417) version.'
-        condition: not file("Armamentarium.esm")
+        condition: 'not file("Armamentarium.esm")'
   - name: 'Armamentarium_MOBS.esp'
     inc:
       - 'ArmamentariumWeapons4Npcs.esp'
@@ -4418,7 +4418,7 @@ plugins:
     msg:
       - type: say
         content: 'Consider updating to the newer [Armamentarium Complete](http://oblivion.nexusmods.com/mods/18417) version.'
-        condition: not file("Armamentarium.esm")
+        condition: 'not file("Armamentarium.esm")'
   - name: 'ArmamentariumKatanas.esp'
     inc:
       - name: 'Armamentarium.esm'
@@ -4426,7 +4426,7 @@ plugins:
     msg:
       - type: say
         content: 'Consider updating to the newer [Armamentarium Complete](http://oblivion.nexusmods.com/mods/18417) version.'
-        condition: not file("Armamentarium.esm")
+        condition: 'not file("Armamentarium.esm")'
   - name: 'ArmamentariumKatanasRU.esp'
     inc:
       - name: 'Armamentarium.esm'
@@ -4434,7 +4434,7 @@ plugins:
     msg:
       - type: say
         content: 'Consider updating to the newer [Armamentarium Complete](http://oblivion.nexusmods.com/mods/18417) version.'
-        condition: not file("Armamentarium.esm")
+        condition: 'not file("Armamentarium.esm")'
   - name: 'ArmamentariumVendors.esp'
     inc:
       - name: 'Armamentarium.esm'
@@ -4442,7 +4442,7 @@ plugins:
     msg:
       - type: say
         content: 'Consider updating to the newer [Armamentarium Complete](http://oblivion.nexusmods.com/mods/18417) version.'
-        condition: not file("Armamentarium.esm")
+        condition: 'not file("Armamentarium.esm")'
   - name: 'ArmamentariumStaffs.esp'
     inc:
       - name: 'Armamentarium.esm'
@@ -4450,7 +4450,7 @@ plugins:
     msg:
       - type: say
         content: 'Consider updating to the newer [Armamentarium Complete](http://oblivion.nexusmods.com/mods/18417) version.'
-        condition: not file("Armamentarium.esm")
+        condition: 'not file("Armamentarium.esm")'
   - name: 'AGEHA Tortured Souls.esp'
     tag:
       - Delev
@@ -5032,7 +5032,7 @@ plugins:
     msg:
       - type: say
         content: 'Use ''for OOO'' version for better OOO/FCOM compatibility.'
-        condition: file("Oscuro''s_Oblivion_Overhaul.esm")
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: 'Midnight Gymnastics.esp'
     dirty:
       - crc: 0x8bca1742
@@ -5282,14 +5282,14 @@ plugins:
     msg:
       - type: say
         content: 'Not compatible with OOO. Already included in OOO.'
-        condition: file("Oscuro''s_Oblivion_Overhaul.esm")
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
     tag:
       - Invent
   - name: 'Sin''s Expanded Light Armor Kit [NPC].esp'
     msg:
       - type: say
         content: 'Not compatible with OOO. Already included in OOO.'
-        condition: file("Oscuro''s_Oblivion_Overhaul.esm")
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: 'SK_Berserk_v0.6.esp'
     dirty:
       - crc: 0xfc1d6b7f
@@ -5419,7 +5419,7 @@ plugins:
     msg:
       - type: say
         content: 'TheFatherSword.esp and 1.4TheAtlanteanSword mods included'
-        condition: file("1.4TheAtlanteanSword.esp") or file("1.4TheAtlanteanSword_leather.esp") or file("1.4TheAtlanteanSword2h_leather.esp") or file("TheFatherSword.esp")
+        condition: 'file("1.4TheAtlanteanSword.esp") or file("1.4TheAtlanteanSword_leather.esp") or file("1.4TheAtlanteanSword2h_leather.esp") or file("TheFatherSword.esp")'
   - name: 'The Little Weapon Pack OB.esp'
     tag:
       - Invent
@@ -5515,7 +5515,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_RealSwords instead.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
       - type: say
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
@@ -5524,7 +5524,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_RealSwords instead.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
       - type: say
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
@@ -5533,7 +5533,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_RealSwords instead.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
       - type: say
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
@@ -5542,7 +5542,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_RealSwords instead.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
       - type: say
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
@@ -5551,7 +5551,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_RealSwords instead.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
       - type: say
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
@@ -5560,7 +5560,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_RealSwords instead.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
       - type: say
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
@@ -5569,7 +5569,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_RealSwords instead.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
       - type: say
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
@@ -5578,7 +5578,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_RealSwords instead.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
       - type: say
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
@@ -5587,7 +5587,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_RealSwords instead.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
       - type: say
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
@@ -5596,7 +5596,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_RealSwords instead.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
       - type: say
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
@@ -5605,7 +5605,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_RealSwords instead.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
       - type: say
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
@@ -5614,7 +5614,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_RealSwords instead.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
       - type: say
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
@@ -5623,7 +5623,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_RealSwords instead.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
       - type: say
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
@@ -5632,7 +5632,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_RealSwords instead.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
       - type: say
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
@@ -5641,7 +5641,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_RealSwords instead.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
       - type: say
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
@@ -5650,7 +5650,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_RealSwords instead.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
       - type: say
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
@@ -5659,7 +5659,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_RealSwords instead.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
       - type: say
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
@@ -5668,7 +5668,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_RealSwords instead.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
       - type: say
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
@@ -5677,7 +5677,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_RealSwords instead.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
       - type: say
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
@@ -5686,7 +5686,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_RealSwords instead.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
       - type: say
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
@@ -5695,7 +5695,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_RealSwords instead.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
       - type: say
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
@@ -5704,7 +5704,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_RealSwords instead.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
       - type: say
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
@@ -5713,7 +5713,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_RealSwords instead.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
       - type: say
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
@@ -5722,7 +5722,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_RealSwords instead.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
       - type: say
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
@@ -5731,7 +5731,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_RealSwords instead.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
       - type: say
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
@@ -5740,7 +5740,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_RealSwords instead.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
       - type: say
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
@@ -5749,7 +5749,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_RealSwords instead.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
       - type: say
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
@@ -5758,7 +5758,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_RealSwords instead.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
       - type: say
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
@@ -5767,7 +5767,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_RealSwords instead.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
       - type: say
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
@@ -5776,7 +5776,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_RealSwords instead.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
       - type: say
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
@@ -5785,7 +5785,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_RealSwords instead.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
       - type: say
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
@@ -5794,7 +5794,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_RealSwords instead.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
       - type: say
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
@@ -5803,7 +5803,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_RealSwords instead.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
       - type: say
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
@@ -5812,7 +5812,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_RealSwords instead.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
       - type: say
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
@@ -5821,7 +5821,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_RealSwords instead.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
       - type: say
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
@@ -5830,7 +5830,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_RealSwords instead.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
       - type: say
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
@@ -5839,7 +5839,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_RealSwords instead.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
       - type: say
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
@@ -5848,7 +5848,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_RealSwords instead.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
       - type: say
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
@@ -6311,37 +6311,37 @@ plugins:
     msg:
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
-        condition: regex("Bashed Patch.*\.esp")
+        condition: 'regex("Bashed Patch.*\.esp")'
   - name: 'Faster_Turning_Horses.esp'
     msg:
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
-        condition: regex("Bashed Patch.*\.esp")
+        condition: 'regex("Bashed Patch.*\.esp")'
   - name: 'HorsesTurnFaster.esp'
     msg:
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
-        condition: regex("Bashed Patch.*\.esp")
+        condition: 'regex("Bashed Patch.*\.esp")'
   - name: 'HorseTurnSpeed-Faster.esp'
     msg:
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
-        condition: regex("Bashed Patch.*\.esp")
+        condition: 'regex("Bashed Patch.*\.esp")'
   - name: 'HorseTurnSpeed-Fast.esp'
     msg:
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
-        condition: regex("Bashed Patch.*\.esp")
+        condition: 'regex("Bashed Patch.*\.esp")'
   - name: 'HorseTurnSpeed-Fastest.esp'
     msg:
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
-        condition: regex("Bashed Patch.*\.esp")
+        condition: 'regex("Bashed Patch.*\.esp")'
   - name: '974-Faster Turning Horses-TESSource.esp'
     msg:
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
-        condition: regex("Bashed Patch.*\.esp")
+        condition: 'regex("Bashed Patch.*\.esp")'
   - name: 'Legion''s Horses Armored With Slof''s Horse Bases.esp'
     tag:
       - Graphics
@@ -6503,12 +6503,12 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Already integrated into FCOM, MMM, OOO or other FCOM components.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
   - name: 'Francesco''s Optional Dungeon Chest Locks.esp'
     msg:
       - type: error
         content: 'Delete. Already integrated into FCOM, MMM, OOO or other FCOM components.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
   - name: 'Francesco''s Optional Leveled Guards.esp'
     tag:
       - Actors.ACBS
@@ -6517,12 +6517,12 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Already integrated into FCOM, MMM, OOO or other FCOM components.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
   - name: 'Francesco''s Optional New Adventurers.esp'
     msg:
       - type: error
         content: 'Delete. Already integrated into FCOM, MMM, OOO or other FCOM components.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
   - name: 'Francesco''s Optional Vendor Tweaks.esp'
     inc:
       - 'FCOM_Convergence.esm'
@@ -6530,17 +6530,17 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Already integrated into FCOM, MMM, OOO or other FCOM components.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
   - name: 'Francesco''s Optional Leveled Arena.esp'
     msg:
       - type: error
         content: 'Delete. Already integrated into FCOM, MMM, OOO or other FCOM components.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
   - name: 'Francesco''s Optional Files.esp'
     msg:
       - type: error
         content: 'Should not be used. Delete. Reinstall Fran''s and select "Separate Files" when the option is presented.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
     tag:
       - Delev
       - Relev
@@ -6548,7 +6548,7 @@ plugins:
     msg:
       - type: error
         content: 'Should not be used. Delete. Reinstall Fran''s and select "Separate Files" when the option is presented.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
     tag:
       - Delev
       - Relev
@@ -6556,7 +6556,7 @@ plugins:
     msg:
       - type: error
         content: 'Should not be used. Delete. Reinstall Fran''s and select "Separate Files" when the option is presented.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
     tag:
       - Delev
       - Relev
@@ -6564,7 +6564,7 @@ plugins:
     msg:
       - type: error
         content: 'Should not be used. Delete. Reinstall Fran''s and select "Separate Files" when the option is presented.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
     tag:
       - Delev
       - Relev
@@ -6572,7 +6572,7 @@ plugins:
     msg:
       - type: error
         content: 'Should not be used. Delete. Reinstall Fran''s and select "Separate Files" when the option is presented.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
     tag:
       - Delev
       - Relev
@@ -6580,7 +6580,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Already integrated into FCOM, MMM, OOO or other FCOM components.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
   - name: 'Francesco''s Dark Seducer Weapons Patch.esp'
     tag:
       - Delev
@@ -6614,17 +6614,17 @@ plugins:
     msg:
       - type: say
         content: 'Not needed if using Mart''s Monster Mod - Diverse Runeskulls*.esp'
-        condition: regex("Mart''s Monster Mod - Diverse Runeskulls.*\.esp")
+        condition: 'regex("Mart''s Monster Mod - Diverse Runeskulls.*\.esp")'
   - name: 'ExnemRuneskulls_ru.esp'
     msg:
       - type: say
         content: 'Not need if use Mart''s Monster Mod - Diverse Runeskulls*.esp'
-        condition: regex("Mart''s Monster Mod - Diverse Runeskulls.*\.esp")
+        condition: 'regex("Mart''s Monster Mod - Diverse Runeskulls.*\.esp")'
   - name: 'FCOM_ExnemRuneskulls.esp'
     msg:
       - type: say
         content: 'Not need if use Mart''s Monster Mod - Diverse Runeskulls*.esp'
-        condition: regex("Mart''s Monster Mod - Diverse Runeskulls.*\.esp")
+        condition: 'regex("Mart''s Monster Mod - Diverse Runeskulls.*\.esp")'
   - name: 'Slof''s Oblivion Robe Trader.esp'
     tag:
       - Graphics
@@ -6641,7 +6641,7 @@ plugins:
     msg:
       - type: say
         content: 'If using Cobl 1.72 and a version of FCOM below 0.9.9, also use the FCOM patch ''FCOM_Cobl.esp''. If you are using UFCOM then use "OOO 1.32-Cobl.esp" and "MMM_cobl.esp" instead of ''FCOM_Cobl.esp''.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
     dirty:
       - crc: 0x8a79a499
         util: *dirtyUtil
@@ -6670,7 +6670,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Already included in ''FCOM_Cobl.esp'' or latest ''MMM_Cobl.esp''.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
   - name: 'COBL-FransCre.esp'
     req:
       - 'Francesco''s Leveled Creatures-Items Mod.esm'
@@ -6710,17 +6710,17 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Only use ''Loth''s Blunt Weapons For NPCs.esp'' and ''FCOM_LothsBluntWeapons.esp''.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
   - name: 'Loth''s Blunt Weapons- Mobs.esp'
     msg:
       - type: error
         content: 'Delete. Only use ''Loth''s Blunt Weapons For NPCs.esp'' and ''FCOM_LothsBluntWeapons.esp''.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
   - name: 'Oblivion WarCry.esp'
     msg:
       - type: error
         content: 'German version not compatible with FCOM. Delete & Use ''Oblivion WarCry EV.esp'' instead.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
       - type: say
         content: 'German version.'
       - *doNotClean
@@ -6747,7 +6747,7 @@ plugins:
       - Relev
       - Stats
       - name: -Actors.DeathItem
-        condition: version("Oblivion WarCry EV.esp","1.09",<)
+        condition: 'version("Oblivion WarCry EV.esp","1.09",<)'
   - name: 'FCOM_WarCry.esp'
     inc:
       - 'FCOM_WarCryNoSpawn.esp'
@@ -6780,94 +6780,94 @@ plugins:
       - Scripts
       - Stats
       - name: -Factions
-        condition: file("Mart''s Monster Mod for OOO.esm") or file("FCOM_Convergence.esm")
+        condition: 'file("Mart''s Monster Mod for OOO.esm") or file("FCOM_Convergence.esm")'
       - name: -Relations
-        condition: file("Mart''s Monster Mod for OOO.esm") or file("FCOM_Convergence.esm")
+        condition: 'file("Mart''s Monster Mod for OOO.esm") or file("FCOM_Convergence.esm")'
   - name: ''OOO-Armor_Perks_WearRate_Repair.esp''
     msg:
       - type: say
         content: ''Don''t use with the FULL version of OOO, already included.''
-        condition: file("Oscuro''s_Oblivion_Overhaul.esm")
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: 'OOO-Birthsigns.esp'
     msg:
       - type: say
         content: 'Don''t use with the FULL version of OOO, already included.'
-        condition: file("Oscuro''s_Oblivion_Overhaul.esm")
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: 'OOO-Combat_Skills_Perks_Marksmanship.esp'
     msg:
       - type: say
         content: 'Don''t use with the FULL version of OOO, already included.'
-        condition: file("Oscuro''s_Oblivion_Overhaul.esm")
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: 'OOO-DaedricLord_Quests.esp'
     msg:
       - type: say
         content: 'Don''t use with the FULL version of OOO, already included.'
-        condition: file("Oscuro''s_Oblivion_Overhaul.esm")
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: 'OOO-DaedraLord_Quests.esp'
     msg:
       - type: say
         content: 'Don''t use with the FULL version of OOO, already included.'
-        condition: file("Oscuro''s_Oblivion_Overhaul.esm")
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: 'OOO-Dangerous_traps.esp'
     msg:
       - type: say
         content: 'Don''t use with the FULL version of OOO, already included.'
-        condition: file("Oscuro''s_Oblivion_Overhaul.esm")
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: 'OOO-Deadly_Combat.esp'
     msg:
       - type: say
         content: 'Don''t use with the FULL version of OOO, already included.'
-        condition: file("Oscuro''s_Oblivion_Overhaul.esm")
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: 'OOO-DLT_Immersion.esp'
     msg:
       - type: say
         content: 'Don''t use with the FULL version of OOO, already included.'
-        condition: file("Oscuro''s_Oblivion_Overhaul.esm")
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: 'OOO-Magic_Effects+Enchantments.esp'
     msg:
       - type: say
         content: 'Don''t use with the FULL version of OOO, already included.'
-        condition: file("Oscuro''s_Oblivion_Overhaul.esm")
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: 'OOO-Magic_Effects+Spells.esp'
     msg:
       - type: say
         content: 'Don''t use with the FULL version of OOO, already included.'
-        condition: file("Oscuro''s_Oblivion_Overhaul.esm")
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: 'OOO-Magic_Game_Settings.esp'
     msg:
       - type: say
         content: 'Don''t use with the FULL version of OOO, already included.'
-        condition: file("Oscuro''s_Oblivion_Overhaul.esm")
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: 'OOO-Potions.esp'
     msg:
       - type: say
         content: 'Don''t use with the FULL version of OOO, already included.'
-        condition: file("Oscuro''s_Oblivion_Overhaul.esm")
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: 'OOO-Thief_Guild_Difficult.esp'
     msg:
       - type: say
         content: 'Don''t use with the FULL version of OOO, already included.'
-        condition: file("Oscuro''s_Oblivion_Overhaul.esm")
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: 'OOO-ThiefGuild_Difficult.esp'
     msg:
       - type: say
         content: 'Don''t use with the FULL version of OOO, already included.'
-        condition: file("Oscuro''s_Oblivion_Overhaul.esm")
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: 'OOO-Ayleid Coin Add-on.esp'
     msg:
       - type: error
         content: 'Delete. Update to latest version of OOO.'
-        condition: file("Oscuro''s_Oblivion_Overhaul.esm") or file("FCOM_Convergence.esm")
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm") or file("FCOM_Convergence.esm")'
   - name: 'OOO132RC3Hotfixes.esp'
     msg:
       - type: error
         content: 'Delete. Update to latest version of OOO.'
-        condition: file("Oscuro''s_Oblivion_Overhaul.esm") or file("FCOM_Convergence.esm")
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm") or file("FCOM_Convergence.esm")'
   - name: 'OOO132RC3MapMarkers.esp'
     msg:
       - type: error
         content: 'Delete. Update to latest version of OOO.'
-        condition: file("Oscuro''s_Oblivion_Overhaul.esm") or file("FCOM_Convergence.esm")
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm") or file("FCOM_Convergence.esm")'
   - name: 'OOO-LightOfDawnFlamesWhenDrawnOBSE.esp'
     inc:
       - 'OOO-LightOfDawnAlwaysFlames.esp'
@@ -6880,7 +6880,7 @@ plugins:
     msg:
       - type: error
         content: 'Incompatible with MMMforOOO/FCOM. Already integrated.'
-        condition: file("Mart''s Monster Mod for OOO.esp") or file("FCOM_Convergence.esm")
+        condition: 'file("Mart''s Monster Mod for OOO.esp") or file("FCOM_Convergence.esm")'
   - name: 'OMOBS_OOO_missing_Oblivion_Bow_Ammo.esp'
     tag:
       - Stats
@@ -7088,7 +7088,7 @@ plugins:
     msg:
       - type: say
         content: 'Not for OOO. Remove this and use ''ArmamentariumLL4OOO.esp'' instead.'
-        condition: file("Oscuro''s_Oblivion_Overhaul.esm")
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: 'C&C&EQR - OOO.esp'
     msg:
       - type: say
@@ -7129,7 +7129,7 @@ plugins:
     msg:
       - type: say
         content: 'Remove this. Do not use with OOO/FCOM.'
-        condition: file("Oscuro''s_Oblivion_Overhaul.esm") or file("FCOM_Convergence.esm")
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm") or file("FCOM_Convergence.esm")'
   - name: 'OOO 1.32-Cobl.esp'
     tag:
       - Delev
@@ -7141,7 +7141,7 @@ plugins:
     msg:
       - type: error
         content: 'Do not use COBL and Tamerielic Ingredients at the same time.'
-        condition: regex("Tamerielic Ingredients.*\.es[mp]")
+        condition: 'regex("Tamerielic Ingredients.*\.es[mp]")'
       - type: say
         content: 'Do not use with latest MMM/FCOM/COBL - superseded by MMM_Cobl.esp'
     tag:
@@ -7151,12 +7151,12 @@ plugins:
     msg:
       - type: say
         content: 'Included in OOO. Remove unless you want to lose OOO''s container traps, security rebalance and lock bashing features (so you can use other mods for those).'
-        condition: file("Oscuro''s_Oblivion_Overhaul.esm")
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: 'Harvest[Containers] - Vanilla.esp'
     msg:
       - type: say
         content: 'Included in OOO. Remove unless you want to lose OOO''s container traps, security rebalance and lock bashing features (so you can use other mods for those).'
-        condition: file("Oscuro''s_Oblivion_Overhaul.esm")
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
     dirty:
       - crc: 0xd7e2759e
         util: *dirtyUtil
@@ -7164,7 +7164,7 @@ plugins:
     msg:
       - type: say
         content: 'Included in OOO. Remove unless you want to lose OOO''s container traps, security rebalance and lock bashing features (so you can use other mods for those).'
-        condition: file("Oscuro''s_Oblivion_Overhaul.esm")
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: 'DEJ Harvest - Containers [Combo] v0.99.08.esp'
     msg:
       - type: say
@@ -7173,20 +7173,20 @@ plugins:
     msg:
       - type: say
         content: 'Included in OOO. Remove unless you want to lose OOO''s container traps, security rebalance and lock bashing features (so you can use other mods for those).'
-        condition: file("Oscuro''s_Oblivion_Overhaul.esm")
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: 'Harvest[Containers] - Havok Crates Add-on.esp'
     msg:
       - type: say
         content: 'Included in OOO. Remove unless you want to lose OOO''s container traps, security rebalance and lock bashing features (so you can use other mods for those).'
-        condition: file("Oscuro''s_Oblivion_Overhaul.esm")
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: 'Hemingweys NPC Capes for OOO and FCOM.esp'
     msg:
       - type: say
         content: 'Obselete if using MMM or FCOM. Update to latest version and use ''Mart''s Monster Mod - Hemingweys NPC and Guard Capes.esp'' instead.'
-        condition: file("Mart''s Monster Mod.esm") or file("FCOM_Convergence.esm")
+        condition: 'file("Mart''s Monster Mod.esm") or file("FCOM_Convergence.esm")'
       - type: say
         content: 'If you are running only OOO, but not MMM or FCOM, keep this installed.'
-        condition: file("Oscuro''s_Oblivion_Overhaul.esm")
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: 'MTCDirtierBandits.esp'
     tag:
       - Invent
@@ -7234,7 +7234,7 @@ plugins:
     msg:
       - type: say
         content: 'Outdated. Install FCOM version 1.0 or later.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
   - name: 'Mart''s Monster Mod - Fran''s Leveled Quests.esp'
     msg:
       - type: error
@@ -7248,7 +7248,7 @@ plugins:
     msg:
       - type: error
         content: 'FCOM_Convergence.esm is missing. Re-install FCOM.'
-        condition: not file("FCOM_Convergence.esm")
+        condition: 'not file("FCOM_Convergence.esm")'
       - *doNotClean
     tag:
       - Actors.ACBS
@@ -7272,18 +7272,18 @@ plugins:
     msg:
       - type: error
         content: 'Outdated. Install FCOM version 0.9.9 or later.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
       - type: error
         content: 'FCOM_Convergence.esm is missing. Re-install FCOM.'
-        condition: not file("FCOM_Convergence.esm")
+        condition: 'not file("FCOM_Convergence.esm")'
   - name: 'FCOM_OscurosOverhaul.esp'
     msg:
       - type: say
         content: 'Only use when not using MMM.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
       - type: error
         content: 'FCOM_Convergence.esm is missing. Re-install FCOM.'
-        condition: not file("FCOM_Convergence.esm")
+        condition: 'not file("FCOM_Convergence.esm")'
   - name: 'Choices and Consequences - MMM.esp'
     msg:
       - type: say
@@ -7301,11 +7301,11 @@ plugins:
       - type: say
         content: 'Not needed in MMM 3.6beta3+. Already integrated.'
   - name: 'Mart''s Monster Mod - Diverse Runeskulls.esp'
-    condition: *FCOMCond
+    condition: '*FCOMCond'
     msg:
       - type: say
         content: 'Replaces both ''FCOM_ExnemRuneskulls.esp'' and ''ExnemRuneskulls.esp'' - Please remove them.'
-        condition: file("FCOM_ExnemRuneskulls.esp") or file("ExnemRuneskulls.esp")
+        condition: 'file("FCOM_ExnemRuneskulls.esp") or file("ExnemRuneskulls.esp")'
     tag:
       - Delev
       - Relev
@@ -7313,17 +7313,17 @@ plugins:
     msg:
       - type: error
         content: 'FCOM_Convergence.esm is missing. Re-install FCOM.'
-        condition: not file("FCOM_Convergence.esm")
+        condition: 'not file("FCOM_Convergence.esm")'
   - name: 'FCOM_EntropicOrderHardcore.esp'
     msg:
       - type: error
         content: 'FCOM_Convergence.esm is missing. Re-install FCOM.'
-        condition: not file("FCOM_Convergence.esm")
+        condition: 'not file("FCOM_Convergence.esm")'
   - name: 'FCOM_RealSwords.esp'
     msg:
       - type: error
         content: 'FCOM_Convergence.esm is missing. Re-install FCOM.'
-        condition: not file("FCOM_Convergence.esm")
+        condition: 'not file("FCOM_Convergence.esm")'
     tag:
       - Delev
       - Relev
@@ -7331,7 +7331,7 @@ plugins:
     msg:
       - type: error
         content: 'FCOM_Convergence.esm is missing. Re-install FCOM.'
-        condition: not file("FCOM_Convergence.esm")
+        condition: 'not file("FCOM_Convergence.esm")'
   - name: 'Mart''s Monster Mod - Durability & Damage.esp'
     msg:
       - type: error
@@ -7340,7 +7340,7 @@ plugins:
     msg:
       - type: error
         content: 'FCOM_Convergence.esm is missing. Re-install FCOM.'
-        condition: not file("FCOM_Convergence.esm")
+        condition: 'not file("FCOM_Convergence.esm")'
   - name: 'FCOM_SpawnRatesReduced.esp'
     inc:
       - 'FCOM_SpawnRatesSlightlyReduced.esp'
@@ -7348,7 +7348,7 @@ plugins:
     msg:
       - type: error
         content: 'FCOM_Convergence.esm is missing. Re-install FCOM.'
-        condition: not file("FCOM_Convergence.esm")
+        condition: 'not file("FCOM_Convergence.esm")'
     tag:
       - Delev
       - Relev
@@ -7359,7 +7359,7 @@ plugins:
     msg:
       - type: error
         content: 'FCOM_Convergence.esm is missing. Re-install FCOM.'
-        condition: not file("FCOM_Convergence.esm")
+        condition: 'not file("FCOM_Convergence.esm")'
     tag:
       - Delev
       - Relev
@@ -7372,7 +7372,7 @@ plugins:
         content: '''Stronger'' is the same as ''Reduced'' but spawns will be more powerful.'
       - type: error
         content: 'FCOM_Convergence.esm is missing. Re-install FCOM.'
-        condition: not file("FCOM_Convergence.esm")
+        condition: 'not file("FCOM_Convergence.esm")'
     tag:
       - Delev
       - Relev
@@ -7399,7 +7399,7 @@ plugins:
     msg:
       - type: error
         content: 'FCOM_Convergence.esm is missing. Re-install FCOM.'
-        condition: not file("FCOM_Convergence.esm")
+        condition: 'not file("FCOM_Convergence.esm")'
     tag:
       - Delev
       - Relev
@@ -7411,7 +7411,7 @@ plugins:
     msg:
       - type: error
         content: 'FCOM_Convergence.esm is missing. Re-install FCOM.'
-        condition: not file("FCOM_Convergence.esm")
+        condition: 'not file("FCOM_Convergence.esm")'
   - name: 'Mart''s Monster Mod - No Spiders.esp'
     msg:
       - type: error
@@ -7420,7 +7420,7 @@ plugins:
     msg:
       - type: error
         content: 'FCOM_Convergence.esm is missing. Re-install FCOM.'
-        condition: not file("FCOM_Convergence.esm")
+        condition: 'not file("FCOM_Convergence.esm")'
   - name: 'Mart''s Monster Mod - No Wyvern.esp'
     msg:
       - type: error
@@ -7433,7 +7433,7 @@ plugins:
     msg:
       - type: error
         content: 'FCOM_Convergence.esm is missing. Re-install FCOM.'
-        condition: not file("FCOM_Convergence.esm")
+        condition: 'not file("FCOM_Convergence.esm")'
   - name: 'Mart''s Monster Mod for OOO - NoReaversInGates.esp'
     msg:
       - type: error
@@ -7444,12 +7444,12 @@ plugins:
     msg:
       - type: error
         content: 'FCOM_Convergence.esm is missing. Re-install FCOM.'
-        condition: not file("FCOM_Convergence.esm")
+        condition: 'not file("FCOM_Convergence.esm")'
   - name: 'FCOM_NoAdventurersInGates.esp'
     msg:
       - type: error
         content: 'FCOM_Convergence.esm is missing. Re-install FCOM.'
-        condition: not file("FCOM_Convergence.esm")
+        condition: 'not file("FCOM_Convergence.esm")'
   - name: 'Mart''s Monster Mod for OOO - LessReaversInGates.esp'
     msg:
       - type: error
@@ -7460,7 +7460,7 @@ plugins:
     msg:
       - type: error
         content: 'FCOM_Convergence.esm is missing. Re-install FCOM.'
-        condition: not file("FCOM_Convergence.esm")
+        condition: 'not file("FCOM_Convergence.esm")'
   - name: 'Mart''s Monster Mod - Increased Spawn Rates.esp'
     msg:
       - type: error
@@ -7555,7 +7555,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Not needed with FCOM.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
     tag:
       - Actors.AIData
       - Actors.AIPackages
@@ -7573,7 +7573,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Not needed with FCOM.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
     tag:
       - Actors.AIData
       - Actors.AIPackages
@@ -7591,7 +7591,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Not needed with FCOM.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
     tag:
       - Delev
       - Factions
@@ -7620,7 +7620,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Not needed with FCOM.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
     tag:
       - Actors.AIData
       - Actors.AIPackages
@@ -7684,11 +7684,11 @@ plugins:
         content: 'Can increase the chances of a CTD in a heavily modded game.'
       - *doNotClean
   - name: 'Mart''s Monster Mod - Diverse Runeskulls.esp'
-    condition: not file("FCOM_Convergence.esm")
+    condition: 'not file("FCOM_Convergence.esm")'
     msg:
       - type: say
         content: 'Replaces both ''FCOM_ExnemRuneskulls.esp'' and ''ExnemRuneskulls.esp'' - Please remove them.'
-        condition: file("FCOM_ExnemRuneskulls.esp") or file("ExnemRuneskulls.esp")
+        condition: 'file("FCOM_ExnemRuneskulls.esp") or file("ExnemRuneskulls.esp")'
     tag:
       - Delev
       - Relev
@@ -7704,12 +7704,12 @@ plugins:
     msg:
       - type: error
         content: 'Not compatible with OOO. Already included in OOO.'
-        condition: file("Oscuro''s_Oblivion_Overhaul.esm")
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: 'Mart''s Monster Mod - Diverse Creature Skins.esp'
     msg:
       - type: error
         content: 'Not compatible with OOO. Already included in OOO.'
-        condition: file("Oscuro''s_Oblivion_Overhaul.esm")
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
       - type: say
         content: 'Outdated. Update to MMM 3.7+.'
   - name: 'Mart''s Monster Mod - More Reaver Variants.esp'
@@ -7727,7 +7727,7 @@ plugins:
     msg:
       - type: say
         content: 'Not compatible with OOO. Already included in OOO.'
-        condition: file("Oscuro''s_Oblivion_Overhaul.esm")
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: 'Mart''s Monster Mod - Fran''s leveled quests.esp'
     msg:
       - type: say
@@ -7736,23 +7736,23 @@ plugins:
     msg:
       - type: say
         content: 'Use ''Mart''s Monster Mod for OOO - LessReaversInGates.esp'' instead.'
-        condition: file("Oscuro''s_Oblivion_Overhaul.esm")
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: 'Mart''s Monster Mod - Safer Roads.esp'
     msg:
       - type: say
         content: 'Remove: already included in ''Mart''s Monster Mod - Spawn Rates - Reduced.esp'''
-        condition: file("Mart''s Monster Mod - Spawn Rates - Reduced")
+        condition: 'file("Mart''s Monster Mod - Spawn Rates - Reduced")'
       - type: say
         content: 'Remove: already included in ''Mart''s Monster Mod - Spawn Rates Reduced Reduced.esp'''
-        condition: file("Mart''s Monster Mod - Spawn Rates Reduced Reduced")
+        condition: 'file("Mart''s Monster Mod - Spawn Rates Reduced Reduced")'
       - type: say
         content: 'Remove: already included in ''Mart''s Monster Mod - Spawn Rates - Reduced Vanilla.esp'''
-        condition: file("Mart''s Monster Mod - Spawn Rates - Reduced Vanilla")
+        condition: 'file("Mart''s Monster Mod - Spawn Rates - Reduced Vanilla")'
   - name: 'Mart''s Monster Mod - NoReaversInGates.esp'
     msg:
       - type: say
         content: 'Use ''Mart''s Monster Mod for OOO - NoReaversInGates.esp'' instead.'
-        condition: file("Oscuro''s_Oblivion_Overhaul.esm")
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: 'Mart''s Monster Mod - No Reaver Hounds.esp'
     msg:
       - type: say
@@ -7784,7 +7784,7 @@ plugins:
     msg:
       - type: say
         content: 'Incompatible with Better Cities - City Defences.'
-        condition: file("Better Cities Resources.esm")
+        condition: 'file("Better Cities Resources.esm")'
       - *doNotClean
   - name: 'Mart''s Monster Mod - Friendlier Factions OOO+FCOM.esp'
     msg:
@@ -7836,7 +7836,7 @@ plugins:
     msg:
       - type: say
         content: 'Requires a Bashed Patch to be compatible with Slof''s Horses or Slof''s Extra Horses'
-        condition: regex("Slof.*Horse.*\.esp")
+        condition: 'regex("Slof.*Horse.*\.esp")'
     tag:
       - Actors.AIPackages
       - Graphics
@@ -7884,7 +7884,7 @@ plugins:
         content: 'Requires: Oscuro''s Oblivion Overhaul.'
       - type: error
         content: 'Requires: MMMforOOO or FCOM.'
-        condition: file("Mart''s Monster Mod for OOO.esp") or file("FCOM_Convergence.esm")
+        condition: 'file("Mart''s Monster Mod for OOO.esp") or file("FCOM_Convergence.esm")'
     tag:
       - Delev
   - name: 'Mart''s Monster Mod - Diverse Runeskulls Loot OOO.esp'
@@ -8001,7 +8001,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. ''Use TamrielTravellers4OOO.esp'' and ''FCOM_TamrielTravelers.esp'' instead.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
     dirty:
       - crc: 0xeb4a4d83
         util: *dirtyUtil
@@ -8013,7 +8013,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. ''Use TamrielTravellers4OOO.esp'' and ''FCOM_TamrielTravelers.esp'' instead.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
     dirty:
       - crc: 0xc0cecfea
         util: *dirtyUtil
@@ -8025,12 +8025,12 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Not compatible with FCOM.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
   - name: 'TamrielTravellersFactionAll.esp'
     msg:
       - type: error
         content: 'Delete. Not compatible with FCOM.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
   - name: 'TamrielTravellers4OOO.esp'
     dirty:
       - crc: 0x2cb068db
@@ -8061,7 +8061,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Not compatible with FCOM.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
       - type: say
         content: 'Not overhaul mod compatible.'
   - name: 'ShiveringIsleTravellers.esp'
@@ -8158,17 +8158,17 @@ plugins:
     msg:
       - type: error
         content: 'Delete and use ''FCOM_FriendlierFactions.esp''.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
   - name: 'Mart''s Monster Mod - Friendlier Factions OOO+FCOM.esp'
     msg:
       - type: error
         content: 'Delete and use ''FCOM_FriendlierFactions.esp''.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
   - name: 'Mart''s Monster Mod - Friendlier Factions OOO.esp'
     msg:
       - type: error
         content: 'Delete and use ''FCOM_FriendlierFactions.esp''.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
   - name: 'FCOM_FriendlierFactions.esp'
     tag:
       - NoMerge
@@ -8177,7 +8177,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Outdated. Update to FCOM v0.9.9 or later.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
   - name: 'WAC - ItemLootFix4v1.0bTIE.esp'
     tag:
       - Delev
@@ -8407,7 +8407,7 @@ plugins:
     msg:
       - type: say
         content: 'Use ''BladesSmithyOOO.esp'' instead.'
-        condition: file("Oscuro''s_Oblivion_Overhaul.esm")
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: 'OOO_ThievesGuildFix.esp'
     msg:
       - type: say
@@ -8430,22 +8430,22 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Not compatible with FCOM. Use cOMbo plugin instead.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
   - name: 'Tamrielic_Ingredients_OOO.esp'
     msg:
       - type: error
         content: 'Delete. Not compatible with FCOM. Use cOMbo plugin instead.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
   - name: 'Tamrielic_Ingredients_FraM.esp'
     msg:
       - type: error
         content: 'Delete. Not compatible with FCOM. Use cOMbo plugin instead.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
   - name: 'Tamrielic_Ingredients_Fran.esp'
     msg:
       - type: error
         content: 'Delete. Not compatible with FCOM. Use cOMbo plugin instead.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
   - name: 'TGND2 OOO Replacer.esp'
     tag:
       - Graphics
@@ -8814,7 +8814,7 @@ plugins:
     msg:
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
-        condition: regex("Bashed Patch.*\.esp")
+        condition: 'regex("Bashed Patch.*\.esp")'
   - name: 'WACESM_MiscItemsRebal.esp'
     tag:
       - Stats
@@ -8853,7 +8853,7 @@ plugins:
     msg:
       - type: warn
         content: 'Use ''CNRP Bruma4OOO.esp'' instead.'
-        condition: ( *FCOMCond ) or file("Oscuro''s_Oblivion_Overhaul.esm")
+        condition: '( *FCOMCond ) or file("Oscuro''s_Oblivion_Overhaul.esm")'
     tag:
       - Invent
   - name: 'CNRP Bruma4OOO.esp'
@@ -8863,7 +8863,7 @@ plugins:
     msg:
       - type: warn
         content: 'Use ''CNRP Chorrol4OOO.esp'' instead.'
-        condition: ( *FCOMCond ) or file("Oscuro''s_Oblivion_Overhaul.esm")
+        condition: '( *FCOMCond ) or file("Oscuro''s_Oblivion_Overhaul.esm")'
     tag:
       - Invent
   - name: 'CNRP Chorrol4OOO.esp'
@@ -8873,7 +8873,7 @@ plugins:
     msg:
       - type: warn
         content: 'Use ''CNPR DB for OOO.esp'' instead.'
-        condition: ( *FCOMCond ) or file("Oscuro''s_Oblivion_Overhaul.esm")
+        condition: '( *FCOMCond ) or file("Oscuro''s_Oblivion_Overhaul.esm")'
     tag:
       - Graphics
       - Invent
@@ -8892,7 +8892,7 @@ plugins:
     msg:
       - type: warn
         content: 'Use ''CNRP Cheydinhall4OOO.esp'' instead.'
-        condition: ( *FCOMCond ) or file("Oscuro''s_Oblivion_Overhaul.esm")
+        condition: '( *FCOMCond ) or file("Oscuro''s_Oblivion_Overhaul.esm")'
     tag:
       - Invent
   - name: 'CNRP Cheydinhal4OOO.esp'
@@ -8905,7 +8905,7 @@ plugins:
     msg:
       - type: warn
         content: 'Use ''CNRP FightersGuild4OOO.esp'' instead.'
-        condition: ( *FCOMCond ) or file("Oscuro''s_Oblivion_Overhaul.esm")
+        condition: '( *FCOMCond ) or file("Oscuro''s_Oblivion_Overhaul.esm")'
     tag:
       - Invent
   - name: 'CNRP FightersGuild4OOO.esp'
@@ -8955,7 +8955,7 @@ plugins:
     msg:
       - type: say
         content: 'Has minor incompatibility with OOO - changes Meridia quest & script back to level 10'
-        condition: file("Oscuro''s_Oblivion_Overhaul.esm")
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
       - type: say
         content: 'Only use one IABane Oils X.esp'
     tag:
@@ -8964,7 +8964,7 @@ plugins:
     msg:
       - type: say
         content: 'Has minor incompatibility with OOO - changes Meridia quest & script back to level 10'
-        condition: file("Oscuro''s_Oblivion_Overhaul.esm")
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
       - type: say
         content: 'Only use one IABane Oils X.esp'
     tag:
@@ -8973,7 +8973,7 @@ plugins:
     msg:
       - type: say
         content: 'Has minor incompatibility with OOO - changes Meridia quest & script back to level 10'
-        condition: file("Oscuro''s_Oblivion_Overhaul.esm")
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
       - type: say
         content: 'Only use one IABane Oils X.esp'
     tag:
@@ -8982,7 +8982,7 @@ plugins:
     msg:
       - type: say
         content: 'Has minor incompatibility with OOO - changes Meridia quest & script back to level 10'
-        condition: file("Oscuro''s_Oblivion_Overhaul.esm")
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
       - type: say
         content: 'Only use one IABane Oils X.esp'
     tag:
@@ -8991,7 +8991,7 @@ plugins:
     msg:
       - type: say
         content: 'Has minor incompatibility with OOO - changes Meridia quest & script back to level 10'
-        condition: file("Oscuro''s_Oblivion_Overhaul.esm")
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
       - type: say
         content: 'Only use one IABane Oils X.esp'
     tag:
@@ -9102,7 +9102,7 @@ plugins:
     msg:
       - type: say
         content: 'Border regions must be turned off for OOO compatibility. Change bBorderRegionsEnabled to 0 in Oblivion.ini or use Wrye Bash bashed patch tweak.'
-        condition: file("Oscuro''s_Oblivion_Overhaul.esm")
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
     dirty:
       - crc: 0xbf5cf18
         util: *dirtyUtil
@@ -9143,7 +9143,7 @@ plugins:
     msg:
       - type: say
         content: 'Probably incompatible with Better Cities.'
-        condition: file("Better Cities Resources.esm")
+        condition: 'file("Better Cities Resources.esm")'
   - name: '00RBScribeSupplies Intensive.esp'
     msg:
       - type: say
@@ -9246,7 +9246,7 @@ plugins:
     msg:
       - type: say
         content: '"Incompatible with: TOTF.esp Disable on time of game. Enable only after complete quests AHP.esp"'
-        condition: file("TOTF.esp")
+        condition: 'file("TOTF.esp")'
       - type: say
         content: '"Incompatible with: See You Sleep. Disable on time of game. Enable only after complete quests AHP.esp"'
     tag:
@@ -9481,7 +9481,7 @@ plugins:
     msg:
       - type: say
         content: 'Incompatible with Better Cities IC Market District.'
-        condition: file("Better Cities Resources.esm")
+        condition: 'file("Better Cities Resources.esm")'
       - *needsCleaning
   - name: 'Auriel''s_Retreat.esp'
     dirty:
@@ -9499,7 +9499,7 @@ plugins:
     msg:
       - type: warn
         content: 'Contains a wild edit, see [special cleaning instructions](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide#AuriCloudRulerAddons.esp_Special_Cleaning_Instructions) for details.'
-        condition: checksum("AuriCloudRulerAddons.esp", 3BCDEE6F)
+        condition: 'checksum("AuriCloudRulerAddons.esp", 3BCDEE6F)'
     dirty:
       - crc: 0x3bcdee6f
         itm: 1
@@ -9528,7 +9528,7 @@ plugins:
     msg: 
       - type: warn
         content: 'Makes a wild edit to the water level in Shagol gro-Bumph''s house (block 6,1).'
-        condition: checksum("AyleidTemple.esp", 4B14E3CD)
+        condition: 'checksum("AyleidTemple.esp", 4B14E3CD)'
     dirty:
       - crc: 0x4b14e3cd
         util: *dirtyUtil
@@ -9614,7 +9614,7 @@ plugins:
     msg:
       - type: say
         content: 'Incompatible with Better Cities, use ''AbandonedHouseBC.esp'' instead.'
-        condition: file("Better Cities Resources.esm")
+        condition: 'file("Better Cities Resources.esm")'
   - name: 'Better Benirus Manor.esp'
     tag:
       - C.Light
@@ -9809,7 +9809,7 @@ plugins:
     msg:
       - type: say
         content: '"Incompatible with: TheNecromancer.esp"'
-        condition: file("TheNecromancer.esp")
+        condition: 'file("TheNecromancer.esp")'
     dirty:
       - crc: 0x5822a5fd
         util: *dirtyUtil
@@ -9856,49 +9856,49 @@ plugins:
     msg:
       - type: say
         content: 'Probably incompatible with Better Cities IC Arboretum and similar.'
-        condition: file("Better Cities Resources.esm")
+        condition: 'file("Better Cities Resources.esm")'
   - name: 'Clintmichs Beautiful Imperial City Arboretum v1.1.esp'
     msg:
       - type: say
         content: 'Probably incompatible with Better Cities IC Arboretum and similar.'
-        condition: file("Better Cities Resources.esm")
+        condition: 'file("Better Cities Resources.esm")'
   - name: 'Clintmichs Beautiful Arcane University.esp'
     msg:
       - type: say
         content: 'Probably incompatible with Better Cities.'
-        condition: file("Better Cities Resources.esm")
+        condition: 'file("Better Cities Resources.esm")'
   - name: 'The Beautiful Market District.esp'
     msg:
       - type: say
         content: 'Probably incompatible with Better Cities.'
-        condition: file("Better Cities Resources.esm")
+        condition: 'file("Better Cities Resources.esm")'
   - name: 'Clintmichs Beautiful Market District v1.3.esp'
     msg:
       - type: say
         content: 'Probably incompatible with Better Cities.'
-        condition: file("Better Cities Resources.esm")
+        condition: 'file("Better Cities Resources.esm")'
   - name: 'Clintmichs Beautiful Elven Gardens District v1.0.esp'
     msg:
       - type: say
         content: 'Outdated. Update to v1.1+.'
       - type: say
         content: 'Probably incompatible with Better Cities.'
-        condition: file("Better Cities Resources.esm")
+        condition: 'file("Better Cities Resources.esm")'
   - name: 'Clintmichs Beautiful Elven Gardens District v1.1.esp'
     msg:
       - type: say
         content: 'Probably incompatible with Better Cities.'
-        condition: file("Better Cities Resources.esm")
+        condition: 'file("Better Cities Resources.esm")'
   - name: 'Clintmichs Improved Prison District v1.1.esp'
     msg:
       - type: say
         content: 'Probably incompatible with Better Cities.'
-        condition: file("Better Cities Resources.esm")
+        condition: 'file("Better Cities Resources.esm")'
   - name: 'Clintmichs Beautiful Talos Plaza District.esp'
     msg:
       - type: say
         content: 'Probably incompatible with Better Cities.'
-        condition: file("Better Cities Resources.esm")
+        condition: 'file("Better Cities Resources.esm")'
   - name: 'COR-Episode1 Secret of Enourk.esp'
     dirty:
       - crc: 0x156247ac
@@ -9974,7 +9974,7 @@ plugins:
         content: 'Compatibility with other DB Sanctuary mods is unlikely due to the number of persistent references which have been deleted.'
       - type: say
         content: 'TES4Edit displays "Target is not persistent" messages when undeleting and disabling references, just click "Undelete and Disable References" again until it processes all the records.'
-        condition: checksum("DBSRebuiltComplete.esp", 543D21FB) or checksum("DBSRebuiltComplete.esp", D49DA10B)
+        condition: 'checksum("DBSRebuiltComplete.esp", 543D21FB) or checksum("DBSRebuiltComplete.esp", D49DA10B)'
     dirty:
       - crc: 0x543D21FB
         util: *dirtyUtil
@@ -10669,7 +10669,7 @@ plugins:
         content: 'Not Better Cities compatible. Already included in Better Cities IC Talos District.'
       - type: warn
         content: 'Makes a few wild edits, deleting the entirety of "Abandoned Mine Caverns" and modifies the door in "Abandoned Mine" not to point anywhere.'
-        condition: checksum("Jagnot- Imperial City Library V1.3.esp", FC58ACB0)
+        condition: 'checksum("Jagnot- Imperial City Library V1.3.esp", FC58ACB0)'
     dirty:
       - crc: 0xfc58acb0
         util: *dirtyUtil
@@ -10696,7 +10696,7 @@ plugins:
     req:
       - name: 'kingdomofAlamar_OOO.esp'
         display: '[OOO compatibility patch]((http://devnull.sweetdanger.net/mods/KingdomofAlmar_OOO.zip)'
-        condition: file("Oscuro''s_Oblivion_Overhaul.esm")
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
     dirty:
       - crc: 0x72392fc9
         util: *dirtyUtil
@@ -10723,7 +10723,7 @@ plugins:
     msg:
       - type: warn
         content: 'Makes wild edits, see [special cleaning instructions](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide#300_White_Stallion_4.esp_Special_Cleaning_Instructions).'
-        condition: checksum("300_White Stallion 4.esp", 400BDFF6)
+        condition: 'checksum("300_White Stallion 4.esp", 400BDFF6)'
     dirty:
       - crc: 0x400bdff6
         util: *dirtyUtil
@@ -10761,7 +10761,7 @@ plugins:
     msg:
       - type: say
         content: '"Requires: FCOM"'
-        condition: not file("FCOM_Convergence.esm")
+        condition: 'not file("FCOM_Convergence.esm")'
   - name: 'All Natural - Kvatch Rebuilt Weather Patch.esp'
     msg:
       - type: say
@@ -10789,7 +10789,7 @@ plugins:
     msg:
       - type: warn
         content: 'Makes wild edits, see [special cleaning instructions](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide#KvatchRising.esp_Special_Cleaning_Instructions).'
-        condition: checksum("KvatchRising.esp", 6C91CBEB)
+        condition: 'checksum("KvatchRising.esp", 6C91CBEB)'
     dirty:
       - crc: 0x6c91cbeb
         util: *dirtyUtil
@@ -10883,7 +10883,7 @@ plugins:
     msg:
       - type: warn
         content: 'Makes wild edits, see [special cleaning instructions](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide#GlenvarCastle.esp_Special_Cleaning_Instructions).'
-        condition: checksum("GlenvarCastle.esp", 718904AC)
+        condition: 'checksum("GlenvarCastle.esp", 718904AC)'
     dirty:
       - crc: 0x718904ac
         util: *dirtyUtil
@@ -10924,7 +10924,7 @@ plugins:
     msg:
       - type: say
         content: 'Not Better Cities compatible. Already included in Better Cities Leyawiin.'
-        condition: file("Better Cities Resources.esm")
+        condition: 'file("Better Cities Resources.esm")'
   - name: 'Litterbug.esp'
     msg:
       - type: say
@@ -11017,7 +11017,7 @@ plugins:
     msg:
       - type: say
         content: 'Use ''The Imperial Water - BETTER CITIES.esp'' instead.'
-        condition: file("Better Cities Resources.esm")
+        condition: 'file("Better Cities Resources.esm")'
   - name: 'The Imperial Water - BETTER CITIES.esp'
     dirty:
       - crc: 0x73f25199
@@ -11095,13 +11095,13 @@ plugins:
     msg:
       - type: warn
         content: '"Incompatible with Ruined Tail''s Tale unless using the patch available [here](http://oblivion.nexusmods.com/mods/34010)."'
-        condition: ( file("RTT.esp") ) and not file("RTT-Weye Relocation Patch.esp")
+        condition: '( file("RTT.esp") ) and not file("RTT-Weye Relocation Patch.esp")'
       - type: warn
         content: '"Incompatible with Faregyl Village unless using the patch available [here](http://oblivion.nexusmods.com/mods/34010)."'
-        condition: ( file("Faregyl.esp") ) and not file("MTCVillages-FaregylPatch.esp")
+        condition: '( file("Faregyl.esp") ) and not file("MTCVillages-FaregylPatch.esp")'
       - type: warn
         content: '"Incompatible with Lost Spires unless using the patch available [here](http://oblivion.nexusmods.com/mods/42430)."'
-        condition: ( file("The Lost Spires.esp") ) and not file("MTCVillages-LostSpiresPatch.esp")
+        condition: '( file("The Lost Spires.esp") ) and not file("MTCVillages-LostSpiresPatch.esp")'
     dirty:
       - crc: 0x795046ef
         util: *dirtyUtil
@@ -11110,7 +11110,7 @@ plugins:
     msg:
       - type: warn
         content: 'Use this patch or "MTCVillages-LakeRumarePatch.esp", but not both.'
-        condition: file("MTCVillages-LakeRumarePatch.esp")
+        condition: 'file("MTCVillages-LakeRumarePatch.esp")'
   - name: 'MTCExpandedVillages Vwalk.esp'
     tag:
       - Actors.Anims
@@ -11176,12 +11176,12 @@ plugins:
     msg:
       - type: say
         content: 'Probably incompatible with Better Cities Anvil components.'
-        condition: file("Better Cities Resources.esm")
+        condition: 'file("Better Cities Resources.esm")'
   - name: 'New Imperial City.esp'
     msg:
       - type: say
         content: 'Probably incompatible with Better Cities IC components.'
-        condition: file("Better Cities Resources.esm")
+        condition: 'file("Better Cities Resources.esm")'
   - name: 'Nascosto Isles 3.esp'
     dirty:
       - crc: 0xd6d26c08
@@ -11360,7 +11360,7 @@ plugins:
     msg:
       - type: say
         content: 'Use the Better Cities version instead.'
-        condition: file("Better Cities Resources.esm")
+        condition: 'file("Better Cities Resources.esm")'
   - name: 'PearlFarm.esp'
     dirty:
       - crc: 0x590de30d
@@ -11369,7 +11369,7 @@ plugins:
     msg:
       - type: warn
         content: 'Makes wild edits to the FGC010 script.'
-        condition: checksum("Pek_Halls_of_The_Phoenix_Order.esp", D96DB828)
+        condition: 'checksum("Pek_Halls_of_The_Phoenix_Order.esp", D96DB828)'
     dirty:
       - crc: 0xd96db828
         util: *dirtyUtil
@@ -11465,7 +11465,7 @@ plugins:
     msg:
       - type: warn
         content: 'Use this patch or "MTC-WeyePatch.esp", but not both.'
-        condition: file("MTC-WeyePatch.esp")
+        condition: 'file("MTC-WeyePatch.esp")'
   - name: 'Return Of Shadows.esp'
     dirty:
       - crc: 0x6d97b636
@@ -11873,7 +11873,7 @@ plugins:
     msg:
       - type: error
         content: 'road+bridges.esp has been detected. New Roads & Bridges Revised and all dependent patches must be uninstalled before using Roads of Cyrodiil. See Roads of Cyrodiil readme for upgrade instructions.'
-        condition: file("road+bridges.esp")
+        condition: 'file("road+bridges.esp")'
   - name: 'TheForgottenShields v1.1 Delayer.esp'
     msg:
       - type: say
@@ -12057,7 +12057,7 @@ plugins:
         content: '"Incompatible with: UL mod(s)."'
       - type: warn
         content: 'Makes wild edits, see [special cleaning instructions](http://cs.elderscrolls.com/index.php/TES4Edit_Cleaning_Guide#Treasure_Maps_The_Legend_Of_Jauffres_Gold.esp_Special_Cleaning_Instructions).'
-        condition: checksum("Treasure_Maps_The_Legend_Of_Jauffres_Gold.esp", 9BEABF59)
+        condition: 'checksum("Treasure_Maps_The_Legend_Of_Jauffres_Gold.esp", 9BEABF59)'
     dirty:
       - crc: 0x9beabf59
         util: *dirtyUtil
@@ -12195,14 +12195,14 @@ plugins:
     msg:
       - type: say
         content: 'Incompatible with Better Cities.'
-        condition: file("Better Cities Resources.esm")
+        condition: 'file("Better Cities Resources.esm")'
       - type: say
         content: 'Outdated. Update to V2+.'
   - name: 'Vypers Arrow Spells.esp'
     msg:
       - type: say
         content: 'Incompatible with Better Cities.'
-        condition: file("Better Cities Resources.esm")
+        condition: 'file("Better Cities Resources.esm")'
       - type: say
         content: 'Outdated. Update to V2+.'
   - name: 'Watchtower.esp'
@@ -12214,7 +12214,7 @@ plugins:
     msg: 
       - type: warn
         content: 'Makes wild edits, see [special cleaning instructions](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide#Waterfront_Shack.esp_Special_Cleaning_Instructions).'
-        condition: checksum("Waterfront Shack.esp", 4FD37830)
+        condition: 'checksum("Waterfront Shack.esp", 4FD37830)'
     dirty:
       - crc: 0x4fd37830
         util: *dirtyUtil
@@ -12385,7 +12385,7 @@ plugins:
     msg:
       - type: warn
         content: 'Makes wild edits, see [special cleaning instructions](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide#BattlehornCastleEnhanced.esp_Special_Cleaning_Instructions)'
-        condition: checksum("BattlehornCastleEnhanced.esp", 9E3F8559)
+        condition: 'checksum("BattlehornCastleEnhanced.esp", 9E3F8559)'
     dirty:
       - crc: 0x9e3f8559
         util: *dirtyUtil
@@ -12421,17 +12421,17 @@ plugins:
     msg:
       - type: say
         content: 'Use FCOM compatibility version instead.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
   - name: 'Lynges_Thieves_Highway.esp'
     msg:
       - type: say
         content: 'Not Better Cities compatible. Already included with Better Cities IC plugins.'
-        condition: file("Better Cities Resources.esm")
+        condition: 'file("Better Cities Resources.esm")'
   - name: 'Lynges_Thieves_Highway-10256.esp'
     msg:
       - type: say
         content: 'Not Better Cities compatible. Already included with Better Cities IC plugins.'
-        condition: file("Better Cities Resources.esm")
+        condition: 'file("Better Cities Resources.esm")'
     dirty:
       - crc: 0x24fe4781
         util: *dirtyUtil
@@ -12439,20 +12439,20 @@ plugins:
     msg:
       - type: say
         content: 'Not Better Cities compatible. Already included with Better Cities IC plugins.'
-        condition: file("Better Cities Resources.esm")
+        condition: 'file("Better Cities Resources.esm")'
   - name: 'Lynges Thieves Highway.esp'
     msg:
       - type: say
         content: 'Not Better Cities compatible. Already included with Better Cities IC plugins.'
-        condition: file("Better Cities Resources.esm")
+        condition: 'file("Better Cities Resources.esm")'
   - name: 'Lynges Thieves Highway - OOO.esp'
     msg:
       - type: say
         content: 'Not Better Cities compatible. Already included with Better Cities IC plugins.'
-        condition: file("Better Cities Resources.esm")
+        condition: 'file("Better Cities Resources.esm")'
       - type: say
         content: 'Delete ''Lynges Thieves Highway.esp and use this instead.'
-        condition: file("Oscuro''s_Oblivion_Overhaul.esm")
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
 # ENDGROUP: Quests and Locations 2
 # BEGINGROUP: DLC 4
   - name: 'DLCFrostcrag.esp'
@@ -12690,12 +12690,12 @@ plugins:
         content: 'Recommended to upgrade to Quiet Feet MAX 2.0, which does not require a plugin and is more compatible.'
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
-        condition: regex("Bashed Patch.*\.esp")
+        condition: 'regex("Bashed Patch.*\.esp")'
   - name: 'Mart''s Monster Mod - Knights of the Nine Patch.esp'
     msg:
       - type: error
         content: 'Delete. Not compatible with FCOM. Use FCOM_knights.esp instead.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
     tag:
       - Actors.AIData
       - Actors.AIPackages
@@ -12709,7 +12709,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Not compatible with FCOM. Use FCOM_knights.esp instead.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
     tag:
       - Actors.AIData
       - Actors.AIPackages
@@ -12723,7 +12723,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Not compatible with FCOM. Use FCOM_knights.esp instead.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
     tag:
       - Actors.AIData
       - Actors.AIPackages
@@ -12737,7 +12737,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Not compatible with FCOM. Use FCOM_knights.esp instead.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
     tag:
       - Actors.AIData
       - Actors.AIPackages
@@ -12758,7 +12758,7 @@ plugins:
     msg:
       - type: error
         content: 'Use "FCOM_Knights.esp" instead.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
   - name: 'DLC_MOBS.esp'
     msg:
       - type: say
@@ -12937,7 +12937,7 @@ plugins:
     msg:
       - type: warn
         content: 'Makes wild edits to path grids.'
-        condition: checksum("SoT_TheOrderofNibenay.esp", CA79063C)
+        condition: 'checksum("SoT_TheOrderofNibenay.esp", CA79063C)'
     dirty:
       - crc: 0xca79063c
         util: *dirtyUtil
@@ -13054,7 +13054,7 @@ plugins:
     msg:
       - type: say
         content: 'Has some landscape issues with OOO.'
-        condition: file("Oscuro''s_Oblivion_Overhaul.esm")
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
     dirty:
       - crc: 0x6798b41
         util: *dirtyUtil
@@ -13140,7 +13140,7 @@ plugins:
     msg:
       - type: say
         content: 'Incompatible with Better Cities - City Defences.'
-        condition: file("Better Cities Resources.esm")
+        condition: 'file("Better Cities Resources.esm")'
       - *doNotClean
   - name: 'FCOM_Knights.esp'
     tag:
@@ -13201,12 +13201,12 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use ''FCOM_EnhancedDaedricInvasion.esp'' instead.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
   - name: 'Enhanced Daedric Invasion for FranOOOMMM.esp'
     msg:
       - type: error
         content: 'Delete. Use ''FCOM_EnhancedDaedricInvasion.esp'' instead.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
   - name: 'ElsweyrAnequina.esp'
     msg:
       - type: say
@@ -13397,64 +13397,64 @@ plugins:
     msg:
       - type: error
         content: 'road+bridges.esp has been detected. New Roads & Bridges Revised and all dependent patches must be uninstalled before using Roads of Cyrodiil. See Roads of Cyrodiil readme for upgrade instructions.'
-        condition: file("road+bridges.esp")
+        condition: 'file("road+bridges.esp")'
       - type: error
         content: 'West Roads.esp has been detected. West Roads and all dependent patches must be uninstalled before using Roads of Cyrodiil. See Roads of Cyrodiil readme for upgrade instructions.'
-        condition: file("West Roads.esp")
+        condition: 'file("West Roads.esp")'
   - name: 'ROC+AranMathi Patch.esp'
     msg:
       - type: error
         content: 'road+bridges.esp has been detected. New Roads & Bridges Revised and all dependent patches must be uninstalled before using Roads of Cyrodiil. See Roads of Cyrodiil readme for upgrade instructions.'
-        condition: file("road+bridges.esp")
+        condition: 'file("road+bridges.esp")'
   - name: 'ROC+CastleWestWeald Patch.esp'
     msg:
       - type: error
         content: 'road+bridges.esp has been detected. New Roads & Bridges Revised and all dependent patches must be uninstalled before using Roads of Cyrodiil. See Roads of Cyrodiil readme for upgrade instructions.'
-        condition: file("road+bridges.esp")
+        condition: 'file("road+bridges.esp")'
   - name: 'ROC+Fighters Guild Quests.esp'
     msg:
       - type: error
         content: 'road+bridges.esp has been detected. New Roads & Bridges Revised and all dependent patches must be uninstalled before using Roads of Cyrodiil. See Roads of Cyrodiil readme for upgrade instructions.'
-        condition: file("road+bridges.esp")
+        condition: 'file("road+bridges.esp")'
       - type: say
         content: '"Incompatible with: Quest for the Elements (and its ROC patch)"'
   - name: 'ROC+Hemingweys Capes Addon.esp'
     msg:
       - type: error
         content: 'road+bridges.esp has been detected. New Roads & Bridges Revised and all dependent patches must be uninstalled before using Roads of Cyrodiil. See Roads of Cyrodiil readme for upgrade instructions.'
-        condition: file("road+bridges.esp")
+        condition: 'file("road+bridges.esp")'
   - name: 'ROC+Highwood Patch.esp'
     msg:
       - type: error
         content: 'road+bridges.esp has been detected. New Roads & Bridges Revised and all dependent patches must be uninstalled before using Roads of Cyrodiil. See Roads of Cyrodiil readme for upgrade instructions.'
-        condition: file("road+bridges.esp")
+        condition: 'file("road+bridges.esp")'
   - name: 'ROC+QFE Patch.esp'
     msg:
       - type: error
         content: 'road+bridges.esp has been detected. New Roads & Bridges Revised and all dependent patches must be uninstalled before using Roads of Cyrodiil. See Roads of Cyrodiil readme for upgrade instructions.'
-        condition: file("road+bridges.esp")
+        condition: 'file("road+bridges.esp")'
       - type: say
         content: '"Incompatible with: Fighters Guild Quests (and its ROC patch)"'
   - name: 'ROC+Romancing Ahnassi Patch.esp'
     msg:
       - type: error
         content: 'road+bridges.esp has been detected. New Roads & Bridges Revised and all dependent patches must be uninstalled before using Roads of Cyrodiil. See Roads of Cyrodiil readme for upgrade instructions.'
-        condition: file("road+bridges.esp")
+        condition: 'file("road+bridges.esp")'
   - name: 'ROC+Shadowcrest Vineyard Patch.esp'
     msg:
       - type: error
         content: 'road+bridges.esp has been detected. New Roads & Bridges Revised and all dependent patches must be uninstalled before using Roads of Cyrodiil. See Roads of Cyrodiil readme for upgrade instructions.'
-        condition: file("road+bridges.esp")
+        condition: 'file("road+bridges.esp")'
   - name: 'ROC+Tchos Alchemy Tower Patch.esp'
     msg:
       - type: error
         content: 'road+bridges.esp has been detected. New Roads & Bridges Revised and all dependent patches must be uninstalled before using Roads of Cyrodiil. See Roads of Cyrodiil readme for upgrade instructions.'
-        condition: file("road+bridges.esp")
+        condition: 'file("road+bridges.esp")'
   - name: 'ROC+DBC Patch.esp'
     msg:
       - type: error
         content: 'road+bridges.esp has been detected. New Roads & Bridges Revised and all dependent patches must be uninstalled before using Roads of Cyrodiil. See Roads of Cyrodiil readme for upgrade instructions.'
-        condition: file("road+bridges.esp")
+        condition: 'file("road+bridges.esp")'
   - name: 'Immersive Prison sewer exit.esp'
     dirty:
       - crc: 0xd607a66
@@ -13546,7 +13546,7 @@ plugins:
     msg:
       - type: say
         content: 'Use the patch for Servant of the Dawn to resolve compatibility issues.'
-        condition: ( file("Servant of the Dawn.esp") ) and not file("Dschinni - Servant of the Dawn Patch.esp")
+        condition: '( file("Servant of the Dawn.esp") ) and not file("Dschinni - Servant of the Dawn Patch.esp")'
       - type: say
         content: 'Use the patch for UL Arrius Creek and The Heart of the Dead version 6.3 to resolve compatibility issues.'
   - name: 'Dschinni Vwalk.esp'
@@ -13771,7 +13771,7 @@ plugins:
     msg:
       - type: error
         content: 'road+bridges.esp has been detected. New Roads & Bridges Revised and all dependent patches must be uninstalled before using Roads of Cyrodiil. See Roads of Cyrodiil readme for upgrade instructions.'
-        condition: file("road+bridges.esp")
+        condition: 'file("road+bridges.esp")'
   - name: 'Reaper''s Coldstone Town.esp'
     msg:
       - type: say
@@ -13852,12 +13852,12 @@ plugins:
     msg:
       - type: error
         content: 'West Roads.esp has been detected. West Roads and all dependent patches must be uninstalled before using Roads of Cyrodiil. See Roads of Cyrodiil readme for upgrade instructions.'
-        condition: file("West Roads.esp")
+        condition: 'file("West Roads.esp")'
   - name: 'WaterfrontMarket.esp'
     msg:
       - type: say
         content: 'Probably incompatible with Better Cities.'
-        condition: file("Better Cities Resources.esm")
+        condition: 'file("Better Cities Resources.esm")'
     dirty:
       - crc: 0x72eb5289
         util: *dirtyUtil
@@ -13866,7 +13866,7 @@ plugins:
     msg:
       - type: say
         content: 'Probably incompatible with Better Cities.'
-        condition: file("Better Cities Resources.esm")
+        condition: 'file("Better Cities Resources.esm")'
   - name: 'WatersEdgeImproved.esp'
     msg:
       - type: say
@@ -13884,7 +13884,7 @@ plugins:
     msg:
       - type: error
         content: 'West Roads.esp has been detected. West Roads and all dependent patches must be uninstalled before using Roads of Cyrodiil. See Roads of Cyrodiil readme for upgrade instructions.'
-        condition: file("West Roads.esp")
+        condition: 'file("West Roads.esp")'
   - name: 'Chorrol Jewelry Company.esp'
     msg:
       - type: say
@@ -14372,12 +14372,12 @@ plugins:
     msg:
       - type: error
         content: 'West Roads.esp has been detected. West Roads and all dependent patches must be uninstalled before using Roads of Cyrodiil. See Roads of Cyrodiil readme for upgrade instructions.'
-        condition: file("West Roads.esp")
+        condition: 'file("West Roads.esp")'
   - name: 'ROC+RST+Skingrad Outskirts.esp'
     msg:
       - type: error
         content: 'West Roads.esp has been detected. West Roads and all dependent patches must be uninstalled before using Roads of Cyrodiil. See Roads of Cyrodiil readme for upgrade instructions.'
-        condition: file("West Roads.esp")
+        condition: 'file("West Roads.esp")'
   - name: 'xulCliffsOfAnvil.esp'
     dirty:
       - crc: 0x701ef543
@@ -14401,17 +14401,17 @@ plugins:
     msg:
       - type: error
         content: 'road+bridges.esp has been detected. New Roads & Bridges Revised and all dependent patches must be uninstalled before using Roads of Cyrodiil. See Roads of Cyrodiil readme for upgrade instructions.'
-        condition: file("road+bridges.esp")
+        condition: 'file("road+bridges.esp")'
   - name: 'ROC+UL-II Patch.esp'
     msg:
       - type: error
         content: 'road+bridges.esp has been detected. New Roads & Bridges Revised and all dependent patches must be uninstalled before using Roads of Cyrodiil. See Roads of Cyrodiil readme for upgrade instructions.'
-        condition: file("road+bridges.esp")
+        condition: 'file("road+bridges.esp")'
   - name: 'ROC+UL-II+LtPD Patch.esp'
     msg:
       - type: error
         content: 'road+bridges.esp has been detected. New Roads & Bridges Revised and all dependent patches must be uninstalled before using Roads of Cyrodiil. See Roads of Cyrodiil readme for upgrade instructions.'
-        condition: file("road+bridges.esp")
+        condition: 'file("road+bridges.esp")'
   - name: 'ULII-Roads-Patch.esp'
     msg:
       - type: say
@@ -14492,7 +14492,7 @@ plugins:
     msg:
       - type: say
         content: 'Needs Wrye Bash''s "Remove World Orphans" fix.'
-        condition: checksum("Oblivifall - Losing My Religion West Roads Patch.esp",1B777711)
+        condition: 'checksum("Oblivifall - Losing My Religion West Roads Patch.esp",1B777711)'
     dirty:
       - crc: 0x1489007c
         util: *dirtyUtil
@@ -14500,7 +14500,7 @@ plugins:
     msg:
       - type: say
         content: 'Needs Wrye Bash''s "Remove World Orphans" fix.'
-        condition: checksum("Oblivifall - Losing My Religion Kvatch Rebuilt West Roads Patch.esp",EDF95E8A)
+        condition: 'checksum("Oblivifall - Losing My Religion Kvatch Rebuilt West Roads Patch.esp",EDF95E8A)'
   - name: 'BrinaCrossVillage Vwalk.esp'
     tag:
       - Actors.Anims
@@ -14613,7 +14613,7 @@ plugins:
     msg:
       - type: error
         content: 'road+bridges.esp has been detected. New Roads & Bridges Revised and all dependent patches must be uninstalled before using Roads of Cyrodiil. See Roads of Cyrodiil readme for upgrade instructions.'
-        condition: file("road+bridges.esp")
+        condition: 'file("road+bridges.esp")'
   - name: 'Cyrodiil Legion Addon.esp'
     tag:
       - Names
@@ -14629,7 +14629,7 @@ plugins:
     msg:
       - type: error
         content: 'West Roads.esp has been detected. West Roads and all dependent patches must be uninstalled before using Roads of Cyrodiil. See Roads of Cyrodiil readme for upgrade instructions.'
-        condition: file("West Roads.esp")
+        condition: 'file("West Roads.esp")'
   - name: 'Millstone_Farm.esp'
     dirty:
       - crc: 0x8bab5b62
@@ -14962,22 +14962,22 @@ plugins:
     msg:
       - type: error
         content: 'road+bridges.esp has been detected. New Roads & Bridges Revised and all dependent patches must be uninstalled before using Roads of Cyrodiil. See Roads of Cyrodiil readme for upgrade instructions.'
-        condition: file("road+bridges.esp")
+        condition: 'file("road+bridges.esp")'
   - name: 'ROC+UL-II+OCOD Patch.esp'
     msg:
       - type: error
         content: 'road+bridges.esp has been detected. New Roads & Bridges Revised and all dependent patches must be uninstalled before using Roads of Cyrodiil. See Roads of Cyrodiil readme for upgrade instructions.'
-        condition: file("road+bridges.esp")
+        condition: 'file("road+bridges.esp")'
   - name: 'ROC+UL-II+LtPD+OCOD Patch.esp'
     msg:
       - type: error
         content: 'road+bridges.esp has been detected. New Roads & Bridges Revised and all dependent patches must be uninstalled before using Roads of Cyrodiil. See Roads of Cyrodiil readme for upgrade instructions.'
-        condition: file("road+bridges.esp")
+        condition: 'file("road+bridges.esp")'
   - name: 'ROC+OCOD Patch.esp'
     msg:
       - type: error
         content: 'road+bridges.esp has been detected. New Roads & Bridges Revised and all dependent patches must be uninstalled before using Roads of Cyrodiil. See Roads of Cyrodiil readme for upgrade instructions.'
-        condition: file("road+bridges.esp")
+        condition: 'file("road+bridges.esp")'
   - name: 'OCLR+ULBWForest Patch.esp'
     msg:
       - type: say
@@ -15045,7 +15045,7 @@ plugins:
     msg:
       - type: error
         content: 'road+bridges.esp has been detected. New Roads & Bridges Revised and all dependent patches must be uninstalled before using Roads of Cyrodiil. See Roads of Cyrodiil readme for upgrade instructions.'
-        condition: file("road+bridges.esp")
+        condition: 'file("road+bridges.esp")'
   - name: 'FightersGuildContracts.esp'
     dirty:
       - crc: 0xbb0d71d0
@@ -15068,7 +15068,7 @@ plugins:
     msg:
       - type: say
         content: 'If using FCOM, rename this to ''NPC new clothes V2.6.esp'' or adjust the masterlist with Wrye Bash for ''FCOM_NewNPCClothes.esp''.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
   - name: 'FCOM_NewNPCClothes.esp'
     msg:
       - type: say
@@ -15077,17 +15077,17 @@ plugins:
     msg:
       - type: say
         content: 'Probably incompatible with Better Cities.'
-        condition: file("Better Cities Resources.esm")
+        condition: 'file("Better Cities Resources.esm")'
   - name: 'KS - Imperial FPS Boost.esp'
     msg:
       - type: say
         content: 'Probably incompatible with Better Cities.'
-        condition: file("Better Cities Resources.esm")
+        condition: 'file("Better Cities Resources.esm")'
   - name: 'KS - Kvatch FPS Boost.esp'
     msg:
       - type: say
         content: 'Probably incompatible with Better Cities.'
-        condition: file("Better Cities Resources.esm")
+        condition: 'file("Better Cities Resources.esm")'
   - name: 'Imperial City Redux.esp'
     dirty:
       - crc: 0xc6d93343
@@ -15199,12 +15199,12 @@ plugins:
     msg:
       - type: say
         content: 'Use only one of the Improved Marobels Horse plugins.'
-        condition: file("355_Improved_Maborel_horse.esp")
+        condition: 'file("355_Improved_Maborel_horse.esp")'
   - name: '355_Improved_Maborel_horse.esp'
     msg:
       - type: say
         content: 'Use only one of the Improved Marobels Horse plugins.'
-        condition: file("354_Improved_Marobel_horse_immortal.esp")
+        condition: 'file("354_Improved_Marobel_horse_immortal.esp")'
   - name: 'AC''s realistic priced clutter.esp'
     msg:
       - type: say
@@ -15266,7 +15266,7 @@ plugins:
     msg:
       - type: say
         content: 'May break MMM Hunting and Crafting. Not fully tested.'
-        condition: file("Mart''s Monster Mod - Hunting & Crafting.esp")
+        condition: 'file("Mart''s Monster Mod - Hunting & Crafting.esp")'
   - name: 'Automagic Bags.esp'
     dirty:
       - crc: 0xec777db4
@@ -15275,10 +15275,10 @@ plugins:
     msg:
       - type: error
         content: 'OOO users should be using "Banes Guilds UnitedOOO.esp" instead.'
-        condition: file("Oscuro''s_Oblivion_Overhaul.esm")
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
       - type: warn
         content: '"Users are very strongly recommended to upgrade to v2+ of this mod to avoid serious issues. It can be found [here](http://oblivion.nexusmods.com/mods/42261)."'
-        condition: checksum("Banes Guilds United.esp",CFA556BC)
+        condition: 'checksum("Banes Guilds United.esp",CFA556BC)'
     tag:
       - Invent
     dirty:
@@ -15290,7 +15290,7 @@ plugins:
     msg:
       - type: error
         content: 'Use "Banes Guilds United.esp" instead.'
-        condition: not file("Oscuro''s_Oblivion_Overhaul.esm")
+        condition: 'not file("Oscuro''s_Oblivion_Overhaul.esm")'
     tag:
       - Invent
   - name: 'betterArena.esp'
@@ -15319,7 +15319,7 @@ plugins:
     msg:
       - type: say
         content: 'Will totally FUBAR OOO''s item scaling.'
-        condition: file("Oscuro''s_Oblivion_Overhaul.esm")
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
     tag:
       - Delev
   - name: 'Better Potions and Poisons.esp'
@@ -15413,7 +15413,7 @@ plugins:
     msg:
       - type: say
         content: '"Incompatible with: Cliff''s MWStyleEnchantingSpellmaking - No Guild Requirements.esp"'
-        condition: file("Cliff''s MWStyleEnchantingSpellmaking - No Guild Requirements.esp")
+        condition: 'file("Cliff''s MWStyleEnchantingSpellmaking - No Guild Requirements.esp")'
   - name: 'Cliff''s Shacks Basements.esp'
     msg:
       - type: say
@@ -15662,7 +15662,7 @@ plugins:
     msg:
       - type: say
         content: 'Not compatible with OOO. Already included in OOO.'
-        condition: file("Oscuro''s_Oblivion_Overhaul.esm")
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
     dirty:
       - crc: 0xe97c0b93
         util: *dirtyUtil
@@ -15670,7 +15670,7 @@ plugins:
     msg:
       - type: say
         content: 'Not compatible with OOO. Already included in OOO.'
-        condition: file("Oscuro''s_Oblivion_Overhaul.esm")
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: 'FrbitPotionReplacer.esp'
     tag:
       - Graphics
@@ -15732,7 +15732,7 @@ plugins:
         content: '"Incompatible with: (DC) Sutch Reborn landscape LOD."'
       - type: warn
         content: 'Makes wild edits to merchant greetings, water height levels and a vanilla script.'
-        condition: checksum("Golden Perch Inn.esp", 4F0086B1)
+        condition: 'checksum("Golden Perch Inn.esp", 4F0086B1)'
     dirty:
       - crc: 0x444f0e35
         util: *dirtyUtil
@@ -15760,12 +15760,12 @@ plugins:
     msg:
       - type: error
         content: 'Use "GuildAdvancementBGU.esp" instead.'
-        condition: ( file("Banes Guilds United.esp") ) or file("Banes Guilds UnitedOOO.esp")
+        condition: '( file("Banes Guilds United.esp") ) or file("Banes Guilds UnitedOOO.esp")'
   - name: 'GuildAdvancementBGU.esp'
     msg:
       - type: error
         content: 'Use "GuildAdvancement.esp" instead.'
-        condition: ( not file("Banes Guilds United.esp") ) and not file("Banes Guilds UnitedOOO.esp")
+        condition: '( not file("Banes Guilds United.esp") ) and not file("Banes Guilds UnitedOOO.esp")'
   - name: 'GuilesNameReplace-Scrolls.esp'
     tag:
       - Names
@@ -15949,7 +15949,7 @@ plugins:
     msg:
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
-        condition: regex("Bashed Patch.*\.esp")
+        condition: 'regex("Bashed Patch.*\.esp")'
   - name: 'No Wait Regenerate.esp'
     msg:
       - type: say
@@ -16243,7 +16243,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use newer version of Lovers with PK. Integrated into 1.3.1 Rev38 and newer.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
   - name: 'LoversLoser.esp'
     msg:
       - type: say
@@ -16256,7 +16256,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use newer version of Lovers with PK. Integrated into 1.3.1 Rev38 and newer.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
   - name: 'LoversMpc.esp'
     msg:
       - type: say
@@ -16265,7 +16265,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use newer version of Lovers with PK. Integrated into 1.3.1 Rev38 and newer.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
   - name: 'Sexlivion_0.4a_Full_English_v1.esp'
     msg:
       - type: say
@@ -16328,7 +16328,7 @@ plugins:
     msg:
       - type: say
         content: 'Conflicts with OOO''s changes to skill perks and their descriptions.'
-        condition: file("Oscuro''s_Oblivion_Overhaul.esm")
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: 'Steel Helm Replacer.esp'
     tag:
       - Graphics
@@ -16351,7 +16351,7 @@ plugins:
     msg:
       - type: say
         content: 'Probably not compatible with OOO. Update to version 2.0+.'
-        condition: file("Oscuro''s_Oblivion_Overhaul.esm")
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: 'SPTDiverseGuardsMRAll.esp'
     msg:
       - type: say
@@ -16433,52 +16433,52 @@ plugins:
     msg:
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
-        condition: regex("Bashed Patch.*\.esp")
+        condition: 'regex("Bashed Patch.*\.esp")'
   - name: 'Unlimited Rings 1.0 Rus.esp'
     msg:
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
-        condition: regex("Bashed Patch.*\.esp")
+        condition: 'regex("Bashed Patch.*\.esp")'
   - name: 'Unlimited Amulets 1.0.esp'
     msg:
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
-        condition: regex("Bashed Patch.*\.esp")
+        condition: 'regex("Bashed Patch.*\.esp")'
   - name: 'Unlimited Amulets - Shivering Isles.esp'
     msg:
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
-        condition: regex("Bashed Patch.*\.esp")
+        condition: 'regex("Bashed Patch.*\.esp")'
   - name: 'Unlimited Amulets.esp'
     msg:
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
-        condition: regex("Bashed Patch.*\.esp")
+        condition: 'regex("Bashed Patch.*\.esp")'
   - name: 'Unlimited Amulets and Rings - Shivering Isles.esp'
     msg:
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
-        condition: regex("Bashed Patch.*\.esp")
+        condition: 'regex("Bashed Patch.*\.esp")'
   - name: 'Unlimited Rings - Shivering Isles.esp'
     msg:
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
-        condition: regex("Bashed Patch.*\.esp")
+        condition: 'regex("Bashed Patch.*\.esp")'
   - name: 'Unhide_amulets.esp'
     msg:
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
-        condition: regex("Bashed Patch.*\.esp")
+        condition: 'regex("Bashed Patch.*\.esp")'
   - name: 'Unlimited_AmulRings_1C.esp'
     msg:
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
-        condition: regex("Bashed Patch.*\.esp")
+        condition: 'regex("Bashed Patch.*\.esp")'
   - name: 'Unlimited Amulets 1.0_ru.esp'
     msg:
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
-        condition: regex("Bashed Patch.*\.esp")
+        condition: 'regex("Bashed Patch.*\.esp")'
   - name: 'undercover.esp'
     dirty:
       - crc: 0x757f1f42
@@ -16536,12 +16536,12 @@ plugins:
     msg:
       - type: error
         content: 'Use ''LCE-addon.esp'' instead if using MMM/Frans etc.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
   - name: 'lorecreatures.esp'
     msg:
       - type: error
         content: 'Use ''LCE-addon.esp'' instead if using MMM/Frans etc.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
     dirty:
       - crc: 0x43bf6b9b
         util: *dirtyUtil
@@ -16605,7 +16605,7 @@ plugins:
     msg:
       - type: warn
         content: 'Makes wild edits, see [special cleaning instructions](http://cs.elderscrolls.com/index.php/TES4Edit_Cleaning_Guide#Shadow_Ranger.esp_Special_Cleaning_Instructions).'
-        condition: checksum("Shadow Ranger.esp", 1F83FEE1)
+        condition: 'checksum("Shadow Ranger.esp", 1F83FEE1)'
     dirty:
       - crc: 0x1f83fee1
         util: *dirtyUtil
@@ -16824,7 +16824,7 @@ plugins:
     msg:
       - type: ''say''
         content: 'Has problems with OOO (StarX vampires will fight OOO vampires, and some chests/weapons will be in skewed places).'
-        condition: file("Oscuro''s_Oblivion_Overhaul.esm")
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
     tag:
       - C.Light
       - Actors.ACBS
@@ -16837,12 +16837,12 @@ plugins:
     msg:
       - type: say
         content: '"Incompatible with: Unholy Darkness.esp"'
-        condition: file("Unholy Darkness.esp")
+        condition: 'file("Unholy Darkness.esp")'
   - name: 'MIVs Vampire Overhaul ENG.esp'
     msg:
       - type: say
         content: '"Incompatible with: Unholy Darkness.esp"'
-        condition: file("Unholy Darkness.esp")
+        condition: 'file("Unholy Darkness.esp")'
   - name: 'Twillith vampirism 1.7.esp'
     msg:
       - type: say
@@ -16863,7 +16863,7 @@ plugins:
     msg:
       - type: say
         content: 'May have problems with OOO.'
-        condition: file("Oscuro''s_Oblivion_Overhaul.esm")
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
     dirty:
       - crc: 0x277ff034
         util: *dirtyUtil
@@ -17166,37 +17166,37 @@ plugins:
     msg:
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
-        condition: regex("Bashed Patch.*\.esp")
+        condition: 'regex("Bashed Patch.*\.esp")'
   - name: 'arcanevelocity200.esp'
     msg:
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
-        condition: regex("Bashed Patch.*\.esp")
+        condition: 'regex("Bashed Patch.*\.esp")'
   - name: 'ArcaneVelocitySTA200.esp'
     msg:
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
-        condition: regex("Bashed Patch.*\.esp")
+        condition: 'regex("Bashed Patch.*\.esp")'
   - name: 'Faster Spells.esp'
     msg:
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
-        condition: regex("Bashed Patch.*\.esp")
+        condition: 'regex("Bashed Patch.*\.esp")'
   - name: 'FasterArrows150.esp'
     msg:
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
-        condition: regex("Bashed Patch.*\.esp")
+        condition: 'regex("Bashed Patch.*\.esp")'
   - name: 'FasterArrows200.esp'
     msg:
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
-        condition: regex("Bashed Patch.*\.esp")
+        condition: 'regex("Bashed Patch.*\.esp")'
   - name: 'FasterArrows250.esp'
     msg:
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
-        condition: regex("Bashed Patch.*\.esp")
+        condition: 'regex("Bashed Patch.*\.esp")'
   - name: 'Spell Ranks.esp'
     msg:
       - type: say
@@ -17335,12 +17335,12 @@ plugins:
     msg:
       - type: say
         content: 'Not compatible with OOO. Already included in OOO.'
-        condition: file("Oscuro''s_Oblivion_Overhaul.esm")
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: 'SM Security.esp'
     msg:
       - type: say
         content: 'Partly included with OOO. May not be OOO compatible.'
-        condition: file("Oscuro''s_Oblivion_Overhaul.esm")
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: 'Thievery_Easy_Thrill.esp'
     msg:
       - type: say
@@ -17440,7 +17440,7 @@ plugins:
     msg:
       - type: error
         content: 'West Roads.esp has been detected. West Roads and all dependent patches must be uninstalled before using Roads of Cyrodiil. See Roads of Cyrodiil readme for upgrade instructions.'
-        condition: file("West Roads.esp")
+        condition: 'file("West Roads.esp")'
   - name: 'Enhanced Grabbing - Debug.esp'
     msg:
       - type: say
@@ -17478,12 +17478,12 @@ plugins:
     msg:
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
-        condition: regex("Bashed Patch.*\.esp")
+        condition: 'regex("Bashed Patch.*\.esp")'
   - name: 'Arrows Remain 10min.esp'
     msg:
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
-        condition: regex("Bashed Patch.*\.esp")
+        condition: 'regex("Bashed Patch.*\.esp")'
   - name: 'Duke Patricks - Combat Archery.esp'
     msg:
       - type: say
@@ -17527,47 +17527,47 @@ plugins:
     msg:
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
-        condition: regex("Bashed Patch.*\.esp")
+        condition: 'regex("Bashed Patch.*\.esp")'
   - name: '"[Calsar] ArrowSpeedRealism.esp"'
     msg:
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
-        condition: regex("Bashed Patch.*\.esp")
+        condition: 'regex("Bashed Patch.*\.esp")'
   - name: '"[Calsar] ArrowSpeedRealismSI.esp"'
     msg:
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
-        condition: regex("Bashed Patch.*\.esp")
+        condition: 'regex("Bashed Patch.*\.esp")'
   - name: 'ArrowVelocity.esp'
     msg:
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
-        condition: regex("Bashed Patch.*\.esp")
+        condition: 'regex("Bashed Patch.*\.esp")'
   - name: 'change arrow speed x2.esp'
     msg:
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
-        condition: regex("Bashed Patch.*\.esp")
+        condition: 'regex("Bashed Patch.*\.esp")'
   - name: 'Pfeilgeschwindigkeit.esp'
     msg:
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
-        condition: regex("Bashed Patch.*\.esp")
+        condition: 'regex("Bashed Patch.*\.esp")'
   - name: 'Arrow Realism.esp'
     msg:
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
-        condition: regex("Bashed Patch.*\.esp")
+        condition: 'regex("Bashed Patch.*\.esp")'
   - name: 'More_Arrows_Recovered.esp'
     msg:
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
-        condition: regex("Bashed Patch.*\.esp")
+        condition: 'regex("Bashed Patch.*\.esp")'
   - name: 'mighty_bows_arrows_recovery.esp'
     msg:
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
-        condition: regex("Bashed Patch.*\.esp")
+        condition: 'regex("Bashed Patch.*\.esp")'
   - name: 'mighty_bows_full.esp'
     tag:
       - Stats
@@ -17604,12 +17604,12 @@ plugins:
     msg:
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
-        condition: regex("Bashed Patch.*\.esp")
+        condition: 'regex("Bashed Patch.*\.esp")'
   - name: 'Unconscious For 5min.esp'
     msg:
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
-        condition: regex("Bashed Patch.*\.esp")
+        condition: 'regex("Bashed Patch.*\.esp")'
   - name: 'ptThrowingKnives.esp'
     msg:
       - type: say
@@ -17666,7 +17666,7 @@ plugins:
         content: 'A [hotfix](http://omploader.org/vMmJlbA/DRtestfix.zip) exists for CTD issues.'
       - type: error
         content: 'Use the replacement plugin for Nehrim found [here](http://oblivion.nexusmods.com/mods/35157).'
-        condition: *nehrimCond
+        condition: '*nehrimCond'
   - name: 'DeadlyReflex 5 - Combat Moves.esp'
     msg:
       - type: say
@@ -17776,7 +17776,7 @@ plugins:
     msg:
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
-        condition: regex("Bashed Patch.*\.esp")
+        condition: 'regex("Bashed Patch.*\.esp")'
   - name: 'Phitt''s Phighting Phixes.esp'
     msg:
       - type: say
@@ -17874,7 +17874,7 @@ plugins:
     msg:
       - type: say
         content: 'Use ''OOO-Intelligence Overhaul BJ'' instead.'
-        condition: file("Oscuro''s_Oblivion_Overhaul.esm")
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: 'Intelligence Overhaul-RR.esp'
     msg:
       - type: say
@@ -17883,12 +17883,12 @@ plugins:
     msg:
       - type: say
         content: '"Requires: \"AddActorValues.dll\""'
-        condition: ( version("Sneaking Detection Recalibrated.esp","4.0",==) ) and not file("AddActorValues.dll")
+        condition: '( version("Sneaking Detection Recalibrated.esp","4.0",==) ) and not file("AddActorValues.dll")'
   - name: 'SDR Compatibility Patches.esp'
     msg:
       - type: say
         content: 'Deprecated. Do not use with v4.0+ of Sneaking Detection Recalibrated.'
-        condition: version("Sneaking Detection Recalibrated.esp","4.0",==)
+        condition: 'version("Sneaking Detection Recalibrated.esp","4.0",==)'
   - name: 'SDR_Core.esp'
     req:
       - OBSE\Plugins\SDR_obse.dll
@@ -17901,7 +17901,7 @@ plugins:
     msg:
       - type: say
         content: 'Deprecated. Do not use with v4.5.0+ of Sneaking Detection Recalibrated.'
-        condition: version("SDR_Core.esp","=4.5.0",>)
+        condition: 'version("SDR_Core.esp","=4.5.0",>)'
   - name: 'Oblivion XP - Journal Mod Patch.esp'
     msg:
       - type: say
@@ -18295,7 +18295,7 @@ plugins:
     msg:
       - type: error
         content: 'Required Bashed Patch.'
-        condition: not regex("Bashed Patch.*\.esp")
+        condition: 'not regex("Bashed Patch.*\.esp")'
     tag:
       - Deactivate
       - Filter
@@ -18303,18 +18303,18 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use II''s ''Item Interchange - Placement for FCOM.esp'' instead.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
       - type: error
         content: 'Required Bashed Patch.'
-        condition: not regex("Bashed Patch.*\.esp")
+        condition: 'not regex("Bashed Patch.*\.esp")'
   - name: 'Item interchange - Placement for FCOM.esp'
     msg:
       - type: error
         content: 'Required Bashed Patch.'
-        condition: not regex("Bashed Patch.*\.esp")
+        condition: 'not regex("Bashed Patch.*\.esp")'
       - type: say
         content: 'FCOM version; use ''Item interchange - Placement.esp'' instead.'
-        condition: not file("FCOM_Convergence.esm")
+        condition: 'not file("FCOM_Convergence.esm")'
     tag:
       - Deactivate
       - Delev
@@ -18326,7 +18326,7 @@ plugins:
     msg:
       - type: error
         content: 'Required Bashed Patch.'
-        condition: not regex("Bashed Patch.*\.esp")
+        condition: 'not regex("Bashed Patch.*\.esp")'
     tag:
       - Deactivate
       - Filter
@@ -18336,26 +18336,26 @@ plugins:
     msg:
       - type: error
         content: 'Required Bashed Patch.'
-        condition: not regex("Bashed Patch.*\.esp")
+        condition: 'not regex("Bashed Patch.*\.esp")'
   - name: 'Item interchange - Placement for Frostcrag Spire Revisited.esp'
     msg:
       - type: error
         content: 'Required Bashed Patch.'
-        condition: not regex("Bashed Patch.*\.esp")
+        condition: 'not regex("Bashed Patch.*\.esp")'
   - name: 'Item interchange - Option, Ingredients in Bulk.esp'
     msg:
       - type: say
         content: 'Use only one "Ingredients in Bulk" plugin.'
       - type: error
         content: 'Required Bashed Patch.'
-        condition: not regex("Bashed Patch.*\.esp")
+        condition: 'not regex("Bashed Patch.*\.esp")'
   - name: 'Item interchange - Option, Ingredients in Bulk, reduced.esp'
     msg:
       - type: say
         content: 'Use only one "Ingredients in Bulk" plugin.'
       - type: error
         content: 'Required Bashed Patch.'
-        condition: not regex("Bashed Patch.*\.esp")
+        condition: 'not regex("Bashed Patch.*\.esp")'
   - name: 'Atmospheric Loading Screens - No Text.esp'
     tag:
       - Graphics
@@ -18588,7 +18588,7 @@ plugins:
     msg:
       - type: say
         content: 'Use only one ''Cosmetic Compilation*.esp'''
-        condition: file("Cosmetic Compilation.esp")
+        condition: 'file("Cosmetic Compilation.esp")'
     tag:
       - Eyes
       - Hair
@@ -18597,7 +18597,7 @@ plugins:
     msg:
       - type: say
         content: 'Use only one ''Cosmetic Compilation*.esp'''
-        condition: regex("Cosmetic Compilation( XXL DV)?\.esp")
+        condition: 'regex("Cosmetic Compilation( XXL DV)?\.esp")'
     tag:
       - Eyes
       - Hair
@@ -18606,7 +18606,7 @@ plugins:
     msg:
       - type: say
         content: 'Use only one ''Cosmetic Compilation*.esp'''
-        condition: regex("Cosmetic Compilation(( XXL DV)|( - No NPC Changes))?\.esp")
+        condition: 'regex("Cosmetic Compilation(( XXL DV)|( - No NPC Changes))?\.esp")'
     tag:
       - Eyes
       - Hair
@@ -18615,7 +18615,7 @@ plugins:
     msg:
       - type: say
         content: 'Use only one ''Cosmetic Compilation*.esp'''
-        condition: regex("Cosmetic Compilation(( XXL DV)|( - No (JPeepers|NPC Changes)))?\.esp")
+        condition: 'regex("Cosmetic Compilation(( XXL DV)|( - No (JPeepers|NPC Changes)))?\.esp")'
     tag:
       - Eyes
       - Hair
@@ -21266,11 +21266,11 @@ plugins:
   - name: 'Colourwheels Sexy Oblivion OverHaul.esp'
     tag:
       - name: 'Actors.ACBS'
-        condition: file("Banes Guilds United.esp")
+        condition: 'file("Banes Guilds United.esp")'
       - Actors.Anims
       - Graphics
       - name: 'Invent'
-        condition: not file("Banes Guilds United.esp")
+        condition: 'not file("Banes Guilds United.esp")'
       - NPC.Race
       - NpcFaces
     dirty:
@@ -21288,7 +21288,7 @@ plugins:
     msg:
       - type: warn
         content: 'Do not use with "Nephs Stock Shoes Real High Heels.esp".'
-        condition: file("Nephs Stock Shoes Real High Heels.esp")
+        condition: 'file("Nephs Stock Shoes Real High Heels.esp")'
     tag:
       - Graphics
       - Scripts
@@ -21765,7 +21765,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Not compatible with FCOM. Use ''bgBalancingEVOptionalFCOMAdditions.esp'' instead.'
-        condition: *FCOMCond
+        condition: '*FCOMCond'
   - name: 'bgBalancingOptionalNPCDiversityKvatchRebuilt, for Wrye Bash.esp'
     msg: [ *doNotClean ]
   - name: 'bgBalancingEVLAMEAddition.esp'
@@ -21888,30 +21888,30 @@ plugins:
     msg:
       - type: warn
         content: 'Remove this and use the UOP instead.'
-        condition: file("Unofficial Oblivion Patch.esp")
+        condition: 'file("Unofficial Oblivion Patch.esp")'
   - name: 'CustomRaceFix.esp'
     msg:
       - type: warn
         content: 'Remove this and use the UOP instead.'
-        condition: file("Unofficial Oblivion Patch.esp")
+        condition: 'file("Unofficial Oblivion Patch.esp")'
   - name: 'Custom Race Fix.esp'
     msg:
       - type: warn
         content: 'Remove this and use the UOP instead.'
-        condition: file("Unofficial Oblivion Patch.esp")
+        condition: 'file("Unofficial Oblivion Patch.esp")'
   - name: 'boethia custom race.esp'
     msg:
       - type: warn
         content: 'Remove this and use the UOP instead.'
-        condition: ( file("Unofficial Oblivion Patch.esp") ) and not file("Cosmetic Compilation.esp")
+        condition: '( file("Unofficial Oblivion Patch.esp") ) and not file("Cosmetic Compilation.esp")'
       - type: say
         content: 'It must be used if using Cosmetic Compilation.esp.'
-        condition: file("Cosmetic Compilation.esp")
+        condition: 'file("Cosmetic Compilation.esp")'
   - name: 'RaceFix_1C.esp'
     msg:
       - type: warn
         content: 'Remove this and use the UOP instead.'
-        condition: file("Unofficial Oblivion Patch.esp")
+        condition: 'file("Unofficial Oblivion Patch.esp")'
 # ENDGROUP: Other race/birthsign mods
 # BEGINGROUP: Better Cities
   - name: 'Better Cities Full.esp'
@@ -22084,7 +22084,7 @@ plugins:
     msg:
       - type: error
         content: 'This patch should only be used with "Better Cities - Open Better Cities.esp".'
-        condition: not file("Better Cities - Open Better Cities.esp")
+        condition: 'not file("Better Cities - Open Better Cities.esp")'
   - name: 'BCCheydinhal-CheydinhalFalls patch.esp'
     msg:
       - type: say
@@ -22493,10 +22493,10 @@ plugins:
         content: 'For Better Cities and Unique Landscapes use esp included in Cyrodiil Rebuild archive.'
       - type: warn
         content: 'Move xulSkingradOutskirts.esp once after this esp'
-        condition: file("xulSkingradOutskirts.esp")
+        condition: 'file("xulSkingradOutskirts.esp")'
       - type: warn
         content: 'Move Better Cities SKINGRAD.esp once after this esp'
-        condition: file("Better Cities SKINGRAD.esp")
+        condition: 'file("Better Cities SKINGRAD.esp")'
     tag:
       - Actors.ACBS
       - Actors.AIPackages
@@ -22636,54 +22636,54 @@ plugins:
     msg:
       - type: say
         content: 'Don''t use with OOO/FCOM or birthsign changing mods, instead use ''ReallyImmersiveMessagesNoBirthsigns.esp''.'
-        condition: file("Oscuro''s_Oblivion_Overhaul.esm")
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
 # ENDGROUP: Message suppression/changing overrides
 # BEGINGROUP: Respawn & day length overrides
   - name: 'Francesco''s \d\d? days respawn time - 1-\d\d day lenght rescale\.esp'
     msg:
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
-        condition: regex("Bashed Patch.*\.esp")
+        condition: 'regex("Bashed Patch.*\.esp")'
   - name: 'Francesco''s day lenght rescale 1-\d\d\.esp'
     msg:
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
-        condition: regex("Bashed Patch.*\.esp")
+        condition: 'regex("Bashed Patch.*\.esp")'
   - name: 'Francesco''s \d\d? days respawn time\.esp'
     msg:
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
-        condition: regex("Bashed Patch.*\.esp")
+        condition: 'regex("Bashed Patch.*\.esp")'
   - name: 'OOO-Respawn_(Year|Month|(Two_)?Week)\.esp'
     msg:
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
-        condition: regex("Bashed Patch.*\.esp")
+        condition: 'regex("Bashed Patch.*\.esp")'
   - name: 'Z 1 Hour respawn.esp'
     msg:
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
-        condition: regex("Bashed Patch.*\.esp")
+        condition: 'regex("Bashed Patch.*\.esp")'
   - name: 'ThingasTime 1-15 Scale.esp'
     msg:
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
-        condition: regex("Bashed Patch.*\.esp")
+        condition: 'regex("Bashed Patch.*\.esp")'
   - name: 'Timescale \d\d?x Real-Life\.esp'
     msg:
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
-        condition: regex("Bashed Patch.*\.esp")
+        condition: 'regex("Bashed Patch.*\.esp")'
   - name: 'Time-2hr-realtime.esp'
     msg:
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
-        condition: regex("Bashed Patch.*\.esp")
+        condition: 'regex("Bashed Patch.*\.esp")'
   - name: 'TF_timemod1-\d\d?.esp'
     msg:
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
-        condition: regex("Bashed Patch.*\.esp")
+        condition: 'regex("Bashed Patch.*\.esp")'
   - name: 'Syc_LongerDaysShorterNights.esp'
     msg:
       - type: say
@@ -22714,17 +22714,17 @@ plugins:
     msg:
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
-        condition: regex("Bashed Patch.*\.esp")
+        condition: 'regex("Bashed Patch.*\.esp")'
   - name: 'Chameleon-NoRefraction-2411.esp'
     msg:
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
-        condition: regex("Bashed Patch.*\.esp")
+        condition: 'regex("Bashed Patch.*\.esp")'
   - name: '1310-chamelion-norefraction-tessource.esp'
     msg:
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
-        condition: regex("Bashed Patch.*\.esp")
+        condition: 'regex("Bashed Patch.*\.esp")'
   - name: 'spellstrip 1.0.esp'
     tag:
       - Graphics
@@ -23332,22 +23332,22 @@ plugins:
     msg:
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
-        condition: regex("Bashed Patch.*\.esp")
+        condition: 'regex("Bashed Patch.*\.esp")'
   - name: 'MassA.I-30.esp'
     msg:
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
-        condition: regex("Bashed Patch.*\.esp")
+        condition: 'regex("Bashed Patch.*\.esp")'
   - name: 'MassA.I-40.esp'
     msg:
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
-        condition: regex("Bashed Patch.*\.esp")
+        condition: 'regex("Bashed Patch.*\.esp")'
   - name: 'MassA.I-50.esp'
     msg:
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
-        condition: regex("Bashed Patch.*\.esp")
+        condition: 'regex("Bashed Patch.*\.esp")'
   - name: 'KSE_v3.esp'
     msg:
       - type: say
@@ -23555,7 +23555,7 @@ plugins:
         content: '"Requires: Roads of Cyrodiil"'
       - type: error
         content: 'road+bridges.esp has been detected. New Roads & Bridges Revised and all dependent patches must be uninstalled before using Roads of Cyrodiil. See Roads of Cyrodiil readme for upgrade instructions.'
-        condition: file("road+bridges.esp")
+        condition: 'file("road+bridges.esp")'
     tag:
       - Deactivate
       - Roads
@@ -23565,7 +23565,7 @@ plugins:
         content: '"Requires: Roads of Cyrodiil, Open Cities Reborn"'
       - type: error
         content: 'road+bridges.esp has been detected. New Roads & Bridges Revised and all dependent patches must be uninstalled before using Roads of Cyrodiil. See Roads of Cyrodiil readme for upgrade instructions.'
-        condition: file("road+bridges.esp")
+        condition: 'file("road+bridges.esp")'
     tag:
       - Deactivate
       - Roads
@@ -23643,7 +23643,7 @@ plugins:
     msg:
       - type: error
         content: 'Required Bashed Patch.'
-        condition: not regex("Bashed Patch.*\.esp")
+        condition: 'not regex("Bashed Patch.*\.esp")'
       - type: say
         content: 'Versions less than 3.1 may cause the quest being patched to restart if installed after the quest has started. Update to the latest delayer if you suspect a problem.'
     tag:
@@ -23653,7 +23653,7 @@ plugins:
     msg:
       - type: error
         content: 'Required Bashed Patch.'
-        condition: not regex("Bashed Patch.*\.esp")
+        condition: 'not regex("Bashed Patch.*\.esp")'
     tag:
       - Deactivate
       - Filter
@@ -23661,7 +23661,7 @@ plugins:
     msg:
       - type: error
         content: 'Required Bashed Patch.'
-        condition: not regex("Bashed Patch.*\.esp")
+        condition: 'not regex("Bashed Patch.*\.esp")'
     tag:
       - Deactivate
       - Filter
@@ -23669,7 +23669,7 @@ plugins:
     msg:
       - type: error
         content: 'Required Bashed Patch.'
-        condition: not regex("Bashed Patch.*\.esp")
+        condition: 'not regex("Bashed Patch.*\.esp")'
     tag:
       - Deactivate
       - Filter
@@ -23679,7 +23679,7 @@ plugins:
     msg:
       - type: error
         content: 'Required Bashed Patch.'
-        condition: not regex("Bashed Patch.*\.esp")
+        condition: 'not regex("Bashed Patch.*\.esp")'
     tag:
       - Deactivate
       - Filter
@@ -23694,7 +23694,7 @@ plugins:
     msg:
       - type: error
         content: 'Required Bashed Patch.'
-        condition: not regex("Bashed Patch.*\.esp")
+        condition: 'not regex("Bashed Patch.*\.esp")'
     tag:
       - Deactivate
       - Filter
@@ -23702,7 +23702,7 @@ plugins:
     msg:
       - type: error
         content: 'Required Bashed Patch.'
-        condition: not regex("Bashed Patch.*\.esp")
+        condition: 'not regex("Bashed Patch.*\.esp")'
     tag:
       - Deactivate
       - Filter
@@ -23710,7 +23710,7 @@ plugins:
     msg:
       - type: error
         content: 'Required Bashed Patch.'
-        condition: not regex("Bashed Patch.*\.esp")
+        condition: 'not regex("Bashed Patch.*\.esp")'
     tag:
       - C.Climate
       - Deactivate
@@ -23720,7 +23720,7 @@ plugins:
     msg:
       - type: error
         content: 'Required Bashed Patch.'
-        condition: not regex("Bashed Patch.*\.esp")
+        condition: 'not regex("Bashed Patch.*\.esp")'
       - type: say
         content: 'Make sure to rename your main Storms & Sounds plugin (OBSE-Storms & Sound.esp, EW-Storms & Sound.esp, etc.) to "Storms & Sound.esp".'
     tag:
@@ -23729,7 +23729,7 @@ plugins:
     msg:
       - type: error
         content: 'Required Bashed Patch.'
-        condition: not regex("Bashed Patch.*\.esp")
+        condition: 'not regex("Bashed Patch.*\.esp")'
     tag:
       - Deactivate
       - Filter
@@ -23871,17 +23871,17 @@ plugins:
     msg:
       - type: error
         content: 'This plugin should never be active. Deactivate immediately.'
-        condition: active("KRLODToggleRestored.esp")
+        condition: 'active("KRLODToggleRestored.esp")'
   - name: 'KRLODToggleBurnt.esp'
     msg:
       - type: error
         content: 'This plugin should never be active. Deactivate immediately.'
-        condition: active("KRLODToggleBurnt.esp")
+        condition: 'active("KRLODToggleBurnt.esp")'
   - name: 'FRLODToggleBasic.esp'
     msg:
       - type: error
         content: 'This plugin should never be active. Deactivate immediately.'
-        condition: active("FRLODToggleBasic.esp")
+        condition: 'active("FRLODToggleBasic.esp")'
 
   - name: 'NehrimEnglish.esp'
     after: [ All Natural Nehrim.esp ]
@@ -23896,7 +23896,7 @@ plugins:
       - *masterReassign
       - type: say
         content: 'Unnecessary as many windows are already lit.'
-        condition: *nehrimCond
+        condition: '*nehrimCond'
 
   - name: 'Nehrim Blackscreenfix.esp'
     msg:
@@ -23923,7 +23923,7 @@ plugins:
       - *masterReassign
       - type: warn
         content: 'The support plugin does not work. Shaders must be loaded using the shaderlist.'
-        condition: *nehrimCond
+        condition: '*nehrimCond'
 
   - name: 'Enhanced Hotkeys.esp'
     msg: [ *masterReassign ]
@@ -24013,7 +24013,7 @@ plugins:
     msg:
       - type: say
         content: 'Some menu functions may not work.'
-        condition: *nehrimCond
+        condition: '*nehrimCond'
 
   - name: 'ScreenControls.esp'
     msg: [ *masterReassign ]
