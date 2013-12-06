@@ -11,6 +11,8 @@ common:
     active("Oblivion.esm")
   - &FCOMCond
     active("FCOM_Convergence.esm")
+  - &OOOCond
+    active("Oscuro's_Oblivion_Overhaul.esm")
   - &coblCond
     active("Cobl Main.esm")
 # Messages
@@ -173,7 +175,7 @@ plugins:
       - Scripts
       - Stats
       - name: -Relations
-        condition: '( file("Mart''s Monster Mod for OOO.esm") ) or file("FCOM_Convergence.esm")'
+        condition: 'file("Mart''s Monster Mod for OOO.esm") or file("FCOM_Convergence.esm")'
   - name: 'Mart''s Monster Mod.esm'
     tag:
       - Actors.AIData
@@ -1154,7 +1156,7 @@ plugins:
       - Relev
       - Scripts
       - Stats
-      - "-C.Water"
+      - C.Water
   - name: 'UOPS Additional Changes.esp'
     tag:
       - Relev
@@ -2646,12 +2648,12 @@ plugins:
     msg:
       - type: say
         content: 'Probably not compatible with OOO. Untested.'
-        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
+        condition: *OOOCond
   - name: 'Better Wine SI.esp'
     msg:
       - type: say
         content: 'Not compatible with OOO. OOO contains a similar mod.'
-        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
+        condition: *OOOCond
   - name: 'bgShaderStandAloneEV.esp'
     msg:
       - type: say
@@ -2669,7 +2671,7 @@ plugins:
     msg:
       - type: say
         content: 'Not compatible with OOO. OOO contains a similar mod.'
-        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
+        condition: *OOOCond
   - name: 'BAKAdventurerTorch.esp'
     msg:
       - type: say
@@ -2678,12 +2680,12 @@ plugins:
     msg:
       - type: say
         content: 'Not compatible with OOO. OOO contains a similar mod.'
-        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
+        condition: *OOOCond
   - name: 'nmDLTIC-1-6.esp'
     msg:
       - type: say
         content: 'Not compatible with OOO. OOO contains a similar mod.'
-        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
+        condition: *OOOCond
   - name: 'BPMerchantStorage.esp'
     tag:
       - Invent
@@ -3055,7 +3057,7 @@ plugins:
     msg:
       - type: say
         content: 'Not compatible with OOO. Already included in OOO.'
-        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
+        condition: *OOOCond
   - name: 'GW71_Soulgems.esp'
     tag:
       - Graphics
@@ -3067,12 +3069,12 @@ plugins:
     msg:
       - type: say
         content: 'Not compatible with OOO. Already included in OOO.'
-        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
+        condition: *OOOCond
   - name: 'Inebriation Rus.esp'
     msg:
       - type: say
         content: 'Not compatible with OOO. Already included in OOO.'
-        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
+        condition: *OOOCond
   - name: 'Insanity''s Beverage Replacer.esp'
     tag:
       - Graphics
@@ -3122,19 +3124,19 @@ plugins:
     msg:
       - type: say
         content: 'Not compatible with OOO. Already included in OOO.'
-        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
+        condition: *OOOCond
   - name: 'Lock Bash v99.9.esp'
     msg:
       - type: say
         content: 'Not compatible with OOO. Already included in OOO.'
-        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
+        condition: *OOOCond
       - type: say
         content: 'Newer version is available. Update to v99.91 or later.'
   - name: 'Lock Bash v99.91.esp'
     msg:
       - type: say
         content: 'Not compatible with OOO. Already included in OOO.'
-        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
+        condition: *OOOCond
   - name: 'Morag Tong Assassins v1-1.esp'
     dirty:
       - crc: 0xebabfce8
@@ -3189,7 +3191,7 @@ plugins:
     msg:
       - type: say
         content: 'Probably not compatible with OOO. Untested.'
-        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
+        condition: *OOOCond
   - name: 'More_Vegetables.esp'
     dirty:
       - crc: 0x2eaee466
@@ -3624,7 +3626,7 @@ plugins:
     msg:
       - type: say
         content: 'Not compatible with OOO. OOO contains a similar mod.'
-        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
+        condition: *OOOCond
   - name: 'Willful Resistance.esp'
     msg:
       - type: say
@@ -3934,27 +3936,27 @@ plugins:
     msg:
       - type: say
         content: 'Move this after OOO if you desire initial city map markers a la vanilla.'
-        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
+        condition: *OOOCond
   - name: 'Landmarks, w Wells.esp'
     msg:
       - type: say
         content: 'Move this after OOO if you desire initial city map markers a la vanilla.'
-        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
+        condition: *OOOCond
   - name: 'Landmarks, w Wells_DV.esp'
     msg:
       - type: say
         content: 'Move this after OOO if you desire initial city map markers a la vanilla.'
-        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
+        condition: *OOOCond
   - name: 'Landmarks With Wells.esp'
     msg:
       - type: say
         content: 'Move this after OOO if you desire initial city map markers a la vanilla.'
-        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
+        condition: *OOOCond
   - name: 'Landmarks_w_Wells.esp'
     msg:
       - type: say
         content: 'Move this after OOO if you desire initial city map markers a la vanilla.'
-        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
+        condition: *OOOCond
   - name: 'HouseMapMarkersOnlyBought.esp'
     dirty:
       - crc: 0x1664da76
@@ -5121,7 +5123,7 @@ plugins:
     msg:
       - type: say
         content: 'Use ''for OOO'' version for better OOO/FCOM compatibility.'
-        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
+        condition: *OOOCond
   - name: 'Midnight Gymnastics.esp'
     dirty:
       - crc: 0x8bca1742
@@ -5371,14 +5373,14 @@ plugins:
     msg:
       - type: say
         content: 'Not compatible with OOO. Already included in OOO.'
-        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
+        condition: *OOOCond
     tag:
       - Invent
   - name: 'Sin''s Expanded Light Armor Kit [NPC].esp'
     msg:
       - type: say
         content: 'Not compatible with OOO. Already included in OOO.'
-        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
+        condition: *OOOCond
   - name: 'SK_Berserk_v0.6.esp'
     dirty:
       - crc: 0xfc1d6b7f
@@ -6592,12 +6594,12 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Already integrated into FCOM, MMM, OOO or other FCOM components.'
-        condition: '*FCOMCond'
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm") or file("FCOM_Convergence.esm")'
   - name: 'Francesco''s Optional Dungeon Chest Locks.esp'
     msg:
       - type: error
         content: 'Delete. Already integrated into FCOM, MMM, OOO or other FCOM components.'
-        condition: '*FCOMCond'
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm") or file("FCOM_Convergence.esm")'
   - name: 'Francesco''s Optional Leveled Guards.esp'
     tag:
       - Actors.ACBS
@@ -6606,12 +6608,12 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Already integrated into FCOM, MMM, OOO or other FCOM components.'
-        condition: '*FCOMCond'
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm") or file("FCOM_Convergence.esm")'
   - name: 'Francesco''s Optional New Adventurers.esp'
     msg:
       - type: error
         content: 'Delete. Already integrated into FCOM, MMM, OOO or other FCOM components.'
-        condition: '*FCOMCond'
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm") or file("FCOM_Convergence.esm")'
   - name: 'Francesco''s Optional Vendor Tweaks.esp'
     inc:
       - 'FCOM_Convergence.esm'
@@ -6619,12 +6621,12 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Already integrated into FCOM, MMM, OOO or other FCOM components.'
-        condition: '*FCOMCond'
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm") or file("FCOM_Convergence.esm")'
   - name: 'Francesco''s Optional Leveled Arena.esp'
     msg:
       - type: error
         content: 'Delete. Already integrated into FCOM, MMM, OOO or other FCOM components.'
-        condition: '*FCOMCond'
+        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm") or file("FCOM_Convergence.esm")'
   - name: 'Francesco''s Optional Files.esp'
     msg:
       - type: error
@@ -6872,76 +6874,76 @@ plugins:
         condition: 'file("Mart''s Monster Mod for OOO.esm") or file("FCOM_Convergence.esm")'
       - name: -Relations
         condition: 'file("Mart''s Monster Mod for OOO.esm") or file("FCOM_Convergence.esm")'
-  - name: ''OOO-Armor_Perks_WearRate_Repair.esp''
+  - name: 'OOO-Armor_Perks_WearRate_Repair.esp'
     msg:
       - type: say
-        content: ''Don''t use with the FULL version of OOO, already included.''
-        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
+        content: 'Don''t use with the FULL version of OOO, already included.'
+        condition: *OOOCond
   - name: 'OOO-Birthsigns.esp'
     msg:
       - type: say
         content: 'Don''t use with the FULL version of OOO, already included.'
-        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
+        condition: *OOOCond
   - name: 'OOO-Combat_Skills_Perks_Marksmanship.esp'
     msg:
       - type: say
         content: 'Don''t use with the FULL version of OOO, already included.'
-        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
+        condition: *OOOCond
   - name: 'OOO-DaedricLord_Quests.esp'
     msg:
       - type: say
         content: 'Don''t use with the FULL version of OOO, already included.'
-        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
+        condition: *OOOCond
   - name: 'OOO-DaedraLord_Quests.esp'
     msg:
       - type: say
         content: 'Don''t use with the FULL version of OOO, already included.'
-        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
+        condition: *OOOCond
   - name: 'OOO-Dangerous_traps.esp'
     msg:
       - type: say
         content: 'Don''t use with the FULL version of OOO, already included.'
-        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
+        condition: *OOOCond
   - name: 'OOO-Deadly_Combat.esp'
     msg:
       - type: say
         content: 'Don''t use with the FULL version of OOO, already included.'
-        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
+        condition: *OOOCond
   - name: 'OOO-DLT_Immersion.esp'
     msg:
       - type: say
         content: 'Don''t use with the FULL version of OOO, already included.'
-        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
+        condition: *OOOCond
   - name: 'OOO-Magic_Effects+Enchantments.esp'
     msg:
       - type: say
         content: 'Don''t use with the FULL version of OOO, already included.'
-        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
+        condition: *OOOCond
   - name: 'OOO-Magic_Effects+Spells.esp'
     msg:
       - type: say
         content: 'Don''t use with the FULL version of OOO, already included.'
-        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
+        condition: *OOOCond
   - name: 'OOO-Magic_Game_Settings.esp'
     msg:
       - type: say
         content: 'Don''t use with the FULL version of OOO, already included.'
-        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
+        condition: *OOOCond
   - name: 'OOO-Potions.esp'
     msg:
       - type: say
         content: 'Don''t use with the FULL version of OOO, already included.'
-        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
+        condition: *OOOCond
   - name: 'OOO-Thief_Guild_Difficult.esp'
     msg:
       - type: say
         content: 'Don''t use with the FULL version of OOO, already included.'
-        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
+        condition: *OOOCond
   - name: 'OOO-ThiefGuild_Difficult.esp'
     msg:
       - type: say
         content: 'Don''t use with the FULL version of OOO, already included.'
-        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
+        condition: *OOOCond
   - name: 'OOO-Ayleid Coin Add-on.esp'
     msg:
       - type: error
@@ -7177,7 +7179,7 @@ plugins:
     msg:
       - type: say
         content: 'Not for OOO. Remove this and use ''ArmamentariumLL4OOO.esp'' instead.'
-        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
+        condition: *OOOCond
   - name: 'C&C&EQR - OOO.esp'
     msg:
       - type: say
@@ -7240,12 +7242,12 @@ plugins:
     msg:
       - type: say
         content: 'Included in OOO. Remove unless you want to lose OOO''s container traps, security rebalance and lock bashing features (so you can use other mods for those).'
-        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
+        condition: *OOOCond
   - name: 'Harvest[Containers] - Vanilla.esp'
     msg:
       - type: say
         content: 'Included in OOO. Remove unless you want to lose OOO''s container traps, security rebalance and lock bashing features (so you can use other mods for those).'
-        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
+        condition: *OOOCond
     dirty:
       - crc: 0xd7e2759e
         util: *dirtyUtil
@@ -7253,7 +7255,7 @@ plugins:
     msg:
       - type: say
         content: 'Included in OOO. Remove unless you want to lose OOO''s container traps, security rebalance and lock bashing features (so you can use other mods for those).'
-        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
+        condition: *OOOCond
   - name: 'DEJ Harvest - Containers [Combo] v0.99.08.esp'
     msg:
       - type: say
@@ -7262,12 +7264,12 @@ plugins:
     msg:
       - type: say
         content: 'Included in OOO. Remove unless you want to lose OOO''s container traps, security rebalance and lock bashing features (so you can use other mods for those).'
-        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
+        condition: *OOOCond
   - name: 'Harvest[Containers] - Havok Crates Add-on.esp'
     msg:
       - type: say
         content: 'Included in OOO. Remove unless you want to lose OOO''s container traps, security rebalance and lock bashing features (so you can use other mods for those).'
-        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
+        condition: *OOOCond
   - name: 'Hemingweys NPC Capes for OOO and FCOM.esp'
     msg:
       - type: say
@@ -7275,7 +7277,7 @@ plugins:
         condition: 'file("Mart''s Monster Mod.esm") or file("FCOM_Convergence.esm")'
       - type: say
         content: 'If you are running only OOO, but not MMM or FCOM, keep this installed.'
-        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
+        condition: *OOOCond
   - name: 'MTCDirtierBandits.esp'
     tag:
       - Invent
@@ -7793,12 +7795,12 @@ plugins:
     msg:
       - type: error
         content: 'Not compatible with OOO. Already included in OOO.'
-        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
+        condition: *OOOCond
   - name: 'Mart''s Monster Mod - Diverse Creature Skins.esp'
     msg:
       - type: error
         content: 'Not compatible with OOO. Already included in OOO.'
-        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
+        condition: *OOOCond
       - type: say
         content: 'Outdated. Update to MMM 3.7+.'
   - name: 'Mart''s Monster Mod - More Reaver Variants.esp'
@@ -7816,7 +7818,7 @@ plugins:
     msg:
       - type: say
         content: 'Not compatible with OOO. Already included in OOO.'
-        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
+        condition: *OOOCond
   - name: 'Mart''s Monster Mod - Fran''s leveled quests.esp'
     msg:
       - type: say
@@ -7825,7 +7827,7 @@ plugins:
     msg:
       - type: say
         content: 'Use ''Mart''s Monster Mod for OOO - LessReaversInGates.esp'' instead.'
-        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
+        condition: *OOOCond
   - name: 'Mart''s Monster Mod - Safer Roads.esp'
     msg:
       - type: say
@@ -7841,7 +7843,7 @@ plugins:
     msg:
       - type: say
         content: 'Use ''Mart''s Monster Mod for OOO - NoReaversInGates.esp'' instead.'
-        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
+        condition: *OOOCond
   - name: 'Mart''s Monster Mod - No Reaver Hounds.esp'
     msg:
       - type: say
@@ -7971,6 +7973,7 @@ plugins:
     msg:
       - type: say
         content: 'Requires: Oscuro''s Oblivion Overhaul.'
+        condition: 'not file("Oscuro''s_Oblivion_Overhaul.esm")'
       - type: error
         content: 'Requires: MMMforOOO or FCOM.'
         condition: 'file("Mart''s Monster Mod for OOO.esp") or file("FCOM_Convergence.esm")'
@@ -7981,9 +7984,10 @@ plugins:
       - 'Mart''s Monster Mod - Gems & Gem Dust.esp'
     msg:
       - type: say
-        content: '"Requires: Oscuro''s Oblivion Overhaul."'
+        content: 'Requires: Oscuro''s Oblivion Overhaul.'
+        condition: 'not file("Oscuro''s_Oblivion_Overhaul.esm")'
       - type: say
-        content: '"Requires: MMMforOOO or FCOM."'
+        content: 'Requires: MMMforOOO or FCOM.'
     tag:
       - Delev
   - name: 'OMOBS_MMM.esp'
@@ -8015,11 +8019,11 @@ plugins:
   - name: 'WCGL - Wilderness Creatures 1.1.esp'
     msg:
       - type: say
-        content: '"Incompatible with: OOO, MMM and Francescos."'
+        content: 'Incompatible with: OOO, MMM and Francescos.'
   - name: 'Master-Crafting-1.1-MMM.esp'
     msg:
       - type: say
-        content: '"Needs patch: Master-Crafting-1.1-MMM Greaves fix.esp"'
+        content: 'Needs patch: Master-Crafting-1.1-MMM Greaves fix.esp'
   - name: 'Choices and Consequences - MMM - Looting NPCs & Creatures.esp'
     msg:
       - type: say
@@ -8134,18 +8138,19 @@ plugins:
       - Delev
       - Filter
       - Relev
-      - "-NoMerge"
+      - NoMerge
   - name: 'TamrielTravellersItemsCobl.esp'
     msg:
       - type: say
-        content: '"Requires: COBL."'
+        content: 'Requires: COBL.'
+        condition: *coblCOND
   - name: 'TamrielTravellersItemsVendor.esp'
     tag:
       - Deactivate
       - Delev
       - Filter
       - Relev
-      - "-NoMerge"
+      - NoMerge
   - name: 'TamrielTravellersItemsUnscaled.esp'
     msg:
       - type: error
@@ -8157,8 +8162,9 @@ plugins:
     msg:
       - type: say
         content: 'Use of ''TamrielTravellersItemsNPC.esp'', ''TamrielTravellersItemsUnscaled.esp'', or ''TamrielTravellersItemsVendors.esp'' will remove SI items for sale.'
+        condition: 'file("TamrielTravellersItemsNPC.esp") or file("TamrielTravellersItemsUnscaled.esp") or file("TamrielTravellersItemsVendors.esp")'
       - type: say
-        content: '"Requires: Shivering Isles expansion."'
+        content: 'Requires: Shivering Isles expansion.'
     dirty:
       - crc: 0x36dd18e
         util: *dirtyUtil
@@ -8173,7 +8179,8 @@ plugins:
   - name: 'Mart''s Monster Mod - Diverse Imperial Armor.esp'
     msg:
       - type: error
-        content: 'Delete already integrated into FCOM components, use ''FCOM_DiverseGuardUnity.esp'' instead.'
+        content: 'Delete - already integrated into FCOM components, use ''FCOM_DiverseGuardUnity.esp'' instead.'
+        condition: *FCOMCond
   - name: 'FCOM_DiverseGuardUnity.esp'
     tag:
       - Actors.CombatStyle
@@ -8496,7 +8503,7 @@ plugins:
     msg:
       - type: say
         content: 'Use ''BladesSmithyOOO.esp'' instead.'
-        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
+        condition: *OOOCond
   - name: 'OOO_ThievesGuildFix.esp'
     msg:
       - type: say
@@ -8667,7 +8674,8 @@ plugins:
   - name: 'WAC - ItemLootFix4v1.0bOOO.esp'
     msg:
       - type: say
-        content: '"Requires: OOO."'
+        content: 'Requires: OOO.'
+        condition: 'not file("Oscuro''s_Oblivion_Overhaul.esm")'
       - type: say
         content: 'Use only one WAC - ItemLootFix plugin.'
     tag:
@@ -9044,7 +9052,7 @@ plugins:
     msg:
       - type: say
         content: 'Has minor incompatibility with OOO - changes Meridia quest & script back to level 10'
-        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
+        condition: *OOOCond
       - type: say
         content: 'Only use one IABane Oils X.esp'
     tag:
@@ -9053,7 +9061,7 @@ plugins:
     msg:
       - type: say
         content: 'Has minor incompatibility with OOO - changes Meridia quest & script back to level 10'
-        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
+        condition: *OOOCond
       - type: say
         content: 'Only use one IABane Oils X.esp'
     tag:
@@ -9062,7 +9070,7 @@ plugins:
     msg:
       - type: say
         content: 'Has minor incompatibility with OOO - changes Meridia quest & script back to level 10'
-        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
+        condition: *OOOCond
       - type: say
         content: 'Only use one IABane Oils X.esp'
     tag:
@@ -9071,7 +9079,7 @@ plugins:
     msg:
       - type: say
         content: 'Has minor incompatibility with OOO - changes Meridia quest & script back to level 10'
-        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
+        condition: *OOOCond
       - type: say
         content: 'Only use one IABane Oils X.esp'
     tag:
@@ -9080,7 +9088,7 @@ plugins:
     msg:
       - type: say
         content: 'Has minor incompatibility with OOO - changes Meridia quest & script back to level 10'
-        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
+        condition: *OOOCond
       - type: say
         content: 'Only use one IABane Oils X.esp'
     tag:
@@ -9191,7 +9199,7 @@ plugins:
     msg:
       - type: say
         content: 'Border regions must be turned off for OOO compatibility. Change bBorderRegionsEnabled to 0 in Oblivion.ini or use Wrye Bash bashed patch tweak.'
-        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
+        condition: *OOOCond
     dirty:
       - crc: 0xbf5cf18
         util: *dirtyUtil
@@ -10785,7 +10793,7 @@ plugins:
     req:
       - name: 'kingdomofAlamar_OOO.esp'
         display: '[OOO compatibility patch]((http://devnull.sweetdanger.net/mods/KingdomofAlmar_OOO.zip)'
-        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
+        condition: *OOOCond
     dirty:
       - crc: 0x72392fc9
         util: *dirtyUtil
@@ -11549,7 +11557,7 @@ plugins:
       - type: say
         content: 'Patch for FuseSnailRacing.esp'
       - type: say
-        content: '"Incompatible with: If loaded after OOO.esp this cause OOO''s lockbash feature to fail. To fix this simply load RL-LR before OOO.esp."'
+        content: 'If loaded after OOO.esp this cause OOO''s lockbash feature to fail. To fix this simply load RL-LR before OOO.esp.'
   - name: 'MTCVillages-LakeRumarePatch.esp'
     msg:
       - type: warn
@@ -12165,7 +12173,8 @@ plugins:
   - name: 'Treasuresofthedeep.esp'
     msg:
       - type: say
-        content: '"Requires: OOO."'
+        content: 'Requires: OOO.'
+        condition: 'not file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: 'Torynwyll.esp'
     dirty:
       - crc: 0x693fb4d9
@@ -12541,7 +12550,7 @@ plugins:
         condition: 'file("Better Cities Resources.esm")'
       - type: say
         content: 'Delete ''Lynges Thieves Highway.esp and use this instead.'
-        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
+        condition: *OOOCond
 # ENDGROUP: Quests and Locations 2
 # BEGINGROUP: DLC 4
   - name: 'DLCFrostcrag.esp'
@@ -12579,8 +12588,8 @@ plugins:
       - C.Name
       - C.Owner
       - Creatures.Blood
-      - "-C.Climate"
-      - "-C.Light"
+      - C.Climate
+      - C.Light
   - name: 'DLCFrostcrag Reborn.esp'
     msg:
       - type: say
@@ -13143,7 +13152,7 @@ plugins:
     msg:
       - type: say
         content: 'Has some landscape issues with OOO.'
-        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
+        condition: *OOOCond
     dirty:
       - crc: 0x6798b41
         util: *dirtyUtil
@@ -15364,7 +15373,7 @@ plugins:
     msg:
       - type: error
         content: 'OOO users should be using "Banes Guilds UnitedOOO.esp" instead.'
-        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
+        condition: *OOOCond
       - type: warn
         content: '"Users are very strongly recommended to upgrade to v2+ of this mod to avoid serious issues. It can be found [here](http://oblivion.nexusmods.com/mods/42261)."'
         condition: 'checksum("Banes Guilds United.esp",CFA556BC)'
@@ -15408,7 +15417,7 @@ plugins:
     msg:
       - type: say
         content: 'Will totally FUBAR OOO''s item scaling.'
-        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
+        condition: *OOOCond
     tag:
       - Delev
   - name: 'Better Potions and Poisons.esp'
@@ -15751,7 +15760,7 @@ plugins:
     msg:
       - type: say
         content: 'Not compatible with OOO. Already included in OOO.'
-        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
+        condition: *OOOCond
     dirty:
       - crc: 0xe97c0b93
         util: *dirtyUtil
@@ -15759,7 +15768,7 @@ plugins:
     msg:
       - type: say
         content: 'Not compatible with OOO. Already included in OOO.'
-        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
+        condition: *OOOCond
   - name: 'FrbitPotionReplacer.esp'
     tag:
       - Graphics
@@ -16417,7 +16426,7 @@ plugins:
     msg:
       - type: say
         content: 'Conflicts with OOO''s changes to skill perks and their descriptions.'
-        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
+        condition: *OOOCond
   - name: 'Steel Helm Replacer.esp'
     tag:
       - Graphics
@@ -16440,7 +16449,7 @@ plugins:
     msg:
       - type: say
         content: 'Probably not compatible with OOO. Update to version 2.0+.'
-        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
+        condition: *OOOCond
   - name: 'SPTDiverseGuardsMRAll.esp'
     msg:
       - type: say
@@ -16913,7 +16922,7 @@ plugins:
     msg:
       - type: ''say''
         content: 'Has problems with OOO (StarX vampires will fight OOO vampires, and some chests/weapons will be in skewed places).'
-        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
+        condition: *OOOCond
     tag:
       - C.Light
       - Actors.ACBS
@@ -16952,7 +16961,7 @@ plugins:
     msg:
       - type: say
         content: 'May have problems with OOO.'
-        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
+        condition: *OOOCond
     dirty:
       - crc: 0x277ff034
         util: *dirtyUtil
@@ -17424,12 +17433,12 @@ plugins:
     msg:
       - type: say
         content: 'Not compatible with OOO. Already included in OOO.'
-        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
+        condition: *OOOCond
   - name: 'SM Security.esp'
     msg:
       - type: say
         content: 'Partly included with OOO. May not be OOO compatible.'
-        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
+        condition: *OOOCond
   - name: 'Thievery_Easy_Thrill.esp'
     msg:
       - type: say
@@ -17467,7 +17476,8 @@ plugins:
       - type: say
         content: '"Incompatible with: other thievery-detection mods."'
       - type: say
-        content: '"Requires: OOO."'
+        content: 'Requires: OOO.'
+        condition: 'not file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: 'CoblDeathFix.esp'
     tag:
       - Scripts
@@ -17963,7 +17973,7 @@ plugins:
     msg:
       - type: say
         content: 'Use ''OOO-Intelligence Overhaul BJ'' instead.'
-        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
+        condition: *OOOCond
   - name: 'Intelligence Overhaul-RR.esp'
     msg:
       - type: say
@@ -18262,7 +18272,8 @@ plugins:
   - name: 'Let There Be Darkness - OOO.esp'
     msg:
       - type: say
-        content: '"Requires: Oscuro''s Oblivion Overhaul."'
+        content: 'Requires: Oscuro''s Oblivion Overhaul.'
+        condition: 'not file("Oscuro''s_Oblivion_Overhaul.esm")'
     tag:
       - C.Light
       - Deactivate
@@ -20665,7 +20676,8 @@ plugins:
       - type: say
         content: 'Use this or "1em_Vilja MMM FCOM Fix.esp", but not both; The OOO Version offers less protection.'
       - type: say
-        content: '"Requires: Requires OOO (and is good for OOO / MMMforOOO / FCOM / etc.)"'
+        content: 'Requires: Requires OOO (and is good for OOO / MMMforOOO / FCOM / etc.)'
+        condition: 'not file("Oscuro''s_Oblivion_Overhaul.esm")'
     tag:
       - Factions
       - NoMerge
@@ -22650,7 +22662,8 @@ plugins:
   - name: 'HTSCl_ooo.esp'
     msg:
       - type: say
-        content: '"Requires: Oscuro''s Oblivion Overhaul."'
+        content: 'Requires: Oscuro''s Oblivion Overhaul.'
+        condition: 'not file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: 'HTSCl_si.esp'
     msg:
       - type: say
@@ -22725,7 +22738,6 @@ plugins:
     msg:
       - type: say
         content: 'Don''t use with OOO/FCOM or birthsign changing mods, instead use ''ReallyImmersiveMessagesNoBirthsigns.esp''.'
-        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm")'
 # ENDGROUP: Message suppression/changing overrides
 # BEGINGROUP: Respawn & day length overrides
   - name: 'Francesco''s \d\d? days respawn time - 1-\d\d day lenght rescale\.esp'
