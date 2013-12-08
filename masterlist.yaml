@@ -19,11 +19,11 @@ common:
   - &masterReassign
     type: say
     content: 'The Oblivion.esm master must be reassigned to "Nehrim.esm".'
-    condition: '*nehrimCond'
+    condition: *nehrimCond
   - &useNehrimVer
     type: error
     content: 'Use the Nehrim version instead.'
-    condition: '*nehrimCond'
+    condition: *nehrimCond
   - &doNotClean
     type: say
     content: 'Do not clean ITM records, they are intentional and required for the mod to function.'
@@ -5606,7 +5606,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_RealSwords instead.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
       - type: say
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
@@ -5615,7 +5615,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_RealSwords instead.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
       - type: say
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
@@ -5624,7 +5624,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_RealSwords instead.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
       - type: say
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
@@ -5633,7 +5633,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_RealSwords instead.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
       - type: say
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
@@ -5642,7 +5642,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_RealSwords instead.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
       - type: say
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
@@ -5651,7 +5651,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_RealSwords instead.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
       - type: say
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
@@ -5660,7 +5660,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_RealSwords instead.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
       - type: say
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
@@ -5669,7 +5669,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_RealSwords instead.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
       - type: say
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
@@ -5678,7 +5678,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_RealSwords instead.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
       - type: say
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
@@ -5687,7 +5687,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_RealSwords instead.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
       - type: say
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
@@ -5696,7 +5696,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_RealSwords instead.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
       - type: say
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
@@ -5705,7 +5705,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_RealSwords instead.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
       - type: say
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
@@ -5714,7 +5714,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_RealSwords instead.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
       - type: say
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
@@ -5723,7 +5723,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_RealSwords instead.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
       - type: say
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
@@ -5732,7 +5732,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_RealSwords instead.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
       - type: say
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
@@ -5741,7 +5741,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_RealSwords instead.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
       - type: say
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
@@ -5750,7 +5750,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_RealSwords instead.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
       - type: say
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
@@ -5759,7 +5759,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_RealSwords instead.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
       - type: say
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
@@ -5768,7 +5768,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_RealSwords instead.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
       - type: say
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
@@ -5777,7 +5777,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_RealSwords instead.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
       - type: say
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
@@ -5786,7 +5786,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_RealSwords instead.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
       - type: say
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
@@ -5795,7 +5795,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_RealSwords instead.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
       - type: say
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
@@ -5804,7 +5804,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_RealSwords instead.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
       - type: say
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
@@ -5813,7 +5813,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_RealSwords instead.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
       - type: say
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
@@ -5822,7 +5822,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_RealSwords instead.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
       - type: say
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
@@ -5831,7 +5831,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_RealSwords instead.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
       - type: say
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
@@ -5840,7 +5840,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_RealSwords instead.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
       - type: say
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
@@ -5849,7 +5849,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_RealSwords instead.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
       - type: say
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
@@ -5858,7 +5858,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_RealSwords instead.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
       - type: say
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
@@ -5867,7 +5867,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_RealSwords instead.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
       - type: say
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
@@ -5876,7 +5876,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_RealSwords instead.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
       - type: say
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
@@ -5885,7 +5885,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_RealSwords instead.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
       - type: say
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
@@ -5894,7 +5894,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_RealSwords instead.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
       - type: say
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
@@ -5903,7 +5903,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_RealSwords instead.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
       - type: say
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
@@ -5912,7 +5912,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_RealSwords instead.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
       - type: say
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
@@ -5921,7 +5921,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_RealSwords instead.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
       - type: say
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
@@ -5930,7 +5930,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_RealSwords instead.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
       - type: say
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
@@ -5939,7 +5939,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_RealSwords instead.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
       - type: say
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
@@ -6631,7 +6631,7 @@ plugins:
     msg:
       - type: error
         content: 'Should not be used. Delete. Reinstall Fran''s and select "Separate Files" when the option is presented.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
     tag:
       - Delev
       - Relev
@@ -6639,7 +6639,7 @@ plugins:
     msg:
       - type: error
         content: 'Should not be used. Delete. Reinstall Fran''s and select "Separate Files" when the option is presented.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
     tag:
       - Delev
       - Relev
@@ -6647,7 +6647,7 @@ plugins:
     msg:
       - type: error
         content: 'Should not be used. Delete. Reinstall Fran''s and select "Separate Files" when the option is presented.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
     tag:
       - Delev
       - Relev
@@ -6655,7 +6655,7 @@ plugins:
     msg:
       - type: error
         content: 'Should not be used. Delete. Reinstall Fran''s and select "Separate Files" when the option is presented.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
     tag:
       - Delev
       - Relev
@@ -6663,7 +6663,7 @@ plugins:
     msg:
       - type: error
         content: 'Should not be used. Delete. Reinstall Fran''s and select "Separate Files" when the option is presented.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
     tag:
       - Delev
       - Relev
@@ -6671,7 +6671,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Already integrated into FCOM, MMM, OOO or other FCOM components.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
   - name: 'Francesco''s Dark Seducer Weapons Patch.esp'
     tag:
       - Delev
@@ -6732,7 +6732,7 @@ plugins:
     msg:
       - type: say
         content: 'If using Cobl 1.72 and a version of FCOM below 0.9.9, also use the FCOM patch ''FCOM_Cobl.esp''. If you are using UFCOM then use "OOO 1.32-Cobl.esp" and "MMM_cobl.esp" instead of ''FCOM_Cobl.esp''.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
     dirty:
       - crc: 0x8a79a499
         util: *dirtyUtil
@@ -6761,7 +6761,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Already included in ''FCOM_Cobl.esp'' or latest ''MMM_Cobl.esp''.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
   - name: 'COBL-FransCre.esp'
     req:
       - 'Francesco''s Leveled Creatures-Items Mod.esm'
@@ -6801,17 +6801,17 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Only use ''Loth''s Blunt Weapons For NPCs.esp'' and ''FCOM_LothsBluntWeapons.esp''.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
   - name: 'Loth''s Blunt Weapons- Mobs.esp'
     msg:
       - type: error
         content: 'Delete. Only use ''Loth''s Blunt Weapons For NPCs.esp'' and ''FCOM_LothsBluntWeapons.esp''.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
   - name: 'Oblivion WarCry.esp'
     msg:
       - type: error
         content: 'German version not compatible with FCOM. Delete & Use ''Oblivion WarCry EV.esp'' instead.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
       - type: say
         content: 'German version.'
       - *doNotClean
@@ -7325,7 +7325,7 @@ plugins:
     msg:
       - type: say
         content: 'Outdated. Install FCOM version 1.0 or later.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
   - name: 'Mart''s Monster Mod - Fran''s Leveled Quests.esp'
     msg:
       - type: error
@@ -7363,7 +7363,7 @@ plugins:
     msg:
       - type: error
         content: 'Outdated. Install FCOM version 0.9.9 or later.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
       - type: error
         content: 'FCOM_Convergence.esm is missing. Re-install FCOM.'
         condition: 'not file("FCOM_Convergence.esm")'
@@ -7371,7 +7371,7 @@ plugins:
     msg:
       - type: say
         content: 'Only use when not using MMM.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
       - type: error
         content: 'FCOM_Convergence.esm is missing. Re-install FCOM.'
         condition: 'not file("FCOM_Convergence.esm")'
@@ -7392,7 +7392,7 @@ plugins:
       - type: say
         content: 'Not needed in MMM 3.6beta3+. Already integrated.'
   - name: 'Mart''s Monster Mod - Diverse Runeskulls.esp'
-    condition: '*FCOMCond'
+    condition: *FCOMCond
     msg:
       - type: say
         content: 'Replaces both ''FCOM_ExnemRuneskulls.esp'' and ''ExnemRuneskulls.esp'' - Please remove them.'
@@ -7646,7 +7646,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Not needed with FCOM.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
     tag:
       - Actors.AIData
       - Actors.AIPackages
@@ -7664,7 +7664,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Not needed with FCOM.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
     tag:
       - Actors.AIData
       - Actors.AIPackages
@@ -7682,7 +7682,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Not needed with FCOM.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
     tag:
       - Delev
       - Factions
@@ -7711,7 +7711,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Not needed with FCOM.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
     tag:
       - Actors.AIData
       - Actors.AIPackages
@@ -8094,7 +8094,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. ''Use TamrielTravellers4OOO.esp'' and ''FCOM_TamrielTravelers.esp'' instead.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
     dirty:
       - crc: 0xeb4a4d83
         util: *dirtyUtil
@@ -8106,7 +8106,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. ''Use TamrielTravellers4OOO.esp'' and ''FCOM_TamrielTravelers.esp'' instead.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
     dirty:
       - crc: 0xc0cecfea
         util: *dirtyUtil
@@ -8118,12 +8118,12 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Not compatible with FCOM.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
   - name: 'TamrielTravellersFactionAll.esp'
     msg:
       - type: error
         content: 'Delete. Not compatible with FCOM.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
   - name: 'TamrielTravellers4OOO.esp'
     dirty:
       - crc: 0x2cb068db
@@ -8155,7 +8155,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Not compatible with FCOM.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
       - type: say
         content: 'Not overhaul mod compatible.'
   - name: 'ShiveringIsleTravellers.esp'
@@ -8254,17 +8254,17 @@ plugins:
     msg:
       - type: error
         content: 'Delete and use ''FCOM_FriendlierFactions.esp''.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
   - name: 'Mart''s Monster Mod - Friendlier Factions OOO+FCOM.esp'
     msg:
       - type: error
         content: 'Delete and use ''FCOM_FriendlierFactions.esp''.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
   - name: 'Mart''s Monster Mod - Friendlier Factions OOO.esp'
     msg:
       - type: error
         content: 'Delete and use ''FCOM_FriendlierFactions.esp''.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
   - name: 'FCOM_FriendlierFactions.esp'
     tag:
       - NoMerge
@@ -8273,7 +8273,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Outdated. Update to FCOM v0.9.9 or later.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
   - name: 'WAC - ItemLootFix4v1.0bTIE.esp'
     tag:
       - Delev
@@ -8526,22 +8526,22 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Not compatible with FCOM. Use cOMbo plugin instead.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
   - name: 'Tamrielic_Ingredients_OOO.esp'
     msg:
       - type: error
         content: 'Delete. Not compatible with FCOM. Use cOMbo plugin instead.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
   - name: 'Tamrielic_Ingredients_FraM.esp'
     msg:
       - type: error
         content: 'Delete. Not compatible with FCOM. Use cOMbo plugin instead.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
   - name: 'Tamrielic_Ingredients_Fran.esp'
     msg:
       - type: error
         content: 'Delete. Not compatible with FCOM. Use cOMbo plugin instead.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
   - name: 'TGND2 OOO Replacer.esp'
     tag:
       - Graphics
@@ -12519,7 +12519,7 @@ plugins:
     msg:
       - type: say
         content: 'Use FCOM compatibility version instead.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
   - name: 'Lynges_Thieves_Highway.esp'
     msg:
       - type: say
@@ -12793,7 +12793,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Not compatible with FCOM. Use FCOM_knights.esp instead.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
     tag:
       - Actors.AIData
       - Actors.AIPackages
@@ -12807,7 +12807,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Not compatible with FCOM. Use FCOM_knights.esp instead.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
     tag:
       - Actors.AIData
       - Actors.AIPackages
@@ -12821,7 +12821,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Not compatible with FCOM. Use FCOM_knights.esp instead.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
     tag:
       - Actors.AIData
       - Actors.AIPackages
@@ -12835,7 +12835,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Not compatible with FCOM. Use FCOM_knights.esp instead.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
     tag:
       - Actors.AIData
       - Actors.AIPackages
@@ -12856,7 +12856,7 @@ plugins:
     msg:
       - type: error
         content: 'Use "FCOM_Knights.esp" instead.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
   - name: 'DLC_MOBS.esp'
     msg:
       - type: say
@@ -13299,12 +13299,12 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use ''FCOM_EnhancedDaedricInvasion.esp'' instead.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
   - name: 'Enhanced Daedric Invasion for FranOOOMMM.esp'
     msg:
       - type: error
         content: 'Delete. Use ''FCOM_EnhancedDaedricInvasion.esp'' instead.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
   - name: 'ElsweyrAnequina.esp'
     msg:
       - type: say
@@ -15166,7 +15166,7 @@ plugins:
     msg:
       - type: say
         content: 'If using FCOM, rename this to ''NPC new clothes V2.6.esp'' or adjust the masterlist with Wrye Bash for ''FCOM_NewNPCClothes.esp''.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
   - name: 'FCOM_NewNPCClothes.esp'
     msg:
       - type: say
@@ -16341,7 +16341,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use newer version of Lovers with PK. Integrated into 1.3.1 Rev38 and newer.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
   - name: 'LoversLoser.esp'
     msg:
       - type: say
@@ -16354,7 +16354,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use newer version of Lovers with PK. Integrated into 1.3.1 Rev38 and newer.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
   - name: 'LoversMpc.esp'
     msg:
       - type: say
@@ -16363,7 +16363,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use newer version of Lovers with PK. Integrated into 1.3.1 Rev38 and newer.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
   - name: 'Sexlivion_0.4a_Full_English_v1.esp'
     msg:
       - type: say
@@ -16634,12 +16634,12 @@ plugins:
     msg:
       - type: error
         content: 'Use ''LCE-addon.esp'' instead if using MMM/Frans etc.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
   - name: 'lorecreatures.esp'
     msg:
       - type: error
         content: 'Use ''LCE-addon.esp'' instead if using MMM/Frans etc.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
     dirty:
       - crc: 0x43bf6b9b
         util: *dirtyUtil
@@ -17765,7 +17765,7 @@ plugins:
         content: 'A [hotfix](http://omploader.org/vMmJlbA/DRtestfix.zip) exists for CTD issues.'
       - type: error
         content: 'Use the replacement plugin for Nehrim found [here](http://oblivion.nexusmods.com/mods/35157).'
-        condition: '*nehrimCond'
+        condition: *nehrimCond
   - name: 'DeadlyReflex 5 - Combat Moves.esp'
     msg:
       - type: say
@@ -18403,7 +18403,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use II''s ''Item Interchange - Placement for FCOM.esp'' instead.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
       - type: error
         content: 'Required Bashed Patch.'
         condition: 'not regex("Bashed Patch.*\.esp")'
@@ -21866,7 +21866,7 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Not compatible with FCOM. Use ''bgBalancingEVOptionalFCOMAdditions.esp'' instead.'
-        condition: '*FCOMCond'
+        condition: *FCOMCond
   - name: 'bgBalancingOptionalNPCDiversityKvatchRebuilt, for Wrye Bash.esp'
     msg: [ *doNotClean ]
   - name: 'bgBalancingEVLAMEAddition.esp'
@@ -23997,7 +23997,7 @@ plugins:
       - *masterReassign
       - type: say
         content: 'Unnecessary as many windows are already lit.'
-        condition: '*nehrimCond'
+        condition: *nehrimCond
 
   - name: 'Nehrim Blackscreenfix.esp'
     msg:
@@ -24024,7 +24024,7 @@ plugins:
       - *masterReassign
       - type: warn
         content: 'The support plugin does not work. Shaders must be loaded using the shaderlist.'
-        condition: '*nehrimCond'
+        condition: *nehrimCond
 
   - name: 'Enhanced Hotkeys.esp'
     msg: [ *masterReassign ]
@@ -24114,7 +24114,7 @@ plugins:
     msg:
       - type: say
         content: 'Some menu functions may not work.'
-        condition: '*nehrimCond'
+        condition: *nehrimCond
 
   - name: 'ScreenControls.esp'
     msg: [ *masterReassign ]
