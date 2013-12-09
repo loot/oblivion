@@ -6000,6 +6000,8 @@ plugins:
   - name: 'Bloodrayne Armor.esp'
     dirty:
       - crc: 0x1e5ae2ef
+        itm: 10
+        udr: 0
         util: *dirtyUtil
   - name: 'Chrome Amazon Armor.esp'
     tag:
@@ -6010,21 +6012,13 @@ plugins:
   - name: 'Colourwheels Sexy SI Armor & Clothing Replacer.esp'
     tag:
       - Graphics
-  - name: 'dmra_bbb_armamentarium.esp'
-    msg:
-      - type: say
-        content: '"Requires: Armamentarium"'
   - name: 'DMRA BBB Armamentarium Complete.esp'
-    msg:
-      - type: say
-        content: '"Incompatible with: dmra_bbb_armamentarium.esp"'
+    inc:
+      - 'dmra_bbb_armamentarium.esp'
     tag:
       - Graphics
       - NoMerge
   - name: 'TGND2 Armamentarium Replacer.esp'
-    msg:
-      - type: say
-        content: '"Requires: Armamentarium"'
     tag:
       - Graphics
   - name: 'TGND2 Better Cities Replacer.esp'
@@ -6077,19 +6071,24 @@ plugins:
   - name: 'Dragon Princess.esp'
     dirty:
       - crc: 0xdc820ea9
+        itm: 3
+        udr: 0
         util: *dirtyUtil
   - name: 'Fairy Wings Darkness.esp'
     tag:
       - Invent
   - name: 'FF7 Swords 02 core apocalypse.esp'
-    msg:
-      - type: say
-        content: '"Incompatible with: Open Cities."'
+    inc:
+      - 'Open Cities Reborn.esp'
   - name: 'GoddessArmor_Exnem.esp'
     dirty:
       - crc: 0x8568d411
+        itm: 5
+        udr: 0
         util: *dirtyUtil
       - crc: 0xfd45c9b9
+        itm: 5
+        udr: 0
         util: *dirtyUtil
   - name: 'HGEC_AmazonArmor.esp'
     tag:
@@ -6110,10 +6109,14 @@ plugins:
   - name: 'IndigoArmor.esp'
     dirty:
       - crc: 0xfed76787
+        itm: 2
+        udr: 0
         util: *dirtyUtil
   - name: 'Lady Style.esp'
     dirty:
       - crc: 0x3ad9166
+        itm: 1
+        udr: 0
         util: *dirtyUtil
   - name: 'LC-Compilation-Exnem.esp'
     tag:
@@ -6132,9 +6135,6 @@ plugins:
       - Graphics
       - NoMerge
   - name: 'MW  Dremora Armor.esp'
-    msg:
-      - type: say
-        content: '"Requires: Daedric Lord Armor"'
     tag:
       - Graphics
   - name: 'New Exnem Compatible Armors.esp'
@@ -6160,6 +6160,8 @@ plugins:
   - name: 'Sexy Ghost Armor.esp'
     dirty:
       - crc: 0x21b8da71
+        itm: 2
+        udr: 0
         util: *dirtyUtil
   - name: 'Slof''s Brighter Arena Raiments.esp'
     tag:
@@ -6169,12 +6171,14 @@ plugins:
       - Graphics
       - NoMerge
   - name: 'StockClothingArmor-forExnems.esp'
+    dirty:
+      - crc: 0x97bd3c1a
+        itm: 3
+        udr: 0
+        util: *dirtyUtil
     tag:
       - Graphics
       - NoMerge
-    dirty:
-      - crc: 0x97bd3c1a
-        util: *dirtyUtil
   - name: 'StockClothingArmorHGECnormalD.esp'
     tag:
       - Graphics
@@ -6218,17 +6222,17 @@ plugins:
       - Graphics
       - NoMerge
   - name: 'TGND_EY_Vampirehunter.esp'
-    msg:
-      - type: say
-        content: '"Incompatible with: EY_Vampirehunter.esp"'
+    inc:
+      - EY_Vampirehunter.esp
   - name: 'UFF Amazon Armor.esp'
     tag:
       - Graphics
   - name: 'UFF & RM Gold and Silver Daedric Armor.esp'
     dirty:
       - crc: 0x9dfb019
-        util: *dirtyUtil
+        itm: 10
         udr: 1
+        util: *dirtyUtil
   - name: 'YAARM_Steel.esp'
     tag:
       - Graphics
@@ -6236,6 +6240,8 @@ plugins:
   - name: 'Zombie Slayer Armor.esp'
     dirty:
       - crc: 0xaba4972b
+        itm: 1
+        udr: 0
         util: *dirtyUtil
 # ENDGROUP: Body Replacer Armour & Clothing
 # BEGINGROUP: Not For Free Armor
