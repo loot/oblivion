@@ -23426,7 +23426,7 @@ plugins:
   - name: 'Enhanced Economy - Soulgems.esp'
     msg:
       - type: say
-        content: 'Obsolete. Remove this and install Soulgem Magic.'
+        content: 'Obsolete. Remove this and install [Soulgem Magic](http://www.nexusmods.com/oblivion/mods/35393).'
     tag:
       - NoMerge
       - Scripts
@@ -23434,6 +23434,7 @@ plugins:
     msg:
       - type: say
         content: 'Don''t use Wrye Bash''s Bashed Patch unlimited amulet''s tweak with this.'
+        condition: 'regex("Bashed Patch.*\.esp")'
       - type: say
         content: 'If you''re using this with the mod "Beast Characters lose tails no more", temporarily move it below the Bashed Patch whenever you rebuild it'
   - name: 'JazzJRKhajiitfeets.esp'
@@ -23460,9 +23461,11 @@ plugins:
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
         condition: 'regex("Bashed Patch.*\.esp")'
   - name: 'KSE_v3.esp'
-    msg:
-      - type: say
-        content: '"Incompatible with: Vim_and_Vigor.esp, HotkeyCasting.esp, RenGuardOverhaul.esp, 7roads.esp"'
+    inc:
+      - 'Vim_and_Vigor.esp'
+      - 'HotkeyCasting.esp'
+      - 'RenGuardOverhaul.esp'
+      - '7roads.esp'
     tag:
       - Graphics
       - Names
@@ -23511,6 +23514,8 @@ plugins:
   - name: 'UVII.esp'
     dirty:
       - crc: 0x3144ec1b
+        itm: 13
+        udr: 0
         util: *dirtyUtil
   - name: 'DeadlyReflex - Combat Moves.esp'
     msg:
@@ -23519,11 +23524,13 @@ plugins:
   - name: 'DeadlyReflex 6 - Combat Moves.esp'
     msg:
       - type: say
-        content: '"Requires: [NifSE](http://oblivion.nexusmods.com/mods/21292)"'
-      - type: say
-        content: '"Requires: [Drop Lit Torches OBSE](http://oblivion.nexusmods.com/mods/16282)"'
-      - type: say
-        content: 'For use both DR6b101 and NifSE 1.0+ use [fix](http://oblivion.nexusmods.com/mods/40336).'
+        content: 'To use both DR6b101 and NifSE 1.0+ you need the [fix file](http://oblivion.nexusmods.com/mods/40336).'
+        condition: 'not file("Deadly Reflex 6 - HeX NifSE Patch.esp")'
+    req:
+      - name: 'obse\plugins\NifSE.dll'
+        display: '[NifSE](http://www.nexusmods.com/oblivion/mods/21292)'
+      - name: 'DropLitTorchOBSE.esp'
+        display: '[Drop Lit Torches](http://www.nexusmods.com/oblivion/mods/16282)'
     tag:
       - Graphics
   - name: 'Real Hunger, Cobl.esp'
@@ -23534,11 +23541,11 @@ plugins:
     dirty:
       - crc: 0x52afa081
         util: *dirtyUtil
+        itm: 11
         udr: 3
   - name: 'Viconia.esp'
-    msg:
-      - type: say
-        content: '"Incompatible with: ViconiaChapterTwo.esp."'
+    inc:
+      - 'ViconiaChapterTwo.esp'
   - name: 'Viconia Rwalk.esp'
     msg:
       - type: say
@@ -23558,11 +23565,10 @@ plugins:
       - Actors.Anims
       - NoMerge
   - name: 'ViconiaChapterTwo.esp'
-    msg:
-      - type: say
-        content: '"Requires: the Underdark."'
-      - type: say
-        content: '"Incompatible with: Viconia.esp."'
+    inc:
+      - 'Viconia.esp'
+    req:
+      - 'Underdark.esm'
   - name: 'ViconiaChapterTwo Rwalk.esp'
     msg:
       - type: say
@@ -23584,6 +23590,8 @@ plugins:
   - name: 'UnderdarkSaga.esp'
     dirty:
       - crc: 0x453742b9
+        itm: 6
+        udr: 0
         util: *dirtyUtil
   - name: 'UnderdarkSaga v1.2 Delayer.esp'
     msg:
@@ -23638,9 +23646,9 @@ plugins:
   - name: 'NRB4 Standard Road Record.esp'
     msg:
       - type: say
-        content: '"Requires: New Roads+Bridges."'
-      - type: say
         content: 'Use only one road record file.'
+    req:
+      - 'road+bridges.esp'
     tag:
       - Deactivate
       - Roads
@@ -23654,29 +23662,30 @@ plugins:
   - name: 'NRB4 OCReborn Road Record.esp'
     msg:
       - type: say
-        content: '"Requires: Open Cities Reborn."'
-      - type: say
         content: 'Use only one road record file.'
+    req:
+      - 'Open Cities Reborn.esp'
     tag:
       - Deactivate
       - Roads
   - name: 'ROC Standard Road Record.esp'
     msg:
-      - type: say
-        content: '"Requires: Roads of Cyrodiil"'
       - type: error
         content: 'road+bridges.esp has been detected. New Roads & Bridges Revised and all dependent patches must be uninstalled before using Roads of Cyrodiil. See Roads of Cyrodiil readme for upgrade instructions.'
         condition: 'file("road+bridges.esp")'
+    req:
+      - 'Roads of Cyrodiil.esp'
     tag:
       - Deactivate
       - Roads
   - name: 'ROC - OCReborn Road Record.esp'
     msg:
-      - type: say
-        content: '"Requires: Roads of Cyrodiil, Open Cities Reborn"'
       - type: error
         content: 'road+bridges.esp has been detected. New Roads & Bridges Revised and all dependent patches must be uninstalled before using Roads of Cyrodiil. See Roads of Cyrodiil readme for upgrade instructions.'
         condition: 'file("road+bridges.esp")'
+    req:
+      - 'Open Cities Reborn.esp'
+      - 'Roads of Cyrodiil.esp'
     tag:
       - Deactivate
       - Roads
@@ -23690,63 +23699,66 @@ plugins:
   - name: 'CSVF_Road_Record_OC.esp'
     msg:
       - type: say
-        content: '"Requires: Open Cities."'
-      - type: say
         content: 'Use only one road record file.'
+    req:
+      - 'Open Cities.esp'
     tag:
       - Deactivate
       - Roads
   - name: 'CSVF_Road_Record_OC+RB.esp'
     msg:
       - type: say
-        content: '"Requires: Open Cities, New Roads+Bridges."'
-      - type: say
         content: 'Use only one road record file.'
+    req:
+      - 'Open Cities.esp'
+      -  'road+bridges.esp'
     tag:
       - Deactivate
       - Roads
   - name: 'CSVF_Road_Record_BBC.esp'
     msg:
       - type: say
-        content: '"Requires: Better Cities."'
-      - type: say
         content: 'Use only one road record file.'
+    req:
+      - 'Better Cities Full.esp'
     tag:
       - Deactivate
       - Roads
   - name: 'CSVF_Road_Record_BBC+OC.esp'
     msg:
       - type: say
-        content: '"Requires: Open Better Cities."'
-      - type: say
         content: 'Use only one road record file.'
+    req:
+      - 'Better Cities - Open Better Cities.esp'
     tag:
       - Deactivate
       - Roads
   - name: 'CSVF_Road_Record_BBC+RB.esp'
     msg:
       - type: say
-        content: '"Requires: Better Cities, New Roads+Bridges."'
-      - type: say
         content: 'Use only one road record file.'
+    req:
+      - 'Better Cities Full.esp'
+      -  'road+bridges.esp'
     tag:
       - Deactivate
       - Roads
   - name: 'CSVF_Road_Record_BBC+OC+RB.esp'
     msg:
       - type: say
-        content: '"Requires: Open Better Cities, New Roads+Bridges."'
-      - type: say
         content: 'Use only one road record file.'
+    req:
+      - 'Better Cities - Open Better Cities.esp'
+      - 'road+bridges.esp'
     tag:
       - Deactivate
       - Roads
   - name: 'CSVF_Road_Record_RB.esp'
     msg:
       - type: say
-        content: '"Requires: New Roads+Bridges."'
-      - type: say
         content: 'Use only one road record file.'
+    req:
+      -  'road+bridges.esp'
     tag:
       - Deactivate
       - Roads
@@ -23849,6 +23861,8 @@ plugins:
   - name: 'WAC - NoMapMarker.esp'
     dirty:
       - crc: 0x9bd8f9c2
+        itm: 16
+        udr: 0
         util: *dirtyUtil
   - name: 'The Big Merger.esp'
     tag:
