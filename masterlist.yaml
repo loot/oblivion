@@ -241,7 +241,7 @@ plugins:
     req:
       - *OBSE
       - name: 'Race Repository.esm'
-        display: ''[Playable and NPC Creatures (only Race Repository.esm)](http://oblivion.nexusmods.com/mods/31821)''
+        display: '"[Playable and NPC Creatures (only Race Repository.esm)](http://oblivion.nexusmods.com/mods/31821)"'
     dirty:
       - crc: 0x477340c8
         util: *dirtyUtil
@@ -276,7 +276,7 @@ plugins:
     req:
       - *OBSE
       - name: 'OBSE\Plugins\OBME.dll'
-        display: ''[Oblivion Magic Extender](http://oblivion.nexusmods.com/mods/31981)''
+        display: '"[Oblivion Magic Extender](http://oblivion.nexusmods.com/mods/31981"'
 # ENDGROUP: ESMs
 # BEGINGROUP: Earliest mods
 #
@@ -1528,14 +1528,14 @@ plugins:
   - name: 'Atmospheric Loading Screens.esp'
     after:
       - type: say
-        content: ''Move after Race Balancing Project''
+        content: 'Move after Race Balancing Project'
         condition: 'file("bgBalancingEVCore.esp")'
     tag:
       - Graphics
   - name: 'Atmospheric Loading Screens - Original Text.esp'
     after:
       - type: say
-        content: ''Move after Race Balancing Project''
+        content: 'Move after Race Balancing Project'
         condition: 'file("bgBalancingEVCore.esp")'
     tag:
       - Graphics
@@ -1977,7 +1977,7 @@ plugins:
   - name: 'Immersive Interiors.esp'
     req:
       - name: 'All Natural.esp'
-        display: [All Natural](http://oblivion.nexusmods.com/mods/18305/?)
+        display: '[All Natural](http://oblivion.nexusmods.com/mods/18305/?)'
     tag:
       - C.Water
   - name: 'Immersive Interiors - Lights Addon.esp'
@@ -3848,7 +3848,7 @@ plugins:
     req:
       - *OBSE
       - name: 'OBSE\Plugins\EnhancedMusicControl.dll'
-        display: ''[Enhanced Music & Control](http://oblivion.nexusmods.com/mods/19772)''
+        display: '"[Enhanced Music & Control](http://oblivion.nexusmods.com/mods/19772"'
   - name: 'DarNifiedUI Config Addon.esp'
     req:
       - *OBSE
@@ -3856,7 +3856,7 @@ plugins:
         display: '[DarNified UI](http://oblivion.nexusmods.com/mods/10763) or [DarkUI''d DarN](http://oblivion.nexusmods.com/mods/11280)'
       - name: 'OBSE\Plugins\OBSE_Elys_Pluggy.dll'
         display: '[Pluggy](http://oblivion.nexusmods.com/mods/23979) or [Conscribe](http://oblivion.nexusmods.com/mods/26510)'
-        condition: ''not file("OBSE\Plugins\ConScribe.dll")''
+        condition: '"not file("OBSE\Plugins\ConScribe.dll""'
   - name: 'Demolish Plugin - HUD Display.esp'
     req:
       - name: 'OBSE\Plugins\OBSE_Elys_Pluggy.dll'
@@ -3898,7 +3898,7 @@ plugins:
     msg:
       - type: warn
         content: 'You must rename "OBSE_Elys_Pluggy.dll" to "OBSE_Elys_Pluggy_Hud.dll"'
-        condition: ''file("OBSE\Plugins\OBSE_Elys_Pluggy.dll") and not file("OBSE\Plugins\OBSE_Elys_Pluggy_Hud.dll")''
+        condition: '"file("OBSE\Plugins\OBSE_Elys_Pluggy.dll") and not file("OBSE\Plugins\OBSE_Elys_Pluggy_Hud.dll""'
     req:
       - *OBSE
       - name: 'OBSE\Plugins\OBSE_Elys_Pluggy.dll'
@@ -5211,7 +5211,7 @@ plugins:
       - 'Nico''s Dreadweave Armor_heavy.esp'
       - 'Nicos Dreadweave Armor_Light.esp'
       - 'Nico''s Dreadweave Bow and Arrows.esp'
-    url: [ http://planetelderscrolls.gamespy.com/View.php?view=OblivionMods.Detail&id=104519&id=2622 ]
+    url: [ 'http://planetelderscrolls.gamespy.com/View.php?view=OblivionMods.Detail&id=104519&id=2622' ]
   - name: 'Obsidian armor.esp'
     tag:
       - Graphics
@@ -8153,7 +8153,7 @@ plugins:
     msg:
       - type: say
         content: 'Requires: COBL.'
-        condition: *coblCOND
+        condition: *coblCond
   - name: 'TamrielTravellersItemsVendor.esp'
     tag:
       - Deactivate
@@ -10175,7 +10175,7 @@ plugins:
       - Actors.Stats
       - SpellStats
   - name: 'DruidsTree.esp'
-    req: [ ''ShiveringIsles.esp'' ]
+    req: [ file("ShiveringIsles.esp") ]
     msg: [ *needsCleaning ]
   - name: 'DSoSFortNocturnaSuppressio.esp'
     msg: [ *doNotClean ]
@@ -10837,7 +10837,7 @@ plugins:
         udr: 139
         itm: 20
   - name: 'Feudal Empire 300.esp'
-    inc: [ ''300_White Stallion 4.esp'' ]
+    inc: [ file("300_White Stallion 4.esp") ]
     msg:
       - type: warn
         content: 'Makes wild edits, see [special cleaning instructions](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide#300_White_Stallion_4.esp_Special_Cleaning_Instructions).'
@@ -16930,7 +16930,7 @@ plugins:
       - R.Teeth
   - name: 'StarX Vanilla Vampires Revised.esp'
     msg:
-      - type: ''say''
+      - type: say
         content: 'Has problems with OOO (StarX vampires will fight OOO vampires, and some chests/weapons will be in skewed places).'
         condition: *OOOCond
     tag:
@@ -18191,7 +18191,8 @@ plugins:
 # ENDGROUP: Pose and Animation Mods
 # BEGINGROUP: Semi-final overrides
   - name: 'immersive_caves_manual.esp'
-    tag: [ ''Sound'' ]
+    tag:
+      - Sound
   - name: 'immersive_caves_auto.esp'
     tag:
       - Graphics
@@ -21616,7 +21617,7 @@ plugins:
       - NpcFaces
       - R.Head
       - R.Mouth
-    url: [ ''http://oblivion.nexusmods.com/mods/43612'' ]
+    url: [ 'http://oblivion.nexusmods.com/mods/43612' ]
   - name: 'Jjiinx_Long Ears.esp'
     tag:
       - Body-F
@@ -24145,19 +24146,19 @@ plugins:
     msg: [ *masterReassign ]
     
   - name: 'Ostian Enhanced.esp'
-    url: [ ''http://oblivion.nexusmods.com/mods/43632'' ]
+    url: [ 'http://oblivion.nexusmods.com/mods/43632' ]
 
   - name: 'Nehrim Fast Travel 2011.esp'
-    url: [ ''http://oblivion.nexusmods.com/mods/37374'' ]
+    url: [ 'http://oblivion.nexusmods.com/mods/37374' ]
     
   - name: 'DynamicFootPositionNehrim.esp'
-    url: [ ''http://oblivion.nexusmods.com/mods/42222'' ]
+    url: [ 'http://oblivion.nexusmods.com/mods/42222' ]
     
   - name: 'kuerteeNehrimBattleFatigueAndInjuries.esp'
-    url: [ ''http://oblivion.nexusmods.com/mods/24604'' ]
+    url: [ 'http://oblivion.nexusmods.com/mods/24604' ]
     
   - name: 'Giliad House for Sale.esp'
-    url: [ ''http://oblivion.nexusmods.com/mods/41868'' ]
+    url: [ 'http://oblivion.nexusmods.com/mods/41868' ]
 # ENDGROUP: Post Bashed Patch
 
   - name: 'Blacktache''s Secrets v3.esp'
