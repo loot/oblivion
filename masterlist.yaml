@@ -276,7 +276,7 @@ plugins:
     req:
       - *OBSE
       - name: 'OBSE\Plugins\OBME.dll'
-        display: '"[Oblivion Magic Extender](http://oblivion.nexusmods.com/mods/31981"'
+        display: '[Oblivion Magic Extender](http://oblivion.nexusmods.com/mods/31981)'
 # ENDGROUP: ESMs
 # BEGINGROUP: Earliest mods
 #
@@ -1977,7 +1977,7 @@ plugins:
   - name: 'Immersive Interiors.esp'
     req:
       - name: 'All Natural.esp'
-        display: '[All Natural](http://oblivion.nexusmods.com/mods/18305/?)'
+        display: '[All Natural](http://oblivion.nexusmods.com/mods/18305)'
     tag:
       - C.Water
   - name: 'Immersive Interiors - Lights Addon.esp'
@@ -3848,7 +3848,7 @@ plugins:
     req:
       - *OBSE
       - name: 'OBSE\Plugins\EnhancedMusicControl.dll'
-        display: '"[Enhanced Music & Control](http://oblivion.nexusmods.com/mods/19772"'
+        display: '[Enhanced Music & Control](http://oblivion.nexusmods.com/mods/19772)'
   - name: 'DarNifiedUI Config Addon.esp'
     req:
       - *OBSE
@@ -3856,7 +3856,7 @@ plugins:
         display: '[DarNified UI](http://oblivion.nexusmods.com/mods/10763) or [DarkUI''d DarN](http://oblivion.nexusmods.com/mods/11280)'
       - name: 'OBSE\Plugins\OBSE_Elys_Pluggy.dll'
         display: '[Pluggy](http://oblivion.nexusmods.com/mods/23979) or [Conscribe](http://oblivion.nexusmods.com/mods/26510)'
-        condition: '"not file("OBSE\Plugins\ConScribe.dll""'
+        condition: 'not file("OBSE\Plugins\ConScribe.dll")'
   - name: 'Demolish Plugin - HUD Display.esp'
     req:
       - name: 'OBSE\Plugins\OBSE_Elys_Pluggy.dll'
@@ -3898,7 +3898,7 @@ plugins:
     msg:
       - type: warn
         content: 'You must rename "OBSE_Elys_Pluggy.dll" to "OBSE_Elys_Pluggy_Hud.dll"'
-        condition: '"file("OBSE\Plugins\OBSE_Elys_Pluggy.dll") and not file("OBSE\Plugins\OBSE_Elys_Pluggy_Hud.dll""'
+        condition: 'file("OBSE\Plugins\OBSE_Elys_Pluggy.dll") and not file("OBSE\Plugins\OBSE_Elys_Pluggy_Hud.dll")'
     req:
       - *OBSE
       - name: 'OBSE\Plugins\OBSE_Elys_Pluggy.dll'
@@ -10175,7 +10175,7 @@ plugins:
       - Actors.Stats
       - SpellStats
   - name: 'DruidsTree.esp'
-    req: [ file("ShiveringIsles.esp") ]
+    req: [ 'ShiveringIsles.esp' ]
     msg: [ *needsCleaning ]
   - name: 'DSoSFortNocturnaSuppressio.esp'
     msg: [ *doNotClean ]
@@ -10837,7 +10837,7 @@ plugins:
         udr: 139
         itm: 20
   - name: 'Feudal Empire 300.esp'
-    inc: [ file("300_White Stallion 4.esp") ]
+    inc: [ '300_White Stallion 4.esp' ]
     msg:
       - type: warn
         content: 'Makes wild edits, see [special cleaning instructions](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide#300_White_Stallion_4.esp_Special_Cleaning_Instructions).'
