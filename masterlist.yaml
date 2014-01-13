@@ -33,12 +33,10 @@ common:
 # Other Strings
   - &dirtyUtil
     '[TES4Edit](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide)'
-    
 globals:
   - type: warn
     content: 'An update for BOSS (v3.0.0) has been released. Download it [here](http://code.google.com/p/better-oblivion-sorting-software/downloads/list).'
     condition: 'version("BOSS","3.0.0.0",<)'
-    
 plugins:
 # ESMs
   - name: 'Oblivion.esm'
@@ -7485,7 +7483,7 @@ plugins:
     inc:
       - 'Mart''s Monster Mod - More Wilderness Life No Gates.esp'
   - name: 'Mart''s Monster Mod - More Wilderness Life No Gates.esp'
-    inc: 
+    inc:
       - 'Mart''s Monster Mod - More Wilderness Life.esp'
     msg: [ *doNotClean ]
   - name: 'Mart''s Monster Mod - More Passive Wildlife.esp'
@@ -9632,7 +9630,7 @@ plugins:
         util: *dirtyUtil
         udr: 77
   - name: 'AyleidTemple.esp'
-    msg: 
+    msg:
       - type: warn
         content: 'Makes a wild edit to the water level in Shagol gro-Bumph''s house (block 6,1).'
         condition: 'checksum("AyleidTemple.esp", 4B14E3CD)'
@@ -12319,7 +12317,7 @@ plugins:
         util: *dirtyUtil
         udr: 16
   - name: 'Waterfront Shack.esp'
-    msg: 
+    msg:
       - type: warn
         content: 'Makes wild edits, see [special cleaning instructions](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide#Waterfront_Shack.esp_Special_Cleaning_Instructions).'
         condition: 'checksum("Waterfront Shack.esp", 4FD37830)'
@@ -24024,150 +24022,108 @@ plugins:
       - type: say
         content: 'Unnecessary as many windows are already lit.'
         condition: *nehrimCond
-
   - name: 'Nehrim Blackscreenfix.esp'
     msg:
       - type: warn
         content: 'Only compatible with the German 1.0.3 version of Nehrim.'
-
   - name: 'BookTrackerOBSE.esp'
     msg: [ *masterReassign ]
-
   - name: 'Duke Patricks - Who Goes There.esp'
     msg: [ *masterReassign ]
-
   - name: 'Immersive Combat Music.esp'
     msg: [ *masterReassign ]
-
   - name: 'Side''s EAX Control.esp'
     msg: [ *masterReassign ]
-
   - name: 'Spells Delete Only 3.2.esp'
     msg: [ *masterReassign ]
-
   - name: 'Oblivion Graphics Extender Support.esp'
     msg:
       - *masterReassign
       - type: warn
         content: 'The support plugin does not work. Shaders must be loaded using the shaderlist.'
         condition: *nehrimCond
-
   - name: 'Enhanced Hotkeys.esp'
     msg: [ *masterReassign ]
-
   - name: 'FastEquippingNehrim.esp'
     msg:
       - type: say
         content: 'Don''t use hotkeys to change Warcry-style ''set'' equipment. Game bug.'
-
   - name: 'DropLitTorchOBSE.esp'
     msg: [ *masterReassign ]
-
   - name: 'ROM Drop Lit Torches.esp'
     msg: [ *masterReassign ]
-
   - name: 'NehrimTEMP_ENGRISH_TEXT.esp'
     msg:
       - type: warn
         content: 'Outdated. Use [this](http://oblivion.nexusmods.com/mods/39736) instead.'
-
   - name: 'SM Encumbrance and Fatigue.esp'
     msg: [ *masterReassign ]
-
   - name: 'Spell Delete And Item Remove.esp'
     msg: [ *masterReassign ]
-
   - name: 'Spell Delete.esp'
     msg: [ *masterReassign ]
-
   - name: 'Item Remove.esp'
     msg: [ *masterReassign ]
-
   - name: 'attack and hide medium v2.1.esp'
     msg: [ *masterReassign ]
-
   - name: 'attack and hide easier v2.1.esp'
     msg: [ *masterReassign ]
-
   - name: 'attack and hide harder v2.1.esp'
     msg: [ *masterReassign ]
-
   - name: 'SM Combat Hide.esp'
     msg: [ *masterReassign ]
-
   - name: 'SDR Perks And Patches - Oblivion.esp'
     msg: [ *useNehrimVer ]
-
   - name: 'SDR_Perks And Patches (Oblivion).esp'
     msg: [ *useNehrimVer ]
-
   - name: 'StealthOverhaul.esp'
     msg: [ *masterReassign ]
-
   - name: 'Realistic Sneak for NPCs.esp'
     msg: [ *masterReassign ]
-
   - name: 'ZumbsLockpickingMod - OBSE.esp'
     msg: [ *masterReassign ]
-
   - name: 'ZumbsLockpickingMod - Hide Difficulty Addon.esp'
     msg: [ *masterReassign ]
-
   - name: 'Enhanced Grabbing.esp'
     msg: [ *masterReassign ]
-
   - name: 'Armorer''s Advantage.esp'
     msg: [ *masterReassign ]
-
   - name: 'BetterBlocking.esp'
     msg: [ *masterReassign ]
-
   - name: 'Denock Arrows.esp'
     msg: [ *masterReassign ]
-
   - name: 'PTSneakPenalties.esp'
     msg: [ *masterReassign ]
-
   - name: 'Intelligent Learning.esp'
     req: [ ..\obse_1_2_416.dll ]
-
   - name: 'ExponentialLev(Easy|Moderate|Hard|Extreme)\.esp'
     msg:
       - type: say
         content: 'Use only one Exponential Leveling plugin.'
-
   - name: 'CompanionMaster.esp'
     msg:
       - type: say
         content: 'Some menu functions may not work.'
         condition: *nehrimCond
-
   - name: 'ScreenControls.esp'
     msg: [ *masterReassign ]
-    
   - name: 'Ostian Enhanced.esp'
     url: [ 'http://oblivion.nexusmods.com/mods/43632' ]
-
   - name: 'Nehrim Fast Travel 2011.esp'
     url: [ 'http://oblivion.nexusmods.com/mods/37374' ]
-    
   - name: 'DynamicFootPositionNehrim.esp'
     url: [ 'http://oblivion.nexusmods.com/mods/42222' ]
-    
   - name: 'kuerteeNehrimBattleFatigueAndInjuries.esp'
     url: [ 'http://oblivion.nexusmods.com/mods/24604' ]
-    
   - name: 'Giliad House for Sale.esp'
     url: [ 'http://oblivion.nexusmods.com/mods/41868' ]
 # ENDGROUP: Post Bashed Patch
-
   - name: 'Blacktache''s Secrets v3.esp'
     dirty:
       - crc: 0xF69CC41C
         itm: 48
         udr: 155
         util: *dirtyUtil
-        
   - name: 'Happyhannah''s Wines.esp'
     tag: [ 'Relev' ]
     dirty:
@@ -24175,7 +24131,6 @@ plugins:
         itm: 1
         udr: 0
         util: *dirtyUtil
-        
   - name: 'Legends of Zefaro.esp'
     dirty:
       - crc: 0xDDFA1BAA
@@ -24183,38 +24138,32 @@ plugins:
         udr: 19
         util: *dirtyUtil
     url: [ 'http://oblivion.nexusmods.com/mods/43240' ]
-    
   - name: 'More Sigils-2599.esp'
     url: [ 'http://oblivion.nexusmods.com/mods/2599' ]
-    
   - name: 'icearmor.esp'
     dirty:
       - crc: 0x60F25FB1
         itm: 2
         udr: 0
         util: *dirtyUtil
-        
   - name: 'R18PN - Bikini Re-Textured.esp'
     dirty:
       - crc: 0x170FE3CC
         itm: 4
         udr: 1
         util: *dirtyUtil
-  
   - name: 'Queen''s Sword.esp'
     dirty:
       - crc: 0xBB4DC2F5
         itm: 13
         udr: 0
         util: *dirtyUtil
-        
   - name: 'wow.esp'
     dirty:
       - crc: 0x93ABA638
         itm: 2406
         udr: 0
         util: *dirtyUtil
-        
   - name: 'Glowing Respawning Varla & Welkynd Stones 14-28 Days.esp'
     dirty:
       - crc: 0x8AE493C9
@@ -24222,7 +24171,6 @@ plugins:
         udr: 173
         util: *dirtyUtil
     url: [ 'http://oblivion.nexusmods.com/43299' ]
-    
   - name: 'Glowing Respawning Varla & Welkynd Stones 7-14 Days.esp'
     dirty:
       - crc: 0x9C67E42A
@@ -24230,29 +24178,24 @@ plugins:
         udr: 173
         util: *dirtyUtil
     url: [ 'http://oblivion.nexusmods.com/43299' ]
-    
   - name: 'BetterInns + NewHomeOwners.esp'
     tag: [ 'Actors.AIPackages' ]
-    
   - name: 'Glowing Wonders.esp'
     dirty:
       - crc: 0x1D521050
         itm: 1
         udr: 0
         util: *dirtyUtil
-        
   - name: 'Knights - Revelation Vwalk.esp'
     tag:
       - Actors.Anims
       - NoMerge
     url: [ 'http://oblivion.nexusmods.com/mods/28223' ]
-      
   - name: 'SPTDiverseGuards-Core Vwalk.esp'
     tag:
       - Actors.Anims
       - NoMerge
     url: [ 'http://oblivion.nexusmods.com/mods/28223' ]
-    
   - name: 'MerryBellInn.esp'
     dirty:
       - crc: 0x46126974
@@ -24260,7 +24203,6 @@ plugins:
         udr: 14
         util: *dirtyUtil
     url: [ 'http://oblivion.nexusmods.com/mods/14853' ]
-    
   - name: 'SleepyCatInn.esp'
     dirty:
       - crc: 0xC8E4CF92
@@ -24268,7 +24210,6 @@ plugins:
         udr: 4
         util: *dirtyUtil
     url: [ 'http://oblivion.nexusmods.com/mods/14853' ]
-    
   - name: 'PinePeakLodge.esp'
     dirty:
       - crc: 0x1D4C3E0C
@@ -24276,16 +24217,12 @@ plugins:
         udr: 46
         util: *dirtyUtil
     url: [ 'http://oblivion.nexusmods.com/mods/14853' ]
-    
   - name: 'SingingStablehandInn.esp'
     url: [ 'http://oblivion.nexusmods.com/mods/14853' ]
-    
   - name: 'AFKWeye_MTC_RRLRumare_HOH Patch.esp'
     url: [ 'http://oblivion.nexusmods.com/mods/42718' ]
-    
   - name: 'OCR+Werewolf Patch.esp'
     url: [ 'http://oblivion.nexusmods.com/mods/32925' ]
-    
   - name: 'UA OMG 7.3 Patch.esp'
     dirty:
       - crc: 0x2EBC4670
@@ -24293,25 +24230,18 @@ plugins:
         udr: 1528
         util: *dirtyUtil
     url: [ 'http://oblivion.nexusmods.com/mods/32432' ]
-    
   - name: 'Guild Advancement-Universitum Arcanorum patch.esp'
     url: [ 'http://oblivion.nexusmods.com/mods/42870' ]
-    
   - name: 'Banes Guilds United LAME patch.esp'
     url: [ 'http://oblivion.nexusmods.com/mods/42261' ]
-    
   - name: 'Banes Guilds United Integration patch.esp'
     url: [ 'http://oblivion.nexusmods.com/mods/42261' ]
-    
   - name: 'Better Bell Sounds.esp'
     tag: [ 'Scripts' ]
-    
   - name: 'nu_female_player_idle.esp'
     url: [ 'http://oblivion.nexusmods.com/mods/43567' ]
-    
   - name: 'MTCEV-RoC Patch.esp'
     url: [ 'http://oblivion.nexusmods.com/mods/20218' ]
-    
   - name: 'QOTW Season Three.esp'
     dirty:
       - crc: 0x701E316B
@@ -24319,19 +24249,14 @@ plugins:
         udr: 1
         util: *dirtyUtil
     url: [ 'http://oblivion.nexusmods.com/mods/36336' ]
-    
   - name: 'DLCBattlehornCastleCOBL.esp'
     url: [ 'http://oblivion.nexusmods.com/mods/43166' ]
-    
   - name: 'CarahsCaravanRedux.esp'
     url: [ 'http://oblivion.nexusmods.com/mods/43464' ]
-        
   - name: 'Better Elixir of Exploration.esp'
     url: [ 'http://oblivion.nexusmods.com/mods/43674' ]
-    
   - name: 'SummonMerchantSpell.esp'
     url: [ 'http://oblivion.nexusmods.com/mods/30302' ]
-    
   - name: 'Morrowind_ob - UCWUS.esp'
     tag:
       - Invent
@@ -24342,13 +24267,10 @@ plugins:
         udr: 0
         util: *dirtyUtil
     url: [ 'http://morroblivion.com/forums/morroblivion/mods/2173' ]
-    
   - name: 'Morrowind_ob - Silt Striders.esp'
     url: [ 'http://morroblivion.com/forums/morroblivion/mods/2173' ]
-    
   - name: 'Morrowind_ob - Unique Grass.esp'
     url: [ 'http://morroblivion.com/forums/oblivion/morroblivion-mod-releases/3294' ]
-    
   - name: 'Morrowind_ob - Morroblivion_Chargen_And_Transport_Mod_v10.esp'
     dirty:
       - crc: 0x51563805
@@ -24356,7 +24278,6 @@ plugins:
         udr: 0
         util: *dirtyUtil
     url: [ 'http://morroblivion.com/forums/morroblivion/mods/2173' ]
-        
   - name: 'Morrowind_ob - MorroblivionTreeReplacer.esp'
     dirty:
       - crc: 0x7AF5966F
@@ -24364,24 +24285,19 @@ plugins:
         udr: 0
         util: *dirtyUtil
     url: [ 'http://morroblivion.com/forums/morroblivion/mods/2173' ]
-    
   - name: 'Morrowind_ob - ClothingReplacer.esp'
     tag: [ 'Names' ]
     url: [ 'http://morroblivion.com/forums/morroblivion/mods/2173' ]
-    
   - name: 'Morrowind_ob - Conversation.esp'
     tag:
       - Factions
       - Invent
       - Names
     url: [ 'http://morroblivion.com/forums/morroblivion/mods/2173' ]
-    
   - name: 'fg109EscortMission.esp'
     url: [ 'http://oblivion.nexusmods.com/mods/37734' ]
-    
   - name: 'JTP_GlassWeaponsRecolorsBLUE1.esp'
     url: [ 'http://oblivion.nexusmods.com/mods/28207' ]
-    
   - name: 'Blue-Glass Armor.esp'
     dirty:
       - crc: 0xE29C8B31
@@ -24389,23 +24305,19 @@ plugins:
         udr: 0
         util: *dirtyUtil
     url: [ 'http://oblivion.nexusmods.com/mods/9291' ]
-    
   - name: 'Chorrol_Dungeon.esp'
     dirty:
       - crc: 0x4B4E42AD
         itm: 1
         udr: 0
         util: *dirtyUtil
-    
   - name: 'Bandit_Creepy_Castle.esp'
     dirty:
       - crc: 0xFE34F837
         itm: 20
         udr: 0
         util: *dirtyUtil
-
   - name: 'Leveling Quick Fix 15.esp'
     url: [ 'http://oblivion.nexusmods.com/mods/38941' ]
-
   - name: 'Leveling Quick Fix 20.esp'
     url: [ 'http://oblivion.nexusmods.com/mods/38941' ]
