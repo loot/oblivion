@@ -35,6 +35,15 @@ common:
     '[TES4Edit](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide)'
 globals:
   - type: warn
+    content:
+      condition: version("BOSS","2.1.1.0",<)
+      - lang: eng
+        str: An update for BOSS (v2.1.1) has been released. Download it at "http://code.google.com/p/better-oblivion-sorting-software/downloads/list Google Code BOSS page."
+      - lang: rus
+        str: Вышло обновление для BOSS версии 2.1.1. Скачать его вы можете на "http://code.google.com/p/better-oblivion-sorting-software/downloads/list странице проекта BOSS", на Google Code.
+      - lang: spa
+        str: "Tu versión de BOSS es obsoleto Puedes descargar la nueva versión (v2.1.1) aquí: \"http://code.google.com/p/better-oblivion-sorting-software/downloads/list Google Code BOSS page.\""
+  - type: warn
     content: 'An update for BOSS (v3.0.0) has been released. Download it [here](http://code.google.com/p/better-oblivion-sorting-software/downloads/list).'
     condition: 'version("BOSS","3.0.0.0",<)'
 plugins:
