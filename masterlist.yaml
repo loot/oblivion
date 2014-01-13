@@ -1522,7 +1522,6 @@ plugins:
   - name: '7roads_screens.esp'
     tag:
       - Graphics
-
   - name: 'Atmospheric Loading Screens.esp'
     after:
       - type: say
@@ -12473,7 +12472,7 @@ plugins:
 # BEGINGROUP: DLC 3
   - name: 'DLCBattlehornCastle.esp'
     dirty:
-      - crc: 7048C609
+      - crc: 0x7048c609
         itm: 3
         udr: 74
         util: *dirtyUtil
@@ -24007,15 +24006,12 @@ plugins:
       - type: error
         content: 'This plugin should never be active. Deactivate immediately.'
         condition: 'active("FRLODToggleBasic.esp")'
-
   - name: 'NehrimEnglish.esp'
     after: [ All Natural Nehrim.esp ]
-
   - name: 'ASTnehrimHotfixes01(EN).esp'
     msg:
       - type: error
         content: 'Outdated. Use the [update](http://oblivion.nexusmods.com/mods/39736) instead.'
-
   - name: 'WindowLightingSystem.esp'
     msg:
       - *masterReassign
