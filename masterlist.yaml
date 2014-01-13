@@ -4,6 +4,7 @@ common:
   - &OBSE
     name: '../obse_loader.exe'
     display: '[OBSE](http://obse.silverlock.org)'
+
 # Conditions
   - &nehrimCond
     active("Nehrim.esm")
@@ -15,6 +16,7 @@ common:
     active("Oscuro's_Oblivion_Overhaul.esm")
   - &coblCond
     active("Cobl Main.esm")
+
 # Messages
   - &masterReassign
     type: say
@@ -33,19 +35,20 @@ common:
 # Other Strings
   - &dirtyUtil
     '[TES4Edit](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide)'
+
 globals:
-  - type: warn
+  - type: say
+    condition: 'version("BOSS","3.0.0.0",<=)'
+    content: 'All Beta updates for BOSS (v3.0.0) can be downloaded [here](https://github.com/boss-developers/boss-code/releases).'
+  - type: say
     content:
-      condition: version("BOSS","2.1.1.0",<)
       - lang: eng
-        str: An update for BOSS (v2.1.1) has been released. Download it at "http://code.google.com/p/better-oblivion-sorting-software/downloads/list Google Code BOSS page."
+        str: '[Latest BOSS thread](http://forums.bethsoft.com/topic/1434397-rel-boss-for-oblivion/).'
       - lang: rus
-        str: Вышло обновление для BOSS версии 2.1.1. Скачать его вы можете на "http://code.google.com/p/better-oblivion-sorting-software/downloads/list странице проекта BOSS", на Google Code.
+        str: '[Обсуждение BOSS \"(Eng)\"](http://forums.bethsoft.com/topic/1434397-rel-boss-for-oblivion/).'
       - lang: spa
-        str: "Tu versión de BOSS es obsoleto Puedes descargar la nueva versión (v2.1.1) aquí: \"http://code.google.com/p/better-oblivion-sorting-software/downloads/list Google Code BOSS page.\""
-  - type: warn
-    content: 'An update for BOSS (v3.0.0) has been released. Download it [here](http://code.google.com/p/better-oblivion-sorting-software/downloads/list).'
-    condition: 'version("BOSS","3.0.0.0",<)'
+        str: '[Forum de BOSS](http://forums.bethsoft.com/topic/1434397-rel-boss-for-oblivion/).'
+
 plugins:
 # ESMs
   - name: 'Oblivion.esm'
