@@ -5,17 +5,25 @@ common:
     name: '..\obse_loader.exe'
     display: '[OBSE](http://obse.silverlock.org)'
 
+
 # Conditions
   - &nehrimCond
     active("Nehrim.esm")
   - &tes4Cond
     active("Oblivion.esm")
+# IF FILE("FCOM_Convergence.esm") SET: FCOM
   - &FCOMCond
     active("FCOM_Convergence.esm")
+# IF FILE("Oscuro's_Oblivion_Overhaul.esm") SET: OOO
   - &OOOCond
     active("Oscuro's_Oblivion_Overhaul.esm")
   - &coblCond
     active("Cobl Main.esm")
+
+# Masterlist variable setup for BOSS v1.7+.
+# IF FILE("Better Cities Resources.esm") SET: BC
+# IF REGEX("Bashed Patch.*\.esp") SET: BP
+# IF FILE("Cosmetic Compilation.esp") SET: CC1
 
 # Messages
   - &masterReassign
@@ -40,6 +48,8 @@ globals:
   - type: say
     condition: 'version("BOSS","3.0.0.0",<=)'
     content: 'All Beta updates for BOSS (v3.0.0) can be downloaded [here](https://github.com/boss-developers/boss-code/releases).'
+  - type: say
+    content: The next major release of BOSS is now open for "https://github.com/boss-developers/boss-code/wiki/BOSSv3-Beta-Testing beta testing". Anyone wishing to help test must have a BethSoft forum account and be comfortable with using TES4Edit to view conflicts.
   - type: say
     content:
       - lang: eng
@@ -296,6 +306,8 @@ plugins:
       - Actors.ACBS
       - NoMerge
     priority: -2
+# Guesing that this is a Polish reanslation of Oblivion, so loading early. Link supplied was for an unrelated mod.
+# Oblivion PL.esp
   - name: 'HrmnsOblivionScriptOptimizationv1.0.esp'
     msg:
       - type: warn
@@ -305,7 +317,8 @@ plugins:
         content: 'Not recommended for use as there is no measurable performance improvement.'
         condition: 'checksum("HrmnsOblivionScriptOptimizationv1.0.esp",FEED7422)'
     priority: -2
-# Apparently needs to load bloody early. Doesn''t seem like it matters, considering that it doesn''t improve performance.
+# This really does need to load this early.
+# Apparently needs to load bloody early. Doesn't seem like it matters, considering that it doesn't improve performance.
   - name: 'HrmnsOblivionScriptOptimizationv SI 1.0.esp'
     msg:
       - type: warn
@@ -415,7 +428,7 @@ plugins:
     priority: -2
 # ENDGROUP: Earliest mods
 # BEGINGROUP: NPC face mods
-#
+# Bash and deactivate to keep new faces with NPC altering mods later.
 # These should all be tagged with Deactivate, NoMerge, and NPCFaces, and should have priority -2.
   - name: 'Better Looking NPC.esp'
     tag:
@@ -950,6 +963,9 @@ plugins:
     priority: -2
 # ENDGROUP: NPC face mods
 # BEGINGROUP: Vanilla fixes
+# Everything else must be allowed to override these.
+# UOP v3.0.1 or later should be used to fix buggy vanilla quests rather than these -
+# - some fixes I can't find in documentation but am fairly sure UOP would have picked them up.
   - name: 'OblivionMsg.esp'
     tag:
       - Names
@@ -1193,6 +1209,7 @@ plugins:
         content: 'Outdated. Update to newest version of Permanent Effects from Quest Items fix.'
 # ENDGROUP: Post UOP fixes
 # BEGINGROUP: Non-English Language fixes
+# have to be after UOP in some cases
   - name: 'Obl-IM.esp'
     tag:
       - Delev
@@ -1212,6 +1229,8 @@ plugins:
       - Names
 # ENDGROUP: Non-English Language fixes
 # BEGINGROUP: Shivering Isles
+# IFNOT FILE("OblivionMsg.esp") MOD: DLCShiveringIsles.esp
+# Load here if not russian GOTY, see comment about this.
   - name: 'Traduccion Mejorada S.I.esp'
     tag:
       - Names
@@ -1221,6 +1240,7 @@ plugins:
   - name: 'FormID_Reference_Bug_Fix.esp'
     inc:
       - 'Unofficial Shivering Isles Patch.esp'
+# These are chinese mods, must load before USIP but after SI.
   - name: 'tes4SI-CHS-alpha.esp'
     tag:
       - Names
@@ -1531,6 +1551,7 @@ plugins:
         content: 'Do not use with MMMforFrans. Already integrated.'
 # ENDGROUP: Initial Fran''s files for FCOM
 # BEGINGROUP: Loading Screen Alternatives
+# Unlikely to interact with other mods but OOO will overwrite vanilla replacers if not correctly Bash Patched.
   - name: '7roads_screens.esp'
     tag:
       - Graphics
@@ -1611,7 +1632,14 @@ plugins:
       - type: say
         content: 'Make sure that any mod that replaces the graphics of the loading screens is tagged with Graphics, otherwise this mod will revert them to vanilla'
 # ENDGROUP: Loading Screen Alternatives
+
+# BEGINGROUP: Base Mods
+# Mods that can be overridden in part.
+# Low priority mods.
+# New Items, NPCs & creatures that are not overrides of other mods.
+# 'Library' mods.
 # BEGINGROUP: Weather mods and overhauls
+# Unlikely to be affected by anything but sound mods.
   - name: 'oc_darker_nights.esp'
     msg:
       - type: say
@@ -2029,7 +2057,11 @@ plugins:
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
         condition: 'regex("Bashed Patch.*\.esp")'
 # ENDGROUP: Weather mods and overhauls
+
 # BEGINGROUP: Water and lava tweaks
+# All of these simply alter water shader rendering settings - no Bashed Patch tags are needed
+# or appropriate except for in some cases C.Water.
+# Possible dirty edits mean they should go before landscape changing mods.
   - name: 'AdvancedWater.esp'
     tag:
       - C.Water
@@ -2090,7 +2122,9 @@ plugins:
     tag:
       - C.Water
 # ENDGROUP: Water and lava tweaks
+
 # BEGINGROUP: Sound mods
+# Let other mods override as needed. Sometimes overrides weather overhauls with better lightening sounds etc.
   - name: 'Idle Dialogue.esp'
     dirty:
       - crc: 0xf3ddd964
@@ -2489,6 +2523,7 @@ plugins:
         util: *dirtyUtil
 # ENDGROUP: Sound mods
 # BEGINGROUP: Lighting
+# Should load early to allow more 'important' mods to override.
   - name: 'Real_Lights.esp'
     msg:
       - type: say
@@ -2556,7 +2591,11 @@ plugins:
       - type: say
         content: '"Requires: OBSE and ''You Are Here''. ScreenEffects for versions below 1.3."'
 # ENDGROUP: Lighting
+
 # BEGINGROUP: General Base Mods
+# Includes nearly all new items (except weapons and armor).
+# Low priority mods.
+# BEGINGROUP: Base #
   - name: '00crystalTorch.esp'
     dirty:
       - crc: 0xe7a1bce7
@@ -2578,6 +2617,9 @@ plugins:
         util: *dirtyUtil
       - crc: 0x876daca1
         util: *dirtyUtil
+# ENDGROUP: Base #
+
+# BEGINGROUP: Base A
   - name: 'AddActorValues_example.esp'
     msg:
       - type: say
