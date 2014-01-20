@@ -6158,6 +6158,7 @@ plugins:
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
       - Invent
+# ENDGROUP: RealSwords
   - name: 'Mage Equipment.esp'
     msg:
       - type: say
@@ -24099,6 +24100,10 @@ plugins:
       - Relev
       - Stats
 # ENDGROUP: Pre Bash
+
+# BEGINGROUP: Bashed Patch
+# ENDGROUP: Bashed Patch
+
 # BEGINGROUP: Post Bashed Patch
   - name: 'Creeper.esp'
     dirty:
@@ -24124,6 +24129,8 @@ plugins:
     msg: [ *doNotClean ]
   - name: 'Vanilla Weapon Stat Override - SI.esp'
     msg: [ *doNotClean ]
+# BEGINGROUP: Unavailable/Obsolete Duke Patrick's Mods
+# Mods that are not available for download. They have been sorted according to Duke Patrick's load order guidelines, where given.
   - name: 'Duke Patrick ShiveringIsles patch 1.1.esp'
     msg:
       - type: say
@@ -24212,6 +24219,13 @@ plugins:
     msg:
       - type: say
         content: 'Obsolete. Do not use with latest version of SCA Combat Archery.'
+# ENDGROUP: Unavailable/Obsolete Duke Patrick's Mods
+# BEGINGROUP: Map Changes
+# any map changing files esp have to go dead last
+# ENDGROUP: Map Changes
+
+# BEGINGROUP: LOD Togglers
+# These should never be in the active load order.
   - name: 'KRLODToggleRestored.esp'
     msg:
       - type: error
@@ -24227,6 +24241,7 @@ plugins:
       - type: error
         content: 'This plugin should never be active. Deactivate immediately.'
         condition: 'active("FRLODToggleBasic.esp")'
+# ENDGROUP: LOD Togglers
   - name: 'NehrimEnglish.esp'
     after: [ All Natural Nehrim.esp ]
   - name: 'ASTnehrimHotfixes01(EN).esp'
