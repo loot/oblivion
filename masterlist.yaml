@@ -2,7 +2,7 @@
 common:
 # Files
   - &OBSE
-    name: '../obse_loader.exe'
+    name: '..\obse_loader.exe'
     display: '[OBSE](http://obse.silverlock.org)'
 
 # Conditions
@@ -50,7 +50,7 @@ globals:
         str: '[Forum de BOSS](http://forums.bethsoft.com/topic/1434397-rel-boss-for-oblivion/).'
 
 plugins:
-# ESMs
+# BEGINGROUP: ESMs
   - name: 'Oblivion.esm'
     msg:
       - type: error
@@ -1495,7 +1495,7 @@ plugins:
       - type: say
         content: 'Do not use with MMM/FCOM. Already integrated.'
 # ENDGROUP: Post BSA
-# BEGINGROUP: Initial Fran''s files for FCOM
+# BEGINGROUP: Initial Fran's files for FCOM
   - name: 'Francesco''s Optional Chance of Stronger Enemies.esp'
     dirty:
       - crc: 0x4f003db0
@@ -5964,8 +5964,12 @@ plugins:
     inc:
       - 'Mage Equipment - No Manni.esp'
       - 'Mage Equipment.esp'
+# To be alphabetically sorted sometime.
+# ENDGROUP: Items Late
 # ENDGROUP: Items (armor and weapons)
 # BEGINGROUP: Body Replacer Armour & Clothing
+# Stuff for use with body replacers.
+# VITAL for overhaul mod users: Wrye Bash tag all armor replacers {{BASH: Graphics}} to keep their new look.
   - name: 'All Manly.esp'
     tag:
       - Graphics
