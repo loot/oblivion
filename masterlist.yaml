@@ -24102,15 +24102,17 @@ plugins:
 # ENDGROUP: Pre Bash
 
 # BEGINGROUP: Bashed Patch
+  - name: 'Bashed Patch, .+\.esp'
+    Priority: 400
 # ENDGROUP: Bashed Patch
 
 # BEGINGROUP: Post Bashed Patch
   - name: 'Creeper.esp'
     dirty:
       - crc: 0x8a4423ba
+        util: *dirtyUtil
         itm: 0
         udr: 1
-        util: *dirtyUtil
   - name: 'Ahtata Arquamer spike4hair.esp'
     tag:
       - Body-F
