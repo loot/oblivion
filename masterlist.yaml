@@ -6489,8 +6489,9 @@ plugins:
       - Scripts
   - name: 'Athletics While Riding.esp'
     msg:
-      - type: say
+      - type: warn
         content: 'Requires: OBSE v18+.'
+        condition: 'version("../obse_loader.exe", "0.0.18.0", <)'
   - name: 'CDM-Horses.esp'
     msg:
       - type: say
@@ -6605,15 +6606,14 @@ plugins:
     tag:
       - Graphics
   - name: 'Zira''s Horse Modpack - Heavy Legion Horses.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: Zira''s Horse Modpack - Armored Legion Horses.esp'
+    inc:
+      - 'Zira''s Horse Modpack - Armored Legion Horses.esp'
   - name: 'Zira''s Horse Modpack - Armored Legion Horses.esp'
+    inc:
+      - 'Zira''s Horse Modpack - Heavy Legion Horses.esp'
     msg:
       - type: say
         content: 'Requires: Official Horse Armor DLC'
-      - type: say
-        content: 'Incompatible with: Zira''s Horse Modpack - Heavy Legion Horses.esp'
   - name: 'MD Saddlebags V3.0.esp'
     msg:
       - type: say
@@ -6688,12 +6688,14 @@ plugins:
     msg:
       - type: say
         content: 'Only use this or Goblin Realswords.esp (or FCOM)'
+        condition: 'file("FCOM_Convergence.esm") or file("Goblin Realswords.esp")'
     tag:
       - Graphics
   - name: 'Goblin Realswords.esp'
     msg:
       - type: say
         content: 'Only use this or Goblin Realswords+Tribal Shields.esp (or FCOM)'
+        condition: 'file("FCOM_Convergence.esm") or file("Goblin Realswords+Tribal Shields.esp")'
   - name: 'Mart''s Monster Mod - Hemingweys NPC and Guard Capes.esp'
     tag:
       - Invent
@@ -13613,6 +13615,7 @@ plugins:
     msg:
       - type: say
         content: 'Incompatible with: ElsweyrAnequina - SevereDesert NoSpider.esp'
+        condition: 'file("ElsweyrAnequina - SevereDesert NoSpider.esp")'
   - name: 'ElsweyrAnequina - SevereDesert NoSpider.esp'
     msg:
       - type: say
@@ -14919,13 +14922,11 @@ plugins:
       - type: say
         content: 'Versions less than 3.1 may cause the quest being patched to restart if installed after the quest has started. Update to the latest delayer if you suspect a problem.'
   - name: 'CastleSeaview+LostCoast Patch.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: EaglesRest+LostCoast+CastleSeaview Patch.esp'
+    inc:
+      - 'EaglesRest+LostCoast+CastleSeaview Patch.esp'
   - name: 'EaglesRest+LostCoast+CastleSeaview Patch.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: CastleSeaview+LostCoast Patch.esp'
+    inc:
+      - 'CastleSeaview+LostCoast Patch.esp'
   - name: 'Castle Wolfspike2.esp'
     dirty:
       - crc: 0x69690c28
@@ -14964,9 +14965,8 @@ plugins:
         util: *dirtyUtil
         udr: 1910
   - name: 'Miscarcand Expanded.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: The Ruins of Miscarcand.esp'
+    inc:
+      - 'The Ruins of Miscarcand.esp'
   - name: 'bartholm.esp'
     dirty:
       - crc: 0x410debeb
@@ -21132,9 +21132,8 @@ plugins:
       - type: say
         content: 'If you use Entius Gorge you need the compatibility patch found [here](http://oblivion.nexusmods.com/mods/13834).'
   - name: 'Companion-Hilda.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: Companion Neeshka.esp'
+    inc:
+      - 'Companion Neeshka.esp'
   - name: 'Companion Neeshka.esp'
     tag:
       - Hair
