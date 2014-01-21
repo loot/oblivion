@@ -9186,7 +9186,7 @@ plugins:
     msg:
       - type: warn
         content: 'Use ''CNRP Bruma4OOO.esp'' instead.'
-        condition: '( *FCOMCond ) or file("Oscuro''s_Oblivion_Overhaul.esm")'
+        condition: 'active("FCOM_Convergence.esm") or active("Oscuro''s_Oblivion_Overhaul.esm")'
     tag:
       - Invent
   - name: 'CNRP Bruma4OOO.esp'
@@ -9196,7 +9196,7 @@ plugins:
     msg:
       - type: warn
         content: 'Use ''CNRP Chorrol4OOO.esp'' instead.'
-        condition: '( *FCOMCond ) or file("Oscuro''s_Oblivion_Overhaul.esm")'
+        condition: 'active("FCOM_Convergence.esm") or active("Oscuro''s_Oblivion_Overhaul.esm")'
     tag:
       - Invent
   - name: 'CNRP Chorrol4OOO.esp'
@@ -9206,7 +9206,7 @@ plugins:
     msg:
       - type: warn
         content: 'Use ''CNPR DB for OOO.esp'' instead.'
-        condition: '( *FCOMCond ) or file("Oscuro''s_Oblivion_Overhaul.esm")'
+        condition: 'active("FCOM_Convergence.esm") or active("Oscuro''s_Oblivion_Overhaul.esm")'
     tag:
       - Graphics
       - Invent
@@ -9225,7 +9225,7 @@ plugins:
     msg:
       - type: warn
         content: 'Use ''CNRP Cheydinhall4OOO.esp'' instead.'
-        condition: '( *FCOMCond ) or file("Oscuro''s_Oblivion_Overhaul.esm")'
+        condition: 'active("FCOM_Convergence.esm") or active("Oscuro''s_Oblivion_Overhaul.esm")'
     tag:
       - Invent
   - name: 'CNRP Cheydinhal4OOO.esp'
@@ -9238,7 +9238,7 @@ plugins:
     msg:
       - type: warn
         content: 'Use ''CNRP FightersGuild4OOO.esp'' instead.'
-        condition: '( *FCOMCond ) or file("Oscuro''s_Oblivion_Overhaul.esm")'
+        condition: 'active("FCOM_Convergence.esm") or active("Oscuro''s_Oblivion_Overhaul.esm")'
     tag:
       - Invent
   - name: 'CNRP FightersGuild4OOO.esp'
@@ -9270,6 +9270,7 @@ plugins:
     msg:
       - type: say
         content: 'Use only if you are using "Francesco''s Optional Leveled Quests.esp".'
+        condition: 'not file("Francesco''s Optional Leveled Quests.esp")'
     dirty:
       - crc: 0xabe6443d
         util: *dirtyUtil
@@ -9291,6 +9292,7 @@ plugins:
         condition: *OOOCond
       - type: say
         content: 'Only use one IABane Oils X.esp'
+        condition: 'regex("IABaneOils (1000|500|250|100)\.esp")'
     tag:
       - Factions
   - name: 'IABaneOils 1000.esp'
@@ -9300,6 +9302,7 @@ plugins:
         condition: *OOOCond
       - type: say
         content: 'Only use one IABane Oils X.esp'
+        condition: 'regex("IABaneOils (Wimpy|500|250|100)\.esp")'
     tag:
       - Factions
   - name: 'IABaneOils 500.esp'
@@ -9309,6 +9312,7 @@ plugins:
         condition: *OOOCond
       - type: say
         content: 'Only use one IABane Oils X.esp'
+        condition: 'regex("IABaneOils (Wimpy|1000|250|100)\.esp")'
     tag:
       - Factions
   - name: 'IABaneOils 250.esp'
@@ -9318,6 +9322,7 @@ plugins:
         condition: *OOOCond
       - type: say
         content: 'Only use one IABane Oils X.esp'
+        condition: 'regex("IABaneOils (Wimpy|1000|500|100)\.esp")'
     tag:
       - Factions
   - name: 'IABaneOils 100.esp'
@@ -9327,6 +9332,7 @@ plugins:
         condition: *OOOCond
       - type: say
         content: 'Only use one IABane Oils X.esp'
+        condition: 'regex("IABaneOils (Wimpy|1000|500|250)\.esp")'
     tag:
       - Factions
   - name: 'Modified Bandits.esp'
@@ -9372,26 +9378,27 @@ plugins:
       - crc: 0x274ba125
         util: *dirtyUtil
   - name: 'Roleplaying_Expansion.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: ''Mysteries Of Atrene Camp.esp'', ''Kragenir''s Death Quest.esp'' and ''xulCheydinhalFalls.esp''.'
+    inc:
+      - 'Mysteries Of Atrene Camp.esp'
+      - 'Kragenir''s Death Quest.esp'
+      - 'xulCheydinhalFalls.esp'
   - name: 'Suliin V1.2.esp'
     dirty:
       - crc: 0x5802804a
         util: *dirtyUtil
         udr: 118
   - name: 'Quelldorf 1.5.esp'
+    inc: 'Suliin V1.2.esp'
     msg:
       - type: say
-        content: 'Incompatible with: Suliin v1.2.'
-      - type: say
         content: 'Use Quelldorf or Quelldorf ohn Schiff but not both at the same time.'
+        condition: 'file("Quelldorf ohne Schiff1.5.esp")'
   - name: 'Quelldorf ohne Schiff1.5.esp'
+    inc: 'Suliin V1.2.esp'
     msg:
       - type: say
-        content: 'Incompatible with: Suliin v1.2.'
-      - type: say
         content: 'Use Quelldorf or Quelldorf ohn Schiff but not both at the same time.'
+        condition: 'file("Quelldorf 1.5.esp")'
   - name: 'KvatchAftermath.esp'
     dirty:
       - crc: 0x8997d4f1
@@ -9409,6 +9416,7 @@ plugins:
     msg:
       - type: say
         content: 'Rename to Halcyon Island.esp if using the file ''Better Cities - Halcyon Island.esp''.'
+        condition: 'file("Better Cities - Halcyon Island.esp")'
   - name: 'KnightlyArmory.esp'
     dirty:
       - crc: 0xcb971f26
@@ -9481,10 +9489,12 @@ plugins:
     msg:
       - type: say
         content: 'Use only one 00RBScribeSupplies mod at a time.'
+        condition: 'file("00RBScribeSupplies02, read summary.esp")'
   - name: '00RBScribeSupplies02, read summary.esp'
     msg:
       - type: say
         content: 'Use only one 00RBScribeSupplies mod at a time.'
+        condition: 'file("00RBScribeSupplies Intensive.esp")'
   - name: '0WeynonPrioryAlive.esp'
     tag:
       - Graphics
@@ -9526,15 +9536,14 @@ plugins:
         util: *dirtyUtil
         udr: 2
   - name: 'A Not So Simple Cave Retreat.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: ''A Not So Simple Cave Retreat - Coblized.esp''.'
+    inc:
+      - 'A Not So Simple Cave Retreat - Coblized.esp'
   - name: 'A Not So Simple Cave Retreat - Coblized.esp'
+    inc:
+      - 'A Not So Simple Cave Retreat.esp'
     msg:
       - type: say
         content: 'Requires: COBL.'
-      - type: say
-        content: 'Incompatible with: ''A Not So Simple Cave Retreat.esp''.'
   - name: 'AbuEmir01.esp'
     msg:
       - type: say
@@ -9591,10 +9600,12 @@ plugins:
     msg:
       - type: say
         content: 'Use this instead ''Akaviri Imports.esp'' for FCOM. Deactivate or delete ''Akaviri Imports.esp'''
+        condition: 'file("Akaviri Imports.esp")'
   - name: 'Akaviri Imports MOBS.esp'
     msg:
       - type: say
         content: 'Use this instead ''Akaviri Imports.esp'' for FCOM. Deactivate or delete ''Akaviri Imports.esp'''
+        condition: 'file("Akaviri Imports.esp")'
   - name: 'AkavirLegendsREs.esp'
     tag:
       - Graphics
@@ -9643,6 +9654,10 @@ plugins:
       - crc: 0x5838b616
         util: *dirtyUtil
   - name: 'allinonebasement.esp'
+    msg:
+      - type: say
+        content: 'Use only one allinonebasement plugin.'
+        condition: 'file("allinonebasement_COBLnoCM.esp")'
     dirty:
       - crc: 0xc5f94af4
         util: *dirtyUtil
@@ -9650,6 +9665,7 @@ plugins:
     msg:
       - type: say
         content: 'Use only one allinonebasement plugin.'
+        condition: 'file("allinonebasement.esp")'
     dirty:
       - crc: 0xa7c0e846
         util: *dirtyUtil
@@ -9701,18 +9717,22 @@ plugins:
     msg:
       - type: say
         content: 'Use only one Anvil_MorningGlory mod module.'
+        condition: 'regex("Anvil_MorningGloryBetterCities_(Orange|Purple|Mixed)\.esp")'
   - name: 'Anvil_MorningGloryBetterCities_Orange.esp'
     msg:
       - type: say
         content: 'Use only one Anvil_MorningGlory mod module.'
+        condition: 'regex("Anvil_MorningGloryBetterCities_(Blue|Purple|Mixed)\.esp")'
   - name: 'Anvil_MorningGloryBetterCities_Purple.esp'
     msg:
       - type: say
         content: 'Use only one Anvil_MorningGlory mod module.'
+        condition: 'regex("Anvil_MorningGloryBetterCities_(Blue|Orange|Mixed)\.esp")'
   - name: 'Anvil_MorningGloryBetterCities_Mixed.esp'
     msg:
       - type: say
         content: 'Use only one Anvil_MorningGlory mod module.'
+        condition: 'regex("Anvil_MorningGloryBetterCities_(Blue|Orange|Purple)\.esp")'
   - name: 'Aqua_City_01.esp'
     msg:
       - type: say
@@ -9722,7 +9742,7 @@ plugins:
   - name: 'Arcane Services.esp'
     msg:
       - type: say
-        content: 'Requires: OBSE & SI'
+        content: 'Requires: OBSE & Shivering Isles'
     dirty:
       - crc: 0x15ffc768
         util: *dirtyUtil
@@ -9799,9 +9819,8 @@ plugins:
       - Graphics
       - NoMerge
   - name: 'DMRA BBB Artifacts Complete.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: dmra_bbb_artifacts.esp'
+    inc:
+      - 'dmra_bbb_artifacts.esp'
     tag:
       - Graphics
       - NoMerge
@@ -9841,10 +9860,12 @@ plugins:
     msg:
       - type: say
         content: 'Use the Cobl version or the non-Cobl version, not both.'
+        condition: 'active("Automagicon_Cobl.esp")'
   - name: 'Automagicon_Cobl.esp'
     msg:
       - type: say
         content: 'Use the Cobl version or the non-Cobl version, not both.'
+        condition: 'active("Automagicon.esp")'
       - type: say
         content: 'Requires: Cobl'
   - name: 'AWitchTale.esp'
@@ -9910,7 +9931,6 @@ plugins:
       - C.Owner
       - Graphics
       - Names
-    url: [ http://oblivion.nexusmods.com/mods/25319 ]
   - name: 'Better Abandoned House - Interior Only.esp'
     tag:
       - C.Name
@@ -9955,22 +9975,27 @@ plugins:
     msg:
       - type: say
         content: 'Only use one BBM AN-II Patch.'
+        condition: 'regex("Better Benirus Manor (for Cobl - Complete|- Interior Only|for Cobl - Interior Only) - AN-II Patch\.esp")'
   - name: 'Better Benirus Manor for Cobl - Complete - AN-II Patch.esp'
     msg:
       - type: say
         content: 'Only use one BBM AN-II Patch.'
+        condition: 'regex("Better Benirus Manor (- Complete|- Interior Only|for Cobl - Interior Only) - AN-II Patch\.esp")'
   - name: 'Better Benirus Manor - Interior Only - AN-II Patch.esp'
     msg:
       - type: say
         content: 'Only use one BBM AN-II Patch.'
+        condition: 'regex("Better Benirus Manor (- Complete|for Cobl - Complete|for Cobl - Interior Only) - AN-II Patch\.esp")'
   - name: 'Better Benirus Manor for Cobl - Interior Only - AN-II Patch.esp'
     msg:
       - type: say
         content: 'Only use one BBM AN-II Patch.'
+        condition: 'regex("Better Benirus Manor (- Complete|for Cobl - Complete|- Interior Only) - AN-II Patch\.esp")'
   - name: 'ElsweyrFaregylRoad.esp'
     msg:
       - type: say
         content: 'Do not use if using ElsweyrAnequina.esp.'
+        condition: 'active("ElsweyrAnequina.esp")'
   - name: 'Black ocean.esp'
     msg:
       - type: say
@@ -10023,7 +10048,7 @@ plugins:
         udr: 12
   - name: 'Bjornheim.esp'
     msg:
-      - type: say
+      - type: warn
         content: 'This ESP has critical errors and should not be used in an active game. Regular TES4Edit cleaning is not enough to repair it.'
   - name: 'BossPhaitCrab.esp'
     msg:
@@ -10048,14 +10073,15 @@ plugins:
     msg:
       - type: say
         content: 'Revamp of the older mod HackdirtCaverns.esp, do not use both at the same time.'
+        condition: 'file("HackdirtCaverns.esp")'
     dirty:
       - crc: 0x9294634b
         util: *dirtyUtil
         udr: 4
   - name: 'DeepHackdairt.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: HackdirtTheDeepOnes.esp and HackdirtCaverns.esp'
+    inc:
+      - 'HackdirtCaverns.esp'
+      - 'HackdirtTheDeepOnes.esp'
   - name: 'BrotherhoodRenewed.esp'
     tag:
       - Actors.AIPackages
