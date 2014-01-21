@@ -3287,9 +3287,10 @@ plugins:
       - crc: 0x2eaee466
         util: *dirtyUtil
   - name: 'BetterMusicSystem.esp'
+    req: [ *OBSE ]
     msg:
       - type: say
-        content: 'Requires: OBSE, Enhanced Music & Control v0.72B (OBSE-Plugin) & SoundCommands v4.0 (OBSE-Plugin)'
+        content: 'Requires: Enhanced Music & Control v0.72B (OBSE-Plugin) & SoundCommands v4.0 (OBSE-Plugin)'
       - type: say
         content: 'Outdated. Update to version 2+.'
   - name: 'Mud Crabs!.esp'
@@ -3391,9 +3392,10 @@ plugins:
       - type: say
         content: 'Requires: OBSE.'
   - name: 'pmRealTimeInteractions.esp'
+    req: [ *OBSE ]
     msg:
       - type: say
-        content: 'Requires: OBSE, MenuQue'
+        content: 'Requires: MenuQue'
     dirty:
       - crc: 0x94805075
         util: *dirtyUtil
@@ -3447,9 +3449,7 @@ plugins:
       - crc: 0x0
         util: *dirtyUtil
   - name: 'QuickEquipSwap.esp'
-    msg:
-      - type: say
-        content: 'Requires: OBSE'
+    req: [ *OBSE ]
 # ENDGROUP: Base Q
 
 # BEGINGROUP: Base R
@@ -4098,9 +4098,7 @@ plugins:
 # BEGINGROUP: Hotkeys
 # Load order independent. Use only one unless documentation says otherwise.
   - name: 'Clock Hotkey.esp'
-    msg:
-      - type: say
-        content: 'Requires: OBSE'
+    req: [ *OBSE ]
   - name: 'Expanded Hotkeys and Spell Delete v1.0.esp'
     msg:
       - type: say
@@ -10087,9 +10085,10 @@ plugins:
       - Actors.AIPackages
       - Factions
   - name: 'BrotherhoodRenewed - Oblivion XP Patch.esp'
+    req: [ *OBSE ]
     msg:
       - type: say
-        content: 'Requires: OBSE, Oblivion XP'
+        content: 'Requires: Oblivion XP'
   - name: 'Bullock.esp'
     dirty:
       - crc: 0x2b5e16cb
@@ -10106,9 +10105,7 @@ plugins:
         util: *dirtyUtil
         udr: 23
   - name: 'BXX Tamriel Resource Exchange.esp'
-    msg:
-      - type: say
-        content: 'Requires: OBSE.'
+    req: [ *OBSE ]
   - name: 'Cardac.esp'
     dirty:
       - crc: 0x39f1a5a7
@@ -10165,10 +10162,8 @@ plugins:
         util: *dirtyUtil
         udr: 1057
   - name: 'Castle_Highrock.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: TheNecromancer.esp'
-        condition: 'file("TheNecromancer.esp")'
+    inc:
+      - 'TheNecromancer.esp'
     dirty:
       - crc: 0x5822a5fd
         util: *dirtyUtil
@@ -10196,7 +10191,7 @@ plugins:
         udr: 15
   - name: 'Cheydinhal Petshop.esp'
     msg:
-      - type: say
+      - type: warn
         content: 'Has critical flaw affecting numerous mods. Remove immediately. Recommend replacing with Insanity''s Pet Shop for same functionality.'
   - name: 'cloudcity mod V1.1.esp'
     dirty:
@@ -10278,12 +10273,14 @@ plugins:
     msg:
       - type: say
         content: 'Use only one ''Companion Gate.esp'' or ''Companion Gate_Load.esp'''
+        condition: 'file("Companion Gate_Load.esp")'
   - name: 'Companion Gate_Load.esp'
     msg:
       - type: say
-        content: 'Use this, if you haven a exsisting save game'
+        content: 'Use this, if you haven a existing save game'
       - type: say
         content: 'Use only one ''Companion Gate.esp'' or ''Companion Gate_Load.esp'''
+        condition: 'file("Companion Gate.esp")'
   - name: 'CV - Templar Fortress.esp'
     dirty:
       - crc: 0x44e1671
@@ -10364,9 +10361,10 @@ plugins:
       - type: say
         content: 'it''s replace (DC) Sutch Reborn.esp'
   - name: 'Deepwood Adventures.esp'
+    req: [ *OBSE ]
     msg:
       - type: say
-        content: 'Requires: OBSE, Elys Universal Silent Voice'
+        content: 'Requires: Elys Universal Silent Voice'
     dirty:
       - crc: 0xad5233bc
         util: *dirtyUtil
@@ -10405,6 +10403,7 @@ plugins:
     msg:
       - type: say
         content: 'Incompatible with: Better Cities 4.6+. Has been integrated into Better Cities as of version 4.6.0.'
+        condition: 'file("Better Cities Resources.esm")'
   - name: 'Delivery Job - BC.esp'
     msg:
       - type: say
@@ -10449,10 +10448,12 @@ plugins:
     msg:
       - type: say
         content: 'Don''t use ''Sword of Might.esp'' and ''Sword of Might Light Version.esp'' at the same time.'
+        condition: 'file("Duke Patricks Dragon and the Sword of Might Light Version.esp")'
   - name: 'Duke Patricks Dragon and the Sword of Might Light Version.esp'
     msg:
       - type: say
         content: 'Don''t use ''Sword of Might.esp'' and ''Sword of Might Light Version.esp'' at the same time.'
+        condition: 'file("Duke Patricks Dragon and the Sword of Might.esp")'
   - name: 'DukeCity Vwalk.esp'
     tag:
       - Actors.Anims
@@ -10551,17 +10552,17 @@ plugins:
         udr: 2
   - name: 'Forgrum''s Travelogue.esp'
     msg:
-      - type: say
+      - type: warn
         content: 'Do not use. This mod is confirmed to break a number of vanilla quests. Delete immediately.'
   - name: 'Forgrum''s Travelogue v2.0.esp'
     msg:
-      - type: say
+      - type: warn
         content: 'Do not use. This mod is confirmed to break a number of vanilla quests. Delete immediately.'
   - name: 'Forgrum''s Travelogue v2.1 Beta.esp'
     msg:
       - type: say
         content: 'French, no English translation appears to be available.'
-      - type: say
+      - type: warn
         content: 'Do not use. This mod is confirmed to break a number of vanilla quests. Delete immediately.'
   - name: 'FuseSnailRacing.esp'
     msg:
@@ -10672,9 +10673,10 @@ plugins:
         util: *dirtyUtil
         udr: 5
   - name: 'Hentai Mania.esp'
+    req: [ *OBSE ]
     msg:
       - type: say
-        content: 'Requires: HGEC, OBSE'
+        content: 'Requires: HGEC'
     tag:
       - C.Owner
       - Hair
@@ -10691,11 +10693,13 @@ plugins:
         util: *dirtyUtil
         udr: 425
   - name: 'Hentai ManiaC.esp'
+    req: [ *OBSE ]
     msg:
       - type: say
-        content: 'Requires: HGEC, OBSE'
+        content: 'Requires: HGEC'
       - type: say
         content: 'Cleaned version of Hentai Mania.esp. Use only one.'
+        condition: 'file("Hentai Mania.esp")'
   - name: 'Hentai Mania addon Break Undies.esp'
     tag:
       - Scripts
@@ -11117,10 +11121,8 @@ plugins:
         util: *dirtyUtil
         udr: 2
   - name: 'Kvatch Rebuilt - Leveled Guards - FCOM.esp'
-    msg:
-      - type: say
-        content: 'Requires: FCOM'
-        condition: 'not file("FCOM_Convergence.esm")'
+    req:
+      - 'FCOM_Convergence.esm'
   - name: 'All Natural - Kvatch Rebuilt Weather Patch.esp'
     msg:
       - type: say
@@ -11183,6 +11185,7 @@ plugins:
     msg:
       - type: say
         content: 'Use only one ''Lady Stone Villa'' plugin.'
+        condition: 'file("Lady Stone Villa ULCompatable.esp")'
       - type: say
         content: 'Incompatible with: Oscuro''s Oblivion Overhaul'
         condition: *OOOCond
@@ -11197,6 +11200,7 @@ plugins:
     msg:
       - type: say
         content: 'Use only one ''Lady Stone Villa'' plugin.'
+        condition: 'file("Lady Stone Villa.esp")'
       - type: say
         content: 'Incompatible with: Oscuro''s Oblivion Overhaul'
         condition: *OOOCond
@@ -11293,7 +11297,7 @@ plugins:
   - name: 'Locked Doors and Knocking v1.02.esp'
     msg:
       - type: say
-        content: 'Imcompatible with Better Cities, and probably other city altering mods.'
+        content: 'Incompatible with Better Cities, and probably other city altering mods.'
   - name: 'LordKain_Adash_World Vwalk.esp'
     tag:
       - Actors.Anims
@@ -11380,6 +11384,10 @@ plugins:
         content: 'Use ''The Imperial Water - BETTER CITIES.esp'' instead.'
         condition: 'file("Better Cities Resources.esm")'
   - name: 'The Imperial Water - BETTER CITIES.esp'
+    msg:
+      - type: warn
+        content: 'This version requires Better Cities.'
+        condition: 'not file("Better Cities Resources.esm")'
     dirty:
       - crc: 0x73f25199
         util: *dirtyUtil
@@ -11399,10 +11407,12 @@ plugins:
     msg:
       - type: say
         content: 'Use only one Mein Elfengarten-Bezirk Haus V. 2.0 * esp'
+        condition: 'file("Mein Elfengarten-Bezirk Haus V. 2.0 OHNE Dachgarten.esp")'
   - name: 'Mein Elfengarten-Bezirk Haus V. 2.0 OHNE Dachgarten.esp'
     msg:
       - type: say
         content: 'Use only one Mein Elfengarten-Bezirk Haus V. 2.0 * esp'
+        condition: 'file("Mein Elfengarten-Bezirk Haus V. 2.0 mit Dachgarten.esp")'
   - name: 'Mimics!.esp'
     dirty:
       - crc: 0x7f582015
@@ -11447,7 +11457,7 @@ plugins:
       - type: say
         content: 'Needs compatibility patch when used with Unique Landscapes Bravil Barrowfields.'
       - type: say
-        content: 'Also needds manual cleaning of a  deleted static record for 0008060C and one wild edit in CELL 0002FF46 (Bravil Skooma Den).'
+        content: 'Also needs manual [TES4Edit cleaning](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide) of a  deleted static record for 0008060C and one wild edit in CELL 0002FF46 (Bravil Skooma Den).'
     dirty:
       - crc: 0x47777b7d
         util: *dirtyUtil
@@ -11566,9 +11576,7 @@ plugins:
         util: *dirtyUtil
         udr: 9
   - name: 'Nine Divines Robes.esp'
-    msg:
-      - type: say
-        content: 'Requires: OBSE'
+    req: [ *OBSE ]
   - name: 'NordRuins.esp'
     dirty:
       - crc: 0xd56d4152
@@ -11698,9 +11706,10 @@ plugins:
         util: *dirtyUtil
         udr: 4
   - name: 'PathoftheSkullBearer.esp'
+    req: [ *OBSE ]
     msg:
       - type: say
-        content: 'Requires: OBSE, Shivering Isles, Sound Commands (OBSE Plugin), Elys Universal Silent Voice (OBSE Plugin)'
+        content: 'Requires: Shivering Isles, Sound Commands (OBSE Plugin), Elys Universal Silent Voice (OBSE Plugin)'
   - name: 'POTSB.esp'
     msg:
       - type: say
@@ -11777,7 +11786,7 @@ plugins:
         util: *dirtyUtil
   - name: 'Quest.esp'
     msg:
-      - type: say
+      - type: warn
         content: 'Part of Chronicles of Reeb. Goes with Belas.esm. Do not use. This mod has serious landscape errors in the Tamriel worldspace.'
   - name: 'Quest For The Elements.esp'
     msg:
@@ -11822,6 +11831,7 @@ plugins:
         content: 'Patch for FuseSnailRacing.esp'
       - type: say
         content: 'If loaded after OOO.esp this cause OOO''s lockbash feature to fail. To fix this simply load RL-LR before OOO.esp.'
+        condition: *OOOCond
   - name: 'MTCVillages-LakeRumarePatch.esp'
     msg:
       - type: warn
@@ -12187,9 +12197,7 @@ plugins:
       - type: say
         content: 'may be incompatible with AN/RL - to be confirmed.'
   - name: 'The Black Sacrament.esp'
-    msg:
-      - type: say
-        content: 'Requires: OBSE'
+    req: [ *OBSE ]
   - name: 'TheForgottenRealm.esp'
     msg:
       - type: say
@@ -12201,6 +12209,7 @@ plugins:
     msg:
       - type: say
         content: 'Incompatible with: Better Cities.'
+        condition: 'file("Better Cities Resources.esm")'
   - name: 'The Retreat-AN compatible.esp'
     tag:
       - C.Climate
@@ -12435,10 +12444,8 @@ plugins:
     tag:
       - Invent
   - name: 'Treasuresofthedeep.esp'
-    msg:
-      - type: say
-        content: 'Requires: OOO.'
-        condition: 'not file("Oscuro''s_Oblivion_Overhaul.esm")'
+    req:
+      - 'Oscuro''s_Oblivion_Overhaul.esm'
   - name: 'Torynwyll.esp'
     dirty:
       - crc: 0x693fb4d9
@@ -12463,22 +12470,27 @@ plugins:
     msg:
       - type: say
         content: 'Only use one Ushnar''s Re-Skinned Hound*.esp'
+        condition: 'regex("Ushnar''s Re-Skinned Houn(d-Default|d-Atronach|d-Dog|d-Wolf)\.esp")'
   - name: 'Ushnar''s Re-Skinned Hound-Default.esp'
     msg:
       - type: say
         content: 'Only use one Ushnar''s Re-Skinned Hound*.esp'
+        condition: 'regex("Ushnar''s Re-Skinned Houn(d|d-Atronach|d-Dog|d-Wolf)\.esp")'
   - name: 'Ushnar''s Re-Skinned Hound-Atronach.esp'
     msg:
       - type: say
         content: 'Only use one Ushnar''s Re-Skinned Hound*.esp'
+        condition: 'regex("Ushnar''s Re-Skinned Houn(d|d-Default|d-Dog|d-Wolf)\.esp")'
   - name: 'Ushnar''s Re-Skinned Hound-Dog.esp'
     msg:
       - type: say
         content: 'Only use one Ushnar''s Re-Skinned Hound*.esp'
+        condition: 'regex("Ushnar''s Re-Skinned Houn(d|d-Default|d-Atronach|d-Wolf)\.esp")'
   - name: 'Ushnar''s Re-Skinned Hound-Wolf.esp'
     msg:
       - type: say
         content: 'Only use one Ushnar''s Re-Skinned Hound*.esp'
+        condition: 'regex("Ushnar''s Re-Skinned Houn(d|d-Default|d-Atronach|d-Dog)\.esp")'
   - name: 'Valley_View_Estate.esp'
     dirty:
       - crc: 0xbc0e798
@@ -12532,7 +12544,9 @@ plugins:
         content: 'Mark Mergeable and deactivate - Merge animations does not seem to work properly for the original version of VH Bloodlines.'
       - type: say
         content: 'Sensual Walks for Arthmoor''s Verona House Bloodines SI Fixed contains bash tags to merge the animations, which work correctly on his version'
-  - name: 'SAY Recommended to enable only after you save game in IC Waterfront District'
+  - name: 'Apachii_Goddess_Store.esp'
+    msg:
+      - say: 'Recommended to enable only after you save game in IC Waterfront District'
     dirty:
       - crc: 0x6633e61d
         util: *dirtyUtil
@@ -12807,6 +12821,9 @@ plugins:
       - type: say
         content: 'Not Better Cities compatible. Already included with Better Cities IC plugins.'
         condition: 'file("Better Cities Resources.esm")'
+      - type: say 
+        content: 'OOO detected. ''Use Lynges Thieves Highway - OOO.esp'' instead.'
+        condition: *OOOCond
   - name: 'Lynges Thieves Highway - OOO.esp'
     msg:
       - type: say
@@ -12814,7 +12831,7 @@ plugins:
         condition: 'file("Better Cities Resources.esm")'
       - type: say
         content: 'Delete ''Lynges Thieves Highway.esp and use this instead.'
-        condition: *OOOCond
+        condition: '( file("Lynges Thieves Highway.esp") ) and active("Oscuro''s_Oblivion_Overhaul.esm")'
 # ENDGROUP: Quests and Locations 2
 # BEGINGROUP: DLC 4
   - name: 'DLCFrostcrag.esp'
@@ -13648,9 +13665,10 @@ plugins:
         content: 'Incompatible with: ElsweyrAnequina - ModerateIncreasedCreature.esp'
         condition: 'file("ElsweyrAnequina - ModerateIncreasedCreature.esp")'
   - name: 'BetterMusicSystem(Elsweyr).esp'
+    req: [ *OBSE ]
     msg:
       - type: say
-        content: 'Requires: OBSE, Enhanced Music & Control v0.72B (OBSE-Plugin) & SoundCommands v4.0 (OBSE-Plugin) and Elsweyr Anequina.'
+        content: 'Requires: Enhanced Music & Control v0.72B (OBSE-Plugin) & SoundCommands v4.0 (OBSE-Plugin) and Elsweyr Anequina.'
   - name: 'ElsweyrAnequina - Races HGEC-Robert.esp'
     tag:
       - R.Mouth
@@ -17096,9 +17114,7 @@ plugins:
       - type: say
         content: 'Old update to v3.1+'
   - name: 'ReneerKeyLockMod.esp'
-    msg:
-      - type: say
-        content: 'Requires: OBSE'
+    req: [ *OBSE ]
   - name: 'Duke Patricks Hydration and Water Harvesting.esp'
     msg:
       - type: say
@@ -17277,9 +17293,7 @@ plugins:
       - crc: 0x8bc62af5
         util: *dirtyUtil
   - name: 'IshMountedCombatSpellsOnSelf.esp'
-    msg:
-      - type: say
-        content: 'Requires: OBSE'
+    req: [ *OBSE ]
   - name: 'K2_Summons.esp'
     tag:
       - Actors.Spells
@@ -17951,9 +17965,7 @@ plugins:
     tag:
       - Stats
   - name: 'SilverBonus.esp'
-    msg:
-      - type: say
-        content: 'Requires: OBSE'
+    req: [ *OBSE ]
   - name: 'Oblivion Global Mod.esp'
     msg:
       - type: say
@@ -19485,18 +19497,14 @@ plugins:
       - R.Mouth
       - R.Teeth
   - name: 'Moonshadow Elves - Sc.esp'
-    msg:
-      - type: say
-        content: 'Requires: OBSE'
+    req: [ *OBSE ]
     tag:
       - Eyes
       - Hair
       - NpcFaces
       - R.Relations
   - name: 'Moonshadow-Elves_Sc_DV.esp'
-    msg:
-      - type: say
-        content: 'Requires: OBSE'
+    req: [ *OBSE ]
     tag:
       - Eyes
       - Hair
@@ -20409,9 +20417,7 @@ plugins:
       - type: say
         content: 'Use only one Dragorian and dranaugh*.esp'
   - name: 'flying argnian.esp'
-    msg:
-      - type: say
-        content: 'Requires: OBSE'
+    req: [ *OBSE ]
   - name: 'MGothic Breton Race.esp'
     tag:
       - Eyes
@@ -20709,9 +20715,7 @@ plugins:
       - Actors.Anims
       - NoMerge
   - name: 'Minionz.esp'
-    msg:
-      - type: say
-        content: 'Requires: OBSE'
+    req: [ *OBSE ]
   - name: 'AsharasCharactersAsNPCs.esp'
     msg:
       - type: say
@@ -22991,9 +22995,10 @@ plugins:
       - type: say
         content: 'Requires: Elsweyr Deserts of Anequina.'
   - name: 'HTSCl_hud.esp'
+    req: [ *OBSE ]
     msg:
       - type: say
-        content: 'Requires: OBSE, Pluggy v125 or higher. Rename OBSE_Elys_Pluggy.dll to OBSE_Elys_Pluggy_Hud.dll.'
+        content: 'Requires: Pluggy v125 or higher. Rename OBSE_Elys_Pluggy.dll to OBSE_Elys_Pluggy_Hud.dll.'
   - name: 'TheOubliette.esp'
     dirty:
       - crc: 0x2f16c1c5
