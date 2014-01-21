@@ -13067,6 +13067,7 @@ plugins:
     msg:
       - type: say
         content: 'If not using Wrye Bash this will cause loss of some faction changes from KOTN; if you prefer the factions changes to the quiet feet for those creatures move this above Knights.esp.'
+        condition: 'not regex("Bashed Patch.*\.esp")'
       - type: say
         content: 'Recommended to upgrade to Quiet Feet MAX 2.0, which does not require a plugin and is more compatible.'
       - type: say
@@ -13143,7 +13144,8 @@ plugins:
   - name: 'DLC_MOBS.esp'
     msg:
       - type: say
-        content: 'Don''t use BattleHorn_MOBS.esp, VileLair_MOBS.esp, MehrunesRazor_MOBS.esp, Knights_MOBS.esp or ThievesDen_MOBS.esp if using this as this includes all those.'
+        content: 'Remove BattleHorn_MOBS.esp, VileLair_MOBS.esp, MehrunesRazor_MOBS.esp, Knights_MOBS.esp or ThievesDen_MOBS.esp - this includes all of those.'
+        condition: 'regex("(BattleHorn|VileLair|MehrunesRazor|Knights|ThievesDen)_MOBS\.esp")'
       - type: say
         content: 'Recommended to use version 2.0 or greater: <http://oblivion.nexusmods.com/mods/28537>'
     tag:
@@ -13242,14 +13244,17 @@ plugins:
     msg:
       - type: say
         content: 'only use one Cybiades difficulty plugin'
+        condition: 'regex("Cyb(Harder|Hardest)\.esp")'
   - name: 'CybHarder.esp'
     msg:
       - type: say
         content: 'only use one Cybiades difficulty plugin'
+        condition: 'regex("Cyb(Easier|Hardest)\.esp")'
   - name: 'CybHardest.esp'
     msg:
       - type: say
         content: 'only use one Cybiades difficulty plugin'
+        condition: 'regex("Cyb(Harder|Easier)\.esp")'
   - name: 'Cybiades Vwalk.esp'
     tag:
       - Actors.Anims
@@ -13345,7 +13350,8 @@ plugins:
   - name: 'Mighty Umbra.esp'
     msg:
       - type: say
-        content: 'FCOM users might consider ''FCOM_MightyUmbra.esp''.'
+        content: 'FCOM users should consider ''FCOM_MightyUmbra.esp''.'
+        condition: *FCOMCond
     tag:
       - Graphics
       - Stats
@@ -13473,13 +13479,13 @@ plugins:
       - Factions
     dirty:
       - crc: 0x564fd290
-        util: "\"dirty\""
+        util: *dirtyUtil
       - crc: 0x8c632f0d
-        util: "\"dirty\""
+        util: *dirtyUtil
       - crc: 0xa474d117
-        util: "\"dirty\""
+        util: *dirtyUtil
       - crc: 0xe59e8d6e
-        util: "\"dirty\""
+        util: *dirtyUtil
   - name: 'AFK_Weye Vwalk.esp'
     tag:
       - Actors.Anims
@@ -13540,6 +13546,7 @@ plugins:
     msg:
       - type: say
         content: 'If using both Origin of the Mage''s Guild and Slof''s Oblivion Robe trader, use ''FCOM_OMGSRT.esp'' as well.'
+        condition: 'not file("FCOM_OMGSRT.esp")'
     tag:
       - Actors.AIPackages
       - Relations
@@ -13550,9 +13557,11 @@ plugins:
       - type: say
         content: 'Use v1.5 or later to avoid extensive compatibility issues.'
   - name: 'Daedric Shrine Ruins.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: Asharnakibibi.esp, MehrunesFel.esp, Zergonipilamat.esp, MehrunesFel.esp'
+    inc:
+      - 'Asharnakibibi.esp'
+      - 'MehrunesFel.esp'
+      - 'Zergonipilamat.esp'
+      - 'MehrunesFel.esp'
     dirty:
       - crc: 0x99bd9cb0
         util: *dirtyUtil
@@ -13573,7 +13582,7 @@ plugins:
   - name: '_LPDaedricWAR.esp'
     msg:
       - type: say
-        content: 'Requires: EDI is almost certainly incompatible.'
+        content: 'EDI is almost certainly incompatible.'
   - name: 'Enhanced Daedric Invasion.esp'
     dirty:
       - crc: 0xd34d61bc
@@ -13612,61 +13621,33 @@ plugins:
       - crc: 0xad4131f8
         util: *dirtyUtil
   - name: 'ElsweyrAnequina - SevereDesert.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: ElsweyrAnequina - SevereDesert NoSpider.esp'
-        condition: 'file("ElsweyrAnequina - SevereDesert NoSpider.esp")'
+    inc:
+      - 'ElsweyrAnequina - SevereDesert NoSpider.esp'
   - name: 'ElsweyrAnequina - SevereDesert NoSpider.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: ElsweyrAnequina - SevereDesert.esp'
-        condition: 'file("ElsweyrAnequina - SevereDesert.esp")'
+    inc:
+      - 'ElsweyrAnequina - SevereDesert.esp'
   - name: 'ElsweyrAnequina - NoSpider.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: ElsweyrAnequina - IncreasedCreature.esp'
-        condition: 'file("ElsweyrAnequina - IncreasedCreature.esp")'
-      - type: say
-        content: 'Incompatible with: ElsweyrAnequina - IncreasedCreature NoSpider.esp'
-        condition: 'file("ElsweyrAnequina - IncreasedCreature NoSpider.esp")'
-      - type: say
-        content: 'Incompatible with: ElsweyrAnequina - ModerateIncreasedCreature.esp'
-        condition: 'file("ElsweyrAnequina - ModerateIncreasedCreature.esp")'
-      - type: say
-        content: 'Incompatible with: ElsweyrAnequina - ModerateIncreasedCreature NoSpider.esp'
-        condition: 'file("ElsweyrAnequina - ModerateIncreasedCreature NoSpider.esp")'
+    inc:
+      - 'ElsweyrAnequina - IncreasedCreature.esp'
+      - 'ElsweyrAnequina - IncreasedCreature NoSpider.esp'
+      - 'ElsweyrAnequina - ModerateIncreasedCreature.esp'
+      - 'ElsweyrAnequina - ModerateIncreasedCreature NoSpider.esp'
   - name: 'ElsweyrAnequina - IncreasedCreature.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: ElsweyrAnequina - NoSpider.esp'
-        condition: 'file("ElsweyrAnequina - NoSpider.esp")'
-      - type: say
-        content: 'Incompatible with: ElsweyrAnequina - IncreasedCreature NoSpider.esp'
-        condition: 'file("ElsweyrAnequina - IncreasedCreature NoSpider.esp")'
+    inc:
+      - 'ElsweyrAnequina - NoSpider.esp'
+      - 'ElsweyrAnequina - IncreasedCreature NoSpider.esp'
   - name: 'ElsweyrAnequina - IncreasedCreature NoSpider.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: ElsweyrAnequina - NoSpider.esp'
-        condition: 'file("ElsweyrAnequina - NoSpider.esp")'
-      - type: say
-        content: 'Incompatible with: ElsweyrAnequina - IncreasedCreature.esp'
-        condition: 'file("ElsweyrAnequina - IncreasedCreature.esp")'
+    inc:
+      - 'ElsweyrAnequina - NoSpider.esp'
+      - 'ElsweyrAnequina - IncreasedCreature.esp'
   - name: 'ElsweyrAnequina - ModerateIncreasedCreature.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: ElsweyrAnequina - NoSpider.esp'
-        condition: 'file("ElsweyrAnequina - NoSpider.esp")'
-      - type: say
-        content: 'Incompatible with: ElsweyrAnequina - ModerateIncreasedCreature NoSpider.esp'
-        condition: 'file("ElsweyrAnequina - ModerateIncreasedCreature NoSpider.esp")'
+    inc:
+      - 'ElsweyrAnequina - NoSpider.esp'
+      - 'ElsweyrAnequina - ModerateIncreasedCreature NoSpider.esp'
   - name: 'ElsweyrAnequina - ModerateIncreasedCreature NoSpider.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: ElsweyrAnequina - NoSpider.esp'
-        condition: 'file("ElsweyrAnequina - NoSpider.esp")'
-      - type: say
-        content: 'Incompatible with: ElsweyrAnequina - ModerateIncreasedCreature.esp'
-        condition: 'file("ElsweyrAnequina - ModerateIncreasedCreature.esp")'
+    inc:
+      - 'ElsweyrAnequina - NoSpider.esp'
+      - 'ElsweyrAnequina - ModerateIncreasedCreature.esp'
   - name: 'BetterMusicSystem(Elsweyr).esp'
     req: [ *OBSE ]
     msg:
@@ -13713,6 +13694,7 @@ plugins:
     msg:
       - type: say
         content: 'Requires: OBSE v0018.'
+        condition: 'version("..\obse_loader.exe","0.18.0.0",<)'
       - type: say
         content: 'Old. Use ''Enhanced Weather - Across-The-Borders Mods Patch'' instead.'
   - name: 'ElsweyrAnequinaNoSpiders.esp'
@@ -13924,10 +13906,12 @@ plugins:
     msg:
       - type: say
         content: 'only use without Open Cities'
+        condition: 'regex("Open Cities.*\.esp")'
   - name: 'OC_HOD_delayer.esp'
     msg:
       - type: say
         content: 'only use with Open Cities'
+        condition: 'not regex("Open Cities.*\.esp")'
   - name: 'HeartOftheDeadv6.3 Delayer.esp'
     msg:
       - type: say
@@ -14073,11 +14057,11 @@ plugins:
         util: *dirtyUtil
         udr: 161
   - name: 'ElsweyrRiverhold.esp'
+    inc:
+      - 'ElsweyrAnequina.esp'
     msg:
       - type: say
         content: 'Border region restrictions must be turned off: use Wrye Bash tweak or hand edit .ini file.'
-      - type: say
-        content: 'Do not use if using ElsweyrAnequina.esp.'
   - name: 'ExtendedAleswellEV.esp'
     dirty:
       - crc: 0x969f8f4b
@@ -14289,7 +14273,8 @@ plugins:
   - name: 'CUO_Bruma.esp'
     msg:
       - type: say
-        content: 'Requires: Kvatch Aftermath Bruma Features - disable them.'
+        content: 'Kvatch Aftermath Bruma Features - disable them.'
+        condition: 'file("KvatchAftermath.esp")'
     tag:
       - Invent
     dirty:
@@ -14365,6 +14350,7 @@ plugins:
     msg:
       - type: say
         content: 'If using ''xulColovianHighlands.esp'', it must be manually renamed to ''xulColovianHighlands_EV.esp'' for this patch to work.'
+        condition: 'file("xulColovianHighlands.esp")'
   - name: 'OWC - ND UL Colovian Highlands Patch.esp'
     dirty:
       - crc: 0xcbd9dcfd
@@ -14447,6 +14433,7 @@ plugins:
     msg:
       - type: say
         content: 'Also use Sutch reborn Lighthouse Fix UL.esp.'
+        condition: 'not file("Sutch reborn Lighthouse Fix UL.esp")'
   - name: 'Sutch reborn Lighthouse Fix UL.esp'
     dirty:
       - crc: 0xc591afc5
@@ -14484,7 +14471,8 @@ plugins:
   - name: 'HentaiMania2C.esp'
     msg:
       - type: say
-        content: 'Cleaned version of HentaiMania2.esp use only one'
+        content: 'Cleaned version of HentaiMania2.esp, use only one.'
+        condition: 'file("HentaiMania2.esp")'
   - name: 'HentaiMania2_Merged_Hell.esp'
     msg:
       - type: say
@@ -14561,6 +14549,7 @@ plugins:
     msg:
       - type: say
         content: 'Use only one Verwen Brewery esp. Unique Landscapes Ancient Yews.'
+        condition: 'file("Verwen Brewery UL_AY_AC Compatable.esp")'
   - name: 'xulAncientYews 20x8 fix.esp'
     msg:
       - type: say
@@ -14594,6 +14583,7 @@ plugins:
     msg:
       - type: say
         content: 'Use only one Verwen Brewery esp. the Unique Landscapes Ancient Yews/Arrius Creek patch.'
+        condition: 'file("Verwen Brewery UL Ancient Yews Compatable.esp")'
     dirty:
       - crc: 0xe45679c7
         util: *dirtyUtil
@@ -14607,6 +14597,7 @@ plugins:
     msg:
       - type: say
         content: 'Do not use with ''ColdstoneTown-BravilBarrowfields patch.esp''; ColdstoneTown-BravilBarrowfields patch.esp includes the changes from this patch.'
+        condition: 'file("ColdstoneTown-BravilBarrowfields patch.esp")'
   - name: 'OWCND - UL Arrius Creek Patch.esp'
     dirty:
       - crc: 0x7ec34cf0
@@ -14668,6 +14659,7 @@ plugins:
     msg:
       - type: say
         content: 'Do not use with RedcourtCastle-RollingHills patch.esp or RedcourtCastle-AncientYews patch.esp.'
+        condition: 'file("RedcourtCastle-AncientYews patch.esp") or file("RedcourtCastle-RollingHills patch.esp")'
   - name: 'xulPantherRiver.esp'
     dirty:
       - crc: 0x168e01a1
@@ -14735,9 +14727,10 @@ plugins:
     msg:
       - type: say
         content: 'Don''t use UL Imperial Isle Adense Epic Dungeon Patch.esp in conjunction with ImperialCitySuburbs-ImperialIsle patch.esp (causes land tears)'
+        condition: 'file("UL Imperial Isle Adense Epic Dungeon Patch.esp")
   - name: 'LetThePeopleDrink-ImperialIsle-NRB4 patch.esp'
     msg:
-      - type: say
+      - type: warn
         content: 'Do not use - has technical issues. Download the correct patch [here](http://oblivion.nexusmods.com/mods/20218).'
   - name: 'xulBlackwoodForest.esp'
     dirty:
@@ -14862,6 +14855,7 @@ plugins:
     msg:
       - type: say
         content: 'Don''t use with ''ImpeREAL Empire - Unique Forts - Black Rock - OOO FCOM plugin by Xtudo.esp''.'
+        condition: 'file("ImpeREAL Empire - Unique Forts - Black Rock - OOO FCOM plugin by Xtudo.esp")'
     tag:
       - Invent
     dirty:
@@ -14957,9 +14951,8 @@ plugins:
         util: *dirtyUtil
         udr: 1
   - name: 'The Ruins of Miscarcand.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: Miscarcand Expanded.esp'
+    inc:
+      - 'Miscarcand Expanded.esp'
     dirty:
       - crc: 0x9b8c026e
         util: *dirtyUtil
@@ -15048,30 +15041,37 @@ plugins:
         content: 'Update to v3.0 or later.'
       - type: say
         content: 'Incompatible with: Better Cities. Already included in Better Cities IC plugins.'
+        condition: 'file("Better Cities Resources.esm")'
   - name: 'Imperial City Waterfront Tunnel Entrance v3.0.esp'
     msg:
       - type: say
         content: 'Incompatible with: Better Cities. Already included in Better Cities IC plugins.'
+        condition: 'file("Better Cities Resources.esm")'
   - name: 'Imperil_City_Tunnel.esp'
     msg:
       - type: say
         content: 'Incompatible with: Better Cities.'
+        condition: 'file("Better Cities Resources.esm")'
   - name: 'IC Tunnel.esp'
     msg:
       - type: say
         content: 'Incompatible with: Better Cities.'
+        condition: 'file("Better Cities Resources.esm")'
   - name: 'ICWaterfrontPassage.esp'
     msg:
       - type: say
         content: 'Incompatible with: Better Cities.'
+        condition: 'file("Better Cities Resources.esm")'
   - name: 'Waterfront Passage - Control of Goods.esp'
     msg:
       - type: say
         content: 'Incompatible with: Better Cities.'
+        condition: 'file("Better Cities Resources.esm")'
   - name: 'JADDockTunnel.esp'
     msg:
       - type: say
         content: 'Probably not compatible with Better Cities.'
+        condition: 'file("Better Cities Resources.esm")'
   - name: 'Moriarcis.esp'
     tag:
       - Hair
@@ -15087,14 +15087,17 @@ plugins:
     msg:
       - type: say
         content: 'Use only one PPG colour esp'
+        condition: 'regex("PersonalPackGuars (Black|Striped)\.esp")'
   - name: 'PersonalPackGuars Black.esp'
     msg:
       - type: say
         content: 'Use only one PPG colour esp'
+        condition: 'regex("PersonalPackGuars (White|Striped)\.esp")'
   - name: 'PersonalPackGuars Striped.esp'
     msg:
       - type: say
         content: 'Use only one PPG colour esp'
+        condition: 'regex("PersonalPackGuars (White|Black)\.esp")'
   - name: 'Duke Patricks Sickness Alarm.esp'
     tag:
       - Sound
@@ -15110,48 +15113,49 @@ plugins:
     msg:
       - type: say
         content: 'Only use one ''Health Alarm'' mod. Choose.'
+        condition: 'regex("Duke Patrick''?s Health Alar(m RED DEATH with heartbeat NO human yells|m with Fadeout|m with RED DEATH|m RED DEATH with heartbeat|m RED DEATH and Heartbeat|m RED DEATH NO Heartbeat)\.esp")'
     tag:
       - Sound
   - name: 'Duke Patrick''s Health Alarm RED DEATH with heartbeat NO human yells.esp'
     msg:
       - type: say
         content: 'Only use one ''Health Alarm'' mod. Choose.'
+        condition: 'regex("Duke Patrick''?s Health Alar(m|m with Fadeout|m with RED DEATH|m RED DEATH with heartbeat|m RED DEATH and Heartbeat|m RED DEATH NO Heartbeat)\.esp")'
     tag:
       - Sound
   - name: 'Duke Patrick''s Health Alarm with Fadeout.esp'
     msg:
       - type: say
         content: 'Only use one ''Health Alarm'' mod. Choose.'
+        condition: 'regex("Duke Patrick''?s Health Alar(m|m RED DEATH with heartbeat NO human yells|m with RED DEATH|m RED DEATH with heartbeat|m RED DEATH and Heartbeat|m RED DEATH NO Heartbeat)\.esp")'
     tag:
       - Sound
   - name: 'Duke Patrick''s Health Alarm with RED DEATH.esp'
     msg:
       - type: say
         content: 'Only use one ''Health Alarm'' mod. Choose.'
+        condition: 'regex("Duke Patrick''?s Health Alar(m|m RED DEATH with heartbeat NO human yells|m with Fadeout|m RED DEATH with heartbeat|m RED DEATH and Heartbeat|m RED DEATH NO Heartbeat)\.esp")'
     tag:
       - Sound
   - name: 'Duke Patricks - Health Alarm RED DEATH with heartbeat.esp'
     msg:
       - type: say
         content: 'Only use one ''Health Alarm'' mod. Choose.'
+        condition: 'regex("Duke Patrick''?s Health Alar(m|m RED DEATH with heartbeat NO human yells|m with Fadeout|m with RED DEATH|m RED DEATH and Heartbeat|m RED DEATH NO Heartbeat)\.esp")'
     tag:
       - Sound
   - name: 'Duke Patrick''s Health Alarm RED DEATH and Heartbeat.esp'
     msg:
       - type: say
         content: 'Only use one ''Health Alarm'' mod. Choose.'
+        condition: 'regex("Duke Patrick''?s Health Alar(m|m RED DEATH with heartbeat NO human yells|m with Fadeout|m with RED DEATH|m RED DEATH with heartbeat|m RED DEATH NO Heartbeat)\.esp")'
     tag:
       - Sound
   - name: 'Duke Patrick''s Health Alarm RED DEATH NO Heartbeat.esp'
     msg:
       - type: say
         content: 'Only use one ''Health Alarm'' mod. Choose.'
-    tag:
-      - Sound
-  - name: 'Duke Patrick''s Health Alarm RED DEATH and Heartbeat.esp'
-    msg:
-      - type: say
-        content: 'Only use one ''Health Alarm'' mod. Choose.'
+        condition: 'regex("Duke Patrick''?s Health Alar(m|m RED DEATH with heartbeat NO human yells|m with Fadeout|m with RED DEATH|m RED DEATH with heartbeat|m RED DEATH and Heartbeat)\.esp")'
     tag:
       - Sound
   - name: 'Duke Patricks The Lady said NO.esp'
@@ -15193,10 +15197,12 @@ plugins:
     msg:
       - type: say
         content: 'Use OBCBravil or OBCBravilB&M but not both at the same time.'
+        condition: 'file("OBCBravilB&M-Barrowfields patch.esp")'
   - name: 'OBCBravilB&M-Barrowfields patch.esp'
     msg:
       - type: say
         content: 'Use OBCBravil or OBCBravilB&M but not both at the same time.'
+        condition: 'file("OBCBravil-Barrowfields patch.esp")'
   - name: 'BC+Vvardenfell Imports Patch.esp'
     msg:
       - type: say
@@ -15397,14 +15403,17 @@ plugins:
     msg:
       - type: say
         content: 'Use only one ''DBOO - OpenCitiesFull.esp'' or ''DBOO - Open Cities Outer Districts.esp'' or ''DBOO - OpenCitiesFull + Outer Districts.esp'''
+        condition: 'file("DBOO - Open Cities Outer Districts.esp") or file("DBOO - OpenCitiesFull + Outer Districts.esp")'
   - name: 'DBOO - Open Cities Outer Districts.esp'
     msg:
       - type: say
         content: 'Use only one ''DBOO - OpenCitiesFull.esp'' or ''DBOO - Open Cities Outer Districts.esp'' or ''DBOO - OpenCitiesFull + Outer Districts.esp'''
+        condition: 'file("DBOO - OpenCitiesFull.esp") or file("DBOO - OpenCitiesFull + Outer Districts.esp")'
   - name: 'DBOO - OpenCitiesFull + Outer Districts.esp'
     msg:
       - type: say
         content: 'Use only one ''DBOO - OpenCitiesFull.esp'' or ''DBOO - Open Cities Outer Districts.esp'' or ''DBOO - OpenCitiesFull + Outer Districts.esp'''
+        condition: 'file("DBOO - OpenCitiesFull.esp") or file("DBOO - Open Cities Outer Districts.esp")'
   - name: 'Sounds of Cyrodiil - OC Reborn Patch.esp'
     dirty:
       - crc: 0x408c9e1f
