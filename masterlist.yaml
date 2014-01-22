@@ -2526,19 +2526,19 @@ plugins:
 # Should load early to allow more 'important' mods to override.
   - name: 'Real_Lights.esp'
     msg:
-      - type: say
+      - type: warn
         content: 'Breaks the Umbacano branch of The Collector quest, and causes save game bloating.'
       - type: say
         content: 'Recommended to use All Natural''s Real Lights implementation, as it doesn''t suffer from this, fixes a huge number of bugs in the original, and can be used on its own.'
   - name: '_Real_Lights.esp'
     msg:
-      - type: say
+      - type: warn
         content: 'Breaks the Umbacano branch of The Collector quest, and causes save game bloating.'
       - type: say
         content: 'Recommended to use All Natural''s Real Lights implementation, as it doesn''t suffer from this, fixes a huge number of bugs in the original, and can be used on its own.'
   - name: 'RealLightsDV.esp'
     msg:
-      - type: say
+      - type: warn
         content: 'Breaks the Umbacano branch of The Collector quest, and causes save game bloating.'
       - type: say
         content: 'Recommended to use All Natural''s Real Lights implementation, as it doesn''t suffer from this, fixes a huge number of bugs in the original, and can be used on its own.'
@@ -2551,10 +2551,8 @@ plugins:
       - MustBeActiveIfImported
       - Scripts
   - name: 'CampfireBehavior.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: All Natural''s Real Lights plugin (All Natural - Real Lights.esp).'
-        condition: 'file("All Natural - Real Lights.esp")'
+    inc:
+      - 'All Natural - Real Lights.esp'
   - name: 'Illumination(Within|Without)( Rus)?\.esp'
     msg:
       - type: warn
@@ -2613,6 +2611,7 @@ plugins:
     msg:
       - type: say
         content: 'Do NOT use with 300_Lore Dialogue.esp'
+        condition: 'file("300_Lore Dialogue.esp")'
     dirty:
       - crc: 0x366c8d97
         util: *dirtyUtil
@@ -2715,7 +2714,7 @@ plugins:
   - name: 'bgShaderStandAloneEV.esp'
     msg:
       - type: say
-        content: 'Requires: Wrye Bash if using spell mods.'
+        content: 'Requires Wrye Bash if using spell mods.'
     tag:
       - Graphics
   - name: 'Bitches of the Duke.esp'
@@ -2924,6 +2923,7 @@ plugins:
     msg:
       - type: say
         content: 'For use with Better Cities use ''ClocksOfCyrodiil_BC_OBC_OC_OCLR_Vanilla.esp'' instead.'
+        condition: 'file("Better Cities Resources.esm")'
     dirty:
       - crc: 0x6910c69
         util: *dirtyUtil
@@ -2932,21 +2932,21 @@ plugins:
     msg:
       - type: say
         content: 'Deactivate CLocksOfCyrodiil.esp'
-        condition: 'file("ClocksOfCyrodiil.esp")'
+        condition: 'active("ClocksOfCyrodiil.esp")'
       - type: say
         content: 'Obsolete. Use ''ClocksOfCyrodiil_BC_OBC_OC_OCLR_Vanilla.esp'' instead.'
   - name: 'ClocksOfCyrodiilOBC.esp'
     msg:
       - type: say
         content: 'Deactivate CLocksOfCyrodiil.esp'
-        condition: 'file("ClocksOfCyrodiil.esp")'
+        condition: 'active("ClocksOfCyrodiil.esp")'
       - type: say
         content: 'Use ''ClocksOfCyrodiil_BC_OBC_OC_OCLR_Vanilla.esp'' instead.'
   - name: 'ClocksOfCyrodiil_BC_OBC_OC_OCLR_Vanilla.esp'
     msg:
       - type: warn
         content: 'Deactivate CLocksOfCyrodiil.esp'
-        condition: 'file("ClocksOfCyrodiil.esp")'
+        condition: 'active("ClocksOfCyrodiil.esp")'
     dirty:
       - crc: 0xd83fbb37
         util: *dirtyUtil
@@ -2970,6 +2970,7 @@ plugins:
       - *needsCleaning
       - type: say
         content: 'Only use one ''Cryptic''s X X X Dining Set'' plugin.'
+        condition: 'regex("Cryptic (Frosted|Blue Blood|Lake View|Snowy Oak|White Rose) Ayleid Dining Set\.esp")'
     tag:
       - Graphics
       - Names
@@ -2978,6 +2979,7 @@ plugins:
     msg:
       - type: say
         content: 'Only use one ''Cryptic''s X X X Dining Set'' plugin.'
+        condition: 'regex("Cryptic (Festive|Blue Blood|Lake View|Snowy Oak|White Rose) Ayleid Dining Set\.esp")'
     tag:
       - Graphics
       - Names
@@ -2986,6 +2988,7 @@ plugins:
     msg:
       - type: say
         content: 'Only use one ''Cryptic''s X X X Dining Set'' plugin.'
+        condition: 'regex("Cryptic (Festive|Frosted|Lake View|Snowy Oak|White Rose) Ayleid Dining Set\.esp")'
     tag:
       - Graphics
       - Names
@@ -2994,6 +2997,7 @@ plugins:
     msg:
       - type: say
         content: 'Only use one ''Cryptic''s X X X Dining Set'' plugin.'
+        condition: 'regex("Cryptic (Festive|Frosted|Blue Blood|Snowy Oak|White Rose) Ayleid Dining Set\.esp")'
     tag:
       - Graphics
       - Names
@@ -3002,6 +3006,7 @@ plugins:
     msg:
       - type: say
         content: 'Only use one ''Cryptic''s X X X Dining Set'' plugin.'
+        condition: 'regex("Cryptic (Festive|Frosted|Blue Blood|Lake View|White Rose) Ayleid Dining Set\.esp")'
     tag:
       - Graphics
       - Names
@@ -3011,6 +3016,7 @@ plugins:
       - *needsCleaning
       - type: say
         content: 'Only use one ''Cryptic''s X X X Dining Set'' plugin.'
+        condition: 'regex("Cryptic (Festive|Frosted|Blue Blood|Lake View|Snowy Oak) Ayleid Dining Set\.esp")'
     tag:
       - Graphics
       - Names
@@ -3028,9 +3034,8 @@ plugins:
     tag:
       - Invent
   - name: 'Buyable Ayldeid Dishes.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: ''Cryptic''s Buyable Ayleid Dining Sets.esp'''
+    inc:
+      - 'Cryptic''s Buyable Ayleid Dining Sets.esp'
     tag:
       - Invent
   - name: 'CT-Com''s Torch Compendium.esp'
@@ -3047,12 +3052,14 @@ plugins:
     msg:
       - type: say
         content: 'Only use one ChallangingThievery*.esp.'
+        condition: 'file("ChallangingThieveryNoHouseAdditions.esp")'
     tag:
       - Invent
   - name: 'ChallangingThieveryNoHouseAdditions.esp'
     msg:
       - type: say
         content: 'Only use one ChallangingThievery*.esp.'
+        condition: 'file("ChallangingThieveryFull.esp")'
     tag:
       - Invent
 # ENDGROUP: Base C
@@ -3138,7 +3145,7 @@ plugins:
   - name: 'HUDI.esp'
     msg:
       - type: say
-        content: 'Incompatible with: with UI systems other than DarNified UI/Dark''d DarN/other DarN variants.'
+        content: 'Incompatible with: UI systems other than DarNified UI/Dark''d DarN/other DarN variants.'
 # ENDGROUP: Base H
 
 # BEGINGROUP: Base I
@@ -3182,7 +3189,7 @@ plugins:
   - name: 'Katana Store.esp'
     msg:
       - type: say
-        content: 'Requires: patch to use with Kalikuts.'
+        content: 'Requires patch to use with Kalikuts.'
 # ENDGROUP: Base K
 
 # BEGINGROUP: Base L
@@ -3296,10 +3303,12 @@ plugins:
     msg:
       - type: say
         content: 'Use only one Mud Crabs! file'
+        condition: 'regex("Mud Crabs!_.*\.esp")'
   - name: 'Mud Crabs!_coMbO.esp'
     msg:
       - type: say
         content: 'Use only one Mud Crabs! file'
+        condition: 'regex("Mud Crabs!(_MMM|_OOO)?\.esp")'
     dirty:
       - crc: 0xc4750e07
         util: *dirtyUtil
@@ -3307,10 +3316,12 @@ plugins:
     msg:
       - type: say
         content: 'Use only one Mud Crabs! file'
+        condition: 'regex("Mud Crabs!(_coMbO|_OOO)?\.esp")'
   - name: 'Mud Crabs!_OOO.esp'
     msg:
       - type: say
         content: 'Use only one Mud Crabs! file'
+        condition: 'regex("Mud Crabs!(_coMbO|_MMM)?\.esp")'
 # ENDGROUP: Base M
 
 # BEGINGROUP: Base N
@@ -3415,6 +3426,7 @@ plugins:
     msg:
       - type: say
         content: 'do not use ''Q - More and Moldy Ingredients v1.1.esp'' and ''More_vegetables.esp'' with this; this replaces those two esps.'
+        condition: 'file("Q - More and Moldy Ingredients v1.1.esp") or file("More_vegetables.esp")'
     tag:
       - Relev
   - name: 'Q-Core - Icons.esp'
@@ -3456,6 +3468,7 @@ plugins:
     msg:
       - type: say
         content: 'Incompatible with: Better Cities'' VWD plugin.'
+        condition: 'file("Better Cities Resources.esm")'
   - name: 'Respawning Containers.esp'
     msg:
       - type: say
@@ -3722,22 +3735,21 @@ plugins:
     msg:
       - type: say
         content: 'Requires: Coronerras Maximum Compatibility Skeletons, VipCxj''s Plugin Collection v3'
-      - type: say 
+      - type: warn 
         content: 'Requires: OBSE 20+'
         condition: 'version("..\obse_loader.exe","0.20.0.0",<)'
   - name: 'Vows and Covenants.esp'
     msg:
       - type: say
         content: 'Conflicts with Deadly Reflex. Minor Problems.'
+        condition: 'regex("Deadly Reflex.*\.esp")'
 # ENDGROUP: Base V
 
 # BEGINGROUP: Base W
   - name: 'Walk to Oblivion.esp'
     msg:
       - type: say
-        content: 'Incompatible with: Mods like Enhanced Daedric Invasion that modify Oblivion Gate scripts.'
-      - type: say
-        content: 'Use Walk to Oblivion - OBSE.esp if you need compatibility with those mods.'
+        content: 'Incompatible with: Mods like Enhanced Daedric Invasion that modify Oblivion Gate scripts. Use Walk to Oblivion - OBSE.esp if you need compatibility with those mods.'
   - name: 'wd purse of wonders.esp'
     tag:
       - Scripts
@@ -3790,6 +3802,9 @@ plugins:
     msg:
       - type: say
         content: 'Requires: Shivering Isles expansion.'
+      - type: warn
+        content: 'Don''t use ''Living Economy'' and ''Living Economy - SI'' together. Pick one.'
+        condition: 'file("Living Economy.esp")'
   - name: 'SI Living Economy.esp'
     msg:
       - type: warn
@@ -3804,15 +3819,15 @@ plugins:
       - type: say
         content: 'Obsolete. Upgrade to Enhanced Economy.'
   - name: 'Enhanced Economy.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: Living Economy.'
+    inc:
+      - 'Living Economy.esp'
   - name: 'moDem''s City Life - BP Compat.esp'
     msg:
       - type: say
         content: 'May cause crashes in the IC Market district. May have been fixed. Needs verification.'
       - type: say
         content: 'For use with Better Cities use replacing fix for BBC.'
+        condition: 'file("Better Cities Resources.esm")'
     tag:
       - Hair
   - name: 'moDem''s City Life - BP Compat Vwalk.esp'
@@ -4187,10 +4202,15 @@ plugins:
     tag:
       - C.Owner
   - name: 'SM Plugin Refurbish - HorseArmor.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: ''CDM-CGO Compatibility plugins''.'
-      - *doNotClean
+    inc:
+      - 'CDM-CGO Horse Armor Compatability.esp'
+      - 'CDM-CGO Orrery Compatibility.esp'
+      - 'CDM-CGO Thieves Den Compatibility.esp'
+      - 'CDM-CGO Vile Lair Compatibility.esp'
+      - 'CDM-CGO Battlehorn Compatibility.esp'
+      - 'CDM-CGO Shivering Isles Compatibility.esp'
+      - 'CDM-CGO Frostcrag Compatibility.esp'
+    msg: [ *doNotClean ]
   - name: 'SellHorses_Incl_Saddlebags_and_CallSteed.esp'
     msg:
       - type: error
@@ -4222,10 +4242,15 @@ plugins:
       - Actors.Anims
       - NoMerge
   - name: 'SM Plugin Refurbish - Orrery.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: ''CDM-CGO Compatibility plugins''.'
-      - *doNotClean
+    inc:
+      - 'CDM-CGO Horse Armor Compatability.esp'
+      - 'CDM-CGO Orrery Compatibility.esp'
+      - 'CDM-CGO Thieves Den Compatibility.esp'
+      - 'CDM-CGO Vile Lair Compatibility.esp'
+      - 'CDM-CGO Battlehorn Compatibility.esp'
+      - 'CDM-CGO Shivering Isles Compatibility.esp'
+      - 'CDM-CGO Frostcrag Compatibility.esp'
+    msg: [ *doNotClean ]
   - name: 'C&C&EQR - SM Plugin Refurbish - Orrery.esp'
     msg:
       - type: say
@@ -4244,10 +4269,15 @@ plugins:
     tag:
       - Graphics
   - name: 'SM Plugin Refurbish - VileLair.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: ''CDM-CGO Compatibility plugins''.'
-      - *doNotClean
+    inc:
+      - 'CDM-CGO Horse Armor Compatability.esp'
+      - 'CDM-CGO Orrery Compatibility.esp'
+      - 'CDM-CGO Thieves Den Compatibility.esp'
+      - 'CDM-CGO Vile Lair Compatibility.esp'
+      - 'CDM-CGO Battlehorn Compatibility.esp'
+      - 'CDM-CGO Shivering Isles Compatibility.esp'
+      - 'CDM-CGO Frostcrag Compatibility.esp'
+    msg: [ *doNotClean ]
   - name: 'Lair_mobs.esp'
     tag:
       - NoMerge
@@ -4341,9 +4371,14 @@ plugins:
       - crc: 0x4abf2393
         util: *dirtyUtil
   - name: 'DLCSpellTomes - Unofficial Patch.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: ''CDM-CGO Compatibility plugins''.'
+    inc:
+      - 'CDM-CGO Horse Armor Compatability.esp'
+      - 'CDM-CGO Orrery Compatibility.esp'
+      - 'CDM-CGO Thieves Den Compatibility.esp'
+      - 'CDM-CGO Vile Lair Compatibility.esp'
+      - 'CDM-CGO Battlehorn Compatibility.esp'
+      - 'CDM-CGO Shivering Isles Compatibility.esp'
+      - 'CDM-CGO Frostcrag Compatibility.esp'
   - name: 'Book Jackets DLC.esp'
     tag:
       - Graphics
@@ -12781,10 +12816,15 @@ plugins:
         udr: 14
         itm: 86
   - name: 'SM Plugin Refurbish - Battlehorn.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: ''CDM-CGO Compatibility plugins''.'
-      - *doNotClean
+    inc:
+      - 'CDM-CGO Horse Armor Compatability.esp'
+      - 'CDM-CGO Orrery Compatibility.esp'
+      - 'CDM-CGO Thieves Den Compatibility.esp'
+      - 'CDM-CGO Vile Lair Compatibility.esp'
+      - 'CDM-CGO Battlehorn Compatibility.esp'
+      - 'CDM-CGO Shivering Isles Compatibility.esp'
+      - 'CDM-CGO Frostcrag Compatibility.esp'
+    msg: [ *doNotClean ]
   - name: 'BattleHorn_MOBS.esp'
     tag:
       - Deactivate
@@ -12893,10 +12933,15 @@ plugins:
       - type: say
         content: 'If dummy esp for use with The Ayleid Steps consider upgrading to Frostcrag Reborn De-Isolated.'
   - name: 'SM Plugin Refurbish - FrostCrag.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: ''CDM-CGO Compatibility plugins''.'
-      - *doNotClean
+    inc:
+      - 'CDM-CGO Horse Armor Compatability.esp'
+      - 'CDM-CGO Orrery Compatibility.esp'
+      - 'CDM-CGO Thieves Den Compatibility.esp'
+      - 'CDM-CGO Vile Lair Compatibility.esp'
+      - 'CDM-CGO Battlehorn Compatibility.esp'
+      - 'CDM-CGO Shivering Isles Compatibility.esp'
+      - 'CDM-CGO Frostcrag Compatibility.esp'
+    msg: [ *doNotClean ]
   - name: 'BrumaMGRestored.esp'
     dirty:
       - crc: 0x2610b3ea
@@ -13061,18 +13106,29 @@ plugins:
       - NoMerge
       - Stats
   - name: 'SM Plugin Refurbish - Knights.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: ''CDM-CGO Compatibility plugins''.'
-      - *doNotClean
+    inc:
+      - 'CDM-CGO Horse Armor Compatability.esp'
+      - 'CDM-CGO Orrery Compatibility.esp'
+      - 'CDM-CGO Thieves Den Compatibility.esp'
+      - 'CDM-CGO Vile Lair Compatibility.esp'
+      - 'CDM-CGO Battlehorn Compatibility.esp'
+      - 'CDM-CGO Shivering Isles Compatibility.esp'
+      - 'CDM-CGO Frostcrag Compatibility.esp'
+    msg: [ *doNotClean ]
   - name: 'SM Plugin Refurbish(Merged).esp'
+    inc:
+      - 'CDM-CGO Horse Armor Compatability.esp'
+      - 'CDM-CGO Orrery Compatibility.esp'
+      - 'CDM-CGO Thieves Den Compatibility.esp'
+      - 'CDM-CGO Vile Lair Compatibility.esp'
+      - 'CDM-CGO Battlehorn Compatibility.esp'
+      - 'CDM-CGO Shivering Isles Compatibility.esp'
+      - 'CDM-CGO Frostcrag Compatibility.esp'
     msg:
       - type: say
         content: 'The masters of this mod are not in the order that BOSS uses, which will cause it to be displayed with an orange checkbox in Wrye Bash. BOSS''s order is correct, and the master order of the plugin can be altered using TES4Edit or TES4Gecko.'
       - type: say
         content: 'Requires: all DLCs and Shivering Isles to be installed and active.'
-      - type: say
-        content: 'Incompatible with: ''CDM-CGO Compatibility plugins''.'
       - *doNotClean
   - name: 'QuietFeet.esp'
     msg:
@@ -23690,14 +23746,17 @@ plugins:
     msg:
       - type: say
         content: 'Use only one lumi_enchantments esp'
+        condition: 'file("lumi_enchantments_subtle.esp")'
   - name: 'lumi_enchantments_subtle.esp'
     msg:
       - type: say
         content: 'Use only one lumi_enchantments esp'
+        condition: 'file("lumi_enchantments.esp")'
   - name: 'BubbleFx.esp'
     msg:
       - type: say
         content: 'Most likely incompatible with Supreme Magicka.'
+        condition: 'file("SupremeMagicka.esp")'
   - name: 'GW71_Life_Detect.esp'
     tag:
       - Deactivate
@@ -23935,6 +23994,7 @@ plugins:
     msg:
       - type: say
         content: 'If using with Supreme Magicka and experiencing frequent swirling pink or green clouds, set ''zzSMConfigurationQuest.bNoPoisonLevitationEffects'' to 1 in SupremeMagicka.ini.'
+        condition: 'file("SupremeMagicka.esp")'
   - name: 'UVII.esp'
     dirty:
       - crc: 0x3144ec1b
@@ -24189,7 +24249,7 @@ plugins:
   - name: 'Bashed Delayers - MERGE ONLY.esp'
     msg:
       - type: error
-        content: 'Required Bashed Patch.'
+        content: 'Requires Bashed Patch.'
         condition: 'not regex("Bashed Patch.*\.esp")'
       - type: say
         content: 'Versions less than 3.1 may cause the quest being patched to restart if installed after the quest has started. Update to the latest delayer if you suspect a problem.'
@@ -24199,7 +24259,7 @@ plugins:
   - name: 'Bashed Delayers E - MERGE ONLY.esp'
     msg:
       - type: error
-        content: 'Required Bashed Patch.'
+        content: 'Requires Bashed Patch.'
         condition: 'not regex("Bashed Patch.*\.esp")'
     tag:
       - Deactivate
@@ -24207,7 +24267,7 @@ plugins:
   - name: 'Bashed Delayers NE - MERGE ONLY.esp'
     msg:
       - type: error
-        content: 'Required Bashed Patch.'
+        content: 'Requires Bashed Patch.'
         condition: 'not regex("Bashed Patch.*\.esp")'
     tag:
       - Deactivate
@@ -24215,7 +24275,7 @@ plugins:
   - name: 'CoreRandmonClothing4Npcs.esp'
     msg:
       - type: error
-        content: 'Required Bashed Patch.'
+        content: 'Requires Bashed Patch.'
         condition: 'not regex("Bashed Patch.*\.esp")'
     tag:
       - Deactivate
@@ -24225,7 +24285,7 @@ plugins:
   - name: 'Cobl Filter Late MERGE ONLY.esp'
     msg:
       - type: error
-        content: 'Required Bashed Patch.'
+        content: 'Requires Bashed Patch.'
         condition: 'not regex("Bashed Patch.*\.esp")'
     tag:
       - Deactivate
@@ -24240,7 +24300,7 @@ plugins:
   - name: 'OOO Harvest Containers Filter patch for mods.esp'
     msg:
       - type: error
-        content: 'Required Bashed Patch.'
+        content: 'Requires Bashed Patch.'
         condition: 'not regex("Bashed Patch.*\.esp")'
     tag:
       - Deactivate
@@ -24248,7 +24308,7 @@ plugins:
   - name: 'Harvest Containers Filter patch for mods.esp'
     msg:
       - type: error
-        content: 'Required Bashed Patch.'
+        content: 'Requires Bashed Patch.'
         condition: 'not regex("Bashed Patch.*\.esp")'
     tag:
       - Deactivate
@@ -24256,7 +24316,7 @@ plugins:
   - name: 'All Natural - Indoor Weather Filter For Mods.esp'
     msg:
       - type: error
-        content: 'Required Bashed Patch.'
+        content: 'Requires Bashed Patch.'
         condition: 'not regex("Bashed Patch.*\.esp")'
     tag:
       - C.Climate
@@ -24266,7 +24326,7 @@ plugins:
   - name: 'Storms & Sound - Filter Patch.esp'
     msg:
       - type: error
-        content: 'Required Bashed Patch.'
+        content: 'Requires Bashed Patch.'
         condition: 'not regex("Bashed Patch.*\.esp")'
       - type: say
         content: 'Make sure to rename your main Storms & Sounds plugin (OBSE-Storms & Sound.esp, EW-Storms & Sound.esp, etc.) to "Storms & Sound.esp".'
@@ -24275,7 +24335,7 @@ plugins:
   - name: 'TIE Weapon + Armor Filter.esp'
     msg:
       - type: error
-        content: 'Required Bashed Patch.'
+        content: 'Requires Bashed Patch.'
         condition: 'not regex("Bashed Patch.*\.esp")'
     tag:
       - Deactivate
