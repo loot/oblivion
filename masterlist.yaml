@@ -2732,7 +2732,7 @@ plugins:
         condition: *OOOCond
   - name: 'BAKAdventurerTorch.esp'
     msg:
-      - type: say
+      - type: warn
         content: 'Requires: OBSE 20+.'
         condition: 'version("..\obse_loader.exe","0.20.0.0",<)'
   - name: 'bnmDLTIC-1-6.esp'
@@ -2768,7 +2768,7 @@ plugins:
       - Scripts
   - name: 'Camera Redone.esp'
     msg:
-      - type: say
+      - type: warn
         content: 'Requires: OBSE 16+.'
         condition: 'version("..\obse_loader.exe","0.16.0.0",<)'
   - name: 'EnableFreeLookNoWheel.esp'
@@ -3387,10 +3387,10 @@ plugins:
   - name: 'P-Froggys Corpse Carry EV.esp'
     req: [ *OBSE ]
   - name: 'pmRealTimeInteractions.esp'
-    req: [ *OBSE ]
-    msg:
-      - type: say
-        content: 'Requires: MenuQue'
+    req:
+      - *OBSE
+      - name: 'OBSE\Plugins\MenuQue.dll'
+        display: '[MenuQue](http://oblivion.nexusmods.com/mods/32200)'
     dirty:
       - crc: 0x94805075
         util: *dirtyUtil
@@ -3564,7 +3564,7 @@ plugins:
       - C.Names
   - name: 'Rings of Infiltration.esp'
     msg:
-      - type: say
+      - type: warn
         content: 'Requires: OBSE 16+.'
         condition: 'version("..\obse_loader.exe","0.16.0.0",<)'
 # ENDGROUP: Base R
@@ -6619,7 +6619,7 @@ plugins:
         content: 'This mod only adds the saddlebags to merchants once. To ensure they are added to merchants who have been reset, also use "MD Saddlebags v3 alternative trader script".'
   - name: 'Horse Management.esp'
     msg:
-      - type: say
+      - type: warn
         content: 'Requires: OBSE v20b2+'
         condition: 'version("..\obse_loader.exe","0.21.0.0",<)'
   - name: 'qazHorseCommand -horsearmor.esp'
@@ -10027,7 +10027,7 @@ plugins:
       - NoMerge
   - name: 'BladeSong.esp'
     msg:
-      - type: say
+      - type: warn
         content: 'Requires: OBSE 18+, Screen Effects.'
   - name: 'BladeSong v1.3 Delayer.esp'
     msg:
@@ -10055,13 +10055,13 @@ plugins:
         content: 'This ESP has critical errors and should not be used in an active game. Regular TES4Edit cleaning is not enough to repair it.'
   - name: 'BossPhaitCrab.esp'
     msg:
-      - type: say
+      - type: warn
         content: 'Requires: OBSE 20+'
         condition: 'version("..\obse_loader.exe","0.20.0.0",<)'
       - *needsCleaning
   - name: 'BossPhaitDismal.esp'
     msg:
-      - type: say
+      - type: warn
         content: 'Requires: OBSE 20+'
         condition: 'version("..\obse_loader.exe","0.20.0.0",<)'
     dirty:
@@ -11225,7 +11225,7 @@ plugins:
         udr: 31
   - name: 'Legends - Baleful Eye.esp'
     msg:
-      - type: say
+      - type: warn
         content: 'Requires: OBSE 20+'
         condition: 'version("..\obse_loader.exe","0.20.0.0",<)'
     dirty:
@@ -11776,7 +11776,7 @@ plugins:
         udr: 1
   - name: 'Qaja''kar.esp'
     msg:
-      - type: say
+      - type: warn
         content: 'Requires: OBSE 12+.'
         condition: 'version("..\obse_loader.exe","0.12.0.0",<)'
   - name: 'qNS3-inventrix.esp'
@@ -11941,7 +11941,7 @@ plugins:
         util: *dirtyUtil
   - name: 'CMWaterskin.esp'
     msg:
-      - type: say
+      - type: warn
         content: 'Requires: OBSE 18+.'
         condition: 'version("..\obse_loader.exe","0.18.0.0",<)'
   - name: 'ShadowfangKeep.esp'
@@ -13703,7 +13703,7 @@ plugins:
         content: 'Obsolete. Update to latest version and remove.'
   - name: 'Enhanced Weather - Elsweyr Anequina Patch.esp'
     msg:
-      - type: say
+      - type: warn
         content: 'Requires: OBSE v0018+.'
         condition: 'version("..\obse_loader.exe","0.18.0.0",<)'
       - type: say
@@ -15867,12 +15867,12 @@ plugins:
       - NoMerge
   - name: 'CompanionHorseSupport.esp'
     msg:
-      - type: say
+      - type: warn
         content: 'Requires: OBSE version 17b or higher.'
         condition: 'version("..\obse_loader.exe","0.18.0.0",<)'
   - name: 'CompanionHorseSupportFIX forCMPartners.esp'
     msg:
-      - type: say
+      - type: warn
         content: 'Requires: OBSE version 17b or higher.'
         condition: 'version("..\obse_loader.exe","0.18.0.0",<)'
   - name: 'Compass-Disable_POIs.esp'
@@ -15982,10 +15982,10 @@ plugins:
       - type: say
         content: 'If possible, use Wrye Bash''s Darnified Books tweak instead.'
   - name: 'HUD Status Bars.esp'
-    req: [ *OBSE ]
-    msg:
-      - type: say
-        content: 'Requires: MenuQue'
+    req:
+      - *OBSE
+      - name: 'OBSE\Plugins\MenuQue.dll'
+        display: '[MenuQue](http://oblivion.nexusmods.com/mods/32200)'
   - name: 'DDJailShackles.esp'
     msg:
       - type: say
@@ -16778,7 +16778,7 @@ plugins:
       - NoMerge
   - name: 'Sleep to Save.esp'
     msg:
-      - type: say
+      - type: warn
         content: 'Requires: OBSE 11+.'
         condition: 'version("..\obse_loader.exe","0.12.0.0",<)'
   - name: 'Slof''s Dogs.esp'
@@ -16787,7 +16787,7 @@ plugins:
         content: 'Don''t need to use this if you use MMM as it already includes dogs.'
   - name: 'Soulgem Magic.esp'
     msg:
-      - type: say
+      - type: warn
         content: 'Requires: OBSE 20+.'
         condition: 'version("..\obse_loader.exe","0.20.0.0",<)'
     tag:
@@ -17368,7 +17368,7 @@ plugins:
         content: 'Do not activate alongside other horse summoning mods. Use only one .esp.'
   - name: 'MadCompanionshipSpells.esp'
     msg:
-      - type: say
+      - type: warn
         content: 'Requires: OBSE 19+.'
         condition: 'version("..\obse_loader.exe","0.19.0.0",<)'
   - name: 'MarkRecall.esp'
@@ -17613,7 +17613,7 @@ plugins:
         condition: 'file("Disease Immunity (Oblivion).esp")'
   - name: 'spellshields2.esp'
     msg:
-      - type: say
+      - type: warn
         content: 'Requires: OBSE 18+.'
         condition: 'version("..\obse_loader.exe","0.18.0.0",<)'
   - name: 'Wizard''sSpellBook.esp'
@@ -17662,12 +17662,12 @@ plugins:
         content: 'Use Wrye Bash Bashed Patch tweak ''Rational Names'' where posible.'
   - name: 'MagickOverlap.esp'
     msg:
-      - type: say
+      - type: warn
         content: 'Requires: OBSE 14+.'
         condition: 'version("..\obse_loader.exe","0.14.0.0",<)'
   - name: 'Poison Arrows.esp'
     msg:
-      - type: say
+      - type: warn
         content: 'Requires: OBSE 15 or higher.'
         condition: 'version("..\obse_loader.exe","0.15.0.0",<)'
   - name: 'Spell Failure Chance.esp'
@@ -17743,7 +17743,7 @@ plugins:
 # BEGINGROUP: Thievery, Sneaking and Crime
   - name: 'BookLooting.esp'
     msg:
-      - type: say
+      - type: warn
         content: 'Requires: OBSE 15+.'
         condition: 'version("..\obse_loader.exe","0.15.0.0",<)'
   - name: 'Jail Break Routes.esp'
@@ -17954,6 +17954,7 @@ plugins:
     msg:
       - type: say
         content: 'Incompatible with: COBL. COBL includes a denock arrow feature.'
+        condition: *coblCond
   - name: 'Bow_Damage_Equalizer.esp'
     tag:
       - Stats
@@ -17961,29 +17962,35 @@ plugins:
     msg:
       - type: say
         content: 'Only use one Erics * for archers.esp.'
+        condition: 'regex("erics_(double_damage_fast|quad_damage|quad_damage_fast|triple_damage|triple_damage_fast)_for_archers\.esp")'
   - name: 'erics_quad_damage_for_archers.esp'
     msg:
       - type: say
         content: 'Only use one Erics * for archers.esp.'
+        condition: 'regex("erics_(double_damage|double_damage_fast|quad_damage_fast|triple_damage|triple_damage_fast)_for_archers\.esp")'
   - name: 'erics_quad_damage_fast_for_archers.esp'
     msg:
       - type: say
         content: 'Only use one Erics * for archers.esp.'
+        condition: 'regex("erics_(double_damage|double_damage_fast|quad_damage|triple_damage|triple_damage_fast)_for_archers\.esp")'
   - name: 'erics_triple_damage_for_archers.esp'
     msg:
       - type: say
         content: 'Only use one Erics * for archers.esp.'
+        condition: 'regex("erics_(double_damage|double_damage_fast|quad_damage|quad_damage_fast|triple_damage_fast)_for_archers\.esp")'
   - name: 'erics_triple_damage_fast_for_archers.esp'
     msg:
       - type: say
         content: 'Only use one Erics * for archers.esp.'
+        condition: 'regex("erics_(double_damage|double_damage_fast|quad_damage|quad_damage_fast|triple_damage)_for_archers\.esp")'
   - name: 'erics_double_damage_fast_for_archers.esp'
     msg:
       - type: say
         content: 'Only use one Erics * for archers.esp.'
+        condition: 'regex("erics_(double_damage|quad_damage|quad_damage_fast|triple_damage|triple_damage_fast)_for_archers\.esp")'
   - name: 'Fast Arrow Collection.esp'
     msg:
-      - type: say
+      - type: warn
         content: 'Requires: OBSE 16+.'
         condition: 'version("..\obse_loader.exe","0.16.0.0",<)'
   - name: 'More_Arrows_Recovered-2169.esp'
@@ -18041,8 +18048,9 @@ plugins:
     req: [ *OBSE ]
   - name: 'Oblivion Global Mod.esp'
     msg:
-      - type: say
-        content: 'Incompatible with: Deadly reflex'
+      - type: warn
+        content: 'Incompatible with: Deadly Reflex'
+        condition: 'regex("Deadly Reflex.*\.esp")'
   - name: 'HTHAdvanced - Normal.esp'
     msg:
       - type: say
@@ -18053,14 +18061,17 @@ plugins:
     msg:
       - type: say
         content: 'Use only one HTHAdvanced - * esp.'
+        condition: 'file("HTHAdvanced - Normal.esp")'
   - name: 'JM''s Bar Fights mortal.esp'
     msg:
       - type: say
         content: 'Pick and use only 1 of the 2 JM''s Bar Fight mod files.'
+        condition: 'file("JM''s Bar Fights.esp")'
   - name: 'JM''s Bar Fights.esp'
     msg:
       - type: say
         content: 'Pick and use only 1 of the 2 JM''s Bar Fight mod files.'
+        condition: 'file("JM''s Bar Fights mortal.esp")'
   - name: 'Longer_KnockOut-6523.esp'
     msg:
       - type: say
@@ -18149,7 +18160,7 @@ plugins:
         content: 'Use no more than one Timed Block plugin.'
   - name: 'DRSplatter.esp'
     msg:
-      - type: say
+      - type: warn
         content: 'Remove this. Known to cause crashes and save game corruption.'
       - type: say
         content: 'Requires: OBGEv2.'
@@ -18187,7 +18198,7 @@ plugins:
         content: 'Outdated. Update to latest version.'
   - name: 'Double-tap dodge.esp'
     msg:
-      - type: say
+      - type: warn
         content: 'Requires: OBSE 19+.'
         condition: 'version("..\obse_loader.exe","0.19.0.0",<)'
   - name: 'Duke Patricks - NPCs Now Bob Under Your Shots.esp'
@@ -18243,7 +18254,8 @@ plugins:
     msg:
       - type: say
         content: 'Don''t need to use ''PTActorsCare.esp'', ''PTDamageFinal.esp'', ''PTDoorExploitBegone.esp'', ''PTLessKnockback.esp'' or NoRunningBackwards mod with this.'
-      - type: say
+        condition: 'file("PTActorsCare.esp") or file("PTDamageFinal.esp") or file("PTDoorExploitBegone.esp") or file("PTLessKnockback.esp") or file("NoBackwardsRunning.esp") or file("NoBackwardsRunning_fran.esp")'
+      - type: warn
         content: 'Requires: OBSE 17+'
         condition: 'version("..\obse_loader.exe","0.17.0.0",<)'
       - *masterReassign
@@ -18253,7 +18265,7 @@ plugins:
         content: 'Incompatible with: ''Unequip Broken Armor'', ''Enhanced Hotkeys'''
   - name: 'humantouchNPC.esp'
     msg:
-      - type: say
+      - type: warn
         content: 'Requires: OBSE 19+.'
         condition: 'version("..\obse_loader.exe","0.19.0.0",<)'
   - name: 'Duke Patricks - Melee Combat NO RECOIL.esp'
@@ -18266,75 +18278,92 @@ plugins:
     msg:
       - type: say
         content: 'Incompatible with: Progress*.esp'
+        condition: 'regex("[pP]rogress.*\.esp")'
   - name: 'CDM-CGO Horse Armor Compatability.esp'
     msg:
       - type: say
         content: 'Incompatible with: ''SM Plugin Refurbish'' mods.'
+        condition: 'regex(".*SM Plugin Refurbish.*\.esp")'
   - name: 'CDM-CGO Orrery Compatibility.esp'
     msg:
       - type: say
         content: 'Incompatible with: ''SM Plugin Refurbish'' mods.'
+        condition: 'regex(".*SM Plugin Refurbish.*\.esp")'
   - name: 'CDM-CGO Thieves Den Compatibility.esp'
     msg:
       - type: say
         content: 'Incompatible with: ''SM Plugin Refurbish'' mods.'
+        condition: 'regex(".*SM Plugin Refurbish.*\.esp")'
   - name: 'CDM-CGO Vile Lair Compatibility.esp'
     msg:
       - type: say
         content: 'Incompatible with: ''SM Plugin Refurbish'' mods.'
+        condition: 'regex(".*SM Plugin Refurbish.*\.esp")'
   - name: 'CDM-CGO Battlehorn Compatibility.esp'
     msg:
       - type: say
         content: 'Incompatible with: ''SM Plugin Refurbish'' mods.'
+        condition: 'regex(".*SM Plugin Refurbish.*\.esp")'
   - name: 'CDM-CGO Shivering Isles Compatibility.esp'
     msg:
       - type: say
         content: 'Incompatible with: ''SM Plugin Refurbish'' mods.'
+        condition: 'regex(".*SM Plugin Refurbish.*\.esp")'
   - name: 'CDM-CGO Frostcrag Compatibility.esp'
     msg:
       - type: say
         content: 'Incompatible with: ''SM Plugin Refurbish'' mods.'
+        condition: 'regex(".*SM Plugin Refurbish.*\.esp")'
   - name: 'CDM-CGO Standard Skill Levelling Faster.esp'
     msg:
       - type: say
         content: 'Only use one CDM-CGO Skill Levelling plugin.'
+        condition: 'regex("CDM-CGO Standard Skill Levellin(g|g Slower)\.esp") or regex("CDM-CGO Vanilla Skill Levelling (Faster|Slower)\.esp")'
   - name: 'CDM-CGO Standard Skill Levelling Slower.esp'
     msg:
       - type: say
         content: 'Only use one CDM-CGO Skill Levelling plugin.'
+        condition: 'regex("CDM-CGO Standard Skill Levellin(g|g Faster)\.esp") or regex("CDM-CGO Vanilla Skill Levelling (Faster|Slower)\.esp")'
   - name: 'CDM-CGO Standard Skill Levelling.esp'
     msg:
       - type: say
         content: 'Only use one CDM-CGO Skill Levelling plugin.'
+        condition: 'regex("CDM-CGO Standard Skill Levelling (Faster|Slower)\.esp") or regex("CDM-CGO Vanilla Skill Levelling (Faster|Slower)\.esp")'
   - name: 'CDM-CGO Vanilla Skill Levelling Faster.esp'
     msg:
       - type: say
         content: 'Only use one CDM-CGO Skill Levelling plugin.'
+        condition: 'regex("CDM-CGO Standard Skill Levellin(g|g Faster|g Slower)\.esp") or file("CDM-CGO Vanilla Skill Levelling Slower.esp")'
   - name: 'CDM-CGO Vanilla Skill Levelling Slower.esp'
     msg:
       - type: say
         content: 'Only use one CDM-CGO Skill Levelling plugin.'
+        condition: 'regex("CDM-CGO Standard Skill Levellin(g|g Faster|g Slower)\.esp") or file("CDM-CGO Vanilla Skill Levelling Faster.esp")'
   - name: 'ExperienceBasedTraining.esp'
     msg:
-      - type: say
+      - type: warn
         content: 'Requires: OBSE 16+.'
         condition: 'version("..\obse_loader.exe","0.16.0.0",<)'
   - name: 'Jhaerik''s Anti Power-Gaming Leveling System 1 (Very Easy ).esp'
     msg:
       - type: say
         content: 'Use only one Jhaerik''s Anti Power-Gaming Leveling System*.esp'
+        condition: 'regex("Jhaerik''s Anti Power-Gaming Leveling System [234].*\.esp")'
   - name: 'Jhaerik''s Anti Power-Gaming Leveling System 2 (Easy).esp'
     msg:
       - type: say
         content: 'Use only one Jhaerik''s Anti Power-Gaming Leveling System*.esp'
+        condition: 'regex("Jhaerik''s Anti Power-Gaming Leveling System [134].*\.esp")'
   - name: 'Jhaerik''s Anti Power-Gaming Leveling System 3 (Balanced).esp'
     msg:
       - type: say
         content: 'Use only one Jhaerik''s Anti Power-Gaming Leveling System*.esp'
+        condition: 'regex("Jhaerik''s Anti Power-Gaming Leveling System [124].*\.esp")'
   - name: 'Jhaerik''s Anti Power-Gaming Leveling System 4 (Hard).esp'
     msg:
       - type: say
         content: 'Use only one Jhaerik''s Anti Power-Gaming Leveling System*.esp'
+        condition: 'regex("Jhaerik''s Anti Power-Gaming Leveling System [123].*\.esp")'
   - name: 'Intelligence Overhaul BJ.esp'
     msg:
       - type: say
@@ -18342,7 +18371,7 @@ plugins:
         condition: *OOOCond
   - name: 'Intelligence Overhaul-RR.esp'
     msg:
-      - type: say
+      - type: warn
         content: 'Requires: OBSE 11+.'
         condition: 'version("..\obse_loader.exe","0.11.0.0",<)'
   - name: 'Sneaking Detection Recalibrated.esp'
@@ -18354,12 +18383,12 @@ plugins:
     msg:
       - type: say
         content: 'Deprecated. Do not use with v4.0+ of Sneaking Detection Recalibrated.'
-        condition: 'version("Sneaking Detection Recalibrated.esp","4.0",==)'
+        condition: 'version("Sneaking Detection Recalibrated.esp","4.0",>=)'
   - name: 'SDR_Core.esp'
     req:
-      - OBSE\Plugins\SDR_obse.dll
-      - OBSE\Plugins\AddActorValues.dll
-      - ..\obse_1_2_416.dll
+      - 'OBSE\Plugins\SDR_obse.dll'
+      - 'OBSE\Plugins\AddActorValues.dll'
+      - '..\obse_1_2_416.dll'
   - name: 'SDR_NPC Behavior.esp'
     inc:
       - name: 'SM Combat Hide.esp'
@@ -18367,7 +18396,7 @@ plugins:
     msg:
       - type: say
         content: 'Deprecated. Do not use with v4.5.0+ of Sneaking Detection Recalibrated.'
-        condition: 'version("SDR_Core.esp","=4.5.0",>)'
+        condition: 'version("SDR_Core.esp","4.5.0",>=)'
   - name: 'Oblivion XP - Journal Mod Patch.esp'
     msg:
       - type: say
@@ -18383,7 +18412,7 @@ plugins:
   - name: 'DMRequirements.esp'
     msg:
       - type: say
-        content: 'Oudated. Update to version 1.4+.'
+        content: 'Outdated. Update to version 1.4+.'
   - name: 'Toaster''s Legendary Skills.esp'
     msg:
       - type: say
@@ -18392,6 +18421,7 @@ plugins:
     msg:
       - type: say
         content: 'Included in ''Hentai Mania.esp'',  delete or deactivate if you use Hentai Mania mod.'
+        condition: 'regex("Hentai *Mania.*\.esp")'
   - name: 'seorin''s Leveling System.esp'
     msg:
       - type: say
@@ -18400,6 +18430,7 @@ plugins:
     msg:
       - type: say
         content: 'Use only one ''Legendary Abilities'' plugin.'
+        condition: 'file("Legendary Abilities-Fortify Health MOJ.esp") or file("Legendary Abilities-Reflect MOJ.esp")'
     dirty:
       - crc: 0x51d68248
         util: *dirtyUtil
@@ -18407,6 +18438,7 @@ plugins:
     msg:
       - type: say
         content: 'Use only one ''Legendary Abilities'' plugin.'
+        condition: 'file("Legendary Abilities-Shield MOJ.esp") or file("Legendary Abilities-Reflect MOJ.esp")'
     dirty:
       - crc: 0x8f8c843
         util: *dirtyUtil
@@ -18414,6 +18446,7 @@ plugins:
     msg:
       - type: say
         content: 'Use only one ''Legendary Abilities'' plugin.'
+        condition: 'file("Legendary Abilities-Fortify Health MOJ.esp") or file("Legendary Abilities-Shield MOJ.esp")'
     dirty:
       - crc: 0x52ebc32e
         util: *dirtyUtil
@@ -18425,17 +18458,19 @@ plugins:
         util: *dirtyUtil
   - name: 'SkillDecay.esp'
     msg:
-      - type: say
+      - type: warn
         content: 'Requires: OBSE v20+.'
         condition: 'version("..\obse_loader.exe","0.20.0.0",<)'
   - name: 'S.P.A.M.esp'
     msg:
       - type: say
         content: 'Use either ''S.P.A.M.esp'' or ''S.P.A.M. 100+.esp'' but not both together.'
+        condition: 'file("S.P.A.M. 100+.esp")'
   - name: 'S.P.A.M. 100+.esp'
     msg:
       - type: say
         content: 'Use either ''S.P.A.M.esp'' or ''S.P.A.M. 100+.esp'' but not both together.'
+        condition: 'file("S.P.A.M.esp")'
       - type: say
         content: 'Only for use with ''-Elys- Uncapper'' or ''Toaster''s Legendary Mastery'' attribute uncapper mods.'
       - type: say
@@ -18444,18 +18479,22 @@ plugins:
     msg:
       - type: say
         content: 'Choose either this one, ''S.P.A.M. Option - Fastest Major.esp'', or neither, BUT DO NOT choose both.'
+        condition: 'file("S.P.A.M. Option - Fastest Major.esp")'
   - name: 'S.P.A.M. Option - Fastest Major.esp'
     msg:
       - type: say
         content: 'Choose either this one, ''S.P.A.M. Option - Faster Major.esp'', or neither, BUT DO NOT choose both.'
+        condition: 'file("S.P.A.M. option - Faster Major.esp")'
   - name: 'S.P.A.M. option - Faster Minor.esp'
     msg:
       - type: say
         content: 'Choose either this one, ''S.P.A.M. Option - Fastest Minor.esp'', or neither, BUT DO NOT choose both.'
+        condition: 'file("S.P.A.M. Option - Fastest Minor.esp")'
   - name: 'S.P.A.M. Option - Fastest Minor.esp'
     msg:
       - type: say
         content: 'Choose either this one, ''S.P.A.M. Option - Faster Minor.esp'', or neither, BUT DO NOT choose both.'
+        condition: 'file("S.P.A.M. option - Faster Minor.esp")'
   - name: 'The Versatile Adventurer.esp'
     req: [ *OBSE ]
 # ENDGROUP: Skills, Attributes and Leveling
@@ -18472,6 +18511,7 @@ plugins:
     msg:
       - type: say
         content: 'Use ''SW01.esp'' or ''SW01Plus.esp'' but not both at the same time. SW01Plus affects the player as well.'
+        condition: 'file("SW01Plus.esp")'
       - *needsCleaning
     tag:
       - Actors.Anims
@@ -18480,6 +18520,7 @@ plugins:
     msg:
       - type: say
         content: 'Use ''SW01.esp'' or ''SW01Plus.esp'' but not both at the same time. SW01Plus affects the player as well.'
+        condition: 'file("SW01.esp")'
       - *needsCleaning
     tag:
       - Actors.Anims
@@ -18538,7 +18579,7 @@ plugins:
       - NoMerge
   - name: '1st Person Legs.esp'
     msg:
-      - type: say
+      - type: warn
         content: 'Requires: OBSE 15+.'
         condition: 'version("..\obse_loader.exe","0.15.0.0",<)'
   - name: 'xxJump.esp'
@@ -18762,7 +18803,7 @@ plugins:
   - name: 'Item interchange - Extraction.esp'
     msg:
       - type: error
-        content: 'Required Bashed Patch.'
+        content: 'Requires Bashed Patch.'
         condition: 'not regex("Bashed Patch.*\.esp")'
     tag:
       - Deactivate
@@ -18773,15 +18814,15 @@ plugins:
         content: 'Delete. Use II''s ''Item Interchange - Placement for FCOM.esp'' instead.'
         condition: *FCOMCond
       - type: error
-        content: 'Required Bashed Patch.'
+        content: 'Requires Bashed Patch.'
         condition: 'not regex("Bashed Patch.*\.esp")'
   - name: 'Item interchange - Placement for FCOM.esp'
     msg:
       - type: error
-        content: 'Required Bashed Patch.'
+        content: 'Requires Bashed Patch.'
         condition: 'not regex("Bashed Patch.*\.esp")'
       - type: say
-        content: 'FCOM version; use ''Item interchange - Placement.esp'' instead.'
+        content: 'This is the FCOM version; use ''Item interchange - Placement.esp'' instead.'
         condition: 'not file("FCOM_Convergence.esm")'
     tag:
       - Deactivate
@@ -18793,7 +18834,7 @@ plugins:
   - name: 'Item interchange - Placement for Frostcrag.esp'
     msg:
       - type: error
-        content: 'Required Bashed Patch.'
+        content: 'Requires Bashed Patch.'
         condition: 'not regex("Bashed Patch.*\.esp")'
     tag:
       - Deactivate
@@ -18803,26 +18844,26 @@ plugins:
   - name: 'Item interchange - Placement for Frostcrag Reborn.esp'
     msg:
       - type: error
-        content: 'Required Bashed Patch.'
+        content: 'Requires Bashed Patch.'
         condition: 'not regex("Bashed Patch.*\.esp")'
   - name: 'Item interchange - Placement for Frostcrag Spire Revisited.esp'
     msg:
       - type: error
-        content: 'Required Bashed Patch.'
+        content: 'Requires Bashed Patch.'
         condition: 'not regex("Bashed Patch.*\.esp")'
   - name: 'Item interchange - Option, Ingredients in Bulk.esp'
     msg:
       - type: say
         content: 'Use only one "Ingredients in Bulk" plugin.'
       - type: error
-        content: 'Required Bashed Patch.'
+        content: 'Requires Bashed Patch.'
         condition: 'not regex("Bashed Patch.*\.esp")'
   - name: 'Item interchange - Option, Ingredients in Bulk, reduced.esp'
     msg:
       - type: say
         content: 'Use only one "Ingredients in Bulk" plugin.'
       - type: error
-        content: 'Required Bashed Patch.'
+        content: 'Requires Bashed Patch.'
         condition: 'not regex("Bashed Patch.*\.esp")'
   - name: 'Atmospheric Loading Screens - No Text.esp'
     tag:
@@ -18876,10 +18917,10 @@ plugins:
     tag:
       - Graphics
   - name: 'Useful Houses.esp'
-    req: [ *OBSE ]
-    msg:
-      - type: say
-        content: 'Requires: MenuQue.'
+    req:
+      - *OBSE
+      - name: 'OBSE\Plugins\MenuQue.dll'
+        display: '[MenuQue](http://oblivion.nexusmods.com/mods/32200)'
 # ENDGROUP: Semi-final overrides
 # BEGINGROUP: Beauty Packs & Race Changes\Addons
   - name: 'Vanilla_Race_Overhaul.esp'
@@ -19057,7 +19098,7 @@ plugins:
     msg:
       - type: say
         content: 'Use only one ''Cosmetic Compilation*.esp'''
-        condition: 'file("Cosmetic Compilation.esp")'
+        condition: 'regex("Cosmetic Compilation - No (JPeepers|NPC Changes|JPeepers or NPC Changes)\.esp")'
     tag:
       - Eyes
       - Hair
@@ -19066,7 +19107,7 @@ plugins:
     msg:
       - type: say
         content: 'Use only one ''Cosmetic Compilation*.esp'''
-        condition: 'regex("Cosmetic Compilation( XXL DV)?\.esp")'
+        condition: 'regex("Cosmetic Compilation (XXL DV|- No (JPeepers|JPeepers or NPC Changes))\.esp")'
     tag:
       - Eyes
       - Hair
@@ -19075,7 +19116,7 @@ plugins:
     msg:
       - type: say
         content: 'Use only one ''Cosmetic Compilation*.esp'''
-        condition: 'regex("Cosmetic Compilation(( XXL DV)|( - No NPC Changes))?\.esp")'
+        condition: 'regex("Cosmetic Compilation (XXL DV|- No (NPC Changes|JPeepers or NPC Changes))\.esp")'
     tag:
       - Eyes
       - Hair
@@ -19084,7 +19125,7 @@ plugins:
     msg:
       - type: say
         content: 'Use only one ''Cosmetic Compilation*.esp'''
-        condition: 'regex("Cosmetic Compilation(( XXL DV)|( - No (JPeepers|NPC Changes)))?\.esp")'
+        condition: 'regex("Cosmetic Compilation (XXL DV|- No (JPeepers|NPC Changes))\.esp")'
     tag:
       - Eyes
       - Hair
@@ -19650,7 +19691,7 @@ plugins:
   - name: 'Cute Sexy Elves.esp'
     msg:
       - type: say
-        content: 'Incompatible with: Manga Elves.esp (Delete and update to Manga Elves.esp)'
+        content: 'Delete and update to newer version - ''Manga Elves.esp'''
     tag:
       - Eyes
       - Graphics
@@ -19660,6 +19701,7 @@ plugins:
     msg:
       - type: say
         content: 'Incompatible with: Cute Sexy Elves.esp which is an older version of same race'
+        condition: 'file("Cute Sexy Elves.esp")'
     tag:
       - Eyes
       - Graphics
@@ -19989,14 +20031,17 @@ plugins:
     msg:
       - type: say
         content: 'Only use one ''No ...'' plugin.'
+        condition: 'regex("Beautiful People 2ch-Ed Merged Eye Modules No Glow-Eyes( & One-Eyed)?\.esp")'
   - name: 'Beautiful People 2ch-Ed Merged Eye Modules No Glow-Eyes.esp'
     msg:
       - type: say
         content: 'Only use one ''No ...'' plugin.'
+        condition: 'regex("Beautiful People 2ch-Ed Merged Eye Modules No (Glow-Eyes & )?One-Eyed\.esp")'
   - name: 'Beautiful People 2ch-Ed Merged Eye Modules No Glow-Eyes & One-Eyed.esp'
     msg:
       - type: say
         content: 'Only use one ''No ...'' plugin.'
+        condition: 'regex("Beautiful People 2ch-Ed Merged Eye Modules No (One|Glow)-Eye[ds]\.esp")'
   - name: 'Beautiful People 2ch-Ed Chocolate Elves.esp'
     tag:
       - Eyes
@@ -20357,6 +20402,7 @@ plugins:
     msg:
       - type: say
         content: 'Choose only one ''Assassins Creed'' ESP.'
+        condition: 'regex("Assassins Creed - Altair''s Gear ?-? (((Heavy|Light) ?Armor\+?)?(ThrowingKnives)?)\.esp")'
     tag:
       - Eyes
       - Hair
@@ -20366,6 +20412,7 @@ plugins:
     msg:
       - type: say
         content: 'Choose only one ''Assassins Creed'' ESP.'
+        condition: 'regex("Assassins Creed - Altair''s Gear ?-? ?((Heavy ?Armor\+?)?(ThrowingKnives)?)\.esp")'
     tag:
       - Eyes
       - Hair
@@ -20375,6 +20422,7 @@ plugins:
     msg:
       - type: say
         content: 'Choose only one ''Assassins Creed'' ESP.'
+        condition: 'regex("Assassins Creed - Altair''s Gear ?-? ?((((Heavy|Light) Armor\+?)?(ThrowingKnives)?)|HeavyArmor\+ThrowingKnives)\.esp")'
     tag:
       - Eyes
       - Hair
@@ -20384,6 +20432,7 @@ plugins:
     msg:
       - type: say
         content: 'Choose only one ''Assassins Creed'' ESP.'
+        condition: 'regex("Assassins Creed - Altair''s Gear ?-? ?((((Heavy|Light) ?Armor\+?)(ThrowingKnives)?))?\.esp")'
     tag:
       - Eyes
       - Hair
@@ -20393,6 +20442,7 @@ plugins:
     msg:
       - type: say
         content: 'Choose only one ''Assassins Creed'' ESP.'
+        condition: 'regex("Assassins Creed - Altair''s Gear ?-? ?(((Heavy|Light )Armor\+?)?(ThrowingKnives)?)\.esp")'
     tag:
       - Eyes
       - Hair
@@ -20402,6 +20452,7 @@ plugins:
     msg:
       - type: say
         content: 'Choose only one ''Assassins Creed'' ESP.'
+        condition: 'regex("Assassins Creed - Altair''s Gear ?-? ?(((Heavy|Light) ?Armor?)?(ThrowingKnives)?)\.esp")'
     tag:
       - Eyes
       - Hair
@@ -20815,6 +20866,7 @@ plugins:
     msg:
       - type: say
         content: 'Use only one Essential or NotEssential version esp'
+        condition: 'regex("CM Partners( More)? (NPC NE|(NPCs( NE)?))\.esp")'
     tag:
       - Eyes
       - Hair
@@ -20829,6 +20881,7 @@ plugins:
     msg:
       - type: say
         content: 'Use only one Essential or NotEssential version esp'
+        condition: 'regex("CM Partners( More)? (NPC|NPCs( NE)?)\.esp")'
     tag:
       - Eyes
       - Hair
@@ -20840,6 +20893,7 @@ plugins:
     msg:
       - type: say
         content: 'Use only one Essential or NotEssential version esp'
+        condition: 'regex("CM Partners( More)? (NPC( NE)?|NPCs NE)\.esp")'
     tag:
       - Eyes
       - Hair
@@ -20851,6 +20905,7 @@ plugins:
     msg:
       - type: say
         content: 'Use only one Essential or NotEssential version esp'
+        condition: 'regex("CM Partners( More)? (NPC( NE)?|NPCs)\.esp")'
     tag:
       - Eyes
       - Hair
@@ -21275,14 +21330,14 @@ plugins:
       - Eyes
       - Hair
   - name: 'GGIlli.esp'
+    inc:
+      - 'Duke Patricks - Basic Combat Geometry.esp'
     msg:
-      - type: say 
+      - type: warn 
         content: 'Requires: OBSE 17+'
         condition: 'version("..\obse_loader.exe","0.17.0.0",<)'
       - type: say
         content: 'Requires: Underdark: The Realm of Northdark.'
-      - type: say
-        content: 'Incompatible with: Duke Patricks Basic Combat Geometry.'
   - name: 'GG_Valeria_Revived.esp'
     tag:
       - Eyes
@@ -21616,6 +21671,7 @@ plugins:
     msg:
       - type: say
         content: 'Includes ''KW-AlliesPlayNicer.esp'' so don''t use that with this.'
+        condition: 'file("KW-AlliesPlayNicer.esp")'
   - name: 'CMAll.esp'
     tag:
       - Body-F
@@ -21658,9 +21714,8 @@ plugins:
       - Body-M
       - Body-Size-M
   - name: 'Cobl Races.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: bgBalancingEVCore.esp'
+    inc:
+      - 'bgBalancingEVCore.esp'
     tag:
       - Eyes
       - Hair
@@ -22315,9 +22370,8 @@ plugins:
       - R.Relations
       - R.Skills
   - name: 'Cobl Races - Balanced.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: bgBalancingEVCore.esp'
+    inc:
+      - 'bgBalancingEVCore.esp'
     tag:
       - Body-F
       - Body-M
@@ -22385,6 +22439,7 @@ plugins:
         content: 'For use with Better Cities uncheck Better Cities SKINGRAD.esp'
       - type: say
         content: 'Do not use this plugin with Better Cities Full.esp'
+        condition: 'file("Better Cities Full.esp")'
   - name: 'Better Cities IC Arboretum.esp'
     tag:
       - C.Water
@@ -22394,9 +22449,8 @@ plugins:
         util: *dirtyUtil
         udr: 3
   - name: 'Better Cities Full - B&M Edition FPS Patch.esp'
-    msg:
-      - type: say
-        content: 'Only use if using Better Cities Full - B&M Edition.esp'
+    req:
+      - 'Better Cities Full - B&M Edition.esp'
   - name: 'Better Cities Skingrad FPS Patch.esp'
     msg:
       - type: say
@@ -22493,22 +22547,27 @@ plugins:
     msg:
       - type: say
         content: 'Use only one Better Cities *version* - CUO Bravil Patch.esp'
+        condition: 'regex("Better Cities (Full|B&M|Full B&M) - CUO Bravil( Patch)?\.esp")'
   - name: 'Better Cities Full - CUO Bravil.esp'
     msg:
       - type: say
         content: 'Use only one Better Cities *version* - CUO Bravil Patch.esp'
+        condition: 'regex("Better Cities (B&M |Full B&M )?- CUO Bravil Patch\.esp")'
   - name: 'Better Cities B&M - CUO Bravil Patch.esp'
     msg:
       - type: say
         content: 'Use only one Better Cities *version* - CUO Bravil Patch.esp'
+        condition: 'regex("Better Cities (Full (B&M )?)?- CUO Bravil( Patch)?\.esp")'
   - name: 'Better Cities Full B&M - CUO Bravil Patch.esp'
     msg:
       - type: say
         content: 'Use only one Better Cities *version* - CUO Bravil Patch.esp'
+        condition: 'regex("Better Cities (Full |B&M )?- CUO Bravil( Patch)?\.esp")'
   - name: 'BCBravilFULL-Barrowfields patch.esp'
     msg:
       - type: say
         content: 'Same as ''Better Cities - Unique Landscape Barrowfields.esp'' - only use ONE of these.'
+        condition: 'file("Better Cities - Unique Landscape Barrowfields.esp")'
   - name: 'Better Cities - Ruined Tail''s Tale.esp'
     msg:
       - type: say
@@ -22519,14 +22578,17 @@ plugins:
     msg:
       - type: say
         content: 'Use only one Better Cities *version* - CUO Chorrol Patch.esp'
+        condition: 'regex("Better Cities Full( B&M)? - CUO Chorrol Patch\.esp")'
   - name: 'Better Cities Full - CUO Chorrol Patch.esp'
     msg:
       - type: say
         content: 'Use only one Better Cities *version* - CUO Chorrol Patch.esp'
+        condition: 'regex("Better Cities( Full B&M)? - CUO Chorrol Patch\.esp")'
   - name: 'Better Cities Full B&M - CUO Chorrol Patch.esp'
     msg:
       - type: say
         content: 'Use only one Better Cities *version* - CUO Chorrol Patch.esp'
+        condition: 'regex("Better Cities( Full)? - CUO Chorrol Patch\.esp")'
   - name: 'BCChorrol-ChorrolHinterland fix.esp'
     msg:
       - type: say
@@ -22537,6 +22599,7 @@ plugins:
     msg:
       - type: say
         content: 'Same as ''Better Cities - Unique Landscape Chorrol Hinterland.esp'' - only use ONE of these.'
+        condition: 'file("Better Cities - Unique Landscape Chorrol Hinterland.esp")
     tag:
       - C.Water
   - name: 'Better Cities - Unique Landscape Chorrol Hinterland.esp'
@@ -22551,6 +22614,7 @@ plugins:
     msg:
       - type: say
         content: 'Use only one BCCheydinhal*version*-CheydinhalFalls patch.esp'
+        condition: 'file("BCCheydinhalFULLB&M-CheydinhalFalls patch.esp")'
     tag:
       - C.Water
   - name: 'BCCheydinhalFULL-CheydinhalFalls patch.esp'
@@ -22563,6 +22627,7 @@ plugins:
     msg:
       - type: say
         content: 'Use only one BCCheydinhal*version*-CheydinhalFalls patch.esp'
+        condition: 'file("BCCheydinhal-CheydinhalFalls patch.esp")'
     tag:
       - C.Water
   - name: 'Better Cities - Unique Landscape Cheydinhal Falls.esp'
@@ -22578,18 +22643,22 @@ plugins:
     msg:
       - type: say
         content: 'Only use one version of the Better Cities - CUO Bruma Patch.'
+        condition: 'regex("Better Cities (Full|Full B&M) - CUO Bruma Patch\.esp")'
   - name: 'Better Cities Full - CUO Bruma Patch.esp'
     msg:
       - type: say
         content: 'Only use one version of the Better Cities - CUO Bruma Patch.'
+        condition: 'regex("Better Cities (Full B&M )?- CUO Bruma Patch\.esp")'
   - name: 'Better Cities Full B&M - CUO Bruma Patch.esp'
     msg:
       - type: say
         content: 'Only use one version of the Better Cities - CUO Bruma Patch.'
+        condition: 'regex("Better Cities (Full )?- CUO Bruma Patch\.esp")'
   - name: 'BCSkingrad-SkingradOutskirts patch.esp'
     msg:
       - type: say
         content: 'Same as ''Better Cities - Unique Landscape Skingrad Outskirts.esp'' - only use ONE of these.'
+        condition: 'file("Better Cities - Unique Landscape Skingrad Outskirts.esp")'
     tag:
       - C.Water
   - name: 'Better Cities - Unique Landscape Skingrad Outskirts.esp'
@@ -22614,6 +22683,7 @@ plugins:
     msg:
       - type: say
         content: 'Only use if using Better Imperial City.esp'
+        condition: 'not file("Better Imperial City.esp")'
   - name: 'Better Cities - OMG.esp'
     msg:
       - type: say
@@ -22879,6 +22949,7 @@ plugins:
     msg:
       - type: say
         content: 'Only use if using Better Imperial City.esp'
+        condition: 'not file("Better Imperial City.esp")'
       - type: say
         content: 'Outdated. Update to latest version of Better Cities.'
   - name: 'Better Cities IC Temple Patch.esp'
@@ -22936,15 +23007,12 @@ plugins:
       - type: say
         content: 'Outdated. Update to latest version of Better Cities.'
   - name: 'Cyrodiil Rebuild.esp'
+    inc:
+      - 'AnvilBayExpansion.esp'
+      - 'Bravil Docks.esp'
+      - 'ImpeREAL Empire - Unique Castles - Bruma.esp'
+      - 'mrSiikas_ImperialCathedral.esp'
     msg:
-      - type: say
-        content: 'Incompatible with: AnvilBayExpansion.esp'
-      - type: say
-        content: 'Incompatible with: Bravil Docks.esp'
-      - type: say
-        content: 'Incompatible with: ImpeREAL Empire - Unique Castles - Bruma.esp'
-      - type: say
-        content: 'Incompatible with: mrSiikas_ImperialCathedral.esp'
       - type: say
         content: 'Incompatible with: xulChorrolHinterland.esp Included in Cyrodiil Rebuild.esp'
       - type: say
@@ -23005,7 +23073,7 @@ plugins:
       - Stats
   - name: 'HTSCl_base.esp'
     msg:
-      - type: say
+      - type: warn
         content: 'Requires: OBSE 19b+.'
         condition: 'version("..\obse_loader.exe","0.20.0.0",<)'
     tag:
@@ -23040,6 +23108,7 @@ plugins:
     msg:
       - type: say
         content: 'Use either ''HTSCl_wac.esp'' or ''HTSCl_wac_ItemLootFix.esp'', not both.'
+        condition: 'file("HTSCl_wac_ItemLootFix.esp")'
       - type: say
         content: 'Requires: Waalx Animals and Creatures'
     tag:
@@ -23049,6 +23118,7 @@ plugins:
     msg:
       - type: say
         content: 'Use either ''HTSCl_wac.esp'' or ''HTSCl_wac_ItemLootFix.esp'', not both.'
+        condition: 'file("HTSCl_wac.esp")'
       - type: say
         content: 'Requires: Waalx Animals and Creatures - ItemLootFix plugin.'
     tag:
@@ -23058,6 +23128,7 @@ plugins:
     msg:
       - type: say
         content: 'Use either ''HTSCl_cuo.esp'' or ''HTSCl_cuo_inElderCouncil.esp'', not both.'
+        condition: 'file("HTSCl_cuo_inElderCouncil.esp")'
       - type: say
         content: 'Requires: Cyrodiil Upgrade Overhaul.'
     tag:
@@ -23066,6 +23137,7 @@ plugins:
     msg:
       - type: say
         content: 'Use either ''HTSCl_cuo.esp'' or ''HTSCl_cuo_inElderCouncil.esp'', not both.'
+        condition: 'file("HTSCl_cuo.esp")'
       - type: say
         content: 'Requires: CUO, The Elder Council.'
     tag:
