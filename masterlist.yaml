@@ -16462,17 +16462,14 @@ plugins:
     tag:
       - Relations
   - name: 'pmNPCServices.esp'
-    msg:
-      - type: say
-        content: 'Requires: "Real-time Interactions"'
+    req:
+      - 'pmRealTimeInteractions.esp'
   - name: 'pmPersuasionOverhaul.esp'
-    msg:
-      - type: say
-        content: 'Requires: "Real-time Interactions"'
+    req:
+      - 'pmRealTimeInteractions.esp'
   - name: 'pmRepairRecharge.esp'
-    msg:
-      - type: say
-        content: 'Requires: "Real-time Interactions"'
+    req:
+      - 'pmRealTimeInteractions.esp'
   - name: 'PWRunSpeed.esp'
     tag:
       - Actors.Stats
@@ -17088,7 +17085,7 @@ plugins:
   - name: 'Alternative Start v1.2.esp'
     msg:
       - type: say
-        content: 'Check you''re using v1.26 or later.'
+        content: 'Check to make sure you''re using v1.26 or later.'
   - name: 'IOM - Kvatch.esp'
     msg:
       - type: say
@@ -17159,9 +17156,8 @@ plugins:
       - type: say
         content: 'Old, update to version 2.1.'
   - name: 'pmQFNaturalHunger.esp'
-    msg:
-      - type: say
-        content: 'Requires: Real-Time Interactions'
+    req:
+      - 'pmRealTimeInteractions.esp'
   - name: 'True Retroactive Health v2.2.esp'
     msg:
       - type: say
@@ -17178,6 +17174,7 @@ plugins:
     msg:
       - type: say
         content: 'Use only one MHE v2 esp'
+        condition: 'regex("MHE v(2|2 - UFF&Robert Tail|2 - UFF&Robert|2 - Exnem&Robert Tail|2 - Exnem&Robert)\.esp")'
     tag:
       - Actors.ACBS
       - Actors.Stats
@@ -17193,6 +17190,7 @@ plugins:
     msg:
       - type: say
         content: 'Use only one MHE v2 esp'
+        condition: 'regex("MHE v(2 Tail|2 - UFF&Robert Tail|2 - UFF&Robert|2 - Exnem&Robert Tail|2 - Exnem&Robert)\.esp")'
     tag:
       - Actors.ACBS
       - Actors.Stats
@@ -17208,6 +17206,7 @@ plugins:
     msg:
       - type: say
         content: 'Use only one MHE v2 esp'
+        condition: 'regex("MHE v(2 Tail|2|2 - UFF&Robert|2 - Exnem&Robert Tail|2 - Exnem&Robert)\.esp")'
     tag:
       - Actors.ACBS
       - Actors.Stats
@@ -17223,6 +17222,7 @@ plugins:
     msg:
       - type: say
         content: 'Use only one MHE v2 esp'
+        condition: 'regex("MHE v(2 Tail|2|2 - UFF&Robert Tail|2 - Exnem&Robert Tail|2 - Exnem&Robert)\.esp")'
     tag:
       - Actors.ACBS
       - Actors.Stats
@@ -17238,6 +17238,7 @@ plugins:
     msg:
       - type: say
         content: 'Use only one MHE v2 esp'
+        condition: 'regex("MHE v(2 Tail|2|2 - UFF&Robert Tail|2 - UFF&Robert|2 - Exnem&Robert)\.esp")'
     tag:
       - Actors.ACBS
       - Actors.Stats
@@ -17253,6 +17254,7 @@ plugins:
     msg:
       - type: say
         content: 'Use only one MHE v2 esp'
+        condition: 'regex("MHE v(2 Tail|2|2 - UFF&Robert Tail|2 - UFF&Robert|2 - Exnem&Robert Tail)\.esp")'
     tag:
       - Actors.ACBS
       - Actors.Stats
@@ -17278,23 +17280,19 @@ plugins:
         util: *dirtyUtil
         udr: 10
   - name: 'MIVs Vampire Overhaul RUS.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: Unholy Darkness.esp'
-        condition: 'file("Unholy Darkness.esp")'
+    inc:
+      - 'Unholy Darkness.esp'
   - name: 'MIVs Vampire Overhaul ENG.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: Unholy Darkness.esp'
-        condition: 'file("Unholy Darkness.esp")'
+    inc:
+      - 'Unholy Darkness.esp'
   - name: 'Twillith vampirism 1.7.esp'
     msg:
       - type: say
-        content: 'Old update to ''Twillith vampirism.esp''.'
+        content: 'Old, update to ''Twillith vampirism.esp''.'
   - name: 'Twillith vampirism 1.71.esp'
     msg:
       - type: say
-        content: 'Old update to ''Twillith vampirism.esp''.'
+        content: 'Old, update to ''Twillith vampirism.esp''.'
   - name: 'Vampisism Overhaul 2.esp'
     msg:
       - type: say
@@ -17334,9 +17332,10 @@ plugins:
       - type: say
         content: 'Suspected of messing up your magicka multiplier.'
   - name: 'CompanionRepair.esp'
+    req: [ *OBSE ]
     msg:
       - type: say
-        content: 'Requires: RefStuff, OBSE.'
+        content: 'Requires: RefStuff'
   - name: 'elPatrixF_SummonWorkshop_ShiveringIsles.esp'
     msg:
       - type: say
@@ -17357,10 +17356,12 @@ plugins:
     msg:
       - type: say
         content: 'use only one ''JIM_Summon_Doppleganger.esp'' or ''JIM_Balanced_Doppleganger.esp'''
+        condition: 'file("JIM_Balanced_Doppleganger.esp")'
   - name: 'JIM_Balanced_Doppleganger.esp'
     msg:
       - type: say
         content: 'use only one ''JIM_Summon_Doppleganger.esp'' or ''JIM_Balanced_Doppleganger.esp'''
+        condition: 'file("JIM_Summon_Doppleganger.esp")'
   - name: 'JIM_Summon_Unicorn.esp'
     msg:
       - type: say
@@ -17374,6 +17375,7 @@ plugins:
     msg:
       - type: say
         content: 'Consider using Mark Recall 3 if using OBSE.'
+        condition: 'file("..\obse_loader.exe")'
   - name: 'Mark3.esp'
     req: [ *OBSE ]
   - name: 'SNxMarkers.esp'
@@ -17402,22 +17404,27 @@ plugins:
     msg:
       - type: say
         content: 'Use only one Pants Be Gone 1.3 mod'
+        condition: 'file("Pants Be Gone 1.3 Without Demoralize.esp")'
   - name: 'Pants Be Gone 1.3 Without Demoralize.esp'
     msg:
       - type: say
         content: 'Use only one Pants Be Gone 1.3 mod'
+        condition: 'file("Pants Be Gone 1.3 With Demoralize.esp")'
   - name: 'PJs Spells - Cheap Spells.esp'
     msg:
       - type: say
         content: 'Use only one ''PJs Spells - Cheap Spells.esp'' or ''PJs Spell Compendium - No Requirements.esp'' or ''PJs Spell Compendium - Spell Requirements.esp'''
+        condition: 'file("PJs Spell Compendium - No Requirements.esp") or file("PJs Spell Compendium - Spell Requirements.esp")'
   - name: 'PJs Spell Compendium - No Requirements.esp'
     msg:
       - type: say
         content: 'Use only one ''PJs Spells - Cheap Spells.esp'' or ''PJs Spell Compendium - No Requirements.esp'' or ''PJs Spell Compendium - Spell Requirements.esp'''
+        condition: 'file("PJs Spells - Cheap Spells.esp") or file("PJs Spell Compendium - Spell Requirements.esp")'
   - name: 'PJs Spell Compendium - Spell Requirements.esp'
     msg:
       - type: say
         content: 'Use only one ''PJs Spells - Cheap Spells.esp'' or ''PJs Spell Compendium - No Requirements.esp'' or ''PJs Spell Compendium - Spell Requirements.esp'''
+        condition: 'file("PJs Spells - Cheap Spells.esp") or file("PJs Spell Compendium - No Requirements.esp")'
     dirty:
       - crc: 0x38eef54d
         util: *dirtyUtil
@@ -17438,7 +17445,7 @@ plugins:
     req: [ *OBSE ]
   - name: 'training spells.esp'
     msg:
-      - type: say
+      - type: error
         content: 'DO NOT USE. This plugin is corrupt. It may be fixed by loading it in the CS and truncating the file when prompted.'
   - name: 'Judgement of the Nine.esp'
     tag:
@@ -17495,14 +17502,17 @@ plugins:
     msg:
       - type: say
         content: 'Use only one Reduced Costs module at a time'
+        condition: 'file("Midas Reduced Costs Quarter.esp") or file("Midas Reduced Costs 3 Quarters")'
   - name: 'Midas Reduced Costs Quarter.esp'
     msg:
       - type: say
         content: 'Use only one Reduced Costs module at a time'
+        condition: 'file("Midas Reduced Costs Half.esp") or file("Midas Reduced Costs 3 Quarters")'
   - name: 'Midas Reduced Costs 3 Quarters.esp'
     msg:
       - type: say
         content: 'Use only one Reduced Costs module at a time'
+        condition: 'file("Midas Reduced Costs Quarter.esp") or file("Midas Reduced Costs Half")'
   - name: 'Mart''s Monster Mod - Midas Creature Ingredients.esp'
     tag:
       - Actors.ACBS
@@ -17555,22 +17565,31 @@ plugins:
     msg:
       - type: say
         content: 'Pick either the OBSE version or this one. But not both.'
+        condition: 'file("Midas Tigernolevel OBSE.esp")'
   - name: 'Midas Tigernolevel OBSE.esp'
+    req: [ *OBSE ]
     msg:
       - type: say
-        content: 'Pick either the Non OBSE version or this one. But not both. Do not run without Oblivion Script Extender.'
+        content: 'Pick either the Non OBSE version or this one. But not both.'
+        condition: 'file("Midas Tigernolevel NoOBSE.esp")'
   - name: 'Midas BeastFortify Fix NONOBSE.esp'
     msg:
       - type: say
         content: 'Pick either the OBSE version or this one. But not both.'
+        condition: 'file("Midas BeastFortify Fix OBSE.esp")'
   - name: 'Midas BeastFortify Fix OBSE.esp'
+    req: [ *OBSE ]
     msg:
       - type: say
-        content: 'Pick either the Non OBSE version or this one. But not both. Do not run without Oblivion Script Extender.'
+        content: 'Pick either the Non OBSE version or this one. But not both.'
+        condition: 'file("Midas BeastFortify Fix NONOBSE.esp")'
   - name: 'CALSUDG.esp'
     msg:
       - type: say
-        content: 'Requires: OBME, OBSE 18+'
+        content: 'Requires: OBME'
+      - type: say 
+        content: 'Requires: OBSE 18+'
+        condition: 'version("..\obse_loader.exe","0.18.0.0",<)'
   - name: 'ES4_Spell Names by Effect.esp'
     tag:
       - Names
@@ -17586,10 +17605,12 @@ plugins:
     msg:
       - type: say
         content: 'Only use one Disease Immunity esp - use this one without SI.'
+        condition: 'file("Disease Immunity (Oblivion + Shivering Isles).esp")'
   - name: 'Disease Immunity (Oblivion + Shivering Isles).esp'
     msg:
       - type: say
         content: 'Only use one Disease Immunity esp - use this one with SI.'
+        condition: 'file("Disease Immunity (Oblivion).esp")'
   - name: 'spellshields2.esp'
     msg:
       - type: say
@@ -17661,8 +17682,9 @@ plugins:
         content: 'Consider updating to doubledeviant''s updated version.'
   - name: 'Miniature Necromancy Revised.esp'
     msg:
-      - type: say
+      - type: warn
         content: 'Do not have Jpm''s original active at the same time as this.'
+        condition: 'file("Jpm''s Miniature Necromancy.esp") or file("Jpm''s Miniature Necromancy RUS.esp")'
   - name: 'TFE - Restore Cost.esp'
     msg:
       - type: say
@@ -17670,16 +17692,13 @@ plugins:
   - name: 'PMSneakySummons-ForVanilla.esp'
     msg:
       - type: say
-        content: 'Do not use with PMSneakySummonCompatibility.esp,'
-      - type: say
-        content: 'to have magic overhaul features move before magic overhauls (but then'
-      - type: say
-        content: 'you won''t get the features of this)'
+        content: 'Do not use with PMSneakySummonCompatibility.esp, to have magic overhaul features move before magic overhauls (but then you won''t get the features of this)'
   - name: 'Cure Disease Overhaul - Extreme Diseases.esp'
     tag:
       - Actors.Spells
       - SpellStats
   - name: 'Cure Disease Overhaul - Deadly Diseases (OBSE).esp'
+    req: [ *OBSE ]
     tag:
       - Actors.Spells
       - SpellStats
@@ -17733,17 +17752,14 @@ plugins:
         util: *dirtyUtil
         udr: 4
   - name: 'pmCrimeHandler.esp'
-    msg:
-      - type: say
-        content: 'Requires: Real-Time Interactions'
+    req:
+      - 'pmRealTimeInteractions.esp'
   - name: 'pmLockpicking.esp'
-    msg:
-      - type: say
-        content: 'Requires: Real-Time Interactions'
+    req:
+      - 'pmRealTimeInteractions.esp'
   - name: 'pmSkoomaDeals.esp'
-    msg:
-      - type: say
-        content: 'Requires: Real-Time Interactions'
+    req:
+      - 'pmRealTimeInteractions.esp'
   - name: 'Attack & Hide.esp'
     msg:
       - type: say
@@ -17782,26 +17798,32 @@ plugins:
     msg:
       - type: say
         content: 'only use one of the ''Worthwhile Thievery'' ESPs.'
+        condition: 'regex("Thievery_(Easy|Normal|Hard|Normal_Thrill|Hard_Thrill)\.esp")'
   - name: 'Thievery_Easy.esp'
     msg:
       - type: say
         content: 'only use one of the ''Worthwhile Thievery'' ESPs.'
+        condition: 'regex("Thievery_(Normal|Hard|Easy_Thrill|Normal_Thrill|Hard_Thrill)\.esp")'
   - name: 'Thievery_Normal_Thrill.esp'
     msg:
       - type: say
         content: 'only use one of the ''Worthwhile Thievery'' ESPs.'
+        condition: 'regex("Thievery_(Easy|Normal|Hard|Easy_Thrill|Hard_Thrill)\.esp")'
   - name: 'Thievery_Normal.esp'
     msg:
       - type: say
         content: 'only use one of the ''Worthwhile Thievery'' ESPs.'
+        condition: 'regex("Thievery_(Easy|Hard|Easy_Thrill|Normal_Thrill|Hard_Thrill)\.esp")'
   - name: 'Thievery_Hard_Thrill.esp'
     msg:
       - type: say
         content: 'only use one of the ''Worthwhile Thievery'' ESPs.'
+        condition: 'regex("Thievery_(Easy|Normal|Hard|Easy_Thrill|Normal_Thrill)\.esp")'
   - name: 'Thievery_Hard.esp'
     msg:
       - type: say
         content: 'only use one of the ''Worthwhile Thievery'' ESPs.'
+        condition: 'regex("Thievery_(Easy|Normal|Easy_Thrill|Normal_Thrill|Hard_Thrill)\.esp")'
   - name: 'Morrowind Lockpicking.esp'
     msg:
       - type: say
@@ -17824,18 +17846,22 @@ plugins:
     msg:
       - type: say
         content: 'Use only one BountyReductionOverTime esp.'
+        condition: 'regex("BountyReductionOverTim(e_standard|e_unforgiving|e_mostwanted)\.esp")'
   - name: 'BountyReductionOverTime_standard.esp'
     msg:
       - type: say
         content: 'Use only one BountyReductionOverTime esp.'
+        condition: 'regex("BountyReductionOverTim(e|e_unforgiving|e_mostwanted)\.esp")'
   - name: 'BountyReductionOverTime_unforgiving.esp'
     msg:
       - type: say
         content: 'Use only one BountyReductionOverTime esp.'
+        condition: 'regex("BountyReductionOverTim(e|e_standard|e_mostwanted)\.esp")'
   - name: 'BountyReductionOverTime_mostwanted.esp'
     msg:
       - type: say
         content: 'Use only one BountyReductionOverTime esp.'
+        condition: 'regex("BountyReductionOverTim(e|e_standard|e_unforgiving)\.esp")'
   - name: 'No psychic guards v1.1.esp'
     msg:
       - type: say
@@ -17887,10 +17913,12 @@ plugins:
     msg:
       - type: say
         content: 'Only use one ''Lockpick challenge'' mod.'
+        condition: 'file("Duke Patrick''s Lockpick challange Manual.esp")'
   - name: 'Duke Patrick''s Lockpick challange Manual.esp'
     msg:
       - type: say
         content: 'Only use one ''Lockpick challenge'' mod.'
+        condition: 'file("Duke Patrick''s Lockpick challange Autopick.esp")'
 # ENDGROUP: Guards and Bounty
 # BEGINGROUP: Combat
   - name: 'Adrenaline-Fuelled Combat.esp'
