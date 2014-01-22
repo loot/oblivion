@@ -2587,9 +2587,10 @@ plugins:
       - type: say
         content: 'Outdated, incompatible with other ScreenEffects mods. Update to latest version of Ambient Dungeons.'
   - name: 'AmbientDungeons.esp'
+    req: [ *OBSE ]
     msg:
       - type: say
-        content: 'Requires: OBSE and ''You Are Here''. ScreenEffects for versions below 1.3.'
+        content: 'Requires: ''You Are Here''. ScreenEffects for versions below 1.3.'
 # ENDGROUP: Lighting
 
 # BEGINGROUP: General Base Mods
@@ -2733,6 +2734,7 @@ plugins:
     msg:
       - type: say
         content: 'Requires: OBSE 20+.'
+        condition: 'version("..\obse_loader.exe","0.20.0.0",<)'
   - name: 'bnmDLTIC-1-6.esp'
     msg:
       - type: say
@@ -2768,18 +2770,15 @@ plugins:
     msg:
       - type: say
         content: 'Requires: OBSE 16+.'
+        condition: 'version("..\obse_loader.exe","0.16.0.0",<)'
   - name: 'EnableFreeLookNoWheel.esp'
     msg:
       - type: say
         content: 'Only use if you do not have a mouse wheel.'
   - name: 'EnableFreeLookOBSE.esp'
-    msg:
-      - type: say
-        content: 'Requires: OBSE.'
+    req: [ *OBSE ]
   - name: 'tw1_fov_adjustor.esp'
-    msg:
-      - type: say
-        content: 'Requires: OBSE.'
+    req: [ *OBSE ]
   - name: 'CATSDeerPeltsAndAntlers.esp'
     msg:
       - type: say
@@ -3384,13 +3383,9 @@ plugins:
         content: 'Do not use with mmmpld''s original See You Sleep mod or any of its compatibility patches.'
         condition: 'file("P1DseeYouSleep.esp")'
   - name: 'P-Froggys Corpse Carry DV.esp'
-    msg:
-      - type: say
-        content: 'Requires: OBSE.'
+    req: [ *OBSE ]
   - name: 'P-Froggys Corpse Carry EV.esp'
-    msg:
-      - type: say
-        content: 'Requires: OBSE.'
+    req: [ *OBSE ]
   - name: 'pmRealTimeInteractions.esp'
     req: [ *OBSE ]
     msg:
@@ -3571,6 +3566,7 @@ plugins:
     msg:
       - type: say
         content: 'Requires: OBSE 16+.'
+        condition: 'version("..\obse_loader.exe","0.16.0.0",<)'
 # ENDGROUP: Base R
 
 # BEGINGROUP: Base S
@@ -3725,7 +3721,10 @@ plugins:
   - name: 'VipCxj_AirSystem.esp'
     msg:
       - type: say
-        content: 'Requires: OBSE 20+, Coronerras Maximum Compatibility Skeletons, VipCxj''s Plugin Collection v3'
+        content: 'Requires: Coronerras Maximum Compatibility Skeletons, VipCxj''s Plugin Collection v3'
+      - type: say 
+        content: 'Requires: OBSE 20+'
+        condition: 'version("..\obse_loader.exe","0.20.0.0",<)'
   - name: 'Vows and Covenants.esp'
     msg:
       - type: say
@@ -6622,6 +6621,7 @@ plugins:
     msg:
       - type: say
         content: 'Requires: OBSE v20b2+'
+        condition: 'version("..\obse_loader.exe","0.21.0.0",<)'
   - name: 'qazHorseCommand -horsearmor.esp'
     tag:
       - Scripts
@@ -7857,6 +7857,7 @@ plugins:
       - Invent
       - Scripts
       - Stats
+    condition: *FCOMCond
   - name: 'Mart''s Monster Mod - Diverse Creature Skins.esp'
     msg:
       - type: error
@@ -8004,7 +8005,7 @@ plugins:
         content: 'Can increase the chances of a CTD in a heavily modded game.'
       - *doNotClean
   - name: 'Mart''s Monster Mod - Diverse Runeskulls.esp'
-    condition: 'not file("FCOM_Convergence.esm")'
+    condition: 'not active("FCOM_Convergence.esm")'
     msg:
       - type: say
         content: 'Replaces both ''FCOM_ExnemRuneskulls.esp'' and ''ExnemRuneskulls.esp'' - Please remove them.'
@@ -8043,6 +8044,7 @@ plugins:
       - *doNotClean
   - name: 'Mart''s Monster Mod - Hunting & Crafting.esp'
     msg: [ *doNotClean ]
+    condition: 'not active("FCOM_Convergence.esm")'
   - name: 'Mart''s Monster Mod - Durability & Damage.esp'
     msg:
       - type: say
@@ -9740,9 +9742,10 @@ plugins:
   - name: 'AR.esp'
     msg: [ *needsCleaning ]
   - name: 'Arcane Services.esp'
+    req: [ *OBSE ]
     msg:
       - type: say
-        content: 'Requires: OBSE & Shivering Isles'
+        content: 'Requires: Shivering Isles'
     dirty:
       - crc: 0x15ffc768
         util: *dirtyUtil
@@ -10054,11 +10057,13 @@ plugins:
     msg:
       - type: say
         content: 'Requires: OBSE 20+'
+        condition: 'version("..\obse_loader.exe","0.20.0.0",<)'
       - *needsCleaning
   - name: 'BossPhaitDismal.esp'
     msg:
       - type: say
         content: 'Requires: OBSE 20+'
+        condition: 'version("..\obse_loader.exe","0.20.0.0",<)'
     dirty:
       - crc: 0x6d467eb0
         util: *dirtyUtil
@@ -11222,6 +11227,7 @@ plugins:
     msg:
       - type: say
         content: 'Requires: OBSE 20+'
+        condition: 'version("..\obse_loader.exe","0.20.0.0",<)'
     dirty:
       - crc: 0x4a2e7217
         util: *dirtyUtil
@@ -11229,7 +11235,10 @@ plugins:
   - name: 'Legends - Zefaro Cottage.esp'
     msg:
       - type: say
-        content: 'Requires: OBSE 18+, USV, HGEC or Exnem body.'
+        content: 'Requires: USV, HGEC or Exnem body.'
+      - type: say 
+        content: 'Requires: OBSE 18+'
+        condition: 'version("..\obse_loader.exe","0.18.0.0",<)'
   - name: 'Legion Faction Mod.esp'
     tag:
       - Relations
@@ -11769,6 +11778,7 @@ plugins:
     msg:
       - type: say
         content: 'Requires: OBSE 12+.'
+        condition: 'version("..\obse_loader.exe","0.12.0.0",<)'
   - name: 'qNS3-inventrix.esp'
     dirty:
       - crc: 0x8c3473fa
@@ -11933,6 +11943,7 @@ plugins:
     msg:
       - type: say
         content: 'Requires: OBSE 18+.'
+        condition: 'version("..\obse_loader.exe","0.18.0.0",<)'
   - name: 'ShadowfangKeep.esp'
     dirty:
       - crc: 0xa970802f
@@ -13693,7 +13704,7 @@ plugins:
   - name: 'Enhanced Weather - Elsweyr Anequina Patch.esp'
     msg:
       - type: say
-        content: 'Requires: OBSE v0018.'
+        content: 'Requires: OBSE v0018+.'
         condition: 'version("..\obse_loader.exe","0.18.0.0",<)'
       - type: say
         content: 'Old. Use ''Enhanced Weather - Across-The-Borders Mods Patch'' instead.'
@@ -15580,23 +15591,28 @@ plugins:
   - name: '100%FloraHarvest.esp'
     msg:
       - type: say
-        content: 'Use Bashed Patch tweak instead if using Wrye Bash.'
+        content: 'Use Wrye Bash Bashed Patch tweak instead.'
+        condition: 'regex("Bashed Patch.*\.esp")'
   - name: '100% Harvest Chance.esp'
     msg:
       - type: say
-        content: 'Use Bashed Patch tweak instead if using Wrye Bash.'
+        content: 'Use Wrye Bash Bashed Patch tweak instead.'
+        condition: 'regex("Bashed Patch.*\.esp")'
   - name: '100% Harvest Chance Pitcher & Lilly.esp'
     msg:
       - type: say
         content: 'Use Bashed Patch tweak instead if using Wrye Bash - unless you want it only on the Pitcher & Lilly plants.'
+        condition: 'regex("Bashed Patch.*\.esp")'
   - name: '100% Harvest Chance Shivering Isles.esp'
     msg:
       - type: say
-        content: 'Use Bashed Patch tweak instead if using Wrye Bash.'
+        content: 'Use Wrye Bash Bashed Patch tweak instead.'
+        condition: 'regex("Bashed Patch.*\.esp")'
   - name: '1229-Priced Clutter-TESSource.esp'
     msg:
       - type: say
         content: 'May not work with Living Economy as LE scripts tend to overwrite pricing mods.'
+        condition: 'regex("Living Economy.*\.esp")'
   - name: '354_Improved_Marobel_horse_immortal.esp'
     msg:
       - type: say
@@ -15611,6 +15627,7 @@ plugins:
     msg:
       - type: say
         content: 'May not work with Living Economy as LE scripts tend to overwrite pricing mods.'
+        condition: 'regex("Living Economy.*\.esp")'
   - name: 'Addendum - Diabloblivion.esp'
     dirty:
       - crc: 0xd6814dd
@@ -15731,10 +15748,12 @@ plugins:
     msg:
       - type: say
         content: 'May not work with Living Economy as LE scripts tend to overwrite pricing mods.'
+        condition: 'regex("Living Economy.*\.esp")'
   - name: 'BlackFineryWithAmulet.esp'
     msg:
       - type: say
-        content: 'If using Wrye Bash use the ''clothing show amulets'' tweak instead.'
+        content: 'Use Wrye Bash''s ''clothing show amulets'' tweak instead.'
+        condition: 'regex("Bashed Patch.*\.esp")'
   - name: 'Blunt Is Now Hafted.esp'
     tag:
       - Deactivate
@@ -15784,7 +15803,7 @@ plugins:
   - name: 'CDM-Dogs.esp'
     msg:
       - type: say
-        content: 'MMM users: dog''s already included in MMM. May introduce problems with new kind of dog-meat ingredient. Untested.'
+        content: 'MMM users: dogs already included in MMM. May introduce problems with new kind of dog-meat ingredient. Untested.'
   - name: 'CHILDREN ANNUAD.esp'
     tag:
       - Actors.ACBS
@@ -15812,14 +15831,13 @@ plugins:
       - crc: 0x5fc677bf
         util: *dirtyUtil
   - name: 'Cliff''s MWStyleEnchantingSpellmaking - With Guild Requirements.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: Cliff''s MWStyleEnchantingSpellmaking - No Guild Requirements.esp'
-        condition: 'file("Cliff''s MWStyleEnchantingSpellmaking - No Guild Requirements.esp")'
+    inc:
+      - 'Cliff''s MWStyleEnchantingSpellmaking - No Guild Requirements.esp'
   - name: 'Cliff''s Shacks Basements.esp'
     msg:
       - type: say
         content: 'Use ''Cliff''s Shacks Basements.esp'' or ''Cliff''s Shacks Basements-Radiant AI.esp'' but not both at the same time.'
+        condition: 'file("Cliff''s Shacks Basements-Radiant AI.esp")'
     dirty:
       - crc: 0x680bcbc2
         util: *dirtyUtil
@@ -15827,6 +15845,7 @@ plugins:
     msg:
       - type: say
         content: 'Use ''Cliff''s Shacks Basements.esp'' or ''Cliff''s Shacks Basements-Radiant AI.esp'' but not both at the same time.'
+        condition: 'file("Cliff''s Shacks Basements.esp")'
     dirty:
       - crc: 0xc076fe76
         util: *dirtyUtil
@@ -15850,26 +15869,32 @@ plugins:
     msg:
       - type: say
         content: 'Requires: OBSE version 17b or higher.'
+        condition: 'version("..\obse_loader.exe","0.18.0.0",<)'
   - name: 'CompanionHorseSupportFIX forCMPartners.esp'
     msg:
       - type: say
         content: 'Requires: OBSE version 17b or higher.'
+        condition: 'version("..\obse_loader.exe","0.18.0.0",<)'
   - name: 'Compass-Disable_POIs.esp'
     msg:
       - type: say
-        content: 'If using Wrye Bash use Bashed Patch tweaker instead.'
+        content: 'Use Wrye Bash''s Bashed Patch tweaker instead.'
+        condition: 'regex("Bashed Patch.*\.esp")'
   - name: 'Compass-Disable_QuestMarkers.esp'
     msg:
       - type: say
-        content: 'If using Wrye Bash use Bashed Patch tweaker instead.'
+        content: 'Use Wrye Bash''s Bashed Patch tweaker instead.'
+        condition: 'regex("Bashed Patch.*\.esp")'
   - name: 'Compass-Disable_Both.esp'
     msg:
       - type: say
-        content: 'If using Wrye Bash use Bashed Patch tweaker instead.'
+        content: 'Use Wrye Bash''s Bashed Patch tweaker instead.'
+        condition: 'regex("Bashed Patch.*\.esp")'
   - name: 'Compass_Marker_Reducer.esp'
     msg:
       - type: say
-        content: 'If using Wrye Bash use Bashed Patch tweaker instead.'
+        content: 'Use Wrye Bash''s Bashed Patch tweaker instead.'
+        condition: 'regex("Bashed Patch.*\.esp")'
   - name: 'Creatures20.esp'
     tag:
       - Actors.AIData
@@ -15891,7 +15916,7 @@ plugins:
   - name: 'Curseman''s Anti Extinction Mod.esp'
     msg:
       - type: say
-        content: 'Incompatible with: overhauls'
+        content: 'Incompatible with: Overhauls'
     tag:
       - Delev
       - Relev
@@ -15899,10 +15924,12 @@ plugins:
     msg:
       - type: say
         content: 'Use ''CT-YABM.esp'' or ''CT-YABM - No Idle.esp'' but not both at the same time.'
+        condition: 'file("CT-YABM - No Idle.esp")'
   - name: 'CT-YABM - No Idle.esp'
     msg:
       - type: say
         content: 'Use ''CT-YABM.esp'' or ''CT-YABM - No Idle.esp'' but not both at the same time.'
+        condition: 'file("CT-YABM.esp")'
   - name: 'Cyrodiil City Guards.esp'
     dirty:
       - crc: 0xe138ff22
@@ -15955,9 +15982,10 @@ plugins:
       - type: say
         content: 'If possible, use Wrye Bash''s Darnified Books tweak instead.'
   - name: 'HUD Status Bars.esp'
+    req: [ *OBSE ]
     msg:
       - type: say
-        content: 'Requires: OBSE and MenuQue'
+        content: 'Requires: MenuQue'
   - name: 'DDJailShackles.esp'
     msg:
       - type: say
@@ -15974,10 +16002,12 @@ plugins:
     msg:
       - type: say
         content: 'Use only one DoB**mins.esp.'
+        condition: 'file("DoB20mins.esp")'
   - name: 'DoB20mins.esp'
     msg:
       - type: say
         content: 'Use only one DoB**mins.esp.'
+        condition: 'file("DoB10mins.esp")'
   - name: 'Dremora Sigil Lords.esp'
     msg:
       - type: say
@@ -16090,7 +16120,8 @@ plugins:
   - name: 'Gabriella''s Sexy Boutique.esp'
     msg:
       - type: say
-        content: "Incompatible with: Speedbuster Collection.esp, SG010 Compilation.esp, SG001_BunnyGirl.esp, SG002_Button.esp, SG003_Slit.esp, SG004_Stargazer.esp, SG005_DHuntress.esp, SG006_Nabiya.esp, SG007_Nobody.esp, SG008_Gee.esp, SG010_Attractive.esp, SG011_Seductive.esp, SG012_MoonLight_Suit.esp, SG013_Nazca.esp, SG014_SparkleSweetSummer.esp (Includes the contents of these esps)."
+        content: 'Incompatible with: Speedbuster Collection.esp, SG010 Compilation.esp, SG001_BunnyGirl.esp, SG002_Button.esp, SG003_Slit.esp, SG004_Stargazer.esp, SG005_DHuntress.esp, SG006_Nabiya.esp, SG007_Nobody.esp, SG008_Gee.esp, SG010_Attractive.esp, SG011_Seductive.esp, SG012_MoonLight_Suit.esp, SG013_Nazca.esp, SG014_SparkleSweetSummer.esp (Includes the contents of these esps).'
+        condition: 'file("Speedbuster Collection.esp") or file("SG010 Compilation.esp") or file("SG001_BunnyGirl.esp") or file("SG002_Button.esp") or file("SG003_Slit.esp") or file("SG004_Stargazer.esp") or file("SG005_DHuntress.esp") or file("SG006_Nabiya.esp") or file("SG007_Nobody.esp") or file("SG008_Gee.esp") or file("SG010_Attractive.esp") or file("SG011_Seductive.esp") or file("SG012_MoonLight_Suit.esp") or file("SG013_Nazca.esp") or file("SG014_SparkleSweetSummer.esp")'
   - name: 'Get_Your_Arrows_Back-9403.esp'
     msg:
       - type: say
@@ -16148,9 +16179,8 @@ plugins:
     tag:
       - C.Climate
   - name: 'GP_Lockpicks.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: MMM Hunting & Crafting.'
+    inc:
+      - 'Mart''s Monster Mod - Hunting & Crafting.esp'
   - name: 'gq Chapel Altars become Wayshrines.esp'
     tag:
       - Scripts
@@ -16214,6 +16244,7 @@ plugins:
     msg:
       - type: say
         content: 'Don''t use with Leviathan Soulgems (included).'
+        condition: 'regex("Leviathan Soul.*\.esp")'
   - name: 'Kosai''s Welkynd Armor.esp'
     dirty:
       - crc: 0x6a82aa3f
@@ -16353,41 +16384,47 @@ plugins:
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
         condition: 'regex("Bashed Patch.*\.esp")'
   - name: 'No Wait Regenerate.esp'
-    msg:
-      - type: say
-        content: 'Requires: OBSE.'
+    req: [ *OBSE ]
   - name: 'NPC Static Level.esp'
     msg:
       - type: say
         content: 'Almost certainly not compatible with Fran''s, MMM, OOO or FCOM.'
   - name: 'Nude Humanlike Spriggan.esp'
+    inc:
+      - 'Oblivion Sexualized Monsters.esm'
+      - 'Oblivion Sexualized Monsters-exclu TRM.esm'
     msg:
       - type: say
-        content: 'Incompatible with: Oblivion Sexualized Monsters (OSM)'
-      - type: say
         content: 'USE ONE ''nude * Spriggan.esp'' ONLY'
+        condition: 'file("Nude Humanlike Spriggan Tweaked.esp") or file("Nude Humanlike Spriggan HGEC B.esp") or file("Nude Male Spriggan.esp")'
   - name: 'Nude Humanlike Spriggan Tweaked.esp'
+    inc:
+      - 'Oblivion Sexualized Monsters.esm'
+      - 'Oblivion Sexualized Monsters-exclu TRM.esm'
     msg:
-      - type: say
-        content: 'Incompatible with: Oblivion Sexualized Monsters (OSM)'
       - type: say
         content: 'USE ONE ''nude * Spriggan.esp'' ONLY'
+        condition: 'file("Nude Humanlike Spriggan.esp") or file("Nude Humanlike Spriggan HGEC B.esp") or file("Nude Male Spriggan.esp")'
   - name: 'Nude Humanlike Spriggan HGEC B.esp'
+    inc:
+      - 'Oblivion Sexualized Monsters.esm'
+      - 'Oblivion Sexualized Monsters-exclu TRM.esm'
     msg:
-      - type: say
-        content: 'Incompatible with: Oblivion Sexualized Monsters (OSM)'
       - type: say
         content: 'Requires: HGEC Body replacer'
       - type: say
         content: 'USE ONE ''nude * Spriggan.esp'' ONLY'
+        condition: 'file("Nude Humanlike Spriggan.esp") or file("Nude Humanlike Spriggan Tweaked.esp") or file("Nude Male Spriggan.esp")'
   - name: 'Nude Male Spriggan.esp'
+    inc:
+      - 'Oblivion Sexualized Monsters.esm'
+      - 'Oblivion Sexualized Monsters-exclu TRM.esm'
     msg:
-      - type: say
-        content: 'Incompatible with: Oblivion Sexualized Monsters (OSM)'
       - type: say
         content: 'Requires: Robert Male Body v5'
       - type: say
         content: 'USE ONE ''nude * Spriggan.esp'' ONLY'
+        condition: 'file("Nude Humanlike Spriggan.esp") or file("Nude Humanlike Spriggan Tweaked.esp") or file("Nude Humanlike Spriggan HGEC B.esp")'
   - name: 'Oblivifall - Ambiant Dungeon SFX.esp'
     dirty:
       - crc: 0xcbb991e4
@@ -16500,14 +16537,17 @@ plugins:
     msg:
       - type: say
         content: 'Use only one gold in your inventory type mod.'
+        condition: 'file("kuerteeGoldIsAnInventoryItem.esp") or file("DBWGP.esp")'
   - name: 'kuerteeGoldIsAnInventoryItem.esp'
     msg:
       - type: say
         content: 'Use only one gold in your inventory type mod.'
+        condition: 'file("ReneersGoldMod.esp") or file("DBWGP.esp")'
   - name: 'DBWGP.esp'
     msg:
       - type: say
         content: 'Use only one gold in your inventory type mod.'
+        condition: 'file("ReneersGoldMod.esp") or file("kuerteeGoldIsAnInventoryItem.esp")'
   - name: 'Respawning Varla & Welkynd Stones.esp'
     tag:
       - Scripts
@@ -16545,7 +16585,7 @@ plugins:
   - name: 'Safer Roads v1.0.esp'
     msg:
       - type: say
-        content: 'Don''t use with MMM or FCOM - unkown with other overhauls'
+        content: 'Don''t use with MMM or FCOM - unknown with other overhauls'
   - name: 'SecretsoftheAyleidsClosure.esp'
     dirty:
       - crc: 0xe9500749
@@ -16570,15 +16610,18 @@ plugins:
   - name: 'LoversVoice.esp'
     msg:
       - type: say
-        content: 'Use either ''LoversVoice.esp'' or ''LoversVoiceMinus.esp'' or ''LoversVoiceAR.esp'' but not both together.'
+        content: 'Use either ''LoversVoice.esp'' or ''LoversVoiceMinus.esp'' or ''LoversVoiceAR.esp'' but not together.'
+        condition: 'regex("LoversVoic(eMinus|eAR)\.esp")'
   - name: 'LoversVoiceMinus.esp'
     msg:
       - type: say
-        content: 'Use either ''LoversVoice.esp'' or ''LoversVoiceMinus.esp'' or ''LoversVoiceAR.esp'' but not both together.'
+        content: 'Use either ''LoversVoice.esp'' or ''LoversVoiceMinus.esp'' or ''LoversVoiceAR.esp'' but not together.'
+        condition: 'regex("LoversVoic(e|eAR)\.esp")'
   - name: 'LoversVoiceAR.esp'
     msg:
       - type: say
-        content: 'Use either ''LoversVoice.esp'' or ''LoversVoiceMinus.esp'' or ''LoversVoiceAR.esp'' but not both together.'
+        content: 'Use either ''LoversVoice.esp'' or ''LoversVoiceMinus.esp'' or ''LoversVoiceAR.esp'' but not together.'
+        condition: 'regex("LoversVoic(e|eMinus)\.esp")'
   - name: 'LoversAdultPlay.esp'
     msg:
       - type: say
@@ -16588,9 +16631,6 @@ plugins:
       - type: say
         content: 'Obsolete. Use LoversAdultPlayPlus.esp instead.'
   - name: 'LoversAdultPlayPlus.esp'
-    msg:
-      - type: say
-        content: 'Use either ''LoversAdultPlay.esp'' or ''LoversSpringSale.esp'' but not both together.'
   - name: 'LoversAdultPlayPlusforSSP.esp'
     msg:
       - type: say
@@ -16708,18 +16748,22 @@ plugins:
     msg:
       - type: say
         content: 'Use only one Enhanced Vegetation plugin.'
+        condition: 'regex("Enhanced Vegetation \[1[125]...\.esp")'
   - name: 'Enhanced Vegetation [110%].esp'
     msg:
       - type: say
         content: 'Use only one Enhanced Vegetation plugin.'
+        condition: 'regex("Enhanced Vegetation \[1[025]...\.esp")'
   - name: 'Enhanced Vegetation [125%].esp'
     msg:
       - type: say
         content: 'Use only one Enhanced Vegetation plugin.'
+        condition: 'regex("Enhanced Vegetation \[1[015]...\.esp")'
   - name: 'Enhanced Vegetation [150%].esp'
     msg:
       - type: say
         content: 'Use only one Enhanced Vegetation plugin.'
+        condition: 'regex("Enhanced Vegetation \[1[012]...\.esp")'
   - name: 'Side''s Backpacks.esp'
     tag:
       - Invent
@@ -16739,6 +16783,7 @@ plugins:
     msg:
       - type: say
         content: 'Requires: OBSE 11+.'
+        condition: 'version("..\obse_loader.exe","0.12.0.0",<)'
   - name: 'Slof''s Dogs.esp'
     msg:
       - type: say
@@ -16747,6 +16792,7 @@ plugins:
     msg:
       - type: say
         content: 'Requires: OBSE 20+.'
+        condition: 'version("..\obse_loader.exe","0.20.0.0",<)'
     tag:
       - Scripts
   - name: 'SPTDiverseGuards.esp'
@@ -16758,10 +16804,12 @@ plugins:
     msg:
       - type: say
         content: 'Use ''SPTDiverseGuardsMRAll.esp'' or ''SPTDiverseGuardsMRHuman.esp'' but not both at the same time.'
+        condition: 'file("SPTDiverseGuardsMRHuman.esp")'
   - name: 'SPTDiverseGuardsMRHuman.esp'
     msg:
       - type: say
         content: 'Use ''SPTDiverseGuardsMRAll.esp'' or ''SPTDiverseGuardsMRHuman.esp'' but not both at the same time.'
+        condition: 'file("SPTDiverseGuardsMRAll.esp")'
   - name: 'SPTDiverseBandits.esp'
     tag:
       - Relev
@@ -16820,9 +16868,7 @@ plugins:
     tag:
       - Invent
   - name: 'Teleport Everywhere.esp'
-    msg:
-      - type: say
-        content: 'Requires: OBSE.'
+    req: [ *OBSE ]
   - name: 'Things Found Fence.esp'
     tag:
       - Actors.AIData
@@ -16906,7 +16952,7 @@ plugins:
   - name: 'kuerteeDeathHasPenalties.esp'
     msg:
       - type: say
-        content: 'Obsolete. Upgrade to Kuertee''s Alternatives To Death And Reload.'
+        content: 'Obsolete. Upgrade to Kuertee''s "Alternatives To Death And Reload."'
   - name: 'zzzNpcAIEnhanced.esp'
     msg: [ *needsCleaning ]
   - name: 'EnchantedGems_Geomancy.esp'
@@ -16938,12 +16984,10 @@ plugins:
     msg:
       - type: error
         content: 'Use ''LCE-addon.esp'' instead if using MMM/Frans etc.'
-        condition: *FCOMCond
   - name: 'lorecreatures.esp'
     msg:
       - type: error
         content: 'Use ''LCE-addon.esp'' instead if using MMM/Frans etc.'
-        condition: *FCOMCond
     dirty:
       - crc: 0x43bf6b9b
         util: *dirtyUtil
@@ -16967,7 +17011,7 @@ plugins:
   - name: 'Erics Crafting Mod.esp'
     msg:
       - type: say
-        content: 'If it doesn''t work move past your bashed patch (author reccomends that placment but the tags added here should fix that... to be investigated)'
+        content: 'If it doesn''t work move past your bashed patch (author recommends that placement but the tags added here should fix that... to be investigated)'
     tag:
       - Invent
       - Scripts
@@ -17014,9 +17058,9 @@ plugins:
         udr: 2
         itm: 19
   - name: 'Shadow Ranger Redux.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: Shadow Ranger, The Complete Ranger'
+    inc:
+      - 'Shadow Ranger.esp'
+      - 'The Complete Ranger.esp'
   - name: 'Wolvmans_Hidden_Unique_Merchant_Items.esp'
     dirty:
       - crc: 0x9d79b935
@@ -17325,18 +17369,15 @@ plugins:
     msg:
       - type: say
         content: 'Requires: OBSE 19+.'
+        condition: 'version("..\obse_loader.exe","0.19.0.0",<)'
   - name: 'MarkRecall.esp'
     msg:
       - type: say
         content: 'Consider using Mark Recall 3 if using OBSE.'
   - name: 'Mark3.esp'
-    msg:
-      - type: say
-        content: 'Requires: OBSE.'
+    req: [ *OBSE ]
   - name: 'SNxMarkers.esp'
-    msg:
-      - type: say
-        content: 'Requires: OBSE.'
+    req: [ *OBSE ]
   - name: 'Mysterious Bear''s Epic Necromancy + EM.esp'
     dirty:
       - crc: 0xa8e08203
@@ -17394,9 +17435,7 @@ plugins:
       - type: say
         content: 'Requires: SI and OBSE and OBME'
   - name: 'Teleport.esp'
-    msg:
-      - type: say
-        content: 'Requires: OBSE.'
+    req: [ *OBSE ]
   - name: 'training spells.esp'
     msg:
       - type: say
@@ -17555,6 +17594,7 @@ plugins:
     msg:
       - type: say
         content: 'Requires: OBSE 18+.'
+        condition: 'version("..\obse_loader.exe","0.18.0.0",<)'
   - name: 'Wizard''sSpellBook.esp'
     dirty:
       - crc: 0x1a8f35f2
@@ -17603,14 +17643,14 @@ plugins:
     msg:
       - type: say
         content: 'Requires: OBSE 14+.'
+        condition: 'version("..\obse_loader.exe","0.14.0.0",<)'
   - name: 'Poison Arrows.esp'
     msg:
       - type: say
         content: 'Requires: OBSE 15 or higher.'
+        condition: 'version("..\obse_loader.exe","0.15.0.0",<)'
   - name: 'Spell Failure Chance.esp'
-    msg:
-      - type: say
-        content: 'Requires: OBSE.'
+    req: [ *OBSE ]
   - name: 'Jpm''s Miniature Necromancy.esp'
     msg:
       - type: say
@@ -17673,9 +17713,7 @@ plugins:
       - type: say
         content: 'Use only with the ''Herbalism'' mod. Otherwise use ''Harvest [Flora]'' v3.0.1 or later which removes a CTD with the Harrada root.'
   - name: 'IshMultipleApparelEnchantments.esp'
-    msg:
-      - type: say
-        content: 'Requires: OBSE.'
+    req: [ *OBSE ]
   - name: 'Spells and Enchanting at guilds.esp'
     msg: [ *needsCleaning ]
   - name: 'Soolie''sBetterEnchantmentEffects.esp'
@@ -17688,6 +17726,7 @@ plugins:
     msg:
       - type: say
         content: 'Requires: OBSE 15+.'
+        condition: 'version("..\obse_loader.exe","0.15.0.0",<)'
   - name: 'Jail Break Routes.esp'
     dirty:
       - crc: 0xa547b997
@@ -17863,13 +17902,9 @@ plugins:
       - type: say
         content: 'Outdated. Update to v2+.'
   - name: 'Push_Spin_Fly.esp'
-    msg:
-      - type: say
-        content: 'Requires: OBSE.'
+    req: [ *OBSE ]
   - name: 'Push_Shove_Die.esp'
-    msg:
-      - type: say
-        content: 'Requires: OBSE.'
+    req: [ *OBSE ]
   - name: 'Arrows Extra Damage.esp'
     tag:
       - Stats
@@ -17922,6 +17957,7 @@ plugins:
     msg:
       - type: say
         content: 'Requires: OBSE 16+.'
+        condition: 'version("..\obse_loader.exe","0.16.0.0",<)'
   - name: 'More_Arrows_Recovered-2169.esp'
     msg:
       - type: say
@@ -18125,6 +18161,7 @@ plugins:
     msg:
       - type: say
         content: 'Requires: OBSE 19+.'
+        condition: 'version("..\obse_loader.exe","0.19.0.0",<)'
   - name: 'Duke Patricks - NPCs Now Bob Under Your Shots.esp'
     msg:
       - type: say
@@ -18180,6 +18217,7 @@ plugins:
         content: 'Don''t need to use ''PTActorsCare.esp'', ''PTDamageFinal.esp'', ''PTDoorExploitBegone.esp'', ''PTLessKnockback.esp'' or NoRunningBackwards mod with this.'
       - type: say
         content: 'Requires: OBSE 17+'
+        condition: 'version("..\obse_loader.exe","0.17.0.0",<)'
       - *masterReassign
   - name: 'BFG''s Enhanced Armory.esp'
     msg:
@@ -18189,6 +18227,7 @@ plugins:
     msg:
       - type: say
         content: 'Requires: OBSE 19+.'
+        condition: 'version("..\obse_loader.exe","0.19.0.0",<)'
   - name: 'Duke Patricks - Melee Combat NO RECOIL.esp'
     tag:
       - Graphics
@@ -18251,6 +18290,7 @@ plugins:
     msg:
       - type: say
         content: 'Requires: OBSE 16+.'
+        condition: 'version("..\obse_loader.exe","0.16.0.0",<)'
   - name: 'Jhaerik''s Anti Power-Gaming Leveling System 1 (Very Easy ).esp'
     msg:
       - type: say
@@ -18276,6 +18316,7 @@ plugins:
     msg:
       - type: say
         content: 'Requires: OBSE 11+.'
+        condition: 'version("..\obse_loader.exe","0.11.0.0",<)'
   - name: 'Sneaking Detection Recalibrated.esp'
     msg:
       - type: say
@@ -18358,6 +18399,7 @@ plugins:
     msg:
       - type: say
         content: 'Requires: OBSE v20+.'
+        condition: 'version("..\obse_loader.exe","0.20.0.0",<)'
   - name: 'S.P.A.M.esp'
     msg:
       - type: say
@@ -18387,9 +18429,7 @@ plugins:
       - type: say
         content: 'Choose either this one, ''S.P.A.M. Option - Faster Minor.esp'', or neither, BUT DO NOT choose both.'
   - name: 'The Versatile Adventurer.esp'
-    msg:
-      - type: say
-        content: 'Requires: OBSE.'
+    req: [ *OBSE ]
 # ENDGROUP: Skills, Attributes and Leveling
 # BEGINGROUP: Pose and Animation Mods
   - name: 'Mayu''s Animation Overhaul.esp'
@@ -18472,6 +18512,7 @@ plugins:
     msg:
       - type: say
         content: 'Requires: OBSE 15+.'
+        condition: 'version("..\obse_loader.exe","0.15.0.0",<)'
   - name: 'xxJump.esp'
     dirty:
       - crc: 0x6f92cd7c
@@ -18807,9 +18848,10 @@ plugins:
     tag:
       - Graphics
   - name: 'Useful Houses.esp'
+    req: [ *OBSE ]
     msg:
       - type: say
-        content: 'Requires: OBSE & MenuQue.'
+        content: 'Requires: MenuQue.'
 # ENDGROUP: Semi-final overrides
 # BEGINGROUP: Beauty Packs & Race Changes\Addons
   - name: 'Vanilla_Race_Overhaul.esp'
@@ -21206,8 +21248,11 @@ plugins:
       - Hair
   - name: 'GGIlli.esp'
     msg:
+      - type: say 
+        content: 'Requires: OBSE 17+'
+        condition: 'version("..\obse_loader.exe","0.17.0.0",<)'
       - type: say
-        content: 'Requires: OBSE 17+, Underdark: The Realm of Northdark.'
+        content: 'Requires: Underdark: The Realm of Northdark.'
       - type: say
         content: 'Incompatible with: Duke Patricks Basic Combat Geometry.'
   - name: 'GG_Valeria_Revived.esp'
@@ -21365,9 +21410,7 @@ plugins:
       - Eyes
       - Hair
   - name: 'DAJynx.esp'
-    msg:
-      - type: say
-        content: 'Requires: OBSE.'
+    req: [ *OBSE ]
     tag:
       - Eyes
       - Hair
@@ -22936,6 +22979,7 @@ plugins:
     msg:
       - type: say
         content: 'Requires: OBSE 19b+.'
+        condition: 'version("..\obse_loader.exe","0.20.0.0",<)'
     tag:
       - Invent
   - name: 'HTSCl_cobl.esp'
@@ -23176,9 +23220,8 @@ plugins:
   - name: 'bgMagicShaderLifeDetect.esp'
     msg: [ *doNotClean ]
   - name: 'kuerteeDetectLifeEffectNightEyeShader.esp'
+    req: [ *OBSE ]
     msg:
-      - type: say
-        content: 'Requires: OBSE.'
       - type: say
         content: 'Requires: OBSE Night Eye Shader Switcher.'
   - name: 'bgMagicLightningbolt.esp'
