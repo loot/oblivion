@@ -49,8 +49,6 @@ globals:
     condition: 'version("BOSS","3.0.0.0",<=)'
     content: 'All Beta updates for BOSS (v3.0.0) can be downloaded [here](https://github.com/boss-developers/boss-code/releases).'
   - type: say
-    content: The next major release of BOSS is now open for "https://github.com/boss-developers/boss-code/wiki/BOSSv3-Beta-Testing beta testing". Anyone wishing to help test must have a BethSoft forum account and be comfortable with using TES4Edit to view conflicts.
-  - type: say
     content:
       - lang: eng
         str: '[Latest BOSS thread](http://forums.bethsoft.com/topic/1434397-rel-boss-for-oblivion/).'
@@ -9194,7 +9192,8 @@ plugins:
     tag:
       - Stats
   - name: 'WAC-OOO.esp'
-    req: 'Oscuro''s_Oblivion_Overhaul.esm'
+    req: 
+      - 'Oscuro''s_Oblivion_Overhaul.esm'
   - name: 'WAC - Cat Crash Fix.esp'
     tag:
       - Actors.Skeleton
@@ -9425,13 +9424,15 @@ plugins:
         util: *dirtyUtil
         udr: 118
   - name: 'Quelldorf 1.5.esp'
-    inc: 'Suliin V1.2.esp'
+    inc: 
+      - 'Suliin V1.2.esp'
     msg:
       - type: say
         content: 'Use Quelldorf or Quelldorf ohn Schiff but not both at the same time.'
         condition: 'file("Quelldorf ohne Schiff1.5.esp")'
   - name: 'Quelldorf ohne Schiff1.5.esp'
-    inc: 'Suliin V1.2.esp'
+    inc: 
+      - 'Suliin V1.2.esp'
     msg:
       - type: say
         content: 'Use Quelldorf or Quelldorf ohn Schiff but not both at the same time.'
@@ -12594,7 +12595,8 @@ plugins:
         content: 'Sensual Walks for Arthmoor''s Verona House Bloodines SI Fixed contains bash tags to merge the animations, which work correctly on his version'
   - name: 'Apachii_Goddess_Store.esp'
     msg:
-      - say: 'Recommended to enable only after you save game in IC Waterfront District'
+      - type: say
+        content: 'Recommended to enable only after you save game in IC Waterfront District'
     dirty:
       - crc: 0x6633e61d
         util: *dirtyUtil
