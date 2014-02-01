@@ -63,7 +63,7 @@ plugins:
     msg:
       - type: error
         content: 'This must not be activated. However, it can be useful when porting Oblivion mods to Nehrim.'
-        condition: 'active("Oblivion.esm") and active("Nehrim.esm")'
+        condition: 'and active("Oblivion.esm") and active("Nehrim.esm")'
   - name: 'Oblivion_1.1.esm'
     msg:
       - type: say
