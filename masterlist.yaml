@@ -58,7 +58,7 @@ globals:
         str: '[Forum de BOSS](http://forums.bethsoft.com/topic/1434397-rel-boss-for-oblivion/).'
 
 plugins:
-# BEGINGROUP: ESMs
+
   - name: 'Oblivion.esm'
     msg:
       - type: error
@@ -295,8 +295,8 @@ plugins:
       - *OBSE
       - name: 'OBSE\Plugins\OBME.dll'
         display: '[Oblivion Magic Extender](http://oblivion.nexusmods.com/mods/31981)'
-# ENDGROUP: ESMs
-# BEGINGROUP: Earliest mods
+
+
 #
 # Tag with priority: -2
   - name: 'Essential_Merchants.esp'
@@ -424,8 +424,8 @@ plugins:
     tag:
       - Names
     priority: -2
-# ENDGROUP: Earliest mods
-# BEGINGROUP: NPC face mods
+
+
 # Bash and deactivate to keep new faces with NPC altering mods later.
 # These should all be tagged with Deactivate, NoMerge, and NPCFaces, and should have priority -2.
   - name: 'Better Looking NPC.esp'
@@ -959,8 +959,8 @@ plugins:
       - NoMerge
       - NpcFaces
     priority: -2
-# ENDGROUP: NPC face mods
-# BEGINGROUP: Vanilla fixes
+
+
 # Everything else must be allowed to override these.
 # UOP v3.0.1 or later should be used to fix buggy vanilla quests rather than these -
 # - some fixes I can't find in documentation but am fairly sure UOP would have picked them up.
@@ -1090,12 +1090,12 @@ plugins:
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
         condition: 'regex("Bashed Patch.*\.esp")'
-# ENDGROUP: Vanilla fixes
+
   - name: 'DLCShiveringIsles.esp'
     dirty:
       - crc: 0xdaf51407
         util: *dirtyUtil
-# BEGINGROUP: UOP
+
 # The patches need to load after DLCShiveringIsles.esp explicitly, to prevent the Russain GOTY version of the ESP from overwriting fixes.
   - name: 'Unofficial Oblivion Patch.esp'
     after:
@@ -1189,8 +1189,8 @@ plugins:
     msg:
       - type: say
         content: 'Recommend removing if using Wrye Bash. A tweak for this exists in "Tweak Settings".'
-# ENDGROUP: UOP
-# BEGINGROUP: Post UOP fixes
+
+
   - name: 'Finger of the Mountain Fix.esp'
     inc:
       - 'Unofficial Oblivion Patch.esp'
@@ -1205,8 +1205,8 @@ plugins:
     msg:
       - type: error
         content: 'Outdated. Update to newest version of Permanent Effects from Quest Items fix.'
-# ENDGROUP: Post UOP fixes
-# BEGINGROUP: Non-English Language fixes
+
+
 # have to be after UOP in some cases
   - name: 'Obl-IM.esp'
     tag:
@@ -1225,8 +1225,8 @@ plugins:
   - name: 'Oblivion_Deutsch_v5_0.esp'
     tag:
       - Names
-# ENDGROUP: Non-English Language fixes
-# BEGINGROUP: Shivering Isles
+
+
 # IFNOT FILE("OblivionMsg.esp") MOD: DLCShiveringIsles.esp
 # Load here if not russian GOTY, see comment about this.
   - name: 'Traduccion Mejorada S.I.esp'
@@ -1378,8 +1378,8 @@ plugins:
       - Hair
       - NPC.Race
       - NpcFaces
-# ENDGROUP: Shivering Isles
-# BEGINGROUP: VWalk Post-UOP Files
+
+
   - name: 'Oblivion Vwalk UOS.esp'
     tag:
       - Actors.Anims
@@ -1464,8 +1464,8 @@ plugins:
       - Actors.Anims
       - NoMerge
       - NpcFaces
-# ENDGROUP: VWalk Post-UOP Files
-# BEGINGROUP: BSA tricks
+
+
   - name: 'Better Cities .esp'
     msg:
       - type: say
@@ -1502,8 +1502,8 @@ plugins:
     msg:
       - type: say
         content: 'Dummy file to load the TamRes BSA.'
-# ENDGROUP: BSA tricks
-# BEGINGROUP: Post BSA
+
+
   - name: 'MrSiika''sFoxes.esp'
     msg:
       - type: say
@@ -1512,8 +1512,8 @@ plugins:
     msg:
       - type: say
         content: 'Do not use with MMM/FCOM. Already integrated.'
-# ENDGROUP: Post BSA
-# BEGINGROUP: Initial Fran's files for FCOM
+
+
   - name: 'Francesco''s Optional Chance of Stronger Enemies.esp'
     dirty:
       - crc: 0x4f003db0
@@ -1547,8 +1547,8 @@ plugins:
     msg:
       - type: say
         content: 'Do not use with MMMforFrans. Already integrated.'
-# ENDGROUP: Initial Fran''s files for FCOM
-# BEGINGROUP: Loading Screen Alternatives
+
+
 # Unlikely to interact with other mods but OOO will overwrite vanilla replacers if not correctly Bash Patched.
   - name: '7roads_screens.esp'
     tag:
@@ -1629,14 +1629,14 @@ plugins:
     msg:
       - type: say
         content: 'Make sure that any mod that replaces the graphics of the loading screens is tagged with Graphics, otherwise this mod will revert them to vanilla'
-# ENDGROUP: Loading Screen Alternatives
 
-# BEGINGROUP: Base Mods
+
+
 # Mods that can be overridden in part.
 # Low priority mods.
 # New Items, NPCs & creatures that are not overrides of other mods.
 # 'Library' mods.
-# BEGINGROUP: Weather mods and overhauls
+
 # Unlikely to be affected by anything but sound mods.
   - name: 'oc_darker_nights.esp'
     msg:
@@ -2054,9 +2054,9 @@ plugins:
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
         condition: 'regex("Bashed Patch.*\.esp")'
-# ENDGROUP: Weather mods and overhauls
 
-# BEGINGROUP: Water and lava tweaks
+
+
 # All of these simply alter water shader rendering settings - no Bashed Patch tags are needed
 # or appropriate except for in some cases C.Water.
 # Possible dirty edits mean they should go before landscape changing mods.
@@ -2119,9 +2119,9 @@ plugins:
   - name: 'Skyrimized Waters HD - SI Addon.esp'
     tag:
       - C.Water
-# ENDGROUP: Water and lava tweaks
 
-# BEGINGROUP: Sound mods
+
+
 # Let other mods override as needed. Sometimes overrides weather overhauls with better lightening sounds etc.
   - name: 'Idle Dialogue.esp'
     dirty:
@@ -2519,8 +2519,8 @@ plugins:
     dirty:
       - crc: 0x71bddec0
         util: *dirtyUtil
-# ENDGROUP: Sound mods
-# BEGINGROUP: Lighting
+
+
 # Should load early to allow more 'important' mods to override.
   - name: 'Real_Lights.esp'
     msg:
@@ -2587,12 +2587,12 @@ plugins:
     msg:
       - type: say
         content: 'Requires: ''You Are Here''. ScreenEffects for versions below 1.3.'
-# ENDGROUP: Lighting
 
-# BEGINGROUP: General Base Mods
+
+
 # Includes nearly all new items (except weapons and armor).
 # Low priority mods.
-# BEGINGROUP: Base #
+
   - name: '00crystalTorch.esp'
     dirty:
       - crc: 0xe7a1bce7
@@ -2615,9 +2615,9 @@ plugins:
         util: *dirtyUtil
       - crc: 0x876daca1
         util: *dirtyUtil
-# ENDGROUP: Base #
 
-# BEGINGROUP: Base A
+
+
   - name: 'AddActorValues_example.esp'
     msg:
       - type: say
@@ -2679,9 +2679,9 @@ plugins:
 # Amulet of Magicka_1С.esp
 # This С is different from the C in the mod name below: the former is apparently Russian, and the latter is ASCII. Both entries should be kept.
 # Amulet of Magicka_1C.esp
-# ENDGROUP: Base A
 
-# BEGINGROUP: Base B
+
+
   - name: 'Book Jackets Oblivion.esp'
     tag:
       - Graphics
@@ -2750,9 +2750,9 @@ plugins:
       - crc: 0x3bde7dd3
         util: *dirtyUtil
         udr: 3
-# ENDGROUP: Base B
 
-# BEGINGROUP: Base C
+
+
   - name: 'Cobl Bookjackets.esp'
     tag:
       - Graphics
@@ -3060,9 +3060,9 @@ plugins:
         condition: 'file("ChallangingThieveryFull.esp")'
     tag:
       - Invent
-# ENDGROUP: Base C
 
-# BEGINGROUP: Base D
+
+
   - name: 'Daedric Wargames.esp'
     msg:
       - type: say
@@ -3074,9 +3074,9 @@ plugins:
     msg:
       - type: say
         content: 'Outdated. Update to v1.05+.'
-# ENDGROUP: Base D
 
-# BEGINGROUP: Base E
+
+
   - name: 'Energy - Bandits.esp'
     tag:
       - Delev
@@ -3094,9 +3094,9 @@ plugins:
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
         condition: 'regex("Bashed Patch.*\.esp")'
-# ENDGROUP: Base E
 
-# BEGINGROUP: Base F
+
+
   - name: 'Fatality Cam.esp'
     msg:
       - type: say
@@ -3115,9 +3115,9 @@ plugins:
     dirty:
       - crc: 0xa2300d21
         util: *dirtyUtil
-# ENDGROUP: Base F
 
-# BEGINGROUP: Base G
+
+
   - name: 'Gold is now Gold.esp'
     tag:
       - Graphics
@@ -3137,16 +3137,16 @@ plugins:
   - name: 'GW71_Soulgems.esp'
     tag:
       - Graphics
-# ENDGROUP: Base G
 
-# BEGINGROUP: Base H
+
+
   - name: 'HUDI.esp'
     msg:
       - type: say
         content: 'Incompatible with: UI systems other than DarNified UI/Dark''d DarN/other DarN variants.'
-# ENDGROUP: Base H
 
-# BEGINGROUP: Base I
+
+
   - name: 'Inebriation.esp'
     msg:
       - type: say
@@ -3168,9 +3168,9 @@ plugins:
   - name: 'Item Crafting v4.2.esp'
     tag:
       - Invent
-# ENDGROUP: Base I
 
-# BEGINGROUP: Base J
+
+
   - name: 'JPWikiMod.esp'
     msg:
       - type: say
@@ -3181,16 +3181,16 @@ plugins:
     msg:
       - type: say
         content: 'Does not add anything to the game except some examples in the testing hall - deactivate and keep resources is most often the best thing to do.'
-# ENDGROUP: Base J
 
-# BEGINGROUP: Base K
+
+
   - name: 'Katana Store.esp'
     msg:
       - type: say
         content: 'Requires patch to use with Kalikuts.'
-# ENDGROUP: Base K
 
-# BEGINGROUP: Base L
+
+
   - name: 'LIPTemplate.esp'
     msg:
       - type: say
@@ -3246,9 +3246,9 @@ plugins:
     dirty:
       - crc: 0x182a6977
         util: *dirtyUtil
-# ENDGROUP: Base L
 
-# BEGINGROUP: Base M
+
+
   - name: 'MageGuild_simbol.esp'
     tag:
       - Graphics
@@ -3320,9 +3320,9 @@ plugins:
       - type: say
         content: 'Use only one Mud Crabs! file'
         condition: 'regex("Mud Crabs!(_coMbO|_MMM)?\.esp")'
-# ENDGROUP: Base M
 
-# BEGINGROUP: Base N
+
+
   - name: 'New Potions by Tealpanda.esp'
     dirty:
       - crc: 0xe5983547
@@ -3335,9 +3335,9 @@ plugins:
     tag:
       - Graphics
       - NoMerge
-# ENDGROUP: Base N
 
-# BEGINGROUP: Base O
+
+
   - name: 'Oblivion Cats v0.22b.esp'
     dirty:
       - crc: 0x1ce8a9dd
@@ -3346,9 +3346,9 @@ plugins:
     dirty:
       - crc: 0xac9752e5
         util: *dirtyUtil
-# ENDGROUP: Base O
 
-# BEGINGROUP: Base P
+
+
   - name: 'Passion Fruit.esp'
     tag:
       - Graphics
@@ -3411,9 +3411,9 @@ plugins:
     dirty:
       - crc: 0xfe300f35
         util: *dirtyUtil
-# ENDGROUP: Base P
 
-# BEGINGROUP: Base Q
+
+
   - name: 'Q - More and Moldy Ingredients v1.1.esp'
     tag:
       - Relev
@@ -3455,9 +3455,9 @@ plugins:
         util: *dirtyUtil
   - name: 'QuickEquipSwap.esp'
     req: [ *OBSE ]
-# ENDGROUP: Base Q
 
-# BEGINGROUP: Base R
+
+
   - name: 'RAEVWD Cities.esp'
     msg:
       - type: say
@@ -3578,9 +3578,9 @@ plugins:
       - type: warn
         content: 'Requires: OBSE 16+.'
         condition: 'version("..\obse_loader.exe","0.16.0.0",<)'
-# ENDGROUP: Base R
 
-# BEGINGROUP: Base S
+
+
   - name: 'Sexual_SpiderDaedra.esp'
     msg:
       - type: say
@@ -3657,9 +3657,9 @@ plugins:
     msg:
       - type: say
         content: 'Outdated. Upgrade to v2.1.'
-# ENDGROUP: Base S
 
-# BEGINGROUP: Base T
+
+
   - name: 'TeddyBackpacks.esp'
     tag:
       - Invent
@@ -3700,12 +3700,12 @@ plugins:
     msg:
       - type: say
         content: 'Old, update to trfjSolarisStaff.esp.'
-# ENDGROUP: Base T
 
-# BEGINGROUP: Base U
-# ENDGROUP: Base U
 
-# BEGINGROUP: Base V
+
+
+
+
   - name: 'BetterGold Rus.esp'
     tag:
       - Graphics
@@ -3741,9 +3741,9 @@ plugins:
       - type: say
         content: 'Conflicts with Deadly Reflex. Minor Problems.'
         condition: 'regex("Deadly Reflex.*\.esp")'
-# ENDGROUP: Base V
 
-# BEGINGROUP: Base W
+
+
   - name: 'Walk to Oblivion.esp'
     msg:
       - type: say
@@ -3773,9 +3773,9 @@ plugins:
     tag:
       - Invent
       - Relev
-# ENDGROUP: Base W
 
-# BEGINGROUP: Base XYZ
+
+
   - name: 'Zombie Replacer_en.esp'
     tag:
       - Graphics
@@ -3784,9 +3784,9 @@ plugins:
     tag:
       - Graphics
       - NoMerge
-# ENDGROUP: Base XYZ
 
-# BEGINGROUP: Base Late
+
+
   - name: 'Alchemy_Economy_Fix.esp'
     msg:
       - type: say
@@ -3968,11 +3968,11 @@ plugins:
       - crc: 0x56c59ac2
         util: *dirtyUtil
         udr: 50
-# ENDGROUP: Base Late
-# ENDGROUP: General Base Mods
-# ENDGROUP: Base Mods
 
-# BEGINGROUP: Load Order Independent Mods
+
+
+
+
 # These mods don't need to go anywhere, they're fully scripted, so load them early, out of the way of the more placement-critical sections near the bottom of the masterlist.
   - name: 'AutoEquip.esp'
     dirty:
@@ -4068,9 +4068,9 @@ plugins:
     dirty:
       - crc: 0xa08a9abe
         util: *dirtyUtil
-# ENDGROUP: Load Order Independent Mods
 
-# BEGINGROUP: Map marker Tweaks
+
+
 # Load after OOO to override OOO initial map marker changes, otherwise let OOO remove starting default map markers.
   - name: 'Map Marker Renamer.esp'
     msg:
@@ -4105,9 +4105,9 @@ plugins:
     dirty:
       - crc: 0x1664da76
         util: *dirtyUtil
-# ENDGROUP: Map marker Tweaks
 
-# BEGINGROUP: Hotkeys
+
+
 # Load order independent. Use only one unless documentation says otherwise.
   - name: 'Clock Hotkey.esp'
     req: [ *OBSE ]
@@ -4186,8 +4186,8 @@ plugins:
       - type: say
         content: 'Don''t use hotkeys to change Warcry-style ''set'' equipment. Game bug.'
         condition: 'regex("Oblivion WarCry( EV)?\.esp")'
-# ENDGROUP: Hotkeys
-# BEGINGROUP: DLC 1
+
+
   - name: 'DLCHorseArmor.esp'
     tag:
       - Scripts
@@ -4389,8 +4389,8 @@ plugins:
     tag:
       - Graphics
       - NoMerge
-# ENDGROUP: DLC 1
-# BEGINGROUP: Body replacers
+
+
 # Load early.
 # Robert's Male Body Replacer has problems with race mods and patches are needed.
   - name: 'Bab.esp'
@@ -4483,12 +4483,12 @@ plugins:
     tag:
       - Graphics
       - NoMerge
-# ENDGROUP: Body replacers
 
-# BEGINGROUP: Items (armor and weapons)
+
+
 # VITAL for overhaul mod users: Wrye Bash tag all armor replacers {{BASH: Graphics}} to keep their new look.
 # Some items will need to go after overhaul or location altering mods to appear.
-# BEGINGROUP: Items Early
+
   - name: 'Bonemold_Helmet.esp'
     url:
       - http://oblivion.nexusmods.com/mods/6997
@@ -4499,9 +4499,9 @@ plugins:
     msg:
       - type: say
         content: 'Deactivate or delete this ESP file when using ''Unofficial Fran''s Armor'' (mesh and texture files are still required).'
-# ENDGROUP: Items Early
 
-# BEGINGROUP: Items #
+
+
   - name: '01_SenTinel''s Katanas.esp'
     tag:
       - Invent
@@ -4512,9 +4512,9 @@ plugins:
     msg:
       - type: say
         content: 'Requires: Biu''s Adventuress Body (BAB).'
-# ENDGROUP: Items #
 
-# BEGINGROUP: Items A
+
+
   - name: 'AC Stock Armor.esp'
     tag:
       - Graphics
@@ -4717,9 +4717,9 @@ plugins:
     tag:
       - Delev
       - Relev
-# ENDGROUP: Items A
 
-# BEGINGROUP: Items B
+
+
   - name: 'Bearclaw_Helm_Replacer.esp'
     tag:
       - Graphics
@@ -4820,9 +4820,9 @@ plugins:
     dirty:
       - crc: 0x5b43d642
         util: *dirtyUtil
-# ENDGROUP: Items B
 
-# BEGINGROUP: Items C
+
+
   - name: 'CB Gothic Mistress.esp'
     dirty:
       - crc: 0x64f42fd6
@@ -4882,9 +4882,9 @@ plugins:
     dirty:
       - crc: 0xc4e017b
         util: *dirtyUtil
-# ENDGROUP: Items C
 
-# BEGINGROUP: Items D
+
+
   - name: 'Daedric Healer Robes.esp'
     tag:
       - Invent
@@ -4992,9 +4992,9 @@ plugins:
     tag:
       - Graphics
       - Names
-# ENDGROUP: Items D
 
-# BEGINGROUP: Items E
+
+
   - name: 'Emperor''s Heavy War Armor.esp'
     tag:
       - Invent
@@ -5005,9 +5005,9 @@ plugins:
     dirty:
       - crc: 0xa71070b4
         util: *dirtyUtil
-# ENDGROUP: Items E
 
-# BEGINGROUP: Items F
+
+
   - name: 'Fable Swords.esp'
     tag:
       - Invent
@@ -5046,9 +5046,9 @@ plugins:
     dirty:
       - crc: 0xb0fdf6f
         util: *dirtyUtil
-# ENDGROUP: Items F
 
-# BEGINGROUP: Items G
+
+
   - name: 'Garak''s Staff Replacer Artefacts.esp'
     tag:
       - Graphics
@@ -5079,9 +5079,9 @@ plugins:
   - name: 'GruntsSigilStones.esp'
     tag:
       - Invent
-# ENDGROUP: Items G
 
-# BEGINGROUP: Items H
+
+
   - name: 'HaroK Arrow Forge Revisited.esp'
     tag:
       - Invent
@@ -5103,9 +5103,9 @@ plugins:
     dirty:
       - crc: 0xae3a26a9
         util: *dirtyUtil
-# ENDGROUP: Items H
 
-# BEGINGROUP: Items I
+
+
   - name: 'Insanity''s Kill Bill Katanas.esp'
     tag:
       - Invent
@@ -5116,9 +5116,9 @@ plugins:
     dirty:
       - crc: 0xc7862667
         util: *dirtyUtil
-# ENDGROUP: Items I
 
-# BEGINGROUP: Items J
+
+
   - name: 'JBlades!.esp'
     msg:
       - type: say
@@ -5144,9 +5144,9 @@ plugins:
     dirty:
       - crc: 0x270422c2
         util: *dirtyUtil
-# ENDGROUP: Items J
 
-# BEGINGROUP: Items K
+
+
   - name: 'KDCirclets.esp'
     msg:
       - type: say
@@ -5191,9 +5191,9 @@ plugins:
     dirty:
       - crc: 0x4355daba
         util: *dirtyUtil
-# ENDGROUP: Items K
 
-# BEGINGROUP: Items L
+
+
   - name: 'Lady Dark.esp'
     dirty:
       - crc: 0xa18d358b
@@ -5286,9 +5286,9 @@ plugins:
       - crc: 0x19b24219
         util: *dirtyUtil
         udr: 2
-# ENDGROUP: Items L
 
-# BEGINGROUP: Items M
+
+
   - name: 'M&BAxes.esp'
     msg:
       - type: say
@@ -5353,9 +5353,9 @@ plugins:
   - name: 'MC_Staff_Pack_NoLL.esp'
     inc:
       - 'MC_Staff_Pack.esp'
-# ENDGROUP: Items M
 
-# BEGINGROUP: Items N
+
+
   - name: 'Nature''s_bounty.esp'
     dirty:
       - crc: 0x97d180f0
@@ -5422,9 +5422,9 @@ plugins:
       - 'Nicos Dreadweave Armor_Light.esp'
       - 'Nico''s Dreadweave Bow and Arrows.esp'
     url: [ 'http://planetelderscrolls.gamespy.com/View.php?view=OblivionMods.Detail&id=104519&id=2622' ]
-# ENDGROUP: Items N
 
-# BEGINGROUP: Items O
+
+
   - name: 'Obsidian armor.esp'
     tag:
       - Graphics
@@ -5434,9 +5434,9 @@ plugins:
         content: 'Use only one version of Oddbasket Glass Replace esp.'
     tag:
       - Graphics
-# ENDGROUP: Items O
 
-# BEGINGROUP: Items P
+
+
   - name: 'pale_rider''s Armor of Dragon''s Nightmare.esp'
     msg:
       - type: say
@@ -5480,12 +5480,12 @@ plugins:
     msg:
       - type: say
         content: 'Avoid using Potion Belt and KD Circlets at the same time. Character can wear belt or circlet, not both.'
-# ENDGROUP: Items P
 
-# BEGINGROUP: Items Q
-# ENDGROUP: Items Q
 
-# BEGINGROUP: Items R
+
+
+
+
   - name: 'RavenousEleganceRoberts.esp'
     msg:
       - type: say
@@ -5549,9 +5549,9 @@ plugins:
   - name: 'Ryk_Sandals_RHH.esp'
     inc:
       - 'Ryk_Sandals.esp'
-# ENDGROUP: Items R
 
-# BEGINGROUP: Items S
+
+
   - name: 'Saint Hiryu''s Artifacts.esp'
     tag:
       - Invent
@@ -5704,9 +5704,9 @@ plugins:
     dirty:
       - crc: 0xe5ef8132
         util: *dirtyUtil
-# ENDGROUP: Items S
 
-# BEGINGROUP: Items T
+
+
   - name: 'talon.esp'
     tag:
       - Invent
@@ -5780,9 +5780,9 @@ plugins:
       - 'The lord of the ring weapon 1.esp'
       - 'LOTR Weapons.esp'
       - 'LOTR Weapon 2.esp'
-# ENDGROUP: Items T
 
-# BEGINGROUP: Items U
+
+
   - name: 'Unique Enticing Skill Books.esp'
     tag:
       - Graphics
@@ -5794,18 +5794,18 @@ plugins:
     msg:
       - type: say
         content: 'Consider upgrading to version 4.2.1+'
-# ENDGROUP: Items U
 
-# BEGINGROUP: Items V
+
+
   - name: 'VA_GlamdringSword.esp'
     tag:
       - Invent
   - name: 'Vampire Cuirass NPC.esp'
     tag:
       - Invent
-# ENDGROUP: Items V
 
-# BEGINGROUP: Items W
+
+
   - name: 'wands.esp'
     dirty:
       - crc: 0xba110e01
@@ -5821,9 +5821,9 @@ plugins:
     dirty:
       - crc: 0x65f472b4
         util: *dirtyUtil
-# ENDGROUP: Items W
 
-# BEGINGROUP: Items XYZ
+
+
   - name: 'XiaValentinesDayGift07.esp'
     msg:
       - type: say
@@ -5831,9 +5831,9 @@ plugins:
   - name: 'Zatoichi.esp'
     tag:
       - Invent
-# ENDGROUP: Items XYZ
 
-# BEGINGROUP: Items Late
+
+
   - name: 'Thieves Arsenal.esp'
     req: [ *OBSE ]
     dirty:
@@ -5845,7 +5845,7 @@ plugins:
       - type: say
         content: 'Not compatible with any mod that uses "ModPCSpellEffectiveness".'
     req: [ *OBSE ]
-# BEGINGROUP: RealSwords
+
   - name: 'RealSwords - Argonian HI-NPC.esp'
     msg:
       - type: error
@@ -6188,7 +6188,7 @@ plugins:
         content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
     tag:
       - Invent
-# ENDGROUP: RealSwords
+
   - name: 'Mage Equipment.esp'
     msg:
       - type: say
@@ -6206,9 +6206,9 @@ plugins:
       - 'Mage Equipment - No Manni.esp'
       - 'Mage Equipment.esp'
 # To be alphabetically sorted sometime.
-# ENDGROUP: Items Late
-# ENDGROUP: Items (armor and weapons)
-# BEGINGROUP: Body Replacer Armour & Clothing
+
+
+
 # Stuff for use with body replacers.
 # VITAL for overhaul mod users: Wrye Bash tag all armor replacers {{BASH: Graphics}} to keep their new look.
   - name: 'All Manly.esp'
@@ -6492,8 +6492,8 @@ plugins:
         itm: 1
         udr: 0
         util: *dirtyUtil
-# ENDGROUP: Body Replacer Armour & Clothing
-# BEGINGROUP: Not For Free Armor
+
+
   - name: 'Dark_Mistress.esp'
     dirty:
       - crc: 0x86f22d28
@@ -6504,8 +6504,8 @@ plugins:
         itm: 3
         udr: 0
         util: *dirtyUtil
-# ENDGROUP: Not For Free Armor
-# BEGINGROUP: Horse Mods
+
+
   - name: '1SI_Horses.esp'
     msg:
       - type: say
@@ -6711,8 +6711,8 @@ plugins:
     tag:
       - Actors.ACBS
       - Actors.Stats
-# ENDGROUP: Horse Mods
-# BEGINGROUP: Pre Overhaul
+
+
   - name: 'AncientTowers Vwalk.esp'
     tag:
       - Actors.Anims
@@ -6739,8 +6739,8 @@ plugins:
     tag:
       - Invent
       - Names
-# ENDGROUP: Pre Overhaul
-# BEGINGROUP: Only Name changing files
+
+
   - name: 'Ranokoas Organized Potions.esp'
     tag:
       - Deactivate
@@ -6748,8 +6748,8 @@ plugins:
   - name: 'Potion Sorter-2081.esp'
     tag:
       - Names
-# ENDGROUP: Only Name changing files
-# BEGINGROUP: DLC 2
+
+
   - name: 'DLCThievesDen.esp'
     tag:
       - Actors.ACBS
@@ -6832,8 +6832,8 @@ plugins:
   - name: 'ORM-TamriellicGlassDLC7.esp'
     tag:
       - Graphics
-# ENDGROUP: DLC 2
-# BEGINGROUP: Overhauls
+
+
   - name: 'Fran Armor Add-on.esp'
     req:
       - 'Francesco''s Leveled Creatures-Items Mod.esm'
@@ -9213,8 +9213,8 @@ plugins:
   - name: 'WAC - HGEC Equipment Replacer.esp'
     tag:
       - Graphics
-# ENDGROUP: Overhauls
-# BEGINGROUP: Post Overhaul
+
+
   - name: 'beardy.esp'
     tag:
       - NpcFaces
@@ -9392,8 +9392,8 @@ plugins:
     dirty:
       - crc: 0x13f4cf76
         util: *dirtyUtil
-# ENDGROUP: Post Overhaul
-# BEGINGROUP: Morroblivion
+
+
   - name: 'Morroblivion_Chargen_And_Transport_Mod_v6.esp'
     msg:
       - type: say
@@ -9401,8 +9401,8 @@ plugins:
   - name: 'Morroblivion item rebalance.esp'
     tag:
       - Stats
-# ENDGROUP: Morroblivion
-# BEGINGROUP: Quests and Locations 1
+
+
   - name: 'Enhanced Quest Roleplaying.esp'
     tag:
       - Factions
@@ -12789,8 +12789,8 @@ plugins:
     dirty:
       - crc: 0x81563088
         util: *dirtyUtil
-# ENDGROUP: Quests and Locations 1
-# BEGINGROUP: DLC 3
+
+
   - name: 'DLCBattlehornCastle.esp'
     dirty:
       - crc: 0x7048c609
@@ -12838,8 +12838,8 @@ plugins:
     dirty:
       - crc: 0x631088b
         util: *dirtyUtil
-# ENDGROUP: DLC 3
-# BEGINGROUP: Quests and Locations 2
+
+
   - name: 'Falkreath.esp'
     msg:
       - type: say
@@ -12887,8 +12887,8 @@ plugins:
       - type: say
         content: 'Delete ''Lynges Thieves Highway.esp and use this instead.'
         condition: '( file("Lynges Thieves Highway.esp") ) and active("Oscuro''s_Oblivion_Overhaul.esm")'
-# ENDGROUP: Quests and Locations 2
-# BEGINGROUP: DLC 4
+
+
   - name: 'DLCFrostcrag.esp'
     tag:
       - C.Name
@@ -13230,8 +13230,8 @@ plugins:
     msg:
       - type: say
         content: 'Requires: Knights of the Nine'
-# ENDGROUP: DLC 4
-# BEGINGROUP: ROM
+
+
   - name: 'ROM Revised Oblivion Mod.esp'
     tag:
       - Actors.ACBS
@@ -13298,8 +13298,8 @@ plugins:
       - Relev
       - Scripts
       - Stats
-# ENDGROUP: ROM
-# BEGINGROUP: Quests and Locations 3
+
+
   - name: 'Cybiades.esp'
     msg:
       - type: say
@@ -13590,8 +13590,8 @@ plugins:
       - crc: 0x9fd89158
         util: *dirtyUtil
         udr: 57
-# ENDGROUP: Quests and Locations 3
-# BEGINGROUP: FCOM Compatibility Section
+
+
   - name: 'Mart''s Monster Mod - City Defences.esp'
     msg:
       - type: say
@@ -13619,8 +13619,8 @@ plugins:
     tag:
       - Actors.AIPackages
       - Relations
-# ENDGROUP: FCOM Compatibility Section
-# BEGINGROUP: Quests and Locations 4
+
+
   - name: 'BrewHouse.esp'
     msg:
       - type: say
@@ -14002,8 +14002,8 @@ plugins:
     tag:
       - Actors.Anims
       - NoMerge
-# ENDGROUP: Quests and Locations 4
-# BEGINGROUP: Landscape and City overhauls 1
+
+
   - name: 'Better daedric shrines Namira.esp'
     dirty:
       - crc: 0x77ce697e
@@ -15564,8 +15564,8 @@ plugins:
       - crc: 0xc6d93343
         util: *dirtyUtil
         udr: 2758
-# ENDGROUP: Landscape and City overhauls 1
-# BEGINGROUP: Overrides
+
+
   - name: 'Natural_Vegetation_by_Max_Tael.esp'
     msg:
       - type: say
@@ -17126,10 +17126,10 @@ plugins:
     tag:
       - Invent
       - Relev
-# ENDGROUP: Overrides
-# BEGINGROUP: TIE Integration compatibility
-# ENDGROUP: TIE Integration compatibility
-# BEGINGROUP: Alternative starts
+
+
+
+
   - name: 'Alternative Beginnings.esp'
     dirty:
       - crc: 0x4b2ae0d9
@@ -17154,8 +17154,8 @@ plugins:
     msg:
       - type: say
         content: 'Old, update to version 2+.'
-# ENDGROUP: Alternative starts
-# BEGINGROUP: Realism
+
+
   - name: 'Axebane_RealHunger25.esp'
     msg:
       - type: say
@@ -17225,8 +17225,8 @@ plugins:
     msg:
       - type: say
         content: 'Old. Update to latest version.'
-# ENDGROUP: Realism
-# BEGINGROUP: Vampires
+
+
   - name: 'MHE v2 Tail.esp'
     msg:
       - type: say
@@ -17382,8 +17382,8 @@ plugins:
     msg:
       - type: say
         content: 'obselete, consider upgrading to Ashes to Ashes version 1.0+'
-# ENDGROUP: Vampires
-# BEGINGROUP: Magic
+
+
   - name: 'Ayleid Expansion.esp'
     msg:
       - type: say
@@ -17796,8 +17796,8 @@ plugins:
     dirty:
       - crc: 0x850a32b5
         util: *dirtyUtil
-# ENDGROUP: Magic
-# BEGINGROUP: Thievery, Sneaking and Crime
+
+
   - name: 'BookLooting.esp'
     msg:
       - type: warn
@@ -17887,8 +17887,8 @@ plugins:
         content: 'Incompatible with: Zumbs Lockpicking Mod.'
     tag:
       - Relev
-# ENDGROUP: Thievery, Sneaking and Crime
-# BEGINGROUP: Guards and Bounty
+
+
   - name: 'OOO-OLC_Realistic_Detection.esp'
     msg:
       - type: say
@@ -17976,8 +17976,8 @@ plugins:
       - type: say
         content: 'Only use one ''Lockpick challenge'' mod.'
         condition: 'file("Duke Patrick''s Lockpick challange Autopick.esp")'
-# ENDGROUP: Guards and Bounty
-# BEGINGROUP: Combat
+
+
   - name: 'Adrenaline-Fuelled Combat.esp'
     msg:
       - type: say
@@ -18329,8 +18329,8 @@ plugins:
     tag:
       - Graphics
       - Sound
-# ENDGROUP: Combat
-# BEGINGROUP: Skills, Attributes and Leveling
+
+
   - name: 'Bundlement.esp'
     msg:
       - type: say
@@ -18554,8 +18554,8 @@ plugins:
         condition: 'file("S.P.A.M. option - Faster Minor.esp")'
   - name: 'The Versatile Adventurer.esp'
     req: [ *OBSE ]
-# ENDGROUP: Skills, Attributes and Leveling
-# BEGINGROUP: Pose and Animation Mods
+
+
   - name: 'Mayu''s Animation Overhaul.esp'
     msg:
       - type: say
@@ -18643,8 +18643,8 @@ plugins:
     dirty:
       - crc: 0x6f92cd7c
         util: *dirtyUtil
-# ENDGROUP: Pose and Animation Mods
-# BEGINGROUP: Semi-final overrides
+
+
   - name: 'immersive_caves_manual.esp'
     tag:
       - Sound
@@ -18978,8 +18978,8 @@ plugins:
       - *OBSE
       - name: 'OBSE\Plugins\MenuQue.dll'
         display: '[MenuQue](http://oblivion.nexusmods.com/mods/32200)'
-# ENDGROUP: Semi-final overrides
-# BEGINGROUP: Beauty Packs & Race Changes\Addons
+
+
   - name: 'Vanilla_Race_Overhaul.esp'
     tag:
       - Body-F
@@ -22107,8 +22107,8 @@ plugins:
     tag:
       - NoMerge
       - NpcFaces
-# ENDGROUP: Beauty Packs & Race Changes\Addons
-# BEGINGROUP: ZU SI Overhaul
+
+
   - name: 'ZUAmberMadnessOverhaul.esp'
     tag:
       - Actors.ACBS
@@ -22145,8 +22145,8 @@ plugins:
   - name: 'ZUSIO-SM Plugin Refurbish SI-patch.esp'
     tag:
       - Scripts
-# ENDGROUP: ZU SI Overhaul
-# BEGINGROUP: L.A.M.E.
+
+
   - name: 'bgMagicDV.esp'
     msg:
       - type: say
@@ -22203,8 +22203,8 @@ plugins:
     tag:
       - Graphics
       - NoMerge
-# ENDGROUP: L.A.M.E.
-# BEGINGROUP: L.A.M.E. - Supreme Magicka Compatibility
+
+
   - name: 'bgMagicEV_Conjuration_for_Supreme_Magicka.esp'
     msg:
       - type: say
@@ -22213,8 +22213,8 @@ plugins:
         content: 'Only use if placing L.A.M.E. files before Supreme Magika to keep SM spell stats.'
       - type: say
         content: 'Always place this file after Supreme Magika.'
-# ENDGROUP: L.A.M.E. - Supreme Magicka Compatibility
-# BEGINGROUP: Post Magicka Overhaul
+
+
   - name: 'cidnothump.esp'
     msg:
       - type: say
@@ -22234,8 +22234,8 @@ plugins:
     dirty:
       - crc: 0x970cacd1
         util: *dirtyUtil
-# ENDGROUP: Post Magicka Overhaul
-# BEGINGROUP: Race Balancing Project 2
+
+
   - name: 'bgBalancingEVOptionalFangs.esp'
     tag:
       - R.Teeth
@@ -22393,8 +22393,8 @@ plugins:
     tag:
       - Body-F
       - Body-Size-F
-# ENDGROUP: Race Balancing Project 2
-# BEGINGROUP: BG Integration quest
+
+
   - name: 'bgIntegrationEV.esp'
     msg:
       - type: say
@@ -22416,8 +22416,8 @@ plugins:
     tag:
       - NoMerge
       - NpcFaces
-# ENDGROUP: BG Integration quest
-# BEGINGROUP: Other race/birthsign mods
+
+
   - name: 'Trap.esp'
     tag:
       - R.Attributes-F
@@ -22485,8 +22485,8 @@ plugins:
       - type: warn
         content: 'Remove this and use the UOP instead.'
         condition: 'file("Unofficial Oblivion Patch.esp")'
-# ENDGROUP: Other race/birthsign mods
-# BEGINGROUP: Better Cities
+
+
   - name: 'Better Cities Full.esp'
     tag:
       - C.Water
@@ -23224,14 +23224,14 @@ plugins:
     tag:
       - Actors.Anims
       - NoMerge
-# ENDGROUP: Better Cities
-# BEGINGROUP: Message suppression/changing overrides
+
+
   - name: 'ReallyImmersiveMessages.esp'
     msg:
       - type: say
         content: 'Don''t use with OOO/FCOM or birthsign changing mods, instead use ''ReallyImmersiveMessagesNoBirthsigns.esp''.'
-# ENDGROUP: Message suppression/changing overrides
-# BEGINGROUP: Respawn & day length overrides
+
+
   - name: 'Francesco''s \d\d? days respawn time - 1-\d\d day lenght rescale\.esp'
     msg:
       - type: say
@@ -23285,8 +23285,8 @@ plugins:
     msg:
       - type: say
         content: 'Possible to use with ''Syc_LongerDaysShorterNights.esp'''
-# ENDGROUP: Respawn & day length overrides
-# BEGINGROUP: Shader mods
+
+
   - name: '[GFX]_Initial_Glow-all.esp'
     tag:
       - Graphics
@@ -23892,8 +23892,8 @@ plugins:
   - name: 'Shining Creatures_OOO.esp'
     tag:
       - Invent
-# ENDGROUP: Shader mods
-# BEGINGROUP: Pre Bash
+
+
   - name: 'a4VnlObSI_HiResHGEC-BBB-Fems+RmMales.esp'
     tag:
       - Body-F
@@ -24364,14 +24364,14 @@ plugins:
       - Relations
       - Relev
       - Stats
-# ENDGROUP: Pre Bash
 
-# BEGINGROUP: Bashed Patch
+
+
   - name: 'Bashed Patch, .+\.esp'
     Priority: 400
-# ENDGROUP: Bashed Patch
 
-# BEGINGROUP: Post Bashed Patch
+
+
   - name: 'Creeper.esp'
     dirty:
       - crc: 0x8a4423ba
@@ -24396,7 +24396,7 @@ plugins:
     msg: [ *doNotClean ]
   - name: 'Vanilla Weapon Stat Override - SI.esp'
     msg: [ *doNotClean ]
-# BEGINGROUP: Unavailable/Obsolete Duke Patrick's Mods
+
 # Mods that are not available for download. They have been sorted according to Duke Patrick's load order guidelines, where given.
   - name: 'Duke Patrick ShiveringIsles patch 1.1.esp'
     msg:
@@ -24486,12 +24486,12 @@ plugins:
     msg:
       - type: say
         content: 'Obsolete. Do not use with latest version of SCA Combat Archery.'
-# ENDGROUP: Unavailable/Obsolete Duke Patrick's Mods
-# BEGINGROUP: Map Changes
-# any map changing files esp have to go dead last
-# ENDGROUP: Map Changes
 
-# BEGINGROUP: LOD Togglers
+
+# any map changing files esp have to go dead last
+
+
+
 # These should never be in the active load order.
   - name: 'KRLODToggleRestored.esp'
     msg:
@@ -24508,7 +24508,7 @@ plugins:
       - type: error
         content: 'This plugin should never be active. Deactivate immediately.'
         condition: 'active("FRLODToggleBasic.esp")'
-# ENDGROUP: LOD Togglers
+
   - name: 'NehrimEnglish.esp'
     after: [ All Natural Nehrim.esp ]
   - name: 'ASTnehrimHotfixes01(EN).esp'
@@ -24616,7 +24616,7 @@ plugins:
     url: [ 'http://oblivion.nexusmods.com/mods/24604' ]
   - name: 'Giliad House for Sale.esp'
     url: [ 'http://oblivion.nexusmods.com/mods/41868' ]
-# ENDGROUP: Post Bashed Patch
+
   - name: 'Blacktache''s Secrets v3.esp'
     dirty:
       - crc: 0xF69CC41C
