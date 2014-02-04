@@ -290,15 +290,12 @@ plugins:
       - *OBSE
       - name: 'OBSE\Plugins\OBME.dll'
         display: '[Oblivion Magic Extender](http://oblivion.nexusmods.com/mods/31981)'
-#
 # Tag with priority: -2
   - name: 'Essential_Merchants.esp'
     tag:
       - Actors.ACBS
       - NoMerge
     priority: -2
-# Guesing that this is a Polish reanslation of Oblivion, so loading early. Link supplied was for an unrelated mod.
-# Oblivion PL.esp
   - name: 'HrmnsOblivionScriptOptimizationv1.0.esp'
     msg:
       - type: warn
@@ -308,8 +305,6 @@ plugins:
         content: 'Not recommended for use as there is no measurable performance improvement.'
         condition: 'checksum("HrmnsOblivionScriptOptimizationv1.0.esp",FEED7422)'
     priority: -2
-# This really does need to load this early.
-# Apparently needs to load bloody early. Doesn't seem like it matters, considering that it doesn't improve performance.
   - name: 'HrmnsOblivionScriptOptimizationv SI 1.0.esp'
     msg:
       - type: warn
@@ -417,7 +412,6 @@ plugins:
     tag:
       - Names
     priority: -2
-# Bash and deactivate to keep new faces with NPC altering mods later.
 # These should all be tagged with Deactivate, NoMerge, and NPCFaces, and should have priority -2.
   - name: 'Better Looking NPC.esp'
     tag:
@@ -950,9 +944,6 @@ plugins:
       - NoMerge
       - NpcFaces
     priority: -2
-# Everything else must be allowed to override these.
-# UOP v3.0.1 or later should be used to fix buggy vanilla quests rather than these -
-# - some fixes I can't find in documentation but am fairly sure UOP would have picked them up.
   - name: 'OblivionMsg.esp'
     tag:
       - Names
@@ -1190,7 +1181,6 @@ plugins:
     msg:
       - type: error
         content: 'Outdated. Update to newest version of Permanent Effects from Quest Items fix.'
-# have to be after UOP in some cases
   - name: 'Obl-IM.esp'
     tag:
       - Delev
@@ -1208,8 +1198,6 @@ plugins:
   - name: 'Oblivion_Deutsch_v5_0.esp'
     tag:
       - Names
-# IFNOT FILE("OblivionMsg.esp") MOD: DLCShiveringIsles.esp
-# Load here if not russian GOTY, see comment about this.
   - name: 'Traduccion Mejorada S.I.esp'
     tag:
       - Names
@@ -1219,7 +1207,6 @@ plugins:
   - name: 'FormID_Reference_Bug_Fix.esp'
     inc:
       - 'Unofficial Shivering Isles Patch.esp'
-# These are chinese mods, must load before USIP but after SI.
   - name: 'tes4SI-CHS-alpha.esp'
     tag:
       - Names
@@ -1520,7 +1507,6 @@ plugins:
     msg:
       - type: say
         content: 'Do not use with MMMforFrans. Already integrated.'
-# Unlikely to interact with other mods but OOO will overwrite vanilla replacers if not correctly Bash Patched.
   - name: '7roads_screens.esp'
     tag:
       - Graphics
@@ -1600,11 +1586,6 @@ plugins:
     msg:
       - type: say
         content: 'Make sure that any mod that replaces the graphics of the loading screens is tagged with Graphics, otherwise this mod will revert them to vanilla'
-# Mods that can be overridden in part.
-# Low priority mods.
-# New Items, NPCs & creatures that are not overrides of other mods.
-# 'Library' mods.
-# Unlikely to be affected by anything but sound mods.
   - name: 'oc_darker_nights.esp'
     msg:
       - type: say
@@ -2021,9 +2002,6 @@ plugins:
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
         condition: 'regex("Bashed Patch.*\.esp")'
-# All of these simply alter water shader rendering settings - no Bashed Patch tags are needed
-# or appropriate except for in some cases C.Water.
-# Possible dirty edits mean they should go before landscape changing mods.
   - name: 'AdvancedWater.esp'
     tag:
       - C.Water
@@ -2083,7 +2061,6 @@ plugins:
   - name: 'Skyrimized Waters HD - SI Addon.esp'
     tag:
       - C.Water
-# Let other mods override as needed. Sometimes overrides weather overhauls with better lightening sounds etc.
   - name: 'Idle Dialogue.esp'
     dirty:
       - crc: 0xf3ddd964
@@ -2480,7 +2457,6 @@ plugins:
     dirty:
       - crc: 0x71bddec0
         util: *dirtyUtil
-# Should load early to allow more 'important' mods to override.
   - name: 'Real_Lights.esp'
     msg:
       - type: warn
@@ -2546,8 +2522,6 @@ plugins:
     msg:
       - type: say
         content: 'Requires: ''You Are Here''. ScreenEffects for versions below 1.3.'
-# Includes nearly all new items (except weapons and armor).
-# Low priority mods.
   - name: '00crystalTorch.esp'
     dirty:
       - crc: 0xe7a1bce7
@@ -2628,9 +2602,6 @@ plugins:
         condition: 'version("Ayleid Loot EXtension.esp","2.11",==)'
     tag:
       - Invent
-# Amulet of Magicka_1С.esp
-# This С is different from the C in the mod name below: the former is apparently Russian, and the latter is ASCII. Both entries should be kept.
-# Amulet of Magicka_1C.esp
   - name: 'Book Jackets Oblivion.esp'
     tag:
       - Graphics
@@ -3848,7 +3819,6 @@ plugins:
       - crc: 0x56c59ac2
         util: *dirtyUtil
         udr: 50
-# These mods don't need to go anywhere, they're fully scripted, so load them early, out of the way of the more placement-critical sections near the bottom of the masterlist.
   - name: 'AutoEquip.esp'
     dirty:
       - crc: 0xa0675ea6
@@ -3943,7 +3913,6 @@ plugins:
     dirty:
       - crc: 0xa08a9abe
         util: *dirtyUtil
-# Load after OOO to override OOO initial map marker changes, otherwise let OOO remove starting default map markers.
   - name: 'Map Marker Renamer.esp'
     msg:
       - type: say
@@ -3977,7 +3946,6 @@ plugins:
     dirty:
       - crc: 0x1664da76
         util: *dirtyUtil
-# Load order independent. Use only one unless documentation says otherwise.
   - name: 'Clock Hotkey.esp'
     req: [ *OBSE ]
   - name: 'Expanded Hotkeys and Spell Delete v1.0.esp'
@@ -4256,8 +4224,6 @@ plugins:
     tag:
       - Graphics
       - NoMerge
-# Load early.
-# Robert's Male Body Replacer has problems with race mods and patches are needed.
   - name: 'Bab.esp'
     tag:
       - Body-F
@@ -4348,8 +4314,6 @@ plugins:
     tag:
       - Graphics
       - NoMerge
-# VITAL for overhaul mod users: Wrye Bash tag all armor replacers {{BASH: Graphics}} to keep their new look.
-# Some items will need to go after overhaul or location altering mods to appear.
   - name: 'Bonemold_Helmet.esp'
     url:
       - http://oblivion.nexusmods.com/mods/6997
@@ -5986,9 +5950,6 @@ plugins:
     inc:
       - 'Mage Equipment - No Manni.esp'
       - 'Mage Equipment.esp'
-# To be alphabetically sorted sometime.
-# Stuff for use with body replacers.
-# VITAL for overhaul mod users: Wrye Bash tag all armor replacers {{BASH: Graphics}} to keep their new look.
   - name: 'All Manly.esp'
     tag:
       - Graphics
