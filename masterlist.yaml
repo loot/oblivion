@@ -9,18 +9,12 @@ common:
     active("Nehrim.esm")
   - &tes4Cond
     active("Oblivion.esm")
-# IF FILE("FCOM_Convergence.esm") SET: FCOM
   - &FCOMCond
     active("FCOM_Convergence.esm")
-# IF FILE("Oscuro's_Oblivion_Overhaul.esm") SET: OOO
   - &OOOCond
     active("Oscuro's_Oblivion_Overhaul.esm")
   - &coblCond
     active("Cobl Main.esm")
-# Masterlist variable setup for BOSS v1.7+.
-# IF FILE("Better Cities Resources.esm") SET: BC
-# IF REGEX("Bashed Patch.*\.esp") SET: BP
-# IF FILE("Cosmetic Compilation.esp") SET: CC1
 # Messages
   - &masterReassign
     type: say
@@ -134,6 +128,7 @@ plugins:
       - Stats
     dirty:
       - crc: 0x17f6fd1a
+        itm: 6
         util: *dirtyUtil
   - name: 'Francesco''s Optional New Items Add-On.esm'
     tag:
@@ -141,6 +136,7 @@ plugins:
       - Relev
     dirty:
       - crc: 0xdfd4fb97
+        itm: 2
         util: *dirtyUtil
   - name: 'Francesco''s Optional New Creatures Add-On.esm'
     inc:
@@ -257,6 +253,7 @@ plugins:
         display: '[Playable and NPC Creatures (only Race Repository.esm)](http://oblivion.nexusmods.com/mods/31821)'
     dirty:
       - crc: 0x477340c8
+        itm: 7
         util: *dirtyUtil
   - name: 'x117race.esm'
     tag:
@@ -371,6 +368,7 @@ plugins:
     dirty:
       - crc: 0x8a09b1f1
         util: *dirtyUtil
+        itm: 9
         udr: 3
     priority: -2
   - name: 'TRoN 0-59-1b Vwalk.esp'
@@ -712,6 +710,7 @@ plugins:
     dirty:
       - crc: 0x2c6e9200
         util: *dirtyUtil
+        itm: 10
   - name: 'Beautiful_Women_DB_Addon.esp'
     tag:
       - Deactivate
@@ -860,6 +859,7 @@ plugins:
     dirty:
       - crc: 0xaa25a555
         util: *dirtyUtil
+        itm: 3
   - name: 'Absolutely_Sexy_MarketDistrict.esp'
     tag:
       - Deactivate
@@ -950,6 +950,7 @@ plugins:
     dirty:
       - crc: 0xf0ee32c5
         util: *dirtyUtil
+        itm: 100
   - name: 'AtiAAFix.esp'
     msg:
       - type: say
@@ -979,6 +980,7 @@ plugins:
       - crc: 0x69d1d5e0
         util: *dirtyUtil
         udr: 3
+        itm: 1
       - crc: 0xc954deb3
         util: *dirtyUtil
         udr: 3
@@ -1026,6 +1028,7 @@ plugins:
       - crc: 0xe4858a00
         util: *dirtyUtil
         udr: 37
+        itm: 12
   - name: 'The Finger of the Mountain Fix.esp'
     inc:
       - 'Unofficial Oblivion Patch.esp'
@@ -1046,6 +1049,7 @@ plugins:
     dirty:
       - crc: 0xd32dae95
         util: *dirtyUtil
+        itm: 16
         udr: 126
   - name: 'Self-Preservation v1.0.esp'
     msg:
@@ -1056,6 +1060,7 @@ plugins:
     dirty:
       - crc: 0x3bb14891
         util: *dirtyUtil
+        itm: 12
   - name: 'Traduccion Mejorada Oblivion Clan DLAN.esp'
     tag:
       - Names
@@ -1074,6 +1079,7 @@ plugins:
     dirty:
       - crc: 0xdaf51407
         util: *dirtyUtil
+        itm: 2
 # The patches need to load after DLCShiveringIsles.esp explicitly, to prevent the Russain GOTY version of the ESP from overwriting fixes.
   - name: 'Unofficial Oblivion Patch.esp'
     after:
@@ -1478,6 +1484,7 @@ plugins:
     dirty:
       - crc: 0x4f003db0
         util: *dirtyUtil
+        itm: 3
   - name: 'Francesco''s Optional Leveled Guards.esp'
     tag:
       - Actors.ACBS
