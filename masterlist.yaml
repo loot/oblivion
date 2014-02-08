@@ -9852,12 +9852,20 @@ plugins:
       - type: say
         content: 'Also see this plugin''s [special cleaning instructions](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide#Artefacts_of_the_Ancestors.esp_Special_Cleaning_Instructions)'
   - name: 'Artefacts of the Ancestors.esp'
+    msg:
+      - *needsCleaning
+      - type: say
+        content: 'Also see this plugin''s [special cleaning instructions](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide#Artefacts_of_the_Ancestors.esp_Special_Cleaning_Instructions)'
     dirty:
       - crc: 0xdb68939a
         util: *dirtyUtil
         udr: 3
         itm: 255
   - name: 'Artefakte der Ahnen.esp'
+    msg:
+      - *needsCleaning
+      - type: say
+        content: 'Also see this plugin''s [special cleaning instructions](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide#Artefacts_of_the_Ancestors.esp_Special_Cleaning_Instructions)'
     dirty:
       - crc: 0x39cbae14
         util: *dirtyUtil
@@ -12116,6 +12124,8 @@ plugins:
     msg:
       - type: say
         content: 'Has a small landscape conflict with Unique Landcapes: Chorrol Hinterland.'
+      - type: warn
+        content: 'Requires manual cleaning.'
     tag:
       - NpcFaces
     dirty:
@@ -12594,6 +12604,9 @@ plugins:
         itm: 74
         udr: 88
   - name: 'TolawaylAyleidCity_Quest.esp'
+    msg:
+      - type: warn
+        content: 'Deletes a door in the Cheydinhal Castle Private Quarters.'
     dirty:
       - crc: 0xc5c868bd
         util: *dirtyUtil
