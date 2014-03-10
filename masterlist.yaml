@@ -1493,10 +1493,6 @@ plugins:
     tag:
       - Delev
       - Relev
-  - name: 'Francescos Dark Seducer Weapons Patch.esp'
-    tag:
-      - Delev
-      - Relev
   - name: 'FranDarkSeducerWeapFix.esp'
     tag:
       - Delev
@@ -1505,7 +1501,8 @@ plugins:
     req:
       - name: 'meshes\armor\Bonemold\bone.nif'
         display: 'Meshes from the "[Bonemold Helmet](http://oblivion.nexusmods.com/mods/6997)" and "Cryos Ordinator Indoril Armor" mods'
-        condition: 'not file("meshes\armor\Ordinator\helmet.nif")'
+    tag:
+      - Invent
   - name: 'OMOBS_FRAN.esp'
     tag:
       - NoMerge
@@ -6795,25 +6792,12 @@ plugins:
   - name: 'ORM-TamriellicGlassDLC7.esp'
     tag:
       - Graphics
-  - name: 'Fran Armor Add-on.esp'
-    req:
-      - 'Francesco''s Leveled Creatures-Items Mod.esm'
-    msg:
-      - type: say
-        content: 'Requires the meshes from ''Bonemold Helmet'' and ''Cryos Ordinator Indoril Armor'' mods, but not the ESPs.'
-    tag:
-      - Invent
   - name: 'Fran_Lv30Item_Maltz.esp'
     req:
       - 'Francesco''s Leveled Creatures-Items Mod.esm'
   - name: 'Francesco''s More Wilderness Life.esp'
     inc:
       - 'FCOM_Convergence.esm'
-  - name: 'Francesco''s Optional Chance of Stronger Enemies.esp'
-    dirty:
-      - crc: 0x4f003db0
-        util: *dirtyUtil
-        itm: 3
   - name: 'Francesco''s Optional Dungeon Chest Loot.esp'
     msg:
       - type: error
@@ -6824,10 +6808,6 @@ plugins:
       - type: error
         content: 'Delete. Already integrated into FCOM, MMM, OOO or other FCOM components.'
         condition: 'file("Oscuro''s_Oblivion_Overhaul.esm") or file("FCOM_Convergence.esm")'
-  - name: 'Francesco''s Optional Leveled Guards.esp'
-    tag:
-      - Actors.ACBS
-      - Actors.Stats
   - name: 'Francesco''s Optional House Chest Loot.esp'
     msg:
       - type: error
@@ -6896,15 +6876,7 @@ plugins:
       - type: error
         content: 'Delete. Already integrated into FCOM, MMM, OOO or other FCOM components.'
         condition: *FCOMCond
-  - name: 'Francesco''s Dark Seducer Weapons Patch.esp'
-    tag:
-      - Delev
-      - Relev
   - name: 'Francescos Dark Seducer Weapons Patch.esp'
-    tag:
-      - Delev
-      - Relev
-  - name: 'FranDarkSeducerWeapFix.esp'
     tag:
       - Delev
       - Relev
@@ -7621,16 +7593,11 @@ plugins:
     msg:
       - type: say
         content: 'Obsolete. Remove this and update to latest version.'
-  - name: 'Mart''s Monster Mod - Blood Fix v3.esp'
-    msg:
-      - type: say
-        content: 'Not needed in MMM 3.6beta3+. Already integrated.'
   - name: 'MMM - UberhulkParalyzeFix.esp'
     msg:
       - type: say
         content: 'Not needed in MMM 3.6beta3+. Already integrated.'
   - name: 'Mart''s Monster Mod - Diverse Runeskulls.esp'
-    condition: *FCOMCond
     msg:
       - type: say
         content: 'Replaces both ''FCOM_ExnemRuneskulls.esp'' and ''ExnemRuneskulls.esp'' - Please remove them.'
@@ -7661,10 +7628,6 @@ plugins:
       - type: error
         content: 'FCOM_Convergence.esm is missing. Re-install FCOM.'
         condition: 'not file("FCOM_Convergence.esm")'
-  - name: 'Mart''s Monster Mod - Durability & Damage.esp'
-    msg:
-      - type: error
-        content: 'Delete and use ''FCOM_DurabilityAndDamage.esp''.'
   - name: 'FCOM_DurabilityAndDamage.esp'
     msg:
       - type: error
@@ -7720,10 +7683,6 @@ plugins:
     msg:
       - type: say
         content: 'Not recommended, has bugs.'
-  - name: 'Mart''s Monster Mod - Safer Roads.esp'
-    msg:
-      - type: error
-        content: 'Delete and use the ''FCOM_SaferRoads.esp''.'
   - name: 'FCOM_SaferRoads.esp'
     msg:
       - type: error
@@ -7818,10 +7777,8 @@ plugins:
         content: 'Use ''FCOM_SpawnRatesReduced.esp'' instead.'
   - name: 'Mart''s Monster Mod - Spawn Rates Reduced Reduced.esp'
     msg:
-      - type: warn
-        content: 'Not recommended. Not fully tested with FCOM and creatures from other FCOM related mods may not appear.'
       - type: say
-        content: 'Consider using ''FCOM_SpawnRatesReduced.esp'', ''FCOM_SpawnRatesSlightlyReduced.esp'' or ''FCOM_SpawnRatesStronger.esp'' instead.'
+        content: 'Outdated. Update to MMM 3.6+.'
   - name: 'Mart''s Monster Mod - Spawn Rates - Reduced Reduced.esp'
     msg:
       - type: warn
@@ -7841,21 +7798,11 @@ plugins:
   - name: 'Mart''s Monster Mod - Extra Reavers.esp'
     msg:
       - type: say
-        content: 'Old version. As from v3.6, integrated into of Additional Enemy NPC Vars.'
+        content: 'Obsolete. Remove this and update to MMM v3.6, where it is integrated into of Additional Enemy NPC Vars.'
   - name: 'Mart''s Monster Mod for OOO - LessReavers.esp'
     msg:
       - type: error
         content: 'Delete. Use ''Mart''s Monster Mod - Less Reavers.esp''.'
-  - name: 'Mart''s Monster Mod - Vindasel.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Update to MMM 3.7b3+ and use ''Mart''s Monster Mod - Safer Quest Locations.esp'' instead.'
-  - name: 'Mart''s Monster Mod - Bats Addon.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Update to MMM 3.6b3+ and use ''Dungeons of MMM.esp'' instead.'
-  - name: 'Mart''s Monster Mod - Gems & Gem Dust.esp'
-    msg: [ *doNotClean ]
   - name: 'Gems and Gem Dusts - MMM.esp'
     msg:
       - type: say
@@ -7866,11 +7813,6 @@ plugins:
       - Invent
       - Scripts
       - Stats
-    condition: *FCOMCond
-  - name: 'Mart''s Monster Mod - Diverse Creature Skins.esp'
-    msg:
-      - type: error
-        content: 'Obsolete. Remove this and update to MMM 3.7+ and associated version of FCOM.'
   - name: 'Mart''s Monster Mod - Farm Animals.esp'
     dirty:
       - crc: 0xa00e61d1
@@ -7997,37 +7939,7 @@ plugins:
       - Relev
       - Scripts
       - Stats
-  - name: 'Choices and Consequences - MMM.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Remove this and update to latest version.'
-  - name: 'C&C&EQR - MMM.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Remove this and update to latest version.'
   - name: 'Mart''s Monster Mod - Blood Fix v3.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Remove this and update to MMM v3.6beta3+.'
-  - name: 'Mart''s Monster Mod - Additional Enemy NPC Vars.esp'
-    msg:
-      - type: say
-        content: 'Can increase the chances of a CTD in a heavily modded game.'
-      - *doNotClean
-  - name: 'Mart''s Monster Mod - Diverse Runeskulls.esp'
-    condition: 'not active("FCOM_Convergence.esm")'
-    msg:
-      - type: say
-        content: 'Replaces both ''FCOM_ExnemRuneskulls.esp'' and ''ExnemRuneskulls.esp'' - Please remove them.'
-        condition: 'file("FCOM_ExnemRuneskulls.esp") or file("ExnemRuneskulls.esp")'
-    tag:
-      - Delev
-      - Relev
-  - name: 'Mart''s Monster Mod - More Reavers.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Remove this and update to MMM v3.6beta3+.'
-  - name: 'Mart''s Monster Mod - Extra Reavers.esp'
     msg:
       - type: say
         content: 'Obsolete. Remove this and update to MMM v3.6beta3+.'
@@ -8052,14 +7964,14 @@ plugins:
       - type: say
         content: 'Will work with OOO ''light'' but is not compatible with the ''full'' installation of OOO.'
       - *doNotClean
-  - name: 'Mart''s Monster Mod - Hunting & Crafting.esp'
-    msg: [ *doNotClean ]
-    condition: 'not active("FCOM_Convergence.esm")'
   - name: 'Mart''s Monster Mod - Durability & Damage.esp'
     msg:
       - type: say
         content: 'Not compatible with OOO. Already included in OOO.'
         condition: *OOOCond
+      - type: error
+        content: 'Delete and use ''FCOM_DurabilityAndDamage.esp''.'
+        condition: *FCOMCond
   - name: 'Mart''s Monster Mod - Fran''s leveled quests.esp'
     msg:
       - type: say
@@ -8080,16 +7992,15 @@ plugins:
       - type: say
         content: 'Remove: already included in ''Mart''s Monster Mod - Spawn Rates - Reduced Vanilla.esp'''
         condition: 'file("Mart''s Monster Mod - Spawn Rates - Reduced Vanilla")'
+      - type: error
+        content: 'Delete and use the ''FCOM_SaferRoads.esp''.'
+        condition: *FCOMCond
   - name: 'Mart''s Monster Mod - NoReaversInGates.esp'
     msg:
       - type: say
         content: 'Use ''Mart''s Monster Mod for OOO - NoReaversInGates.esp'' instead.'
         condition: *OOOCond
   - name: 'Mart''s Monster Mod - No Reaver Hounds.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to MMM 3.6beta3+.'
-  - name: 'Mart''s Monster Mod - Spawn Rates Reduced Reduced.esp'
     msg:
       - type: say
         content: 'Outdated. Update to MMM 3.6beta3+.'
@@ -8101,17 +8012,6 @@ plugins:
     msg:
       - type: say
         content: 'Obsolete. Remove this and update to 3.6beta3+. Use ''Dungeons of MMM.esp'' instead.'
-  - name: 'Mart''s Monster Mod - More Wilderness Life.esp'
-    inc:
-      - 'Mart''s Monster Mod - More Wilderness Life No Gates.esp'
-  - name: 'Mart''s Monster Mod - More Wilderness Life No Gates.esp'
-    inc:
-      - 'Mart''s Monster Mod - More Wilderness Life.esp'
-    msg: [ *doNotClean ]
-  - name: 'Mart''s Monster Mod - More Passive Wildlife.esp'
-    msg:
-      - type: say
-        content: 'Not recommended, has bugs.'
   - name: 'Mart''s Monster Mod - City Defences.esp'
     msg:
       - type: say
@@ -8122,12 +8022,6 @@ plugins:
     msg:
       - type: say
         content: 'Obsolete. Remove this and update to 3.7b3+. Use ''Mart''s Monster Mod - Friendlier Factions OOO.esp'' instead.'
-  - name: 'MMM - Playable Undead Armors.esp'
-    tag:
-      - Invent
-  - name: 'MMM - Playable Undead Armors - Oblivion WarCry Compatability Patch.esp'
-    tag:
-      - Invent
   - name: 'MrSiika''sFarmAnimals.esp'
     msg:
       - type: say
@@ -8426,11 +8320,6 @@ plugins:
     tag:
       - Graphics
       - NoMerge
-  - name: 'Mart''s Monster Mod - Diverse Imperial Armor.esp'
-    msg:
-      - type: error
-        content: 'Delete - already integrated into FCOM components, use ''FCOM_DiverseGuardUnity.esp'' instead.'
-        condition: *FCOMCond
   - name: 'FCOM_DiverseGuardUnity.esp'
     tag:
       - Actors.CombatStyle
@@ -8501,11 +8390,6 @@ plugins:
     tag:
       - Stats
   - name: 'Mart''s Monster Mod - Friendlier Factions MMM+Fran.esp'
-    msg:
-      - type: error
-        content: 'Delete and use ''FCOM_FriendlierFactions.esp''.'
-        condition: *FCOMCond
-  - name: 'Mart''s Monster Mod - Friendlier Factions OOO+FCOM.esp'
     msg:
       - type: error
         content: 'Delete and use ''FCOM_FriendlierFactions.esp''.'
@@ -8683,20 +8567,6 @@ plugins:
   - name: 'Sagerbliv Weapons v20.esp'
     tag:
       - Names
-      - Stats
-  - name: 'Mart''s Monster Mod - Shivering Isles.esp'
-    tag:
-      - Actors.AIData
-      - Actors.AIPackages
-      - Actors.Stats
-      - Delev
-      - Factions
-      - Graphics
-      - Invent
-      - Names
-      - Relations
-      - Relev
-      - Scripts
       - Stats
   - name: 'Mart''s Monster Mod - Legion Shield Replacer.esp'
     tag:
@@ -13930,12 +13800,6 @@ plugins:
         util: *dirtyUtil
         itm: 34
         udr: 57
-  - name: 'Mart''s Monster Mod - City Defences.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with Better Cities - City Defences.'
-        condition: 'file("Better Cities Resources.esm")'
-      - *doNotClean
   - name: 'FCOM_Knights.esp'
     tag:
       - Delev
@@ -15421,6 +15285,11 @@ plugins:
     msg:
       - type: say
         content: 'Obselete, update to latest version.'
+      - type: say
+        content: 'Use only one road record file.'
+    tag:
+      - Deactivate
+      - Roads
   - name: 'CSV_Farms_Better_Cities.esp'
     msg:
       - type: say
@@ -19642,9 +19511,6 @@ plugins:
         content: 'These eyes will not work properly with the Vanilla eye meshes. You need Elaborate Eyes or the Beautiful People 2.7 mod to use these eye textures.'
     tag:
       - Eyes
-  - name: 'MP Human Eyes Vanilla Makeover.esp'
-    tag:
-      - Eyes
   - name: 'Unique Eyes Selection - DV.esp'
     tag:
       - Eyes
@@ -22409,9 +22275,6 @@ plugins:
         util: *dirtyUtil
         itm: 112
         udr: 11
-  - name: 'DMRA BBB Complete Clothing and Armor Replacer.esp'
-    tag:
-      - Graphics
   - name: 'Nephs Stock Shoes Real High Heels.esp'
     tag:
       - Graphics
@@ -23653,12 +23516,6 @@ plugins:
     msg:
       - type: say
         content: 'For both Unique Landscapes and Better Cities use CRpatchForBSandULskingrad.esp instead'
-  - name: 'CSV_Farms_Better_Cities.esp'
-    msg:
-      - type: say
-        content: 'Use only one CSV Farms * Cities esp.'
-      - type: say
-        content: 'Requires: Better Cities.'
   - name: 'CSV_Farms_Open_Cities.esp'
     msg:
       - type: say
@@ -24716,13 +24573,6 @@ plugins:
     req:
       - 'Open Cities Reborn.esp'
       - 'Roads of Cyrodiil.esp'
-    tag:
-      - Deactivate
-      - Roads
-  - name: 'CSV_Farms_Road_Vanilla.esp'
-    msg:
-      - type: say
-        content: 'Use only one road record file.'
     tag:
       - Deactivate
       - Roads
