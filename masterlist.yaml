@@ -46,6 +46,7 @@ globals:
 
 plugins:
   - name: 'Oblivion.esm'
+    priority: -1999999
     msg:
       - type: error
         content: 'This must not be activated. However, it can be useful when porting Oblivion mods to Nehrim.'
@@ -24757,7 +24758,7 @@ plugins:
       - Relev
       - Stats
   - name: 'Bashed Patch, .+\.esp'
-    Priority: 400
+    priority: 1000400
   - name: 'Creeper.esp'
     dirty:
       - crc: 0x8a4423ba
