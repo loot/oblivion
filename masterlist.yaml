@@ -13210,6 +13210,30 @@ plugins:
         content: 'Delete ''Lynges Thieves Highway.esp and use this instead.'
         condition: '( file("Lynges Thieves Highway.esp") ) and active("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: 'DLCFrostcrag.esp'
+    priority: -1999000
+    after:
+      - 'Unofficial Oblivion Patch.esp'
+      - 'Oblivion Citadel Door Fix.esp'
+      - 'UOPS Additional Changes.esp'
+      - 'UOP Vampire Aging & Face Fix.esp'
+      - 'DLCShiveringIsles.esp'
+      - 'Unofficial Shivering Isles Patch.esp'
+      - 'USIPS Additional Changes.esp'
+      - 'DLCBattlehornCastle.esp'
+      - 'DLCBattlehornCastle - Unofficial Patch.esp'
+      - 'DLCThievesDen.esp'
+      - 'DLCThievesDen - Unofficial Patch.esp'
+      - 'DLCThievesDen - Unofficial Patch - SSSB.esp'
+      - 'DLCMehrunesRazor.esp'
+      - 'DLCMehrunesRazor - Unofficial Patch.esp'
+      - 'DLCVileLair.esp'
+      - 'DLCVileLair - Unofficial Patch.esp'
+      - 'DLCHorseArmor.esp'
+      - 'DLCHorseArmor - Unofficial Patch.esp'
+      - 'DLCOrrery.esp'
+      - 'DLCOrrery - Unofficial Patch.esp'
+      - 'DLCSpellTomes.esp'
+      - 'DLCSpellTomes - Unofficial Patch.esp'
     tag:
       - C.Name
       - C.Owner
@@ -13243,6 +13267,7 @@ plugins:
         util: *dirtyUtil
         itm: 1
   - name: 'DLCFrostcrag - Unofficial Patch.esp'
+    priority: -1999000
     tag:
       - Actors.ACBS
       - C.Name
@@ -13382,6 +13407,8 @@ plugins:
       - 'DLCOrrery - Unofficial Patch.esp'
       - 'DLCSpellTomes.esp'
       - 'DLCSpellTomes - Unofficial Patch.esp'
+      - 'DLCFrostcrag.esp'
+      - 'DLCFrostcrag - Unofficial Patch.esp'
     tag:
       - Actors.AIPackages
       - Factions
