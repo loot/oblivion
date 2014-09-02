@@ -74,24 +74,24 @@ plugins:
         util: *dirtyUtil
         udr: 4
   - name: 'GTAesgaard_2.esm'
+    priority: -3
     msg:
       - type: warn
         content: 'This needs to load directly after Oblivion.esm to avoid landscape issues caused by a failure by the mod author to use TES4Gecko''s "Move Worldspaces" function.'
-        priority: -3
   - name: 'DibellasWatch.esm'
+    priority: -3
     msg:
       - type: warn
         content: 'This needs to load directly after Oblivion.esm to avoid landscape issues caused by a failure by the mod author to use TES4Gecko''s "Move Worldspaces" function.'
-        priority: -3
   - name: 'Belas.esm'
     msg:
       - type: error
         content: 'Part of Chronicles of Reeb. Do not use. Has serious landscape issues due to editing the Tamriel worldspace. Uninstall and delete.'
   - name: 'Morrowind_ob.esm'
+    priority: -3
     msg:
       - type: warn
         content: 'This needs to load directly after Oblivion.esm to avoid landscape issues caused by a failure by the mod author to use TES4Gecko''s "Move Worldspaces" function.'
-        priority: -3
   - name: 'Silgrad_Tower.esm'
     inc:
       - 'Silgrad_Tower_T.esm'
