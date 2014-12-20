@@ -68,6 +68,10 @@ plugins:
     msg:
       - type: say
         content: 'A modding esm - do not use in game, deactivate.'
+  - name: 'XBOX_Controller.esp'
+    priority: -1999999
+    after:
+      - 'Oblivion.esm'
   - name: 'Hammerfell.esm'
     dirty:
       - crc: 0x7d22f9df
