@@ -1534,14 +1534,14 @@ plugins:
     tag:
       - Graphics
   - name: 'Atmospheric Loading Screens.esp'
-    after:
+    msg:
       - type: say
         content: 'Move after Race Balancing Project'
         condition: 'file("bgBalancingEVCore.esp")'
     tag:
       - Graphics
   - name: 'Atmospheric Loading Screens - Original Text.esp'
-    after:
+    msg:
       - type: say
         content: 'Move after Race Balancing Project'
         condition: 'file("bgBalancingEVCore.esp")'
@@ -2504,7 +2504,7 @@ plugins:
       - 'EW-Storms & Sound SI.esp'
       - 'OBSE-Storms & Sound.esp'
       - 'OBSE-Storms & Sound SI.esp'
-  - name: 'Rainbows(_1C)?\.esp'
+  - name: 'Rainbows.esp'
     dirty:
       - crc: 0x71bddec0
         util: *dirtyUtil
