@@ -24953,8 +24953,14 @@ plugins:
       - Relations
       - Relev
       - Stats
+  - name: 'TES4Merged.esp'
+    priority: 1000400
+    tag:
+      - NoMerge
   - name: 'Bashed Patch.*\.esp'
     priority: 1000400
+    after:
+      - 'TES4Merged.esp'
   - name: 'Creeper.esp'
     dirty:
       - crc: 0x8a4423ba
