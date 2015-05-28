@@ -2568,10 +2568,18 @@ plugins:
     inc:
       - 'All Natural - Real Lights.esp'
   - name: 'Illumination(Within|Without)( Rus)?\.esp'
+    after:
+      - 'Finishing Touches -Bravil-.esp'
     msg:
       - type: warn
         content: 'Use only one IlluminationWithin or IlluminationWithout esp.'
         condition: '( regex("IlluminationWithin.*\.esp") ) and regex("IlluminationWithout.*\.esp")'
+    url: [ 'http://www.nexusmods.com/oblivion/mods/3700' ]
+  - name: 'FT-Bravil-IW.esp'
+    after:
+      - 'IlluminationWithin.esp'
+      - 'IlluminationWithout.esp'
+    url: [ 'http://www.nexusmods.com/oblivion/mods/13664' ]
   - name: 'IWR.?-.?Windows( Rus)?\.esp'
     msg:
       - type: say
