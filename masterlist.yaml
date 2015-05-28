@@ -2675,6 +2675,11 @@ plugins:
       - Factions
       - Invent
       - Relev
+  - name: 'AkaviriBattleCat.esp'
+    dirty:
+      - crc: 0x63948b30
+        util: *dirtyUtil
+        itm: 3
   - name: 'Anvil Dock Map Marker.esp'
     msg:
       - type: say
@@ -3246,7 +3251,7 @@ plugins:
     dirty:
       - crc: 0x6d3b25d4
         util: *dirtyUtil
-        itm: 2154
+        itm: 54
   - name: 'Lyn-StoriesFromTheSeaMod.esp'
     tag:
       - Invent
@@ -3264,6 +3269,16 @@ plugins:
   - name: 'MeosPotionReplacer.esp'
     tag:
       - Graphics
+  - name: 'MigStatsCheck.esp'
+    msg:
+      - type: say
+        content: 'Requires: AddActorValues'
+      - type: warn
+        content: 'Requires: OBSE 18+'
+        condition: 'version("..\obse_loader.exe","0.18.0.0",<)'
+    req:
+      - name: 'OBSE\Plugins\MenuQue.dll'
+        display: '[MenuQue](http://www.nexusmods.com/oblivion/mods/32200)'
   - name: 'M.O.E. - Undermined Leveled Gameplay - Creature Edition.esp'
     msg:
       - type: say
@@ -3327,6 +3342,11 @@ plugins:
       - type: say
         content: 'Use only one Mud Crabs! file'
         condition: 'regex("Mud Crabs!(_coMbO|_MMM)?\.esp")'
+  - name: 'NR500.esp'
+    msg:
+      - type: warn
+        content: 'Requires: OBSE 15+'
+        condition: 'version("..\obse_loader.exe","0.15.0.0",<)'
   - name: 'New Potions by Tealpanda.esp'
     dirty:
       - crc: 0xe5983547
@@ -3688,6 +3708,19 @@ plugins:
   - name: 'the punished girlbox.esp'
     tag:
       - Graphics
+  - name: 'Treasure Hunt.esp'
+    dirty:
+      - crc: 0x1402e41f
+        util: *dirtyUtil
+        itm: 6
+      - crc: 0x4fd118f2
+        util: *dirtyUtil
+        itm: 2
+  - name: 'TreasureChest - Hard.esp'
+    msg:
+      - type: warn
+        content: 'Requires: OBSE 14+'
+        condition: 'version("..\obse_loader.exe","0.14.0.0",<)'
   - name: 'TreasureChest - MMM.esp'
     msg:
       - type: say
@@ -3755,6 +3788,11 @@ plugins:
     msg:
       - type: say
         content: 'Incompatible with: Mods like Enhanced Daedric Invasion that modify Oblivion Gate scripts. Use Walk to Oblivion - OBSE.esp if you need compatibility with those mods.'
+  - name: 'Wasabi the Mouse.esp'
+    msg:
+      - type: warn
+        content: 'Requires: OBSE 18+'
+        condition: 'version("..\obse_loader.exe","0.18.0.0",<)'
   - name: 'wd purse of wonders.esp'
     tag:
       - Scripts
@@ -4218,11 +4256,9 @@ plugins:
       - crc: 0xbad48e5d
         util: *dirtyUtil
         itm: 3
-        udr: 0
       - crc: 0x2a0ff245
         util: *dirtyUtil
         itm: 3
-        udr: 0
   - name: 'DLCHorseArmor - Unofficial Patch.esp'
     priority: -1999000
     tag:
@@ -4331,7 +4367,7 @@ plugins:
     dirty:
       - crc: 0x74d2ca6f
         util: *dirtyUtil
-        itm: 16
+        itm: 26
         udr: 1
       - crc: 0x2c59f2f0
         util: *dirtyUtil
@@ -4481,7 +4517,6 @@ plugins:
     dirty:
       - crc: 0x312156F8
         itm: 40
-        udr: 0
         util: *dirtyUtil
       - crc: 0x4abf2393
         util: *dirtyUtil
@@ -4599,8 +4634,7 @@ plugins:
       - Graphics
       - NoMerge
   - name: 'Bonemold_Helmet.esp'
-    url:
-      - http://www.nexusmods.com/oblivion/mods/6997
+    url: [ 'http://www.nexusmods.com/oblivion/mods/6997' ]
     msg:
       - type: say
         content: 'Deactivate or delete this ESP file when using ''Unofficial Fran''s Armor'' (mesh and texture files are still required).'
@@ -4658,6 +4692,11 @@ plugins:
   - name: 'ArenaEyeCandyArmor.esp'
     tag:
       - Graphics
+  - name: 'ArchmageSorceress.esp'
+    dirty:
+      - crc: 0xa18bb8a9
+        util: *dirtyUtil
+        itm: 3
   - name: 'Armblade.esp'
     tag:
       - Invent
@@ -4676,6 +4715,11 @@ plugins:
       - Invent
     dirty:
       - crc: 0xbdd952be
+        util: *dirtyUtil
+        itm: 4
+  - name: 'ArynnsDemonatrixHGEC.esp'
+    dirty:
+      - crc: 0xcb5bd995
         util: *dirtyUtil
         itm: 4
   - name: 'MODAssassinsCreed2_Revisited.esp'
@@ -4749,6 +4793,11 @@ plugins:
       - crc: 0x12cd76a5
         util: *dirtyUtil
         itm: 13
+  - name: 'Altessian.esp'
+    dirty:
+      - crc: 0xe0be005d
+        util: *dirtyUtil
+        itm: 21
   - name: 'ArmamentariumTest.esp'
     inc:
       - name: 'Armamentarium.esm'
@@ -4791,6 +4840,10 @@ plugins:
       - type: say
         content: 'Consider updating to the newer [Armamentarium Complete](http://www.nexusmods.com/oblivion/mods/18417) version.'
         condition: 'not file("Armamentarium.esm")'
+    dirty:
+      - crc: 0x65265f23
+        util: *dirtyUtil
+        itm: 10
   - name: 'ArmamentariumKatanas.esp'
     inc:
       - name: 'Armamentarium.esm'
@@ -4922,6 +4975,16 @@ plugins:
     msg:
       - type: say
         content: 'Do not use with Cet''s Dwarven Precision Bow or the Fletchers mod.'
+  - name: 'BlackPuppetLight.esp'
+    dirty:
+      - crc: 0xadcd53a4
+        util: *dirtyUtil
+        itm: 2
+  - name: 'BlackPuppetUltraLight.esp'
+    dirty:
+      - crc: 0x50d6e645
+        util: *dirtyUtil
+        itm: 2
   - name: 'Brigand''s Gear.esp'
     tag:
       - Invent
@@ -5379,6 +5442,10 @@ plugins:
       - crc: 0xbd23305f
         util: *dirtyUtil
         itm: 19
+  - name: 'LDPGC.esp'
+    msg:
+      - type: say
+        content: 'Requires: HGEC Body, Coronera''s Maximum Compatibility Skeleton'
   - name: 'Legion Shield Replacer.esp'
     tag:
       - Graphics
@@ -5445,6 +5512,10 @@ plugins:
         content: 'Make sure to load an overhaul or something after. Or manually rename the cells that this edits.'
     tag:
       - Invent
+  - name: 'MDMM.esp'
+    msg:
+      - type: say
+        content: 'Requires: HGEC Body, Coronera''s Maximum Compatibility Skeleton'
   - name: 'MODArnTemplar.esp'
     dirty:
       - crc: 0x958a7c
