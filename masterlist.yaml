@@ -5339,7 +5339,7 @@ plugins:
   - name: 'KhergitScimitar.esp'
     msg:
       - type: say
-        content: 'Make sure to load an overhaul or something after. Or manually rename the cells that this edits.'
+        content: 'Cell names are changed. To restore names, use TES4Edit script ''Restore record names from master''.'
   - name: 'Knight of Skeleton.esp'
     dirty:
       - crc: 0x79e857e0
@@ -5491,25 +5491,25 @@ plugins:
   - name: 'M&BAxes.esp'
     msg:
       - type: say
-        content: 'Make sure to load an overhaul or something after. Or manually rename the cells that this edits.'
+        content: 'Cell names are changed. To restore names, use TES4Edit script ''Restore record names from master''.'
     tag:
       - Invent
   - name: 'M&BClubs&Hammers.esp'
     msg:
       - type: say
-        content: 'Make sure to load an overhaul or something after. Or manually rename the cells that this edits.'
+        content: 'Cell names are changed. To restore names, use TES4Edit script ''Restore record names from master''.'
     tag:
       - Invent
   - name: 'M&BShields.esp'
     msg:
       - type: say
-        content: 'Make sure to load an overhaul or something after. Or manually rename the cells that this edits.'
+        content: 'Cell names are changed. To restore names, use TES4Edit script ''Restore record names from master''.'
     tag:
       - Invent
   - name: 'MandBSwords.esp'
     msg:
       - type: say
-        content: 'Make sure to load an overhaul or something after. Or manually rename the cells that this edits.'
+        content: 'Cell names are changed. To restore names, use TES4Edit script ''Restore record names from master''.'
     tag:
       - Invent
   - name: 'MDMM.esp'
@@ -5645,7 +5645,7 @@ plugins:
   - name: 'pale_rider''s Armor of Dragon''s Nightmare.esp'
     msg:
       - type: say
-        content: 'Changes some cell names to German either load an overhaul after (or another mod that changes the testing hall & the best defence). Or manually change the names back to English.'
+        content: 'Changes some cell names to German. To restore names, use TES4Edit script ''Restore record names from master''.'
   - name: 'pale_rider''s Paladin Equipment_enchanted_eng.esp'
     dirty:
       - crc: 0x2e665f07
@@ -5702,7 +5702,7 @@ plugins:
   - name: 'RedgardWeaponsMod.esp'
     msg:
       - type: say
-        content: 'Make sure to load an overhaul or something after. Or manually rename the cells that this edits.'
+        content: 'Cell names are changed. To restore names, use TES4Edit script ''Restore record names from master''.'
   - name: 'Retma Dresses.esp'
     dirty:
       - crc: 0x2df18c43
@@ -5714,6 +5714,11 @@ plugins:
       - Invent
   - name: 'ROHJ2.esp'
     msg: [ *needsCleaning ]
+  - name: 'RomanLegion.esp'
+    dirty:
+      - crc: 0x8edd4373
+        util: *dirtyUtil
+        itm: 2286
   - name: 'royal garb.esp'
     tag:
       - Graphics
