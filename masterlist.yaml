@@ -262,6 +262,11 @@ plugins:
       - crc: 0x477340c8
         itm: 7
         util: *dirtyUtil
+  - name: 'SDR.esm'
+    req:
+      - *OBSE
+      - name: 'OBSE\Plugins\sdr.dll'
+        display: '[Sneaking Detection Recalibrated](http://www.nexusmods.com/oblivion/mods/37385)'
   - name: 'x117race.esm'
     tag:
       - Hair
@@ -1122,6 +1127,7 @@ plugins:
       - Relev
       - Scripts
       - Stats
+#      - C.Water only exists in older version
   - name: 'Unofficial Oblivion Patch DV.esp'
     after:
       - 'DLCShiveringIsles.esp'
@@ -1147,6 +1153,7 @@ plugins:
       - Relev
       - Scripts
       - Stats
+#      - C.Water only exists in older version
   - name: 'Unofficial Oblivion Patch-mobs.esp'
     after:
       - 'DLCShiveringIsles.esp'
@@ -1175,7 +1182,7 @@ plugins:
       - Relev
       - Scripts
       - Stats
-      - "-C.Water"
+#      - C.Water only exists in older version
   - name: 'UOPS Additional Changes.esp'
     priority: -1999000
     tag:
@@ -1512,6 +1519,10 @@ plugins:
     tag:
       - Delev
       - Relev
+  - name: 'Francescos Dark Seducer Weapons Patch.esp'
+    tag:
+      - Delev
+      - Relev
   - name: 'FranDarkSeducerWeapFix.esp'
     tag:
       - Delev
@@ -1665,6 +1676,11 @@ plugins:
     msg:
       - type: say
         content: 'Original mod is heavily bugged. Make sure you are using Ryu Doppler''s fixed version.'
+  - name: 'Natural_Weather_HDR_by_Max_Tael_RD.esp'
+    dirty:
+      - crc: 0x9233fd80
+        util: *dirtyUtil
+        itm: 2
   - name: 'Natural_Weather_HDR+Darker_Nights_2.1.2_bugfree.esp'
     msg:
       - type: say
@@ -2087,6 +2103,9 @@ plugins:
   - name: 'Skyrimized Waters HD - SI Addon.esp'
     tag:
       - C.Water
+  - name: 'Better Bell Sounds.esp'
+    tag:
+      - Scripts
   - name: 'Idle Dialogue.esp'
     dirty:
       - crc: 0xf3ddd964
@@ -3119,6 +3138,13 @@ plugins:
   - name: 'GW71_Soulgems.esp'
     tag:
       - Graphics
+  - name: 'Happyhannah''s Wines.esp'
+    tag:
+      - Relev
+    dirty:
+      - crc: 0xf1ac6630
+        util: *dirtyUtil
+        itm: 1
   - name: 'HUDI.esp'
     msg:
       - type: say
@@ -3314,6 +3340,8 @@ plugins:
         util: *dirtyUtil
         itm: 18
   - name: 'Oblivion Collectible Cards.esp'
+    tag:
+      - Invent
     dirty:
       - crc: 0xac9752e5
         util: *dirtyUtil
@@ -3944,6 +3972,8 @@ plugins:
   - name: 'C&C - The Blackwood Company.esp'
     tag:
       - C.Owner
+      - Factions
+      - Invent
       - Relations
     dirty:
       - crc: 0x56c59ac2
@@ -5049,6 +5079,11 @@ plugins:
   - name: 'dragon weapons.esp'
     tag:
       - Invent
+  - name: 'Dynasty Armor DM-BBB.esp'
+    dirty:
+      - crc: 0x3da8158c
+        util: *dirtyUtil
+        itm: 8
   - name: 'doofdillas_potions_recolored_unsorted_v0_2_1.esp'
     msg:
       - type: say
@@ -5078,6 +5113,14 @@ plugins:
       - crc: 0xa71070b4
         util: *dirtyUtil
         itm: 4
+  - name: 'EmpressRobes.esp'
+    dirty:
+      - crc: 0x99705812
+        util: *dirtyUtil
+        itm: 2
+      - crc: 0xd51dd701
+        util: *dirtyUtil
+        itm: 2
   - name: 'Fable Swords.esp'
     tag:
       - Invent
@@ -5117,6 +5160,14 @@ plugins:
       - crc: 0xb0fdf6f
         util: *dirtyUtil
         itm: 4
+  - name: 'Frill Short Dress and Halloween Backpack.esp'
+    tag:
+      - Graphics
+  - name: 'Full Metal Bikini Mark II.esp'
+    dirty:
+      - crc: 0xc5ce3717
+        util: *dirtyUtil
+        itm: 9
   - name: 'Garak''s Staff Replacer Artefacts.esp'
     tag:
       - Graphics
@@ -5171,6 +5222,17 @@ plugins:
       - crc: 0xae3a26a9
         util: *dirtyUtil
         itm: 13
+  - name: 'icearmor.esp'
+    dirty:
+      - crc: 0x60f25b1
+        util: *dirtyUtil
+        itm: 2
+      - crc: 0x657795e2
+        util: *dirtyUtil
+        itm: 2
+      - crc: 0xa01e2b64
+        util: *dirtyUtil
+        itm: 2
   - name: 'Insanity''s Kill Bill Katanas.esp'
     tag:
       - Invent
@@ -5254,6 +5316,9 @@ plugins:
       - crc: 0x4355daba
         util: *dirtyUtil
         itm: 3
+  - name: 'Kusanagi.esp'
+    tag:
+      - Invent
   - name: 'Lady Dark.esp'
     dirty:
       - crc: 0xa18d358b
@@ -6277,6 +6342,16 @@ plugins:
         content: 'Item sale prices will be excessive and unpredictable with OOO, FCOM and/or Living Economy'
       - type: say
         content: 'If using Mage Equipment Lite load after SRT.'
+    tag:
+      - Delev
+      - Graphics
+      - Invent
+      - Relev
+      - Stats
+    dirty:
+      - crc: 0x60c24030
+        util: *dirtyUtil
+        udr: 23
   - name: 'Mage Equipment - No Manni.esp'
     msg:
       - type: say
@@ -6287,6 +6362,10 @@ plugins:
     inc:
       - 'Mage Equipment - No Manni.esp'
       - 'Mage Equipment.esp'
+  - name: 'MEQ_NakakitaPatch.esp'
+    tag:
+      - Graphics
+      - NoMerge
   - name: 'All Manly.esp'
     tag:
       - Graphics
@@ -6486,7 +6565,6 @@ plugins:
     dirty:
       - crc: 0x21b8da71
         itm: 2
-        udr: 0
         util: *dirtyUtil
   - name: 'Slof''s Brighter Arena Raiments.esp'
     tag:
@@ -6499,7 +6577,6 @@ plugins:
     dirty:
       - crc: 0x97bd3c1a
         itm: 3
-        udr: 0
         util: *dirtyUtil
     tag:
       - Graphics
@@ -6814,6 +6891,12 @@ plugins:
     tag:
       - Invent
       - Names
+  - name: 'The Last Queen Of The Ayleids.esp'
+    dirty:
+      - crc: 0x8e806bb1
+        util: *dirtyUtil
+        itm: 6
+        udr: 164
   - name: 'Ranokoas Organized Potions.esp'
     tag:
       - Deactivate
@@ -6922,6 +7005,9 @@ plugins:
   - name: 'ORM-TamriellicGlassDLC7.esp'
     tag:
       - Graphics
+  - name: 'Fran Armor Add-on.esp'
+    tag:
+      - Invent
   - name: 'Fran_Lv30Item_Maltz.esp'
     req:
       - 'Francesco''s Leveled Creatures-Items Mod.esm'
@@ -6938,6 +7024,10 @@ plugins:
       - type: error
         content: 'Delete. Already integrated into FCOM, MMM, OOO or other FCOM components.'
         condition: 'file("Oscuro''s_Oblivion_Overhaul.esm") or file("FCOM_Convergence.esm")'
+  - name: 'Francesco's Optional Leveled Guards.esp'
+    tag:
+      - Actors.ACBS
+      - Actors.Stats
   - name: 'Francesco''s Optional House Chest Loot.esp'
     msg:
       - type: error
@@ -7006,10 +7096,6 @@ plugins:
       - type: error
         content: 'Delete. Already integrated into FCOM, MMM, OOO or other FCOM components.'
         condition: *FCOMCond
-  - name: 'Francescos Dark Seducer Weapons Patch.esp'
-    tag:
-      - Delev
-      - Relev
   - name: 'Fran-Ayleid Coin Add-on.esp'
     inc:
       - 'Mart''s Monster Mod - Diverse Runeskulls Loot G&GD.esp'
@@ -8538,6 +8624,10 @@ plugins:
       - type: error
         content: 'Delete. Outdated. Update to FCOM v0.9.9 or later.'
         condition: *FCOMCond
+  - name: 'Cobl Patch - MMM Gems and Gem Dust.esp'
+    tag:
+      - Delev
+      - Invent
   - name: 'WAC - ItemLootFix4v1.0bTIE.esp'
     tag:
       - Delev
@@ -8679,6 +8769,9 @@ plugins:
     tag:
       - Delev
       - Relev
+  - name: 'Oblivion Intensity.esp'
+    tag:
+      - Names
   - name: 'Choices and Consequences - FCOM.esp'
     msg:
       - type: say
@@ -9400,6 +9493,37 @@ plugins:
   - name: 'Morroblivion item rebalance.esp'
     tag:
       - Stats
+  - name: 'Morrowind_ob - Morroblivion_Chargen_And_Transport_Mod_v10.esp'
+    dirty:
+      - crc: 0x51563805
+        util: *dirtyUtil
+        itm: 3
+    url: [ 'http://tesrenewal.com/forums/morroblivion/mods/753' ]
+  - name: 'Morrowind_ob - MorroblivionTreeReplacer.esp'
+    dirty:
+      - crc: 0x7AF5966F
+        util: *dirtyUtil
+        itm: 3043
+    url: [ 'http://tesrenewal.com/forums/morroblivion/mods/753' ]
+  - name: 'Morrowind_ob - ClothingReplacer.esp'
+    tag:
+      - Names
+    url: [ 'http://tesrenewal.com/forums/morroblivion/mods/753' ]
+  - name: 'Morrowind_ob - Conversation.esp'
+    tag:
+      - Factions
+      - Invent
+      - Names
+    url: [ 'http://tesrenewal.com/forums/morroblivion/mods/753' ]
+  - name: 'Morrowind_ob - UCWUS.esp'
+    tag:
+      - Invent
+      - Names
+    dirty:
+      - crc: 0x9F7F8D5F
+        itm: 4
+        util: *dirtyUtil
+    url: [ 'http://tesrenewal.com/forums/morroblivion/mods/753' ]
   - name: 'Enhanced Quest Roleplaying.esp'
     tag:
       - Factions
@@ -9439,6 +9563,10 @@ plugins:
         condition: 'file("Quelldorf 1.5.esp")'
   - name: 'KvatchAftermath.esp'
     dirty:
+      - crc: 0x435d607c
+        util: *dirtyUtil
+        itm: 5202
+        udr: 390
       - crc: 0x8997d4f1
         util: *dirtyUtil
         itm: 5240
@@ -9631,6 +9759,15 @@ plugins:
       - crc: 0x2ab190d0
         util: *dirtyUtil
         itm: 420
+  - name: 'A Family Problem.esp'
+    tag:
+      - Eyes
+      - Hair
+    dirty:
+      - crc: 0x14617e55
+        util: *dirtyUtil
+        itm: 28
+        udr: 39
   - name: 'AGC-TARDISoutside.esp'
     msg:
       - type: say
@@ -9675,6 +9812,22 @@ plugins:
       - crc: 0xf39e2389
         util: *dirtyUtil
         itm: 9
+  - name: 'Alexis_Magiergilde.esp'
+    dirty:
+      - crc: 0x55de75f7
+        util: *dirtyUtil
+        itm: 25
+        udr: 48
+  - name: 'Albae+Gefährten.esp'
+    dirty:
+      - crc: 0x57563a26
+        util: *dirtyUtil
+        itm: 14
+        udr: 21
+      - crc: 0x78c10a9a
+        util: *dirtyUtil
+        itm: 78
+        udr: 21
   - name: 'Ald-Khull.esp'
     msg:
       - type: say
@@ -10772,6 +10925,9 @@ plugins:
     tag:
       - Actors.Anims
       - NoMerge
+  - name: 'GoldenCrestTGND.esp'
+    tag:
+      - Graphics
   - name: 'GreatForestMarket Vwalk.esp'
     tag:
       - Actors.Anims
@@ -10781,6 +10937,12 @@ plugins:
       - crc: 0x15fc9306
         util: *dirtyUtil
         itm: 7
+  - name: 'Guards.esp'
+    dirty:
+      - crc: 0x84c20e98
+        util: *dirtyUtil
+        itm: 71
+        udr: 20
   - name: 'GwedenBrothel.esp'
     dirty:
       - crc: 0x1433b9e8
@@ -12131,8 +12293,17 @@ plugins:
     dirty:
       - crc: 0x9654b520
         util: *dirtyUtil
-        udr: 1
         itm: 4440
+        udr: 1
+  - name: 'RuinsofEvendallMod.esp'
+    msg:
+      - type: say
+        content: 'Very dirty - Compile All Scripts was used on the mod; either use the CS or Tes4Edit to clean or use Wrye Bash''s Decompile All command.'
+    dirty:
+      - crc: 0xc320276c
+        util: *dirtyUtil
+        itm: 46
+        udr: 36
   - name: 'RumpleMod Rwalk.esp'
     msg:
       - type: say
@@ -12340,6 +12511,11 @@ plugins:
     tag:
       - Actors.Anims
       - NoMerge
+  - name: 'BetterInns + NewHomeOwners.esp'
+    tag:
+      - Actors.AIPackages
+      - C.Name
+      - Scripts
   - name: 'BetterInns - Harvest Containers PATCH.esp'
     msg:
       - type: say
@@ -12512,6 +12688,11 @@ plugins:
       - type: say
         content: 'Incompatible with: Better Cities.'
         condition: 'file("Better Cities Resources.esm")'
+  - name: 'The Power of the North.esp'
+    dirty:
+      - crc: 0x2eb9a944
+        util: *dirtyUtil
+        udr: 20
   - name: 'The Retreat-AN compatible.esp'
     tag:
       - C.Climate
@@ -13470,6 +13651,11 @@ plugins:
     tag:
       - Actors.Anims
       - NoMerge
+  - name: 'Knights - Revelation Vwalk.esp'
+    tag:
+      - Actors.Anims
+      - NoMerge
+    url: [ 'http://www.nexusmods.com/oblivion/mods/28223' ]
   - name: 'EVE_KnightsoftheNine.esp'
     tag:
       - Graphics
@@ -13973,12 +14159,33 @@ plugins:
         util: *dirtyUtil
         itm: 15
   - name: 'MannimarcoRevisited.esp'
+    tag:
+      - Actors.ACBS
+      - Actors.AIData
+      - Actors.AIPackages
+      - Actors.Anims
+      - Actors.CombatStyle
+      - Actors.Spells
+      - Actors.Stats
+      - Factions
+      - Invent
+      - NPC.Race
     dirty:
       - crc: 0xe2be41da
         util: *dirtyUtil
         udr: 261
   - name: 'MannimarcoRevisitedOOO.esp'
     tag:
+      - Actors.ACBS
+      - Actors.AIData
+      - Actors.AIPackages
+      - Actors.Anims
+      - Actors.CombatStyle
+      - Actors.Spells
+      - Actors.Stats
+      - Factions
+      - Invent
+      - NPC.Race
       - NpcFaces
   - name: 'Shadowcrest_Vineyard.esp'
     dirty:
@@ -14004,6 +14211,9 @@ plugins:
   - name: 'FCOM_SlofsRobeTrader.esp'
     tag:
       - Delev
+      - Graphics
+      - Invent
+      - Names
       - Relev
   - name: 'FCOM_OMG.esp'
     msg:
@@ -14514,6 +14724,10 @@ plugins:
       - crc: 0x128c5f11
         util: *dirtyUtil
         itm: 1
+  - name: 'Oblivifall - Losing My Religion Vwalk.esp'
+    tag:
+      - Actors.Anims
+      - NoMerge
   - name: 'Unique Forts Fort Strand.esp'
     dirty:
       - crc: 0x5aaf40dc
@@ -16224,6 +16438,11 @@ plugins:
       - Actors.Stats
       - Invent
       - Stats
+  - name: 'ApparatusIcons.esp'
+    tag:
+      - Deactivate
+      - Graphics
+      - NoMerge
   - name: 'Arkestar - Name Rat 1 - Potions.esp'
     tag:
       - Names
@@ -16786,6 +17005,11 @@ plugins:
   - name: 'gq Chapel Altars become Wayshrines.esp'
     tag:
       - Scripts
+  - name: 'Grass Overhaul.esp'
+    tag:
+      - Deactivate
+      - Graphics
+      - NoMerge
   - name: 'GuardEquipAndStatFix.esp'
     tag:
       - Actors.Stats
@@ -17040,12 +17264,20 @@ plugins:
       - crc: 0xcbb991e4
         util: *dirtyUtil
         itm: 1
+  - name: 'Oblivifall - Closing Time.esp'
+    tag:
+      - Actors.AIPackages
   - name: 'Oblivifall - New Classes.esp'
     tag:
       - R.Description
   - name: 'Oblivifall - New Classes Regular Fonts.esp'
     tag:
       - R.Description
+  - name: 'Oblivion grass overhaul.esp'
+    tag:
+      - Deactivate
+      - Graphics
+      - NoMerge
   - name: 'OriginalLeather.esp'
     tag:
       - Names
@@ -17410,6 +17642,11 @@ plugins:
         condition: 'version("..\obse_loader.exe","0.20.0.0",<)'
     tag:
       - Scripts
+  - name: 'SPTDiverseGuards-Core Vwalk.esp'
+    tag:
+      - Actors.Anims
+      - NoMerge
+    url: [ 'http://www.nexusmods.com/oblivion/mods/28223' ]
   - name: 'SPTDiverseGuards.esp'
     msg:
       - type: say
@@ -17482,6 +17719,11 @@ plugins:
   - name: 'StrongerAllies.esp'
     tag:
       - Invent
+  - name: 'SOC-Wildlife Variety.esp'
+    tag:
+      - Relev
+    after:
+      - 'NaturalWildlife.esp'
   - name: 'Teleport Everywhere.esp'
     req: [ *OBSE ]
   - name: 'Things Found Fence.esp'
@@ -17493,6 +17735,9 @@ plugins:
         util: *dirtyUtil
         itm: 3
         udr: 587
+  - name: 'TrollResurrection.esp'
+    tag:
+      - SpellStats
   - name: 'Unlimited Rings 1.0.esp'
     msg:
       - type: say
@@ -17548,6 +17793,10 @@ plugins:
       - crc: 0x757f1f42
         util: *dirtyUtil
         itm: 1
+  - name: 'UnleveledQuestRewards.esp'
+    tag:
+      - Delev
+      - Relev
   - name: 'upperGothicClutter.esp'
     tag:
       - Graphics
@@ -25258,24 +25507,12 @@ plugins:
         udr: 173
         util: *dirtyUtil
     url: [ 'http://www.nexusmods.com/oblivion/43299' ]
-  - name: 'BetterInns + NewHomeOwners.esp'
-    tag: [ 'Actors.AIPackages' ]
   - name: 'Glowing Wonders.esp'
     dirty:
       - crc: 0x1D521050
         itm: 1
         udr: 0
         util: *dirtyUtil
-  - name: 'Knights - Revelation Vwalk.esp'
-    tag:
-      - Actors.Anims
-      - NoMerge
-    url: [ 'http://www.nexusmods.com/oblivion/mods/28223' ]
-  - name: 'SPTDiverseGuards-Core Vwalk.esp'
-    tag:
-      - Actors.Anims
-      - NoMerge
-    url: [ 'http://www.nexusmods.com/oblivion/mods/28223' ]
   - name: 'MerryBellInn.esp'
     dirty:
       - crc: 0x46126974
@@ -25337,43 +25574,16 @@ plugins:
     url: [ 'http://www.nexusmods.com/oblivion/mods/43674' ]
   - name: 'SummonMerchantSpell.esp'
     url: [ 'http://www.nexusmods.com/oblivion/mods/30302' ]
-  - name: 'Morrowind_ob - UCWUS.esp'
-    tag:
-      - Invent
-      - Names
-    dirty:
-      - crc: 0x9F7F8D5F
-        itm: 4
-        udr: 0
-        util: *dirtyUtil
-    url: [ 'http://morroblivion.com/forums/morroblivion/mods/2173' ]
   - name: 'Morrowind_ob - Silt Striders.esp'
-    url: [ 'http://morroblivion.com/forums/morroblivion/mods/2173' ]
+    url: [ 'http://tesrenewal.com/forums/morroblivion/mods/753' ]
   - name: 'Morrowind_ob - Unique Grass.esp'
     url: [ 'http://morroblivion.com/forums/oblivion/morroblivion-mod-releases/3294' ]
-  - name: 'Morrowind_ob - Morroblivion_Chargen_And_Transport_Mod_v10.esp'
-    dirty:
-      - crc: 0x51563805
-        itm: 3
-        udr: 0
-        util: *dirtyUtil
-    url: [ 'http://morroblivion.com/forums/morroblivion/mods/2173' ]
-  - name: 'Morrowind_ob - MorroblivionTreeReplacer.esp'
-    dirty:
-      - crc: 0x7AF5966F
-        itm: 3043
-        udr: 0
-        util: *dirtyUtil
-    url: [ 'http://morroblivion.com/forums/morroblivion/mods/2173' ]
-  - name: 'Morrowind_ob - ClothingReplacer.esp'
-    tag: [ 'Names' ]
-    url: [ 'http://morroblivion.com/forums/morroblivion/mods/2173' ]
   - name: 'Morrowind_ob - Conversation.esp'
     tag:
       - Factions
       - Invent
       - Names
-    url: [ 'http://morroblivion.com/forums/morroblivion/mods/2173' ]
+    url: [ 'http://tesrenewal.com/forums/morroblivion/mods/753' ]
   - name: 'fg109EscortMission.esp'
     url: [ 'http://www.nexusmods.com/oblivion/mods/37734' ]
   - name: 'JTP_GlassWeaponsRecolorsBLUE1.esp'
