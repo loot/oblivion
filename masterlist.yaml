@@ -1127,7 +1127,7 @@ plugins:
       - Relev
       - Scripts
       - Stats
-#      - C.Water only exists in older version
+      - "-C.Water"
   - name: 'Unofficial Oblivion Patch DV.esp'
     after:
       - 'DLCShiveringIsles.esp'
@@ -1153,7 +1153,7 @@ plugins:
       - Relev
       - Scripts
       - Stats
-#      - C.Water only exists in older version
+      - "-C.Water"
   - name: 'Unofficial Oblivion Patch-mobs.esp'
     after:
       - 'DLCShiveringIsles.esp'
@@ -1182,7 +1182,7 @@ plugins:
       - Relev
       - Scripts
       - Stats
-#      - C.Water only exists in older version
+      - "-C.Water"
   - name: 'UOPS Additional Changes.esp'
     priority: -1999000
     tag:
@@ -2103,9 +2103,6 @@ plugins:
   - name: 'Skyrimized Waters HD - SI Addon.esp'
     tag:
       - C.Water
-  - name: 'Better Bell Sounds.esp'
-    tag:
-      - Scripts
   - name: 'Idle Dialogue.esp'
     dirty:
       - crc: 0xf3ddd964
@@ -3138,13 +3135,6 @@ plugins:
   - name: 'GW71_Soulgems.esp'
     tag:
       - Graphics
-  - name: 'Happyhannah''s Wines.esp'
-    tag:
-      - Relev
-    dirty:
-      - crc: 0xf1ac6630
-        util: *dirtyUtil
-        itm: 1
   - name: 'HUDI.esp'
     msg:
       - type: say
@@ -5222,17 +5212,6 @@ plugins:
       - crc: 0xae3a26a9
         util: *dirtyUtil
         itm: 13
-  - name: 'icearmor.esp'
-    dirty:
-      - crc: 0x60f25b1
-        util: *dirtyUtil
-        itm: 2
-      - crc: 0x657795e2
-        util: *dirtyUtil
-        itm: 2
-      - crc: 0xa01e2b64
-        util: *dirtyUtil
-        itm: 2
   - name: 'Insanity''s Kill Bill Katanas.esp'
     tag:
       - Invent
@@ -7005,9 +6984,6 @@ plugins:
   - name: 'ORM-TamriellicGlassDLC7.esp'
     tag:
       - Graphics
-  - name: 'Fran Armor Add-on.esp'
-    tag:
-      - Invent
   - name: 'Fran_Lv30Item_Maltz.esp'
     req:
       - 'Francesco''s Leveled Creatures-Items Mod.esm'
@@ -7024,10 +7000,6 @@ plugins:
       - type: error
         content: 'Delete. Already integrated into FCOM, MMM, OOO or other FCOM components.'
         condition: 'file("Oscuro''s_Oblivion_Overhaul.esm") or file("FCOM_Convergence.esm")'
-  - name: 'Francesco''s Optional Leveled Guards.esp'
-    tag:
-      - Actors.ACBS
-      - Actors.Stats
   - name: 'Francesco''s Optional House Chest Loot.esp'
     msg:
       - type: error
@@ -9507,12 +9479,6 @@ plugins:
     url: [ 'http://tesrenewal.com/forums/morroblivion/mods/753' ]
   - name: 'Morrowind_ob - ClothingReplacer.esp'
     tag:
-      - Names
-    url: [ 'http://tesrenewal.com/forums/morroblivion/mods/753' ]
-  - name: 'Morrowind_ob - Conversation.esp'
-    tag:
-      - Factions
-      - Invent
       - Names
     url: [ 'http://tesrenewal.com/forums/morroblivion/mods/753' ]
   - name: 'Morrowind_ob - UCWUS.esp'
@@ -25456,11 +25422,11 @@ plugins:
         udr: 155
         util: *dirtyUtil
   - name: 'Happyhannah''s Wines.esp'
-    tag: [ 'Relev' ]
+    tag:
+      - Relev
     dirty:
       - crc: 0xF1AC6630
         itm: 1
-        udr: 0
         util: *dirtyUtil
   - name: 'Legends of Zefaro.esp'
     dirty:
@@ -25474,9 +25440,14 @@ plugins:
   - name: 'icearmor.esp'
     dirty:
       - crc: 0x60F25FB1
-        itm: 2
-        udr: 0
         util: *dirtyUtil
+        itm: 2
+      - crc: 0x657795e2
+        util: *dirtyUtil
+        itm: 2
+      - crc: 0xa01e2b64
+        util: *dirtyUtil
+        itm: 2
   - name: 'R18PN - Bikini Re-Textured.esp'
     dirty:
       - crc: 0x170FE3CC
@@ -25556,7 +25527,8 @@ plugins:
   - name: 'Banes Guilds United Integration patch.esp'
     url: [ 'http://www.nexusmods.com/oblivion/mods/42261' ]
   - name: 'Better Bell Sounds.esp'
-    tag: [ 'Scripts' ]
+    tag:
+      - Scripts
   - name: 'nu_female_player_idle.esp'
     url: [ 'http://www.nexusmods.com/oblivion/mods/43567' ]
   - name: 'MTCEV-RoC Patch.esp'
