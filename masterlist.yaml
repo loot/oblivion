@@ -26,7 +26,15 @@ common:
     condition: *nehrimCond
   - &doNotClean
     type: say
-    content: 'Do not clean ITM records, they are intentional and required for the mod to function.'
+    content:
+      - lang: en
+        str: 'Do not clean ITM records, they are intentional and required for the mod to function. It is safe to undelete records, but do not do anything other than that.'
+      - lang: ru
+        str: 'Не очищать. "Грязные" правки оставлены специально и требуются для функционирования мода.'
+      - lang: es
+        str: 'Do not clean ITM records, they are intentional and required for the mod to function. It is safe to undelete records, but do not do anything other than that.'
+      - lang: zh_CN
+        str: '不干净。"脏"数据是故意的，这是mod需要的功能。'
   - &needsCleaning
     type: say
     content: 'Needs [TES4Edit cleaning](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide).'
@@ -6973,9 +6981,7 @@ plugins:
       - 'CDM-CGO Battlehorn Compatibility.esp'
       - 'CDM-CGO Shivering Isles Compatibility.esp'
       - 'CDM-CGO Frostcrag Compatibility.esp'
-    msg:
-      - type: say
-        content: 'Do not clean. "Dirty" edits are intentional and required for the mod to function.'
+    msg: [ *doNotClean ]
   - name: 'ThievesDen_MOBS.esp'
     tag:
       - Deactivate
@@ -9478,8 +9484,7 @@ plugins:
         itm: 3043
     url: [ 'http://tesrenewal.com/forums/morroblivion/mods/753' ]
   - name: 'Morrowind_ob - ClothingReplacer.esp'
-    tag:
-      - Names
+    tag: [ Names ]
     url: [ 'http://tesrenewal.com/forums/morroblivion/mods/753' ]
   - name: 'Morrowind_ob - UCWUS.esp'
     tag:
@@ -12289,6 +12294,9 @@ plugins:
       - Actors.Anims
       - NoMerge
   - name: 'Rustle House - AN Patch.esp'
+    msg:
+      - type: say
+        content: 'It is possible when using All Natural + CBash the first floor of the house may become flooded. If so remove the "KhRHInterior" record from the Bashed Patch every time you rebuild. Or consider installing the "Rustle House CBash Fix.esp".'
     tag:
       - C.Climate
   - name: 'Sacred Duty.esp'
@@ -19452,9 +19460,17 @@ plugins:
   - name: 'immersive_caves_manual.esp'
     tag:
       - Sound
+  - name: 'Immersive Caves.esp'
+    tag:
+      - Names
+  - name: 'Immersive Caves Auto.esp'
+    tag:
+      - Names
+      - Sound
   - name: 'immersive_caves_auto.esp'
     tag:
       - Graphics
+      - Names
       - Sound
   - name: 'Dark Dungeons.esp'
     tag:
@@ -19669,6 +19685,10 @@ plugins:
     tag:
       - Deactivate
       - Filter
+  - name: 'Capes4NPCs - Extraction.esp'
+    tag:
+      - Deactivate
+      - Filter
   - name: 'Item interchange - Placement.esp'
     msg:
       - type: error
@@ -19677,6 +19697,11 @@ plugins:
       - type: error
         content: 'Requires Bashed Patch.'
         condition: 'not regex("Bashed Patch.*\.esp")'
+  - name: 'Capes4NPCs - Placement.esp'
+    tag:
+      - Filter
+      - IIM
+      - Invent
   - name: 'Item interchange - Placement for FCOM.esp'
     msg:
       - type: error
@@ -20262,6 +20287,12 @@ plugins:
       - Hair
       - NpcFaces
       - R.Relations
+  - name: 'High Rock''s Sorcerers.esp'
+    tag:
+      - Eyes
+      - Hair
+      - NpcFaces
+      - R.Relations
   - name: 'kaleen.esp'
     tag:
       - Eyes
@@ -20597,6 +20628,12 @@ plugins:
       - Hair
       - NpcFaces
   - name: '_Ren_BeautyPack_full_-_DV_Eshme_Compatible.esp'
+    tag:
+      - Eyes
+      - Graphics
+      - Hair
+      - NpcFaces
+  - name: 'Ren_Beauty_Pack_Expanded_Compilation.esp'
     tag:
       - Eyes
       - Graphics
@@ -22912,6 +22949,15 @@ plugins:
     after:
       - 'MaleBodyReplacerV5.esp'
     url: [ 'http://www.nexusmods.com/oblivion/mods/43612' ]
+  - name: 'Oblivion_Character_Overhaul Vwalk.esp'
+    tag:
+      - Actors.Anims
+      - NoMerge
+  - name: 'OCOv2-BR.esp'
+    tag:
+      - NpcFaces
+      - R.Body
+      - R.Head
   - name: 'Jjiinx_Long Ears.esp'
     tag:
       - Body-F
@@ -23597,12 +23643,48 @@ plugins:
     tag:
       - Actors.Anims
       - NoMerge
+  - name: 'Better Cities - Leyawiin Flooded.esp'
+    tag:
+      - C.Water
   - name: 'Better Cities - No LEYAWIIN Flooding.esp'
     tag:
       - C.Water
   - name: 'Better Cities - Open Better Cities.esp'
     tag:
       - Actors.AIPackages
+  - name: 'OSPS-BC_IC-II_UL-II_Patch.esp'
+    msg:
+      - type: warn
+        content: 'You Only need this patch. Remove the Better Cities - Unique Landscape Imperial Isle.esp'
+        condition: 'file("Better Cities - Unique Landscape Imperial Isle.esp")'
+  - name: 'OSPS_BC_IC-II_UL-II_TalosBridge_Patch.esp'
+    msg:
+      - type: warn
+        content: 'You Only need this patch. Remove the Better Cities - Unique Landscape Imperial Isle.esp'
+        condition: 'file("Better Cities - Unique Landscape Imperial Isle.esp")'
+      - type: warn
+        content: 'You Only need this patch. Remove the TalosGatehouse + ULImperialIsle.esp'
+        condition: 'file("TalosGatehouse + ULImperialIsle.esp")'
+  - name: 'OSPS-BC_IC-II_UL-II_RRLR_Patch.esp'
+    msg:
+      - type: warn
+        content: 'You Only need this patch. Remove the Better Cities - Unique Landscape Imperial Isle.esp'
+        condition: 'file("Better Cities - Unique Landscape Imperial Isle.esp")'
+    tag:
+      - C.Water
+  - name: 'OSPS_BC_IC-II_UL-II_TalosBridge_RRLR_Patch.esp'
+    msg:
+      - type: warn
+        content: 'You Only need this patch. Remove the Better Cities - Unique Landscape Imperial Isle.esp'
+        condition: 'file("Better Cities - Unique Landscape Imperial Isle.esp")'
+      - type: warn
+        content: 'You Only need this patch. Remove the TalosGatehouse + ULImperialIsle.esp'
+        condition: 'file("TalosGatehouse + ULImperialIsle.esp")'
+      - type: warn
+        content: 'You Only need this patch. Remove the wb_TBG_RR-LR_UL-II_patch.esp'
+        condition: 'file("wb_TBG_RR-LR_UL-II_patch.esp")'
+    tag:
+      - C.Water
   - name: 'Better Cities IC Districts.esp'
     msg:
       - type: say
@@ -24686,6 +24768,10 @@ plugins:
       - crc: 0x3f990ded
         util: *dirtyUtil
         itm: 2
+  - name: 'SDR_Detect Life Shader Patch [Oblivion].esp'
+    msg:
+      - type: say
+        content: Obsolete. Upgrade to SDR version 8.2
   - name: 'Shining Creatures.esp'
     msg:
       - type: say
@@ -24813,7 +24899,6 @@ plugins:
     dirty:
       - crc: 0x3144ec1b
         itm: 13
-        udr: 0
         util: *dirtyUtil
   - name: 'DeadlyReflex - Combat Moves.esp'
     msg:
@@ -24889,7 +24974,6 @@ plugins:
     dirty:
       - crc: 0x453742b9
         itm: 6
-        udr: 0
         util: *dirtyUtil
   - name: 'UnderdarkSaga v1.2 Delayer.esp'
     msg:
@@ -25002,7 +25086,7 @@ plugins:
         content: 'Use only one road record file.'
     req:
       - 'Open Cities.esp'
-      -  'road+bridges.esp'
+      - 'road+bridges.esp'
     tag:
       - Deactivate
       - Roads
@@ -25030,7 +25114,7 @@ plugins:
         content: 'Use only one road record file.'
     req:
       - 'Better Cities Full.esp'
-      -  'road+bridges.esp'
+      - 'road+bridges.esp'
     tag:
       - Deactivate
       - Roads
@@ -25049,7 +25133,7 @@ plugins:
       - type: say
         content: 'Use only one road record file.'
     req:
-      -  'road+bridges.esp'
+      - 'road+bridges.esp'
     tag:
       - Deactivate
       - Roads
@@ -25153,7 +25237,6 @@ plugins:
     dirty:
       - crc: 0x9bd8f9c2
         itm: 16
-        udr: 0
         util: *dirtyUtil
   - name: 'The Big Merger.esp'
     tag:
@@ -25170,6 +25253,10 @@ plugins:
       - Relations
       - Relev
       - Stats
+  - name: 'SDR Perks and Patches [Oblivion].esp'
+    msg:
+      - type: say
+        content: Obsolete. Upgrade to SDR version 8.2
   - name: 'TES4Merged.esp'
     priority: 1000400
     tag:
@@ -25182,7 +25269,6 @@ plugins:
     dirty:
       - crc: 0x8a4423ba
         util: *dirtyUtil
-        itm: 0
         udr: 1
   - name: 'Ahtata Arquamer spike4hair.esp'
     tag:
@@ -25198,6 +25284,10 @@ plugins:
     msg:
       - type: say
         content: 'Obsolete. Remove and use newer version of Lovers with PK. Integrated into 1.3.1 Rev41 and newer.'
+  - name: 'Rustle House CBash Fix.esp'
+    msg:
+      - type: say
+        content: 'ONLY needed if you find the house basement flooded. This happens sometimes when using All Natural + CBash. Instead of using this fix you can alternately remove the "KhRHInterior" record from the Bash Patch each time you rebuild.'
   - name: 'Vanilla Weapon Stat Override.esp'
     msg: [ *doNotClean ]
   - name: 'Vanilla Weapon Stat Override - SI.esp'
@@ -25422,8 +25512,7 @@ plugins:
         udr: 155
         util: *dirtyUtil
   - name: 'Happyhannah''s Wines.esp'
-    tag:
-      - Relev
+    tag: [ Relev ]
     dirty:
       - crc: 0xF1AC6630
         itm: 1
@@ -25458,18 +25547,15 @@ plugins:
     dirty:
       - crc: 0xBB4DC2F5
         itm: 13
-        udr: 0
         util: *dirtyUtil
   - name: 'wow.esp'
     dirty:
       - crc: 0x93ABA638
         itm: 2406
-        udr: 0
         util: *dirtyUtil
   - name: 'Glowing Respawning Varla & Welkynd Stones 14-28 Days.esp'
     dirty:
       - crc: 0x8AE493C9
-        itm: 0
         udr: 173
         util: *dirtyUtil
     url: [ 'http://www.nexusmods.com/oblivion/43299' ]
@@ -25484,7 +25570,6 @@ plugins:
     dirty:
       - crc: 0x1D521050
         itm: 1
-        udr: 0
         util: *dirtyUtil
   - name: 'MerryBellInn.esp'
     dirty:
@@ -25527,8 +25612,7 @@ plugins:
   - name: 'Banes Guilds United Integration patch.esp'
     url: [ 'http://www.nexusmods.com/oblivion/mods/42261' ]
   - name: 'Better Bell Sounds.esp'
-    tag:
-      - Scripts
+    tag: [ Scripts ]
   - name: 'nu_female_player_idle.esp'
     url: [ 'http://www.nexusmods.com/oblivion/mods/43567' ]
   - name: 'MTCEV-RoC Patch.esp'
