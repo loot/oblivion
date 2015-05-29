@@ -5728,6 +5728,11 @@ plugins:
   - name: 'Royal Glass.esp'
     tag:
       - Invent
+  - name: 'Rune of Independence.esp'
+    msg:
+      - type: warn
+        content: 'Requires: OBSE 19+.'
+        condition: 'version("..\obse_loader.exe","0.19.0.0",<)'
   - name: 'RustyItems.esp'
     tag:
       - Graphics
@@ -5791,6 +5796,11 @@ plugins:
       - crc: 0xc078a0f2
         util: *dirtyUtil
         itm: 4
+  - name: 'Sexy Daedric Priestess.esp'
+    dirty:
+      - crc: 0x4be5bba2
+        util: *dirtyUtil
+        itm: 1
   - name: 'Shdw_Armor Set_Sotonhorian.esp'
     dirty:
       - crc: 0x1c75b309
@@ -5937,7 +5947,10 @@ plugins:
     tag:
       - Invent
   - name: 'Tail_Amulet_Converter.esp'
-    req: [ *OBSE ]
+    msg:
+      - type: warn
+        content: 'Requires: OBSE 11+.'
+        condition: 'version("..\obse_loader.exe","0.11.0.0",<)'
   - name: 'Talon of Akatosh Claymore v1.1 Delayer.esp'
     msg:
       - type: say
@@ -5977,9 +5990,8 @@ plugins:
   - name: 'Thori''Dal, The Stars'' Furyl - Legends of Azeroth Armory.esp'
     dirty:
       - crc: 0xD50A68CC
-        itm: 8
-        udr: 0
         util: *dirtyUtil
+        itm: 8
   - name: 'TLS Modded Mannequins.esp'
     msg:
       - type: say
@@ -6476,7 +6488,6 @@ plugins:
     dirty:
       - crc: 0x1e5ae2ef
         itm: 10
-        udr: 0
         util: *dirtyUtil
   - name: 'Chrome Amazon Armor.esp'
     tag:
@@ -6543,11 +6554,15 @@ plugins:
     tag:
       - Graphics
       - NoMerge
+  - name: 'Dollparts'' Wild Flower Corsets of Cyrodiil.esp'
+    dirty:
+      - crc: 0xbe9bea03
+        util: *dirtyUtil
+        itm: 4
   - name: 'Dragon Princess.esp'
     dirty:
       - crc: 0xdc820ea9
         itm: 3
-        udr: 0
         util: *dirtyUtil
   - name: 'Fairy Wings Darkness.esp'
     tag:
@@ -6559,15 +6574,18 @@ plugins:
     dirty:
       - crc: 0x8568d411
         itm: 5
-        udr: 0
         util: *dirtyUtil
       - crc: 0xfd45c9b9
         itm: 5
-        udr: 0
         util: *dirtyUtil
   - name: 'HGEC_AmazonArmor.esp'
     tag:
       - Graphics
+  - name: 'HGEC_Companionmail.esp'
+    dirty:
+      - crc: 0xe43eeefb
+        util: *dirtyUtil
+        itm: 2
   - name: 'HGEC Glass Replacement.esp'
     tag:
       - Graphics
@@ -6585,13 +6603,11 @@ plugins:
     dirty:
       - crc: 0xfed76787
         itm: 2
-        udr: 0
         util: *dirtyUtil
   - name: 'Lady Style.esp'
     dirty:
       - crc: 0x3ad9166
         itm: 1
-        udr: 0
         util: *dirtyUtil
   - name: 'LC-Compilation-Exnem.esp'
     tag:
@@ -6620,7 +6636,6 @@ plugins:
     dirty:
       - crc: 0xc8f5d0fd
         itm: 4
-        udr: 0
         util: *dirtyUtil
   - name: 'Roberts Armamentium female.esp'
     tag:
@@ -6697,6 +6712,14 @@ plugins:
   - name: 'TGND_EY_Vampirehunter.esp'
     inc:
       - EY_Vampirehunter.esp
+  - name: 'TGNDNessaStore.esp'
+    msg:
+      - type: warn
+        content: 'Requires: OBSE 20+.'
+        condition: 'version("..\obse_loader.exe","0.20.0.0",<)'
+    msg:
+      - type: say
+        content: 'Requires: TGND'
   - name: 'UFF Amazon Armor.esp'
     tag:
       - Graphics
@@ -6706,6 +6729,11 @@ plugins:
         itm: 10
         udr: 1
         util: *dirtyUtil
+  - name: 'Velveteen_Armor_HGEC.esp'
+    dirty:
+      - crc: 0x5ede9a39
+        util: *dirtyUtil
+        itm: 1
   - name: 'YAARM_Steel.esp'
     tag:
       - Graphics
@@ -6714,17 +6742,14 @@ plugins:
     dirty:
       - crc: 0xaba4972b
         itm: 1
-        udr: 0
         util: *dirtyUtil
   - name: 'Dark_Mistress.esp'
     dirty:
       - crc: 0x86f22d28
         itm: 3
-        udr: 0
         util: *dirtyUtil
       - crc: 0xc1861491
         itm: 3
-        udr: 0
         util: *dirtyUtil
   - name: '1SI_Horses.esp'
     msg:
@@ -7653,6 +7678,16 @@ plugins:
   - name: 'OOO-Better_Priced_Clutter.esp'
     tag:
       - Stats
+  - name: 'OOOCreatureAddons.esp'
+    inc:
+      - 'OOOAddonUndead.esp'
+      - 'OOOAddonWilderness.esp'
+      - 'OOODangerousDaedra.esp'
+  - name: 'OOOEquipmentAddon.esp'
+    dirty:
+      - crc: 0xb951292d
+        util: *dirtyUtil
+        itm: 1
   - name: 'RealitySpectreStars2HeavenBetterPotionsOOOEffects.esp'
     tag:
       - Graphics
