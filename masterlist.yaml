@@ -8095,6 +8095,8 @@ plugins:
     msg:
       - type: say
         content: 'Outdated. Update to MMM 3.6+.'
+      - type: say
+        content: 'Consider using ''FCOM_SpawnRatesReduced.esp'', ''FCOM_SpawnRatesSlightlyReduced.esp'' or ''FCOM_SpawnRatesStronger.esp'' instead.'
   - name: 'Mart''s Monster Mod - Spawn Rates - Reduced Reduced.esp'
     msg:
       - type: warn
@@ -9407,6 +9409,10 @@ plugins:
   - name: 'beardy.esp'
     tag:
       - NpcFaces
+  - name: 'FCOM 300_Resource.esp'
+    msg:
+      - type: warn
+        content: 'Plugin used for testing - do not use in game, deactivate.'
   - name: 'CNRP Brumav02.esp'
     msg:
       - type: warn
@@ -9586,6 +9592,8 @@ plugins:
       - crc: 0x13f4cf76
         util: *dirtyUtil
         itm: 1
+  - name: 'Morrowind_ob.esp'
+    msg: [ *doNotClean ]
   - name: 'Morroblivion_Chargen_And_Transport_Mod_v6.esp'
     msg:
       - type: say
@@ -9685,6 +9693,12 @@ plugins:
         util: *dirtyUtil
         itm: 7
         udr: 9
+  - name: 'Castle Ravenpride.esp'
+    dirty:
+      - crc: 0x8682e3f3
+        util: *dirtyUtil
+        itm: 62
+        udr: 191
   - name: 'cyrodiil transportation network.esp'
     msg:
       - type: say
@@ -9775,6 +9789,12 @@ plugins:
         util: *dirtyUtil
         itm: 8
         udr: 86
+  - name: '2HFluch.esp'
+    dirty:
+      - crc: 0x32d57f9e
+        util: *dirtyUtil
+        itm: 94
+        udr: 1
   - name: '300 Regal Imperial City 2.esp'
     dirty:
       - crc: 0x7ac8f55b
@@ -9819,6 +9839,17 @@ plugins:
     msg:
       - type: say
         content: 'Requires: COBL.'
+  - name: 'A Sorceress Love 1_1.esp'
+    dirty:
+      - crc: 0xc720fa75
+        util: *dirtyUtil
+        itm: 78
+        udr: 6
+  - name: 'ABloodyNight.esp'
+    dirty:
+      - crc: 0x51a4c491
+        util: *dirtyUtil
+        itm: 3
   - name: 'AbuEmir01.esp'
     msg:
       - type: say
@@ -9988,6 +10019,12 @@ plugins:
       - crc: 0x7acea2cc
         util: *dirtyUtil
         itm: 6
+  - name: 'Alternative Entrances.esp'
+    dirty:
+      - crc: 0x717a46a2
+        util: *dirtyUtil
+        itm: 8
+        udr: 2
   - name: 'Amen''thalas for Cobl, for SI.esp'
     msg:
       - type: say
@@ -10004,6 +10041,14 @@ plugins:
     msg:
       - type: say
         content: 'Rename to Amen''thalas.esp'
+  - name: 'AmVampireRing.esp'
+    msg:
+      - type: say
+        content: 'Compile All Scripts was used on the mod; either use the CS or Tes4Edit to clean or use Wrye Bash's 'Decompile All' command.'
+    dirty:
+      - crc: 0x11d48c2e
+        util: *dirtyUtil
+        itm: 114
   - name: 'Ancient Ruins - Ayleid Edition.esp'
     dirty:
       - crc: 0xf3161932
@@ -10052,7 +10097,11 @@ plugins:
       - type: say
         content: 'Requires: Shivering Isles'
   - name: 'AR.esp'
-    msg: [ *needsCleaning ]
+    dirty:
+      - crc: 0xeb70503
+        util: *dirtyUtil
+        itm: 76
+        udr: 44
   - name: 'Arcane Services.esp'
     req: [ *OBSE ]
     msg:
@@ -10151,6 +10200,18 @@ plugins:
     tag:
       - Graphics
       - NoMerge
+  - name: 'AraenyaRealm.esp'
+    dirty:
+      - crc: 0x3cb0c878
+        util: *dirtyUtil
+        itm: 116
+        udr: 532
+  - name: 'AStrangeCave.esp'
+    dirty:
+      - crc: 0xbdbcf7a8
+        util: *dirtyUtil
+        itm: 10
+        udr: 2
   - name: 'ATW_Castle_Vet_v1.3.esp'
     dirty:
       - crc: 0xab48455d
@@ -10181,8 +10242,8 @@ plugins:
         condition: 'checksum("AuriCloudRulerAddons.esp", 3BCDEE6F)'
     dirty:
       - crc: 0x3bcdee6f
-        itm: 1
         util: *dirtyUtil
+        itm: 1
   - name: 'Automagicon.esp'
     msg:
       - type: say
