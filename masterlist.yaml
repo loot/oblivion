@@ -10303,6 +10303,11 @@ plugins:
     msg:
       - type: say
         content: 'Incompatible with: anything that changes Legion Armor.'
+    dirty:
+      - crc: 0xba133af8
+        util: *dirtyUtil
+        itm: 19
+        udr: 24
   - name: 'BeastHeadInn.esp'
     dirty:
       - crc: 0xfc965cd1
@@ -10392,6 +10397,12 @@ plugins:
       - type: say
         content: 'Only use one BBM AN-II Patch.'
         condition: 'regex("Better Benirus Manor (- Complete|for Cobl - Complete|- Interior Only) - AN-II Patch\.esp")'
+  - name: 'Big Business.esp'
+    dirty:
+      - crc: 0xcec8bc70
+        util: *dirtyUtil
+        itm: 2
+        udr: 3
   - name: 'ElsweyrFaregylRoad.esp'
     msg:
       - type: say
@@ -10424,6 +10435,11 @@ plugins:
     tag:
       - Actors.Anims
       - NoMerge
+  - name: 'Blade Of Shai''tan.esp'
+    dirty:
+      - crc: 0x92e6006d
+        util: *dirtyUtil
+        itm: 26
   - name: 'BladeSong.esp'
     msg:
       - type: warn
@@ -10456,6 +10472,12 @@ plugins:
     msg:
       - type: warn
         content: 'This ESP has critical errors and should not be used in an active game. Regular TES4Edit cleaning is not enough to repair it.'
+  - name: 'Blacktache''s Secrets 3.esp'
+    dirty:
+      - crc: 0xf69cc41c
+        util: *dirtyUtil
+        itm: 48
+        udr: 155
   - name: 'BossPhaitCrab.esp'
     msg:
       - type: warn
@@ -10506,6 +10528,11 @@ plugins:
         util: *dirtyUtil
         itm: 11
         udr: 1
+  - name: 'BuryCorpse.esp'
+    msg:
+      - type: warn
+        content: 'Requires: OBSE 20+'
+        condition: 'version("..\obse_loader.exe","0.20.0.0",<)'
   - name: 'Butcher.esp'
     dirty:
       - crc: 0x3d158713
@@ -10606,6 +10633,12 @@ plugins:
         util: *dirtyUtil
         itm: 3
         udr: 246
+  - name: 'ChangeinManagement.esp'
+    dirty:
+      - crc: 0x9715a726
+        util: *dirtyUtil
+        itm: 40
+        udr: 1
   - name: 'Clamshell_Cottage_v1.5.esp'
     dirty:
       - crc: 0x21cf774
@@ -10621,10 +10654,21 @@ plugins:
         util: *dirtyUtil
         itm: 181
         udr: 50
+  - name: 'Comp_Cecilia.esp'
+    dirty:
+      - crc: 0x3c2322bd
+        util: *dirtyUtil
+        itm: 24
+        udr: 2
   - name: 'ConLoGnollkuppeMod.esp'
     msg:
       - type: say
         content: 'German mod.'
+  - name: 'The Contented Prisoner V 2.esp'
+    dirty:
+      - crc: 0x1d8a8cb3
+        util: *dirtyUtil
+        udr: 16
   - name: 'TCP Silence remover.esp'
     msg:
       - type: say
@@ -10866,6 +10910,24 @@ plugins:
         util: *dirtyUtil
         itm: 22
         udr: 1
+  - name: 'DMwardropemerged.esp'
+    dirty:
+      - crc: 0x63b084e2
+        util: *dirtyUtil
+        itm: 22
+        udr: 1
+      - crc: 0x9fb2b37c
+        util: *dirtyUtil
+        itm: 22
+        udr: 1
+  - name: 'DMwardropemergednoenchant.esp'
+    dirty:
+      - crc: 0x33c8ae99
+        util: *dirtyUtil
+        itm: 8
+      - crc: 0xed3c0b97
+        util: *dirtyUtil
+        itm: 8
   - name: 'DragonInvasion.esp'
     tag:
       - Actors.ACBS
@@ -10885,7 +10947,10 @@ plugins:
       - type: say
         content: 'Old, updated to latest version.'
   - name: 'Dwarven Mines.esp'
-    msg: [ *needsCleaning ]
+    dirty:
+      - crc: 0x16e9e81e
+        util: *dirtyUtil
+        itm: 141
   - name: 'Dwarven Mines Vwalk.esp'
     tag:
       - Actors.Anims
@@ -11144,6 +11209,11 @@ plugins:
         util: *dirtyUtil
         itm: 1690
         udr: 7
+  - name: 'HazadirsArms.esp'
+    dirty:
+      - crc: 0x7ce87ae7
+        util: *dirtyUtil
+        itm: 13
   - name: 'HauntedHouse.esp'
     dirty:
       - crc: 0x2f2f9619
@@ -11497,6 +11567,12 @@ plugins:
     msg:
       - type: say
         content: 'Update to latest version, called "The Lost Treasures Of Cyrodiil".'
+  - name: 'In Sachen Ayleiden.esp'
+    dirty:
+      - crc: 0xf954c934
+        util: *dirtyUtil
+        itm: 7
+        udr: 4
   - name: 'Insomonias Ruins.esp'
     dirty:
       - crc: 0x554de8ab
@@ -11564,6 +11640,11 @@ plugins:
     msg:
       - type: say
         content: 'Incompatible with: New Roads and Bridges; Landscape problems reported.'
+  - name: 'Kragenir''s Death Quest.esp'
+    dirty:
+      - crc: 0x3cc0b31f
+        util: *dirtyUtil
+        itm: 1
   - name: 'Kragenir''s Death Quest Vwalk.esp'
     tag:
       - Actors.Anims
