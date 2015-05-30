@@ -1135,7 +1135,8 @@ plugins:
       - Relev
       - Scripts
       - Stats
-      - "-C.Water"
+      - name: "-C.Water"
+        condition: 'version("Unofficial Oblivion Patch.esp","3.4.0",>=)'
   - name: 'Unofficial Oblivion Patch DV.esp'
     after:
       - 'DLCShiveringIsles.esp'
@@ -1161,7 +1162,8 @@ plugins:
       - Relev
       - Scripts
       - Stats
-      - "-C.Water"
+      - name: "-C.Water"
+        condition: 'version("Unofficial Oblivion Patch.esp","3.4.0",>=)'
   - name: 'Unofficial Oblivion Patch-mobs.esp'
     after:
       - 'DLCShiveringIsles.esp'
@@ -1190,7 +1192,8 @@ plugins:
       - Relev
       - Scripts
       - Stats
-      - "-C.Water"
+      - name: "-C.Water"
+        condition: 'version("Unofficial Oblivion Patch.esp","3.4.0",>=)'
   - name: 'UOPS Additional Changes.esp'
     priority: -1999000
     tag:
