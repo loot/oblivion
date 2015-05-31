@@ -14151,7 +14151,7 @@ plugins:
         content: 'Remove BattleHorn_MOBS.esp, VileLair_MOBS.esp, MehrunesRazor_MOBS.esp, Knights_MOBS.esp or ThievesDen_MOBS.esp - this includes all of those.'
         condition: 'regex("(BattleHorn|VileLair|MehrunesRazor|Knights|ThievesDen)_MOBS\.esp")'
       - type: say
-        content: 'Recommended to use version 2.0 or greater: <http://www.nexusmods.com/oblivion/mods/28537>'
+        content: 'Recommended to use version 2.0 or greater: [MOBS](http://www.nexusmods.com/oblivion/mods/28537)'
     tag:
       - Deactivate
       - Filter
@@ -14611,7 +14611,14 @@ plugins:
         udr: 6
   - name: 'DarkBrotherhoodChronicles.esp'
     tag:
+      - Actor.Spells
       - Actors.AIPackages
+  - name: 'DBC-ImpeREAL City Unique Districts Waterfront Patch.esp'
+    inc:
+      - 'DBC-ImpeREAL City Unique Districts-Merged Patch.esp'
+  - name: 'DBC-ImpeREAL City Unique Districts-Merged Patch.esp'
+    inc:
+      - 'DBC-ImpeREAL City Unique Districts Waterfront Patch.esp'
   - name: 'Gaelendryl.esp'
     dirty:
       - crc: 0x795872ca
@@ -14787,6 +14794,10 @@ plugins:
         itm: 104
   - name: 'Walkabout.esp'
     dirty:
+      - crc: 0x1796e52d
+        util: *dirtyUtil
+        itm: 41
+        udr: 1
       - crc: 0x31be18d9
         util: *dirtyUtil
         itm: 21
@@ -15482,6 +15493,11 @@ plugins:
         util: *dirtyUtil
         itm: 109
         udr: 64
+  - name: 'Trails Of Cyrodiil Merged UL Colovian Highlands.esp'
+    msg:
+      - type: warn
+        content: 'Contains xulColovianHighlands.esp. ONLY load Meshes and Textures from UL Colovian Highlands when using this plugin.'
+	condition: 'file("xulColovianHighlands.esp")'
   - name: 'xulChorrolHinterland.esp'
     dirty:
       - crc: 0xb7b4334a
@@ -15576,6 +15592,15 @@ plugins:
       - crc: 0x905f14af
         util: *dirtyUtil
         itm: 2
+        udr: 2
+  - name: 'UL Beaches of Cyrodiil - DMwardrobe patch.esp'
+    msg:
+      - type: say
+        content: 'Master records needs updating from "DMwardropemerged no enchant.esp" to "DMwardropemergednoenchant.esp"'
+    dirty:
+      - crc: 0xc08127ba
+        util: *dirtyUtil
+        itm: 4
         udr: 2
   - name: 'HentaiMania2.esp'
     dirty:
@@ -16336,7 +16361,7 @@ plugins:
   - name: 'Salmo the Baker, Cobl.esp'
     msg:
       - type: say
-        content: 'MAY cause CTDs. Cause uncertain despite extensive debugging. Disable if experiencing a persistant crash.'
+        content: 'MAY cause CTDs. Cause uncertain despite extensive debugging. Disable if experiencing a persistent crash.'
     tag:
       - Actors.AIData
       - Actors.AIPackages
@@ -16356,7 +16381,7 @@ plugins:
       - type: say
         content: 'Version of Salmo the baker for Woodland Village.'
       - type: say
-        content: 'MAY cause CTDs. Cause uncertain despite extensive debugging. Disable if experiencing a persistant crash.'
+        content: 'MAY cause CTDs. Cause uncertain despite extensive debugging. Disable if experiencing a persistent crash.'
   - name: 'Sutch Village Vwalk.esp'
     tag:
       - Actors.Anims
@@ -16671,6 +16696,10 @@ plugins:
     msg:
       - type: say
         content: 'Put before Unique Landscape mods to return tree sizes there to normal.'
+    dirty:
+      - crc: 0xb02b5753
+        util: *dirtyUtil
+        itm: 1
   - name: 'Natural_Vegetation_200%_by_Max_Tael.esp'
     msg:
       - type: say
@@ -17510,6 +17539,8 @@ plugins:
       - crc: 0xe5dfd452
         util: *dirtyUtil
         itm: 1
+  - name: 'Magic Spell Perks Balanced.esp'
+    req: [ *OBSE ]
   - name: 'Mg_Global Item Mod.esp'
     tag:
       - Invent
@@ -17705,6 +17736,11 @@ plugins:
   - name: 'REDrinks.esp'
     tag:
       - Graphics
+  - name: 'Repair Anytime-9384.esp'
+    msg:
+      - type: say
+        content: 'Use Wrye Bash Bashed Patch Tweak Combat Repair [Allowed] instead.'
+        condition: 'regex("Bashed Patch.*\.esp")'
   - name: 'real_tools.esp'
     msg:
       - type: say
@@ -17835,19 +17871,24 @@ plugins:
         content: 'Use either ''LoversVoice.esp'' or ''LoversVoiceMinus.esp'' or ''LoversVoiceAR.esp'' but not together.'
         condition: 'regex("LoversVoic(e|eMinus)\.esp")'
   - name: 'LoversAdultPlay.esp'
+    inc:
+      - 'LoversSpringSale.esp'
     msg:
       - type: say
         content: 'Obsolete. Use LoversAdultPlayPlus.esp instead.'
   - name: 'LoversSpringSale.esp'
+    inc:
+      - 'LoversAdultPlay.esp'
     msg:
       - type: say
         content: 'Obsolete. Use LoversAdultPlayPlus.esp instead.'
+  - name: 'LoversAdultPlayPlus.esp'
+    inc:
+      - 'LoversAdultPlayPlusforSSP.esp'
   - name: 'LoversAdultPlayPlusforSSP.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: LoversAdultPlayPlus.esp'
-      - type: say
-        content: 'Incompatible with: LoversSpringSale.esp'
+    inc:
+      - 'LoversAdultPlayPlus.esp'
+      - 'LoversSpringSale.esp'
   - name: 'LoversTachiCat.esp'
     msg:
       - type: say
