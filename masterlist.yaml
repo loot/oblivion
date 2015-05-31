@@ -18276,7 +18276,6 @@ plugins:
     dirty:
       - crc: 0x46563387
         util: *dirtyUtil
-        udr: 0
         itm: 12
   - name: 'CLS-craftybits.esp'
     dirty:
@@ -18769,6 +18768,11 @@ plugins:
         util: *dirtyUtil
         itm: 49
         udr: 11
+  - name: 'Rathunas01.esp'
+    req: [ *OBSE ]
+    msg:
+      - type: say
+        content: 'Requires: COBL, Unique Landscapes-Brena River Ravine'
   - name: 'MidasSpellTomes.esp'
     tag:
       - Relev
@@ -18811,6 +18815,9 @@ plugins:
   - name: 'FrostcragMidasLab.esp'
     tag:
       - Invent
+  - name: 'OSPS-TalesftTomb-MidasMagic-Patch.esp'
+    inc:
+      - 'Rathunas01.esp'
   - name: 'Midas PowDur1.5x.esp'
     msg:
       - type: say
@@ -18981,9 +18988,11 @@ plugins:
       - type: say
         content: 'Not needed if using LAME.'
   - name: 'PMSneakySummons-ForVanilla.esp'
+    inc:
+      - 'PMSneakySummonCompatibility.esp'
     msg:
       - type: say
-        content: 'Do not use with PMSneakySummonCompatibility.esp, to have magic overhaul features move before magic overhauls (but then you won''t get the features of this)'
+        content: 'To have magic overhaul features move before magic overhauls (but then you won''t get the features of this)'
   - name: 'Cure Disease Overhaul - Extreme Diseases.esp'
     tag:
       - Actors.Spells
@@ -19319,11 +19328,25 @@ plugins:
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
         condition: 'regex("Bashed Patch.*\.esp")'
+  - name: 'Simple Dual Wielding.esp'
+    req:
+      - name: 'obse\plugins\NifSE.dll'
+        display: '[NifSE](http://www.nexusmods.com/oblivion/mods/21292)'
+    msg:
+      - type: warn
+        content: 'Requires: OBSE 20+.'
+        condition: 'version("..\obse_loader.exe","0.20.0.0",<)'
   - name: 'More_Arrows_Recovered.esp'
     msg:
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
         condition: 'regex("Bashed Patch.*\.esp")'
+  - name: 'Enter The Shinobi - Coors916.esp'
+    dirty:
+      - crc: 0xa32969be
+        util: *dirtyUtil
+        itm: 33
+        udr: 4
   - name: 'mighty_bows_arrows_recovery.esp'
     msg:
       - type: say
@@ -19638,6 +19661,11 @@ plugins:
       - type: warn
         content: 'Requires: OBSE 16+.'
         condition: 'version("..\obse_loader.exe","0.16.0.0",<)'
+  - name: 'Mercantile Leveling-Fixed.esp'
+    msg:
+      - type: warn
+        content: 'Requires: OBSE 15+.'
+        condition: 'version("..\obse_loader.exe","0.15.0.0",<)'
   - name: 'Jhaerik''s Anti Power-Gaming Leveling System 1 (Very Easy ).esp'
     msg:
       - type: say
@@ -19691,6 +19719,18 @@ plugins:
       - type: say
         content: 'Deprecated. Do not use with v4.5.0+ of Sneaking Detection Recalibrated.'
         condition: 'version("SDR_Core.esp","4.5.0",>=)'
+  - name: 'SDR_ThievesArsenal_Patch.esp'
+    msg:
+      - type: say
+        content: 'Obsolete. Upgrade to SDR version 8.2'
+  - name: 'SDR_Detect Life Shader Patch (Oblivion).esp'
+    msg:
+      - type: say
+        content: 'Obsolete. Upgrade to SDR version 8.2'
+  - name: 'SDR_Detect Life Shader Patch (Nehrim).esp'
+    msg:
+      - type: say
+        content: 'Obsolete. Upgrade to SDR version 8.2'
   - name: 'Oblivion XP - Journal Mod Patch.esp'
     msg:
       - type: say
@@ -19699,10 +19739,22 @@ plugins:
     msg:
       - type: error
         content: 'Use the Oblivion version.'
+      - type: say
+        content: 'Obsolete. Upgrade to SDR version 8.2'
   - name: 'SDR_Perks And Patches (Nehrim).esp'
     msg:
       - type: error
         content: 'Use the Oblivion version.'
+      - type: say
+        content: 'Obsolete. Upgrade to SDR version 8.2'
+  - name: 'SDR_Trip Wire Pressure Plate Patch [Oblivion].esp'
+    msg:
+      - type: say
+        content: 'Obsolete. Upgrade to SDR version 8.2'
+  - name: 'SDR_Trip Wire Pressure Plate Patch [Nehrim].esp'
+    msg:
+      - type: say
+        content: 'Obsolete. Upgrade to SDR version 8.2'
   - name: 'DMRequirements.esp'
     msg:
       - type: say
@@ -21082,6 +21134,11 @@ plugins:
       - Hair
       - NpcFaces
       - R.Relations
+  - name: 'Playable Goblin.esp'
+    msg:
+      - type: warn
+        content: 'Requires: OBSE 18+.'
+        condition: 'version("..\obse_loader.exe","0.18.0.0",<)'
   - name: 'Riflers Races.esp'
     tag:
       - Eyes
@@ -23963,6 +24020,11 @@ plugins:
       - type: error
         content: 'This patch should only be used with "Better Cities - Open Better Cities.esp".'
         condition: 'not file("Better Cities - Open Better Cities.esp")'
+  - name: 'Better Cities Anvil Open - Knights of the Nine.esp'
+    msg:
+      - type: error
+        content: 'This patch should only be used with "Better Cities - Open Better Cities.esp"'
+        condition: 'not file("Better Cities - Open Better Cities.esp")'
   - name: 'BCCheydinhal-CheydinhalFalls patch.esp'
     msg:
       - type: say
@@ -24017,9 +24079,18 @@ plugins:
   - name: 'Better Cities - Unique Landscape Skingrad Outskirts.esp'
     tag:
       - C.Water
+  - name: 'Better Cities - Storms & Sound.esp'
+    msg:
+      - type: say
+        content: 'Reassign the "Storms & Sounds.esp" master using Bash depending on which S&S ESP you are using.'
   - name: 'Better Cities - TIE Restricted Area.esp'
     tag:
       - Scripts
+  - name: 'BICDist_OotD_Patch.esp'
+    msg:
+      - type: error
+        content: 'This patch should only be used with Better Cities IC Green Emperor Way.esp!'
+        condition: 'not file("Better Cities IC Green Emperor Way.esp")'
   - name: 'Better Imperial City Rwalk.esp'
     msg:
       - type: say
@@ -24410,12 +24481,6 @@ plugins:
         content: 'Incompatible with: *Better Cities CHORROL.esp'
       - type: say
         content: 'For Better Cities and Unique Landscapes use esp included in Cyrodiil Rebuild archive.'
-      - type: warn
-        content: 'Move xulSkingradOutskirts.esp once after this esp'
-        condition: 'file("xulSkingradOutskirts.esp")'
-      - type: warn
-        content: 'Move Better Cities SKINGRAD.esp once after this esp'
-        condition: 'file("Better Cities SKINGRAD.esp")'
     tag:
       - Actors.ACBS
       - Actors.AIPackages
@@ -24426,6 +24491,12 @@ plugins:
         util: *dirtyUtil
         itm: 128
         udr: 257
+  - name: 'xulSkingradOutskirts.esp'
+    after:
+      - 'Cyrodiil Rebuild.esp'
+  - name: 'Better Cities SKINGRAD.esp'
+    after:
+      - 'Cyrodiil Rebuild.esp'
   - name: 'Cyrodiil Rebuild II.esp'
     tag:
       - Actors.ACBS
@@ -24489,39 +24560,31 @@ plugins:
     tag:
       - Graphics
   - name: 'HTSCl_wac.esp'
-    msg:
-      - type: say
-        content: 'Use either ''HTSCl_wac.esp'' or ''HTSCl_wac_ItemLootFix.esp'', not both.'
-        condition: 'file("HTSCl_wac_ItemLootFix.esp")'
+    inc:
+      - 'HTSCl_wac_ItemLootFix.esp'
       - type: say
         content: 'Requires: Waalx Animals and Creatures'
     tag:
       - Graphics
       - Invent
   - name: 'HTSCl_wac_ItemLootFix.esp'
-    msg:
-      - type: say
-        content: 'Use either ''HTSCl_wac.esp'' or ''HTSCl_wac_ItemLootFix.esp'', not both.'
-        condition: 'file("HTSCl_wac.esp")'
+    inc:
+      - 'HTSCl_wac.esp'
       - type: say
         content: 'Requires: Waalx Animals and Creatures - ItemLootFix plugin.'
     tag:
       - Graphics
       - Invent
   - name: 'HTSCl_cuo.esp'
-    msg:
-      - type: say
-        content: 'Use either ''HTSCl_cuo.esp'' or ''HTSCl_cuo_inElderCouncil.esp'', not both.'
-        condition: 'file("HTSCl_cuo_inElderCouncil.esp")'
+    inc:
+      - 'HTSCl_cuo_inElderCouncil.esp'
       - type: say
         content: 'Requires: Cyrodiil Upgrade Overhaul.'
     tag:
       - Graphics
   - name: 'HTSCl_cuo_inElderCouncil.esp'
-    msg:
-      - type: say
-        content: 'Use either ''HTSCl_cuo.esp'' or ''HTSCl_cuo_inElderCouncil.esp'', not both.'
-        condition: 'file("HTSCl_cuo.esp")'
+    inc:
+      - 'HTSCl_cuo.esp'
       - type: say
         content: 'Requires: CUO, The Elder Council.'
     tag:
@@ -24603,6 +24666,13 @@ plugins:
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
         condition: 'regex("Bashed Patch.*\.esp")'
+  - name: 'Dynamic TimeScale.esp'
+    msg:
+      - type: warn
+        content: 'Requires: OBSE 15+.'
+        condition: 'version("..\obse_loader.exe","0.15.0.0",<)'
+      - type: say
+        content: 'Requires: You are Here v1.1-'
   - name: 'Syc_LongerDaysShorterNights.esp'
     msg:
       - type: say
@@ -25199,10 +25269,14 @@ plugins:
       - crc: 0x3f990ded
         util: *dirtyUtil
         itm: 2
+  - name: 'SDR_Perks And Patches [Oblivion].esp'
+    msg:
+      - type: say
+        content: 'Obsolete. Upgrade to SDR version 8.2'
   - name: 'SDR_Detect Life Shader Patch [Oblivion].esp'
     msg:
       - type: say
-        content: Obsolete. Upgrade to SDR version 8.2
+        content: 'Obsolete. Upgrade to SDR version 8.2'
   - name: 'Shining Creatures.esp'
     msg:
       - type: say
@@ -25687,7 +25761,7 @@ plugins:
   - name: 'SDR Perks and Patches [Oblivion].esp'
     msg:
       - type: say
-        content: Obsolete. Upgrade to SDR version 8.2
+        content: 'Obsolete. Upgrade to SDR version 8.2'
   - name: 'TES4Merged.esp'
     priority: 1000400
     tag:
@@ -25812,8 +25886,6 @@ plugins:
     msg:
       - type: say
         content: 'Obsolete. Do not use with latest version of SCA Combat Archery.'
-# any map changing files esp have to go dead last
-# These should never be in the active load order.
   - name: 'KRLODToggleRestored.esp'
     msg:
       - type: error
