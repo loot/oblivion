@@ -15946,6 +15946,11 @@ plugins:
     tag:
       - Actors.Anims
       - NoMerge
+  - name: 'OotD_UL_Jerall_Patch.esp'
+    msg:
+      - type: warn
+        content: 'You do not need both of these patches! Disable OotD_UL_Jerall_Patch.esp.'
+        condition: 'file("OrdenDesDrachen-JerallGlacier patch.esp")'
   - name: 'xulTheEasternPeaks Vwalk.esp'
     tag:
       - Actors.Anims
@@ -16386,6 +16391,41 @@ plugins:
     tag:
       - Actors.Anims
       - NoMerge
+  - name: 'OotDPS-Necro-FAR-FotA-Patch.esp'
+    msg:
+      - type: warn
+        content: 'Use the UL Jerall Glacier version of this patch!'
+        condition: 'file("xulJerallGlacier.esp")'
+  - name: 'OotDPS-FAR-FotA-Patch.esp'
+    msg:
+      - type: warn
+        content: 'Use the UL Jerall Glacier version of this patch!'
+        condition: 'file("xulJerallGlacier.esp")'
+  - name: 'OotDPS-FotA.esp'
+    msg:
+      - type: warn
+        content: 'Use the UL Jerall Glacier version of this patch!'
+        condition: 'file("xulJerallGlacier.esp")'
+  - name: 'OotDPS_Necro_FotA_Patch.esp'
+    msg:
+      - type: warn
+        content: 'Use the UL Jerall Glacier version of this patch!'
+        condition: 'file("xulJerallGlacier.esp")'
+  - name: 'OotD_FAR_Necromancer_Patch.esp'
+    msg:
+      - type: warn
+        content: 'Use the UL Jerall Glacier version of this patch!'
+        condition: 'file("xulJerallGlacier.esp")'
+  - name: 'OotD_FAR_Patch.esp'
+    msg:
+      - type: warn
+        content: 'Use the UL Jerall Glacier version of this patch!'
+        condition: 'file("xulJerallGlacier.esp")'
+  - name: 'OotD_ULJerall_TheNecromancer_Patch.esp'
+    msg:
+      - type: warn
+        content: 'Use the UL Jerall Glacier version of this patch!'
+        condition: 'file("xulJerallGlacier.esp")'
   - name: 'OBCBravil-Barrowfields patch.esp'
     msg:
       - type: say
@@ -17481,6 +17521,12 @@ plugins:
     msg:
       - type: say
         content: 'Requires: Tibixe''s String Function Collection and Leviathan Soulgems.'
+  - name: 'LessHealthfulRest.esp'
+    inc:
+      - 'LessHealthfulWaiting.esp'
+  - name: 'LessHealthfulWaiting.esp'
+    inc:
+      - 'LessHealthfulRest.esp'
   - name: 'M.O.E. - Bone Names and Priced Skull.esp'
     msg:
       - type: say
@@ -17906,6 +17952,20 @@ plugins:
     msg:
       - type: say
         content: 'Old, update to version 1.3b3 Rev05a or later.'
+  - name: 'LoversAchievments.esp'
+    req:
+      - 'OBSE\Plugins\AddActorValues.dll'
+    msg:
+      - type: warn
+        content: 'Requires: OBSE 20+.'
+        condition: 'version("..\obse_loader.exe","0.20.0.0",<)'
+  - name: 'LoversJoystick.esp'
+    msg:
+      - type: warn
+        content: 'Requires: OBSE 20+.'
+        condition: 'version("..\obse_loader.exe","0.20.0.0",<)'
+      - type: say
+        content: 'Requires: LAPF v1.4, SetBody Blockhead 0.4'
   - name: 'LoversCreature_SexualOrgans.esp'
     tag:
       - Graphics
@@ -18265,10 +18325,12 @@ plugins:
     msg:
       - type: error
         content: 'Use ''LCE-addon.esp'' instead if using MMM/Frans etc.'
+        condition: *FCOMCond
   - name: 'lorecreatures.esp'
     msg:
       - type: error
         content: 'Use ''LCE-addon.esp'' instead if using MMM/Frans etc.'
+        condition: *FCOMCond
     dirty:
       - crc: 0x43bf6b9b
         util: *dirtyUtil
@@ -18747,6 +18809,10 @@ plugins:
   - name: 'AgarVariedSpellSounds_SupremeMagicka.esp'
     tag:
       - Sound
+    dirty:
+      - crc: 0xf66f81a3
+        util: *dirtyUtil
+        itm: 17
   - name: 'SupremeMagicka.esp'
     msg: [ *doNotClean ]
     tag:
