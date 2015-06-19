@@ -1556,17 +1556,13 @@ plugins:
     tag:
       - Graphics
   - name: 'Atmospheric Loading Screens.esp'
-    msg:
-      - type: say
-        content: 'Move after Race Balancing Project'
-        condition: 'file("bgBalancingEVCore.esp")'
+    after:
+      - 'bgBalancingEVCore.esp'
     tag:
       - Graphics
   - name: 'Atmospheric Loading Screens - Original Text.esp'
-    msg:
-      - type: say
-        content: 'Move after Race Balancing Project'
-        condition: 'file("bgBalancingEVCore.esp")'
+    after:
+      - 'bgBalancingEVCore.esp'
     tag:
       - Graphics
   - name: 'Atmospheric Loading Screens - Random Quotes.esp'
