@@ -7617,11 +7617,9 @@ plugins:
         content: 'Can increase the chances of a CTD in a heavily modded game due to increased processor load.'
       - *doNotClean
   - name: 'FCOM_Convergence.esp'
-    msg:
-      - type: error
-        content: 'FCOM_Convergence.esm is missing. Re-install FCOM.'
-        condition: 'not file("FCOM_Convergence.esm")'
-      - *doNotClean
+    req:
+      - 'FCOM_Convergence.esm'
+    msg: [ *doNotClean ]
     tag:
       - Actors.ACBS
       - Actors.AIData
@@ -7643,17 +7641,15 @@ plugins:
   - name: 'FCOM_ConvergenceNoFran.esp'
     msg:
       - *obsolete
-      - type: error
-        content: 'FCOM_Convergence.esm is missing. Re-install FCOM.'
-        condition: 'not file("FCOM_Convergence.esm")'
+    req:
+      - 'FCOM_Convergence.esm'
   - name: 'FCOM_OscurosOverhaul.esp'
+    req:
+      - 'FCOM_Convergence.esm'
     msg:
       - type: say
         content: 'Only use when not using MMM.'
         condition: *FCOMCond
-      - type: error
-        content: 'FCOM_Convergence.esm is missing. Re-install FCOM.'
-        condition: 'not file("FCOM_Convergence.esm")'
   - name: 'Choices and Consequences - MMM.esp'
     msg: [ *obsolete ]
   - name: 'C&C&EQR - MMM.esp'
@@ -7669,41 +7665,29 @@ plugins:
       - Delev
       - Relev
   - name: 'FCOM_EntropicOrderRebalance.esp'
-    msg:
-      - type: error
-        content: 'FCOM_Convergence.esm is missing. Re-install FCOM.'
-        condition: 'not file("FCOM_Convergence.esm")'
+    req:
+      - 'FCOM_Convergence.esm'
   - name: 'FCOM_EntropicOrderHardcore.esp'
-    msg:
-      - type: error
-        content: 'FCOM_Convergence.esm is missing. Re-install FCOM.'
-        condition: 'not file("FCOM_Convergence.esm")'
+    req:
+      - 'FCOM_Convergence.esm'
   - name: 'FCOM_RealSwords.esp'
-    msg:
-      - type: error
-        content: 'FCOM_Convergence.esm is missing. Re-install FCOM.'
-        condition: 'not file("FCOM_Convergence.esm")'
+    req:
+      - 'FCOM_Convergence.esm'
     tag:
       - Delev
       - Relev
   - name: 'More Effective Enchantments FCOM.esp'
-    msg:
-      - type: error
-        content: 'FCOM_Convergence.esm is missing. Re-install FCOM.'
-        condition: 'not file("FCOM_Convergence.esm")'
+    req:
+      - 'FCOM_Convergence.esm'
   - name: 'FCOM_DurabilityAndDamage.esp'
-    msg:
-      - type: error
-        content: 'FCOM_Convergence.esm is missing. Re-install FCOM.'
-        condition: 'not file("FCOM_Convergence.esm")'
+    req:
+      - 'FCOM_Convergence.esm'
   - name: 'FCOM_SpawnRatesReduced.esp'
     inc:
       - 'FCOM_SpawnRatesSlightlyReduced.esp'
       - 'FCOM_SpawnRatesStronger.esp'
-    msg:
-      - type: error
-        content: 'FCOM_Convergence.esm is missing. Re-install FCOM.'
-        condition: 'not file("FCOM_Convergence.esm")'
+    req:
+      - 'FCOM_Convergence.esm'
     tag:
       - Delev
       - Relev
@@ -7711,10 +7695,8 @@ plugins:
     inc:
       - 'FCOM_SpawnRatesStronger.esp'
       - 'FCOM_SpawnRatesReduced.esp'
-    msg:
-      - type: error
-        content: 'FCOM_Convergence.esm is missing. Re-install FCOM.'
-        condition: 'not file("FCOM_Convergence.esm")'
+    req:
+      - 'FCOM_Convergence.esm'
     tag:
       - Delev
       - Relev
@@ -7722,12 +7704,11 @@ plugins:
     inc:
       - 'FCOM_SpawnRatesReduced.esp'
       - 'FCOM_SpawnRatesSlightlyReduced.esp'
+    req:
+      - 'FCOM_Convergence.esm'
     msg:
       - type: say
         content: '''Stronger'' is the same as ''Reduced'' but spawns will be more powerful.'
-      - type: error
-        content: 'FCOM_Convergence.esm is missing. Re-install FCOM.'
-        condition: 'not file("FCOM_Convergence.esm")'
     tag:
       - Delev
       - Relev
@@ -7747,10 +7728,8 @@ plugins:
       - type: say
         content: 'Not recommended, has bugs.'
   - name: 'FCOM_SaferRoads.esp'
-    msg:
-      - type: error
-        content: 'FCOM_Convergence.esm is missing. Re-install FCOM.'
-        condition: 'not file("FCOM_Convergence.esm")'
+    req:
+      - 'FCOM_Convergence.esm'
     tag:
       - Delev
       - Relev
@@ -7759,19 +7738,15 @@ plugins:
       - type: error
         content: 'Delete and use ''FCOM_LessRats.esp''.'
   - name: 'FCOM_LessRats.esp'
-    msg:
-      - type: error
-        content: 'FCOM_Convergence.esm is missing. Re-install FCOM.'
-        condition: 'not file("FCOM_Convergence.esm")'
+    req:
+      - 'FCOM_Convergence.esm'
   - name: 'Mart''s Monster Mod - No Spiders.esp'
     msg:
       - type: error
         content: 'Delete and use ''FCOM_NoSpiders.esp''.'
   - name: 'FCOM_NoSpiders.esp'
-    msg:
-      - type: error
-        content: 'FCOM_Convergence.esm is missing. Re-install FCOM.'
-        condition: 'not file("FCOM_Convergence.esm")'
+    req:
+      - 'FCOM_Convergence.esm'
   - name: 'Mart''s Monster Mod - No Wyvern.esp'
     msg:
       - type: error
@@ -7781,10 +7756,8 @@ plugins:
       - type: error
         content: 'Delete and use ''FCOM_NoWyverns.esp''.'
   - name: 'FCOM_NoWyverns.esp'
-    msg:
-      - type: error
-        content: 'FCOM_Convergence.esm is missing. Re-install FCOM.'
-        condition: 'not file("FCOM_Convergence.esm")'
+    req:
+      - 'FCOM_Convergence.esm'
   - name: 'Mart''s Monster Mod for OOO - NoReaversInGates.esp'
     msg:
       - type: error
@@ -7792,15 +7765,11 @@ plugins:
   - name: 'FCOM_NoReaversInGates.esp'
     inc:
       - 'FCOM_LessReaversInGates.esp'
-    msg:
-      - type: error
-        content: 'FCOM_Convergence.esm is missing. Re-install FCOM.'
-        condition: 'not file("FCOM_Convergence.esm")'
+    req:
+      - 'FCOM_Convergence.esm'
   - name: 'FCOM_NoAdventurersInGates.esp'
-    msg:
-      - type: error
-        content: 'FCOM_Convergence.esm is missing. Re-install FCOM.'
-        condition: 'not file("FCOM_Convergence.esm")'
+    req:
+      - 'FCOM_Convergence.esm'
   - name: 'Mart''s Monster Mod for OOO - LessReaversInGates.esp'
     msg:
       - type: error
@@ -7808,10 +7777,8 @@ plugins:
   - name: 'FCOM_LessReaversInGates.esp'
     inc:
       - 'FCOM_NoReaversInGates.esp'
-    msg:
-      - type: error
-        content: 'FCOM_Convergence.esm is missing. Re-install FCOM.'
-        condition: 'not file("FCOM_Convergence.esm")'
+    req:
+      - 'FCOM_Convergence.esm'
   - name: 'Mart''s Monster Mod - Increased Spawn Rates.esp'
     msg: [ *obsolete ]
   - name: 'Mart''s Monster Mod - Spawn Rates Increased.esp'
@@ -8193,9 +8160,8 @@ plugins:
       - type: say
         content: 'Incompatible with: OOO, MMM and Francescos.'
   - name: 'Master-Crafting-1.1-MMM.esp'
-    msg:
-      - type: say
-        content: 'Needs patch: Master-Crafting-1.1-MMM Greaves fix.esp'
+    req:
+      - 'Master-Crafting-1.1-MMM Greaves fix.esp'
   - name: 'Choices and Consequences - MMM - Looting NPCs & Creatures.esp'
     msg: [ *obsolete ]
   - name: 'OWC - Seaworld.esp'
@@ -8493,10 +8459,9 @@ plugins:
         util: *dirtyUtil
         itm: 8
   - name: 'TIE In.esp'
+    req:
+      - 'FCOM_Convergence.esm'
     msg:
-      - type: say
-        content: 'Requires: FCOM.'
-        condition: 'not active("FCOM_Convergence.esm")'
       - type: say
         content: 'Recommend avoid using TNR.'
   - name: 'TIE In - Frans.esp'
@@ -9124,10 +9089,8 @@ plugins:
       - type: say
         content: 'Use only if you have SI.'
   - name: 'Fran''s Ore Refiner.esp'
-    msg:
-      - type: say
-        content: 'Use only if you are using "Francesco''s Optional Leveled Quests.esp".'
-        condition: 'not file("Francesco''s Optional Leveled Quests.esp")'
+    req:
+      - 'Francesco''s Optional Leveled Quests.esp'
     dirty:
       - crc: 0xabe6443d
         util: *dirtyUtil
@@ -14912,10 +14875,8 @@ plugins:
       - type: say
         content: 'Obsolete. Update to UL:Lost Coast 1.6.3 or higher, then delete this patch.'
   - name: 'SutchReborn-LostCoast patch.esp'
-    msg:
-      - type: say
-        content: 'Also use Sutch reborn Lighthouse Fix UL.esp.'
-        condition: 'not file("Sutch reborn Lighthouse Fix UL.esp")'
+    req:
+      - 'Sutch reborn Lighthouse Fix UL.esp'
   - name: 'Sutch reborn Lighthouse Fix UL.esp'
     dirty:
       - crc: 0xc591afc5
