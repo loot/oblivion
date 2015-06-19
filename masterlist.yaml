@@ -35,6 +35,19 @@ common:
         str: 'No limpiar las referencias ITM (iguales al master), ya que son intencionales y necesarias para que el Mod funcione. Sí es seguro restaurar las UDR (referencias borradas), pero no haga más que eso.'
       - lang: zh_CN
         str: '不干净。"脏"数据是故意的，这是mod需要的功能。'
+  - &obsolete
+    type: say
+    content:
+      - lang: en
+        str: 'Obsolete. Update to latest version.'
+      - lang: ru
+        str: 'Устарело. Обновите до последней версии.'
+      - lang: es
+        str: 'Obsoleto. Actualizar a la última versión.'
+      - lang: ko
+        str: '사용되지 않습니다. 최신 버전으로 업데이트하십시오.'
+      - lang: zh_CN
+        str: '已过时。请升级到最新版本。'
   - &needsCleaning
     type: say
     content: 'Needs [TES4Edit cleaning](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide).'
@@ -124,9 +137,7 @@ plugins:
       - Body-Size-M
       - Eyes
   - name: 'EnhancedWeatherSIOnly.esm'
-    msg:
-      - type: error
-        content: 'Obsolete. Remove this and install Enhanced Weather.'
+    msg: [ *obsolete ]
   - name: 'Francesco''s Leveled Creatures-Items Mod.esm'
     tag:
       - Actors.ACBS
@@ -176,16 +187,12 @@ plugins:
     inc:
       - 'Tamrielic Ingredients.esm'
   - name: 'Item interchange.esm'
-    msg:
-      - type: error
-        content: 'Outdated. All functions are now handled by Cobl.esm. Update to the latest versions of ''Item Interchange'' and Cobl.'
+    msg: [ *obsolete ]
   - name: 'Qarls_Harvest.esm'
     tag:
       - Scripts
   - name: 'DEJ Harvest - Flora.esm'
-    msg:
-      - type: error
-        content: 'Obsolete. Update to ''Harvest [Flora]'' v3.0.1+.'
+    msg: [ *obsolete ]
   - name: 'Tamriel''s Glittering Geology.esm'
     inc:
       - 'Oscuro''s_Oblivion_Overhaul.esm'
@@ -242,9 +249,7 @@ plugins:
     tag:
       - Relev
   - name: 'ArmamentariumEnchanted.esm'
-    msg:
-      - type: error
-        content: 'Outdated, included in Armamentarium Complete.'
+    msg: [ *obsolete ]
   - name: 'bookplacing.esm'
     msg:
       - type: warn
@@ -418,9 +423,7 @@ plugins:
       - NoMerge
     priority: -2
   - name: 'Underdark v1.1 Delayer.esp'
-    msg:
-      - type: say
-        content: 'Versions less than 3.1 may cause the quest being patched to restart if installed after the quest has started. Update to the latest delayer if you suspect a problem.'
+    msg: [ *obsolete ]
     priority: -2
   - name: '!Oblivion_PL.esp'
     tag:
@@ -639,9 +642,7 @@ plugins:
       - NpcFaces
     priority: -2
   - name: 'Cobl - NPCDiversity - TNR Merge.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Remove this and install either Cobl Races TNR.esp or Cobl Races TNR SI.esp.'
+    msg: [ *obsolete ]
     tag:
       - Deactivate
       - Invent
@@ -668,9 +669,7 @@ plugins:
       - NpcFaces
     priority: -2
   - name: 'Younger Hotter NPC''s 0.99.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to version 1+.'
+    msg: [ *obsolete ]
     tag:
       - Deactivate
       - NoMerge
@@ -1217,9 +1216,7 @@ plugins:
       - type: say
         content: 'Make sure you have version 1.1 or higher.'
   - name: 'Permanent Effects from Quest Items fix Merge.esp'
-    msg:
-      - type: error
-        content: 'Outdated. Update to newest version of Permanent Effects from Quest Items fix.'
+    msg: [ *obsolete ]
   - name: 'Obl-IM.esp'
     tag:
       - Delev
@@ -1231,9 +1228,7 @@ plugins:
       - Sound
       - Stats
   - name: 'Oblivion_Deutsch_v3_2_1.esp'
-    msg:
-      - type: error
-        content: 'Old, update to latest version (V5+).'
+    msg: [ *obsolete ]
   - name: 'Oblivion_Deutsch_v5_0.esp'
     tag:
       - Names
@@ -1250,9 +1245,7 @@ plugins:
     tag:
       - Names
   - name: 'tes4-CHS-book.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Update to tes4-CHS-Addon.esp'
+    msg: [ *obsolete ]
   - name: 'Unofficial Shivering Isles Patch.esp'
     priority: -1999000
     after:
@@ -1664,9 +1657,7 @@ plugins:
       - type: say
         content: 'This mod is incompatible with weather mods.'
   - name: 'Arthur_ Natural weather with HDR.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to latest version of Arthur Natural Environments.'
+    msg: [ *obsolete ]
   - name: 'Natural_Weather_by_Max_Tael.esp'
     msg:
       - type: say
@@ -1705,9 +1696,7 @@ plugins:
       - type: say
         content: 'Outdated. Update to Ryu Doppler''s fixed Natural Weather.'
   - name: 'Ls More Butterflies and Fireflies.esp'
-    msg:
-      - type: say
-        content: 'Old, update to version 5+.'
+    msg: [ *obsolete ]
   - name: 'Ls More Butterflies and Fireflies Not In Interiors.esp'
     inc:
       - 'Ls More Butterflies and Fireflies 5.0.esp'
@@ -1723,29 +1712,17 @@ plugins:
       - 'Ls More Butterflies and Fireflies Not In Interiors Without Fairies 5.0 Halved.esp'
       - 'Ls More Butterflies and Fireflies Not In Interiors Without Fairies 5.0 Quarter.esp'
   - name: 'Ls More Butterflies and Fireflies 4.0.esp'
-    msg:
-      - type: say
-        content: 'Old, update to version 5+.'
+    msg: [ *obsolete ]
   - name: 'Ls More Butterflies and Fireflies 4.0 Halved.esp'
-    msg:
-      - type: say
-        content: 'Old, update to version 5+.'
+    msg: [ *obsolete ]
   - name: 'Ls More Butterflies and Fireflies 4.0 Quarter.esp'
-    msg:
-      - type: say
-        content: 'Old, update to version 5+.'
+    msg: [ *obsolete ]
   - name: 'Ls More Butterflies and Fireflies Not In Interiors 4.0.esp'
-    msg:
-      - type: say
-        content: 'Old, update to version 5+.'
+    msg: [ *obsolete ]
   - name: 'Ls More Butterflies and Fireflies Not In Interiors 4.0 Halved.esp'
-    msg:
-      - type: say
-        content: 'Old, update to version 5+.'
+    msg: [ *obsolete ]
   - name: 'Ls More Butterflies and Fireflies Not In Interiors 4.0 Quarter.esp'
-    msg:
-      - type: say
-        content: 'Old, update to version 5+.'
+    msg: [ *obsolete ]
   - name: 'Ls More Butterflies and Fireflies 5.0.esp'
     inc:
       - 'Ls More Butterflies and Fireflies Not In Interiors.esp'
@@ -1927,17 +1904,11 @@ plugins:
       - type: say
         content: 'Obsolete. Update to the latest version of Enhanced Weather and install the standalone version of Enhanced Seasons.'
   - name: 'EnhancedWeather - SI.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Update to the latest version of Enhanced Weather.'
+    msg: [ *obsolete ]
   - name: 'EnhancedWeatherSIOnly.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Upgrade to the latest version of Enhanced Weather.'
+    msg: [ *obsolete ]
   - name: 'EW-GTA2 Patch.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Upgrade to the latest version of Enhanced Weather.'
+    msg: [ *obsolete ]
   - name: 'All Natural.esp'
     msg:
       - type: say
@@ -1956,49 +1927,27 @@ plugins:
     tag:
       - Scripts
   - name: 'All Natural - Enhanced Weather.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Update to latest version of All Natural and delete this.'
+    msg: [ *obsolete ]
   - name: 'All Natural - Natural Weather.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Update to latest version of All Natural and delete this.'
+    msg: [ *obsolete ]
   - name: 'All Natural - EW + NW.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Update to latest version of All Natural and delete this.'
+    msg: [ *obsolete ]
   - name: 'All Natural - Atmospheric Weather System.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Update to latest version of All Natural and delete this.'
+    msg: [ *obsolete ]
   - name: 'All Natural - EW + AWS.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Update to latest version of All Natural and delete this.'
+    msg: [ *obsolete ]
   - name: 'All Natural - NW + AWS.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Update to latest version of All Natural and delete this.'
+    msg: [ *obsolete ]
   - name: 'All Natural - EW + NW + AWS.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Update to latest version of All Natural and delete this.'
+    msg: [ *obsolete ]
   - name: 'All Natural - Enhanced Seasons.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Update to latest version of All Natural and delete this.'
+    msg: [ *obsolete ]
   - name: 'All Natural - Debug Ring.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Update to latest version of All Natural and delete this.'
+    msg: [ *obsolete ]
   - name: 'All Natural - Weather Inside.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Update to latest version of All Natural and delete this.'
+    msg: [ *obsolete ]
   - name: 'All Natural - Optional Features.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Update to latest version of All Natural and delete this.'
+    msg: [ *obsolete ]
   - name: 'Gates To Aesgaard 2 Weather Patch.esp'
     msg:
       - type: say
@@ -2010,9 +1959,7 @@ plugins:
     tag:
       - C.Water
   - name: 'Immersive Interiors - Lights Addon.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Update to the latest version of Immersive Interiors and delete this.'
+    msg: [ *obsolete ]
   - name: 'Natural Interiors.esp'
     msg:
       - type: say
@@ -2058,9 +2005,7 @@ plugins:
     tag:
       - C.Water
   - name: 'Enhanced Water v1.5 HD.esp'
-    msg:
-      - type: say
-        content: 'Old. Update to latest version.'
+    msg: [ *obsolete ]
     tag:
       - C.Water
   - name: 'Enhanced Water v2.0 ND.esp'
@@ -2185,8 +2130,7 @@ plugins:
         condition: 'regex("Bashed Patch.*\.esp")'
   - name: 'QuietFeet Max.esp'
     msg:
-      - type: say
-        content: 'Update to v2.0, which does not require a plugin.'
+      - *obsolete
       - type: say
         content: 'Use Wrye Bash Bashed Patch tweak instead.'
         condition: 'regex("Bashed Patch.*\.esp")'
@@ -2688,9 +2632,7 @@ plugins:
     tag:
       - Graphics
   - name: 'Automagic Bags 1.1.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to V3+ and use ''Automagic Bags.esp'' instead.'
+    msg: [ *obsolete ]
   - name: 'Ayleid Coin Add-on.esp'
     msg:
       - type: say
@@ -2946,17 +2888,13 @@ plugins:
         itm: 46
         udr: 20
   - name: 'ClocksOfCyrodiilBC.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Use ''ClocksOfCyrodiil_BC_OBC_OC_OCLR_Vanilla.esp'' instead.'
     inc:
       - ClocksOfCyrodiil.esp
+    msg: [ *obsolete ]
   - name: 'ClocksOfCyrodiilOBC.esp'
-    msg:
-      - type: say
-        content: 'Use ''ClocksOfCyrodiil_BC_OBC_OC_OCLR_Vanilla.esp'' instead.'
     inc:
       - ClocksOfCyrodiil.esp
+    msg: [ *obsolete ]
   - name: 'ClocksOfCyrodiil_BC_OBC_OC_OCLR_Vanilla.esp'
     inc:
       - ClocksOfCyrodiil.esp
@@ -2965,9 +2903,7 @@ plugins:
         util: *dirtyUtil
         itm: 9
   - name: 'OCC-CoC-Patch.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Use ClocksOfCyrodiil_BC_OBC_OC_OCLR_Vanilla.esp instead.'
+    msg: [ *obsolete ]
   - name: 'Better Clocks.esp'
     dirty:
       - crc: 0xefeaa850
@@ -3040,9 +2976,7 @@ plugins:
     tag:
       - Names
   - name: 'Diverse Dungeons - Subtle Color v.1.04.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to v1.05+.'
+    msg: [ *obsolete ]
   - name: 'Energy - Bandits.esp'
     tag:
       - Delev
@@ -3173,8 +3107,7 @@ plugins:
       - type: say
         content: 'Not compatible with OOO. Already included in OOO.'
         condition: *OOOCond
-      - type: say
-        content: 'Newer version is available. Update to v99.91 or later.'
+      - *obsolete
   - name: 'Lock Bash v99.91.esp'
     msg:
       - type: say
@@ -3259,8 +3192,7 @@ plugins:
     msg:
       - type: say
         content: 'Requires: Enhanced Music & Control v0.72B (OBSE-Plugin) & SoundCommands v4.0 (OBSE-Plugin)'
-      - type: say
-        content: 'Outdated. Update to version 2+.'
+      - *obsolete
   - name: 'Mud Crabs!(_(coMbO|MMM|OOO))?\.esp'
     msg:
       - type: say
@@ -3306,9 +3238,7 @@ plugins:
   - name: 'personality_idles4.esp'
     msg: [ *doNotClean ]
   - name: 'Personality Idles 4 - Cleanned version.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to latest version.'
+    msg: [ *obsolete ]
     tag:
       - Actors.Anims
       - NoMerge
@@ -3392,9 +3322,7 @@ plugins:
       - type: say
         content: 'Don''t use with MMM/OOO/FCOM; use ''Qarls_Harvest addon_MMM/OOO'''
   - name: 'QQuix - Rock, rock, rock your ship - V2.0.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to V3+.'
+    msg: [ *obsolete ]
     dirty:
       - crc: 0x275d6c94
         util: *dirtyUtil
@@ -3563,25 +3491,15 @@ plugins:
       - type: say
         content: 'v0.9 is a testing version. Not much information on load order or any stability issues.'
   - name: 'Shield on Back RC5-Public.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Update to latest version.'
+    msg: [ *obsolete ]
   - name: 'Shield on Back 3.1.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Update to latest version.'
+    msg: [ *obsolete ]
   - name: 'ShieldOnBack_1C.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Update to latest version.'
+    msg: [ *obsolete ]
   - name: 'ShieldOnBack_GOTY_1C.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Update to latest version.'
+    msg: [ *obsolete ]
   - name: '1HweaponOnBack.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Update to latest version.'
+    msg: [ *obsolete ]
   - name: 'Shouts of the Dovahkiin.esp'
     tag:
       - Actors.Anims
@@ -3606,9 +3524,7 @@ plugins:
       - Invent
       - Relev
   - name: 'SPARTANVIsDiverseCityGuards05BETA.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to ''SPARTAN VIs Diverse City Guards v1 2.esp''.'
+    msg: [ *obsolete ]
   - name: 'SPARTAN VIs Diverse City Guards v1 2.esp'
     tag:
       - Invent
@@ -3616,9 +3532,7 @@ plugins:
     tag:
       - Invent
   - name: 'SummonChest_v2.0.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Upgrade to v2.1.'
+    msg: [ *obsolete ]
   - name: 'TeddyBackpacks.esp'
     tag:
       - Invent
@@ -3669,9 +3583,7 @@ plugins:
       - type: say
         content: 'Requires: Cobl.'
   - name: 'trfSolaris.esp'
-    msg:
-      - type: say
-        content: 'Old, update to trfjSolarisStaff.esp.'
+    msg: [ *obsolete ]
   - name: 'BetterGold Rus.esp'
     tag:
       - Graphics
@@ -3763,9 +3675,7 @@ plugins:
       - type: say
         content: 'Requires: Shivering Isles expansion.'
   - name: 'SI Living Economy.esp'
-    msg:
-      - type: warn
-        content: 'Outdated. Update to latest version.'
+    msg: [ *obsolete ]
   - name: 'Living Economy - Items.esp'
     dirty:
       - crc: 0x1f0a2ab8
@@ -3897,21 +3807,13 @@ plugins:
       - Delev
       - Relev
   - name: 'travellers a.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to ''travellers-new balance.esp''.'
+    msg: [ *obsolete ]
   - name: 'travellers b.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to ''travellers-new balance.esp''.'
+    msg: [ *obsolete ]
   - name: 'travellers c.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to ''travellers-new balance.esp''.'
+    msg: [ *obsolete ]
   - name: 'travellers d.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to ''travellers-new balance.esp''.'
+    msg: [ *obsolete ]
   - name: 'travellers-new balance Vwalk.esp'
     tag:
       - Actors.Anims
@@ -3930,9 +3832,7 @@ plugins:
       - type: say
         content: 'Incompatible with: Vampire mods.'
   - name: 'C&C&EQR.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Update to latest version.'
+    msg: [ *obsolete ]
   - name: 'C&C - The Blackwood Company.esp'
     tag:
       - C.Owner
@@ -3979,13 +3879,9 @@ plugins:
       - type: say
         content: 'Required if using any of Duke Patricks'' mods with companion mods.'
   - name: 'FormID Finder.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to version 4.'
+    msg: [ *obsolete ]
   - name: 'FormID Finder without Pluggy.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to version 4.'
+    msg: [ *obsolete ]
   - name: 'kuerteeAutoSaveAndTime.esp'
     msg:
       - type: say
@@ -4023,18 +3919,13 @@ plugins:
       - name: 'OBSE\Plugins\MenuQue.dll'
         display: '[MenuQue](http://www.nexusmods.com/oblivion/mods/32200)'
   - name: 'Streamline 2.0.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to 3.1+'
+    msg: [ *obsolete ]
   - name: 'Streamline 2.1.esp'
     msg:
-      - type: say
-        content: 'Outdated. Update to 3.1+'
+      - *obsolete
       - *masterReassign
   - name: 'Streamline 3.0.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to 3.1+'
+    msg: [ *obsolete ]
   - name: 'zzzItemGeneratingSystem.esp'
     dirty:
       - crc: 0xa08a9abe
@@ -4260,9 +4151,7 @@ plugins:
       - 'CDM-CGO Frostcrag Compatibility.esp'
     msg: [ *doNotClean ]
   - name: 'C&C&EQR - SM Plugin Refurbish - Orrery.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Update to latest version.'
+    msg: [ *obsolete ]
   - name: 'DLCVileLair.esp'
     priority: -1999000
     after:
@@ -5072,16 +4961,12 @@ plugins:
         util: *dirtyUtil
         itm: 8
   - name: 'doofdillas_potions_recolored_unsorted_v0_2_1.esp'
-    msg:
-      - type: say
-        content: 'Old, update to version 0.3.1+'
+    msg: [ *obsolete ]
     tag:
       - Graphics
       - Names
   - name: 'doofdillas_potions_recolored_sorted_v0_2_1.esp'
-    msg:
-      - type: say
-        content: 'Old, update to version 0.3.1+'
+    msg: [ *obsolete ]
     tag:
       - Graphics
       - Names
@@ -5173,13 +5058,9 @@ plugins:
         util: *dirtyUtil
         itm: 4
   - name: 'Griffon Fortress 0.3.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to version 0.5.'
+    msg: [ *obsolete ]
   - name: 'Griffon Fortress 0.4.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to version 0.5.'
+    msg: [ *obsolete ]
   - name: 'Growlfs Hot Clothes.esp'
     tag:
       - Graphics
@@ -5221,9 +5102,7 @@ plugins:
         util: *dirtyUtil
         itm: 15
   - name: 'JBlades!.esp'
-    msg:
-      - type: say
-        content: 'Update to version 1.1+.'
+    msg: [ *obsolete ]
   - name: 'JBladesVol2.esp'
     tag:
       - Relev
@@ -5264,29 +5143,17 @@ plugins:
         util: *dirtyUtil
         itm: 1
   - name: 'KohdiBladesofAnkewan Delayer.esp'
-    msg:
-      - type: say
-        content: 'Old version, update to latest version.'
+    msg: [ *obsolete ]
   - name: 'KohdiBladesofAnkewan v1.6 Delayer.esp'
-    msg:
-      - type: say
-        content: 'Versions less than 3.1 may cause the quest being patched to restart if installed after the quest has started. Update to the latest delayer if you suspect a problem.'
+    msg: [ *obsolete ]
   - name: 'KohdiArmoryofAnsephaer Delayer.esp'
-    msg:
-      - type: say
-        content: 'Old version, update to latest version.'
+    msg: [ *obsolete ]
   - name: 'KohdiArmoryofAnsephaer v1.01 Delayer.esp'
-    msg:
-      - type: say
-        content: 'Versions less than 3.1 may cause the quest being patched to restart if installed after the quest has started. Update to the latest delayer if you suspect a problem.'
+    msg: [ *obsolete ]
   - name: 'Kohdi Ankewan-Anesphar Delayer.esp'
-    msg:
-      - type: say
-        content: 'Old, update to latest version.'
+    msg: [ *obsolete ]
   - name: 'Kohdi Ankewan-Anesphar Delayer v2.esp'
-    msg:
-      - type: say
-        content: 'Depreciated.'
+    msg: [ *obsolete ]
   - name: 'Kurese Recolours.esp'
     dirty:
       - crc: 0x4355daba
@@ -5731,9 +5598,7 @@ plugins:
     tag:
       - Invent
   - name: 'Shivering Armor Variety - Test.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to the release version.'
+    msg: [ *obsolete ]
   - name: 'Shrouded Armor X.esp'
     tag:
       - Graphics
@@ -5870,13 +5735,9 @@ plugins:
         content: 'Requires: OBSE 11+.'
         condition: 'version("..\obse_loader.exe","0.11.0.0",<)'
   - name: 'Talon of Akatosh Claymore v1.1 Delayer.esp'
-    msg:
-      - type: say
-        content: 'Versions less than 3.1 may cause the quest being patched to restart if installed after the quest has started. Update to the latest delayer if you suspect a problem.'
+    msg: [ *obsolete ]
   - name: 'Talon of Akatosh Longsword v1.1 Delayer.esp'
-    msg:
-      - type: say
-        content: 'Versions less than 3.1 may cause the quest being patched to restart if installed after the quest has started. Update to the latest delayer if you suspect a problem.'
+    msg: [ *obsolete ]
   - name: 'tda_Armoury.esp'
     dirty:
       - crc: 0xe1b7e45f
@@ -5945,13 +5806,9 @@ plugins:
     tag:
       - Graphics
   - name: 'UU! Female Undies.esp'
-    msg:
-      - type: say
-        content: 'Consider upgrading to version 4.2.1+'
+    msg: [ *obsolete ]
   - name: 'UU! Female Undies NPCs.esp'
-    msg:
-      - type: say
-        content: 'Consider upgrading to version 4.2.1+'
+    msg: [ *obsolete ]
   - name: 'VA_GlamdringSword.esp'
     tag:
       - Invent
@@ -7369,20 +7226,11 @@ plugins:
         content: 'Don''t use with the FULL version of OOO, already included.'
         condition: *OOOCond
   - name: 'OOO-Ayleid Coin Add-on.esp'
-    msg:
-      - type: error
-        content: 'Delete. Update to latest version of OOO.'
-        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm") or file("FCOM_Convergence.esm")'
+    msg: [ *obsolete ]
   - name: 'OOO132RC3Hotfixes.esp'
-    msg:
-      - type: error
-        content: 'Delete. Update to latest version of OOO.'
-        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm") or file("FCOM_Convergence.esm")'
+    msg: [ *obsolete ]
   - name: 'OOO132RC3MapMarkers.esp'
-    msg:
-      - type: error
-        content: 'Delete. Update to latest version of OOO.'
-        condition: 'file("Oscuro''s_Oblivion_Overhaul.esm") or file("FCOM_Convergence.esm")'
+    msg: [ *obsolete ]
   - name: 'OOO-LightOfDawnFlamesWhenDrawnOBSE.esp'
     inc:
       - 'OOO-LightOfDawnAlwaysFlames.esp'
@@ -7582,9 +7430,7 @@ plugins:
     inc:
       - 'Oscuro''s_Oblivion_Overhaul.esm'
       - 'FCOM_Convergence.esm'
-    msg:
-      - type: say
-        content: 'Upgrade to latest version.'
+    msg: [ *obsolete ]
   - name: 'OMOBS Optional Combat Settings.esp'
     inc:
       - 'Oscuro''s_Oblivion_Overhaul.esm'
@@ -7617,9 +7463,7 @@ plugins:
         content: 'Not for OOO. Remove this and use ''ArmamentariumLL4OOO.esp'' instead.'
         condition: *OOOCond
   - name: 'C&C&EQR - OOO.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Update to latest version.'
+    msg: [ *obsolete ]
   - name: 'ArmamentariumLLVendors.esp'
     msg:
       - type: say
@@ -7696,9 +7540,7 @@ plugins:
         content: 'Included in OOO. Remove unless you want to lose OOO''s container traps, security rebalance and lock bashing features (so you can use other mods for those).'
         condition: *OOOCond
   - name: 'DEJ Harvest - Containers [Combo] v0.99.08.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Remove this and update to the latest version of Harvest[Containers].'
+    msg: [ *obsolete ]
   - name: 'Harvest[Containers] - Flat-Top Barrels Add-on.esp'
     msg:
       - type: say
@@ -7800,9 +7642,7 @@ plugins:
       - Stats
   - name: 'FCOM_ConvergenceNoFran.esp'
     msg:
-      - type: error
-        content: 'Outdated. Install FCOM version 0.9.9 or later.'
-        condition: *FCOMCond
+      - *obsolete
       - type: error
         content: 'FCOM_Convergence.esm is missing. Re-install FCOM.'
         condition: 'not file("FCOM_Convergence.esm")'
@@ -7815,17 +7655,11 @@ plugins:
         content: 'FCOM_Convergence.esm is missing. Re-install FCOM.'
         condition: 'not file("FCOM_Convergence.esm")'
   - name: 'Choices and Consequences - MMM.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Remove this and update to latest version.'
+    msg: [ *obsolete ]
   - name: 'C&C&EQR - MMM.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Remove this and update to latest version.'
+    msg: [ *obsolete ]
   - name: 'MMM - UberhulkParalyzeFix.esp'
-    msg:
-      - type: say
-        content: 'Not needed in MMM 3.6beta3+. Already integrated.'
+    msg: [ *obsolete ]
   - name: 'Mart''s Monster Mod - Diverse Runeskulls.esp'
     msg:
       - type: say
@@ -7979,9 +7813,7 @@ plugins:
         content: 'FCOM_Convergence.esm is missing. Re-install FCOM.'
         condition: 'not file("FCOM_Convergence.esm")'
   - name: 'Mart''s Monster Mod - Increased Spawn Rates.esp'
-    msg:
-      - type: error
-        content: 'Delete. Old version of MMM. Update MMM to 3.6beta3 or later.'
+    msg: [ *obsolete ]
   - name: 'Mart''s Monster Mod - Spawn Rates Increased.esp'
     msg:
       - type: warn
@@ -8006,8 +7838,7 @@ plugins:
         content: 'Use ''FCOM_SpawnRatesReduced.esp'' instead.'
   - name: 'Mart''s Monster Mod - Spawn Rates Reduced Reduced.esp'
     msg:
-      - type: say
-        content: 'Outdated. Update to MMM 3.6+.'
+      - *obsolete
       - type: say
         content: 'Consider using ''FCOM_SpawnRatesReduced.esp'', ''FCOM_SpawnRatesSlightlyReduced.esp'' or ''FCOM_SpawnRatesStronger.esp'' instead.'
   - name: 'Mart''s Monster Mod - Spawn Rates - Reduced Reduced.esp'
@@ -8023,13 +7854,9 @@ plugins:
       - type: say
         content: 'Consider using ''FCOM_SpawnRatesReduced.esp'', ''FCOM_SpawnRatesSlightlyReduced.esp'' or ''FCOM_SpawnRatesStronger.esp'' instead.'
   - name: 'Mart''s Monster Mod - More Reavers.esp'
-    msg:
-      - type: say
-        content: 'Old version. As from v3.6, integrated into of Additional Enemy NPC Vars.'
+    msg: [ *obsolete ]
   - name: 'Mart''s Monster Mod - Extra Reavers.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Remove this and update to MMM v3.6, where it is integrated into of Additional Enemy NPC Vars.'
+    msg: [ *obsolete ]
   - name: 'Mart''s Monster Mod for OOO - LessReavers.esp'
     msg:
       - type: error
@@ -8171,9 +7998,7 @@ plugins:
       - Scripts
       - Stats
   - name: 'Mart''s Monster Mod - Blood Fix v3.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Remove this and update to MMM v3.6beta3+.'
+    msg: [ *obsolete ]
   - name: 'Mart''s Monster Mod - Diverse Imperial Armor.esp'
     msg:
       - type: error
@@ -8184,12 +8009,9 @@ plugins:
       - type: error
         content: 'Not compatible with OOO. Already included in OOO.'
         condition: *OOOCond
-      - type: say
-        content: 'Outdated. Update to MMM 3.7+.'
+      - *obsolete
   - name: 'Mart''s Monster Mod - More Reaver Variants.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Integrated into ''Mart''s Monster Mod - Additional Enemy NPC Vars.esp''. Remove this and update to MMM v3.6beta3+.'
+    msg: [ *obsolete ]
   - name: 'Mart''s Monster Mod - Gems & Gem Dust.esp'
     msg:
       - type: say
@@ -8232,17 +8054,11 @@ plugins:
         content: 'Use ''Mart''s Monster Mod for OOO - NoReaversInGates.esp'' instead.'
         condition: *OOOCond
   - name: 'Mart''s Monster Mod - No Reaver Hounds.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to MMM 3.6beta3+.'
+    msg: [ *obsolete ]
   - name: 'Mart''s Monster Mod - Vindasel.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Remove this and update to 3.7b3+. Use ''Mart''s Monster Mod - Safer Quest Locations.esp'' instead.'
+    msg: [ *obsolete ]
   - name: 'Mart''s Monster Mod - Bats Addon.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Remove this and update to 3.6beta3+. Use ''Dungeons of MMM.esp'' instead.'
+    msg: [ *obsolete ]
   - name: 'Mart''s Monster Mod - City Defences.esp'
     msg:
       - type: say
@@ -8250,9 +8066,7 @@ plugins:
         condition: 'file("Better Cities Resources.esm")'
       - *doNotClean
   - name: 'Mart''s Monster Mod - Friendlier Factions OOO+FCOM.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Remove this and update to 3.7b3+. Use ''Mart''s Monster Mod - Friendlier Factions OOO.esp'' instead.'
+    msg: [ *obsolete ]
   - name: 'MrSiika''sFarmAnimals.esp'
     msg:
       - type: say
@@ -8278,13 +8092,9 @@ plugins:
       - type: say
         content: 'MMM users should use ''VASE - Cyrodiil for MMM.esp'' instead.'
   - name: 'Mart''s Monster Mod - Boar''s Addon.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to MMM 3.7b3+.'
+    msg: [ *obsolete ]
   - name: 'Mart''s Monster Mod - Hairy Spiders Addon.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to MMM 3.7b3+.'
+    msg: [ *obsolete ]
   - name: 'Mart''s Monster Mod - Slof Horses Complete.esp'
     msg:
       - type: say
@@ -8360,9 +8170,7 @@ plugins:
     tag:
       - Stats
   - name: 'Spiders Addon.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Remove this and update to MMM 3.7b1+.'
+    msg: [ *obsolete ]
   - name: 'Arachnophobia-2343.esp'
     tag:
       - Delev
@@ -8389,9 +8197,7 @@ plugins:
       - type: say
         content: 'Needs patch: Master-Crafting-1.1-MMM Greaves fix.esp'
   - name: 'Choices and Consequences - MMM - Looting NPCs & Creatures.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Remove this and update to latest version.'
+    msg: [ *obsolete ]
   - name: 'OWC - Seaworld.esp'
     dirty:
       - crc: 0xa9894cf0
@@ -8558,9 +8364,7 @@ plugins:
       - Invent
       - Scripts
   - name: 'Choices and Consequences - FCOM - Diverse Guards.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Update to latest version and remove.'
+    msg: [ *obsolete ]
   - name: 'FCOM_HungersUnitySI.esp'
     msg:
       - type: say
@@ -8635,10 +8439,7 @@ plugins:
       - NoMerge
       - Relations
   - name: 'FCOM_VanillaItemReleveler.esp'
-    msg:
-      - type: error
-        content: 'Delete. Outdated. Update to FCOM v0.9.9 or later.'
-        condition: *FCOMCond
+    msg: [ *obsolete ]
   - name: 'Cobl Patch - MMM Gems and Gem Dust.esp'
     tag:
       - Delev
@@ -8749,9 +8550,7 @@ plugins:
     tag:
       - Graphics
   - name: 'Brasher''s Oblivion Overhaul.esp'
-    msg:
-      - type: warn
-        content: 'Obsolete. Upgrade to the latest version of David Brasher''s Oblivion Overhaul and remove this plugin.'
+    msg: [ *obsolete ]
     tag:
       - Delev
       - Relev
@@ -8783,9 +8582,7 @@ plugins:
     tag:
       - Names
   - name: 'Choices and Consequences - FCOM.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Update to latest version and remove.'
+    msg: [ *obsolete ]
   - name: 'Dangerous_Overhaul_v0.2.esp'
     tag:
       - Relev
@@ -9382,9 +9179,7 @@ plugins:
   - name: 'Morrowind_ob.esp'
     msg: [ *doNotClean ]
   - name: 'Morroblivion_Chargen_And_Transport_Mod_v6.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Upgrade to version 7+'
+    msg: [ *obsolete ]
   - name: 'Morroblivion item rebalance.esp'
     tag:
       - Stats
@@ -9636,25 +9431,15 @@ plugins:
       - type: say
         content: 'Newest version has the same name as the original. Check that you''re using at least v1.5.2.'
   - name: 'AdenseEpicDungeon1_1.esp'
-    msg:
-      - type: say
-        content: 'Old, update to latest version (plugin name is AdenseEpicDungeon).'
+    msg: [ *obsolete ]
   - name: 'AdenseEpicDungeon1_2.esp'
-    msg:
-      - type: say
-        content: 'Old, update to latest version (plugin name is AdenseEpicDungeon).'
+    msg: [ *obsolete ]
   - name: 'AdenseEpicDungeon1_3.esp'
-    msg:
-      - type: say
-        content: 'Old, update to latest version (plugin name is AdenseEpicDungeon).'
+    msg: [ *obsolete ]
   - name: 'AdenseEpicDungeon1_4.esp'
-    msg:
-      - type: say
-        content: 'Old, update to latest version (plugin name is AdenseEpicDungeon).'
+    msg: [ *obsolete ]
   - name: 'AdenseEpicDungeon1_5.esp'
-    msg:
-      - type: say
-        content: 'Old, update to latest version (plugin name is AdenseEpicDungeon).'
+    msg: [ *obsolete ]
   - name: 'Aetheric Cuteblade.esp'
     dirty:
       - crc: 0x2ab190d0
@@ -9744,9 +9529,7 @@ plugins:
         itm: 9
         udr: 18
   - name: 'All New House.esp'
-    msg:
-      - type: say
-        content: 'Old, update to latest version (which is called Vaernlor Manor).'
+    msg: [ *obsolete ]
   - name: 'adTreeHome.esp'
     dirty:
       - crc: 0xedf06e4d
@@ -9893,9 +9676,7 @@ plugins:
       - type: say
         content: 'Requires: Shivering Isles'
   - name: 'ArchersLodge.esp'
-    msg:
-      - type: say
-        content: 'Update to version 1.1.'
+    msg: [ *obsolete ]
   - name: 'ArchersLodge1.1.esp'
     dirty:
       - crc: 0x208c0818
@@ -9960,13 +9741,9 @@ plugins:
       - Graphics
       - NoMerge
   - name: 'ArtifactsforArmaComplete.esp'
-    msg:
-      - type: say
-        content: 'Obselete. Use Artifacts-ArmaCompleteAddon.esp instead'
+    msg: [ *obsolete ]
   - name: 'Artifacts for ArmaComplete.esp'
-    msg:
-      - type: say
-        content: 'Obselete. Use Artifacts-ArmaCompleteAddon.esp instead'
+    msg: [ *obsolete ]
   - name: 'dmra_bbb_artifacts.esp'
     tag:
       - Graphics
@@ -10335,13 +10112,9 @@ plugins:
         itm: 13
         udr: 2
   - name: 'CaveOfWishcraft 1_1.esp'
-    msg:
-      - type: say
-        content: 'Update to latest version (named ''Cave Of Wishcraft.esp'').'
+    msg: [ *obsolete ]
   - name: 'CaveOfWishcraft v1.1 Delayer.esp'
-    msg:
-      - type: say
-        content: 'Versions less than 3.1 may cause the quest being patched to restart if installed after the quest has started. Update to the latest delayer if you suspect a problem.'
+    msg: [ *obsolete ]
   - name: 'CottageInColoviaV1.6.esp'
     msg:
       - type: say
@@ -10353,9 +10126,7 @@ plugins:
         itm: 3
         udr: 86
   - name: 'Castle.bedwyr 0.9.1.esp'
-    msg:
-      - type: say
-        content: 'Old, update to v 1.0.0+.'
+    msg: [ *obsolete ]
   - name: 'CastleInTheMountain.esp'
     tag:
       - Invent
@@ -10472,8 +10243,7 @@ plugins:
         condition: 'file("Better Cities Resources.esm")'
   - name: 'Clintmichs Beautiful Elven Gardens District v1.0.esp'
     msg:
-      - type: say
-        content: 'Outdated. Update to v1.1+.'
+      - *obsolete
       - type: say
         content: 'Probably incompatible with Better Cities.'
         condition: 'file("Better Cities Resources.esm")'
@@ -10527,9 +10297,7 @@ plugins:
         itm: 50
         udr: 892
   - name: 'CyrilliansStaff v1.0 Delayer.esp'
-    msg:
-      - type: say
-        content: 'Versions less than 3.1 may cause the quest being patched to restart if installed after the quest has started. Update to the latest delayer if you suspect a problem.'
+    msg: [ *obsolete ]
   - name: 'Daedric Armor of Darkness.esp'
     dirty:
       - crc: 0xe17a73ea
@@ -10555,13 +10323,9 @@ plugins:
       - type: say
         content: 'Incompatible with: Apachii''s Goddess Store.'
   - name: 'Dark Brotherhood Outpost v2.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to latest version.'
+    msg: [ *obsolete ]
   - name: 'Dark Brotherhood Outpost v3.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to latest version.'
+    msg: [ *obsolete ]
   - name: 'DarkQuest.esp'
     dirty:
       - crc: 0x74e5f1c3
@@ -10625,13 +10389,9 @@ plugins:
         itm: 2265
         udr: 45
   - name: 'Demonhunter Delayer.esp'
-    msg:
-      - type: say
-        content: 'Old version.'
+    msg: [ *obsolete ]
   - name: 'Demonhunter v1.01 Delayer.esp'
-    msg:
-      - type: say
-        content: 'Versions less than 3.1 may cause the quest being patched to restart if installed after the quest has started. Update to the latest delayer if you suspect a problem.'
+    msg: [ *obsolete ]
   - name: 'DibellaTempleWillowLakeVillagev1.esp'
     dirty:
       - crc: 0xc19a0b4e
@@ -10665,8 +10425,7 @@ plugins:
     msg:
       - type: say
         content: 'Must deactivate delivery_job.esp if using it. This ESP replaces that file.'
-      - type: say
-        content: 'Obsolete: Now integrated with Better Cities 4.6+. Update and delete this plugin.'
+      - *obsolete
   - name: 'DJ Markov Manor.esp'
     dirty:
       - crc: 0x6cb134c6
@@ -10712,9 +10471,7 @@ plugins:
       - type: say
         content: 'Be sure to update to version 2.0. Version 1.x could break the Dark Brotherhood quest line.'
   - name: 'DSPirateIsleBeta.esp'
-    msg:
-      - type: say
-        content: 'Old, updated to latest version.'
+    msg: [ *obsolete ]
   - name: 'Dwarven Mines.esp'
     dirty:
       - crc: 0x16e9e81e
@@ -10828,9 +10585,7 @@ plugins:
         itm: 4430
         udr: 1
   - name: 'FiveBlindMiceBeta.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Upgrade to version 1.3+. Earlier versions have serious bugs that break vanilla dungeon triggers among other things.'
+    msg: [ *obsolete ]
   - name: 'Forgotten Tomb.esp'
     dirty:
       - crc: 0x39276ec4
@@ -10879,13 +10634,9 @@ plugins:
         util: *dirtyUtil
         udr: 3
   - name: 'Gift of Kynareth_delayer.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to the latest version of the delayer.'
+    msg: [ *obsolete ]
   - name: 'Gift of Kynareth v2.1 Delayer.esp'
-    msg:
-      - type: say
-        content: 'Versions less than 3.1 may cause the quest being patched to restart if installed after the quest has started. Update to the latest delayer if you suspect a problem.'
+    msg: [ *obsolete ]
   - name: 'Giskards Tales From the Tomb.esp'
     dirty:
       - crc: 0x90f0f66
@@ -10942,15 +10693,11 @@ plugins:
       - Actors.Anims
       - NoMerge
   - name: 'HauntedHouse v1.3.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to version 1.5.'
+    msg: [ *obsolete ]
     tag:
       - Invent
   - name: 'HauntedHouse v1.4.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to version 1.5.'
+    msg: [ *obsolete ]
     tag:
       - Invent
   - name: 'Haunted_House_v1.5.esp'
@@ -10962,9 +10709,7 @@ plugins:
         itm: 13
         udr: 5
   - name: 'Haunted_House_v1.5 Delayer.esp'
-    msg:
-      - type: say
-        content: 'Versions less than 3.1 may cause the quest being patched to restart if installed after the quest has started. Update to the latest delayer if you suspect a problem.'
+    msg: [ *obsolete ]
   - name: 'HauntedLairMod.esp'
     dirty:
       - crc: 0x4b7fb9b4
@@ -11385,9 +11130,7 @@ plugins:
         util: *dirtyUtil
         itm: 6
   - name: 'Jade_Manor V1.26.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to v1.3+.'
+    msg: [ *obsolete ]
   - name: 'kingdomofAlmar.esp'
     req:
       - name: 'kingdomofAlamar_OOO.esp'
@@ -11418,8 +11161,7 @@ plugins:
         itm: 2
   - name: '300_White Stallion+SB23.esp'
     msg:
-      - type: say
-        content: 'Outdated. Update to v4+.'
+      - *obsolete
       - type: say
         content: 'Compatible with MD_SaddleBags Lite.'
   - name: '300_White Stallion 4.esp'
@@ -11475,9 +11217,7 @@ plugins:
     req:
       - 'FCOM_Convergence.esm'
   - name: 'All Natural - Kvatch Rebuilt Weather Patch.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Remove this and install the ''Kvatch Rebuilt Weather Patch.esp'' included in All Natural v0.9.4+.'
+    msg: [ *obsolete ]
   - name: 'Kvatch Rebuilt Rwalk.esp'
     msg:
       - type: say
@@ -11520,13 +11260,9 @@ plugins:
         util: *dirtyUtil
         udr: 277
   - name: 'Eiamod_delayer.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to latest version.'
+    msg: [ *obsolete ]
   - name: 'EiAmod v1.2 Delayer.esp'
-    msg:
-      - type: say
-        content: 'Versions less than 3.1 may cause the quest being patched to restart if installed after the quest has started. Update to the latest delayer if you suspect a problem.'
+    msg: [ *obsolete ]
   - name: 'EiAmod Vwalk.esp'
     tag:
       - Actors.Anims
@@ -11689,9 +11425,7 @@ plugins:
         itm: 2
         udr: 1
   - name: 'Lycanmoon.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to version 1.6+.'
+    msg: [ *obsolete ]
   - name: 'Lycanthrope.esp'
     msg:
       - type: say
@@ -11763,9 +11497,7 @@ plugins:
         itm: 138
         udr: 229
   - name: 'Mag1cWind0w_The_Imperial_Water.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to v1.2+.'
+    msg: [ *obsolete ]
   - name: 'The Imperial Water.esp'
     msg:
       - type: say
@@ -11814,13 +11546,9 @@ plugins:
       - type: say
         content: 'Border region restrictions must be turned off: change bBorderRegionsEnabled to 0 in Oblivion.ini or use Wrye Bash bashed patch tweak.'
   - name: 'MountainShackR12.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to R13+.'
+    msg: [ *obsolete ]
   - name: 'MountainShackR121.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to R13+.'
+    msg: [ *obsolete ]
   - name: 'mrSiikas_ImperialCathedral.esp'
     msg:
       - type: say
@@ -12005,13 +11733,11 @@ plugins:
         udr: 27
   - name: 'NNWARE2.esp'
     msg:
-      - type: say
-        content: 'Obsolete. Upgrade to the latest version and delete this.'
+      - *obsolete
       - *needsCleaning
   - name: 'NNWARE Series 1.esp'
     msg:
-      - type: say
-        content: 'Obsolete. Upgrade to the latest version and delete this.'
+      - *obsolete
       - *needsCleaning
   - name: 'NNWAREAyleidDungeons_Series1EV.esp'
     dirty:
@@ -12020,45 +11746,25 @@ plugins:
         itm: 20
         udr: 11
   - name: 'NNWARE01EV-Sercen.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Update to series 2+.'
+    msg: [ *obsolete ]
   - name: 'NNWARE02EV-Trumbe.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Update to series 2+.'
+    msg: [ *obsolete ]
   - name: 'NNWARE03EV-Piukanda.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Update to series 2+.'
+    msg: [ *obsolete ]
   - name: 'NNWARE04EV-Veyond.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Update to series 2+.'
+    msg: [ *obsolete ]
   - name: 'NNWARE05EV-Bawn.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Update to series 2+.'
+    msg: [ *obsolete ]
   - name: 'NNWARE01-Sercen.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Update to series 2+.'
+    msg: [ *obsolete ]
   - name: 'NNWARE02-Trumbe.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Update to series 2+.'
+    msg: [ *obsolete ]
   - name: 'NNWARE03-Piukanda.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Update to series 2+.'
+    msg: [ *obsolete ]
   - name: 'NNWARE04-Veyond.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Update to series 2+.'
+    msg: [ *obsolete ]
   - name: 'NNWARE05-Bawn.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Update to series 2+.'
+    msg: [ *obsolete ]
   - name: 'GTAesgaard.esp'
     dirty:
       - crc: 0x7d7ea42e
@@ -12079,21 +11785,13 @@ plugins:
         itm: 13
         udr: 12
   - name: 'GTAesgaard I v1.2 Delayer.esp'
-    msg:
-      - type: say
-        content: 'Versions less than 3.1 may cause the quest being patched to restart if installed after the quest has started. Update to the latest delayer if you suspect a problem.'
+    msg: [ *obsolete ]
   - name: 'GTAesgaard II v1.1 Delayer.esp'
-    msg:
-      - type: say
-        content: 'Versions less than 3.1 may cause the quest being patched to restart if installed after the quest has started. Update to the latest delayer if you suspect a problem.'
+    msg: [ *obsolete ]
   - name: 'GTAesgaard 1and2 Delayer.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to the latest version of the delayer.'
+    msg: [ *obsolete ]
   - name: 'GTAesgaard I-II Delayer.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Remove this.'
+    msg: [ *obsolete ]
   - name: 'OgramiradsUnmarkedPlaces.esp'
     msg:
       - type: say
@@ -12109,9 +11807,7 @@ plugins:
         util: *dirtyUtil
         itm: 3
   - name: 'Order of the Virtuous Blood Expanded v0.1.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to ''Order of the Virtuous Blood Expanded v0.3.esp''.'
+    msg: [ *obsolete ]
   - name: 'ThePaleAdventurer.esp'
     dirty:
       - crc: 0x29220aef
@@ -12138,13 +11834,9 @@ plugins:
         itm: 26
         udr: 7
   - name: 'Pats Business Mod---Shop Version 1.6.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to version 2.1+.'
+    msg: [ *obsolete ]
   - name: 'Pats Business Mod---Shop Version 2.0.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to version 2.1+.'
+    msg: [ *obsolete ]
   - name: 'Pats Business Mod.esp'
     msg:
       - type: say
@@ -12165,9 +11857,7 @@ plugins:
         util: *dirtyUtil
         itm: 2
   - name: 'Pine Lodge.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to version 2+.'
+    msg: [ *obsolete ]
   - name: 'Potion Of the Gods.esp'
     msg:
       - type: say
@@ -12390,9 +12080,7 @@ plugins:
         util: *dirtyUtil
         itm: 1432
   - name: 'SenTineL''s Legendary Weapons And Armors 1.0.esp'
-    msg:
-      - type: say
-        content: 'Update to latest version, latest version doesn''t have version number in name.'
+    msg: [ *obsolete ]
   - name: 'SenTineL''s Legendary Weapons And Armors_[AC][EU]\.esp'
     msg:
       - type: say
@@ -12531,9 +12219,7 @@ plugins:
         itm: 31
         udr: 1
   - name: 'Steve - Hitman (Patched) Delayer.esp'
-    msg:
-      - type: say
-        content: 'Versions less than 3.1 may cause the quest being patched to restart if installed after the quest has started. Update to the latest delayer if you suspect a problem.'
+    msg: [ *obsolete ]
   - name: 'stWorldMonsters.esp'
     msg: [ *needsCleaning ]
   - name: 'SunderedKeep.esp'
@@ -12550,9 +12236,7 @@ plugins:
       - Actors.Anims
       - NoMerge
   - name: 'Sylar_INNMergedCyrodillInnsRevisedV1.1.esp'
-    msg:
-      - type: say
-        content: 'Outdated - Update to latest version of Inns Revised in Cyrodiil.'
+    msg: [ *obsolete ]
   - name: 'Sylar_INNMergedCyrodillInnsRevisedV1.1 vwalk.esp'
     msg:
       - type: say
@@ -12592,9 +12276,7 @@ plugins:
       - Actors.Anims
       - NoMerge
   - name: 'Tantrivaylia v0.99a Delayer.esp'
-    msg:
-      - type: say
-        content: 'Versions less than 3.1 may cause the quest being patched to restart if installed after the quest has started. Update to the latest delayer if you suspect a problem.'
+    msg: [ *obsolete ]
   - name: 'Taverners Vwalk.esp'
     tag:
       - Actors.Anims
@@ -12687,13 +12369,9 @@ plugins:
         itm: 12
         udr: 6
   - name: 'Temple_Of_Zealots.esp'
-    msg:
-      - type: say
-        content: 'Check out version 2'
+    msg: [ *obsolete ]
   - name: 'TempleOfZealots.esp'
-    msg:
-      - type: say
-        content: 'Check out version 2'
+    msg: [ *obsolete ]
   - name: 'The Ayleid Steps.esp'
     dirty:
       - crc: 0x6669b5b6
@@ -12794,9 +12472,7 @@ plugins:
         content: 'road+bridges.esp has been detected. New Roads & Bridges Revised and all dependent patches must be uninstalled before using Roads of Cyrodiil. See Roads of Cyrodiil readme for upgrade instructions.'
         condition: 'file("road+bridges.esp")'
   - name: 'TheForgottenShields v1.1 Delayer.esp'
-    msg:
-      - type: say
-        content: 'Versions less than 3.1 may cause the quest being patched to restart if installed after the quest has started. Update to the latest delayer if you suspect a problem.'
+    msg: [ *obsolete ]
   - name: 'Thermae.esp'
     dirty:
       - crc: 0xaad7ec09
@@ -12804,9 +12480,7 @@ plugins:
         itm: 21
         udr: 39
   - name: '__thermae_CustomVisitor.esp'
-    msg:
-      - type: say
-        content: 'Old, update to latest version.'
+    msg: [ *obsolete ]
   - name: 'TheRunesOfThu''um.esp'
     dirty:
       - crc: 0x5277c565
@@ -12931,9 +12605,7 @@ plugins:
     tag:
       - Relev
   - name: 'TR_Stirk_v0.9.esp'
-    msg:
-      - type: say
-        content: 'Obsolete beta. Need to update to released version.'
+    msg: [ *obsolete ]
   - name: 'TR_Stirk.esp'
     tag:
       - Graphics
@@ -13165,15 +12837,13 @@ plugins:
       - type: say
         content: 'Incompatible with Better Cities.'
         condition: 'file("Better Cities Resources.esm")'
-      - type: say
-        content: 'Outdated. Update to V2+.'
+      - *obsolete
   - name: 'Vypers Arrow Spells.esp'
     msg:
       - type: say
         content: 'Incompatible with Better Cities.'
         condition: 'file("Better Cities Resources.esm")'
-      - type: say
-        content: 'Outdated. Update to V2+.'
+      - *obsolete
   - name: 'Watchtower.esp'
     dirty:
       - crc: 0x11d3867a
@@ -13197,9 +12867,7 @@ plugins:
         itm: 24
         udr: 21
   - name: 'WeaponsOfTheNine v2.3 Delayer.esp'
-    msg:
-      - type: say
-        content: 'Versions less than 3.1 may cause the quest being patched to restart if installed after the quest has started. Update to the latest delayer if you suspect a problem.'
+    msg: [ *obsolete ]
   - name: 'WellspringGrove.esp'
     dirty:
       - crc: 0xc08abbfe
@@ -13228,17 +12896,11 @@ plugins:
         itm: 2
         udr: 3
   - name: 'Woodsman Home.esp'
-    msg:
-      - type: say
-        content: 'Outdated.  Delete and replace with Woodsman Home_1_2.esp.'
+    msg: [ *obsolete ]
   - name: 'WOTFH_1.1.esp'
-    msg:
-      - type: say
-        content: 'Old Version, update to version 1.3+'
+    msg: [ *obsolete ]
   - name: 'WOTFH_1.2.esp'
-    msg:
-      - type: say
-        content: 'Old Version, update to version 1.3+'
+    msg: [ *obsolete ]
   - name: 'WOTFH_1.3.esp'
     dirty:
       - crc: 0x76708a3d
@@ -13260,9 +12922,7 @@ plugins:
         itm: 91
         udr: 10
   - name: 'Cyrodill Travel Services.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Update to latest version, then delete this file. It was a typo.'
+    msg: [ *obsolete ]
   - name: 'Cyrodiil Travel Services Vwalk.esp'
     tag:
       - Actors.Anims
@@ -13354,9 +13014,7 @@ plugins:
       - type: say
         content: 'Requires: JQ Fighters Guild United.'
   - name: 'Arena_BattlesV1.1.esp'
-    msg:
-      - type: say
-        content: 'Old, update to version 1.2+.'
+    msg: [ *obsolete ]
     tag:
       - Relations
   - name: 'Arena_BattlesV1.2.esp'
@@ -13558,9 +13216,7 @@ plugins:
       - "-C.Climate"
       - "-C.Light"
   - name: 'DLCFrostcrag Reborn.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Upgrade to the latest version of Frostcrag Reborn De-Isolated.'
+    msg: [ *obsolete ]
   - name: 'DLCFrostcragReborn.esp'
     msg:
       - type: say
@@ -13626,21 +13282,15 @@ plugins:
     tag:
       - Graphics
   - name: 'Ulrim''s Horses - LegionArmor.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Check for newer version.'
+    msg: [ *obsolete ]
     tag:
       - Graphics
   - name: 'Ulrim''s Horses - OOO+LegionArmor.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Check for newer version.'
+    msg: [ *obsolete ]
     tag:
       - Graphics
   - name: 'Ulrim''s Horses for OOO.esp'
-    msg:
-      - type: say
-        content: 'Check for newer version.'
+    msg: [ *obsolete ]
     tag:
       - Graphics
   - name: 'Ulrim''s Horses.esp'
@@ -14017,15 +13667,13 @@ plugins:
         content: 'Works with RTT 3.0 only.'
   - name: 'Ruin.esp'
     msg:
-      - type: say
-        content: 'Update to latest version of Ruined Tail''s Tale.'
+      - *obsolete
       - *needsCleaning
   - name: 'OCC-RTT-Patch.esp'
     msg:
       - type: say
         content: 'Works with RTT v2.5 only.'
-      - type: say
-        content: 'Update to latest version of Ruined Tail''s Tale.'
+      - *obsolete
   - name: 'RTT Vwalk.esp'
     tag:
       - Actors.Anims
@@ -14137,13 +13785,9 @@ plugins:
         itm: 163
         udr: 433
   - name: 'The Lost Spires_delayer.esp'
-    msg:
-      - type: say
-        content: 'Old Version.'
+    msg: [ *obsolete ]
   - name: 'The Lost Spires v14 Delayer.esp'
-    msg:
-      - type: say
-        content: 'Versions less than 3.1 may cause the quest being patched to restart if installed after the quest has started. Update to the latest delayer if you suspect a problem.'
+    msg: [ *obsolete ]
   - name: 'The Lost Spires Vwalk.esp'
     tag:
       - Actors.Anims
@@ -14209,9 +13853,7 @@ plugins:
         util: *dirtyUtil
         udr: 1
   - name: 'HoarfrostCastle v1.2.2 Delayer.esp'
-    msg:
-      - type: say
-        content: 'Versions less than 3.1 may cause the quest being patched to restart if installed after the quest has started. Update to the latest delayer if you suspect a problem.'
+    msg: [ *obsolete ]
   - name: 'HoarfrostCastle Vwalk.esp'
     tag:
       - Actors.Anims
@@ -14469,9 +14111,7 @@ plugins:
         itm: 48
         udr: 32
   - name: 'ElsweyrC&CBlackwoodPatch.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Update to latest version and remove.'
+    msg: [ *obsolete ]
   - name: 'Enhanced Weather - Elsweyr Anequina Patch.esp'
     msg:
       - type: warn
@@ -14649,14 +14289,12 @@ plugins:
       - NoMerge
   - name: 'MTCThievesGrotto.esp'
     msg:
-      - type: say
-        content: 'Update to v4.1.'
+      - *obsolete
       - type: say
         content: 'Use ''ThievesGrotto-ColovianHighlands patch.esp'' if using UL Colovian Highlands.'
   - name: 'MTCThievesGrottoV4.esp'
     msg:
-      - type: say
-        content: 'Update to v4.1.'
+      - *obsolete
       - type: say
         content: 'Use ''ThievesGrotto-ColovianHighlands patch.esp'' if using UL Colovian Highlands.'
   - name: 'MTCThievesGrottoV4.1.esp'
@@ -14712,15 +14350,12 @@ plugins:
         content: 'only use with Open Cities'
         condition: 'not regex("Open Cities.*\.esp")'
   - name: 'HeartOftheDeadv6.3 Delayer.esp'
-    msg:
-      - type: say
-        content: 'Old Version.Update to ''HeartOfTheDeadv6.5 Delayer.esp'' (fine even if using HoTD 6.3/6.4).'
+    msg: [ *obsolete ]
   - name: 'HeartOfTheDeadv6.5 Delayer.esp'
     msg:
       - type: say
         content: 'Fine with HoTD V6.3-6.5.'
-      - type: say
-        content: 'Versions less than 3.1 may cause the quest being patched to restart if installed after the quest has started. Update to the latest delayer if you suspect a problem.'
+      - *obsolete
   - name: 'Dschinni.esp'
     msg:
       - type: say
@@ -14980,8 +14615,7 @@ plugins:
     msg:
       - type: say
         content: 'Incompatible with: Heart of the Dead.'
-      - type: say
-        content: 'Update to latest version (9+), esp renamed.'
+      - *obsolete
   - name: 'Reaper''s Coldstone Town Vwalk.esp'
     tag:
       - Actors.Anims
@@ -15144,9 +14778,7 @@ plugins:
       - C.Music
       - C.Water
   - name: 'xulBrenaRiverRavine02.esp'
-    msg:
-      - type: say
-        content: 'Obsolete beta. Need to update to released version, then delete this.'
+    msg: [ *obsolete ]
   - name: 'TheNecromancer-StendarrValley patch.esp'
     msg:
       - type: say
@@ -15184,9 +14816,7 @@ plugins:
         itm: 12
         udr: 1319
   - name: 'ULFallenLeafEverglade.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Update to latest version, then delete.'
+    msg: [ *obsolete ]
   - name: 'xulFallenleafEverglade.esp'
     dirty:
       - crc: 0xe17d276d
@@ -15236,13 +14866,9 @@ plugins:
       - Actors.Anims
       - NoMerge
   - name: 'VeronaHouseBloodlines-ChorrolHinterland fix.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Delete.'
+    msg: [ *obsolete ]
   - name: 'MOEVampireClanRaelu-ChorrolHinterland patch.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Delete.'
+    msg: [ *obsolete ]
   - name: 'WAC-ULchorrolhinterland-patch.esp'
     dirty:
       - crc: 0xd31bdfef
@@ -15261,13 +14887,9 @@ plugins:
       - type: say
         content: 'Obsolete. Update to the latest UL:Lost Coast.'
   - name: 'UL_BOC_LostCoast_1.0.esp'
-    msg:
-      - type: say
-        content: 'Old version. Update to UL:Lost Coast 1.6.3 or higher.'
+    msg: [ *obsolete ]
   - name: 'uniquelandscapes_beachesofcyrodiil_1.4.1.esp'
-    msg:
-      - type: say
-        content: 'Old version. Update to UL:Lost Coast 1.6.3 or higher.'
+    msg: [ *obsolete ]
   - name: 'VeronaHouseBloodlines-LostCoast fix.esp'
     msg:
       - type: say
@@ -15554,9 +15176,7 @@ plugins:
         util: *dirtyUtil
         udr: 7847
   - name: 'ValleyViewEstate-RiverEthe patch.esp'
-    msg:
-      - type: say
-        content: 'Update patch version to 1.1.1.'
+    msg: [ *obsolete ]
   - name: 'WestRoads-RiverEthe patch.esp'
     msg:
       - type: say
@@ -15696,13 +15316,9 @@ plugins:
         content: 'road+bridges.esp has been detected. New Roads & Bridges Revised and all dependent patches must be uninstalled before using Roads of Cyrodiil. See Roads of Cyrodiil readme for upgrade instructions.'
         condition: 'file("road+bridges.esp")'
   - name: 'ULII-Roads-Patch.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Patch needs to be updated, then delete this file.'
+    msg: [ *obsolete ]
   - name: 'LtPD+NRB4+UL-II Patch.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Patch needs to be updated, then delete this file.'
+    msg: [ *obsolete ]
   - name: 'xul Rwalk Full.esp'
     msg:
       - type: say
@@ -15800,26 +15416,19 @@ plugins:
         util: *dirtyUtil
         itm: 3
   - name: 'CSV_Farms_Road_Open_Cities.esp'
-    msg:
-      - type: say
-        content: 'Obselete, update to latest version.'
+    msg: [ *obsolete ]
   - name: 'CSV_Farms_Road_Vanilla.esp'
     msg:
-      - type: say
-        content: 'Obselete, update to latest version.'
+      - *obsolete
       - type: say
         content: 'Use only one road record file.'
     tag:
       - Deactivate
       - Roads
   - name: 'CSV_Farms_Better_Cities.esp'
-    msg:
-      - type: say
-        content: 'Obselete, update to latest version.'
+    msg: [ *obsolete ]
   - name: 'Castle_Seaview v1.1 Delayer.esp'
-    msg:
-      - type: say
-        content: 'Versions less than 3.1 may cause the quest being patched to restart if installed after the quest has started. Update to the latest delayer if you suspect a problem.'
+    msg: [ *obsolete ]
   - name: 'CastleSeaview+LostCoast Patch.esp'
     inc:
       - 'EaglesRest+LostCoast+CastleSeaview Patch.esp'
@@ -15952,8 +15561,7 @@ plugins:
         content: 'Outdated. Update the affected UL mods and then delete this patch.'
   - name: 'Imperial City Waterfront Tunnel Entrance v2.1.esp'
     msg:
-      - type: say
-        content: 'Update to v3.0 or later.'
+      - *obsolete
       - type: say
         content: 'Incompatible with: Better Cities. Already included in Better Cities IC plugins.'
         condition: 'file("Better Cities Resources.esm")'
@@ -16019,13 +15627,9 @@ plugins:
     tag:
       - Sound
   - name: 'Duke Patricks Street Performer.esp'
-    msg:
-      - type: say
-        content: 'Old. Update to latest version.'
+    msg: [ *obsolete ]
   - name: 'Duke Patricks Dont Be A Soch.esp'
-    msg:
-      - type: say
-        content: 'Old. Update to latest version.'
+    msg: [ *obsolete ]
   - name: 'Duke Patrick''s Health Alarm.esp'
     msg:
       - type: say
@@ -16076,9 +15680,7 @@ plugins:
     tag:
       - Sound
   - name: 'Duke Patricks The Lady said NO.esp'
-    msg:
-      - type: say
-        content: 'Old. Update to latest version.'
+    msg: [ *obsolete ]
   - name: 'SPD-SailableRivers.esp'
     msg:
       - type: say
@@ -16161,9 +15763,7 @@ plugins:
       - type: say
         content: 'Incompatible with: UL Cheydinhal Falls.'
   - name: 'Open Cities.esp'
-    msg:
-      - type: say
-        content: 'Obsolete, unsupported. Please update to version 3.0+.'
+    msg: [ *obsolete ]
   - name: 'Open Cities + Cats & Rats.esp'
     msg:
       - type: say
@@ -16187,52 +15787,32 @@ plugins:
       - name: 'Bartholm.esp'
         display: '[Bartholm](http://www.nexusmods.com/oblivion/mods/5022)'
   - name: 'Open Cities Anvil.esp'
-    msg:
-      - type: say
-        content: 'Obsolete, unsupported. Please update to version 4.0+.'
+    msg: [ *obsolete ]
   - name: 'Open Cities Bravil.esp'
-    msg:
-      - type: say
-        content: 'Obsolete, unsupported. Please update to version 4.0+.'
+    msg: [ *obsolete ]
   - name: 'Open Cities Bravil Blood&Mud.esp'
     req:
       - name: 'Blood&Mud.esp'
         display: '[Bravil Blood & Mud](http://www.nexusmods.com/oblivion/mods/12016)'
-    msg:
-      - type: say
-        content: 'Obsolete, unsupported. Please update to version 4.0+.'
+    msg: [ *obsolete ]
   - name: 'Open Cities Bruma.esp'
-    msg:
-      - type: say
-        content: 'Obsolete, unsupported. Please update to version 4.0+.'
+    msg: [ *obsolete ]
   - name: 'Open Cities Cheydinhal.esp'
-    msg:
-      - type: say
-        content: 'Obsolete, unsupported. Please update to version 4.0+.'
+    msg: [ *obsolete ]
   - name: 'Open Cities Chorrol.esp'
-    msg:
-      - type: say
-        content: 'Obsolete, unsupported. Please update to version 4.0+.'
+    msg: [ *obsolete ]
   - name: 'Open Cities Leyawiin.esp'
-    msg:
-      - type: say
-        content: 'Obsolete, unsupported. Please update to version 4.0+.'
+    msg: [ *obsolete ]
   - name: 'Open Cities Leyawiin Reborn.esp'
     msg:
       - type: say
         content: 'Obsolete. Upgrade to Open Cities Reborn, and follow the readme for proper instructions.'
   - name: 'Open Cities Skingrad.esp'
-    msg:
-      - type: say
-        content: 'Obsolete, unsupported. Please update to version 4.0+.'
+    msg: [ *obsolete ]
   - name: 'Open Cities Full.esp'
-    msg:
-      - type: say
-        content: 'Obsolete, unsupported. Please update to version 4.0+.'
+    msg: [ *obsolete ]
   - name: 'Open Cities Full + Bravil Blood&Mud.esp'
-    msg:
-      - type: say
-        content: 'Obsolete, unsupported. Please update to version 4.0+.'
+    msg: [ *obsolete ]
     req:
       - name: 'Blood&Mud.esp'
         display: '[Bravil Blood & Mud](http://www.nexusmods.com/oblivion/mods/12016)'
@@ -16252,37 +15832,21 @@ plugins:
       - name: 'Blood&Mud.esp'
         display: '[Bravil Blood & Mud](http://www.nexusmods.com/oblivion/mods/12016)'
   - name: 'Open Cities Reborn - Anvil.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Update to Open Cities Reborn 0.8.1 or higher.'
+    msg: [ *obsolete ]
   - name: 'Open Cities Reborn - Bravil.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Update to Open Cities Reborn 0.8.1 or higher.'
+    msg: [ *obsolete ]
   - name: 'Open Cities Reborn - Bruma.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Update to Open Cities Reborn 0.8.1 or higher.'
+    msg: [ *obsolete ]
   - name: 'Open Cities Reborn - Cheydinhal.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Update to Open Cities Reborn 0.8.1 or higher.'
+    msg: [ *obsolete ]
   - name: 'Open Cities Reborn - Chorrol.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Update to Open Cities Reborn 0.8.1 or higher.'
+    msg: [ *obsolete ]
   - name: 'Open Cities Reborn - Leyawiin.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Update to Open Cities Reborn 0.8.1 or higher.'
+    msg: [ *obsolete ]
   - name: 'Open Cities Reborn - Skingrad.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Update to Open Cities Reborn 0.8.1 or higher.'
+    msg: [ *obsolete ]
   - name: 'Open Cities Reborn - Full Merge.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Update to Open Cities Reborn 0.8.1 or higher.'
+    msg: [ *obsolete ]
   - name: 'Open Cities Reborn.esp'
     tag:
       - C.Name
@@ -16291,13 +15855,9 @@ plugins:
       - type: say
         content: 'Note - Be sure this is being used on Bravil Docks by Greg Simmonds. Will cause a CTD with the wrong file.'
   - name: 'OCC-ABE-LC-Land Patch.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Delete this patch.'
+    msg: [ *obsolete ]
   - name: 'OCC-ABE-Patch.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Delete this patch.'
+    msg: [ *obsolete ]
   - name: 'OCC-Roads-Patch.esp'
     msg:
       - type: say
@@ -16497,29 +16057,17 @@ plugins:
         util: *dirtyUtil
         itm: 1
   - name: 'DEJ Harvest - Flora.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to ''Harvest [Flora]'' v3.0.1+.'
+    msg: [ *obsolete ]
   - name: 'RealisticFlora.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to ''Harvest [Flora]'' v3.0.1+.'
+    msg: [ *obsolete ]
   - name: 'RealisticFlora-DLCFrostcrag.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to ''Harvest [Flora]'' v3.0.1+.'
+    msg: [ *obsolete ]
   - name: 'RealisticFlora - DLCFrostcrag.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to ''Harvest [Flora]'' v3.0.1+.'
+    msg: [ *obsolete ]
   - name: 'RealisticFlora-DLCVilelair.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to ''Harvest [Flora]'' v3.0.1+.'
+    msg: [ *obsolete ]
   - name: 'RealisticFlora - DLCVileLair.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to ''Harvest [Flora]'' v3.0.1+.'
+    msg: [ *obsolete ]
   - name: 'Diseased Corpses.esp'
     msg:
       - type: say
@@ -16527,21 +16075,13 @@ plugins:
     tag:
       - Scripts
   - name: 'Real Lava.esp'
-    msg:
-      - type: say
-        content: 'Update to 1.3 or later.'
+    msg: [ *obsolete ]
   - name: 'Real Lava v1.1.esp'
-    msg:
-      - type: say
-        content: 'Update to 1.3 or later.'
+    msg: [ *obsolete ]
   - name: 'Real Lava 1.2.esp'
-    msg:
-      - type: say
-        content: 'Update to 1.3 or later.'
+    msg: [ *obsolete ]
   - name: 'Real Lava v1.2.esp'
-    msg:
-      - type: say
-        content: 'Update to 1.3 or later.'
+    msg: [ *obsolete ]
   - name: '100%FloraHarvest.esp'
     msg:
       - type: say
@@ -16638,9 +16178,7 @@ plugins:
       - type: say
         content: 'Try AutoBookPlacer v3 or later.'
   - name: 'AutoBookPlacer_v2.esp'
-    msg:
-      - type: say
-        content: 'Update to v3 or later.'
+    msg: [ *obsolete ]
   - name: 'Axebane_Hunters25.esp'
     msg:
       - type: say
@@ -16741,9 +16279,7 @@ plugins:
       - Deactivate
       - Stats
   - name: 'BrighterTorches_v1.1.esp'
-    msg:
-      - type: say
-        content: 'Old, update to V1.2+'
+    msg: [ *obsolete ]
   - name: 'TimeWizard.esp'
     msg:
       - type: say
@@ -16951,9 +16487,7 @@ plugins:
       - name: 'OBSE\Plugins\MenuQue.dll'
         display: '[MenuQue](http://www.nexusmods.com/oblivion/mods/32200)'
   - name: 'DDJailShackles.esp'
-    msg:
-      - type: say
-        content: 'Old, update to version 1.04+'
+    msg: [ *obsolete ]
   - name: 'Decorator Assistant.esp'
     msg:
       - type: say
@@ -17002,21 +16536,13 @@ plugins:
       - NpcFaces
       - Scripts
   - name: 'Exterior Actors Have Torches 1.0 DT.esp'
-    msg:
-      - type: say
-        content: 'Check for newer version.'
+    msg: [ *obsolete ]
   - name: 'Exterior Actors Have Torches 1.0 CT.esp'
-    msg:
-      - type: say
-        content: 'Check for newer version.'
+    msg: [ *obsolete ]
   - name: 'Fading Torches v1.3b.esp'
-    msg:
-      - type: say
-        content: 'Old, update to v2.2+.'
+    msg: [ *obsolete ]
   - name: 'fadingtorches v1.3b.esp'
-    msg:
-      - type: say
-        content: 'Old, update to v2.2+.'
+    msg: [ *obsolete ]
   - name: 'fadingtorches v2.2b.esp'
     tag:
       - Names
@@ -17192,9 +16718,7 @@ plugins:
         util: *dirtyUtil
         udr: 464
   - name: 'L&G Billboards Scaled.esp'
-    msg:
-      - type: warn
-        content: 'Obsolete. Upgrade to the newest version of Lush & Gaudy and remove this plugin.'
+    msg: [ *obsolete ]
   - name: 'LastUnicorn.esp'
     dirty:
       - crc: 0xf0a49bd7
@@ -17633,17 +17157,13 @@ plugins:
       - 'LoversAdultPlayPlus.esp'
       - 'LoversSpringSale.esp'
   - name: 'LoversTachiCat.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Use LoversTachiCat2.esp instead.'
+    msg: [ *obsolete ]
   - name: 'Lovers_NA.esp'
     tag:
       - Eyes
       - Hair
   - name: 'Lovers_pkr.esp'
-    msg:
-      - type: say
-        content: 'Old, update to version 1.3b3 Rev05a or later.'
+    msg: [ *obsolete ]
   - name: 'LoversAchievments.esp'
     req:
       - 'OBSE\Plugins\AddActorValues.dll'
@@ -17709,18 +17229,14 @@ plugins:
         content: 'Delete. Use newer version of Lovers with PK. Integrated into 1.3.1 Rev38 and newer.'
         condition: *FCOMCond
   - name: 'LoversMpc.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Use mpc.esm version 1.2.3 or later.'
+    msg: [ *obsolete ]
   - name: 'LoversStopCombat.esp'
     msg:
       - type: error
         content: 'Delete. Use newer version of Lovers with PK. Integrated into 1.3.1 Rev38 and newer.'
         condition: *FCOMCond
   - name: 'Sexlivion_0.4a_Full_English_v1.esp'
-    msg:
-      - type: say
-        content: 'Old, update to version 0.8.2'
+    msg: [ *obsolete ]
   - name: 'SPS.esp'
     dirty:
       - crc: 0x530d9de0
@@ -18124,9 +17640,7 @@ plugins:
     tag:
       - Scripts
   - name: 'Skip Tutorial.esp'
-    msg:
-      - type: say
-        content: 'Old, update to version 2+.'
+    msg: [ *obsolete ]
   - name: 'Axebane_RealHunger25.esp'
     msg:
       - type: say
@@ -18176,26 +17690,18 @@ plugins:
       - type: say
         content: 'Old, update to ''Tyler''s Hungry, Thirsty, Sleepy, Tired.esp''.'
   - name: 'Duke Patricks Running Backwards RISK.esp'
-    msg:
-      - type: say
-        content: 'Old. Update to latest version.'
+    msg: [ *obsolete ]
   - name: 'Natural Hunger v2_0 by QF.esp'
-    msg:
-      - type: say
-        content: 'Old, update to version 2.1.'
+    msg: [ *obsolete ]
   - name: 'pmQFNaturalHunger.esp'
     req:
       - 'pmRealTimeInteractions.esp'
   - name: 'True Retroactive Health v2.2.esp'
-    msg:
-      - type: say
-        content: 'Old update to v3.1+'
+    msg: [ *obsolete ]
   - name: 'ReneerKeyLockMod.esp'
     req: [ *OBSE ]
   - name: 'Duke Patricks Hydration and Water Harvesting.esp'
-    msg:
-      - type: say
-        content: 'Old. Update to latest version.'
+    msg: [ *obsolete ]
   - name: 'MHE v2 Tail.esp'
     msg:
       - type: say
@@ -18313,17 +17819,11 @@ plugins:
     inc:
       - 'Unholy Darkness.esp'
   - name: 'Twillith vampirism 1.7.esp'
-    msg:
-      - type: say
-        content: 'Old, update to ''Twillith vampirism.esp''.'
+    msg: [ *obsolete ]
   - name: 'Twillith vampirism 1.71.esp'
-    msg:
-      - type: say
-        content: 'Old, update to ''Twillith vampirism.esp''.'
+    msg: [ *obsolete ]
   - name: 'Vampisism Overhaul 2.esp'
-    msg:
-      - type: say
-        content: 'Older version. Consider using version 3 or later.'
+    msg: [ *obsolete ]
   - name: 'Drokk''s Vampire Mod.esp'
     tag:
       - Graphics
@@ -18341,18 +17841,14 @@ plugins:
     tag:
       - Relations
   - name: 'Duke Patricks Nosferatu Vampires.esp'
-    msg:
-      - type: say
-        content: 'Old. Update to latest version.'
+    msg: [ *obsolete ]
     tag:
       - Sound
   - name: 'Duke Patricks - Nosferatu Class Vampires.esp'
     tag:
       - Sound
   - name: 'Ashes to Ashes & DP Nosferatu Class Vampires - Compatibility Patch.esp'
-    msg:
-      - type: say
-        content: 'obselete, consider upgrading to Ashes to Ashes version 1.0+'
+    msg: [ *obsolete ]
   - name: 'Ayleid Expansion.esp'
     msg:
       - type: say
@@ -18541,13 +18037,9 @@ plugins:
       - Actors.Anims
       - NoMerge
   - name: 'Midas SMHolyHeal.esp'
-    msg:
-      - type: say
-        content: 'DELETE: Outdated'
+    msg: [ *obsolete ]
   - name: 'Midas SMPoison.esp'
-    msg:
-      - type: say
-        content: 'DELETE: Outdated'
+    msg: [ *obsolete ]
   - name: 'Midas Reduced Costs Half.esp'
     msg:
       - type: say
@@ -18723,9 +18215,7 @@ plugins:
       - type: say
         content: 'Will probably break Dark Botherhood guild quest.'
   - name: 'Poison Maker.esp'
-    msg:
-      - type: say
-        content: 'Consider updating to v1.08.'
+    msg: [ *obsolete ]
   - name: 'Potion_Sorter-2081.esp'
     tag:
       - Names
@@ -18771,29 +18261,17 @@ plugins:
     req:
       - 'pmRealTimeInteractions.esp'
   - name: 'Attack & Hide.esp'
-    msg:
-      - type: say
-        content: 'Check for newer version.'
+    msg: [ *obsolete ]
   - name: 'attack and hide medium.esp'
-    msg:
-      - type: say
-        content: 'Check for newer version.'
+    msg: [ *obsolete ]
   - name: 'attack and hide v1.1.esp'
-    msg:
-      - type: say
-        content: 'Check for newer version.'
+    msg: [ *obsolete ]
   - name: 'attack and hide easier v2.0.esp'
-    msg:
-      - type: say
-        content: 'Check for newer version.'
+    msg: [ *obsolete ]
   - name: 'attack and hide medium v2.0.esp'
-    msg:
-      - type: say
-        content: 'Check for newer version.'
+    msg: [ *obsolete ]
   - name: 'attack and hide harder v2.0.esp'
-    msg:
-      - type: say
-        content: 'Check for newer version'
+    msg: [ *obsolete ]
   - name: 'Deadlier Traps.esp'
     msg:
       - type: say
@@ -18848,9 +18326,7 @@ plugins:
         util: *dirtyUtil
         itm: 1
   - name: 'RenGuardOverhaulShiveringIsles.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Remove this and update to v2.08+.'
+    msg: [ *obsolete ]
   - name: 'kuerteeCrimeHasWitnesses.esp'
     inc:
       - 'RenGuardOverhaul.esp'
@@ -18874,20 +18350,14 @@ plugins:
         content: 'West Roads.esp has been detected. West Roads and all dependent patches must be uninstalled before using Roads of Cyrodiil. See Roads of Cyrodiil readme for upgrade instructions.'
         condition: 'file("West Roads.esp")'
   - name: 'Enhanced Grabbing - Debug.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to latest version.'
+    msg: [ *obsolete ]
   - name: 'Duke Patrick''s Lockpick challange Autopick.esp'
     inc:
       - 'Duke Patrick''s Lockpick challange Manual.esp'
   - name: 'Adrenaline-Fuelled Combat.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to v2+.'
+    msg: [ *obsolete ]
   - name: 'Adrenaline Fuelled Archery- Bow Sway.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to v2+.'
+    msg: [ *obsolete ]
   - name: 'Push_Spin_Fly.esp'
     req: [ *OBSE ]
   - name: 'Push_Shove_Die.esp'
@@ -19026,21 +18496,13 @@ plugins:
       - type: say
         content: 'Obsolete. Remove this and install Unnecessary Violence.'
   - name: 'Deadly Reflex - Timed Block + Higher Damage.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to v5+.'
+    msg: [ *obsolete ]
   - name: 'Deadly Reflex - Timed Block no other changes.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to v5+.'
+    msg: [ *obsolete ]
   - name: 'DeadlyReflex - Timed Block + Very High Damage.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to v5+.'
+    msg: [ *obsolete ]
   - name: 'Mounted_Spellcasting Deadly Reflex Compatible.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to v5+.'
+    msg: [ *obsolete ]
   - name: 'Deadly Reflex 5 - Timed Block.esp'
     msg:
       - type: say
@@ -19108,58 +18570,34 @@ plugins:
       - type: say
         content: 'Make sure to set calculateFromVanilla in the included ini file to 0 when used alongside other combat mods.'
   - name: 'Duke Patricks Near Miss Arrow Shot Alerts The Target.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to latest version.'
+    msg: [ *obsolete ]
   - name: 'Duke Patricks - Near Miss Arrow Shot Alerts The Target.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to latest version.'
+    msg: [ *obsolete ]
   - name: 'Duke Patricks - arrow shots alarm the targets.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to latest version.'
+    msg: [ *obsolete ]
   - name: 'Duke Patricks - Near Miss Magic And Arrow Shots Alert The Target.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to latest version.'
+    msg: [ *obsolete ]
   - name: 'Duke Patricks - Stat Based Bob And Weave.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to latest version.'
+    msg: [ *obsolete ]
   - name: 'Duke Patricks Bob and Weave Dodge GOLD Edition.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to latest version.'
+    msg: [ *obsolete ]
   - name: 'Duke Patricks - Bob and Weave Dodge Mark II.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to latest version.'
+    msg: [ *obsolete ]
   - name: 'Double-tap dodge.esp'
     msg:
       - type: warn
         content: 'Requires: OBSE 19+.'
         condition: 'version("..\obse_loader.exe","0.19.0.0",<)'
   - name: 'Duke Patricks - NPCs Now Bob Under Your Shots.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to latest version.'
+    msg: [ *obsolete ]
   - name: 'Duke Patrick''s NPCs Now Bob Under Your Shots.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to latest version.'
+    msg: [ *obsolete ]
   - name: 'Duke Patrick''s Vampires Bob Under Your Shots.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to latest version.'
+    msg: [ *obsolete ]
   - name: 'Duke Patricks NPC Arrow Shots Can Miss Now.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to latest version (''Duke Patricks - Actors Can Miss Now.esp'').'
+    msg: [ *obsolete ]
   - name: 'Duke Patricks - NPC MAGIC and Arrows Can Miss Now.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to latest version (''Duke Patricks - Actors Can Miss Now.esp'').'
+    msg: [ *obsolete ]
   - name: 'Duke Patricks - Actors Can Miss Now.esp'
     msg:
       - type: say
@@ -19178,13 +18616,9 @@ plugins:
       - type: say
         content: 'Obsolete. Remove this and install Duke Patrick''s Combat Geometry.'
   - name: 'Duke Patrick''s Smash of the Titans.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to latest version.'
+    msg: [ *obsolete ]
   - name: 'Duke Patrick`s Smash of the Titans.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to latest version.'
+    msg: [ *obsolete ]
   - name: 'MM_AllowAlchemy.esp'
     msg:
       - type: say
@@ -19377,9 +18811,7 @@ plugins:
       - type: say
         content: 'Obsolete. Upgrade to SDR version 8.2'
   - name: 'DMRequirements.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to version 1.4+.'
+    msg: [ *obsolete ]
   - name: 'Toaster''s Legendary Skills.esp'
     msg:
       - type: say
@@ -19605,9 +19037,7 @@ plugins:
       - C.Light
       - Deactivate
   - name: 'Let There Be Darkness.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Update to version 1.2+.'
+    msg: [ *obsolete ]
     tag:
       - C.Light
       - Deactivate
@@ -19615,8 +19045,7 @@ plugins:
     msg:
       - type: say
         content: 'Requires: Shivering Isles.'
-      - type: say
-        content: 'Obsolete. Update to version 1.2+.'
+      - *obsolete
     tag:
       - C.Light
       - Deactivate
@@ -23744,9 +23173,7 @@ plugins:
       - type: say
         content: 'Use only one Better *version* - OMG Patch.esp'
   - name: 'Better Cities - Stranded Light.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Remove this.'
+    msg: [ *obsolete ]
   - name: 'Better Cities - COBL.esp'
     dirty:
       - crc: 0x52344ab9
@@ -23899,53 +23326,29 @@ plugins:
       - type: say
         content: 'Obsolete. Remove this and update Better Cities to latest version.'
   - name: 'Better Cities - B&M LS RTT TotF.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Remove this.'
+    msg: [ *obsolete ]
   - name: 'Better Cities - B&M LS RTT.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Remove this.'
+    msg: [ *obsolete ]
   - name: 'Better Cities - B&M LS ToTF RTT.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Remove this.'
+    msg: [ *obsolete ]
   - name: 'Better Cities - B&M LS ToTF.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Remove this.'
+    msg: [ *obsolete ]
   - name: 'Better Cities - B&M RTT.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Remove this.'
+    msg: [ *obsolete ]
   - name: 'Better Cities - B&M ToTF RTT.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Remove this.'
+    msg: [ *obsolete ]
   - name: 'Better Cities - B&M ToTF.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Remove this.'
+    msg: [ *obsolete ]
   - name: 'Better Cities - Blood&Mud LostSpires.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Remove this.'
+    msg: [ *obsolete ]
   - name: 'Better Cities - LS RTT TotF.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Remove this.'
+    msg: [ *obsolete ]
   - name: 'Better Cities - LS RTT.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Remove this.'
+    msg: [ *obsolete ]
   - name: 'Better Cities - LS TotF.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Remove this.'
+    msg: [ *obsolete ]
   - name: 'Better Cities - RTT TotF.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Remove this.'
+    msg: [ *obsolete ]
   - name: 'Better Cities - Bruma FPS Improver.esp'
     msg:
       - type: say
@@ -24340,16 +23743,12 @@ plugins:
       - Graphics
       - NoMerge
   - name: 'Duke Patrick''s magic you can believe in 4p5.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to latest version.'
+    msg: [ *obsolete ]
     tag:
       - Graphics
       - Sound
   - name: 'Duke Patrick''s magic you can believe in 5.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to latest version.'
+    msg: [ *obsolete ]
     tag:
       - Graphics
       - Sound
@@ -24999,25 +24398,15 @@ plugins:
       - Graphics
       - Sound
   - name: 'Duke Patricks Script Effect Silencer.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to latest version.'
+    msg: [ *obsolete ]
   - name: 'Duke Patricks Script Effect Silencer Rev 2.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to latest version.'
+    msg: [ *obsolete ]
   - name: 'Duke Patricks Script Effect Silencer Silver Edition.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to latest version.'
+    msg: [ *obsolete ]
   - name: 'Duke Patricks Script Effect Silencer Gold Edition.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to latest version.'
+    msg: [ *obsolete ]
   - name: 'Duke Patricks - BASIC Script Effect Silencer BETA.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to latest version.'
+    msg: [ *obsolete ]
   - name: 'UnnecessaryViolence.esp'
     msg:
       - type: say
@@ -25029,9 +24418,7 @@ plugins:
         itm: 13
         util: *dirtyUtil
   - name: 'DeadlyReflex - Combat Moves.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to v5+.'
+    msg: [ *obsolete ]
   - name: 'DeadlyReflex 6 - Combat Moves.esp'
     msg:
       - type: say
@@ -25104,9 +24491,7 @@ plugins:
         itm: 6
         util: *dirtyUtil
   - name: 'UnderdarkSaga v1.2 Delayer.esp'
-    msg:
-      - type: say
-        content: 'Versions less than 3.1 may cause the quest being patched to restart if installed after the quest has started. Update to the latest delayer if you suspect a problem.'
+    msg: [ *obsolete ]
   - name: 'UnderdarkSaga Vwalk.esp'
     tag:
       - Actors.Anims
@@ -25146,8 +24531,7 @@ plugins:
       - Roads
   - name: 'Open Cities Reborn Road Record.esp'
     msg:
-      - type: say
-        content: 'Obsolete. Update to Open Cities Reborn 0.8.1 or higher, then delete this plugin.'
+      - *obsolete
       - type: say
         content: 'Use only one road record file.'
     tag:
@@ -25163,9 +24547,7 @@ plugins:
       - Deactivate
       - Roads
   - name: 'NRB4 OCLR Road Record.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Remove this and update to New Roads & Bridges 4.5.6+.'
+    msg: [ *obsolete ]
     tag:
       - Deactivate
       - Roads
@@ -25422,25 +24804,15 @@ plugins:
     msg: [ *doNotClean ]
 # Mods that are not available for download. They have been sorted according to Duke Patrick's load order guidelines, where given.
   - name: 'Duke Patrick ShiveringIsles patch 1.1.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Do not use.'
+    msg: [ *obsolete ]
   - name: 'Duke Patrick''s more & better loot.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Do not use.'
+    msg: [ *obsolete ]
   - name: 'Duke Patricks - Custom Melee Weapons Made Compatible.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Do not use.'
+    msg: [ *obsolete ]
   - name: 'Duke Patrick''s So you think you are a war god 1.2.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Do not use.'
+    msg: [ *obsolete ]
   - name: 'Duke Patricks So you think you are a war god MARK II.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Do not use.'
+    msg: [ *obsolete ]
   - name: 'Duke Patricks - Momentum Lite Damage Bonus.esp'
     msg:
       - type: say
@@ -25462,53 +24834,29 @@ plugins:
       - type: say
         content: 'Obsolete. Replaced by SCA Shield Tricks.'
   - name: 'Duke Patricks SCA Melee combat with NO RECOIL.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to latest version.'
+    msg: [ *obsolete ]
   - name: 'Duke Patrick''s SCA style combat NO RECOIL Rev 6.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to latest version.'
+    msg: [ *obsolete ]
   - name: 'Duke Patricks SCA Combat Archery.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to latest version.'
+    msg: [ *obsolete ]
   - name: 'Duke Patricks - SCA Combat Archery.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Update to latest version.'
+    msg: [ *obsolete ]
   - name: 'Duke Patrick''s SCA Combat Archery patch for CnC.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Do not use with latest version of SCA Combat Archery.'
+    msg: [ *obsolete ]
   - name: 'Duke Patrick''s SCA Combat Archery patch for LAME.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Do not use with latest version of SCA Combat Archery.'
+    msg: [ *obsolete ]
   - name: 'Duke Patrick''s SCA Combat Archery Patch for MMM.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Do not use with latest version of SCA Combat Archery.'
+    msg: [ *obsolete ]
   - name: 'Duke_Patricks SCA_Combat_Archery_Patch_for_MMM.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Do not use with latest version of SCA Combat Archery.'
+    msg: [ *obsolete ]
   - name: 'Duke Patrick''s SCA Combat Archery patch for OOO v2.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Do not use with latest version of SCA Combat Archery.'
+    msg: [ *obsolete ]
   - name: 'Duke Patrick''s SCA Combat Archery patch for RBP.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Do not use with latest version of SCA Combat Archery.'
+    msg: [ *obsolete ]
   - name: 'Duke Patrick''s SCA Combat Archery patch for RBP No SI.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Do not use with latest version of SCA Combat Archery.'
+    msg: [ *obsolete ]
   - name: 'Duke Patrick''s SCA Combat Archery patch for xulLostCoast.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Do not use with latest version of SCA Combat Archery.'
+    msg: [ *obsolete ]
   - name: 'KRLODToggleRestored.esp'
     msg:
       - type: error
