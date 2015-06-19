@@ -2981,62 +2981,16 @@ plugins:
   - name: 'CrimsonScarArmor.esp'
     tag:
       - Invent
+  - name: 'Cryptic (Festive|Frosted|Blue Blood|Lake View|Snowy Oak|White Rose) Ayleid Dining Set\.esp'
+    msg:
+      - type: say
+        content: 'Only use one Cryptic Dining Set plugin.'
+    tag:
+      - Graphics
+      - Names
+      - Stats
   - name: 'Cryptic Festive Ayleid Dining Set.esp'
-    msg:
-      - *needsCleaning
-      - type: say
-        content: 'Only use one ''Cryptic''s X X X Dining Set'' plugin.'
-        condition: 'regex("Cryptic (Frosted|Blue Blood|Lake View|Snowy Oak|White Rose) Ayleid Dining Set\.esp")'
-    tag:
-      - Graphics
-      - Names
-      - Stats
-  - name: 'Cryptic Frosted Ayleid Dining Set.esp'
-    msg:
-      - type: say
-        content: 'Only use one ''Cryptic''s X X X Dining Set'' plugin.'
-        condition: 'regex("Cryptic (Festive|Blue Blood|Lake View|Snowy Oak|White Rose) Ayleid Dining Set\.esp")'
-    tag:
-      - Graphics
-      - Names
-      - Stats
-  - name: 'Cryptic Blue Blood Ayleid Dining Set.esp'
-    msg:
-      - type: say
-        content: 'Only use one ''Cryptic''s X X X Dining Set'' plugin.'
-        condition: 'regex("Cryptic (Festive|Frosted|Lake View|Snowy Oak|White Rose) Ayleid Dining Set\.esp")'
-    tag:
-      - Graphics
-      - Names
-      - Stats
-  - name: 'Cryptic Lake View Ayleid Dining Set.esp'
-    msg:
-      - type: say
-        content: 'Only use one ''Cryptic''s X X X Dining Set'' plugin.'
-        condition: 'regex("Cryptic (Festive|Frosted|Blue Blood|Snowy Oak|White Rose) Ayleid Dining Set\.esp")'
-    tag:
-      - Graphics
-      - Names
-      - Stats
-  - name: 'Cryptic Snowy Oak Ayleid Dining Set.esp'
-    msg:
-      - type: say
-        content: 'Only use one ''Cryptic''s X X X Dining Set'' plugin.'
-        condition: 'regex("Cryptic (Festive|Frosted|Blue Blood|Lake View|White Rose) Ayleid Dining Set\.esp")'
-    tag:
-      - Graphics
-      - Names
-      - Stats
-  - name: 'Cryptic White Rose Ayleid Dining Set.esp'
-    msg:
-      - *needsCleaning
-      - type: say
-        content: 'Only use one ''Cryptic''s X X X Dining Set'' plugin.'
-        condition: 'regex("Cryptic (Festive|Frosted|Blue Blood|Lake View|Snowy Oak) Ayleid Dining Set\.esp")'
-    tag:
-      - Graphics
-      - Names
-      - Stats
+    msg: [ *needsCleaning ]
   - name: 'Cryptic''s Buyable Ayleid Dining Sets.esp'
     msg:
       - type: say
@@ -3307,30 +3261,15 @@ plugins:
         content: 'Requires: Enhanced Music & Control v0.72B (OBSE-Plugin) & SoundCommands v4.0 (OBSE-Plugin)'
       - type: say
         content: 'Outdated. Update to version 2+.'
-  - name: 'Mud Crabs!.esp'
+  - name: 'Mud Crabs!(_(coMbO|MMM|OOO))?\.esp'
     msg:
       - type: say
         content: 'Use only one Mud Crabs! file'
-        condition: 'regex("Mud Crabs!_.*\.esp")'
   - name: 'Mud Crabs!_coMbO.esp'
-    msg:
-      - type: say
-        content: 'Use only one Mud Crabs! file'
-        condition: 'regex("Mud Crabs!(_MMM|_OOO)?\.esp")'
     dirty:
       - crc: 0xc4750e07
         util: *dirtyUtil
         itm: 16
-  - name: 'Mud Crabs!_MMM.esp'
-    msg:
-      - type: say
-        content: 'Use only one Mud Crabs! file'
-        condition: 'regex("Mud Crabs!(_coMbO|_OOO)?\.esp")'
-  - name: 'Mud Crabs!_OOO.esp'
-    msg:
-      - type: say
-        content: 'Use only one Mud Crabs! file'
-        condition: 'regex("Mud Crabs!(_coMbO|_MMM)?\.esp")'
   - name: 'NR500.esp'
     msg:
       - type: warn
@@ -9060,25 +8999,10 @@ plugins:
     tag:
       - Graphics
       - NoMerge
-  - name: 'WAC - ItemLootFix4v1.0b.esp'
+  - name: 'WAC - ItemLootFix4v1\.0b(Fran|OOO|MMM|MMMorFCOM|OWCND|VNT)?\.esp'
     msg:
       - type: say
         content: 'Use only one WAC - ItemLootFix plugin.'
-        condition: 'regex("WAC - ItemLootFix4v1\.0(bFran|bOOO|bMMM|bMMMorFCOM|bOWCND|bVNT)\.esp")'
-    tag:
-      - Actors.AIData
-      - Actors.Stats
-      - Delev
-      - Factions
-      - Invent
-      - Relations
-      - Relev
-      - Stats
-  - name: 'WAC - ItemLootFix4v1.0bFran.esp'
-    msg:
-      - type: say
-        content: 'Use only one WAC - ItemLootFix plugin.'
-        condition: 'regex("WAC - ItemLootFix4v1\.0(b|bOOO|bMMM|bMMMorFCOM|bOWCND|bVNT)\.esp")'
     tag:
       - Actors.AIData
       - Actors.Stats
@@ -9093,80 +9017,18 @@ plugins:
       - type: say
         content: 'Requires: OOO.'
         condition: 'not file("Oscuro''s_Oblivion_Overhaul.esm")'
-      - type: say
-        content: 'Use only one WAC - ItemLootFix plugin.'
-        condition: 'regex("WAC - ItemLootFix4v1\.0(b|bFran|bMMM|bMMMorFCOM|bOWCND|bVNT)\.esp")'
-    tag:
-      - Actors.AIData
-      - Actors.Stats
-      - Delev
-      - Factions
-      - Invent
-      - Relations
-      - Relev
-      - Stats
   - name: 'WAC - ItemLootFix4v1.0bMMM.esp'
     msg:
       - type: say
         content: 'Requires: MMM or FCOM'
-      - type: say
-        content: 'Use only one WAC - ItemLootFix plugin.'
-        condition: 'regex("WAC - ItemLootFix4v1\.0(b|bFran|bOOO|bMMMorFCOM|bOWCND|bVNT)\.esp")'
-    tag:
-      - Actors.AIData
-      - Actors.Stats
-      - Delev
-      - Factions
-      - Invent
-      - Relations
-      - Relev
-      - Stats
   - name: 'WAC - ItemLootFix4v1.0bMMMorFCOM.esp'
     msg:
       - type: say
         content: 'Requires: MMM or FCOM'
-      - type: say
-        content: 'Use only one WAC - ItemLootFix plugin.'
-        condition: 'regex("WAC - ItemLootFix4v1\.0(b|bFran|bOOO|bMMM|bOWCND|bVNT)\.esp")'
-    tag:
-      - Actors.AIData
-      - Actors.Stats
-      - Delev
-      - Factions
-      - Invent
-      - Relations
-      - Relev
-      - Stats
   - name: 'WAC - ItemLootFix4v1.0bOWCND.esp'
     msg:
       - type: say
         content: 'Requires: Oblivion Warcry New Dimension'
-      - type: say
-        content: 'Use only one WAC - ItemLootFix plugin.'
-        condition: 'regex("WAC - ItemLootFix4v1\.0(b|bFran|bOOO|bMMM|bMMMorFCOM|bVNT)\.esp")'
-    tag:
-      - Actors.AIData
-      - Actors.Stats
-      - Delev
-      - Factions
-      - Invent
-      - Relations
-      - Relev
-      - Stats
-  - name: 'WAC - ItemLootFix4v1.0bVNT.esp'
-    msg:
-      - type: say
-        content: 'Use only one WAC - ItemLootFix plugin.'
-        condition: 'regex("WAC - ItemLootFix4v1\.0(b|bFran|bOOO|bMMM|bMMMorFCOM|bOWCND)\.esp")'
-    tag:
-      - Actors.AIData
-      - Actors.Stats
-      - Delev
-      - Factions
-      - Invent
-      - Relations
-      - Relev
-      - Stats
   - name: 'WAC - WeaponReachMOBS.esp'
     tag:
       - Stats
@@ -9486,54 +9348,13 @@ plugins:
   - name: 'Daggerfall NPCs.esp'
     tag:
       - Delev
-  - name: 'IABaneOils Wimpy.esp'
+  - name: 'IABaneOils (Wimpy|1000|500|250|100)\.esp'
     msg:
       - type: say
         content: 'Has minor incompatibility with OOO - changes Meridia quest & script back to level 10'
         condition: *OOOCond
       - type: say
         content: 'Only use one IABane Oils X.esp'
-        condition: 'regex("IABaneOils (1000|500|250|100)\.esp")'
-    tag:
-      - Factions
-  - name: 'IABaneOils 1000.esp'
-    msg:
-      - type: say
-        content: 'Has minor incompatibility with OOO - changes Meridia quest & script back to level 10'
-        condition: *OOOCond
-      - type: say
-        content: 'Only use one IABane Oils X.esp'
-        condition: 'regex("IABaneOils (Wimpy|500|250|100)\.esp")'
-    tag:
-      - Factions
-  - name: 'IABaneOils 500.esp'
-    msg:
-      - type: say
-        content: 'Has minor incompatibility with OOO - changes Meridia quest & script back to level 10'
-        condition: *OOOCond
-      - type: say
-        content: 'Only use one IABane Oils X.esp'
-        condition: 'regex("IABaneOils (Wimpy|1000|250|100)\.esp")'
-    tag:
-      - Factions
-  - name: 'IABaneOils 250.esp'
-    msg:
-      - type: say
-        content: 'Has minor incompatibility with OOO - changes Meridia quest & script back to level 10'
-        condition: *OOOCond
-      - type: say
-        content: 'Only use one IABane Oils X.esp'
-        condition: 'regex("IABaneOils (Wimpy|1000|500|100)\.esp")'
-    tag:
-      - Factions
-  - name: 'IABaneOils 100.esp'
-    msg:
-      - type: say
-        content: 'Has minor incompatibility with OOO - changes Meridia quest & script back to level 10'
-        condition: *OOOCond
-      - type: say
-        content: 'Only use one IABane Oils X.esp'
-        condition: 'regex("IABaneOils (Wimpy|1000|500|250)\.esp")'
     tag:
       - Factions
   - name: 'Modified Bandits.esp'
@@ -13250,31 +13071,10 @@ plugins:
       - crc: 0x1cd53035
         util: *dirtyUtil
         itm: 2
-  - name: 'Ushnar''s Re-Skinned Hound.esp'
+  - name: 'Ushnar''s Re-Skinned Hound(-(Default|Atronach|Dog|Wolf))?\.esp'
     msg:
       - type: say
         content: 'Only use one Ushnar''s Re-Skinned Hound*.esp'
-        condition: 'regex("Ushnar''s Re-Skinned Houn(d-Default|d-Atronach|d-Dog|d-Wolf)\.esp")'
-  - name: 'Ushnar''s Re-Skinned Hound-Default.esp'
-    msg:
-      - type: say
-        content: 'Only use one Ushnar''s Re-Skinned Hound*.esp'
-        condition: 'regex("Ushnar''s Re-Skinned Houn(d|d-Atronach|d-Dog|d-Wolf)\.esp")'
-  - name: 'Ushnar''s Re-Skinned Hound-Atronach.esp'
-    msg:
-      - type: say
-        content: 'Only use one Ushnar''s Re-Skinned Hound*.esp'
-        condition: 'regex("Ushnar''s Re-Skinned Houn(d|d-Default|d-Dog|d-Wolf)\.esp")'
-  - name: 'Ushnar''s Re-Skinned Hound-Dog.esp'
-    msg:
-      - type: say
-        content: 'Only use one Ushnar''s Re-Skinned Hound*.esp'
-        condition: 'regex("Ushnar''s Re-Skinned Houn(d|d-Default|d-Atronach|d-Wolf)\.esp")'
-  - name: 'Ushnar''s Re-Skinned Hound-Wolf.esp'
-    msg:
-      - type: say
-        content: 'Only use one Ushnar''s Re-Skinned Hound*.esp'
-        condition: 'regex("Ushnar''s Re-Skinned Houn(d|d-Default|d-Atronach|d-Dog)\.esp")'
   - name: 'Valley_View_Estate.esp'
     dirty:
       - crc: 0xbc0e798
@@ -14173,21 +13973,10 @@ plugins:
       - crc: 0xb3592b2f
         util: *dirtyUtil
         itm: 4
-  - name: 'CybEasier.esp'
+  - name: 'Cyb(Easier|Harder|Hardest)\.esp'
     msg:
       - type: say
         content: 'only use one Cybiades difficulty plugin'
-        condition: 'regex("Cyb(Harder|Hardest)\.esp")'
-  - name: 'CybHarder.esp'
-    msg:
-      - type: say
-        content: 'only use one Cybiades difficulty plugin'
-        condition: 'regex("Cyb(Easier|Hardest)\.esp")'
-  - name: 'CybHardest.esp'
-    msg:
-      - type: say
-        content: 'only use one Cybiades difficulty plugin'
-        condition: 'regex("Cyb(Harder|Easier)\.esp")'
   - name: 'Cybiades Vwalk.esp'
     tag:
       - Actors.Anims
@@ -17820,21 +17609,10 @@ plugins:
         util: *dirtyUtil
         itm: 314
         udr: 4
-  - name: 'LoversVoice.esp'
+  - name: 'LoversVoice(Minus|AR)?\.esp'
     msg:
       - type: say
-        content: 'Use either ''LoversVoice.esp'' or ''LoversVoiceMinus.esp'' or ''LoversVoiceAR.esp'' but not together.'
-        condition: 'regex("LoversVoic(eMinus|eAR)\.esp")'
-  - name: 'LoversVoiceMinus.esp'
-    msg:
-      - type: say
-        content: 'Use either ''LoversVoice.esp'' or ''LoversVoiceMinus.esp'' or ''LoversVoiceAR.esp'' but not together.'
-        condition: 'regex("LoversVoic(e|eAR)\.esp")'
-  - name: 'LoversVoiceAR.esp'
-    msg:
-      - type: say
-        content: 'Use either ''LoversVoice.esp'' or ''LoversVoiceMinus.esp'' or ''LoversVoiceAR.esp'' but not together.'
-        condition: 'regex("LoversVoic(e|eMinus)\.esp")'
+        content: 'Use only one Lovers Voice plugin.'
   - name: 'LoversAdultPlay.esp'
     inc:
       - 'LoversSpringSale.esp'
@@ -18796,51 +18574,21 @@ plugins:
   - name: 'OSPS-TalesftTomb-MidasMagic-Patch.esp'
     inc:
       - 'Rathunas01.esp'
-  - name: 'Midas PowDur1.5x.esp'
+  - name: 'Midas PowDur(1\.5|2|3|4)x\.esp'
     msg:
       - type: say
-        content: 'Use only one PowDur modifier at a time. Load after midasspells.esp'
-  - name: 'Midas PowDur2x.esp'
+        content: 'Use only one PowDur modifier at a time.'
+    after:
+      - 'midasspells.esp'
+  - name: 'Midas Eldrich Power (2|2\.5|3|4|5|6)x\.esp'
     msg:
       - type: say
-        content: 'Use only one PowDur modifier at a time. Load after midasspells.esp'
-  - name: 'Midas PowDur3x.esp'
-    msg:
-      - type: say
-        content: 'Use only one PowDur modifier at a time. Load after midasspells.esp'
-  - name: 'Midas PowDur4x.esp'
-    msg:
-      - type: say
-        content: 'Use only one PowDur modifier at a time. Load after midasspells.esp'
-  - name: 'Midas Eldrich Power 2x.esp'
-    msg:
-      - type: say
-        content: 'Use only one Eldrich Power modifier at a time. Load after PowDur modifiers.'
-  - name: 'Midas Eldrich Power 2.5x.esp'
-    msg:
-      - type: say
-        content: 'Use only one Eldrich Power modifier at a time. Load after PowDur modifiers.'
-  - name: 'Midas Eldrich Power 3x.esp'
-    msg:
-      - type: say
-        content: 'Use only one Eldrich Power modifier at a time. Load after PowDur modifiers.'
-  - name: 'Midas Eldrich Power 4x.esp'
-    msg:
-      - type: say
-        content: 'Use only one Eldrich Power modifier at a time. Load after PowDur modifiers.'
-  - name: 'Midas Eldrich Power 5x.esp'
-    msg:
-      - type: say
-        content: 'Use only one Eldrich Power modifier at a time. Load after PowDur modifiers.'
-  - name: 'Midas Eldrich Power 6x.esp'
-    msg:
-      - type: say
-        content: 'Use only one Eldrich Power modifier at a time. Load after PowDur modifiers.'
-  - name: 'Midas Tigernolevel NoOBSE.esp'
-    msg:
-      - type: say
-        content: 'Pick either the OBSE version or this one. But not both.'
-        condition: 'file("Midas Tigernolevel OBSE.esp")'
+        content: 'Use only one Eldrich Power modifier at a time.'
+    after:
+      - 'Midas PowDur1.5x.esp'
+      - 'Midas PowDur2x.esp'
+      - 'Midas PowDur3x.esp'
+      - 'Midas PowDur4x.esp'
   - name: 'Midas Tigernolevel OBSE.esp'
     req: [ *OBSE ]
     inc:
@@ -19056,36 +18804,10 @@ plugins:
       - type: say
         content: 'Partly included with OOO. May not be OOO compatible.'
         condition: *OOOCond
-  - name: 'Thievery_Easy_Thrill.esp'
+  - name: 'Thievery_(Easy|Normal|Hard)(_Thrill)?\.esp'
     msg:
       - type: say
         content: 'only use one of the ''Worthwhile Thievery'' ESPs.'
-        condition: 'regex("Thievery_(Easy|Normal|Hard|Normal_Thrill|Hard_Thrill)\.esp")'
-  - name: 'Thievery_Easy.esp'
-    msg:
-      - type: say
-        content: 'only use one of the ''Worthwhile Thievery'' ESPs.'
-        condition: 'regex("Thievery_(Normal|Hard|Easy_Thrill|Normal_Thrill|Hard_Thrill)\.esp")'
-  - name: 'Thievery_Normal_Thrill.esp'
-    msg:
-      - type: say
-        content: 'only use one of the ''Worthwhile Thievery'' ESPs.'
-        condition: 'regex("Thievery_(Easy|Normal|Hard|Easy_Thrill|Hard_Thrill)\.esp")'
-  - name: 'Thievery_Normal.esp'
-    msg:
-      - type: say
-        content: 'only use one of the ''Worthwhile Thievery'' ESPs.'
-        condition: 'regex("Thievery_(Easy|Hard|Easy_Thrill|Normal_Thrill|Hard_Thrill)\.esp")'
-  - name: 'Thievery_Hard_Thrill.esp'
-    msg:
-      - type: say
-        content: 'only use one of the ''Worthwhile Thievery'' ESPs.'
-        condition: 'regex("Thievery_(Easy|Normal|Hard|Easy_Thrill|Normal_Thrill)\.esp")'
-  - name: 'Thievery_Hard.esp'
-    msg:
-      - type: say
-        content: 'only use one of the ''Worthwhile Thievery'' ESPs.'
-        condition: 'regex("Thievery_(Easy|Normal|Easy_Thrill|Normal_Thrill|Hard_Thrill)\.esp")'
   - name: 'Morrowind Lockpicking.esp'
     msg:
       - type: say
@@ -19102,26 +18824,10 @@ plugins:
   - name: 'CoblDeathFix.esp'
     tag:
       - Scripts
-  - name: 'BountyReductionOverTime.esp'
+  - name: 'BountyReductionOverTime(_standard|_unforgiving|_mostwanted)?.esp'
     msg:
       - type: say
         content: 'Use only one BountyReductionOverTime esp.'
-        condition: 'regex("BountyReductionOverTim(e_standard|e_unforgiving|e_mostwanted)\.esp")'
-  - name: 'BountyReductionOverTime_standard.esp'
-    msg:
-      - type: say
-        content: 'Use only one BountyReductionOverTime esp.'
-        condition: 'regex("BountyReductionOverTim(e|e_unforgiving|e_mostwanted)\.esp")'
-  - name: 'BountyReductionOverTime_unforgiving.esp'
-    msg:
-      - type: say
-        content: 'Use only one BountyReductionOverTime esp.'
-        condition: 'regex("BountyReductionOverTim(e|e_standard|e_mostwanted)\.esp")'
-  - name: 'BountyReductionOverTime_mostwanted.esp'
-    msg:
-      - type: say
-        content: 'Use only one BountyReductionOverTime esp.'
-        condition: 'regex("BountyReductionOverTim(e|e_standard|e_unforgiving)\.esp")'
   - name: 'No psychic guards v1.1.esp'
     msg:
       - type: say
@@ -19211,36 +18917,10 @@ plugins:
   - name: 'Bow_Damage_Equalizer.esp'
     tag:
       - Stats
-  - name: 'erics_double_damage_for_archers.esp'
+  - name: 'erics_(double|triple|quad)_damage(_fast)?_for_archers\.esp'
     msg:
       - type: say
         content: 'Only use one Erics * for archers.esp.'
-        condition: 'regex("erics_(double_damage_fast|quad_damage|quad_damage_fast|triple_damage|triple_damage_fast)_for_archers\.esp")'
-  - name: 'erics_quad_damage_for_archers.esp'
-    msg:
-      - type: say
-        content: 'Only use one Erics * for archers.esp.'
-        condition: 'regex("erics_(double_damage|double_damage_fast|quad_damage_fast|triple_damage|triple_damage_fast)_for_archers\.esp")'
-  - name: 'erics_quad_damage_fast_for_archers.esp'
-    msg:
-      - type: say
-        content: 'Only use one Erics * for archers.esp.'
-        condition: 'regex("erics_(double_damage|double_damage_fast|quad_damage|triple_damage|triple_damage_fast)_for_archers\.esp")'
-  - name: 'erics_triple_damage_for_archers.esp'
-    msg:
-      - type: say
-        content: 'Only use one Erics * for archers.esp.'
-        condition: 'regex("erics_(double_damage|double_damage_fast|quad_damage|quad_damage_fast|triple_damage_fast)_for_archers\.esp")'
-  - name: 'erics_triple_damage_fast_for_archers.esp'
-    msg:
-      - type: say
-        content: 'Only use one Erics * for archers.esp.'
-        condition: 'regex("erics_(double_damage|double_damage_fast|quad_damage|quad_damage_fast|triple_damage)_for_archers\.esp")'
-  - name: 'erics_double_damage_fast_for_archers.esp'
-    msg:
-      - type: say
-        content: 'Only use one Erics * for archers.esp.'
-        condition: 'regex("erics_(double_damage|quad_damage|quad_damage_fast|triple_damage|triple_damage_fast)_for_archers\.esp")'
   - name: 'Fast Arrow Collection.esp'
     msg:
       - type: warn
