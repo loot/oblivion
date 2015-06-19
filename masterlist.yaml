@@ -2624,10 +2624,8 @@ plugins:
       - type: say
         content: 'May have a problem with Storms and Sounds.'
   - name: '300_Lore_Dialogue_Updated.esp'
-    msg:
-      - type: say
-        content: 'Do NOT use with 300_Lore Dialogue.esp'
-        condition: 'file("300_Lore Dialogue.esp")'
+    inc:
+      - '300_Lore Dialogue.esp'
     dirty:
       - crc: 0x366c8d97
         util: *dirtyUtil
@@ -2950,22 +2948,18 @@ plugins:
   - name: 'ClocksOfCyrodiilBC.esp'
     msg:
       - type: say
-        content: 'Deactivate CLocksOfCyrodiil.esp'
-        condition: 'active("ClocksOfCyrodiil.esp")'
-      - type: say
         content: 'Obsolete. Use ''ClocksOfCyrodiil_BC_OBC_OC_OCLR_Vanilla.esp'' instead.'
+    inc:
+      - ClocksOfCyrodiil.esp
   - name: 'ClocksOfCyrodiilOBC.esp'
     msg:
       - type: say
-        content: 'Deactivate CLocksOfCyrodiil.esp'
-        condition: 'active("ClocksOfCyrodiil.esp")'
-      - type: say
         content: 'Use ''ClocksOfCyrodiil_BC_OBC_OC_OCLR_Vanilla.esp'' instead.'
+    inc:
+      - ClocksOfCyrodiil.esp
   - name: 'ClocksOfCyrodiil_BC_OBC_OC_OCLR_Vanilla.esp'
-    msg:
-      - type: warn
-        content: 'Deactivate CLocksOfCyrodiil.esp'
-        condition: 'active("ClocksOfCyrodiil.esp")'
+    inc:
+      - ClocksOfCyrodiil.esp
     dirty:
       - crc: 0xd83fbb37
         util: *dirtyUtil
@@ -3075,17 +3069,13 @@ plugins:
       - Deactivate
       - Graphics
   - name: 'ChallangingThieveryFull.esp'
-    msg:
-      - type: say
-        content: 'Only use one ChallangingThievery*.esp.'
-        condition: 'file("ChallangingThieveryNoHouseAdditions.esp")'
+    inc:
+      - 'ChallangingThieveryNoHouseAdditions.esp'
     tag:
       - Invent
   - name: 'ChallangingThieveryNoHouseAdditions.esp'
-    msg:
-      - type: say
-        content: 'Only use one ChallangingThievery*.esp.'
-        condition: 'file("ChallangingThieveryFull.esp")'
+    inc:
+      - 'ChallangingThieveryFull.esp'
     tag:
       - Invent
   - name: 'Daedric Wargames.esp'
@@ -3406,15 +3396,11 @@ plugins:
         util: *dirtyUtil
         itm: 7
   - name: 'See You Sleep DLL.esp'
-    msg:
-      - type: error
-        content: 'Do not use with mmmpld''s original See You Sleep mod or any of its compatibility patches.'
-        condition: 'file("P1DseeYouSleep.esp")'
+    inc:
+      - 'P1DseeYouSleep.esp'
   - name: 'See You Sleep DLL - Vampire Bedroll Anims.esp'
-    msg:
-      - type: error
-        content: 'Do not use with mmmpld''s original See You Sleep mod or any of its compatibility patches.'
-        condition: 'file("P1DseeYouSleep.esp")'
+    inc:
+      - 'P1DseeYouSleep.esp'
   - name: 'P-Froggys Corpse Carry DV.esp'
     req: [ *OBSE ]
   - name: 'P-Froggys Corpse Carry EV.esp'
@@ -3445,10 +3431,9 @@ plugins:
     tag:
       - Relev
   - name: 'MoreMoldyIngredients&Vegeteables.esp'
-    msg:
-      - type: say
-        content: 'do not use ''Q - More and Moldy Ingredients v1.1.esp'' and ''More_vegetables.esp'' with this; this replaces those two esps.'
-        condition: 'file("Q - More and Moldy Ingredients v1.1.esp") or file("More_vegetables.esp")'
+    inc:
+      - 'Q - More and Moldy Ingredients v1.1.esp'
+      - 'More_vegetables.esp'
     tag:
       - Relev
   - name: 'Q-Core - Icons.esp'
@@ -3721,29 +3706,29 @@ plugins:
         content: 'Requires: OBSE 14+'
         condition: 'version("..\obse_loader.exe","0.14.0.0",<)'
   - name: 'TreasureChest - MMM.esp'
-    msg:
-      - type: say
-        content: 'For MMM or MMMforFran , do not use with TreasureChest - OOO/FCOM.esp.'
+    inc:
+      - 'TreasureChest - OOO.esp'
+      - 'TreasureChest - FCOM.esp'
   - name: 'TreasureChest - OOO.esp'
-    msg:
-      - type: say
-        content: 'For OOO , do not use with TreasureChest - MMM/FCOM.esp.'
+    inc:
+      - 'TreasureChest - FCOM.esp'
+      - 'TreasureChest - MMM.esp'
   - name: 'TreasureChest - FCOM.esp'
-    msg:
-      - type: say
-        content: 'For FCOM or MMMforOOO , do not use with TreasureChest - MMM/OOO.esp.'
+    inc:
+      - 'TreasureChest - OOO.esp'
+      - 'TreasureChest - MMM.esp'
   - name: 'TreasureChest - ALEX.esp'
+    inc:
+      - 'TreasureChest - ALEX for OOO.esp'
     msg:
       - type: say
         content: 'Requires: Cobl.'
-      - type: say
-        content: 'do not use with TreasureChest - ALEX for OOO.esp.'
   - name: 'TreasureChest - ALEX for OOO.esp'
+    inc:
+      - 'TreasureChest - ALEX.esp'
     msg:
       - type: say
         content: 'Requires: Cobl.'
-      - type: say
-        content: 'do not use with TreasureChest - ALEX.esp.'
   - name: 'trfSolaris.esp'
     msg:
       - type: say
@@ -3830,17 +3815,14 @@ plugins:
       - type: say
         content: 'Not needed if using option in Enhanced Economy.'
   - name: 'Living Economy.esp'
-    msg:
-      - type: warn
-        content: 'Don''t use ''Living Economy'' and ''Living Economy - SI'' together. Pick one.'
-        condition: 'file("Living Economy - SI.esp")'
+    inc:
+      - 'Living Economy - SI.esp'
   - name: 'Living Economy - SI.esp'
+    inc:
+      - 'Living Economy.esp'
     msg:
       - type: say
         content: 'Requires: Shivering Isles expansion.'
-      - type: warn
-        content: 'Don''t use ''Living Economy'' and ''Living Economy - SI'' together. Pick one.'
-        condition: 'file("Living Economy.esp")'
   - name: 'SI Living Economy.esp'
     msg:
       - type: warn
@@ -4400,10 +4382,8 @@ plugins:
       - NoMerge
       - Stats
   - name: 'See You Sleep DLL - DLCVileLair.esp'
-    msg:
-      - type: error
-        content: 'Do not use with mmmpld''s original See You Sleep mod or any of its compatibility patches.'
-        condition: 'file("P1DseeYouSleep.esp")'
+    inc:
+      - 'P1DseeYouSleep.esp'
   - name: 'DLCMehrunesRazor.esp'
     priority: -1999000
     after:
@@ -4677,9 +4657,9 @@ plugins:
       - type: say
         content: 'If using Wrye Bash use the bashed patch tweak instead.'
   - name: 'Alir''sArmor.esp'
+    inc:
+      - 'Better Imperial City.esp'
     msg:
-      - type: say
-        content: 'Will conflict with Better Imperial City.esp'
       - type: say
         content: 'May conflict with mods that alter the exterior of the IC Market District.'
   - name: 'Alluring Books.esp'
@@ -6965,17 +6945,15 @@ plugins:
       - Actors.Anims
       - NoMerge
   - name: 'Goblin Realswords+Tribal Shields.esp'
-    msg:
-      - type: say
-        content: 'Only use this or Goblin Realswords.esp (or FCOM)'
-        condition: 'file("FCOM_Convergence.esm") or file("Goblin Realswords.esp")'
+    inc:
+      - 'FCOM_Convergence.esm'
+      - 'Goblin Realswords.esp'
     tag:
       - Graphics
   - name: 'Goblin Realswords.esp'
-    msg:
-      - type: say
-        content: 'Only use this or Goblin Realswords+Tribal Shields.esp (or FCOM)'
-        condition: 'file("FCOM_Convergence.esm") or file("Goblin Realswords+Tribal Shields.esp")'
+    inc:
+      - 'FCOM_Convergence.esm'
+      - 'Goblin Realswords+Tribal Shields.esp'
   - name: 'Mart''s Monster Mod - Hemingweys NPC and Guard Capes.esp'
     tag:
       - Invent
@@ -8826,13 +8804,8 @@ plugins:
       - type: say
         content: 'Not recommended. Kept for development purposes only.'
   - name: 'TIE In - Game Settings.esp'
-    msg:
-      - type: say
-        content: 'Choose only Game Settings.esp OR Game Settings OOO.esp, not both.'
-  - name: 'TIE In - Game Settings OOO.esp'
-    msg:
-      - type: say
-        content: 'Choose only Game Settings.esp OR Game Settings OOO.esp, not both.'
+    inc:
+      - 'TIE In - Game Settings OOO.esp'
   - name: 'TIE Cats.esp'
     tag:
       - Graphics
@@ -8896,13 +8869,11 @@ plugins:
     tag:
       - Graphics
   - name: 'Qarls_Harvest addon_MMM.esp'
-    msg:
-      - type: say
-        content: 'Don''t use with ''Qarls_Harvest addon.esp''.'
+    inc:
+      - 'Qarls_Harvest addon.esp'
   - name: 'Qarls_Harvest addon_OOO.esp'
-    msg:
-      - type: say
-        content: 'Don''t use with ''Qarls_Harvest addon.esp''.'
+    inc:
+      - 'Qarls_Harvest addon.esp'
   - name: 'Fransfemale.esp'
     tag:
       - Graphics
@@ -9008,9 +8979,8 @@ plugins:
       - Names
       - Relations
   - name: 'Geomancy & Gem Dust OOO (No Spell Change).esp'
-    msg:
-      - type: say
-        content: 'Use ''Geomancy & Gem Dust OOO (No Spell Change)'' or ''Geomancy & Gem Dust OOO'' but not both at the same time.'
+    inc:
+      - 'Geomancy & Gem Dust OOO.esp'
   - name: 'MMM-Cobl.esp'
     tag:
       - Delev
@@ -9647,17 +9617,11 @@ plugins:
   - name: 'Quelldorf 1.5.esp'
     inc:
       - 'Suliin V1.2.esp'
-    msg:
-      - type: say
-        content: 'Use Quelldorf or Quelldorf ohn Schiff but not both at the same time.'
-        condition: 'file("Quelldorf ohne Schiff1.5.esp")'
+      - 'Quelldorf ohne Schiff1.5.esp'
   - name: 'Quelldorf ohne Schiff1.5.esp'
     inc:
       - 'Suliin V1.2.esp'
-    msg:
-      - type: say
-        content: 'Use Quelldorf or Quelldorf ohn Schiff but not both at the same time.'
-        condition: 'file("Quelldorf 1.5.esp")'
+      - 'Quelldorf 1.5.esp'
   - name: 'KvatchAftermath.esp'
     dirty:
       - crc: 0x435d607c
@@ -9768,15 +9732,11 @@ plugins:
         content: 'Probably incompatible with Better Cities.'
         condition: 'file("Better Cities Resources.esm")'
   - name: '00RBScribeSupplies Intensive.esp'
-    msg:
-      - type: say
-        content: 'Use only one 00RBScribeSupplies mod at a time.'
-        condition: 'file("00RBScribeSupplies02, read summary.esp")'
+    inc:
+      - '00RBScribeSupplies02, read summary.esp'
   - name: '00RBScribeSupplies02, read summary.esp'
-    msg:
-      - type: say
-        content: 'Use only one 00RBScribeSupplies mod at a time.'
-        condition: 'file("00RBScribeSupplies Intensive.esp")'
+    inc:
+      - '00RBScribeSupplies Intensive.esp'
   - name: '0WeynonPrioryAlive.esp'
     tag:
       - Graphics
@@ -10241,15 +10201,12 @@ plugins:
         util: *dirtyUtil
         itm: 1
   - name: 'Automagicon.esp'
-    msg:
-      - type: say
-        content: 'Use the Cobl version or the non-Cobl version, not both.'
-        condition: 'active("Automagicon_Cobl.esp")'
+    inc:
+      - 'Automagicon_Cobl.esp'
   - name: 'Automagicon_Cobl.esp'
+    inc:
+      - 'Automagicon.esp'
     msg:
-      - type: say
-        content: 'Use the Cobl version or the non-Cobl version, not both.'
-        condition: 'active("Automagicon.esp")'
       - type: say
         content: 'Requires: Cobl'
   - name: 'AWitchTale.esp'
@@ -10497,10 +10454,8 @@ plugins:
       - type: say
         content: 'Incompatible with: Better Cities. Already included in Better Cities Bravil.'
   - name: 'HackdirtTheDeepOnes.esp'
-    msg:
-      - type: say
-        content: 'Revamp of the older mod HackdirtCaverns.esp, do not use both at the same time.'
-        condition: 'file("HackdirtCaverns.esp")'
+    inc:
+      - 'HackdirtCaverns.esp'
     dirty:
       - crc: 0x9294634b
         util: *dirtyUtil
@@ -10736,17 +10691,14 @@ plugins:
         util: *dirtyUtil
         itm: 3
   - name: 'Companion Gate.esp'
-    msg:
-      - type: say
-        content: 'Use only one ''Companion Gate.esp'' or ''Companion Gate_Load.esp'''
-        condition: 'file("Companion Gate_Load.esp")'
+    inc:
+      - 'Companion Gate_Load.esp'
   - name: 'Companion Gate_Load.esp'
+    inc:
+      - 'Companion Gate.esp'
     msg:
       - type: say
         content: 'Use this, if you haven a existing save game'
-      - type: say
-        content: 'Use only one ''Companion Gate.esp'' or ''Companion Gate_Load.esp'''
-        condition: 'file("Companion Gate.esp")'
   - name: 'CV - Templar Fortress.esp'
     dirty:
       - crc: 0x44e1671
@@ -10952,15 +10904,8 @@ plugins:
       - Actors.Anims
       - NoMerge
   - name: 'Duke Patricks Dragon and the Sword of Might.esp'
-    msg:
-      - type: say
-        content: 'Don''t use ''Sword of Might.esp'' and ''Sword of Might Light Version.esp'' at the same time.'
-        condition: 'file("Duke Patricks Dragon and the Sword of Might Light Version.esp")'
-  - name: 'Duke Patricks Dragon and the Sword of Might Light Version.esp'
-    msg:
-      - type: say
-        content: 'Don''t use ''Sword of Might.esp'' and ''Sword of Might Light Version.esp'' at the same time.'
-        condition: 'file("Duke Patricks Dragon and the Sword of Might.esp")'
+    inc:
+      - 'Duke Patricks Dragon and the Sword of Might Light Version.esp'
   - name: 'DukeCity Vwalk.esp'
     tag:
       - Actors.Anims
@@ -11743,13 +11688,11 @@ plugins:
         udr: 3
         itm: 202
   - name: 'Gold Road Cottage - Classy.esp'
-    msg:
-      - type: say
-        content: 'Use only one ''Gold Road Cottage - X.esp''.'
+    inc:
+      - 'Gold Road Cottage - Rugged.esp'
   - name: 'Gold Road Cottage - Rugged.esp'
-    msg:
-      - type: say
-        content: 'Use only one ''Gold Road Cottage - X.esp''.'
+    inc:
+      - 'Gold Road Cottage - Classy.esp'
   - name: 'EiAmod.esp'
     dirty:
       - crc: 0x37abd205
@@ -11768,10 +11711,9 @@ plugins:
       - Actors.Anims
       - NoMerge
   - name: 'Lady Stone Villa.esp'
+    inc:
+      - 'Lady Stone Villa ULCompatable.esp'
     msg:
-      - type: say
-        content: 'Use only one ''Lady Stone Villa'' plugin.'
-        condition: 'file("Lady Stone Villa ULCompatable.esp")'
       - type: say
         content: 'Incompatible with: Oscuro''s Oblivion Overhaul'
         condition: *OOOCond
@@ -11785,10 +11727,9 @@ plugins:
         itm: 22
         udr: 1830
   - name: 'Lady Stone Villa ULCompatable.esp'
+    inc:
+      - 'Lady Stone Villa.esp'
     msg:
-      - type: say
-        content: 'Use only one ''Lady Stone Villa'' plugin.'
-        condition: 'file("Lady Stone Villa.esp")'
       - type: say
         content: 'Incompatible with: Oscuro''s Oblivion Overhaul'
         condition: *OOOCond
@@ -11958,15 +11899,15 @@ plugins:
         util: *dirtyUtil
         itm: 3
   - name: 'MadMagesTower.esp'
+    inc:
+      - 'MadMagesTowerBASIC.esp'
     msg:
-      - type: say
-        content: 'Edits border region. See documentation. Use either ''MadMagesTower.esp'' or ''MadMagesTowerBASIC.esp'' but not both.'
       - type: say
         content: 'Use ''MadMagesTower-CloudtopMountains patch.esp'' compatibility patch when using Unique Landscapes Cloudtop Mountain.'
   - name: 'MadMagesTowerBASIC.esp'
+    inc:
+      - 'MadMagesTower.esp'
     msg:
-      - type: say
-        content: 'Does not edit border region. See documentation. Use either ''MadMagesTower.esp'' or ''MadMagesTowerBASIC.esp'' but not both.'
       - type: say
         content: 'Use ''MadMagesTowerBASIC-CloudtopMountains patch.esp'' compatibility patch when using Unique Landscapes Cloudtop Mountain.'
   - name: 'Mad Mike''s Crypts of Cyrodiil.esp'
@@ -12037,15 +11978,11 @@ plugins:
         util: *dirtyUtil
         itm: 3
   - name: 'Mein Elfengarten-Bezirk Haus V. 2.0 mit Dachgarten.esp'
-    msg:
-      - type: say
-        content: 'Use only one Mein Elfengarten-Bezirk Haus V. 2.0 * esp'
-        condition: 'file("Mein Elfengarten-Bezirk Haus V. 2.0 OHNE Dachgarten.esp")'
+    inc:
+      - 'Mein Elfengarten-Bezirk Haus V. 2.0 OHNE Dachgarten.esp'
   - name: 'Mein Elfengarten-Bezirk Haus V. 2.0 OHNE Dachgarten.esp'
-    msg:
-      - type: say
-        content: 'Use only one Mein Elfengarten-Bezirk Haus V. 2.0 * esp'
-        condition: 'file("Mein Elfengarten-Bezirk Haus V. 2.0 mit Dachgarten.esp")'
+    inc:
+      - 'Mein Elfengarten-Bezirk Haus V. 2.0 mit Dachgarten.esp'
   - name: 'Mimics!.esp'
     dirty:
       - crc: 0x7f582015
@@ -12519,10 +12456,8 @@ plugins:
         content: 'If loaded after OOO.esp this cause OOO''s lockbash feature to fail. To fix this simply load RL-LR before OOO.esp.'
         condition: *OOOCond
   - name: 'MTCVillages-LakeRumarePatch.esp'
-    msg:
-      - type: warn
-        content: 'Use this patch or "MTC-WeyePatch.esp", but not both.'
-        condition: 'file("MTC-WeyePatch.esp")'
+    inc:
+      - 'MTC-WeyePatch.esp'
   - name: 'RealmofRuun.esp'
     dirty:
       - crc: 0x4b20fae5
@@ -17167,15 +17102,8 @@ plugins:
       - Delev
       - Relev
   - name: 'CT-YABM.esp'
-    msg:
-      - type: say
-        content: 'Use ''CT-YABM.esp'' or ''CT-YABM - No Idle.esp'' but not both at the same time.'
-        condition: 'file("CT-YABM - No Idle.esp")'
-  - name: 'CT-YABM - No Idle.esp'
-    msg:
-      - type: say
-        content: 'Use ''CT-YABM.esp'' or ''CT-YABM - No Idle.esp'' but not both at the same time.'
-        condition: 'file("CT-YABM.esp")'
+    inc:
+      - 'CT-YABM - No Idle.esp'
   - name: 'Cyrodiil City Guards.esp'
     dirty:
       - crc: 0xe138ff22
@@ -17246,15 +17174,8 @@ plugins:
       - type: say
         content: 'Requires: COBL.'
   - name: 'DoB10mins.esp'
-    msg:
-      - type: say
-        content: 'Use only one DoB**mins.esp.'
-        condition: 'file("DoB20mins.esp")'
-  - name: 'DoB20mins.esp'
-    msg:
-      - type: say
-        content: 'Use only one DoB**mins.esp.'
-        condition: 'file("DoB10mins.esp")'
+    inc:
+      - 'DoB20mins.esp'
   - name: 'Dremora Sigil Lords.esp'
     msg:
       - type: say
@@ -17824,20 +17745,17 @@ plugins:
       - Graphics
       - Names
   - name: 'ReneersGoldMod.esp'
-    msg:
-      - type: say
-        content: 'Use only one gold in your inventory type mod.'
-        condition: 'file("kuerteeGoldIsAnInventoryItem.esp") or file("DBWGP.esp")'
+    inc:
+      - 'kuerteeGoldIsAnInventoryItem.esp'
+      - 'DBWGP.esp'
   - name: 'kuerteeGoldIsAnInventoryItem.esp'
-    msg:
-      - type: say
-        content: 'Use only one gold in your inventory type mod.'
-        condition: 'file("ReneersGoldMod.esp") or file("DBWGP.esp")'
+    inc:
+      - 'ReneersGoldMod.esp'
+      - 'DBWGP.esp'
   - name: 'DBWGP.esp'
-    msg:
-      - type: say
-        content: 'Use only one gold in your inventory type mod.'
-        condition: 'file("ReneersGoldMod.esp") or file("kuerteeGoldIsAnInventoryItem.esp")'
+    inc:
+      - 'kuerteeGoldIsAnInventoryItem.esp'
+      - 'ReneersGoldMod.esp'
   - name: 'Respawning Varla & Welkynd Stones.esp'
     tag:
       - Scripts
@@ -18121,15 +18039,8 @@ plugins:
         content: 'Probably not compatible with OOO. Update to version 2.0+.'
         condition: *OOOCond
   - name: 'SPTDiverseGuardsMRAll.esp'
-    msg:
-      - type: say
-        content: 'Use ''SPTDiverseGuardsMRAll.esp'' or ''SPTDiverseGuardsMRHuman.esp'' but not both at the same time.'
-        condition: 'file("SPTDiverseGuardsMRHuman.esp")'
-  - name: 'SPTDiverseGuardsMRHuman.esp'
-    msg:
-      - type: say
-        content: 'Use ''SPTDiverseGuardsMRAll.esp'' or ''SPTDiverseGuardsMRHuman.esp'' but not both at the same time.'
-        condition: 'file("SPTDiverseGuardsMRAll.esp")'
+    inc:
+      - 'SPTDiverseGuardsMRHuman.esp'
   - name: 'SPTDiverseBandits.esp'
     tag:
       - Relev
@@ -18932,21 +18843,12 @@ plugins:
         condition: 'file("Midas Tigernolevel OBSE.esp")'
   - name: 'Midas Tigernolevel OBSE.esp'
     req: [ *OBSE ]
-    msg:
-      - type: say
-        content: 'Pick either the Non OBSE version or this one. But not both.'
-        condition: 'file("Midas Tigernolevel NoOBSE.esp")'
-  - name: 'Midas BeastFortify Fix NONOBSE.esp'
-    msg:
-      - type: say
-        content: 'Pick either the OBSE version or this one. But not both.'
-        condition: 'file("Midas BeastFortify Fix OBSE.esp")'
+    inc:
+      - 'Midas Tigernolevel NoOBSE.esp'
   - name: 'Midas BeastFortify Fix OBSE.esp'
     req: [ *OBSE ]
-    msg:
-      - type: say
-        content: 'Pick either the Non OBSE version or this one. But not both.'
-        condition: 'file("Midas BeastFortify Fix NONOBSE.esp")'
+    inc:
+      - 'Midas BeastFortify Fix NONOBSE.esp'
   - name: 'CALSUDG.esp'
     msg:
       - type: say
@@ -18966,15 +18868,8 @@ plugins:
         util: *dirtyUtil
         udr: 1
   - name: 'Disease Immunity (Oblivion).esp'
-    msg:
-      - type: say
-        content: 'Only use one Disease Immunity esp - use this one without SI.'
-        condition: 'file("Disease Immunity (Oblivion + Shivering Isles).esp")'
-  - name: 'Disease Immunity (Oblivion + Shivering Isles).esp'
-    msg:
-      - type: say
-        content: 'Only use one Disease Immunity esp - use this one with SI.'
-        condition: 'file("Disease Immunity (Oblivion).esp")'
+    inc:
+      - 'Disease Immunity (Oblivion + Shivering Isles).esp'
   - name: 'spellshields2.esp'
     msg:
       - type: warn
@@ -19251,13 +19146,11 @@ plugins:
       - type: say
         content: 'Obsolete. Remove this and update to v2.08+.'
   - name: 'kuerteeCrimeHasWitnesses.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: Reneer''s Guard Overhaul.'
+    inc:
+      - 'RenGuardOverhaul.esp'
   - name: 'kuerteeLootingDeadGuardsIsStealing.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: Reneer''s Guard Overhaul.'
+    inc:
+      - 'RenGuardOverhaul.esp'
   - name: 'TRN One of the Gang.esp'
     msg:
       - type: say
@@ -19279,15 +19172,8 @@ plugins:
       - type: say
         content: 'Outdated. Update to latest version.'
   - name: 'Duke Patrick''s Lockpick challange Autopick.esp'
-    msg:
-      - type: say
-        content: 'Only use one ''Lockpick challenge'' mod.'
-        condition: 'file("Duke Patrick''s Lockpick challange Manual.esp")'
-  - name: 'Duke Patrick''s Lockpick challange Manual.esp'
-    msg:
-      - type: say
-        content: 'Only use one ''Lockpick challenge'' mod.'
-        condition: 'file("Duke Patrick''s Lockpick challange Autopick.esp")'
+    inc:
+      - 'Duke Patrick''s Lockpick challange Manual.esp'
   - name: 'Adrenaline-Fuelled Combat.esp'
     msg:
       - type: say
@@ -19433,26 +19319,14 @@ plugins:
         content: 'Incompatible with: Deadly Reflex'
         condition: 'regex("Deadly Reflex.*\.esp")'
   - name: 'HTHAdvanced - Normal.esp'
+    inc:
+      - 'HTHAdvanced - Sinkpoint.esp'
     msg:
-      - type: say
-        content: 'Use only one HTHAdvanced - * esp.'
       - type: say
         content: 'Use ''Sinkpoint'' version if using using Sinkpoints Martial Arts Animation Replacer.'
-  - name: 'HTHAdvanced - Sinkpoint.esp'
-    msg:
-      - type: say
-        content: 'Use only one HTHAdvanced - * esp.'
-        condition: 'file("HTHAdvanced - Normal.esp")'
   - name: 'JM''s Bar Fights mortal.esp'
-    msg:
-      - type: say
-        content: 'Pick and use only 1 of the 2 JM''s Bar Fight mod files.'
-        condition: 'file("JM''s Bar Fights.esp")'
-  - name: 'JM''s Bar Fights.esp'
-    msg:
-      - type: say
-        content: 'Pick and use only 1 of the 2 JM''s Bar Fight mod files.'
-        condition: 'file("JM''s Bar Fights mortal.esp")'
+    inc:
+      - 'JM''s Bar Fights.esp'
   - name: 'Longer_KnockOut-6523.esp'
     msg:
       - type: say
@@ -23281,10 +23155,8 @@ plugins:
       - Graphics
       - Scripts
   - name: 'Nephs Stock Shoes Real High Heels SI.esp'
-    msg:
-      - type: warn
-        content: 'Do not use with "Nephs Stock Shoes Real High Heels.esp".'
-        condition: 'file("Nephs Stock Shoes Real High Heels.esp")'
+    inc:
+      - 'Nephs Stock Shoes Real High Heels.esp'
     tag:
       - Graphics
       - Scripts
