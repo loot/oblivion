@@ -7611,6 +7611,9 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Already integrated into FCOM.'
+        condition: *FCOMCond
+      - type: say
+        content: 'Requires: a Fran''s install with the Leveled Quests option.'
   - name: 'Mart''s Monster Mod - Additional Enemy NPC Vars.esp'
     msg:
       - type: say
@@ -7992,10 +7995,6 @@ plugins:
       - type: error
         content: 'Delete and use ''FCOM_DurabilityAndDamage.esp''.'
         condition: *FCOMCond
-  - name: 'Mart''s Monster Mod - Fran''s leveled quests.esp'
-    msg:
-      - type: say
-        content: 'Requires: a Fran''s install with the Leveled Quests option.'
   - name: 'Mart''s Monster Mod - LessReaversInGates.esp'
     msg:
       - type: say
