@@ -57,16 +57,16 @@ common:
 
 globals:
   - type: say
-    content: 'A [new release](https://github.com/loot/loot/releases/tag/v0.7.0) of LOOT is available.'
-    condition: 'version("LOOT", "0.7.0.0", <)'
+    content: 'A [new release](https://github.com/loot/loot/releases/tag/v0.8.0) of LOOT is available.'
+    condition: 'version("LOOT", "0.8.0.0", <)'
   - type: say
     content:
       - lang: en
-        str: '[Latest LOOT thread](http://forums.bethsoft.com/topic/1516193-rel-loot-thread-18/).'
+        str: '[Latest LOOT thread](http://forums.bethsoft.com/topic/1519842-rel-loot-thread-19/).'
       - lang: ru
-        str: '[Обсуждение LOOT "(Eng)"](http://forums.bethsoft.com/topic/1516193-rel-loot-thread-18/).'
+        str: '[Обсуждение LOOT "(Eng)"](http://forums.bethsoft.com/topic/1519842-rel-loot-thread-19/).'
       - lang: es
-        str: '[Forum de LOOT](http://forums.bethsoft.com/topic/1516193-rel-loot-thread-18/).'
+        str: '[Forum de LOOT](http://forums.bethsoft.com/topic/1519842-rel-loot-thread-19/).'
 
 plugins:
   - name: 'Oblivion.esm'
@@ -8041,6 +8041,12 @@ plugins:
     msg:
       - type: say
         content: 'MMM users should use ''Mart''s Monster Mod - Farm Animals''.'
+    dirty:
+      - crc: 0x79F13870 
+        itm: 8
+        udr: 0
+        util: *dirtyUtil
+    url: [ 'http://www.nexusmods.com/oblivion/mods/14265' ]
   - name: 'MrSiikasBats.esp'
     msg:
       - type: say
@@ -16191,6 +16197,11 @@ plugins:
         util: *dirtyUtil
         itm: 68
         udr: 4164
+      - crc: 0xF6E3D7C4
+        util: *dirtyUtil
+        itm: 5
+        udr: 0
+    url: [ 'http://www.nexusmods.com/oblivion/mods/40392' ]
   - name: 'SunderedKeep Vwalk.esp'
     tag:
       - Actors.Anims
@@ -25102,3 +25113,42 @@ plugins:
     url: [ 'http://www.nexusmods.com/oblivion/mods/38941' ]
   - name: 'Leveling Quick Fix 20.esp'
     url: [ 'http://www.nexusmods.com/oblivion/mods/38941' ]
+  - name: 'Command Mount.esp'
+    dirty:
+      - crc: 0x081C0225
+        itm: 2
+        udr: 0
+        util: *dirtyUtil
+    url: [ 'http://www.nexusmods.com/oblivion/mods/27957' ]
+  - name: 'Oblivifall - Let''s Talk!.esp'
+    dirty:
+      - crc: 0x5DFF0867
+        itm: 2
+        udr: 0
+        util: *dirtyUtil
+    url: [ 'http://www.nexusmods.com/oblivion/mods/27957' ]
+  - name: 'Salmo the Baker.esp'
+    msg:
+      - type: say
+        content: Do not use with the COBL version of this plugin!
+    dirty:
+      - crc: 0x2C782FA2
+        itm: 60
+        udr: 31
+        util: *dirtyUtil
+    url: [ 'http://www.nexusmods.com/oblivion/mods/8435' ]
+  - name: 'BlackHorseCourierExpanded.esp'
+    dirty:
+       - crc: 0xC73A3567
+         itm: 2
+         udr: 12
+         util: *dirtyUtil
+    url: [ 'http://www.nexusmods.com/oblivion/mods/27029' ]
+  - name: 'Advanced Mark & Recall.esp'
+    req: [ *OBSE ]
+    dirty:
+      - crc: 0x855CE363
+        itm: 4
+        udr: 0
+        util: *dirtyUtil
+    url: [ 'http://www.nexusmods.com/oblivion/mods/10985' ]
