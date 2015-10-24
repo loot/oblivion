@@ -2847,7 +2847,8 @@ plugins:
     tag:
       - Graphics
   - name: 'Bitches of the Duke.esp'
-    msg: [ *reqShiveringIsles ]
+    req:
+      - 'DLCShiveringIsles.esp'
   - name: 'Bosmer Meat Mandate.esp'
     tag:
       - Invent
@@ -3075,7 +3076,8 @@ plugins:
     tag:
       - Invent
   - name: 'Daedric Wargames.esp'
-    msg: [ *reqShiveringIsles ]
+    req:
+      - 'DLCShiveringIsles.esp'
   - name: 'Oblivion_Deutsch_v3_1.esp'
     tag:
       - Names
@@ -3445,7 +3447,8 @@ plugins:
         content: 'Incompatible with: Better Cities'' VWD plugin.'
         condition: 'file("Better Cities Resources.esm")'
   - name: 'Respawning Containers.esp'
-    msg: [ *reqShiveringIsles ]
+    req:
+      - 'DLCShiveringIsles.esp'
   - name: 'RealitySpectre''sBetterPotions.esp'
     tag:
       - Graphics
@@ -3716,9 +3719,10 @@ plugins:
     inc:
       - 'Living Economy - SI.esp'
   - name: 'Living Economy - SI.esp'
+    req:
+      - 'DLCShiveringIsles.esp'
     inc:
       - 'Living Economy.esp'
-    msg: [ *reqShiveringIsles ]
   - name: 'SI Living Economy.esp'
     msg: [ *obsolete ]
   - name: 'Living Economy - Items.esp'
@@ -6360,7 +6364,8 @@ plugins:
         itm: 3
         <<: *dirtyPlugin
   - name: '1SI_Horses.esp'
-    msg: [ *reqShiveringIsles ]
+    req:
+      - 'DLCShiveringIsles.esp'
   - name: 'a4sFlamingNightmare.esp'
     tag:
       - Graphics
@@ -6373,7 +6378,8 @@ plugins:
   - name: 'Athletics While Riding.esp'
     req: [ *OBSEv18 ]
   - name: 'CDM-Horses.esp'
-    msg: [ *reqShiveringIsles ]
+    req:
+      - 'DLCShiveringIsles.esp'
   - name: 'MigHorseArmor.esp'
     dirty:
       - crc: 0x1c8f1c26
@@ -7944,11 +7950,12 @@ plugins:
       - type: say
         content: 'Not overhaul mod compatible.'
   - name: 'ShiveringIsleTravellers.esp'
+    req:
+      - 'DLCShiveringIsles.esp'
     msg:
       - type: say
         content: 'Use of ''TamrielTravellersItemsNPC.esp'', ''TamrielTravellersItemsUnscaled.esp'', or ''TamrielTravellersItemsVendors.esp'' will remove SI items for sale.'
         condition: 'file("TamrielTravellersItemsNPC.esp") or file("TamrielTravellersItemsUnscaled.esp") or file("TamrielTravellersItemsVendors.esp")'
-      - *reqShiveringIsles
     dirty:
       - crc: 0x36dd18e
         <<: *dirtyPlugin
@@ -7973,7 +7980,8 @@ plugins:
   - name: 'Choices and Consequences - FCOM - Diverse Guards.esp'
     msg: [ *obsolete ]
   - name: 'FCOM_HungersUnitySI.esp'
-    msg: [ *reqShiveringIsles ]
+    req:
+      - 'DLCShiveringIsles.esp'
     tag:
       - Actors.Skeleton
       - Factions
@@ -8999,7 +9007,8 @@ plugins:
         <<: *dirtyPlugin
         itm: 3
   - name: 'AbuEmir01.esp'
-    msg: [ *reqShiveringIsles ]
+    req:
+      - 'DLCShiveringIsles.esp'
   - name: 'AdenseEpicDungeon.esp'
     msg:
       - type: say
@@ -9227,7 +9236,8 @@ plugins:
         content: 'Use only one Anvil_MorningGlory mod module.'
         condition: 'file("Anvil_MorningGloryBetterCities_(Blue|Orange|Purple)\.esp")'
   - name: 'Aqua_City_01.esp'
-    msg: [ *reqShiveringIsles ]
+    req:
+      - 'DLCShiveringIsles.esp'
   - name: 'AR.esp'
     dirty:
       - crc: 0xeb70503
@@ -9235,14 +9245,16 @@ plugins:
         itm: 76
         udr: 44
   - name: 'Arcane Services.esp'
-    req: [ *OBSE ]
-    msg: [ *reqShiveringIsles ]
+    req:
+      - *OBSE
+      - 'DLCShiveringIsles.esp'
     dirty:
       - crc: 0x15ffc768
         <<: *dirtyPlugin
         itm: 3
   - name: 'Archer Shop Ver. 4.2.esp'
-    msg: [ *reqShiveringIsles ]
+    req:
+      - 'DLCShiveringIsles.esp'
   - name: 'ArchersLodge.esp'
     msg: [ *obsolete ]
   - name: 'ArchersLodge1.1.esp'
@@ -9530,8 +9542,9 @@ plugins:
         content: 'Do not use if using ElsweyrAnequina.esp.'
         condition: 'active("ElsweyrAnequina.esp")'
   - name: 'Black ocean.esp'
+    req:
+      - 'DLCShiveringIsles.esp'
     msg:
-      - *reqShiveringIsles
       - type: say
         content: 'Requires: Knights of the Nine, unless using the patch available from [here](http://blackocean.ucoz.ru).'
     dirty:
@@ -9540,8 +9553,9 @@ plugins:
         itm: 273
         udr: 547
   - name: 'Black_ocean.esp'
+    req:
+      - 'DLCShiveringIsles.esp'
     msg:
-      - *reqShiveringIsles
       - type: say
         content: 'Requires: Knights of the Nine, unless using the patch available from [here](http://blackocean.ucoz.ru).'
   - name: 'BladeOfTheHaunted.esp'
@@ -10860,7 +10874,8 @@ plugins:
         content: 'Not Better Cities compatible. Already included in Better Cities Leyawiin.'
         condition: 'file("Better Cities Resources.esm")'
   - name: 'Litterbug.esp'
-    msg: [ *reqShiveringIsles ]
+    req:
+      - 'DLCShiveringIsles.esp'
   - name: 'Locked Doors and Knocking v1.02.esp'
     msg:
       - type: say
@@ -10954,7 +10969,8 @@ plugins:
         itm: 79
         udr: 3
   - name: 'Mages Guild Quests.esp'
-    msg: [ *reqShiveringIsles ]
+    req:
+      - 'DLCShiveringIsles.esp'
   - name: 'Martin.esp'
     dirty:
       - crc: 0xd12c13f3
@@ -10978,9 +10994,11 @@ plugins:
         <<: *dirtyPlugin
         itm: 21
   - name: 'Mansion of Champions.esp'
+    req:
+      - 'DLCShiveringIsles.esp'
     msg:
       - type: say
-        content: 'Requires: Cobl, Shivering Isles'
+        content: 'Requires: Cobl'
     dirty:
       - crc: 0xee81149c
         <<: *dirtyPlugin
@@ -11258,7 +11276,8 @@ plugins:
   - name: 'GTAesgaard I-II Delayer.esp'
     msg: [ *obsolete ]
   - name: 'OgramiradsUnmarkedPlaces.esp'
-    msg: [ *reqShiveringIsles ]
+    req:
+      - 'DLCShiveringIsles.esp'
     dirty:
       - crc: 0xa738d15f
         <<: *dirtyPlugin
@@ -11283,7 +11302,9 @@ plugins:
         itm: 13
         udr: 4
   - name: 'PathoftheSkullBearer.esp'
-    req: [ *OBSE ]
+    req:
+      - *OBSE
+      - 'DLCShiveringIsles.esp'
     msg:
       - *reqShiveringIsles
       - type: say
@@ -11389,7 +11410,8 @@ plugins:
       - Actors.Anims
       - NoMerge
   - name: 'Ravenrock.esp'
-    msg: [ *reqShiveringIsles ]
+    req:
+      - 'DLCShiveringIsles.esp'
   - name: 'Ranokoas City Stealth Exits.esp'
     dirty:
       - crc: 0xb6e7250e
@@ -11585,9 +11607,11 @@ plugins:
       - Actors.Anims
       - NoMerge
   - name: 'Skingrad Market 1.0.esp'
+    req:
+      - 'DLCShiveringIsles.esp'
     msg:
       - type: say
-        content: 'Requires: Cobl, OBSE, Elys Universal Silent Voice, Shivering Isles'
+        content: 'Requires: Cobl, OBSE, Elys Universal Silent Voice'
   - name: 'Skyrim Draugr Canyon.esp'
     dirty:
       - crc: 0xde35e870
@@ -11664,7 +11688,8 @@ plugins:
         itm: 57
         udr: 159
   - name: 'SSS_1.0.esp'
-    msg: [ *reqShiveringIsles ]
+    req:
+      - 'DLCShiveringIsles.esp'
   - name: 'Steve - Hitman.esp'
     dirty:
       - crc: 0x60af4a1f
@@ -12345,8 +12370,8 @@ plugins:
   - name: 'witcher2.esp'
     req:
       - *OBSE
+      - 'DLCShiveringIsles.esp'
     msg:
-      - *reqShiveringIsles
       - type: say
         content: 'Requires: HG Eye Candy Body and Male Body Replacer'
   - name: 'Witch''s Throne.esp'
@@ -12406,9 +12431,11 @@ plugins:
         itm: 62
         udr: 10
   - name: 'YakumoIsle.esp'
+    req:
+      - 'DLCShiveringIsles.esp'
     msg:
       - type: say
-        content: 'Requires: HGEC, Shivering Isles'
+        content: 'Requires: HGEC'
   - name: 'YokudaBattleCat.esp'
     dirty:
       - crc: 0x15472fde
@@ -12895,6 +12922,8 @@ plugins:
       - 'CDM-CGO Frostcrag Compatibility.esp'
     msg: [ *doNotClean ]
   - name: 'SM Plugin Refurbish(Merged).esp'
+    req:
+      - 'DLCShiveringIsles.esp'
     inc:
       - 'CDM-CGO Horse Armor Compatability.esp'
       - 'CDM-CGO Orrery Compatibility.esp'
@@ -12907,7 +12936,7 @@ plugins:
       - type: say
         content: 'The masters of this mod are not in the order that LOOT uses, which will cause it to be displayed with an orange checkbox in Wrye Bash. LOOT''s order is correct, and the master order of the plugin can be altered using TES4Edit or TES4Gecko.'
       - type: say
-        content: 'Requires: all DLCs and Shivering Isles to be installed and active.'
+        content: 'Requires: all DLCs to be installed and active.'
       - *doNotClean
   - name: 'QuietFeet.esp'
     msg:
@@ -15194,9 +15223,8 @@ plugins:
       - type: say
         content: 'Obsolete. Please update Cats&Rats and Open Cities to latest versions.'
   - name: 'Open Cities New Sheoth.esp'
-    msg:
-      - type: say
-        content: 'Requires: Official Shivering Isles expansion.'
+    req:
+      - 'DLCShiveringIsles.esp'
     tag:
       - Actors.AIPackages
   - name: 'Open Cities Bartholm.esp'
@@ -16212,6 +16240,8 @@ plugins:
       - type: say
         content: 'If using with an overhaul such as OOO (or many other mods) really should use Wrye Bash or you''ll have loss of some leveled list changes.'
   - name: 'TI-MM v04d.esp'
+    req:
+      - 'DLCShiveringIsles.esp'
     msg:
       - *reqShiveringIsles
       - type: say
@@ -16895,6 +16925,8 @@ plugins:
       - type: say
         content: 'Needs Shivering Isles. Otherwise use ''Tim_No_SI''.'
   - name: 'Tim_No_SI.esp'
+    inc:
+      - 'DLCShiveringIsles.esp'
     msg:
       - type: say
         content: 'Use this without Shivering Isles. Otherwise use ''Merchant_Tim''.'
@@ -17153,7 +17185,8 @@ plugins:
       - type: say
         content: 'Requires: RefStuff'
   - name: 'elPatrixF_SummonWorkshop_ShiveringIsles.esp'
-    msg: [ *reqShiveringIsles ]
+    req:
+      - 'DLCShiveringIsles.esp'
   - name: 'Illusionary Summons.esp'
     dirty:
       - crc: 0x8bc62af5
@@ -17248,7 +17281,8 @@ plugins:
         <<: *dirtyPlugin
         itm: 9
   - name: 'Portal - SI.esp'
-    msg: [ *reqShiveringIsles ]
+    req:
+      - 'DLCShiveringIsles.esp'
   - name: 'Silj''s Martigen''s Monster Mod summmon spells and conjuration compendium.esp'
     dirty:
       - crc: 0x3c6cc609
@@ -18222,9 +18256,9 @@ plugins:
       - C.Light
       - Deactivate
   - name: 'Let There Be Darkness - Shivering Isles.esp'
-    msg:
-      - *reqShiveringIsles
-      - *obsolete
+    req:
+      - 'DLCShiveringIsles.esp'
+    msg: [ *obsolete ]
     tag:
       - C.Light
       - Deactivate
@@ -18233,7 +18267,8 @@ plugins:
       - C.Light
       - Deactivate
   - name: 'Let There Be Darkness - Cyrodiil + SI.esp'
-    msg: [ *reqShiveringIsles ]
+    req:
+      - 'DLCShiveringIsles.esp'
     tag:
       - C.Light
       - Deactivate
@@ -18252,9 +18287,11 @@ plugins:
       - C.Light
       - Deactivate
   - name: 'Let there be Darkness All Merge.esp'
+    req:
+      - 'DLCShiveringIsles.esp'
     msg:
       - type: say
-        content: 'Requires: Knights of the Nine, Shivering Isles, Mehrunes Razor.'
+        content: 'Requires: Knights of the Nine, Mehrunes Razor.'
     tag:
       - C.Light
       - Deactivate
@@ -21970,28 +22007,36 @@ plugins:
   - name: 'bgBalancingOptionalNPCDiversityKvatchRebuilt, for Wrye Bash.esp'
     msg: [ *doNotClean ]
   - name: 'bgBalancingEVLAMEAddition.esp'
+    req:
+      - 'DLCShiveringIsles.esp'
     msg:
       - type: say
-        content: 'Requires: LAME and Shivering Isles.'
+        content: 'Requires: LAME.'
       - *doNotClean
     tag:
       - Relev
   - name: 'bgBalancingDVLAMEAddition.esp'
+    req:
+      - 'DLCShiveringIsles.esp'
     msg:
       - type: say
-        content: 'Requires: LAME and Shivering Isles.'
+        content: 'Requires: LAME.'
       - *doNotClean
     tag:
       - Relev
   - name: 'bgBalancingEVLAMEGlue.esp'
+    req:
+      - 'DLCShiveringIsles.esp'
     msg:
       - type: say
-        content: 'Requires: LAME and Shivering Isles.'
+        content: 'Requires: LAME.'
       - *doNotClean
   - name: 'bgBalancingDVLAMEGlue.esp'
+    req:
+      - 'DLCShiveringIsles.esp'
     msg:
       - type: say
-        content: 'Requires: LAME and Shivering Isles.'
+        content: 'Requires: LAME.'
       - *doNotClean
   - name: 'bgBalancingEVOptionalNPCDiversityLAME.esp'
     msg: [ *doNotClean ]
@@ -22004,6 +22049,8 @@ plugins:
       - NoMerge
       - NpcFaces
   - name: 'bgBalancingEVOptionalSeamReducerHighElfFix.esp'
+    req:
+      - 'DLCShiveringIsles.esp'
     msg:
       - *reqShiveringIsles
       - type: say
@@ -22012,6 +22059,8 @@ plugins:
     tag:
       - Body-M
   - name: 'bgBalancingDVOptionalSeamReducerHighElfFix.esp'
+    req:
+      - 'DLCShiveringIsles.esp'
     msg:
       - *reqShiveringIsles
       - type: say
@@ -22023,9 +22072,11 @@ plugins:
       - Body-F
       - Body-Size-F
   - name: 'bgIntegrationEV.esp'
+    req:
+      - 'DLCShiveringIsles.esp'
     msg:
       - type: say
-        content: 'Requires: LAME, Shivering Isles and Race Balancing Project.'
+        content: 'Requires: LAME and Race Balancing Project.'
       - *doNotClean
   - name: 'bgIntegrationEV - Alternative NPC Faces by LazyMonk.esp'
     tag:
@@ -22694,7 +22745,8 @@ plugins:
         content: 'Requires: Oscuro''s Oblivion Overhaul.'
         condition: 'not file("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: 'HTSCl_si.esp'
-    msg: [ *reqShiveringIsles ]
+    req:
+      - 'DLCShiveringIsles.esp'
   - name: 'HTSCl_bbc.esp'
     msg:
       - type: say
