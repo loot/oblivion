@@ -8761,22 +8761,31 @@ plugins:
       - Relev
       - Stats
   - name: 'WAC - ItemLootFix4v1.0bOOO.esp'
-    msg:
-      - type: say
-        content: 'Requires: OOO.'
-        condition: 'not file("Oscuro''s_Oblivion_Overhaul.esm")'
+    req:
+      - 'Oscuro''s_Oblivion_Overhaul.esm'
   - name: 'WAC - ItemLootFix4v1.0bMMM.esp'
+    req:
+      - name: 'Mart''s Monster Mod.esm'
+        condition: 'not active("FCOM_Convergence.esm")'
+      - name: 'FCOM_Convergence.esm'
+        condition: 'not active("Mart''s Monster Mod.esm")'
     msg:
-      - type: say
-        content: 'Requires: MMM or FCOM'
+      - type: error
+        content: 'Requires either Mart''s Monster Mod or FCOM.'
+        condition: 'not (active("Mart''s Monster Mod.esm") or active("FCOM_Convergence.esm"))'
   - name: 'WAC - ItemLootFix4v1.0bMMMorFCOM.esp'
+    req:
+      - name: 'Mart''s Monster Mod.esm'
+        condition: 'not active("FCOM_Convergence.esm")'
+      - name: 'FCOM_Convergence.esm'
+        condition: 'not active("Mart''s Monster Mod.esm")'
     msg:
-      - type: say
-        content: 'Requires: MMM or FCOM'
+      - type: error
+        content: 'Requires either Mart''s Monster Mod or FCOM.'
+        condition: 'not (active("Mart''s Monster Mod.esm") or active("FCOM_Convergence.esm"))'
   - name: 'WAC - ItemLootFix4v1.0bOWCND.esp'
-    msg:
-      - type: say
-        content: 'Requires: Oblivion Warcry New Dimension'
+    req:
+      - 'OWC - New Dimension.esp'
   - name: 'WAC - WeaponReachMOBS.esp'
     tag:
       - Stats
