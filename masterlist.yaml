@@ -6473,9 +6473,8 @@ plugins:
     tag:
       - Graphics
   - name: 'Shadow Steed.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: DLC Horse Armour.'
+    inc:
+      - 'DLCHorseArmor.esp'
     dirty:
       - crc: 0xeddab6db
         <<: *dirtyPlugin
@@ -6500,9 +6499,8 @@ plugins:
   - name: 'Zira''s Horse Modpack - Armored Legion Horses.esp'
     inc:
       - 'Zira''s Horse Modpack - Heavy Legion Horses.esp'
-    msg:
-      - type: say
-        content: 'Requires: Official Horse Armor DLC'
+    req:
+      - 'DLCHorseArmor.esp'
   - name: 'MD Saddlebags V3.0.esp'
     msg:
       - type: say
