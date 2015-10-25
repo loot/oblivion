@@ -54,8 +54,6 @@ common:
     active("FCOM_Convergence.esm")
   - &OOOCond
     active("Oscuro's_Oblivion_Overhaul.esm")
-  - &coblCond
-    active("Cobl Main.esm")
 # Messages
   - &masterReassign
     type: say
@@ -2805,9 +2803,8 @@ plugins:
       - type: say
         content: 'Do not use with OOO, COBL, MMM G&GD - included. If using Fran use ''Fran-Ayleid Coin Add-on.esp'' instead.'
   - name: 'Ayleid Loot EXtension.esp'
-    msg:
-      - type: say
-        content: 'Requires: Cobl'
+    req:
+      - name: 'Cobl Main.esm'
         condition: 'version("Ayleid Loot EXtension.esp","2.11",==)'
     tag:
       - Invent
@@ -3237,7 +3234,8 @@ plugins:
     tag:
       - Graphics
   - name: 'Mage Guild Sorters v3.esp'
-    msg: [ *reqCOBL ]
+    req:
+      - 'Cobl Main.esm'
   - name: 'MeosPotionReplacer.esp'
     tag:
       - Graphics
@@ -3633,13 +3631,15 @@ plugins:
       - 'TreasureChest - OOO.esp'
       - 'TreasureChest - MMM.esp'
   - name: 'TreasureChest - ALEX.esp'
+    req:
+      - 'Cobl Main.esm'
     inc:
       - 'TreasureChest - ALEX for OOO.esp'
-    msg: [ *reqCOBL ]
   - name: 'TreasureChest - ALEX for OOO.esp'
+    req:
+      - 'Cobl Main.esm'
     inc:
       - 'TreasureChest - ALEX.esp'
-    msg: [ *reqCOBL ]
   - name: 'trfSolaris.esp'
     msg: [ *obsolete ]
   - name: 'BetterGold Rus.esp'
@@ -7934,7 +7934,8 @@ plugins:
       - Relev
       - "-NoMerge"
   - name: 'TamrielTravellersItemsCobl.esp'
-    msg: [ *reqCOBL ]
+    req:
+      - 'Cobl Main.esm'
   - name: 'TamrielTravellersItemsVendor.esp'
     group: *latePatchesGroup
     tag:
@@ -8992,9 +8993,10 @@ plugins:
     inc:
       - 'A Not So Simple Cave Retreat - Coblized.esp'
   - name: 'A Not So Simple Cave Retreat - Coblized.esp'
+    req:
+      - 'Cobl Main.esm'
     inc:
       - 'A Not So Simple Cave Retreat.esp'
-    msg: [ *reqCOBL ]
   - name: 'A Sorceress Love 1_1.esp'
     dirty:
       - crc: 0xc720fa75
@@ -9382,11 +9384,10 @@ plugins:
     inc:
       - 'Automagicon_Cobl.esp'
   - name: 'Automagicon_Cobl.esp'
+    req:
+      - 'Cobl Main.esm'
     inc:
       - 'Automagicon.esp'
-    msg:
-      - type: say
-        content: 'Requires: Cobl'
   - name: 'AWitchTale.esp'
     dirty:
       - crc: 0xc7f27f01
@@ -10996,9 +10997,7 @@ plugins:
   - name: 'Mansion of Champions.esp'
     req:
       - 'DLCShiveringIsles.esp'
-    msg:
-      - type: say
-        content: 'Requires: Cobl'
+      - 'Cobl Main.esm'
     dirty:
       - crc: 0xee81149c
         <<: *dirtyPlugin
@@ -11609,9 +11608,10 @@ plugins:
   - name: 'Skingrad Market 1.0.esp'
     req:
       - 'DLCShiveringIsles.esp'
+      - 'Cobl Main.esm'
     msg:
       - type: say
-        content: 'Requires: Cobl, OBSE, Elys Universal Silent Voice'
+        content: 'Requires: OBSE, Elys Universal Silent Voice'
   - name: 'Skyrim Draugr Canyon.esp'
     dirty:
       - crc: 0xde35e870
@@ -15913,7 +15913,8 @@ plugins:
       - type: say
         content: 'Check version is 1.1 or later.'
   - name: 'dhsRTentwithSorter.esp'
-    msg: [ *reqCOBL ]
+    req:
+      - 'Cobl Main.esm'
   - name: 'DoB10mins.esp'
     inc:
       - 'DoB20mins.esp'
@@ -15926,7 +15927,8 @@ plugins:
       - type: say
         content: 'Outdated. Upgrade to Portable Sorters.'
   - name: 'DS Portable Sorters.esp'
-    msg: [ *reqCOBL ]
+    req:
+      - 'Cobl Main.esm'
   - name: 'Dwemer_Rename.esp'
     msg:
       - type: say
@@ -17346,10 +17348,12 @@ plugins:
         itm: 49
         udr: 11
   - name: 'Rathunas01.esp'
-    req: [ *OBSE ]
+    req:
+      - *OBSE
+      - 'Cobl Main.esm'
     msg:
       - type: say
-        content: 'Requires: COBL, Unique Landscapes-Brena River Ravine'
+        content: 'Requires: Unique Landscapes-Brena River Ravine'
   - name: 'MidasSpellTomes.esp'
     tag:
       - Relev
@@ -17664,10 +17668,8 @@ plugins:
       - type: say
         content: 'Incompatible with: MOBS Optional Combat Settings.esp.'
   - name: 'Duke Patricks Basic Denock Arrows.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: COBL. COBL includes a denock arrow feature.'
-        condition: *coblCond
+    inc:
+      - name: 'Cobl Main.esm' # COBL includes a denock arrow feature
   - name: 'Bow_Damage_Equalizer.esp'
     tag:
       - Stats
@@ -21407,9 +21409,11 @@ plugins:
       - Voice-F
       - Voice-M
   - name: 'DiverseDremoraCoblRacesCosmetics.esp'
+    req:
+      - 'Cobl Main.esm'
     msg:
       - type: say
-        content: 'Requires: Cobl and Cobl Races Cosmetics Resources'
+        content: 'Requires: Cobl Races Cosmetics Resources'
     tag:
       - Eyes
       - Hair
@@ -22731,7 +22735,8 @@ plugins:
     tag:
       - Invent
   - name: 'HTSCl_cobl.esp'
-    msg: [ *reqCOBL ]
+    req:
+      - 'Cobl Main.esm'
   - name: 'HTSCl_mmm.esp'
     msg:
       - type: say
