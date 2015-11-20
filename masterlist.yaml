@@ -3262,13 +3262,11 @@ plugins:
     tag:
       - Graphics
   - name: 'More_Animals.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: Mart''s Monster Mod. Included in MMM.'
+    inc:
+      - 'Mart''s Monster Mod.esm' # Included in MMM
   - name: 'More_Animals_1C.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: Mart''s Monster Mod. Included in MMM.'
+    inc:
+      - 'Mart''s Monster Mod.esm' # Included in MMM
   - name: 'More Drinks.esp'
     msg:
       - type: say
@@ -7701,13 +7699,11 @@ plugins:
         <<: *dirtyPlugin
     url: [ 'http://www.nexusmods.com/oblivion/mods/14265' ]
   - name: 'MrSiikasBats.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: MMM.'
+    inc:
+      - 'Mart''s Monster Mod.esm'
   - name: 'OblivionDurzogs.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: MMM.'
+    inc:
+      - 'Mart''s Monster Mod.esm'
   - name: 'Diverse Wisps - for Vanilla.esp'
     msg:
       - type: say
@@ -7808,6 +7804,8 @@ plugins:
       - type: say
         content: 'Consider using Creature Diversity.esp or MMM or Frans instead.'
   - name: 'WCGL - Wilderness Creatures 1.1.esp'
+    inc:
+      - 'Mart''s Monster Mod.esm'
     msg:
       - type: say
         content: 'Incompatible with: OOO, MMM and Francescos.'
@@ -15839,6 +15837,8 @@ plugins:
       - Names
       - Relev
   - name: 'CreaturesFactionalised.esp'
+    inc:
+      - 'Mart''s Monster Mod.esm'
     msg:
       - type: say
         content: 'Incompatible with: OOO, MMM, probably most other overhauls if they touch creatures at all.'
@@ -19445,6 +19445,8 @@ plugins:
       - NpcFaces
       - R.Relations
   - name: 'Slof''s Playable Xivilai.esp'
+    inc:
+      - 'Mart''s Monster Mod.esm'
     msg:
       - type: say
         content: 'Incompatible with: OOO, MMM or FCOM: Xivilai won''t appear. Patch planned.'
