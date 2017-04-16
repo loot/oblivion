@@ -1318,6 +1318,8 @@ plugins:
     global_priority: -120
     after:
       - 'DLCShiveringIsles.esp'
+      - 'tes4SI-CHS-alpha.esp'
+      - 'tes4-CHS-book.esp'
     msg:
       - type: say
         content: 'Use Standalone MOBS if using Frans or OMOBS if using FCOM/OOO. Both versions can be found [here](http://www.nexusmods.com/oblivion/mods/28537)'
@@ -6354,6 +6356,8 @@ plugins:
     tag:
       - Graphics
   - name: 'DMRA BBB Complete Clothing and Armor Replacer.esp'
+    after:
+      - 'Colourwheels Sexy Oblivion OverHaul.esp'
     tag:
       - Graphics
   - name: 'DMRA BBB Better Cities.esp'
@@ -8094,6 +8098,8 @@ plugins:
   - name: 'Mart''s Monster Mod - Bats Addon.esp'
     msg: [ *obsolete ]
   - name: 'Mart''s Monster Mod - City Defences.esp'
+    after:
+      - 'Mart''s Monster Mod - More Wilderness Life No Gates.esp'
     msg:
       - type: say
         content: 'Incompatible with Better Cities - City Defences.'
@@ -9390,6 +9396,8 @@ plugins:
     inc:
       - '00RBScribeSupplies Intensive.esp'
   - name: '0WeynonPrioryAlive.esp'
+    after:
+      - 'SOC-RegionalFarms.esp'
     tag:
       - Graphics
     dirty:
@@ -9962,6 +9970,8 @@ plugins:
         content: 'Incompatible with Better Cities, use ''AbandonedHouseBC.esp'' instead.'
         condition: 'file("Better Cities Resources.esm")'
   - name: 'Better Benirus Manor.esp'
+    after:
+      - 'Ghorak''s House.esp'
     tag:
       - C.Light
   - name: 'Better Benirus Manor - Complete - AN-II Patch.esp'
@@ -10882,6 +10892,8 @@ plugins:
       - type: say
         content: 'Incompatible with: Region Revive - Lake Rumare.'
   - name: 'ImpeREAL Empire - Unique Castles.esp'
+    after:
+      - 'Trade and Commerce.esp'
     msg:
       - type: say
         content: 'Incompatible with: Better Cities Full or Better Cities IC components.'
@@ -11984,6 +11996,9 @@ plugins:
         itm: 6
         udr: 2
   - name: 'Region Revive - Lake Rumare.esp'
+    after:
+      - 'TalosBridgeGateHouse.esp'
+      - 'MTCExpandedVillages.esp'
     msg:
       - type: say
         content: 'Incompatible with: most Weye-related mods.'
@@ -12259,6 +12274,8 @@ plugins:
   - name: 'stWorldMonsters.esp'
     msg: [ *needsCleaning ]
   - name: 'SunderedKeep.esp'
+    after:
+      - 'Better dungeons.esp'
     dirty:
       - crc: 0x70719f5b
         <<: *dirtyPlugin
@@ -12420,7 +12437,7 @@ plugins:
     tag:
       - Actors.Anims
       - NoMerge
-  - name: 'Aylied Steps - AN Real Lights patch.esp'
+  - name: 'Aylied Steps - AN Real Lights patch.esp'  # Not a typo
     msg:
       - type: say
         content: 'Requires: The Ayleid Steps, All Natural Real Lights.'
@@ -13807,6 +13824,11 @@ plugins:
       - Actors.Anims
       - NoMerge
   - name: 'The Lost Spires.esp'
+    after:
+      - 'CUO_Bravil.esp'
+      - 'Aundae.esp'
+      - 'Aundae_OBSE_addon.esp'
+      - 'Blood&Mud.esp'
     dirty:
       - crc: 0x5b6adfb3
         <<: *dirtyPlugin
@@ -16938,6 +16960,8 @@ plugins:
       - type: say
         content: 'Almost certainly not compatible with Fran''s, MMM, OOO or FCOM.'
   - name: 'Nude Humanlike Spriggan.esp'
+    after:
+      - 'Knights - Unofficial Patch.esp'
     inc:
       - 'Oblivion Sexualized Monsters.esm'
       - 'Oblivion Sexualized Monsters-exclu TRM.esm'
@@ -16946,6 +16970,8 @@ plugins:
         content: 'USE ONE ''nude * Spriggan.esp'' ONLY'
         condition: 'file("Nude Humanlike Spriggan Tweaked.esp") or file("Nude Humanlike Spriggan HGEC B.esp") or file("Nude Male Spriggan.esp")'
   - name: 'Nude Humanlike Spriggan Tweaked.esp'
+    after:
+      - 'Knights - Unofficial Patch.esp'
     inc:
       - 'Oblivion Sexualized Monsters.esm'
       - 'Oblivion Sexualized Monsters-exclu TRM.esm'
@@ -16954,6 +16980,8 @@ plugins:
         content: 'USE ONE ''nude * Spriggan.esp'' ONLY'
         condition: 'file("Nude Humanlike Spriggan.esp") or file("Nude Humanlike Spriggan HGEC B.esp") or file("Nude Male Spriggan.esp")'
   - name: 'Nude Humanlike Spriggan HGEC B.esp'
+    after:
+      - 'Knights - Unofficial Patch.esp'
     inc:
       - 'Oblivion Sexualized Monsters.esm'
       - 'Oblivion Sexualized Monsters-exclu TRM.esm'
@@ -16964,6 +16992,8 @@ plugins:
         content: 'USE ONE ''nude * Spriggan.esp'' ONLY'
         condition: 'file("Nude Humanlike Spriggan.esp") or file("Nude Humanlike Spriggan Tweaked.esp") or file("Nude Male Spriggan.esp")'
   - name: 'Nude Male Spriggan.esp'
+    after:
+      - 'Knights - Unofficial Patch.esp'
     inc:
       - 'Oblivion Sexualized Monsters.esm'
       - 'Oblivion Sexualized Monsters-exclu TRM.esm'
@@ -18019,6 +18049,7 @@ plugins:
     msg:
       - type: error
         content: 'DO NOT USE. This plugin is corrupt. It may be fixed by loading it in the CS and truncating the file when prompted.'
+        condition: 'checksum("training spells.esp", DD4985A)'
   - name: 'Judgement of the Nine.esp'
     tag:
       - Graphics
@@ -18823,12 +18854,16 @@ plugins:
       - type: say
         content: 'Edits "ObXPMiscScript" from version 4.1.5. Important: use this patch with that version only!'
   - name: 'SDR Perks And Patches - Nehrim.esp'
+    after:
+      - 'Oblivion XP.esp'
     msg:
       - type: error
         content: 'Use the Oblivion version.'
       - type: say
         content: 'Obsolete. Upgrade to SDR version 8.2'
   - name: 'SDR_Perks And Patches (Nehrim).esp'
+    after:
+      - 'Oblivion XP.esp'
     msg:
       - type: error
         content: 'Use the Oblivion version.'
@@ -22878,6 +22913,10 @@ plugins:
       - R.Relations
       - R.Skills
   - name: 'Birthsigns Expanded.esp'
+    after:
+      - 'Cobl Races - Balanced.esp'
+      - 'Cobl Balanced Races - MMR Patch.esp'
+      - 'Cobl Races Ren Names Fix.esp'
     msg:
       - type: say
         content: 'May be a bit imbalanced when used with Race Balancing Project.'
@@ -23662,6 +23701,31 @@ plugins:
         <<: *dirtyPlugin
         itm: 32
   - name: 'Universitum Arcanorum.esp'
+    after:
+      # 'Universitum Arcanorum.esp' should load after Better Cities, but nothing
+      # more specific is known and the plugin doesn't seem to be available for
+      # download and inspection any more, so all main Better Cities plugins are
+      # listed below.
+      - 'Better Cities ANVIL.esp'
+      - 'Better Cities BRAVIL.esp'
+      - 'Better Cities BRUMA.esp'
+      - 'Better Cities CHEYDINHAL.esp'
+      - 'Better Cities CHORROL.esp'
+      - 'Better Cities LEYAWIIN.esp'
+      - 'Better Cities SKINGRAD.esp'
+      - 'Better Cities Full.esp'
+      - 'Better Cities - Open Cities Reborn.esp'
+      - 'Better Imperial City.esp'
+      - 'Better Cities IC Arboretum.esp'
+      - 'Better Cities IC Arcane University.esp'
+      - 'Better Cities IC Arena.esp'
+      - 'Better Cities IC Elven Gardens.esp'
+      - 'Better Cities IC Green Emperor Way.esp'
+      - 'Better Cities IC Market.esp'
+      - 'Better Cities IC Prison.esp'
+      - 'Better Cities IC Talos Plaza.esp'
+      - 'Better Cities IC Temple.esp'
+      - 'Better Cities IC Waterfront.esp'
     dirty:
       - crc: 0x9bdbb795
         <<: *dirtyPlugin
@@ -24813,6 +24877,8 @@ plugins:
         <<: *dirtyPlugin
         udr: 1
   - name: 'Ahtata Arquamer spike4hair.esp'
+    after:
+      - 'Bashed Patch, 0.esp'  # The default filename for a Bashed Patch.
     tag:
       - Body-F
       - Body-M
@@ -24975,8 +25041,12 @@ plugins:
     msg: [ *masterReassign ]
   - name: 'SDR Perks And Patches - Oblivion.esp'
     msg: [ *useNehrimVer ]
+    after:
+      - 'Oblivion XP.esp'
   - name: 'SDR_Perks And Patches (Oblivion).esp'
     msg: [ *useNehrimVer ]
+    after:
+      - 'Oblivion XP.esp'
   - name: 'StealthOverhaul.esp'
     msg: [ *masterReassign ]
   - name: 'Realistic Sneak for NPCs.esp'
@@ -25231,3 +25301,70 @@ plugins:
   - name: 'OSPS-BC_IC-II_RRLR_Patch.esp'
     tag:
       - C.Water
+  - name: 'FalkreathGS_RM.esp'
+    after:
+      - 'RumpleModSI.esp'
+  - name: 'Dollparts'' Cherry Brooke Grove.esp'
+    after:
+      - 'Dollparts'' Cherry Brooke Grove - WAC Patch.esp'
+  - name: 'Gold Road Cottage.esp'
+    after:
+      - 'Kvatch Rebuilt.esp'
+      - 'Oblivifall - Losing My Religion.esp'
+  - name: 'DynamicFootPosition.esp'
+    after:
+      - 'P1DseeYouSleep.esp'
+      - 'personality_idles4.esp'
+  - name: 'Better Cities IC Lighting Overhaul.esp'
+    after:
+      - 'xulCheydinhalFalls.esp'
+  - name: 'Better Clocks-Better Cities IC Light Overhaul.esp'
+    after:
+      - 'xulCheydinhalFalls.esp'
+  - name: 'Better Clocks for Better Cities 2_0.esp'
+    after:
+      - 'xulCheydinhalFalls.esp'
+  - name: 'OWC - Players Home.esp'
+    after:
+      # 'OWC - Players Home.esp' should load after Better Cities, but nothing
+      # more specific is known and the plugin doesn't seem to be available for
+      # download and inspection any more, so all main Better Cities plugins are
+      # listed below.
+      - 'Better Cities ANVIL.esp'
+      - 'Better Cities BRAVIL.esp'
+      - 'Better Cities BRUMA.esp'
+      - 'Better Cities CHEYDINHAL.esp'
+      - 'Better Cities CHORROL.esp'
+      - 'Better Cities LEYAWIIN.esp'
+      - 'Better Cities SKINGRAD.esp'
+      - 'Better Cities Full.esp'
+      - 'Better Cities - Open Cities Reborn.esp'
+      - 'Better Imperial City.esp'
+      - 'Better Cities IC Arboretum.esp'
+      - 'Better Cities IC Arcane University.esp'
+      - 'Better Cities IC Arena.esp'
+      - 'Better Cities IC Elven Gardens.esp'
+      - 'Better Cities IC Green Emperor Way.esp'
+      - 'Better Cities IC Market.esp'
+      - 'Better Cities IC Prison.esp'
+      - 'Better Cities IC Talos Plaza.esp'
+      - 'Better Cities IC Temple.esp'
+      - 'Better Cities IC Waterfront.esp'
+  - name: 'Ak- Morroblivion Maps HD.esp'
+    global_priority: 127
+  - name: 'Hiboriamap.esp'
+    global_priority: 127
+  - name: 'MWakeMap.esp'
+    global_priority: 127
+  - name: 'MergedMaps.esp'
+    global_priority: 127
+  - name: 'Elsweyr Color Map.esp'
+    global_priority: 127
+  - name: 'Colored Map for Elsweyr 1.1.esp'
+    global_priority: 127
+  - name: 'TamrielWorldspaceCompleteWorldMap.esp'
+    global_priority: 127
+  - name: 'TWMP_Tamriel_Ingame_ Map.esp'
+    global_priority: 127
+  - name: 'DWIngameMap.esp'
+    global_priority: 127
