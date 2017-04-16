@@ -25368,3 +25368,7 @@ plugins:
     global_priority: 127
   - name: 'DWIngameMap.esp'
     global_priority: 127
+  - name: 'Better Cities (ANVIL|Full|- Open Cities Reborn)\.esp'
+    after:
+      - name: 'TR_Stirk.esp'
+        condition: 'not active("Stirk_Compatibility_Patch.esp")'
