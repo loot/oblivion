@@ -23834,6 +23834,18 @@ plugins:
   - name: 'OSPS-BC_IC-II_RRLR_Patch.esp'
     tag:
       - C.Water
+    msg:
+      - type: warn
+        content: 'Use OSPS-BC_IC-II_UL-II_Patch.esp instead.'
+        condition: 'file("xulImperialIsle.esp")'
+  - name: 'OSPS-BC_Imperial_Isle-UL_Imperial_Isle_Talos_Bridge_Gatehouse-Region_Revive_Patch.esp'
+    tag:
+      - C.Water
+    inc:
+      - 'Better Cities - Unique Landscape Imperial Isle.esp'
+      - 'TalosGatehouse + ULImperialIsle.esp'
+      - 'wb_TBG_RR-LR_UL-II_patch.esp'
+      - 'OSPS_BC_IC-II_UL-II_TalosBridge_RRLR_Patch.esp'
   - name: 'FalkreathGS_RM.esp'
     after:
       - 'RumpleModSI.esp'
