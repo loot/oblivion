@@ -2657,6 +2657,13 @@ plugins:
       - crc: 0xe7a1bce7
         <<: *dirtyPlugin
         itm: 1
+  - name: '00 Realistic Player Speech.esp'
+    tag:
+      - Names
+    dirty:
+      - crc: 0x46716219
+        <<: *dirtyPlugin
+        itm: 2
   - name: '300_lore dialogue v1.15.esp'
     msg:
       - type: say
@@ -16254,6 +16261,10 @@ plugins:
   - name: 'REDrinks.esp'
     tag:
       - Graphics
+  - name: 'Relevant Scrolls & Potions & Staves.esp'
+    msg:
+      - type: say
+        content: 'If used with another potion graphics replacer, remove the Graphics tag to ensure compatibility. I.e. only the mod you want to be dominant should have a Graphics tag.'
   - name: 'Repair Anytime-9384.esp'
     msg:
       - type: say
@@ -21503,6 +21514,41 @@ plugins:
       - NpcFaces
       - R.Body
       - R.Head
+  - name: 'OCO_DLCHorseArmor_Patch.esp'
+    tag:
+      - Actors.ACBS
+      - Actors.AIPackages
+      - Actors.Skeleton
+      - Actors.Stats
+      - NpcFaces
+  - name: 'OCO_DLCOrrery_Patch.esp'
+    tag:
+      - Actors.AIPackages
+      - NpcFaces
+  - name: 'OCO_DLCMehrunesRazor_Patch.esp'
+    tag:
+      - Actors.ACBS
+      - Actors.Skeleton
+      - NpcFaces
+  - name: 'OCO_DLCThievesDen_Patch.esp'
+    tag:
+      - Actors.ACBS
+      - Actors.AIPackages
+      - Actors.Skeleton
+      - Actors.Stats
+      - NpcFaces
+  - name: 'OCO_KnightsOTN_Patch.esp'
+    tag:
+      - Actors.ACBS
+      - Actors.AIPackages
+      - Actors.Stats
+      - NpcFaces
+  - name: 'OCO_UOP_USIP_Patch.esp'
+    tag:
+      - Actors.ACBS
+      - Actors.Skeleton
+      - Actors.Stats
+      - NpcFaces
   - name: 'Jjiinx_Long Ears.esp'
     tag:
       - Body-F
