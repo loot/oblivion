@@ -21636,6 +21636,14 @@ plugins:
   - name: 'ZUSIO-SM Plugin Refurbish SI-patch.esp'
     tag:
       - Scripts
+  - name: 'OOOShiveringIsles.esp'
+    msg:
+      - type: say
+        content: 'Disable the "R.Head" Bash Tag from OOOShiveringIsles.esp to avoid conflicts with Oblivion Character Overhaul.'
+        condition: 'file("Oblivion_Character_Overhaul.esp")'
+  - name: 'OOOSIArcheryPatch.esp'
+    tag:
+      - NoMerge
   - name: 'bgMagicDV.esp'
     msg:
       - type: say
