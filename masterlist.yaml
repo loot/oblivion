@@ -12876,6 +12876,9 @@ plugins:
       - type: error
         content: 'Use "FCOM_Knights.esp" instead.'
         condition: *FCOMCond
+  - name: 'Better Unique Items.esp'
+    tag:
+      - Graphics
   - name: 'DLC_MOBS.esp'
     global_priority: 79
     msg:
@@ -13506,6 +13509,10 @@ plugins:
       - crc: 0x535e4f5d
         <<: *dirtyPlugin
         itm: 104
+  - name: 'Tales from Elsweyr Anequina Vwalk.esp'
+    tag:
+      - Actors.Anims
+      - NoMerge
   - name: 'Walkabout.esp'
     dirty:
       - crc: 0x1796e52d
@@ -17138,6 +17145,9 @@ plugins:
         <<: *dirtyPlugin
         itm: 17
   - name: 'SupremeMagicka.esp'
+    after:
+      - 'lumi_enchantments.esp'
+      - 'lumi_enchantments_subtle.esp'
     msg: [ *doNotClean ]
     tag:
       - Graphics
@@ -22799,11 +22809,15 @@ plugins:
       - type: say
         content: 'Use only one lumi_enchantments esp'
         condition: 'file("lumi_enchantments_subtle.esp")'
+    tag:
+      - Graphics
   - name: 'lumi_enchantments_subtle.esp'
     msg:
       - type: say
         content: 'Use only one lumi_enchantments esp'
         condition: 'file("lumi_enchantments.esp")'
+    tag:
+      - Graphics
   - name: 'BubbleFx.esp'
     msg:
       - type: say
