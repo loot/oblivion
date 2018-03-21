@@ -287,15 +287,33 @@ globals:
         text: '[最新的LOOT版本](%1%)。'
     subs: [ 'https://loot.github.io/latest-thread/' ]
 
+groups:
+  - name: &gameMasterGroup Main Game Master
+
+  - name: &dlcGroup DLC & Unofficial Patches
+    after: [ *gameMasterGroup ]
+
+  - name: default
+    after: [ *dlcGroup ]
+
+  - name: &latePatchesGroup Late Patches
+    after: [ default ]
+
+  - name: &dynamicPatchesGroup Dynamic Patches
+    after: [ *latePatchesGroup ]
+
+  - name: &mapGroup Maps
+    after: [ *dynamicPatchesGroup ]
+
 plugins:
   - name: 'Oblivion.esm'
-    global_priority: -127
+    group: *gameMasterGroup
     msg:
       - type: error
         content: 'This must not be activated. However, it can be useful when porting Oblivion mods to Nehrim.'
         condition: 'active("Oblivion.esm") and active("Nehrim.esm")'
   - name: 'Nehrim.esm'
-    global_priority: -127
+    group: *gameMasterGroup
   - name: 'Oblivion_1.1.esm'
     msg:
       - <<: *moddingPlugin
@@ -309,7 +327,7 @@ plugins:
       - <<: *moddingPlugin
         condition: 'active("Oblivion_1.1.esm")'
   - name: 'XBOX_Controller.esp'
-    global_priority: -127
+    group: *gameMasterGroup
     after:
       - 'Oblivion.esm'
   - name: 'Hammerfell.esm'
@@ -1275,7 +1293,7 @@ plugins:
   - name: 'Bow_Reach_Fix.esp'
     msg: [ *bashedPatchTweak ]
   - name: 'DLCShiveringIsles.esp'
-    global_priority: -120
+    group: *dlcGroup
     after:
       - 'Unofficial Oblivion Patch.esp'
       - 'Oblivion Citadel Door Fix.esp'
@@ -1286,7 +1304,7 @@ plugins:
         <<: *dirtyPlugin
         itm: 2
   - name: 'Unofficial Oblivion Patch.esp'
-    global_priority: -120
+    group: *dlcGroup
     msg: [ *doNotClean ]
     tag:
       - Actors.ACBS
@@ -1370,14 +1388,14 @@ plugins:
       - name: "-C.Water"
         condition: 'version("Unofficial Oblivion Patch.esp","3.4.0",>=)'
   - name: 'UOPS Additional Changes.esp'
-    global_priority: -120
+    group: *dlcGroup
     tag:
       - Relev
       - Stats
   - name: 'Oblivion Citadel Door Fix.esp'
-    global_priority: -120
+    group: *dlcGroup
   - name: 'UOP Vampire Aging & Face Fix.esp'
-    global_priority: -120
+    group: *dlcGroup
     msg: [ *bashedPatchTweak ]
   - name: 'Finger of the Mountain Fix.esp'
     inc:
@@ -1421,7 +1439,7 @@ plugins:
   - name: 'tes4-CHS-book.esp'
     msg: [ *obsolete ]
   - name: 'Unofficial Shivering Isles Patch.esp'
-    global_priority: -120
+    group: *dlcGroup
     after:
       - 'DLCShiveringIsles.esp'
       - 'tes4SI-CHS-alpha.esp'
@@ -1445,7 +1463,7 @@ plugins:
       - Scripts
       - Stats
   - name: 'USIPS Additional Changes.esp'
-    global_priority: -120
+    group: *dlcGroup
     tag:
       - Relev
   - name: 'Unofficial Shivering Isles Patch DV.esp'
@@ -3972,7 +3990,7 @@ plugins:
   - name: 'STHotkeys.esp'
     msg: [ *hotkeyBug ]
   - name: 'DLCHorseArmor.esp'
-    global_priority: -120
+    group: *dlcGroup
     after:
       - 'Unofficial Oblivion Patch.esp'
       - 'Oblivion Citadel Door Fix.esp'
@@ -4000,7 +4018,7 @@ plugins:
         <<: *dirtyPlugin
         itm: 3
   - name: 'DLCHorseArmor - Unofficial Patch.esp'
-    global_priority: -120
+    group: *dlcGroup
     tag:
       - C.Owner
   - name: 'SM Plugin Refurbish - HorseArmor.esp'
@@ -4018,7 +4036,7 @@ plugins:
       - type: error
         content: 'Rename this file to "DLCHorseArmor.esp", after backing up the original.'
   - name: 'DLCOrrery.esp'
-    global_priority: -120
+    group: *dlcGroup
     after:
       - 'Unofficial Oblivion Patch.esp'
       - 'Oblivion Citadel Door Fix.esp'
@@ -4050,7 +4068,7 @@ plugins:
         udr: 2
         <<: *dirtyPlugin
   - name: 'DLCOrrery - Unofficial Patch.esp'
-    global_priority: -120
+    group: *dlcGroup
   - name: 'DLCOrrery Rwalk.esp'
     msg: [ *useSensualWalks ]
     tag:
@@ -4078,7 +4096,7 @@ plugins:
   - name: 'C&C&EQR - SM Plugin Refurbish - Orrery.esp'
     msg: [ *obsolete ]
   - name: 'DLCVileLair.esp'
-    global_priority: -120
+    group: *dlcGroup
     after:
       - 'Unofficial Oblivion Patch.esp'
       - 'Oblivion Citadel Door Fix.esp'
@@ -4112,7 +4130,7 @@ plugins:
         itm: 16
         udr: 1
   - name: 'DLCVileLair - Unofficial Patch.esp'
-    global_priority: -120
+    group: *dlcGroup
     tag:
       - Graphics
   - name: 'SM Plugin Refurbish - VileLair.esp'
@@ -4138,7 +4156,7 @@ plugins:
     inc:
       - 'P1DseeYouSleep.esp'
   - name: 'DLCMehrunesRazor.esp'
-    global_priority: -120
+    group: *dlcGroup
     after:
       - 'Unofficial Oblivion Patch.esp'
       - 'Oblivion Citadel Door Fix.esp'
@@ -4162,7 +4180,7 @@ plugins:
         udr: 15
         <<: *dirtyPlugin
   - name: 'DLCMehrunesRazor - Unofficial Patch.esp'
-    global_priority: -120
+    group: *dlcGroup
     tag:
       - Delev
       - Invent
@@ -4214,7 +4232,7 @@ plugins:
   - name: 'SM Plugin Refurbish - MehrunesRazor.esp'
     msg: [ *doNotClean ]
   - name: 'DLCSpellTomes.esp'
-    global_priority: -120
+    group: *dlcGroup
     after:
       - 'Unofficial Oblivion Patch.esp'
       - 'Oblivion Citadel Door Fix.esp'
@@ -4246,7 +4264,7 @@ plugins:
         <<: *dirtyPlugin
         itm: 44
   - name: 'DLCSpellTomes - Unofficial Patch.esp'
-    global_priority: -120
+    group: *dlcGroup
     inc:
       - 'CDM-CGO Horse Armor Compatability.esp'
       - 'CDM-CGO Orrery Compatibility.esp'
@@ -6502,7 +6520,7 @@ plugins:
     tag:
       - Names
   - name: 'DLCThievesDen.esp'
-    global_priority: -120
+    group: *dlcGroup
     after:
       - 'Unofficial Oblivion Patch.esp'
       - 'Oblivion Citadel Door Fix.esp'
@@ -6529,7 +6547,7 @@ plugins:
         udr: 135
         <<: *dirtyPlugin
   - name: 'DLCThievesDen - Unofficial Patch.esp'
-    global_priority: -120
+    group: *dlcGroup
     tag:
       - Actors.ACBS
       - Actors.AIData
@@ -6540,7 +6558,7 @@ plugins:
       - Delev
       - Relev
   - name: 'DLCThievesDen - Unofficial Patch - SSSB.esp'
-    global_priority: -120
+    group: *dlcGroup
     after:
       - 'DLCThievesDen - Unofficial Patch.esp'
     msg:
@@ -7847,7 +7865,7 @@ plugins:
       - Actors.Anims
       - NoMerge
   - name: 'TamrielTravellersItemsNPC.esp'
-    global_priority: 79
+    group: *latePatchesGroup
     tag:
       - Deactivate
       - Delev
@@ -7857,7 +7875,7 @@ plugins:
   - name: 'TamrielTravellersItemsCobl.esp'
     msg: [ *reqCOBL ]
   - name: 'TamrielTravellersItemsVendor.esp'
-    global_priority: 79
+    group: *latePatchesGroup
     tag:
       - Deactivate
       - Delev
@@ -12416,7 +12434,7 @@ plugins:
         <<: *dirtyPlugin
         itm: 4
   - name: 'DLCBattlehornCastle.esp'
-    global_priority: -120
+    group: *dlcGroup
     after:
       - 'Unofficial Oblivion Patch.esp'
       - 'Oblivion Citadel Door Fix.esp'
@@ -12439,7 +12457,7 @@ plugins:
         udr: 72
         <<: *dirtyPlugin
   - name: 'DLCBattlehornCastle - Unofficial Patch.esp'
-    global_priority: -120
+    group: *dlcGroup
     dirty:
       - crc: 0xab4de79a
         <<: *dirtyPlugin
@@ -12532,7 +12550,7 @@ plugins:
         content: 'Delete ''Lynges Thieves Highway.esp and use this instead.'
         condition: '( file("Lynges Thieves Highway.esp") ) and active("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: 'DLCFrostcrag.esp'
-    global_priority: -120
+    group: *dlcGroup
     after:
       - 'Unofficial Oblivion Patch.esp'
       - 'Oblivion Citadel Door Fix.esp'
@@ -12589,7 +12607,7 @@ plugins:
         <<: *dirtyPlugin
         itm: 1
   - name: 'DLCFrostcrag - Unofficial Patch.esp'
-    global_priority: -120
+    group: *dlcGroup
     tag:
       - Actors.ACBS
       - C.Name
@@ -12689,7 +12707,7 @@ plugins:
     tag:
       - Graphics
   - name: 'Knights.esp'
-    global_priority: -120
+    group: *dlcGroup
     after:
       - 'Unofficial Oblivion Patch.esp'
       - 'Oblivion Citadel Door Fix.esp'
@@ -12739,7 +12757,7 @@ plugins:
     tag:
       - Names
   - name: 'Knights - Unofficial Patch.esp'
-    global_priority: -120
+    group: *dlcGroup
     tag:
       - Actors.ACBS
       - Actors.AIPackages
@@ -12883,7 +12901,7 @@ plugins:
         content: 'Use "FCOM_Knights.esp" instead.'
         condition: *FCOMCond
   - name: 'DLC_MOBS.esp'
-    global_priority: 79
+    group: *latePatchesGroup
     msg:
       - type: say
         content: 'Remove BattleHorn_MOBS.esp, VileLair_MOBS.esp, MehrunesRazor_MOBS.esp, Knights_MOBS.esp or ThievesDen_MOBS.esp - this includes all of those.'
@@ -13491,7 +13509,7 @@ plugins:
         <<: *dirtyPlugin
         udr: 137
   - name: 'RimmenAN.esp'
-    global_priority: 79
+    group: *latePatchesGroup
     tag:
       - C.Climate
       - Deactivate
@@ -18247,7 +18265,7 @@ plugins:
       - C.Light
       - Deactivate
   - name: 'Let There Be Darkness All.esp'
-    global_priority: 79
+    group: *latePatchesGroup
     tag:
       - C.Light
       - Deactivate
@@ -18263,14 +18281,14 @@ plugins:
       - Deactivate
       - NoMerge
   - name: 'Cava Obscura - Filter Patch For Mods.esp'
-    global_priority: 79
+    group: *latePatchesGroup
     tag:
       - C.Light
       - Deactivate
       - Filter
       - NoMerge
   - name: 'Item interchange - Extraction.esp'
-    global_priority: 79
+    group: *latePatchesGroup
     msg:
       - type: error
         content: 'Requires Bashed Patch.'
@@ -18279,7 +18297,7 @@ plugins:
       - Deactivate
       - Filter
   - name: 'Capes4NPCs - Extraction.esp'
-    global_priority: 79
+    group: *latePatchesGroup
     tag:
       - Deactivate
       - Filter
@@ -18292,13 +18310,13 @@ plugins:
         content: 'Requires Bashed Patch.'
         condition: 'not file("Bashed Patch.*\.esp")'
   - name: 'Capes4NPCs - Placement.esp'
-    global_priority: 79
+    group: *latePatchesGroup
     tag:
       - Filter
       - IIM
       - Invent
   - name: 'Item interchange - Placement for FCOM.esp'
-    global_priority: 79
+    group: *latePatchesGroup
     msg:
       - type: error
         content: 'Requires Bashed Patch.'
@@ -18314,7 +18332,7 @@ plugins:
       - Invent
       - Relev
   - name: 'Item interchange - Placement for Frostcrag.esp'
-    global_priority: 79
+    group: *latePatchesGroup
     msg:
       - type: error
         content: 'Requires Bashed Patch.'
@@ -21731,7 +21749,7 @@ plugins:
     tag:
       - Sound
   - name: 'PMSneakySummonCompatibility.esp'
-    global_priority: 79
+    group: *latePatchesGroup
     msg:
       - type: say
         content: 'Requires: Wrye Bash for proper use'
@@ -23298,7 +23316,7 @@ plugins:
       - Deactivate
       - Roads
   - name: 'Bashed Delayers - MERGE ONLY.esp'
-    global_priority: 79
+    group: *latePatchesGroup
     msg:
       - type: error
         content: 'Requires Bashed Patch.'
@@ -23309,7 +23327,7 @@ plugins:
       - Deactivate
       - Filter
   - name: 'Bashed Delayers E - MERGE ONLY.esp'
-    global_priority: 79
+    group: *latePatchesGroup
     msg:
       - type: error
         content: 'Requires Bashed Patch.'
@@ -23318,7 +23336,7 @@ plugins:
       - Deactivate
       - Filter
   - name: 'Bashed Delayers NE - MERGE ONLY.esp'
-    global_priority: 79
+    group: *latePatchesGroup
     msg:
       - type: error
         content: 'Requires Bashed Patch.'
@@ -23327,7 +23345,7 @@ plugins:
       - Deactivate
       - Filter
   - name: 'CoreRandmonClothing4Npcs.esp'
-    global_priority: 79
+    group: *latePatchesGroup
     msg:
       - type: error
         content: 'Requires Bashed Patch.'
@@ -23338,7 +23356,7 @@ plugins:
       - IIM
       - Invent
   - name: 'Cobl Filter Late MERGE ONLY.esp'
-    global_priority: 79
+    group: *latePatchesGroup
     msg:
       - type: error
         content: 'Requires Bashed Patch.'
@@ -23347,7 +23365,7 @@ plugins:
       - Deactivate
       - Filter
   - name: 'Oscuro''s_Oblivion_Overhaul - Harvest Containers - SI.esp'
-    global_priority: 79
+    group: *latePatchesGroup
     tag:
       - Deactivate
       - Filter
@@ -23355,7 +23373,7 @@ plugins:
       - Invent
       - Scripts
   - name: 'OOO Harvest Containers Filter patch for mods.esp'
-    global_priority: 79
+    group: *latePatchesGroup
     msg:
       - type: error
         content: 'Requires Bashed Patch.'
@@ -23364,7 +23382,7 @@ plugins:
       - Deactivate
       - Filter
   - name: 'Harvest Containers Filter patch for mods.esp'
-    global_priority: 79
+    group: *latePatchesGroup
     msg:
       - type: error
         content: 'Requires Bashed Patch.'
@@ -23373,7 +23391,7 @@ plugins:
       - Deactivate
       - Filter
   - name: 'All Natural - Indoor Weather Filter For Mods.esp'
-    global_priority: 79
+    group: *latePatchesGroup
     msg:
       - type: error
         content: 'Requires Bashed Patch.'
@@ -23384,7 +23402,7 @@ plugins:
       - Filter
       - NoMerge
   - name: 'Storms & Sound - Filter Patch.esp'
-    global_priority: 79
+    group: *latePatchesGroup
     msg:
       - type: error
         content: 'Requires Bashed Patch.'
@@ -23393,7 +23411,7 @@ plugins:
     tag:
       - Filter
   - name: 'TIE Weapon + Armor Filter.esp'
-    global_priority: 79
+    group: *latePatchesGroup
     msg:
       - type: error
         content: 'Requires Bashed Patch.'
@@ -23428,11 +23446,11 @@ plugins:
       - type: say
         content: 'Obsolete. Upgrade to SDR version 8.2'
   - name: 'TES4Merged.esp'
-    global_priority: 80
+    group: *dynamicPatchesGroup
     tag:
       - NoMerge
   - name: 'Bashed Patch.*\.esp'
-    global_priority: 80
+    group: *dynamicPatchesGroup
     after:
       - 'TES4Merged.esp'
   - name: 'Creeper.esp'
@@ -23928,23 +23946,23 @@ plugins:
       - 'Better Cities IC Temple.esp'
       - 'Better Cities IC Waterfront.esp'
   - name: 'Ak- Morroblivion Maps HD.esp'
-    global_priority: 127
+    group: *mapGroup
   - name: 'Hiboriamap.esp'
-    global_priority: 127
+    group: *mapGroup
   - name: 'MWakeMap.esp'
-    global_priority: 127
+    group: *mapGroup
   - name: 'MergedMaps.esp'
-    global_priority: 127
+    group: *mapGroup
   - name: 'Elsweyr Color Map.esp'
-    global_priority: 127
+    group: *mapGroup
   - name: 'Colored Map for Elsweyr 1.1.esp'
-    global_priority: 127
+    group: *mapGroup
   - name: 'TamrielWorldspaceCompleteWorldMap.esp'
-    global_priority: 127
+    group: *mapGroup
   - name: 'TWMP_Tamriel_Ingame_ Map.esp'
-    global_priority: 127
+    group: *mapGroup
   - name: 'DWIngameMap.esp'
-    global_priority: 127
+    group: *mapGroup
   - name: 'Better Cities (ANVIL|Full|- Open Cities Reborn)\.esp'
     after:
       - name: 'TR_Stirk.esp'
