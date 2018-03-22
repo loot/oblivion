@@ -293,8 +293,14 @@ groups:
   - name: &dlcGroup DLC & Unofficial Patches
     after: [ *gameMasterGroup ]
 
-  - name: default
+  - name: &newLandsGroup New Lands
     after: [ *dlcGroup ]
+
+  - name: &underridesGroup Underrides
+    after: [ *newLandsGroup ]
+
+  - name: default
+    after: [ *underridesGroup ]
 
   - name: &latePatchesGroup Late Patches
     after: [ default ]
@@ -336,17 +342,17 @@ plugins:
         <<: *dirtyPlugin
         udr: 4
   - name: 'GTAesgaard_2.esm'
-    priority: -3
+    group: *newLandsGroup
     msg: [ *moveWorldspaces ]
   - name: 'DibellasWatch.esm'
-    priority: -3
+    group: *newLandsGroup
     msg: [ *moveWorldspaces ]
   - name: 'Belas.esm'
     msg:
       - type: error
         content: 'Part of Chronicles of Reeb. Do not use. Has serious landscape issues due to editing the Tamriel worldspace. Uninstall and delete.'
   - name: 'Morrowind_ob.esm'
-    priority: -3
+    group: *newLandsGroup
     msg: [ *moveWorldspaces ]
   - name: 'Silgrad_Tower.esm'
     inc:
@@ -544,7 +550,7 @@ plugins:
     tag:
       - Actors.ACBS
       - NoMerge
-    priority: -2
+    group: *underridesGroup
   - name: 'HrmnsOblivionScriptOptimizationv1.0.esp'
     msg:
       - type: warn
@@ -553,108 +559,108 @@ plugins:
       - type: warn
         content: 'Not recommended for use as there is no measurable performance improvement.'
         condition: 'checksum("HrmnsOblivionScriptOptimizationv1.0.esp",FEED7422)'
-    priority: -2
+    group: *underridesGroup
   - name: 'HrmnsOblivionScriptOptimizationv SI 1.0.esp'
     msg:
       - type: warn
         content: 'Not recommended for use as there is no measurable performance improvement.'
-    priority: -2
+    group: *underridesGroup
   - name: 'Skillbookssave.esp'
     tag:
       - Scripts
-    priority: -2
+    group: *underridesGroup
   - name: 'OBSE Save Skill Books For Later DV.esp'
     tag:
       - Scripts
-    priority: -2
+    group: *underridesGroup
   - name: 'Book Jackets Oblivion - SSBFL.esp'
     inc:
       - 'Skillbookssave.esp'
     tag:
       - Graphics
       - Scripts
-    priority: -2
+    group: *underridesGroup
   - name: 'Book Jackets Oblivion - BP - SSBFL.esp'
     inc:
       - 'Skillbookssave.esp'
     tag:
       - Graphics
       - Scripts
-    priority: -2
+    group: *underridesGroup
   - name: 'Oblivion Vwalk.esp'
     tag:
       - Actors.Anims
       - NoMerge
-    priority: -2
+    group: *underridesGroup
   - name: 'CyrodiilUpgradeResourcePack Vwalk.esp'
     tag:
       - Actors.Anims
       - NoMerge
-    priority: -2
+    group: *underridesGroup
   - name: 'SoVvM Vwalk.esp'
     tag:
       - Actors.Anims
       - NoMerge
-    priority: -2
+    group: *underridesGroup
   - name: 'Oblivion_SI Vwalk Full.esp'
     msg: [ *updateSensualWalks ]
     tag:
       - Actors.Anims
       - NoMerge
-    priority: -2
+    group: *underridesGroup
   - name: 'TRoN.esp'
     dirty:
       - crc: 0x8a09b1f1
         <<: *dirtyPlugin
         itm: 9
         udr: 3
-    priority: -2
+    group: *underridesGroup
   - name: 'TRoN 0-59-1b Vwalk.esp'
     tag:
       - Actors.Anims
       - NoMerge
-    priority: -2
+    group: *underridesGroup
   - name: 'TRoN Rwalk.esp'
     msg: [ *useSensualWalks ]
     tag:
       - Actors.Anims
       - NoMerge
-    priority: -2
+    group: *underridesGroup
   - name: 'TRoN Swalk.esp'
     msg: [ *useSensualWalks ]
     tag:
       - Actors.Anims
       - NoMerge
-    priority: -2
+    group: *underridesGroup
   - name: 'TRoN Vwalk.esp'
     tag:
       - Actors.Anims
       - NoMerge
-    priority: -2
+    group: *underridesGroup
   - name: 'Underdark v1.1 Delayer.esp'
     msg: [ *obsolete ]
-    priority: -2
+    group: *underridesGroup
   - name: '!Oblivion_PL.esp'
     tag:
       - Names
-    priority: -2
+    group: *underridesGroup
   - name: 'tes4-CHS-main.esp'
     tag:
       - Names
-    priority: -2
+    group: *underridesGroup
 # These should all be tagged with Deactivate, NoMerge, and NPCFaces, and should have priority -2.
   - name: 'Better Looking NPC.esp'
     tag:
       - Deactivate
       - NoMerge
       - NpcFaces
-    priority: -2
+    group: *underridesGroup
   - name: 'EURN.esp'
     tag:
       - Deactivate
       - NoMerge
       - NpcFaces
-    priority: -2
+    group: *underridesGroup
   - name: 'xeoex.esp'
     tag:
       - Eyes
@@ -666,12 +672,12 @@ plugins:
       - R.Head
       - R.Mouth
       - R.Teeth
-    priority: -2
+    group: *underridesGroup
   - name: 'xeoex Vwalk.esp'
     tag:
       - Actors.Anims
       - NoMerge
-    priority: -2
+    group: *underridesGroup
   - name: 'xeosp++.esp'
     tag:
       - Body-F
@@ -683,78 +689,78 @@ plugins:
       - Hair
       - NPC.Race
       - NpcFaces
-    priority: -2
+    group: *underridesGroup
   - name: 'xeosp++ Vwalk.esp'
     tag:
       - Actors.Anims
       - NoMerge
-    priority: -2
+    group: *underridesGroup
   - name: 'TNR - THE REDGUARDS.esp'
     tag:
       - Deactivate
       - NoMerge
       - NpcFaces
-    priority: -2
+    group: *underridesGroup
   - name: 'TNR - THE DUNMER.esp'
     tag:
       - Deactivate
       - NoMerge
       - NpcFaces
-    priority: -2
+    group: *underridesGroup
   - name: 'TNR - THE IMPERIALS.esp'
     tag:
       - Deactivate
       - NoMerge
       - NpcFaces
-    priority: -2
+    group: *underridesGroup
   - name: 'TNR - THE BRETONS.esp'
     tag:
       - Deactivate
       - NoMerge
       - NpcFaces
-    priority: -2
+    group: *underridesGroup
   - name: 'TNR - THE ALTMER.esp'
     tag:
       - Deactivate
       - NoMerge
       - NpcFaces
-    priority: -2
+    group: *underridesGroup
   - name: 'TNR - THE BOSMER.esp'
     tag:
       - Deactivate
       - NoMerge
       - NpcFaces
-    priority: -2
+    group: *underridesGroup
   - name: 'TNR - THE NORDS.esp'
     tag:
       - Deactivate
       - NoMerge
       - NpcFaces
-    priority: -2
+    group: *underridesGroup
   - name: 'TNR - THE ORCS.esp'
     tag:
       - Deactivate
       - NoMerge
       - NpcFaces
-    priority: -2
+    group: *underridesGroup
   - name: 'TNR - THE KHAJIIT.esp'
     tag:
       - Deactivate
       - NoMerge
       - NpcFaces
-    priority: -2
+    group: *underridesGroup
   - name: 'TNR - THE ARGONIANS.esp'
     tag:
       - Deactivate
       - NoMerge
       - NpcFaces
-    priority: -2
+    group: *underridesGroup
   - name: 'TNR - all.esp'
     tag:
       - Deactivate
       - NoMerge
       - NpcFaces
-    priority: -2
+    group: *underridesGroup
   - name: 'TNR- All Races.esp'
     inc:
       - 'Cobl Races TNR.esp'
@@ -762,7 +768,7 @@ plugins:
       - Deactivate
       - NoMerge
       - NpcFaces
-    priority: -2
+    group: *underridesGroup
   - name: 'TNR ALL RACES FINAL.esp'
     inc:
       - 'Cobl Races TNR.esp'
@@ -770,7 +776,7 @@ plugins:
       - Deactivate
       - NoMerge
       - NpcFaces
-    priority: -2
+    group: *underridesGroup
   - name: 'TNR - ALL RACES FINAL.esp'
     inc:
       - 'Cobl Races TNR.esp'
@@ -778,7 +784,7 @@ plugins:
       - Deactivate
       - NoMerge
       - NpcFaces
-    priority: -2
+    group: *underridesGroup
   - name: 'TNR - ALL RACES FINAL DV.esp'
     inc:
       - 'Cobl Races TNR.esp'
@@ -786,7 +792,7 @@ plugins:
       - Deactivate
       - NoMerge
       - NpcFaces
-    priority: -2
+    group: *underridesGroup
   - name: 'TNR ALL RACES FINAL Vwalk.esp'
     tag:
       - Actors.Anims
@@ -798,7 +804,7 @@ plugins:
       - Deactivate
       - NoMerge
       - NpcFaces
-    priority: -2
+    group: *underridesGroup
   - name: 'TNR - ShiveringIsles.esp'
     inc:
       - 'Cobl Races TNR SI.esp'
@@ -806,7 +812,7 @@ plugins:
       - Deactivate
       - NoMerge
       - NpcFaces
-    priority: -2
+    group: *underridesGroup
   - name: 'TNR - ShiveringIsles no helms.esp'
     inc:
       - 'Cobl Races TNR SI.esp'
@@ -814,7 +820,7 @@ plugins:
       - Deactivate
       - NoMerge
       - NpcFaces
-    priority: -2
+    group: *underridesGroup
   - name: 'TNR - ShiveringIsles no helms Vwalk.esp'
     tag:
       - Actors.Anims
@@ -824,7 +830,7 @@ plugins:
       - Deactivate
       - NoMerge
       - NpcFaces
-    priority: -2
+    group: *underridesGroup
   - name: 'Oblivion_SI Vwalk Full TNR.esp'
     msg: [ *updateSensualWalks ]
     tag:
@@ -838,7 +844,7 @@ plugins:
       - Deactivate
       - NoMerge
       - NpcFaces
-    priority: -2
+    group: *underridesGroup
   - name: 'Cobl Races TNR SI.esp'
     msg:
       - type: say
@@ -847,7 +853,7 @@ plugins:
       - Deactivate
       - NoMerge
       - NpcFaces
-    priority: -2
+    group: *underridesGroup
   - name: 'Cobl - NPCDiversity - TNR Merge.esp'
     msg: [ *obsolete ]
     tag:
@@ -855,39 +861,39 @@ plugins:
       - Invent
       - NoMerge
       - NpcFaces
-    priority: -2
+    group: *underridesGroup
   - name: 'TweakedGenericFaces.esp'
     tag:
       - Deactivate
       - NoMerge
       - NpcFaces
-    priority: -2
+    group: *underridesGroup
   - name: 'TweakedGenericFaces-LITE.esp'
     tag:
       - Deactivate
       - NoMerge
       - NpcFaces
-    priority: -2
+    group: *underridesGroup
   - name: 'Better-Horse-Eyes.esp'
     tag:
       - Deactivate
       - Graphics
       - NoMerge
       - NpcFaces
-    priority: -2
+    group: *underridesGroup
   - name: 'Younger Hotter NPC''s 0.99.esp'
     msg: [ *obsolete ]
     tag:
       - Deactivate
       - NoMerge
       - NpcFaces
-    priority: -2
+    group: *underridesGroup
   - name: 'Younger Hotter NPC''s v1.0.esp'
     tag:
       - Deactivate
       - NoMerge
       - NpcFaces
-    priority: -2
+    group: *underridesGroup
   - name: 'Younger Hotter NPC''s v1.0 Vwalk.esp'
     tag:
       - Actors.Anims
@@ -897,26 +903,26 @@ plugins:
       - Deactivate
       - NoMerge
       - NpcFaces
-    priority: -2
+    group: *underridesGroup
   - name: 'YoungerHotterNPCwithPussies.esp'
     tag:
       - Deactivate
       - NoMerge
       - NpcFaces
-    priority: -2
+    group: *underridesGroup
   - name: 'YH Orcs v1.esp'
     tag:
       - Deactivate
       - NoMerge
       - NpcFaces
-    priority: -2
+    group: *underridesGroup
   - name: 'Ren''s hair on Young Hot NPCs.esp'
     tag:
       - Deactivate
       - Hair
       - NoMerge
       - NpcFaces
-    priority: -2
+    group: *underridesGroup
   - name: 'Ren''s hair on Young Hot NPCs Vwalk.esp'
     tag:
       - Actors.Anims
@@ -926,13 +932,13 @@ plugins:
       - Deactivate
       - NoMerge
       - NpcFaces
-    priority: -2
+    group: *underridesGroup
   - name: 'Beautiful_Women_NiceOnly.esp'
     tag:
       - Deactivate
       - NoMerge
       - NpcFaces
-    priority: -2
+    group: *underridesGroup
     dirty:
       - crc: 0x2c6e9200
         <<: *dirtyPlugin
@@ -942,25 +948,25 @@ plugins:
       - Deactivate
       - NoMerge
       - NpcFaces
-    priority: -2
+    group: *underridesGroup
   - name: 'Beautiful_Women_SI.esp'
     tag:
       - Deactivate
       - NoMerge
       - NpcFaces
-    priority: -2
+    group: *underridesGroup
   - name: 'Beautiful_Women_Vampires.esp'
     tag:
       - Deactivate
       - NoMerge
       - NpcFaces
-    priority: -2
+    group: *underridesGroup
   - name: 'Beautiful_Women_Vampires_50.esp'
     tag:
       - Deactivate
       - NoMerge
       - NpcFaces
-    priority: -2
+    group: *underridesGroup
   - name: 'Beautiful_Women_DB_Addon Vwalk.esp'
     tag:
       - Actors.Anims
@@ -974,7 +980,7 @@ plugins:
       - Deactivate
       - NoMerge
       - NpcFaces
-    priority: -2
+    group: *underridesGroup
   - name: 'Beautiful_Women_NotSoNice_Bonus Vwalk.esp'
     tag:
       - Actors.Anims
@@ -1001,85 +1007,85 @@ plugins:
       - Deactivate
       - NoMerge
       - NpcFaces
-    priority: -2
+    group: *underridesGroup
   - name: 'Beautiful_Women_Revised_DB.esp'
     tag:
       - Deactivate
       - NoMerge
       - NpcFaces
-    priority: -2
+    group: *underridesGroup
   - name: 'Beautiful_Women_Revised_SI.esp'
     tag:
       - Deactivate
       - NoMerge
       - NpcFaces
-    priority: -2
+    group: *underridesGroup
   - name: 'Beautiful_Women_Revised_NotSoNice.esp'
     tag:
       - Deactivate
       - NoMerge
       - NpcFaces
-    priority: -2
+    group: *underridesGroup
   - name: 'Handsome_Gents_Addon.esp'
     tag:
       - Deactivate
       - NoMerge
       - NpcFaces
-    priority: -2
+    group: *underridesGroup
   - name: 'Handsome_Gents_DB_Addon.esp'
     tag:
       - Deactivate
       - NoMerge
       - NpcFaces
-    priority: -2
+    group: *underridesGroup
   - name: 'Handsome_Gents_SI.esp'
     tag:
       - Deactivate
       - NoMerge
       - NpcFaces
-    priority: -2
+    group: *underridesGroup
   - name: 'Handsome_Gents_Vampires.esp'
     tag:
       - Deactivate
       - NoMerge
       - NpcFaces
-    priority: -2
+    group: *underridesGroup
   - name: 'Handsome_Gents_Vampires_50.esp'
     tag:
       - Deactivate
       - NoMerge
       - NpcFaces
-    priority: -2
+    group: *underridesGroup
   - name: 'Handsome_Gents_Bonus.esp'
     tag:
       - Deactivate
       - NoMerge
       - NpcFaces
-    priority: -2
+    group: *underridesGroup
   - name: 'Handsome_Gents_Revised.esp'
     tag:
       - Deactivate
       - NoMerge
       - NpcFaces
-    priority: -2
+    group: *underridesGroup
   - name: 'Handsome_Gents_Revised_DB.esp'
     tag:
       - Deactivate
       - NoMerge
       - NpcFaces
-    priority: -2
+    group: *underridesGroup
   - name: 'Handsome_Gents_Revised_SI.esp'
     tag:
       - Deactivate
       - NoMerge
       - NpcFaces
-    priority: -2
+    group: *underridesGroup
   - name: 'emperorface.esp'
     tag:
       - Deactivate
       - NoMerge
       - NpcFaces
-    priority: -2
+    group: *underridesGroup
     dirty:
       - crc: 0xaa25a555
         <<: *dirtyPlugin
@@ -1090,27 +1096,27 @@ plugins:
       - Invent
       - NoMerge
       - NpcFaces
-    priority: -2
+    group: *underridesGroup
   - name: 'YoungerNPCs.esp'
     tag:
       - Deactivate
       - NoMerge
       - NpcFaces
-    priority: -2
+    group: *underridesGroup
   - name: 'Colourwheels Sexy Female NPCs.esp'
     tag:
       - Actors.Anims
       - Deactivate
       - NoMerge
       - NpcFaces
-    priority: -2
+    group: *underridesGroup
   - name: 'Colourwheels Sexy Female NPCs Vwalk.esp'
     tag:
       - Actors.Anims
       - Deactivate
       - NoMerge
       - NpcFaces
-    priority: -2
+    group: *underridesGroup
   - name: 'ChangeSomeCyrodiilLadies.esp'
     msg:
       - type: say
@@ -1119,55 +1125,55 @@ plugins:
       - Deactivate
       - NoMerge
       - NpcFaces
-    priority: -2
+    group: *underridesGroup
   - name: 'CSCP.esp'
     tag:
       - Deactivate
       - NoMerge
       - NpcFaces
-    priority: -2
+    group: *underridesGroup
   - name: 'Beautiful Amazon.esp'
     tag:
       - Deactivate
       - NoMerge
       - NpcFaces
-    priority: -2
+    group: *underridesGroup
   - name: 'BeautifulJensine.esp'
     tag:
       - Deactivate
       - NoMerge
       - NpcFaces
-    priority: -2
+    group: *underridesGroup
   - name: 'Prettier Vampire Faces.esp'
     tag:
       - Deactivate
       - NoMerge
       - NpcFaces
-    priority: -2
+    group: *underridesGroup
   - name: 'Better Faces.esp'
     tag:
       - Deactivate
       - NoMerge
       - NpcFaces
-    priority: -2
+    group: *underridesGroup
   - name: 'BPFace_Oblivion.esp'
     tag:
       - Actors.ACBS
       - NoMerge
       - NPC.Race
       - NpcFaces
-    priority: -2
+    group: *underridesGroup
   - name: 'LD_Patrick_Stewart_Sean_Bean.esp'
     tag:
       - NPC.Race
       - NpcFaces
-    priority: -2
+    group: *underridesGroup
   - name: 'TolkieneElderElf.esp'
     tag:
       - Deactivate
       - NoMerge
       - NpcFaces
-    priority: -2
+    group: *underridesGroup
   - name: 'OblivionMsg.esp'
     tag:
       - Names
