@@ -16844,6 +16844,14 @@ plugins:
   - name: 'Quest Award Leveller - Knights of the Nine.esp'
     tag:
       - Scripts
+    msg:
+      - type: warn
+        content: 'Contains corrupt identical-to-master records. Automated cleaning wth TES4Edit will remove them.'
+        condition: 'checksum("Quest Award Leveller - Knights of the Nine.esp", A80CD1A4)'
+    dirty:
+      - crc: 0xA80CD1A4
+        <<: *dirtyPlugin
+        itm: 7
   - name: 'AyleidMeteorIronWeaponsVANILLA.esp'
     tag:
       - Invent
