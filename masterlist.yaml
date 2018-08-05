@@ -12772,18 +12772,24 @@ plugins:
       - 'DLCFrostcrag.esp'
       - 'DLCFrostcrag - Unofficial Patch.esp'
     tag:
+      - Actors.ACBS
       - Actors.AIPackages
+      - Actors.Stats
       - Factions
-      - Relations
+      - Graphics
     dirty:
       - crc: 0x71480b94
         itm: 113
         udr: 255
         <<: *dirtyPlugin
-      - crc: 0xF1F478FA
-        itm: 121
-        udr: 257
+      - crc: 0xF1F478FA # Steam GOTY
+        util: TES4Edit 3.2.2
+        itm: 83
+        udr: 255
         <<: *dirtyPlugin
+    clean:
+      - crc: 0x6C88EDB3
+        util: TES4Edit 3.2.2
   - name: 'Knights - Book Jackets.esp'
     tag:
       - Graphics
