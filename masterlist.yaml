@@ -4177,14 +4177,18 @@ plugins:
       - 'DLCThievesDen - Unofficial Patch.esp'
       - 'DLCThievesDen - Unofficial Patch - SSSB.esp'
     dirty:
-      - crc: 0xCB413740
-        itm: 21
+      - crc: 0xCB413740 # Steam GOTY
+        util: TES4Edit 3.2.2
+        itm: 14
         udr: 15
         <<: *dirtyPlugin
       - crc: 0x78fdd06e
         itm: 21
         udr: 15
         <<: *dirtyPlugin
+    clean:
+      - crc: 0x98F295F5 # Steam GOTY
+        util: TES4Edit 3.2.2
   - name: 'DLCMehrunesRazor - Unofficial Patch.esp'
     group: *dlcGroup
     tag:
