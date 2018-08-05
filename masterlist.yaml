@@ -4015,14 +4015,20 @@ plugins:
       - 'DLCVileLair.esp'
       - 'DLCVileLair - Unofficial Patch.esp'
     tag:
+      - Actors.ACBS
+      - Actors.AIPackages
       - Scripts
     dirty:
-      - crc: 0xbad48e5d
+      - crc: 0xBAD48E5D # Steam GOTY
         <<: *dirtyPlugin
+        util: TES4Edit 3.2.2
         itm: 3
       - crc: 0x2a0ff245
         <<: *dirtyPlugin
         itm: 3
+    clean:
+      - crc: 0xBD0084C5
+        util: TES4Edit 3.2.2
   - name: 'DLCHorseArmor - Unofficial Patch.esp'
     group: *dlcGroup
     tag:
