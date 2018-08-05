@@ -12450,9 +12450,10 @@ plugins:
       - 'Unofficial Shivering Isles Patch.esp'
       - 'USIPS Additional Changes.esp'
     dirty:
-      - crc: 0x7048c609
-        itm: 13
-        udr: 74
+      - crc: 0x7048c609 # Steam GOTY
+        util: TES4Edit v3.2.2
+        itm: 3
+        udr: 72
         <<: *dirtyPlugin
       - crc: 0xcadd3fd0
         itm: 18
@@ -12462,6 +12463,9 @@ plugins:
         itm: 13
         udr: 72
         <<: *dirtyPlugin
+    clean:
+      - crc: 0xE449E3FA # Steam GOTY
+        util: TES4Edit v3.2.2
   - name: 'DLCBattlehornCastle - Unofficial Patch.esp'
     group: *dlcGroup
     dirty:
