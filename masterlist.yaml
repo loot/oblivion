@@ -4015,14 +4015,20 @@ plugins:
       - 'DLCVileLair.esp'
       - 'DLCVileLair - Unofficial Patch.esp'
     tag:
+      - Actors.ACBS
+      - Actors.AIPackages
       - Scripts
     dirty:
-      - crc: 0xbad48e5d
+      - crc: 0xBAD48E5D # Steam GOTY
         <<: *dirtyPlugin
+        util: TES4Edit 3.2.2
         itm: 3
       - crc: 0x2a0ff245
         <<: *dirtyPlugin
         itm: 3
+    clean:
+      - crc: 0xBD0084C5
+        util: TES4Edit 3.2.2
   - name: 'DLCHorseArmor - Unofficial Patch.esp'
     group: *dlcGroup
     tag:
@@ -4065,7 +4071,8 @@ plugins:
     tag:
       - Actors.AIPackages
     dirty:
-      - crc: 0x5bc59db4
+      - crc: 0x5BC59DB4 # Steam GOTY
+        util: Tes4Edit 3.2.2
         itm: 11
         udr: 2
         <<: *dirtyPlugin
@@ -4073,6 +4080,9 @@ plugins:
         itm: 11
         udr: 2
         <<: *dirtyPlugin
+    clean:
+      - crc: 0x351A3894
+        util: Tes4Edit 3.2.2
   - name: 'DLCOrrery - Unofficial Patch.esp'
     group: *dlcGroup
   - name: 'DLCOrrery Rwalk.esp'
@@ -4122,10 +4132,13 @@ plugins:
       - type: say
         content: 'Incompatible with: Kumiko Manor esp'
         condition: 'file("Kumiko.?Manor.+\.esp")'
+    tag:
+      - Sound
     dirty:
-      - crc: 0x74d2ca6f
+      - crc: 0x74d2ca6f # Steam GOTY
         <<: *dirtyPlugin
-        itm: 26
+        util: TES4Edit 3.2.2
+        itm: 16
         udr: 1
       - crc: 0x2c59f2f0
         <<: *dirtyPlugin
@@ -4135,6 +4148,9 @@ plugins:
         <<: *dirtyPlugin
         itm: 16
         udr: 1
+    clean:
+      - crc: 0x1D2570A8 # Steam GOTY
+        util: TES4Edit 3.2.2
   - name: 'DLCVileLair - Unofficial Patch.esp'
     group: *dlcGroup
     tag:
@@ -4177,14 +4193,18 @@ plugins:
       - 'DLCThievesDen - Unofficial Patch.esp'
       - 'DLCThievesDen - Unofficial Patch - SSSB.esp'
     dirty:
-      - crc: 0xCB413740
-        itm: 21
+      - crc: 0xCB413740 # Steam GOTY
+        util: TES4Edit 3.2.2
+        itm: 14
         udr: 15
         <<: *dirtyPlugin
       - crc: 0x78fdd06e
         itm: 21
         udr: 15
         <<: *dirtyPlugin
+    clean:
+      - crc: 0x98F295F5 # Steam GOTY
+        util: TES4Edit 3.2.2
   - name: 'DLCMehrunesRazor - Unofficial Patch.esp'
     group: *dlcGroup
     tag:
@@ -4260,15 +4280,16 @@ plugins:
       - 'DLCHorseArmor - Unofficial Patch.esp'
       - 'DLCOrrery.esp'
       - 'DLCOrrery - Unofficial Patch.esp'
-    tag:
-      - Relev
     dirty:
-      - crc: 0x312156F8
+      - crc: 0x312156F8 # Steam GOTY
         itm: 40
         <<: *dirtyPlugin
       - crc: 0x4abf2393
         <<: *dirtyPlugin
         itm: 44
+    clean:
+      - crc: 0x02FA9682 # Steam GOTY
+        util: TES4Edit 3.2.2
   - name: 'DLCSpellTomes - Unofficial Patch.esp'
     group: *dlcGroup
     inc:
@@ -6544,7 +6565,8 @@ plugins:
       - C.Light
       - C.Name
     dirty:
-      - crc: 0x5db8ccc
+      - crc: 0x05DB8CCC
+        util: TES4Edit 3.2.2
         itm: 5
         udr: 135
         <<: *dirtyPlugin
@@ -6552,6 +6574,9 @@ plugins:
         itm: 5
         udr: 135
         <<: *dirtyPlugin
+    clean:
+      - crc: 0x7F76D2D3 # Steam GOTY
+        util: TES4Edit 3.2.2
   - name: 'DLCThievesDen - Unofficial Patch.esp'
     group: *dlcGroup
     tag:
@@ -12450,9 +12475,10 @@ plugins:
       - 'Unofficial Shivering Isles Patch.esp'
       - 'USIPS Additional Changes.esp'
     dirty:
-      - crc: 0x7048c609
-        itm: 13
-        udr: 74
+      - crc: 0x7048c609 # Steam GOTY
+        util: TES4Edit v3.2.2
+        itm: 3
+        udr: 72
         <<: *dirtyPlugin
       - crc: 0xcadd3fd0
         itm: 18
@@ -12462,6 +12488,9 @@ plugins:
         itm: 13
         udr: 72
         <<: *dirtyPlugin
+    clean:
+      - crc: 0xE449E3FA # Steam GOTY
+        util: TES4Edit v3.2.2
   - name: 'DLCBattlehornCastle - Unofficial Patch.esp'
     group: *dlcGroup
     dirty:
@@ -12585,7 +12614,7 @@ plugins:
       - C.Owner
       - Factions
     dirty:
-      - crc: 0x2A7665FB
+      - crc: 0x2A7665FB # Steam GOTY
         itm: 71
         udr: 94
         <<: *dirtyPlugin
@@ -12607,6 +12636,9 @@ plugins:
         itm: 98
         udr: 185
         <<: *dirtyPlugin
+    clean:
+      - crc: 0x5AEE2921 # Steam GOTY
+        util: TES4Edit 3.2.2
   - name: 'DSoSFrostCragRebornExteriorStairsFix.esp'
     dirty:
       - crc: 0xd2621e65
@@ -12740,18 +12772,24 @@ plugins:
       - 'DLCFrostcrag.esp'
       - 'DLCFrostcrag - Unofficial Patch.esp'
     tag:
+      - Actors.ACBS
       - Actors.AIPackages
+      - Actors.Stats
       - Factions
-      - Relations
+      - Graphics
     dirty:
       - crc: 0x71480b94
         itm: 113
         udr: 255
         <<: *dirtyPlugin
-      - crc: 0xF1F478FA
-        itm: 121
-        udr: 257
+      - crc: 0xF1F478FA # Steam GOTY
+        util: TES4Edit 3.2.2
+        itm: 83
+        udr: 255
         <<: *dirtyPlugin
+    clean:
+      - crc: 0x6C88EDB3
+        util: TES4Edit 3.2.2
   - name: 'Knights - Book Jackets.esp'
     tag:
       - Graphics
