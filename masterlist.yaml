@@ -4280,15 +4280,16 @@ plugins:
       - 'DLCHorseArmor - Unofficial Patch.esp'
       - 'DLCOrrery.esp'
       - 'DLCOrrery - Unofficial Patch.esp'
-    tag:
-      - Relev
     dirty:
-      - crc: 0x312156F8
+      - crc: 0x312156F8 # Steam GOTY
         itm: 40
         <<: *dirtyPlugin
       - crc: 0x4abf2393
         <<: *dirtyPlugin
         itm: 44
+    clean:
+      - crc: 0x02FA9682 # Steam GOTY
+        util: TES4Edit 3.2.2
   - name: 'DLCSpellTomes - Unofficial Patch.esp'
     group: *dlcGroup
     inc:
