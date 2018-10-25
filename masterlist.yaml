@@ -205,6 +205,12 @@ common:
   - &dirtyPlugin
     util: '[TES4Edit](http://www.nexusmods.com/oblivion/mods/11536/)'
     info: 'A cleaning guide is available [here](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide).'
+  - &quickClean
+    util: '[TES4Edit](https://github.com/TES5Edit/TES5Edit/releases) **Quick Auto Clean**'
+    info: |+
+
+          >A guide for running **Quick Auto Clean** can be found [here](https://tes5edit.github.io/docs/5-mod-cleaning-and-error-checking.html#quickautoclean).
+          >The latest version of [TES4Edit Experimental](https://github.com/TES5Edit/TES5Edit/releases) is required to use **Quick Auto Clean**.
 
 bash_tags:
   - 'Actors.ACBS'
@@ -1305,10 +1311,9 @@ plugins:
       - 'Oblivion Citadel Door Fix.esp'
       - 'UOPS Additional Changes.esp'
       - 'UOP Vampire Aging & Face Fix.esp'
-    dirty:
-      - crc: 0xdaf51407
-        <<: *dirtyPlugin
-        itm: 2
+    clean:
+      - crc: 0x2BB84977 # Steam GOTY
+        util: 'TES4Edit v3.2.84 EXPERIMENTAL'
   - name: 'Unofficial Oblivion Patch.esp'
     group: *dlcGroup
     msg: [ *doNotClean ]
@@ -4019,16 +4024,15 @@ plugins:
       - Actors.AIPackages
       - Scripts
     dirty:
-      - crc: 0xBAD48E5D # Steam GOTY
-        <<: *dirtyPlugin
-        util: TES4Edit 3.2.2
-        itm: 3
       - crc: 0x2a0ff245
         <<: *dirtyPlugin
         itm: 3
+      - <<: *quickClean
+        crc: 0xBAD48E5D # Steam GOTY
+        itm: 3
     clean:
-      - crc: 0xBD0084C5
-        util: TES4Edit 3.2.2
+      - crc: 0xBD0084C5 # Steam GOTY
+        util: 'TES4Edit v3.2.84 EXPERIMENTAL'
   - name: 'DLCHorseArmor - Unofficial Patch.esp'
     group: *dlcGroup
     tag:
@@ -4071,18 +4075,17 @@ plugins:
     tag:
       - Actors.AIPackages
     dirty:
-      - crc: 0x5BC59DB4 # Steam GOTY
-        util: Tes4Edit 3.2.2
-        itm: 11
-        udr: 2
-        <<: *dirtyPlugin
       - crc: 0x5ef0d503
         itm: 11
         udr: 2
         <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x5BC59DB4 # Steam GOTY
+        itm: 11
+        udr: 2
     clean:
-      - crc: 0x351A3894
-        util: Tes4Edit 3.2.2
+      - crc: 0x351A3894 # Steam GOTY
+        util: 'TES4Edit v3.2.84 EXPERIMENTAL'
   - name: 'DLCOrrery - Unofficial Patch.esp'
     group: *dlcGroup
   - name: 'DLCOrrery Rwalk.esp'
@@ -4135,11 +4138,6 @@ plugins:
     tag:
       - Sound
     dirty:
-      - crc: 0x74d2ca6f # Steam GOTY
-        <<: *dirtyPlugin
-        util: TES4Edit 3.2.2
-        itm: 16
-        udr: 1
       - crc: 0x2c59f2f0
         <<: *dirtyPlugin
         itm: 16
@@ -4148,9 +4146,13 @@ plugins:
         <<: *dirtyPlugin
         itm: 16
         udr: 1
+      - <<: *quickClean
+        crc: 0x74D2CA6F # Steam GOTY
+        itm: 28
+        udr: 1
     clean:
-      - crc: 0x1D2570A8 # Steam GOTY
-        util: TES4Edit 3.2.2
+      - crc: 0x8748A782 # Steam GOTY
+        util: 'TES4Edit v3.2.84 EXPERIMENTAL'
   - name: 'DLCVileLair - Unofficial Patch.esp'
     group: *dlcGroup
     tag:
@@ -4193,18 +4195,20 @@ plugins:
       - 'DLCThievesDen - Unofficial Patch.esp'
       - 'DLCThievesDen - Unofficial Patch - SSSB.esp'
     dirty:
-      - crc: 0xCB413740 # Steam GOTY
-        util: TES4Edit 3.2.2
-        itm: 14
-        udr: 15
-        <<: *dirtyPlugin
       - crc: 0x78fdd06e
         itm: 21
         udr: 15
         <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xCB413740 # Steam GOTY
+        itm: 23
+        udr: 15
+      - <<: *quickClean
+        crc: 0xE49AD982 # Steam GOTY
+        itm: 3
     clean:
-      - crc: 0x98F295F5 # Steam GOTY
-        util: TES4Edit 3.2.2
+      - crc: 0x78D22CF8 # Steam GOTY
+        util: 'TES4Edit v3.2.84 EXPERIMENTAL'
   - name: 'DLCMehrunesRazor - Unofficial Patch.esp'
     group: *dlcGroup
     tag:
@@ -4281,15 +4285,15 @@ plugins:
       - 'DLCOrrery.esp'
       - 'DLCOrrery - Unofficial Patch.esp'
     dirty:
-      - crc: 0x312156F8 # Steam GOTY
-        itm: 40
-        <<: *dirtyPlugin
       - crc: 0x4abf2393
         <<: *dirtyPlugin
         itm: 44
+      - <<: *quickClean
+        crc: 0x312156F8 # Steam GOTY
+        itm: 40
     clean:
       - crc: 0x02FA9682 # Steam GOTY
-        util: TES4Edit 3.2.2
+        util: 'TES4Edit v3.2.84 EXPERIMENTAL'
   - name: 'DLCSpellTomes - Unofficial Patch.esp'
     group: *dlcGroup
     inc:
@@ -6565,18 +6569,17 @@ plugins:
       - C.Light
       - C.Name
     dirty:
-      - crc: 0x05DB8CCC
-        util: TES4Edit 3.2.2
-        itm: 5
-        udr: 135
-        <<: *dirtyPlugin
       - crc: 0x7bf882e1
         itm: 5
         udr: 135
         <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x05DB8CCC # Steam GOTY
+        itm: 5
+        udr: 135
     clean:
       - crc: 0x7F76D2D3 # Steam GOTY
-        util: TES4Edit 3.2.2
+        util: 'TES4Edit v3.2.84 EXPERIMENTAL'
   - name: 'DLCThievesDen - Unofficial Patch.esp'
     group: *dlcGroup
     tag:
@@ -12475,11 +12478,6 @@ plugins:
       - 'Unofficial Shivering Isles Patch.esp'
       - 'USIPS Additional Changes.esp'
     dirty:
-      - crc: 0x7048c609 # Steam GOTY
-        util: TES4Edit v3.2.2
-        itm: 3
-        udr: 72
-        <<: *dirtyPlugin
       - crc: 0xcadd3fd0
         itm: 18
         udr: 74
@@ -12488,9 +12486,16 @@ plugins:
         itm: 13
         udr: 72
         <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x7048C609 # Steam GOTY
+        itm: 10
+        udr: 72
+      - <<: *quickClean
+        crc: 0xD1C60FCE # Steam GOTY
+        itm: 3
     clean:
-      - crc: 0xE449E3FA # Steam GOTY
-        util: TES4Edit v3.2.2
+      - crc: 0xAA810FEF # Steam GOTY
+        util: 'TES4Edit v3.2.84 EXPERIMENTAL'
   - name: 'DLCBattlehornCastle - Unofficial Patch.esp'
     group: *dlcGroup
     dirty:
@@ -12614,10 +12619,6 @@ plugins:
       - C.Owner
       - Factions
     dirty:
-      - crc: 0x2A7665FB # Steam GOTY
-        itm: 71
-        udr: 94
-        <<: *dirtyPlugin
       - crc: 0x641c4ec0
         udr: 184
         <<: *dirtyPlugin
@@ -12636,9 +12637,16 @@ plugins:
         itm: 98
         udr: 185
         <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x2A7665FB # Steam GOTY
+        itm: 75
+        udr: 94
+      - <<: *quickClean
+        crc: 0xF50ADEB9 # Steam GOTY
+        itm: 3
     clean:
-      - crc: 0x5AEE2921 # Steam GOTY
-        util: TES4Edit 3.2.2
+      - crc: 0xF595C8AD # Steam GOTY
+        util: 'TES4Edit v3.2.84 EXPERIMENTAL'
   - name: 'DSoSFrostCragRebornExteriorStairsFix.esp'
     dirty:
       - crc: 0xd2621e65
@@ -12782,14 +12790,16 @@ plugins:
         itm: 113
         udr: 255
         <<: *dirtyPlugin
-      - crc: 0xF1F478FA # Steam GOTY
-        util: TES4Edit 3.2.2
-        itm: 83
+      - <<: *quickClean
+        crc: 0xF1F478FA # Steam GOTY
+        itm: 115
         udr: 255
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x3DB61760 # Steam GOTY
+        itm: 2
     clean:
-      - crc: 0x6C88EDB3
-        util: TES4Edit 3.2.2
+      - crc: 0x4FB7DC47 # Steam GOTY
+        util: 'TES4Edit v3.2.84 EXPERIMENTAL'
   - name: 'Knights - Book Jackets.esp'
     tag:
       - Graphics
