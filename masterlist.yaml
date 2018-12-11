@@ -1312,8 +1312,9 @@ plugins:
       - 'UOPS Additional Changes.esp'
       - 'UOP Vampire Aging & Face Fix.esp'
     clean:
-      - crc: 0x2BB84977 # Steam GOTY
-        util: 'TES4Edit v3.2.84 EXPERIMENTAL'
+      # version: 1.2.0.416 GOTY
+      - crc: 0x2BB84977
+        util: 'TES4Edit v4.0.0'
   - name: 'Unofficial Oblivion Patch.esp'
     group: *dlcGroup
     msg: [ *doNotClean ]
@@ -4024,15 +4025,15 @@ plugins:
       - Actors.AIPackages
       - Scripts
     dirty:
-      - crc: 0x2a0ff245
-        <<: *dirtyPlugin
-        itm: 3
+      # version: 1.2.0.416 GOTY
       - <<: *quickClean
-        crc: 0xBAD48E5D # Steam GOTY
+        crc: 0xBAD48E5D
+        util: '[TES4Edit v4.0.0](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 3
     clean:
-      - crc: 0xBD0084C5 # Steam GOTY
-        util: 'TES4Edit v3.2.84 EXPERIMENTAL'
+      # version: 1.2.0.416 GOTY
+      - crc: 0x272D610A
+        util: 'TES4Edit v4.0.0'
   - name: 'DLCHorseArmor - Unofficial Patch.esp'
     group: *dlcGroup
     tag:
@@ -4075,17 +4076,16 @@ plugins:
     tag:
       - Actors.AIPackages
     dirty:
-      - crc: 0x5ef0d503
-        itm: 11
-        udr: 2
-        <<: *dirtyPlugin
+      # version: 1.2.0.416 GOTY
       - <<: *quickClean
-        crc: 0x5BC59DB4 # Steam GOTY
+        crc: 0x5BC59DB4
+        util: '[TES4Edit v4.0.0](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 11
         udr: 2
     clean:
-      - crc: 0x351A3894 # Steam GOTY
-        util: 'TES4Edit v3.2.84 EXPERIMENTAL'
+      # version: 1.2.0.416 GOTY
+      - crc: 0xE28C6E78
+        util: 'TES4Edit v4.0.0'
   - name: 'DLCOrrery - Unofficial Patch.esp'
     group: *dlcGroup
   - name: 'DLCOrrery Rwalk.esp'
@@ -4138,21 +4138,16 @@ plugins:
     tag:
       - Sound
     dirty:
-      - crc: 0x2c59f2f0
-        <<: *dirtyPlugin
-        itm: 16
-        udr: 1
-      - crc: 0x34afad8c
-        <<: *dirtyPlugin
-        itm: 16
-        udr: 1
+      # version: 1.2.0.416 GOTY
       - <<: *quickClean
-        crc: 0x74D2CA6F # Steam GOTY
+        crc: 0x74D2CA6F
+        util: '[TES4Edit v4.0.0](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 28
         udr: 1
     clean:
-      - crc: 0x8748A782 # Steam GOTY
-        util: 'TES4Edit v3.2.84 EXPERIMENTAL'
+      # version: 1.2.0.416 GOTY
+      - crc: 0x9BF7C295
+        util: 'TES4Edit v4.0.0'
   - name: 'DLCVileLair - Unofficial Patch.esp'
     group: *dlcGroup
     tag:
@@ -4195,20 +4190,21 @@ plugins:
       - 'DLCThievesDen - Unofficial Patch.esp'
       - 'DLCThievesDen - Unofficial Patch - SSSB.esp'
     dirty:
-      - crc: 0x78fdd06e
-        itm: 21
-        udr: 15
-        <<: *dirtyPlugin
+      # version: 1.2.0.416 GOTY
       - <<: *quickClean
-        crc: 0xCB413740 # Steam GOTY
+        crc: 0xCB413740
+        util: '[TES4Edit v4.0.0](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 23
         udr: 15
+      # version: 1.2.0.416 GOTY, Before Second Pass of Quick Clean
       - <<: *quickClean
-        crc: 0xE49AD982 # Steam GOTY
+        crc: 0xD05D448B
+        util: '[TES4Edit v4.0.0](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 3
     clean:
-      - crc: 0x78D22CF8 # Steam GOTY
-        util: 'TES4Edit v3.2.84 EXPERIMENTAL'
+      # version: 1.2.0.416 GOTY
+      - crc: 0xBEDA62E3
+        util: 'TES4Edit v4.0.0'
   - name: 'DLCMehrunesRazor - Unofficial Patch.esp'
     group: *dlcGroup
     tag:
@@ -4285,15 +4281,15 @@ plugins:
       - 'DLCOrrery.esp'
       - 'DLCOrrery - Unofficial Patch.esp'
     dirty:
-      - crc: 0x4abf2393
-        <<: *dirtyPlugin
-        itm: 44
+      # version: 1.2.0.416 GOTY
       - <<: *quickClean
-        crc: 0x312156F8 # Steam GOTY
+        crc: 0x312156F8
+        util: '[TES4Edit v4.0.0](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 40
     clean:
-      - crc: 0x02FA9682 # Steam GOTY
-        util: 'TES4Edit v3.2.84 EXPERIMENTAL'
+      # version: 1.2.0.416 GOTY
+      - crc: 0x9973E1A7
+        util: 'TES4Edit v4.0.0'
   - name: 'DLCSpellTomes - Unofficial Patch.esp'
     group: *dlcGroup
     inc:
@@ -6569,17 +6565,16 @@ plugins:
       - C.Light
       - C.Name
     dirty:
-      - crc: 0x7bf882e1
-        itm: 5
-        udr: 135
-        <<: *dirtyPlugin
+      # version: 1.2.0.416 GOTY
       - <<: *quickClean
-        crc: 0x05DB8CCC # Steam GOTY
+        crc: 0x05DB8CCC
+        util: '[TES4Edit v4.0.0](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 5
         udr: 135
     clean:
-      - crc: 0x7F76D2D3 # Steam GOTY
-        util: 'TES4Edit v3.2.84 EXPERIMENTAL'
+      # version: 1.2.0.416 GOTY
+      - crc: 0xF3740D32
+        util: 'TES4Edit v4.0.0'
   - name: 'DLCThievesDen - Unofficial Patch.esp'
     group: *dlcGroup
     tag:
@@ -12478,24 +12473,21 @@ plugins:
       - 'Unofficial Shivering Isles Patch.esp'
       - 'USIPS Additional Changes.esp'
     dirty:
-      - crc: 0xcadd3fd0
-        itm: 18
-        udr: 74
-        <<: *dirtyPlugin
-      - crc: 0xf94b3393
-        itm: 13
-        udr: 72
-        <<: *dirtyPlugin
+      # version: 1.2.0.416 GOTY
       - <<: *quickClean
-        crc: 0x7048C609 # Steam GOTY
+        crc: 0x7048C609
+        util: '[TES4Edit v4.0.0](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 10
         udr: 72
+      # version: 1.2.0.416 GOTY, after second pass of quick clean.
       - <<: *quickClean
-        crc: 0xD1C60FCE # Steam GOTY
+        crc: 0x991F07A3
+        util: '[TES4Edit v4.0.0](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 3
     clean:
-      - crc: 0xAA810FEF # Steam GOTY
-        util: 'TES4Edit v3.2.84 EXPERIMENTAL'
+      # version: 1.2.0.416 GOTY
+      - crc: 0x92E3710E
+        util: 'TES4Edit v4.0.0'
   - name: 'DLCBattlehornCastle - Unofficial Patch.esp'
     group: *dlcGroup
     dirty:
@@ -12619,34 +12611,21 @@ plugins:
       - C.Owner
       - Factions
     dirty:
-      - crc: 0x641c4ec0
-        udr: 184
-        <<: *dirtyPlugin
-      - crc: 0x8c95f38d
-        itm: 22
-        udr: 94
-        <<: *dirtyPlugin
-      - crc: 0x9b056616
-        itm: 3
-        udr: 184
-        <<: *dirtyPlugin
-      - crc: 0xe3dacffd
-        udr: 131
-        <<: *dirtyPlugin
-      - crc: 0xe91bc831
-        itm: 98
-        udr: 185
-        <<: *dirtyPlugin
+      # version: 1.2.0.416 GOTY
       - <<: *quickClean
-        crc: 0x2A7665FB # Steam GOTY
+        crc: 0x2A7665FB
+        util: '[TES4Edit v4.0.0](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 75
         udr: 94
+      # version: 1.2.0.416 GOTY, after second pass of quick clean.
       - <<: *quickClean
-        crc: 0xF50ADEB9 # Steam GOTY
+        crc: 0x08F0D19F
+        util: '[TES4Edit v4.0.0](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 3
     clean:
-      - crc: 0xF595C8AD # Steam GOTY
-        util: 'TES4Edit v3.2.84 EXPERIMENTAL'
+      # version: 1.2.0.416 GOTY
+      - crc: 0x1C0161D5
+        util: 'TES4Edit v4.0.0'
   - name: 'DSoSFrostCragRebornExteriorStairsFix.esp'
     dirty:
       - crc: 0xd2621e65
@@ -12786,20 +12765,21 @@ plugins:
       - Factions
       - Graphics
     dirty:
-      - crc: 0x71480b94
-        itm: 113
-        udr: 255
-        <<: *dirtyPlugin
+      # version: 1.2.0.416 GOTY
       - <<: *quickClean
-        crc: 0xF1F478FA # Steam GOTY
+        crc: 0xF1F478FA
+        util: '[TES4Edit v4.0.0](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 115
         udr: 255
+      # version: 1.2.0.416 GOTY, after second pass of quick clean.
       - <<: *quickClean
-        crc: 0x3DB61760 # Steam GOTY
+        crc: 0xA2D49F26
+        util: '[TES4Edit v4.0.0](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 2
     clean:
-      - crc: 0x4FB7DC47 # Steam GOTY
-        util: 'TES4Edit v3.2.84 EXPERIMENTAL'
+      # version: 1.2.0.416 GOTY
+      - crc: 0x4A574661
+        util: 'TES4Edit v4.0.0'
   - name: 'Knights - Book Jackets.esp'
     tag:
       - Graphics
