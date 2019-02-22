@@ -130,7 +130,7 @@ common:
     type: error
     content: 'Already included in Oscuro''s Oblivion Overhaul.'
     condition: *OOOCond
-  - &reqModX
+  - &requiresX
     type: say
     content:
       - lang: en
@@ -142,10 +142,10 @@ common:
       - lang: ja
         text: '要: %1%'
   - &reqShiveringIsles
-    <<: *reqModX
+    <<: *requiresX
     subs: [ 'Shivering Isles DLC' ]
   - &reqCOBL
-    <<: *reqModX
+    <<: *requiresX
     subs: [ 'COBL' ]
   - &useSensualWalks
     type: say
