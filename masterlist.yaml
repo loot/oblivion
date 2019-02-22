@@ -201,16 +201,28 @@ common:
     - lang: zh_CN
       text: '只使用一个%1%。'
 
-# Cleaning data
+# Dirty Plugin Messages
   - &dirtyPlugin
     util: '[TES4Edit](http://www.nexusmods.com/oblivion/mods/11536/)'
-    info: 'An explanation of Dirty Edits is available [here](https://tes5edit.github.io/docs/5-mod-cleaning-and-error-checking.html#Apendix-A).'
+    info:
+      - lang: en
+        text: 'An explanation of Dirty Edits is available [here](https://tes5edit.github.io/docs/5-mod-cleaning-and-error-checking.html#Apendix-A).'
+      - lang: de
+        text: 'Eine englische Säuberungsanleitung ist [hier](https://tes5edit.github.io/docs/5-mod-cleaning-and-error-checking.html#s_5-3) verfügbar.'
   - &quickClean
     util: '[TES4Edit](http://www.nexusmods.com/oblivion/mods/11536/) **Quick Auto Clean**'
-    info: 'A guide for running **Quick Auto Clean** can be found [here](https://tes5edit.github.io/docs/5-mod-cleaning-and-error-checking.html#s_5-3-2).'
+    info:
+      - lang: en
+        text: 'Due to Improvements made to the cleaning process with the official release of xEdit 4.0.x+, any mods which were verified as clean with older versions of xEdit may now require additional cleaning. A guide for running xEdit 4.0.x+ in **Quick Auto Clean** mode can be found [here](https://tes5edit.github.io/docs/5-mod-cleaning-and-error-checking.html#s_5-3-2).'
+      - lang: de
+        text: 'Wegen Verbesserungen die dem Säuberungsprozess zugute gekommen sind mit der offiziellen Veröffentlichung von xEdit 4.0.x+, sämtliche Mods die als sauber verifiziert wurden mithilfe älterer Versionen von xEdit brauchen eventuell zusätzliche Säuberungen. Eine englische Anleitung zum ausführen von xEdit 4.0.x+ im **Schnell-Automatisch-Säubern** Modus kann [hier](https://tes5edit.github.io/docs/5-mod-cleaning-and-error-checking.html#s_5-3-2) aufgefunden werden.'
   - &reqManualFix
     util: '[TES4Edit](http://www.nexusmods.com/oblivion/mods/11536/) **Quick Auto Clean**'
-    info: 'A guide for running **Quick Auto Clean** can be found [here](https://tes5edit.github.io/docs/5-mod-cleaning-and-error-checking.html#s_5-3-2). It is strongly recommended not to use mods that contain **Deleted navmeshes** as they''re known to cause crashes. **Deleted navmeshes** must be corrected manually.'
+    info:
+      - lang: en
+        text: 'It is strongly recommended not to use mods that contain **Deleted navmeshes** as they''re known to cause crashes. **Deleted navmeshes** must be corrected manually(A complex process that should be done by the mod author). More information on **Deleted navmeshes** is provided [here](https://www.creationkit.com/index.php?title=Fixing_Navmesh_Deletion_Tutorial).'
+      - lang: de
+        text: 'Es wird streng empfohlen keine Mods zu verwenden die **Gelöschte Navmeshes** beinhalten da diese dafür bekannt sind Abstürze auszulösen. **Gelöschte Navmeshes** müssen manuell korrigiert werden(Ein komplexer Prozess der vom Mod-Autor erledigt werden sollte). Mehr Informationen über **Gelöschte Navmeshes** wird [hier](https://www.creationkit.com/index.php?title=Fixing_Navmesh_Deletion_Tutorial) geboten.'
 
 bash_tags:
   - 'Actors.ACBS'
