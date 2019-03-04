@@ -24042,6 +24042,39 @@ plugins:
       - name: 'TR_Stirk.esp'
         condition: 'not active("Stirk_Compatibility_Patch.esp")'
 
+  - name: 'BalancedMagic.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/45249' ]
+    dirty:
+      # version: 2.5
+      - <<: *quickClean
+        crc: 0x0D32E9EA
+        util: '[TES4Edit v4.0.1](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 3
+      # version: 2.5, Esp without nature Summons
+      - <<: *quickClean
+        crc: 0xCEF52118
+        util: '[TES4Edit v4.0.1](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
+    clean:
+      # version: 2.5
+      - crc: 0x92C52909
+        util: 'TES4Edit v4.0.1'
+      # version: 2.5, Esp without nature Summons
+      - crc: 0x2D4A9137
+        util: 'TES4Edit v4.0.1'
+  - name: 'BMEnchantmentRebalance.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/45249' ]
+    dirty:
+      # version: 2.5
+      - <<: *quickClean
+        crc: 0x41713073
+        util: '[TES4Edit v4.0.1](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 22
+    clean:
+      # version: 2.5
+      - crc: 0x0134E1BF
+        util: 'TES4Edit v4.0.1'
+
   - name: 'Smarter Bandits.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/23296' ]
     dirty:
