@@ -23672,9 +23672,8 @@ plugins:
         <<: *dirtyPlugin
     url: [ 'http://www.nexusmods.com/oblivion/mods/27957' ]
   - name: 'Salmo the Baker.esp'
-    msg:
-      - type: say
-        content: Do not use with the COBL version of this plugin!
+    inc:
+      - 'Salmo the Baker, Cobl.esp'
     dirty:
       - crc: 0x2C782FA2
         itm: 60
