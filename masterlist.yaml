@@ -12054,11 +12054,28 @@ plugins:
         itm: 9
         udr: 36
   - name: 'Trails Of Cyrodiil Merged Vanilla.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/44766' ]
     inc:
       - 'xulColovianHighlands_EV.esp'
     msg:
       - type: say
         content: 'Use instead ''Trails of Cyrodiil Merged UL Colovian Highlands.esp''.'
+    dirty:
+      # version: 1
+      - <<: *quickClean
+        crc: 0xCE5C4FF8
+        util: '[TES4Edit v4.0.1](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 552
+        udr: 189
+      # version: 1, 2nd pass quick clean
+      - <<: *quickClean
+        crc: 0xCF018745
+        util: '[TES4Edit v4.0.1](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1
+    clean:
+      # version: 1
+      - crc: 0x75508C6B
+        util: 'TES4Edit v4.0.1'
   - name: 'Tramps.esp'
     tag:
       - Relev
@@ -14261,10 +14278,27 @@ plugins:
         itm: 109
         udr: 64
   - name: 'Trails Of Cyrodiil Merged UL Colovian Highlands.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/44766' ]
     msg:
       - type: warn
         content: 'Contains xulColovianHighlands.esp. ONLY load Meshes and Textures from UL Colovian Highlands when using this plugin.'
         condition: 'file("xulColovianHighlands.esp")'
+    dirty:
+      # version: 1
+      - <<: *quickClean
+        crc: 0xCB94C87A
+        util: '[TES4Edit v4.0.1](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 576
+        udr: 217
+      # version: 1, 2nd pass quick clean
+      - <<: *quickClean
+        crc: 0x39CDC008
+        util: '[TES4Edit v4.0.1](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1
+    clean:
+      # version: 1
+      - crc: 0xB2D180E7
+        util: 'TES4Edit v4.0.1'
   - name: 'xulChorrolHinterland.esp'
     tag:
       - C.Water
@@ -24041,3 +24075,77 @@ plugins:
     after:
       - name: 'TR_Stirk.esp'
         condition: 'not active("Stirk_Compatibility_Patch.esp")'
+
+  - name: 'BalancedMagic.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/45249' ]
+    dirty:
+      # version: 2.5
+      - <<: *quickClean
+        crc: 0x0D32E9EA
+        util: '[TES4Edit v4.0.1](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 3
+      # version: 2.5, Esp without nature Summons
+      - <<: *quickClean
+        crc: 0xCEF52118
+        util: '[TES4Edit v4.0.1](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
+    clean:
+      # version: 2.5
+      - crc: 0x92C52909
+        util: 'TES4Edit v4.0.1'
+      # version: 2.5, Esp without nature Summons
+      - crc: 0x2D4A9137
+        util: 'TES4Edit v4.0.1'
+  - name: 'BMEnchantmentRebalance.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/45249' ]
+    dirty:
+      # version: 2.5
+      - <<: *quickClean
+        crc: 0x41713073
+        util: '[TES4Edit v4.0.1](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 22
+    clean:
+      # version: 2.5
+      - crc: 0x0134E1BF
+        util: 'TES4Edit v4.0.1'
+
+  - name: 'Fair x2 Spawns v1.0.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/14376' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x970E0DFE
+        util: '[TES4Edit v4.0.1](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 19
+    clean:
+      - crc: 0xA2398398
+        util: 'TES4Edit v4.0.1'
+
+  - name: 'ReanimationSpellVendor.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/45977' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xE25F5AF6
+        util: '[TES4Edit v4.0.1](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 10
+    clean:
+      - crc: 0x726A050C
+        util: 'TES4Edit v4.0.1'
+
+  - name: 'Smarter Bandits.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/23296' ]
+    dirty:
+      # version: 1.1
+      - <<: *quickClean
+        crc: 0x24E8FDC8
+        util: '[TES4Edit v4.0.1](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 14
+        udr: 8
+      # version: 1.1, 2nd pass quick clean
+      - <<: *quickClean
+        crc: 0x1F821959
+        util: '[TES4Edit v4.0.1](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1
+    clean:
+      # version: 1.1
+      - crc: 0x5137625D
+        util: 'TES4Edit v4.0.1'
