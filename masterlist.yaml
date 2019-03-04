@@ -3458,14 +3458,14 @@ plugins:
   - name: 'QuickEquipSwap.esp'
     req: [ *OBSE ]
   - name: 'RAEVWD Cities.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: Better Cities, Open Cities Classic, Open Cities Reborn.'
+    inc:
+      - name: 'Better Cities Resources.esm'
+        display: 'Better Cities'
+      - 'Open Cities Classic.esp'
+      - 'Open Cities Reborn.esp'
   - name: 'RAEVWD Imperial City.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: Better Cities'' VWD plugin.'
-        condition: 'file("Better Cities Resources.esm")'
+    inc:
+      - 'Better Cities - VWD of the IC.esp'
   - name: 'Respawning Containers.esp'
     req:
       - 'DLCShiveringIsles.esp'
