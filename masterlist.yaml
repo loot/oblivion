@@ -8404,7 +8404,7 @@ plugins:
     msg:
       - type: error
         content: 'Requires either Mart''s Monster Mod or FCOM.'
-        condition: 'not (active("Mart''s Monster Mod.esm") or active("FCOM_Convergence.esm"))'
+        condition: 'not active("Mart''s Monster Mod.esm") and not active("FCOM_Convergence.esm")'
   - name: 'WAC - ItemLootFix4v1.0bMMMorFCOM.esp'
     req:
       - name: 'Mart''s Monster Mod.esm'
@@ -8414,7 +8414,7 @@ plugins:
     msg:
       - type: error
         content: 'Requires either Mart''s Monster Mod or FCOM.'
-        condition: 'not (active("Mart''s Monster Mod.esm") or active("FCOM_Convergence.esm"))'
+        condition: 'not active("Mart''s Monster Mod.esm") and not active("FCOM_Convergence.esm")'
   - name: 'WAC - ItemLootFix4v1.0bOWCND.esp'
     req:
       - 'OWC - New Dimension.esp'
