@@ -24041,3 +24041,22 @@ plugins:
     after:
       - name: 'TR_Stirk.esp'
         condition: 'not active("Stirk_Compatibility_Patch.esp")'
+
+  - name: 'Smarter Bandits.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/23296' ]
+    dirty:
+      # version: 1.1
+      - <<: *quickClean
+        crc: 0x24E8FDC8
+        util: '[TES4Edit v4.0.1](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 14
+        udr: 8
+      # version: 1.1, 2nd pass quick clean
+      - <<: *quickClean
+        crc: 0x1F821959
+        util: '[TES4Edit v4.0.1](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1
+    clean:
+      # version: 1.1
+      - crc: 0x5137625D
+        util: 'TES4Edit v4.0.1'
