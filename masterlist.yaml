@@ -103,6 +103,9 @@ common:
   - &obsoleteUseFCOM
     <<: *obsolete
     subs: [ '[FCOM Convergence](https://www.nexusmods.com/oblivion/mods/12249)' ]
+  - &obsoleteUseRyuDoppler
+    <<: *obsolete
+    subs: [ '[Ryu Doppler''s fixed Natural Weather](https://www.nexusmods.com/oblivion/mods/14918)' ]
 
   - &needsCleaning
     type: say
@@ -126,9 +129,6 @@ common:
   - &useRyuDoppler
     type: warn
     content: 'The original mod is heavily bugged, make sure you are using Ryu Doppler''s fixed Natural Weather.'
-  - &updateToRyuDoppler
-    type: warn
-    content: 'Obsolete. Update to Ryu Doppler''s fixed Natural Weather.'
   - &includedInOOO
     type: error
     content: 'Already included in Oscuro''s Oblivion Overhaul.'
@@ -1870,13 +1870,13 @@ plugins:
         <<: *dirtyPlugin
         itm: 2
   - name: 'Natural_Weather_HDR+Darker_Nights_2.1.2_bugfree.esp'
-    msg: [ *updateToRyuDoppler ]
+    msg: [ *obsoleteUseRyuDoppler ]
   - name: 'Natural_Weather_HDR_2.1.2_bugfree.esp'
-    msg: [ *updateToRyuDoppler ]
+    msg: [ *obsoleteUseRyuDoppler ]
   - name: 'Natural_Weather_non-HDR_2.1.2_bugfree.esp'
-    msg: [ *updateToRyuDoppler ]
+    msg: [ *obsoleteUseRyuDoppler ]
   - name: 'Natural_Weather_HDR_2.1.2_coloroverride.esp'
-    msg: [ *updateToRyuDoppler ]
+    msg: [ *obsoleteUseRyuDoppler ]
   - name: 'Ls More Butterflies and Fireflies.esp'
     msg: [ *obsolete ]
   - name: 'Ls More Butterflies and Fireflies Not In Interiors.esp'
