@@ -12340,17 +12340,15 @@ plugins:
         <<: *dirtyPlugin
         itm: 4
   - name: 'Vypers Arrow Spells-SI.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with Better Cities.'
-        condition: 'file("Better Cities Resources.esm")'
-      - *obsolete
+    inc:
+      - name: 'Better Cities Resources.esm'
+        display: 'Better Cities'
+    msg: [ *obsolete ]
   - name: 'Vypers Arrow Spells.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with Better Cities.'
-        condition: 'file("Better Cities Resources.esm")'
-      - *obsolete
+    inc:
+      - name: 'Better Cities Resources.esm'
+        display: 'Better Cities'
+    msg: [ *obsolete ]
   - name: 'Watchtower.esp'
     dirty:
       - crc: 0x11d3867a
