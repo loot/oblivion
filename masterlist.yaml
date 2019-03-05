@@ -13729,19 +13729,19 @@ plugins:
   - name: 'ROC+CastleWestWeald Patch.esp'
     msg: [ *roadsAndBridgesDetected ]
   - name: 'ROC+Fighters Guild Quests.esp'
-    msg:
-      - *roadsAndBridgesDetected
-      - type: say
-        content: 'Incompatible with: Quest for the Elements (and its ROC patch)'
+    inc:
+      - 'Quest For The Elements.esp'
+      - 'ROC+QFE Patch.esp'
+    msg: [ *roadsAndBridgesDetected ]
   - name: 'ROC+Hemingweys Capes Addon.esp'
     msg: [ *roadsAndBridgesDetected ]
   - name: 'ROC+Highwood Patch.esp'
     msg: [ *roadsAndBridgesDetected ]
   - name: 'ROC+QFE Patch.esp'
-    msg:
-      - *roadsAndBridgesDetected
-      - type: say
-        content: 'Incompatible with: Fighters Guild Quests (and its ROC patch)'
+    inc:
+      - 'Fighters Guild Quests.esp'
+      - 'ROC+Fighters Guild Quests.esp'
+    msg: [ *roadsAndBridgesDetected ]
   - name: 'ROC+Romancing Ahnassi Patch.esp'
     msg: [ *roadsAndBridgesDetected ]
   - name: 'ROC+Shadowcrest Vineyard Patch.esp'
