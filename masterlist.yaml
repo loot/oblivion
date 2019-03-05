@@ -9001,9 +9001,15 @@ plugins:
         <<: *dirtyPlugin
         itm: 11
   - name: '7roads.esp'
+    inc:
+      - 'HoarfrostCastle.esp'
+      - 'KSE_v3.esp'
+      - 'Kvatch Rebuilt.esp'
+      - 'MannimarcoComplete.esp'
+      - 'MidasSpells.esp'
+      - 'RenCorpseMod.esp'
+      - 'Unique Landscapes.esp'
     msg:
-      - type: say
-        content: 'Incompatible with: Kvatch Rebuilt, Hoarfrost Castle, Midas Magic, Mannimarco Complete, Reneer''s Corpse Mod, Unique landscapes, KSE_v3.esp.'
       - type: say
         content: 'For compatibility with Knights of the Nine, get the [patch](http://tamriel.ru/7roadsmod/Knights_Patch_02.zip).'
       - *needsCleaning
