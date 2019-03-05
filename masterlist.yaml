@@ -9241,11 +9241,17 @@ plugins:
         itm: 115
         udr: 3
   - name: 'AnvilBayExpansion.esp'
+    inc:
+      - 'Better Cities ANVIL.esp'
+      - 'Better Cities Full.esp'
+      - 'Open Cities Reborn.esp'
     msg:
-      - type: say
-        content: 'Incompatible with: Better Cities. Already included in Better Cities Anvil.'
-      - type: say
-        content: 'Incompatible with: Open Cities Reborn.'
+      - <<: *alreadyInX
+        subs: [ 'Better Cities - Anvil' ]
+        condition: 'active("Better Cities ANVIL.esp")'
+      - <<: *alreadyInX
+        subs: [ 'Better Cities - Full' ]
+        condition: 'active("Better Cities Full.esp")'
   - name: 'AnvilBayMisteryHouse.esp'
     dirty:
       - crc: 0x7ba6c2d6
