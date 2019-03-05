@@ -100,6 +100,10 @@ common:
       - lang: de
         text: 'Veraltet. Aktualisere zur letzten Version. %1%'
     subs: [ '' ]
+  - &obsoleteUseFCOM
+    <<: *obsolete
+    subs: [ '[FCOM Convergence](https://www.nexusmods.com/oblivion/mods/12249)' ]
+
   - &needsCleaning
     type: say
     content: 'Needs [TES4Edit cleaning](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide).'
@@ -182,9 +186,6 @@ common:
     type: say
     content: 'Don''t use with the FULL version of OOO, already included.'
     condition: *OOOCond
-  - &useFCOMInstead
-    type: error
-    content: 'Obsolete. Remove this and install FCOM.'
   - &useFCOMSpawnRates
     type: say
     content: 'Consider using ''FCOM_SpawnRatesReduced.esp'', ''FCOM_SpawnRatesSlightlyReduced.esp'' or ''FCOM_SpawnRatesStronger.esp'' instead.'
@@ -7271,23 +7272,23 @@ plugins:
         <<: *dirtyPlugin
         udr: 10
   - name: 'FranOOOMMM_FranItemLists.esp'
-    msg: [ *useFCOMInstead ]
+    msg: [ *obsoleteUseFCOM ]
   - name: 'FranOOOMMM_SpawnMerge.esp'
-    msg: [ *useFCOMInstead ]
+    msg: [ *obsoleteUseFCOM ]
   - name: 'FranOOOMMM_GuardFix.esp'
-    msg: [ *useFCOMInstead ]
+    msg: [ *obsoleteUseFCOM ]
   - name: 'FranOOOMMM_OOOItemLists.esp'
-    msg: [ *useFCOMInstead ]
+    msg: [ *obsoleteUseFCOM ]
   - name: 'FranOOOMMM_WarCry_BobsArmory.esp'
-    msg: [ *useFCOMInstead ]
+    msg: [ *obsoleteUseFCOM ]
   - name: 'Mart''s Monster Mod - Diverse NPC faces nv.esp'
-    msg: [ *useFCOMInstead ]
+    msg: [ *obsoleteUseFCOM ]
   - name: 'Mart''s Monster Mod for Fran''s nvCNPC.esp'
-    msg: [ *useFCOMInstead ]
+    msg: [ *obsoleteUseFCOM ]
   - name: 'Mart''s Monster Mod for Fran''s nvNPC.esp'
-    msg: [ *useFCOMInstead ]
+    msg: [ *obsoleteUseFCOM ]
   - name: 'Oscuro''s Combat Behavior.esp'
-    msg: [ *useFCOMInstead ]
+    msg: [ *obsoleteUseFCOM ]
   - name: 'Mart''s Monster Mod for FCOM.esp'
     msg:
       - type: say
