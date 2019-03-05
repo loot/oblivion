@@ -106,6 +106,10 @@ common:
   - &obsoleteUseRyuDoppler
     <<: *obsolete
     subs: [ '[Ryu Doppler''s fixed Natural Weather](https://www.nexusmods.com/oblivion/mods/14918)' ]
+  - &obsoleteArmamentarium
+    <<: *obsolete
+    subs: [ '[Armamentarium Complete](http://www.nexusmods.com/oblivion/mods/18417)' ]
+    condition: 'not file("Armamentarium.esm") or (file("Armamentarium.esm") and version("Armamentarium.esm","1.35",<))'
 
   - &needsCleaning
     type: say
@@ -163,10 +167,6 @@ common:
   - &hotkeyBug
     type: say
     content: 'Don''t use hotkeys to change equipment sets. Game bug.'
-  - &updateArmamentarium
-    type: say
-    content: 'Consider updating to the newer [Armamentarium Complete](http://www.nexusmods.com/oblivion/mods/18417) version.'
-    condition: 'not file("Armamentarium.esm")'
   - &useFCOMRealSwords
     type: error
     content: 'Delete. Use FCOM_RealSwords instead.'
@@ -520,6 +520,7 @@ plugins:
   - name: 'Armamentarium.esm'
     tag:
       - Relev
+    msg: [ *obsoleteArmamentarium ]
   - name: 'ArmamentariumFran.esm'
     tag:
       - Relev
@@ -4602,29 +4603,29 @@ plugins:
     inc:
       - name: 'Armamentarium.esm'
         display: 'Armamentarium Complete'
-    msg: [ *updateArmamentarium ]
+    msg: [ *obsoleteArmamentarium ]
   - name: 'ArmamentariumArmor.esp'
     inc:
       - name: 'Armamentarium.esm'
         display: 'Armamentarium Complete'
-    msg: [ *updateArmamentarium ]
+    msg: [ *obsoleteArmamentarium ]
   - name: 'ArmamentariumArmor4Npcs.esp'
     inc:
       - name: 'Armamentarium.esm'
         display: 'Armamentarium Complete'
-    msg: [ *updateArmamentarium ]
+    msg: [ *obsoleteArmamentarium ]
   - name: 'ArmamentariumWeapons4Npcs.esp'
     inc:
       - 'Armamentarium_MOBS.esp'
       - name: 'Armamentarium.esm'
         display: 'Armamentarium Complete'
-    msg: [ *updateArmamentarium ]
+    msg: [ *obsoleteArmamentarium ]
   - name: 'Armamentarium_MOBS.esp'
     inc:
       - 'ArmamentariumWeapons4Npcs.esp'
       - name: 'Armamentarium.esm'
         display: 'Armamentarium Complete'
-    msg: [ *updateArmamentarium ]
+    msg: [ *obsoleteArmamentarium ]
     dirty:
       - crc: 0x65265f23
         <<: *dirtyPlugin
@@ -4633,22 +4634,22 @@ plugins:
     inc:
       - name: 'Armamentarium.esm'
         display: 'Armamentarium Complete'
-    msg: [ *updateArmamentarium ]
+    msg: [ *obsoleteArmamentarium ]
   - name: 'ArmamentariumKatanasRU.esp'
     inc:
       - name: 'Armamentarium.esm'
         display: 'Armamentarium Complete'
-    msg: [ *updateArmamentarium ]
+    msg: [ *obsoleteArmamentarium ]
   - name: 'ArmamentariumVendors.esp'
     inc:
       - name: 'Armamentarium.esm'
         display: 'Armamentarium Complete'
-    msg: [ *updateArmamentarium ]
+    msg: [ *obsoleteArmamentarium ]
   - name: 'ArmamentariumStaffs.esp'
     inc:
       - name: 'Armamentarium.esm'
         display: 'Armamentarium Complete'
-    msg: [ *updateArmamentarium ]
+    msg: [ *obsoleteArmamentarium ]
   - name: 'AGEHA Tortured Souls.esp'
     tag:
       - Delev
