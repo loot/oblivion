@@ -12621,9 +12621,12 @@ plugins:
         <<: *dirtyPlugin
         itm: 5
   - name: 'Falkreath.esp'
+    inc:
+      - 'GwedenBrothel.esp'
     msg:
-      - type: say
-        content: 'Incompatible with: Gweden Brothel series.'
+      - <<: *alreadyInX
+        subs: [ 'Gweden Brothel' ]
+        condition: '(active("GwedenBrothel.esp"))'
   - name: 'sir_balin_mod.esp'
     dirty:
       - crc: 0x607e10be
