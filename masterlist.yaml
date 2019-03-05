@@ -149,9 +149,6 @@ common:
     <<: *requiresX
     subs: [ '[Ryu Doppler''s fixed Natural Weather](https://www.nexusmods.com/oblivion/mods/14918)' ]
     condition: 'not active("Natural_Weather_HDR_2.1.3_coloroverride.esp.esp") and not active("Natural_Weather_HDR_by_Max_Tae_CO_RD.esp")'
-  - &reqShiveringIsles
-    <<: *requiresX
-    subs: [ 'Shivering Isles DLC' ]
   - &reqCOBL
     <<: *requiresX
     subs: [ 'COBL' ]
@@ -11314,7 +11311,6 @@ plugins:
       - *OBSE
       - 'DLCShiveringIsles.esp'
     msg:
-      - *reqShiveringIsles
       - type: say
         content: 'Requires: Sound Commands (OBSE Plugin), Elys Universal Silent Voice (OBSE Plugin)'
   - name: 'POTSB.esp'
@@ -16256,7 +16252,6 @@ plugins:
     req:
       - 'DLCShiveringIsles.esp'
     msg:
-      - *reqShiveringIsles
       - type: say
         content: 'Requires: Qarl''s Harvest, Tamrielic Ingredients.'
   - name: 'NameReplacer-Clothing.esp'
@@ -22069,7 +22064,6 @@ plugins:
     req:
       - 'DLCShiveringIsles.esp'
     msg:
-      - *reqShiveringIsles
       - type: say
         content: 'Requires: Luchaire''s Body Seam Reducer.'
       - *doNotClean
@@ -22079,7 +22073,6 @@ plugins:
     req:
       - 'DLCShiveringIsles.esp'
     msg:
-      - *reqShiveringIsles
       - type: say
         content: 'Requires: Luchaire''s Body Seam Reducer.'
     tag:
