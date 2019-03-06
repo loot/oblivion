@@ -20040,8 +20040,9 @@ plugins:
       - NpcFaces
   - name: 'Dragorian and dranaugh( \(No Claws and Feet\))?\.esp'
     msg:
-      - type: say
-        content: 'Use only one Dragorian and dranaugh*.esp'
+      - <<: *useOnlyOneX
+        subs: [ 'Dragorian and dranaugh' ]
+        condition: 'many("Dragorian and dranaugh( \(No Claws and Feet\))?\.esp")'
   - name: 'flying argnian.esp'
     req: [ *OBSE ]
   - name: 'MGothic Breton Race.esp'
