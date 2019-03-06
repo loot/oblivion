@@ -17264,11 +17264,16 @@ plugins:
       - <<: *useOnlyOneX
         subs: [ 'Midas PowDur modifier' ]
         condition: 'many("Midas PowDur(1\.5|2|3|4)x\.esp")'
+  - name: 'Midas Eldrich Power (2|2\.5|3|4|5|6)x\.esp'
     after:
       - 'Midas PowDur1.5x.esp'
       - 'Midas PowDur2x.esp'
       - 'Midas PowDur3x.esp'
       - 'Midas PowDur4x.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Midas Eldrich Power modifier' ]
+        condition: 'many("Midas Eldrich Power (2|2\.5|3|4|5|6)x\.esp")'
   - name: 'Midas Tigernolevel OBSE.esp'
     req: [ *OBSE ]
     inc:
