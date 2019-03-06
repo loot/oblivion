@@ -15517,16 +15517,11 @@ plugins:
       - type: say
         content: 'May not work with Living Economy as LE scripts tend to overwrite pricing mods.'
         condition: 'file("Living Economy.*\.esp")'
-  - name: '354_Improved_Marobel_horse_immortal.esp'
+  - name: '(354|355)?_Improved_(Maborel|Marobel)?_horse(immortal)?.*\.esp'
     msg:
-      - type: say
-        content: 'Use only one of the Improved Marobels Horse plugins.'
-        condition: 'file("355_Improved_Maborel_horse.esp")'
-  - name: '355_Improved_Maborel_horse.esp'
-    msg:
-      - type: say
-        content: 'Use only one of the Improved Marobels Horse plugins.'
-        condition: 'file("354_Improved_Marobel_horse_immortal.esp")'
+      - <<: *useOnlyOneX
+        subs: [ 'Improved Marobels Horse' ]
+        condition: 'many("(354|355)?_Improved_(Maborel|Marobel)?_horse(immortal)?.*\.esp")'
   - name: 'AC''s realistic priced clutter.esp'
     msg:
       - type: say
