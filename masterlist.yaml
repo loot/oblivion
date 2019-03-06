@@ -15063,21 +15063,11 @@ plugins:
       - crc: 0x508e738b
         <<: *dirtyPlugin
         itm: 12
-  - name: 'PersonalPackGuars White.esp'
+  - name: 'PersonalPackGuars (White|Black|Striped)\.esp'
     msg:
-      - type: say
-        content: 'Use only one PPG colour esp'
-        condition: 'file("PersonalPackGuars (Black|Striped)\.esp")'
-  - name: 'PersonalPackGuars Black.esp'
-    msg:
-      - type: say
-        content: 'Use only one PPG colour esp'
-        condition: 'file("PersonalPackGuars (White|Striped)\.esp")'
-  - name: 'PersonalPackGuars Striped.esp'
-    msg:
-      - type: say
-        content: 'Use only one PPG colour esp'
-        condition: 'file("PersonalPackGuars (White|Black)\.esp")'
+      - <<: *useOnlyOneX
+        subs: [ 'PersonalPackGuars colour' ]
+        condition: 'many("PersonalPackGuars (White|Black|Striped)\.esp")'
   - name: 'Duke Patricks Sickness Alarm.esp'
     tag:
       - Sound
