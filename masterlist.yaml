@@ -17913,32 +17913,25 @@ plugins:
       - type: say
         content: 'Use just one Seorin''s Leveling System mod file.'
   - name: 'Legendary Abilities-Shield MOJ.esp'
-    msg:
-      - type: say
-        content: 'Use only one ''Legendary Abilities'' plugin.'
-        condition: 'file("Legendary Abilities-Fortify Health MOJ.esp") or file("Legendary Abilities-Reflect MOJ.esp")'
     dirty:
       - crc: 0x51d68248
         <<: *dirtyPlugin
         itm: 5
   - name: 'Legendary Abilities-Fortify Health MOJ.esp'
-    msg:
-      - type: say
-        content: 'Use only one ''Legendary Abilities'' plugin.'
-        condition: 'file("Legendary Abilities-Shield MOJ.esp") or file("Legendary Abilities-Reflect MOJ.esp")'
     dirty:
       - crc: 0x8f8c843
         <<: *dirtyPlugin
         itm: 5
   - name: 'Legendary Abilities-Reflect MOJ.esp'
-    msg:
-      - type: say
-        content: 'Use only one ''Legendary Abilities'' plugin.'
-        condition: 'file("Legendary Abilities-Fortify Health MOJ.esp") or file("Legendary Abilities-Shield MOJ.esp")'
     dirty:
       - crc: 0x52ebc32e
         <<: *dirtyPlugin
         itm: 5
+  - name: 'Legendary Abilities-(Fortify Health|Shield|Reflect) MOJ?.*\.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Legendary Abilities' ]
+        condition: 'many("Legendary Abilities-(Fortify Health|Shield|Reflect) MOJ?.*\.esp")'
   - name: 'Grandmaster of Alchemy.esp'
     tag:
       - Factions
