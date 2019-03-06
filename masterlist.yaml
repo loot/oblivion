@@ -84,27 +84,33 @@ common:
     type: say
     content:
       - lang: en
-        text: 'Obsolete. Update to latest version.'
+        text: 'Obsolete. Update to the latest version. %1%'
       - lang: ru
-        text: 'Устарело. Обновите до последней версии.'
+        text: 'Устарело. Обновите до последней версии. %1%'
       - lang: es
-        text: 'Obsoleto. Actualizar a la última versión.'
+        text: 'Obsoleto. Actualizar a la última versión. %1%'
       - lang: ko
-        text: '사용되지 않습니다. 최신 버전으로 업데이트하십시오.'
+        text: '사용되지 않습니다. 최신 버전으로 업데이트하십시오. %1%'
       - lang: zh_CN
-        text: '已过时。请升级到最新版本。'
+        text: '已过时。请升级到最新版本。 %1%'
       - lang: da
-        text: 'Forældet. Opdatér til den nyeste version.'
+        text: 'Forældet. Opdatér til den nyeste version. %1%'
       - lang: ja
-        text: '旧式のプラグインです。最新版に更新してください。'
+        text: '旧式のプラグインです。最新版に更新してください。 %1%'
       - lang: de
-        text: 'Veraltet. Aktualisere zur letzten Version.'
+        text: 'Veraltet. Aktualisere zur letzten Version. %1%'
+    subs: [ '' ]
+  - &obsoleteUseFCOM
+    <<: *obsolete
+    subs: [ '[FCOM Convergence](https://www.nexusmods.com/oblivion/mods/12249)' ]
+  - &obsoleteArmamentarium
+    <<: *obsolete
+    subs: [ '[Armamentarium Complete](http://www.nexusmods.com/oblivion/mods/18417)' ]
+    condition: 'not file("Armamentarium.esm") or (file("Armamentarium.esm") and version("Armamentarium.esm","1.35",<))'
+
   - &needsCleaning
     type: say
     content: 'Needs [TES4Edit cleaning](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide).'
-  - &moddingPlugin
-    type: warn
-    content: 'A modding plugin - do not use in game, deactivate.'
   - &moveWorldspaces
     type: warn
     content: 'This needs to load directly after Oblivion.esm to avoid landscape issues caused by a failure by the mod author to use TES4Gecko''s "Move Worldspaces" function.'
@@ -118,18 +124,8 @@ common:
   - &incompatibleWithWeatherMods
     type: say
     content: 'This mod is incompatible with weather mods.'
-  - &useRyuDoppler
-    type: warn
-    content: 'The original mod is heavily bugged, make sure you are using Ryu Doppler''s fixed Natural Weather.'
-  - &updateToRyuDoppler
-    type: warn
-    content: 'Obsolete. Update to Ryu Doppler''s fixed Natural Weather.'
-  - &includedInOOO
-    type: error
-    content: 'Already included in Oscuro''s Oblivion Overhaul.'
-    condition: *OOOCond
   - &requiresX
-    type: say
+    type: warn
     content:
       - lang: en
         text: 'Requires: %1%'
@@ -139,12 +135,6 @@ common:
         text: 'Requiere: %1%'
       - lang: ja
         text: '要: %1%'
-  - &reqShiveringIsles
-    <<: *requiresX
-    subs: [ 'Shivering Isles DLC' ]
-  - &reqCOBL
-    <<: *requiresX
-    subs: [ 'COBL' ]
   - &useSensualWalks
     type: say
     content: 'Obsolete. Remove this and install Sensual Walks.'
@@ -158,10 +148,6 @@ common:
   - &hotkeyBug
     type: say
     content: 'Don''t use hotkeys to change equipment sets. Game bug.'
-  - &updateArmamentarium
-    type: say
-    content: 'Consider updating to the newer [Armamentarium Complete](http://www.nexusmods.com/oblivion/mods/18417) version.'
-    condition: 'not file("Armamentarium.esm")'
   - &useFCOMRealSwords
     type: error
     content: 'Delete. Use FCOM_RealSwords instead.'
@@ -169,21 +155,6 @@ common:
   - &useWithBashedPatch
     type: say
     content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
-  - &includedInFCOM
-    type: error
-    content: 'Delete. Already integrated into FCOM, MMM, OOO or other FCOM components.'
-    condition: 'file("Oscuro''s_Oblivion_Overhaul.esm") or file("FCOM_Convergence.esm")'
-  - &useFransSeparateOptions
-    type: error
-    content: 'Should not be used. Delete. Reinstall Fran''s and select "Separate Files" when the option is presented.'
-    condition: *FCOMCond
-  - &includedInOOOFull
-    type: say
-    content: 'Don''t use with the FULL version of OOO, already included.'
-    condition: *OOOCond
-  - &useFCOMInstead
-    type: error
-    content: 'Obsolete. Remove this and install FCOM.'
   - &useFCOMSpawnRates
     type: say
     content: 'Consider using ''FCOM_SpawnRatesReduced.esp'', ''FCOM_SpawnRatesSlightlyReduced.esp'' or ''FCOM_SpawnRatesStronger.esp'' instead.'
@@ -199,19 +170,74 @@ common:
     type: warn
     content: 'Use .ini tweak or Wrye Bash Bashed Patch tweak instead where possible to avoid conflicts.'
 
+  - &alreadyInX
+    type: error
+    content:
+      - lang: en
+        text: 'Delete. Already included in %1%.'
+      - lang: ru
+        text: 'Удалите. Уже включено в %1%.'
+      - lang: es
+        text: 'Borrar. Esta incluido en %1%.'
+      - lang: ko
+        text: '삭제하십시오. 이미 %1%에 포함되어 있습니다.'
+      - lang: zh_CN
+        text: '删除。已包含在%1%中。'
+      - lang: da
+        text: 'Slet. Allerede inkluderet i %1%.'
+      - lang: ja
+        text: '削除してください。既に%1%に含まれています。'
+      - lang: de
+        text: 'Löschen. Bereits in %1% enthalten.'
+  - &alreadyInOOO
+    <<: *alreadyInX
+    subs: [ 'Oscuro''s Oblivion Overhaul' ]
+    condition: *OOOCond
+  - &alreadyInOOOFull
+    <<: *alreadyInX
+    type: say
+    subs: [ 'Oscuro''s Oblivion Overhaul FULL' ]
+    condition: *OOOCond
+  - &alreadyInFCOM
+    <<: *alreadyInX
+    subs: [ 'FCOM, MMM, OOO or other FCOM components' ]
+    condition: 'file("Oscuro''s_Oblivion_Overhaul.esm") or file("FCOM_Convergence.esm")'
+
+  - &deleteOrDeactivateX
+    type: warn
+    content:
+      - lang: en
+        text: 'Delete or deactivate. %1%'
+    subs: [ '' ]
+  - &deleteModdingPlugin
+    <<: *deleteOrDeactivateX
+    type: error
+    subs: [ 'This is a modding plugin and should not be use in game.' ]
+  - &deleteUseFransSeparateOptions
+    <<: *deleteOrDeactivateX
+    type: error
+    subs: [ 'This plugin should not be used. Reinstall Fran''s and select "Separate Files" when the option is presented.' ]
+    condition: *FCOMCond
+
   - &useOnlyOneX
     type: error
     content:
-    - lang: en
-      text: 'Use only one %1%.'
-    - lang: ru
-      text: 'Используйте только один %1%.'
-    - lang: es
-      text: 'Utilizar solo un %1%.'
-    - lang: ko
-      text: '%1%을 한개만 사용하십시오.'
-    - lang: zh_CN
-      text: '只使用一个%1%。'
+      - lang: en
+        text: 'Use only one %1%.'
+      - lang: ru
+        text: 'Используйте только один %1%.'
+      - lang: es
+        text: 'Utilizar solo un %1%.'
+      - lang: ko
+        text: '%1%을 한개만 사용하십시오.'
+      - lang: zh_CN
+        text: '只使用一个%1%。'
+      - lang: ja
+        text: '%1%は一つだけ使用してください。'
+      - lang: da
+        text: 'Slet. Allerede inkluderet i %1%.'
+      - lang: de
+        text: 'Nutzen Sie nur einen %1%.'
 
 # Dirty Plugin Messages
   - &dirtyPlugin
@@ -358,15 +384,15 @@ plugins:
     group: *gameMasterGroup
   - name: 'Oblivion_1.1.esm'
     msg:
-      - <<: *moddingPlugin
+      - <<: *deleteModdingPlugin
         condition: 'active("Oblivion_1.1.esm")'
   - name: 'Oblivion_SI.esm'
     msg:
-      - <<: *moddingPlugin
+      - <<: *deleteModdingPlugin
         condition: 'active("Oblivion_1.1.esm")'
   - name: 'Oblivion_GOTY non-SI.esm'
     msg:
-      - <<: *moddingPlugin
+      - <<: *deleteModdingPlugin
         condition: 'active("Oblivion_1.1.esm")'
   - name: 'XBOX_Controller.esp'
     group: *gameMasterGroup
@@ -518,6 +544,7 @@ plugins:
   - name: 'Armamentarium.esm'
     tag:
       - Relev
+    msg: [ *obsoleteArmamentarium ]
   - name: 'ArmamentariumFran.esm'
     tag:
       - Relev
@@ -1854,27 +1881,20 @@ plugins:
     msg: [ *incompatibleWithWeatherMods ]
   - name: 'Arthur_ Natural weather with HDR.esp'
     msg: [ *obsolete ]
-  - name: 'Natural_Weather_by_Max_Tael.esp'
-    msg: [ *useRyuDoppler ]
-  - name: 'Natural_Weather_HDR_by_Max_Tael.esp'
-    msg: [ *useRyuDoppler ]
-  - name: 'Natural_Weather_with_darker_Nights_by_Max_Tael.esp'
-    msg: [ *useRyuDoppler ]
-  - name: 'Natural_Weather_HDR_with_darker_Nights_by_Max_Tael.esp'
-    msg: [ *useRyuDoppler ]
+  - name: 'Natural_Weather_(HDR_)?(with_darker_Nights_)?by_Max_Tael?.*\.esp'
+    msg:
+      - <<: *requiresX
+        subs: [ '[Ryu Doppler''s fixed Natural Weather](https://www.nexusmods.com/oblivion/mods/14918)' ]
+        condition: 'not active("Natural_Weather_HDR_2.1.3_coloroverride.esp.esp") and not active("Natural_Weather_HDR_by_Max_Tae_CO_RD.esp")'
   - name: 'Natural_Weather_HDR_by_Max_Tael_RD.esp'
     dirty:
       - crc: 0x9233fd80
         <<: *dirtyPlugin
         itm: 2
-  - name: 'Natural_Weather_HDR+Darker_Nights_2.1.2_bugfree.esp'
-    msg: [ *updateToRyuDoppler ]
-  - name: 'Natural_Weather_HDR_2.1.2_bugfree.esp'
-    msg: [ *updateToRyuDoppler ]
-  - name: 'Natural_Weather_non-HDR_2.1.2_bugfree.esp'
-    msg: [ *updateToRyuDoppler ]
-  - name: 'Natural_Weather_HDR_2.1.2_coloroverride.esp'
-    msg: [ *updateToRyuDoppler ]
+  - name: 'Natural_Weather_(non-HDR|HDR|non-HDR\+Darker_Nights|HDR\+Darker_Nights)?_2.1.2_(bugfree|coloroverride)?.*\.esp'
+    msg:
+      - <<: *obsolete
+        subs: [ '[Ryu Doppler''s fixed Natural Weather](https://www.nexusmods.com/oblivion/mods/14918)' ]
   - name: 'Ls More Butterflies and Fireflies.esp'
     msg: [ *obsolete ]
   - name: 'Ls More Butterflies and Fireflies Not In Interiors.esp'
@@ -3171,7 +3191,7 @@ plugins:
       - type: say
         content: 'Requires patch to use with Kalikuts.'
   - name: 'LIPTemplate.esp'
-    msg: [ *moddingPlugin ]
+    msg: [ *deleteModdingPlugin ]
   - name: 'LadyLis_dainties.esp'
     dirty:
       - crc: 0xb3ec8302
@@ -3683,7 +3703,7 @@ plugins:
     tag:
       - Scripts
   - name: 'Weed AND Beer inebriation 1.32.esp'
-    msg: [ *includedInOOO ]
+    msg: [ *alreadyInOOO ]
   - name: 'Willful Resistance.esp'
     msg:
       - type: say
@@ -4600,29 +4620,29 @@ plugins:
     inc:
       - name: 'Armamentarium.esm'
         display: 'Armamentarium Complete'
-    msg: [ *updateArmamentarium ]
+    msg: [ *obsoleteArmamentarium ]
   - name: 'ArmamentariumArmor.esp'
     inc:
       - name: 'Armamentarium.esm'
         display: 'Armamentarium Complete'
-    msg: [ *updateArmamentarium ]
+    msg: [ *obsoleteArmamentarium ]
   - name: 'ArmamentariumArmor4Npcs.esp'
     inc:
       - name: 'Armamentarium.esm'
         display: 'Armamentarium Complete'
-    msg: [ *updateArmamentarium ]
+    msg: [ *obsoleteArmamentarium ]
   - name: 'ArmamentariumWeapons4Npcs.esp'
     inc:
       - 'Armamentarium_MOBS.esp'
       - name: 'Armamentarium.esm'
         display: 'Armamentarium Complete'
-    msg: [ *updateArmamentarium ]
+    msg: [ *obsoleteArmamentarium ]
   - name: 'Armamentarium_MOBS.esp'
     inc:
       - 'ArmamentariumWeapons4Npcs.esp'
       - name: 'Armamentarium.esm'
         display: 'Armamentarium Complete'
-    msg: [ *updateArmamentarium ]
+    msg: [ *obsoleteArmamentarium ]
     dirty:
       - crc: 0x65265f23
         <<: *dirtyPlugin
@@ -4631,22 +4651,22 @@ plugins:
     inc:
       - name: 'Armamentarium.esm'
         display: 'Armamentarium Complete'
-    msg: [ *updateArmamentarium ]
+    msg: [ *obsoleteArmamentarium ]
   - name: 'ArmamentariumKatanasRU.esp'
     inc:
       - name: 'Armamentarium.esm'
         display: 'Armamentarium Complete'
-    msg: [ *updateArmamentarium ]
+    msg: [ *obsoleteArmamentarium ]
   - name: 'ArmamentariumVendors.esp'
     inc:
       - name: 'Armamentarium.esm'
         display: 'Armamentarium Complete'
-    msg: [ *updateArmamentarium ]
+    msg: [ *obsoleteArmamentarium ]
   - name: 'ArmamentariumStaffs.esp'
     inc:
       - name: 'Armamentarium.esm'
         display: 'Armamentarium Complete'
-    msg: [ *updateArmamentarium ]
+    msg: [ *obsoleteArmamentarium ]
   - name: 'AGEHA Tortured Souls.esp'
     tag:
       - Delev
@@ -5566,11 +5586,11 @@ plugins:
       - type: say
         content: 'If using FCOM it''s recommended that you use "Silverware Weapons - FCOM.esp" instead'
   - name: 'Sin''s Expanded Light Armor Kit [Chest].esp'
-    msg: [ *includedInOOO ]
+    msg: [ *alreadyInOOO ]
     tag:
       - Invent
   - name: 'Sin''s Expanded Light Armor Kit [NPC].esp'
-    msg: [ *includedInOOO ]
+    msg: [ *alreadyInOOO ]
   - name: 'SK_Berserk_v0.6.esp'
     dirty:
       - crc: 0xfc1d6b7f
@@ -6680,47 +6700,47 @@ plugins:
     inc:
       - 'FCOM_Convergence.esm'
   - name: 'Francesco''s Optional Dungeon Chest Loot.esp'
-    msg: [ *includedInFCOM ]
+    msg: [ *alreadyInFCOM ]
   - name: 'Francesco''s Optional Dungeon Chest Locks.esp'
-    msg: [ *includedInFCOM ]
+    msg: [ *alreadyInFCOM ]
   - name: 'Francesco''s Optional House Chest Loot.esp'
-    msg: [ *includedInFCOM ]
+    msg: [ *alreadyInFCOM ]
   - name: 'Francesco''s Optional New Adventurers.esp'
-    msg: [ *includedInFCOM ]
+    msg: [ *alreadyInFCOM ]
   - name: 'Francesco''s Optional Vendor Tweaks.esp'
     inc:
       - 'FCOM_Convergence.esm'
   - name: 'Francesco''s Optional Leveled Quests.esp'
-    msg: [ *includedInFCOM ]
+    msg: [ *alreadyInFCOM ]
   - name: 'Francesco''s Optional Leveled Arena.esp'
-    msg: [ *includedInFCOM ]
+    msg: [ *alreadyInFCOM ]
   - name: 'Francesco''s Optional Files.esp'
-    msg: [ *useFransSeparateOptions ]
+    msg: [ *deleteUseFransSeparateOptions ]
     tag:
       - Delev
       - Relev
   - name: 'Francesco''s Optional Files 1.esp'
-    msg: [ *useFransSeparateOptions ]
+    msg: [ *deleteUseFransSeparateOptions ]
     tag:
       - Delev
       - Relev
   - name: 'Francesco''s Optional Files 2.esp'
-    msg: [ *useFransSeparateOptions ]
+    msg: [ *deleteUseFransSeparateOptions ]
     tag:
       - Delev
       - Relev
   - name: 'Francesco''s Optional Files 3.esp'
-    msg: [ *useFransSeparateOptions ]
+    msg: [ *deleteUseFransSeparateOptions ]
     tag:
       - Delev
       - Relev
   - name: 'Francesco''s Optional Files 4.esp'
-    msg: [ *useFransSeparateOptions ]
+    msg: [ *deleteUseFransSeparateOptions ]
     tag:
       - Delev
       - Relev
   - name: 'LuckBasedLootForFrans.esp'
-    msg: [ *includedInFCOM ]
+    msg: [ *alreadyInFCOM ]
   - name: 'Fran-Ayleid Coin Add-on.esp'
     inc:
       - 'Mart''s Monster Mod - Diverse Runeskulls Loot G&GD.esp'
@@ -6920,33 +6940,33 @@ plugins:
       - name: -Relations
         condition: 'file("Mart''s Monster Mod for OOO.esm") or file("FCOM_Convergence.esm")'
   - name: 'OOO-Armor_Perks_WearRate_Repair.esp'
-    msg: [ *includedInOOOFull ]
+    msg: [ *alreadyInOOOFull ]
   - name: 'OOO-Birthsigns.esp'
-    msg: [ *includedInOOOFull ]
+    msg: [ *alreadyInOOOFull ]
   - name: 'OOO-Combat_Skills_Perks_Marksmanship.esp'
-    msg: [ *includedInOOOFull ]
+    msg: [ *alreadyInOOOFull ]
   - name: 'OOO-DaedricLord_Quests.esp'
-    msg: [ *includedInOOOFull ]
+    msg: [ *alreadyInOOOFull ]
   - name: 'OOO-DaedraLord_Quests.esp'
-    msg: [ *includedInOOOFull ]
+    msg: [ *alreadyInOOOFull ]
   - name: 'OOO-Dangerous_traps.esp'
-    msg: [ *includedInOOOFull ]
+    msg: [ *alreadyInOOOFull ]
   - name: 'OOO-Deadly_Combat.esp'
-    msg: [ *includedInOOOFull ]
+    msg: [ *alreadyInOOOFull ]
   - name: 'OOO-DLT_Immersion.esp'
-    msg: [ *includedInOOOFull ]
+    msg: [ *alreadyInOOOFull ]
   - name: 'OOO-Magic_Effects+Enchantments.esp'
-    msg: [ *includedInOOOFull ]
+    msg: [ *alreadyInOOOFull ]
   - name: 'OOO-Magic_Effects+Spells.esp'
-    msg: [ *includedInOOOFull ]
+    msg: [ *alreadyInOOOFull ]
   - name: 'OOO-Magic_Game_Settings.esp'
-    msg: [ *includedInOOOFull ]
+    msg: [ *alreadyInOOOFull ]
   - name: 'OOO-Potions.esp'
-    msg: [ *includedInOOOFull ]
+    msg: [ *alreadyInOOOFull ]
   - name: 'OOO-Thief_Guild_Difficult.esp'
-    msg: [ *includedInOOOFull ]
+    msg: [ *alreadyInOOOFull ]
   - name: 'OOO-ThiefGuild_Difficult.esp'
-    msg: [ *includedInOOOFull ]
+    msg: [ *alreadyInOOOFull ]
   - name: 'OOO-Ayleid Coin Add-on.esp'
     msg: [ *obsolete ]
   - name: 'OOO132RC3Hotfixes.esp'
@@ -6963,7 +6983,7 @@ plugins:
     tag: [ Stats ]
   - name: 'MrSiikaRabbitsforOOO.esp'
     msg:
-      - <<: *includedInFCOM
+      - <<: *alreadyInFCOM
         condition: 'file("Mart''s Monster Mod for OOO.esp") or file("FCOM_Convergence.esm")'
   - name: 'OMOBS_OOO_missing_Oblivion_Bow_Ammo.esp'
     tag:
@@ -7219,7 +7239,7 @@ plugins:
       - Delev
       - Relev
   - name: 'John''s Leveled List Overhaul - Bandits in Glass Begone.esp'
-    msg: [ *includedInFCOM ]
+    msg: [ *alreadyInFCOM ]
   - name: 'OOO 1.32-Cobl.esp'
     tag:
       - Delev
@@ -7239,21 +7259,21 @@ plugins:
       - Delev
       - Relev
   - name: 'Harvest[Containers].esp'
-    msg: [ *includedInOOO ]
+    msg: [ *alreadyInOOO ]
   - name: 'Harvest[Containers] - Vanilla.esp'
-    msg: [ *includedInOOO ]
+    msg: [ *alreadyInOOO ]
     dirty:
       - crc: 0xd7e2759e
         <<: *dirtyPlugin
         itm: 19
   - name: 'Harvest[Containers] - Player Home Add-on.esp'
-    msg: [ *includedInOOO ]
+    msg: [ *alreadyInOOO ]
   - name: 'DEJ Harvest - Containers [Combo] v0.99.08.esp'
     msg: [ *obsolete ]
   - name: 'Harvest[Containers] - Flat-Top Barrels Add-on.esp'
-    msg: [ *includedInOOO ]
+    msg: [ *alreadyInOOO ]
   - name: 'Harvest[Containers] - Havok Crates Add-on.esp'
-    msg: [ *includedInOOO ]
+    msg: [ *alreadyInOOO ]
   - name: 'Hemingweys NPC Capes for OOO and FCOM.esp'
     msg:
       - type: say
@@ -7270,23 +7290,23 @@ plugins:
         <<: *dirtyPlugin
         udr: 10
   - name: 'FranOOOMMM_FranItemLists.esp'
-    msg: [ *useFCOMInstead ]
+    msg: [ *obsoleteUseFCOM ]
   - name: 'FranOOOMMM_SpawnMerge.esp'
-    msg: [ *useFCOMInstead ]
+    msg: [ *obsoleteUseFCOM ]
   - name: 'FranOOOMMM_GuardFix.esp'
-    msg: [ *useFCOMInstead ]
+    msg: [ *obsoleteUseFCOM ]
   - name: 'FranOOOMMM_OOOItemLists.esp'
-    msg: [ *useFCOMInstead ]
+    msg: [ *obsoleteUseFCOM ]
   - name: 'FranOOOMMM_WarCry_BobsArmory.esp'
-    msg: [ *useFCOMInstead ]
+    msg: [ *obsoleteUseFCOM ]
   - name: 'Mart''s Monster Mod - Diverse NPC faces nv.esp'
-    msg: [ *useFCOMInstead ]
+    msg: [ *obsoleteUseFCOM ]
   - name: 'Mart''s Monster Mod for Fran''s nvCNPC.esp'
-    msg: [ *useFCOMInstead ]
+    msg: [ *obsoleteUseFCOM ]
   - name: 'Mart''s Monster Mod for Fran''s nvNPC.esp'
-    msg: [ *useFCOMInstead ]
+    msg: [ *obsoleteUseFCOM ]
   - name: 'Oscuro''s Combat Behavior.esp'
-    msg: [ *useFCOMInstead ]
+    msg: [ *obsoleteUseFCOM ]
   - name: 'Mart''s Monster Mod for FCOM.esp'
     msg:
       - type: say
@@ -7294,7 +7314,7 @@ plugins:
         condition: *FCOMCond
   - name: 'Mart''s Monster Mod - Fran''s Leveled Quests.esp'
     msg:
-      - *includedInFCOM
+      - *alreadyInFCOM
       - type: say
         content: 'Requires: a Fran''s install with the Leveled Quests option.'
   - name: 'Mart''s Monster Mod - Additional Enemy NPC Vars.esp'
@@ -7494,7 +7514,7 @@ plugins:
       - type: error
         content: 'Delete. Use ''Mart''s Monster Mod - Less Reavers.esp''.'
   - name: 'Gems and Gem Dusts - MMM.esp'
-    msg: [ *includedInOOOFull ]
+    msg: [ *alreadyInOOOFull ]
   - name: 'Mart''s Monster Mod - Hunting & Crafting.esp'
     msg: [ *doNotClean ]
     tag:
@@ -7513,7 +7533,7 @@ plugins:
     tag:
       - Invent
   - name: 'Mart''s Monster Mod.esp'
-    msg: [ *includedInFCOM ]
+    msg: [ *alreadyInFCOM ]
     tag:
       - Actors.AIData
       - Actors.AIPackages
@@ -7627,20 +7647,20 @@ plugins:
   - name: 'Mart''s Monster Mod - Blood Fix v3.esp'
     msg: [ *obsolete ]
   - name: 'Mart''s Monster Mod - Diverse Imperial Armor.esp'
-    msg: [ *includedInOOO ]
+    msg: [ *alreadyInOOO ]
   - name: 'Mart''s Monster Mod - Diverse Creature Skins.esp'
     msg:
-      - *includedInOOO
+      - *alreadyInOOO
       - *obsolete
   - name: 'Mart''s Monster Mod - More Reaver Variants.esp'
     msg: [ *obsolete ]
   - name: 'Mart''s Monster Mod - Gems & Gem Dust.esp'
     msg:
-      - *includedInOOOFull
+      - *alreadyInOOOFull
       - *doNotClean
   - name: 'Mart''s Monster Mod - Durability & Damage.esp'
     msg:
-      - *includedInOOO
+      - *alreadyInOOO
       - type: error
         content: 'Delete and use ''FCOM_DurabilityAndDamage.esp''.'
         condition: *FCOMCond
@@ -8128,13 +8148,13 @@ plugins:
     inc:
       - 'TIE In - FCOM Convergence.esp'
   - name: 'TIE In - Archery.esp'
-    msg: [ *moddingPlugin ]
+    msg: [ *deleteModdingPlugin ]
   - name: 'TIE In - Armors.esp'
-    msg: [ *moddingPlugin ]
+    msg: [ *deleteModdingPlugin ]
   - name: 'TIE In - Weapons.esp'
-    msg: [ *moddingPlugin ]
+    msg: [ *deleteModdingPlugin ]
   - name: 'TIE In - Armory.esp'
-    msg: [ *moddingPlugin ]
+    msg: [ *deleteModdingPlugin ]
   - name: 'TIE In - Game Settings.esp'
     inc:
       - 'TIE In - Game Settings OOO.esp'
@@ -11310,7 +11330,6 @@ plugins:
       - *OBSE
       - 'DLCShiveringIsles.esp'
     msg:
-      - *reqShiveringIsles
       - type: say
         content: 'Requires: Sound Commands (OBSE Plugin), Elys Universal Silent Voice (OBSE Plugin)'
   - name: 'POTSB.esp'
@@ -16000,13 +16019,13 @@ plugins:
     tag:
       - Invent
   - name: 'First Person Messages.esp'
-    msg: [ *includedInOOO ]
+    msg: [ *alreadyInOOO ]
     dirty:
       - crc: 0xe97c0b93
         <<: *dirtyPlugin
         itm: 3
   - name: '2nd to 1st person.esp'
-    msg: [ *includedInOOO ]
+    msg: [ *alreadyInOOO ]
   - name: 'FrbitPotionReplacer.esp'
     tag:
       - Graphics
@@ -16252,7 +16271,6 @@ plugins:
     req:
       - 'DLCShiveringIsles.esp'
     msg:
-      - *reqShiveringIsles
       - type: say
         content: 'Requires: Qarl''s Harvest, Tamrielic Ingredients.'
   - name: 'NameReplacer-Clothing.esp'
@@ -22065,7 +22083,6 @@ plugins:
     req:
       - 'DLCShiveringIsles.esp'
     msg:
-      - *reqShiveringIsles
       - type: say
         content: 'Requires: Luchaire''s Body Seam Reducer.'
       - *doNotClean
@@ -22075,7 +22092,6 @@ plugins:
     req:
       - 'DLCShiveringIsles.esp'
     msg:
-      - *reqShiveringIsles
       - type: say
         content: 'Requires: Luchaire''s Body Seam Reducer.'
     tag:
