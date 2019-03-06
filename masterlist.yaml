@@ -14525,11 +14525,16 @@ plugins:
         <<: *dirtyPlugin
         itm: 1
         udr: 4572
-  - name: 'Verwen Brewery UL Ancient Yews Compatable.esp'
+  - name: 'Verwen Brewery (UL_AY_AC|UL Ancient Yews)? Compatable?.*\.esp'
     msg:
-      - type: say
-        content: 'Use only one Verwen Brewery esp. Unique Landscapes Ancient Yews.'
-        condition: 'file("Verwen Brewery UL_AY_AC Compatable.esp")'
+      - <<: *useOnlyOneX
+        subs: [ 'Verwen Brewery Unique Landscapes Ancient Yews/Arrius Creek patch' ]
+        condition: 'many("Verwen Brewery (UL_AY_AC|UL Ancient Yews)? Compatable?.*\.esp")'
+  - name: 'Verwen Brewery UL_AY_AC Compatable.esp'
+    dirty:
+      - crc: 0xe45679c7
+        <<: *dirtyPlugin
+        udr: 1
   - name: 'xulAncientYews 20x8 fix.esp'
     msg:
       - type: say
@@ -14561,15 +14566,6 @@ plugins:
         <<: *dirtyPlugin
         itm: 3
         udr: 37
-  - name: 'Verwen Brewery UL_AY_AC Compatable.esp'
-    msg:
-      - type: say
-        content: 'Use only one Verwen Brewery esp. the Unique Landscapes Ancient Yews/Arrius Creek patch.'
-        condition: 'file("Verwen Brewery UL Ancient Yews Compatable.esp")'
-    dirty:
-      - crc: 0xe45679c7
-        <<: *dirtyPlugin
-        udr: 1
   - name: 'HeartoftheDead-ArriusCreek patch.esp'
     dirty:
       - crc: 0xea1f2756
