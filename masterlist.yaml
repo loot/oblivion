@@ -20360,13 +20360,6 @@ plugins:
       - Actors.Anims
       - NoMerge
   - name: 'CM Partners NPC.esp'
-    msg:
-      - type: say
-        content: 'Use only one Essential or NotEssential version esp'
-        condition: 'file("CM Partners( More)? (NPC NE|(NPCs( NE)?))\.esp")'
-    tag:
-      - Eyes
-      - Hair
     dirty:
       - crc: 0xacb522ac
         <<: *dirtyPlugin
@@ -20375,11 +20368,11 @@ plugins:
     tag:
       - Actors.Anims
       - NoMerge
-  - name: 'CM Partners NPC NE.esp'
+  - name: 'CM Partners (NPC( NE)?|More NPCs( NE)?)?.*\.esp'
     msg:
-      - type: say
-        content: 'Use only one Essential or NotEssential version esp'
-        condition: 'file("CM Partners( More)? (NPC|NPCs( NE)?)\.esp")'
+      - <<: *useOnlyOneX
+        subs: [ 'CM Partners' ]
+        condition: 'many("CM Partners (NPC( NE)?|More NPCs( NE)?)?.*\.esp")'
     tag:
       - Eyes
       - Hair
@@ -20387,26 +20380,10 @@ plugins:
     tag:
       - Actors.Anims
       - NoMerge
-  - name: 'CM Partners More NPCs.esp'
-    msg:
-      - type: say
-        content: 'Use only one Essential or NotEssential version esp'
-        condition: 'file("CM Partners( More)? (NPC( NE)?|NPCs NE)\.esp")'
-    tag:
-      - Eyes
-      - Hair
   - name: 'CM Partners More NPCs Vwalk.esp'
     tag:
       - Actors.Anims
       - NoMerge
-  - name: 'CM Partners More NPCs NE.esp'
-    msg:
-      - type: say
-        content: 'Use only one Essential or NotEssential version esp'
-        condition: 'file("CM Partners( More)? (NPC( NE)?|NPCs)\.esp")'
-    tag:
-      - Eyes
-      - Hair
   - name: 'CM Partners More NPCs NE Vwalk.esp'
     tag:
       - Actors.Anims
