@@ -11575,8 +11575,9 @@ plugins:
     msg: [ *obsolete ]
   - name: 'SenTineL''s Legendary Weapons And Armors_[AC][EU]\.esp'
     msg:
-      - type: say
-        content: 'Use only one SenTineL''s Legendary Weapons And Armors_XX.esp'
+      - <<: *useOnlyOneX
+        subs: [ 'SenTineL''s Legendary Weapons And Armors' ]
+        condition: 'many("SenTineL''s Legendary Weapons And Armors_[AC][EU]\.esp")'
   - name: 'ShadowRose Manor.esp'
     dirty:
       - crc: 0xa7eb4436
