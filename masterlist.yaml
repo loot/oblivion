@@ -22740,18 +22740,11 @@ plugins:
       - <<: *useOnlyOneX
         subs: [ 'Life Detected .esp' ]
         condition: 'many("Life Detected - (Aura|Burst|Cascade|Escape|Fountain|Orbit|Skeleton|Venting) - (Tiny|Small|Medium|Large|Huge) - (1|2)\.esp")'
-  - name: 'lumi_enchantments.esp'
+  - name: 'lumi_enchantments(_subtle)?.*\.esp'
     msg:
-      - type: say
-        content: 'Use only one lumi_enchantments esp'
-        condition: 'file("lumi_enchantments_subtle.esp")'
-    tag:
-      - Graphics
-  - name: 'lumi_enchantments_subtle.esp'
-    msg:
-      - type: say
-        content: 'Use only one lumi_enchantments esp'
-        condition: 'file("lumi_enchantments.esp")'
+      - <<: *useOnlyOneX
+        subs: [ 'Luminars Better Enchantment Effects' ]
+        condition: 'many("lumi_enchantments(_subtle)?.*\.esp")'
     tag:
       - Graphics
   - name: 'BubbleFx.esp'
