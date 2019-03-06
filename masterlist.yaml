@@ -238,6 +238,10 @@ common:
         text: 'Slet. Allerede inkluderet i %1%.'
       - lang: de
         text: 'Nutzen Sie nur einen %1%.'
+  - &useOnlyOneRoadRecordFile
+    <<: *useOnlyOneX
+    type: say
+    subs: [ 'road record file' ]
 
 # Dirty Plugin Messages
   - &dirtyPlugin
@@ -14888,8 +14892,7 @@ plugins:
   - name: 'CSV_Farms_Road_Vanilla.esp'
     msg:
       - *obsolete
-      - type: say
-        content: 'Use only one road record file.'
+      - *useOnlyOneRoadRecordFile
     tag:
       - Deactivate
       - Roads
@@ -23374,9 +23377,7 @@ plugins:
       - Deactivate
       - Roads
   - name: 'Open Cities Classic Road Record.esp'
-    msg:
-      - type: say
-        content: 'Use only one road record file.'
+    msg: [ *useOnlyOneRoadRecordFile ]
     tag:
       - Deactivate
       - Roads
@@ -23390,15 +23391,12 @@ plugins:
   - name: 'Open Cities Reborn Road Record.esp'
     msg:
       - *obsolete
-      - type: say
-        content: 'Use only one road record file.'
+      - *useOnlyOneRoadRecordFile
     tag:
       - Deactivate
       - Roads
   - name: 'NRB4 Standard Road Record.esp'
-    msg:
-      - type: say
-        content: 'Use only one road record file.'
+    msg: [ *useOnlyOneRoadRecordFile ]
     req:
       - 'road+bridges.esp'
     tag:
@@ -23410,9 +23408,7 @@ plugins:
       - Deactivate
       - Roads
   - name: 'NRB4 OCReborn Road Record.esp'
-    msg:
-      - type: say
-        content: 'Use only one road record file.'
+    msg: [ *useOnlyOneRoadRecordFile ]
     req:
       - 'Open Cities Reborn.esp'
     tag:
@@ -23434,18 +23430,14 @@ plugins:
       - Deactivate
       - Roads
   - name: 'CSVF_Road_Record_OC.esp'
-    msg:
-      - type: say
-        content: 'Use only one road record file.'
+    msg: [ *useOnlyOneRoadRecordFile ]
     req:
       - 'Open Cities.esp'
     tag:
       - Deactivate
       - Roads
   - name: 'CSVF_Road_Record_OC+RB.esp'
-    msg:
-      - type: say
-        content: 'Use only one road record file.'
+    msg: [ *useOnlyOneRoadRecordFile ]
     req:
       - 'Open Cities.esp'
       - 'road+bridges.esp'
@@ -23453,27 +23445,21 @@ plugins:
       - Deactivate
       - Roads
   - name: 'CSVF_Road_Record_BBC.esp'
-    msg:
-      - type: say
-        content: 'Use only one road record file.'
+    msg: [ *useOnlyOneRoadRecordFile ]
     req:
       - 'Better Cities Full.esp'
     tag:
       - Deactivate
       - Roads
   - name: 'CSVF_Road_Record_BBC+OC.esp'
-    msg:
-      - type: say
-        content: 'Use only one road record file.'
+    msg: [ *useOnlyOneRoadRecordFile ]
     req:
       - 'Better Cities - Open Better Cities.esp'
     tag:
       - Deactivate
       - Roads
   - name: 'CSVF_Road_Record_BBC+RB.esp'
-    msg:
-      - type: say
-        content: 'Use only one road record file.'
+    msg: [ *useOnlyOneRoadRecordFile ]
     req:
       - 'Better Cities Full.esp'
       - 'road+bridges.esp'
@@ -23481,9 +23467,7 @@ plugins:
       - Deactivate
       - Roads
   - name: 'CSVF_Road_Record_BBC+OC+RB.esp'
-    msg:
-      - type: say
-        content: 'Use only one road record file.'
+    msg: [ *useOnlyOneRoadRecordFile ]
     req:
       - 'Better Cities - Open Better Cities.esp'
       - 'road+bridges.esp'
@@ -23491,9 +23475,7 @@ plugins:
       - Deactivate
       - Roads
   - name: 'CSVF_Road_Record_RB.esp'
-    msg:
-      - type: say
-        content: 'Use only one road record file.'
+    msg: [ *useOnlyOneRoadRecordFile ]
     req:
       - 'road+bridges.esp'
     tag:
