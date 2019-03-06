@@ -111,9 +111,6 @@ common:
   - &needsCleaning
     type: say
     content: 'Needs [TES4Edit cleaning](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide).'
-  - &moddingPlugin
-    type: warn
-    content: 'A modding plugin - do not use in game, deactivate.'
   - &moveWorldspaces
     type: warn
     content: 'This needs to load directly after Oblivion.esm to avoid landscape issues caused by a failure by the mod author to use TES4Gecko''s "Move Worldspaces" function.'
@@ -216,6 +213,10 @@ common:
       - lang: en
         text: 'Delete or deactivate. %1%'
     subs: [ '' ]
+  - &deleteModdingPlugin
+    <<: *deleteOrDeactivateX
+    type: error
+    subs: [ 'This is a modding plugin and should not be use in game.' ]
   - &useOnlyOneX
     type: error
     content:
@@ -381,15 +382,15 @@ plugins:
     group: *gameMasterGroup
   - name: 'Oblivion_1.1.esm'
     msg:
-      - <<: *moddingPlugin
+      - <<: *deleteModdingPlugin
         condition: 'active("Oblivion_1.1.esm")'
   - name: 'Oblivion_SI.esm'
     msg:
-      - <<: *moddingPlugin
+      - <<: *deleteModdingPlugin
         condition: 'active("Oblivion_1.1.esm")'
   - name: 'Oblivion_GOTY non-SI.esm'
     msg:
-      - <<: *moddingPlugin
+      - <<: *deleteModdingPlugin
         condition: 'active("Oblivion_1.1.esm")'
   - name: 'XBOX_Controller.esp'
     group: *gameMasterGroup
@@ -3188,7 +3189,7 @@ plugins:
       - type: say
         content: 'Requires patch to use with Kalikuts.'
   - name: 'LIPTemplate.esp'
-    msg: [ *moddingPlugin ]
+    msg: [ *deleteModdingPlugin ]
   - name: 'LadyLis_dainties.esp'
     dirty:
       - crc: 0xb3ec8302
@@ -8145,13 +8146,13 @@ plugins:
     inc:
       - 'TIE In - FCOM Convergence.esp'
   - name: 'TIE In - Archery.esp'
-    msg: [ *moddingPlugin ]
+    msg: [ *deleteModdingPlugin ]
   - name: 'TIE In - Armors.esp'
-    msg: [ *moddingPlugin ]
+    msg: [ *deleteModdingPlugin ]
   - name: 'TIE In - Weapons.esp'
-    msg: [ *moddingPlugin ]
+    msg: [ *deleteModdingPlugin ]
   - name: 'TIE In - Armory.esp'
-    msg: [ *moddingPlugin ]
+    msg: [ *deleteModdingPlugin ]
   - name: 'TIE In - Game Settings.esp'
     inc:
       - 'TIE In - Game Settings OOO.esp'
