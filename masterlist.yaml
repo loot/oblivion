@@ -9169,23 +9169,20 @@ plugins:
         <<: *dirtyPlugin
         itm: 43
   - name: 'allinonebasement.esp'
-    msg:
-      - type: say
-        content: 'Use only one allinonebasement plugin.'
-        condition: 'file("allinonebasement_COBLnoCM.esp")'
     dirty:
       - crc: 0xc5f94af4
         <<: *dirtyPlugin
         itm: 2
   - name: 'allinonebasement_COBLnoCM.esp'
-    msg:
-      - type: say
-        content: 'Use only one allinonebasement plugin.'
-        condition: 'file("allinonebasement.esp")'
     dirty:
       - crc: 0xa7c0e846
         <<: *dirtyPlugin
         itm: 2
+  - name: 'allinonebasement(_COBLnoCM)?.*\.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'All In One Basement' ]
+        condition: 'many("allinonebasement(_COBLnoCM)?.*\.esp")'
   - name: 'AyleidQuest.esp'
     dirty:
       - crc: 0x37f7310
