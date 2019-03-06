@@ -17094,16 +17094,11 @@ plugins:
       - crc: 0x49ace956
         <<: *dirtyPlugin
         itm: 2
-  - name: 'JIM_Summon_Doppleganger.esp'
+  - name: 'JIM_(Summon|Balanced)_Doppleganger?.*\.esp'
     msg:
-      - type: say
-        content: 'use only one ''JIM_Summon_Doppleganger.esp'' or ''JIM_Balanced_Doppleganger.esp'''
-        condition: 'file("JIM_Balanced_Doppleganger.esp")'
-  - name: 'JIM_Balanced_Doppleganger.esp'
-    msg:
-      - type: say
-        content: 'use only one ''JIM_Summon_Doppleganger.esp'' or ''JIM_Balanced_Doppleganger.esp'''
-        condition: 'file("JIM_Summon_Doppleganger.esp")'
+      - <<: *useOnlyOneX
+        subs: [ 'JIM Doppleganger' ]
+        condition: 'many("JIM_(Summon|Balanced)_Doppleganger?.*\.esp")'
   - name: 'JIM_Summon_Unicorn.esp'
     msg:
       - type: say
