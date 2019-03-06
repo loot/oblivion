@@ -8407,8 +8407,9 @@ plugins:
       - NoMerge
   - name: 'WAC - ItemLootFix4v1\.0b(Fran|OOO|MMM|MMMorFCOM|OWCND|VNT)?\.esp'
     msg:
-      - type: say
-        content: 'Use only one WAC - ItemLootFix plugin.'
+      - <<: *useOnlyOneX
+        subs: [ 'WAC - ItemLootFix' ]
+        condition: 'many("WAC - ItemLootFix4v1\.0b(Fran|OOO|MMM|MMMorFCOM|OWCND|VNT)?\.esp")'
     tag:
       - Actors.AIData
       - Actors.Stats
