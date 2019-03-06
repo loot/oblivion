@@ -210,6 +210,12 @@ common:
     subs: [ 'FCOM, MMM, OOO or other FCOM components' ]
     condition: 'file("Oscuro''s_Oblivion_Overhaul.esm") or file("FCOM_Convergence.esm")'
 
+  - &deleteOrDeactivateX
+    type: warn
+    content:
+      - lang: en
+        text: 'Delete or deactivate. %1%'
+    subs: [ '' ]
   - &useOnlyOneX
     type: error
     content:
