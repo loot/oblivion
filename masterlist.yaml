@@ -17241,21 +17241,11 @@ plugins:
     msg: [ *obsolete ]
   - name: 'Midas SMPoison.esp'
     msg: [ *obsolete ]
-  - name: 'Midas Reduced Costs Half.esp'
+  - name: 'Midas Reduced Costs (Half|Quarter|3 Quarters)?.*\.esp'
     msg:
-      - type: say
-        content: 'Use only one Reduced Costs module at a time'
-        condition: 'file("Midas Reduced Costs Quarter.esp") or file("Midas Reduced Costs 3 Quarters")'
-  - name: 'Midas Reduced Costs Quarter.esp'
-    msg:
-      - type: say
-        content: 'Use only one Reduced Costs module at a time'
-        condition: 'file("Midas Reduced Costs Half.esp") or file("Midas Reduced Costs 3 Quarters")'
-  - name: 'Midas Reduced Costs 3 Quarters.esp'
-    msg:
-      - type: say
-        content: 'Use only one Reduced Costs module at a time'
-        condition: 'file("Midas Reduced Costs Quarter.esp") or file("Midas Reduced Costs Half")'
+      - <<: *useOnlyOneX
+        subs: [ 'Reduced Costs module' ]
+        condition: 'many("Midas Reduced Costs (Half|Quarter|3 Quarters)?.*\.esp")'
   - name: 'Mart''s Monster Mod - Midas Creature Ingredients.esp'
     tag:
       - Actors.ACBS
