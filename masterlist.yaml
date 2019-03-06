@@ -9246,26 +9246,11 @@ plugins:
         <<: *dirtyPlugin
         itm: 6
         udr: 42
-  - name: 'Anvil_MorningGloryBetterCities_Blue.esp'
+  - name: 'Anvil_MorningGloryBetterCities_(Blue|Orange|Purple|Mixed)?.*\.esp'
     msg:
-      - type: say
-        content: 'Use only one Anvil_MorningGlory mod module.'
-        condition: 'file("Anvil_MorningGloryBetterCities_(Orange|Purple|Mixed)\.esp")'
-  - name: 'Anvil_MorningGloryBetterCities_Orange.esp'
-    msg:
-      - type: say
-        content: 'Use only one Anvil_MorningGlory mod module.'
-        condition: 'file("Anvil_MorningGloryBetterCities_(Blue|Purple|Mixed)\.esp")'
-  - name: 'Anvil_MorningGloryBetterCities_Purple.esp'
-    msg:
-      - type: say
-        content: 'Use only one Anvil_MorningGlory mod module.'
-        condition: 'file("Anvil_MorningGloryBetterCities_(Blue|Orange|Mixed)\.esp")'
-  - name: 'Anvil_MorningGloryBetterCities_Mixed.esp'
-    msg:
-      - type: say
-        content: 'Use only one Anvil_MorningGlory mod module.'
-        condition: 'file("Anvil_MorningGloryBetterCities_(Blue|Orange|Purple)\.esp")'
+      - <<: *useOnlyOneX
+        subs: [ 'Anvil Morning Glory Better Cities' ]
+        condition: 'many("Anvil_MorningGloryBetterCities_(Blue|Orange|Purple|Mixed)?.*\.esp")'
   - name: 'Aqua_City_01.esp'
     req:
       - 'DLCShiveringIsles.esp'
