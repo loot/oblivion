@@ -17462,8 +17462,9 @@ plugins:
       - Scripts
   - name: 'BountyReductionOverTime(_standard|_unforgiving|_mostwanted)?.esp'
     msg:
-      - type: say
-        content: 'Use only one BountyReductionOverTime esp.'
+      - <<: *useOnlyOneX
+        subs: [ 'Bounty Reduction Over Time' ]
+        condition: 'many("BountyReductionOverTime(_standard|_unforgiving|_mostwanted)?.esp")'
   - name: 'No psychic guards v1.1.esp'
     msg:
       - type: say
