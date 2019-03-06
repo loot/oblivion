@@ -17141,24 +17141,15 @@ plugins:
         udr: 2
   - name: 'Pants Be Gone 1.3 With(out)? Demoralize?.*\.esp'
     msg:
-  - name: 'PJs Spells - Cheap Spells.esp'
-    msg:
-      - type: say
-        content: 'Use only one ''PJs Spells - Cheap Spells.esp'' or ''PJs Spell Compendium - No Requirements.esp'' or ''PJs Spell Compendium - Spell Requirements.esp'''
-        condition: 'file("PJs Spell Compendium - No Requirements.esp") or file("PJs Spell Compendium - Spell Requirements.esp")'
-  - name: 'PJs Spell Compendium - No Requirements.esp'
       - <<: *useOnlyOneX
         subs: [ 'Pants Be Gone' ]
         condition: 'many("Pants Be Gone 1.3 With(out)? Demoralize?.*\.esp")'
+  - name: 'PJs Spell(s - Cheap Spells| Compendium - (No|Spell)? Requirements)?.*\.esp'
     msg:
-      - type: say
-        content: 'Use only one ''PJs Spells - Cheap Spells.esp'' or ''PJs Spell Compendium - No Requirements.esp'' or ''PJs Spell Compendium - Spell Requirements.esp'''
-        condition: 'file("PJs Spells - Cheap Spells.esp") or file("PJs Spell Compendium - Spell Requirements.esp")'
+      - <<: *useOnlyOneX
+        subs: [ 'PJs Spells' ]
+        condition: 'many("PJs Spell(s - Cheap Spells| Compendium - (No|Spell)? Requirements)?.*\.esp")'
   - name: 'PJs Spell Compendium - Spell Requirements.esp'
-    msg:
-      - type: say
-        content: 'Use only one ''PJs Spells - Cheap Spells.esp'' or ''PJs Spell Compendium - No Requirements.esp'' or ''PJs Spell Compendium - Spell Requirements.esp'''
-        condition: 'file("PJs Spells - Cheap Spells.esp") or file("PJs Spell Compendium - No Requirements.esp")'
     dirty:
       - crc: 0x38eef54d
         <<: *dirtyPlugin
