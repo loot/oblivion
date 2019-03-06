@@ -17807,26 +17807,11 @@ plugins:
     req: [ *OBSEv16 ]
   - name: 'Mercantile Leveling-Fixed.esp'
     req: [ *OBSEv15 ]
-  - name: 'Jhaerik''s Anti Power-Gaming Leveling System 1 (Very Easy ).esp'
+  - name: 'Jhaerik''s Anti Power-Gaming Leveling System [1234] ((Very Easy )|(Easy)|(Balanced)|(Hard))?.*\.esp'
     msg:
-      - type: say
-        content: 'Use only one Jhaerik''s Anti Power-Gaming Leveling System*.esp'
-        condition: 'file("Jhaerik''s Anti Power-Gaming Leveling System [234].*\.esp")'
-  - name: 'Jhaerik''s Anti Power-Gaming Leveling System 2 (Easy).esp'
-    msg:
-      - type: say
-        content: 'Use only one Jhaerik''s Anti Power-Gaming Leveling System*.esp'
-        condition: 'file("Jhaerik''s Anti Power-Gaming Leveling System [134].*\.esp")'
-  - name: 'Jhaerik''s Anti Power-Gaming Leveling System 3 (Balanced).esp'
-    msg:
-      - type: say
-        content: 'Use only one Jhaerik''s Anti Power-Gaming Leveling System*.esp'
-        condition: 'file("Jhaerik''s Anti Power-Gaming Leveling System [124].*\.esp")'
-  - name: 'Jhaerik''s Anti Power-Gaming Leveling System 4 (Hard).esp'
-    msg:
-      - type: say
-        content: 'Use only one Jhaerik''s Anti Power-Gaming Leveling System*.esp'
-        condition: 'file("Jhaerik''s Anti Power-Gaming Leveling System [123].*\.esp")'
+      - <<: *useOnlyOneX
+        subs: [ 'Jhaerik''s Anti Power-Gaming Leveling System' ]
+        condition: 'many("Jhaerik''s Anti Power-Gaming Leveling System [1234] ((Very Easy )|(Easy)|(Balanced)|(Hard))?.*\.esp")'
   - name: 'Intelligence Overhaul BJ.esp'
     msg:
       - type: say
