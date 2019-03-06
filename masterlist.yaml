@@ -3309,8 +3309,9 @@ plugins:
       - *obsolete
   - name: 'Mud Crabs!(_(coMbO|MMM|OOO))?\.esp'
     msg:
-      - type: say
-        content: 'Use only one Mud Crabs! file'
+      - <<: *useOnlyOneX
+        subs: [ 'Mud Crabs!' ]
+        condition: 'many("Mud Crabs!(_(coMbO|MMM|OOO))?\.esp")'
   - name: 'Mud Crabs!_coMbO.esp'
     dirty:
       - crc: 0xc4750e07
