@@ -155,10 +155,6 @@ common:
   - &useWithBashedPatch
     type: say
     content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
-  - &useFransSeparateOptions
-    type: error
-    content: 'Should not be used. Delete. Reinstall Fran''s and select "Separate Files" when the option is presented.'
-    condition: *FCOMCond
   - &useFCOMSpawnRates
     type: say
     content: 'Consider using ''FCOM_SpawnRatesReduced.esp'', ''FCOM_SpawnRatesSlightlyReduced.esp'' or ''FCOM_SpawnRatesStronger.esp'' instead.'
@@ -217,6 +213,12 @@ common:
     <<: *deleteOrDeactivateX
     type: error
     subs: [ 'This is a modding plugin and should not be use in game.' ]
+  - &deleteUseFransSeparateOptions
+    <<: *deleteOrDeactivateX
+    type: error
+    subs: [ 'This plugin should not be used. Reinstall Fran''s and select "Separate Files" when the option is presented.' ]
+    condition: *FCOMCond
+
   - &useOnlyOneX
     type: error
     content:
@@ -6713,27 +6715,27 @@ plugins:
   - name: 'Francesco''s Optional Leveled Arena.esp'
     msg: [ *alreadyInFCOM ]
   - name: 'Francesco''s Optional Files.esp'
-    msg: [ *useFransSeparateOptions ]
+    msg: [ *deleteUseFransSeparateOptions ]
     tag:
       - Delev
       - Relev
   - name: 'Francesco''s Optional Files 1.esp'
-    msg: [ *useFransSeparateOptions ]
+    msg: [ *deleteUseFransSeparateOptions ]
     tag:
       - Delev
       - Relev
   - name: 'Francesco''s Optional Files 2.esp'
-    msg: [ *useFransSeparateOptions ]
+    msg: [ *deleteUseFransSeparateOptions ]
     tag:
       - Delev
       - Relev
   - name: 'Francesco''s Optional Files 3.esp'
-    msg: [ *useFransSeparateOptions ]
+    msg: [ *deleteUseFransSeparateOptions ]
     tag:
       - Delev
       - Relev
   - name: 'Francesco''s Optional Files 4.esp'
-    msg: [ *useFransSeparateOptions ]
+    msg: [ *deleteUseFransSeparateOptions ]
     tag:
       - Delev
       - Relev
