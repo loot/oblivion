@@ -16676,26 +16676,11 @@ plugins:
     msg:
       - type: say
         content: 'obselete get Oblivion Sexualized Monsters.esm and OSM-All Genders.esp instead.'
-  - name: 'Enhanced Vegetation [100%].esp'
+  - name: 'Enhanced Vegetation \[1[0125]...\.esp'
     msg:
-      - type: say
-        content: 'Use only one Enhanced Vegetation plugin.'
-        condition: 'file("Enhanced Vegetation \[1[125]...\.esp")'
-  - name: 'Enhanced Vegetation [110%].esp'
-    msg:
-      - type: say
-        content: 'Use only one Enhanced Vegetation plugin.'
-        condition: 'file("Enhanced Vegetation \[1[025]...\.esp")'
-  - name: 'Enhanced Vegetation [125%].esp'
-    msg:
-      - type: say
-        content: 'Use only one Enhanced Vegetation plugin.'
-        condition: 'file("Enhanced Vegetation \[1[015]...\.esp")'
-  - name: 'Enhanced Vegetation [150%].esp'
-    msg:
-      - type: say
-        content: 'Use only one Enhanced Vegetation plugin.'
-        condition: 'file("Enhanced Vegetation \[1[012]...\.esp")'
+      - <<: *useOnlyOneX
+        subs: [ 'Enhanced Vegetation' ]
+        condition: 'many("Enhanced Vegetation \[1[0125]...\.esp")'
   - name: 'Side''s Backpacks.esp'
     tag:
       - Invent
