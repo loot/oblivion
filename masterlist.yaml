@@ -15344,21 +15344,11 @@ plugins:
     msg:
       - type: say
         content: 'Not compatible with Open Cities Reborn.'
-  - name: 'DBOO - OpenCitiesFull.esp'
+  - name: 'DBOO - Open(Cities| Cities)?(Full| Outer Districts|Full + Outer Districts)?.*\.esp'
     msg:
-      - type: say
-        content: 'Use only one ''DBOO - OpenCitiesFull.esp'' or ''DBOO - Open Cities Outer Districts.esp'' or ''DBOO - OpenCitiesFull + Outer Districts.esp'''
-        condition: 'file("DBOO - Open Cities Outer Districts.esp") or file("DBOO - OpenCitiesFull + Outer Districts.esp")'
-  - name: 'DBOO - Open Cities Outer Districts.esp'
-    msg:
-      - type: say
-        content: 'Use only one ''DBOO - OpenCitiesFull.esp'' or ''DBOO - Open Cities Outer Districts.esp'' or ''DBOO - OpenCitiesFull + Outer Districts.esp'''
-        condition: 'file("DBOO - OpenCitiesFull.esp") or file("DBOO - OpenCitiesFull + Outer Districts.esp")'
-  - name: 'DBOO - OpenCitiesFull + Outer Districts.esp'
-    msg:
-      - type: say
-        content: 'Use only one ''DBOO - OpenCitiesFull.esp'' or ''DBOO - Open Cities Outer Districts.esp'' or ''DBOO - OpenCitiesFull + Outer Districts.esp'''
-        condition: 'file("DBOO - OpenCitiesFull.esp") or file("DBOO - Open Cities Outer Districts.esp")'
+      - <<: *useOnlyOneX
+        subs: [ 'DBs Oblivion Overhaul - OpenCities Full, Outer Districts or Full + Outer Districts' ]
+        condition: 'many("DBOO - Open(Cities| Cities)?(Full| Outer Districts|Full + Outer Districts)?.*\.esp")'
   - name: 'Sounds of Cyrodiil - OC Reborn Patch.esp'
     dirty:
       - crc: 0x408c9e1f
