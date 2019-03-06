@@ -20702,8 +20702,9 @@ plugins:
       - NoMerge
   - name: '1em_Vilja_?(cool|Ren)(hair)?\d\d?g?\.esp'
     msg:
-      - type: say
-        content: 'Use only one 1em_Vilja_*hair*.esp.'
+      - <<: *useOnlyOneX
+        subs: [ 'Companion Vilja Hairstyle' ]
+        condition: 'many("1em_Vilja_?(cool|Ren)(hair)?\d\d?g?\.esp")'
   - name: '1em_Vilja Not Essential Vwalk.esp'
     tag:
       - Actors.Anims
