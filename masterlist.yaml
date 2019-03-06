@@ -23513,8 +23513,9 @@ plugins:
     req: [ ..\obse_1_2_416.dll ]
   - name: 'ExponentialLev(Easy|Moderate|Hard|Extreme)\.esp'
     msg:
-      - type: say
-        content: 'Use only one Exponential Leveling plugin.'
+      - <<: *useOnlyOneX
+        subs: [ 'Exponential Leveling' ]
+        condition: 'many("ExponentialLev(Easy|Moderate|Hard|Extreme)\.esp")'
   - name: 'CompanionMaster.esp'
     msg:
       - type: say
