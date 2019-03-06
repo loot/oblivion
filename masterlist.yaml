@@ -21745,10 +21745,11 @@ plugins:
   - name: 'bgBalancingDVOptionalFangs.esp'
     tag:
       - R.Teeth
-  - name: 'bgBalancingEVOptionalNPCDiversity, Beautification.esp'
+  - name: 'bgBalancingEVOptionalNPCDiversity, (Beautification|TNR Merge|Vanilla)\.esp'
     msg:
-      - type: say
-        content: 'Use only one ''OptionalNPCDiversity'' file.'
+      - <<: *useOnlyOneX
+        subs: [ 'Race Balancing Project - NPC Diversity Module' ]
+        condition: 'many("bgBalancingEVOptionalNPCDiversity, (Beautification|TNR Merge|Vanilla)\.esp")'
     tag:
       - NoMerge
       - NpcFaces
@@ -21756,19 +21757,15 @@ plugins:
     msg:
       - type: say
         content: 'Replace with ''bgBalancingEVOptionalNPCDiversity, Vanilla.esp'''
-  - name: 'bgBalancingEVOptionalNPCDiversity, Vanilla.esp'
+  - name: 'bgBalancingEVOptionalNPCDiversity, (Beautification |TNR Merge |Vanilla )Better Redguards\.esp'
     msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Race Balancing Project - NPC Diversity Better Redguards Module' ]
+        condition: 'many("bgBalancingEVOptionalNPCDiversity, (Beautification |TNR Merge |Vanilla )Better Redguards\.esp")'
       - type: say
-        content: 'Use only one ''OptionalNPCDiversity'' file.'
+        content: 'If at all possible *also* use the Wrye Bash tweak for mod compatibility for BR.'
     tag:
-      - NoMerge
-      - NpcFaces
-  - name: 'bgBalancingEVOptionalNPCDiversity, TNR Merge.esp'
-    msg:
-      - type: say
-        content: 'Use only one ''OptionalNPCDiversity'' file.'
-      - *doNotClean
-    tag:
+      - Invent
       - NoMerge
       - NpcFaces
   - name: 'bgBalancingEVOptionalBetterRedguards.esp'
@@ -21777,62 +21774,6 @@ plugins:
         content: 'Requires: Better Redguards installed with its ESP deactivated.'
       - type: say
         content: 'If at all possible *also* use the Wrye Bash tweak for mod compatibility for BR.'
-  - name: 'bgBalancingDVOptionalBetterRedguards.esp'
-    msg:
-      - type: say
-        content: 'Requires: Better Redguards installed with its ESP deactivated.'
-      - type: say
-        content: 'If at all possible *also* use the Wrye Bash tweak for mod compatibility for BR.'
-  - name: 'bgBalancingEVOptionalNPCDiversity, Vanilla Better Redguards.esp'
-    msg:
-      - type: say
-        content: 'Use only one ''OptionalNPCDiversity'' plugin.'
-      - type: say
-        content: 'If at all possible *also* use the Wrye Bash tweak for mod compatibility for BR.'
-    tag:
-      - Invent
-      - NoMerge
-      - NpcFaces
-  - name: 'bgBalancingEVOptionalNPCDiversity, Beautification Better Redguards.esp'
-    msg:
-      - type: say
-        content: 'Use only one ''OptionalNPCDiversity'' plugin.'
-      - type: say
-        content: 'If at all possible *also* use the Wrye Bash tweak for mod compatibility for BR.'
-    tag:
-      - Invent
-      - NoMerge
-      - NpcFaces
-  - name: 'bgBalancingEVOptionalNPCDiversity, for Wrye Bash Better Redguards.esp'
-    msg:
-      - type: say
-        content: 'Use only one ''OptionalNPCDiversity'' plugin.'
-      - type: say
-        content: 'If at all possible *also* use the Wrye Bash tweak for mod compatibility for BR.'
-    tag:
-      - Invent
-      - NoMerge
-      - NpcFaces
-  - name: 'bgBalancingEVOptionalNPCDiversity, TNR Merge Better Redguards.esp'
-    msg:
-      - type: say
-        content: 'Use only one ''OptionalNPCDiversity'' plugin.'
-      - type: say
-        content: 'If at all possible *also* use the Wrye Bash tweak for mod compatibility for BR.'
-    tag:
-      - Invent
-      - NoMerge
-      - NpcFaces
-  - name: 'bgBalancingDVOptionalNPCDiversity, TNR Merge Better Redguards.esp'
-    msg:
-      - type: say
-        content: 'Use only one ''OptionalNPCDiversity'' plugin.'
-      - type: say
-        content: 'If at all possible *also* use the Wrye Bash tweak for mod compatibility for BR.'
-    tag:
-      - Invent
-      - NoMerge
-      - NpcFaces
   - name: 'bgBalancingEVOptionalFCOMAdditions.esp'
     tag:
       - Actors.ACBS
