@@ -16544,8 +16544,9 @@ plugins:
         udr: 4
   - name: 'LoversVoice(Minus|AR)?\.esp'
     msg:
-      - type: say
-        content: 'Use only one Lovers Voice plugin.'
+      - <<: *useOnlyOneX
+        subs: [ 'Lovers Voice' ]
+        condition: 'many("LoversVoice(Minus|AR)?\.esp")'
   - name: 'LoversAdultPlay.esp'
     inc:
       - 'LoversSpringSale.esp'
