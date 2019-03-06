@@ -5410,8 +5410,9 @@ plugins:
       - Graphics
   - name: 'Oddbasket Glass Replace(RU)?( NoEnch)?( ALT)?\.esp'
     msg:
-      - type: say
-        content: 'Use only one version of Oddbasket Glass Replace esp.'
+      - <<: *useOnlyOneX
+        subs: [ 'Oddbasket Glass Replace' ]
+        condition: 'many("Oddbasket Glass Replace(RU)?( NoEnch)?( ALT)?\.esp")'
     tag:
       - Graphics
   - name: 'pale_rider''s Armor of Dragon''s Nightmare.esp'
