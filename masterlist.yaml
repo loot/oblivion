@@ -127,10 +127,6 @@ common:
   - &incompatibleWithWeatherMods
     type: say
     content: 'This mod is incompatible with weather mods.'
-  - &includedInOOO
-    type: error
-    content: 'Already included in Oscuro''s Oblivion Overhaul.'
-    condition: *OOOCond
   - &requiresX
     type: warn
     content:
@@ -162,18 +158,10 @@ common:
   - &useWithBashedPatch
     type: say
     content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
-  - &includedInFCOM
-    type: error
-    content: 'Delete. Already integrated into FCOM, MMM, OOO or other FCOM components.'
-    condition: 'file("Oscuro''s_Oblivion_Overhaul.esm") or file("FCOM_Convergence.esm")'
   - &useFransSeparateOptions
     type: error
     content: 'Should not be used. Delete. Reinstall Fran''s and select "Separate Files" when the option is presented.'
     condition: *FCOMCond
-  - &includedInOOOFull
-    type: say
-    content: 'Don''t use with the FULL version of OOO, already included.'
-    condition: *OOOCond
   - &useFCOMSpawnRates
     type: say
     content: 'Consider using ''FCOM_SpawnRatesReduced.esp'', ''FCOM_SpawnRatesSlightlyReduced.esp'' or ''FCOM_SpawnRatesStronger.esp'' instead.'
@@ -208,6 +196,19 @@ common:
         text: '削除してください。既に%1%に含まれています。'
       - lang: de
         text: 'Löschen. Bereits in %1% enthalten.'
+  - &alreadyInOOO
+    <<: *alreadyInX
+    subs: [ 'Oscuro''s Oblivion Overhaul' ]
+    condition: *OOOCond
+  - &alreadyInOOOFull
+    <<: *alreadyInX
+    type: say
+    subs: [ 'Oscuro''s Oblivion Overhaul FULL' ]
+    condition: *OOOCond
+  - &alreadyInFCOM
+    <<: *alreadyInX
+    subs: [ 'FCOM, MMM, OOO or other FCOM components' ]
+    condition: 'file("Oscuro''s_Oblivion_Overhaul.esm") or file("FCOM_Convergence.esm")'
 
   - &useOnlyOneX
     type: error
@@ -3693,7 +3694,7 @@ plugins:
     tag:
       - Scripts
   - name: 'Weed AND Beer inebriation 1.32.esp'
-    msg: [ *includedInOOO ]
+    msg: [ *alreadyInOOO ]
   - name: 'Willful Resistance.esp'
     msg:
       - type: say
@@ -5576,11 +5577,11 @@ plugins:
       - type: say
         content: 'If using FCOM it''s recommended that you use "Silverware Weapons - FCOM.esp" instead'
   - name: 'Sin''s Expanded Light Armor Kit [Chest].esp'
-    msg: [ *includedInOOO ]
+    msg: [ *alreadyInOOO ]
     tag:
       - Invent
   - name: 'Sin''s Expanded Light Armor Kit [NPC].esp'
-    msg: [ *includedInOOO ]
+    msg: [ *alreadyInOOO ]
   - name: 'SK_Berserk_v0.6.esp'
     dirty:
       - crc: 0xfc1d6b7f
@@ -6690,20 +6691,20 @@ plugins:
     inc:
       - 'FCOM_Convergence.esm'
   - name: 'Francesco''s Optional Dungeon Chest Loot.esp'
-    msg: [ *includedInFCOM ]
+    msg: [ *alreadyInFCOM ]
   - name: 'Francesco''s Optional Dungeon Chest Locks.esp'
-    msg: [ *includedInFCOM ]
+    msg: [ *alreadyInFCOM ]
   - name: 'Francesco''s Optional House Chest Loot.esp'
-    msg: [ *includedInFCOM ]
+    msg: [ *alreadyInFCOM ]
   - name: 'Francesco''s Optional New Adventurers.esp'
-    msg: [ *includedInFCOM ]
+    msg: [ *alreadyInFCOM ]
   - name: 'Francesco''s Optional Vendor Tweaks.esp'
     inc:
       - 'FCOM_Convergence.esm'
   - name: 'Francesco''s Optional Leveled Quests.esp'
-    msg: [ *includedInFCOM ]
+    msg: [ *alreadyInFCOM ]
   - name: 'Francesco''s Optional Leveled Arena.esp'
-    msg: [ *includedInFCOM ]
+    msg: [ *alreadyInFCOM ]
   - name: 'Francesco''s Optional Files.esp'
     msg: [ *useFransSeparateOptions ]
     tag:
@@ -6730,7 +6731,7 @@ plugins:
       - Delev
       - Relev
   - name: 'LuckBasedLootForFrans.esp'
-    msg: [ *includedInFCOM ]
+    msg: [ *alreadyInFCOM ]
   - name: 'Fran-Ayleid Coin Add-on.esp'
     inc:
       - 'Mart''s Monster Mod - Diverse Runeskulls Loot G&GD.esp'
@@ -6930,33 +6931,33 @@ plugins:
       - name: -Relations
         condition: 'file("Mart''s Monster Mod for OOO.esm") or file("FCOM_Convergence.esm")'
   - name: 'OOO-Armor_Perks_WearRate_Repair.esp'
-    msg: [ *includedInOOOFull ]
+    msg: [ *alreadyInOOOFull ]
   - name: 'OOO-Birthsigns.esp'
-    msg: [ *includedInOOOFull ]
+    msg: [ *alreadyInOOOFull ]
   - name: 'OOO-Combat_Skills_Perks_Marksmanship.esp'
-    msg: [ *includedInOOOFull ]
+    msg: [ *alreadyInOOOFull ]
   - name: 'OOO-DaedricLord_Quests.esp'
-    msg: [ *includedInOOOFull ]
+    msg: [ *alreadyInOOOFull ]
   - name: 'OOO-DaedraLord_Quests.esp'
-    msg: [ *includedInOOOFull ]
+    msg: [ *alreadyInOOOFull ]
   - name: 'OOO-Dangerous_traps.esp'
-    msg: [ *includedInOOOFull ]
+    msg: [ *alreadyInOOOFull ]
   - name: 'OOO-Deadly_Combat.esp'
-    msg: [ *includedInOOOFull ]
+    msg: [ *alreadyInOOOFull ]
   - name: 'OOO-DLT_Immersion.esp'
-    msg: [ *includedInOOOFull ]
+    msg: [ *alreadyInOOOFull ]
   - name: 'OOO-Magic_Effects+Enchantments.esp'
-    msg: [ *includedInOOOFull ]
+    msg: [ *alreadyInOOOFull ]
   - name: 'OOO-Magic_Effects+Spells.esp'
-    msg: [ *includedInOOOFull ]
+    msg: [ *alreadyInOOOFull ]
   - name: 'OOO-Magic_Game_Settings.esp'
-    msg: [ *includedInOOOFull ]
+    msg: [ *alreadyInOOOFull ]
   - name: 'OOO-Potions.esp'
-    msg: [ *includedInOOOFull ]
+    msg: [ *alreadyInOOOFull ]
   - name: 'OOO-Thief_Guild_Difficult.esp'
-    msg: [ *includedInOOOFull ]
+    msg: [ *alreadyInOOOFull ]
   - name: 'OOO-ThiefGuild_Difficult.esp'
-    msg: [ *includedInOOOFull ]
+    msg: [ *alreadyInOOOFull ]
   - name: 'OOO-Ayleid Coin Add-on.esp'
     msg: [ *obsolete ]
   - name: 'OOO132RC3Hotfixes.esp'
@@ -6973,7 +6974,7 @@ plugins:
     tag: [ Stats ]
   - name: 'MrSiikaRabbitsforOOO.esp'
     msg:
-      - <<: *includedInFCOM
+      - <<: *alreadyInFCOM
         condition: 'file("Mart''s Monster Mod for OOO.esp") or file("FCOM_Convergence.esm")'
   - name: 'OMOBS_OOO_missing_Oblivion_Bow_Ammo.esp'
     tag:
@@ -7229,7 +7230,7 @@ plugins:
       - Delev
       - Relev
   - name: 'John''s Leveled List Overhaul - Bandits in Glass Begone.esp'
-    msg: [ *includedInFCOM ]
+    msg: [ *alreadyInFCOM ]
   - name: 'OOO 1.32-Cobl.esp'
     tag:
       - Delev
@@ -7249,21 +7250,21 @@ plugins:
       - Delev
       - Relev
   - name: 'Harvest[Containers].esp'
-    msg: [ *includedInOOO ]
+    msg: [ *alreadyInOOO ]
   - name: 'Harvest[Containers] - Vanilla.esp'
-    msg: [ *includedInOOO ]
+    msg: [ *alreadyInOOO ]
     dirty:
       - crc: 0xd7e2759e
         <<: *dirtyPlugin
         itm: 19
   - name: 'Harvest[Containers] - Player Home Add-on.esp'
-    msg: [ *includedInOOO ]
+    msg: [ *alreadyInOOO ]
   - name: 'DEJ Harvest - Containers [Combo] v0.99.08.esp'
     msg: [ *obsolete ]
   - name: 'Harvest[Containers] - Flat-Top Barrels Add-on.esp'
-    msg: [ *includedInOOO ]
+    msg: [ *alreadyInOOO ]
   - name: 'Harvest[Containers] - Havok Crates Add-on.esp'
-    msg: [ *includedInOOO ]
+    msg: [ *alreadyInOOO ]
   - name: 'Hemingweys NPC Capes for OOO and FCOM.esp'
     msg:
       - type: say
@@ -7304,7 +7305,7 @@ plugins:
         condition: *FCOMCond
   - name: 'Mart''s Monster Mod - Fran''s Leveled Quests.esp'
     msg:
-      - *includedInFCOM
+      - *alreadyInFCOM
       - type: say
         content: 'Requires: a Fran''s install with the Leveled Quests option.'
   - name: 'Mart''s Monster Mod - Additional Enemy NPC Vars.esp'
@@ -7504,7 +7505,7 @@ plugins:
       - type: error
         content: 'Delete. Use ''Mart''s Monster Mod - Less Reavers.esp''.'
   - name: 'Gems and Gem Dusts - MMM.esp'
-    msg: [ *includedInOOOFull ]
+    msg: [ *alreadyInOOOFull ]
   - name: 'Mart''s Monster Mod - Hunting & Crafting.esp'
     msg: [ *doNotClean ]
     tag:
@@ -7523,7 +7524,7 @@ plugins:
     tag:
       - Invent
   - name: 'Mart''s Monster Mod.esp'
-    msg: [ *includedInFCOM ]
+    msg: [ *alreadyInFCOM ]
     tag:
       - Actors.AIData
       - Actors.AIPackages
@@ -7637,20 +7638,20 @@ plugins:
   - name: 'Mart''s Monster Mod - Blood Fix v3.esp'
     msg: [ *obsolete ]
   - name: 'Mart''s Monster Mod - Diverse Imperial Armor.esp'
-    msg: [ *includedInOOO ]
+    msg: [ *alreadyInOOO ]
   - name: 'Mart''s Monster Mod - Diverse Creature Skins.esp'
     msg:
-      - *includedInOOO
+      - *alreadyInOOO
       - *obsolete
   - name: 'Mart''s Monster Mod - More Reaver Variants.esp'
     msg: [ *obsolete ]
   - name: 'Mart''s Monster Mod - Gems & Gem Dust.esp'
     msg:
-      - *includedInOOOFull
+      - *alreadyInOOOFull
       - *doNotClean
   - name: 'Mart''s Monster Mod - Durability & Damage.esp'
     msg:
-      - *includedInOOO
+      - *alreadyInOOO
       - type: error
         content: 'Delete and use ''FCOM_DurabilityAndDamage.esp''.'
         condition: *FCOMCond
@@ -16009,13 +16010,13 @@ plugins:
     tag:
       - Invent
   - name: 'First Person Messages.esp'
-    msg: [ *includedInOOO ]
+    msg: [ *alreadyInOOO ]
     dirty:
       - crc: 0xe97c0b93
         <<: *dirtyPlugin
         itm: 3
   - name: '2nd to 1st person.esp'
-    msg: [ *includedInOOO ]
+    msg: [ *alreadyInOOO ]
   - name: 'FrbitPotionReplacer.esp'
     tag:
       - Graphics
