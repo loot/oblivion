@@ -18593,38 +18593,11 @@ plugins:
       - Eyes
       - Hair
       - NpcFaces
-  - name: 'Cosmetic Compilation XXL DV.esp'
+  - name: 'Cosmetic Compilation (XXL DV|- No (JPeepers|NPC Changes|JPeepers or NPC Changes))?.*\.esp'
     msg:
-      - type: say
-        content: 'Use only one ''Cosmetic Compilation*.esp'''
-        condition: 'file("Cosmetic Compilation - No (JPeepers|NPC Changes|JPeepers or NPC Changes)\.esp")'
-    tag:
-      - Eyes
-      - Hair
-      - NpcFaces
-  - name: 'Cosmetic Compilation - No NPC Changes.esp'
-    msg:
-      - type: say
-        content: 'Use only one ''Cosmetic Compilation*.esp'''
-        condition: 'file("Cosmetic Compilation (XXL DV|- No (JPeepers|JPeepers or NPC Changes))\.esp")'
-    tag:
-      - Eyes
-      - Hair
-      - NpcFaces
-  - name: 'Cosmetic Compilation - No JPeepers.esp'
-    msg:
-      - type: say
-        content: 'Use only one ''Cosmetic Compilation*.esp'''
-        condition: 'file("Cosmetic Compilation (XXL DV|- No (NPC Changes|JPeepers or NPC Changes))\.esp")'
-    tag:
-      - Eyes
-      - Hair
-      - NpcFaces
-  - name: 'Cosmetic Compilation - No JPeepers or NPC Changes.esp'
-    msg:
-      - type: say
-        content: 'Use only one ''Cosmetic Compilation*.esp'''
-        condition: 'file("Cosmetic Compilation (XXL DV|- No (JPeepers|NPC Changes))\.esp")'
+      - <<: *useOnlyOneX
+        subs: [ 'Cosmetic Compilation' ]
+        condition: 'many("Cosmetic Compilation (XXL DV|- No (JPeepers|NPC Changes|JPeepers or NPC Changes))?.*\.esp")'
     tag:
       - Eyes
       - Hair
