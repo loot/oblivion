@@ -22448,15 +22448,16 @@ plugins:
   - name: 'CSV_Farms_Open_Cities.esp'
     msg:
       - type: say
-        content: 'Use only one CSV Farms * Cities esp.'
-      - type: say
         content: 'Requires: Open Cities.'
   - name: 'CSV_Farms_Open_Better_Cities.esp'
     msg:
       - type: say
-        content: 'Use only one CSV Farms * Cities esp.'
-      - type: say
         content: 'Requires: Open Better Cities.'
+  - name: 'CSV_Farms_Open(_Better)?_Cities\.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Castle Sea View Farms' ]
+        condition: 'many("CSV_Farms_Open(_Better)?_Cities\.esp")'
   - name: 'ROM Patch - Better Cities.esp'
     tag:
       - Stats
