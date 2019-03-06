@@ -17258,15 +17258,12 @@ plugins:
     inc:
       - 'Rathunas01.esp'
   - name: 'Midas PowDur(1\.5|2|3|4)x\.esp'
-    msg:
-      - type: say
-        content: 'Use only one PowDur modifier at a time.'
     after:
       - 'midasspells.esp'
-  - name: 'Midas Eldrich Power (2|2\.5|3|4|5|6)x\.esp'
     msg:
-      - type: say
-        content: 'Use only one Eldrich Power modifier at a time.'
+      - <<: *useOnlyOneX
+        subs: [ 'Midas PowDur modifier' ]
+        condition: 'many("Midas PowDur(1\.5|2|3|4)x\.esp")'
     after:
       - 'Midas PowDur1.5x.esp'
       - 'Midas PowDur2x.esp'
