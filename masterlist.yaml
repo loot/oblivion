@@ -2696,9 +2696,9 @@ plugins:
     after:
       - 'Finishing Touches -Bravil-.esp'
     msg:
-      - type: warn
-        content: 'Use only one IlluminationWithin or IlluminationWithout esp.'
-        condition: '( file("IlluminationWithin.*\.esp") ) and file("IlluminationWithout.*\.esp")'
+      - <<: *useOnlyOneX
+        subs: [ 'Illumination' ]
+        condition: 'many("Illumination(Within|Without)( Rus)?\.esp")'
     url: [ 'http://www.nexusmods.com/oblivion/mods/3700' ]
   - name: 'FT-Bravil-IW.esp'
     after:
