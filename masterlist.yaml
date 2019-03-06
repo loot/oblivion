@@ -18351,17 +18351,11 @@ plugins:
       - type: error
         content: 'Requires Bashed Patch.'
         condition: 'not file("Bashed Patch.*\.esp")'
-  - name: 'Item interchange - Option, Ingredients in Bulk.esp'
+  - name: 'Item interchange - Option, Ingredients in Bulk(, reduced)?.*\.esp'
     msg:
-      - type: say
-        content: 'Use only one "Ingredients in Bulk" plugin.'
-      - type: error
-        content: 'Requires Bashed Patch.'
-        condition: 'not file("Bashed Patch.*\.esp")'
-  - name: 'Item interchange - Option, Ingredients in Bulk, reduced.esp'
-    msg:
-      - type: say
-        content: 'Use only one "Ingredients in Bulk" plugin.'
+      - <<: *useOnlyOneX
+        subs: [ 'Ingredients in Bulk' ]
+        condition: 'many("Item interchange - Option, Ingredients in Bulk(, reduced)?.*\.esp")'
       - type: error
         content: 'Requires Bashed Patch.'
         condition: 'not file("Bashed Patch.*\.esp")'
