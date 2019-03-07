@@ -11694,9 +11694,8 @@ plugins:
       - Eyes
       - Hair
   - name: 'Spirit''s Edge.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: Ayleid Wells'
+    inc:
+      - 'Ayleid Wells.esp'
     dirty:
       - crc: 0x3987c0d6
         <<: *dirtyPlugin
