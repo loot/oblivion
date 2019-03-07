@@ -9373,11 +9373,10 @@ plugins:
         <<: *dirtyPlugin
         udr: 14
   - name: 'Auriel''s Books.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with Better Cities IC Market District.'
-        condition: 'file("Better Cities Resources.esm")'
-      - *needsCleaning
+    inc:
+      - 'Better Imperial City.esp'
+      - 'Better Cities IC Market.esp'
+    msg: [ *needsCleaning ]
   - name: 'Auriel''s_Retreat.esp'
     dirty:
       - crc: 0xcb6ef46d
