@@ -11092,6 +11092,12 @@ plugins:
       - 'Better Cities BRAVIL.esp'
       - 'Better Cities Full.esp'
     msg:
+      - <<: *alreadyInX
+        subs: [ 'Better Cities - Bravil' ]
+        condition: 'active("Better Cities BRAVIL.esp")'
+      - <<: *alreadyInX
+        subs: [ 'Better Cities - Full' ]
+        condition: 'active("Better Cities Full.esp")'
       - type: say
         content: 'Needs compatibility patch when used with Unique Landscapes Bravil Barrowfields.'
       - type: say
