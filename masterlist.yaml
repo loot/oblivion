@@ -17463,9 +17463,8 @@ plugins:
     msg:
       - type: say
         content: 'Incompatible with: other thievery-detection mods.'
-      - type: say
-        content: 'Requires: OOO.'
-        condition: 'not file("Oscuro''s_Oblivion_Overhaul.esm")'
+    req:
+      - 'Oscuro''s_Oblivion_Overhaul.esm'
   - name: 'CoblDeathFix.esp'
     tag:
       - Scripts
