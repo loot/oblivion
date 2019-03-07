@@ -22155,22 +22155,16 @@ plugins:
       - type: say
         content: 'Only use if using Better Imperial City.esp'
         condition: 'not file("Better Imperial City.esp")'
-  - name: 'Better Cities - OMG.esp'
+  - name: 'Better Cities - OMG( Patch)?.*\.esp'
     msg:
-      - type: say
-        content: 'Use only one Better *version* - OMG Patch.esp'
-  - name: 'Better Cities - OMG Patch.esp'
+      - <<: *useOnlyOneX
+        subs: [ 'Better Cities & OMG Patch' ]
+        condition: 'many("Better Cities - OMG( Patch)?.*\.esp")'
+  - name: 'Better Imperial City - OMG( Patch)?.*\.esp'
     msg:
-      - type: say
-        content: 'Use only one Better *version* - OMG Patch.esp'
-  - name: 'Better Imperial City - OMG Patch.esp'
-    msg:
-      - type: say
-        content: 'Use only one Better *version* - OMG Patch.esp'
-  - name: 'Better Imperial City - OMG.esp'
-    msg:
-      - type: say
-        content: 'Use only one Better *version* - OMG Patch.esp'
+      - <<: *useOnlyOneX
+        subs: [ 'Better Imperial City & OMG Patch' ]
+        condition: 'many("Better Imperial City - OMG( Patch)?.*\.esp")'
   - name: 'Better Cities - Stranded Light.esp'
     msg: [ *obsolete ]
   - name: 'Better Cities - COBL.esp'
