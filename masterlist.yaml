@@ -22477,18 +22477,16 @@ plugins:
   - name: 'HTSCl_wac.esp'
     inc:
       - 'HTSCl_wac_ItemLootFix.esp'
-    msg:
-      - type: say
-        content: 'Requires: Waalx Animals and Creatures'
+    req:
+      - 'Waalx Animals & Creatures.esm'
     tag:
       - Graphics
       - Invent
   - name: 'HTSCl_wac_ItemLootFix.esp'
     inc:
       - 'HTSCl_wac.esp'
-    msg:
-      - type: say
-        content: 'Requires: Waalx Animals and Creatures - ItemLootFix plugin.'
+    req:
+      - 'WAC - ItemLootFix4v1.0b.esp'
     tag:
       - Graphics
       - Invent
