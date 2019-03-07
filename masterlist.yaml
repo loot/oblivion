@@ -219,6 +219,14 @@ common:
     subs: [ 'This plugin should not be used. Reinstall Fran''s and select "Separate Files" when the option is presented.' ]
     condition: *FCOMCond
 
+  - &patch3rdParty
+    type: warn
+    content:
+      - lang: en
+        text: 'You seem to be using %1%, but you have not enabled a compatibility patch for this mod. A third party patch is available here: %2%'
+      - lang: de
+        text: 'Sie scheinen %1% zu nutzen, aber sie haben keinen Kompatibilitätspatch für diesen Mod aktiviert. Ein Patch von Dritten ist hier verfügbar: %2%'
+
   - &useOnlyOneX
     type: say
     content:
@@ -11103,6 +11111,22 @@ plugins:
       - name: 'The Lost Spires.esp'
         display: 'The Lost Spires'
         condition: 'not file("MTCVillages-LostSpiresPatch.esp")'
+    msg:
+      - <<: *patch3rdParty
+        subs:
+          - 'Faregyl Village'
+          - '[MTC Expanded Villages - Faregyl Patch](https://www.nexusmods.com/oblivion/mods/42123)'
+        condition: 'active("Faregyl.esp") and not file("MTCVillages-FaregylPatch.esp")'
+      - <<: *patch3rdParty
+        subs:
+          - 'The Lost Spires'
+          - '[MTC Expanded Villages - Lost Spires Patch](http://www.nexusmods.com/oblivion/mods/42430)'
+        condition: 'active("The Lost Spires.esp") and not file("MTCVillages-LostSpiresPatch.esp")'
+      - <<: *patch3rdParty
+        subs:
+          - 'Ruined Tail''s Tale'
+          - '[MTC Expanded Villages - Weye Patch](https://www.nexusmods.com/oblivion/mods/42170) or [Arthmoors Mod Patches](http://www.nexusmods.com/oblivion/mods/34010)'
+        condition: 'active("RTT.esp") and not file("RTT-Weye Relocation Patch.esp") and not file("MTC-WeyePatch.esp")'
     dirty:
       - crc: 0x795046ef
         <<: *dirtyPlugin
