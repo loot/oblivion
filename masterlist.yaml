@@ -10615,18 +10615,17 @@ plugins:
       - <<: *alreadyInX
         subs: [ 'Better Cities IC Green Emperor Way District' ]
         condition: 'active("Better Cities IC Green Emperor Way.esp")'
-  - name: 'JADImperialApartments01Temple.esp'
+  - name: 'JADImperialApartments(01|02|03)Temple\.esp'
+    inc:
+      - 'Better Imperial City.esp'
+      - 'Better Cities IC Temple.esp'
     msg:
-      - type: say
-        content: 'Incompatible with: Better Cities Temple District. Already included as part of Better Cities.'
-  - name: 'JADImperialApartments02Temple.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: Better Cities Temple District. Already included as part of Better Cities.'
-  - name: 'JADImperialApartments03Temple.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: Better Cities Temple District. Already included as part of Better Cities.'
+      - <<: *alreadyInX
+        subs: [ 'Better Cities Imperial City' ]
+        condition: 'active("Better Imperial City.esp")'
+      - <<: *alreadyInX
+        subs: [ 'Better Cities Imperial City Temple District' ]
+        condition: 'active("Better Cities IC Temple.esp")'
   - name: 'Jagnot- Imperial City Library V1.3.esp'
     msg:
       - type: say
