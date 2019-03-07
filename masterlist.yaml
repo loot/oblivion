@@ -22035,21 +22035,11 @@ plugins:
         content: 'Incompatible with: Ruined Tail''s Tale v2.5.'
       - type: say
         content: 'Requires: Ruined Tail''s Tale v3+.'
-  - name: 'Better Cities - CUO Chorrol Patch.esp'
+  - name: 'Better Cities( Full)?( B&M)? - CUO Chorrol Patch\.esp'
     msg:
-      - type: say
-        content: 'Use only one Better Cities *version* - CUO Chorrol Patch.esp'
-        condition: 'file("Better Cities Full( B&M)? - CUO Chorrol Patch\.esp")'
-  - name: 'Better Cities Full - CUO Chorrol Patch.esp'
-    msg:
-      - type: say
-        content: 'Use only one Better Cities *version* - CUO Chorrol Patch.esp'
-        condition: 'file("Better Cities( Full B&M)? - CUO Chorrol Patch\.esp")'
-  - name: 'Better Cities Full B&M - CUO Chorrol Patch.esp'
-    msg:
-      - type: say
-        content: 'Use only one Better Cities *version* - CUO Chorrol Patch.esp'
-        condition: 'file("Better Cities( Full)? - CUO Chorrol Patch\.esp")'
+      - <<: *useOnlyOneX
+        subs: [ 'Better Cities *version* - CUO Chorrol Patch' ]
+        condition: 'many("Better Cities( Full)?( B&M)? - CUO Chorrol Patch\.esp")'
   - name: 'BCChorrol-ChorrolHinterland fix.esp'
     msg:
       - type: say
