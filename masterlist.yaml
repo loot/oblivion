@@ -220,7 +220,7 @@ common:
     condition: *FCOMCond
 
   - &useOnlyOneX
-    type: error
+    type: say
     content:
       - lang: en
         text: 'Use only one %1%.'
@@ -238,6 +238,9 @@ common:
         text: 'Slet. Allerede inkluderet i %1%.'
       - lang: de
         text: 'Nutzen Sie nur einen %1%.'
+  - &useOnlyOneRoadRecordFile
+    <<: *useOnlyOneX
+    subs: [ 'road record file' ]
 
 # Dirty Plugin Messages
   - &dirtyPlugin
@@ -2692,9 +2695,9 @@ plugins:
     after:
       - 'Finishing Touches -Bravil-.esp'
     msg:
-      - type: warn
-        content: 'Use only one IlluminationWithin or IlluminationWithout esp.'
-        condition: '( file("IlluminationWithin.*\.esp") ) and file("IlluminationWithout.*\.esp")'
+      - <<: *useOnlyOneX
+        subs: [ 'Illumination' ]
+        condition: 'many("Illumination(Within|Without)( Rus)?\.esp")'
     url: [ 'http://www.nexusmods.com/oblivion/mods/3700' ]
   - name: 'FT-Bravil-IW.esp'
     after:
@@ -3305,8 +3308,9 @@ plugins:
       - *obsolete
   - name: 'Mud Crabs!(_(coMbO|MMM|OOO))?\.esp'
     msg:
-      - type: say
-        content: 'Use only one Mud Crabs! file'
+      - <<: *useOnlyOneX
+        subs: [ 'Mud Crabs!' ]
+        condition: 'many("Mud Crabs!(_(coMbO|MMM|OOO))?\.esp")'
   - name: 'Mud Crabs!_coMbO.esp'
     dirty:
       - crc: 0xc4750e07
@@ -5405,8 +5409,9 @@ plugins:
       - Graphics
   - name: 'Oddbasket Glass Replace(RU)?( NoEnch)?( ALT)?\.esp'
     msg:
-      - type: say
-        content: 'Use only one version of Oddbasket Glass Replace esp.'
+      - <<: *useOnlyOneX
+        subs: [ 'Oddbasket Glass Replace' ]
+        condition: 'many("Oddbasket Glass Replace(RU)?( NoEnch)?( ALT)?\.esp")'
     tag:
       - Graphics
   - name: 'pale_rider''s Armor of Dragon''s Nightmare.esp'
@@ -8401,8 +8406,9 @@ plugins:
       - NoMerge
   - name: 'WAC - ItemLootFix4v1\.0b(Fran|OOO|MMM|MMMorFCOM|OWCND|VNT)?\.esp'
     msg:
-      - type: say
-        content: 'Use only one WAC - ItemLootFix plugin.'
+      - <<: *useOnlyOneX
+        subs: [ 'WAC - ItemLootFix' ]
+        condition: 'many("WAC - ItemLootFix4v1\.0b(Fran|OOO|MMM|MMMorFCOM|OWCND|VNT)?\.esp")'
     tag:
       - Actors.AIData
       - Actors.Stats
@@ -9162,23 +9168,20 @@ plugins:
         <<: *dirtyPlugin
         itm: 43
   - name: 'allinonebasement.esp'
-    msg:
-      - type: say
-        content: 'Use only one allinonebasement plugin.'
-        condition: 'file("allinonebasement_COBLnoCM.esp")'
     dirty:
       - crc: 0xc5f94af4
         <<: *dirtyPlugin
         itm: 2
   - name: 'allinonebasement_COBLnoCM.esp'
-    msg:
-      - type: say
-        content: 'Use only one allinonebasement plugin.'
-        condition: 'file("allinonebasement.esp")'
     dirty:
       - crc: 0xa7c0e846
         <<: *dirtyPlugin
         itm: 2
+  - name: 'allinonebasement(_COBLnoCM)?\.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'All In One Basement' ]
+        condition: 'many("allinonebasement(_COBLnoCM)?\.esp")'
   - name: 'AyleidQuest.esp'
     dirty:
       - crc: 0x37f7310
@@ -9242,26 +9245,11 @@ plugins:
         <<: *dirtyPlugin
         itm: 6
         udr: 42
-  - name: 'Anvil_MorningGloryBetterCities_Blue.esp'
+  - name: 'Anvil_MorningGloryBetterCities_(Blue|Orange|Purple|Mixed)\.esp'
     msg:
-      - type: say
-        content: 'Use only one Anvil_MorningGlory mod module.'
-        condition: 'file("Anvil_MorningGloryBetterCities_(Orange|Purple|Mixed)\.esp")'
-  - name: 'Anvil_MorningGloryBetterCities_Orange.esp'
-    msg:
-      - type: say
-        content: 'Use only one Anvil_MorningGlory mod module.'
-        condition: 'file("Anvil_MorningGloryBetterCities_(Blue|Purple|Mixed)\.esp")'
-  - name: 'Anvil_MorningGloryBetterCities_Purple.esp'
-    msg:
-      - type: say
-        content: 'Use only one Anvil_MorningGlory mod module.'
-        condition: 'file("Anvil_MorningGloryBetterCities_(Blue|Orange|Mixed)\.esp")'
-  - name: 'Anvil_MorningGloryBetterCities_Mixed.esp'
-    msg:
-      - type: say
-        content: 'Use only one Anvil_MorningGlory mod module.'
-        condition: 'file("Anvil_MorningGloryBetterCities_(Blue|Orange|Purple)\.esp")'
+      - <<: *useOnlyOneX
+        subs: [ 'Anvil Morning Glory Better Cities' ]
+        condition: 'many("Anvil_MorningGloryBetterCities_(Blue|Orange|Purple|Mixed)\.esp")'
   - name: 'Aqua_City_01.esp'
     req:
       - 'DLCShiveringIsles.esp'
@@ -11586,8 +11574,9 @@ plugins:
     msg: [ *obsolete ]
   - name: 'SenTineL''s Legendary Weapons And Armors_[AC][EU]\.esp'
     msg:
-      - type: say
-        content: 'Use only one SenTineL''s Legendary Weapons And Armors_XX.esp'
+      - <<: *useOnlyOneX
+        subs: [ 'SenTineL''s Legendary Weapons And Armors' ]
+        condition: 'many("SenTineL''s Legendary Weapons And Armors_[AC][EU]\.esp")'
   - name: 'ShadowRose Manor.esp'
     dirty:
       - crc: 0xa7eb4436
@@ -14535,11 +14524,16 @@ plugins:
         <<: *dirtyPlugin
         itm: 1
         udr: 4572
-  - name: 'Verwen Brewery UL Ancient Yews Compatable.esp'
+  - name: 'Verwen Brewery (UL_AY_AC|UL Ancient Yews) Compatable\.esp'
     msg:
-      - type: say
-        content: 'Use only one Verwen Brewery esp. Unique Landscapes Ancient Yews.'
-        condition: 'file("Verwen Brewery UL_AY_AC Compatable.esp")'
+      - <<: *useOnlyOneX
+        subs: [ 'Verwen Brewery Unique Landscapes Ancient Yews/Arrius Creek patch' ]
+        condition: 'many("Verwen Brewery (UL_AY_AC|UL Ancient Yews) Compatable\.esp")'
+  - name: 'Verwen Brewery UL_AY_AC Compatable.esp'
+    dirty:
+      - crc: 0xe45679c7
+        <<: *dirtyPlugin
+        udr: 1
   - name: 'xulAncientYews 20x8 fix.esp'
     msg:
       - type: say
@@ -14571,15 +14565,6 @@ plugins:
         <<: *dirtyPlugin
         itm: 3
         udr: 37
-  - name: 'Verwen Brewery UL_AY_AC Compatable.esp'
-    msg:
-      - type: say
-        content: 'Use only one Verwen Brewery esp. the Unique Landscapes Ancient Yews/Arrius Creek patch.'
-        condition: 'file("Verwen Brewery UL Ancient Yews Compatable.esp")'
-    dirty:
-      - crc: 0xe45679c7
-        <<: *dirtyPlugin
-        udr: 1
   - name: 'HeartoftheDead-ArriusCreek patch.esp'
     dirty:
       - crc: 0xea1f2756
@@ -14888,8 +14873,7 @@ plugins:
   - name: 'CSV_Farms_Road_Vanilla.esp'
     msg:
       - *obsolete
-      - type: say
-        content: 'Use only one road record file.'
+      - *useOnlyOneRoadRecordFile
     tag:
       - Deactivate
       - Roads
@@ -15078,21 +15062,11 @@ plugins:
       - crc: 0x508e738b
         <<: *dirtyPlugin
         itm: 12
-  - name: 'PersonalPackGuars White.esp'
+  - name: 'PersonalPackGuars (White|Black|Striped)\.esp'
     msg:
-      - type: say
-        content: 'Use only one PPG colour esp'
-        condition: 'file("PersonalPackGuars (Black|Striped)\.esp")'
-  - name: 'PersonalPackGuars Black.esp'
-    msg:
-      - type: say
-        content: 'Use only one PPG colour esp'
-        condition: 'file("PersonalPackGuars (White|Striped)\.esp")'
-  - name: 'PersonalPackGuars Striped.esp'
-    msg:
-      - type: say
-        content: 'Use only one PPG colour esp'
-        condition: 'file("PersonalPackGuars (White|Black)\.esp")'
+      - <<: *useOnlyOneX
+        subs: [ 'PersonalPackGuars colour' ]
+        condition: 'many("PersonalPackGuars (White|Black|Striped)\.esp")'
   - name: 'Duke Patricks Sickness Alarm.esp'
     tag:
       - Sound
@@ -15369,21 +15343,11 @@ plugins:
     msg:
       - type: say
         content: 'Not compatible with Open Cities Reborn.'
-  - name: 'DBOO - OpenCitiesFull.esp'
+  - name: 'DBOO - Open(Cities| Cities)(Full| Outer Districts|Full + Outer Districts)\.esp'
     msg:
-      - type: say
-        content: 'Use only one ''DBOO - OpenCitiesFull.esp'' or ''DBOO - Open Cities Outer Districts.esp'' or ''DBOO - OpenCitiesFull + Outer Districts.esp'''
-        condition: 'file("DBOO - Open Cities Outer Districts.esp") or file("DBOO - OpenCitiesFull + Outer Districts.esp")'
-  - name: 'DBOO - Open Cities Outer Districts.esp'
-    msg:
-      - type: say
-        content: 'Use only one ''DBOO - OpenCitiesFull.esp'' or ''DBOO - Open Cities Outer Districts.esp'' or ''DBOO - OpenCitiesFull + Outer Districts.esp'''
-        condition: 'file("DBOO - OpenCitiesFull.esp") or file("DBOO - OpenCitiesFull + Outer Districts.esp")'
-  - name: 'DBOO - OpenCitiesFull + Outer Districts.esp'
-    msg:
-      - type: say
-        content: 'Use only one ''DBOO - OpenCitiesFull.esp'' or ''DBOO - Open Cities Outer Districts.esp'' or ''DBOO - OpenCitiesFull + Outer Districts.esp'''
-        condition: 'file("DBOO - OpenCitiesFull.esp") or file("DBOO - Open Cities Outer Districts.esp")'
+      - <<: *useOnlyOneX
+        subs: [ 'DBs Oblivion Overhaul - OpenCities Full, Outer Districts or Full + Outer Districts' ]
+        condition: 'many("DBOO - Open(Cities| Cities)(Full| Outer Districts|Full + Outer Districts)\.esp")'
   - name: 'Sounds of Cyrodiil - OC Reborn Patch.esp'
     dirty:
       - crc: 0x408c9e1f
@@ -15552,16 +15516,11 @@ plugins:
       - type: say
         content: 'May not work with Living Economy as LE scripts tend to overwrite pricing mods.'
         condition: 'file("Living Economy.*\.esp")'
-  - name: '354_Improved_Marobel_horse_immortal.esp'
+  - name: '(354|355)_Improved_(Maborel|Marobel)_horse(immortal)?\.esp'
     msg:
-      - type: say
-        content: 'Use only one of the Improved Marobels Horse plugins.'
-        condition: 'file("355_Improved_Maborel_horse.esp")'
-  - name: '355_Improved_Maborel_horse.esp'
-    msg:
-      - type: say
-        content: 'Use only one of the Improved Marobels Horse plugins.'
-        condition: 'file("354_Improved_Marobel_horse_immortal.esp")'
+      - <<: *useOnlyOneX
+        subs: [ 'Improved Marobels Horse' ]
+        condition: 'many("(354|355)_Improved_(Maborel|Marobel)_horse(immortal)?\.esp")'
   - name: 'AC''s realistic priced clutter.esp'
     msg:
       - type: say
@@ -16584,8 +16543,9 @@ plugins:
         udr: 4
   - name: 'LoversVoice(Minus|AR)?\.esp'
     msg:
-      - type: say
-        content: 'Use only one Lovers Voice plugin.'
+      - <<: *useOnlyOneX
+        subs: [ 'Lovers Voice' ]
+        condition: 'many("LoversVoice(Minus|AR)?\.esp")'
   - name: 'LoversAdultPlay.esp'
     inc:
       - 'LoversSpringSale.esp'
@@ -16715,26 +16675,11 @@ plugins:
     msg:
       - type: say
         content: 'obselete get Oblivion Sexualized Monsters.esm and OSM-All Genders.esp instead.'
-  - name: 'Enhanced Vegetation [100%].esp'
+  - name: 'Enhanced Vegetation \[1[0125]...\.esp'
     msg:
-      - type: say
-        content: 'Use only one Enhanced Vegetation plugin.'
-        condition: 'file("Enhanced Vegetation \[1[125]...\.esp")'
-  - name: 'Enhanced Vegetation [110%].esp'
-    msg:
-      - type: say
-        content: 'Use only one Enhanced Vegetation plugin.'
-        condition: 'file("Enhanced Vegetation \[1[025]...\.esp")'
-  - name: 'Enhanced Vegetation [125%].esp'
-    msg:
-      - type: say
-        content: 'Use only one Enhanced Vegetation plugin.'
-        condition: 'file("Enhanced Vegetation \[1[015]...\.esp")'
-  - name: 'Enhanced Vegetation [150%].esp'
-    msg:
-      - type: say
-        content: 'Use only one Enhanced Vegetation plugin.'
-        condition: 'file("Enhanced Vegetation \[1[012]...\.esp")'
+      - <<: *useOnlyOneX
+        subs: [ 'Enhanced Vegetation' ]
+        condition: 'many("Enhanced Vegetation \[1[0125]...\.esp")'
   - name: 'Side''s Backpacks.esp'
     tag:
       - Invent
@@ -17055,91 +17000,11 @@ plugins:
     req: [ *OBSE ]
   - name: 'Duke Patricks Hydration and Water Harvesting.esp'
     msg: [ *obsolete ]
-  - name: 'MHE v2 Tail.esp'
+  - name: 'MHE v(2|2 Tail|2 - UFF&Robert Tail|2 - UFF&Robert|2 - Exnem&Robert Tail|2 - Exnem&Robert)\.esp'
     msg:
-      - type: say
-        content: 'Use only one MHE v2 esp'
-        condition: 'file("MHE v(2|2 - UFF&Robert Tail|2 - UFF&Robert|2 - Exnem&Robert Tail|2 - Exnem&Robert)\.esp")'
-    tag:
-      - Actors.ACBS
-      - Actors.Stats
-      - Eyes
-      - Graphics
-      - Hair
-      - NPC.Race
-      - NpcFaces
-      - R.Ears
-      - R.Relations
-      - R.Teeth
-  - name: 'MHE v2.esp'
-    msg:
-      - type: say
-        content: 'Use only one MHE v2 esp'
-        condition: 'file("MHE v(2 Tail|2 - UFF&Robert Tail|2 - UFF&Robert|2 - Exnem&Robert Tail|2 - Exnem&Robert)\.esp")'
-    tag:
-      - Actors.ACBS
-      - Actors.Stats
-      - Eyes
-      - Graphics
-      - Hair
-      - NPC.Race
-      - NpcFaces
-      - R.Ears
-      - R.Relations
-      - R.Teeth
-  - name: 'MHE v2 - UFF&Robert Tail.esp'
-    msg:
-      - type: say
-        content: 'Use only one MHE v2 esp'
-        condition: 'file("MHE v(2 Tail|2|2 - UFF&Robert|2 - Exnem&Robert Tail|2 - Exnem&Robert)\.esp")'
-    tag:
-      - Actors.ACBS
-      - Actors.Stats
-      - Eyes
-      - Graphics
-      - Hair
-      - NPC.Race
-      - NpcFaces
-      - R.Ears
-      - R.Relations
-      - R.Teeth
-  - name: 'MHE v2 - UFF&Robert.esp'
-    msg:
-      - type: say
-        content: 'Use only one MHE v2 esp'
-        condition: 'file("MHE v(2 Tail|2|2 - UFF&Robert Tail|2 - Exnem&Robert Tail|2 - Exnem&Robert)\.esp")'
-    tag:
-      - Actors.ACBS
-      - Actors.Stats
-      - Eyes
-      - Graphics
-      - Hair
-      - NPC.Race
-      - NpcFaces
-      - R.Ears
-      - R.Relations
-      - R.Teeth
-  - name: 'MHE v2 - Exnem&Robert Tail.esp'
-    msg:
-      - type: say
-        content: 'Use only one MHE v2 esp'
-        condition: 'file("MHE v(2 Tail|2|2 - UFF&Robert Tail|2 - UFF&Robert|2 - Exnem&Robert)\.esp")'
-    tag:
-      - Actors.ACBS
-      - Actors.Stats
-      - Eyes
-      - Graphics
-      - Hair
-      - NPC.Race
-      - NpcFaces
-      - R.Ears
-      - R.Relations
-      - R.Teeth
-  - name: 'MHE v2 - Exnem&Robert.esp'
-    msg:
-      - type: say
-        content: 'Use only one MHE v2 esp'
-        condition: 'file("MHE v(2 Tail|2|2 - UFF&Robert Tail|2 - UFF&Robert|2 - Exnem&Robert Tail)\.esp")'
+      - <<: *useOnlyOneX
+        subs: [ 'Modified Hair & Eyes v2' ]
+        condition: 'many("MHE v(2|2 Tail|2 - UFF&Robert Tail|2 - UFF&Robert|2 - Exnem&Robert Tail|2 - Exnem&Robert)\.esp")'
     tag:
       - Actors.ACBS
       - Actors.Stats
@@ -17228,16 +17093,11 @@ plugins:
       - crc: 0x49ace956
         <<: *dirtyPlugin
         itm: 2
-  - name: 'JIM_Summon_Doppleganger.esp'
+  - name: 'JIM_(Summon|Balanced)_Doppleganger\.esp'
     msg:
-      - type: say
-        content: 'use only one ''JIM_Summon_Doppleganger.esp'' or ''JIM_Balanced_Doppleganger.esp'''
-        condition: 'file("JIM_Balanced_Doppleganger.esp")'
-  - name: 'JIM_Balanced_Doppleganger.esp'
-    msg:
-      - type: say
-        content: 'use only one ''JIM_Summon_Doppleganger.esp'' or ''JIM_Balanced_Doppleganger.esp'''
-        condition: 'file("JIM_Summon_Doppleganger.esp")'
+      - <<: *useOnlyOneX
+        subs: [ 'JIM Doppleganger' ]
+        condition: 'many("JIM_(Summon|Balanced)_Doppleganger\.esp")'
   - name: 'JIM_Summon_Unicorn.esp'
     msg:
       - type: say
@@ -17278,31 +17138,17 @@ plugins:
       - crc: 0x26a014e9
         <<: *dirtyPlugin
         udr: 2
-  - name: 'Pants Be Gone 1.3 With Demoralize.esp'
+  - name: 'Pants Be Gone 1.3 With(out)? Demoralize\.esp'
     msg:
-      - type: say
-        content: 'Use only one Pants Be Gone 1.3 mod'
-        condition: 'file("Pants Be Gone 1.3 Without Demoralize.esp")'
-  - name: 'Pants Be Gone 1.3 Without Demoralize.esp'
+      - <<: *useOnlyOneX
+        subs: [ 'Pants Be Gone' ]
+        condition: 'many("Pants Be Gone 1.3 With(out)? Demoralize\.esp")'
+  - name: 'PJs Spell(s - Cheap Spells| Compendium - (No|Spell) Requirements)\.esp'
     msg:
-      - type: say
-        content: 'Use only one Pants Be Gone 1.3 mod'
-        condition: 'file("Pants Be Gone 1.3 With Demoralize.esp")'
-  - name: 'PJs Spells - Cheap Spells.esp'
-    msg:
-      - type: say
-        content: 'Use only one ''PJs Spells - Cheap Spells.esp'' or ''PJs Spell Compendium - No Requirements.esp'' or ''PJs Spell Compendium - Spell Requirements.esp'''
-        condition: 'file("PJs Spell Compendium - No Requirements.esp") or file("PJs Spell Compendium - Spell Requirements.esp")'
-  - name: 'PJs Spell Compendium - No Requirements.esp'
-    msg:
-      - type: say
-        content: 'Use only one ''PJs Spells - Cheap Spells.esp'' or ''PJs Spell Compendium - No Requirements.esp'' or ''PJs Spell Compendium - Spell Requirements.esp'''
-        condition: 'file("PJs Spells - Cheap Spells.esp") or file("PJs Spell Compendium - Spell Requirements.esp")'
+      - <<: *useOnlyOneX
+        subs: [ 'PJs Spells' ]
+        condition: 'many("PJs Spell(s - Cheap Spells| Compendium - (No|Spell) Requirements)\.esp")'
   - name: 'PJs Spell Compendium - Spell Requirements.esp'
-    msg:
-      - type: say
-        content: 'Use only one ''PJs Spells - Cheap Spells.esp'' or ''PJs Spell Compendium - No Requirements.esp'' or ''PJs Spell Compendium - Spell Requirements.esp'''
-        condition: 'file("PJs Spells - Cheap Spells.esp") or file("PJs Spell Compendium - No Requirements.esp")'
     dirty:
       - crc: 0x38eef54d
         <<: *dirtyPlugin
@@ -17394,21 +17240,11 @@ plugins:
     msg: [ *obsolete ]
   - name: 'Midas SMPoison.esp'
     msg: [ *obsolete ]
-  - name: 'Midas Reduced Costs Half.esp'
+  - name: 'Midas Reduced Costs (Half|Quarter|3 Quarters)\.esp'
     msg:
-      - type: say
-        content: 'Use only one Reduced Costs module at a time'
-        condition: 'file("Midas Reduced Costs Quarter.esp") or file("Midas Reduced Costs 3 Quarters")'
-  - name: 'Midas Reduced Costs Quarter.esp'
-    msg:
-      - type: say
-        content: 'Use only one Reduced Costs module at a time'
-        condition: 'file("Midas Reduced Costs Half.esp") or file("Midas Reduced Costs 3 Quarters")'
-  - name: 'Midas Reduced Costs 3 Quarters.esp'
-    msg:
-      - type: say
-        content: 'Use only one Reduced Costs module at a time'
-        condition: 'file("Midas Reduced Costs Quarter.esp") or file("Midas Reduced Costs Half")'
+      - <<: *useOnlyOneX
+        subs: [ 'Reduced Costs module' ]
+        condition: 'many("Midas Reduced Costs (Half|Quarter|3 Quarters)\.esp")'
   - name: 'Mart''s Monster Mod - Midas Creature Ingredients.esp'
     tag:
       - Actors.ACBS
@@ -17421,20 +17257,22 @@ plugins:
     inc:
       - 'Rathunas01.esp'
   - name: 'Midas PowDur(1\.5|2|3|4)x\.esp'
-    msg:
-      - type: say
-        content: 'Use only one PowDur modifier at a time.'
     after:
       - 'midasspells.esp'
-  - name: 'Midas Eldrich Power (2|2\.5|3|4|5|6)x\.esp'
     msg:
-      - type: say
-        content: 'Use only one Eldrich Power modifier at a time.'
+      - <<: *useOnlyOneX
+        subs: [ 'Midas PowDur modifier' ]
+        condition: 'many("Midas PowDur(1\.5|2|3|4)x\.esp")'
+  - name: 'Midas Eldrich Power (2|2\.5|3|4|5|6)x\.esp'
     after:
       - 'Midas PowDur1.5x.esp'
       - 'Midas PowDur2x.esp'
       - 'Midas PowDur3x.esp'
       - 'Midas PowDur4x.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Midas Eldrich Power modifier' ]
+        condition: 'many("Midas Eldrich Power (2|2\.5|3|4|5|6)x\.esp")'
   - name: 'Midas Tigernolevel OBSE.esp'
     req: [ *OBSE ]
     inc:
@@ -17623,8 +17461,9 @@ plugins:
       - Scripts
   - name: 'BountyReductionOverTime(_standard|_unforgiving|_mostwanted)?.esp'
     msg:
-      - type: say
-        content: 'Use only one BountyReductionOverTime esp.'
+      - <<: *useOnlyOneX
+        subs: [ 'Bounty Reduction Over Time' ]
+        condition: 'many("BountyReductionOverTime(_standard|_unforgiving|_mostwanted)?.esp")'
   - name: 'No psychic guards v1.1.esp'
     msg:
       - type: say
@@ -17967,26 +17806,11 @@ plugins:
     req: [ *OBSEv16 ]
   - name: 'Mercantile Leveling-Fixed.esp'
     req: [ *OBSEv15 ]
-  - name: 'Jhaerik''s Anti Power-Gaming Leveling System 1 (Very Easy ).esp'
+  - name: 'Jhaerik''s Anti Power-Gaming Leveling System [1234] ((Very Easy )|(Easy)|(Balanced)|(Hard))?\.esp'
     msg:
-      - type: say
-        content: 'Use only one Jhaerik''s Anti Power-Gaming Leveling System*.esp'
-        condition: 'file("Jhaerik''s Anti Power-Gaming Leveling System [234].*\.esp")'
-  - name: 'Jhaerik''s Anti Power-Gaming Leveling System 2 (Easy).esp'
-    msg:
-      - type: say
-        content: 'Use only one Jhaerik''s Anti Power-Gaming Leveling System*.esp'
-        condition: 'file("Jhaerik''s Anti Power-Gaming Leveling System [134].*\.esp")'
-  - name: 'Jhaerik''s Anti Power-Gaming Leveling System 3 (Balanced).esp'
-    msg:
-      - type: say
-        content: 'Use only one Jhaerik''s Anti Power-Gaming Leveling System*.esp'
-        condition: 'file("Jhaerik''s Anti Power-Gaming Leveling System [124].*\.esp")'
-  - name: 'Jhaerik''s Anti Power-Gaming Leveling System 4 (Hard).esp'
-    msg:
-      - type: say
-        content: 'Use only one Jhaerik''s Anti Power-Gaming Leveling System*.esp'
-        condition: 'file("Jhaerik''s Anti Power-Gaming Leveling System [123].*\.esp")'
+      - <<: *useOnlyOneX
+        subs: [ 'Jhaerik''s Anti Power-Gaming Leveling System' ]
+        condition: 'many("Jhaerik''s Anti Power-Gaming Leveling System [1234] ((Very Easy )|(Easy)|(Balanced)|(Hard))?\.esp")'
   - name: 'Intelligence Overhaul BJ.esp'
     msg:
       - type: say
@@ -18073,32 +17897,25 @@ plugins:
       - type: say
         content: 'Use just one Seorin''s Leveling System mod file.'
   - name: 'Legendary Abilities-Shield MOJ.esp'
-    msg:
-      - type: say
-        content: 'Use only one ''Legendary Abilities'' plugin.'
-        condition: 'file("Legendary Abilities-Fortify Health MOJ.esp") or file("Legendary Abilities-Reflect MOJ.esp")'
     dirty:
       - crc: 0x51d68248
         <<: *dirtyPlugin
         itm: 5
   - name: 'Legendary Abilities-Fortify Health MOJ.esp'
-    msg:
-      - type: say
-        content: 'Use only one ''Legendary Abilities'' plugin.'
-        condition: 'file("Legendary Abilities-Shield MOJ.esp") or file("Legendary Abilities-Reflect MOJ.esp")'
     dirty:
       - crc: 0x8f8c843
         <<: *dirtyPlugin
         itm: 5
   - name: 'Legendary Abilities-Reflect MOJ.esp'
-    msg:
-      - type: say
-        content: 'Use only one ''Legendary Abilities'' plugin.'
-        condition: 'file("Legendary Abilities-Fortify Health MOJ.esp") or file("Legendary Abilities-Shield MOJ.esp")'
     dirty:
       - crc: 0x52ebc32e
         <<: *dirtyPlugin
         itm: 5
+  - name: 'Legendary Abilities-(Fortify Health|Shield|Reflect) MOJ\.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Legendary Abilities' ]
+        condition: 'many("Legendary Abilities-(Fortify Health|Shield|Reflect) MOJ\.esp")'
   - name: 'Grandmaster of Alchemy.esp'
     tag:
       - Factions
@@ -18518,17 +18335,11 @@ plugins:
       - type: error
         content: 'Requires Bashed Patch.'
         condition: 'not file("Bashed Patch.*\.esp")'
-  - name: 'Item interchange - Option, Ingredients in Bulk.esp'
+  - name: 'Item interchange - Option, Ingredients in Bulk(, reduced)?\.esp'
     msg:
-      - type: say
-        content: 'Use only one "Ingredients in Bulk" plugin.'
-      - type: error
-        content: 'Requires Bashed Patch.'
-        condition: 'not file("Bashed Patch.*\.esp")'
-  - name: 'Item interchange - Option, Ingredients in Bulk, reduced.esp'
-    msg:
-      - type: say
-        content: 'Use only one "Ingredients in Bulk" plugin.'
+      - <<: *useOnlyOneX
+        subs: [ 'Ingredients in Bulk' ]
+        condition: 'many("Item interchange - Option, Ingredients in Bulk(, reduced)?\.esp")'
       - type: error
         content: 'Requires Bashed Patch.'
         condition: 'not file("Bashed Patch.*\.esp")'
@@ -18760,38 +18571,11 @@ plugins:
       - Eyes
       - Hair
       - NpcFaces
-  - name: 'Cosmetic Compilation XXL DV.esp'
+  - name: 'Cosmetic Compilation (XXL DV|- No (JPeepers|NPC Changes|JPeepers or NPC Changes))\.esp'
     msg:
-      - type: say
-        content: 'Use only one ''Cosmetic Compilation*.esp'''
-        condition: 'file("Cosmetic Compilation - No (JPeepers|NPC Changes|JPeepers or NPC Changes)\.esp")'
-    tag:
-      - Eyes
-      - Hair
-      - NpcFaces
-  - name: 'Cosmetic Compilation - No NPC Changes.esp'
-    msg:
-      - type: say
-        content: 'Use only one ''Cosmetic Compilation*.esp'''
-        condition: 'file("Cosmetic Compilation (XXL DV|- No (JPeepers|JPeepers or NPC Changes))\.esp")'
-    tag:
-      - Eyes
-      - Hair
-      - NpcFaces
-  - name: 'Cosmetic Compilation - No JPeepers.esp'
-    msg:
-      - type: say
-        content: 'Use only one ''Cosmetic Compilation*.esp'''
-        condition: 'file("Cosmetic Compilation (XXL DV|- No (NPC Changes|JPeepers or NPC Changes))\.esp")'
-    tag:
-      - Eyes
-      - Hair
-      - NpcFaces
-  - name: 'Cosmetic Compilation - No JPeepers or NPC Changes.esp'
-    msg:
-      - type: say
-        content: 'Use only one ''Cosmetic Compilation*.esp'''
-        condition: 'file("Cosmetic Compilation (XXL DV|- No (JPeepers|NPC Changes))\.esp")'
+      - <<: *useOnlyOneX
+        subs: [ 'Cosmetic Compilation' ]
+        condition: 'many("Cosmetic Compilation (XXL DV|- No (JPeepers|NPC Changes|JPeepers or NPC Changes))\.esp")'
     tag:
       - Eyes
       - Hair
@@ -20234,8 +20018,9 @@ plugins:
       - NpcFaces
   - name: 'Dragorian and dranaugh( \(No Claws and Feet\))?\.esp'
     msg:
-      - type: say
-        content: 'Use only one Dragorian and dranaugh*.esp'
+      - <<: *useOnlyOneX
+        subs: [ 'Dragorian and dranaugh' ]
+        condition: 'many("Dragorian and dranaugh( \(No Claws and Feet\))?\.esp")'
   - name: 'flying argnian.esp'
     req: [ *OBSE ]
   - name: 'MGothic Breton Race.esp'
@@ -20554,13 +20339,6 @@ plugins:
       - Actors.Anims
       - NoMerge
   - name: 'CM Partners NPC.esp'
-    msg:
-      - type: say
-        content: 'Use only one Essential or NotEssential version esp'
-        condition: 'file("CM Partners( More)? (NPC NE|(NPCs( NE)?))\.esp")'
-    tag:
-      - Eyes
-      - Hair
     dirty:
       - crc: 0xacb522ac
         <<: *dirtyPlugin
@@ -20569,11 +20347,11 @@ plugins:
     tag:
       - Actors.Anims
       - NoMerge
-  - name: 'CM Partners NPC NE.esp'
+  - name: 'CM Partners (NPC( NE)?|More NPCs( NE)?)\.esp'
     msg:
-      - type: say
-        content: 'Use only one Essential or NotEssential version esp'
-        condition: 'file("CM Partners( More)? (NPC|NPCs( NE)?)\.esp")'
+      - <<: *useOnlyOneX
+        subs: [ 'CM Partners' ]
+        condition: 'many("CM Partners (NPC( NE)?|More NPCs( NE)?)\.esp")'
     tag:
       - Eyes
       - Hair
@@ -20581,26 +20359,10 @@ plugins:
     tag:
       - Actors.Anims
       - NoMerge
-  - name: 'CM Partners More NPCs.esp'
-    msg:
-      - type: say
-        content: 'Use only one Essential or NotEssential version esp'
-        condition: 'file("CM Partners( More)? (NPC( NE)?|NPCs NE)\.esp")'
-    tag:
-      - Eyes
-      - Hair
   - name: 'CM Partners More NPCs Vwalk.esp'
     tag:
       - Actors.Anims
       - NoMerge
-  - name: 'CM Partners More NPCs NE.esp'
-    msg:
-      - type: say
-        content: 'Use only one Essential or NotEssential version esp'
-        condition: 'file("CM Partners( More)? (NPC( NE)?|NPCs)\.esp")'
-    tag:
-      - Eyes
-      - Hair
   - name: 'CM Partners More NPCs NE Vwalk.esp'
     tag:
       - Actors.Anims
@@ -20918,8 +20680,9 @@ plugins:
       - NoMerge
   - name: '1em_Vilja_?(cool|Ren)(hair)?\d\d?g?\.esp'
     msg:
-      - type: say
-        content: 'Use only one 1em_Vilja_*hair*.esp.'
+      - <<: *useOnlyOneX
+        subs: [ 'Companion Vilja Hairstyle' ]
+        condition: 'many("1em_Vilja_?(cool|Ren)(hair)?\d\d?g?\.esp")'
   - name: '1em_Vilja Not Essential Vwalk.esp'
     tag:
       - Actors.Anims
@@ -21939,10 +21702,11 @@ plugins:
   - name: 'bgBalancingDVOptionalFangs.esp'
     tag:
       - R.Teeth
-  - name: 'bgBalancingEVOptionalNPCDiversity, Beautification.esp'
+  - name: 'bgBalancingEVOptionalNPCDiversity, (Beautification|TNR Merge|Vanilla)\.esp'
     msg:
-      - type: say
-        content: 'Use only one ''OptionalNPCDiversity'' file.'
+      - <<: *useOnlyOneX
+        subs: [ 'Race Balancing Project - NPC Diversity Module' ]
+        condition: 'many("bgBalancingEVOptionalNPCDiversity, (Beautification|TNR Merge|Vanilla)\.esp")'
     tag:
       - NoMerge
       - NpcFaces
@@ -21950,19 +21714,15 @@ plugins:
     msg:
       - type: say
         content: 'Replace with ''bgBalancingEVOptionalNPCDiversity, Vanilla.esp'''
-  - name: 'bgBalancingEVOptionalNPCDiversity, Vanilla.esp'
+  - name: 'bgBalancingEVOptionalNPCDiversity, (Beautification |TNR Merge |Vanilla )Better Redguards\.esp'
     msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Race Balancing Project - NPC Diversity Better Redguards Module' ]
+        condition: 'many("bgBalancingEVOptionalNPCDiversity, (Beautification |TNR Merge |Vanilla )Better Redguards\.esp")'
       - type: say
-        content: 'Use only one ''OptionalNPCDiversity'' file.'
+        content: 'If at all possible *also* use the Wrye Bash tweak for mod compatibility for BR.'
     tag:
-      - NoMerge
-      - NpcFaces
-  - name: 'bgBalancingEVOptionalNPCDiversity, TNR Merge.esp'
-    msg:
-      - type: say
-        content: 'Use only one ''OptionalNPCDiversity'' file.'
-      - *doNotClean
-    tag:
+      - Invent
       - NoMerge
       - NpcFaces
   - name: 'bgBalancingEVOptionalBetterRedguards.esp'
@@ -21971,62 +21731,6 @@ plugins:
         content: 'Requires: Better Redguards installed with its ESP deactivated.'
       - type: say
         content: 'If at all possible *also* use the Wrye Bash tweak for mod compatibility for BR.'
-  - name: 'bgBalancingDVOptionalBetterRedguards.esp'
-    msg:
-      - type: say
-        content: 'Requires: Better Redguards installed with its ESP deactivated.'
-      - type: say
-        content: 'If at all possible *also* use the Wrye Bash tweak for mod compatibility for BR.'
-  - name: 'bgBalancingEVOptionalNPCDiversity, Vanilla Better Redguards.esp'
-    msg:
-      - type: say
-        content: 'Use only one ''OptionalNPCDiversity'' plugin.'
-      - type: say
-        content: 'If at all possible *also* use the Wrye Bash tweak for mod compatibility for BR.'
-    tag:
-      - Invent
-      - NoMerge
-      - NpcFaces
-  - name: 'bgBalancingEVOptionalNPCDiversity, Beautification Better Redguards.esp'
-    msg:
-      - type: say
-        content: 'Use only one ''OptionalNPCDiversity'' plugin.'
-      - type: say
-        content: 'If at all possible *also* use the Wrye Bash tweak for mod compatibility for BR.'
-    tag:
-      - Invent
-      - NoMerge
-      - NpcFaces
-  - name: 'bgBalancingEVOptionalNPCDiversity, for Wrye Bash Better Redguards.esp'
-    msg:
-      - type: say
-        content: 'Use only one ''OptionalNPCDiversity'' plugin.'
-      - type: say
-        content: 'If at all possible *also* use the Wrye Bash tweak for mod compatibility for BR.'
-    tag:
-      - Invent
-      - NoMerge
-      - NpcFaces
-  - name: 'bgBalancingEVOptionalNPCDiversity, TNR Merge Better Redguards.esp'
-    msg:
-      - type: say
-        content: 'Use only one ''OptionalNPCDiversity'' plugin.'
-      - type: say
-        content: 'If at all possible *also* use the Wrye Bash tweak for mod compatibility for BR.'
-    tag:
-      - Invent
-      - NoMerge
-      - NpcFaces
-  - name: 'bgBalancingDVOptionalNPCDiversity, TNR Merge Better Redguards.esp'
-    msg:
-      - type: say
-        content: 'Use only one ''OptionalNPCDiversity'' plugin.'
-      - type: say
-        content: 'If at all possible *also* use the Wrye Bash tweak for mod compatibility for BR.'
-    tag:
-      - Invent
-      - NoMerge
-      - NpcFaces
   - name: 'bgBalancingEVOptionalFCOMAdditions.esp'
     tag:
       - Actors.ACBS
@@ -22299,26 +22003,11 @@ plugins:
     tag:
       - Actors.Anims
       - NoMerge
-  - name: 'Better Cities - CUO Bravil Patch.esp'
+  - name: 'Better Cities( Full)?( B&M)? - CUO Bravil( Patch)?\.esp'
     msg:
-      - type: say
-        content: 'Use only one Better Cities *version* - CUO Bravil Patch.esp'
-        condition: 'file("Better Cities (Full|B&M|Full B&M) - CUO Bravil( Patch)?\.esp")'
-  - name: 'Better Cities Full - CUO Bravil.esp'
-    msg:
-      - type: say
-        content: 'Use only one Better Cities *version* - CUO Bravil Patch.esp'
-        condition: 'file("Better Cities (B&M |Full B&M )?- CUO Bravil Patch\.esp")'
-  - name: 'Better Cities B&M - CUO Bravil Patch.esp'
-    msg:
-      - type: say
-        content: 'Use only one Better Cities *version* - CUO Bravil Patch.esp'
-        condition: 'file("Better Cities (Full (B&M )?)?- CUO Bravil( Patch)?\.esp")'
-  - name: 'Better Cities Full B&M - CUO Bravil Patch.esp'
-    msg:
-      - type: say
-        content: 'Use only one Better Cities *version* - CUO Bravil Patch.esp'
-        condition: 'file("Better Cities (Full |B&M )?- CUO Bravil( Patch)?\.esp")'
+      - <<: *useOnlyOneX
+        subs: [ 'Better Cities *version* - CUO Bravil Patch' ]
+        condition: 'many("Better Cities( Full)?( B&M)? - CUO Bravil( Patch)?\.esp")'
   - name: 'BCBravilFULL-Barrowfields patch.esp'
     msg:
       - type: say
@@ -22330,21 +22019,11 @@ plugins:
         content: 'Incompatible with: Ruined Tail''s Tale v2.5.'
       - type: say
         content: 'Requires: Ruined Tail''s Tale v3+.'
-  - name: 'Better Cities - CUO Chorrol Patch.esp'
+  - name: 'Better Cities( Full)?( B&M)? - CUO Chorrol Patch\.esp'
     msg:
-      - type: say
-        content: 'Use only one Better Cities *version* - CUO Chorrol Patch.esp'
-        condition: 'file("Better Cities Full( B&M)? - CUO Chorrol Patch\.esp")'
-  - name: 'Better Cities Full - CUO Chorrol Patch.esp'
-    msg:
-      - type: say
-        content: 'Use only one Better Cities *version* - CUO Chorrol Patch.esp'
-        condition: 'file("Better Cities( Full B&M)? - CUO Chorrol Patch\.esp")'
-  - name: 'Better Cities Full B&M - CUO Chorrol Patch.esp'
-    msg:
-      - type: say
-        content: 'Use only one Better Cities *version* - CUO Chorrol Patch.esp'
-        condition: 'file("Better Cities( Full)? - CUO Chorrol Patch\.esp")'
+      - <<: *useOnlyOneX
+        subs: [ 'Better Cities *version* - CUO Chorrol Patch' ]
+        condition: 'many("Better Cities( Full)?( B&M)? - CUO Chorrol Patch\.esp")'
   - name: 'BCChorrol-ChorrolHinterland fix.esp'
     msg:
       - type: say
@@ -22371,33 +22050,24 @@ plugins:
       - type: error
         content: 'This patch should only be used with "Better Cities - Open Better Cities.esp"'
         condition: 'not file("Better Cities - Open Better Cities.esp")'
-  - name: 'BCCheydinhal-CheydinhalFalls patch.esp'
+  - name: 'BCCheydinhal(FULL)?(B&M)?-CheydinhalFalls patch\.esp'
     msg:
-      - type: say
-        content: 'Use only one BCCheydinhal*version*-CheydinhalFalls patch.esp'
-        condition: 'file("BCCheydinhalFULLB&M-CheydinhalFalls patch.esp")'
+      - <<: *useOnlyOneX
+        subs: [ 'Better Cities Cheydinhal & CheydinhalFalls patch' ]
+        condition: 'many("BCCheydinhal(FULL)?(B&M)?-CheydinhalFalls patch\.esp")'
+      - <<: *useOnlyOneX
+        subs: [ 'Same as Better Cities & Unique Landscape - Cheydinhal Falls Patch' ]
+        condition: 'file("Better Cities( Full)?( B&M)? - Unique Landscape Cheydinhal Falls\.esp")'
     tag:
       - C.Water
-  - name: 'BCCheydinhalFULL-CheydinhalFalls patch.esp'
+  - name: 'Better Cities( Full)?( B&M)? - Unique Landscape Cheydinhal Falls\.esp'
     msg:
-      - type: say
-        content: 'Same as ''Better Cities - Unique Landscape Cheydinhal Falls.esp'' - only use ONE of these.'
-    tag:
-      - C.Water
-  - name: 'BCCheydinhalFULLB&M-CheydinhalFalls patch.esp'
-    msg:
-      - type: say
-        content: 'Use only one BCCheydinhal*version*-CheydinhalFalls patch.esp'
-        condition: 'file("BCCheydinhal-CheydinhalFalls patch.esp")'
-    tag:
-      - C.Water
-  - name: 'Better Cities - Unique Landscape Cheydinhal Falls.esp'
-    tag:
-      - C.Water
-  - name: 'Better Cities Full - Unique Landscape Cheydinhal Falls.esp'
-    tag:
-      - C.Water
-  - name: 'Better Cities B&M - Unique Landscape Cheydinhal Falls.esp'
+      - <<: *useOnlyOneX
+        subs: [ 'Better Cities & Unique Landscape - Cheydinhal Falls Patch' ]
+        condition: 'many("Better Cities - Unique Landscape Cheydinhal Falls.esp")'
+      - <<: *useOnlyOneX
+        subs: [ 'Same as Better Cities Cheydinhal - CheydinhalFalls patch' ]
+        condition: 'file("BCCheydinhal(FULL)?(B&M)?-CheydinhalFalls patch\.esp")'
     tag:
       - C.Water
   - name: 'Better Cities - CUO Bruma Patch.esp'
@@ -22450,22 +22120,16 @@ plugins:
       - type: say
         content: 'Only use if using Better Imperial City.esp'
         condition: 'not file("Better Imperial City.esp")'
-  - name: 'Better Cities - OMG.esp'
+  - name: 'Better Cities - OMG( Patch)?.*\.esp'
     msg:
-      - type: say
-        content: 'Use only one Better *version* - OMG Patch.esp'
-  - name: 'Better Cities - OMG Patch.esp'
+      - <<: *useOnlyOneX
+        subs: [ 'Better Cities & OMG Patch' ]
+        condition: 'many("Better Cities - OMG( Patch)?\.esp")'
+  - name: 'Better Imperial City - OMG( Patch)?.*\.esp'
     msg:
-      - type: say
-        content: 'Use only one Better *version* - OMG Patch.esp'
-  - name: 'Better Imperial City - OMG Patch.esp'
-    msg:
-      - type: say
-        content: 'Use only one Better *version* - OMG Patch.esp'
-  - name: 'Better Imperial City - OMG.esp'
-    msg:
-      - type: say
-        content: 'Use only one Better *version* - OMG Patch.esp'
+      - <<: *useOnlyOneX
+        subs: [ 'Better Imperial City & OMG Patch' ]
+        condition: 'many("Better Imperial City - OMG( Patch)?\.esp")'
   - name: 'Better Cities - Stranded Light.esp'
     msg: [ *obsolete ]
   - name: 'Better Cities - COBL.esp'
@@ -22743,15 +22407,16 @@ plugins:
   - name: 'CSV_Farms_Open_Cities.esp'
     msg:
       - type: say
-        content: 'Use only one CSV Farms * Cities esp.'
-      - type: say
         content: 'Requires: Open Cities.'
   - name: 'CSV_Farms_Open_Better_Cities.esp'
     msg:
       - type: say
-        content: 'Use only one CSV Farms * Cities esp.'
-      - type: say
         content: 'Requires: Open Better Cities.'
+  - name: 'CSV_Farms_Open(_Better)?_Cities\.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Castle Sea View Farms' ]
+        condition: 'many("CSV_Farms_Open(_Better)?_Cities\.esp")'
   - name: 'ROM Patch - Better Cities.esp'
     tag:
       - Stats
@@ -23035,18 +22700,11 @@ plugins:
       - <<: *useOnlyOneX
         subs: [ 'Life Detected .esp' ]
         condition: 'many("Life Detected - (Aura|Burst|Cascade|Escape|Fountain|Orbit|Skeleton|Venting) - (Tiny|Small|Medium|Large|Huge) - (1|2)\.esp")'
-  - name: 'lumi_enchantments.esp'
+  - name: 'lumi_enchantments(_subtle)?\.esp'
     msg:
-      - type: say
-        content: 'Use only one lumi_enchantments esp'
-        condition: 'file("lumi_enchantments_subtle.esp")'
-    tag:
-      - Graphics
-  - name: 'lumi_enchantments_subtle.esp'
-    msg:
-      - type: say
-        content: 'Use only one lumi_enchantments esp'
-        condition: 'file("lumi_enchantments.esp")'
+      - <<: *useOnlyOneX
+        subs: [ 'Luminars Better Enchantment Effects' ]
+        condition: 'many("lumi_enchantments(_subtle)?\.esp")'
     tag:
       - Graphics
   - name: 'BubbleFx.esp'
@@ -23374,9 +23032,7 @@ plugins:
       - Deactivate
       - Roads
   - name: 'Open Cities Classic Road Record.esp'
-    msg:
-      - type: say
-        content: 'Use only one road record file.'
+    msg: [ *useOnlyOneRoadRecordFile ]
     tag:
       - Deactivate
       - Roads
@@ -23390,15 +23046,12 @@ plugins:
   - name: 'Open Cities Reborn Road Record.esp'
     msg:
       - *obsolete
-      - type: say
-        content: 'Use only one road record file.'
+      - *useOnlyOneRoadRecordFile
     tag:
       - Deactivate
       - Roads
   - name: 'NRB4 Standard Road Record.esp'
-    msg:
-      - type: say
-        content: 'Use only one road record file.'
+    msg: [ *useOnlyOneRoadRecordFile ]
     req:
       - 'road+bridges.esp'
     tag:
@@ -23410,9 +23063,7 @@ plugins:
       - Deactivate
       - Roads
   - name: 'NRB4 OCReborn Road Record.esp'
-    msg:
-      - type: say
-        content: 'Use only one road record file.'
+    msg: [ *useOnlyOneRoadRecordFile ]
     req:
       - 'Open Cities Reborn.esp'
     tag:
@@ -23434,18 +23085,14 @@ plugins:
       - Deactivate
       - Roads
   - name: 'CSVF_Road_Record_OC.esp'
-    msg:
-      - type: say
-        content: 'Use only one road record file.'
+    msg: [ *useOnlyOneRoadRecordFile ]
     req:
       - 'Open Cities.esp'
     tag:
       - Deactivate
       - Roads
   - name: 'CSVF_Road_Record_OC+RB.esp'
-    msg:
-      - type: say
-        content: 'Use only one road record file.'
+    msg: [ *useOnlyOneRoadRecordFile ]
     req:
       - 'Open Cities.esp'
       - 'road+bridges.esp'
@@ -23453,27 +23100,21 @@ plugins:
       - Deactivate
       - Roads
   - name: 'CSVF_Road_Record_BBC.esp'
-    msg:
-      - type: say
-        content: 'Use only one road record file.'
+    msg: [ *useOnlyOneRoadRecordFile ]
     req:
       - 'Better Cities Full.esp'
     tag:
       - Deactivate
       - Roads
   - name: 'CSVF_Road_Record_BBC+OC.esp'
-    msg:
-      - type: say
-        content: 'Use only one road record file.'
+    msg: [ *useOnlyOneRoadRecordFile ]
     req:
       - 'Better Cities - Open Better Cities.esp'
     tag:
       - Deactivate
       - Roads
   - name: 'CSVF_Road_Record_BBC+RB.esp'
-    msg:
-      - type: say
-        content: 'Use only one road record file.'
+    msg: [ *useOnlyOneRoadRecordFile ]
     req:
       - 'Better Cities Full.esp'
       - 'road+bridges.esp'
@@ -23481,9 +23122,7 @@ plugins:
       - Deactivate
       - Roads
   - name: 'CSVF_Road_Record_BBC+OC+RB.esp'
-    msg:
-      - type: say
-        content: 'Use only one road record file.'
+    msg: [ *useOnlyOneRoadRecordFile ]
     req:
       - 'Better Cities - Open Better Cities.esp'
       - 'road+bridges.esp'
@@ -23491,9 +23130,7 @@ plugins:
       - Deactivate
       - Roads
   - name: 'CSVF_Road_Record_RB.esp'
-    msg:
-      - type: say
-        content: 'Use only one road record file.'
+    msg: [ *useOnlyOneRoadRecordFile ]
     req:
       - 'road+bridges.esp'
     tag:
@@ -23836,8 +23473,9 @@ plugins:
     req: [ ..\obse_1_2_416.dll ]
   - name: 'ExponentialLev(Easy|Moderate|Hard|Extreme)\.esp'
     msg:
-      - type: say
-        content: 'Use only one Exponential Leveling plugin.'
+      - <<: *useOnlyOneX
+        subs: [ 'Exponential Leveling' ]
+        condition: 'many("ExponentialLev(Easy|Moderate|Hard|Extreme)\.esp")'
   - name: 'CompanionMaster.esp'
     msg:
       - type: say
