@@ -11931,10 +11931,9 @@ plugins:
     tag:
       - Hair
   - name: 'The Reluctant Ranger REVAMPED.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: Better Cities.'
-        condition: 'file("Better Cities Resources.esm")'
+    inc:
+      - name: 'Better Cities Resources.esm'
+        display: 'Better Cities'
   - name: 'The Power of the North.esp'
     dirty:
       - crc: 0x2eb9a944
@@ -15045,25 +15044,21 @@ plugins:
         content: 'Incompatible with: Better Cities. Already included in Better Cities IC plugins.'
         condition: 'file("Better Cities Resources.esm")'
   - name: 'Imperil_City_Tunnel.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: Better Cities.'
-        condition: 'file("Better Cities Resources.esm")'
+    inc:
+      - name: 'Better Cities Resources.esm'
+        display: 'Better Cities'
   - name: 'IC Tunnel.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: Better Cities.'
-        condition: 'file("Better Cities Resources.esm")'
+    inc:
+      - name: 'Better Cities Resources.esm'
+        display: 'Better Cities'
   - name: 'ICWaterfrontPassage.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: Better Cities.'
-        condition: 'file("Better Cities Resources.esm")'
+    inc:
+      - name: 'Better Cities Resources.esm'
+        display: 'Better Cities'
   - name: 'Waterfront Passage - Control of Goods.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: Better Cities.'
-        condition: 'file("Better Cities Resources.esm")'
+    inc:
+      - name: 'Better Cities Resources.esm'
+        display: 'Better Cities'
   - name: 'JADDockTunnel.esp'
     msg:
       - type: say
