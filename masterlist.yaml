@@ -12001,9 +12001,8 @@ plugins:
         <<: *dirtyPlugin
         itm: 17
   - name: 'The Vertueux.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: The Lost Spires; Small landscaping issue between the HQ and surroundings.'
+    inc:
+      - 'The Lost Spires.esp'
     dirty:
       - crc: 0xf83cbbc4
         <<: *dirtyPlugin
