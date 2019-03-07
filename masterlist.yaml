@@ -9444,9 +9444,8 @@ plugins:
       - type: say
         content: 'German Version'
   - name: 'Bandit Hideouts.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: Castle West Weald.'
+    inc:
+      - 'CastleWestWeald.esp'
     dirty:
       - crc: 0xeb5bf385
         <<: *dirtyPlugin
