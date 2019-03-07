@@ -10605,9 +10605,16 @@ plugins:
         itm: 1862
         udr: 2
   - name: 'JADICMothPriests.esp'
+    inc:
+      - 'Better Imperial City.esp'
+      - 'Better Cities IC Green Emperor Way.esp'
     msg:
-      - type: say
-        content: 'Incompatible with: Better Cities Green Emperor''s Way. Already included as part of Better Cities.'
+      - <<: *alreadyInX
+        subs: [ 'Better Cities Imperial City' ]
+        condition: 'active("Better Imperial City.esp")'
+      - <<: *alreadyInX
+        subs: [ 'Better Cities IC Green Emperor Way District' ]
+        condition: 'active("Better Cities IC Green Emperor Way.esp")'
   - name: 'JADImperialApartments01Temple.esp'
     msg:
       - type: say
