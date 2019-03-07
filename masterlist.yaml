@@ -22051,33 +22051,24 @@ plugins:
       - type: error
         content: 'This patch should only be used with "Better Cities - Open Better Cities.esp"'
         condition: 'not file("Better Cities - Open Better Cities.esp")'
-  - name: 'BCCheydinhal-CheydinhalFalls patch.esp'
+  - name: 'BCCheydinhal(FULL)?(B&M)?-CheydinhalFalls patch\.esp'
     msg:
-      - type: say
-        content: 'Use only one BCCheydinhal*version*-CheydinhalFalls patch.esp'
-        condition: 'file("BCCheydinhalFULLB&M-CheydinhalFalls patch.esp")'
+      - <<: *useOnlyOneX
+        subs: [ 'Better Cities Cheydinhal & CheydinhalFalls patch' ]
+        condition: 'many("BCCheydinhal(FULL)?(B&M)?-CheydinhalFalls patch\.esp")'
+      - <<: *useOnlyOneX
+        subs: [ 'Same as Better Cities & Unique Landscape - Cheydinhal Falls Patch' ]
+        condition: 'file("Better Cities( Full)?( B&M)? - Unique Landscape Cheydinhal Falls\.esp")'
     tag:
       - C.Water
-  - name: 'BCCheydinhalFULL-CheydinhalFalls patch.esp'
+  - name: 'Better Cities( Full)?( B&M)? - Unique Landscape Cheydinhal Falls\.esp'
     msg:
-      - type: say
-        content: 'Same as ''Better Cities - Unique Landscape Cheydinhal Falls.esp'' - only use ONE of these.'
-    tag:
-      - C.Water
-  - name: 'BCCheydinhalFULLB&M-CheydinhalFalls patch.esp'
-    msg:
-      - type: say
-        content: 'Use only one BCCheydinhal*version*-CheydinhalFalls patch.esp'
-        condition: 'file("BCCheydinhal-CheydinhalFalls patch.esp")'
-    tag:
-      - C.Water
-  - name: 'Better Cities - Unique Landscape Cheydinhal Falls.esp'
-    tag:
-      - C.Water
-  - name: 'Better Cities Full - Unique Landscape Cheydinhal Falls.esp'
-    tag:
-      - C.Water
-  - name: 'Better Cities B&M - Unique Landscape Cheydinhal Falls.esp'
+      - <<: *useOnlyOneX
+        subs: [ 'Better Cities & Unique Landscape - Cheydinhal Falls Patch' ]
+        condition: 'many("Better Cities - Unique Landscape Cheydinhal Falls.esp")'
+      - <<: *useOnlyOneX
+        subs: [ 'Same as Better Cities Cheydinhal - CheydinhalFalls patch' ]
+        condition: 'file("BCCheydinhal(FULL)?(B&M)?-CheydinhalFalls patch\.esp")'
     tag:
       - C.Water
   - name: 'Better Cities - CUO Bruma Patch.esp'
