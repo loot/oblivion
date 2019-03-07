@@ -3146,10 +3146,9 @@ plugins:
       - Delev
       - Relev
   - name: 'GuildOwnership1.2.esp'
-    msg:
-      - type: say
-        content: 'Not compatible with OOO. Already included in OOO.'
-        condition: *OOOCond
+    inc:
+      - 'Oscuro''s_Oblivion_Overhaul.esm'
+    msg: [ *alreadyInOOO ]
   - name: 'GW71_Soulgems.esp'
     tag:
       - Graphics
@@ -3158,15 +3157,13 @@ plugins:
       - type: say
         content: 'Incompatible with: UI systems other than DarNified UI/Dark''d DarN/other DarN variants.'
   - name: 'Inebriation.esp'
-    msg:
-      - type: say
-        content: 'Not compatible with OOO. Already included in OOO.'
-        condition: *OOOCond
+    inc:
+      - 'Oscuro''s_Oblivion_Overhaul.esm'
+    msg: [ *alreadyInOOO ]
   - name: 'Inebriation Rus.esp'
-    msg:
-      - type: say
-        content: 'Not compatible with OOO. Already included in OOO.'
-        condition: *OOOCond
+    inc:
+      - 'Oscuro''s_Oblivion_Overhaul.esm'
+    msg: [ *alreadyInOOO ]
   - name: 'Insanity''s Beverage Replacer.esp'
     tag:
       - Graphics
@@ -3216,21 +3213,19 @@ plugins:
         <<: *dirtyPlugin
         itm: 18
   - name: 'Lock Bash v1.1.esp'
-    msg:
-      - type: say
-        content: 'Not compatible with OOO. Already included in OOO.'
-        condition: *OOOCond
+    inc:
+      - 'Oscuro''s_Oblivion_Overhaul.esm'
+    msg: [ *alreadyInOOO ]
   - name: 'Lock Bash v99.9.esp'
+    inc:
+      - 'Oscuro''s_Oblivion_Overhaul.esm'
     msg:
-      - type: say
-        content: 'Not compatible with OOO. Already included in OOO.'
-        condition: *OOOCond
+      - *alreadyInOOO
       - *obsolete
   - name: 'Lock Bash v99.91.esp'
-    msg:
-      - type: say
-        content: 'Not compatible with OOO. Already included in OOO.'
-        condition: *OOOCond
+    inc:
+      - 'Oscuro''s_Oblivion_Overhaul.esm'
+    msg: [ *alreadyInOOO ]
   - name: 'Morag Tong Assassins v1-1.esp'
     dirty:
       - crc: 0xebabfce8
@@ -17461,10 +17456,9 @@ plugins:
   - name: 'attack and hide harder v2.0.esp'
     msg: [ *obsolete ]
   - name: 'Deadlier Traps.esp'
-    msg:
-      - type: say
-        content: 'Not compatible with OOO. Already included in OOO.'
-        condition: *OOOCond
+    inc:
+      - 'Oscuro''s_Oblivion_Overhaul.esm'
+    msg: [ *alreadyInOOO ]
   - name: 'SM Security.esp'
     msg:
       - type: say
