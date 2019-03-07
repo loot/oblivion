@@ -7696,11 +7696,10 @@ plugins:
   - name: 'Mart''s Monster Mod - City Defences.esp'
     after:
       - 'Mart''s Monster Mod - More Wilderness Life No Gates.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with Better Cities - City Defences.'
-        condition: 'file("Better Cities Resources.esm")'
-      - *doNotClean
+    inc:
+      - name: 'Better Cities Resources.esm'
+        display: 'Better Cities'
+    msg: [ *doNotClean ]
   - name: 'Mart''s Monster Mod - Friendlier Factions OOO+FCOM.esp'
     msg: [ *obsolete ]
   - name: 'MrSiika''sFarmAnimals.esp'
