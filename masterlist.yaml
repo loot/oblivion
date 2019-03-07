@@ -15366,9 +15366,8 @@ plugins:
       - type: say
         content: 'Obsolete. Update West Roads to version 1.2. Download and use "Open Cities - Skingrad Outskirts Patch v1_0" instead.'
   - name: 'Better Benirus Manor OC Patch.esp'
-    msg:
-      - type: say
-        content: 'Not compatible with Open Cities Reborn.'
+    inc:
+      - 'Open Cities Reborn.esp'
   - name: 'DBOO - Open(Cities| Cities)(Full| Outer Districts|Full + Outer Districts)\.esp'
     msg:
       - <<: *useOnlyOneX
