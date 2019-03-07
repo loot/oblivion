@@ -14334,6 +14334,10 @@ plugins:
       - crc: 0xB2D180E7
         util: 'TES4Edit v4.0.1'
   - name: 'xulChorrolHinterland.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'Cyrodiil Rebuild.esp' ]
+        condition: 'active("Cyrodiil Rebuild.esp")'
     tag:
       - C.Water
     dirty:
@@ -22360,16 +22364,14 @@ plugins:
   - name: 'Cyrodiil Rebuild.esp'
     inc:
       - 'AnvilBayExpansion.esp'
+      - 'Better Cities CHORROL.esp'
+      - 'Better Cities Full.esp'
       - 'Bravil Docks.esp'
+      - 'Extended Cyrodiil - Apfelwacht.esp'
       - 'ImpeREAL Empire - Unique Castles - Bruma.esp'
       - 'mrSiikas_ImperialCathedral.esp'
+      - 'xulChorrolHinterland.esp'
     msg:
-      - type: say
-        content: 'Incompatible with: xulChorrolHinterland.esp Included in Cyrodiil Rebuild.esp'
-      - type: say
-        content: 'Incompatible with: Extended Cyrodiil - Apfelwacht extended'
-      - type: say
-        content: 'Incompatible with: *Better Cities CHORROL.esp'
       - type: say
         content: 'For Better Cities and Unique Landscapes use esp included in Cyrodiil Rebuild archive.'
     tag:
