@@ -17538,9 +17538,8 @@ plugins:
   - name: 'Arrows Remain 10min.esp'
     msg: [ *bashedPatchTweak ]
   - name: 'Duke Patricks - Combat Archery.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: MOBS Optional Combat Settings.esp.'
+    inc:
+      - 'MOBS Optional Combat Settings.esp'
   - name: 'Duke Patricks Basic Denock Arrows.esp'
     inc:
       - name: 'Cobl Main.esm' # COBL includes a denock arrow feature
