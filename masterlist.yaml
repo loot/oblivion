@@ -9651,9 +9651,16 @@ plugins:
     req: [ *OBSE ]
     msg: [ *needsCleaning ]
   - name: 'Bravil Docks.esp'
+    inc:
+      - 'Better Cities BRAVIL.esp'
+      - 'Better Cities Full.esp'
     msg:
-      - type: say
-        content: 'Incompatible with: Better Cities. Already included in Better Cities Bravil.'
+      - <<: *alreadyInX
+        subs: [ 'Better Cities - Bravil' ]
+        condition: 'active("Better Cities BRAVIL.esp")'
+      - <<: *alreadyInX
+        subs: [ 'Better Cities - Full' ]
+        condition: 'active("Better Cities Full.esp")'
   - name: 'HackdirtTheDeepOnes.esp'
     inc:
       - 'HackdirtCaverns.esp'
