@@ -17738,9 +17738,9 @@ plugins:
         condition: 'file("PTActorsCare.esp") or file("PTDamageFinal.esp") or file("PTDoorExploitBegone.esp") or file("PTLessKnockback.esp") or file("NoBackwardsRunning.esp") or file("NoBackwardsRunning_fran.esp")'
       - *masterReassign
   - name: 'BFG''s Enhanced Armory.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: ''Unequip Broken Armor'', ''Enhanced Hotkeys'''
+    inc:
+      - 'Enhanced Hotkeys.esp'
+      - 'Unequip Broken Armor.esp'
   - name: 'humantouchNPC.esp'
     req: [ *OBSEv19 ]
   - name: 'Duke Patricks - Melee Combat NO RECOIL.esp'
