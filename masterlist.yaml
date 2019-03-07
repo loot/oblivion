@@ -21332,6 +21332,10 @@ plugins:
       - Body-Size-F
       - Body-Size-M
   - name: 'Slof''s Oblivion Better Beasts.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'Slof''s Better Bodies' ]
+        condition: 'active("Slof''s Better Bodies.esp")'
     tag:
       - Body-F
       - Body-M
@@ -21489,7 +21493,7 @@ plugins:
         display: '[Robert''s Female Body Replacer](https://www.nexusmods.com/oblivion/mods/15624)'
     msg:
       - type: say
-        content: 'Incompatible with: Non-Robert''s body mods, Slof''s Oblivion Better Beasts.esp (included in this), Improved Facial Textures, Facial Textures by Enayla, Cobl Races Resource and Luchairs HGEC body seam reducer.'
+        content: 'Incompatible with: Non-Robert''s body mods, Improved Facial Textures, Facial Textures by Enayla and Luchairs HGEC body seam reducer.'
     tag:
       - Body-F
       - Body-M
