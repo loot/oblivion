@@ -11093,16 +11093,16 @@ plugins:
         itm: 94
         udr: 5
   - name: 'MTCExpandedVillages.esp'
-    msg:
-      - type: warn
-        content: 'Incompatible with Ruined Tail''s Tale unless using the patch available [here](http://www.nexusmods.com/oblivion/mods/34010).'
-        condition: '( file("RTT.esp") ) and not file("RTT-Weye Relocation Patch.esp")'
-      - type: warn
-        content: 'Incompatible with Faregyl Village unless using the patch available [here](http://www.nexusmods.com/oblivion/mods/34010).'
-        condition: '( file("Faregyl.esp") ) and not file("MTCVillages-FaregylPatch.esp")'
-      - type: warn
-        content: 'Incompatible with Lost Spires unless using the patch available [here](http://www.nexusmods.com/oblivion/mods/42430).'
-        condition: '( file("The Lost Spires.esp") ) and not file("MTCVillages-LostSpiresPatch.esp")'
+    inc:
+      - name: 'RTT.esp'
+        display: 'Ruined Tail''s Tale'
+        condition: 'not file("RTT-Weye Relocation Patch.esp") and not file("MTC-WeyePatch.esp")'
+      - name: 'Faregyl.esp'
+        display: 'Faregyl Village'
+        condition: 'not file("MTCVillages-FaregylPatch.esp")'
+      - name: 'The Lost Spires.esp'
+        display: 'The Lost Spires'
+        condition: 'not file("MTCVillages-LostSpiresPatch.esp")'
     dirty:
       - crc: 0x795046ef
         <<: *dirtyPlugin
