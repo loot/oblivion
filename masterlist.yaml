@@ -9532,9 +9532,12 @@ plugins:
         itm: 244
         udr: 18
   - name: 'AbandonedHouse.esp'
+    inc:
+      - name: 'Better Cities Resources.esm'
+        display: 'Better Cities'
     msg:
       - type: say
-        content: 'Incompatible with Better Cities, use ''AbandonedHouseBC.esp'' instead.'
+        content: 'Use AbandonedHouse Better Cities instead.'
         condition: 'file("Better Cities Resources.esm")'
   - name: 'Better Benirus Manor.esp'
     after:
