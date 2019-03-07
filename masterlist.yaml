@@ -22004,26 +22004,11 @@ plugins:
     tag:
       - Actors.Anims
       - NoMerge
-  - name: 'Better Cities - CUO Bravil Patch.esp'
+  - name: 'Better Cities( Full)?( B&M)? - CUO Bravil( Patch)?\.esp'
     msg:
-      - type: say
-        content: 'Use only one Better Cities *version* - CUO Bravil Patch.esp'
-        condition: 'file("Better Cities (Full|B&M|Full B&M) - CUO Bravil( Patch)?\.esp")'
-  - name: 'Better Cities Full - CUO Bravil.esp'
-    msg:
-      - type: say
-        content: 'Use only one Better Cities *version* - CUO Bravil Patch.esp'
-        condition: 'file("Better Cities (B&M |Full B&M )?- CUO Bravil Patch\.esp")'
-  - name: 'Better Cities B&M - CUO Bravil Patch.esp'
-    msg:
-      - type: say
-        content: 'Use only one Better Cities *version* - CUO Bravil Patch.esp'
-        condition: 'file("Better Cities (Full (B&M )?)?- CUO Bravil( Patch)?\.esp")'
-  - name: 'Better Cities Full B&M - CUO Bravil Patch.esp'
-    msg:
-      - type: say
-        content: 'Use only one Better Cities *version* - CUO Bravil Patch.esp'
-        condition: 'file("Better Cities (Full |B&M )?- CUO Bravil( Patch)?\.esp")'
+      - <<: *useOnlyOneX
+        subs: [ 'Better Cities *version* - CUO Bravil Patch' ]
+        condition: 'many("Better Cities( Full)?( B&M)? - CUO Bravil( Patch)?\.esp")'
   - name: 'BCBravilFULL-Barrowfields patch.esp'
     msg:
       - type: say
