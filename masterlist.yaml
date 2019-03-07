@@ -15213,9 +15213,8 @@ plugins:
         content: 'Use OBCBravil or OBCBravilB&M but not both at the same time.'
         condition: 'file("OBCBravil-Barrowfields patch.esp")'
   - name: 'BC+Vvardenfell Imports Patch.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: UL Cheydinhal Falls.'
+    inc:
+      - 'xulCheydinhalFalls.esp'
   - name: 'Open Cities.esp'
     msg: [ *obsolete ]
   - name: 'Open Cities + Cats & Rats.esp'
