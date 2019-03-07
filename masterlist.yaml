@@ -16041,10 +16041,23 @@ plugins:
     tag:
       - Stats
   - name: 'Gabriella''s Sexy Boutique.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: Speedbuster Collection.esp, SG010 Compilation.esp, SG001_BunnyGirl.esp, SG002_Button.esp, SG003_Slit.esp, SG004_Stargazer.esp, SG005_DHuntress.esp, SG006_Nabiya.esp, SG007_Nobody.esp, SG008_Gee.esp, SG010_Attractive.esp, SG011_Seductive.esp, SG012_MoonLight_Suit.esp, SG013_Nazca.esp, SG014_SparkleSweetSummer.esp (Includes the contents of these esps).'
-        condition: 'file("Speedbuster Collection.esp") or file("SG010 Compilation.esp") or file("SG001_BunnyGirl.esp") or file("SG002_Button.esp") or file("SG003_Slit.esp") or file("SG004_Stargazer.esp") or file("SG005_DHuntress.esp") or file("SG006_Nabiya.esp") or file("SG007_Nobody.esp") or file("SG008_Gee.esp") or file("SG010_Attractive.esp") or file("SG011_Seductive.esp") or file("SG012_MoonLight_Suit.esp") or file("SG013_Nazca.esp") or file("SG014_SparkleSweetSummer.esp")'
+    inc:
+      # Includes these esps
+      - 'Speedbuster Collection.esp'
+      - 'SG010 Compilation.esp'
+      - 'SG001_BunnyGirl.esp'
+      - 'SG002_Button.esp'
+      - 'SG003_Slit.esp'
+      - 'SG004_Stargazer.esp'
+      - 'SG005_DHuntress.esp'
+      - 'SG006_Nabiya.esp'
+      - 'SG007_Nobody.esp'
+      - 'SG008_Gee.esp'
+      - 'SG010_Attractive.esp'
+      - 'SG011_Seductive.esp'
+      - 'SG012_MoonLight_Suit.esp'
+      - 'SG013_Nazca.esp'
+      - 'SG014_SparkleSweetSummer.esp'
   - name: 'Get_Your_Arrows_Back-9403.esp'
     msg:
       - type: say
