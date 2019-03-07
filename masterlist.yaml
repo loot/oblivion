@@ -11422,9 +11422,9 @@ plugins:
       - type: warn
         content: 'Part of Chronicles of Reeb. Goes with Belas.esm. Do not use. This mod has serious landscape errors in the Tamriel worldspace.'
   - name: 'Quest For The Elements.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: Fighters Guild Quests (and its ROC patch)'
+    inc:
+      - 'Fighters Guild Quests.esp'
+      - 'ROC+Fighters Guild Quests.esp'
     dirty:
       - crc: 0xd2e0b570
         <<: *dirtyPlugin
