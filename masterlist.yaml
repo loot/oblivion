@@ -15031,17 +15031,15 @@ plugins:
     msg:
       - type: say
         content: 'Outdated. Update the affected UL mods and then delete this patch.'
-  - name: 'Imperial City Waterfront Tunnel Entrance v2.1.esp'
+  - name: 'Imperial City Waterfront Tunnel Entrance v(2\.1|3\.0)\.esp'
+    inc:
+      - 'Better Imperial City.esp'
+      - 'Better Cities IC Waterfront.esp'
     msg:
       - *obsolete
-      - type: say
-        content: 'Incompatible with: Better Cities. Already included in Better Cities IC plugins.'
-        condition: 'file("Better Cities Resources.esm")'
-  - name: 'Imperial City Waterfront Tunnel Entrance v3.0.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: Better Cities. Already included in Better Cities IC plugins.'
-        condition: 'file("Better Cities Resources.esm")'
+      - <<: *alreadyInX
+        subs: [ 'Better Cities - Imperial City & IC Waterfront' ]
+        condition: 'active("Better Imperial City.esp") or active("Better Cities IC Waterfront.esp")'
   - name: 'Imperil_City_Tunnel.esp'
     inc:
       - name: 'Better Cities Resources.esm'
