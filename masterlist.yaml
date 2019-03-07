@@ -10025,10 +10025,14 @@ plugins:
       - Actors.Anims
       - NoMerge
   - name: 'delivery_job.esp'
+    inc:
+      - name: 'Better Cities Resources.esm'
+        display: 'Better Cities 4.6+'
+        condition: 'file("Better Cities Resources.esm") and version("Better Cities Resources.esm","4.6.0",>=)'
     msg:
-      - type: say
-        content: 'Incompatible with: Better Cities 4.6+. Has been integrated into Better Cities as of version 4.6.0.'
-        condition: 'file("Better Cities Resources.esm")'
+      - <<: *alreadyInX
+        subs: [ 'Better Cities' ]
+        condition: 'active("Better Cities Resources.esm") and version("Better Cities Resources.esm","4.6.0",>=)'
   - name: 'Delivery Job - BC.esp'
     msg:
       - type: say
