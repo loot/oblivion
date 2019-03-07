@@ -17455,9 +17455,8 @@ plugins:
       - type: say
         content: 'only use one of the ''Worthwhile Thievery'' ESPs.'
   - name: 'Morrowind Lockpicking.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: Zumbs Lockpicking Mod.'
+    inc:
+      - 'ZumbsLockpickingMod.esp'
     tag:
       - Relev
   - name: 'OOO-OLC_Realistic_Detection.esp'
