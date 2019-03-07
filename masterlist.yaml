@@ -220,7 +220,7 @@ common:
     condition: *FCOMCond
 
   - &useOnlyOneX
-    type: error
+    type: say
     content:
       - lang: en
         text: 'Use only one %1%.'
@@ -240,7 +240,6 @@ common:
         text: 'Nutzen Sie nur einen %1%.'
   - &useOnlyOneRoadRecordFile
     <<: *useOnlyOneX
-    type: say
     subs: [ 'road record file' ]
 
 # Dirty Plugin Messages
