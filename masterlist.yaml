@@ -19166,10 +19166,8 @@ plugins:
       - Hair
       - NpcFaces
   - name: 'Manga Elves.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: Cute Sexy Elves.esp which is an older version of same race'
-        condition: 'file("Cute Sexy Elves.esp")'
+    inc:
+      - 'Cute Sexy Elves.esp'
     tag:
       - Eyes
       - Graphics
