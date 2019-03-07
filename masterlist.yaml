@@ -14089,10 +14089,9 @@ plugins:
   - name: 'ROC+RBWR Patch.esp'
     msg: [ *roadsAndBridgesDetected ]
   - name: 'Reaper''s Coldstone Town.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: Heart of the Dead.'
-      - *obsolete
+    inc:
+      - 'HeartOftheDead.esp'
+    msg: [ *obsolete ]
   - name: 'Reaper''s Coldstone Town Vwalk.esp'
     tag:
       - Actors.Anims
