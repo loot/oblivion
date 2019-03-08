@@ -17328,10 +17328,10 @@ plugins:
     inc:
       - 'Midas BeastFortify Fix NONOBSE.esp'
   - name: 'CALSUDG.esp'
-    req: [ *OBSEv18 ]
-    msg:
-      - type: say
-        content: 'Requires: OBME'
+    req:
+      - *OBSEv18
+      - name: 'OBSE/Plugins/OBME.dll'
+        display: '[Oblivion Magic Extender](http://www.nexusmods.com/oblivion/mods/31981)'
   - name: 'ES4_Spell Names by Effect.esp'
     tag:
       - Names
