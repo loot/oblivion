@@ -22506,10 +22506,11 @@ plugins:
       - type: say
         content: 'Requires: Elsweyr Deserts of Anequina.'
   - name: 'HTSCl_hud.esp'
-    req: [ *OBSE ]
-    msg:
-      - type: say
-        content: 'Requires: Pluggy v125 or higher. Rename OBSE_Elys_Pluggy.dll to OBSE_Elys_Pluggy_Hud.dll.'
+    req:
+      - *OBSE
+      - name: 'OBSE/Plugins/OBSE_Elys_Pluggy.dll'
+        display: '[Pluggy v125 or higher](https://www.nexusmods.com/oblivion/mods/23979). Rename OBSE_Elys_Pluggy.dll to OBSE_Elys_Pluggy_Hud.dll.'
+        condition: 'not file("OBSE/Plugins/OBSE_Elys_Pluggy_Hud.dll")'
   - name: 'TheOubliette.esp'
     dirty:
       - crc: 0x2f16c1c5
