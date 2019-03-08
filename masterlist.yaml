@@ -22745,10 +22745,8 @@ plugins:
     tag:
       - Graphics
   - name: 'BubbleFx.esp'
-    msg:
-      - type: say
-        content: 'Most likely incompatible with Supreme Magicka.'
-        condition: 'file("SupremeMagicka.esp")'
+    inc:
+      - 'SupremeMagicka.esp'
   - name: 'GW71_Life_Detect.esp'
     tag:
       - Deactivate
