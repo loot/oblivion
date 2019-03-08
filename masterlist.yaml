@@ -8361,9 +8361,15 @@ plugins:
       - Graphics
       - NoMerge
   - name: 'Diverse Imperial Armor v1.1.esp'
+    inc:
+      - 'FCOM_Convergence.esm'
+      - 'Mart''s Monster Mod.esm'
+      - 'Mart''s Monster Mod for Fran.esp'
+      - 'Mart''s Monster Mod for OOO.esm'
     msg:
       - type: say
-        content: 'Incompatible with: MMM/FCOM use Diverse Guard Armor.esp instead for MMM/MMMForFrans (merged in MMMforOOO) or use Diverse Guard Unity for FCOM.'
+        content: 'Use Diverse Guard Armor.esp instead for MMM/MMMForFrans (merged in MMMforOOO) or use Diverse Guard Unity for FCOM.'
+        condition: 'file("Mart''s Monster Mod for Fran.esp") or file("Mart''s Monster Mod.esm") or file("Mart''s Monster Mod for OOO.esm") or file("FCOM_Convergence.esm")'
   - name: 'DiverseDremoraArmor.esp'
     tag:
       - Graphics
