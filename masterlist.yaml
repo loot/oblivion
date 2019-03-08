@@ -17704,11 +17704,13 @@ plugins:
       - type: say
         content: 'Use no more than one Timed Block plugin.'
   - name: 'DRSplatter.esp'
+    req:
+      - *OBSE
+      - name: 'OBSE/Plugins/OBGEv2.dll'
+        display: '[Oblivion Graphics Extender](https://www.nexusmods.com/oblivion/mods/30054)'
     msg:
       - type: warn
         content: 'Remove this. Known to cause crashes and save game corruption.'
-      - type: say
-        content: 'Requires: OBGEv2.'
   - name: 'kuerteeAttributeAndSkillBasedDamageModifiers.esp'
     msg:
       - type: say
