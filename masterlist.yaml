@@ -7765,10 +7765,12 @@ plugins:
       - 'Mart''s Monster Mod - Gems & Gem Dust.esp'
     req:
       - 'Oscuro''s_Oblivion_Overhaul.esm'
-    msg:
-      - type: say
-        content: 'Requires: MMMforOOO or FCOM.'
-        condition: 'not file("Mart''s Monster Mod for OOO.esp") and not file("FCOM_Convergence.esm")'
+      - name: 'Mart''s Monster Mod for OOO.esp'
+        display: '[MMMforOOO](https://www.nexusmods.com/oblivion/mods/17784) or [FCOM Convergence](https://www.nexusmods.com/oblivion/mods/12249)'
+        condition: 'not file("FCOM_Convergence.esm")'
+      - name: 'FCOM_Convergence.esm'
+        display: '[MMMforOOO](https://www.nexusmods.com/oblivion/mods/17784) or [FCOM Convergence](https://www.nexusmods.com/oblivion/mods/12249)'
+        condition: 'not file("Mart''s Monster Mod for OOO.esp")'
     tag:
       - Delev
   - name: 'Mart''s Monster Mod - Diverse Runeskulls Loot OOO.esp'
@@ -7776,10 +7778,12 @@ plugins:
       - 'Mart''s Monster Mod - Gems & Gem Dust.esp'
     req:
       - 'Oscuro''s_Oblivion_Overhaul.esm'
-    msg:
-      - type: say
-        content: 'Requires: MMMforOOO or FCOM.'
-        condition: 'not file("Mart''s Monster Mod for OOO.esp") and not file("FCOM_Convergence.esm")'
+      - name: 'Mart''s Monster Mod for OOO.esp'
+        display: '[MMMforOOO](https://www.nexusmods.com/oblivion/mods/17784) or [FCOM Convergence](https://www.nexusmods.com/oblivion/mods/12249)'
+        condition: 'not file("FCOM_Convergence.esm")'
+      - name: 'FCOM_Convergence.esm'
+        display: '[MMMforOOO](https://www.nexusmods.com/oblivion/mods/17784) or [FCOM Convergence](https://www.nexusmods.com/oblivion/mods/12249)'
+        condition: 'not file("Mart''s Monster Mod for OOO.esp")'
     tag:
       - Delev
   - name: 'OMOBS_MMM.esp'
