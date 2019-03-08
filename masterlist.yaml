@@ -7788,11 +7788,10 @@ plugins:
   - name: 'Mart''s Monster Mod - Diverse RuneSkull OOO Loot.esp'
     inc:
       - 'Mart''s Monster Mod - Gems & Gem Dust.esp'
+    req:
+      - 'Oscuro''s_Oblivion_Overhaul.esm'
     msg:
       - type: say
-        content: 'Requires: Oscuro''s Oblivion Overhaul.'
-        condition: 'not file("Oscuro''s_Oblivion_Overhaul.esm")'
-      - type: error
         content: 'Requires: MMMforOOO or FCOM.'
         condition: 'not file("Mart''s Monster Mod for OOO.esp") and not file("FCOM_Convergence.esm")'
     tag:
@@ -7800,10 +7799,9 @@ plugins:
   - name: 'Mart''s Monster Mod - Diverse Runeskulls Loot OOO.esp'
     inc:
       - 'Mart''s Monster Mod - Gems & Gem Dust.esp'
+    req:
+      - 'Oscuro''s_Oblivion_Overhaul.esm'
     msg:
-      - type: say
-        content: 'Requires: Oscuro''s Oblivion Overhaul.'
-        condition: 'not file("Oscuro''s_Oblivion_Overhaul.esm")'
       - type: say
         content: 'Requires: MMMforOOO or FCOM.'
         condition: 'not file("Mart''s Monster Mod for OOO.esp") and not file("FCOM_Convergence.esm")'
@@ -18185,10 +18183,8 @@ plugins:
       - C.Light
       - Deactivate
   - name: 'Let There Be Darkness - OOO.esp'
-    msg:
-      - type: say
-        content: 'Requires: Oscuro''s Oblivion Overhaul.'
-        condition: 'not file("Oscuro''s_Oblivion_Overhaul.esm")'
+    req:
+      - 'Oscuro''s_Oblivion_Overhaul.esm'
     tag:
       - C.Light
       - Deactivate
@@ -22474,10 +22470,8 @@ plugins:
       - Graphics
       - Invent
   - name: 'HTSCl_ooo.esp'
-    msg:
-      - type: say
-        content: 'Requires: Oscuro''s Oblivion Overhaul.'
-        condition: 'not file("Oscuro''s_Oblivion_Overhaul.esm")'
+    req:
+      - 'Oscuro''s_Oblivion_Overhaul.esm'
   - name: 'HTSCl_si.esp'
     req:
       - 'DLCShiveringIsles.esp'
