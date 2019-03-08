@@ -7300,10 +7300,10 @@ plugins:
         content: 'Outdated. Install FCOM version 1.0 or later.'
         condition: *FCOMCond
   - name: 'Mart''s Monster Mod - Fran''s Leveled Quests.esp'
-    msg:
-      - *alreadyInFCOM
-      - type: say
-        content: 'Requires: a Fran''s install with the Leveled Quests option.'
+    msg: [ *alreadyInFCOM ]
+    req:
+      - name: 'Francesco''s Optional Leveled Quests.esp'
+        display: '[Francescos Creatures and Items. Optional Extras - Leveled Quests.](https://www.nexusmods.com/oblivion/mods/40190)'
   - name: 'Mart''s Monster Mod - Additional Enemy NPC Vars.esp'
     msg:
       - type: say
