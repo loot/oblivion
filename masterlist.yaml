@@ -17868,6 +17868,9 @@ plugins:
         content: 'Deprecated. Do not use with v4.0+ of Sneaking Detection Recalibrated.'
         condition: 'version("Sneaking Detection Recalibrated.esp","4.0",>=)'
   - name: 'SDR_Core.esp'
+    inc:
+      - name: 'SDR_NPC Behavior.esp'
+        condition: 'version("SDR_Core.esp","4.5.0",>=)'
     req:
       - 'OBSE/Plugins/SDR_obse.dll'
       - 'OBSE/Plugins/AddActorValues.dll'
@@ -17876,10 +17879,6 @@ plugins:
     inc:
       - name: 'SM Combat Hide.esp'
         display: 'SM Combat Hide'
-    msg:
-      - type: say
-        content: 'Deprecated. Do not use with v4.5.0+ of Sneaking Detection Recalibrated.'
-        condition: 'version("SDR_Core.esp","4.5.0",>=)'
   - name: 'SDR_ThievesArsenal_Patch.esp'
     msg:
       - type: say
