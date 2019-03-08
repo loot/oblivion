@@ -22667,10 +22667,10 @@ plugins:
   - name: 'bgMagicShaderLifeDetect.esp'
     msg: [ *doNotClean ]
   - name: 'kuerteeDetectLifeEffectNightEyeShader.esp'
-    req: [ *OBSE ]
-    msg:
-      - type: say
-        content: 'Requires: OBSE Night Eye Shader Switcher.'
+    req:
+      - *OBSE
+      - name: 'OBSE/Plugins/SwitchNightEyeShaders.dll'
+        display: '[Night Eye Shader Switcher](https://www.nexusmods.com/oblivion/mods/19476)'
   - name: 'bgMagicLightningbolt.esp'
     msg: [ *doNotClean ]
   - name: 'BNewShockBoltEffects20.esp'
