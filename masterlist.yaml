@@ -17204,9 +17204,11 @@ plugins:
         itm: 13
         udr: 4
   - name: 'SummonKnightofOrderOBME.esp'
-    msg:
-      - type: say
-        content: 'Requires: SI and OBSE and OBME'
+    req:
+      - *OBSE
+      - name: 'OBSE/Plugins/OBME.dll'
+        display: '[Oblivion Magic Extender](https://www.nexusmods.com/oblivion/mods/31981)'
+      - 'DLCShiveringIsles.esp'
   - name: 'Teleport.esp'
     req: [ *OBSE ]
   - name: 'training spells.esp'
