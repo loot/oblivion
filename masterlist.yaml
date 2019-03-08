@@ -18217,9 +18217,8 @@ plugins:
       - C.Light
       - Deactivate
   - name: 'Let There Be Darkness - Elsweyr.esp'
-    msg:
-      - type: say
-        content: 'Requires: Elsweyr Deserts of Anequina.'
+    req:
+      - 'ElsweyrAnequina.esp'
     tag:
       - C.Light
       - Deactivate
@@ -22479,9 +22478,8 @@ plugins:
     tag:
       - Graphics
   - name: 'HTSCl_elsweyr.esp'
-    msg:
-      - type: say
-        content: 'Requires: Elsweyr Deserts of Anequina.'
+    req:
+      - 'ElsweyrAnequina.esp'
   - name: 'HTSCl_hud.esp'
     req:
       - *OBSE
