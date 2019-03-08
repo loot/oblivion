@@ -553,6 +553,11 @@ plugins:
       - Relations
       - Relev
   - name: 'Armamentarium.esm'
+    inc:
+      - name: 'FCOM_ArcheryArmamentarium.esp'
+        condition: 'version("Armamentarium.esm","1.35",<)'
+      - name: 'FCOM_Archery_Deadly_Armamentarium.esp'
+        condition: 'version("Armamentarium.esm","1.35",<)'
     tag:
       - Relev
     msg: [ *obsoleteArmamentarium ]
