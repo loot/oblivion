@@ -15740,9 +15740,9 @@ plugins:
   - name: 'BrighterTorches_v1.1.esp'
     msg: [ *obsolete ]
   - name: 'TimeWizard.esp'
-    msg:
-      - type: say
-        content: 'Requires: OBSE (only if using version 2.1+)'
+    req:
+      - <<: *OBSE
+        condition: 'version("TimeWizard.esp","2.1",>=)'
   - name: 'Buried_Treasure.esp'
     dirty:
       - crc: 0xb48899c1
