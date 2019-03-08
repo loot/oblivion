@@ -17255,6 +17255,9 @@ plugins:
         itm: 17
   - name: 'SupremeMagicka.esp'
     after:
+      - name: 'bgMagicEV.esp'
+        display: 'Less Annoying Magic Experience (L.A.M.E)'
+        condition: 'file("bgMagicEV_Conjuration_for_Supreme_Magicka.esp")'
       - 'lumi_enchantments.esp'
       - 'lumi_enchantments_subtle.esp'
     msg: [ *doNotClean ]
@@ -21665,10 +21668,10 @@ plugins:
       - Relev
       - SpellStats
   - name: 'bgMagicEV.esp'
-    msg:
-      - type: say
-        content: 'Move Supreme Magica after LAME if you want Supreme Magica spell stats.'
-      - *doNotClean
+    after:
+      - name: 'SupremeMagicka.esp'
+        condition: 'not file("bgMagicEV_Conjuration_for_Supreme_Magicka.esp")'
+    msg: [ *doNotClean ]
     tag:
       - C.RecordFlags
       - Delev
@@ -21710,14 +21713,6 @@ plugins:
     tag:
       - Graphics
       - NoMerge
-  - name: 'bgMagicEV_Conjuration_for_Supreme_Magicka.esp'
-    msg:
-      - type: say
-        content: 'Requires: Supreme Magicka.'
-      - type: say
-        content: 'Only use if placing L.A.M.E. files before Supreme Magika to keep SM spell stats.'
-      - type: say
-        content: 'Always place this file after Supreme Magika.'
   - name: 'cidnothump.esp'
     msg:
       - type: say
@@ -21786,36 +21781,32 @@ plugins:
     msg: [ *doNotClean ]
   - name: 'bgBalancingEVLAMEAddition.esp'
     req:
+      - name: 'bgMagicEV.esp'
+        display: 'Less Annoying Magic Experience (L.A.M.E)'
       - 'DLCShiveringIsles.esp'
-    msg:
-      - type: say
-        content: 'Requires: LAME.'
-      - *doNotClean
+    msg: [ *doNotClean ]
     tag:
       - Relev
   - name: 'bgBalancingDVLAMEAddition.esp'
     req:
+      - name: 'bgMagicEV.esp'
+        display: 'Less Annoying Magic Experience (L.A.M.E)'
       - 'DLCShiveringIsles.esp'
-    msg:
-      - type: say
-        content: 'Requires: LAME.'
-      - *doNotClean
+    msg: [ *doNotClean ]
     tag:
       - Relev
   - name: 'bgBalancingEVLAMEGlue.esp'
     req:
+      - name: 'bgMagicEV.esp'
+        display: 'Less Annoying Magic Experience (L.A.M.E)'
       - 'DLCShiveringIsles.esp'
-    msg:
-      - type: say
-        content: 'Requires: LAME.'
-      - *doNotClean
+    msg: [ *doNotClean ]
   - name: 'bgBalancingDVLAMEGlue.esp'
     req:
+      - name: 'bgMagicEV.esp'
+        display: 'Less Annoying Magic Experience (L.A.M.E)'
       - 'DLCShiveringIsles.esp'
-    msg:
-      - type: say
-        content: 'Requires: LAME.'
-      - *doNotClean
+    msg: [ *doNotClean ]
   - name: 'bgBalancingEVOptionalNPCDiversityLAME.esp'
     msg: [ *doNotClean ]
     tag:
@@ -22463,9 +22454,8 @@ plugins:
     req:
       - 'Cobl Main.esm'
   - name: 'HTSCl_mmm.esp'
-    msg:
-      - type: say
-        content: 'Requires: Mart''s Monster Mod.'
+    req:
+      - 'Mart''s Monster Mod.esm'
     tag:
       - Graphics
       - Invent
@@ -22476,9 +22466,8 @@ plugins:
     req:
       - 'DLCShiveringIsles.esp'
   - name: 'HTSCl_bbc.esp'
-    msg:
-      - type: say
-        content: 'Requires: Better Cities Resources.'
+    req:
+      - 'Better Cities Resources.esm'
     tag:
       - Graphics
   - name: 'HTSCl_wac.esp'
