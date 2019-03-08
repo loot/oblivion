@@ -9973,12 +9973,13 @@ plugins:
       - type: say
         content: 'it''s replace (DC) Sutch Reborn.esp'
   - name: 'Deepwood Adventures.esp'
-    req: [ *OBSE ]
+    req:
+      - *OBSE
+      - name: 'OBSE/Plugins/Elys_USV.dll'
+        display: '[Elys- Universal Silent Voice](https://www.nexusmods.com/oblivion/mods/16622)'
     msg:
       - type: say
         content: 'Very dirty - Compile All Scripts was used on the mod. Either use the CS or Tes4Edit to clean or use Wrye Bash''s Decompile All command.'
-      - type: say
-        content: 'Requires: Elys Universal Silent Voice'
     dirty:
       - crc: 0xad5233bc
         <<: *dirtyPlugin
@@ -11349,10 +11350,12 @@ plugins:
   - name: 'PathoftheSkullBearer.esp'
     req:
       - *OBSE
+      - name: 'OBSE/Plugins/Elys_USV.dll'
+        display: '[Elys- Universal Silent Voice](https://www.nexusmods.com/oblivion/mods/16622)'
       - 'DLCShiveringIsles.esp'
     msg:
       - type: say
-        content: 'Requires: Sound Commands (OBSE Plugin), Elys Universal Silent Voice (OBSE Plugin)'
+        content: 'Requires: Sound Commands (OBSE Plugin)'
   - name: 'POTSB.esp'
     msg:
       - type: say
@@ -12297,9 +12300,9 @@ plugins:
         itm: 15
         udr: 58
   - name: 'VRIceOrcMod.esp'
-    msg:
-      - type: say
-        content: 'Requires: Elys'' Universal Silent Voice or the dialogue will go by very fast.'
+    req:
+      - name: 'OBSE/Plugins/Elys_USV.dll'
+        display: '[Elys- Universal Silent Voice](https://www.nexusmods.com/oblivion/mods/16622)'
   - name: 'Veldin.esp'
     dirty:
       - crc: 0xbc65cd25
