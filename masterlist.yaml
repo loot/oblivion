@@ -3309,11 +3309,13 @@ plugins:
         <<: *dirtyPlugin
         itm: 3
   - name: 'BetterMusicSystem.esp'
-    req: [ *OBSE ]
-    msg:
-      - type: say
-        content: 'Requires: Enhanced Music & Control v0.72B (OBSE-Plugin) & SoundCommands v4.0 (OBSE-Plugin)'
-      - *obsolete
+    req:
+      - *OBSE
+      - name: 'OBSE/Plugins/EnhancedMusicControl.dll'
+        display: '[Enhanced Music & Control v0.72B](https://www.nexusmods.com/oblivion/mods/19772)'
+      - name: 'OBSE/Plugins/SoundCommands.dll'
+        display: '[SoundCommands 4.0](https://www.nexusmods.com/oblivion/mods/16288)'
+    msg: [ *obsolete ]
   - name: 'Mud Crabs!(_(coMbO|MMM|OOO))?\.esp'
     msg:
       - <<: *useOnlyOneX
@@ -13600,10 +13602,13 @@ plugins:
       - 'ElsweyrAnequina - NoSpider.esp'
       - 'ElsweyrAnequina - ModerateIncreasedCreature.esp'
   - name: 'BetterMusicSystem(Elsweyr).esp'
-    req: [ *OBSE ]
-    msg:
-      - type: say
-        content: 'Requires: Enhanced Music & Control v0.72B (OBSE-Plugin) & SoundCommands v4.0 (OBSE-Plugin) and Elsweyr Anequina.'
+    req:
+      - 'ElsweyrAnequina.esp'
+      - *OBSE
+      - name: 'OBSE/Plugins/EnhancedMusicControl.dll'
+        display: '[Enhanced Music & Control v0.72B](https://www.nexusmods.com/oblivion/mods/19772)'
+      - name: 'OBSE/Plugins/SoundCommands.dll'
+        display: '[SoundCommands 4.0](https://www.nexusmods.com/oblivion/mods/16288)'
   - name: 'ElsweyrAnequina - Races HGEC-Robert.esp'
     tag:
       - R.Mouth
