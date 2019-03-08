@@ -22578,10 +22578,10 @@ plugins:
   - name: 'TF_timemod1-\d\d?.esp'
     msg: [ *bashedPatchTweak ]
   - name: 'Dynamic TimeScale.esp'
-    req: [ *OBSEv15 ]
-    msg:
-      - type: say
-        content: 'Requires: You are Here v1.1-'
+    req:
+      - *OBSEv15
+      - name: 'You Are Here.esm'
+        display: 'You Are Here v1.1-'
   - name: 'Syc_LongerDaysShorterNights.esp'
     msg:
       - type: say
