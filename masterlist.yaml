@@ -106,7 +106,7 @@ common:
   - &obsoleteArmamentarium
     <<: *obsolete
     subs: [ '[Armamentarium Complete](http://www.nexusmods.com/oblivion/mods/18417)' ]
-    condition: 'not file("Armamentarium.esm") or (file("Armamentarium.esm") and version("Armamentarium.esm","1.35",<))'
+    condition: 'file("Armamentarium.esm") and version("Armamentarium.esm","1.35",<)'
 
   - &needsCleaning
     type: say
@@ -4628,55 +4628,30 @@ plugins:
         <<: *dirtyPlugin
         itm: 21
   - name: 'ArmamentariumTest.esp'
-    inc:
-      - name: 'Armamentarium.esm'
-        display: 'Armamentarium Complete'
     msg: [ *obsoleteArmamentarium ]
   - name: 'ArmamentariumArmor.esp'
-    inc:
-      - name: 'Armamentarium.esm'
-        display: 'Armamentarium Complete'
     msg: [ *obsoleteArmamentarium ]
   - name: 'ArmamentariumArmor4Npcs.esp'
-    inc:
-      - name: 'Armamentarium.esm'
-        display: 'Armamentarium Complete'
     msg: [ *obsoleteArmamentarium ]
   - name: 'ArmamentariumWeapons4Npcs.esp'
     inc:
       - 'Armamentarium_MOBS.esp'
-      - name: 'Armamentarium.esm'
-        display: 'Armamentarium Complete'
     msg: [ *obsoleteArmamentarium ]
   - name: 'Armamentarium_MOBS.esp'
     inc:
       - 'ArmamentariumWeapons4Npcs.esp'
-      - name: 'Armamentarium.esm'
-        display: 'Armamentarium Complete'
     msg: [ *obsoleteArmamentarium ]
     dirty:
       - crc: 0x65265f23
         <<: *dirtyPlugin
         itm: 10
   - name: 'ArmamentariumKatanas.esp'
-    inc:
-      - name: 'Armamentarium.esm'
-        display: 'Armamentarium Complete'
     msg: [ *obsoleteArmamentarium ]
   - name: 'ArmamentariumKatanasRU.esp'
-    inc:
-      - name: 'Armamentarium.esm'
-        display: 'Armamentarium Complete'
     msg: [ *obsoleteArmamentarium ]
   - name: 'ArmamentariumVendors.esp'
-    inc:
-      - name: 'Armamentarium.esm'
-        display: 'Armamentarium Complete'
     msg: [ *obsoleteArmamentarium ]
   - name: 'ArmamentariumStaffs.esp'
-    inc:
-      - name: 'Armamentarium.esm'
-        display: 'Armamentarium Complete'
     msg: [ *obsoleteArmamentarium ]
   - name: 'AGEHA Tortured Souls.esp'
     tag:
