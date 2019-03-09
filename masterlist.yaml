@@ -20527,12 +20527,11 @@ plugins:
       - Actors.Anims
       - NoMerge
   - name: '1em_Vilja OOO FCOM Fix.esp'
+    req:
+      - 'Oscuro''s_Oblivion_Overhaul.esm'
     msg:
       - type: say
         content: 'Use this or "1em_Vilja MMM FCOM Fix.esp", but not both; The OOO Version offers less protection.'
-      - type: say
-        content: 'Requires: Requires OOO (and is good for OOO / MMMforOOO / FCOM / etc.)'
-        condition: 'not file("Oscuro''s_Oblivion_Overhaul.esm")'
     tag:
       - Factions
       - NoMerge
@@ -20542,11 +20541,11 @@ plugins:
       - Factions
       - NoMerge
   - name: '1em_Vilja MMM FCOM Fix.esp'
+    req:
+      - 'Mart''s Monster Mod.esm'
     msg:
       - type: say
         content: 'Use this or "1em_Vilja OOO FCOM Fix.esp", but not both; The MMM Version offers more protection from certain Npc and Creatures.'
-      - type: say
-        content: 'Requires: Requires MMM ( and is good for MMM / MMMforFrans / etc. )'
     tag:
       - Factions
       - NoMerge
