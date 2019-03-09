@@ -106,7 +106,7 @@ common:
   - &obsoleteArmamentarium
     <<: *obsolete
     subs: [ '[Armamentarium Complete](http://www.nexusmods.com/oblivion/mods/18417)' ]
-    condition: 'not file("Armamentarium.esm") or (file("Armamentarium.esm") and version("Armamentarium.esm","1.35",<))'
+    condition: 'file("Armamentarium.esm") and version("Armamentarium.esm","1.35",<)'
 
   - &needsCleaning
     type: say
@@ -218,6 +218,14 @@ common:
     type: error
     subs: [ 'This plugin should not be used. Reinstall Fran''s and select "Separate Files" when the option is presented.' ]
     condition: *FCOMCond
+
+  - &patch3rdParty
+    type: warn
+    content:
+      - lang: en
+        text: 'You seem to be using %1%, but you have not enabled a compatibility patch for this mod. A third party patch is available here: %2%'
+      - lang: de
+        text: 'Sie scheinen %1% zu nutzen, aber sie haben keinen Kompatibilitätspatch für diesen Mod aktiviert. Ein Patch von Dritten ist hier verfügbar: %2%'
 
   - &useOnlyOneX
     type: say
@@ -545,6 +553,11 @@ plugins:
       - Relations
       - Relev
   - name: 'Armamentarium.esm'
+    inc:
+      - name: 'FCOM_ArcheryArmamentarium.esp'
+        condition: 'version("Armamentarium.esm","1.35",<)'
+      - name: 'FCOM_Archery_Deadly_Armamentarium.esp'
+        condition: 'version("Armamentarium.esm","1.35",<)'
     tag:
       - Relev
     msg: [ *obsoleteArmamentarium ]
@@ -1621,9 +1634,8 @@ plugins:
       - 'Francesco''s Leveled Creatures-Items Mod.esm'
       - 'FCOM_Convergence.esm'
   - name: 'xeoexpeople.esp'
-    msg:
-      - type: say
-        content: 'Delete or disable ''xeoex.esp'''
+    inc:
+      - 'xeoex.esp'
     tag:
       - Actors.Stats
       - Eyes
@@ -2725,16 +2737,16 @@ plugins:
       - type: say
         content: 'Check for newer version of Open Cities.'
   - name: 'aKALAmbientDungeonsBeta2.esp'
-    msg:
-      - type: say
-        content: 'Requires: ''ScreenEffects'' and ''You Are Here''.'
-      - type: say
-        content: 'Outdated, incompatible with other ScreenEffects mods. Update to latest version of Ambient Dungeons.'
+    req:
+      - 'ScreenEffects.esm'
+      - 'You Are Here.esm'
+    msg: [ *obsolete ]
   - name: 'AmbientDungeons.esp'
-    req: [ *OBSE ]
-    msg:
-      - type: say
-        content: 'Requires: ''You Are Here''. ScreenEffects for versions below 1.3.'
+    req:
+      - *OBSE
+      - name: 'ScreenEffects.esm'
+        condition: 'version("AmbientDungeons.esp","1.3",<)'
+      - 'You Are Here.esm'
   - name: '00crystalTorch.esp'
     dirty:
       - crc: 0xe7a1bce7
@@ -3146,10 +3158,9 @@ plugins:
       - Delev
       - Relev
   - name: 'GuildOwnership1.2.esp'
-    msg:
-      - type: say
-        content: 'Not compatible with OOO. Already included in OOO.'
-        condition: *OOOCond
+    inc:
+      - 'Oscuro''s_Oblivion_Overhaul.esm'
+    msg: [ *alreadyInOOO ]
   - name: 'GW71_Soulgems.esp'
     tag:
       - Graphics
@@ -3158,15 +3169,13 @@ plugins:
       - type: say
         content: 'Incompatible with: UI systems other than DarNified UI/Dark''d DarN/other DarN variants.'
   - name: 'Inebriation.esp'
-    msg:
-      - type: say
-        content: 'Not compatible with OOO. Already included in OOO.'
-        condition: *OOOCond
+    inc:
+      - 'Oscuro''s_Oblivion_Overhaul.esm'
+    msg: [ *alreadyInOOO ]
   - name: 'Inebriation Rus.esp'
-    msg:
-      - type: say
-        content: 'Not compatible with OOO. Already included in OOO.'
-        condition: *OOOCond
+    inc:
+      - 'Oscuro''s_Oblivion_Overhaul.esm'
+    msg: [ *alreadyInOOO ]
   - name: 'Insanity''s Beverage Replacer.esp'
     tag:
       - Graphics
@@ -3216,21 +3225,19 @@ plugins:
         <<: *dirtyPlugin
         itm: 18
   - name: 'Lock Bash v1.1.esp'
-    msg:
-      - type: say
-        content: 'Not compatible with OOO. Already included in OOO.'
-        condition: *OOOCond
+    inc:
+      - 'Oscuro''s_Oblivion_Overhaul.esm'
+    msg: [ *alreadyInOOO ]
   - name: 'Lock Bash v99.9.esp'
+    inc:
+      - 'Oscuro''s_Oblivion_Overhaul.esm'
     msg:
-      - type: say
-        content: 'Not compatible with OOO. Already included in OOO.'
-        condition: *OOOCond
+      - *alreadyInOOO
       - *obsolete
   - name: 'Lock Bash v99.91.esp'
-    msg:
-      - type: say
-        content: 'Not compatible with OOO. Already included in OOO.'
-        condition: *OOOCond
+    inc:
+      - 'Oscuro''s_Oblivion_Overhaul.esm'
+    msg: [ *alreadyInOOO ]
   - name: 'Morag Tong Assassins v1-1.esp'
     dirty:
       - crc: 0xebabfce8
@@ -3301,11 +3308,13 @@ plugins:
         <<: *dirtyPlugin
         itm: 3
   - name: 'BetterMusicSystem.esp'
-    req: [ *OBSE ]
-    msg:
-      - type: say
-        content: 'Requires: Enhanced Music & Control v0.72B (OBSE-Plugin) & SoundCommands v4.0 (OBSE-Plugin)'
-      - *obsolete
+    req:
+      - *OBSE
+      - name: 'OBSE/Plugins/EnhancedMusicControl.dll'
+        display: '[Enhanced Music & Control v0.72B](https://www.nexusmods.com/oblivion/mods/19772)'
+      - name: 'OBSE/Plugins/SoundCommands.dll'
+        display: '[SoundCommands 4.0](https://www.nexusmods.com/oblivion/mods/16288)'
+    msg: [ *obsolete ]
   - name: 'Mud Crabs!(_(coMbO|MMM|OOO))?\.esp'
     msg:
       - <<: *useOnlyOneX
@@ -3458,14 +3467,14 @@ plugins:
   - name: 'QuickEquipSwap.esp'
     req: [ *OBSE ]
   - name: 'RAEVWD Cities.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: Better Cities, Open Cities Classic, Open Cities Reborn.'
+    inc:
+      - name: 'Better Cities Resources.esm'
+        display: 'Better Cities'
+      - 'Open Cities Classic.esp'
+      - 'Open Cities Reborn.esp'
   - name: 'RAEVWD Imperial City.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: Better Cities'' VWD plugin.'
-        condition: 'file("Better Cities Resources.esm")'
+    inc:
+      - 'Better Cities - VWD of the IC.esp'
   - name: 'Respawning Containers.esp'
     req:
       - 'DLCShiveringIsles.esp'
@@ -3954,9 +3963,14 @@ plugins:
   - name: 'FormID Finder without Pluggy.esp'
     msg: [ *obsolete ]
   - name: 'kuerteeAutoSaveAndTime.esp'
+    inc:
+      - 'Streamline 2.0.esp'
+      - 'Streamline 2.1.esp'
+      - 'Streamline 3.0.esp'
+      - 'Streamline 3.1.esp'
     msg:
       - type: say
-        content: 'Incompatible with Streamline''s Streamsave and Cobl''s clock.'
+        content: 'Incompatible with Cobl''s clock.'
   - name: 'NameThatHorse.esp'
     req:
       - *OBSE
@@ -4189,10 +4203,9 @@ plugins:
       - 'DLCThievesDen - Unofficial Patch - SSSB.esp'
       - 'DLCMehrunesRazor.esp'
       - 'DLCMehrunesRazor - Unofficial Patch.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: Kumiko Manor esp'
-        condition: 'file("Kumiko.?Manor.+\.esp")'
+    inc:
+      - 'KumikoManor.esp'
+      - 'Kumiko Manor 2.1 Rus.esp'
     tag:
       - Sound
     dirty:
@@ -4473,9 +4486,13 @@ plugins:
     tag:
       - Invent
   - name: '1SB_RavenousEleganceOutfit.esp'
-    msg:
-      - type: say
-        content: 'Requires: Biu''s Adventuress Body (BAB).'
+    req:
+      - name: 'Bab.esp'
+        display: '[Biu''s Adventuress Body (BAB)](https://www.nexusmods.com/oblivion/mods/12536)'
+        condition: 'checksum("1SB_RavenousEleganceOutfit.esp", 26841C94)'
+      - name: 'TFF_Races_Base.esp'
+        display: '[Fantasy Figures](https://www.nexusmods.com/oblivion/mods/13356)'
+        condition: 'checksum("1SB_RavenousEleganceOutfit.esp", 5EBF2923)'
   - name: 'AC Stock Armor.esp'
     tag:
       - Graphics
@@ -4621,55 +4638,30 @@ plugins:
         <<: *dirtyPlugin
         itm: 21
   - name: 'ArmamentariumTest.esp'
-    inc:
-      - name: 'Armamentarium.esm'
-        display: 'Armamentarium Complete'
     msg: [ *obsoleteArmamentarium ]
   - name: 'ArmamentariumArmor.esp'
-    inc:
-      - name: 'Armamentarium.esm'
-        display: 'Armamentarium Complete'
     msg: [ *obsoleteArmamentarium ]
   - name: 'ArmamentariumArmor4Npcs.esp'
-    inc:
-      - name: 'Armamentarium.esm'
-        display: 'Armamentarium Complete'
     msg: [ *obsoleteArmamentarium ]
   - name: 'ArmamentariumWeapons4Npcs.esp'
     inc:
       - 'Armamentarium_MOBS.esp'
-      - name: 'Armamentarium.esm'
-        display: 'Armamentarium Complete'
     msg: [ *obsoleteArmamentarium ]
   - name: 'Armamentarium_MOBS.esp'
     inc:
       - 'ArmamentariumWeapons4Npcs.esp'
-      - name: 'Armamentarium.esm'
-        display: 'Armamentarium Complete'
     msg: [ *obsoleteArmamentarium ]
     dirty:
       - crc: 0x65265f23
         <<: *dirtyPlugin
         itm: 10
   - name: 'ArmamentariumKatanas.esp'
-    inc:
-      - name: 'Armamentarium.esm'
-        display: 'Armamentarium Complete'
     msg: [ *obsoleteArmamentarium ]
   - name: 'ArmamentariumKatanasRU.esp'
-    inc:
-      - name: 'Armamentarium.esm'
-        display: 'Armamentarium Complete'
     msg: [ *obsoleteArmamentarium ]
   - name: 'ArmamentariumVendors.esp'
-    inc:
-      - name: 'Armamentarium.esm'
-        display: 'Armamentarium Complete'
     msg: [ *obsoleteArmamentarium ]
   - name: 'ArmamentariumStaffs.esp'
-    inc:
-      - name: 'Armamentarium.esm'
-        display: 'Armamentarium Complete'
     msg: [ *obsoleteArmamentarium ]
   - name: 'AGEHA Tortured Souls.esp'
     tag:
@@ -5468,9 +5460,9 @@ plugins:
       - 'KDCirclets.esp'
       - 'KDClothCirclets.esp'
   - name: 'RavenousEleganceRoberts.esp'
-    msg:
-      - type: say
-        content: 'Requires Robert''s Female Body v12'
+    req:
+      - name: 'RTFemaleReplacerV12.esp'
+        display: '[Robert''s Female Body Replacer](https://www.nexusmods.com/oblivion/mods/15624)'
   - name: 'RedgardWeaponsMod.esp'
     msg:
       - type: say
@@ -7318,10 +7310,10 @@ plugins:
         content: 'Outdated. Install FCOM version 1.0 or later.'
         condition: *FCOMCond
   - name: 'Mart''s Monster Mod - Fran''s Leveled Quests.esp'
-    msg:
-      - *alreadyInFCOM
-      - type: say
-        content: 'Requires: a Fran''s install with the Leveled Quests option.'
+    msg: [ *alreadyInFCOM ]
+    req:
+      - name: 'Francesco''s Optional Leveled Quests.esp'
+        display: '[Francescos Creatures and Items. Optional Extras - Leveled Quests.](https://www.nexusmods.com/oblivion/mods/40190)'
   - name: 'Mart''s Monster Mod - Additional Enemy NPC Vars.esp'
     msg:
       - type: say
@@ -7702,11 +7694,10 @@ plugins:
   - name: 'Mart''s Monster Mod - City Defences.esp'
     after:
       - 'Mart''s Monster Mod - More Wilderness Life No Gates.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with Better Cities - City Defences.'
-        condition: 'file("Better Cities Resources.esm")'
-      - *doNotClean
+    inc:
+      - name: 'Better Cities Resources.esm'
+        display: 'Better Cities'
+    msg: [ *doNotClean ]
   - name: 'Mart''s Monster Mod - Friendlier Factions OOO+FCOM.esp'
     msg: [ *obsolete ]
   - name: 'MrSiika''sFarmAnimals.esp'
@@ -7782,25 +7773,27 @@ plugins:
   - name: 'Mart''s Monster Mod - Diverse RuneSkull OOO Loot.esp'
     inc:
       - 'Mart''s Monster Mod - Gems & Gem Dust.esp'
-    msg:
-      - type: say
-        content: 'Requires: Oscuro''s Oblivion Overhaul.'
-        condition: 'not file("Oscuro''s_Oblivion_Overhaul.esm")'
-      - type: error
-        content: 'Requires: MMMforOOO or FCOM.'
-        condition: 'not file("Mart''s Monster Mod for OOO.esp") and not file("FCOM_Convergence.esm")'
+    req:
+      - 'Oscuro''s_Oblivion_Overhaul.esm'
+      - name: 'Mart''s Monster Mod for OOO.esp'
+        display: '[MMMforOOO](https://www.nexusmods.com/oblivion/mods/17784) or [FCOM Convergence](https://www.nexusmods.com/oblivion/mods/12249)'
+        condition: 'not file("FCOM_Convergence.esm")'
+      - name: 'FCOM_Convergence.esm'
+        display: '[MMMforOOO](https://www.nexusmods.com/oblivion/mods/17784) or [FCOM Convergence](https://www.nexusmods.com/oblivion/mods/12249)'
+        condition: 'not file("Mart''s Monster Mod for OOO.esp")'
     tag:
       - Delev
   - name: 'Mart''s Monster Mod - Diverse Runeskulls Loot OOO.esp'
     inc:
       - 'Mart''s Monster Mod - Gems & Gem Dust.esp'
-    msg:
-      - type: say
-        content: 'Requires: Oscuro''s Oblivion Overhaul.'
-        condition: 'not file("Oscuro''s_Oblivion_Overhaul.esm")'
-      - type: say
-        content: 'Requires: MMMforOOO or FCOM.'
-        condition: 'not file("Mart''s Monster Mod for OOO.esp") and not file("FCOM_Convergence.esm")'
+    req:
+      - 'Oscuro''s_Oblivion_Overhaul.esm'
+      - name: 'Mart''s Monster Mod for OOO.esp'
+        display: '[MMMforOOO](https://www.nexusmods.com/oblivion/mods/17784) or [FCOM Convergence](https://www.nexusmods.com/oblivion/mods/12249)'
+        condition: 'not file("FCOM_Convergence.esm")'
+      - name: 'FCOM_Convergence.esm'
+        display: '[MMMforOOO](https://www.nexusmods.com/oblivion/mods/17784) or [FCOM Convergence](https://www.nexusmods.com/oblivion/mods/12249)'
+        condition: 'not file("Mart''s Monster Mod for OOO.esp")'
     tag:
       - Delev
   - name: 'OMOBS_MMM.esp'
@@ -7830,10 +7823,10 @@ plugins:
         content: 'Consider using Creature Diversity.esp or MMM or Frans instead.'
   - name: 'WCGL - Wilderness Creatures 1.1.esp'
     inc:
+      - 'FCOM_Francescos.esp'
+      - 'Francesco''s Leveled Creatures-Items Mod.esm'
       - 'Mart''s Monster Mod.esm'
-    msg:
-      - type: say
-        content: 'Incompatible with: OOO, MMM and Francescos.'
+      - 'Oscuro''s_Oblivion_Overhaul.esp'
   - name: 'Master-Crafting-1.1-MMM.esp'
     req:
       - 'Master-Crafting-1.1-MMM Greaves fix.esp'
@@ -8015,9 +8008,6 @@ plugins:
       - NoMerge
       - Stats
   - name: 'FCOM_ArcheryArmamentarium.esp'
-    msg:
-      - type: say
-        content: 'Requires: the Armamentarium Complete mod.'
     tag:
       - Stats
   - name: 'FCOM_Archery_Armamentarium.esp'
@@ -8045,18 +8035,12 @@ plugins:
     tag:
       - Stats
   - name: 'FCOM_Archery_Deadly_Armamentarium.esp'
-    msg:
-      - type: say
-        content: 'Requires: the Armamentarium Complete mod.'
     tag:
       - Stats
   - name: 'FCOM_Archery_Deadly_RealSwords.esp'
     tag:
       - Stats
   - name: 'FCOM_Archery_Deadly_Artifacts.esp'
-    msg:
-      - type: say
-        content: 'Requires: the Artifacts mod.'
     tag:
       - Stats
   - name: 'Mart''s Monster Mod - Friendlier Factions MMM+Fran.esp'
@@ -8355,9 +8339,15 @@ plugins:
       - Graphics
       - NoMerge
   - name: 'Diverse Imperial Armor v1.1.esp'
+    inc:
+      - 'FCOM_Convergence.esm'
+      - 'Mart''s Monster Mod.esm'
+      - 'Mart''s Monster Mod for Fran.esp'
+      - 'Mart''s Monster Mod for OOO.esm'
     msg:
       - type: say
-        content: 'Incompatible with: MMM/FCOM use Diverse Guard Armor.esp instead for MMM/MMMForFrans (merged in MMMforOOO) or use Diverse Guard Unity for FCOM.'
+        content: 'Use Diverse Guard Armor.esp instead for MMM/MMMForFrans (merged in MMMforOOO) or use Diverse Guard Unity for FCOM.'
+        condition: 'file("Mart''s Monster Mod for Fran.esp") or file("Mart''s Monster Mod.esm") or file("Mart''s Monster Mod for OOO.esm") or file("FCOM_Convergence.esm")'
   - name: 'DiverseDremoraArmor.esp'
     tag:
       - Graphics
@@ -8777,9 +8767,11 @@ plugins:
     tag:
       - Delev
   - name: 'Weapon Expansion Pack for Oblivion Nthusiasts.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: Mithril and Orcish Weapon Sets v1 and v2, Fine Weapons, Rusty Items'
+    inc:
+      - 'exhoffhandseries_Ionis_Mithril+Orcish.esp'
+      - 'FineWeapons.esp'
+      - 'Mithril and Orcish Weapon Sets by Ionis.esp'
+      - 'RustyItems.esp'
     tag:
       - Delev
       - Graphics
@@ -8999,9 +8991,15 @@ plugins:
         <<: *dirtyPlugin
         itm: 11
   - name: '7roads.esp'
+    inc:
+      - 'HoarfrostCastle.esp'
+      - 'KSE_v3.esp'
+      - 'Kvatch Rebuilt.esp'
+      - 'MannimarcoComplete.esp'
+      - 'MidasSpells.esp'
+      - 'RenCorpseMod.esp'
+      - 'Unique Landscapes.esp'
     msg:
-      - type: say
-        content: 'Incompatible with: Kvatch Rebuilt, Hoarfrost Castle, Midas Magic, Mannimarco Complete, Reneer''s Corpse Mod, Unique landscapes, KSE_v3.esp.'
       - type: say
         content: 'For compatibility with Knights of the Nine, get the [patch](http://tamriel.ru/7roadsmod/Knights_Patch_02.zip).'
       - *needsCleaning
@@ -9131,9 +9129,8 @@ plugins:
         itm: 78
         udr: 21
   - name: 'Ald-Khull.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: Abandoned Village of Lily'
+    inc:
+      - 'Village of Lily 2.0.esp'
     dirty:
       - crc: 0x9585ac0c
         <<: *dirtyPlugin
@@ -9153,9 +9150,9 @@ plugins:
         itm: 10
         udr: 1
   - name: 'adTreeHomeToilet for BPH.esp'
-    msg:
-      - type: say
-        content: 'Requires: Enchanted Druid Treehome and Basic Personal Hygiene.'
+    req:
+      - name: 'Basic Personal Hygiene.esp'
+        display: '[Basic Personal Hygiene](https://www.nexusmods.com/oblivion/mods/13237)'
   - name: 'Astralis.esp'
     dirty:
       - crc: 0xfce9262
@@ -9234,11 +9231,17 @@ plugins:
         itm: 115
         udr: 3
   - name: 'AnvilBayExpansion.esp'
+    inc:
+      - 'Better Cities ANVIL.esp'
+      - 'Better Cities Full.esp'
+      - 'Open Cities Reborn.esp'
     msg:
-      - type: say
-        content: 'Incompatible with: Better Cities. Already included in Better Cities Anvil.'
-      - type: say
-        content: 'Incompatible with: Open Cities Reborn.'
+      - <<: *alreadyInX
+        subs: [ 'Better Cities - Anvil' ]
+        condition: 'active("Better Cities ANVIL.esp")'
+      - <<: *alreadyInX
+        subs: [ 'Better Cities - Full' ]
+        condition: 'active("Better Cities Full.esp")'
   - name: 'AnvilBayMisteryHouse.esp'
     dirty:
       - crc: 0x7ba6c2d6
@@ -9367,11 +9370,10 @@ plugins:
         <<: *dirtyPlugin
         udr: 14
   - name: 'Auriel''s Books.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with Better Cities IC Market District.'
-        condition: 'file("Better Cities Resources.esm")'
-      - *needsCleaning
+    inc:
+      - 'Better Imperial City.esp'
+      - 'Better Cities IC Market.esp'
+    msg: [ *needsCleaning ]
   - name: 'Auriel''s_Retreat.esp'
     dirty:
       - crc: 0xcb6ef46d
@@ -9432,18 +9434,16 @@ plugins:
       - type: say
         content: 'German Version'
   - name: 'Bandit Hideouts.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: Castle West Weald.'
+    inc:
+      - 'CastleWestWeald.esp'
     dirty:
       - crc: 0xeb5bf385
         <<: *dirtyPlugin
         itm: 12
         udr: 2
   - name: 'Basement for Cobl - Sheep Wool addition.esp'
-    msg:
-      - type: say
-        content: 'Requires: MMM'
+    req:
+      - 'Mart''s Monster Mod.esm'
   - name: 'Battle4Morrowind.esp'
     msg:
       - type: say
@@ -9515,9 +9515,12 @@ plugins:
         itm: 244
         udr: 18
   - name: 'AbandonedHouse.esp'
+    inc:
+      - name: 'Better Cities Resources.esm'
+        display: 'Better Cities'
     msg:
       - type: say
-        content: 'Incompatible with Better Cities, use ''AbandonedHouseBC.esp'' instead.'
+        content: 'Use AbandonedHouse Better Cities instead.'
         condition: 'file("Better Cities Resources.esm")'
   - name: 'Better Benirus Manor.esp'
     after:
@@ -9639,9 +9642,16 @@ plugins:
     req: [ *OBSE ]
     msg: [ *needsCleaning ]
   - name: 'Bravil Docks.esp'
+    inc:
+      - 'Better Cities BRAVIL.esp'
+      - 'Better Cities Full.esp'
     msg:
-      - type: say
-        content: 'Incompatible with: Better Cities. Already included in Better Cities Bravil.'
+      - <<: *alreadyInX
+        subs: [ 'Better Cities - Bravil' ]
+        condition: 'active("Better Cities BRAVIL.esp")'
+      - <<: *alreadyInX
+        subs: [ 'Better Cities - Full' ]
+        condition: 'active("Better Cities Full.esp")'
   - name: 'HackdirtTheDeepOnes.esp'
     inc:
       - 'HackdirtCaverns.esp'
@@ -9708,9 +9718,8 @@ plugins:
   - name: 'CaveOfWishcraft v1.1 Delayer.esp'
     msg: [ *obsolete ]
   - name: 'CottageInColoviaV1.6.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: Waalx Animals and Creatures.'
+    inc:
+      - 'Waalx Animals & Creatures.esm'
   - name: 'Castle Arpenia - Colovian Highlands.esp'
     dirty:
       - crc: 0x67360e2c
@@ -9911,9 +9920,8 @@ plugins:
         itm: 16
         udr: 6
   - name: 'DarelothFrontDoorFix.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: Apachii''s Goddess Store.'
+    inc:
+      - 'Apachii_Goddess_Store.esp'
   - name: 'Dark Brotherhood Outpost v2.esp'
     msg: [ *obsolete ]
   - name: 'Dark Brotherhood Outpost v3.esp'
@@ -9969,12 +9977,13 @@ plugins:
       - type: say
         content: 'it''s replace (DC) Sutch Reborn.esp'
   - name: 'Deepwood Adventures.esp'
-    req: [ *OBSE ]
+    req:
+      - *OBSE
+      - name: 'OBSE/Plugins/Elys_USV.dll'
+        display: '[Elys- Universal Silent Voice](https://www.nexusmods.com/oblivion/mods/16622)'
     msg:
       - type: say
         content: 'Very dirty - Compile All Scripts was used on the mod. Either use the CS or Tes4Edit to clean or use Wrye Bash''s Decompile All command.'
-      - type: say
-        content: 'Requires: Elys Universal Silent Voice'
     dirty:
       - crc: 0xad5233bc
         <<: *dirtyPlugin
@@ -10009,10 +10018,14 @@ plugins:
       - Actors.Anims
       - NoMerge
   - name: 'delivery_job.esp'
+    inc:
+      - name: 'Better Cities Resources.esm'
+        display: 'Better Cities 4.6+'
+        condition: 'file("Better Cities Resources.esm") and version("Better Cities Resources.esm","4.6.0",>=)'
     msg:
-      - type: say
-        content: 'Incompatible with: Better Cities 4.6+. Has been integrated into Better Cities as of version 4.6.0.'
-        condition: 'file("Better Cities Resources.esm")'
+      - <<: *alreadyInX
+        subs: [ 'Better Cities' ]
+        condition: 'active("Better Cities Resources.esm") and version("Better Cities Resources.esm","4.6.0",>=)'
   - name: 'Delivery Job - BC.esp'
     msg:
       - type: say
@@ -10158,9 +10171,9 @@ plugins:
         <<: *dirtyPlugin
         itm: 99
   - name: 'Fighters Guild Quests.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: Quest for the Elements (and its ROC patch)'
+    inc:
+      - 'Quest For The Elements.esp'
+      - 'ROC+QFE Patch.esp'
     tag:
       - Actors.ACBS
       - Actors.AIPackages
@@ -10236,11 +10249,18 @@ plugins:
         itm: 1
         udr: 24
   - name: 'Gold Coast''s Hillsborough Estate.esp'
+    inc:
+      - name: 'Unique Landscapes.esp'
+        display: 'Unique Landscapes Compilation'
+      - name: 'xulBrenaRiverRavine.esp'
+        display: 'Unique Landscapes - Brena River Ravine'
+      - name: 'xulTheHeath.esp'
+        display: 'Unique Landscapes - The Heath'
+      - name: 'xulBeachesOfCyrodiilLostCoast.esp'
+        display: 'Unique Landscapes - The Lost Coast'
     msg:
       - type: say
         content: 'Probably incompatible with Better Cities Anvil and most other mods that change Anvil.'
-      - type: say
-        content: 'Incompatible with: Unique Landscapes Lost Coast, The Heath, and Brena River.'
   - name: 'GoldenCrest.esp'
     dirty:
       - crc: 0xaa4eeb02
@@ -10434,9 +10454,8 @@ plugins:
         itm: 1
         udr: 2
   - name: 'Imperial City Manor.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: Region Revive - Lake Rumare.'
+    inc:
+      - 'Region Revive - Lake Rumare.esp'
   - name: 'ImpeREAL Empire - Unique Castles.esp'
     after:
       - 'Trade and Commerce.esp'
@@ -10544,20 +10563,14 @@ plugins:
     inc:
       - 'Better Cities CHORROL.esp'
       - 'Better Cities Full.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: Open Cities Classic or Open Cities Chorrol components.'
-      - type: say
-        content: 'Incompatible with: Open Better Cities Complete or Open Better Cities Chorrol components.'
+      - 'Better Cities - Open Better Cities.esp'
+      - 'Better Cities - Open Cities Reborn.esp'
   - name: 'Improved Skingrad.esp'
     inc:
       - 'Better Cities SKINGRAD.esp'
       - 'Better Cities Full.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: Open Cities Classic or Open Cities Skingrad components.'
-      - type: say
-        content: 'Incompatible with: Open Better Cities Complete or Open Better Cities Skingrad components.'
+      - 'Better Cities - Open Better Cities.esp'
+      - 'Better Cities - Open Cities Reborn.esp'
   - name: 'IC Atmospheric Shops Mod.esp'
     msg:
       - type: say
@@ -10593,21 +10606,27 @@ plugins:
         itm: 1862
         udr: 2
   - name: 'JADICMothPriests.esp'
+    inc:
+      - 'Better Imperial City.esp'
+      - 'Better Cities IC Green Emperor Way.esp'
     msg:
-      - type: say
-        content: 'Incompatible with: Better Cities Green Emperor''s Way. Already included as part of Better Cities.'
-  - name: 'JADImperialApartments01Temple.esp'
+      - <<: *alreadyInX
+        subs: [ 'Better Cities Imperial City' ]
+        condition: 'active("Better Imperial City.esp")'
+      - <<: *alreadyInX
+        subs: [ 'Better Cities IC Green Emperor Way District' ]
+        condition: 'active("Better Cities IC Green Emperor Way.esp")'
+  - name: 'JADImperialApartments(01|02|03)Temple\.esp'
+    inc:
+      - 'Better Imperial City.esp'
+      - 'Better Cities IC Temple.esp'
     msg:
-      - type: say
-        content: 'Incompatible with: Better Cities Temple District. Already included as part of Better Cities.'
-  - name: 'JADImperialApartments02Temple.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: Better Cities Temple District. Already included as part of Better Cities.'
-  - name: 'JADImperialApartments03Temple.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: Better Cities Temple District. Already included as part of Better Cities.'
+      - <<: *alreadyInX
+        subs: [ 'Better Cities Imperial City' ]
+        condition: 'active("Better Imperial City.esp")'
+      - <<: *alreadyInX
+        subs: [ 'Better Cities Imperial City Temple District' ]
+        condition: 'active("Better Cities IC Temple.esp")'
   - name: 'Jagnot- Imperial City Library V1.3.esp'
     msg:
       - type: say
@@ -10648,9 +10667,9 @@ plugins:
         itm: 177
         udr: 31
   - name: 'Knights abode.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: New Roads and Bridges; Landscape problems reported.'
+    inc:
+      - name: 'road+bridges.esp'
+        display: 'New Roads and Bridges'
   - name: 'Kragenir''s Death Quest.esp'
     dirty:
       - crc: 0x3cc0b31f
@@ -10772,10 +10791,7 @@ plugins:
   - name: 'Lady Stone Villa.esp'
     inc:
       - 'Lady Stone Villa ULCompatable.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: Oscuro''s Oblivion Overhaul'
-        condition: *OOOCond
+      - 'Oscuro''s_Oblivion_Overhaul.esm'
     dirty:
       - crc: 0x3f125733
         <<: *dirtyPlugin
@@ -10788,10 +10804,7 @@ plugins:
   - name: 'Lady Stone Villa ULCompatable.esp'
     inc:
       - 'Lady Stone Villa.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: Oscuro''s Oblivion Overhaul'
-        condition: *OOOCond
+      - 'Oscuro''s_Oblivion_Overhaul.esm'
     dirty:
       - crc: 0x5d2b3929
         <<: *dirtyPlugin
@@ -10891,6 +10904,9 @@ plugins:
     req:
       - 'DLCShiveringIsles.esp'
   - name: 'Locked Doors and Knocking v1.02.esp'
+    inc:
+      - name: 'Better Cities Resources.esm'
+        display: 'Better Cities'
     msg:
       - type: say
         content: 'Incompatible with Better Cities, and probably other city altering mods.'
@@ -11017,9 +11033,8 @@ plugins:
         itm: 64
         udr: 1
   - name: 'MapleoakRetreat.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: UL Lush Woodlands.'
+    inc:
+      - 'xulLushWoodlands.esp'
   - name: 'marodan_osdakal.esp'
     dirty:
       - crc: 0x5028bb9e
@@ -11067,9 +11082,16 @@ plugins:
         <<: *dirtyPlugin
         itm: 1
   - name: 'MTCRiverShackv1.2.esp'
+    inc:
+      - 'Better Cities BRAVIL.esp'
+      - 'Better Cities Full.esp'
     msg:
-      - type: say
-        content: 'Incompatible with: Better Cities Bravil. Already included as part of Better Cities.'
+      - <<: *alreadyInX
+        subs: [ 'Better Cities - Bravil' ]
+        condition: 'active("Better Cities BRAVIL.esp")'
+      - <<: *alreadyInX
+        subs: [ 'Better Cities - Full' ]
+        condition: 'active("Better Cities Full.esp")'
       - type: say
         content: 'Needs compatibility patch when used with Unique Landscapes Bravil Barrowfields.'
       - type: say
@@ -11080,16 +11102,32 @@ plugins:
         itm: 94
         udr: 5
   - name: 'MTCExpandedVillages.esp'
+    inc:
+      - name: 'RTT.esp'
+        display: 'Ruined Tail''s Tale'
+        condition: 'not file("RTT-Weye Relocation Patch.esp") and not file("MTC-WeyePatch.esp")'
+      - name: 'Faregyl.esp'
+        display: 'Faregyl Village'
+        condition: 'not file("MTCVillages-FaregylPatch.esp")'
+      - name: 'The Lost Spires.esp'
+        display: 'The Lost Spires'
+        condition: 'not file("MTCVillages-LostSpiresPatch.esp")'
     msg:
-      - type: warn
-        content: 'Incompatible with Ruined Tail''s Tale unless using the patch available [here](http://www.nexusmods.com/oblivion/mods/34010).'
-        condition: '( file("RTT.esp") ) and not file("RTT-Weye Relocation Patch.esp")'
-      - type: warn
-        content: 'Incompatible with Faregyl Village unless using the patch available [here](http://www.nexusmods.com/oblivion/mods/34010).'
-        condition: '( file("Faregyl.esp") ) and not file("MTCVillages-FaregylPatch.esp")'
-      - type: warn
-        content: 'Incompatible with Lost Spires unless using the patch available [here](http://www.nexusmods.com/oblivion/mods/42430).'
-        condition: '( file("The Lost Spires.esp") ) and not file("MTCVillages-LostSpiresPatch.esp")'
+      - <<: *patch3rdParty
+        subs:
+          - 'Faregyl Village'
+          - '[MTC Expanded Villages - Faregyl Patch](https://www.nexusmods.com/oblivion/mods/42123)'
+        condition: 'active("Faregyl.esp") and not file("MTCVillages-FaregylPatch.esp")'
+      - <<: *patch3rdParty
+        subs:
+          - 'The Lost Spires'
+          - '[MTC Expanded Villages - Lost Spires Patch](http://www.nexusmods.com/oblivion/mods/42430)'
+        condition: 'active("The Lost Spires.esp") and not file("MTCVillages-LostSpiresPatch.esp")'
+      - <<: *patch3rdParty
+        subs:
+          - 'Ruined Tail''s Tale'
+          - '[MTC Expanded Villages - Weye Patch](https://www.nexusmods.com/oblivion/mods/42170) or [Arthmoors Mod Patches](http://www.nexusmods.com/oblivion/mods/34010)'
+        condition: 'active("RTT.esp") and not file("RTT-Weye Relocation Patch.esp") and not file("MTC-WeyePatch.esp")'
     dirty:
       - crc: 0x795046ef
         <<: *dirtyPlugin
@@ -11316,10 +11354,11 @@ plugins:
   - name: 'PathoftheSkullBearer.esp'
     req:
       - *OBSE
+      - name: 'OBSE/Plugins/Elys_USV.dll'
+        display: '[Elys- Universal Silent Voice](https://www.nexusmods.com/oblivion/mods/16622)'
+      - name: 'OBSE/Plugins/SoundCommands.dll'
+        display: '[SoundCommands](https://www.nexusmods.com/oblivion/mods/16288)'
       - 'DLCShiveringIsles.esp'
-    msg:
-      - type: say
-        content: 'Requires: Sound Commands (OBSE Plugin), Elys Universal Silent Voice (OBSE Plugin)'
   - name: 'POTSB.esp'
     msg:
       - type: say
@@ -11408,9 +11447,9 @@ plugins:
       - type: warn
         content: 'Part of Chronicles of Reeb. Goes with Belas.esm. Do not use. This mod has serious landscape errors in the Tamriel worldspace.'
   - name: 'Quest For The Elements.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: Fighters Guild Quests (and its ROC patch)'
+    inc:
+      - 'Fighters Guild Quests.esp'
+      - 'ROC+Fighters Guild Quests.esp'
     dirty:
       - crc: 0xd2e0b570
         <<: *dirtyPlugin
@@ -11620,11 +11659,11 @@ plugins:
       - NoMerge
   - name: 'Skingrad Market 1.0.esp'
     req:
+      - *OBSE
+      - name: 'OBSE/Plugins/Elys_USV.dll'
+        display: '[Elys- Universal Silent Voice](https://www.nexusmods.com/oblivion/mods/16622)'
       - 'DLCShiveringIsles.esp'
       - 'Cobl Main.esm'
-    msg:
-      - type: say
-        content: 'Requires: OBSE, Elys Universal Silent Voice'
   - name: 'Skyrim Draugr Canyon.esp'
     dirty:
       - crc: 0xde35e870
@@ -11680,9 +11719,8 @@ plugins:
       - Eyes
       - Hair
   - name: 'Spirit''s Edge.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: Ayleid Wells'
+    inc:
+      - 'Ayleid Wells.esp'
     dirty:
       - crc: 0x3987c0d6
         <<: *dirtyPlugin
@@ -11877,10 +11915,6 @@ plugins:
     tag:
       - Actors.Anims
       - NoMerge
-  - name: 'Aylied Steps - AN Real Lights patch.esp'  # Not a typo
-    msg:
-      - type: say
-        content: 'Requires: The Ayleid Steps, All Natural Real Lights.'
   - name: 'CDEP_FanaCeya.esp'
     tag:
       - C.Light
@@ -11916,10 +11950,9 @@ plugins:
     tag:
       - Hair
   - name: 'The Reluctant Ranger REVAMPED.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: Better Cities.'
-        condition: 'file("Better Cities Resources.esm")'
+    inc:
+      - name: 'Better Cities Resources.esm'
+        display: 'Better Cities'
   - name: 'The Power of the North.esp'
     dirty:
       - crc: 0x2eb9a944
@@ -11989,9 +12022,8 @@ plugins:
         <<: *dirtyPlugin
         itm: 17
   - name: 'The Vertueux.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: The Lost Spires; Small landscaping issue between the HQ and surroundings.'
+    inc:
+      - 'The Lost Spires.esp'
     dirty:
       - crc: 0xf83cbbc4
         <<: *dirtyPlugin
@@ -12267,9 +12299,9 @@ plugins:
         itm: 15
         udr: 58
   - name: 'VRIceOrcMod.esp'
-    msg:
-      - type: say
-        content: 'Requires: Elys'' Universal Silent Voice or the dialogue will go by very fast.'
+    req:
+      - name: 'OBSE/Plugins/Elys_USV.dll'
+        display: '[Elys- Universal Silent Voice](https://www.nexusmods.com/oblivion/mods/16622)'
   - name: 'Veldin.esp'
     dirty:
       - crc: 0xbc65cd25
@@ -12340,17 +12372,15 @@ plugins:
         <<: *dirtyPlugin
         itm: 4
   - name: 'Vypers Arrow Spells-SI.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with Better Cities.'
-        condition: 'file("Better Cities Resources.esm")'
-      - *obsolete
+    inc:
+      - name: 'Better Cities Resources.esm'
+        display: 'Better Cities'
+    msg: [ *obsolete ]
   - name: 'Vypers Arrow Spells.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with Better Cities.'
-        condition: 'file("Better Cities Resources.esm")'
-      - *obsolete
+    inc:
+      - name: 'Better Cities Resources.esm'
+        display: 'Better Cities'
+    msg: [ *obsolete ]
   - name: 'Watchtower.esp'
     dirty:
       - crc: 0x11d3867a
@@ -12522,9 +12552,9 @@ plugins:
         itm: 4
         udr: 4
   - name: 'Arena District Alive-JQ-FGU.esp'
-    msg:
-      - type: say
-        content: 'Requires: JQ Fighters Guild United.'
+    req:
+      - name: 'Fighter''s Guild Unified.esp'
+        display: '[The United Fighter''s Guilds of Cyrodiil](https://www.nexusmods.com/oblivion/mods/45475)'
   - name: 'Arena_BattlesV1.1.esp'
     msg: [ *obsolete ]
     tag:
@@ -12610,9 +12640,12 @@ plugins:
         <<: *dirtyPlugin
         itm: 5
   - name: 'Falkreath.esp'
+    inc:
+      - 'GwedenBrothel.esp'
     msg:
-      - type: say
-        content: 'Incompatible with: Gweden Brothel series.'
+      - <<: *alreadyInX
+        subs: [ 'Gweden Brothel' ]
+        condition: '(active("GwedenBrothel.esp"))'
   - name: 'sir_balin_mod.esp'
     dirty:
       - crc: 0x607e10be
@@ -13568,10 +13601,13 @@ plugins:
       - 'ElsweyrAnequina - NoSpider.esp'
       - 'ElsweyrAnequina - ModerateIncreasedCreature.esp'
   - name: 'BetterMusicSystem(Elsweyr).esp'
-    req: [ *OBSE ]
-    msg:
-      - type: say
-        content: 'Requires: Enhanced Music & Control v0.72B (OBSE-Plugin) & SoundCommands v4.0 (OBSE-Plugin) and Elsweyr Anequina.'
+    req:
+      - 'ElsweyrAnequina.esp'
+      - *OBSE
+      - name: 'OBSE/Plugins/EnhancedMusicControl.dll'
+        display: '[Enhanced Music & Control v0.72B](https://www.nexusmods.com/oblivion/mods/19772)'
+      - name: 'OBSE/Plugins/SoundCommands.dll'
+        display: '[SoundCommands 4.0](https://www.nexusmods.com/oblivion/mods/16288)'
   - name: 'ElsweyrAnequina - Races HGEC-Robert.esp'
     tag:
       - R.Mouth
@@ -13718,19 +13754,19 @@ plugins:
   - name: 'ROC+CastleWestWeald Patch.esp'
     msg: [ *roadsAndBridgesDetected ]
   - name: 'ROC+Fighters Guild Quests.esp'
-    msg:
-      - *roadsAndBridgesDetected
-      - type: say
-        content: 'Incompatible with: Quest for the Elements (and its ROC patch)'
+    inc:
+      - 'Quest For The Elements.esp'
+      - 'ROC+QFE Patch.esp'
+    msg: [ *roadsAndBridgesDetected ]
   - name: 'ROC+Hemingweys Capes Addon.esp'
     msg: [ *roadsAndBridgesDetected ]
   - name: 'ROC+Highwood Patch.esp'
     msg: [ *roadsAndBridgesDetected ]
   - name: 'ROC+QFE Patch.esp'
-    msg:
-      - *roadsAndBridgesDetected
-      - type: say
-        content: 'Incompatible with: Fighters Guild Quests (and its ROC patch)'
+    inc:
+      - 'Fighters Guild Quests.esp'
+      - 'ROC+Fighters Guild Quests.esp'
+    msg: [ *roadsAndBridgesDetected ]
   - name: 'ROC+Romancing Ahnassi Patch.esp'
     msg: [ *roadsAndBridgesDetected ]
   - name: 'ROC+Shadowcrest Vineyard Patch.esp'
@@ -14055,9 +14091,8 @@ plugins:
         itm: 12
         udr: 4
   - name: 'Lakeview.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: Shezrie''s Villages and Shezrie''s Towns.'
+    inc:
+      - 'ShezriesTownsMaster.esp'
   - name: 'New Valen.esp'
     msg:
       - type: say
@@ -14076,10 +14111,9 @@ plugins:
   - name: 'ROC+RBWR Patch.esp'
     msg: [ *roadsAndBridgesDetected ]
   - name: 'Reaper''s Coldstone Town.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: Heart of the Dead.'
-      - *obsolete
+    inc:
+      - 'HeartOftheDead.esp'
+    msg: [ *obsolete ]
   - name: 'Reaper''s Coldstone Town Vwalk.esp'
     tag:
       - Actors.Anims
@@ -14336,6 +14370,10 @@ plugins:
       - crc: 0xB2D180E7
         util: 'TES4Edit v4.0.1'
   - name: 'xulChorrolHinterland.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'Cyrodiil Rebuild.esp' ]
+        condition: 'active("Cyrodiil Rebuild.esp")'
     tag:
       - C.Water
     dirty:
@@ -15013,37 +15051,31 @@ plugins:
     msg:
       - type: say
         content: 'Outdated. Update the affected UL mods and then delete this patch.'
-  - name: 'Imperial City Waterfront Tunnel Entrance v2.1.esp'
+  - name: 'Imperial City Waterfront Tunnel Entrance v(2\.1|3\.0)\.esp'
+    inc:
+      - 'Better Imperial City.esp'
+      - 'Better Cities IC Waterfront.esp'
     msg:
       - *obsolete
-      - type: say
-        content: 'Incompatible with: Better Cities. Already included in Better Cities IC plugins.'
-        condition: 'file("Better Cities Resources.esm")'
-  - name: 'Imperial City Waterfront Tunnel Entrance v3.0.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: Better Cities. Already included in Better Cities IC plugins.'
-        condition: 'file("Better Cities Resources.esm")'
+      - <<: *alreadyInX
+        subs: [ 'Better Cities - Imperial City & IC Waterfront' ]
+        condition: 'active("Better Imperial City.esp") or active("Better Cities IC Waterfront.esp")'
   - name: 'Imperil_City_Tunnel.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: Better Cities.'
-        condition: 'file("Better Cities Resources.esm")'
+    inc:
+      - name: 'Better Cities Resources.esm'
+        display: 'Better Cities'
   - name: 'IC Tunnel.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: Better Cities.'
-        condition: 'file("Better Cities Resources.esm")'
+    inc:
+      - name: 'Better Cities Resources.esm'
+        display: 'Better Cities'
   - name: 'ICWaterfrontPassage.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: Better Cities.'
-        condition: 'file("Better Cities Resources.esm")'
+    inc:
+      - name: 'Better Cities Resources.esm'
+        display: 'Better Cities'
   - name: 'Waterfront Passage - Control of Goods.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: Better Cities.'
-        condition: 'file("Better Cities Resources.esm")'
+    inc:
+      - name: 'Better Cities Resources.esm'
+        display: 'Better Cities'
   - name: 'JADDockTunnel.esp'
     msg:
       - type: say
@@ -15203,9 +15235,8 @@ plugins:
         content: 'Use OBCBravil or OBCBravilB&M but not both at the same time.'
         condition: 'file("OBCBravil-Barrowfields patch.esp")'
   - name: 'BC+Vvardenfell Imports Patch.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: UL Cheydinhal Falls.'
+    inc:
+      - 'xulCheydinhalFalls.esp'
   - name: 'Open Cities.esp'
     msg: [ *obsolete ]
   - name: 'Open Cities + Cats & Rats.esp'
@@ -15340,9 +15371,8 @@ plugins:
       - type: say
         content: 'Obsolete. Update West Roads to version 1.2. Download and use "Open Cities - Skingrad Outskirts Patch v1_0" instead.'
   - name: 'Better Benirus Manor OC Patch.esp'
-    msg:
-      - type: say
-        content: 'Not compatible with Open Cities Reborn.'
+    inc:
+      - 'Open Cities Reborn.esp'
   - name: 'DBOO - Open(Cities| Cities)(Full| Outer Districts|Full + Outer Districts)\.esp'
     msg:
       - <<: *useOnlyOneX
@@ -15465,10 +15495,6 @@ plugins:
       - crc: 0x67EB4689
         <<: *dirtyPlugin
         itm: 2
-  - name: 'Basement for Cobl - My Custom Plants Show Harvested Status.esp'
-    msg:
-      - type: say
-        content: 'Requires: Harvest Flora'
   - name: 'Pitcher Plant and Lily Ingredients.esp'
     dirty:
       - crc: 0x963addce
@@ -15690,9 +15716,9 @@ plugins:
   - name: 'BrighterTorches_v1.1.esp'
     msg: [ *obsolete ]
   - name: 'TimeWizard.esp'
-    msg:
-      - type: say
-        content: 'Requires: OBSE (only if using version 2.1+)'
+    req:
+      - <<: *OBSE
+        condition: 'version("TimeWizard.esp","2.1",>=)'
   - name: 'Buried_Treasure.esp'
     dirty:
       - crc: 0xb48899c1
@@ -15817,9 +15843,10 @@ plugins:
   - name: 'CreaturesFactionalised.esp'
     inc:
       - 'Mart''s Monster Mod.esm'
+      - 'Oscuro''s_Oblivion_Overhaul.esm'
     msg:
       - type: say
-        content: 'Incompatible with: OOO, MMM, probably most other overhauls if they touch creatures at all.'
+        content: 'Incompatible with: Probably most overhauls if they touch creatures at all.'
     tag:
       - Actors.AIData
       - Factions
@@ -16000,10 +16027,23 @@ plugins:
     tag:
       - Stats
   - name: 'Gabriella''s Sexy Boutique.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: Speedbuster Collection.esp, SG010 Compilation.esp, SG001_BunnyGirl.esp, SG002_Button.esp, SG003_Slit.esp, SG004_Stargazer.esp, SG005_DHuntress.esp, SG006_Nabiya.esp, SG007_Nobody.esp, SG008_Gee.esp, SG010_Attractive.esp, SG011_Seductive.esp, SG012_MoonLight_Suit.esp, SG013_Nazca.esp, SG014_SparkleSweetSummer.esp (Includes the contents of these esps).'
-        condition: 'file("Speedbuster Collection.esp") or file("SG010 Compilation.esp") or file("SG001_BunnyGirl.esp") or file("SG002_Button.esp") or file("SG003_Slit.esp") or file("SG004_Stargazer.esp") or file("SG005_DHuntress.esp") or file("SG006_Nabiya.esp") or file("SG007_Nobody.esp") or file("SG008_Gee.esp") or file("SG010_Attractive.esp") or file("SG011_Seductive.esp") or file("SG012_MoonLight_Suit.esp") or file("SG013_Nazca.esp") or file("SG014_SparkleSweetSummer.esp")'
+    inc:
+      # Includes these esps
+      - 'Speedbuster Collection.esp'
+      - 'SG010 Compilation.esp'
+      - 'SG001_BunnyGirl.esp'
+      - 'SG002_Button.esp'
+      - 'SG003_Slit.esp'
+      - 'SG004_Stargazer.esp'
+      - 'SG005_DHuntress.esp'
+      - 'SG006_Nabiya.esp'
+      - 'SG007_Nobody.esp'
+      - 'SG008_Gee.esp'
+      - 'SG010_Attractive.esp'
+      - 'SG011_Seductive.esp'
+      - 'SG012_MoonLight_Suit.esp'
+      - 'SG013_Nazca.esp'
+      - 'SG014_SparkleSweetSummer.esp'
   - name: 'Get_Your_Arrows_Back-9403.esp'
     msg:
       - type: say
@@ -16045,9 +16085,9 @@ plugins:
     tag:
       - Stats
   - name: 'Golden Perch Inn.esp'
+    inc:
+      - '(DC) Sutch Reborn.esp'
     msg:
-      - type: say
-        content: 'Incompatible with: (DC) Sutch Reborn landscape LOD.'
       - type: warn
         content: 'Makes wild edits to merchant greetings, water height levels and a vanilla script.'
         condition: 'checksum("Golden Perch Inn.esp", 4F0086B1)'
@@ -17163,9 +17203,11 @@ plugins:
         itm: 13
         udr: 4
   - name: 'SummonKnightofOrderOBME.esp'
-    msg:
-      - type: say
-        content: 'Requires: SI and OBSE and OBME'
+    req:
+      - *OBSE
+      - name: 'OBSE/Plugins/OBME.dll'
+        display: '[Oblivion Magic Extender](https://www.nexusmods.com/oblivion/mods/31981)'
+      - 'DLCShiveringIsles.esp'
   - name: 'Teleport.esp'
     req: [ *OBSE ]
   - name: 'training spells.esp'
@@ -17191,6 +17233,9 @@ plugins:
         itm: 17
   - name: 'SupremeMagicka.esp'
     after:
+      - name: 'bgMagicEV.esp'
+        display: 'Less Annoying Magic Experience (L.A.M.E)'
+        condition: 'file("bgMagicEV_Conjuration_for_Supreme_Magicka.esp")'
       - 'lumi_enchantments.esp'
       - 'lumi_enchantments_subtle.esp'
     msg: [ *doNotClean ]
@@ -17282,10 +17327,10 @@ plugins:
     inc:
       - 'Midas BeastFortify Fix NONOBSE.esp'
   - name: 'CALSUDG.esp'
-    req: [ *OBSEv18 ]
-    msg:
-      - type: say
-        content: 'Requires: OBME'
+    req:
+      - *OBSEv18
+      - name: 'OBSE/Plugins/OBME.dll'
+        display: '[Oblivion Magic Extender](http://www.nexusmods.com/oblivion/mods/31981)'
   - name: 'ES4_Spell Names by Effect.esp'
     tag:
       - Names
@@ -17430,10 +17475,9 @@ plugins:
   - name: 'attack and hide harder v2.0.esp'
     msg: [ *obsolete ]
   - name: 'Deadlier Traps.esp'
-    msg:
-      - type: say
-        content: 'Not compatible with OOO. Already included in OOO.'
-        condition: *OOOCond
+    inc:
+      - 'Oscuro''s_Oblivion_Overhaul.esm'
+    msg: [ *alreadyInOOO ]
   - name: 'SM Security.esp'
     msg:
       - type: say
@@ -17444,18 +17488,16 @@ plugins:
       - type: say
         content: 'only use one of the ''Worthwhile Thievery'' ESPs.'
   - name: 'Morrowind Lockpicking.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: Zumbs Lockpicking Mod.'
+    inc:
+      - 'ZumbsLockpickingMod.esp'
     tag:
       - Relev
   - name: 'OOO-OLC_Realistic_Detection.esp'
     msg:
       - type: say
         content: 'Incompatible with: other thievery-detection mods.'
-      - type: say
-        content: 'Requires: OOO.'
-        condition: 'not file("Oscuro''s_Oblivion_Overhaul.esm")'
+    req:
+      - 'Oscuro''s_Oblivion_Overhaul.esm'
   - name: 'CoblDeathFix.esp'
     tag:
       - Scripts
@@ -17528,9 +17570,8 @@ plugins:
   - name: 'Arrows Remain 10min.esp'
     msg: [ *bashedPatchTweak ]
   - name: 'Duke Patricks - Combat Archery.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: MOBS Optional Combat Settings.esp.'
+    inc:
+      - 'MOBS Optional Combat Settings.esp'
   - name: 'Duke Patricks Basic Denock Arrows.esp'
     inc:
       - name: 'Cobl Main.esm' # COBL includes a denock arrow feature
@@ -17662,11 +17703,13 @@ plugins:
       - type: say
         content: 'Use no more than one Timed Block plugin.'
   - name: 'DRSplatter.esp'
+    req:
+      - *OBSE
+      - name: 'OBSE/Plugins/OBGEv2.dll'
+        display: '[Oblivion Graphics Extender](https://www.nexusmods.com/oblivion/mods/30054)'
     msg:
       - type: warn
         content: 'Remove this. Known to cause crashes and save game corruption.'
-      - type: say
-        content: 'Requires: OBGEv2.'
   - name: 'kuerteeAttributeAndSkillBasedDamageModifiers.esp'
     msg:
       - type: say
@@ -17728,9 +17771,9 @@ plugins:
         condition: 'file("PTActorsCare.esp") or file("PTDamageFinal.esp") or file("PTDoorExploitBegone.esp") or file("PTLessKnockback.esp") or file("NoBackwardsRunning.esp") or file("NoBackwardsRunning_fran.esp")'
       - *masterReassign
   - name: 'BFG''s Enhanced Armory.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: ''Unequip Broken Armor'', ''Enhanced Hotkeys'''
+    inc:
+      - 'Enhanced Hotkeys.esp'
+      - 'Unequip Broken Armor.esp'
   - name: 'humantouchNPC.esp'
     req: [ *OBSEv19 ]
   - name: 'Duke Patricks - Melee Combat NO RECOIL.esp'
@@ -17742,41 +17785,17 @@ plugins:
       - type: say
         content: 'Incompatible with: Progress*.esp'
         condition: 'file("[pP]rogress.*\.esp")'
-  - name: 'CDM-CGO Horse Armor Compatability.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: ''SM Plugin Refurbish'' mods.'
-        condition: 'file(".*SM Plugin Refurbish.*\.esp")'
-  - name: 'CDM-CGO Orrery Compatibility.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: ''SM Plugin Refurbish'' mods.'
-        condition: 'file(".*SM Plugin Refurbish.*\.esp")'
-  - name: 'CDM-CGO Thieves Den Compatibility.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: ''SM Plugin Refurbish'' mods.'
-        condition: 'file(".*SM Plugin Refurbish.*\.esp")'
-  - name: 'CDM-CGO Vile Lair Compatibility.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: ''SM Plugin Refurbish'' mods.'
-        condition: 'file(".*SM Plugin Refurbish.*\.esp")'
-  - name: 'CDM-CGO Battlehorn Compatibility.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: ''SM Plugin Refurbish'' mods.'
-        condition: 'file(".*SM Plugin Refurbish.*\.esp")'
-  - name: 'CDM-CGO Shivering Isles Compatibility.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: ''SM Plugin Refurbish'' mods.'
-        condition: 'file(".*SM Plugin Refurbish.*\.esp")'
-  - name: 'CDM-CGO Frostcrag Compatibility.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: ''SM Plugin Refurbish'' mods.'
-        condition: 'file(".*SM Plugin Refurbish.*\.esp")'
+  - name: 'CDM-CGO (Horse Armor|Orrery|Thieves Den|Vile Lair|Battlehorn|Shivering Isles|Frostcrag) Compatibility\.esp'
+    inc:
+      - 'SM Plugin Refurbish - Battlehorn.esp'
+      - 'SM Plugin Refurbish - Frostcrag.esp'
+      - 'SM Plugin Refurbish - HorseArmor.esp'
+      - 'SM Plugin Refurbish - Knights.esp'
+      - 'SM Plugin Refurbish - MehrunesRazor.esp'
+      - 'SM Plugin Refurbish - Orrery.esp'
+      - 'SM Plugin Refurbish - SI.esp'
+      - 'SM Plugin Refurbish - ThievesDen.esp'
+      - 'SM Plugin Refurbish - VileLair.esp'
   - name: 'CDM-CGO Standard Skill Levelling Faster.esp'
     msg:
       - type: say
@@ -17829,6 +17848,9 @@ plugins:
         content: 'Deprecated. Do not use with v4.0+ of Sneaking Detection Recalibrated.'
         condition: 'version("Sneaking Detection Recalibrated.esp","4.0",>=)'
   - name: 'SDR_Core.esp'
+    inc:
+      - name: 'SDR_NPC Behavior.esp'
+        condition: 'version("SDR_Core.esp","4.5.0",>=)'
     req:
       - 'OBSE/Plugins/SDR_obse.dll'
       - 'OBSE/Plugins/AddActorValues.dll'
@@ -17837,10 +17859,6 @@ plugins:
     inc:
       - name: 'SM Combat Hide.esp'
         display: 'SM Combat Hide'
-    msg:
-      - type: say
-        content: 'Deprecated. Do not use with v4.5.0+ of Sneaking Detection Recalibrated.'
-        condition: 'version("SDR_Core.esp","4.5.0",>=)'
   - name: 'SDR_ThievesArsenal_Patch.esp'
     msg:
       - type: say
@@ -18117,117 +18135,66 @@ plugins:
       - C.Light
       - Deactivate
   - name: 'Let There Be Darkness - Knights.esp'
-    msg:
-      - type: say
-        content: 'Requires: Knights of the Nine.'
     tag:
       - C.Light
       - Deactivate
   - name: 'Let There Be Darkness - Mehrunes Razor.esp'
-    msg:
-      - type: say
-        content: 'Requires: Mehrunes Razor.'
     tag:
       - C.Light
       - Deactivate
   - name: 'Let there be Darkness All Merge.esp'
-    req:
-      - 'DLCShiveringIsles.esp'
-    msg:
-      - type: say
-        content: 'Requires: Knights of the Nine, Mehrunes Razor.'
     tag:
       - C.Light
       - Deactivate
   - name: 'Let There Be Darkness - Thieves Den.esp'
-    msg:
-      - type: say
-        content: 'Requires: Thieves Den.'
     tag:
       - C.Light
       - Deactivate
   - name: 'Let There Be Darkness - OOO.esp'
-    msg:
-      - type: say
-        content: 'Requires: Oscuro''s Oblivion Overhaul.'
-        condition: 'not file("Oscuro''s_Oblivion_Overhaul.esm")'
     tag:
       - C.Light
       - Deactivate
   - name: 'Let There Be Darkness - Kvatch Rebuilt.esp'
-    msg:
-      - type: say
-        content: 'Requires: Kvatch Rebuilt.'
     tag:
       - C.Light
       - Deactivate
   - name: 'Let There Be Darkness - Curse of Hircine.esp'
-    msg:
-      - type: say
-        content: 'Requires: Curse of Hircine.'
     tag:
       - C.Light
       - Deactivate
   - name: 'Let There Be Darkness - Glenvar Castle.esp'
-    msg:
-      - type: say
-        content: 'Requires: Glenvar Castle.'
     tag:
       - C.Light
       - Deactivate
   - name: 'Let There Be Darkness - The Elder Council.esp'
-    msg:
-      - type: say
-        content: 'Requires: The Elder Council.'
     tag:
       - C.Light
       - Deactivate
   - name: 'Let There Be Darkness - Thievery.esp'
-    msg:
-      - type: say
-        content: 'Requires: Thievery in the Imperial City.'
     tag:
       - C.Light
       - Deactivate
   - name: 'Let There Be Darkness - VH Bloodlines.esp'
-    msg:
-      - type: say
-        content: 'Requires: Verona House Bloodlines.'
     tag:
       - C.Light
       - Deactivate
   - name: 'Let There Be Darkness - Lost Spires.esp'
-    msg:
-      - type: say
-        content: 'Requires: The Lost Spires.'
     tag:
       - C.Light
       - Deactivate
   - name: 'Let There Be Darkness - Elsweyr.esp'
-    msg:
-      - type: say
-        content: 'Requires: Elsweyr Deserts of Anequina.'
     tag:
       - C.Light
       - Deactivate
   - name: 'Let There Be Darkness - UL Colovian Highlands.esp'
-    msg:
-      - type: say
-        content: 'Requires: UL Colovian Highlands.'
     tag:
       - C.Light
       - Deactivate
   - name: 'Let There Be Darkness - UL Lost Coast.esp'
-    msg:
-      - type: say
-        content: 'Requires: UL Lost Coast.'
     tag:
       - C.Light
       - Deactivate
   - name: 'Let There Be Darkness - UL Brena.esp'
-    msg:
-      - type: say
-        content: 'Requires: Ul Brena River Ravine.'
     tag:
       - C.Light
       - Deactivate
@@ -19156,10 +19123,8 @@ plugins:
       - Hair
       - NpcFaces
   - name: 'Manga Elves.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: Cute Sexy Elves.esp which is an older version of same race'
-        condition: 'file("Cute Sexy Elves.esp")'
+    inc:
+      - 'Cute Sexy Elves.esp'
     tag:
       - Eyes
       - Graphics
@@ -19248,10 +19213,9 @@ plugins:
       - R.Relations
   - name: 'Slof''s Playable Xivilai.esp'
     inc:
+      - 'FCOM_Convergence.esm'
       - 'Mart''s Monster Mod.esm'
-    msg:
-      - type: say
-        content: 'Incompatible with: OOO, MMM or FCOM: Xivilai won''t appear. Patch planned.'
+      - 'Oscuro''s_Oblivion_Overhaul.esm'
     tag:
       - Eyes
       - Hair
@@ -20323,9 +20287,9 @@ plugins:
   - name: 'Minionz.esp'
     req: [ *OBSE ]
   - name: 'AsharasCharactersAsNPCs.esp'
-    msg:
-      - type: say
-        content: 'Requires: RBP full'
+    req:
+      - name: '_Ren_BeautyPack_full.esp'
+        display: '[Rens Beauty Pack](https://www.nexusmods.com/oblivion/mods/4431)'
   - name: 'CM Partners Vwalk.esp'
     tag:
       - Actors.Anims
@@ -20554,12 +20518,11 @@ plugins:
       - Actors.Anims
       - NoMerge
   - name: '1em_Vilja OOO FCOM Fix.esp'
+    req:
+      - 'Oscuro''s_Oblivion_Overhaul.esm'
     msg:
       - type: say
         content: 'Use this or "1em_Vilja MMM FCOM Fix.esp", but not both; The OOO Version offers less protection.'
-      - type: say
-        content: 'Requires: Requires OOO (and is good for OOO / MMMforOOO / FCOM / etc.)'
-        condition: 'not file("Oscuro''s_Oblivion_Overhaul.esm")'
     tag:
       - Factions
       - NoMerge
@@ -20569,11 +20532,11 @@ plugins:
       - Factions
       - NoMerge
   - name: '1em_Vilja MMM FCOM Fix.esp'
+    req:
+      - 'Mart''s Monster Mod.esm'
     msg:
       - type: say
         content: 'Use this or "1em_Vilja OOO FCOM Fix.esp", but not both; The MMM Version offers more protection from certain Npc and Creatures.'
-      - type: say
-        content: 'Requires: Requires MMM ( and is good for MMM / MMMforFrans / etc. )'
     tag:
       - Factions
       - NoMerge
@@ -21321,6 +21284,10 @@ plugins:
       - Body-Size-F
       - Body-Size-M
   - name: 'Slof''s Oblivion Better Beasts.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'Slof''s Better Bodies' ]
+        condition: 'active("Slof''s Better Bodies.esp")'
     tag:
       - Body-F
       - Body-M
@@ -21471,11 +21438,19 @@ plugins:
       - Body-Size-M
       - NpcFaces
   - name: 'Slof''s Better Bodies.esp'
+    inc:
+      - 'Cobl Races.esp'
+      - 'Cobl Races - Balanced.esp'
+      - 'Cobl Races TNR.esp'
+      - 'Cobl Races TNR SI.esp'
+    req:
+      - name: 'MaleBodyReplacerV5.esp'
+        display: '[Robert''s Male Body Replacer(v3, v4 or v5)](https://www.nexusmods.com/oblivion/mods/40532)'
+      - name: 'RTFemaleReplacerV12.esp'
+        display: '[Robert''s Female Body Replacer](https://www.nexusmods.com/oblivion/mods/15624)'
     msg:
       - type: say
-        content: 'Requires: Robert''s Male (v3, v4 or v5) and Robert''s Female body mods.'
-      - type: say
-        content: 'Incompatible with: Non-Robert''s body mods, Slof''s Oblivion Better Beasts.esp (included in this), Improved Facial Textures, Facial Textures by Enayla, Cobl Races Resource and Luchairs HGEC body seam reducer.'
+        content: 'Incompatible with: Non-Robert''s body mods, Improved Facial Textures, Facial Textures by Enayla and Luchairs HGEC body seam reducer.'
     tag:
       - Body-F
       - Body-M
@@ -21622,10 +21597,10 @@ plugins:
       - Relev
       - SpellStats
   - name: 'bgMagicEV.esp'
-    msg:
-      - type: say
-        content: 'Move Supreme Magica after LAME if you want Supreme Magica spell stats.'
-      - *doNotClean
+    after:
+      - name: 'SupremeMagicka.esp'
+        condition: 'not file("bgMagicEV_Conjuration_for_Supreme_Magicka.esp")'
+    msg: [ *doNotClean ]
     tag:
       - C.RecordFlags
       - Delev
@@ -21667,14 +21642,6 @@ plugins:
     tag:
       - Graphics
       - NoMerge
-  - name: 'bgMagicEV_Conjuration_for_Supreme_Magicka.esp'
-    msg:
-      - type: say
-        content: 'Requires: Supreme Magicka.'
-      - type: say
-        content: 'Only use if placing L.A.M.E. files before Supreme Magika to keep SM spell stats.'
-      - type: say
-        content: 'Always place this file after Supreme Magika.'
   - name: 'cidnothump.esp'
     msg:
       - type: say
@@ -21743,36 +21710,32 @@ plugins:
     msg: [ *doNotClean ]
   - name: 'bgBalancingEVLAMEAddition.esp'
     req:
+      - name: 'bgMagicEV.esp'
+        display: 'Less Annoying Magic Experience (L.A.M.E)'
       - 'DLCShiveringIsles.esp'
-    msg:
-      - type: say
-        content: 'Requires: LAME.'
-      - *doNotClean
+    msg: [ *doNotClean ]
     tag:
       - Relev
   - name: 'bgBalancingDVLAMEAddition.esp'
     req:
+      - name: 'bgMagicEV.esp'
+        display: 'Less Annoying Magic Experience (L.A.M.E)'
       - 'DLCShiveringIsles.esp'
-    msg:
-      - type: say
-        content: 'Requires: LAME.'
-      - *doNotClean
+    msg: [ *doNotClean ]
     tag:
       - Relev
   - name: 'bgBalancingEVLAMEGlue.esp'
     req:
+      - name: 'bgMagicEV.esp'
+        display: 'Less Annoying Magic Experience (L.A.M.E)'
       - 'DLCShiveringIsles.esp'
-    msg:
-      - type: say
-        content: 'Requires: LAME.'
-      - *doNotClean
+    msg: [ *doNotClean ]
   - name: 'bgBalancingDVLAMEGlue.esp'
     req:
+      - name: 'bgMagicEV.esp'
+        display: 'Less Annoying Magic Experience (L.A.M.E)'
       - 'DLCShiveringIsles.esp'
-    msg:
-      - type: say
-        content: 'Requires: LAME.'
-      - *doNotClean
+    msg: [ *doNotClean ]
   - name: 'bgBalancingEVOptionalNPCDiversityLAME.esp'
     msg: [ *doNotClean ]
     tag:
@@ -22013,12 +21976,6 @@ plugins:
       - type: say
         content: 'Same as ''Better Cities - Unique Landscape Barrowfields.esp'' - only use ONE of these.'
         condition: 'file("Better Cities - Unique Landscape Barrowfields.esp")'
-  - name: 'Better Cities - Ruined Tail''s Tale.esp'
-    msg:
-      - type: say
-        content: 'Incompatible with: Ruined Tail''s Tale v2.5.'
-      - type: say
-        content: 'Requires: Ruined Tail''s Tale v3+.'
   - name: 'Better Cities( Full)?( B&M)? - CUO Chorrol Patch\.esp'
     msg:
       - <<: *useOnlyOneX
@@ -22362,16 +22319,14 @@ plugins:
   - name: 'Cyrodiil Rebuild.esp'
     inc:
       - 'AnvilBayExpansion.esp'
+      - 'Better Cities CHORROL.esp'
+      - 'Better Cities Full.esp'
       - 'Bravil Docks.esp'
+      - 'Extended Cyrodiil - Apfelwacht.esp'
       - 'ImpeREAL Empire - Unique Castles - Bruma.esp'
       - 'mrSiikas_ImperialCathedral.esp'
+      - 'xulChorrolHinterland.esp'
     msg:
-      - type: say
-        content: 'Incompatible with: xulChorrolHinterland.esp Included in Cyrodiil Rebuild.esp'
-      - type: say
-        content: 'Incompatible with: Extended Cyrodiil - Apfelwacht extended'
-      - type: say
-        content: 'Incompatible with: *Better Cities CHORROL.esp'
       - type: say
         content: 'For Better Cities and Unique Landscapes use esp included in Cyrodiil Rebuild archive.'
     tag:
@@ -22404,14 +22359,6 @@ plugins:
     msg:
       - type: say
         content: 'For both Unique Landscapes and Better Cities use CRpatchForBSandULskingrad.esp instead'
-  - name: 'CSV_Farms_Open_Cities.esp'
-    msg:
-      - type: say
-        content: 'Requires: Open Cities.'
-  - name: 'CSV_Farms_Open_Better_Cities.esp'
-    msg:
-      - type: say
-        content: 'Requires: Open Better Cities.'
   - name: 'CSV_Farms_Open(_Better)?_Cities\.esp'
     msg:
       - <<: *useOnlyOneX
@@ -22428,41 +22375,35 @@ plugins:
     req:
       - 'Cobl Main.esm'
   - name: 'HTSCl_mmm.esp'
-    msg:
-      - type: say
-        content: 'Requires: Mart''s Monster Mod.'
+    req:
+      - 'Mart''s Monster Mod.esm'
     tag:
       - Graphics
       - Invent
   - name: 'HTSCl_ooo.esp'
-    msg:
-      - type: say
-        content: 'Requires: Oscuro''s Oblivion Overhaul.'
-        condition: 'not file("Oscuro''s_Oblivion_Overhaul.esm")'
+    req:
+      - 'Oscuro''s_Oblivion_Overhaul.esm'
   - name: 'HTSCl_si.esp'
     req:
       - 'DLCShiveringIsles.esp'
   - name: 'HTSCl_bbc.esp'
-    msg:
-      - type: say
-        content: 'Requires: Better Cities Resources.'
+    req:
+      - 'Better Cities Resources.esm'
     tag:
       - Graphics
   - name: 'HTSCl_wac.esp'
     inc:
       - 'HTSCl_wac_ItemLootFix.esp'
-    msg:
-      - type: say
-        content: 'Requires: Waalx Animals and Creatures'
+    req:
+      - 'Waalx Animals & Creatures.esm'
     tag:
       - Graphics
       - Invent
   - name: 'HTSCl_wac_ItemLootFix.esp'
     inc:
       - 'HTSCl_wac.esp'
-    msg:
-      - type: say
-        content: 'Requires: Waalx Animals and Creatures - ItemLootFix plugin.'
+    req:
+      - 'WAC - ItemLootFix4v1.0b.esp'
     tag:
       - Graphics
       - Invent
@@ -22483,14 +22424,14 @@ plugins:
     tag:
       - Graphics
   - name: 'HTSCl_elsweyr.esp'
-    msg:
-      - type: say
-        content: 'Requires: Elsweyr Deserts of Anequina.'
+    req:
+      - 'ElsweyrAnequina.esp'
   - name: 'HTSCl_hud.esp'
-    req: [ *OBSE ]
-    msg:
-      - type: say
-        content: 'Requires: Pluggy v125 or higher. Rename OBSE_Elys_Pluggy.dll to OBSE_Elys_Pluggy_Hud.dll.'
+    req:
+      - *OBSE
+      - name: 'OBSE/Plugins/OBSE_Elys_Pluggy.dll'
+        display: '[Pluggy v125 or higher](https://www.nexusmods.com/oblivion/mods/23979). Rename OBSE_Elys_Pluggy.dll to OBSE_Elys_Pluggy_Hud.dll.'
+        condition: 'not file("OBSE/Plugins/OBSE_Elys_Pluggy_Hud.dll")'
   - name: 'TheOubliette.esp'
     dirty:
       - crc: 0x2f16c1c5
@@ -22558,10 +22499,10 @@ plugins:
   - name: 'TF_timemod1-\d\d?.esp'
     msg: [ *bashedPatchTweak ]
   - name: 'Dynamic TimeScale.esp'
-    req: [ *OBSEv15 ]
-    msg:
-      - type: say
-        content: 'Requires: You are Here v1.1-'
+    req:
+      - *OBSEv15
+      - name: 'You Are Here.esm'
+        display: 'You Are Here v1.1-'
   - name: 'Syc_LongerDaysShorterNights.esp'
     msg:
       - type: say
@@ -22647,10 +22588,10 @@ plugins:
   - name: 'bgMagicShaderLifeDetect.esp'
     msg: [ *doNotClean ]
   - name: 'kuerteeDetectLifeEffectNightEyeShader.esp'
-    req: [ *OBSE ]
-    msg:
-      - type: say
-        content: 'Requires: OBSE Night Eye Shader Switcher.'
+    req:
+      - *OBSE
+      - name: 'OBSE/Plugins/SwitchNightEyeShaders.dll'
+        display: '[Night Eye Shader Switcher](https://www.nexusmods.com/oblivion/mods/19476)'
   - name: 'bgMagicLightningbolt.esp'
     msg: [ *doNotClean ]
   - name: 'BNewShockBoltEffects20.esp'
@@ -22708,10 +22649,8 @@ plugins:
     tag:
       - Graphics
   - name: 'BubbleFx.esp'
-    msg:
-      - type: say
-        content: 'Most likely incompatible with Supreme Magicka.'
-        condition: 'file("SupremeMagicka.esp")'
+    inc:
+      - 'SupremeMagicka.esp'
   - name: 'GW71_Life_Detect.esp'
     tag:
       - Deactivate
@@ -23672,9 +23611,8 @@ plugins:
         <<: *dirtyPlugin
     url: [ 'http://www.nexusmods.com/oblivion/mods/27957' ]
   - name: 'Salmo the Baker.esp'
-    msg:
-      - type: say
-        content: Do not use with the COBL version of this plugin!
+    inc:
+      - 'Salmo the Baker, Cobl.esp'
     dirty:
       - crc: 0x2C782FA2
         itm: 60
