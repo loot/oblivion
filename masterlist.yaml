@@ -4487,9 +4487,13 @@ plugins:
     tag:
       - Invent
   - name: '1SB_RavenousEleganceOutfit.esp'
-    msg:
-      - type: say
-        content: 'Requires: Biu''s Adventuress Body (BAB).'
+    req:
+      - name: 'Bab.esp'
+        display: '[Biu''s Adventuress Body (BAB)](https://www.nexusmods.com/oblivion/mods/12536)'
+        condition: 'checksum("1SB_RavenousEleganceOutfit.esp", 26841C94)'
+      - name: 'TFF_Races_Base.esp'
+        display: '[Fantasy Figures](https://www.nexusmods.com/oblivion/mods/13356)'
+        condition: 'checksum("1SB_RavenousEleganceOutfit.esp", 5EBF2923)'
   - name: 'AC Stock Armor.esp'
     tag:
       - Graphics
