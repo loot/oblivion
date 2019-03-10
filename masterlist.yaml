@@ -256,6 +256,16 @@ common:
     <<: *useOnlyOneX
     subs: [ 'road record file' ]
 
+  - &wildEdits
+    type: warn
+    content:
+      - lang: en
+        text: 'This plugin contains wild edits beyond ITM and UDR records and deleted navmeshes and may require additional manual cleaning to not interfere with other mods. %1%'
+      - lang: da
+        text: 'Dette plugin indeholder ukontrollerede redigeringer udover ITM- og UDR-poster og slettede navmesher og kan behøve yderligere manuel oprydning for ikke at forstyrre andre mods. %1%'
+      - lang: de
+        text: 'Dieses Plugin enthält wilde Modifikationen weit über ITM-, und UDR Einträge und entfernte Navmeshes hinaus und benötigt vermutlich mehr manuelle Säuberung um andere Mods nicht zu beeinträchtigen. %1%'
+    subs: [ '' ]
 # Dirty Plugin Messages
   - &dirtyPlugin
     util: '[TES4Edit](http://www.nexusmods.com/oblivion/mods/11536/)'
@@ -9389,8 +9399,8 @@ plugins:
       - NoMerge
   - name: 'AuriCloudRulerAddons.esp'
     msg:
-      - type: warn
-        content: 'Contains a wild edit, see [special cleaning instructions](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide#AuriCloudRulerAddons.esp_Special_Cleaning_Instructions) for details.'
+      - <<: *wildEdits
+        subs: [ '[Cleaning instructions](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide#AuriCloudRulerAddons.esp_Special_Cleaning_Instructions)' ]
         condition: 'checksum("AuriCloudRulerAddons.esp", 3BCDEE6F)'
     dirty:
       - crc: 0x3bcdee6f
@@ -9418,8 +9428,8 @@ plugins:
         udr: 77
   - name: 'AyleidTemple.esp'
     msg:
-      - type: warn
-        content: 'Makes a wild edit to the water level in Shagol gro-Bumph''s house (block 6,1).'
+      - <<: *wildEdits
+        subs: [ 'Makes a wild edit to the water level in Shagol gro-Bumph''s house (block 6,1).' ]
         condition: 'checksum("AyleidTemple.esp", 4B14E3CD)'
     dirty:
       - crc: 0x4b14e3cd
@@ -10627,8 +10637,8 @@ plugins:
       - <<: *alreadyInX
         subs: [ 'Better Cities Imperial City Merged/Talos Plaza District' ]
         condition: 'active("Better Imperial City.esp") or active("Better Cities IC Talos Plaza.esp")'
-      - type: warn
-        content: 'Makes a few wild edits, deleting the entirety of "Abandoned Mine Caverns" and modifies the door in "Abandoned Mine" not to point anywhere.'
+      - <<: *wildEdits
+        subs: [ 'Makes a few wild edits, deleting the entirety of "Abandoned Mine Caverns" and modifies the door in "Abandoned Mine" not to point anywhere.' ]
         condition: 'checksum("Jagnot- Imperial City Library V1.3.esp", FC58ACB0)'
     dirty:
       - crc: 0xfc58acb0
@@ -10687,8 +10697,8 @@ plugins:
         content: 'Compatible with MD_SaddleBags Lite.'
   - name: '300_White Stallion 4.esp'
     msg:
-      - type: warn
-        content: 'Makes wild edits, see [special cleaning instructions](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide#300_White_Stallion_4.esp_Special_Cleaning_Instructions).'
+      - <<: *wildEdits
+        subs: [ '[Cleaning instructions](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide#300_White_Stallion_4.esp_Special_Cleaning_Instructions)' ]
         condition: 'checksum("300_White Stallion 4.esp", 400BDFF6)'
     dirty:
       - crc: 0x400bdff6
@@ -10698,15 +10708,15 @@ plugins:
   - name: 'Feudal Empire 300.esp'
     inc: [ '300_White Stallion 4.esp' ]
     msg:
-      - type: warn
-        content: 'Makes wild edits, see [special cleaning instructions](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide#300_White_Stallion_4.esp_Special_Cleaning_Instructions).'
+      - <<: *wildEdits
+        subs: [ '[Cleaning instructions](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide#300_White_Stallion_4.esp_Special_Cleaning_Instructions)' ]
     tag:
       - Graphics
       - Invent
   - name: '300 Feudal Empire.esp'
     msg:
-      - type: warn
-        content: 'Makes wild edits, see [special cleaning instructions](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide#300_White_Stallion_4.esp_Special_Cleaning_Instructions).'
+      - <<: *wildEdits
+        subs: [ '[Cleaning instructions](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide#300_White_Stallion_4.esp_Special_Cleaning_Instructions)' ]
     tag:
       - Graphics
       - Invent
@@ -10757,8 +10767,8 @@ plugins:
     tag:
       - Actors.AIPackages
     msg:
-      - type: warn
-        content: 'Makes wild edits, see [special cleaning instructions](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide#KvatchRising.esp_Special_Cleaning_Instructions).'
+      - <<: *wildEdits
+        subs: [ '[Cleaning instructions](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide#KvatchRising.esp_Special_Cleaning_Instructions)' ]
         condition: 'checksum("KvatchRising.esp", 6C91CBEB)'
     dirty:
       - crc: 0x6c91cbeb
@@ -10846,8 +10856,8 @@ plugins:
       - Stats
   - name: 'GlenvarCastle.esp'
     msg:
-      - type: warn
-        content: 'Makes wild edits, see [special cleaning instructions](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide#GlenvarCastle.esp_Special_Cleaning_Instructions).'
+      - <<: *wildEdits
+        subs: [ '[Cleaning instructions](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide#GlenvarCastle.esp_Special_Cleaning_Instructions)' ]
         condition: 'checksum("GlenvarCastle.esp", 718904AC)'
     dirty:
       - crc: 0x718904ac
@@ -11090,8 +11100,8 @@ plugins:
         condition: 'active("Better Cities Full.esp")'
       - type: say
         content: 'Needs compatibility patch when used with Unique Landscapes Bravil Barrowfields.'
-      - type: say
-        content: 'Also needs manual [TES4Edit cleaning](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide) of a  deleted static record for 0008060C and one wild edit in CELL 0002FF46 (Bravil Skooma Den).'
+      - <<: *wildEdits
+        subs: [ 'Requires manual [TES4Edit cleaning](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide) of a  deleted static record for 0008060C and one wild edit in CELL 0002FF46 (Bravil Skooma Den)' ]
     dirty:
       - crc: 0x47777b7d
         <<: *dirtyPlugin
@@ -11380,8 +11390,8 @@ plugins:
         itm: 12
   - name: 'Pek_Halls_of_The_Phoenix_Order.esp'
     msg:
-      - type: warn
-        content: 'Makes wild edits to the FGC010 script.'
+      - <<: *wildEdits
+        subs: [ 'Makes wild edits to the FGC010 script.' ]
         condition: 'checksum("Pek_Halls_of_The_Phoenix_Order.esp", D96DB828)'
     dirty:
       - crc: 0xd96db828
@@ -12231,8 +12241,8 @@ plugins:
     msg:
       - type: say
         content: 'Incompatible with: UL mod(s).'
-      - type: warn
-        content: 'Makes wild edits, see [special cleaning instructions](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide#Treasure_Maps_The_Legend_Of_Jauffres_Gold.esp_Special_Cleaning_Instructions).'
+      - <<: *wildEdits
+        subs: [ '[Cleaning instructions](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide#Treasure_Maps_The_Legend_Of_Jauffres_Gold.esp_Special_Cleaning_Instructions)' ]
         condition: 'checksum("Treasure_Maps_The_Legend_Of_Jauffres_Gold.esp", 9BEABF59)'
     dirty:
       - crc: 0x9beabf59
@@ -12385,8 +12395,8 @@ plugins:
         udr: 16
   - name: 'Waterfront Shack.esp'
     msg:
-      - type: warn
-        content: 'Makes wild edits, see [special cleaning instructions](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide#Waterfront_Shack.esp_Special_Cleaning_Instructions).'
+      - <<: *wildEdits
+        subs: [ '[Cleaning instructions](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide#Waterfront_Shack.esp_Special_Cleaning_Instructions)' ]
         condition: 'checksum("Waterfront Shack.esp", 4FD37830)'
     dirty:
       - crc: 0x4fd37830
@@ -12605,8 +12615,8 @@ plugins:
         itm: 1
   - name: 'BattlehornCastleEnhanced.esp'
     msg:
-      - type: warn
-        content: 'Makes wild edits, see [special cleaning instructions](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide#BattlehornCastleEnhanced.esp_Special_Cleaning_Instructions)'
+      - <<: *wildEdits
+        subs: [ '[Cleaning instructions](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide#BattlehornCastleEnhanced.esp_Special_Cleaning_Instructions)' ]
         condition: 'checksum("BattlehornCastleEnhanced.esp", 9E3F8559)'
     dirty:
       - crc: 0x9e3f8559
@@ -13216,8 +13226,8 @@ plugins:
         udr: 729
   - name: 'SoT_TheOrderofNibenay.esp'
     msg:
-      - type: warn
-        content: 'Makes wild edits to path grids.'
+      - <<: *wildEdits
+        subs: [ 'Makes wild edits to path grids.' ]
         condition: 'checksum("SoT_TheOrderofNibenay.esp", CA79063C)'
     dirty:
       - crc: 0xca79063c
@@ -16083,8 +16093,8 @@ plugins:
     inc:
       - '(DC) Sutch Reborn.esp'
     msg:
-      - type: warn
-        content: 'Makes wild edits to merchant greetings, water height levels and a vanilla script.'
+      - <<: *wildEdits
+        subs: [ 'Makes wild edits to merchant greetings, water height levels and a vanilla script.' ]
         condition: 'checksum("Golden Perch Inn.esp", 4F0086B1)'
     dirty:
       - crc: 0x444f0e35
@@ -16951,8 +16961,8 @@ plugins:
     msg: [ *useIniTweakOrBashedPatch ]
   - name: 'Shadow Ranger.esp'
     msg:
-      - type: warn
-        content: 'Makes wild edits, see [special cleaning instructions](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide#Shadow_Ranger.esp_Special_Cleaning_Instructions).'
+      - <<: *wildEdits
+        subs: [ '[Cleaning instructions](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide#Shadow_Ranger.esp_Special_Cleaning_Instructions)' ]
         condition: 'checksum("Shadow Ranger.esp", 1F83FEE1)'
     dirty:
       - crc: 0x1f83fee1
@@ -19631,8 +19641,8 @@ plugins:
       - R.Relations
   - name: 'Vampire Race Reloaded.esp'
     msg:
-      - type: say
-        content: 'May contain wild edits to vanilla vampire attributes.'
+      - <<: *wildEdits
+        subs: [ 'May contain wild edits to vanilla vampire attributes.' ]
     tag:
       - Eyes
       - Hair
