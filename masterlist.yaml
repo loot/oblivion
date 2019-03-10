@@ -3932,8 +3932,8 @@ plugins:
     req: [ *OBSE ]
   - name: 'AutomaticPatrols.esp'
     msg:
-      - type: error
-        content: 'This should be deleted. It is already included in the "Dynamic Leveled Lists" mod'
+      - <<: *alreadyInX
+        subs: [ 'Dynamic Leveled Lists' ]
         condition: 'file("DynamicLeveledLists.esp")'
   - name: 'CDM - Shivering Time.esp'
     req: [ *OBSE ]
