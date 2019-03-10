@@ -6816,9 +6816,9 @@ plugins:
         content: 'Don''t use with vampire mods.'
   - name: 'Cobl Tweaks.esp'
     msg:
-      - type: error
-        content: 'Delete. Already included in ''FCOM_Cobl.esp'' or latest ''MMM_Cobl.esp''.'
-        condition: *FCOMCond
+      - <<: *alreadyInX
+        subs: [ 'FCOM_Cobl or latest MMM_Cobl' ]
+        condition: 'active("(FCOM|MMM)_Cobl\.esp")'
   - name: 'COBL-FransCre.esp'
     req:
       - 'Francesco''s Leveled Creatures-Items Mod.esm'
