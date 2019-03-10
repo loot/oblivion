@@ -7546,8 +7546,8 @@ plugins:
       - Stats
   - name: 'Mart''s Monster Mod for Fran.esp'
     msg:
-      - type: error
-        content: 'Delete. Not needed with FCOM.'
+      - <<: *deleteOrDeactivateX
+        subs: [ 'Not needed with FCOM.' ]
         condition: *FCOMCond
     tag:
       - Actors.AIData
@@ -7564,8 +7564,8 @@ plugins:
       - Stats
   - name: 'Mart''s Monster Mod for Francescos.esp'
     msg:
-      - type: error
-        content: 'Delete. Not needed with FCOM.'
+      - <<: *deleteOrDeactivateX
+        subs: [ 'Not needed with FCOM.' ]
         condition: *FCOMCond
     tag:
       - Delev
@@ -7593,8 +7593,8 @@ plugins:
       - NpcFaces
   - name: 'Mart''s Monster Mod for OOO.esp'
     msg:
-      - type: error
-        content: 'Delete. Not needed with FCOM.'
+      - <<: *deleteOrDeactivateX
+        subs: [ 'Not needed with FCOM.' ]
         condition: *FCOMCond
     tag:
       - Actors.AIData
