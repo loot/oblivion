@@ -574,8 +574,9 @@ plugins:
     msg: [ *obsolete ]
   - name: 'bookplacing.esm'
     msg:
-      - type: warn
-        content: 'Check you are using v2+. If not, Update. v1 has a severe bug with the Mystic Emporium disappearing.'
+      - <<: *obsolete
+        subs: [ '[Book Placement v2](https://www.nexusmods.com/oblivion/mods/6262). v1 has a severe bug with the Mystic Emporium disappearing.' ]
+        condition: 'not version("bookplacing.esm", "1.2", ==)'
   - name: 'No Lights Flicker.esm'
     msg: [ *bashedPatchTweak ]
   - name: 'TLS Modded Mannequins.esm'
