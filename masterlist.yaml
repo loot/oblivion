@@ -10605,26 +10605,21 @@ plugins:
       - 'Better Cities IC Green Emperor Way.esp'
     msg:
       - <<: *alreadyInX
-        subs: [ 'Better Cities Imperial City' ]
-        condition: 'active("Better Imperial City.esp")'
-      - <<: *alreadyInX
-        subs: [ 'Better Cities IC Green Emperor Way District' ]
-        condition: 'active("Better Cities IC Green Emperor Way.esp")'
+        subs: [ 'Better Cities Imperial City/Green Emperor Way District' ]
+        condition: 'active("Better Imperial City.esp") or active("Better Cities IC Green Emperor Way.esp")'
   - name: 'JADImperialApartments(01|02|03)Temple\.esp'
     inc:
       - 'Better Imperial City.esp'
       - 'Better Cities IC Temple.esp'
     msg:
       - <<: *alreadyInX
-        subs: [ 'Better Cities Imperial City' ]
-        condition: 'active("Better Imperial City.esp")'
-      - <<: *alreadyInX
-        subs: [ 'Better Cities Imperial City Temple District' ]
-        condition: 'active("Better Cities IC Temple.esp")'
+        subs: [ 'Better Cities Imperial City/Temple District' ]
+        condition: 'active("Better Imperial City.esp") or active("Better Cities IC Temple.esp")'
   - name: 'Jagnot- Imperial City Library V1.3.esp'
     msg:
-      - type: say
-        content: 'Not Better Cities compatible. Already included in Better Cities IC Talos District.'
+      - <<: *alreadyInX
+        subs: [ 'Better Cities Imperial City Merged/Talos Plaza District' ]
+        condition: 'active("Better Imperial City.esp") or active("Better Cities IC Talos Plaza.esp")'
       - type: warn
         content: 'Makes a few wild edits, deleting the entirety of "Abandoned Mine Caverns" and modifies the door in "Abandoned Mine" not to point anywhere.'
         condition: 'checksum("Jagnot- Imperial City Library V1.3.esp", FC58ACB0)'
@@ -10891,9 +10886,9 @@ plugins:
         itm: 1
   - name: 'LeyawiinPort-AlphaRelease.esp'
     msg:
-      - type: say
-        content: 'Not Better Cities compatible. Already included in Better Cities Leyawiin.'
-        condition: 'file("Better Cities Resources.esm")'
+      - <<: *alreadyInX
+        subs: [ 'Better Cities Leyawiin' ]
+        condition: 'active("Better Cities Full.esp") or active("Better Cities LEYAWIIN.esp")'
   - name: 'Litterbug.esp'
     req:
       - 'DLCShiveringIsles.esp'
@@ -12658,36 +12653,36 @@ plugins:
         condition: *FCOMCond
   - name: 'Lynges_Thieves_Highway.esp'
     msg:
-      - type: say
-        content: 'Not Better Cities compatible. Already included with Better Cities IC plugins.'
-        condition: 'file("Better Cities Resources.esm")'
+      - <<: *alreadyInX
+        subs: [ 'Better Cities Imperial City plugins' ]
+        condition: 'active("Better Imperial City.esp") or active("Better Cities IC (Arboretum|Arcane University|Arena|Elven Gardens|Green Emperor Way|Market|Prison|Temple|Waterfront)\.esp")'
   - name: 'Lynges_Thieves_Highway-10256.esp'
     msg:
-      - type: say
-        content: 'Not Better Cities compatible. Already included with Better Cities IC plugins.'
-        condition: 'file("Better Cities Resources.esm")'
+      - <<: *alreadyInX
+        subs: [ 'Better Cities Imperial City plugins' ]
+        condition: 'active("Better Imperial City.esp") or active("Better Cities IC (Arboretum|Arcane University|Arena|Elven Gardens|Green Emperor Way|Market|Prison|Temple|Waterfront)\.esp")'
     dirty:
       - crc: 0x24fe4781
         <<: *dirtyPlugin
         itm: 2
   - name: 'Thieves Highway.esp'
     msg:
-      - type: say
-        content: 'Not Better Cities compatible. Already included with Better Cities IC plugins.'
-        condition: 'file("Better Cities Resources.esm")'
+      - <<: *alreadyInX
+        subs: [ 'Better Cities Imperial City plugins' ]
+        condition: 'active("Better Imperial City.esp") or active("Better Cities IC (Arboretum|Arcane University|Arena|Elven Gardens|Green Emperor Way|Market|Prison|Temple|Waterfront)\.esp")'
   - name: 'Lynges Thieves Highway.esp'
     msg:
-      - type: say
-        content: 'Not Better Cities compatible. Already included with Better Cities IC plugins.'
-        condition: 'file("Better Cities Resources.esm")'
+      - <<: *alreadyInX
+        subs: [ 'Better Cities Imperial City plugins' ]
+        condition: 'active("Better Imperial City.esp") or active("Better Cities IC (Arboretum|Arcane University|Arena|Elven Gardens|Green Emperor Way|Market|Prison|Temple|Waterfront)\.esp")'
       - type: say
         content: 'OOO detected. ''Use Lynges Thieves Highway - OOO.esp'' instead.'
         condition: *OOOCond
   - name: 'Lynges Thieves Highway - OOO.esp'
     msg:
-      - type: say
-        content: 'Not Better Cities compatible. Already included with Better Cities IC plugins.'
-        condition: 'file("Better Cities Resources.esm")'
+      - <<: *alreadyInX
+        subs: [ 'Better Cities Imperial City plugins' ]
+        condition: 'active("Better Imperial City.esp") or active("Better Cities IC (Arboretum|Arcane University|Arena|Elven Gardens|Green Emperor Way|Market|Prison|Temple|Waterfront)\.esp")'
       - type: say
         content: 'Delete ''Lynges Thieves Highway.esp and use this instead.'
         condition: '( file("Lynges Thieves Highway.esp") ) and active("Oscuro''s_Oblivion_Overhaul.esm")'
