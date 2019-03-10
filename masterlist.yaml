@@ -23164,22 +23164,11 @@ plugins:
     msg: [ *obsolete ]
   - name: 'Duke Patricks So you think you are a war god MARK II.esp'
     msg: [ *obsolete ]
-  - name: 'Duke Patricks - Momentum Lite Damage Bonus.esp'
+  - name: 'Duke Patricks (- )?Momentum (Lite |Super )?Damage (Bonus| And Jump Risk)( Light)?\.esp'
     msg:
-      - type: say
-        content: 'Only use one ''Momentum Damage'' mod.'
-  - name: 'Duke Patricks Momentum Damage Bonus Light.esp'
-    msg:
-      - type: say
-        content: 'Only use one ''Momentum Damage'' mod.'
-  - name: 'Duke Patricks Momentum Super Damage Bonus.esp'
-    msg:
-      - type: say
-        content: 'Only use one ''Momentum Damage'' mod.'
-  - name: 'Duke Patricks - Momentum Damage And Jump Risk.esp'
-    msg:
-      - type: say
-        content: 'Only use one ''Momentum Damage'' mod.'
+      - <<: *useOnlyOneX
+        subs: [ 'Duke Patricks Momentum Damage' ]
+        condition: 'file("Duke Patricks (- )?Momentum (Lite |Super )?Damage (Bonus| And Jump Risk)( Light)?\.esp")'
   - name: 'Duke Patricks - Shield Charge.esp'
     msg:
       - type: say
