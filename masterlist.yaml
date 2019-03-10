@@ -15727,8 +15727,9 @@ plugins:
       - Factions
   - name: 'CDM-Dogs.esp'
     msg:
-      - type: say
-        content: 'MMM users: dogs already included in MMM. May introduce problems with new kind of dog-meat ingredient. Untested.'
+      - <<: *alreadyInX
+        subs: [ 'Mart''s Monster Mod' ]
+        condition: 'active("Mart''s Monster Mod.esp")'
   - name: 'CHILDREN ANNUAD.esp'
     tag:
       - Actors.ACBS
