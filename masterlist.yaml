@@ -124,17 +124,6 @@ common:
   - &incompatibleWithWeatherMods
     type: say
     content: 'This mod is incompatible with weather mods.'
-  - &requiresX
-    type: warn
-    content:
-      - lang: en
-        text: 'Requires: %1%'
-      - lang: ru
-        text: 'Требуется: %1%'
-      - lang: es
-        text: 'Requiere: %1%'
-      - lang: ja
-        text: '要: %1%'
   - &useSensualWalks
     type: say
     content: 'Obsolete. Remove this and install Sensual Walks.'
@@ -226,6 +215,23 @@ common:
         text: 'You seem to be using %1%, but you have not enabled a compatibility patch for this mod. A third party patch is available here: %2%'
       - lang: de
         text: 'Sie scheinen %1% zu nutzen, aber sie haben keinen Kompatibilitätspatch für diesen Mod aktiviert. Ein Patch von Dritten ist hier verfügbar: %2%'
+
+  - &requiresX
+    type: warn
+    content:
+      - lang: en
+        text: 'Requires: %1%'
+      - lang: ru
+        text: 'Требуется: %1%'
+      - lang: es
+        text: 'Requiere: %1%'
+      - lang: ja
+        text: '要: %1%'
+  - &requiresBashedPatch
+    <<: *requiresX
+    type: error
+    subs: [ '[Wrye Bash](https://www.nexusmods.com/oblivion/mods/22368) Bashed Patch' ]
+    condition: 'not file("Bashed Patch.*\.esp")'
 
   - &useOnlyOneX
     type: say
@@ -12975,9 +12981,7 @@ plugins:
       - *doNotClean
   - name: 'QuietFeet.esp'
     msg:
-      - type: say
-        content: 'If not using Wrye Bash this will cause loss of some faction changes from KOTN; if you prefer the factions changes to the quiet feet for those creatures move this above Knights.esp.'
-        condition: 'not file("Bashed Patch.*\.esp")'
+      - *requiresBashedPatch
       - type: say
         content: 'Recommended to upgrade to Quiet Feet MAX 2.0, which does not require a plugin and is more compatible.'
       - *bashedPatchTweak
@@ -18140,10 +18144,7 @@ plugins:
       - NoMerge
   - name: 'Item interchange - Extraction.esp'
     group: *latePatchesGroup
-    msg:
-      - type: error
-        content: 'Requires Bashed Patch.'
-        condition: 'not file("Bashed Patch.*\.esp")'
+    msg: [ *requiresBashedPatch ]
     tag:
       - Deactivate
       - Filter
@@ -18157,9 +18158,7 @@ plugins:
       - type: error
         content: 'Delete. Use II''s ''Item Interchange - Placement for FCOM.esp'' instead.'
         condition: *FCOMCond
-      - type: error
-        content: 'Requires Bashed Patch.'
-        condition: 'not file("Bashed Patch.*\.esp")'
+      - *requiresBashedPatch
   - name: 'Capes4NPCs - Placement.esp'
     group: *latePatchesGroup
     tag:
@@ -18169,9 +18168,7 @@ plugins:
   - name: 'Item interchange - Placement for FCOM.esp'
     group: *latePatchesGroup
     msg:
-      - type: error
-        content: 'Requires Bashed Patch.'
-        condition: 'not file("Bashed Patch.*\.esp")'
+      - *requiresBashedPatch
       - type: say
         content: 'This is the FCOM version; use ''Item interchange - Placement.esp'' instead.'
         condition: 'not file("FCOM_Convergence.esm")'
@@ -18184,33 +18181,22 @@ plugins:
       - Relev
   - name: 'Item interchange - Placement for Frostcrag.esp'
     group: *latePatchesGroup
-    msg:
-      - type: error
-        content: 'Requires Bashed Patch.'
-        condition: 'not file("Bashed Patch.*\.esp")'
+    msg: [ *requiresBashedPatch ]
     tag:
       - Deactivate
       - Filter
       - IIM
       - Invent
   - name: 'Item interchange - Placement for Frostcrag Reborn.esp'
-    msg:
-      - type: error
-        content: 'Requires Bashed Patch.'
-        condition: 'not file("Bashed Patch.*\.esp")'
+    msg: [ *requiresBashedPatch ]
   - name: 'Item interchange - Placement for Frostcrag Spire Revisited.esp'
-    msg:
-      - type: error
-        content: 'Requires Bashed Patch.'
-        condition: 'not file("Bashed Patch.*\.esp")'
+    msg: [ *requiresBashedPatch ]
   - name: 'Item interchange - Option, Ingredients in Bulk(, reduced)?\.esp'
     msg:
       - <<: *useOnlyOneX
         subs: [ 'Ingredients in Bulk' ]
         condition: 'many("Item interchange - Option, Ingredients in Bulk(, reduced)?\.esp")'
-      - type: error
-        content: 'Requires Bashed Patch.'
-        condition: 'not file("Bashed Patch.*\.esp")'
+      - *requiresBashedPatch
   - name: 'Atmospheric Loading Screens - No Text.esp'
     tag:
       - Graphics
@@ -22979,9 +22965,7 @@ plugins:
   - name: 'Bashed Delayers - MERGE ONLY.esp'
     group: *latePatchesGroup
     msg:
-      - type: error
-        content: 'Requires Bashed Patch.'
-        condition: 'not file("Bashed Patch.*\.esp")'
+      - *requiresBashedPatch
       - type: say
         content: 'Versions less than 3.1 may cause the quest being patched to restart if installed after the quest has started. Update to the latest delayer if you suspect a problem.'
     tag:
@@ -22989,28 +22973,19 @@ plugins:
       - Filter
   - name: 'Bashed Delayers E - MERGE ONLY.esp'
     group: *latePatchesGroup
-    msg:
-      - type: error
-        content: 'Requires Bashed Patch.'
-        condition: 'not file("Bashed Patch.*\.esp")'
+    msg: [ *requiresBashedPatch ]
     tag:
       - Deactivate
       - Filter
   - name: 'Bashed Delayers NE - MERGE ONLY.esp'
     group: *latePatchesGroup
-    msg:
-      - type: error
-        content: 'Requires Bashed Patch.'
-        condition: 'not file("Bashed Patch.*\.esp")'
+    msg: [ *requiresBashedPatch ]
     tag:
       - Deactivate
       - Filter
   - name: 'CoreRandmonClothing4Npcs.esp'
     group: *latePatchesGroup
-    msg:
-      - type: error
-        content: 'Requires Bashed Patch.'
-        condition: 'not file("Bashed Patch.*\.esp")'
+    msg: [ *requiresBashedPatch ]
     tag:
       - Deactivate
       - Filter
@@ -23018,10 +22993,7 @@ plugins:
       - Invent
   - name: 'Cobl Filter Late MERGE ONLY.esp'
     group: *latePatchesGroup
-    msg:
-      - type: error
-        content: 'Requires Bashed Patch.'
-        condition: 'not file("Bashed Patch.*\.esp")'
+    msg: [ *requiresBashedPatch ]
     tag:
       - Deactivate
       - Filter
@@ -23035,28 +23007,19 @@ plugins:
       - Scripts
   - name: 'OOO Harvest Containers Filter patch for mods.esp'
     group: *latePatchesGroup
-    msg:
-      - type: error
-        content: 'Requires Bashed Patch.'
-        condition: 'not file("Bashed Patch.*\.esp")'
+    msg: [ *requiresBashedPatch ]
     tag:
       - Deactivate
       - Filter
   - name: 'Harvest Containers Filter patch for mods.esp'
     group: *latePatchesGroup
-    msg:
-      - type: error
-        content: 'Requires Bashed Patch.'
-        condition: 'not file("Bashed Patch.*\.esp")'
+    msg: [ *requiresBashedPatch ]
     tag:
       - Deactivate
       - Filter
   - name: 'All Natural - Indoor Weather Filter For Mods.esp'
     group: *latePatchesGroup
-    msg:
-      - type: error
-        content: 'Requires Bashed Patch.'
-        condition: 'not file("Bashed Patch.*\.esp")'
+    msg: [ *requiresBashedPatch ]
     tag:
       - C.Climate
       - Deactivate
@@ -23065,18 +23028,13 @@ plugins:
   - name: 'Storms & Sound - Filter Patch.esp'
     group: *latePatchesGroup
     msg:
-      - type: error
-        content: 'Requires Bashed Patch.'
-        condition: 'not file("Bashed Patch.*\.esp")'
+      - *requiresBashedPatch
       - *renameStormsAndSounds
     tag:
       - Filter
   - name: 'TIE Weapon + Armor Filter.esp'
     group: *latePatchesGroup
-    msg:
-      - type: error
-        content: 'Requires Bashed Patch.'
-        condition: 'not file("Bashed Patch.*\.esp")'
+    msg: [ *requiresBashedPatch ]
     tag:
       - Deactivate
       - Filter
