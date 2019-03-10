@@ -7668,15 +7668,9 @@ plugins:
         condition: *OOOCond
   - name: 'Mart''s Monster Mod - Safer Roads.esp'
     msg:
-      - type: say
-        content: 'Remove: already included in ''Mart''s Monster Mod - Spawn Rates - Reduced.esp'''
-        condition: 'file("Mart''s Monster Mod - Spawn Rates - Reduced")'
-      - type: say
-        content: 'Remove: already included in ''Mart''s Monster Mod - Spawn Rates Reduced Reduced.esp'''
-        condition: 'file("Mart''s Monster Mod - Spawn Rates Reduced Reduced")'
-      - type: say
-        content: 'Remove: already included in ''Mart''s Monster Mod - Spawn Rates - Reduced Vanilla.esp'''
-        condition: 'file("Mart''s Monster Mod - Spawn Rates - Reduced Vanilla")'
+      - <<: *alreadyInX
+        subs: [ 'Mart''s Monster Mod Spawn Rates' ]
+        condition: 'file("Mart''s Monster Mod - Spawn Rates - Reduced( Reduced| Vanilla)\.esp")'
       - type: error
         content: 'Delete and use the ''FCOM_SaferRoads.esp''.'
         condition: *FCOMCond
