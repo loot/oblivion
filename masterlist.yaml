@@ -2177,15 +2177,15 @@ plugins:
     msg: [ *obsolete ]
   - name: 'Natural Interiors.esp'
     msg:
-      - type: say
-        content: 'Delete. Already merged into All Natural'
+      - <<: *alreadyInX
+        subs: [ 'All Natural' ]
         condition: 'file("All Natural.esp")'
     tag:
       - C.Climate
   - name: 'Natural Interiors - Cities.esp'
     msg:
-      - type: say
-        content: 'Delete. Already merged into All Natural'
+      - <<: *alreadyInX
+        subs: [ 'All Natural' ]
         condition: 'file("All Natural.esp")'
   - name: 'NoOblivionWeatherOutside.esp'
     inc:
