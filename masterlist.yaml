@@ -669,20 +669,24 @@ plugins:
     tag:
       - Scripts
     group: *underridesGroup
-  - name: 'Book Jackets Oblivion - SSBFL.esp'
+
+  - name: 'Book Jackets Oblivion.esp'
+    dirty:
+      - crc: 0x88936850
+        <<: *dirtyPlugin
+        itm: 8
+        udr: 234
+  - name: 'Book Jackets Oblivion( ITA)?( - BP)?\.esp'
+    tag:
+      - Graphics
+  - name: 'Book Jackets Oblivion( - BP)? - SSBFL\.esp'
+    group: *underridesGroup
     inc:
       - 'Skillbookssave.esp'
     tag:
       - Graphics
       - Scripts
-    group: *underridesGroup
-  - name: 'Book Jackets Oblivion - BP - SSBFL.esp'
-    inc:
-      - 'Skillbookssave.esp'
-    tag:
-      - Graphics
-      - Scripts
-    group: *underridesGroup
+
   - name: 'Oblivion Vwalk.esp'
     tag:
       - Actors.Anims
@@ -2815,20 +2819,6 @@ plugins:
         condition: 'version("Ayleid Loot EXtension.esp","2.11",==)'
     tag:
       - Invent
-  - name: 'Book Jackets Oblivion.esp'
-    tag:
-      - Graphics
-    dirty:
-      - crc: 0x88936850
-        <<: *dirtyPlugin
-        itm: 8
-        udr: 234
-  - name: 'Book Jackets Oblivion - BP.esp'
-    tag:
-      - Graphics
-  - name: 'Book Jackets Oblivion ITA - BP.esp'
-    tag:
-      - Graphics
   - name: 'OBG - Buechermod - Bilder - BP.esp'
     tag:
       - Graphics
