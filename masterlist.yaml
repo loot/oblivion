@@ -443,12 +443,11 @@ plugins:
   - name: 'Morrowind_ob.esm'
     group: *newLandsGroup
     msg: [ *moveWorldspaces ]
-  - name: 'Silgrad_Tower.esm'
-    inc:
-      - 'Silgrad_Tower_T.esm'
-  - name: 'Silgrad_Tower_T.esm'
-    inc:
-      - 'Silgrad_Tower.esm'
+  - name: 'Silgrad_Tower(_T)?\.esm'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Silgrad Tower' ]
+        condition: 'many("Silgrad_Tower(_T)?\.esm")'
   - name: 'Beautiful People 2ch-Ed.esm'
     tag:
       - Eyes
