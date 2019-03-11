@@ -1405,66 +1405,20 @@ plugins:
       # version: 1.2.0.416 GOTY
       - crc: 0x2BB84977
         util: 'TES4Edit v4.0.0'
+
   - name: 'Unofficial Oblivion Patch.esp'
     group: *dlcGroup
     msg: [ *doNotClean ]
-    tag:
-      - Actors.ACBS
-      - Actors.AIData
-      - Actors.AIPackages
-      - Actors.CombatStyle
-      - Actors.DeathItem
-      - Actors.Stats
-      - C.Climate
-      - C.Light
-      - C.Music
-      - C.Name
-      - C.Owner
-      - Creatures.Blood
-      - Delev
-      - Factions
-      - Invent
-      - Names
-      - NPC.Class
-      - Relations
-      - Relev
-      - Scripts
-      - Stats
-      - name: "-C.Water"
-        condition: 'version("Unofficial Oblivion Patch.esp","3.4.0",>=)'
   - name: 'Unofficial Oblivion Patch DV.esp'
     after:
       - 'DLCShiveringIsles.esp'
-    tag:
-      - Actors.ACBS
-      - Actors.AIData
-      - Actors.AIPackages
-      - Actors.CombatStyle
-      - Actors.DeathItem
-      - Actors.Stats
-      - C.Climate
-      - C.Light
-      - C.Music
-      - C.Name
-      - C.Owner
-      - Creatures.Blood
-      - Delev
-      - Factions
-      - Invent
-      - Names
-      - NPC.Class
-      - Relations
-      - Relev
-      - Scripts
-      - Stats
-      - name: "-C.Water"
-        condition: 'version("Unofficial Oblivion Patch.esp","3.4.0",>=)'
   - name: 'Unofficial Oblivion Patch-mobs.esp'
     after:
       - 'DLCShiveringIsles.esp'
     msg:
       - type: error
         content: 'Remove and use regular MOBS/OMOBS instead, using Bash Patch to merge.'
+  - name: 'Unofficial Oblivion Patch( DV|-mobs)?\.esp'
     tag:
       - Actors.ACBS
       - Actors.AIData
@@ -1499,6 +1453,7 @@ plugins:
   - name: 'UOP Vampire Aging & Face Fix.esp'
     group: *dlcGroup
     msg: [ *bashedPatchTweak ]
+
   - name: 'Finger of the Mountain Fix.esp'
     inc:
       - 'Unofficial Oblivion Patch.esp'
