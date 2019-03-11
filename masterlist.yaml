@@ -707,6 +707,7 @@ plugins:
       - Actors.Anims
       - NoMerge
     group: *underridesGroup
+
   - name: 'TRoN.esp'
     dirty:
       - crc: 0x8a09b1f1
@@ -714,28 +715,14 @@ plugins:
         itm: 9
         udr: 3
     group: *underridesGroup
-  - name: 'TRoN 0-59-1b Vwalk.esp'
+  - name: 'TRoN( 0-59-1b)? (V|R|S)walk\.esp'
     tag:
       - Actors.Anims
       - NoMerge
     group: *underridesGroup
-  - name: 'TRoN Rwalk.esp'
+  - name: 'TRoN (R|S)walk\.esp'
     msg: [ *useSensualWalks ]
-    tag:
-      - Actors.Anims
-      - NoMerge
-    group: *underridesGroup
-  - name: 'TRoN Swalk.esp'
-    msg: [ *useSensualWalks ]
-    tag:
-      - Actors.Anims
-      - NoMerge
-    group: *underridesGroup
-  - name: 'TRoN Vwalk.esp'
-    tag:
-      - Actors.Anims
-      - NoMerge
-    group: *underridesGroup
+
   - name: 'Underdark v1.1 Delayer.esp'
     msg: [ *obsolete ]
     group: *underridesGroup
