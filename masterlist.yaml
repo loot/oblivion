@@ -1691,29 +1691,16 @@ plugins:
   - name: 'Advanced_Water.esp'
     tag:
       - C.Water
-  - name: 'Enhanced Water v1.5 ND.esp'
-    tag:
-      - C.Water
-  - name: 'Enhanced Water v1.5 HD.esp'
+  - name: 'Enhanced Water v[1].[015] (ND|HD)\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/8011' ]
     msg: [ *obsolete ]
-    tag:
-      - C.Water
-  - name: 'Enhanced Water v2.0 ND.esp'
-    tag:
-      - C.Water
-  - name: 'Enhanced Water ND_1C.esp'
-    tag:
-      - C.Water
-  - name: 'Enhanced Water v2.0 HD.esp'
-    tag:
-      - C.Water
-  - name: 'Enhanced Water v2.0 HD - SI Addon.esp'
-    tag:
-      - C.Water
-  - name: 'Enhanced Water HD_1C.esp'
-    tag:
-      - C.Water
-  - name: 'Enhanced Water v2.0 HDMI.esp'
+  - name: 'Enhanced Water v[12].[015] (ND|HD)\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/8011' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Enhanced Water' ]
+        condition: 'many("Enhanced Water v[12].[015] (ND|HD)\.esp")'
+  - name: 'Enhanced Water.*\.esp'
     tag:
       - C.Water
   - name: 'Realistic Water.esp'
