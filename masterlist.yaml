@@ -208,6 +208,10 @@ common:
     subs: [ 'This plugin should not be used. Reinstall Fran''s and select "Separate Files" when the option is presented.' ]
     condition: *FCOMCond
 
+  - &dummyFileLoader
+    type: say
+    content: 'Dummy file to load .BSA files. Using a file to load a BSA means the BSA must NOT be listed in Oblivion.ini at the same time or the game will not load. This is ususally only a problem when automatic installers insert the name into Oblivion.ini then the user creates a BSA redirection file later.'
+
   - &patch3rdParty
     type: warn
     content:
@@ -1413,41 +1417,23 @@ plugins:
       - NoMerge
       - NpcFaces
   - name: 'Better Cities .esp'
-    msg:
-      - type: say
-        content: 'Dummy file to load Better Cities .BSA'
+    msg: [ *dummyFileLoader ]
   - name: 'BSAloader.esp'
-    msg:
-      - type: say
-        content: 'Dummy file to load .BSA files.'
+    msg: [ *dummyFileLoader ]
   - name: 'FraNewItems.esp'
-    msg:
-      - type: say
-        content: 'Dummy file to load FraNewItems.BSA. Using a file to load a BSA means the BSA must NOT be listed in Oblivion.ini at the same time or the game will not load.'
+    msg: [ *dummyFileLoader ]
   - name: 'Fra.esp'
-    msg:
-      - type: say
-        content: 'Dummy file to load Frans BSA(s). Usually refers to FraNewItems.BSA. Using a file to load a BSA means the BSA must NOT be listed in Oblivion.ini at the same time or the game will not load. This is ususally only a problem when automatic installers insert the name into Oblivion.ini then the user creates a BSA redirection file later.'
+    msg: [ *dummyFileLoader ]
   - name: 'Francesco.esp'
-    msg:
-      - type: say
-        content: 'Dummy file to load both Frans BSAs. Using a file to load a BSA means the BSA must NOT be listed in Oblivion.ini at the same time or the game will not load. This is ususally only a problem when automatic installers insert the name into Oblivion.ini then the user creates a BSA redirection file later.'
+    msg: [ *dummyFileLoader ]
   - name: 'Francesco''s Creatures and Items Resources.esp'
-    msg:
-      - type: say
-        content: 'Dummy file to load both Frans BSAs. Using a file to load a BSA means the BSA must NOT be listed in Oblivion.ini at the same time or the game will not load. This is ususally only a problem when automatic installers insert the name into Oblivion.ini then the user creates a BSA redirection file later.'
+    msg: [ *dummyFileLoader ]
   - name: 'MMM.esp'
-    msg:
-      - type: say
-        content: 'Dummy file to load the MMM .BSA.'
+    msg: [ *dummyFileLoader ]
   - name: 'Oblivion.esp'
-    msg:
-      - type: say
-        content: 'Usually a BSA redirection hack. Using a file to load a BSA means the BSA must NOT be listed in Oblivion.ini at the same time or the game will not load. This is ususally only a problem when automatic installers insert the name into Oblivion.ini then the user creates a BSA redirection file later.'
+    msg: [ *dummyFileLoader ]
   - name: 'TamRes.esp'
-    msg:
-      - type: say
-        content: 'Dummy file to load the TamRes BSA.'
+    msg: [ *dummyFileLoader ]
   - name: 'MrSiika''sFoxes.esp'
     msg:
       - type: say
