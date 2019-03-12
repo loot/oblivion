@@ -21945,34 +21945,17 @@ plugins:
       - crc: 0x8bd75254
         <<: *dirtyPlugin
         itm: 2
-  - name: 'Detect Life Shader.esp'
+  - name: 'Detect Life( Blue| Cyan| Green| Red| Yellow)? Shader( \[New\]| Green| Purple)?\.esp'
+    url:
+      - 'https://www.nexusmods.com/oblivion/mods/3529'
+      - 'https://www.nexusmods.com/oblivion/mods/3756'
     tag:
       - Deactivate
       - Graphics
-  - name: 'Detect Life Shader [New].esp'
-    tag:
-      - Deactivate
-      - Graphics
-  - name: 'Detect Life Blue Shader.esp'
-    tag:
-      - Deactivate
-      - Graphics
-  - name: 'Detect Life Cyan Shader.esp'
-    tag:
-      - Deactivate
-      - Graphics
-  - name: 'Detect Life Green Shader.esp'
-    tag:
-      - Deactivate
-      - Graphics
-  - name: 'Detect Life Red Shader.esp'
-    tag:
-      - Deactivate
-      - Graphics
-  - name: 'Detect Life Yellow Shader.esp'
-    tag:
-      - Deactivate
-      - Graphics
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Detect Life Shader' ]
+        condition: 'many("Detect Life( Blue| Cyan| Green| Red| Yellow)? Shader( \[New\]| Green| Purple)?\.esp")'
   - name: 'Lem - Lighter Fire Effect.esp'
     tag:
       - Deactivate
