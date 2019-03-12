@@ -10464,10 +10464,9 @@ plugins:
         content: 'Use ''The Imperial Water - BETTER CITIES.esp'' instead.'
         condition: 'file("Better Cities Resources.esm")'
   - name: 'The Imperial Water - BETTER CITIES.esp'
-    msg:
-      - type: warn
-        content: 'This version requires Better Cities.'
-        condition: 'not file("Better Cities Resources.esm")'
+    req:
+      - name: 'Better Cities Resources.esm'
+        display: '[Better Cities](https://www.nexusmods.com/oblivion/mods/16513)'
     dirty:
       - crc: 0x73f25199
         <<: *dirtyPlugin
@@ -21339,15 +21338,11 @@ plugins:
     tag:
       - C.Water
   - name: 'Better Cities - Knights of the Nine.esp'
-    msg:
-      - type: error
-        content: 'This patch should only be used with "Better Cities - Open Better Cities.esp".'
-        condition: 'not file("Better Cities - Open Better Cities.esp")'
+    req:
+      - 'Better Cities - Open Better Cities.esp'
   - name: 'Better Cities Anvil Open - Knights of the Nine.esp'
-    msg:
-      - type: error
-        content: 'This patch should only be used with "Better Cities - Open Better Cities.esp"'
-        condition: 'not file("Better Cities - Open Better Cities.esp")'
+    req:
+      - 'Better Cities - Open Better Cities.esp'
   - name: 'BCCheydinhal(FULL)?(B&M)?-CheydinhalFalls patch\.esp'
     msg:
       - <<: *useOnlyOneX
@@ -21401,10 +21396,8 @@ plugins:
     tag:
       - Scripts
   - name: 'BICDist_OotD_Patch.esp'
-    msg:
-      - type: error
-        content: 'This patch should only be used with Better Cities IC Green Emperor Way.esp!'
-        condition: 'not file("Better Cities IC Green Emperor Way.esp")'
+    req:
+      - 'Better Cities IC Green Emperor Way.esp'
   - name: 'Better Imperial City Rwalk.esp'
     msg: [ *useSensualWalks ]
   - name: 'Better Imperial City Swalk.esp'
@@ -21414,10 +21407,8 @@ plugins:
       - Actors.Anims
       - NoMerge
   - name: 'Better Imperial City FPS Patch.esp'
-    msg:
-      - type: say
-        content: 'Only use if using Better Imperial City.esp'
-        condition: 'not file("Better Imperial City.esp")'
+    req:
+      - 'Better Imperial City.esp'
   - name: 'Better Cities - OMG( Patch)?.*\.esp'
     msg:
       - <<: *useOnlyOneX
@@ -21607,11 +21598,9 @@ plugins:
       - 'Better Cities Full.esp'
     msg: [ *obsolete ]
   - name: 'Better Imperial City Patch.esp'
-    msg:
-      - type: say
-        content: 'Only use if using Better Imperial City.esp'
-        condition: 'not file("Better Imperial City.esp")'
-      - *obsolete
+    req:
+      - 'Better Imperial City.esp'
+    msg: [ *obsolete ]
   - name: 'Better Cities IC Temple Patch.esp'
     inc:
       - 'Better Cities Full.esp'
