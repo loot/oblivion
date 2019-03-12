@@ -22399,22 +22399,11 @@ plugins:
     tag:
       - Deactivate
       - Roads
-  - name: 'Bashed Delayers - MERGE ONLY.esp'
-    group: *latePatchesGroup
+  - name: 'Bashed Delayers - MERGE ONLY\.esp'
     msg:
-      - *requiresBashedPatch
       - type: say
         content: 'Versions less than 3.1 may cause the quest being patched to restart if installed after the quest has started. Update to the latest delayer if you suspect a problem.'
-    tag:
-      - Deactivate
-      - Filter
-  - name: 'Bashed Delayers E - MERGE ONLY.esp'
-    group: *latePatchesGroup
-    msg: [ *requiresBashedPatch ]
-    tag:
-      - Deactivate
-      - Filter
-  - name: 'Bashed Delayers NE - MERGE ONLY.esp'
+  - name: 'Bashed Delayers( (N)?E)? - MERGE ONLY.esp'
     group: *latePatchesGroup
     msg: [ *requiresBashedPatch ]
     tag:
