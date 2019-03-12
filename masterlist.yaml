@@ -442,8 +442,8 @@ plugins:
     msg: [ *moveWorldspaces ]
   - name: 'Belas.esm'
     msg:
-      - type: error
-        content: 'Part of Chronicles of Reeb. Do not use. Has serious landscape issues due to editing the Tamriel worldspace. Uninstall and delete.'
+      - <<: *deleteOrDeactivateX
+        subs: [ 'Part of Chronicles of Reeb. Do not use. Has serious landscape issues due to editing the Tamriel worldspace.' ]
   - name: 'Morrowind_ob.esm'
     group: *newLandsGroup
     msg: [ *moveWorldspaces ]
