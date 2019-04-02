@@ -893,7 +893,6 @@ plugins:
       - NoMerge
       - NpcFaces
     group: *underridesGroup
-
   - name: 'Beautiful_Women_NiceOnly.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17189' ]
     tag:
@@ -917,7 +916,6 @@ plugins:
       - NoMerge
       - NpcFaces
     group: *underridesGroup
-
   - name: 'Beautiful_Women(_SI|_NiceOnly|_NotSoNice_Bonus|_DB_Addon|_Vampires(_50)?)( Vwalk)\.esp'
     tag:
       - Actors.Anims
@@ -1161,11 +1159,14 @@ plugins:
       - 'Oblivion Citadel Door Fix.esp'
       - 'UOPS Additional Changes.esp'
       - 'UOP Vampire Aging & Face Fix.esp'
+    dirty:
+      - crc: 0xdaf51407
+        <<: *dirtyPlugin
+        itm: 2
     clean:
       # version: 1.2.0.416 GOTY
       - crc: 0x2BB84977
         util: 'TES4Edit v4.0.0'
-
   - name: 'Unofficial Oblivion Patch.esp'
     group: *dlcGroup
     msg: [ *doNotClean ]
