@@ -551,6 +551,10 @@ plugins:
       - Relev
       - Scripts
       - Stats
+    dirty:
+      - crc: 0xfa08de55
+        itm: 1
+        <<: *dirtyPlugin
   - name: 'Mart''s Monster Mod for OOO.esm'
     inc:
       - 'FCOM_Convergence.esm'
@@ -672,8 +676,9 @@ plugins:
     tag:
       - Scripts
     group: *underridesGroup
-
   - name: 'Book Jackets Oblivion.esp'
+    tag:
+      - Graphics
     dirty:
       - crc: 0x88936850
         <<: *dirtyPlugin
@@ -689,7 +694,6 @@ plugins:
     tag:
       - Graphics
       - Scripts
-
   - name: 'Oblivion Vwalk.esp'
     tag:
       - Actors.Anims
@@ -711,7 +715,6 @@ plugins:
       - Actors.Anims
       - NoMerge
     group: *underridesGroup
-
   - name: 'TRoN.esp'
     dirty:
       - crc: 0x8a09b1f1
@@ -738,6 +741,9 @@ plugins:
     tag:
       - Names
     group: *underridesGroup
+  - name: 'Icon Overhaul.esp'
+    tag:
+      - Graphics
 # These should all be tagged with Deactivate, NoMerge, and NPCFaces, and should have priority -2.
   - name: 'Better Looking NPC.esp'
     tag:
@@ -785,7 +791,6 @@ plugins:
       - Actors.Anims
       - NoMerge
     group: *underridesGroup
-
   - name: 'TNR - (all|THE)( ALTMER| ARGONIANS| BOSMER| BRETONS| DUNMER| IMPERIALS| KHAJIIT| NORDS| ORCS| REDGUARDS)?\.esp'
     group: *underridesGroup
     tag:
@@ -823,7 +828,6 @@ plugins:
       - NoMerge
       - NpcFaces
     group: *underridesGroup
-
   - name: 'Oblivion_SI Vwalk Full TNR.esp'
     msg: [ *updateSensualWalks ]
     tag:
@@ -892,6 +896,9 @@ plugins:
 
   - name: 'Beautiful_Women_NiceOnly.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17189' ]
+    tag:
+      - NoMerge
+      - NpcFaces
     dirty:
       - crc: 0x2c6e9200
         <<: *dirtyPlugin
