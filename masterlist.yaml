@@ -21094,9 +21094,6 @@ plugins:
       - type: warn
         content: 'Remove this and use the UOP instead.'
         condition: 'file("Unofficial Oblivion Patch.esp")'
-  - name: 'Better Cities Full.esp'
-    tag:
-      - C.Water
   - name: 'BC Skingrad Reduced - EV.esp'
     msg:
       - type: say
@@ -21104,9 +21101,6 @@ plugins:
       - type: say
         content: 'Do not use this plugin with Better Cities Full.esp'
         condition: 'file("Better Cities Full.esp")'
-  - name: 'Better Cities IC Arboretum.esp'
-    tag:
-      - C.Water
   - name: 'Better Imperial City.esp'
     after:
       - 'Sounds of Cyrodiil.esp'
@@ -21299,9 +21293,6 @@ plugins:
     tag:
       - Actors.Anims
       - NoMerge
-  - name: 'Better Imperial City FPS Patch.esp'
-    req:
-      - 'Better Imperial City.esp'
   - name: 'Better Cities - OMG( Patch)?.*\.esp'
     msg:
       - <<: *useOnlyOneX
@@ -21327,15 +21318,6 @@ plugins:
     tag:
       - Actors.Anims
       - NoMerge
-  - name: 'Better Cities - Leyawiin Flooded.esp'
-    tag:
-      - C.Water
-  - name: 'Better Cities - No LEYAWIIN Flooding.esp'
-    tag:
-      - C.Water
-  - name: 'Better Cities - Open Better Cities.esp'
-    tag:
-      - Actors.AIPackages
   - name: 'OSPS-BC_IC-II_UL-II_Patch.esp'
     msg:
       - type: warn
