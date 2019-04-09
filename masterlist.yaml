@@ -22072,27 +22072,25 @@ plugins:
     msg:
       - type: say
         content: 'Obsolete. Upgrade to SDR version 8.2'
+  - name: 'Shining Creatures(_Atronach(Flame|Frost)|_WillOWisp|_DLCFrostcrag)?\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/29735' ]
+    tag:
+      - Invent
   - name: 'Shining Creatures.esp'
-    msg:
-      - type: say
-        content: 'Do not use at the same time as any of the ''Shining ****.esp'' variants (except for the DLCFrostcrag Patch).'
-    tag:
-      - Invent
-  - name: 'Shining Creatures_AtronachFlame.esp'
-    tag:
-      - Invent
-  - name: 'Shining Creatures_AtronachFrost.esp'
-    tag:
-      - Invent
-  - name: 'Shining Creatures_WillOWisp.esp'
-    tag:
-      - Invent
+    inc:
+      - 'Shining Creatures_AtronachFlame.esp'
+      - 'Shining Creatures_AtronachFrost.esp'
+      - 'Shining Creatures_WillOWisp.esp'
+  - name: 'Shining Creatures_(Atronach(Flame|Frost)|WillOWisp)\.esp'
+    inc:
+      - 'Shining Creatures.esp'
   - name: 'Shining Creatures_DLCFrostcrag.esp'
-    tag:
-      - Invent
-  - name: 'Shining Creatures_OOO.esp'
-    tag:
-      - Invent
+    after:
+      - 'Shining Creatures_AtronachFlame.esp'
+    req:
+      - name: 'Shining Creatures.esp'
+        display: 'Shining Creatures.esp or Shining Creatures_AtronachFlame.esp'
+        condition: 'not active("Shining Creatures_AtronachFlame.esp")'
   - name: 'a4VnlObSI_HiResHGEC-BBB-Fems+RmMales.esp'
     tag:
       - Body-F
