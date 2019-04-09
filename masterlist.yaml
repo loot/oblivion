@@ -21988,72 +21988,47 @@ plugins:
   - name: 'Jake''s Water.esp'
     tag:
       - Graphics
-  - name: 'Visually Enchanted Damage and Absorb with Particles.esp'
+  - name: 'Visually Enchanted Damage and Absorb( with Particles)?\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/10979' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Visually Enchanted Damage and Absorb' ]
+        condition: 'file("Visually Enchanted Damage and Absorb( with Particles)?\.esp")'
     tag:
       - Deactivate
       - Graphics
-  - name: 'Visually Enchanted Drains 1.esp'
-    tag:
-      - Graphics
-  - name: 'Visually Enchanted Drains.esp'
+  - name: 'Visually Enchanted( Drains| SoulTrap)?( 1)?\.esp'
     tag:
       - Deactivate
       - Graphics
-  - name: 'Visually Enchanted Fire 1.esp'
+  - name: 'Visually Enchanted (Fire|Frost|Shock) [123]\.esp'
+    url:
+      - 'https://www.nexusmods.com/oblivion/mods/2398'
+      - 'https://www.nexusmods.com/oblivion/mods/8490'
     tag:
       - Deactivate
       - Graphics
-  - name: 'Visually Enchanted Fire 2.esp'
-    tag:
-      - Deactivate
-      - Graphics
-  - name: 'Visually Enchanted Fire 3.esp'
-    tag:
-      - Deactivate
-      - Graphics
-  - name: 'Visually Enchanted Fire.esp'
-    tag:
-      - Deactivate
-      - Graphics
-  - name: 'Visually Enchanted Frost 1.esp'
-    tag:
-      - Deactivate
-      - Graphics
-  - name: 'Visually Enchanted Frost 2.esp'
-    tag:
-      - Deactivate
-      - Graphics
-  - name: 'Visually Enchanted Frost 3.esp'
-    tag:
-      - Deactivate
-      - Graphics
-  - name: 'Visually Enchanted Frost.esp'
-    tag:
-      - Deactivate
-      - Graphics
-  - name: 'Visually Enchanted Shock 1.esp'
-    tag:
-      - Deactivate
-      - Graphics
-  - name: 'Visually Enchanted Shock 2.esp'
-    tag:
-      - Deactivate
-      - Graphics
-  - name: 'Visually Enchanted Shock 3.esp'
-    tag:
-      - Deactivate
-      - Graphics
-  - name: 'Visually Enchanted Shock.esp'
-    tag:
-      - Deactivate
-      - Graphics
-  - name: 'Visually Enchanted SoulTrap 1.esp'
-    tag:
-      - Graphics
-  - name: 'Visually Enchanted SoulTrap.esp'
-    tag:
-      - Deactivate
-      - Graphics
+  - name: 'Visually Enchanted Fire( [123])?\.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Visually Enchanted Customizer Fire' ]
+        condition: 'file("Visually Enchanted Fire( [123])?\.esp")'
+  - name: 'Visually Enchanted Frost( [123])?\.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Visually Enchanted Customizer Frost' ]
+        condition: 'file("Visually Enchanted Frost( [123])?\.esp")'
+  - name: 'Visually Enchanted Shock( [123])?\.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Visually Enchanted Customizer Shock' ]
+        condition: 'file("Visually Enchanted Shock( [123])?\.esp")'
+  - name: 'Visually Enchanted (1.0|2.0|2.1|2.1 No Shock Particles)\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/2365' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Visually Enchanted Weapons' ]
+        condition: 'file("Visually Enchanted (1.0|2.0|2.1|2.1 No Shock Particles)\.esp")'
   - name: 'WNewShockBoltEffects20.esp'
     dirty:
       - crc: 0x9e684ac5
