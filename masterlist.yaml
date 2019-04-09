@@ -383,8 +383,11 @@ globals:
 groups:
   - name: &gameMasterGroup Main Game Master
 
-  - name: &dlcGroup DLC & Unofficial Patches
+  - name: &unofficialPatchesGroup Unofficial Patches
     after: [ *gameMasterGroup ]
+
+  - name: &dlcGroup DLC
+    after: [ *unofficialPatchesGroup ]
 
   - name: &newLandsGroup New Lands
     after: [ *dlcGroup ]
@@ -418,11 +421,6 @@ plugins:
 # Official DLC
   - name: 'DLCShiveringIsles.esp'
     group: *dlcGroup
-    after:
-      - 'Unofficial Oblivion Patch.esp'
-      - 'Oblivion Citadel Door Fix.esp'
-      - 'UOPS Additional Changes.esp'
-      - 'UOP Vampire Aging & Face Fix.esp'
     dirty:
       - crc: 0xdaf51407
         <<: *dirtyPlugin
@@ -434,13 +432,7 @@ plugins:
   - name: 'DLCBattlehornCastle.esp'
     group: *dlcGroup
     after:
-      - 'Unofficial Oblivion Patch.esp'
-      - 'Oblivion Citadel Door Fix.esp'
-      - 'UOPS Additional Changes.esp'
-      - 'UOP Vampire Aging & Face Fix.esp'
       - 'DLCShiveringIsles.esp'
-      - 'Unofficial Shivering Isles Patch.esp'
-      - 'USIPS Additional Changes.esp'
     dirty:
       # version: 1.2.0.416 GOTY
       - <<: *quickClean
@@ -460,15 +452,8 @@ plugins:
   - name: 'DLCThievesDen.esp'
     group: *dlcGroup
     after:
-      - 'Unofficial Oblivion Patch.esp'
-      - 'Oblivion Citadel Door Fix.esp'
-      - 'UOPS Additional Changes.esp'
-      - 'UOP Vampire Aging & Face Fix.esp'
       - 'DLCShiveringIsles.esp'
-      - 'Unofficial Shivering Isles Patch.esp'
-      - 'USIPS Additional Changes.esp'
       - 'DLCBattlehornCastle.esp'
-      - 'DLCBattlehornCastle - Unofficial Patch.esp'
     tag:
       - Actors.ACBS
       - Actors.AIPackages
@@ -489,18 +474,9 @@ plugins:
   - name: 'DLCMehrunesRazor.esp'
     group: *dlcGroup
     after:
-      - 'Unofficial Oblivion Patch.esp'
-      - 'Oblivion Citadel Door Fix.esp'
-      - 'UOPS Additional Changes.esp'
-      - 'UOP Vampire Aging & Face Fix.esp'
       - 'DLCShiveringIsles.esp'
-      - 'Unofficial Shivering Isles Patch.esp'
-      - 'USIPS Additional Changes.esp'
       - 'DLCBattlehornCastle.esp'
-      - 'DLCBattlehornCastle - Unofficial Patch.esp'
       - 'DLCThievesDen.esp'
-      - 'DLCThievesDen - Unofficial Patch.esp'
-      - 'DLCThievesDen - Unofficial Patch - SSSB.esp'
     dirty:
       # version: 1.2.0.416 GOTY
       - <<: *quickClean
@@ -520,20 +496,10 @@ plugins:
   - name: 'DLCVileLair.esp'
     group: *dlcGroup
     after:
-      - 'Unofficial Oblivion Patch.esp'
-      - 'Oblivion Citadel Door Fix.esp'
-      - 'UOPS Additional Changes.esp'
-      - 'UOP Vampire Aging & Face Fix.esp'
       - 'DLCShiveringIsles.esp'
-      - 'Unofficial Shivering Isles Patch.esp'
-      - 'USIPS Additional Changes.esp'
       - 'DLCBattlehornCastle.esp'
-      - 'DLCBattlehornCastle - Unofficial Patch.esp'
       - 'DLCThievesDen.esp'
-      - 'DLCThievesDen - Unofficial Patch.esp'
-      - 'DLCThievesDen - Unofficial Patch - SSSB.esp'
       - 'DLCMehrunesRazor.esp'
-      - 'DLCMehrunesRazor - Unofficial Patch.esp'
     inc:
       - 'KumikoManor.esp'
       - 'Kumiko Manor 2.1 Rus.esp'
@@ -553,22 +519,11 @@ plugins:
   - name: 'DLCHorseArmor.esp'
     group: *dlcGroup
     after:
-      - 'Unofficial Oblivion Patch.esp'
-      - 'Oblivion Citadel Door Fix.esp'
-      - 'UOPS Additional Changes.esp'
-      - 'UOP Vampire Aging & Face Fix.esp'
       - 'DLCShiveringIsles.esp'
-      - 'Unofficial Shivering Isles Patch.esp'
-      - 'USIPS Additional Changes.esp'
       - 'DLCBattlehornCastle.esp'
-      - 'DLCBattlehornCastle - Unofficial Patch.esp'
       - 'DLCThievesDen.esp'
-      - 'DLCThievesDen - Unofficial Patch.esp'
-      - 'DLCThievesDen - Unofficial Patch - SSSB.esp'
       - 'DLCMehrunesRazor.esp'
-      - 'DLCMehrunesRazor - Unofficial Patch.esp'
       - 'DLCVileLair.esp'
-      - 'DLCVileLair - Unofficial Patch.esp'
     tag:
       - Actors.ACBS
       - Actors.AIPackages
@@ -586,24 +541,12 @@ plugins:
   - name: 'DLCOrrery.esp'
     group: *dlcGroup
     after:
-      - 'Unofficial Oblivion Patch.esp'
-      - 'Oblivion Citadel Door Fix.esp'
-      - 'UOPS Additional Changes.esp'
-      - 'UOP Vampire Aging & Face Fix.esp'
       - 'DLCShiveringIsles.esp'
-      - 'Unofficial Shivering Isles Patch.esp'
-      - 'USIPS Additional Changes.esp'
       - 'DLCBattlehornCastle.esp'
-      - 'DLCBattlehornCastle - Unofficial Patch.esp'
       - 'DLCThievesDen.esp'
-      - 'DLCThievesDen - Unofficial Patch.esp'
-      - 'DLCThievesDen - Unofficial Patch - SSSB.esp'
       - 'DLCMehrunesRazor.esp'
-      - 'DLCMehrunesRazor - Unofficial Patch.esp'
       - 'DLCVileLair.esp'
-      - 'DLCVileLair - Unofficial Patch.esp'
       - 'DLCHorseArmor.esp'
-      - 'DLCHorseArmor - Unofficial Patch.esp'
     tag:
       - Actors.AIPackages
     dirty:
@@ -620,26 +563,13 @@ plugins:
   - name: 'DLCSpellTomes.esp'
     group: *dlcGroup
     after:
-      - 'Unofficial Oblivion Patch.esp'
-      - 'Oblivion Citadel Door Fix.esp'
-      - 'UOPS Additional Changes.esp'
-      - 'UOP Vampire Aging & Face Fix.esp'
       - 'DLCShiveringIsles.esp'
-      - 'Unofficial Shivering Isles Patch.esp'
-      - 'USIPS Additional Changes.esp'
       - 'DLCBattlehornCastle.esp'
-      - 'DLCBattlehornCastle - Unofficial Patch.esp'
       - 'DLCThievesDen.esp'
-      - 'DLCThievesDen - Unofficial Patch.esp'
-      - 'DLCThievesDen - Unofficial Patch - SSSB.esp'
       - 'DLCMehrunesRazor.esp'
-      - 'DLCMehrunesRazor - Unofficial Patch.esp'
       - 'DLCVileLair.esp'
-      - 'DLCVileLair - Unofficial Patch.esp'
       - 'DLCHorseArmor.esp'
-      - 'DLCHorseArmor - Unofficial Patch.esp'
       - 'DLCOrrery.esp'
-      - 'DLCOrrery - Unofficial Patch.esp'
     dirty:
       # version: 1.2.0.416 GOTY
       - <<: *quickClean
@@ -653,28 +583,14 @@ plugins:
   - name: 'DLCFrostcrag.esp'
     group: *dlcGroup
     after:
-      - 'Unofficial Oblivion Patch.esp'
-      - 'Oblivion Citadel Door Fix.esp'
-      - 'UOPS Additional Changes.esp'
-      - 'UOP Vampire Aging & Face Fix.esp'
       - 'DLCShiveringIsles.esp'
-      - 'Unofficial Shivering Isles Patch.esp'
-      - 'USIPS Additional Changes.esp'
       - 'DLCBattlehornCastle.esp'
-      - 'DLCBattlehornCastle - Unofficial Patch.esp'
       - 'DLCThievesDen.esp'
-      - 'DLCThievesDen - Unofficial Patch.esp'
-      - 'DLCThievesDen - Unofficial Patch - SSSB.esp'
       - 'DLCMehrunesRazor.esp'
-      - 'DLCMehrunesRazor - Unofficial Patch.esp'
       - 'DLCVileLair.esp'
-      - 'DLCVileLair - Unofficial Patch.esp'
       - 'DLCHorseArmor.esp'
-      - 'DLCHorseArmor - Unofficial Patch.esp'
       - 'DLCOrrery.esp'
-      - 'DLCOrrery - Unofficial Patch.esp'
       - 'DLCSpellTomes.esp'
-      - 'DLCSpellTomes - Unofficial Patch.esp'
     tag:
       - C.Name
       - C.Owner
@@ -698,30 +614,15 @@ plugins:
   - name: 'Knights.esp'
     group: *dlcGroup
     after:
-      - 'Unofficial Oblivion Patch.esp'
-      - 'Oblivion Citadel Door Fix.esp'
-      - 'UOPS Additional Changes.esp'
-      - 'UOP Vampire Aging & Face Fix.esp'
       - 'DLCShiveringIsles.esp'
-      - 'Unofficial Shivering Isles Patch.esp'
-      - 'USIPS Additional Changes.esp'
       - 'DLCBattlehornCastle.esp'
-      - 'DLCBattlehornCastle - Unofficial Patch.esp'
       - 'DLCThievesDen.esp'
-      - 'DLCThievesDen - Unofficial Patch.esp'
-      - 'DLCThievesDen - Unofficial Patch - SSSB.esp'
       - 'DLCMehrunesRazor.esp'
-      - 'DLCMehrunesRazor - Unofficial Patch.esp'
       - 'DLCVileLair.esp'
-      - 'DLCVileLair - Unofficial Patch.esp'
       - 'DLCHorseArmor.esp'
-      - 'DLCHorseArmor - Unofficial Patch.esp'
       - 'DLCOrrery.esp'
-      - 'DLCOrrery - Unofficial Patch.esp'
       - 'DLCSpellTomes.esp'
-      - 'DLCSpellTomes - Unofficial Patch.esp'
       - 'DLCFrostcrag.esp'
-      - 'DLCFrostcrag - Unofficial Patch.esp'
     tag:
       - Actors.ACBS
       - Actors.AIPackages
@@ -747,7 +648,7 @@ plugins:
 
 # Unofficial Patches
   - name: 'Unofficial Oblivion Patch.esp'
-    group: *dlcGroup
+    group: *unofficialPatchesGroup
     msg: [ *doNotClean ]
   - name: 'Unofficial Oblivion Patch( DV|-mobs)?\.esp'
     tag:
@@ -775,17 +676,17 @@ plugins:
       - name: "-C.Water"
         condition: 'version("Unofficial Oblivion Patch.esp","3.4.0",>=)'
   - name: 'Oblivion Citadel Door Fix.esp'
-    group: *dlcGroup
+    group: *unofficialPatchesGroup
   - name: 'UOPS Additional Changes.esp'
-    group: *dlcGroup
+    group: *unofficialPatchesGroup
     tag:
       - Relev
       - Stats
   - name: 'UOP Vampire Aging & Face Fix.esp'
-    group: *dlcGroup
+    group: *unofficialPatchesGroup
     msg: [ *bashedPatchTweak ]
   - name: 'Unofficial Shivering Isles Patch.esp'
-    group: *dlcGroup
+    group: *unofficialPatchesGroup
     after:
       - 'DLCShiveringIsles.esp'
       - 'tes4SI-CHS-alpha.esp'
@@ -810,17 +711,17 @@ plugins:
       - Scripts
       - Stats
   - name: 'USIPS Additional Changes.esp'
-    group: *dlcGroup
+    group: *unofficialPatchesGroup
     tag:
       - Relev
   - name: 'DLCBattlehornCastle - Unofficial Patch.esp'
-    group: *dlcGroup
+    group: *unofficialPatchesGroup
     dirty:
       - crc: 0xab4de79a
         <<: *dirtyPlugin
         itm: 1
   - name: 'DLCThievesDen - Unofficial Patch.esp'
-    group: *dlcGroup
+    group: *unofficialPatchesGroup
     tag:
       - Actors.ACBS
       - Actors.AIData
@@ -831,14 +732,12 @@ plugins:
       - Delev
       - Relev
   - name: 'DLCThievesDen - Unofficial Patch - SSSB.esp'
-    group: *dlcGroup
-    after:
-      - 'DLCThievesDen - Unofficial Patch.esp'
+    group: *unofficialPatchesGroup
     msg:
       - type: say
         content: 'Only for new game. Don''t use for existing game.'
   - name: 'DLCMehrunesRazor - Unofficial Patch.esp'
-    group: *dlcGroup
+    group: *unofficialPatchesGroup
     tag:
       - Delev
       - Invent
@@ -848,17 +747,17 @@ plugins:
         <<: *dirtyPlugin
         itm: 1
   - name: 'DLCVileLair - Unofficial Patch.esp'
-    group: *dlcGroup
+    group: *unofficialPatchesGroup
     tag:
       - Graphics
   - name: 'DLCHorseArmor - Unofficial Patch.esp'
-    group: *dlcGroup
+    group: *unofficialPatchesGroup
     tag:
       - C.Owner
   - name: 'DLCOrrery - Unofficial Patch.esp'
-    group: *dlcGroup
+    group: *unofficialPatchesGroup
   - name: 'DLCSpellTomes - Unofficial Patch.esp'
-    group: *dlcGroup
+    group: *unofficialPatchesGroup
     inc:
       - 'CDM-CGO Horse Armor Compatability.esp'
       - 'CDM-CGO Orrery Compatibility.esp'
@@ -868,7 +767,7 @@ plugins:
       - 'CDM-CGO Shivering Isles Compatibility.esp'
       - 'CDM-CGO Frostcrag Compatibility.esp'
   - name: 'DLCFrostcrag - Unofficial Patch.esp'
-    group: *dlcGroup
+    group: *unofficialPatchesGroup
     tag:
       - Actors.ACBS
       - C.Name
@@ -877,7 +776,7 @@ plugins:
       - "-C.Climate"
       - "-C.Light"
   - name: 'Knights - Unofficial Patch.esp'
-    group: *dlcGroup
+    group: *unofficialPatchesGroup
     tag:
       - Actors.ACBS
       - Actors.AIPackages
