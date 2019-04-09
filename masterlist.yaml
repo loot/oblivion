@@ -624,6 +624,7 @@ plugins:
 
 # Unofficial Patches
   - name: 'Unofficial Oblivion Patch.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/5296' ]
     group: *unofficialPatchesGroup
     msg: [ *doNotClean ]
   - name: 'Unofficial Oblivion Patch( DV|-mobs)?\.esp'
@@ -652,21 +653,38 @@ plugins:
       - name: "-C.Water"
         condition: 'version("Unofficial Oblivion Patch.esp","3.4.0",>=)'
   - name: 'Oblivion Citadel Door Fix.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/5296' ]
     group: *unofficialPatchesGroup
+    clean:
+      # version: 3.5.6a
+      - crc: 0xE1CC0647
+        util: 'TES4Edit v4.0.2'
+  - name: 'UOP Vampire Aging & Face Fix.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/5296' ]
+    group: *unofficialPatchesGroup
+    msg: [ *bashedPatchTweak ]
+    clean:
+      # version: 3.5.6a
+      - crc: 0xA57A5DAC
+        util: 'TES4Edit v4.0.2'
   - name: 'UOPS Additional Changes.esp'
     group: *unofficialPatchesGroup
     tag:
       - Relev
       - Stats
-  - name: 'UOP Vampire Aging & Face Fix.esp'
-    group: *unofficialPatchesGroup
-    msg: [ *bashedPatchTweak ]
+
   - name: 'Unofficial Shivering Isles Patch.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/10739' ]
     group: *unofficialPatchesGroup
-    after:
+    req:
       - 'DLCShiveringIsles.esp'
+    after:
       - 'tes4SI-CHS-alpha.esp'
       - 'tes4-CHS-book.esp'
+    clean:
+      # version: 1.5.9
+      - crc: 0x19ADA30F
+        util: 'TES4Edit v4.0.2'
   - name: 'Unofficial Shivering Isles Patch( DV|-mobs)?\.esp'
     tag:
       - Actors.ACBS
@@ -690,14 +708,18 @@ plugins:
     group: *unofficialPatchesGroup
     tag:
       - Relev
+
+  - name: '(DLC(BattlehornCastle|ThievesDen|MehrunesRazor|VileLair|HorseArmor|Orrery|SpellTomes|Frostcrag)|Knights) - Unofficial Patch( - SSSB)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/9969' 
+        name: 'Unofficial Oblivion DLC Patches'
+    group: *unofficialPatchesGroup
   - name: 'DLCBattlehornCastle - Unofficial Patch.esp'
-    group: *unofficialPatchesGroup
-    dirty:
-      - crc: 0xab4de79a
-        <<: *dirtyPlugin
-        itm: 1
+    clean:
+      # version: 24
+      - crc: 0x1F6B40D8
+        util: 'TES4Edit v4.0.2'
   - name: 'DLCThievesDen - Unofficial Patch.esp'
-    group: *unofficialPatchesGroup
     tag:
       - Actors.ACBS
       - Actors.AIData
@@ -707,33 +729,47 @@ plugins:
       - C.Name
       - Delev
       - Relev
+    clean:
+      # version: 24
+      - crc: 0xF7685DB5
+        util: 'TES4Edit v4.0.2'
   - name: 'DLCThievesDen - Unofficial Patch - SSSB.esp'
-    group: *unofficialPatchesGroup
     msg:
       - type: say
         content: 'Only for new game. Don''t use for existing game.'
+    clean:
+      # version: 24
+      - crc: 0xF8731FE7
+        util: 'TES4Edit v4.0.2'
   - name: 'DLCMehrunesRazor - Unofficial Patch.esp'
-    group: *unofficialPatchesGroup
     tag:
       - Delev
       - Invent
       - Relev
-    dirty:
-      - crc: 0x17517fa6
-        <<: *dirtyPlugin
-        itm: 1
+    clean:
+      # version: 24
+      - crc: 0xFDD28667
+        util: 'TES4Edit v4.0.2'
   - name: 'DLCVileLair - Unofficial Patch.esp'
-    group: *unofficialPatchesGroup
     tag:
       - Graphics
+    clean:
+      # version: 24
+      - crc: 0x84ABAB20
+        util: 'TES4Edit v4.0.2'
   - name: 'DLCHorseArmor - Unofficial Patch.esp'
-    group: *unofficialPatchesGroup
     tag:
       - C.Owner
+    clean:
+      # version: 24
+      - crc: 0xC5A61F9E
+        util: 'TES4Edit v4.0.2'
   - name: 'DLCOrrery - Unofficial Patch.esp'
-    group: *unofficialPatchesGroup
+    clean:
+      # version: 24
+      - crc: 0xFCF99B11
+        util: 'TES4Edit v4.0.2'
   - name: 'DLCSpellTomes - Unofficial Patch.esp'
-    group: *unofficialPatchesGroup
     inc:
       - 'CDM-CGO Horse Armor Compatability.esp'
       - 'CDM-CGO Orrery Compatibility.esp'
@@ -742,8 +778,11 @@ plugins:
       - 'CDM-CGO Battlehorn Compatibility.esp'
       - 'CDM-CGO Shivering Isles Compatibility.esp'
       - 'CDM-CGO Frostcrag Compatibility.esp'
+    clean:
+      # version: 24
+      - crc: 0x3AE29795
+        util: 'TES4Edit v4.0.2'
   - name: 'DLCFrostcrag - Unofficial Patch.esp'
-    group: *unofficialPatchesGroup
     tag:
       - Actors.ACBS
       - C.Name
@@ -751,13 +790,20 @@ plugins:
       - Creatures.Blood
       - "-C.Climate"
       - "-C.Light"
+    clean:
+      # version: 24
+      - crc: 0x7835C46D
+        util: 'TES4Edit v4.0.2'
   - name: 'Knights - Unofficial Patch.esp'
-    group: *unofficialPatchesGroup
     tag:
       - Actors.ACBS
       - Actors.AIPackages
       - Factions
       - Relations
+    clean:
+      # version: 24
+      - crc: 0xCCDA5239
+        util: 'TES4Edit v4.0.2'
 
   - name: 'Oblivion_1.1.esm'
     msg:
