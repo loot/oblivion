@@ -22463,14 +22463,18 @@ plugins:
         udr: 0
         <<: *dirtyPlugin
     url: [ 'http://www.nexusmods.com/oblivion/mods/27957' ]
-  - name: 'Salmo the Baker.esp'
+  - name: 'Salmo The Baker v2.0.esp'
     inc:
       - 'Salmo the Baker, Cobl.esp'
     dirty:
-      - crc: 0x2C782FA2
-        itm: 60
+      - <<: *quickClean
+        crc: 0x2C782FA2
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 63
         udr: 31
-        <<: *dirtyPlugin
+    clean:
+      - crc: 0x61D1F420
+        util: 'TES4Edit v4.0.2'
     url: [ 'http://www.nexusmods.com/oblivion/mods/8435' ]
   - name: 'BlackHorseCourierExpanded.esp'
     dirty:
