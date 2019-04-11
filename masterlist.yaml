@@ -384,19 +384,20 @@ groups:
   - name: &gameMasterGroup Main Game Master
 
   - name: &unofficialPatchesGroup Unofficial Patches
-    after: [ *gameMasterGroup ]
 
   - name: &dlcGroup DLC
     after: [ *unofficialPatchesGroup ]
 
   - name: &newLandsGroup New Lands
-    after: [ *dlcGroup ]
+    after: [ *gameMasterGroup ]
 
   - name: &underridesGroup Underrides
     after: [ *newLandsGroup ]
 
   - name: default
-    after: [ *underridesGroup ]
+    after:
+      - *dlcGroup
+      - *underridesGroup
 
   - name: &latePatchesGroup Late Patches
     after: [ default ]
