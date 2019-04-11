@@ -22399,10 +22399,14 @@ plugins:
     url: [ 'http://www.nexusmods.com/oblivion/mods/20218' ]
   - name: 'QOTW Season Three.esp'
     dirty:
-      - crc: 0x701E316B
-        itm: 140
+      - <<: *quickClean
+        crc: 0x671B0844
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 99
         udr: 1
-        <<: *dirtyPlugin
+    clean:
+      - crc: 0x3537644F
+        util: 'TES4Edit v4.0.2'
     url: [ 'http://www.nexusmods.com/oblivion/mods/36336' ]
   - name: 'DLCBattlehornCastleCOBL.esp'
     url: [ 'http://www.nexusmods.com/oblivion/mods/43166' ]
