@@ -22458,11 +22458,16 @@ plugins:
     url: [ 'http://www.nexusmods.com/oblivion/mods/27957' ]
   - name: 'Oblivifall - Let''s Talk!.esp'
     dirty:
-      - crc: 0x5DFF0867
+      # Version: 1.1
+      - <<: *quickClean
+        crc: 0x5DFF0867
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 2
-        udr: 0
-        <<: *dirtyPlugin
-    url: [ 'http://www.nexusmods.com/oblivion/mods/27957' ]
+    clean:
+      # Version: 1.1, After QAC
+      - crc: 0xFA385F7F
+        util: 'TES4Edit v4.0.2'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/27148' ]
   - name: 'Salmo The Baker v2.0.esp'
     inc:
       - 'Salmo the Baker, Cobl.esp'
