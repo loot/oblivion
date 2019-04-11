@@ -22440,11 +22440,13 @@ plugins:
         udr: 0
         <<: *dirtyPlugin
   - name: 'Bandit_Creepy_Castle.esp'
-    dirty:
-      - crc: 0xFE34F837
-        itm: 20
-        udr: 0
-        <<: *dirtyPlugin
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/37285'
+        name: 'Handrest Isle'
+    clean:
+      # Version: 1.8
+      - crc: 0x90212E2E
+        util: 'TES4Edit v4.0.2'
   - name: 'Leveling Quick Fix 15.esp'
     url: [ 'http://www.nexusmods.com/oblivion/mods/38941' ]
   - name: 'Leveling Quick Fix 20.esp'
