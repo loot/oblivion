@@ -22092,10 +22092,18 @@ plugins:
     after:
       - 'TES4Merged.esp'
   - name: 'Creeper.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/16373' ]
     dirty:
-      - crc: 0x8a4423ba
-        <<: *dirtyPlugin
-        udr: 1
+      # version: 0.99
+      - <<: *quickClean
+        crc: 0x7A00708E
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
+        udr: 2
+    clean:
+      # version: 0.99, after QAC
+      - crc: 0x30E920AF
+        util: 'TES4Edit v4.0.2'
   - name: 'Ahtata Arquamer spike4hair.esp'
     after:
       - 'Bashed Patch, 0.esp'  # The default filename for a Bashed Patch.
