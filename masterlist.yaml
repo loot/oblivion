@@ -2108,20 +2108,13 @@ plugins:
       - 'AmbientTownSounds.esp'
     tag:
       - Sound
+  - name: '(AWS|NW|ANW|EW|OBSE)?(-)?Storms & Sound( SI)?\.esp'
+    msg:
+      - <<: *useOnlyOneX
+        type: error
+        subs: [ 'Storms & Sound' ]
+        condition: 'many("(AWS|NW|ANW|EW|OBSE)?(-)?Storms & Sound( SI)?\.esp")'
   - name: 'Storms & Sound.esp'
-    inc:
-      - 'Storms & Sound SI.esp'
-      - 'AWS-Storms & Sound.esp'
-      - 'AWS-Storms & Sound SI.esp'
-      - 'NW-Storms & Sound.esp'
-      - 'NW Storms & Sound SI.esp'
-      - 'NW-Storms & Sound SI.esp'
-      - 'ANW-Storms & Sound.esp'
-      - 'ANW-Storms & Sound SI.esp'
-      - 'EW-Storms & Sound.esp'
-      - 'EW-Storms & Sound SI.esp'
-      - 'OBSE-Storms & Sound.esp'
-      - 'OBSE-Storms & Sound SI.esp'
     tag:
       - C.Owner
     dirty:
@@ -2135,19 +2128,6 @@ plugins:
       - crc: 0x96BE8115
         util: 'TES4Edit v4.0.2'
   - name: 'Storms & Sound SI.esp'
-    inc:
-      - 'Storms & Sound.esp'
-      - 'AWS-Storms & Sound.esp'
-      - 'AWS-Storms & Sound SI.esp'
-      - 'NW-Storms & Sound.esp'
-      - 'NW Storms & Sound SI.esp'
-      - 'NW-Storms & Sound SI.esp'
-      - 'ANW-Storms & Sound.esp'
-      - 'ANW-Storms & Sound SI.esp'
-      - 'EW-Storms & Sound.esp'
-      - 'EW-Storms & Sound SI.esp'
-      - 'OBSE-Storms & Sound.esp'
-      - 'OBSE-Storms & Sound SI.esp'
     dirty:
       # Version: 3.0
       - <<: *quickClean
@@ -2159,19 +2139,6 @@ plugins:
       - crc: 0x3D098099
         util: 'TES4Edit v4.0.2'
   - name: 'AWS-Storms & Sound.esp'
-    inc:
-      - 'Storms & Sound.esp'
-      - 'Storms & Sound SI.esp'
-      - 'AWS-Storms & Sound SI.esp'
-      - 'NW-Storms & Sound.esp'
-      - 'NW Storms & Sound SI.esp'
-      - 'NW-Storms & Sound SI.esp'
-      - 'ANW-Storms & Sound.esp'
-      - 'ANW-Storms & Sound SI.esp'
-      - 'EW-Storms & Sound.esp'
-      - 'EW-Storms & Sound SI.esp'
-      - 'OBSE-Storms & Sound.esp'
-      - 'OBSE-Storms & Sound SI.esp'
     dirty:
       # Version: 3.0
       - <<: *quickClean
@@ -2183,19 +2150,6 @@ plugins:
       - crc: 0x74313711
         util: 'TES4Edit v4.0.2'
   - name: 'AWS-Storms & Sound SI.esp'
-    inc:
-      - 'Storms & Sound.esp'
-      - 'Storms & Sound SI.esp'
-      - 'AWS-Storms & Sound.esp'
-      - 'NW-Storms & Sound.esp'
-      - 'NW Storms & Sound SI.esp'
-      - 'NW-Storms & Sound SI.esp'
-      - 'ANW-Storms & Sound.esp'
-      - 'ANW-Storms & Sound SI.esp'
-      - 'EW-Storms & Sound.esp'
-      - 'EW-Storms & Sound SI.esp'
-      - 'OBSE-Storms & Sound.esp'
-      - 'OBSE-Storms & Sound SI.esp'
     dirty:
       # Version: 3.0
       - <<: *quickClean
@@ -2207,19 +2161,6 @@ plugins:
       - crc: 0xF4D16BFB
         util: 'TES4Edit v4.0.2'
   - name: 'NW-Storms & Sound.esp'
-    inc:
-      - 'Storms & Sound.esp'
-      - 'Storms & Sound SI.esp'
-      - 'AWS-Storms & Sound.esp'
-      - 'AWS-Storms & Sound SI.esp'
-      - 'NW Storms & Sound SI.esp'
-      - 'NW-Storms & Sound SI.esp'
-      - 'ANW-Storms & Sound.esp'
-      - 'ANW-Storms & Sound SI.esp'
-      - 'EW-Storms & Sound.esp'
-      - 'EW-Storms & Sound SI.esp'
-      - 'OBSE-Storms & Sound.esp'
-      - 'OBSE-Storms & Sound SI.esp'
     dirty:
       # Version: 3.0
       - <<: *quickClean
@@ -2230,34 +2171,7 @@ plugins:
       # Version: 3.0
       - crc: 0x472E9733
         util: 'TES4Edit v4.0.2'
-  - name: 'NW Storms & Sound SI.esp'
-    inc:
-      - 'Storms & Sound.esp'
-      - 'Storms & Sound SI.esp'
-      - 'AWS-Storms & Sound.esp'
-      - 'AWS-Storms & Sound SI.esp'
-      - 'NW-Storms & Sound.esp'
-      - 'NW-Storms & Sound SI.esp'
-      - 'ANW-Storms & Sound.esp'
-      - 'ANW-Storms & Sound SI.esp'
-      - 'EW-Storms & Sound.esp'
-      - 'EW-Storms & Sound SI.esp'
-      - 'OBSE-Storms & Sound.esp'
-      - 'OBSE-Storms & Sound SI.esp'
   - name: 'NW-Storms & Sound SI.esp'
-    inc:
-      - 'Storms & Sound.esp'
-      - 'Storms & Sound SI.esp'
-      - 'AWS-Storms & Sound.esp'
-      - 'AWS-Storms & Sound SI.esp'
-      - 'NW-Storms & Sound.esp'
-      - 'NW Storms & Sound SI.esp'
-      - 'ANW-Storms & Sound.esp'
-      - 'ANW-Storms & Sound SI.esp'
-      - 'EW-Storms & Sound.esp'
-      - 'EW-Storms & Sound SI.esp'
-      - 'OBSE-Storms & Sound.esp'
-      - 'OBSE-Storms & Sound SI.esp'
     dirty:
       # Version: 3.0
       - <<: *quickClean
@@ -2269,19 +2183,6 @@ plugins:
       - crc: 0x39E16936
         util: 'TES4Edit v4.0.2'
   - name: 'ANW-Storms & Sound.esp'
-    inc:
-      - 'Storms & Sound.esp'
-      - 'Storms & Sound SI.esp'
-      - 'AWS-Storms & Sound.esp'
-      - 'AWS-Storms & Sound SI.esp'
-      - 'NW-Storms & Sound.esp'
-      - 'NW Storms & Sound SI.esp'
-      - 'NW-Storms & Sound SI.esp'
-      - 'ANW-Storms & Sound SI.esp'
-      - 'EW-Storms & Sound.esp'
-      - 'EW-Storms & Sound SI.esp'
-      - 'OBSE-Storms & Sound.esp'
-      - 'OBSE-Storms & Sound SI.esp'
     dirty:
       # Version: 3.0
       - <<: *quickClean
@@ -2293,19 +2194,6 @@ plugins:
       - crc: 0x22708102
         util: 'TES4Edit v4.0.2'
   - name: 'ANW-Storms & Sound SI.esp'
-    inc:
-      - 'Storms & Sound.esp'
-      - 'Storms & Sound SI.esp'
-      - 'AWS-Storms & Sound.esp'
-      - 'AWS-Storms & Sound SI.esp'
-      - 'NW-Storms & Sound.esp'
-      - 'NW Storms & Sound SI.esp'
-      - 'NW-Storms & Sound SI.esp'
-      - 'ANW-Storms & Sound.esp'
-      - 'EW-Storms & Sound.esp'
-      - 'EW-Storms & Sound SI.esp'
-      - 'OBSE-Storms & Sound.esp'
-      - 'OBSE-Storms & Sound SI.esp'
     dirty:
       # Version: 3.0
       - <<: *quickClean
@@ -2317,19 +2205,6 @@ plugins:
       - crc: 0x76ED59C3
         util: 'TES4Edit v4.0.2'
   - name: 'EW-Storms & Sound.esp'
-    inc:
-      - 'Storms & Sound.esp'
-      - 'Storms & Sound SI.esp'
-      - 'AWS-Storms & Sound.esp'
-      - 'AWS-Storms & Sound SI.esp'
-      - 'NW-Storms & Sound.esp'
-      - 'NW Storms & Sound SI.esp'
-      - 'NW-Storms & Sound SI.esp'
-      - 'ANW-Storms & Sound.esp'
-      - 'ANW-Storms & Sound SI.esp'
-      - 'EW-Storms & Sound SI.esp'
-      - 'OBSE-Storms & Sound.esp'
-      - 'OBSE-Storms & Sound SI.esp'
     dirty:
       # Version: 3.0
       - <<: *quickClean
@@ -2341,19 +2216,6 @@ plugins:
       - crc: 0xE0523CDA
         util: 'TES4Edit v4.0.2'
   - name: 'EW-Storms & Sound SI.esp'
-    inc:
-      - 'Storms & Sound.esp'
-      - 'Storms & Sound SI.esp'
-      - 'AWS-Storms & Sound.esp'
-      - 'AWS-Storms & Sound SI.esp'
-      - 'NW-Storms & Sound.esp'
-      - 'NW Storms & Sound SI.esp'
-      - 'NW-Storms & Sound SI.esp'
-      - 'ANW-Storms & Sound.esp'
-      - 'ANW-Storms & Sound SI.esp'
-      - 'EW-Storms & Sound.esp'
-      - 'OBSE-Storms & Sound.esp'
-      - 'OBSE-Storms & Sound SI.esp'
     dirty:
       # Version: 3.0
       - <<: *quickClean
@@ -2365,19 +2227,6 @@ plugins:
       - crc: 0xBEE85870
         util: 'TES4Edit v4.0.2'
   - name: 'OBSE-Storms & Sound.esp'
-    inc:
-      - 'Storms & Sound.esp'
-      - 'Storms & Sound SI.esp'
-      - 'AWS-Storms & Sound.esp'
-      - 'AWS-Storms & Sound SI.esp'
-      - 'NW-Storms & Sound.esp'
-      - 'NW Storms & Sound SI.esp'
-      - 'NW-Storms & Sound SI.esp'
-      - 'ANW-Storms & Sound.esp'
-      - 'ANW-Storms & Sound SI.esp'
-      - 'EW-Storms & Sound.esp'
-      - 'EW-Storms & Sound SI.esp'
-      - 'OBSE-Storms & Sound SI.esp'
     msg:
       - type: say
         content: 'This one is compatible with all weather mods.'
@@ -2392,19 +2241,6 @@ plugins:
       - crc: 0xA47F2363
         util: 'TES4Edit v4.0.2'
   - name: 'OBSE-Storms & Sound SI.esp'
-    inc:
-      - 'Storms & Sound.esp'
-      - 'Storms & Sound SI.esp'
-      - 'AWS-Storms & Sound.esp'
-      - 'AWS-Storms & Sound SI.esp'
-      - 'NW-Storms & Sound.esp'
-      - 'NW Storms & Sound SI.esp'
-      - 'NW-Storms & Sound SI.esp'
-      - 'ANW-Storms & Sound.esp'
-      - 'ANW-Storms & Sound SI.esp'
-      - 'EW-Storms & Sound.esp'
-      - 'EW-Storms & Sound SI.esp'
-      - 'OBSE-Storms & Sound.esp'
     msg:
       - type: say
         content: 'This one is compatible with all weather mods.'
