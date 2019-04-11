@@ -22482,10 +22482,23 @@ plugins:
   - name: 'Advanced Mark & Recall.esp'
     req: [ *OBSE ]
     dirty:
-      - crc: 0x855CE363
+      # Version: 1.0
+      - <<: *quickClean
+        crc: 0x259151E8
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 4
-        udr: 0
-        <<: *dirtyPlugin
+      # Version: 2.0
+      - <<: *quickClean
+        crc: 0x855CE363
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 4
+    clean:
+      # Version: 1.0
+      - crc: 0x64B41263
+        util: 'TES4Edit v4.0.2'
+      # Version: 2.0
+      - crc: 0x1796C360
+        util: 'TES4Edit v4.0.2'
     url: [ 'http://www.nexusmods.com/oblivion/mods/10985' ]
   - name: 'Eastbrink-ImpeREALForts Patch.esp'
     after:
