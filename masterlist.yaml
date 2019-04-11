@@ -22351,29 +22351,58 @@ plugins:
       - crc: 0x1D521050
         itm: 1
         <<: *dirtyPlugin
+  - name: '(MerryBellInn|SleepyCatInn|SingingStablehandInn|PinePeakLodge)\.esp'
+    url:
+      - link: 'http://www.nexusmods.com/oblivion/mods/14853'
+        name: 'Cyrodiil Inns'
   - name: 'MerryBellInn.esp'
     dirty:
-      - crc: 0x46126974
-        itm: 5
+      # Version: 1
+      - <<: *quickClean
+        crc: 0x46126974
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 8
         udr: 14
-        <<: *dirtyPlugin
-    url: [ 'http://www.nexusmods.com/oblivion/mods/14853' ]
+    clean:
+      # Version: 1, after QAC
+      - crc: 0x0173D9BA
+        util: 'TES4Edit v4.0.2'
   - name: 'SleepyCatInn.esp'
     dirty:
-      - crc: 0xC8E4CF92
-        itm: 5
+      # Version: 1
+      - <<: *quickClean
+        crc: 0xC8E4CF92
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 7
         udr: 4
-        <<: *dirtyPlugin
-    url: [ 'http://www.nexusmods.com/oblivion/mods/14853' ]
+    clean:
+      # Version: 1, after QAC
+      - crc: 0xF67E1140
+        util: 'TES4Edit v4.0.2'
   - name: 'PinePeakLodge.esp'
     dirty:
-      - crc: 0x1D4C3E0C
-        itm: 96
+      # Version: 1
+      - <<: *quickClean
+        crc: 0x1D4C3E0C
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 99
         udr: 46
-        <<: *dirtyPlugin
-    url: [ 'http://www.nexusmods.com/oblivion/mods/14853' ]
+    clean:
+      # Version: 1, after QAC
+      - crc: 0x7C99DFAC
+        util: 'TES4Edit v4.0.2'
   - name: 'SingingStablehandInn.esp'
-    url: [ 'http://www.nexusmods.com/oblivion/mods/14853' ]
+    dirty:
+      # Version: 1
+      - <<: *quickClean
+        crc: 0x448D8A67
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 6
+        udr: 7
+    clean:
+      # Version: 1, after QAC
+      - crc: 0xDDFA366D
+        util: 'TES4Edit v4.0.2'
   - name: 'AFKWeye_MTC_RRLRumare_HOH Patch.esp'
     url: [ 'http://www.nexusmods.com/oblivion/mods/42718' ]
   - name: 'OCR+Werewolf Patch.esp'
