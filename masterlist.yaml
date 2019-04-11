@@ -22348,10 +22348,17 @@ plugins:
       - crc: 0xD7A02335
         util: 'TES4Edit v4.0.2'
   - name: 'Glowing Wonders.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/43331' ]
     dirty:
-      - crc: 0x1D521050
+      # Version: 1.0
+      - <<: *quickClean
+        crc: 0x1D521050
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
-        <<: *dirtyPlugin
+    clean:
+      # Version: 1.0, after QAC
+      - crc: 0x1D5D23FE
+        util: 'TES4Edit v4.0.2'
   - name: '(MerryBellInn|SleepyCatInn|SingingStablehandInn|PinePeakLodge)\.esp'
     url:
       - link: 'http://www.nexusmods.com/oblivion/mods/14853'
