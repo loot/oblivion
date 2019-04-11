@@ -2109,14 +2109,29 @@ plugins:
     tag:
       - Sound
   - name: '(AWS|NW|ANW|EW|OBSE)?(-)?Storms & Sound( SI)?\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/8711' ]
     msg:
       - <<: *useOnlyOneX
         type: error
         subs: [ 'Storms & Sound' ]
         condition: 'many("(AWS|NW|ANW|EW|OBSE)?(-)?Storms & Sound( SI)?\.esp")'
+  - name: '(AWS|NW|ANW|EW|OBSE)?(-)?Storms & Sound.esp'
+    inc:
+      - 'DLCShiveringIsles.esp'
+  - name: '(AWS|NW|ANW|EW|OBSE)?(-)?Storms & Sound SI.esp'
+    req:
+      - 'DLCShiveringIsles.esp'
+  - name: 'OBSE-Storms & Sound( SI)?\.esp'
+    req:
+      - *OBSE
+    msg:
+      - type: say
+        content: 'This one is compatible with all weather mods.'
   - name: 'Storms & Sound.esp'
-    tag:
-      - C.Owner
+    msg:
+      - <<: *wildEdits
+        subs: [ 'Remove record **00049BD5**, blocks Unofficial Patch change.' ]
+        condition: 'checksum("Storms & Sound.esp", 96BE8115)'
     dirty:
       # Version: 3.0
       - <<: *quickClean
@@ -2125,7 +2140,7 @@ plugins:
         itm: 45
     clean:
       # Version: 3.0
-      - crc: 0x96BE8115
+      - crc: 0xCD6F4891
         util: 'TES4Edit v4.0.2'
   - name: 'Storms & Sound SI.esp'
     dirty:
@@ -2227,9 +2242,6 @@ plugins:
       - crc: 0xBEE85870
         util: 'TES4Edit v4.0.2'
   - name: 'OBSE-Storms & Sound.esp'
-    msg:
-      - type: say
-        content: 'This one is compatible with all weather mods.'
     dirty:
       # Version: 3.0
       - <<: *quickClean
@@ -2241,9 +2253,6 @@ plugins:
       - crc: 0xA47F2363
         util: 'TES4Edit v4.0.2'
   - name: 'OBSE-Storms & Sound SI.esp'
-    msg:
-      - type: say
-        content: 'This one is compatible with all weather mods.'
     dirty:
       # Version: 3.0
       - <<: *quickClean
