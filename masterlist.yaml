@@ -22428,10 +22428,15 @@ plugins:
     url: [ 'http://www.nexusmods.com/oblivion/mods/28207' ]
   - name: 'Blue-Glass Armor.esp'
     dirty:
-      - crc: 0xE29C8B31
-        itm: 1
-        udr: 0
-        <<: *dirtyPlugin
+      # Version: 1.0
+      - <<: *quickClean
+        crc: 0xE29C8B31
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 10
+    clean:
+      # Version: 1.0, after QAC
+      - crc: 0x6B70AF82
+        util: 'TES4Edit v4.0.2'
     url: [ 'http://www.nexusmods.com/oblivion/mods/9291' ]
   - name: 'Chorrol_Dungeon.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/37272' ]
