@@ -426,93 +426,6 @@ plugins:
       # version: 1.2.0.416 GOTY
       - crc: 0x2BB84977
         util: 'TES4Edit v4.0.2'
-  - name: 'DLCBattlehornCastle.esp'
-    group: *dlcGroup
-    after:
-      - 'DLCShiveringIsles.esp'
-      - 'DLCHorseArmor.esp'
-      - 'DLCOrrery.esp'
-      - 'DLCVileLair.esp'
-      - 'DLCMehrunesRazor.esp'
-      - 'DLCSpellTomes.esp'
-      - 'DLCThievesDen.esp'
-    dirty:
-      # version: 1.2.0.416 GOTY
-      - <<: *quickClean
-        crc: 0x7048C609
-        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 13
-        udr: 72
-    clean:
-      # version: 1.2.0.416 GOTY
-      - crc: 0x56ADB38E
-        util: 'TES4Edit v4.0.2'
-  - name: 'DLCThievesDen.esp'
-    group: *dlcGroup
-    after:
-      - 'DLCShiveringIsles.esp'
-      - 'DLCHorseArmor.esp'
-      - 'DLCOrrery.esp'
-      - 'DLCVileLair.esp'
-      - 'DLCMehrunesRazor.esp'
-      - 'DLCSpellTomes.esp'
-    tag:
-      - Actors.ACBS
-      - Actors.AIPackages
-      - Actors.Stats
-      - C.Light
-      - C.Name
-    dirty:
-      # version: 1.2.0.416 GOTY
-      - <<: *quickClean
-        crc: 0x05DB8CCC
-        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 5
-        udr: 135
-    clean:
-      # version: 1.2.0.416 GOTY
-      - crc: 0xF3740D32
-        util: 'TES4Edit v4.0.2'
-  - name: 'DLCMehrunesRazor.esp'
-    group: *dlcGroup
-    after:
-      - 'DLCShiveringIsles.esp'
-      - 'DLCHorseArmor.esp'
-      - 'DLCOrrery.esp'
-      - 'DLCVileLair.esp'
-    dirty:
-      # version: 1.2.0.416 GOTY
-      - <<: *quickClean
-        crc: 0xCB413740
-        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 26
-        udr: 15
-    clean:
-      # version: 1.2.0.416 GOTY
-      - crc: 0xBEDA62E3
-        util: 'TES4Edit v4.0.2'
-  - name: 'DLCVileLair.esp'
-    group: *dlcGroup
-    after:
-      - 'DLCShiveringIsles.esp'
-      - 'DLCHorseArmor.esp'
-      - 'DLCOrrery.esp'
-    inc:
-      - 'KumikoManor.esp'
-      - 'Kumiko Manor 2.1 Rus.esp'
-    tag:
-      - Sound
-    dirty:
-      # version: 1.2.0.416 GOTY
-      - <<: *quickClean
-        crc: 0x74D2CA6F
-        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 28
-        udr: 1
-    clean:
-      # version: 1.2.0.416 GOTY
-      - crc: 0x9BF7C295
-        util: 'TES4Edit v4.0.2'
   - name: 'DLCHorseArmor.esp'
     group: *dlcGroup
     after:
@@ -549,6 +462,46 @@ plugins:
       # version: 1.2.0.416 GOTY
       - crc: 0xE28C6E78
         util: 'TES4Edit v4.0.2'
+  - name: 'DLCVileLair.esp'
+    group: *dlcGroup
+    after:
+      - 'DLCShiveringIsles.esp'
+      - 'DLCHorseArmor.esp'
+      - 'DLCOrrery.esp'
+    inc:
+      - 'KumikoManor.esp'
+      - 'Kumiko Manor 2.1 Rus.esp'
+    tag:
+      - Sound
+    dirty:
+      # version: 1.2.0.416 GOTY
+      - <<: *quickClean
+        crc: 0x74D2CA6F
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 28
+        udr: 1
+    clean:
+      # version: 1.2.0.416 GOTY
+      - crc: 0x9BF7C295
+        util: 'TES4Edit v4.0.2'
+  - name: 'DLCMehrunesRazor.esp'
+    group: *dlcGroup
+    after:
+      - 'DLCShiveringIsles.esp'
+      - 'DLCHorseArmor.esp'
+      - 'DLCOrrery.esp'
+      - 'DLCVileLair.esp'
+    dirty:
+      # version: 1.2.0.416 GOTY
+      - <<: *quickClean
+        crc: 0xCB413740
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 26
+        udr: 15
+    clean:
+      # version: 1.2.0.416 GOTY
+      - crc: 0xBEDA62E3
+        util: 'TES4Edit v4.0.2'
   - name: 'DLCSpellTomes.esp'
     group: *dlcGroup
     after:
@@ -568,6 +521,53 @@ plugins:
     clean:
       # version: 1.2.0.416 GOTY
       - crc: 0x9973E1A7
+        util: 'TES4Edit v4.0.2'
+  - name: 'DLCThievesDen.esp'
+    group: *dlcGroup
+    after:
+      - 'DLCShiveringIsles.esp'
+      - 'DLCHorseArmor.esp'
+      - 'DLCOrrery.esp'
+      - 'DLCVileLair.esp'
+      - 'DLCMehrunesRazor.esp'
+      - 'DLCSpellTomes.esp'
+    tag:
+      - Actors.ACBS
+      - Actors.AIPackages
+      - Actors.Stats
+      - C.Light
+      - C.Name
+    dirty:
+      # version: 1.2.0.416 GOTY
+      - <<: *quickClean
+        crc: 0x05DB8CCC
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 5
+        udr: 135
+    clean:
+      # version: 1.2.0.416 GOTY
+      - crc: 0xF3740D32
+        util: 'TES4Edit v4.0.2'
+  - name: 'DLCBattlehornCastle.esp'
+    group: *dlcGroup
+    after:
+      - 'DLCShiveringIsles.esp'
+      - 'DLCHorseArmor.esp'
+      - 'DLCOrrery.esp'
+      - 'DLCVileLair.esp'
+      - 'DLCMehrunesRazor.esp'
+      - 'DLCSpellTomes.esp'
+      - 'DLCThievesDen.esp'
+    dirty:
+      # version: 1.2.0.416 GOTY
+      - <<: *quickClean
+        crc: 0x7048C609
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 13
+        udr: 72
+    clean:
+      # version: 1.2.0.416 GOTY
+      - crc: 0x56ADB38E
         util: 'TES4Edit v4.0.2'
   - name: 'DLCFrostcrag.esp'
     group: *dlcGroup
@@ -675,7 +675,6 @@ plugins:
     tag:
       - Relev
       - Stats
-
   - name: 'Unofficial Shivering Isles Patch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/10739' ]
     group: *unofficialPatchesGroup
@@ -711,16 +710,51 @@ plugins:
     group: *unofficialPatchesGroup
     tag:
       - Relev
-
   - name: '(DLC(BattlehornCastle|ThievesDen|MehrunesRazor|VileLair|HorseArmor|Orrery|SpellTomes|Frostcrag)|Knights) - Unofficial Patch( - SSSB)?\.esp'
     url:
-      - link: 'https://www.nexusmods.com/oblivion/mods/9969' 
+      - link: 'https://www.nexusmods.com/oblivion/mods/9969'
         name: 'Unofficial Oblivion DLC Patches'
     group: *unofficialPatchesGroup
-  - name: 'DLCBattlehornCastle - Unofficial Patch.esp'
+  - name: 'DLCHorseArmor - Unofficial Patch.esp'
+    tag:
+      - C.Owner
     clean:
       # version: 24
-      - crc: 0x1F6B40D8
+      - crc: 0xC5A61F9E
+        util: 'TES4Edit v4.0.2'
+  - name: 'DLCOrrery - Unofficial Patch.esp'
+    clean:
+      # version: 24
+      - crc: 0xFCF99B11
+        util: 'TES4Edit v4.0.2'
+  - name: 'DLCVileLair - Unofficial Patch.esp'
+    tag:
+      - Graphics
+    clean:
+      # version: 24
+      - crc: 0x84ABAB20
+        util: 'TES4Edit v4.0.2'
+  - name: 'DLCMehrunesRazor - Unofficial Patch.esp'
+    tag:
+      - Delev
+      - Invent
+      - Relev
+    clean:
+      # version: 24
+      - crc: 0xFDD28667
+        util: 'TES4Edit v4.0.2'
+  - name: 'DLCSpellTomes - Unofficial Patch.esp'
+    inc:
+      - 'CDM-CGO Horse Armor Compatability.esp'
+      - 'CDM-CGO Orrery Compatibility.esp'
+      - 'CDM-CGO Thieves Den Compatibility.esp'
+      - 'CDM-CGO Vile Lair Compatibility.esp'
+      - 'CDM-CGO Battlehorn Compatibility.esp'
+      - 'CDM-CGO Shivering Isles Compatibility.esp'
+      - 'CDM-CGO Frostcrag Compatibility.esp'
+    clean:
+      # version: 24
+      - crc: 0x3AE29795
         util: 'TES4Edit v4.0.2'
   - name: 'DLCThievesDen - Unofficial Patch.esp'
     tag:
@@ -744,46 +778,10 @@ plugins:
       # version: 24
       - crc: 0xF8731FE7
         util: 'TES4Edit v4.0.2'
-  - name: 'DLCMehrunesRazor - Unofficial Patch.esp'
-    tag:
-      - Delev
-      - Invent
-      - Relev
+  - name: 'DLCBattlehornCastle - Unofficial Patch.esp'
     clean:
       # version: 24
-      - crc: 0xFDD28667
-        util: 'TES4Edit v4.0.2'
-  - name: 'DLCVileLair - Unofficial Patch.esp'
-    tag:
-      - Graphics
-    clean:
-      # version: 24
-      - crc: 0x84ABAB20
-        util: 'TES4Edit v4.0.2'
-  - name: 'DLCHorseArmor - Unofficial Patch.esp'
-    tag:
-      - C.Owner
-    clean:
-      # version: 24
-      - crc: 0xC5A61F9E
-        util: 'TES4Edit v4.0.2'
-  - name: 'DLCOrrery - Unofficial Patch.esp'
-    clean:
-      # version: 24
-      - crc: 0xFCF99B11
-        util: 'TES4Edit v4.0.2'
-  - name: 'DLCSpellTomes - Unofficial Patch.esp'
-    inc:
-      - 'CDM-CGO Horse Armor Compatability.esp'
-      - 'CDM-CGO Orrery Compatibility.esp'
-      - 'CDM-CGO Thieves Den Compatibility.esp'
-      - 'CDM-CGO Vile Lair Compatibility.esp'
-      - 'CDM-CGO Battlehorn Compatibility.esp'
-      - 'CDM-CGO Shivering Isles Compatibility.esp'
-      - 'CDM-CGO Frostcrag Compatibility.esp'
-    clean:
-      # version: 24
-      - crc: 0x3AE29795
+      - crc: 0x1F6B40D8
         util: 'TES4Edit v4.0.2'
   - name: 'DLCFrostcrag - Unofficial Patch.esp'
     tag:
