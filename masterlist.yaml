@@ -22294,11 +22294,18 @@ plugins:
   - name: 'Giliad House for Sale.esp'
     url: [ 'http://www.nexusmods.com/oblivion/mods/41868' ]
   - name: 'Blacktache''s Secrets v3.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/9939' ]
     dirty:
-      - crc: 0xF69CC41C
-        itm: 48
+      # Version: 3.0
+      - <<: *quickClean
+        crc: 0xF69CC41C
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 50
         udr: 155
-        <<: *dirtyPlugin
+    clean:
+      # Version: 3.0, after QAC
+      - crc: 0x2B61A309
+        util: 'TES4Edit v4.0.2'
   - name: 'Happyhannah''s Wines.esp'
     tag: [ Relev ]
     dirty:
