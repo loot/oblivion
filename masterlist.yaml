@@ -16944,31 +16944,11 @@ plugins:
       - 'SM Plugin Refurbish - ThievesDen.esp'
       - 'SM Plugin Refurbish - VileLair.esp'
       - 'SM Plugin Refurbish(Merged).esp'
-  - name: 'CDM-CGO Standard Skill Levelling Faster.esp'
+  - name: 'CDM-CGO (Vanilla|Standard) Skill Levelling( Slower| Faster)?\.esp'
     msg:
-      - type: say
-        content: 'Only use one CDM-CGO Skill Levelling plugin.'
-        condition: 'file("CDM-CGO Standard Skill Levellin(g|g Slower)\.esp") or file("CDM-CGO Vanilla Skill Levelling (Faster|Slower)\.esp")'
-  - name: 'CDM-CGO Standard Skill Levelling Slower.esp'
-    msg:
-      - type: say
-        content: 'Only use one CDM-CGO Skill Levelling plugin.'
-        condition: 'file("CDM-CGO Standard Skill Levellin(g|g Faster)\.esp") or file("CDM-CGO Vanilla Skill Levelling (Faster|Slower)\.esp")'
-  - name: 'CDM-CGO Standard Skill Levelling.esp'
-    msg:
-      - type: say
-        content: 'Only use one CDM-CGO Skill Levelling plugin.'
-        condition: 'file("CDM-CGO Standard Skill Levelling (Faster|Slower)\.esp") or file("CDM-CGO Vanilla Skill Levelling (Faster|Slower)\.esp")'
-  - name: 'CDM-CGO Vanilla Skill Levelling Faster.esp'
-    msg:
-      - type: say
-        content: 'Only use one CDM-CGO Skill Levelling plugin.'
-        condition: 'file("CDM-CGO Standard Skill Levellin(g|g Faster|g Slower)\.esp") or file("CDM-CGO Vanilla Skill Levelling Slower.esp")'
-  - name: 'CDM-CGO Vanilla Skill Levelling Slower.esp'
-    msg:
-      - type: say
-        content: 'Only use one CDM-CGO Skill Levelling plugin.'
-        condition: 'file("CDM-CGO Standard Skill Levellin(g|g Faster|g Slower)\.esp") or file("CDM-CGO Vanilla Skill Levelling Faster.esp")'
+      - <<: *useOnlyOneX
+        subs: [ 'CDM-CGO Skill Levelling plugin' ]
+        condition: 'many("CDM-CGO (Vanilla|Standard) Skill Levelling( Slower| Faster)?\.esp")'
   - name: 'ExperienceBasedTraining.esp'
     req: [ *OBSEv16 ]
   - name: 'Mercantile Leveling-Fixed.esp'
