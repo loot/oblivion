@@ -16785,14 +16785,6 @@ plugins:
     msg: [ *bashedPatchTweak ]
   - name: 'Unconscious For 5min.esp'
     msg: [ *bashedPatchTweak ]
-  - name: 'ptThrowingKnives.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Remove this and install Unnecessary Violence.'
-  - name: 'ptThrowingWeapons.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Remove this and install Unnecessary Violence.'
 
   - name: 'DeadlyReflex 6 - Combat Moves.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/8273' ]
@@ -21796,16 +21788,29 @@ plugins:
     msg: [ *obsolete ]
   - name: 'Duke Patricks - BASIC Script Effect Silencer BETA.esp'
     msg: [ *obsolete ]
+
+  - name: 'UVIII.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/40310' ]
+    clean:
+      # version: 3.1.3
+      - crc: 0xBEC3DB85
+        util: 'TES4Edit v4.0.2'
+  - name: '(UnnecessaryViolence|UVII)\.esp'
+    msg:
+      - <<: *obsolete
+        subs: [ '[Unnecessary Violence III](https://www.nexusmods.com/oblivion/mods/40310)' ]
   - name: 'UnnecessaryViolence.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/24936' ]
     msg:
       - type: say
         content: 'If using with Supreme Magicka and experiencing frequent swirling pink or green clouds, set ''zzSMConfigurationQuest.bNoPoisonLevitationEffects'' to 1 in SupremeMagicka.ini.'
         condition: 'file("SupremeMagicka.esp")'
-  - name: 'UVII.esp'
-    dirty:
-      - crc: 0x3144ec1b
-        itm: 13
-        <<: *dirtyPlugin
+  - name: 'ptThrowing(Weapons|Knives)\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/23353' ]
+    msg:
+      - <<: *obsolete
+        subs: [ '[Unnecessary Violence III](https://www.nexusmods.com/oblivion/mods/40310)' ]
+
   - name: 'Real Hunger, Cobl.esp'
     msg:
       - type: say
