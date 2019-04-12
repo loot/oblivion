@@ -16793,61 +16793,37 @@ plugins:
     msg:
       - type: say
         content: 'Obsolete. Remove this and install Unnecessary Violence.'
-  - name: 'Deadly Reflex - Timed Block + Higher Damage.esp'
-    msg: [ *obsolete ]
-  - name: 'Deadly Reflex - Timed Block no other changes.esp'
-    msg: [ *obsolete ]
-  - name: 'DeadlyReflex - Timed Block + Very High Damage.esp'
-    msg: [ *obsolete ]
-  - name: 'Mounted_Spellcasting Deadly Reflex Compatible.esp'
-    msg: [ *obsolete ]
-  - name: 'Deadly Reflex 5 - Timed Block.esp'
-    msg:
-      - type: say
-        content: 'Use no more than one Timed Block plugin.'
-  - name: 'Deadly Reflex 5 - Timed block and 150% damage.esp'
-    msg:
-      - type: say
-        content: 'Use no more than one Timed Block plugin.'
-      - *masterReassign
-  - name: 'Deadly Reflex 5 - Timed Block and 250% damage.esp'
-    msg:
-      - type: say
-        content: 'Use no more than one Timed Block plugin.'
-      - *masterReassign
-  - name: 'Deadly Reflex 5 - Timed block and 1.5x damage.esp'
-    msg:
-      - type: say
-        content: 'Use no more than one Timed Block plugin.'
-  - name: 'Deadly Reflex 5 - Timed Block and 2.5x damage.esp'
-    msg:
-      - type: say
-        content: 'Use no more than one Timed Block plugin.'
-  - name: 'Deadly Reflex 5 - Timed Block with no damage or durability changes.esp'
-    msg:
-      - type: say
-        content: 'Use no more than one Timed Block plugin.'
-  - name: 'Deadly Reflex 5 - Combat Moves.esp'
+
+  - name: 'DeadlyReflex 6 - Combat Moves.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/8273' ]
+    req:
+      - name: 'Deadly Reflex 6 - HeX NifSE Patch.esp'
+        display: 'To use both DR6b101 and NifSE 1.0+ you need the [fix file](http://www.nexusmods.com/oblivion/mods/40336).'
+      - name: 'obse/plugins/NifSE.dll'
+        display: '[NifSE](http://www.nexusmods.com/oblivion/mods/21292)'
+      - name: 'DropLitTorchOBSE.esp'
+        display: '[Drop Lit Torches](http://www.nexusmods.com/oblivion/mods/16282)'
+    tag:
+      - Graphics
   - name: 'DeadlyReflex 5 - Combat Moves.esp'
     dirty:
-      - crc: 0xf63d656d
-        <<: *dirtyPlugin
+      - <<: *dirtyPlugin
+        crc: 0xf63d656d
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
-      - crc: 0x5726D76C
-        <<: *dirtyPlugin
+      - <<: *dirtyPlugin
+        crc: 0x5726D76C
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
-  - name: 'Deadly Reflex 6 - Timed Block with no damage or durability changes.esp'
+  - name: 'Deadly Reflex [56] - Timed Block( and [12]50% damage| with no damage or durability changes)?\.esp'
     msg:
-      - type: say
-        content: 'Use no more than one Timed Block plugin.'
-  - name: 'Deadly Reflex 6 - Timed block and 150% damage.esp'
-    msg:
-      - type: say
-        content: 'Use no more than one Timed Block plugin.'
-  - name: 'Deadly Reflex 6 - Timed Block and 250% damage.esp'
-    msg:
-      - type: say
-        content: 'Use no more than one Timed Block plugin.'
+      - <<: *useOnlyOneX
+        subs: [ 'Deadly Reflex Timed Block plugin' ]
+        condition: 'many("Deadly Reflex [56] - Timed Block( and [12]50% damage| with no damage or durability changes)?\.esp")'
+  - name: 'Deadly Reflex 5 - Timed Block and [12]50% damage\.esp'
+    msg: [ *masterReassign ]
+  - name: '(Mounted_Spellcasting )?Deadly( )?Reflex( 3)?( Compatible| - Combat Moves| - Timed Block (\+ (Very High|Higher) Damage|no other changes))\.esp'
+    msg: [ *obsolete ]
   - name: 'DRSplatter.esp'
     req:
       - *OBSE
@@ -16856,6 +16832,7 @@ plugins:
     msg:
       - type: warn
         content: 'Remove this. Known to cause crashes and save game corruption.'
+
   - name: 'kuerteeAttributeAndSkillBasedDamageModifiers.esp'
     msg:
       - type: say
@@ -21829,18 +21806,6 @@ plugins:
       - crc: 0x3144ec1b
         itm: 13
         <<: *dirtyPlugin
-  - name: 'DeadlyReflex - Combat Moves.esp'
-    msg: [ *obsolete ]
-  - name: 'DeadlyReflex 6 - Combat Moves.esp'
-    req:
-      - name: 'Deadly Reflex 6 - HeX NifSE Patch.esp'
-        display: 'To use both DR6b101 and NifSE 1.0+ you need the [fix file](http://www.nexusmods.com/oblivion/mods/40336).'
-      - name: 'obse/plugins/NifSE.dll'
-        display: '[NifSE](http://www.nexusmods.com/oblivion/mods/21292)'
-      - name: 'DropLitTorchOBSE.esp'
-        display: '[Drop Lit Torches](http://www.nexusmods.com/oblivion/mods/16282)'
-    tag:
-      - Graphics
   - name: 'Real Hunger, Cobl.esp'
     msg:
       - type: say
