@@ -22092,10 +22092,18 @@ plugins:
     after:
       - 'TES4Merged.esp'
   - name: 'Creeper.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/16373' ]
     dirty:
-      - crc: 0x8a4423ba
-        <<: *dirtyPlugin
-        udr: 1
+      # version: 0.99
+      - <<: *quickClean
+        crc: 0x7A00708E
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
+        udr: 2
+    clean:
+      # version: 0.99, after QAC
+      - crc: 0x30E920AF
+        util: 'TES4Edit v4.0.2'
   - name: 'Ahtata Arquamer spike4hair.esp'
     after:
       - 'Bashed Patch, 0.esp'  # The default filename for a Bashed Patch.
@@ -22286,11 +22294,18 @@ plugins:
   - name: 'Giliad House for Sale.esp'
     url: [ 'http://www.nexusmods.com/oblivion/mods/41868' ]
   - name: 'Blacktache''s Secrets v3.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/9939' ]
     dirty:
-      - crc: 0xF69CC41C
-        itm: 48
+      # Version: 3.0
+      - <<: *quickClean
+        crc: 0xF69CC41C
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 50
         udr: 155
-        <<: *dirtyPlugin
+    clean:
+      # Version: 3.0, after QAC
+      - crc: 0x2B61A309
+        util: 'TES4Edit v4.0.2'
   - name: 'Happyhannah''s Wines.esp'
     tag: [ Relev ]
     dirty:
@@ -22333,47 +22348,84 @@ plugins:
       - crc: 0x93ABA638
         itm: 2406
         <<: *dirtyPlugin
+  - name: 'Glowing Respawning Varla & Welkynd Stones (7-14|14-28) Days.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/46187'
+        name: 'Khettienna''s Mini-Mods'
   - name: 'Glowing Respawning Varla & Welkynd Stones 14-28 Days.esp'
-    dirty:
-      - crc: 0x8AE493C9
-        udr: 173
-        <<: *dirtyPlugin
-    url: [ 'http://www.nexusmods.com/oblivion/mods/43299' ]
+    clean:
+      # Version: 1
+      - crc: 0xE91EBD2E
+        util: 'TES4Edit v4.0.2'
   - name: 'Glowing Respawning Varla & Welkynd Stones 7-14 Days.esp'
-    dirty:
-      - crc: 0x9C67E42A
-        itm: 0
-        udr: 173
-        <<: *dirtyPlugin
-    url: [ 'http://www.nexusmods.com/oblivion/mods/43299' ]
+    clean:
+      # Version: 1
+      - crc: 0xD7A02335
+        util: 'TES4Edit v4.0.2'
   - name: 'Glowing Wonders.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/43331' ]
     dirty:
-      - crc: 0x1D521050
+      # Version: 1.0
+      - <<: *quickClean
+        crc: 0x1D521050
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
-        <<: *dirtyPlugin
+    clean:
+      # Version: 1.0, after QAC
+      - crc: 0x1D5D23FE
+        util: 'TES4Edit v4.0.2'
+  - name: '(MerryBellInn|SleepyCatInn|SingingStablehandInn|PinePeakLodge)\.esp'
+    url:
+      - link: 'http://www.nexusmods.com/oblivion/mods/14853'
+        name: 'Cyrodiil Inns'
   - name: 'MerryBellInn.esp'
     dirty:
-      - crc: 0x46126974
-        itm: 5
+      # Version: 1
+      - <<: *quickClean
+        crc: 0x46126974
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 8
         udr: 14
-        <<: *dirtyPlugin
-    url: [ 'http://www.nexusmods.com/oblivion/mods/14853' ]
+    clean:
+      # Version: 1, after QAC
+      - crc: 0x0173D9BA
+        util: 'TES4Edit v4.0.2'
   - name: 'SleepyCatInn.esp'
     dirty:
-      - crc: 0xC8E4CF92
-        itm: 5
+      # Version: 1
+      - <<: *quickClean
+        crc: 0xC8E4CF92
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 7
         udr: 4
-        <<: *dirtyPlugin
-    url: [ 'http://www.nexusmods.com/oblivion/mods/14853' ]
+    clean:
+      # Version: 1, after QAC
+      - crc: 0xF67E1140
+        util: 'TES4Edit v4.0.2'
   - name: 'PinePeakLodge.esp'
     dirty:
-      - crc: 0x1D4C3E0C
-        itm: 96
+      # Version: 1
+      - <<: *quickClean
+        crc: 0x1D4C3E0C
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 99
         udr: 46
-        <<: *dirtyPlugin
-    url: [ 'http://www.nexusmods.com/oblivion/mods/14853' ]
+    clean:
+      # Version: 1, after QAC
+      - crc: 0x7C99DFAC
+        util: 'TES4Edit v4.0.2'
   - name: 'SingingStablehandInn.esp'
-    url: [ 'http://www.nexusmods.com/oblivion/mods/14853' ]
+    dirty:
+      # Version: 1
+      - <<: *quickClean
+        crc: 0x448D8A67
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 6
+        udr: 7
+    clean:
+      # Version: 1, after QAC
+      - crc: 0xDDFA366D
+        util: 'TES4Edit v4.0.2'
   - name: 'AFKWeye_MTC_RRLRumare_HOH Patch.esp'
     url: [ 'http://www.nexusmods.com/oblivion/mods/42718' ]
   - name: 'OCR+Werewolf Patch.esp'
@@ -22399,10 +22451,14 @@ plugins:
     url: [ 'http://www.nexusmods.com/oblivion/mods/20218' ]
   - name: 'QOTW Season Three.esp'
     dirty:
-      - crc: 0x701E316B
-        itm: 140
+      - <<: *quickClean
+        crc: 0x671B0844
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 99
         udr: 1
-        <<: *dirtyPlugin
+    clean:
+      - crc: 0x3537644F
+        util: 'TES4Edit v4.0.2'
     url: [ 'http://www.nexusmods.com/oblivion/mods/36336' ]
   - name: 'DLCBattlehornCastleCOBL.esp'
     url: [ 'http://www.nexusmods.com/oblivion/mods/43166' ]
@@ -22428,64 +22484,110 @@ plugins:
     url: [ 'http://www.nexusmods.com/oblivion/mods/28207' ]
   - name: 'Blue-Glass Armor.esp'
     dirty:
-      - crc: 0xE29C8B31
-        itm: 1
-        udr: 0
-        <<: *dirtyPlugin
+      # Version: 1.0
+      - <<: *quickClean
+        crc: 0xE29C8B31
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 10
+    clean:
+      # Version: 1.0, after QAC
+      - crc: 0x6B70AF82
+        util: 'TES4Edit v4.0.2'
     url: [ 'http://www.nexusmods.com/oblivion/mods/9291' ]
   - name: 'Chorrol_Dungeon.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/37272' ]
     dirty:
-      - crc: 0x4B4E42AD
-        itm: 1
-        udr: 0
-        <<: *dirtyPlugin
+      # Version: 1.0.8
+      - <<: *quickClean
+        crc: 0x0A22984B
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 14
+    clean:
+      # Version: 1.0.8, after QAC
+      - crc: 0x74437FBD
+        util: 'TES4Edit v4.0.2'
   - name: 'Bandit_Creepy_Castle.esp'
-    dirty:
-      - crc: 0xFE34F837
-        itm: 20
-        udr: 0
-        <<: *dirtyPlugin
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/37285'
+        name: 'Handrest Isle'
+    clean:
+      # Version: 1.8
+      - crc: 0x90212E2E
+        util: 'TES4Edit v4.0.2'
   - name: 'Leveling Quick Fix 15.esp'
     url: [ 'http://www.nexusmods.com/oblivion/mods/38941' ]
   - name: 'Leveling Quick Fix 20.esp'
     url: [ 'http://www.nexusmods.com/oblivion/mods/38941' ]
   - name: 'Command Mount.esp'
     dirty:
-      - crc: 0x081C0225
+      # Version: 1.0
+      - <<: *quickClean
+        crc: 0x081C0225
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 2
-        udr: 0
-        <<: *dirtyPlugin
+    clean:
+      # Version: 1.0, After QAC
+      - crc: 0x94C4C65F
+        util: 'TES4Edit v4.0.2'
     url: [ 'http://www.nexusmods.com/oblivion/mods/27957' ]
   - name: 'Oblivifall - Let''s Talk!.esp'
     dirty:
-      - crc: 0x5DFF0867
+      # Version: 1.1
+      - <<: *quickClean
+        crc: 0x5DFF0867
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 2
-        udr: 0
-        <<: *dirtyPlugin
-    url: [ 'http://www.nexusmods.com/oblivion/mods/27957' ]
-  - name: 'Salmo the Baker.esp'
+    clean:
+      # Version: 1.1, After QAC
+      - crc: 0xFA385F7F
+        util: 'TES4Edit v4.0.2'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/27148' ]
+  - name: 'Salmo The Baker v2.0.esp'
     inc:
       - 'Salmo the Baker, Cobl.esp'
     dirty:
-      - crc: 0x2C782FA2
-        itm: 60
+      - <<: *quickClean
+        crc: 0x2C782FA2
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 63
         udr: 31
-        <<: *dirtyPlugin
+    clean:
+      - crc: 0x61D1F420
+        util: 'TES4Edit v4.0.2'
     url: [ 'http://www.nexusmods.com/oblivion/mods/8435' ]
   - name: 'BlackHorseCourierExpanded.esp'
     dirty:
-       - crc: 0xC73A3567
-         itm: 2
-         udr: 12
-         <<: *dirtyPlugin
+      # Version: 1.2
+      - <<: *quickClean
+        crc: 0xC73A3567
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
+        udr: 12
+    clean:
+      # Version: 1.2
+      - crc: 0x47CE6324
+        util: 'TES4Edit v4.0.2'
     url: [ 'http://www.nexusmods.com/oblivion/mods/27029' ]
   - name: 'Advanced Mark & Recall.esp'
     req: [ *OBSE ]
     dirty:
-      - crc: 0x855CE363
+      # Version: 1.0
+      - <<: *quickClean
+        crc: 0x259151E8
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 4
-        udr: 0
-        <<: *dirtyPlugin
+      # Version: 2.0
+      - <<: *quickClean
+        crc: 0x855CE363
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 4
+    clean:
+      # Version: 1.0
+      - crc: 0x64B41263
+        util: 'TES4Edit v4.0.2'
+      # Version: 2.0
+      - crc: 0x1796C360
+        util: 'TES4Edit v4.0.2'
     url: [ 'http://www.nexusmods.com/oblivion/mods/10985' ]
   - name: 'Eastbrink-ImpeREALForts Patch.esp'
     after:
