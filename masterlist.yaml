@@ -20575,21 +20575,10 @@ plugins:
   - name: 'OOOSIArcheryPatch.esp'
     tag:
       - NoMerge
-  - name: 'bgMagicDV.esp'
-    msg:
-      - type: say
-        content: 'German version.'
-      - *doNotClean
-    tag:
-      - C.RecordFlags
-      - Delev
-      - Names
-      - Relev
-      - SpellStats
-  - name: 'bgMagicEV.esp'
+  - name: 'bgMagic(D|E)V.esp'
     after:
       - name: 'SupremeMagicka.esp'
-        condition: 'not file("bgMagicEV_Conjuration_for_Supreme_Magicka.esp")'
+        condition: 'not file("bgMagic(D|E)V_Conjuration_for_Supreme_Magicka.esp")'
     msg: [ *doNotClean ]
     tag:
       - C.RecordFlags
@@ -20597,36 +20586,31 @@ plugins:
       - Names
       - Relev
       - SpellStats
-  - name: 'bgMagicEV Vwalk.esp'
+  - name: 'bgMagic.*\.esp'
+    url:
+      - link: 'Less Annoying Magic Experience'
+        name: 'http://www.theelderscrolls.info/?go=dlfile&fileid=219'
+  - name: 'bgMagic(DV|EV)?(AddEnVar|Bonus|ItemSigil|Lightningbolt|Shader|ShaderLifeDetect|SpellTomes_for_WryeBash)\.esp'
+    msg: [ *doNotClean ]
+  - name: 'bgMagic(D|E)V Vwalk.esp'
     tag:
       - Actors.Anims
       - NoMerge
-  - name: 'bgMagicSpellTomes_for_WryeBash.esp'
-    msg: [ *doNotClean ]
+  - name: 'bgMagic(DV|EV)?Shader.esp'
+    tag:
+      - Graphics
+      - NoMerge
+  - name: 'bgMagic(DV|EV)?(AddEnVar|SpellTomes_for_WryeBash)\.esp'
     tag:
       - Relev
-  - name: 'bgMagicDVSpellTomes_for_WryeBash.esp'
-    msg: [ *doNotClean ]
-  - name: 'bgMagicItemSigil.esp'
-    msg: [ *doNotClean ]
-  - name: 'bgMagicDVItemSigil.esp'
-    msg: [ *doNotClean ]
-  - name: 'bgMagicBonus.esp'
-    msg: [ *doNotClean ]
-  - name: 'bgMagicDVBonus.esp'
-    msg: [ *doNotClean ]
-  - name: 'bgMagicEVAddEnVar.esp'
-    msg: [ *doNotClean ]
-    tag:
-      - Relev
-  - name: 'bgMagicDVAddEnVar.esp'
-    msg: [ *doNotClean ]
-    tag:
-      - Relev
+  - name: 'bgMagicDV.*\.esp'
+    msg:
+      - type: say
+        content: 'German version.'
   - name: 'bgMagicEVPaperChase.esp'
     dirty:
-      - crc: 0x6dc9fa83
-        <<: *dirtyPlugin
+      - <<: *dirtyPlugin
+        crc: 0x6dc9fa83
         itm: 19
   - name: 'LoversCreature_SexualOrgans_LAME.esp'
     tag:
@@ -21537,25 +21521,11 @@ plugins:
     tag:
       - Graphics
       - NoMerge
-  - name: 'bgMagicEVShader.esp'
-    msg: [ *doNotClean ]
-    tag:
-      - Graphics
-      - NoMerge
-  - name: 'bgMagicDVShader.esp'
-    msg: [ *doNotClean ]
-    tag:
-      - Graphics
-      - NoMerge
-  - name: 'bgMagicShaderLifeDetect.esp'
-    msg: [ *doNotClean ]
   - name: 'kuerteeDetectLifeEffectNightEyeShader.esp'
     req:
       - *OBSE
       - name: 'OBSE/Plugins/SwitchNightEyeShaders.dll'
         display: '[Night Eye Shader Switcher](https://www.nexusmods.com/oblivion/mods/19476)'
-  - name: 'bgMagicLightningbolt.esp'
-    msg: [ *doNotClean ]
   - name: 'BNewShockBoltEffects20.esp'
     dirty:
       - crc: 0x82b4bf9a
