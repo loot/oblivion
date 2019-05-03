@@ -630,6 +630,22 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/5296' ]
     group: *unofficialPatchesGroup
     msg: [ *doNotClean ]
+    inc:
+      - 'Arcana Restored.esp'
+      - 'ArenaChampionHotfix.esp'
+      - 'Erthor_Fix-2593.esp'
+      - 'FathisFix.esp'
+      - 'Fighters_Guild_Dissapearences_Mission_Bug_Fix-3483.esp'
+      - 'The Finger of the Mountain Fix.esp'
+      - 'Finger of the Mountain Fix.esp'
+      - 'fix_Brush_of_Death-3144.esp'
+      - 'Hermaeus Mora Daedric Quest Fix.esp'
+      - 'id_CompetitionFix.esp'
+      - 'Mages Guild Quest Fixes.esp'
+      - 'object_placement.esp'
+      - 'SwampyCaveFix.esp'
+      - 'UnRacefix.esp'
+      - 'Ultimate_Heist_Fix-4880.esp'
   - name: 'Unofficial Oblivion Patch( DV|-mobs)?\.esp'
     tag:
       - Actors.ACBS
@@ -683,6 +699,9 @@ plugins:
     after:
       - 'tes4SI-CHS-alpha.esp'
       - 'tes4-CHS-book.esp'
+    inc:
+      - 'FormIDReferenceBugFix.esp'
+      - 'FormID_Reference_Bug_Fix.esp'
     clean:
       # version: 1.5.9
       - crc: 0x19ADA30F
@@ -1440,8 +1459,7 @@ plugins:
       - type: say
         content: 'Alternatively, remove this and use UOP v3.0.1+ instead.'
   - name: 'Arcana Restored.esp'
-    inc:
-      - 'Unofficial Oblivion Patch.esp'
+  # Hidden file https://www.nexusmods.com/oblivion/mods/36811
     dirty:
       - crc: 0x69d1d5e0
         <<: *dirtyPlugin
@@ -1450,54 +1468,16 @@ plugins:
       - crc: 0xc954deb3
         <<: *dirtyPlugin
         udr: 3
-  - name: 'Erthor_Fix-2593.esp'
-    inc:
-      - 'Unofficial Oblivion Patch.esp'
-  - name: 'Hermaeus Mora Daedric Quest Fix.esp'
-    inc:
-      - 'Unofficial Oblivion Patch.esp'
-  - name: 'UnRacefix.esp'
-    inc:
-      - 'Unofficial Oblivion Patch.esp'
-  - name: 'Ultimate_Heist_Fix-4880.esp'
-    inc:
-      - 'Unofficial Oblivion Patch.esp'
-  - name: 'fix_Brush_of_Death-3144.esp'
-    inc:
-      - 'Unofficial Oblivion Patch.esp'
-  - name: 'Fighters_Guild_Dissapearences_Mission_Bug_Fix-3483.esp'
-    inc:
-      - 'Unofficial Oblivion Patch.esp'
-  - name: 'FathisFix.esp'
-    inc:
-      - 'Unofficial Oblivion Patch.esp'
-  - name: 'Mages Guild Quest Fixes.esp'
-    inc:
-      - 'Unofficial Oblivion Patch.esp'
-  - name: 'id_CompetitionFix.esp'
-    inc:
-      - 'Unofficial Oblivion Patch.esp'
-  - name: 'SwampyCaveFix.esp'
-    inc:
-      - 'Unofficial Oblivion Patch.esp'
-  - name: 'ArenaChampionHotfix.esp'
-    inc:
-      - 'Unofficial Oblivion Patch.esp'
   - name: '995-Specular Fix 1.1-TESSource.esp'
     msg:
       - type: error
         content: 'Remove. The bug was fixed in the 1.2 official Oblivion update.'
   - name: 'object_placement.esp'
-    inc:
-      - 'Unofficial Oblivion Patch.esp'
     dirty:
       - crc: 0xe4858a00
         <<: *dirtyPlugin
         udr: 37
         itm: 12
-  - name: 'The Finger of the Mountain Fix.esp'
-    inc:
-      - 'Unofficial Oblivion Patch.esp'
   - name: 'Specular_Fix_1.1.esp'
     tag:
       - Graphics
@@ -1547,9 +1527,6 @@ plugins:
     msg:
       - type: error
         content: 'Remove and use regular MOBS/OMOBS instead, using Bash Patch to merge.'
-  - name: 'Finger of the Mountain Fix.esp'
-    inc:
-      - 'Unofficial Oblivion Patch.esp'
   - name: 'Primate Rank Fix.esp'
     tag:
       - Factions
@@ -1577,12 +1554,6 @@ plugins:
   - name: 'Traduccion Mejorada S.I.esp'
     tag:
       - Names
-  - name: 'FormIDReferenceBugFix.esp'
-    inc:
-      - 'Unofficial Shivering Isles Patch.esp'
-  - name: 'FormID_Reference_Bug_Fix.esp'
-    inc:
-      - 'Unofficial Shivering Isles Patch.esp'
   - name: 'tes4SI-CHS-alpha.esp'
     tag:
       - Names
