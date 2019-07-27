@@ -405,8 +405,12 @@ groups:
   - name: &dynamicPatchesGroup Dynamic Patches
     after: [ *latePatchesGroup ]
 
-  - name: &mapGroup Maps
+  - name: &lateChangesGroup Late Fixes & Changes
+    description: 'A group for modules that need to be placed after dynamic patches such as Bashed Patch.'
     after: [ *dynamicPatchesGroup ]
+
+  - name: &mapGroup Maps
+    after: [ *lateChangesGroup ]
 
 plugins:
 # Game Masters
