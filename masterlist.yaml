@@ -22051,18 +22051,14 @@ plugins:
   - name: 'Ahtata Arquamer spike4hair.esp'
     after:
       - 'Bashed Patch, 0.esp'  # The default filename for a Bashed Patch.
+
   - name: 'Maskar''s Oblivion Overhaul.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/42780' ]
+    group: *lateChangesGroup
     after:
       - 'Bashed Patch, 0.esp'  # The default filename for a Bashed Patch.
-    tag:
-      - Body-F
-      - Body-M
-      - Body-Size-F
-      - Body-Size-M
-      - Eyes
-      - Hair
-      - NpcFaces
-      - R.Relations
+    req: [ *OBSEv21 ]
+
   - name: 'LoversIdleForceReset.esp'
     msg:
       - type: say
