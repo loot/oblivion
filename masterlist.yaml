@@ -394,9 +394,13 @@ groups:
   - name: &underridesGroup Underrides
     after: [ *newLandsGroup ]
 
+  - name: &earlyLoadersGroup Early Loaders
+    description: 'A group for modules that should load early just after the DLC and Unofficial patches.'
+    after: [ *dlcGroup ]
+
   - name: default
     after:
-      - *dlcGroup
+      - *earlyLoadersGroup
       - *underridesGroup
 
   - name: &latePatchesGroup Late Patches
@@ -2611,6 +2615,7 @@ plugins:
   - name: 'SNR Crowded Roads UFF.esp'
   - name: 'SNR Crowded Roads 2.1.esp'
   - name: 'ClocksOfCyrodiil.esp'
+    group: *earlyLoadersGroup
     msg:
       - type: say
         content: 'For use with Better Cities use ''ClocksOfCyrodiil_BC_OBC_OC_OCLR_Vanilla.esp'' instead.'
@@ -14444,6 +14449,12 @@ plugins:
   - name: 'Open Cities Reborn.esp'
     tag:
       - C.Name
+  - name: 'COC + OCC-OCR Patch.esp'
+    group: *underridesGroup
+    inc:
+      - name: 'ClocksOfCyrodiil.esp'
+        display: 'Better Cities - Clocks of Cyrodiil'
+        condition: 'version("ClocksOfCyrodiil.esp", "6.0.0", >=)'
   - name: 'OC+Bravil Docks Patch.esp'
     msg:
       - type: say
