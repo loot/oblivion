@@ -14451,6 +14451,10 @@ plugins:
       - C.Name
   - name: 'COC + OCC-OCR Patch.esp'
     group: *underridesGroup
+    inc:
+      - name: 'ClocksOfCyrodiil.esp'
+        display: 'Better Cities - Clocks of Cyrodiil'
+        condition: 'version("ClocksOfCyrodiil.esp", "6.0.0", >=)'
   - name: 'OC+Bravil Docks Patch.esp'
     msg:
       - type: say
