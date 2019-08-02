@@ -8918,14 +8918,16 @@ plugins:
         itm: 1
   - name: 'BHC_Expanded.esp'
     dirty:
-      - crc: 0xc73a3567
-        <<: *dirtyPlugin
+      # Version: 1.2
+      - <<: *quickClean
+        crc: 0xC73A3567
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 2
         udr: 12
-      - crc: 0xdf5b8901
-        <<: *dirtyPlugin
-        itm: 2
-        udr: 12
+    clean:
+      # Version: 1.2
+      - crc: 0x47CE6324
+        util: 'TES4Edit v4.0.2'
   - name: 'Bjornheim.esp'
     msg:
       - type: warn
@@ -22506,19 +22508,6 @@ plugins:
       - crc: 0x61D1F420
         util: 'TES4Edit v4.0.2'
     url: [ 'http://www.nexusmods.com/oblivion/mods/8435' ]
-  - name: 'BlackHorseCourierExpanded.esp'
-    dirty:
-      # Version: 1.2
-      - <<: *quickClean
-        crc: 0xC73A3567
-        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 2
-        udr: 12
-    clean:
-      # Version: 1.2
-      - crc: 0x47CE6324
-        util: 'TES4Edit v4.0.2'
-    url: [ 'http://www.nexusmods.com/oblivion/mods/27029' ]
   - name: 'Advanced Mark & Recall.esp'
     req: [ *OBSE ]
     dirty:
