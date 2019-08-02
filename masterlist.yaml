@@ -16904,6 +16904,7 @@ plugins:
       - type: say
         content: 'Obsolete, you can update to Supreme Magicka 0.89b+ and set ''zzSMConfigurationQuest.bNoPoisonLevitationEffects'' to 1 in the ini for the same result.'
   - name: 'MidasSpells.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/9562' ]
     tag:
       - Invent
     dirty:
@@ -16924,6 +16925,7 @@ plugins:
       - type: say
         content: 'Requires: Unique Landscapes-Brena River Ravine'
   - name: 'MidasSpellTomes.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/18398' ]
     tag:
       - Relev
   - name: 'MMC_Iphigenia Vwalk.esp'
@@ -16941,22 +16943,26 @@ plugins:
   - name: 'Midas SMPoison.esp'
     msg: [ *obsolete ]
   - name: 'Midas Reduced Costs (Half|Quarter|3 Quarters)\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/32952' ]
     msg:
       - <<: *useOnlyOneX
         subs: [ 'Reduced Costs module' ]
         condition: 'many("Midas Reduced Costs (Half|Quarter|3 Quarters)\.esp")'
   - name: 'Mart''s Monster Mod - Midas Creature Ingredients.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/32952' ]
     tag:
       - Actors.ACBS
       - Invent
       - Names
   - name: 'FrostcragMidasLab.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/15951' ]
     tag:
       - Invent
   - name: 'OSPS-TalesftTomb-MidasMagic-Patch.esp'
     inc:
       - 'Rathunas01.esp'
   - name: 'Midas PowDur(1\.5|2|3|4)x\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/32952' ]
     after:
       - 'midasspells.esp'
     msg:
@@ -16964,6 +16970,7 @@ plugins:
         subs: [ 'Midas PowDur modifier' ]
         condition: 'many("Midas PowDur(1\.5|2|3|4)x\.esp")'
   - name: 'Midas Eldrich Power (2|2\.5|3|4|5|6)x\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/32952' ]
     after:
       - 'Midas PowDur1.5x.esp'
       - 'Midas PowDur2x.esp'
@@ -16974,10 +16981,12 @@ plugins:
         subs: [ 'Midas Eldrich Power modifier' ]
         condition: 'many("Midas Eldrich Power (2|2\.5|3|4|5|6)x\.esp")'
   - name: 'Midas Tigernolevel OBSE.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/32952' ]
     req: [ *OBSE ]
     inc:
       - 'Midas Tigernolevel NoOBSE.esp'
   - name: 'Midas BeastFortify Fix OBSE.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/32952' ]
     req: [ *OBSE ]
     inc:
       - 'Midas BeastFortify Fix NONOBSE.esp'
