@@ -7733,11 +7733,18 @@ plugins:
         <<: *dirtyPlugin
         itm: 8
   - name: 'TIE In.esp'
+    url:
+      - 'https://www.nexusmods.com/oblivion/mods/18071'
+      - 'https://www.nexusmods.com/oblivion/mods/40679'
     req:
       - 'FCOM_Convergence.esm'
     msg:
       - type: say
         content: 'Recommend avoid using TNR.'
+  - name: 'TIE In - FCOM Convergence.esp'
+    url:
+      - 'https://www.nexusmods.com/oblivion/mods/18071'
+      - 'https://www.nexusmods.com/oblivion/mods/40679'
   - name: 'TIE In - Frans.esp'
     inc:
       - 'TIE In - FCOM Convergence.esp'
@@ -7750,7 +7757,6 @@ plugins:
   - name: 'TIE In - OOO.esp'
     inc:
       - 'TIE In - FCOM Convergence.esp'
-  - name: 'TIE In - FCOM Convergence.esp'
   - name: 'TIE In - FCOM Modular.esp'
     inc:
       - 'TIE In - FCOM Convergence.esp'
