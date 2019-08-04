@@ -5011,30 +5011,14 @@ plugins:
     tag:
       - Graphics
       - NoMerge
-  - name: 'RingwraithArmorDaedric.esp'
+
+  - name: 'RingwraithArmor(Daedric|Glass|Mithril|Steel)\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/4311' ]
-    inc:
-      - 'RingwraithArmorMithril.esp'
-      - 'RingwraithArmorSteel.esp'
-      - 'RingwraithArmorGlass.esp'
-  - name: 'RingwraithArmorMithril.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/4311' ]
-    inc:
-      - 'RingwraithArmorDaedric.esp'
-      - 'RingwraithArmorSteel.esp'
-      - 'RingwraithArmorGlass.esp'
-  - name: 'RingwraithArmorSteel.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/4311' ]
-    inc:
-      - 'RingwraithArmorDaedric.esp'
-      - 'RingwraithArmorMithril.esp'
-      - 'RingwraithArmorGlass.esp'
-  - name: 'RingwraithArmorGlass.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/4311' ]
-    inc:
-      - 'RingwraithArmorDaedric.esp'
-      - 'RingwraithArmorMithril.esp'
-      - 'RingwraithArmorSteel.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Ringwraith Armor' ]
+        condition: 'many("RingwraithArmor(Daedric|Glass|Mithril|Steel)\.esp")'
+
   - name: 'Ryk_Sandals.esp'
     inc:
       - 'Ryk_Sandals_RHH.esp'
