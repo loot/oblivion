@@ -1661,9 +1661,19 @@ plugins:
       - Actors.Stats
       - Invent
       - Stats
-  - name: 'SM Plugin Refurbish - SI.esp'
+
+  - name: 'SM Plugin Refurbish.*\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/11474' ]
     msg: [ *doNotClean ]
+  - name: 'SM Plugin Refurbish(Merged).esp'
+    req:
+      - 'DLCShiveringIsles.esp'
+    msg:
+      - type: say
+        content: 'The masters of this mod are not in the order that LOOT uses, which will cause it to be displayed with an orange checkbox in Wrye Bash. LOOT''s order is correct, and the master order of the plugin can be altered using TES4Edit or TES4Gecko.'
+      - type: say
+        content: 'Requires: all DLCs to be installed and active.'
+
   - name: 'SI Public Music.esp'
     tag:
       - C.Music
@@ -3799,9 +3809,6 @@ plugins:
     msg: [ *hotkeyBug ]
   - name: 'STHotkeys.esp'
     msg: [ *hotkeyBug ]
-  - name: 'SM Plugin Refurbish - HorseArmor.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/11474' ]
-    msg: [ *doNotClean ]
   - name: 'SellHorses_Incl_Saddlebags_and_CallSteed.esp'
     msg:
       - type: error
@@ -3821,14 +3828,8 @@ plugins:
     tag:
       - Actors.Anims
       - NoMerge
-  - name: 'SM Plugin Refurbish - Orrery.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/11474' ]
-    msg: [ *doNotClean ]
   - name: 'C&C&EQR - SM Plugin Refurbish - Orrery.esp'
     msg: [ *obsolete ]
-  - name: 'SM Plugin Refurbish - VileLair.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/11474' ]
-    msg: [ *doNotClean ]
   - name: 'Lair_mobs.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/28537' ]
     tag:
@@ -3886,9 +3887,6 @@ plugins:
     tag:
       - Actors.Anims
       - NoMerge
-  - name: 'SM Plugin Refurbish - MehrunesRazor.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/11474' ]
-    msg: [ *doNotClean ]
   - name: 'Book Jackets DLC.esp'
     tag:
       - Graphics
@@ -5975,9 +5973,6 @@ plugins:
     tag:
       - Actors.Anims
       - NoMerge
-  - name: 'SM Plugin Refurbish - ThievesDen.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/11474' ]
-    msg: [ *doNotClean ]
   - name: 'ThievesDen_MOBS.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/28537' ]
     tag:
@@ -12132,9 +12127,6 @@ plugins:
         <<: *dirtyPlugin
         udr: 14
         itm: 86
-  - name: 'SM Plugin Refurbish - Battlehorn.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/11474' ]
-    msg: [ *doNotClean ]
   - name: 'BattleHorn_MOBS.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/28537' ]
     tag:
@@ -12218,9 +12210,6 @@ plugins:
     msg:
       - type: say
         content: 'If dummy esp for use with The Ayleid Steps consider upgrading to Frostcrag Reborn De-Isolated.'
-  - name: 'SM Plugin Refurbish - FrostCrag.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/11474' ]
-    msg: [ *doNotClean ]
   - name: 'BrumaMGRestored.esp'
     dirty:
       - crc: 0x2610b3ea
@@ -12354,19 +12343,6 @@ plugins:
     tag:
       - NoMerge
       - Stats
-  - name: 'SM Plugin Refurbish - Knights.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/11474' ]
-    msg: [ *doNotClean ]
-  - name: 'SM Plugin Refurbish(Merged).esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/11474' ]
-    req:
-      - 'DLCShiveringIsles.esp'
-    msg:
-      - type: say
-        content: 'The masters of this mod are not in the order that LOOT uses, which will cause it to be displayed with an orange checkbox in Wrye Bash. LOOT''s order is correct, and the master order of the plugin can be altered using TES4Edit or TES4Gecko.'
-      - type: say
-        content: 'Requires: all DLCs to be installed and active.'
-      - *doNotClean
   - name: 'QuietFeet.esp'
     msg:
       - *requiresBashedPatch
