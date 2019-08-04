@@ -4087,54 +4087,20 @@ plugins:
         <<: *dirtyPlugin
         itm: 3
         udr: 6
-  - name: 'Armor of Heaven''s Fury-Heavy.esp'
+
+  - name: 'Armor of Heaven''s Fury(-Gold)?-Heavy(-Alt-helm)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/7080' ]
-    inc:
-      - 'Armor of Heaven''s Fury-Gold-Heavy-Alt-helm.esp'
-      - 'Armor of Heaven''s Fury-Heavy-Alt-helm.esp'
-      - 'Armor of Heaven''s Fury-Gold-Heavy.esp'
-  - name: 'Armor of Heaven''s Fury-Heavy-Alt-helm.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Armor of Heaven''s Fury Heavy' ]
+        condition: 'many("Armor of Heaven''s Fury(-Gold)?-Heavy(-Alt-helm)?\.esp")'
+  - name: 'Armor of Heaven''s Fury(-Gold)?-Light(-Alt-helm)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/7080' ]
-    inc:
-      - 'Armor of Heaven''s Fury-Heavy.esp'
-      - 'Armor of Heaven''s Fury-Gold-Heavy-Alt-helm.esp'
-      - 'Armor of Heaven''s Fury-Gold-Heavy.esp'
-  - name: 'Armor of Heaven''s Fury-Gold-Heavy.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/7080' ]
-    inc:
-      - 'Armor of Heaven''s Fury-Heavy.esp'
-      - 'Armor of Heaven''s Fury-Heavy-Alt-helm.esp'
-      - 'Armor of Heaven''s Fury-Gold-Heavy-Alt-helm.esp'
-  - name: 'Armor of Heaven''s Fury-Gold-Heavy-Alt-helm.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/7080' ]
-    inc:
-      - 'Armor of Heaven''s Fury-Heavy.esp'
-      - 'Armor of Heaven''s Fury-Heavy-Alt-helm.esp'
-      - 'Armor of Heaven''s Fury-Gold-Heavy.esp'
-  - name: 'Armor of Heaven''s Fury-Light.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/7080' ]
-    inc:
-      - 'Armor of Heaven''s Fury-Gold-Light-Alt-helm.esp'
-      - 'Armor of Heaven''s Fury-Gold-Light.esp'
-      - 'Armor of Heaven''s Fury-Light-Alt-helm.esp'
-  - name: 'Armor of Heaven''s Fury-Light-Alt-helm.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/7080' ]
-    inc:
-      - 'Armor of Heaven''s Fury-Gold-Light-Alt-helm.esp'
-      - 'Armor of Heaven''s Fury-Gold-Light.esp'
-      - 'Armor of Heaven''s Fury-Light.esp'
-  - name: 'Armor of Heaven''s Fury-Gold-Light.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/7080' ]
-    inc:
-      - 'Armor of Heaven''s Fury-Gold-Light-Alt-helm.esp'
-      - 'Armor of Heaven''s Fury-Light.esp'
-      - 'Armor of Heaven''s Fury-Light-Alt-helm.esp'
-  - name: 'Armor of Heaven''s Fury-Gold-Light-Alt-helm.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/7080' ]
-    inc:
-      - 'Armor of Heaven''s Fury-Gold-Light.esp'
-      - 'Armor of Heaven''s Fury-Light.esp'
-      - 'Armor of Heaven''s Fury-Light-Alt-helm.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Armor of Heaven''s Fury Light' ]
+        condition: 'many("Armor of Heaven''s Fury(-Gold)?-Light(-Alt-helm)?\.esp")'
+
   - name: 'ArmorOfTheWhiteFox.esp'
     tag:
       - Invent
