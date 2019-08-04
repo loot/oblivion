@@ -23037,11 +23037,14 @@ plugins:
     msg: [ *masterReassign ]
   - name: 'Intelligent Learning.esp'
     req: [ ..\obse_1_2_416.dll ]
-  - name: 'ExponentialLev(Easy|Moderate|Hard|Extreme)\.esp'
+  - name: 'Exponential(lvl|Lev)(Easy|Moderate|Hard|Extreme)\.esp'
+    url:
+      - 'https://www.nexusmods.com/oblivion/mods/37547'
+      - 'https://www.nexusmods.com/oblivion/mods/38191'
     msg:
       - <<: *useOnlyOneX
         subs: [ 'Exponential Leveling' ]
-        condition: 'many("ExponentialLev(Easy|Moderate|Hard|Extreme)\.esp")'
+        condition: 'many("Exponential(lvl|Lev)(Easy|Moderate|Hard|Extreme)\.esp")'
   - name: 'CompanionMaster.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/29652' ]
     msg:
