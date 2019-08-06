@@ -80,6 +80,17 @@ common:
         text: 'IMTレコードはクリーンしないでください。これらは意図的に残されたデータであり、Modを機能させるために必要です。削除の取り消しは安全に行えますが、それ以外のことは行わないでください。'
       - lang: de
         text: 'ITM-Einträge in diesem Plugin sollten nicht gesäubert werden, sie sind absichtlich enthalten und werden benötigt, damit der Mod richtig funktioniert. Gelöschte Eintrage wiederherzustellen ist in Ordung, alles andere aber nicht.'
+  - &reqMasterSort
+    type: say
+    content:
+      - lang: en
+        text: 'Plugin''s Masters require sorting.'
+      - lang: de
+        text: 'Die Plugin Master müssen sortiert werden.'
+      - lang: ko
+        text: '플러그인 마스터의 정렬이 필요합니다.'
+      - lang: pt
+        text: 'A Master deste Plugin necessita ordenação.'
   - &obsolete
     type: say
     content:
@@ -1687,8 +1698,7 @@ plugins:
     req:
       - 'DLCShiveringIsles.esp'
     msg:
-      - type: say
-        content: 'The masters of this mod are not in the order that LOOT uses, which will cause it to be displayed with an orange checkbox in Wrye Bash. LOOT''s order is correct, and the master order of the plugin can be altered using TES4Edit or TES4Gecko.'
+      - *reqMasterSort
       - type: say
         content: 'Requires: all DLCs to be installed and active.'
 
@@ -13662,8 +13672,7 @@ plugins:
         condition: 'file("West Roads.esp")'
   - name: 'Chorrol Jewelry Company.esp'
     msg:
-      - type: say
-        content: 'Need to run TES4Edit "sort masters" function.'
+      - *reqMasterSort
       - *needsCleaning
   - name: 'CUO_Bruma.esp'
     msg:
