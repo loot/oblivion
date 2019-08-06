@@ -431,6 +431,8 @@ plugins:
 # Official DLC
   - name: 'DLCShiveringIsles.esp'
     group: *dlcGroup
+    after:
+      - 'Unofficial Oblivion Patch.esp'
     clean:
       # version: 1.2.0.416 GOTY
       - crc: 0x2BB84977
@@ -439,6 +441,7 @@ plugins:
     group: *dlcGroup
     after:
       - 'DLCShiveringIsles.esp'
+      - 'Unofficial Oblivion Patch.esp'
     tag:
       - Actors.ACBS
       - Actors.AIPackages
@@ -458,6 +461,7 @@ plugins:
     after:
       - 'DLCShiveringIsles.esp'
       - 'DLCHorseArmor.esp'
+      - 'Unofficial Oblivion Patch.esp'
     tag:
       - Actors.AIPackages
     dirty:
@@ -477,6 +481,7 @@ plugins:
       - 'DLCShiveringIsles.esp'
       - 'DLCHorseArmor.esp'
       - 'DLCOrrery.esp'
+      - 'Unofficial Oblivion Patch.esp'
     inc:
       - 'KumikoManor.esp'
       - 'Kumiko Manor 2.1 Rus.esp'
@@ -500,6 +505,7 @@ plugins:
       - 'DLCHorseArmor.esp'
       - 'DLCOrrery.esp'
       - 'DLCVileLair.esp'
+      - 'Unofficial Oblivion Patch.esp'
     dirty:
       # version: 1.2.0.416 GOTY
       - <<: *quickClean
@@ -519,6 +525,7 @@ plugins:
       - 'DLCOrrery.esp'
       - 'DLCVileLair.esp'
       - 'DLCMehrunesRazor.esp'
+      - 'Unofficial Oblivion Patch.esp'
     tag:
       - Relev
     dirty:
@@ -540,6 +547,7 @@ plugins:
       - 'DLCVileLair.esp'
       - 'DLCMehrunesRazor.esp'
       - 'DLCSpellTomes.esp'
+      - 'Unofficial Oblivion Patch.esp'
     tag:
       - Actors.ACBS
       - Actors.AIPackages
@@ -567,6 +575,7 @@ plugins:
       - 'DLCMehrunesRazor.esp'
       - 'DLCSpellTomes.esp'
       - 'DLCThievesDen.esp'
+      - 'Unofficial Oblivion Patch.esp'
     dirty:
       # version: 1.2.0.416 GOTY
       - <<: *quickClean
@@ -589,6 +598,7 @@ plugins:
       - 'DLCSpellTomes.esp'
       - 'DLCThievesDen.esp'
       - 'DLCBattlehornCastle.esp'
+      - 'Unofficial Oblivion Patch.esp'
     tag:
       - C.Name
       - C.Owner
@@ -616,6 +626,7 @@ plugins:
       - 'DLCThievesDen.esp'
       - 'DLCBattlehornCastle.esp'
       - 'DLCFrostcrag.esp'
+      - 'Unofficial Oblivion Patch.esp'
     tag:
       - Actors.ACBS
       - Actors.AIPackages
@@ -637,7 +648,7 @@ plugins:
 # Unofficial Patches
   - name: 'Unofficial Oblivion Patch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/5296' ]
-    group: *unofficialPatchesGroup
+    group: *dlcGroup
     msg: [ *doNotClean ]
     inc:
       - 'Arcana Restored.esp'
