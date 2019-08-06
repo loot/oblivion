@@ -859,10 +859,9 @@ plugins:
     req: [ *OBSEv21 ]
   - name: 'Hammerfell.esm'
     url: [ 'https://www.nexusmods.com/oblivion/mods/34484' ]
-    dirty:
-      - crc: 0x7d22f9df
-        <<: *dirtyPlugin
-        udr: 4
+    clean:
+      - crc: 0xE84E8476
+        util: 'TES4Edit v4.0.2'
   - name: 'GTAesgaard_2.esm'
     url: [ 'https://www.nexusmods.com/oblivion/mods/21693' ]
     group: *veryEarlyGroup
