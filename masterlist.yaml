@@ -856,8 +856,7 @@ plugins:
   - name: 'XBOX_Controller.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/47215' ]
     group: *gameMasterGroup
-    after:
-      - 'Oblivion.esm'
+    req: [ *OBSEv21 ]
   - name: 'Hammerfell.esm'
     url: [ 'https://www.nexusmods.com/oblivion/mods/34484' ]
     dirty:
