@@ -383,16 +383,19 @@ globals:
 groups:
   - name: &gameMasterGroup Main Game Master
 
+  - name: &veryEarlyGroup Very Early Loaders
+    description: 'A group for modules that should load early before the DLC and Unofficial patches.'
+    after: [ *gameMasterGroup ]
+
   - name: &unofficialPatchesGroup Unofficial Patches
 
   - name: &dlcGroup DLC
-    after: [ *unofficialPatchesGroup ]
-
-  - name: &newLandsGroup New Lands
-    after: [ *gameMasterGroup ]
+    after:
+      - *veryEarlyGroup
+      - *unofficialPatchesGroup
 
   - name: &underridesGroup Underrides
-    after: [ *newLandsGroup ]
+    after: [ *veryEarlyGroup ]
 
   - name: &earlyLoadersGroup Early Loaders
     description: 'A group for modules that should load early just after the DLC and Unofficial patches.'
@@ -863,11 +866,11 @@ plugins:
         udr: 4
   - name: 'GTAesgaard_2.esm'
     url: [ 'https://www.nexusmods.com/oblivion/mods/21693' ]
-    group: *newLandsGroup
+    group: *veryEarlyGroup
     msg: [ *moveWorldspaces ]
   - name: 'DibellasWatch.esm'
     url: [ 'https://www.nexusmods.com/oblivion/mods/37120' ]
-    group: *newLandsGroup
+    group: *veryEarlyGroup
     msg: [ *moveWorldspaces ]
   - name: 'Belas.esm'
     url: [ 'https://www.moddb.com/mods/the-chronicles-of-reeb-working-title/downloads/the-chronicles-of-reeb' ]
@@ -876,7 +879,7 @@ plugins:
         subs: [ 'Part of Chronicles of Reeb. Do not use. Has serious landscape issues due to editing the Tamriel worldspace.' ]
   - name: 'Morrowind_ob.esm'
     url: [ 'http://tesrenewal.com/forums/morroblivion/mods/753' ]
-    group: *newLandsGroup
+    group: *veryEarlyGroup
     msg: [ *moveWorldspaces ]
   - name: 'Silgrad_Tower(_T)?\.esm'
     url: [ 'https://www.nexusmods.com/oblivion/mods/37132' ]
