@@ -978,6 +978,14 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/21104' ]
     inc:
       - 'Tamrielic Ingredients.esm'
+    clean:
+      - crc: 0x8284D0E6
+        util: 'TES4Edit v4.0.2'
+  - name: 'Cobl Silent Equip Misc.esp'
+    clean:
+      - crc: 0x5860AF9A
+        util: 'TES4Edit v4.0.2'
+
   - name: 'Item interchange.esm'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17557' ]
     msg: [ *obsolete ]
@@ -1352,6 +1360,14 @@ plugins:
       - NoMerge
       - NpcFaces
     group: *underridesGroup
+  - name: 'Cobl Races TNR.esp'
+    clean:
+      - crc: 0xEE36BE6B
+        util: 'TES4Edit v4.0.2'
+  - name: 'Cobl Races TNR SI.esp'
+    clean:
+      - crc: 0x1BF099CF
+        util: 'TES4Edit v4.0.2'
   - name: 'Cobl - NPCDiversity - TNR Merge.esp'
     msg: [ *obsolete ]
     tag:
@@ -6106,19 +6122,14 @@ plugins:
         content: 'If using Cobl 1.72 and a version of FCOM below 0.9.9, also use the FCOM patch ''FCOM_Cobl.esp''. If you are using UFCOM then use "OOO 1.32-Cobl.esp" and "MMM_cobl.esp" instead of ''FCOM_Cobl.esp''.'
         condition: *FCOMCond
     dirty:
-      - crc: 0x8a79a499
-        <<: *dirtyPlugin
-        itm: 1
+      - <<: *quickClean
+        crc: 0xEAB6315A
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
         udr: 14
-      - crc: 0x9fa7eef9
-        <<: *dirtyPlugin
-        udr: 14
-      - crc: 0xeab63159
-        <<: *dirtyPlugin
-        udr: 14
-      - crc: 0xeab6315a
-        <<: *dirtyPlugin
-        udr: 14
+    clean:
+      # version: 1.72, after QAC
+      - crc: 0x1DBAD1A7
+        util: 'TES4Edit v4.0.2'
   - name: 'OC+COBL Luggage Patch.esp'
     msg:
       - type: say
@@ -6127,6 +6138,9 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/21104' ]
     req:
       - 'DLCShiveringIsles.esp'
+    clean:
+      - crc: 0xF7ADF908
+        util: 'TES4Edit v4.0.2'
   - name: 'FF_Real_Thirst, Cobl.esp'
     msg:
       - type: say
@@ -6137,6 +6151,9 @@ plugins:
       - <<: *alreadyInX
         subs: [ 'FCOM_Cobl or latest MMM_Cobl' ]
         condition: 'active("(FCOM|MMM)_Cobl\.esp")'
+    clean:
+      - crc: 0x905EBDCE
+        util: 'TES4Edit v4.0.2'
   - name: 'COBL-FransCre.esp'
     req:
       - 'Francesco''s Leveled Creatures-Items Mod.esm'
@@ -6595,10 +6612,9 @@ plugins:
     tag:
       - Delev
       - Invent
-    dirty:
-      - crc: 0x10e32f6b
-        <<: *dirtyPlugin
-        itm: 9
+    clean:
+      - crc: 0x23312D99
+        util: 'TES4Edit v4.0.2'
   - name: 'FCOM_Cobl.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/12249/' ]
     msg:
@@ -7704,6 +7720,9 @@ plugins:
     tag:
       - Delev
       - Invent
+    clean:
+      - crc: 0x82EE4E0B
+        util: 'TES4Edit v4.0.2'
   - name: 'EVE_StockEquipmentReplacer4FCOM.esp'
     msg:
       - type: say
@@ -14642,9 +14661,14 @@ plugins:
       - Names
       - NPC.Class
     dirty:
-      - crc: 0xe02e250d
-        <<: *dirtyPlugin
-        itm: 34
+      - <<: *quickClean
+        crc: 0xE02E250D
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 36
+    clean:
+      # version: 1.72, after QAC
+      - crc: 0x85042A99
+        util: 'TES4Edit v4.0.2'
   - name: 'Salmo WV, Cobl.esp'
     msg:
       - type: say
@@ -20605,6 +20629,9 @@ plugins:
       - R.Skills
       - Voice-F
       - Voice-M
+    clean:
+      - crc: 0xAA29DCA8
+        util: 'TES4Edit v4.0.2'
   - name: 'DiverseDremoraCoblRacesCosmetics.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/40461' ]
     req:
@@ -21285,6 +21312,9 @@ plugins:
       - R.Description
       - R.Relations
       - R.Skills
+    clean:
+      - crc: 0x8C1A854E
+        util: 'TES4Edit v4.0.2'
   - name: 'Birthsigns Expanded.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/12149' ]
     after:
