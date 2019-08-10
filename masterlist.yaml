@@ -987,7 +987,13 @@ plugins:
   - name: 'Cobl Mort Demo.esp'
     msg: [ *deleteModdingPlugin ]
   - name: 'Cobl Silent Equip Misc.esp'
-    msg: [ *bashedPatchTweak ]
+    msg:
+      - type: warn
+        content:
+          - lang: en
+            text: 'A tweak "**%1%**" in Wrye Bash''s Bashed Patch "**Tweak Settings**" section can be used instead of this plugin.'
+        subs: [ 'Msg: Equip Misc. Item' ]
+        condition: 'file("Bashed Patch.*\.esp")'
     clean:
       - crc: 0x5860AF9A
         util: 'TES4Edit v4.0.2'
