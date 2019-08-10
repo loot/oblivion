@@ -230,6 +230,19 @@ common:
         text: 'You seem to be using %1%, but you have not enabled a compatibility patch for this mod. A third party patch is available here: %2%'
       - lang: de
         text: 'Sie scheinen %1% zu nutzen, aber sie haben keinen Kompatibilitätspatch für diesen Mod aktiviert. Ein Patch von Dritten ist hier verfügbar: %2%'
+  - &patchIncluded
+    type: say
+    content:
+      - lang: en
+        text: 'You seem to be using **%1%**, but you have not enabled a compatibility patch for this mod. A compatibility patch is included with this plugin''s installer.'
+      - lang: de
+        text: 'Sie scheinen **%1%** zu nutzen, aber sie haben keinen Kompatibilitätspatch für diesen Mod aktiviert. Ein Kompatibilitätspatch ist enthalten mit diesen Plugins Installer.'
+      - lang: ko
+        text: '**%1%** 모드와 사용하기 위한 호환성 패치가 작동 중이지 않습니다. 호환성 패치는 이 플러그인의 인스톨러에 포함되어 있습니다.'
+      - lang: ja
+        text: '**%1%**を使用しているようですが、このmodの互換性パッチが有効になっていません。互換性パッチは、このプラグインのインストーラーに含まれています。'
+      - lang: pt
+        text: 'Você aparenta estar a utilizar **%1%**, mas não ativou o patch de compatibilidade para este mod. Um patch de compatibilidade está incluído com o instalador do plugin'
 
   - &requiresX
     type: warn
@@ -731,6 +744,7 @@ plugins:
     req:
       - 'DLCShiveringIsles.esp'
     after:
+      - 'Cobl Si.esp'
       - 'tes4SI-CHS-alpha.esp'
       - 'tes4-CHS-book.esp'
     inc:
@@ -974,10 +988,154 @@ plugins:
     inc:
       - 'FCOM_Convergence.esm'
 
-  - name: 'Cobl Main.esm'
+# (Cobl) Common Oblivion
+  - name: '(Salmo the Baker, |OOO 1.32-|MMM-)?Cobl( Main| Mort Demo| Silent Equip Misc| Filter Late MERGE ONLY| Glue| Si| Tweaks| Races( - Balanced| TNR| TNR SI)?)?\.es(m|p)'
     url: [ 'https://www.nexusmods.com/oblivion/mods/21104' ]
+  - name: 'Cobl Main.esm'
     inc:
       - 'Tamrielic Ingredients.esm'
+    msg:
+      - <<: *patchIncluded
+        subs: [ 'DLC Shivering Isles' ]
+        condition: 'active("DLCShiveringIsles.esp") and not active("Cobl Si.esp")'
+      - <<: *patchIncluded
+        subs: [ 'Martigen''s Monster Mod' ]
+        condition: 'active("Mart''s Monster Mod.esm") and version("Mart''s Monster Mod.esm", "3.7b", >=) and not file("MMM-Cobl.esp")'
+      - <<: *patchIncluded
+        subs: [ 'Oscuro''s Oblivion Overhaul' ]
+        condition: 'active("Oscuro''s_Oblivion_Overhaul.esm") and version("Oscuro''s_Oblivion_Overhaul.esm", "1.3.2", >=) and not file("OOO 1.32-Cobl.esp")'
+    clean:
+      - crc: 0x8284D0E6
+        util: 'TES4Edit v4.0.2'
+  - name: 'Cobl Mort Demo.esp'
+    msg: [ *deleteModdingPlugin ]
+  - name: 'Cobl Silent Equip Misc.esp'
+    msg:
+      - type: warn
+        content:
+          - lang: en
+            text: 'A tweak "**%1%**" in Wrye Bash''s Bashed Patch "**Tweak Settings**" section can be used instead of this plugin.'
+        subs: [ 'Msg: Equip Misc. Item' ]
+        condition: 'file("Bashed Patch.*\.esp")'
+    clean:
+      - crc: 0x5860AF9A
+        util: 'TES4Edit v4.0.2'
+  - name: 'Cobl Filter Late MERGE ONLY.esp'
+    group: *latePatchesGroup
+    msg: [ *requiresBashedPatch ]
+    tag:
+      - Deactivate
+  - name: 'Cobl Glue.esp'
+    group: *veryEarlyGroup
+    dirty:
+      - <<: *quickClean
+        crc: 0xEAB6315A
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        udr: 14
+    clean:
+      # version: 1.72, after QAC
+      - crc: 0x1DBAD1A7
+        util: 'TES4Edit v4.0.2'
+  - name: 'Cobl Si.esp'
+    group: *veryEarlyGroup
+    req: [ 'DLCShiveringIsles.esp' ]
+    clean:
+      - crc: 0xF7ADF908
+        util: 'TES4Edit v4.0.2'
+  - name: 'Cobl Tweaks.esp'
+    group: *veryEarlyGroup
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'FCOM Convergence' ]
+        condition: 'active("FCOM_Convergence.esm")'
+    tag:
+      - Invent
+    clean:
+      - crc: 0x905EBDCE
+        util: 'TES4Edit v4.0.2'
+  - name: 'Cobl Races( - Balanced)?\.esp'
+    inc:
+      - 'bgBalancingEVCore.esp'
+  - name: 'Cobl Races.esp'
+    req: [ 'DLCShiveringIsles.esp' ]
+    tag:
+      - -R.Relations
+    clean:
+      - crc: 0xAA29DCA8
+        util: 'TES4Edit v4.0.2'
+  - name: 'Cobl Races - Balanced.esp'
+    tag:
+      - -Body-F
+      - -Body-M
+      - Body-Size-F
+      - Body-Size-M
+      - R.Attributes-F
+      - R.Attributes-M
+      - R.ChangeSpells
+      - R.Description
+      - R.Skills
+    clean:
+      - crc: 0x8C1A854E
+        util: 'TES4Edit v4.0.2'
+  - name: 'Cobl Races( TNR( SI)?)?\.esp'
+    msg:
+      - <<: *requiresX
+        subs: [ 'Optional file [Cobl Cosmetics Res 01](https://www.nexusmods.com/oblivion/mods/21104/)' ]
+        condition: 'not file("Sound/Voice/Cobl Races.esp/xivilai/f/genericxiv_seen_00010baf_1.mp3")'
+  - name: 'Cobl Races TNR( SI)?\.esp'
+    group: *veryEarlyGroup
+    tag:
+      - Deactivate
+  - name: 'Cobl Races TNR.esp'
+    clean:
+      - crc: 0xEE36BE6B
+        util: 'TES4Edit v4.0.2'
+  - name: 'Cobl Races TNR SI.esp'
+    clean:
+      - crc: 0x1BF099CF
+        util: 'TES4Edit v4.0.2'
+  - name: 'Salmo the Baker, Cobl.esp'
+    msg:
+      - type: say
+        content: 'MAY cause CTDs. Cause uncertain despite extensive debugging. Disable if experiencing a persistent crash.'
+    tag:
+      - Actors.ACBS
+      - Actors.AIData
+      - Actors.AIPackages
+      - Actors.Stats
+      - Factions
+      - Graphics
+      - Invent
+      - Names
+      - NPC.Class
+    dirty:
+      - <<: *quickClean
+        crc: 0xE02E250D
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 36
+    clean:
+      # version: 1.72, after QAC
+      - crc: 0x85042A99
+        util: 'TES4Edit v4.0.2'
+  - name: 'OOO 1.32-Cobl.esp'
+    msg:
+      - type: error
+        content: 'Requires: [Oscuro''s_Oblivion_Overhaul.esm v1.32+](https://www.nexusmods.com/oblivion/mods/46199/)'
+        condition: 'version("Oscuro''s_Oblivion_Overhaul.esm", "1.3.2", <)'
+    clean:
+      - crc: 0x23312D99
+        util: 'TES4Edit v4.0.2'
+  - name: 'MMM-Cobl.esp'
+    msg:
+      - type: error
+        content: 'Requires: [Mart''s Monster Mod v3.7+](https://www.nexusmods.com/oblivion/mods/17784/)'
+        condition: 'version("Mart''s Monster Mod.esm", "3.7b", <)'
+    tag:
+      - -Delev
+    clean:
+      - crc: 0x82EE4E0B
+        util: 'TES4Edit v4.0.2'
+
   - name: 'Item interchange.esm'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17557' ]
     msg: [ *obsolete ]
@@ -1342,16 +1500,6 @@ plugins:
     tag:
       - Actors.Anims
       - NoMerge
-  - name: 'Cobl Races TNR( SI)?\.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/21104' ]
-    msg:
-      - type: say
-        content: 'Requires: the Cobl Cosmetics Res 01 files installed.'
-    tag:
-      - Deactivate
-      - NoMerge
-      - NpcFaces
-    group: *underridesGroup
   - name: 'Cobl - NPCDiversity - TNR Merge.esp'
     msg: [ *obsolete ]
     tag:
@@ -6099,44 +6247,14 @@ plugins:
       - crc: 0x8a79a499
         <<: *dirtyPlugin
         itm: 2
-  - name: 'Cobl Glue.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/21104' ]
-    msg:
-      - type: say
-        content: 'If using Cobl 1.72 and a version of FCOM below 0.9.9, also use the FCOM patch ''FCOM_Cobl.esp''. If you are using UFCOM then use "OOO 1.32-Cobl.esp" and "MMM_cobl.esp" instead of ''FCOM_Cobl.esp''.'
-        condition: *FCOMCond
-    dirty:
-      - crc: 0x8a79a499
-        <<: *dirtyPlugin
-        itm: 1
-        udr: 14
-      - crc: 0x9fa7eef9
-        <<: *dirtyPlugin
-        udr: 14
-      - crc: 0xeab63159
-        <<: *dirtyPlugin
-        udr: 14
-      - crc: 0xeab6315a
-        <<: *dirtyPlugin
-        udr: 14
   - name: 'OC+COBL Luggage Patch.esp'
     msg:
       - type: say
         content: 'Outdated. Upgrade to Open Cities Classic or Open Cities Reborn and use the patch for whichever one you choose.'
-  - name: 'Cobl Si.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/21104' ]
-    req:
-      - 'DLCShiveringIsles.esp'
   - name: 'FF_Real_Thirst, Cobl.esp'
     msg:
       - type: say
         content: 'Don''t use with vampire mods.'
-  - name: 'Cobl Tweaks.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/21104' ]
-    msg:
-      - <<: *alreadyInX
-        subs: [ 'FCOM_Cobl or latest MMM_Cobl' ]
-        condition: 'active("(FCOM|MMM)_Cobl\.esp")'
   - name: 'COBL-FransCre.esp'
     req:
       - 'Francesco''s Leveled Creatures-Items Mod.esm'
@@ -6590,15 +6708,6 @@ plugins:
       - Relev
   - name: 'John''s Leveled List Overhaul - Bandits in Glass Begone.esp'
     msg: [ *alreadyInFCOM ]
-  - name: 'OOO 1.32-Cobl.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/21104' ]
-    tag:
-      - Delev
-      - Invent
-    dirty:
-      - crc: 0x10e32f6b
-        <<: *dirtyPlugin
-        itm: 9
   - name: 'FCOM_Cobl.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/12249/' ]
     msg:
@@ -7699,11 +7808,6 @@ plugins:
   - name: 'Geomancy & Gem Dust OOO (No Spell Change).esp'
     inc:
       - 'Geomancy & Gem Dust OOO.esp'
-  - name: 'MMM-Cobl.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/21104' ]
-    tag:
-      - Delev
-      - Invent
   - name: 'EVE_StockEquipmentReplacer4FCOM.esp'
     msg:
       - type: say
@@ -14626,25 +14730,6 @@ plugins:
     msg:
       - type: say
         content: 'Most likely incompatible with some ULs'
-  - name: 'Salmo the Baker, Cobl.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/21104' ]
-    msg:
-      - type: say
-        content: 'MAY cause CTDs. Cause uncertain despite extensive debugging. Disable if experiencing a persistent crash.'
-    tag:
-      - Actors.AIData
-      - Actors.AIPackages
-      - Actors.Stats
-      - C.Owner
-      - Factions
-      - Graphics
-      - Invent
-      - Names
-      - NPC.Class
-    dirty:
-      - crc: 0xe02e250d
-        <<: *dirtyPlugin
-        itm: 34
   - name: 'Salmo WV, Cobl.esp'
     msg:
       - type: say
@@ -20590,21 +20675,6 @@ plugins:
     tag:
       - Body-M
       - Body-Size-M
-  - name: 'Cobl Races.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/21104' ]
-    inc:
-      - 'bgBalancingEVCore.esp'
-    tag:
-      - Eyes
-      - Hair
-      - R.Attributes-F
-      - R.Attributes-M
-      - R.ChangeSpells
-      - R.Description
-      - R.Relations
-      - R.Skills
-      - Voice-F
-      - Voice-M
   - name: 'DiverseDremoraCoblRacesCosmetics.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/40461' ]
     req:
@@ -21262,23 +21332,6 @@ plugins:
   - name: 'Trap.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/26216' ]
     tag:
-      - R.Attributes-F
-      - R.Attributes-M
-      - R.ChangeSpells
-      - R.Description
-      - R.Relations
-      - R.Skills
-  - name: 'Cobl Races - Balanced.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/21104' ]
-    inc:
-      - 'bgBalancingEVCore.esp'
-    tag:
-      - Body-F
-      - Body-M
-      - Body-Size-F
-      - Body-Size-M
-      - Eyes
-      - Hair
       - R.Attributes-F
       - R.Attributes-M
       - R.ChangeSpells
@@ -22507,13 +22560,6 @@ plugins:
       - Filter
       - IIM
       - Invent
-  - name: 'Cobl Filter Late MERGE ONLY.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/21104' ]
-    group: *latePatchesGroup
-    msg: [ *requiresBashedPatch ]
-    tag:
-      - Deactivate
-      - Filter
   - name: 'Oscuro''s_Oblivion_Overhaul - Harvest Containers - SI.esp'
     group: *latePatchesGroup
     tag:
