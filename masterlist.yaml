@@ -1024,10 +1024,6 @@ plugins:
       - Deactivate
   - name: 'Cobl Glue.esp'
     group: *veryEarlyGroup
-    msg:
-      - type: say
-        content: 'If using Cobl 1.72 and a version of FCOM below 0.9.9, also use the FCOM patch ''FCOM_Cobl.esp''. If you are using UFCOM then use "OOO 1.32-Cobl.esp" and "MMM_cobl.esp" instead of ''FCOM_Cobl.esp''.'
-        condition: *FCOMCond
     dirty:
       - <<: *quickClean
         crc: 0xEAB6315A
