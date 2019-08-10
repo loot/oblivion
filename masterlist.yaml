@@ -996,6 +996,9 @@ plugins:
       - 'Tamrielic Ingredients.esm'
     msg:
       - <<: *patchIncluded
+        subs: [ 'DLC Shivering Isles' ]
+        condition: 'active("DLCShiveringIsles.esp") and not active("Cobl Si.esp")'
+      - <<: *patchIncluded
         subs: [ 'Martigen''s Monster Mod' ]
         condition: 'active("Mart''s Monster Mod.esm") and version("Mart''s Monster Mod.esm", "3.7b", >=) and not file("MMM-Cobl.esp")'
       - <<: *patchIncluded
