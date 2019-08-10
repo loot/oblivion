@@ -976,8 +976,9 @@ plugins:
       - 'FCOM_Convergence.esm'
 
 # (Cobl) Common Oblivion
-  - name: 'Cobl Main.esm'
+  - name: '(Salmo the Baker, |OOO 1.32-|MMM-)?Cobl( Main| Mort Demo| Silent Equip Misc| Filter Late MERGE ONLY| Glue| Si| Tweaks| Races( - Balanced| TNR| TNR SI)?)?\.es(m|p)'
     url: [ 'https://www.nexusmods.com/oblivion/mods/21104' ]
+  - name: 'Cobl Main.esm'
     inc:
       - 'Tamrielic Ingredients.esm'
     clean:
@@ -991,13 +992,11 @@ plugins:
       - crc: 0x5860AF9A
         util: 'TES4Edit v4.0.2'
   - name: 'Cobl Filter Late MERGE ONLY.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/21104' ]
     group: *latePatchesGroup
     msg: [ *requiresBashedPatch ]
     tag:
       - Deactivate
   - name: 'Cobl Glue.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/21104' ]
     group: *veryEarlyGroup
     msg:
       - type: say
@@ -1013,7 +1012,6 @@ plugins:
       - crc: 0x1DBAD1A7
         util: 'TES4Edit v4.0.2'
   - name: 'Cobl Si.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/21104' ]
     group: *veryEarlyGroup
     req:
       - 'DLCShiveringIsles.esp'
@@ -1021,7 +1019,6 @@ plugins:
       - crc: 0xF7ADF908
         util: 'TES4Edit v4.0.2'
   - name: 'Cobl Tweaks.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/21104' ]
     group: *veryEarlyGroup
     msg:
       - <<: *alreadyInX
@@ -1033,7 +1030,6 @@ plugins:
       - crc: 0x905EBDCE
         util: 'TES4Edit v4.0.2'
   - name: 'Cobl Races.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/21104' ]
     inc:
       - 'bgBalancingEVCore.esp'
     req: [ 'DLCShiveringIsles.esp' ]
@@ -1043,7 +1039,6 @@ plugins:
       - crc: 0xAA29DCA8
         util: 'TES4Edit v4.0.2'
   - name: 'Cobl Races - Balanced.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/21104' ]
     inc:
       - 'bgBalancingEVCore.esp'
     tag:
@@ -1060,7 +1055,6 @@ plugins:
       - crc: 0x8C1A854E
         util: 'TES4Edit v4.0.2'
   - name: 'Cobl Races TNR( SI)?\.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/21104' ]
     group: *veryEarlyGroup
     msg:
       - type: say
@@ -1076,7 +1070,6 @@ plugins:
       - crc: 0x1BF099CF
         util: 'TES4Edit v4.0.2'
   - name: 'Salmo the Baker, Cobl.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/21104' ]
     msg:
       - type: say
         content: 'MAY cause CTDs. Cause uncertain despite extensive debugging. Disable if experiencing a persistent crash.'
@@ -1100,7 +1093,6 @@ plugins:
       - crc: 0x85042A99
         util: 'TES4Edit v4.0.2'
   - name: 'OOO 1.32-Cobl.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/21104' ]
     msg:
       - type: error
         content: 'Requires: [Oscuro''s_Oblivion_Overhaul.esm v1.32+](https://www.nexusmods.com/oblivion/mods/46199/)'
@@ -1109,7 +1101,6 @@ plugins:
       - crc: 0x23312D99
         util: 'TES4Edit v4.0.2'
   - name: 'MMM-Cobl.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/21104' ]
     msg:
       - type: error
         content: 'Requires: [Mart''s Monster Mod v3.7+](https://www.nexusmods.com/oblivion/mods/17784/)'
