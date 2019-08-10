@@ -6616,6 +6616,10 @@ plugins:
     msg: [ *alreadyInFCOM ]
   - name: 'OOO 1.32-Cobl.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/21104' ]
+    msg:
+      - type: error
+        content: 'Requires: [Oscuro''s_Oblivion_Overhaul.esm v1.32+](https://www.nexusmods.com/oblivion/mods/46199/)'
+        condition: 'version("Oscuro''s_Oblivion_Overhaul.esm", "1.3.2", <)'
     tag:
       - Delev
       - Invent
