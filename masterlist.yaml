@@ -7724,6 +7724,10 @@ plugins:
       - 'Geomancy & Gem Dust OOO.esp'
   - name: 'MMM-Cobl.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/21104' ]
+    msg:
+      - type: error
+        content: 'Requires: [Mart''s Monster Mod v3.7+](https://www.nexusmods.com/oblivion/mods/17784/)'
+        condition: 'version("Mart''s Monster Mod.esm", "3.7b", <)'
     tag:
       - Delev
       - Invent
