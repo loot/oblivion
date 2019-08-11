@@ -17571,6 +17571,10 @@ plugins:
       - <<: *useOnlyOneX
         subs: [ '"S.P.A.M.esp" or "S.P.A.M. 100+.esp"' ]
         condition: 'many("S.P.A.M(\. 100\+)?\.esp")'
+  - name: 'S.P.A.M.esp'
+    req:
+      - <<: *OBSE
+        condition: 'checksum("S.P.A.M.esp", 33B963F5)'
   - name: 'S.P.A.M. 100+.esp'
     req:
       - name: 'OBSE/Plugins/OBSE_Elys_Uncapper.dll'
