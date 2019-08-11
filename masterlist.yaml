@@ -17566,40 +17566,27 @@ plugins:
         itm: 12
   - name: 'SkillDecay.esp'
     req: [ *OBSEv20 ]
-  - name: 'S.P.A.M.esp'
+  - name: 'S.P.A.M(\. 100\+)?\.esp'
     msg:
-      - type: say
-        content: 'Use either ''S.P.A.M.esp'' or ''S.P.A.M. 100+.esp'' but not both together.'
-        condition: 'file("S.P.A.M. 100+.esp")'
+      - <<: *useOnlyOneX
+        subs: [ '"S.P.A.M.esp" or "S.P.A.M. 100+.esp"' ]
+        condition: 'many("S.P.A.M(\. 100\+)?\.esp")'
   - name: 'S.P.A.M. 100+.esp'
     msg:
-      - type: say
-        content: 'Use either ''S.P.A.M.esp'' or ''S.P.A.M. 100+.esp'' but not both together.'
-        condition: 'file("S.P.A.M.esp")'
       - type: say
         content: 'Only for use with ''-Elys- Uncapper'' or ''Toaster''s Legendary Mastery'' attribute uncapper mods.'
       - type: say
         content: 'All character attributes MUST be below 95 if adding one of those uncapper mods and this SPAM plugin.'
-  - name: 'S.P.A.M. option - Faster Major.esp'
+  - name: 'S.P.A.M. option - Faste(r|st) Major.esp'
     msg:
-      - type: say
-        content: 'Choose either this one, ''S.P.A.M. Option - Fastest Major.esp'', or neither, BUT DO NOT choose both.'
-        condition: 'file("S.P.A.M. Option - Fastest Major.esp")'
-  - name: 'S.P.A.M. Option - Fastest Major.esp'
+      - <<: *useOnlyOneX
+        subs: [ 'S.P.A.M Faster or Fastest Major' ]
+        condition: 'many("S.P.A.M. option - Faste(r|st) Major.esp")'
+  - name: 'S.P.A.M. option - Faste(r|st) Minor.esp'
     msg:
-      - type: say
-        content: 'Choose either this one, ''S.P.A.M. Option - Faster Major.esp'', or neither, BUT DO NOT choose both.'
-        condition: 'file("S.P.A.M. option - Faster Major.esp")'
-  - name: 'S.P.A.M. option - Faster Minor.esp'
-    msg:
-      - type: say
-        content: 'Choose either this one, ''S.P.A.M. Option - Fastest Minor.esp'', or neither, BUT DO NOT choose both.'
-        condition: 'file("S.P.A.M. Option - Fastest Minor.esp")'
-  - name: 'S.P.A.M. Option - Fastest Minor.esp'
-    msg:
-      - type: say
-        content: 'Choose either this one, ''S.P.A.M. Option - Faster Minor.esp'', or neither, BUT DO NOT choose both.'
-        condition: 'file("S.P.A.M. option - Faster Minor.esp")'
+      - <<: *useOnlyOneX
+        subs: [ 'S.P.A.M Faster or Fastest Minor' ]
+        condition: 'many("S.P.A.M. option - Faste(r|st) Minor.esp")'
   - name: 'The Versatile Adventurer.esp'
     req: [ *OBSE ]
   - name: 'Mayu''s Animation Overhaul.esp'
