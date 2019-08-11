@@ -20037,64 +20037,32 @@ plugins:
       - Factions
       - NoMerge
       - Relations
-  - name: '1em_Vilja_as_Argonian.esp'
+  - name: '1em_Vilja_as_(Argonian|(Blood|Chocolate|Moonshadow|Nec_Mystic_High)_Elf(_MU|_Stranger|-Remake)?|High_Imperial|Tabaxi|Vampire(_Reloaded)?|Custom| Synx)(_by_(Xtudo|4GVN|Gonzoguns))?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/28977' ]
     msg:
-      - type: say
-        content: 'Choose only ONE customization for Vilja.'
+      - <<: *useOnlyOneX
+        subs: [ 'Customization for Vilja' ]
+        condition: 'many("1em_Vilja_as_(Argonian|(Blood|Chocolate|Moonshadow|Nec_Mystic_High)_Elf(_MU|_Stranger|\-Remake)?|High_Imperial|Tabaxi|Vampire(_Reloaded)?|Custom| Synx)(_by_(Xtudo|4GVN|Gonzoguns))?\.esp")'
   - name: '1em_Vilja_as_Argonian Vwalk.esp'
     tag:
       - Actors.Anims
       - NoMerge
-  - name: '1em_Vilja_as_Nec_Mystic_High_Elf-Remake_by_Xtudo.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/28977' ]
-    msg:
-      - type: say
-        content: 'Choose only ONE customization for Vilja.'
-  - name: '1em_Vilja_as_Blood_Elf_by_Xtudo.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/28977' ]
-    msg:
-      - type: say
-        content: 'Choose only ONE customization for Vilja.'
-  - name: '1em_Vilja_as_ Synx_by_Xtudo.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/28977' ]
-    msg:
-      - type: say
-        content: 'Choose only ONE customization for Vilja.'
-  - name: '1em_Vilja_as_Chocolate_Elf.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/28977' ]
-    msg:
-      - type: say
-        content: 'Choose only ONE customization for Vilja.'
   - name: '1em_Vilja_as_Chocolate_Elf Vwalk.esp'
     tag:
       - Actors.Anims
       - NoMerge
   - name: '1em_Vilja_as_Custom_by_Gonzoguns.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/28977' ]
     msg:
       - type: say
         content: 'Requires: Requires resources from [Abriael Human Races Revamped](http://www.nexusmods.com/oblivion/mods/25524), the ESP file is not required.'
-      - type: say
-        content: 'Choose only ONE customization for Vilja.'
   - name: '1em_Vilja_as_Custom_by_Gonzoguns Vwalk.esp'
     tag:
       - Actors.Anims
       - NoMerge
-  - name: '1em_Vilja_as_Custom_by_4GVN.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/28977' ]
-    msg:
-      - type: say
-        content: 'Choose only ONE customization for Vilja.'
   - name: '1em_Vilja_as_Custom_by_4GVN Vwalk.esp'
     tag:
       - Actors.Anims
       - NoMerge
-  - name: '1em_Vilja_as_Custom_by_Xtudo.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/28977' ]
-    msg:
-      - type: say
-        content: 'Choose only ONE customization for Vilja.'
   - name: '1em_Vilja_as_Custom_by_Xtudo Vwalk.esp'
     tag:
       - Actors.Anims
@@ -20104,49 +20072,22 @@ plugins:
     msg:
       - type: say
         content: 'Requires: Requires resources from [Deathknowz''s High Imperials Race](http://www.nexusmods.com/oblivion/mods/33044) (all three files), the ESP file is not required.'
-      - type: say
-        content: 'Choose only ONE customization for Vilja.'
   - name: '1em_Vilja_as_High_Imperial Vwalk.esp'
     tag:
       - Actors.Anims
       - NoMerge
-  - name: '1em_Vilja_as_Moonshadow_Elf_MU.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/28977' ]
-    msg:
-      - type: say
-        content: 'Choose only ONE customization for Vilja.'
   - name: '1em_Vilja_as_Moonshadow_Elf_MU Vwalk.esp'
     tag:
       - Actors.Anims
       - NoMerge
-  - name: '1em_Vilja_as_Moonshadow_Elf_Stranger.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/28977' ]
-    msg:
-      - type: say
-        content: 'Choose only ONE customization for Vilja.'
   - name: '1em_Vilja_as_Moonshadow_Elf_Stranger Vwalk.esp'
     tag:
       - Actors.Anims
       - NoMerge
-  - name: '1em_Vilja_as_Vampire.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/28977' ]
-    msg:
-      - type: say
-        content: 'Choose only ONE customization for Vilja.'
   - name: '1em_Vilja_as_Vampire Vwalk.esp'
     tag:
       - Actors.Anims
       - NoMerge
-  - name: '1em_Vilja_as_Vampire_Reloaded_by_Xtudo.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/28977' ]
-    msg:
-      - type: say
-        content: 'Choose only ONE customization for Vilja.'
-  - name: '1em_Vilja_as_Tabaxi.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/28977' ]
-    msg:
-      - type: say
-        content: 'Choose only ONE customization for Vilja.'
   - name: '1em_Vilja_as_Tabaxi Vwalk.esp'
     tag:
       - Actors.Anims
