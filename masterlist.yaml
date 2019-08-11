@@ -17572,9 +17572,11 @@ plugins:
         subs: [ '"S.P.A.M.esp" or "S.P.A.M. 100+.esp"' ]
         condition: 'many("S.P.A.M(\. 100\+)?\.esp")'
   - name: 'S.P.A.M. 100+.esp'
+    req:
+      - name: 'OBSE/Plugins/OBSE_Elys_Uncapper.dll'
+        display: '[Oblivion -Elys- Uncapper](https://www.nexusmods.com/oblivion/mods/13841) or [Legendary Mastery](https://www.nexusmods.com/oblivion/mods/3664)'
+        condition: 'not file("Toaster''s Legendary Mastery.esp")'
     msg:
-      - type: say
-        content: 'Only for use with ''-Elys- Uncapper'' or ''Toaster''s Legendary Mastery'' attribute uncapper mods.'
       - type: say
         content: 'All character attributes MUST be below 95 if adding one of those uncapper mods and this SPAM plugin.'
   - name: 'S.P.A.M. option - Faste(r|st) Major.esp'
