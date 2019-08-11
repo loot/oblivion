@@ -69,7 +69,7 @@ common:
       - lang: en
         text: 'Do not clean ITM records, they are intentional and required for the mod to function. It is safe to undelete records, but do not do anything other than that.'
       - lang: ru
-        text: 'Не очищать. "Грязные" правки оставлены специально и требуются для функционирования мода.'
+        text: 'Не очищать ITM-записи. "Грязные" правки оставлены специально и требуются для функционирования мода. Восстановить удаленные записи (UDR) можно безопасно, но идентичные мастерфайлу лучше оставить.'
       - lang: es
         text: 'No limpiar las referencias ITM (iguales al master), ya que son intencionales y necesarias para que el Mod funcione. Sí es seguro restaurar las UDR (referencias borradas), pero no haga más que eso.'
       - lang: zh_CN
@@ -80,15 +80,23 @@ common:
         text: 'IMTレコードはクリーンしないでください。これらは意図的に残されたデータであり、Modを機能させるために必要です。削除の取り消しは安全に行えますが、それ以外のことは行わないでください。'
       - lang: de
         text: 'ITM-Einträge in diesem Plugin sollten nicht gesäubert werden, sie sind absichtlich enthalten und werden benötigt, damit der Mod richtig funktioniert. Gelöschte Eintrage wiederherzustellen ist in Ordung, alles andere aber nicht.'
+      - lang: ko
+        text: 'ITM 자료를 삭제하지 마십시오. 모드가 정상 작동하기 위해 의도적으로 남겨진 자료입니다. 삭제를 취소하는 것 이외에는 안전하지 않습니다.'
+      - lang: pt
+        text: 'Não apagar os registos ITM. São intencionais e necessárias para o funcionamento do mod. É seguro restaurar os registos, mas não faça nada mais que isso.'
   - &reqMasterSort
     type: say
     content:
       - lang: en
         text: 'Plugin''s Masters require sorting.'
+      - lang: ru
+        text: 'Мастерфайлы плагина требуют сортировки.'
       - lang: de
         text: 'Die Plugin Master müssen sortiert werden.'
       - lang: ko
         text: '플러그인 마스터의 정렬이 필요합니다.'
+      - lang: ja
+        text: 'このプラグインのマスターはソートが必要です。'
       - lang: pt
         text: 'A Master deste Plugin necessita ordenação.'
   - &obsolete
@@ -189,6 +197,8 @@ common:
         text: '削除してください。既に%1%に含まれています。'
       - lang: de
         text: 'Löschen. Bereits in %1% enthalten.'
+      - lang: pt
+        text: 'Apagar. Já incluído em %1%.'
   - &alreadyInOOO
     <<: *alreadyInX
     subs: [ 'Oscuro''s Oblivion Overhaul' ]
@@ -227,14 +237,24 @@ common:
     type: warn
     content:
       - lang: en
-        text: 'You seem to be using %1%, but you have not enabled a compatibility patch for this mod. A third party patch is available here: %2%'
+        text: 'You seem to be using **%1%**, but you have not enabled a compatibility patch for this mod. A third party patch is available here: %2%'
+      - lang: ru
+        text: 'Похоже, что используется **%1%**, но патч совместимости для него не был подключен. Патч совместимости можно найти здесь: %2%'
       - lang: de
-        text: 'Sie scheinen %1% zu nutzen, aber sie haben keinen Kompatibilitätspatch für diesen Mod aktiviert. Ein Patch von Dritten ist hier verfügbar: %2%'
+        text: 'Sie scheinen **%1%** zu nutzen, aber sie haben keinen Kompatibilitätspatch für diesen Mod aktiviert. Ein Patch von Dritten ist hier verfügbar: %2%'
+      - lang: ko
+        text: '**%1%** 모드와 사용하기 위한 호환성 패치가 작동 중이지 않습니다. 제3자 제공 호환성 패치는 여기에서 다운로드 가능합니다: %2%'
+      - lang: ja
+        text: '**%1%**を使用しているようですが、このmodの互換性パッチが有効になっていません。サードパーティのパッチはここで入手できます:%2%'
+      - lang: pt
+        text: 'Você aparenta estar a utilizar **%1%**, mas não ativou o patch de compatibilidade para este mod. Um patch feito por terceiros está disponível aqui: %2%'
   - &patchIncluded
     type: say
     content:
       - lang: en
         text: 'You seem to be using **%1%**, but you have not enabled a compatibility patch for this mod. A compatibility patch is included with this plugin''s installer.'
+      - lang: ru
+        text: 'Похоже, что используется **%1%**, но патч совместимости для него не был подключен. Патч совместимости можно найти в установщике плагина.'
       - lang: de
         text: 'Sie scheinen **%1%** zu nutzen, aber sie haben keinen Kompatibilitätspatch für diesen Mod aktiviert. Ein Kompatibilitätspatch ist enthalten mit diesen Plugins Installer.'
       - lang: ko
@@ -271,15 +291,15 @@ common:
       - lang: es
         text: 'Utilizar solo un %1%.'
       - lang: ko
-        text: '%1%을 한개만 사용하십시오.'
+        text: '%1%을 한 개만 사용하십시오.'
       - lang: zh_CN
         text: '只使用一个%1%。'
       - lang: ja
         text: '%1%は一つだけ使用してください。'
-      - lang: da
-        text: 'Slet. Allerede inkluderet i %1%.'
       - lang: de
         text: 'Nutzen Sie nur einen %1%.'
+      - lang: pt
+        text: 'Utilizar apenas um %1%.'
   - &useOnlyOneRoadRecordFile
     <<: *useOnlyOneX
     subs: [ 'road record file' ]
@@ -289,33 +309,60 @@ common:
     content:
       - lang: en
         text: 'This plugin contains wild edits beyond ITM and UDR records and deleted navmeshes and may require additional manual cleaning to not interfere with other mods. %1%'
+      - lang: ru
+        text: 'Плагин содержит дикие правки, кроме ITM, UDR записей и удаленных навмешей и может потребовать дополнительной ручной чистки, чтобы не пересекаться с другими модами. %1%'
       - lang: da
         text: 'Dette plugin indeholder ukontrollerede redigeringer udover ITM- og UDR-poster og slettede navmesher og kan behøve yderligere manuel oprydning for ikke at forstyrre andre mods. %1%'
       - lang: de
         text: 'Dieses Plugin enthält wilde Modifikationen weit über ITM-, und UDR Einträge und entfernte Navmeshes hinaus und benötigt vermutlich mehr manuelle Säuberung um andere Mods nicht zu beeinträchtigen. %1%'
+      - lang: ja
+        text: 'このプラグインにはITMおよびUDRレコード以外の誤った編集(Wild Edit)が含まれており、navmeshが削除されています。他のmodと干渉しないように、追加の手動クリーニングが必要になる場合があります。%1%'
+      - lang: pt
+        text: 'Este plugin contém edições selvagens (Wild Edits) para além dos registros ITM e UDR, e Navmeshes apagadas. Pode requerer limpeza manual adicional de forma a não interferir com outros mods. %1%'
     subs: [ '' ]
-# Dirty Plugin Messages
+
+# Dirty Aliases
   - &dirtyPlugin
     util: '[TES4Edit](http://www.nexusmods.com/oblivion/mods/11536/)'
     info:
       - lang: en
         text: 'An explanation of Dirty Edits is available [here](https://tes5edit.github.io/docs/5-mod-cleaning-and-error-checking.html#Apendix-A).'
+      - lang: ru
+        text: 'Объяснение по грязным правкам доступно [здесь](https://tes5edit.github.io/docs/5-mod-cleaning-and-error-checking.html#Apendix-A).'
       - lang: de
         text: 'Eine englische Säuberungsanleitung ist [hier](https://tes5edit.github.io/docs/5-mod-cleaning-and-error-checking.html#s_5-3) verfügbar.'
+      - lang: ja
+        text: 'Dirty Editsについては[ここ](https://tes5edit.github.io/docs/5-mod-cleaning-and-error-checking.html#Apendix-A)を参照してください。'
+      - lang: pt
+        text: 'Uma explição em inglês de Edição Suja (Dirty Edits) está disponível [aqui](https://tes5edit.github.io/docs/5-mod-cleaning-and-error-checking.html#Apendix-A).'
   - &quickClean
-    util: '[TES4Edit](http://www.nexusmods.com/oblivion/mods/11536/) **Quick Auto Clean**'
+    util: '[TES4Edit](http://www.nexusmods.com/oblivion/mods/11536/)'
     info:
       - lang: en
         text: 'Due to Improvements made to the cleaning process with the official release of xEdit 4.0.x+, any mods which were verified as clean with older versions of xEdit may now require additional cleaning. A guide for running xEdit 4.0.x+ in **Quick Auto Clean** mode can be found [here](https://tes5edit.github.io/docs/5-mod-cleaning-and-error-checking.html#s_5-3-4).'
+      - lang: ru
+        text: 'Из-за изменений в способе очистки в версии xEdit 4.0.x+, моды, что были проверены как чистые с предыдущими версиями xEdit могут вновь потребовать очистки. Руководство по запуску xEdit 4.0.x+ в режиме **Быстрой очистки** может быть найдено [здесь](https://tes5edit.github.io/docs/5-mod-cleaning-and-error-checking.html#s_5-3-4).'
       - lang: de
         text: 'Wegen Verbesserungen die dem Säuberungsprozess zugute gekommen sind mit der offiziellen Veröffentlichung von xEdit 4.0.x+, sämtliche Mods die als sauber verifiziert wurden mithilfe älterer Versionen von xEdit brauchen eventuell zusätzliche Säuberungen. Eine englische Anleitung zum ausführen von xEdit 4.0.x+ im **Schnell-Automatisch-Säubern** Modus kann [hier](https://tes5edit.github.io/docs/5-mod-cleaning-and-error-checking.html#s_5-3-4) aufgefunden werden.'
+      - lang: ko
+        text: 'xEdit 4.0.x+ 공식 출시와 함께 소개된 향상된 청소 기능으로 인해, 구 버전의 xEdit로 검증되었던 모드는 추가적인 청소가 필요할 수 있습니다. xEdit 4.0.x+ **Quick Auto Clean** 모드 실행 설명서는 [여기](https://tes5edit.github.io/docs/5-mod-cleaning-and-error-checking.html#s_5-3-4)에서 찾을 수 있습니다. '
+      - lang: ja
+        text: 'xEdit 4.0.x+の公式リリースでクリーニングプロセスが改善されたため、以前のバージョンのxEditでクリーニングした場合は、追加のクリーニングが必要になることがあります。xEdit 4.0.x+を**Quick Auto Clean**モードで実行するためのガイドがあります[ここ] (https://tes5edit.github.io/docs/5-mod-cleaning-and-error-checking.html#s_5-3-4)。'
+      - lang: pt
+        text: 'Devido a melhorias feitas ao processo de limpeza com o lançamento oficial de xEdit 4.0.x+, qualquer mod que seja verificado como limpo por versões anteriores de xEdit podem agora necessitar de limpeza adicional. Um guia em inglês para utilizar xEdit 4.0.x+ no modo **Limpeza Automática Rápida** pode ser encontrado [aqui](https://tes5edit.github.io/docs/5-mod-cleaning-and-error-checking.html#s_5-3-4).'
   - &reqManualFix
-    util: '[TES4Edit](http://www.nexusmods.com/oblivion/mods/11536/) **Quick Auto Clean**'
+    util: '[TES4Edit](http://www.nexusmods.com/oblivion/mods/11536/)'
     info:
       - lang: en
         text: 'It is strongly recommended not to use mods that contain **Deleted navmeshes** as they''re known to cause crashes. **Deleted navmeshes** must be corrected manually(A complex process that should be done by the mod author). More information on **Deleted navmeshes** is provided [here](https://www.creationkit.com/index.php?title=Fixing_Navmesh_Deletion_Tutorial).'
+      - lang: ru
+        text: 'Настоятельно не рекомендуется использовать моды с **удаленными навмешами** т.к. известно, что они вызывают вылеты. **удаленные навмеши** должны быть исправлены вручную(Комплексный процесс, который должен быть выполнен автором мода). Больше информации о **удаленных навмешах** можно найти [здесь](https://www.creationkit.com/index.php?title=Fixing_Navmesh_Deletion_Tutorial).'
       - lang: de
         text: 'Es wird streng empfohlen keine Mods zu verwenden die **Gelöschte Navmeshes** beinhalten da diese dafür bekannt sind Abstürze auszulösen. **Gelöschte Navmeshes** müssen manuell korrigiert werden(Ein komplexer Prozess der vom Mod-Autor erledigt werden sollte). Mehr Informationen über **Gelöschte Navmeshes** wird [hier](https://www.creationkit.com/index.php?title=Fixing_Navmesh_Deletion_Tutorial) geboten.'
+      - lang: ja
+        text: '**navmeshの削除**を含むmodは使用しないことを強く推奨します。クラッシュの原因になります。**navmeshの削除**は手動で修正する必要があります(mod作成者が行う必要がある複雑なプロセスです)。**navmeshの削除**の詳細については[ここ](https://www.creationkit.com/index.php?title=Fixing_Navmesh_Deletion_Tutorial)を参照してください。'
+      - lang: pt
+        text: 'É fortemente recomandado não utilizar mods que contenham **Navmeshes apagados** sendo que são conhecidos por causar falhas. **Navmeshes apagados** devem ser corrigidos manualmente(Um processo complexo que deve ser feito pelo autor do mod). Mais informação sobre **Navmeshes apagados** está disponível em inglês [aqui] (https://www.creationkit.com/index.php?title=Fixing_Navmesh_Deletion_Tutorial).'
 
 bash_tags:
   - 'Actors.ACBS'
@@ -402,6 +449,8 @@ globals:
         text: '[LOOTの最新スレッドを開く](%1%)（英語）'
       - lang: de
         text: '[Aktueller LOOT-Thread](%1%).'
+      - lang: pt
+        text: '[Postagem mais recente do LOOT](%1%).'
     subs: [ 'https://loot.github.io/latest-thread/' ]
 
 groups:
