@@ -986,6 +986,9 @@ plugins:
   - name: 'Francesco''s (Creatures|Leveled|More|Optional).*\.es(m|p)'
     url: [ 'https://www.nexusmods.com/oblivion/mods/40190' ]
   - name: 'Francesco''s Leveled Creatures-Items Mod.esm'
+    inc:
+      - name: 'Oscuro''s_Oblivion_Overhaul.esm'
+        condition: 'not active("FCOM_Convergence.esm")'
     tag:
       - Actors.ACBS
       - Actors.AIData
