@@ -19317,12 +19317,6 @@ plugins:
       - Hair
       - NpcFaces
       - R.Relations
-  - name: 'Altair_Race.esp'
-    tag:
-      - Eyes
-      - Hair
-      - NpcFaces
-      - R.Relations
   - name: 'XeniaRace.esp'
     tag:
       - Eyes
@@ -19367,66 +19361,18 @@ plugins:
     tag:
       - Actors.Anims
       - NoMerge
-  - name: 'Assassins Creed - Altair''s Gear.esp'
-    msg:
-      - type: say
-        content: 'Choose only one ''Assassins Creed'' ESP.'
-        condition: 'file("Assassins Creed - Altair''s Gear ?-? (((Heavy|Light) ?Armor\+?)?(ThrowingKnives)?)\.esp")'
+  - name: '(Assassins Creed - )?Altair(_Race|''s Gear( - |- )?(Light|Heavy)?( Armor|Armor)?(\+)?(ThrowingKnives)?)\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/19388' ]
     tag:
       - Eyes
       - Hair
       - NpcFaces
       - R.Relations
-  - name: 'Assassins Creed - Altair''s Gear - Light Armor.esp'
+  - name: 'Assassins Creed - Altair''s Gear( - |- )?(Light|Heavy)?( Armor|Armor)?(\+)?(ThrowingKnives)?\.esp'
     msg:
-      - type: say
-        content: 'Choose only one ''Assassins Creed'' ESP.'
-        condition: 'file("Assassins Creed - Altair''s Gear ?-? ?((Heavy ?Armor\+?)?(ThrowingKnives)?)\.esp")'
-    tag:
-      - Eyes
-      - Hair
-      - NpcFaces
-      - R.Relations
-  - name: 'Assassins Creed - Altair''s Gear- HeavyArmor.esp'
-    msg:
-      - type: say
-        content: 'Choose only one ''Assassins Creed'' ESP.'
-        condition: 'file("Assassins Creed - Altair''s Gear ?-? ?((((Heavy|Light) Armor\+?)?(ThrowingKnives)?)|HeavyArmor\+ThrowingKnives)\.esp")'
-    tag:
-      - Eyes
-      - Hair
-      - NpcFaces
-      - R.Relations
-  - name: 'Assassins Creed - Altair''s Gear - ThrowingKnives.esp'
-    msg:
-      - type: say
-        content: 'Choose only one ''Assassins Creed'' ESP.'
-        condition: 'file("Assassins Creed - Altair''s Gear ?-? ?((((Heavy|Light) ?Armor\+?)(ThrowingKnives)?))?\.esp")'
-    tag:
-      - Eyes
-      - Hair
-      - NpcFaces
-      - R.Relations
-  - name: 'Assassins Creed - Altair''s Gear - Heavy Armor.esp'
-    msg:
-      - type: say
-        content: 'Choose only one ''Assassins Creed'' ESP.'
-        condition: 'file("Assassins Creed - Altair''s Gear ?-? ?(((Heavy|Light )Armor\+?)?(ThrowingKnives)?)\.esp")'
-    tag:
-      - Eyes
-      - Hair
-      - NpcFaces
-      - R.Relations
-  - name: 'Assassins Creed - Altair''s Gear - HeavyArmor+ThrowingKnives.esp'
-    msg:
-      - type: say
-        content: 'Choose only one ''Assassins Creed'' ESP.'
-        condition: 'file("Assassins Creed - Altair''s Gear ?-? ?(((Heavy|Light) ?Armor?)?(ThrowingKnives)?)\.esp")'
-    tag:
-      - Eyes
-      - Hair
-      - NpcFaces
-      - R.Relations
+      - <<: *useOnlyOneX
+        subs: [ 'Assassins Creed' ]
+        condition: 'many("Assassins Creed - Altair''s Gear( - |- )?(Light|Heavy)?( Armor|Armor)?(\+)?(ThrowingKnives)?\.esp")'
   - name: 'Raven Elves.esp'
     tag:
       - Eyes
