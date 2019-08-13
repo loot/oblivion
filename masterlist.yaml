@@ -6200,16 +6200,18 @@ plugins:
     tag:
       - Delev
       - Relev
-  - name: 'Loth''s Blunt Weapons.esp'
+  - name: 'Loth''s Blunt Weapons(- Mobs| for Npcs)?\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/12939' ]
     msg:
-      - type: error
-        content: 'Delete. Only use ''Loth''s Blunt Weapons For NPCs.esp'' and ''FCOM_LothsBluntWeapons.esp''.'
-        condition: *FCOMCond
-  - name: 'Loth''s Blunt Weapons- Mobs.esp'
+      - <<: *useOnlyOneX
+        subs: [ 'Loth''s Blunt Weapons version' ]
+        condition: 'many("Loth''s Blunt Weapons(- Mobs)?\.esp")'
+  - name: 'Loth''s Blunt Weapons(- Mobs)?\.esp'
+    inc: [ 'FCOM_Convergence.esm' ]
     msg:
-      - type: error
-        content: 'Delete. Only use ''Loth''s Blunt Weapons For NPCs.esp'' and ''FCOM_LothsBluntWeapons.esp''.'
-        condition: *FCOMCond
+      - <<: *useInstead
+        subs: [ '"Loth''s Blunt Weapons for Npcs.esp" & "FCOM_LothsBluntWeapons.esp"' ]
+        condition: 'active("FCOM_Convergence.esm")'
   - name: 'Oblivion WarCry.esp'
     msg:
       - type: error
