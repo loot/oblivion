@@ -281,6 +281,13 @@ common:
     subs: [ '[Wrye Bash](https://www.nexusmods.com/oblivion/mods/22368) Bashed Patch' ]
     condition: 'not file("Bashed Patch.*\.esp")'
 
+  - &useInstead
+    type: warn
+    content:
+      - lang: en
+        text: 'Use %1% instead.'
+      - lang: ja
+        text: '代わりに%1%を使用してください。'
   - &useOnlyOneX
     type: say
     content:
