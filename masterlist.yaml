@@ -20010,10 +20010,10 @@ plugins:
       - R.Teeth
   - name: 'Oblivion_Character_Overhaul.esp'
     url:
-      - link: 'Oblivion Character Overhaul v2'
-        name: 'https://www.nexusmods.com/oblivion/mods/44676'
-      - link: 'Oblivion Character Overhaul v2 - Unofficial Patch'
-        name: 'https://www.nexusmods.com/oblivion/mods/48136'
+      - link: 'https://www.nexusmods.com/oblivion/mods/44676'
+        name: 'Oblivion Character Overhaul v2'
+      - link: 'https://www.nexusmods.com/oblivion/mods/48136'
+        name: 'Oblivion Character Overhaul v2 - Unofficial Patch'
     tag:
       - Eyes
       - NpcFaces
@@ -20028,8 +20028,8 @@ plugins:
       - R.Head
   - name: 'OCO_(DLCHorseArmor|DLCMehrunesRazor|DLCOrrery|DLCThievesDen|KnightsOTN|UOP_USIP|KvatchRebuilt)_Patch\.esp'
     url:
-      - link: 'Compatibility Patches for nuska''s Oblivion Character Overhaul (v2)'
-        name: 'https://www.nexusmods.com/oblivion/mods/46249'
+      - link: 'https://www.nexusmods.com/oblivion/mods/46249'
+        name: 'Compatibility Patches for nuska''s Oblivion Character Overhaul (v2)'
   - name: 'OCO_DLCHorseArmor_Patch.esp'
     tag:
       - Actors.ACBS
@@ -20149,10 +20149,10 @@ plugins:
       - SpellStats
   - name: 'bgMagic.*\.esp'
     url:
-      - link: 'Less Annoying Magic Experience'
-        name: 'http://www.theelderscrolls.info/?go=dlfile&fileid=219'
-      - link: 'Less Annoying Magic Experience [Deutsche Version 1.7]'
-        name: 'http://www.theelderscrolls.info/?go=dlfile&fileid=220'
+      - link: 'http://www.theelderscrolls.info/?go=dlfile&fileid=219'
+        name: 'Less Annoying Magic Experience'
+      - link: 'http://www.theelderscrolls.info/?go=dlfile&fileid=220'
+        name: 'Less Annoying Magic Experience [Deutsche Version 1.7]'
   - name: 'bgMagic(DV|EV)?(AddEnVar|Bonus|ItemSigil|Lightningbolt|Shader|ShaderLifeDetect|SpellTomes_for_WryeBash)\.esp'
     msg: [ *doNotClean ]
   - name: 'bgMagic(DV|EV)?Shader.esp'
@@ -20526,7 +20526,7 @@ plugins:
         condition: 'many("BCCheydinhal(FULL)?(B&M)?-CheydinhalFalls patch\.esp")'
       - <<: *useOnlyOneX
         subs: [ 'Same as Better Cities & Unique Landscape - Cheydinhal Falls Patch' ]
-        condition: 'file("Better Cities( Full)?( B&M)? - Unique Landscape Cheydinhal Falls\.esp")'
+        condition: 'many("Better Cities( Full)?( B&M)? - Unique Landscape Cheydinhal Falls\.esp")'
     tag:
       - C.Water
   - name: 'Better Cities( Full)?( B&M)? - Unique Landscape Cheydinhal Falls\.esp'
@@ -20536,7 +20536,7 @@ plugins:
         condition: 'many("Better Cities - Unique Landscape Cheydinhal Falls.esp")'
       - <<: *useOnlyOneX
         subs: [ 'Same as Better Cities Cheydinhal - CheydinhalFalls patch' ]
-        condition: 'file("BCCheydinhal(FULL)?(B&M)?-CheydinhalFalls patch\.esp")'
+        condition: 'many("BCCheydinhal(FULL)?(B&M)?-CheydinhalFalls patch\.esp")'
     tag:
       - C.Water
   - name: 'Better Cities - CUO Bruma Patch.esp'
@@ -21155,7 +21155,7 @@ plugins:
     msg:
       - <<: *useOnlyOneX
         subs: [ 'Visually Enchanted Damage and Absorb' ]
-        condition: 'file("Visually Enchanted Damage and Absorb( with Particles)?\.esp")'
+        condition: 'many("Visually Enchanted Damage and Absorb( with Particles)?\.esp")'
     tag:
       - Deactivate
       - Graphics
@@ -21174,23 +21174,23 @@ plugins:
     msg:
       - <<: *useOnlyOneX
         subs: [ 'Visually Enchanted Customizer Fire' ]
-        condition: 'file("Visually Enchanted Fire( [123])?\.esp")'
+        condition: 'many("Visually Enchanted Fire( [123])?\.esp")'
   - name: 'Visually Enchanted Frost( [123])?\.esp'
     msg:
       - <<: *useOnlyOneX
         subs: [ 'Visually Enchanted Customizer Frost' ]
-        condition: 'file("Visually Enchanted Frost( [123])?\.esp")'
+        condition: 'many("Visually Enchanted Frost( [123])?\.esp")'
   - name: 'Visually Enchanted Shock( [123])?\.esp'
     msg:
       - <<: *useOnlyOneX
         subs: [ 'Visually Enchanted Customizer Shock' ]
-        condition: 'file("Visually Enchanted Shock( [123])?\.esp")'
+        condition: 'many("Visually Enchanted Shock( [123])?\.esp")'
   - name: 'Visually Enchanted (1.0|2.0|2.1|2.1 No Shock Particles)\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/2365' ]
     msg:
       - <<: *useOnlyOneX
         subs: [ 'Visually Enchanted Weapons' ]
-        condition: 'file("Visually Enchanted (1.0|2.0|2.1|2.1 No Shock Particles)\.esp")'
+        condition: 'many("Visually Enchanted (1.0|2.0|2.1|2.1 No Shock Particles)\.esp")'
   - name: 'WNewShockBoltEffects20.esp'
     dirty:
       - crc: 0x9e684ac5
@@ -21679,7 +21679,7 @@ plugins:
     msg:
       - <<: *useOnlyOneX
         subs: [ 'Duke Patricks Momentum Damage' ]
-        condition: 'file("Duke Patricks (- )?Momentum (Lite |Super )?Damage (Bonus| And Jump Risk)( Light)?\.esp")'
+        condition: 'many("Duke Patricks (- )?Momentum (Lite |Super )?Damage (Bonus| And Jump Risk)( Light)?\.esp")'
   - name: 'Duke Patricks - Shield Charge.esp'
     msg:
       - type: say
