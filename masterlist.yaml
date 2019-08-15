@@ -1223,6 +1223,8 @@ plugins:
       - Stats
       - name: -Relations
         condition: 'file("Mart''s Monster Mod for OOO.esm") or file("FCOM_Convergence.esm")'
+
+# (MMM) Martigen’s Monster Mod
   - name: 'Mart''s Monster Mod.esm'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
     tag:
@@ -1252,6 +1254,441 @@ plugins:
       - Factions
       - Relations
       - Relev
+  - name: 'Mart''s Monster Mod - Shivering Isles.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
+    tag:
+      - Actors.AIData
+      - Actors.AIPackages
+      - Actors.Stats
+      - Delev
+      - Factions
+      - Graphics
+      - Invent
+      - Names
+      - Relations
+      - Relev
+      - Scripts
+      - Stats
+  - name: 'Mart''s Monster Mod - Knights.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
+    inc:
+      - 'FCOM_Convergence.esm'
+    tag:
+      - Actors.AIData
+      - Actors.AIPackages
+      - Actors.Stats
+      - Delev
+      - Factions
+      - Relations
+      - Relev
+      - Stats
+  - name: 'Mart''s Monster Mod for OOO - Knights .esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
+    inc:
+      - 'FCOM_Convergence.esm'
+    tag:
+      - Actors.AIData
+      - Actors.AIPackages
+      - Actors.Stats
+      - Delev
+      - Factions
+      - Relations
+      - Relev
+      - Stats
+  - name: 'Mart''s Monster Mod.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
+    msg: [ *alreadyInFCOM ]
+    tag:
+      - Actors.AIData
+      - Actors.AIPackages
+      - Actors.Stats
+      - Delev
+      - Factions
+      - Graphics
+      - Invent
+      - Names
+      - Relations
+      - Relev
+      - Scripts
+      - Stats
+  - name: 'Mart''s Monster Mod for Fran.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
+    msg:
+      - <<: *deleteOrDeactivateX
+        subs: [ 'Not needed with FCOM.' ]
+        condition: *FCOMCond
+    tag:
+      - Actors.AIData
+      - Actors.AIPackages
+      - Actors.Stats
+      - Delev
+      - Factions
+      - Graphics
+      - Invent
+      - Names
+      - Relations
+      - Relev
+      - Scripts
+      - Stats
+  - name: 'Mart''s Monster Mod for OOO.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
+    msg:
+      - <<: *deleteOrDeactivateX
+        subs: [ 'Not needed with FCOM.' ]
+        condition: *FCOMCond
+    tag:
+      - Actors.AIData
+      - Actors.AIPackages
+      - Actors.Stats
+      - Delev
+      - Factions
+      - Graphics
+      - Invent
+      - Names
+      - Relations
+      - Relev
+      - Scripts
+      - Stats
+  - name: 'Mart''s Monster Mod - Additional Enemy NPC Vars.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
+    msg:
+      - type: say
+        content: 'Can increase the chances of a CTD in a heavily modded game due to increased processor load.'
+      - *doNotClean
+  - name: 'Mart''s Monster Mod - City Defences.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
+    after:
+      - 'Mart''s Monster Mod - More Wilderness Life No Gates.esp'
+    inc:
+      - name: 'Better Cities Resources.esm'
+        display: 'Better Cities'
+    msg: [ *doNotClean ]
+  - name: 'Mart''s Monster Mod - Diverse Imperial Armor.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
+    msg: [ *alreadyInOOO ]
+  - name: 'Mart''s Monster Mod - Diverse Runeskulls Loot.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
+    inc:
+      - 'Mart''s Monster Mod for OOO.esp'
+      - 'Mart''s Monster Mod - Gems & Gem Dust.esp'
+    tag:
+      - Delev
+  - name: 'Mart''s Monster Mod - Diverse Runeskulls Loot G&GD.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
+    req:
+      - 'Mart''s Monster Mod - Gems & Gem Dust.esp'
+    tag:
+      - Delev
+  - name: 'Mart''s Monster Mod - Diverse Runeskull(s Loot OOO| OOO Loot)\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
+    inc:
+      - 'Mart''s Monster Mod - Gems & Gem Dust.esp'
+    req:
+      - 'Oscuro''s_Oblivion_Overhaul.esm'
+      - name: 'Mart''s Monster Mod for OOO.esp'
+        display: '[MMMforOOO](https://www.nexusmods.com/oblivion/mods/17784) or [FCOM Convergence](https://www.nexusmods.com/oblivion/mods/12249)'
+        condition: 'not file("FCOM_Convergence.esm")'
+      - name: 'FCOM_Convergence.esm'
+        display: '[MMMforOOO](https://www.nexusmods.com/oblivion/mods/17784) or [FCOM Convergence](https://www.nexusmods.com/oblivion/mods/12249)'
+        condition: 'not file("Mart''s Monster Mod for OOO.esp")'
+    tag:
+      - Delev
+  - name: 'Mart''s Monster Mod - DLCHorseArmor+Slofs .esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
+    tag:
+      - Graphics
+  - name: 'Mart''s Monster Mod - Durability & Damage.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
+    msg:
+      - *alreadyInOOO
+      - type: error
+        content: 'Delete and use ''FCOM_DurabilityAndDamage.esp''.'
+        condition: *FCOMCond
+  - name: 'Mart''s Monster Mod - Farm Animals.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
+    dirty:
+      - crc: 0xa00e61d1
+        <<: *dirtyPlugin
+        itm: 8
+  - name: 'Mart''s Monster Mod - Friendlier Factions MMM+Fran.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/17784' ]
+    msg:
+      - type: error
+        content: 'Delete and use ''FCOM_FriendlierFactions.esp''.'
+        condition: *FCOMCond
+  - name: 'Mart''s Monster Mod - Friendlier Factions OOO.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/17784' ]
+    msg:
+      - type: error
+        content: 'Delete and use ''FCOM_FriendlierFactions.esp''.'
+        condition: *FCOMCond
+  - name: 'Mart''s Monster Mod - Fran''s Leveled Quests.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
+    msg: [ *alreadyInFCOM ]
+    req:
+      - name: 'Francesco''s Optional Leveled Quests.esp'
+        display: '[Francescos Creatures and Items. Optional Extras - Leveled Quests.](https://www.nexusmods.com/oblivion/mods/40190)'
+  - name: 'Mart''s Monster Mod - Gems & Gem Dust.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
+    msg:
+      - *alreadyInOOOFull
+      - *doNotClean
+  - name: 'Mart''s Monster Mod - Hunting & Crafting.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
+    msg: [ *doNotClean ]
+    tag:
+      - Invent
+      - Scripts
+      - Stats
+  - name: 'Mart''s Monster Mod - Less Rats.esp'
+    msg:
+      - type: error
+        content: 'Delete and use ''FCOM_LessRats.esp''.'
+  - name: 'Mart''s Monster Mod - More Passive Wildlife.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
+    msg:
+      - type: say
+        content: 'Not recommended, has bugs.'
+  - name: 'Mart''s Monster Mod - More Wilderness Life.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
+    inc:
+      - 'Mart''s Monster Mod - More Wilderness Life No Gates.esp'
+  - name: 'Mart''s Monster Mod - More Wilderness Life No Gates.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
+    inc:
+      - 'Mart''s Monster Mod - More Wilderness Life.esp'
+    msg: [ *doNotClean ]
+  - name: 'Mart''s Monster Mod - No Spiders.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
+    msg:
+      - type: error
+        content: 'Delete and use ''FCOM_NoSpiders.esp''.'
+  - name: 'Mart''s Monster Mod - No Wyvern.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
+    msg:
+      - type: error
+        content: 'Delete and use ''FCOM_NoWyverns.esp''.'
+  - name: 'Mart''s Monster Mod for OOO - LessReaversInGates.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
+    msg:
+      - type: error
+        content: 'Delete. Use FCOM_LessReaversInGates instead.'
+  - name: 'Mart''s Monster Mod for OOO - NoReaversInGates.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
+    msg:
+      - type: error
+        content: 'Delete. Use ''FCOM_NoReaversInGates.esp'' instead.'
+  - name: 'Mart''s Monster Mod - Resized Races.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
+    tag:
+      - Body-Size-F
+      - Body-Size-M
+      - R.Relations
+  - name: 'Mart''s Monster Mod - Safer Roads.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'Mart''s Monster Mod Spawn Rates' ]
+        condition: 'file("Mart''s Monster Mod - Spawn Rates - Reduced( Reduced| Vanilla)\.esp")'
+      - type: error
+        content: 'Delete and use the ''FCOM_SaferRoads.esp''.'
+        condition: *FCOMCond
+  - name: 'Mart''s Monster Mod - Slof Horses Complete.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
+    msg:
+      - type: say
+        content: 'Requires a Bashed Patch to be compatible with Slof''s Horses or Slof''s Extra Horses'
+        condition: 'file("Slof.*Horse.*\.esp")'
+    tag:
+      - Actors.AIPackages
+      - Graphics
+      - Names
+      - Scripts
+  - name: 'Mart''s Monster Mod - Spawn Rates - Increased.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
+    msg: [ *useFCOMSpawnRates ]
+  - name: 'Mart''s Monster Mod - Spawn Rates - Moderate Increased.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
+    msg: [ *useFCOMSpawnRates ]
+  - name: 'Mart''s Monster Mod - Spawn Rates - Reduced.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
+    msg: [ *useFCOMSpawnRates ]
+  - name: 'Mart''s Monster Mod - Spawn Rates - Reduced Reduced.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
+    msg: [ *useFCOMSpawnRates ]
+  - name: 'Mart''s Monster Mod - Spawn Rates - Reduced Vanilla.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
+    msg: [ *useFCOMSpawnRates ]
+
+  # MMM Older versions
+  - name: 'Mart''s Monster Mod - Knights of the Nine Patch.esp'
+    inc:
+      - 'FCOM_Convergence.esm'
+    tag:
+      - Actors.AIData
+      - Actors.AIPackages
+      - Actors.Stats
+      - Delev
+      - Factions
+      - Relations
+      - Relev
+      - Stats
+  - name: 'Mart''s Monster Mod for OOO - Knights.esp'
+    inc:
+      - 'FCOM_Convergence.esm'
+    tag:
+      - Actors.AIData
+      - Actors.AIPackages
+      - Actors.Stats
+      - Delev
+      - Factions
+      - Relations
+      - Relev
+      - Stats
+  - name: 'Mart''s Monster Mod for FCOM.esp'
+    msg:
+      - type: say
+        content: 'Outdated. Install FCOM version 1.0 or later.'
+        condition: *FCOMCond
+  - name: 'Mart''s Monster Mod for Francescos.esp'
+    msg:
+      - <<: *deleteOrDeactivateX
+        subs: [ 'Not needed with FCOM.' ]
+        condition: *FCOMCond
+    tag:
+      - Delev
+      - Factions
+      - Graphics
+      - Invent
+      - Relations
+      - Relev
+      - Scripts
+  - name: 'Mart''s Monster Mod for Fran''s nvCNPC.esp'
+    msg: [ *obsoleteUseFCOM ]
+  - name: 'Mart''s Monster Mod for Fran''s nvNPC.esp'
+    msg: [ *obsoleteUseFCOM ]
+  - name: 'Mart''s Monster Mod for OOO - LessReavers.esp'
+    msg:
+      - type: error
+        content: 'Delete. Use ''Mart''s Monster Mod - Less Reavers.esp''.'
+  - name: 'Mart''s Monster Mod - Bats Addon.esp'
+    msg: [ *obsolete ]
+  - name: 'Mart''s Monster Mod - Blood Fix v3.esp'
+    msg: [ *obsolete ]
+  - name: 'Mart''s Monster Mod - Boar''s Addon.esp'
+    msg: [ *obsolete ]
+  - name: 'Mart''s Monster Mod - Diverse Creature Skins.esp'
+    msg:
+      - *alreadyInOOO
+      - *obsolete
+  - name: 'Mart''s Monster Mod - Diverse NPC faces nv.esp'
+    msg: [ *obsoleteUseFCOM ]
+  - name: 'Mart''s Monster Mod - Diverse Runeskulls.esp'
+    msg:
+      - type: say
+        content: 'Replaces both ''FCOM_ExnemRuneskulls.esp'' and ''ExnemRuneskulls.esp'' - Please remove them.'
+        condition: 'file("FCOM_ExnemRuneskulls.esp") or file("ExnemRuneskulls.esp")'
+    tag:
+      - Delev
+      - Relev
+  - name: 'Mart''s Monster Mod - Diverse RuneSkull Loot.esp'
+    inc:
+      - 'Mart''s Monster Mod for OOO.esp'
+      - 'Mart''s Monster Mod - Gems & Gem Dust.esp'
+    tag:
+      - Delev
+  - name: 'Mart''s Monster Mod - Diverse RuneSkull MMM Loot.esp'
+    req:
+      - 'Mart''s Monster Mod - Gems & Gem Dust.esp'
+    tag:
+      - Delev
+  - name: 'Marts Monster Mod - DLCHorseArmor+Slof.esp'
+    tag:
+      - Graphics
+  - name: 'Mart''s Monster Mod - Extra Reavers.esp'
+    msg: [ *obsolete ]
+  - name: 'Mart''s Monster Mod - Friendlier Factions OOO+FCOM.esp'
+    msg: [ *obsolete ]
+  - name: 'Mart''s Monster Mod - Increased Spawn Rates.esp'
+    msg: [ *obsolete ]
+  - name: 'Mart''s Monster Mod - Hairy Spiders Addon.esp'
+    msg: [ *obsolete ]
+  - name: 'Mart''s Monster Mod - Hemingweys NPC and Guard Capes.esp'
+    tag:
+      - Invent
+  - name: 'Mart''s Monster Mod - Legion Shield Replacer.esp'
+    tag:
+      - Graphics
+  - name: 'Mart''s Monster Mod - LessReaversInGates.esp'
+    msg:
+      - type: say
+        content: 'Use ''Mart''s Monster Mod for OOO - LessReaversInGates.esp'' instead.'
+        condition: *OOOCond
+  - name: 'Mart''s Monster Mod - More Reavers.esp'
+    msg: [ *obsolete ]
+  - name: 'Mart''s Monster Mod - More Reaver Variants.esp'
+    msg: [ *obsolete ]
+  - name: 'Mart''s Monster Mod - NoReaversInGates.esp'
+    msg:
+      - type: say
+        content: 'Use ''Mart''s Monster Mod for OOO - NoReaversInGates.esp'' instead.'
+        condition: *OOOCond
+  - name: 'Mart''s Monster Mod - No Reaver Hounds.esp'
+    msg: [ *obsolete ]
+  - name: 'Mart''s_Monster Mod -No Wyvern.esp'
+    msg:
+      - type: error
+        content: 'Delete and use ''FCOM_NoWyverns.esp''.'
+  - name: 'Martigen''s Monster Mod - Resized Races.esp'
+    tag:
+      - Body-Size-F
+      - Body-Size-M
+      - R.Relations
+  - name: 'Mart''s Monster Mod - Spawn Rates Increased.esp'
+    msg: [ *useFCOMSpawnRates ]
+  - name: 'Mart''s Monster Mod - Spawn Rates Moderate.esp'
+    msg: [ *useFCOMSpawnRates ]
+  - name: 'Mart''s Monster Mod - Spawn Rates Reduced Reduced.esp'
+    msg:
+      - *obsolete
+      - *useFCOMSpawnRates
+  - name: 'Mart''s Monster Mod - Vindasel.esp'
+    msg: [ *obsolete ]
+  - name: 'Mart''s Monster Mod TNR Faces.esp'
+    tag:
+      - NoMerge
+      - NpcFaces
+  - name: 'Mart''s Monster Mod COBL Races TNR.esp'
+    inc:
+      - 'COBL Races TNR.esp'
+    tag:
+      - NoMerge
+      - NpcFaces
+  - name: 'Mart''s Monster Mod - COBL Races TNR.esp'
+    inc:
+      - 'COBL Races TNR.esp'
+    tag:
+      - NoMerge
+      - NpcFaces
+  - name: 'Mart''s Monster Mod for OOO TNR Faces.esp'
+    inc:
+      - 'COBL Races TNR.esp'
+    tag:
+      - NoMerge
+      - NpcFaces
+  - name: 'Mart''s Monster Mod for OOO COBL Races TNR.esp'
+    inc:
+      - 'COBL Races TNR.esp'
+    tag:
+      - NoMerge
+      - NpcFaces
+  - name: 'Mart''s Monster Mod for OOO - COBL Races TNR.esp'
+    inc:
+      - 'COBL Races TNR.esp'
+    tag:
+      - NoMerge
+      - NpcFaces
+
   - name: 'Waalx Animals & Creatures.esm'
     url: [ 'http://tesalliance.org/forums/index.php?/files/file/1318-wac-waalx-animals-creatures/' ]
     inc:
@@ -5985,9 +6422,6 @@ plugins:
     inc:
       - 'FCOM_Convergence.esm'
       - 'Goblin Realswords+Tribal Shields.esp'
-  - name: 'Mart''s Monster Mod - Hemingweys NPC and Guard Capes.esp'
-    tag:
-      - Invent
   - name: 'RealBanditsAndHighwaymen.esp'
     tag:
       - Invent
@@ -6664,31 +7098,8 @@ plugins:
     msg: [ *obsoleteUseFCOM ]
   - name: 'FranOOOMMM_WarCry_BobsArmory.esp'
     msg: [ *obsoleteUseFCOM ]
-  - name: 'Mart''s Monster Mod - Diverse NPC faces nv.esp'
-    msg: [ *obsoleteUseFCOM ]
-  - name: 'Mart''s Monster Mod for Fran''s nvCNPC.esp'
-    msg: [ *obsoleteUseFCOM ]
-  - name: 'Mart''s Monster Mod for Fran''s nvNPC.esp'
-    msg: [ *obsoleteUseFCOM ]
   - name: 'Oscuro''s Combat Behavior.esp'
     msg: [ *obsoleteUseFCOM ]
-  - name: 'Mart''s Monster Mod for FCOM.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Install FCOM version 1.0 or later.'
-        condition: *FCOMCond
-  - name: 'Mart''s Monster Mod - Fran''s Leveled Quests.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
-    msg: [ *alreadyInFCOM ]
-    req:
-      - name: 'Francesco''s Optional Leveled Quests.esp'
-        display: '[Francescos Creatures and Items. Optional Extras - Leveled Quests.](https://www.nexusmods.com/oblivion/mods/40190)'
-  - name: 'Mart''s Monster Mod - Additional Enemy NPC Vars.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
-    msg:
-      - type: say
-        content: 'Can increase the chances of a CTD in a heavily modded game due to increased processor load.'
-      - *doNotClean
   - name: 'FCOM_Convergence.esp'
     url: [ 'http://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/' ]
     req:
@@ -6732,14 +7143,6 @@ plugins:
     msg: [ *obsolete ]
   - name: 'MMM - UberhulkParalyzeFix.esp'
     msg: [ *obsolete ]
-  - name: 'Mart''s Monster Mod - Diverse Runeskulls.esp'
-    msg:
-      - type: say
-        content: 'Replaces both ''FCOM_ExnemRuneskulls.esp'' and ''ExnemRuneskulls.esp'' - Please remove them.'
-        condition: 'file("FCOM_ExnemRuneskulls.esp") or file("ExnemRuneskulls.esp")'
-    tag:
-      - Delev
-      - Relev
   - name: 'FCOM_EntropicOrderRebalance.esp'
     url: [ 'http://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/' ]
     req:
@@ -6801,20 +7204,6 @@ plugins:
     msg:
       - type: say
         content: 'Delete. Use Mart''s Monster Mod - More Wilderness Life.esp or Mart''s Monster Mod - More Wilderness Life No Gates.esp instead'
-  - name: 'Mart''s Monster Mod - More Wilderness Life.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
-    inc:
-      - 'Mart''s Monster Mod - More Wilderness Life No Gates.esp'
-  - name: 'Mart''s Monster Mod - More Wilderness Life No Gates.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
-    inc:
-      - 'Mart''s Monster Mod - More Wilderness Life.esp'
-    msg: [ *doNotClean ]
-  - name: 'Mart''s Monster Mod - More Passive Wildlife.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
-    msg:
-      - type: say
-        content: 'Not recommended, has bugs.'
   - name: 'FCOM_SaferRoads.esp'
     url: [ 'http://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/' ]
     req:
@@ -6822,41 +7211,18 @@ plugins:
     tag:
       - Delev
       - Relev
-  - name: 'Mart''s Monster Mod - Less Rats.esp'
-    msg:
-      - type: error
-        content: 'Delete and use ''FCOM_LessRats.esp''.'
   - name: 'FCOM_LessRats.esp'
     url: [ 'http://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/' ]
     req:
       - 'FCOM_Convergence.esm'
-  - name: 'Mart''s Monster Mod - No Spiders.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
-    msg:
-      - type: error
-        content: 'Delete and use ''FCOM_NoSpiders.esp''.'
   - name: 'FCOM_NoSpiders.esp'
     url: [ 'http://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/' ]
     req:
       - 'FCOM_Convergence.esm'
-  - name: 'Mart''s Monster Mod - No Wyvern.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
-    msg:
-      - type: error
-        content: 'Delete and use ''FCOM_NoWyverns.esp''.'
-  - name: 'Mart''s_Monster Mod -No Wyvern.esp'
-    msg:
-      - type: error
-        content: 'Delete and use ''FCOM_NoWyverns.esp''.'
   - name: 'FCOM_NoWyverns.esp'
     url: [ 'http://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/' ]
     req:
       - 'FCOM_Convergence.esm'
-  - name: 'Mart''s Monster Mod for OOO - NoReaversInGates.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
-    msg:
-      - type: error
-        content: 'Delete. Use ''FCOM_NoReaversInGates.esp'' instead.'
   - name: 'FCOM_NoReaversInGates.esp'
     url: [ 'http://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/' ]
     inc:
@@ -6867,245 +7233,20 @@ plugins:
     url: [ 'http://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/' ]
     req:
       - 'FCOM_Convergence.esm'
-  - name: 'Mart''s Monster Mod for OOO - LessReaversInGates.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
-    msg:
-      - type: error
-        content: 'Delete. Use FCOM_LessReaversInGates instead.'
   - name: 'FCOM_LessReaversInGates.esp'
     url: [ 'http://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/' ]
     inc:
       - 'FCOM_NoReaversInGates.esp'
     req:
       - 'FCOM_Convergence.esm'
-  - name: 'Mart''s Monster Mod - Increased Spawn Rates.esp'
-    msg: [ *obsolete ]
-  - name: 'Mart''s Monster Mod - Spawn Rates Increased.esp'
-    msg: [ *useFCOMSpawnRates ]
-  - name: 'Mart''s Monster Mod - Spawn Rates - Increased.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
-    msg: [ *useFCOMSpawnRates ]
-  - name: 'Mart''s Monster Mod - Spawn Rates - Moderate Increased.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
-    msg: [ *useFCOMSpawnRates ]
-  - name: 'Mart''s Monster Mod - Spawn Rates Moderate.esp'
-    msg: [ *useFCOMSpawnRates ]
-  - name: 'Mart''s Monster Mod - Spawn Rates - Reduced.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
-    msg: [ *useFCOMSpawnRates ]
-  - name: 'Mart''s Monster Mod - Spawn Rates Reduced Reduced.esp'
-    msg:
-      - *obsolete
-      - *useFCOMSpawnRates
-  - name: 'Mart''s Monster Mod - Spawn Rates - Reduced Reduced.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
-    msg: [ *useFCOMSpawnRates ]
-  - name: 'Mart''s Monster Mod - Spawn Rates - Reduced Vanilla.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
-    msg: [ *useFCOMSpawnRates ]
-  - name: 'Mart''s Monster Mod - More Reavers.esp'
-    msg: [ *obsolete ]
-  - name: 'Mart''s Monster Mod - Extra Reavers.esp'
-    msg: [ *obsolete ]
-  - name: 'Mart''s Monster Mod for OOO - LessReavers.esp'
-    msg:
-      - type: error
-        content: 'Delete. Use ''Mart''s Monster Mod - Less Reavers.esp''.'
   - name: 'Gems and Gem Dusts - MMM.esp'
     msg: [ *alreadyInOOOFull ]
-  - name: 'Mart''s Monster Mod - Hunting & Crafting.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
-    msg: [ *doNotClean ]
-    tag:
-      - Invent
-      - Scripts
-      - Stats
-  - name: 'Mart''s Monster Mod - Farm Animals.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
-    dirty:
-      - crc: 0xa00e61d1
-        <<: *dirtyPlugin
-        itm: 8
   - name: 'MMM - Playable Undead Armors.esp'
     tag:
       - Invent
   - name: 'MMM - Playable Undead Armors - Oblivion WarCry Compatability Patch.esp'
     tag:
       - Invent
-  - name: 'Mart''s Monster Mod.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
-    msg: [ *alreadyInFCOM ]
-    tag:
-      - Actors.AIData
-      - Actors.AIPackages
-      - Actors.Stats
-      - Delev
-      - Factions
-      - Graphics
-      - Invent
-      - Names
-      - Relations
-      - Relev
-      - Scripts
-      - Stats
-  - name: 'Mart''s Monster Mod for Fran.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
-    msg:
-      - <<: *deleteOrDeactivateX
-        subs: [ 'Not needed with FCOM.' ]
-        condition: *FCOMCond
-    tag:
-      - Actors.AIData
-      - Actors.AIPackages
-      - Actors.Stats
-      - Delev
-      - Factions
-      - Graphics
-      - Invent
-      - Names
-      - Relations
-      - Relev
-      - Scripts
-      - Stats
-  - name: 'Mart''s Monster Mod for Francescos.esp'
-    msg:
-      - <<: *deleteOrDeactivateX
-        subs: [ 'Not needed with FCOM.' ]
-        condition: *FCOMCond
-    tag:
-      - Delev
-      - Factions
-      - Graphics
-      - Invent
-      - Relations
-      - Relev
-      - Scripts
-  - name: 'Mart''s Monster Mod TNR Faces.esp'
-    tag:
-      - NoMerge
-      - NpcFaces
-  - name: 'Mart''s Monster Mod COBL Races TNR.esp'
-    inc:
-      - 'COBL Races TNR.esp'
-    tag:
-      - NoMerge
-      - NpcFaces
-  - name: 'Mart''s Monster Mod - COBL Races TNR.esp'
-    inc:
-      - 'COBL Races TNR.esp'
-    tag:
-      - NoMerge
-      - NpcFaces
-  - name: 'Mart''s Monster Mod for OOO.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
-    msg:
-      - <<: *deleteOrDeactivateX
-        subs: [ 'Not needed with FCOM.' ]
-        condition: *FCOMCond
-    tag:
-      - Actors.AIData
-      - Actors.AIPackages
-      - Actors.Stats
-      - Delev
-      - Factions
-      - Graphics
-      - Invent
-      - Names
-      - Relations
-      - Relev
-      - Scripts
-      - Stats
-  - name: 'Mart''s Monster Mod for OOO TNR Faces.esp'
-    inc:
-      - 'COBL Races TNR.esp'
-    tag:
-      - NoMerge
-      - NpcFaces
-  - name: 'Mart''s Monster Mod for OOO COBL Races TNR.esp'
-    inc:
-      - 'COBL Races TNR.esp'
-    tag:
-      - NoMerge
-      - NpcFaces
-  - name: 'Mart''s Monster Mod for OOO - COBL Races TNR.esp'
-    inc:
-      - 'COBL Races TNR.esp'
-    tag:
-      - NoMerge
-      - NpcFaces
-  - name: 'Mart''s Monster Mod - Shivering Isles.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
-    tag:
-      - Actors.AIData
-      - Actors.AIPackages
-      - Actors.Stats
-      - Delev
-      - Factions
-      - Graphics
-      - Invent
-      - Names
-      - Relations
-      - Relev
-      - Scripts
-      - Stats
-  - name: 'Mart''s Monster Mod - Blood Fix v3.esp'
-    msg: [ *obsolete ]
-  - name: 'Mart''s Monster Mod - Diverse Imperial Armor.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
-    msg: [ *alreadyInOOO ]
-  - name: 'Mart''s Monster Mod - Diverse Creature Skins.esp'
-    msg:
-      - *alreadyInOOO
-      - *obsolete
-  - name: 'Mart''s Monster Mod - More Reaver Variants.esp'
-    msg: [ *obsolete ]
-  - name: 'Mart''s Monster Mod - Gems & Gem Dust.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
-    msg:
-      - *alreadyInOOOFull
-      - *doNotClean
-  - name: 'Mart''s Monster Mod - Durability & Damage.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
-    msg:
-      - *alreadyInOOO
-      - type: error
-        content: 'Delete and use ''FCOM_DurabilityAndDamage.esp''.'
-        condition: *FCOMCond
-  - name: 'Mart''s Monster Mod - LessReaversInGates.esp'
-    msg:
-      - type: say
-        content: 'Use ''Mart''s Monster Mod for OOO - LessReaversInGates.esp'' instead.'
-        condition: *OOOCond
-  - name: 'Mart''s Monster Mod - Safer Roads.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
-    msg:
-      - <<: *alreadyInX
-        subs: [ 'Mart''s Monster Mod Spawn Rates' ]
-        condition: 'file("Mart''s Monster Mod - Spawn Rates - Reduced( Reduced| Vanilla)\.esp")'
-      - type: error
-        content: 'Delete and use the ''FCOM_SaferRoads.esp''.'
-        condition: *FCOMCond
-  - name: 'Mart''s Monster Mod - NoReaversInGates.esp'
-    msg:
-      - type: say
-        content: 'Use ''Mart''s Monster Mod for OOO - NoReaversInGates.esp'' instead.'
-        condition: *OOOCond
-  - name: 'Mart''s Monster Mod - No Reaver Hounds.esp'
-    msg: [ *obsolete ]
-  - name: 'Mart''s Monster Mod - Vindasel.esp'
-    msg: [ *obsolete ]
-  - name: 'Mart''s Monster Mod - Bats Addon.esp'
-    msg: [ *obsolete ]
-  - name: 'Mart''s Monster Mod - City Defences.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
-    after:
-      - 'Mart''s Monster Mod - More Wilderness Life No Gates.esp'
-    inc:
-      - name: 'Better Cities Resources.esm'
-        display: 'Better Cities'
-    msg: [ *doNotClean ]
-  - name: 'Mart''s Monster Mod - Friendlier Factions OOO+FCOM.esp'
-    msg: [ *obsolete ]
   - name: 'MrSiika''sFarmAnimals.esp'
     msg:
       - type: say
@@ -7134,66 +7275,6 @@ plugins:
     msg:
       - type: say
         content: 'MMM users should use ''VASE - Cyrodiil for MMM.esp'' instead.'
-  - name: 'Mart''s Monster Mod - Boar''s Addon.esp'
-    msg: [ *obsolete ]
-  - name: 'Mart''s Monster Mod - Hairy Spiders Addon.esp'
-    msg: [ *obsolete ]
-  - name: 'Mart''s Monster Mod - Slof Horses Complete.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
-    msg:
-      - type: say
-        content: 'Requires a Bashed Patch to be compatible with Slof''s Horses or Slof''s Extra Horses'
-        condition: 'file("Slof.*Horse.*\.esp")'
-    tag:
-      - Actors.AIPackages
-      - Graphics
-      - Names
-      - Scripts
-  - name: 'Marts Monster Mod - DLCHorseArmor+Slof.esp'
-    tag:
-      - Graphics
-  - name: 'Mart''s Monster Mod - DLCHorseArmor+Slofs .esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
-    tag:
-      - Graphics
-  - name: 'Mart''s Monster Mod - Diverse RuneSkull Loot.esp'
-    inc:
-      - 'Mart''s Monster Mod for OOO.esp'
-      - 'Mart''s Monster Mod - Gems & Gem Dust.esp'
-    tag:
-      - Delev
-  - name: 'Mart''s Monster Mod - Diverse Runeskulls Loot.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
-    inc:
-      - 'Mart''s Monster Mod for OOO.esp'
-      - 'Mart''s Monster Mod - Gems & Gem Dust.esp'
-    tag:
-      - Delev
-  - name: 'Mart''s Monster Mod - Diverse RuneSkull MMM Loot.esp'
-    req:
-      - 'Mart''s Monster Mod - Gems & Gem Dust.esp'
-    tag:
-      - Delev
-  - name: 'Mart''s Monster Mod - Diverse Runeskulls Loot G&GD.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
-    req:
-      - 'Mart''s Monster Mod - Gems & Gem Dust.esp'
-    tag:
-      - Delev
-  - name: 'Mart''s Monster Mod - Diverse Runeskull(s Loot OOO| OOO Loot)\.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
-    inc:
-      - 'Mart''s Monster Mod - Gems & Gem Dust.esp'
-    req:
-      - 'Oscuro''s_Oblivion_Overhaul.esm'
-      - name: 'Mart''s Monster Mod for OOO.esp'
-        display: '[MMMforOOO](https://www.nexusmods.com/oblivion/mods/17784) or [FCOM Convergence](https://www.nexusmods.com/oblivion/mods/12249)'
-        condition: 'not file("FCOM_Convergence.esm")'
-      - name: 'FCOM_Convergence.esm'
-        display: '[MMMforOOO](https://www.nexusmods.com/oblivion/mods/17784) or [FCOM Convergence](https://www.nexusmods.com/oblivion/mods/12249)'
-        condition: 'not file("Mart''s Monster Mod for OOO.esp")'
-    tag:
-      - Delev
   - name: 'OMOBS_MMM.esp'
     tag:
       - Stats
@@ -7434,18 +7515,6 @@ plugins:
   - name: 'FCOM_Archery_Deadly_Artifacts.esp'
     tag:
       - Stats
-  - name: 'Mart''s Monster Mod - Friendlier Factions MMM+Fran.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/17784' ]
-    msg:
-      - type: error
-        content: 'Delete and use ''FCOM_FriendlierFactions.esp''.'
-        condition: *FCOMCond
-  - name: 'Mart''s Monster Mod - Friendlier Factions OOO.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/17784' ]
-    msg:
-      - type: error
-        content: 'Delete and use ''FCOM_FriendlierFactions.esp''.'
-        condition: *FCOMCond
   - name: 'FCOM_FriendlierFactions.esp'
     url: [ 'http://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/' ]
     tag:
@@ -7581,9 +7650,6 @@ plugins:
     tag:
       - Names
       - Stats
-  - name: 'Mart''s Monster Mod - Legion Shield Replacer.esp'
-    tag:
-      - Graphics
   - name: 'Legion Shield Replacer - OOO.esp'
     tag:
       - Graphics
@@ -12040,56 +12106,6 @@ plugins:
       - type: say
         content: 'Recommended to upgrade to Quiet Feet MAX 2.0, which does not require a plugin and is more compatible.'
       - *bashedPatchTweak
-  - name: 'Mart''s Monster Mod - Knights of the Nine Patch.esp'
-    inc:
-      - 'FCOM_Convergence.esm'
-    tag:
-      - Actors.AIData
-      - Actors.AIPackages
-      - Actors.Stats
-      - Delev
-      - Factions
-      - Relations
-      - Relev
-      - Stats
-  - name: 'Mart''s Monster Mod - Knights.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
-    inc:
-      - 'FCOM_Convergence.esm'
-    tag:
-      - Actors.AIData
-      - Actors.AIPackages
-      - Actors.Stats
-      - Delev
-      - Factions
-      - Relations
-      - Relev
-      - Stats
-  - name: 'Mart''s Monster Mod for OOO - Knights.esp'
-    inc:
-      - 'FCOM_Convergence.esm'
-    tag:
-      - Actors.AIData
-      - Actors.AIPackages
-      - Actors.Stats
-      - Delev
-      - Factions
-      - Relations
-      - Relev
-      - Stats
-  - name: 'Mart''s Monster Mod for OOO - Knights .esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
-    inc:
-      - 'FCOM_Convergence.esm'
-    tag:
-      - Actors.AIData
-      - Actors.AIPackages
-      - Actors.Stats
-      - Delev
-      - Factions
-      - Relations
-      - Relev
-      - Stats
   - name: 'OCC-KOTN-Patch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/32925' ]
     tag:
@@ -19820,17 +19836,6 @@ plugins:
     tag:
       - Body-F
       - Body-Size-F
-  - name: 'Mart''s Monster Mod - Resized Races.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
-    tag:
-      - Body-Size-F
-      - Body-Size-M
-      - R.Relations
-  - name: 'Martigen''s Monster Mod - Resized Races.esp'
-    tag:
-      - Body-Size-F
-      - Body-Size-M
-      - R.Relations
   - name: 'Bigger_Dremora.esp'
     tag:
       - Body-Size-F
