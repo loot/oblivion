@@ -1373,7 +1373,10 @@ plugins:
       - Stats
   - name: 'Mart''s Monster Mod.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
-    msg: [ *alreadyInFCOM ]
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'FCOM_Convergence.esp' ]
+        condition: 'active("FCOM_Convergence.esp")'
     tag:
       - Actors.AIData
       - Actors.AIPackages
@@ -1390,9 +1393,9 @@ plugins:
   - name: 'Mart''s Monster Mod for Fran.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
     msg:
-      - <<: *deleteOrDeactivateX
-        subs: [ 'Not needed with FCOM.' ]
-        condition: *FCOMCond
+      - <<: *alreadyInX
+        subs: [ 'FCOM_Convergence.esp' ]
+        condition: 'active("FCOM_Convergence.esp")'
     tag:
       - Actors.AIData
       - Actors.AIPackages
@@ -1409,9 +1412,9 @@ plugins:
   - name: 'Mart''s Monster Mod for OOO.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
     msg:
-      - <<: *deleteOrDeactivateX
-        subs: [ 'Not needed with FCOM.' ]
-        condition: *FCOMCond
+      - <<: *alreadyInX
+        subs: [ 'FCOM_Convergence.esp' ]
+        condition: 'active("FCOM_Convergence.esp")'
     tag:
       - Actors.AIData
       - Actors.AIPackages
