@@ -163,10 +163,6 @@ common:
   - &useWithBashedPatch
     type: say
     content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
-  - &useFCOMSpawnRates
-    type: say
-    content: 'Consider using ''FCOM_SpawnRatesReduced.esp'', ''FCOM_SpawnRatesSlightlyReduced.esp'' or ''FCOM_SpawnRatesStronger.esp'' instead.'
-    condition: *FCOMCond
   - &roadsAndBridgesDetected
     type: error
     content: 'road+bridges.esp has been detected. New Roads & Bridges Revised and all dependent patches must be uninstalled before using Roads of Cyrodiil. See Roads of Cyrodiil readme for upgrade instructions.'
@@ -1757,30 +1753,30 @@ plugins:
     clean:
       - crc: 0x4618F324
         util: 'TES4Edit v4.0.2'
+  - name: 'Mart''s Monster Mod - Spawn Rates.*\.esp'
+    msg:
+      - <<: *useInstead
+        subs: [ 'FCOM Spawn Rates' ]
+        condition: 'active("FCOM_Convergence.esp")'
   - name: 'Mart''s Monster Mod - Spawn Rates - Increased.esp'
-    msg: [ *useFCOMSpawnRates ]
     dirty:
       - <<: *quickClean
         crc: 0x16438018
         util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
   - name: 'Mart''s Monster Mod - Spawn Rates - Moderate Increased.esp'
-    msg: [ *useFCOMSpawnRates ]
     clean:
       - crc: 0xA63575E0
         util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - Spawn Rates - Reduced.esp'
-    msg: [ *useFCOMSpawnRates ]
     clean:
       - crc: 0xC6BB0E58
         util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - Spawn Rates - Reduced Reduced.esp'
-    msg: [ *useFCOMSpawnRates ]
     clean:
       - crc: 0xF9D8C6D8
         util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - Spawn Rates - Reduced Vanilla.esp'
-    msg: [ *useFCOMSpawnRates ]
     clean:
       - crc: 0x3EE2CD43
         util: 'TES4Edit v4.0.2'
@@ -1899,13 +1895,9 @@ plugins:
       - Body-Size-M
       - R.Relations
   - name: 'Mart''s Monster Mod - Spawn Rates Increased.esp'
-    msg: [ *useFCOMSpawnRates ]
   - name: 'Mart''s Monster Mod - Spawn Rates Moderate.esp'
-    msg: [ *useFCOMSpawnRates ]
   - name: 'Mart''s Monster Mod - Spawn Rates Reduced Reduced.esp'
-    msg:
-      - *obsolete
-      - *useFCOMSpawnRates
+    msg: [ *obsolete ]
   - name: 'Mart''s Monster Mod - Vindasel.esp'
     msg: [ *obsolete ]
   - name: 'Mart''s Monster Mod TNR Faces.esp'
