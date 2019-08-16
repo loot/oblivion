@@ -1371,7 +1371,7 @@ plugins:
       - Relations
       - Relev
       - Stats
-  - name: 'Mart''s Monster Mod.esp'
+  - name: 'Mart''s Monster Mod( for Fran| for OOO)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
     msg:
       - <<: *alreadyInX
@@ -1390,50 +1390,19 @@ plugins:
       - Relev
       - Scripts
       - Stats
+  - name: 'Mart''s Monster Mod.esp'
+    msg:
       - <<: *requiresX
         subs: [ 'Mart''s Monster Mod.bsa' ]
         condition: 'not file("Mart''s Monster Mod.bsa")'
   - name: 'Mart''s Monster Mod for Fran.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
     msg:
-      - <<: *alreadyInX
-        subs: [ 'FCOM_Convergence.esp' ]
-        condition: 'active("FCOM_Convergence.esp")'
-    tag:
-      - Actors.AIData
-      - Actors.AIPackages
-      - Actors.Stats
-      - Delev
-      - Factions
-      - Graphics
-      - Invent
-      - Names
-      - Relations
-      - Relev
-      - Scripts
-      - Stats
       - <<: *requiresX
         subs: [ 'Mart''s Monster Mod for Frans.bsa' ]
         condition: 'not file("Mart''s Monster Mod for Frans.bsa")'
   - name: 'Mart''s Monster Mod for OOO.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
     msg:
-      - <<: *alreadyInX
-        subs: [ 'FCOM_Convergence.esp' ]
-        condition: 'active("FCOM_Convergence.esp")'
-    tag:
-      - Actors.AIData
-      - Actors.AIPackages
-      - Actors.Stats
-      - Delev
-      - Factions
-      - Graphics
-      - Invent
-      - Names
-      - Relations
-      - Relev
-      - Scripts
-      - Stats
       - <<: *requiresX
         subs: [ 'Mart''s Monster Mod for OOO.bsa' ]
         condition: 'not file("Mart''s Monster Mod for OOO.bsa")'
