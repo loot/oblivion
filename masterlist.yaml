@@ -1018,6 +1018,10 @@ plugins:
     inc:
       - 'FCOM_Convergence.esm'
       - 'Mart''s Monster Mod.esm'
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'Mart''s Monster Mod for Frans' ]
+        condition: 'active("Mart''s Monster Mod for Frans.esp")'
     tag:
       - Actors.AIPackages
       - Delev
@@ -1032,10 +1036,18 @@ plugins:
     inc:
       - 'FCOM_Convergence.esm'
       - 'Mart''s Monster Mod.esm'
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'Mart''s Monster Mod for Frans' ]
+        condition: 'active("Mart''s Monster Mod for Frans.esp")'
   - name: 'Francesco''s Optional Chance of More Enemies.esp'
     inc:
       - name: 'Mart''s Monster Mod.esm'
         condition: 'not active("FCOM_Convergence.esm")'
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'Mart''s Monster Mod' ]
+        condition: 'active("Mart''s Monster Mod.esm") and not active("FCOM_Convergence.esm")'
   - name: 'Francesco''s Optional Chance of Stronger Enemies.esp'
     dirty:
       - crc: 0x4f003db0
@@ -1061,6 +1073,10 @@ plugins:
     inc:
       - name: 'Mart''s Monster Mod.esm'
         condition: 'not active("FCOM_Convergence.esm")'
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'Mart''s Monster Mod' ]
+        condition: 'active("Mart''s Monster Mod.esm") and not active("FCOM_Convergence.esm")'
     tag:
       - Actors.ACBS
       - Actors.Stats
@@ -1071,7 +1087,11 @@ plugins:
   - name: 'Francesco''s Optional New Adventurers.esp'
     inc:
       - 'FCOM_Convergence.esm'
-    msg: [ *alreadyInFCOM ]
+    msg:
+      - *alreadyInFCOM
+      - <<: *alreadyInX
+        subs: [ 'Mart''s Monster Mod for Frans' ]
+        condition: 'active("Mart''s Monster Mod for Frans.esp")'
   - name: 'Francesco''s Optional Vendor Tweaks.esp'
     inc:
       - 'FCOM_Convergence.esm'
