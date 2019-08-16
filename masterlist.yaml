@@ -1390,6 +1390,9 @@ plugins:
       - Relev
       - Scripts
       - Stats
+      - <<: *requiresX
+        subs: [ 'Mart''s Monster Mod.bsa' ]
+        condition: 'not file("Mart''s Monster Mod.bsa")'
   - name: 'Mart''s Monster Mod for Fran.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
     msg:
@@ -1409,6 +1412,9 @@ plugins:
       - Relev
       - Scripts
       - Stats
+      - <<: *requiresX
+        subs: [ 'Mart''s Monster Mod for Frans.bsa' ]
+        condition: 'not file("Mart''s Monster Mod for Frans.bsa")'
   - name: 'Mart''s Monster Mod for OOO.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
     msg:
@@ -1428,6 +1434,9 @@ plugins:
       - Relev
       - Scripts
       - Stats
+      - <<: *requiresX
+        subs: [ 'Mart''s Monster Mod for OOO.bsa' ]
+        condition: 'not file("Mart''s Monster Mod for OOO.bsa")'
   - name: 'Mart''s Monster Mod - Additional Enemy NPC Vars.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
     msg:
@@ -7116,9 +7125,13 @@ plugins:
     msg: [ *obsoleteUseFCOM ]
   - name: 'FCOM_Convergence.esp'
     url: [ 'http://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/' ]
+    msg:
+      - *doNotClean
+      - <<: *requiresX
+        subs: [ 'FCOM_Convergence_Mart''s Monster Mod.bsa' ]
+        condition: 'not file("FCOM_Convergence_Mart''s Monster Mod.bsa")'
     req:
       - 'FCOM_Convergence.esm'
-    msg: [ *doNotClean ]
     tag:
       - Actors.ACBS
       - Actors.AIData
