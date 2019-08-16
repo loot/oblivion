@@ -1377,6 +1377,9 @@ plugins:
       - <<: *alreadyInX
         subs: [ 'FCOM_Convergence.esp' ]
         condition: 'active("FCOM_Convergence.esp")'
+      - <<: *useOnlyOneX
+        subs: [ 'Mart''s Monster Mod esp' ]
+        condition: 'many("Mart''s Monster Mod( for Fran| for OOO)?\.esp")'
     tag:
       - Actors.AIData
       - Actors.AIPackages
