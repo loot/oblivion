@@ -1797,15 +1797,9 @@ plugins:
 
   # MMM Older versions
   - name: 'Mart''s Monster Mod for FCOM.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Install FCOM version 1.0 or later.'
-        condition: *FCOMCond
+    msg: [ *obsoleteUseFCOM ]
   - name: 'Mart''s Monster Mod for Francescos.esp'
-    msg:
-      - <<: *deleteOrDeactivateX
-        subs: [ 'Not needed with FCOM.' ]
-        condition: *FCOMCond
+    msg: [ *alreadyInFCOM ]
     tag:
       - Delev
       - Factions
