@@ -1319,9 +1319,10 @@ plugins:
       - Scripts
       - Stats
     dirty:
-      - crc: 0xfa08de55
+      - <<: *quickClean
+        crc: 0xFA08DE55
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
-        <<: *dirtyPlugin
   - name: 'Mart''s Monster Mod for OOO.esm'
     inc:
       - 'FCOM_Convergence.esm'
@@ -1330,6 +1331,11 @@ plugins:
       - Factions
       - Relations
       - Relev
+    dirty:
+      - <<: *quickClean
+        crc: 0x435C16D9
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 3
   - name: 'Mart''s Monster Mod - Shivering Isles.esp'
     tag:
       - Actors.AIData
@@ -1344,6 +1350,11 @@ plugins:
       - Relev
       - Scripts
       - Stats
+    dirty:
+      - <<: *quickClean
+        crc: 0xDF4B7C20
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 3
   - name: 'Mart''s Monster Mod( for OOO)? - Knights( | of the Nine Patch)?\.esp'
     inc:
       - 'FCOM_Convergence.esm'
@@ -1360,6 +1371,18 @@ plugins:
       - Relations
       - Relev
       - Stats
+  - name: 'Mart''s Monster Mod - Knights.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x51DBA3E6
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
+  - name: 'Mart''s Monster Mod for OOO - Knights .esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x436D9B8D
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
   - name: 'Mart''s Monster Mod( for Fran| for OOO)?\.esp'
     msg:
       - <<: *alreadyInX
@@ -1386,16 +1409,31 @@ plugins:
       - <<: *requiresX
         subs: [ 'Mart''s Monster Mod.bsa' ]
         condition: 'not file("Mart''s Monster Mod.bsa")'
+    dirty:
+      - <<: *quickClean
+        crc: 0x8528FB34
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 904
   - name: 'Mart''s Monster Mod for Fran.esp'
     msg:
       - <<: *requiresX
         subs: [ 'Mart''s Monster Mod for Frans.bsa' ]
         condition: 'not file("Mart''s Monster Mod for Frans.bsa")'
+    dirty:
+      - <<: *quickClean
+        crc: 0x4D843B1C
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 870
   - name: 'Mart''s Monster Mod for OOO.esp'
     msg:
       - <<: *requiresX
         subs: [ 'Mart''s Monster Mod for OOO.bsa' ]
         condition: 'not file("Mart''s Monster Mod for OOO.bsa")'
+    dirty:
+      - <<: *quickClean
+        crc: 0x33A4E76A
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 402
   - name: 'Mart''s Monster Mod - Additional Enemy NPC Vars.esp'
     msg:
       - type: say
@@ -1408,19 +1446,38 @@ plugins:
       - name: 'Better Cities Resources.esm'
         display: 'Better Cities'
     msg: [ *doNotClean ]
+  - name: 'Mart''s Monster Mod - Curse of Hircine.esp'
+    clean:
+      - crc: 0xBD0F4261
+        util: 'TES4Edit v4.0.2'
+  - name: 'Mart''s Monster Mod - Diverse Creatures Expansion.esp'
+    clean:
+      - crc: 0xE300B724
+        util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - Diverse Imperial Armor.esp'
     msg: [ *alreadyInOOO ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x2A650097
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
   - name: 'Mart''s Monster Mod - Diverse Runeskulls Loot.esp'
     inc:
       - 'Mart''s Monster Mod for OOO.esp'
       - 'Mart''s Monster Mod - Gems & Gem Dust.esp'
     tag:
       - Delev
+    clean:
+      - crc: 0xF8F36924
+        util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - Diverse Runeskulls Loot G&GD.esp'
     req:
       - 'Mart''s Monster Mod - Gems & Gem Dust.esp'
     tag:
       - Delev
+    clean:
+      - crc: 0xBC851604
+        util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - Diverse Runeskull(s Loot OOO| OOO Loot)\.esp'
     inc:
       - 'Mart''s Monster Mod - Gems & Gem Dust.esp'
@@ -1434,64 +1491,214 @@ plugins:
         condition: 'not file("Mart''s Monster Mod for OOO.esp")'
     tag:
       - Delev
+  - name: 'Mart''s Monster Mod - Diverse Runeskulls Loot OOO.esp'
+    clean:
+      - crc: 0x932A57C9
+        util: 'TES4Edit v4.0.2'
+  - name: 'Mart''s Monster Mod - Diverse WaterLife.esp'
+    clean:
+      - crc: 0x75A8F813
+        util: 'TES4Edit v4.0.2'
+  - name: 'Mart''s Monster Mod - Divserse Wisp and VASE Addon.esp'
+    clean:
+      - crc: 0xE79AC594
+        util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - DLCHorseArmor+Slofs .esp'
     tag:
       - Graphics
+    clean:
+      - crc: 0xDEB6DE93
+        util: 'TES4Edit v4.0.2'
+  - name: 'Mart''s Monster Mod - Dungeons of MMM.esp'
+    clean:
+      - crc: 0x9208A5D0
+        util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - Durability & Damage.esp'
     msg:
       - *alreadyInOOO
       - type: error
         content: 'Delete and use ''FCOM_DurabilityAndDamage.esp''.'
         condition: *FCOMCond
-  - name: 'Mart''s Monster Mod - Farm Animals.esp'
+    clean:
+      - crc: 0xA9481543
+        util: 'TES4Edit v4.0.2'
+  - name: 'Mart''s Monster Mod - Extra Wounding.esp'
     dirty:
-      - crc: 0xa00e61d1
-        <<: *dirtyPlugin
-        itm: 8
+      - <<: *quickClean
+        crc: 0xD8C0168F
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
+  - name: 'Mart''s Monster Mod - Farm Animals.esp'
+    clean:
+      - crc: 0x7AD3E3A9
+        util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - Friendlier Factions MMM+Fran.esp'
     msg:
       - type: error
         content: 'Delete and use ''FCOM_FriendlierFactions.esp''.'
         condition: *FCOMCond
+    clean:
+      - crc: 0x5794FAE2
+        util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - Friendlier Factions OOO.esp'
     msg:
       - type: error
         content: 'Delete and use ''FCOM_FriendlierFactions.esp''.'
         condition: *FCOMCond
+    dirty:
+      - <<: *quickClean
+        crc: 0x2E446319
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
   - name: 'Mart''s Monster Mod - Fran''s Leveled Quests.esp'
     msg: [ *alreadyInFCOM ]
     req:
       - name: 'Francesco''s Optional Leveled Quests.esp'
         display: '[Francescos Creatures and Items. Optional Extras - Leveled Quests.](https://www.nexusmods.com/oblivion/mods/40190)'
+    clean:
+      - crc: 0xDE377299
+        util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - Gems & Gem Dust.esp'
-    msg:
-      - *alreadyInOOOFull
-      - *doNotClean
+    msg: [ *alreadyInOOOFull ]
+    clean:
+      - crc: 0x5327F263
+        util: 'TES4Edit v4.0.2'
+  - name: 'Mart''s Monster Mod - Hemingwey Capes Addon.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x497A32B5
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 106
+  - name: 'Mart''s Monster Mod - Hemingweys NPC Capes Improved.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x56442922
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 10
   - name: 'Mart''s Monster Mod - Hunting & Crafting.esp'
-    msg: [ *doNotClean ]
     tag:
       - Invent
       - Scripts
       - Stats
+    clean:
+      - crc: 0xD53A8A19
+        util: 'TES4Edit v4.0.2'
+  - name: 'Mart''s Monster Mod - Less Bone Loot.esp'
+    clean:
+      - crc: 0xA78B9CE3
+        util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - Less Rats.esp'
     msg:
       - type: error
         content: 'Delete and use ''FCOM_LessRats.esp''.'
+    clean:
+      - crc: 0xED551EA9
+        util: 'TES4Edit v4.0.2'
+  - name: 'Mart''s Monster Mod - Less Reavers.esp'
+    clean:
+      - crc: 0xCC3F03C7
+        util: 'TES4Edit v4.0.2'
+  - name: 'Mart''s Monster Mod - Looting NPCs & Creatures.esp'
+    clean:
+      - crc: 0x0674FBEA
+        util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - More Passive Wildlife.esp'
     msg:
       - type: say
         content: 'Not recommended, has bugs.'
+    clean:
+      - crc: 0xBDFC5F0E
+        util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - More Wilderness Life.esp'
     inc:
       - 'Mart''s Monster Mod - More Wilderness Life No Gates.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0xFEA2D531
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 18
   - name: 'Mart''s Monster Mod - More Wilderness Life No Gates.esp'
     inc:
       - 'Mart''s Monster Mod - More Wilderness Life.esp'
     msg: [ *doNotClean ]
+  - name: 'Mart''s Monster Mod - No Adventurers.esp'
+    clean:
+      - crc: 0x848043F2
+        util: 'TES4Edit v4.0.2'
+  - name: 'Mart''s Monster Mod - No Balrogs.esp'
+    clean:
+      - crc: 0x38D2B986
+        util: 'TES4Edit v4.0.2'
+  - name: 'Mart''s Monster Mod - No Beholdens.esp'
+    clean:
+      - crc: 0xC6C70215
+        util: 'TES4Edit v4.0.2'
+  - name: 'Mart''s Monster Mod - No Blood.esp'
+    clean:
+      - crc: 0xB1108D5F
+        util: 'TES4Edit v4.0.2'
+  - name: 'Mart''s Monster Mod - No Bone Loot.esp'
+    clean:
+      - crc: 0x6EB28406
+        util: 'TES4Edit v4.0.2'
+  - name: 'Mart''s Monster Mod - No Carrion Rats.esp'
+    clean:
+      - crc: 0xEEE80176
+        util: 'TES4Edit v4.0.2'
+  - name: 'Mart''s Monster Mod - No Fiends.esp'
+    clean:
+      - crc: 0x7CD34790
+        util: 'TES4Edit v4.0.2'
+  - name: 'Mart''s Monster Mod - No Ghostly Appariation.esp'
+    clean:
+      - crc: 0x36D4B02D
+        util: 'TES4Edit v4.0.2'
+  - name: 'Mart''s Monster Mod - No Giants.esp'
+    clean:
+      - crc: 0xC3D39B1E
+        util: 'TES4Edit v4.0.2'
+  - name: 'Mart''s Monster Mod - No Lanterns.esp'
+    clean:
+      - crc: 0xB4AF9751
+        util: 'TES4Edit v4.0.2'
+  - name: 'Mart''s Monster Mod - No Pests.esp'
+    clean:
+      - crc: 0xFD5158B2
+        util: 'TES4Edit v4.0.2'
+  - name: 'Mart''s Monster Mod - No Reavers.esp'
+    clean:
+      - crc: 0x36A744E9
+        util: 'TES4Edit v4.0.2'
+  - name: 'Mart''s Monster Mod - No Skeep.esp'
+    clean:
+      - crc: 0x4EDBFE3F
+        util: 'TES4Edit v4.0.2'
+  - name: 'Mart''s Monster Mod - No Slimes.esp'
+    clean:
+      - crc: 0xADAEDF08
+        util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - No Spiders.esp'
     msg:
       - type: error
         content: 'Delete and use ''FCOM_NoSpiders.esp''.'
+  - name: 'Mart''s Monster Mod - No Swarms.esp'
+    clean:
+      - crc: 0x31E5E710
+        util: 'TES4Edit v4.0.2'
+  - name: 'Mart''s Monster Mod - No Uberhulks.esp'
+    clean:
+      - crc: 0xBF1E308C
+        util: 'TES4Edit v4.0.2'
+  - name: 'Mart''s Monster Mod - No Undead Rise.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x1E8FCF0B
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1
+  - name: 'Mart''s Monster Mod - No Werewolves.esp'
+    clean:
+      - crc: 0xB069AB27
+        util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - No Wyvern.esp'
     msg:
       - type: error
@@ -1500,15 +1707,32 @@ plugins:
     msg:
       - type: error
         content: 'Delete. Use FCOM_LessReaversInGates instead.'
+    clean:
+      - crc: 0xFCA5FBC1
+        util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod for OOO - NoReaversInGates.esp'
     msg:
       - type: error
         content: 'Delete. Use ''FCOM_NoReaversInGates.esp'' instead.'
+    clean:
+      - crc: 0xB18E484D
+        util: 'TES4Edit v4.0.2'
+  - name: 'Mart''s Monster Mod - RadiantAITweaks.esp'
+    clean:
+      - crc: 0x801334B7
+        util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - Resized Races.esp'
     tag:
       - Body-Size-F
       - Body-Size-M
       - R.Relations
+    clean:
+      - crc: 0xE29818CA
+        util: 'TES4Edit v4.0.2'
+  - name: 'Mart''s Monster Mod - Safer Quest Locations.esp'
+    clean:
+      - crc: 0xEE8175FD
+        util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - Safer Roads.esp'
     msg:
       - <<: *alreadyInX
@@ -1517,6 +1741,9 @@ plugins:
       - type: error
         content: 'Delete and use the ''FCOM_SaferRoads.esp''.'
         condition: *FCOMCond
+    clean:
+      - crc: 0xC1316241
+        util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - Slof Horses Complete.esp'
     msg:
       - type: say
@@ -1527,16 +1754,49 @@ plugins:
       - Graphics
       - Names
       - Scripts
+    clean:
+      - crc: 0x4618F324
+        util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - Spawn Rates - Increased.esp'
     msg: [ *useFCOMSpawnRates ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x16438018
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1
   - name: 'Mart''s Monster Mod - Spawn Rates - Moderate Increased.esp'
     msg: [ *useFCOMSpawnRates ]
+    clean:
+      - crc: 0xA63575E0
+        util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - Spawn Rates - Reduced.esp'
     msg: [ *useFCOMSpawnRates ]
+    clean:
+      - crc: 0xC6BB0E58
+        util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - Spawn Rates - Reduced Reduced.esp'
     msg: [ *useFCOMSpawnRates ]
+    clean:
+      - crc: 0xF9D8C6D8
+        util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - Spawn Rates - Reduced Vanilla.esp'
     msg: [ *useFCOMSpawnRates ]
+    clean:
+      - crc: 0x3EE2CD43
+        util: 'TES4Edit v4.0.2'
+  - name: 'Mart''s Monster Mod - Undead Rise Fix.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0xE037E256
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 12
+    clean:
+      - crc: 0x8D76C7D9
+        util: 'TES4Edit v4.0.2'
+  - name: 'Mart''s Monster Mod - Zombies for Body Meshes.esp'
+    clean:
+      - crc: 0x6C98F68D
+        util: 'TES4Edit v4.0.2'
 
   # MMM Older versions
   - name: 'Mart''s Monster Mod for FCOM.esp'
