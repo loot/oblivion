@@ -985,6 +985,8 @@ plugins:
       - Eyes
   - name: 'EnhancedWeatherSIOnly.esm'
     msg: [ *obsolete ]
+
+# Francescos Creatures and Items V5
   - name: 'Francesco''s Leveled Creatures-Items Mod.esm'
     url: [ 'https://www.nexusmods.com/oblivion/mods/40190' ]
     tag:
@@ -1025,6 +1027,80 @@ plugins:
       - Relations
       - Relev
       - Scripts
+  - name: 'Francesco''s Creatures and Items Resources.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/40190' ]
+    msg: [ *dummyFileLoader ]
+  - name: 'Francesco''s More Wilderness Life.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/40190' ]
+    inc:
+      - 'FCOM_Convergence.esm'
+  - name: 'Francesco''s Optional Chance of Stronger Enemies.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/40190' ]
+    dirty:
+      - crc: 0x4f003db0
+        <<: *dirtyPlugin
+        itm: 3
+  - name: 'Francesco''s Optional Dungeon Chest Locks.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/40190' ]
+    msg: [ *alreadyInFCOM ]
+  - name: 'Francesco''s Optional Dungeon Chest Loot.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/40190' ]
+    msg: [ *alreadyInFCOM ]
+  - name: 'Francesco''s Optional House Chest Loot.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/40190' ]
+    msg: [ *alreadyInFCOM ]
+  - name: 'Francesco''s Optional Leveled Arena.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/40190' ]
+    msg: [ *alreadyInFCOM ]
+  - name: 'Francesco''s Optional Leveled Guards.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/40190' ]
+    tag:
+      - Actors.ACBS
+      - Actors.Stats
+  - name: 'Francesco''s Optional Leveled Quests.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/40190' ]
+    msg: [ *alreadyInFCOM ]
+  - name: 'Francesco''s Optional New Adventurers.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/40190' ]
+    msg: [ *alreadyInFCOM ]
+  - name: 'Francesco''s Optional Vendor Tweaks.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/40190' ]
+    inc:
+      - 'FCOM_Convergence.esm'
+  # Older plugins
+  - name: 'Francesco''s Optional Files.esp'
+    msg: [ *deleteUseFransSeparateOptions ]
+    tag:
+      - Delev
+      - Relev
+  - name: 'Francesco''s Optional Files 1.esp'
+    msg: [ *deleteUseFransSeparateOptions ]
+    tag:
+      - Delev
+      - Relev
+  - name: 'Francesco''s Optional Files 2.esp'
+    msg: [ *deleteUseFransSeparateOptions ]
+    tag:
+      - Delev
+      - Relev
+  - name: 'Francesco''s Optional Files 3.esp'
+    msg: [ *deleteUseFransSeparateOptions ]
+    tag:
+      - Delev
+      - Relev
+  - name: 'Francesco''s Optional Files 4.esp'
+    msg: [ *deleteUseFransSeparateOptions ]
+    tag:
+      - Delev
+      - Relev
+  - name: 'Francesco''s \d\d? days respawn time - 1-\d\d day lenght rescale\.esp'
+    msg: [ *bashedPatchTweak ]
+  - name: 'Francesco''s day lenght rescale 1-\d\d\.esp'
+    msg: [ *bashedPatchTweak ]
+  - name: 'Francesco''s \d\d? days respawn time\.esp'
+    msg: [ *bashedPatchTweak ]
+
+
   - name: 'Crafting Skill Engine.esm'
     url:
       - 'https://www.nexusmods.com/oblivion/mods/2530'
@@ -2382,9 +2458,6 @@ plugins:
     msg: [ *dummyFileLoader ]
   - name: 'Francesco.esp'
     msg: [ *dummyFileLoader ]
-  - name: 'Francesco''s Creatures and Items Resources.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/40190' ]
-    msg: [ *dummyFileLoader ]
   - name: 'MMM.esp'
     msg: [ *dummyFileLoader ]
   - name: 'Oblivion.esp'
@@ -2399,17 +2472,6 @@ plugins:
     msg:
       - type: say
         content: 'Do not use with MMM/FCOM. Already integrated.'
-  - name: 'Francesco''s Optional Chance of Stronger Enemies.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/40190' ]
-    dirty:
-      - crc: 0x4f003db0
-        <<: *dirtyPlugin
-        itm: 3
-  - name: 'Francesco''s Optional Leveled Guards.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/40190' ]
-    tag:
-      - Actors.ACBS
-      - Actors.Stats
   - name: 'Francesco''s Dark Seducer Weapons Patch.esp'
     tag:
       - Delev
@@ -6482,57 +6544,6 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/15411' ]
     req:
       - 'Francesco''s Leveled Creatures-Items Mod.esm'
-  - name: 'Francesco''s More Wilderness Life.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/40190' ]
-    inc:
-      - 'FCOM_Convergence.esm'
-  - name: 'Francesco''s Optional Dungeon Chest Loot.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/40190' ]
-    msg: [ *alreadyInFCOM ]
-  - name: 'Francesco''s Optional Dungeon Chest Locks.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/40190' ]
-    msg: [ *alreadyInFCOM ]
-  - name: 'Francesco''s Optional House Chest Loot.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/40190' ]
-    msg: [ *alreadyInFCOM ]
-  - name: 'Francesco''s Optional New Adventurers.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/40190' ]
-    msg: [ *alreadyInFCOM ]
-  - name: 'Francesco''s Optional Vendor Tweaks.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/40190' ]
-    inc:
-      - 'FCOM_Convergence.esm'
-  - name: 'Francesco''s Optional Leveled Quests.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/40190' ]
-    msg: [ *alreadyInFCOM ]
-  - name: 'Francesco''s Optional Leveled Arena.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/40190' ]
-    msg: [ *alreadyInFCOM ]
-  - name: 'Francesco''s Optional Files.esp'
-    msg: [ *deleteUseFransSeparateOptions ]
-    tag:
-      - Delev
-      - Relev
-  - name: 'Francesco''s Optional Files 1.esp'
-    msg: [ *deleteUseFransSeparateOptions ]
-    tag:
-      - Delev
-      - Relev
-  - name: 'Francesco''s Optional Files 2.esp'
-    msg: [ *deleteUseFransSeparateOptions ]
-    tag:
-      - Delev
-      - Relev
-  - name: 'Francesco''s Optional Files 3.esp'
-    msg: [ *deleteUseFransSeparateOptions ]
-    tag:
-      - Delev
-      - Relev
-  - name: 'Francesco''s Optional Files 4.esp'
-    msg: [ *deleteUseFransSeparateOptions ]
-    tag:
-      - Delev
-      - Relev
   - name: 'LuckBasedLootForFrans.esp'
     msg: [ *alreadyInFCOM ]
   - name: 'Fran-Ayleid Coin Add-on.esp'
@@ -20975,12 +20986,6 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/27720' ]
     after:
       - 'Oscuro''s_Oblivion_Overhaul.esp'
-  - name: 'Francesco''s \d\d? days respawn time - 1-\d\d day lenght rescale\.esp'
-    msg: [ *bashedPatchTweak ]
-  - name: 'Francesco''s day lenght rescale 1-\d\d\.esp'
-    msg: [ *bashedPatchTweak ]
-  - name: 'Francesco''s \d\d? days respawn time\.esp'
-    msg: [ *bashedPatchTweak ]
   - name: 'OOO-Respawn_(Year|Month|(Two_)?Week)\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/46199/' ]
     msg: [ *bashedPatchTweak ]
