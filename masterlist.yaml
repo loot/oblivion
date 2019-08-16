@@ -1349,6 +1349,10 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
     inc:
       - 'FCOM_Convergence.esm'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Mart''s Monster Mod Knights' ]
+        condition: 'many("Mart''s Monster Mod( for OOO)? - Knights( | of the Nine Patch)?\.esp")'
     tag:
       - Actors.AIData
       - Actors.AIPackages
