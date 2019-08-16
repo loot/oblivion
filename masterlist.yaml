@@ -1512,9 +1512,9 @@ plugins:
   - name: 'Mart''s Monster Mod - Durability & Damage.esp'
     msg:
       - *alreadyInOOO
-      - type: error
-        content: 'Delete and use ''FCOM_DurabilityAndDamage.esp''.'
-        condition: *FCOMCond
+      - <<: *useInstead
+        subs: [ 'FCOM Durability & Damage' ]
+        condition: 'active("FCOM_Convergence.esp")'
     clean:
       - crc: 0xA9481543
         util: 'TES4Edit v4.0.2'
@@ -1530,17 +1530,17 @@ plugins:
         util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - Friendlier Factions MMM+Fran.esp'
     msg:
-      - type: error
-        content: 'Delete and use ''FCOM_FriendlierFactions.esp''.'
-        condition: *FCOMCond
+      - <<: *useInstead
+        subs: [ 'FCOM Friendlier Factions' ]
+        condition: 'active("FCOM_Convergence.esp")'
     clean:
       - crc: 0x5794FAE2
         util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - Friendlier Factions OOO.esp'
     msg:
-      - type: error
-        content: 'Delete and use ''FCOM_FriendlierFactions.esp''.'
-        condition: *FCOMCond
+      - <<: *useInstead
+        subs: [ 'FCOM Friendlier Factions' ]
+        condition: 'active("FCOM_Convergence.esp")'
     dirty:
       - <<: *quickClean
         crc: 0x2E446319
@@ -1585,8 +1585,9 @@ plugins:
         util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - Less Rats.esp'
     msg:
-      - type: error
-        content: 'Delete and use ''FCOM_LessRats.esp''.'
+      - <<: *useInstead
+        subs: [ 'FCOM Less Rats' ]
+        condition: 'active("FCOM_Convergence.esp")'
     clean:
       - crc: 0xED551EA9
         util: 'TES4Edit v4.0.2'
@@ -1618,6 +1619,10 @@ plugins:
       - 'Mart''s Monster Mod - More Wilderness Life.esp'
     msg: [ *doNotClean ]
   - name: 'Mart''s Monster Mod - No Adventurers.esp'
+    msg:
+      - <<: *useInstead
+        subs: [ 'FCOM No Adventurers' ]
+        condition: 'active("FCOM_Convergence.esp")'
     clean:
       - crc: 0x848043F2
         util: 'TES4Edit v4.0.2'
@@ -1675,8 +1680,9 @@ plugins:
         util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - No Spiders.esp'
     msg:
-      - type: error
-        content: 'Delete and use ''FCOM_NoSpiders.esp''.'
+      - <<: *useInstead
+        subs: [ 'FCOM No Spiders' ]
+        condition: 'active("FCOM_Convergence.esp")'
   - name: 'Mart''s Monster Mod - No Swarms.esp'
     clean:
       - crc: 0x31E5E710
@@ -1697,19 +1703,22 @@ plugins:
         util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - No Wyvern.esp'
     msg:
-      - type: error
-        content: 'Delete and use ''FCOM_NoWyverns.esp''.'
+      - <<: *useInstead
+        subs: [ 'FCOM No Wyvern' ]
+        condition: 'active("FCOM_Convergence.esp")'
   - name: 'Mart''s Monster Mod for OOO - LessReaversInGates.esp'
     msg:
-      - type: error
-        content: 'Delete. Use FCOM_LessReaversInGates instead.'
+      - <<: *useInstead
+        subs: [ 'FCOM Less Reavers In Gates' ]
+        condition: 'active("FCOM_Convergence.esp")'
     clean:
       - crc: 0xFCA5FBC1
         util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod for OOO - NoReaversInGates.esp'
     msg:
-      - type: error
-        content: 'Delete. Use ''FCOM_NoReaversInGates.esp'' instead.'
+      - <<: *useInstead
+        subs: [ 'FCOM No Reavers In Gates' ]
+        condition: 'active("FCOM_Convergence.esp")'
     clean:
       - crc: 0xB18E484D
         util: 'TES4Edit v4.0.2'
@@ -1735,9 +1744,9 @@ plugins:
       - <<: *alreadyInX
         subs: [ 'Mart''s Monster Mod Spawn Rates' ]
         condition: 'file("Mart''s Monster Mod - Spawn Rates - Reduced( Reduced| Vanilla)\.esp")'
-      - type: error
-        content: 'Delete and use the ''FCOM_SaferRoads.esp''.'
-        condition: *FCOMCond
+      - <<: *useInstead
+        subs: [ 'FCOM Safer Roads' ]
+        condition: 'active("FCOM_Convergence.esp")'
     clean:
       - crc: 0xC1316241
         util: 'TES4Edit v4.0.2'
@@ -1882,8 +1891,9 @@ plugins:
     msg: [ *obsolete ]
   - name: 'Mart''s_Monster Mod -No Wyvern.esp'
     msg:
-      - type: error
-        content: 'Delete and use ''FCOM_NoWyverns.esp''.'
+      - <<: *useInstead
+        subs: [ 'FCOM No Wyverns' ]
+        condition: 'active("FCOM_Convergence.esp")'
   - name: 'Martigen''s Monster Mod - Resized Races.esp'
   - name: 'Mart''s Monster Mod - (Reduced |Reduced Reduced)?Spawn Rates( Increased| Moderate| Reduced Reduced)?\.esp'
     msg: [ *obsolete ]
