@@ -1631,17 +1631,18 @@ plugins:
     clean:
       - crc: 0xBDFC5F0E
         util: 'TES4Edit v4.0.2'
+  - name: 'Mart''s Monster Mod - More Wilderness Life( No Gates)?\.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Mart''s Monster Mod - More Wilderness Life' ]
+        condition: 'many("Mart''s Monster Mod - More Wilderness Life( No Gates)?\.esp")'
   - name: 'Mart''s Monster Mod - More Wilderness Life.esp'
-    inc:
-      - 'Mart''s Monster Mod - More Wilderness Life No Gates.esp'
     dirty:
       - <<: *quickClean
         crc: 0xFEA2D531
         util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 18
   - name: 'Mart''s Monster Mod - More Wilderness Life No Gates.esp'
-    inc:
-      - 'Mart''s Monster Mod - More Wilderness Life.esp'
     msg: [ *doNotClean ]
   - name: 'Mart''s Monster Mod - No Adventurers.esp'
     msg:
