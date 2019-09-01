@@ -1897,8 +1897,8 @@ plugins:
       - Graphics
   - name: 'Mart''s Monster Mod - LessReaversInGates.esp'
     msg:
-      - type: say
-        content: 'Use ''Mart''s Monster Mod for OOO - LessReaversInGates.esp'' instead.'
+      - <<: *useInstead
+        subs: [ 'Mart''s Monster Mod for OOO - LessReaversInGates.esp' ]
         condition: *OOOCond
   - name: 'Mart''s Monster Mod - More Reavers.esp'
     msg: [ *obsolete ]
@@ -1906,8 +1906,8 @@ plugins:
     msg: [ *obsolete ]
   - name: 'Mart''s Monster Mod - NoReaversInGates.esp'
     msg:
-      - type: say
-        content: 'Use ''Mart''s Monster Mod for OOO - NoReaversInGates.esp'' instead.'
+      - <<: *useInstead
+        subs: [ 'Mart''s Monster Mod for OOO - NoReaversInGates.esp' ]
         condition: *OOOCond
   - name: 'Mart''s Monster Mod - No Reaver Hounds.esp'
     msg: [ *obsolete ]
