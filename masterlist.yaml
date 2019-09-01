@@ -1320,8 +1320,7 @@ plugins:
         util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
   - name: 'Mart''s Monster Mod for OOO.esm'
-    inc:
-      - 'FCOM_Convergence.esm'
+    inc: [ 'FCOM_Convergence.esm' ]
     tag:
       - Delev
       - Factions
@@ -1352,8 +1351,7 @@ plugins:
         util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 3
   - name: 'Mart''s Monster Mod( for OOO)? - Knights( | of the Nine Patch)?\.esp'
-    inc:
-      - 'FCOM_Convergence.esm'
+    inc: [ 'FCOM_Convergence.esm' ]
     msg:
       - <<: *useOnlyOneX
         subs: [ 'Mart''s Monster Mod Knights' ]
@@ -1368,6 +1366,7 @@ plugins:
       - Relev
       - Stats
   - name: 'Mart''s Monster Mod - Knights.esp'
+    inc: [ 'Oscuro''s_Oblivion_Overhaul.esm' ]
     dirty:
       - <<: *quickClean
         crc: 0x51DBA3E6
@@ -1401,6 +1400,9 @@ plugins:
       - Scripts
       - Stats
   - name: 'Mart''s Monster Mod.esp'
+    inc:
+      - 'Francesco''s Leveled Creatures-Items Mod.esm'
+      - 'Oscuro''s_Oblivion_Overhaul.esm'
     msg:
       - <<: *requiresX
         subs: [ 'Mart''s Monster Mod.bsa' ]
@@ -1451,6 +1453,7 @@ plugins:
       - crc: 0xE300B724
         util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - Diverse Imperial Armor.esp'
+    inc: [ 'Oscuro''s_Oblivion_Overhaul.esm' ]
     msg: [ *alreadyInOOO ]
     dirty:
       - <<: *quickClean
@@ -1510,6 +1513,9 @@ plugins:
       - crc: 0x9208A5D0
         util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - Durability & Damage.esp'
+    inc:
+      - 'FCOM_Convergence.esm'
+      - 'Oscuro''s_Oblivion_Overhaul.esm'
     msg:
       - *alreadyInOOO
       - <<: *useInstead
