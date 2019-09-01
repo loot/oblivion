@@ -1850,8 +1850,8 @@ plugins:
     msg: [ *obsoleteUseFCOM ]
   - name: 'Mart''s Monster Mod for OOO - LessReavers.esp'
     msg:
-      - type: error
-        content: 'Delete. Use ''Mart''s Monster Mod - Less Reavers.esp''.'
+      - <<: *useInstead
+        subs: [ 'Mart''s Monster Mod - Less Reavers.esp' ]
   - name: 'Mart''s Monster Mod - Bats Addon.esp'
     msg: [ *obsolete ]
   - name: 'Mart''s Monster Mod - Blood Fix v3.esp'
