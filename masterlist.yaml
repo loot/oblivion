@@ -1340,8 +1340,7 @@ plugins:
         util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 3
   - name: 'Mart''s Monster Mod - Shivering Isles.esp'
-    req:
-      - 'DLCShiveringIsles.esp'
+    req: [ 'DLCShiveringIsles.esp' ]
     tag:
       - Actors.AIData
       - Actors.AIPackages
@@ -1462,8 +1461,7 @@ plugins:
         content: 'Can increase the chances of a CTD in a heavily modded game due to increased processor load.'
       - *doNotClean
   - name: 'Mart''s Monster Mod - City Defences.esp'
-    after:
-      - 'Mart''s Monster Mod - More Wilderness Life No Gates.esp'
+    after: [ 'Mart''s Monster Mod - More Wilderness Life No Gates.esp' ]
     inc:
       - name: 'Better Cities Resources.esm'
         display: 'Better Cities'
@@ -1494,16 +1492,14 @@ plugins:
       - crc: 0xF8F36924
         util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - Diverse Runeskulls Loot G&GD.esp'
-    req:
-      - 'Mart''s Monster Mod - Gems & Gem Dust.esp'
+    req: [ 'Mart''s Monster Mod - Gems & Gem Dust.esp' ]
     tag:
       - Delev
     clean:
       - crc: 0xBC851604
         util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - Diverse Runeskull(s Loot OOO| OOO Loot)\.esp'
-    inc:
-      - 'Mart''s Monster Mod - Gems & Gem Dust.esp'
+    inc: [ 'Mart''s Monster Mod - Gems & Gem Dust.esp' ]
     req:
       - 'Oscuro''s_Oblivion_Overhaul.esm'
       - name: 'Mart''s Monster Mod for OOO.esp'
@@ -1879,8 +1875,7 @@ plugins:
     tag:
       - Delev
   - name: 'Mart''s Monster Mod - Diverse RuneSkull MMM Loot.esp'
-    req:
-      - 'Mart''s Monster Mod - Gems & Gem Dust.esp'
+    req: [ 'Mart''s Monster Mod - Gems & Gem Dust.esp' ]
     tag:
       - Delev
   - name: 'Marts Monster Mod - DLCHorseArmor+Slof.esp'
@@ -1930,8 +1925,7 @@ plugins:
       - NoMerge
       - NpcFaces
   - name: 'Mart''s Monster Mod( - | for OOO - | for OOO )(COBL Races TNR|TNR Faces)\.esp'
-    inc:
-      - 'COBL Races TNR.esp'
+    inc: [ 'COBL Races TNR.esp' ]
 
 
   - name: 'Waalx Animals & Creatures.esm'
