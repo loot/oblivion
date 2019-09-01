@@ -1869,10 +1869,6 @@ plugins:
   - name: 'Mart''s Monster Mod - Diverse NPC faces nv.esp'
     msg: [ *obsoleteUseFCOM ]
   - name: 'Mart''s Monster Mod - Diverse Runeskulls.esp'
-    msg:
-      - type: say
-        content: 'Replaces both ''FCOM_ExnemRuneskulls.esp'' and ''ExnemRuneskulls.esp'' - Please remove them.'
-        condition: 'file("FCOM_ExnemRuneskulls.esp") or file("ExnemRuneskulls.esp")'
     tag:
       - Delev
       - Relev
@@ -6736,22 +6732,13 @@ plugins:
       - 'KDCircletsOOOOptimized - NPC Equip.esp'
     inc:
       - 'Potion Belt.esp'
-  - name: 'ExnemRuneskulls.esp'
+  - name: '(FCOM_)?ExnemRuneskulls(_ru)?\.esp'
     msg:
-      - type: say
-        content: 'Not needed if using Mart''s Monster Mod - Diverse Runeskulls*.esp'
-        condition: 'file("Mart''s Monster Mod - Diverse Runeskulls.*\.esp")'
-  - name: 'ExnemRuneskulls_ru.esp'
-    msg:
-      - type: say
-        content: 'Not need if use Mart''s Monster Mod - Diverse Runeskulls*.esp'
-        condition: 'file("Mart''s Monster Mod - Diverse Runeskulls.*\.esp")'
+      - <<: *alreadyInX
+        subs: [ 'Mart''s Monster Mod - Diverse Runeskulls' ]
+        condition: 'active("Mart''s Monster Mod - Diverse Runeskulls.*\.esp")'
   - name: 'FCOM_ExnemRuneskulls.esp'
     url: [ 'http://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/' ]
-    msg:
-      - type: say
-        content: 'Not need if use Mart''s Monster Mod - Diverse Runeskulls*.esp'
-        condition: 'file("Mart''s Monster Mod - Diverse Runeskulls.*\.esp")'
   - name: 'Slof''s Oblivion Robe Trader.esp'
     tag:
       - Graphics
