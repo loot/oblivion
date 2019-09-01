@@ -1300,6 +1300,10 @@ plugins:
   - name: 'Mart''s Monster Mod.*\.es(m|p)'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
   - name: 'Mart''s Monster Mod.esm'
+    after:
+      - 'Francesco''s Leveled Creatures-Items Mod.esm'
+      - 'Francesco''s Optional New Items Add-On.esm'
+      - 'Oscuro''s_Oblivion_Overhaul.esm'
     tag:
       - Actors.AIData
       - Actors.AIPackages
@@ -1379,6 +1383,16 @@ plugins:
         util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 2
   - name: 'Mart''s Monster Mod( for Fran| for OOO)?\.esp'
+    after:
+      - 'Francesco''s Optional Chance of Stronger Bosses.esp'
+      - 'Francesco''s Optional Chance of Stronger Enemies.esp'
+      - 'Francesco''s Optional Dungeon Chest Locks.esp'
+      - 'Francesco''s Optional Dungeon Chest Loot.esp'
+      - 'Francesco''s Optional House Chest Loot.esp'
+      - 'Francesco''s Optional Leveled Arena.esp'
+      - 'Francesco''s Optional Leveled Quests.esp'
+      - 'Francesco''s Optional Vendor Tweaks.esp'
+      - 'Oscuro''s_Oblivion_Overhaul.esp'
     msg:
       - <<: *alreadyInX
         subs: [ 'FCOM_Convergence.esp' ]
