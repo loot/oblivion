@@ -143,9 +143,6 @@ common:
   - &incompatibleWithWeatherMods
     type: say
     content: 'This mod is incompatible with weather mods.'
-  - &useSensualWalks
-    type: say
-    content: 'Obsolete. Remove this and install Sensual Walks.'
   - &updateSensualWalks
     type: error
     content: 'Outdated. Update to the latest version of Sensual Walks and use Wrye Bash to merge the Sensual Walks patches.'
@@ -2099,10 +2096,6 @@ plugins:
         udr: 3
     group: *underridesGroup
   - name: 'TRoN( 0-59-1b)? (R|S)walk\.esp'
-    msg: [ *useSensualWalks ]
-    tag:
-      - Actors.Anims
-      - NoMerge
     group: *underridesGroup
 
   - name: 'Underdark v1.1 Delayer.esp'
@@ -4038,61 +4031,6 @@ plugins:
     tag:
       - Actors.Anims
       - NoMerge
-  - name: 'Oblivion Rwalk.esp'
-    msg: [ *useSensualWalks ]
-    tag:
-      - Actors.Anims
-      - NoMerge
-  - name: 'Oblivion Swalk.esp'
-    msg: [ *useSensualWalks ]
-    tag:
-      - Actors.Anims
-      - NoMerge
-  - name: 'Oblivion_SI Rwalk Full.esp'
-    msg: [ *useSensualWalks ]
-    tag:
-      - Actors.Anims
-      - NoMerge
-  - name: 'Oblivion_SI Swalk Full.esp'
-    msg: [ *useSensualWalks ]
-    tag:
-      - Actors.Anims
-      - NoMerge
-  - name: 'DLCShiveringIsles Rwalk.esp'
-    msg: [ *useSensualWalks ]
-    tag:
-      - Actors.Anims
-      - NoMerge
-  - name: 'DLCShiveringIsles Swalk.esp'
-    msg: [ *useSensualWalks ]
-    tag:
-      - Actors.Anims
-      - NoMerge
-  - name: 'DLCShiveringIsles Rwalk DG_DS.esp'
-    msg: [ *useSensualWalks ]
-    tag:
-      - Actors.Anims
-      - NoMerge
-  - name: 'DLCShiveringIsles Swalk DG_DS.esp'
-    msg: [ *useSensualWalks ]
-    tag:
-      - Actors.Anims
-      - NoMerge
-  - name: 'Better Cities ESM Rwalk.esp'
-    msg: [ *useSensualWalks ]
-    tag:
-      - Actors.Anims
-      - NoMerge
-  - name: 'Better Cities ESM Swalk.esp'
-    msg: [ *useSensualWalks ]
-    tag:
-      - Actors.Anims
-      - NoMerge
-  - name: 'Nude Swalk.esp'
-    msg: [ *useSensualWalks ]
-    tag:
-      - Actors.Anims
-      - NoMerge
   - name: 'REBetterLCB.esp'
     tag:
       - Deactivate
@@ -4586,16 +4524,6 @@ plugins:
     msg:
       - type: error
         content: 'Rename this file to "DLCHorseArmor.esp", after backing up the original.'
-  - name: 'DLCOrrery Rwalk.esp'
-    msg: [ *useSensualWalks ]
-    tag:
-      - Actors.Anims
-      - NoMerge
-  - name: 'DLCOrrery Swalk.esp'
-    msg: [ *useSensualWalks ]
-    tag:
-      - Actors.Anims
-      - NoMerge
   - name: 'C&C&EQR - SM Plugin Refurbish - Orrery.esp'
     msg: [ *obsolete ]
   - name: 'Lair_mobs.esp'
@@ -4626,26 +4554,6 @@ plugins:
       - Deactivate
       - NoMerge
       - Stats
-  - name: 'DLCMehrunesRazor Rwalk.esp'
-    msg: [ *useSensualWalks ]
-    tag:
-      - Actors.Anims
-      - NoMerge
-  - name: 'DLCMehrunesRazor Swalk.esp'
-    msg: [ *useSensualWalks ]
-    tag:
-      - Actors.Anims
-      - NoMerge
-  - name: 'DLCMehrunesRazor Rwalk UOP.esp'
-    msg: [ *useSensualWalks ]
-    tag:
-      - Actors.Anims
-      - NoMerge
-  - name: 'DLCMehrunesRazor Swalk UOP.esp'
-    msg: [ *useSensualWalks ]
-    tag:
-      - Actors.Anims
-      - NoMerge
   - name: 'DLCMehrunesRazor Vwalk UOP.esp'
     tag:
       - Actors.Anims
@@ -6674,26 +6582,6 @@ plugins:
   - name: 'Potion Sorter-2081.esp'
     tag:
       - Names
-  - name: 'DLCThievesDen Rwalk.esp'
-    msg: [ *useSensualWalks ]
-    tag:
-      - Actors.Anims
-      - NoMerge
-  - name: 'DLCThievesDen Swalk.esp'
-    msg: [ *useSensualWalks ]
-    tag:
-      - Actors.Anims
-      - NoMerge
-  - name: 'DLCThievesDen Rwalk UOP.esp'
-    msg: [ *useSensualWalks ]
-    tag:
-      - Actors.Anims
-      - NoMerge
-  - name: 'DLCThievesDen Swalk UOP.esp'
-    msg: [ *useSensualWalks ]
-    tag:
-      - Actors.Anims
-      - NoMerge
   - name: 'DLCThievesDen Vwalk UOP.esp'
     tag:
       - Actors.Anims
@@ -10309,10 +10197,6 @@ plugins:
       - 'FCOM_Convergence.esm'
   - name: 'All Natural - Kvatch Rebuilt Weather Patch.esp'
     msg: [ *obsolete ]
-  - name: 'Kvatch Rebuilt Rwalk.esp'
-    msg: [ *useSensualWalks ]
-  - name: 'Kvatch Rebuilt Swalk.esp'
-    msg: [ *useSensualWalks ]
   - name: 'KvatchCastleMakeover.esp'
     dirty:
       - crc: 0x89d1c577
@@ -11090,10 +10974,6 @@ plugins:
         <<: *dirtyPlugin
         itm: 46
         udr: 36
-  - name: 'RumpleMod Rwalk.esp'
-    msg: [ *useSensualWalks ]
-  - name: 'RumpleMod Swalk.esp'
-    msg: [ *useSensualWalks ]
   - name: 'Rustle House - AN Patch.esp'
     msg:
       - type: say
@@ -12161,10 +12041,6 @@ plugins:
       - crc: 0x2610b3ea
         <<: *dirtyPlugin
         itm: 4
-  - name: 'BrumaMGRestored Rwalk.esp'
-    msg: [ *useSensualWalks ]
-  - name: 'BrumaMGRestored Swalk.esp'
-    msg: [ *useSensualWalks ]
   - name: 'BrumaMGRestored-Frostcrag.esp'
     dirty:
       - crc: 0xfb464aaf
@@ -12175,10 +12051,6 @@ plugins:
       - crc: 0xc9702e32
         <<: *dirtyPlugin
         udr: 156
-  - name: 'DLCFrostcrag Rwalk.esp'
-    msg: [ *useSensualWalks ]
-  - name: 'DLCFrostcrag Swalk.esp'
-    msg: [ *useSensualWalks ]
   - name: 'ORM-TamriellicGlassDLC3.esp'
     tag:
       - Graphics
@@ -12228,14 +12100,6 @@ plugins:
   - name: 'DMRA BBB Knights of the Nine Replacer.esp'
     tag:
       - Graphics
-  - name: 'Knights Rwalk.esp'
-    msg: [ *useSensualWalks ]
-  - name: 'Knights Swalk.esp'
-    msg: [ *useSensualWalks ]
-  - name: 'Knights Rwalk UOP.esp'
-    msg: [ *useSensualWalks ]
-  - name: 'Knights Swalk UOP.esp'
-    msg: [ *useSensualWalks ]
   - name: 'Knights Vwalk UOP.esp'
     tag:
       - Actors.Anims
@@ -13510,10 +13374,6 @@ plugins:
       - crc: 0xb7b4334a
         <<: *dirtyPlugin
         udr: 2326
-  - name: 'xulChorrolHinterland Rwalk.esp'
-    msg: [ *useSensualWalks ]
-  - name: 'xulChorrolHinterland Swalk.esp'
-    msg: [ *useSensualWalks ]
   - name: 'VeronaHouseBloodlines-ChorrolHinterland fix.esp'
     msg: [ *obsolete ]
   - name: 'MOEVampireClanRaelu-ChorrolHinterland patch.esp'
@@ -13643,10 +13503,6 @@ plugins:
       - crc: 0xa29afdc3
         <<: *dirtyPlugin
         udr: 5260
-  - name: 'xulBravilBarrowfields Rwalk.esp'
-    msg: [ *useSensualWalks ]
-  - name: 'xulBravilBarrowfields Swalk.esp'
-    msg: [ *useSensualWalks ]
   - name: 'LostSpires-BravilBarrowfields patch.esp'
     msg:
       - type: say
@@ -13757,10 +13613,6 @@ plugins:
     msg:
       - type: say
         content: 'Only use one UL Rolling Hills plugin.'
-  - name: 'xulRollingHills_EV Rwalk.esp'
-    msg: [ *useSensualWalks ]
-  - name: 'xulRollingHills_EV Swalk.esp'
-    msg: [ *useSensualWalks ]
   - name: 'FCOM MWL-RollingHills patch.esp'
     msg:
       - type: say
@@ -13800,10 +13652,6 @@ plugins:
     msg:
       - type: say
         content: 'Border region restrictions must be turned off: use Wrye Bash tweak or hand edit .ini file.'
-  - name: 'xulBrenaRiverRavine Rwalk.esp'
-    msg: [ *useSensualWalks ]
-  - name: 'xulBrenaRiverRavine Swalk.esp'
-    msg: [ *useSensualWalks ]
   - name: 'NakedNord.esp'
     dirty:
       - crc: 0xab1b9d3c
@@ -13820,10 +13668,6 @@ plugins:
         <<: *dirtyPlugin
         itm: 19
         udr: 49
-  - name: 'xulImperialIsle Rwalk.esp'
-    msg: [ *useSensualWalks ]
-  - name: 'xulImperialIsle Swalk.esp'
-    msg: [ *useSensualWalks ]
   - name: 'BladeOfTheHaunted_UL_ImperialIsle_Patch.esp'
     msg:
       - type: say
@@ -13899,10 +13743,6 @@ plugins:
     msg: [ *obsolete ]
   - name: 'LtPD+NRB4+UL-II Patch.esp'
     msg: [ *obsolete ]
-  - name: 'xul Rwalk Full.esp'
-    msg: [ *useSensualWalks ]
-  - name: 'xul Swalk Full.esp'
-    msg: [ *useSensualWalks ]
   - name: 'xul Vwalk Full.esp'
     msg: [ *updateSensualWalks ]
     tag:
@@ -19473,10 +19313,6 @@ plugins:
   - name: 'Companion Neeshka.esp'
     tag:
       - Hair
-  - name: 'Companion Neeshka Rwalk.esp'
-    msg: [ *useSensualWalks ]
-  - name: 'Companion Neeshka Swalk.esp'
-    msg: [ *useSensualWalks ]
   - name: 'companion_iceelves.esp'
     tag:
       - Eyes
@@ -20644,10 +20480,6 @@ plugins:
     inc:
       - 'Better Cities Full.esp'
       - 'Better Imperial City.esp'
-  - name: 'Better Cities Full Rwalk.esp'
-    msg: [ *useSensualWalks ]
-  - name: 'Better Cities Full Swalk.esp'
-    msg: [ *useSensualWalks ]
   - name: 'Better Cities( Full)?( B&M)? - CUO Bravil( Patch)?\.esp'
     msg:
       - <<: *useOnlyOneX
@@ -20744,10 +20576,6 @@ plugins:
   - name: 'BICDist_OotD_Patch.esp'
     req:
       - 'Better Cities IC Green Emperor Way.esp'
-  - name: 'Better Imperial City Rwalk.esp'
-    msg: [ *useSensualWalks ]
-  - name: 'Better Imperial City Swalk.esp'
-    msg: [ *useSensualWalks ]
   - name: 'Better Cities - OMG( Patch)?.*\.esp'
     msg:
       - <<: *useOnlyOneX
@@ -20766,10 +20594,6 @@ plugins:
       - crc: 0x52344ab9
         <<: *dirtyPlugin
         udr: 1
-  - name: 'Better Cities and IC Rwalk.esp'
-    msg: [ *useSensualWalks ]
-  - name: 'Better Cities and IC Swalk.esp'
-    msg: [ *useSensualWalks ]
   - name: 'OSPS-BC_IC-II_UL-II_Patch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/45817' ]
     msg:
@@ -21503,31 +21327,11 @@ plugins:
   - name: 'Viconia.esp'
     inc:
       - 'ViconiaChapterTwo.esp'
-  - name: 'Viconia Rwalk.esp'
-    msg: [ *useSensualWalks ]
-    tag:
-      - Actors.Anims
-      - NoMerge
-  - name: 'Viconia Swalk.esp'
-    msg: [ *useSensualWalks ]
-    tag:
-      - Actors.Anims
-      - NoMerge
   - name: 'ViconiaChapterTwo.esp'
     inc:
       - 'Viconia.esp'
     req:
       - 'Underdark.esm'
-  - name: 'ViconiaChapterTwo Rwalk.esp'
-    msg: [ *useSensualWalks ]
-    tag:
-      - Actors.Anims
-      - NoMerge
-  - name: 'ViconiaChapterTwo Swalk.esp'
-    msg: [ *useSensualWalks ]
-    tag:
-      - Actors.Anims
-      - NoMerge
   - name: 'UnderdarkSaga.esp'
     dirty:
       - crc: 0x453742b9
@@ -21576,6 +21380,16 @@ plugins:
     group: *underridesGroup
   - name: 'Younger Hotter NPC''s v1.0 Vwalk.esp'
     group: *underridesGroup
+  # Catch all for Obsolete Walk mods
+  - name: '([^\.]+(\d\.\d)? (R|S)walk).*\.esp'
+    msg:
+      - *obsolete
+      - <<: *useInstead
+        subs: [ '[Sensual Walks for Female NPCs](https://www.nexusmods.com/oblivion/mods/28223)' ]
+    tag:
+      - Actors.Anims
+      - NoMerge
+
   - name: 'Open Cities Road Record.esp'
     msg:
       - type: say
