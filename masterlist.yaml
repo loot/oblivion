@@ -1508,7 +1508,6 @@ plugins:
       - crc: 0xF8F36924
         util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - Diverse Runeskulls Loot G&GD.esp'
-    req: [ 'Mart''s Monster Mod - Gems & Gem Dust.esp' ]
     tag:
       - Delev
     clean:
@@ -1517,7 +1516,6 @@ plugins:
   - name: 'Mart''s Monster Mod - Diverse Runeskulls Loot OOO.esp'
     inc: [ 'Mart''s Monster Mod - Gems & Gem Dust.esp' ]
     req:
-      - 'Oscuro''s_Oblivion_Overhaul.esm'
       - name: 'Mart''s Monster Mod for OOO.esp'
         display: '[MMMforOOO](https://www.nexusmods.com/oblivion/mods/17784) or [FCOM Convergence](https://www.nexusmods.com/oblivion/mods/12249)'
         condition: 'not file("FCOM_Convergence.esm")'
@@ -1586,9 +1584,7 @@ plugins:
         itm: 2
   - name: 'Mart''s Monster Mod - Fran''s Leveled Quests.esp'
     msg: [ *alreadyInFCOM ]
-    req:
-      - name: 'Francesco''s Optional Leveled Quests.esp'
-        display: '[Francescos Creatures and Items. Optional Extras - Leveled Quests.](https://www.nexusmods.com/oblivion/mods/40190)'
+    req: [ 'Francesco''s Optional Leveled Quests.esp' ]
     clean:
       - crc: 0xDE377299
         util: 'TES4Edit v4.0.2'
@@ -1908,13 +1904,11 @@ plugins:
     tag:
       - Delev
   - name: 'Mart''s Monster Mod - Diverse RuneSkull MMM Loot.esp'
-    req: [ 'Mart''s Monster Mod - Gems & Gem Dust.esp' ]
     tag:
       - Delev
   - name: 'Mart''s Monster Mod - Diverse RuneSkull OOO Loot.esp'
     inc: [ 'Mart''s Monster Mod - Gems & Gem Dust.esp' ]
     req:
-      - 'Oscuro''s_Oblivion_Overhaul.esm'
       - name: 'Mart''s Monster Mod for OOO.esp'
         display: '[MMMforOOO](https://www.nexusmods.com/oblivion/mods/17784) or [FCOM Convergence](https://www.nexusmods.com/oblivion/mods/12249)'
         condition: 'not file("FCOM_Convergence.esm")'
