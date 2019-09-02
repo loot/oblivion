@@ -206,6 +206,22 @@ common:
     subs: [ 'FCOM, MMM, OOO or other FCOM components' ]
     condition: 'file("Oscuro''s_Oblivion_Overhaul.esm") or file("FCOM_Convergence.esm")'
 
+  - &alreadyInOrFixedByX
+    type: error
+    content:
+    - lang: en
+      text: 'Delete. Already included or otherwise fixed in %1%.'
+    - lang: ru
+      text: 'Удалите. Уже включено в %1% или исправлено иным образом.'
+    - lang: de
+      text: 'Löschen. Bereits enthalten oder anderweitig korrigiert in %1%.'
+    - lang: es
+      text: 'Borrar. Esta incluido, o de otra modo, arreglado en el %1%.'
+  - &alreadyInOrFixedByUOP
+    <<: *alreadyInOrFixedByX
+    subs: [ 'Unofficial Oblivion Patch' ]
+    condition: 'active("Unofficial Oblivion Patch.esp")'
+
   - &deleteOrDeactivateX
     type: warn
     content:
@@ -281,6 +297,11 @@ common:
         text: 'Use %1% instead.'
       - lang: ja
         text: '代わりに%1%を使用してください。'
+  - &useInsteadUOP
+    <<: *useInstead
+    subs: [ '[Unofficial Oblivion Patch](https://www.nexusmods.com/oblivion/mods/5296)' ]
+    condition: 'not file("Unofficial Oblivion Patch.esp")'
+
   - &useOnlyOneX
     type: say
     content:
@@ -2369,13 +2390,13 @@ plugins:
   - name: 'nVidia Black Screen Fix.esp'
     msg:
       - *bashedPatchTweak
-      - type: say
-        content: 'Alternatively, remove this and use UOP v3.0.1+ instead.'
+      - *alreadyInOrFixedByUOP
+      - *useInsteadUOP
   - name: 'Black Screen Fix.esp'
     msg:
       - *bashedPatchTweak
-      - type: say
-        content: 'Alternatively, remove this and use UOP v3.0.1+ instead.'
+      - *alreadyInOrFixedByUOP
+      - *useInsteadUOP
   - name: 'Arcana Restored.esp'
   # Hidden file https://www.nexusmods.com/oblivion/mods/36811
     dirty:
@@ -3320,8 +3341,8 @@ plugins:
         itm: 3
   - name: 'Anvil Dock Map Marker.esp'
     msg:
-      - type: say
-        content: 'Use UOP 3.2.0 or later instead.'
+      - *alreadyInOrFixedByUOP
+      - *useInsteadUOP
   - name: 'Anvil beach retexture.esp'
     tag:
       - Graphics
@@ -20311,33 +20332,20 @@ plugins:
     tag:
       - Invent
   - name: 'KT_CustomRaceFix.esp'
-    msg:
-      - type: warn
-        content: 'Remove this and use the UOP instead.'
-        condition: 'file("Unofficial Oblivion Patch.esp")'
+    msg: [ *alreadyInOrFixedByUOP ]
   - name: 'CustomRaceFix.esp'
-    msg:
-      - type: warn
-        content: 'Remove this and use the UOP instead.'
-        condition: 'file("Unofficial Oblivion Patch.esp")'
+    msg: [ *alreadyInOrFixedByUOP ]
   - name: 'Custom Race Fix.esp'
-    msg:
-      - type: warn
-        content: 'Remove this and use the UOP instead.'
-        condition: 'file("Unofficial Oblivion Patch.esp")'
+    msg: [ *alreadyInOrFixedByUOP ]
   - name: 'boethia custom race.esp'
     msg:
-      - type: warn
-        content: 'Remove this and use the UOP instead.'
-        condition: '( file("Unofficial Oblivion Patch.esp") ) and not file("Cosmetic Compilation.esp")'
+      - <<: *alreadyInOrFixedByUOP
+        condition: 'file("Unofficial Oblivion Patch.esp") and not file("Cosmetic Compilation.esp")'
       - type: say
         content: 'It must be used if using Cosmetic Compilation.esp.'
         condition: 'file("Cosmetic Compilation.esp")'
   - name: 'RaceFix_1C.esp'
-    msg:
-      - type: warn
-        content: 'Remove this and use the UOP instead.'
-        condition: 'file("Unofficial Oblivion Patch.esp")'
+    msg: [ *alreadyInOrFixedByUOP ]
   - name: 'BC Skingrad Reduced - EV.esp'
     msg:
       - type: say
