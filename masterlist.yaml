@@ -2084,9 +2084,6 @@ plugins:
     group: *underridesGroup
   - name: 'Oblivion_SI Vwalk Full.esp'
     msg: [ *updateSensualWalks ]
-    tag:
-      - Actors.Anims
-      - NoMerge
     group: *underridesGroup
   - name: 'TRoN.esp'
     dirty:
@@ -2186,9 +2183,6 @@ plugins:
     group: *underridesGroup
   - name: 'Oblivion_SI Vwalk Full TNR.esp'
     msg: [ *updateSensualWalks ]
-    tag:
-      - Actors.Anims
-      - NoMerge
   - name: 'Cobl - NPCDiversity - TNR Merge.esp'
     msg: [ *obsolete ]
     tag:
@@ -2254,15 +2248,8 @@ plugins:
       - NoMerge
       - NpcFaces
     group: *underridesGroup
-  - name: 'Beautiful_Women(_SI|_NiceOnly|_NotSoNice_Bonus|_DB_Addon|_Vampires(_50)?)( Vwalk)\.esp'
-    tag:
-      - Actors.Anims
-      - NoMerge
   - name: 'Beautiful Women Vwalk Full.esp'
     msg: [ *updateSensualWalks ]
-    tag:
-      - Actors.Anims
-      - NoMerge
 
   - name: 'Beautiful_Women_Revised(_SI|_NotSoNice|_DB)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/24003' ]
@@ -2304,9 +2291,7 @@ plugins:
     group: *underridesGroup
   - name: 'Colourwheels Sexy Female NPCs( Vwalk)?\.esp'
     tag:
-      - Actors.Anims
       - Deactivate
-      - NoMerge
       - NpcFaces
     group: *underridesGroup
   - name: 'ChangeSomeCyrodiilLadies.esp'
@@ -2531,10 +2516,6 @@ plugins:
   - name: 'SI Public Music.esp'
     tag:
       - C.Music
-  - name: 'DLCShiveringIsles Vwalk DG_DS.esp'
-    tag:
-      - Actors.Anims
-      - NoMerge
   - name: 'MOBS.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/28537' ]
     inc:
@@ -2567,47 +2548,23 @@ plugins:
       - NPC.Race
       - NpcFaces
   - name: 'Oblivion Vwalk UOS.esp'
-    tag:
-      - Actors.Anims
-      - NoMerge
-      - NpcFaces
+    tag: [ NpcFaces ]
   - name: 'Oblivion_SI Vwalk Full( TNR)? UOS\.esp'
     msg: [ *updateSensualWalks ]
-    tag:
-      - Actors.Anims
-      - NoMerge
-      - NpcFaces
+    tag: [ NpcFaces ]
   - name: 'DLCShiveringIsles Vwalk( DG_DS)? UOS\.esp'
-    tag:
-      - Actors.Anims
-      - NoMerge
-      - NpcFaces
+    tag: [ NpcFaces ]
   - name: 'TNR ALL RACES FINAL Vwalk UOS.esp'
-    tag:
-      - Actors.Anims
-      - NoMerge
-      - NpcFaces
+    tag: [ NpcFaces ]
   - name: 'TNR - ShiveringIsles no helms Vwalk UOS.esp'
-    tag:
-      - Actors.Anims
-      - NoMerge
-      - NpcFaces
-  - name: 'Beautiful_Women_(DB_Addon|NiceOnly|NotSoNice_Bonus|SI|Vampires(_50)?)( Vwalk)? UOS\.esp'
-    tag:
-      - Actors.Anims
-      - NoMerge
-      - NpcFaces
+    tag: [ NpcFaces ]
+  - name: 'Beautiful_Women_(DB_Addon|NiceOnly|NotSoNice_Bonus|SI|Vampires(_50)?) Vwalk UOS\.esp'
+    tag: [ NpcFaces ]
   - name: 'Beautiful Women Vwalk Full UOS.esp'
     msg: [ *updateSensualWalks ]
-    tag:
-      - Actors.Anims
-      - NoMerge
-      - NpcFaces
+    tag: [ NpcFaces ]
   - name: 'Colourwheels Sexy Female NPCs Vwalk UOS.esp'
-    tag:
-      - Actors.Anims
-      - NoMerge
-      - NpcFaces
+    tag: [ NpcFaces ]
   - name: 'Better Cities .esp'
     msg: [ *dummyFileLoader ]
   - name: 'BSAloader.esp'
@@ -4554,10 +4511,6 @@ plugins:
       - Deactivate
       - NoMerge
       - Stats
-  - name: 'DLCMehrunesRazor Vwalk UOP.esp'
-    tag:
-      - Actors.Anims
-      - NoMerge
   - name: 'Book Jackets DLC.esp'
     tag:
       - Graphics
@@ -6582,10 +6535,6 @@ plugins:
   - name: 'Potion Sorter-2081.esp'
     tag:
       - Names
-  - name: 'DLCThievesDen Vwalk UOP.esp'
-    tag:
-      - Actors.Anims
-      - NoMerge
   - name: 'ThievesDen_MOBS.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/28537' ]
     tag:
@@ -12100,10 +12049,6 @@ plugins:
   - name: 'DMRA BBB Knights of the Nine Replacer.esp'
     tag:
       - Graphics
-  - name: 'Knights Vwalk UOP.esp'
-    tag:
-      - Actors.Anims
-      - NoMerge
   - name: 'EVE_KnightsoftheNine.esp'
     tag:
       - Graphics
@@ -13745,9 +13690,6 @@ plugins:
     msg: [ *obsolete ]
   - name: 'xul Vwalk Full.esp'
     msg: [ *updateSensualWalks ]
-    tag:
-      - Actors.Anims
-      - NoMerge
   - name: 'OblivionCollectibleCards-UniqueLandscapes Merged patch.esp'
     msg:
       - type: say
@@ -21358,7 +21300,7 @@ plugins:
       - Actors.Anims
       - NoMerge
   # Catch all for Sensual Walk patches
-  - name: '([^\.]+(\d\.\d)? Vwalk)\.esp'
+  - name: '([^\.]+(\d\.\d)? Vwalk).*\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/28223'
         name: 'Sensual Walks for Female NPCs'
