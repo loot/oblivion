@@ -1404,6 +1404,9 @@ plugins:
       - <<: *alreadyInX
         subs: [ 'FCOM_Convergence.esp' ]
         condition: 'active("FCOM_Convergence.esp")'
+      - <<: *requiresX
+        subs: [ 'Mart''s Monster Mod BSA' ]
+        condition: 'not file("Mart''s Monster Mod.bsa") or not file("Mart''s Monster Mod for Frans.bsa") or not file("Mart''s Monster Mod for OOO.bsa") or not file("FCOM_Convergence_Mart''s Monster Mod.bsa")'
       - <<: *useOnlyOneX
         subs: [ 'Mart''s Monster Mod esp' ]
         condition: 'many("Mart''s Monster Mod( for Fran| for OOO)?\.esp")'
@@ -1425,9 +1428,6 @@ plugins:
       - 'Francesco''s Leveled Creatures-Items Mod.esm'
       - 'Oscuro''s_Oblivion_Overhaul.esm'
     msg:
-      - <<: *requiresX
-        subs: [ 'Mart''s Monster Mod.bsa' ]
-        condition: 'not file("Mart''s Monster Mod.bsa")'
       - type: say
         content:
           - lang: en
@@ -1441,9 +1441,6 @@ plugins:
         itm: 904
   - name: 'Mart''s Monster Mod for Fran.esp'
     msg:
-      - <<: *requiresX
-        subs: [ 'Mart''s Monster Mod for Frans.bsa' ]
-        condition: 'not file("Mart''s Monster Mod for Frans.bsa")'
       - type: say
         content:
           - lang: en
@@ -1457,9 +1454,6 @@ plugins:
         itm: 870
   - name: 'Mart''s Monster Mod for OOO.esp'
     msg:
-      - <<: *requiresX
-        subs: [ 'Mart''s Monster Mod for OOO.bsa' ]
-        condition: 'not file("Mart''s Monster Mod for OOO.bsa")'
       - type: say
         content:
           - lang: en
@@ -7288,8 +7282,8 @@ plugins:
     msg:
       - *doNotClean
       - <<: *requiresX
-        subs: [ 'FCOM_Convergence_Mart''s Monster Mod.bsa' ]
-        condition: 'not file("FCOM_Convergence_Mart''s Monster Mod.bsa")'
+        subs: [ 'Mart''s Monster Mod BSA' ]
+        condition: 'not file("Mart''s Monster Mod.bsa") or not file("Mart''s Monster Mod for Frans.bsa") or not file("Mart''s Monster Mod for OOO.bsa") or not file("FCOM_Convergence_Mart''s Monster Mod.bsa")'
       - type: say
         content:
           - lang: en
