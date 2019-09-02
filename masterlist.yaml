@@ -1305,6 +1305,10 @@ plugins:
       - 'Francesco''s Leveled Creatures-Items Mod.esm'
       - 'Francesco''s Optional New Items Add-On.esm'
       - 'Oscuro''s_Oblivion_Overhaul.esm'
+    msg:
+      - <<: *obsolete
+        subs: [ '[Martigen''s Monster Mod 3.8](https://www.nexusmods.com/oblivion/mods/17784)' ]
+        condition: 'version("Mart''s Monster Mod.esm", "3.8b1", <)'
     tag:
       - Actors.AIData
       - Actors.AIPackages
@@ -1359,12 +1363,12 @@ plugins:
         crc: 0xDF4B7C20
         util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 3
-  - name: 'Mart''s Monster Mod( for OOO)? - Knights( | of the Nine Patch)?\.esp'
+  - name: 'Mart''s Monster Mod( - Knights| for OOO - Knights )\.esp'
     inc: [ 'FCOM_Convergence.esm' ]
     msg:
       - <<: *useOnlyOneX
         subs: [ 'Mart''s Monster Mod Knights' ]
-        condition: 'many("Mart''s Monster Mod( for OOO)? - Knights( | of the Nine Patch)?\.esp")'
+        condition: 'many("Mart''s Monster Mod( - Knights| for OOO - Knights )\.esp")'
     tag:
       - Actors.AIData
       - Actors.AIPackages
@@ -1510,7 +1514,7 @@ plugins:
     clean:
       - crc: 0xBC851604
         util: 'TES4Edit v4.0.2'
-  - name: 'Mart''s Monster Mod - Diverse Runeskull(s Loot OOO| OOO Loot)\.esp'
+  - name: 'Mart''s Monster Mod - Diverse Runeskulls Loot OOO.esp'
     inc: [ 'Mart''s Monster Mod - Gems & Gem Dust.esp' ]
     req:
       - 'Oscuro''s_Oblivion_Overhaul.esm'
@@ -1522,7 +1526,6 @@ plugins:
         condition: 'not file("Mart''s Monster Mod for OOO.esp")'
     tag:
       - Delev
-  - name: 'Mart''s Monster Mod - Diverse Runeskulls Loot OOO.esp'
     clean:
       - crc: 0x932A57C9
         util: 'TES4Edit v4.0.2'
@@ -1765,12 +1768,11 @@ plugins:
     clean:
       - crc: 0x801334B7
         util: 'TES4Edit v4.0.2'
-  - name: 'Mart(igen)?''s Monster Mod - Resized Races\.esp'
+  - name: 'Mart''s Monster Mod - Resized Races.esp'
     tag:
       - Body-Size-F
       - Body-Size-M
       - R.Relations
-  - name: 'Mart''s Monster Mod - Resized Races.esp'
     clean:
       - crc: 0xE29818CA
         util: 'TES4Edit v4.0.2'
@@ -1844,10 +1846,30 @@ plugins:
         util: 'TES4Edit v4.0.2'
 
   # MMM Older versions
+  # v370
+  - name: 'Mart''s Monster Mod - Durzog Addon.esp'
+    msg: [ *obsolete ]
+  - name: 'Mart''s Monster Mod - Foxes.esp'
+    msg: [ *obsolete ]
+  - name: 'Mart''s Monster Mod - Friendlier Factions OOO+FCOM.esp'
+    msg: [ *obsolete ]
+  - name: 'Mart''s Monster Mod - Vindasel.esp'
+    msg: [ *obsolete ]
+  # v355b5
   - name: 'Mart''s Monster Mod for FCOM.esp'
     msg: [ *obsoleteUseFCOM ]
+  - name: 'Mart''s Monster Mod - Bats Addon.esp'
+    msg: [ *obsolete ]
+  - name: 'Mart''s_Monster Mod -No Wyvern.esp'
+    msg:
+      - <<: *useInstead
+        subs: [ 'FCOM No Wyverns' ]
+        condition: 'active("FCOM_Convergence.esp")'
+  # v201
   - name: 'Mart''s Monster Mod for Francescos.esp'
-    msg: [ *alreadyInFCOM ]
+    msg:
+      - *alreadyInFCOM
+      - *obsolete
     tag:
       - Delev
       - Factions
@@ -1856,26 +1878,28 @@ plugins:
       - Relations
       - Relev
       - Scripts
-  - name: 'Mart''s Monster Mod for Fran''s nvCNPC.esp'
-    msg: [ *obsoleteUseFCOM ]
-  - name: 'Mart''s Monster Mod for Fran''s nvNPC.esp'
-    msg: [ *obsoleteUseFCOM ]
-  - name: 'Mart''s Monster Mod for OOO - LessReavers.esp'
-    msg:
-      - <<: *useInstead
-        subs: [ 'Mart''s Monster Mod - Less Reavers.esp' ]
-  - name: 'Mart''s Monster Mod - Bats Addon.esp'
-    msg: [ *obsolete ]
-  - name: 'Mart''s Monster Mod - Blood Fix v3.esp'
-    msg: [ *obsolete ]
-  - name: 'Mart''s Monster Mod - Boar''s Addon.esp'
+  - name: 'Mart''s Monster Mod - Diverse NPC faces.esp'
     msg: [ *obsolete ]
   - name: 'Mart''s Monster Mod - Diverse Creature Skins.esp'
     msg:
       - *alreadyInOOO
       - *obsolete
-  - name: 'Mart''s Monster Mod - Diverse NPC faces nv.esp'
-    msg: [ *obsoleteUseFCOM ]
+  - name: 'Mart''s Monster Mod - Fran''s leveled quests + HC.esp'
+    msg: [ *obsolete ]
+  - name: 'Mart''s Monster Mod - Fran''s leveled quests + HC + DD.esp'
+    msg: [ *obsolete ]
+  - name: 'Mart''s Monster Mod - Friendlier Factions.esp'
+    msg: [ *obsolete ]
+  - name: 'Mart''s Monster Mod - (Increased|Reduced|Reduced Reduced) Spawn Rates\.esp'
+    msg: [ *obsolete ]
+
+# MMM Optionial Addon and Patches https://www.nexusmods.com/oblivion/mods/22771
+  - name: 'Mart''s Monster Mod( for OOO)? - TNR Faces\.esp'
+    inc: [ 'COBL Races TNR.esp' ]
+  - name: 'Mart''s Monster Mod( for OOO)? - (COBL Races TNR|TNR Faces)\.esp'
+    tag:
+      - NoMerge
+      - NpcFaces
   - name: 'Mart''s Monster Mod - Diverse Runeskulls.esp'
     tag:
       - Delev
@@ -1890,14 +1914,34 @@ plugins:
     req: [ 'Mart''s Monster Mod - Gems & Gem Dust.esp' ]
     tag:
       - Delev
-  - name: 'Marts Monster Mod - DLCHorseArmor+Slof.esp'
+  - name: 'Mart''s Monster Mod - Diverse RuneSkull OOO Loot.esp'
+    inc: [ 'Mart''s Monster Mod - Gems & Gem Dust.esp' ]
+    req:
+      - 'Oscuro''s_Oblivion_Overhaul.esm'
+      - name: 'Mart''s Monster Mod for OOO.esp'
+        display: '[MMMforOOO](https://www.nexusmods.com/oblivion/mods/17784) or [FCOM Convergence](https://www.nexusmods.com/oblivion/mods/12249)'
+        condition: 'not file("FCOM_Convergence.esm")'
+      - name: 'FCOM_Convergence.esm'
+        display: '[MMMforOOO](https://www.nexusmods.com/oblivion/mods/17784) or [FCOM Convergence](https://www.nexusmods.com/oblivion/mods/12249)'
+        condition: 'not file("Mart''s Monster Mod for OOO.esp")'
     tag:
-      - Graphics
+      - Delev
+  - name: 'MMM - Playable Undead Armors.esp'
+    tag:
+      - Invent
+  - name: 'MMM - Playable Undead Armors - Oblivion WarCry Compatability Patch.esp'
+    tag:
+      - Invent
+
+  - name: 'Mart''s Monster Mod for OOO - LessReavers.esp'
+    msg:
+      - <<: *useInstead
+        subs: [ 'Mart''s Monster Mod - Less Reavers.esp' ]
+  - name: 'Mart''s Monster Mod - Blood Fix v3.esp'
+    msg: [ *obsolete ]
+  - name: 'Mart''s Monster Mod - Boar''s Addon.esp'
+    msg: [ *obsolete ]
   - name: 'Mart''s Monster Mod - Extra Reavers.esp'
-    msg: [ *obsolete ]
-  - name: 'Mart''s Monster Mod - Friendlier Factions OOO+FCOM.esp'
-    msg: [ *obsolete ]
-  - name: 'Mart''s Monster Mod - Increased Spawn Rates.esp'
     msg: [ *obsolete ]
   - name: 'Mart''s Monster Mod - Hairy Spiders Addon.esp'
     msg: [ *obsolete ]
@@ -1923,22 +1967,26 @@ plugins:
         condition: *OOOCond
   - name: 'Mart''s Monster Mod - No Reaver Hounds.esp'
     msg: [ *obsolete ]
-  - name: 'Mart''s_Monster Mod -No Wyvern.esp'
-    msg:
-      - <<: *useInstead
-        subs: [ 'FCOM No Wyverns' ]
-        condition: 'active("FCOM_Convergence.esp")'
-  - name: 'Mart''s Monster Mod - (Reduced |Reduced Reduced)?Spawn Rates( Increased| Moderate| Reduced Reduced)?\.esp'
-    msg: [ *obsolete ]
-  - name: 'Mart''s Monster Mod - Vindasel.esp'
-    msg: [ *obsolete ]
-  - name: 'Mart''s Monster Mod( | - | for OOO - | for OOO )(COBL Races TNR|TNR Faces)\.esp'
-    tag:
-      - NoMerge
-      - NpcFaces
-  - name: 'Mart''s Monster Mod( - | for OOO - | for OOO )(COBL Races TNR|TNR Faces)\.esp'
-    inc: [ 'COBL Races TNR.esp' ]
 
+# FranOOOMMM! https://www.nexusmods.com/oblivion/mods/8037
+  - name: 'FranOOOMMM_FranItemLists.esp'
+    msg: [ *obsoleteUseFCOM ]
+  - name: 'FranOOOMMM_GuardFix.esp'
+    msg: [ *obsoleteUseFCOM ]
+  - name: 'FranOOOMMM_OOOItemLists.esp'
+    msg: [ *obsoleteUseFCOM ]
+  - name: 'FranOOOMMM_SpawnMerge.esp'
+    msg: [ *obsoleteUseFCOM ]
+  - name: 'FranOOOMMM_WarCry_BobsArmory.esp'
+    msg: [ *obsoleteUseFCOM ]
+  - name: 'Mart''s Monster Mod - Diverse NPC faces nv.esp'
+    msg: [ *obsoleteUseFCOM ]
+  - name: 'Mart''s Monster Mod for Fran''s nvNPC.esp'
+    msg: [ *obsoleteUseFCOM ]
+  - name: 'Mart''s Monster Mod for Fran''s nvCNPC.esp'
+    msg: [ *obsoleteUseFCOM ]
+  - name: 'Oscuro''s Combat Behavior.esp'
+    msg: [ *obsoleteUseFCOM ]
 
   - name: 'Waalx Animals & Creatures.esm'
     url: [ 'http://tesalliance.org/forums/index.php?/files/file/1318-wac-waalx-animals-creatures/' ]
@@ -7265,18 +7313,6 @@ plugins:
       - crc: 0x2ab190d0
         <<: *dirtyPlugin
         udr: 10
-  - name: 'FranOOOMMM_FranItemLists.esp'
-    msg: [ *obsoleteUseFCOM ]
-  - name: 'FranOOOMMM_SpawnMerge.esp'
-    msg: [ *obsoleteUseFCOM ]
-  - name: 'FranOOOMMM_GuardFix.esp'
-    msg: [ *obsoleteUseFCOM ]
-  - name: 'FranOOOMMM_OOOItemLists.esp'
-    msg: [ *obsoleteUseFCOM ]
-  - name: 'FranOOOMMM_WarCry_BobsArmory.esp'
-    msg: [ *obsoleteUseFCOM ]
-  - name: 'Oscuro''s Combat Behavior.esp'
-    msg: [ *obsoleteUseFCOM ]
   - name: 'FCOM_Convergence.esp'
     url: [ 'http://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/' ]
     msg:
@@ -7428,12 +7464,6 @@ plugins:
       - 'FCOM_Convergence.esm'
   - name: 'Gems and Gem Dusts - MMM.esp'
     msg: [ *alreadyInOOOFull ]
-  - name: 'MMM - Playable Undead Armors.esp'
-    tag:
-      - Invent
-  - name: 'MMM - Playable Undead Armors - Oblivion WarCry Compatability Patch.esp'
-    tag:
-      - Invent
   - name: 'MrSiika''sFarmAnimals.esp'
     msg:
       - type: say
