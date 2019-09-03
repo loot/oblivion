@@ -2434,11 +2434,11 @@ plugins:
     tag:
       - Factions
   - name: 'Permanent Effects from Quest Items fix.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/25895' ]
     msg:
-      - type: say
-        content: 'Make sure you have version 1.1 or higher.'
-  - name: 'Permanent Effects from Quest Items fix Merge.esp'
-    msg: [ *obsolete ]
+      - <<: *alreadyInOrFixedByX
+        subs: [ '(OBSE) Oblivion Script Extender' ]
+        condition: 'file("../obse_1_2_416.dll") and version("../obse_1_2_416.dll","0.21.0.0", >=)'
   - name: 'Obl-IM.esp'
     tag:
       - Delev
