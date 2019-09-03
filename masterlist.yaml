@@ -290,6 +290,22 @@ common:
     subs: [ '[Wrye Bash](https://www.nexusmods.com/oblivion/mods/22368) Bashed Patch' ]
     condition: 'not file("Bashed Patch.*\.esp")'
 
+  - &useBashTweakInstead
+    type: say
+    content:
+      - lang: en
+        text: 'A Bashed Patch tweak can be used instead of this plugin. %1%'
+    subs: [ '' ]
+    condition: 'file("Bashed Patch.*\.esp")'
+
+  - &useBashTweakRecommended
+    type: say
+    content:
+      - lang: en
+        text: 'It''s recommended to use the following Bashed Patch tweak with this plugin. %1%'
+    subs: [ '' ]
+    condition: 'file("Bashed Patch.*\.esp")'
+
   - &useInstead
     type: warn
     content:
@@ -1122,12 +1138,8 @@ plugins:
     msg: [ *deleteModdingPlugin ]
   - name: 'Cobl Silent Equip Misc.esp'
     msg:
-      - type: warn
-        content:
-          - lang: en
-            text: 'A tweak "**%1%**" in Wrye Bash''s Bashed Patch "**Tweak Settings**" section can be used instead of this plugin.'
-        subs: [ 'Msg: Equip Misc. Item' ]
-        condition: 'file("Bashed Patch.*\.esp")'
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings: Equip Misc. Item' ]
     clean:
       - crc: 0x5860AF9A
         util: 'TES4Edit v4.0.2'
@@ -14300,9 +14312,8 @@ plugins:
     msg: [ *bashedPatchTweak ]
   - name: '100% Harvest Chance Pitcher & Lilly.esp'
     msg:
-      - type: say
-        content: 'Use Bashed Patch tweak instead if using Wrye Bash - unless you want it only on the Pitcher & Lilly plants.'
-        condition: 'file("Bashed Patch.*\.esp")'
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Assorted: Harvest Chance' ]
   - name: '100% Harvest Chance Shivering Isles.esp'
     msg: [ *bashedPatchTweak ]
   - name: '1229-Priced Clutter-TESSource.esp'
@@ -14441,9 +14452,8 @@ plugins:
         condition: 'file("Living Economy.*\.esp")'
   - name: 'BlackFineryWithAmulet.esp'
     msg:
-      - type: say
-        content: 'Use Wrye Bash''s ''clothing show amulets'' tweak instead.'
-        condition: 'file("Bashed Patch.*\.esp")'
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Clothes: Robes Show Amulets' ]
   - name: 'Blunt Is Now Hafted.esp'
     tag:
       - Deactivate
@@ -14562,24 +14572,20 @@ plugins:
     req: [ *OBSEv18 ]
   - name: 'Compass-Disable_POIs.esp'
     msg:
-      - type: say
-        content: 'Use Wrye Bash''s Bashed Patch tweaker instead.'
-        condition: 'file("Bashed Patch.*\.esp")'
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Setting: Compass' ]
   - name: 'Compass-Disable_QuestMarkers.esp'
     msg:
-      - type: say
-        content: 'Use Wrye Bash''s Bashed Patch tweaker instead.'
-        condition: 'file("Bashed Patch.*\.esp")'
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Setting: Compass' ]
   - name: 'Compass-Disable_Both.esp'
     msg:
-      - type: say
-        content: 'Use Wrye Bash''s Bashed Patch tweaker instead.'
-        condition: 'file("Bashed Patch.*\.esp")'
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Setting: Compass' ]
   - name: 'Compass_Marker_Reducer.esp'
     msg:
-      - type: say
-        content: 'Use Wrye Bash''s Bashed Patch tweaker instead.'
-        condition: 'file("Bashed Patch.*\.esp")'
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Setting: Compass' ]
   - name: 'Creatures20.esp'
     tag:
       - Actors.AIData
@@ -14649,23 +14655,11 @@ plugins:
     msg:
       - type: say
         content: 'Old file. Not needed with DarkUI''d DarN 1.5.5 or newer.'
-  - name: 'DarNified Books.esp'
+  - name: 'DarNified Books.*\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/10763' ]
     msg:
-      - type: say
-        content: 'If possible, use Wrye Bash''s Darnified Books tweak instead.'
-  - name: 'DarNified Books for OOO.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/14276' ]
-    msg:
-      - type: say
-        content: 'If possible, use Wrye Bash''s Darnified Books tweak instead.'
-  - name: 'DarNified Books_BJ.esp'
-    msg:
-      - type: say
-        content: 'If possible, use Wrye Bash''s Darnified Books tweak instead.'
-  - name: 'DarNified Books_BP_BJ.esp'
-    msg:
-      - type: say
-        content: 'If possible, use Wrye Bash''s Darnified Books tweak instead.'
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Assorted: Darnified Books' ]
   - name: 'HUD Status Bars.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/34905' ]
     req:
@@ -15231,9 +15225,8 @@ plugins:
         content: 'If used with another potion graphics replacer, remove the Graphics tag to ensure compatibility. I.e. only the mod you want to be dominant should have a Graphics tag.'
   - name: 'Repair Anytime-9384.esp'
     msg:
-      - type: say
-        content: 'Use Wrye Bash Bashed Patch Tweak Combat Repair [Allowed] instead.'
-        condition: 'file("Bashed Patch.*\.esp")'
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings: Combat Repair' ]
   - name: 'real_tools.esp'
     msg:
       - type: say
@@ -16146,8 +16139,8 @@ plugins:
     msg: [ *bashedPatchTweak ]
   - name: 'Spell Ranks.esp'
     msg:
-      - type: say
-        content: 'Use Wrye Bash Bashed Patch tweak ''Rational Names'' where posible.'
+      - <<: *useBashTweakRecommended
+        subs: [ 'Import Names: Rational_Names.csv' ]
   - name: 'MagickOverlap.esp'
     req: [ *OBSEv14 ]
   - name: 'Poison Arrows.esp'
@@ -19731,8 +19724,8 @@ plugins:
       - NpcFaces
   - name: 'Better Redguard v2.esp'
     msg:
-      - type: say
-        content: 'If at all possible *also* use the Wrye Bash tweak for mod compatibility for BR.'
+      - <<: *useBashTweakRecommended
+        subs: [ 'Tweak Actors: Redguard FGTS Nuller' ]
     tag:
       - Actors.ACBS
       - Actors.Stats
@@ -20075,8 +20068,8 @@ plugins:
       - <<: *useOnlyOneX
         subs: [ 'Race Balancing Project - NPC Diversity Better Redguards Module' ]
         condition: 'many("bgBalancingEVOptionalNPCDiversity, (Beautification |TNR Merge |Vanilla )Better Redguards\.esp")'
-      - type: say
-        content: 'If at all possible *also* use the Wrye Bash tweak for mod compatibility for BR.'
+      - <<: *useBashTweakRecommended
+        subs: [ 'Tweak Actors: Redguard FGTS Nuller' ]
     tag:
       - Invent
       - NoMerge
@@ -20086,8 +20079,8 @@ plugins:
     msg:
       - type: say
         content: 'Requires: Better Redguards installed with its ESP deactivated.'
-      - type: say
-        content: 'If at all possible *also* use the Wrye Bash tweak for mod compatibility for BR.'
+      - <<: *useBashTweakRecommended
+        subs: [ 'Tweak Actors: Redguard FGTS Nuller' ]
   - name: 'bgBalancingEVOptionalFCOMAdditions.esp'
     url: [ 'http://theelderscrolls.info/?go=dlfile&fileid=215' ]
     tag:
