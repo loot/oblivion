@@ -203,8 +203,8 @@ common:
     condition: *OOOCond
   - &alreadyInFCOM
     <<: *alreadyInX
-    subs: [ 'FCOM, MMM, OOO or other FCOM components' ]
-    condition: 'file("Oscuro''s_Oblivion_Overhaul.esm") or file("FCOM_Convergence.esm")'
+    subs: [ 'FCOM Convergence' ]
+    condition: 'active("FCOM_Convergence.esm")'
 
   - &alreadyInOrFixedByX
     type: error
@@ -999,8 +999,12 @@ plugins:
     msg: [ *obsolete ]
 
 # Francescos Creatures and Items V5
-  - name: 'Francesco''s Leveled Creatures-Items Mod.esm'
+  - name: 'Francesco''s (Creatures|Leveled|More|Optional).*\.es(m|p)'
     url: [ 'https://www.nexusmods.com/oblivion/mods/40190' ]
+  - name: 'Francesco''s Leveled Creatures-Items Mod.esm'
+    inc:
+      - name: 'Oscuro''s_Oblivion_Overhaul.esm'
+        condition: 'not active("FCOM_Convergence.esm")'
     tag:
       - Actors.ACBS
       - Actors.AIData
@@ -1014,23 +1018,56 @@ plugins:
       - Relev
       - Scripts
       - Stats
-    dirty:
-      - crc: 0x17f6fd1a
-        itm: 6
-        <<: *dirtyPlugin
+    clean:
+      # version: 5.0B1 No Extras
+      - crc: 0x6E140E64
+        util: 'TES4Edit v4.0.2'
+      # version: 5.0B1 Combat Tweaks
+      - crc: 0xA202CFEE
+        util: 'TES4Edit v4.0.2'
+      # version: 5.0B1 MOBS
+      - crc: 0x86F701A8
+        util: 'TES4Edit v4.0.2'
+      # version: 5.0B1 MOBS + Combat Tweaks
+      - crc: 0xA6E20DD9
+        util: 'TES4Edit v4.0.2'
+      # version: 5.0B1 SI
+      - crc: 0x40DB6674
+        util: 'TES4Edit v4.0.2'
+      # version: 5.0B1 SI + Combat Tweaks
+      - crc: 0x1C4954F9
+        util: 'TES4Edit v4.0.2'
+      # version: 5.0B1 SI MOBS
+      - crc: 0xFC291261
+        util: 'TES4Edit v4.0.2'
+      # version: 5.0B1 SI MOBS + Combat Tweaks
+      - crc: 0x4CC0CFD7
+        util: 'TES4Edit v4.0.2'
   - name: 'Francesco''s Optional New Items Add-On.esm'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/40190' ]
     tag:
       - Delev
       - Relev
-    dirty:
-      - crc: 0xdfd4fb97
-        itm: 2
-        <<: *dirtyPlugin
+    clean:
+      # version: 5.0B1
+      - crc: 0x2F92934E
+        util: 'TES4Edit v4.0.2'
+      # version: 5.0B1 MOBS
+      - crc: 0x4EC479E6
+        util: 'TES4Edit v4.0.2'
+      # version: 5.0B1 SI
+      - crc: 0x36E8215E
+        util: 'TES4Edit v4.0.2'
+      # version: 5.0B1 SI + MOBS
+      - crc: 0x754C4DFF
+        util: 'TES4Edit v4.0.2'
   - name: 'Francesco''s Optional New Creatures Add-On.esm'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/40190' ]
     inc:
       - 'FCOM_Convergence.esm'
+      - 'Mart''s Monster Mod.esm'
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'Mart''s Monster Mod for Frans' ]
+        condition: 'active("Mart''s Monster Mod for Frans.esp")'
     tag:
       - Actors.AIPackages
       - Delev
@@ -1039,68 +1076,187 @@ plugins:
       - Relations
       - Relev
       - Scripts
+    dirty:
+      # version: 5.0B1 No Extras
+      - <<: *quickClean
+        crc: 0x05C1179C
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
+      # version: 5.0B1 Higher Spawn Chance
+      - <<: *quickClean
+        crc: 0x7E6C2002
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
+      # version: 5.0B1 SI
+      - <<: *quickClean
+        crc: 0xEC1ED965
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
+      # version: 5.0B1 SI + Higher Spawn Chance
+      - <<: *quickClean
+        crc: 0x7954ED0D
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
   - name: 'Francesco''s Creatures and Items Resources.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/40190' ]
+    group: *veryEarlyGroup
+    after: [ 'DLCShiveringIsles.esp' ]
     msg: [ *dummyFileLoader ]
   - name: 'Francesco''s More Wilderness Life.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/40190' ]
     inc:
       - 'FCOM_Convergence.esm'
-  - name: 'Francesco''s Optional Chance of Stronger Enemies.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/40190' ]
+      - 'Mart''s Monster Mod.esm'
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'Mart''s Monster Mod for Frans' ]
+        condition: 'active("Mart''s Monster Mod for Frans.esp")'
     dirty:
-      - crc: 0x4f003db0
-        <<: *dirtyPlugin
-        itm: 3
+      # version: 5.0B1
+      - <<: *quickClean
+        crc: 0x60471138
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 13
+      # version: 5.0B1 Hardcore
+      - <<: *quickClean
+        crc: 0xB5D7D5D3
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 13
+      # version: 5.0B1 Extra Hardcore
+      - <<: *quickClean
+        crc: 0x9AAFAB5D
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 13
+  - name: 'Francesco''s Optional Chance of More Enemies.esp'
+    inc:
+      - name: 'FCOM_Convergence.esm'
+        condition: 'not active("DLCShiveringIsles.esp")'
+      - name: 'Mart''s Monster Mod.esm'
+        condition: 'not active("FCOM_Convergence.esm")'
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'Mart''s Monster Mod' ]
+        condition: 'active("Mart''s Monster Mod.esm") and not active("FCOM_Convergence.esm")'
+    clean:
+      # version: 5.0B1
+      - crc: 0x834225AC
+        util: 'TES4Edit v4.0.2'
+      # version: 5.0B1 Hardcore
+      - crc: 0x723E4920
+        util: 'TES4Edit v4.0.2'
+      # version: 5.0B1 Extra Hardcore
+      - crc: 0x8CA49385
+        util: 'TES4Edit v4.0.2'
+      # version: 5.0B1 SI
+      - crc: 0xE02591A7
+        util: 'TES4Edit v4.0.2'
+      # version: 5.0B1 SI Hardcore
+      - crc: 0x248C8931
+        util: 'TES4Edit v4.0.2'
+      # version: 5.0B1 SI Extra Hardcore
+      - crc: 0x2FF407FF
+        util: 'TES4Edit v4.0.2'
+  - name: 'Francesco''s Optional Chance of Stronger Bosses.esp'
+    clean:
+      # version: 5.0B1
+      - crc: 0xC4F8B2FA
+        util: 'TES4Edit v4.0.2'
+      # version: 5.0B1 SI
+      - crc: 0x19C52F4F
+        util: 'TES4Edit v4.0.2'
+  - name: 'Francesco''s Optional Chance of Stronger Enemies.esp'
+    clean:
+      # version: 5.0B1
+      - crc: 0x08F1B16D
+        util: 'TES4Edit v4.0.2'
+      # version: 5.0B1 SI
+      - crc: 0x69CDAE26
+        util: 'TES4Edit v4.0.2'
+  - name: 'Francesco''s Optional (Dungeon Chest (Locks|Loot)|House Chest Loot|Leveled (Arena|Quests))\.esp'
+    inc: [ 'FCOM_Convergence.esm' ]
+    msg: [ *alreadyInFCOM ]
   - name: 'Francesco''s Optional Dungeon Chest Locks.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/40190' ]
-    msg: [ *alreadyInFCOM ]
+    dirty:
+      # version: 5.0B1
+      - <<: *quickClean
+        crc: 0xE6986FB8
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
+      # version: 5.0B1 SI
+      - <<: *quickClean
+        crc: 0xE8D24A94
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
   - name: 'Francesco''s Optional Dungeon Chest Loot.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/40190' ]
-    msg: [ *alreadyInFCOM ]
+    dirty:
+      # version: 5.0B1
+      - <<: *quickClean
+        crc: 0xA8DDDA6F
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
+      # version: 5.0B1 SI
+      - <<: *quickClean
+        crc: 0x94B735A6
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
   - name: 'Francesco''s Optional House Chest Loot.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/40190' ]
-    msg: [ *alreadyInFCOM ]
+    clean:
+      - crc: 0x968F569D
+        util: 'TES4Edit v4.0.2'
   - name: 'Francesco''s Optional Leveled Arena.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/40190' ]
-    msg: [ *alreadyInFCOM ]
+    clean:
+      - crc: 0xB3A72219
+        util: 'TES4Edit v4.0.2'
   - name: 'Francesco''s Optional Leveled Guards.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/40190' ]
+    inc:
+      - name: 'FCOM_Convergence.esm'
+        condition: 'not active("DLCShiveringIsles.esp")'
+      - name: 'Mart''s Monster Mod.esm'
+        condition: 'not active("FCOM_Convergence.esm")'
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'Mart''s Monster Mod' ]
+        condition: 'active("Mart''s Monster Mod.esm") and not active("FCOM_Convergence.esm")'
     tag:
       - Actors.ACBS
       - Actors.Stats
+    clean:
+      # version: 5.0B1
+      - crc: 0xF336E22D
+        util: 'TES4Edit v4.0.2'
+      # version: 5.0B1 SI
+      - crc: 0x4B2B4B48
+        util: 'TES4Edit v4.0.2'
   - name: 'Francesco''s Optional Leveled Quests.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/40190' ]
-    msg: [ *alreadyInFCOM ]
+    dirty:
+      # version: 5.0B1
+      - <<: *quickClean
+        crc: 0x6876A2AA
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1
+        udr: 311
+      # version: 5.0B1 SI
+      - <<: *quickClean
+        crc: 0xAA79DA0D
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 3
+        udr: 311
   - name: 'Francesco''s Optional New Adventurers.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/40190' ]
-    msg: [ *alreadyInFCOM ]
-  - name: 'Francesco''s Optional Vendor Tweaks.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/40190' ]
     inc:
       - 'FCOM_Convergence.esm'
+      - 'Oscuro''s_Oblivion_Overhaul.esm'
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'Mart''s Monster Mod for Frans' ]
+        condition: 'active("Mart''s Monster Mod for Frans.esp")'
+    clean:
+      - crc: 0xCBA1CE61
+        util: 'TES4Edit v4.0.2'
+  - name: 'Francesco''s Optional Vendor Tweaks.esp'
+    inc: [ 'FCOM_Convergence.esm' ]
+    clean:
+      - crc: 0x506AFA75
+        util: 'TES4Edit v4.0.2'
   # Older plugins
-  - name: 'Francesco''s Optional Files.esp'
-    msg: [ *deleteUseFransSeparateOptions ]
-    tag:
-      - Delev
-      - Relev
-  - name: 'Francesco''s Optional Files 1.esp'
-    msg: [ *deleteUseFransSeparateOptions ]
-    tag:
-      - Delev
-      - Relev
-  - name: 'Francesco''s Optional Files 2.esp'
-    msg: [ *deleteUseFransSeparateOptions ]
-    tag:
-      - Delev
-      - Relev
-  - name: 'Francesco''s Optional Files 3.esp'
-    msg: [ *deleteUseFransSeparateOptions ]
-    tag:
-      - Delev
-      - Relev
-  - name: 'Francesco''s Optional Files 4.esp'
+  - name: 'Francesco''s Optional Files( [1234])?\.esp'
     msg: [ *deleteUseFransSeparateOptions ]
     tag:
       - Delev
@@ -1112,6 +1268,12 @@ plugins:
   - name: 'Francesco''s \d\d? days respawn time\.esp'
     msg: [ *bashedPatchTweak ]
 
+  - name: 'Combat Behavior 2.11b.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/2073' ]
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'Francescos Creatures and Items' ]
+        condition: 'active("Francesco''s Leveled Creatures-Items Mod.esm")'
 
   - name: 'Crafting Skill Engine.esm'
     url:
@@ -1863,9 +2025,8 @@ plugins:
         condition: 'active("FCOM_Convergence.esp")'
   # v201
   - name: 'Mart''s Monster Mod for Francescos.esp'
-    msg:
-      - *alreadyInFCOM
-      - *obsolete
+    inc: [ 'FCOM_Convergence.esm' ]
+    msg: [ *obsolete ]
     tag:
       - Delev
       - Factions
@@ -6736,9 +6897,8 @@ plugins:
       - 'OOO-LightOfDawnFlamesWhenDrawnOBSE.esp'
     tag: [ Stats ]
   - name: 'MrSiikaRabbitsforOOO.esp'
-    msg:
-      - <<: *alreadyInFCOM
-        condition: 'file("Mart''s Monster Mod for OOO.esp") or file("FCOM_Convergence.esm")'
+    inc: [ '"Mart''s Monster Mod for OOO.esp' ]
+    msg: [ *alreadyInFCOM ]
   - name: 'OMOBS_OOO_missing_Oblivion_Bow_Ammo.esp'
     tag:
       - Stats
@@ -7001,7 +7161,9 @@ plugins:
       - Delev
       - Relev
   - name: 'John''s Leveled List Overhaul - Bandits in Glass Begone.esp'
-    msg: [ *alreadyInFCOM ]
+    inc:
+      - 'FCOM_Convergence.esm'
+      - 'Oscuro''s_Oblivion_Overhaul.esm'
   - name: 'FCOM_Cobl.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/12249/' ]
     msg:
