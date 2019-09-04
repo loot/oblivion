@@ -222,6 +222,24 @@ common:
     subs: [ 'Unofficial Oblivion Patch' ]
     condition: 'active("Unofficial Oblivion Patch.esp")'
 
+  - &corrupt
+    type: warn
+    content:
+      - lang: en
+        text: 'This file is corrupt and should not be used.'
+      - lang: ru
+        text: 'Файл испорчен и не должен использоваться.'
+      - lang: de
+        text: 'Diese Datei ist korrupt und sollte nicht benutzt werden.'
+      - lang: es
+        text: 'Este archivo puede corromper tu juego y no debería ser utilizado.'
+      - lang: ja
+        text: 'このファイルは壊れています。使用しないでください。'
+      - lang: pt_BR
+        text: 'Este arquivo está corrompido e não deveria ser utilizado.'
+      - lang: pt_BR
+        text: 'Ten plik jest zepsuty i nie powinien być używany.'
+
   - &deleteOrDeactivateX
     type: warn
     content:
@@ -15664,6 +15682,7 @@ plugins:
         udr: 1
   - name: 'LCE-addon.esp'
     msg:
+      - *corrupt
       - type: say
         content: 'If not using monster overhaul mods, use ''Lore Creatures.esp''.'
     dirty:
