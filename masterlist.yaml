@@ -9818,11 +9818,29 @@ plugins:
         <<: *dirtyPlugin
         itm: 71
         udr: 20
+
+  - name: '(Gweden(Brothel|Expansion)|FalkreathGS_RM)\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/26346' ]
   - name: 'GwedenBrothel.esp'
     dirty:
-      - crc: 0x1433b9e8
-        <<: *dirtyPlugin
-        udr: 14
+      - <<: *quickClean
+        crc: 0xB837C081
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 4
+  - name: 'GwedenExpansion.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x7DCFE84D
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 6
+  - name: 'FalkreathGS_RM.esp'
+    after: [ 'RumpleModSI.esp' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x8B4F5DE6
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
+
   - name: 'hackdirtabyss.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/13952' ]
     dirty:
@@ -22014,9 +22032,6 @@ plugins:
       - 'TalosGatehouse + ULImperialIsle.esp'
       - 'wb_TBG_RR-LR_UL-II_patch.esp'
       - 'OSPS_BC_IC-II_UL-II_TalosBridge_RRLR_Patch.esp'
-  - name: 'FalkreathGS_RM.esp'
-    after:
-      - 'RumpleModSI.esp'
   - name: 'Dollparts'' Cherry Brooke Grove.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/37753' ]
     after:
