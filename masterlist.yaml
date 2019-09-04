@@ -2217,23 +2217,17 @@ plugins:
       - type: warn
         content: 'Not recommended for use as there is no measurable performance improvement.'
     group: *underridesGroup
-  - name: 'Skillbookssave.esp'
+
+  - name: '(Skillbookssave|Book Jackets Oblivion( - BP)? - SSBFL)\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/13994' ]
-    tag:
-      - Scripts
     group: *underridesGroup
-  - name: 'OBSE Save Skill Books For Later DV.esp'
-    tag:
-      - Scripts
-    group: *underridesGroup
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Save Skill Books For Later' ]
+        condition: 'many("(Skillbookssave|Book Jackets Oblivion( - BP)? - SSBFL)\.esp")'
+    tag: [ Scripts ]
   - name: 'Book Jackets Oblivion - SSBFL.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/13994' ]
-    group: *underridesGroup
-    inc:
-      - 'Skillbookssave.esp'
-    tag:
-      - Graphics
-      - Scripts
+    tag: [ Graphics ]
 
   - name: 'Book Jackets Oblivion( - BP)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/5570' ]
