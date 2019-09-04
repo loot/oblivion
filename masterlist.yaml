@@ -206,8 +206,8 @@ common:
     condition: *OOOCond
   - &alreadyInFCOM
     <<: *alreadyInX
-    subs: [ 'FCOM, MMM, OOO or other FCOM components' ]
-    condition: 'file("Oscuro''s_Oblivion_Overhaul.esm") or file("FCOM_Convergence.esm")'
+    subs: [ 'FCOM Convergence' ]
+    condition: 'active("FCOM_Convergence.esm")'
 
   - &deleteOrDeactivateX
     type: warn
@@ -1236,8 +1236,8 @@ plugins:
   - name: 'Francesco''s Optional New Adventurers.esp'
     inc:
       - 'FCOM_Convergence.esm'
+      - 'Oscuro''s_Oblivion_Overhaul.esm'
     msg:
-      - *alreadyInFCOM
       - <<: *alreadyInX
         subs: [ 'Mart''s Monster Mod for Frans' ]
         condition: 'active("Mart''s Monster Mod for Frans.esp")'
@@ -2026,9 +2026,8 @@ plugins:
         condition: 'active("FCOM_Convergence.esp")'
   # v201
   - name: 'Mart''s Monster Mod for Francescos.esp'
-    msg:
-      - *alreadyInFCOM
-      - *obsolete
+    inc: [ 'FCOM_Convergence.esm' ]
+    msg: [ *obsolete ]
     tag:
       - Delev
       - Factions
@@ -7111,9 +7110,8 @@ plugins:
       - 'OOO-LightOfDawnFlamesWhenDrawnOBSE.esp'
     tag: [ Stats ]
   - name: 'MrSiikaRabbitsforOOO.esp'
-    msg:
-      - <<: *alreadyInFCOM
-        condition: 'file("Mart''s Monster Mod for OOO.esp") or file("FCOM_Convergence.esm")'
+    inc: [ '"Mart''s Monster Mod for OOO.esp' ]
+    msg: [ *alreadyInFCOM ]
   - name: 'OMOBS_OOO_missing_Oblivion_Bow_Ammo.esp'
     tag:
       - Stats
@@ -7376,7 +7374,9 @@ plugins:
       - Delev
       - Relev
   - name: 'John''s Leveled List Overhaul - Bandits in Glass Begone.esp'
-    msg: [ *alreadyInFCOM ]
+    inc:
+      - 'FCOM_Convergence.esm'
+      - 'Oscuro''s_Oblivion_Overhaul.esm'
   - name: 'FCOM_Cobl.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/12249/' ]
     msg:
