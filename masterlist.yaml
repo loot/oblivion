@@ -2226,19 +2226,7 @@ plugins:
     tag:
       - Scripts
     group: *underridesGroup
-  - name: 'Book Jackets Oblivion.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/5570' ]
-    tag:
-      - Graphics
-    dirty:
-      - crc: 0x88936850
-        <<: *dirtyPlugin
-        itm: 8
-        udr: 234
-  - name: 'Book Jackets Oblivion( ITA)?( - BP)?\.esp'
-    tag:
-      - Graphics
-  - name: 'Book Jackets Oblivion( - BP)? - SSBFL\.esp'
+  - name: 'Book Jackets Oblivion - SSBFL.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/13994' ]
     group: *underridesGroup
     inc:
@@ -2246,6 +2234,33 @@ plugins:
     tag:
       - Graphics
       - Scripts
+
+  - name: 'Book Jackets Oblivion( - BP)?\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/5570' ]
+    inc: [ 'Skillbookssave.esp' ]
+    tag: [ Graphics ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Book Jackets Oblivion' ]
+        condition: 'many("Book Jackets Oblivion( - BP)?\.esp")'
+  - name: 'Book Jackets Oblivion.esp'
+    inc: [ bookplacing.esm ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x88936850
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 8
+        udr: 233
+  - name: 'Book Jackets Oblivion - BP.esp'
+    after: [ 'Book Placement v2.esp' ]
+    tag: [ Scripts ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x8C50B45D
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 8
+        udr: 233
+
   - name: 'Oblivion Vwalk.esp'
     group: *underridesGroup
   - name: 'Oblivion_SI Vwalk Full.esp'
