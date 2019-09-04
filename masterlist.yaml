@@ -2149,15 +2149,13 @@ plugins:
       - Eyes
       - Hair
   - name: 'Minotaur Race.esm'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/32375' ]
-    req:
-      - *OBSE
-      - name: 'Race Repository.esm'
-        display: '[Playable and NPC Creatures (only Race Repository.esm)](http://www.nexusmods.com/oblivion/mods/31821)'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/31821' ]
+    req: [ *OBSE ]
     dirty:
-      - crc: 0x477340c8
-        itm: 7
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x477340C8
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 8
   - name: 'SDR.esm'
     url: [ 'https://www.nexusmods.com/oblivion/mods/37385' ]
     req:
