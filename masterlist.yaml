@@ -1250,6 +1250,12 @@ plugins:
   - name: 'Francesco''s \d\d? days respawn time\.esp'
     msg: [ *bashedPatchTweak ]
 
+  - name: 'Combat Behavior 2.11b.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/2073' ]
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'Francescos Creatures and Items' ]
+        condition: 'active("Francesco''s Leveled Creatures-Items Mod.esm")'
 
   - name: 'Crafting Skill Engine.esm'
     url:
