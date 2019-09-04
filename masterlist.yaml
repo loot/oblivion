@@ -222,6 +222,24 @@ common:
     subs: [ 'Unofficial Oblivion Patch' ]
     condition: 'active("Unofficial Oblivion Patch.esp")'
 
+  - &corrupt
+    type: warn
+    content:
+      - lang: en
+        text: 'This file is corrupt and should not be used.'
+      - lang: ru
+        text: 'Файл испорчен и не должен использоваться.'
+      - lang: de
+        text: 'Diese Datei ist korrupt und sollte nicht benutzt werden.'
+      - lang: es
+        text: 'Este archivo puede corromper tu juego y no debería ser utilizado.'
+      - lang: ja
+        text: 'このファイルは壊れています。使用しないでください。'
+      - lang: pt_BR
+        text: 'Este arquivo está corrompido e não deveria ser utilizado.'
+      - lang: pt_BR
+        text: 'Ten plik jest zepsuty i nie powinien być używany.'
+
   - &deleteOrDeactivateX
     type: warn
     content:
@@ -15647,29 +15665,16 @@ plugins:
       - crc: 0x62c163d8
         <<: *dirtyPlugin
         itm: 4
-  - name: 'Lore Creatures.esp'
-    msg:
-      - type: error
-        content: 'Use ''LCE-addon.esp'' instead if using MMM/Frans etc.'
-        condition: *FCOMCond
   - name: 'lorecreatures.esp'
-    msg:
-      - type: error
-        content: 'Use ''LCE-addon.esp'' instead if using MMM/Frans etc.'
-        condition: *FCOMCond
+    url: [ 'https://www.nexusmods.com/oblivion/mods/7471' ]
     dirty:
-      - crc: 0x43bf6b9b
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x43BF6B9B
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 36
         udr: 1
   - name: 'LCE-addon.esp'
-    msg:
-      - type: say
-        content: 'If not using monster overhaul mods, use ''Lore Creatures.esp''.'
-    dirty:
-      - crc: 0x46563387
-        <<: *dirtyPlugin
-        itm: 12
+    msg: [ *corrupt ]
   - name: 'CLS-craftybits.esp'
     dirty:
       - crc: 0x4c5bc5ec
