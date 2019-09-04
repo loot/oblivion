@@ -1152,10 +1152,10 @@ plugins:
       # version: 5.0B1 SI
       - crc: 0x69CDAE26
         util: 'TES4Edit v4.0.2'
-  - name: 'Francesco''s Optional Dungeon Chest Locks.esp'
-    inc:
-      - 'FCOM_Convergence.esm'
+  - name: 'Francesco''s Optional (Dungeon Chest (Locks|Loot)|House Chest Loot|Leveled (Arena|Quests))\.esp'
+    inc: [ 'FCOM_Convergence.esm' ]
     msg: [ *alreadyInFCOM ]
+  - name: 'Francesco''s Optional Dungeon Chest Locks.esp'
     dirty:
       # version: 5.0B1
       - <<: *quickClean
@@ -1168,9 +1168,6 @@ plugins:
         util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 2
   - name: 'Francesco''s Optional Dungeon Chest Loot.esp'
-    inc:
-      - 'FCOM_Convergence.esm'
-    msg: [ *alreadyInFCOM ]
     dirty:
       # version: 5.0B1
       - <<: *quickClean
@@ -1183,16 +1180,10 @@ plugins:
         util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 2
   - name: 'Francesco''s Optional House Chest Loot.esp'
-    inc:
-      - 'FCOM_Convergence.esm'
-    msg: [ *alreadyInFCOM ]
     clean:
       - crc: 0x968F569D
         util: 'TES4Edit v4.0.2'
   - name: 'Francesco''s Optional Leveled Arena.esp'
-    inc:
-      - 'FCOM_Convergence.esm'
-    msg: [ *alreadyInFCOM ]
     clean:
       - crc: 0xB3A72219
         util: 'TES4Edit v4.0.2'
@@ -1217,9 +1208,6 @@ plugins:
       - crc: 0x4B2B4B48
         util: 'TES4Edit v4.0.2'
   - name: 'Francesco''s Optional Leveled Quests.esp'
-    inc:
-      - 'FCOM_Convergence.esm'
-    msg: [ *alreadyInFCOM ]
     dirty:
       # version: 5.0B1
       - <<: *quickClean
