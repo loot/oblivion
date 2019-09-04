@@ -15668,8 +15668,9 @@ plugins:
   - name: 'lorecreatures.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/7471' ]
     dirty:
-      - crc: 0x43bf6b9b
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x43BF6B9B
+        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 36
         udr: 1
   - name: 'LCE-addon.esp'
