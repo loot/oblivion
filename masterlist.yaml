@@ -1109,6 +1109,8 @@ plugins:
         itm: 13
   - name: 'Francesco''s Optional Chance of More Enemies.esp'
     inc:
+      - name: 'FCOM_Convergence.esm'
+        condition: 'not active("DLCShiveringIsles.esp")'
       - name: 'Mart''s Monster Mod.esm'
         condition: 'not active("FCOM_Convergence.esm")'
     msg:
@@ -1196,6 +1198,8 @@ plugins:
         util: 'TES4Edit v4.0.2'
   - name: 'Francesco''s Optional Leveled Guards.esp'
     inc:
+      - name: 'FCOM_Convergence.esm'
+        condition: 'not active("DLCShiveringIsles.esp")'
       - name: 'Mart''s Monster Mod.esm'
         condition: 'not active("FCOM_Convergence.esm")'
     msg:
