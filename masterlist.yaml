@@ -186,7 +186,7 @@ common:
         text: 'Файл испорчен и не должен использоваться.'
 
   - &deleteOrDeactivateX
-    type: warn
+    type: error
     content:
       - lang: en
         text: 'Delete or deactivate. %1%'
@@ -224,7 +224,7 @@ common:
         text: '不干净。"脏"数据是故意的，这是mod需要的功能。'
 
   - &obsolete
-    type: say
+    type: warn
     content:
       - lang: en
         text: 'Obsolete. Update to the latest version. %1%'
@@ -357,7 +357,7 @@ common:
     condition: 'not file("Unofficial Oblivion Patch.esp")'
 
   - &useOnlyOneX
-    type: say
+    type: error
     content:
       - lang: en
         text: 'Use only one %1%.'
