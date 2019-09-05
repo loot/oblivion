@@ -308,7 +308,7 @@ common:
     subs: [ '[Wrye Bash](https://www.nexusmods.com/oblivion/mods/22368) Bashed Patch' ]
     condition: 'not file("Bashed Patch.*\.esp")'
 
-  - &reqMasterSort
+  - &sortMasters
     type: say
     content:
       - lang: en
@@ -2722,7 +2722,7 @@ plugins:
     req:
       - 'DLCShiveringIsles.esp'
     msg:
-      - *reqMasterSort
+      - *sortMasters
       - type: say
         content: 'Requires: all DLCs to be installed and active.'
 
@@ -13355,7 +13355,7 @@ plugins:
         condition: 'file("West Roads.esp")'
   - name: 'Chorrol Jewelry Company.esp'
     msg:
-      - *reqMasterSort
+      - *sortMasters
       - *needsCleaning
   - name: 'CUO_Bruma.esp'
     msg:
