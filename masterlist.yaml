@@ -2761,10 +2761,12 @@ plugins:
     group: *latePatchesGroup
     msg:
       - type: say
-        content: 'Remove BattleHorn_MOBS.esp, VileLair_MOBS.esp, MehrunesRazor_MOBS.esp, Knights_MOBS.esp or ThievesDen_MOBS.esp - this includes all of those.'
-        condition: 'file("(BattleHorn|VileLair|MehrunesRazor|Knights|ThievesDen)_MOBS\.esp")'
-      - type: say
         content: 'Recommended to use version 2.0 or greater: [MOBS](http://www.nexusmods.com/oblivion/mods/28537)'
+  - name: '(BattleHorn|Knights|Lair|Mehrunes|ThievesDen|VileLair)_MOBS\.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'DLC_MOBS.esp' ]
+        condition: 'file("DLC_MOBS.esp")'
 
   - name: 'xeoexpeople.esp'
     inc:
