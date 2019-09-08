@@ -2768,6 +2768,11 @@ plugins:
       - <<: *alreadyInX
         subs: [ 'DLC_MOBS.esp' ]
         condition: 'file("DLC_MOBS.esp")'
+  - name: 'Lair_MOBS.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'VileLair_MOBS.esp' ]
+        condition: 'file("VileLair_MOBS.esp")'
 
   - name: 'xeoexpeople.esp'
     inc:
