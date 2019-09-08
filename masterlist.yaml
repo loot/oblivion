@@ -2894,10 +2894,6 @@ plugins:
         display: 'Meshes from the "[Bonemold Helmet](http://www.nexusmods.com/oblivion/mods/6997)" and "Cryos Ordinator Indoril Armor" mods'
     tag:
       - Invent
-  - name: 'OMOBS_FRAN.esp'
-    tag:
-      - NoMerge
-      - Stats
   - name: 'MrSiikaRabbitsforFrans.esp'
     msg:
       - type: say
@@ -4726,14 +4722,6 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/42649' ]
     inc:
       - 'P1DseeYouSleep.esp'
-  - name: 'MOBS MehrunesRazor.esp'
-    tag:
-      - Stats
-  - name: 'MehrunesRazor_MOBS.esp'
-    tag:
-      - Deactivate
-      - NoMerge
-      - Stats
   - name: 'Book Jackets DLC.esp'
     tag:
       - Graphics
@@ -7000,9 +6988,6 @@ plugins:
   - name: 'MrSiikaRabbitsforOOO.esp'
     inc: [ '"Mart''s Monster Mod for OOO.esp' ]
     msg: [ *alreadyInFCOM ]
-  - name: 'OMOBS_OOO_missing_Oblivion_Bow_Ammo.esp'
-    tag:
-      - Stats
   - name: 'a4sFlamingNightmare-OOO.esp'
     tag:
       - Graphics
@@ -7171,11 +7156,6 @@ plugins:
   - name: 'Hemingweys Capes for FCOM_FrancescosNamedBosses.esp'
     tag:
       - Invent
-  - name: 'OMOBS_Optionial Combat Settings.esp'
-    inc:
-      - 'Oscuro''s_Oblivion_Overhaul.esm'
-      - 'FCOM_Convergence.esm'
-    msg: [ *obsolete ]
   - name: 'mg19obsefix.esp'
     req: [ *OBSE ]
   - name: 'OOO-Better_Priced_Clutter.esp'
@@ -7476,12 +7456,6 @@ plugins:
     msg:
       - type: say
         content: 'MMM users should use ''VASE - Cyrodiil for MMM.esp'' instead.'
-  - name: 'OMOBS_MMM.esp'
-    tag:
-      - Stats
-  - name: 'OMOBS_MMM_H&C_Ammo.esp'
-    tag:
-      - Stats
   - name: 'Spiders Addon.esp'
     msg: [ *obsolete ]
   - name: 'Arachnophobia-2343.esp'
@@ -8756,11 +8730,6 @@ plugins:
         <<: *dirtyPlugin
         itm: 232
   - name: 'Akiviri Imports MOBS.esp'
-    msg:
-      - type: say
-        content: 'Use this instead ''Akaviri Imports.esp'' for FCOM. Deactivate or delete ''Akaviri Imports.esp'''
-        condition: 'file("Akaviri Imports.esp")'
-  - name: 'Akaviri Imports MOBS.esp'
     msg:
       - type: say
         content: 'Use this instead ''Akaviri Imports.esp'' for FCOM. Deactivate or delete ''Akaviri Imports.esp'''
@@ -12259,13 +12228,6 @@ plugins:
     tag:
       - Graphics
       - NoMerge
-  - name: 'MOBS_Knights.esp'
-    tag:
-      - Stats
-  - name: 'MOBS Knights.esp'
-    tag:
-      - NoMerge
-      - Stats
   - name: 'QuietFeet.esp'
     msg:
       - *requiresBashedPatch
@@ -12286,10 +12248,6 @@ plugins:
       - type: error
         content: 'Use "FCOM_Knights.esp" instead.'
         condition: *FCOMCond
-  - name: 'MOBS DLCs.esp'
-    tag:
-      - NoMerge
-      - Stats
   - name: 'Dragon Templar.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/31961' ]
     msg:
