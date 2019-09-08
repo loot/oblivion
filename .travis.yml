@@ -16,7 +16,15 @@ install:
 
 script:
   - ./metadata_validator $TRAVIS_BUILD_DIR/masterlist.yaml
-  - js-yaml $TRAVIS_BUILD_DIR/masterlist.yaml > /dev/null
+  - js-yaml $TRAVIS_BUILD_DIR/masterlist.yaml > masterlist.json
+  # Check for duplicate message content lang values in globals.
+  - GLOBALS_WITH_DUPLICATE_LANG=$(jq '.globals[] | select(.content | arrays) | .content | .[0].text as $text | map(.lang) | length as $len | unique | length as $unique_len | if $len == $unique_len then empty else $text end' masterlist.json)
+  - echo $GLOBALS_WITH_DUPLICATE_LANG
+  - if [ -n "$GLOBALS_WITH_DUPLICATE_LANG" ]; then false; fi
+  # Check for duplicate message content lang values in plugins.
+  - PLUGINS_WITH_DUPLICATE_LANG=$(jq '.plugins[1] | select(.msg) | .name as $name | .msg[] | .content | arrays | map(.lang) | length as $len | unique | length as $unique_len | if $len == $unique_len then empty else $name end' masterlist.json)
+  - echo $PLUGINS_WITH_DUPLICATE_LANG
+  - if [ -n "$PLUGINS_WITH_DUPLICATE_LANG" ]; then false; fi
 
 notifications:
   irc:
