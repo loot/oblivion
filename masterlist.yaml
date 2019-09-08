@@ -2760,8 +2760,9 @@ plugins:
   - name: 'DLC_MOBS.esp'
     group: *latePatchesGroup
     msg:
-      - type: say
-        content: 'Recommended to use version 2.0 or greater: [MOBS](http://www.nexusmods.com/oblivion/mods/28537)'
+      - <<: *obsolete
+        subs: [ '[MOBS](http://www.nexusmods.com/oblivion/mods/28537)' ]
+        condition: 'version("DLC_MOBS.esp", "2.0", <)'
   - name: '(BattleHorn|Knights|Lair|Mehrunes|ThievesDen|VileLair)_MOBS\.esp'
     msg:
       - <<: *alreadyInX
