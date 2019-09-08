@@ -45,6 +45,34 @@ common:
     display: '[OBSE](http://obse.silverlock.org) v21+'
     condition: 'version("../obse_1_2_416.dll","0.21.0.0",<)'
 
+  # OBSE Plugins
+  - &EnhancedMusicControl
+    name: 'OBSE/Plugins/EnhancedMusicControl.dll'
+    display: '[Enhanced Music & Control](https://www.nexusmods.com/oblivion/mods/19772)'
+  - &MagicExtender
+    name: 'OBSE/Plugins/OBME.dll'
+    display: '[Oblivion Magic Extender](https://www.nexusmods.com/oblivion/mods/31981)'
+  - &MenuQue
+    name: 'OBSE/Plugins/MenuQue.dll'
+    display: '[MenuQue](http://www.nexusmods.com/oblivion/mods/32200)'
+  - &NifSE
+    name: 'obse/plugins/NifSE.dll'
+    display: '[NifSE](http://www.nexusmods.com/oblivion/mods/21292)'
+  - &Pluggy
+    name: 'OBSE/Plugins/OBSE_Elys_Pluggy.dll'
+    display: '[Pluggy](http://www.nexusmods.com/oblivion/mods/23979)'
+  - &SilentVoice
+    name: 'OBSE/Plugins/Elys_USV.dll'
+    display: '[Elys- Universal Silent Voice](https://www.nexusmods.com/oblivion/mods/16622)'
+  - &SoundCommands
+    name: 'OBSE/Plugins/SoundCommands.dll'
+    display: '[SoundCommands 4.0](https://www.nexusmods.com/oblivion/mods/16288)'
+
+  # Mod files
+  - &BetterCities
+    name: 'Better Cities Resources.esm'
+    display: '[Better Cities](https://www.nexusmods.com/oblivion/mods/16513)'
+
 # Conditions
   - &nehrimCond
     active("Nehrim.esm")
@@ -1694,9 +1722,7 @@ plugins:
       - *doNotClean
   - name: 'Mart''s Monster Mod - City Defences.esp'
     after: [ 'Mart''s Monster Mod - More Wilderness Life No Gates.esp' ]
-    inc:
-      - name: 'Better Cities Resources.esm'
-        display: 'Better Cities'
+    inc: [ *BetterCities ]
     msg: [ *doNotClean ]
   - name: 'Mart''s Monster Mod - Curse of Hircine.esp'
     clean:
@@ -2245,8 +2271,7 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/35264' ]
     req:
       - *OBSE
-      - name: 'OBSE/Plugins/OBME.dll'
-        display: '[Oblivion Magic Extender](http://www.nexusmods.com/oblivion/mods/31981)'
+      - *MagicExtender
   - name: 'Essential_Merchants.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/26285' ]
     tag:
@@ -3952,8 +3977,7 @@ plugins:
         content: 'Requires: AddActorValues'
     req:
       - *OBSEv18
-      - name: 'OBSE/Plugins/MenuQue.dll'
-        display: '[MenuQue](http://www.nexusmods.com/oblivion/mods/32200)'
+      - *MenuQue
   - name: 'M.O.E. - Undermined Leveled Gameplay - Creature Edition.esp'
     msg:
       - type: say
@@ -3987,10 +4011,8 @@ plugins:
   - name: 'BetterMusicSystem.esp'
     req:
       - *OBSE
-      - name: 'OBSE/Plugins/EnhancedMusicControl.dll'
-        display: '[Enhanced Music & Control v0.72B](https://www.nexusmods.com/oblivion/mods/19772)'
-      - name: 'OBSE/Plugins/SoundCommands.dll'
-        display: '[SoundCommands 4.0](https://www.nexusmods.com/oblivion/mods/16288)'
+      - *EnhancedMusicControl
+      - *SoundCommands
     msg: [ *obsolete ]
   - name: 'Mud Crabs!(_(coMbO|MMM|OOO))?\.esp'
     msg:
@@ -4076,8 +4098,7 @@ plugins:
   - name: 'pmRealTimeInteractions.esp'
     req:
       - *OBSE
-      - name: 'OBSE/Plugins/MenuQue.dll'
-        display: '[MenuQue](http://www.nexusmods.com/oblivion/mods/32200)'
+      - *MenuQue
     dirty:
       - crc: 0x94805075
         <<: *dirtyPlugin
@@ -4150,8 +4171,7 @@ plugins:
   - name: 'RAEVWD Cities.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/20053' ]
     inc:
-      - name: 'Better Cities Resources.esm'
-        display: 'Better Cities'
+      - *BetterCities
       - 'Open Cities Classic.esp'
       - 'Open Cities Reborn.esp'
   - name: 'RAEVWD Imperial City.esp'
@@ -4526,20 +4546,17 @@ plugins:
   - name: 'CBMS_V2.esp'
     req:
       - *OBSE
-      - name: 'OBSE/Plugins/EnhancedMusicControl.dll'
-        display: '[Enhanced Music & Control](http://www.nexusmods.com/oblivion/mods/19772)'
+      - *EnhancedMusicControl
   - name: 'DarNifiedUI Config Addon.esp'
     req:
       - *OBSE
       - name: 'textures/menus/darn/omg.dds'
         display: '[DarNified UI](http://www.nexusmods.com/oblivion/mods/10763) or [DarkUI''d DarN](http://www.nexusmods.com/oblivion/mods/11280)'
-      - name: 'OBSE/Plugins/OBSE_Elys_Pluggy.dll'
+      - <<: *Pluggy
         display: '[Pluggy](http://www.nexusmods.com/oblivion/mods/23979) or [Conscribe](http://www.nexusmods.com/oblivion/mods/26510)'
         condition: 'not file("OBSE/Plugins/ConScribe.dll")'
   - name: 'Demolish Plugin - HUD Display.esp'
-    req:
-      - name: 'OBSE/Plugins/OBSE_Elys_Pluggy.dll'
-        display: '[Pluggy](http://www.nexusmods.com/oblivion/mods/23979)'
+    req: [ *Pluggy ]
   - name: 'Duke Patricks - Friendship Ring For Companion Detection.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/21594' ]
     msg:
@@ -4562,8 +4579,7 @@ plugins:
   - name: 'NameThatHorse.esp'
     req:
       - *OBSE
-      - name: 'OBSE/Plugins/OBSE_Elys_Pluggy.dll'
-        display: '[Pluggy](http://www.nexusmods.com/oblivion/mods/23979)'
+      - *Pluggy
   - name: 'sycNiceToMeetYou.esp'
     req: [ *OBSE ]
   - name: 'NPC Height Randomizer.esp'
@@ -4583,14 +4599,12 @@ plugins:
         condition: 'file("OBSE/Plugins/OBSE_Elys_Pluggy.dll") and not file("OBSE/Plugins/OBSE_Elys_Pluggy_Hud.dll")'
     req:
       - *OBSE
-      - name: 'OBSE/Plugins/OBSE_Elys_Pluggy.dll'
-        display: '[Pluggy](http://www.nexusmods.com/oblivion/mods/23979)'
+      - <<: *Pluggy
         condition: 'not file("OBSE/Plugins/OBSE_Elys_Pluggy_Hud.dll")'
   - name: 'VipCxj_RadarSystem.esp'
     req:
       - *OBSE
-      - name: 'OBSE/Plugins/MenuQue.dll'
-        display: '[MenuQue](http://www.nexusmods.com/oblivion/mods/32200)'
+      - *MenuQue
   - name: 'Streamline 2.0.esp'
     msg: [ *obsolete ]
   - name: 'Streamline 2.1.esp'
@@ -9097,9 +9111,7 @@ plugins:
         itm: 244
         udr: 18
   - name: 'AbandonedHouse.esp'
-    inc:
-      - name: 'Better Cities Resources.esm'
-        display: 'Better Cities'
+    inc: [ *BetterCities ]
     msg:
       - type: say
         content: 'Use AbandonedHouse Better Cities instead.'
@@ -9549,8 +9561,7 @@ plugins:
   - name: 'Deepwood Adventures.esp'
     req:
       - *OBSE
-      - name: 'OBSE/Plugins/Elys_USV.dll'
-        display: '[Elys- Universal Silent Voice](https://www.nexusmods.com/oblivion/mods/16622)'
+      - *SilentVoice
     msg:
       - type: say
         content: 'Very dirty - Compile All Scripts was used on the mod. Either use the CS or Tes4Edit to clean or use Wrye Bash''s Decompile All command.'
@@ -9583,10 +9594,6 @@ plugins:
         itm: 7
   - name: 'delivery_job.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/33191' ]
-    inc:
-      - name: 'Better Cities Resources.esm'
-        display: 'Better Cities 4.6+'
-        condition: 'file("Better Cities Resources.esm") and version("Better Cities Resources.esm","4.6.0",>=)'
     msg:
       - <<: *alreadyInX
         subs: [ 'Better Cities' ]
@@ -10426,9 +10433,7 @@ plugins:
     req:
       - 'DLCShiveringIsles.esp'
   - name: 'Locked Doors and Knocking v1.02.esp'
-    inc:
-      - name: 'Better Cities Resources.esm'
-        display: 'Better Cities'
+    inc: [ *BetterCities ]
     msg:
       - type: say
         content: 'Incompatible with Better Cities, and probably other city altering mods.'
@@ -10534,9 +10539,7 @@ plugins:
         content: 'Use ''The Imperial Water - BETTER CITIES.esp'' instead.'
         condition: 'file("Better Cities Resources.esm")'
   - name: 'The Imperial Water - BETTER CITIES.esp'
-    req:
-      - name: 'Better Cities Resources.esm'
-        display: '[Better Cities](https://www.nexusmods.com/oblivion/mods/16513)'
+    req: [ *BetterCities ]
     dirty:
       - crc: 0x73f25199
         <<: *dirtyPlugin
@@ -10863,10 +10866,8 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/39923' ]
     req:
       - *OBSE
-      - name: 'OBSE/Plugins/Elys_USV.dll'
-        display: '[Elys- Universal Silent Voice](https://www.nexusmods.com/oblivion/mods/16622)'
-      - name: 'OBSE/Plugins/SoundCommands.dll'
-        display: '[SoundCommands](https://www.nexusmods.com/oblivion/mods/16288)'
+      - *SilentVoice
+      - *SoundCommands
       - 'DLCShiveringIsles.esp'
   - name: 'POTSB.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/42395' ]
@@ -11142,8 +11143,7 @@ plugins:
   - name: 'Skingrad Market 1.0.esp'
     req:
       - *OBSE
-      - name: 'OBSE/Plugins/Elys_USV.dll'
-        display: '[Elys- Universal Silent Voice](https://www.nexusmods.com/oblivion/mods/16622)'
+      - *SilentVoice
       - 'DLCShiveringIsles.esp'
       - 'Cobl Main.esm'
   - name: 'Skyrim Draugr Canyon.esp'
@@ -11408,9 +11408,7 @@ plugins:
     tag:
       - Hair
   - name: 'The Reluctant Ranger REVAMPED.esp'
-    inc:
-      - name: 'Better Cities Resources.esm'
-        display: 'Better Cities'
+    inc: [ *BetterCities ]
   - name: 'The Power of the North.esp'
     dirty:
       - crc: 0x2eb9a944
@@ -11749,9 +11747,7 @@ plugins:
         itm: 15
         udr: 58
   - name: 'VRIceOrcMod.esp'
-    req:
-      - name: 'OBSE/Plugins/Elys_USV.dll'
-        display: '[Elys- Universal Silent Voice](https://www.nexusmods.com/oblivion/mods/16622)'
+    req: [ *SilentVoice ]
   - name: 'Veldin.esp'
     dirty:
       - crc: 0xbc65cd25
@@ -11819,14 +11815,10 @@ plugins:
         <<: *dirtyPlugin
         itm: 4
   - name: 'Vypers Arrow Spells-SI.esp'
-    inc:
-      - name: 'Better Cities Resources.esm'
-        display: 'Better Cities'
+    inc: [ *BetterCities ]
     msg: [ *obsolete ]
   - name: 'Vypers Arrow Spells.esp'
-    inc:
-      - name: 'Better Cities Resources.esm'
-        display: 'Better Cities'
+    inc: [ *BetterCities ]
     msg: [ *obsolete ]
   - name: 'Watchtower.esp'
     dirty:
@@ -12710,10 +12702,8 @@ plugins:
     req:
       - 'ElsweyrAnequina.esp'
       - *OBSE
-      - name: 'OBSE/Plugins/EnhancedMusicControl.dll'
-        display: '[Enhanced Music & Control v0.72B](https://www.nexusmods.com/oblivion/mods/19772)'
-      - name: 'OBSE/Plugins/SoundCommands.dll'
-        display: '[SoundCommands 4.0](https://www.nexusmods.com/oblivion/mods/16288)'
+      - *EnhancedMusicControl
+      - *SoundCommands
   - name: 'ElsweyrAnequina - Races HGEC-Robert.esp'
     tag:
       - R.Mouth
@@ -14000,21 +13990,13 @@ plugins:
         subs: [ 'Better Cities - Imperial City & IC Waterfront' ]
         condition: 'active("Better Imperial City.esp") or active("Better Cities IC Waterfront.esp")'
   - name: 'Imperil_City_Tunnel.esp'
-    inc:
-      - name: 'Better Cities Resources.esm'
-        display: 'Better Cities'
+    inc: [ *BetterCities ]
   - name: 'IC Tunnel.esp'
-    inc:
-      - name: 'Better Cities Resources.esm'
-        display: 'Better Cities'
+    inc: [ *BetterCities ]
   - name: 'ICWaterfrontPassage.esp'
-    inc:
-      - name: 'Better Cities Resources.esm'
-        display: 'Better Cities'
+    inc: [ *BetterCities ]
   - name: 'Waterfront Passage - Control of Goods.esp'
-    inc:
-      - name: 'Better Cities Resources.esm'
-        display: 'Better Cities'
+    inc: [ *BetterCities ]
   - name: 'JADDockTunnel.esp'
     msg:
       - type: say
@@ -14825,8 +14807,7 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/34905' ]
     req:
       - *OBSE
-      - name: 'OBSE/Plugins/MenuQue.dll'
-        display: '[MenuQue](http://www.nexusmods.com/oblivion/mods/32200)'
+      - *MenuQue
   - name: 'DDJailShackles.esp'
     msg: [ *obsolete ]
   - name: 'Decorator Assistant.esp'
@@ -16116,8 +16097,7 @@ plugins:
   - name: 'SummonKnightofOrderOBME.esp'
     req:
       - *OBSE
-      - name: 'OBSE/Plugins/OBME.dll'
-        display: '[Oblivion Magic Extender](https://www.nexusmods.com/oblivion/mods/31981)'
+      - *MagicExtender
       - 'DLCShiveringIsles.esp'
   - name: 'Teleport.esp'
     req: [ *OBSE ]
@@ -16247,8 +16227,7 @@ plugins:
   - name: 'CALSUDG.esp'
     req:
       - *OBSEv18
-      - name: 'OBSE/Plugins/OBME.dll'
-        display: '[Oblivion Magic Extender](http://www.nexusmods.com/oblivion/mods/31981)'
+      - *MagicExtender
   - name: 'ES4_Spell Names by Effect.esp'
     tag:
       - Names
@@ -16521,8 +16500,7 @@ plugins:
     msg: [ *bashedPatchTweak ]
   - name: 'Simple Dual Wielding.esp'
     req:
-      - name: 'obse/plugins/NifSE.dll'
-        display: '[NifSE](http://www.nexusmods.com/oblivion/mods/21292)'
+      - *NifSE
       - *OBSEv20
   - name: 'More_Arrows_Recovered.esp'
     msg: [ *bashedPatchTweak ]
@@ -16568,8 +16546,7 @@ plugins:
         content: 'To use both DR6b101 and NifSE 1.0+ you need the [fix file](http://www.nexusmods.com/oblivion/mods/40336).'
         condition: 'not file("Deadly Reflex 6 - HeX NifSE Patch.esp")'
     req:
-      - name: 'obse/plugins/NifSE.dll'
-        display: '[NifSE](http://www.nexusmods.com/oblivion/mods/21292)'
+      - *NifSE
       - name: 'DropLitTorchOBSE.esp'
         display: '[Drop Lit Torches](http://www.nexusmods.com/oblivion/mods/16282)'
     tag:
@@ -17140,8 +17117,7 @@ plugins:
   - name: 'Useful Houses.esp'
     req:
       - *OBSE
-      - name: 'OBSE/Plugins/MenuQue.dll'
-        display: '[MenuQue](http://www.nexusmods.com/oblivion/mods/32200)'
+      - *MenuQue
   - name: 'Vanilla_Race_Overhaul.esp'
     tag:
       - Body-F
@@ -20848,8 +20824,7 @@ plugins:
     req:
       - 'DLCShiveringIsles.esp'
   - name: 'HTSCl_bbc.esp'
-    req:
-      - 'Better Cities Resources.esm'
+    req: [ *BetterCities ]
     tag:
       - Graphics
   - name: 'HTSCl_wac.esp'
@@ -20888,10 +20863,13 @@ plugins:
     req:
       - 'ElsweyrAnequina.esp'
   - name: 'HTSCl_hud.esp'
+    msg:
+      - type: warn
+        content: 'You must rename "OBSE_Elys_Pluggy.dll" to "OBSE_Elys_Pluggy_Hud.dll"'
+        condition: 'file("OBSE/Plugins/OBSE_Elys_Pluggy.dll") and not file("OBSE/Plugins/OBSE_Elys_Pluggy_Hud.dll")'
     req:
       - *OBSE
-      - name: 'OBSE/Plugins/OBSE_Elys_Pluggy.dll'
-        display: '[Pluggy v125 or higher](https://www.nexusmods.com/oblivion/mods/23979). Rename OBSE_Elys_Pluggy.dll to OBSE_Elys_Pluggy_Hud.dll.'
+      - <<: *Pluggy
         condition: 'not file("OBSE/Plugins/OBSE_Elys_Pluggy_Hud.dll")'
   - name: 'TheOubliette.esp'
     dirty:
