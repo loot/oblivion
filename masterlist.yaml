@@ -2737,28 +2737,43 @@ plugins:
   - name: 'SI Public Music.esp'
     tag:
       - C.Music
-  - name: 'MOBS.esp'
+
+### MOBS - Medieval Oblivion Equipment Balance System ###
+  - name: '(MOBS|MOBS SI|OMOBS|OMOBS SI)\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/28537' ]
-    inc:
-      - 'MOBS SI.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'MOBS, MOBS SI, OMOBS OR OMOBS SI' ]
+        condition: 'many("(MOBS|MOBS SI|OMOBS|OMOBS SI)\.esp")'
     tag:
       - NoMerge
       - Stats
-  - name: 'MOBS SI.esp'
+  - name: '(MOBS|MOBS SI|OMOBS) Optional Combat Settings\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/28537' ]
-    tag:
-      - NoMerge
-      - Stats
-  - name: 'MOBS Optional Combat Settings.esp'
+    inc: [ 'FCOM_Convergence.esm' ]
+  - name: '(MOBS|MOBS SI) Optional Combat Settings\.esp'
+    inc: [ 'Francesco''s Leveled Creatures-Items Mod.esm' ]
+  - name: 'OMOBS Optional Combat Settings.esp'
+    inc: [ 'Oscuro''s_Oblivion_Overhaul.esm' ]
+  - name: '(DLC|BattleHorn|Knights|Lair|Mehrunes|ThievesDen|VileLair)_MOBS\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/28537' ]
-    inc:
-      - 'Francesco''s Leveled Creatures-Items Mod.esm'
-      - 'FCOM_Convergence.esm'
-  - name: 'MOBS SI Optional Combat Settings.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/28537' ]
-    inc:
-      - 'Francesco''s Leveled Creatures-Items Mod.esm'
-      - 'FCOM_Convergence.esm'
+  - name: 'DLC_MOBS.esp'
+    group: *latePatchesGroup
+    msg:
+      - <<: *obsolete
+        subs: [ '[MOBS](http://www.nexusmods.com/oblivion/mods/28537)' ]
+        condition: 'version("DLC_MOBS.esp", "2.0", <)'
+  - name: '(BattleHorn|Knights|Lair|Mehrunes|ThievesDen|VileLair)_MOBS\.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'DLC_MOBS.esp' ]
+        condition: 'file("DLC_MOBS.esp")'
+  - name: 'Lair_MOBS.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'VileLair_MOBS.esp' ]
+        condition: 'file("VileLair_MOBS.esp")'
+
   - name: 'xeoexpeople.esp'
     inc:
       - 'xeoex.esp'
@@ -2828,10 +2843,6 @@ plugins:
         display: 'Meshes from the "[Bonemold Helmet](http://www.nexusmods.com/oblivion/mods/6997)" and "Cryos Ordinator Indoril Armor" mods'
     tag:
       - Invent
-  - name: 'OMOBS_FRAN.esp'
-    tag:
-      - NoMerge
-      - Stats
   - name: 'MrSiikaRabbitsforFrans.esp'
     msg:
       - type: say
@@ -4656,34 +4667,10 @@ plugins:
         content: 'Rename this file to "DLCHorseArmor.esp", after backing up the original.'
   - name: 'C&C&EQR - SM Plugin Refurbish - Orrery.esp'
     msg: [ *obsolete ]
-  - name: 'Lair_mobs.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/28537' ]
-    tag:
-      - NoMerge
-      - Stats
-  - name: 'VileLair_MOBS.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/28537' ]
-    tag:
-      - Deactivate
-      - NoMerge
-      - Stats
   - name: 'See You Sleep DLL - DLCVileLair.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/42649' ]
     inc:
       - 'P1DseeYouSleep.esp'
-  - name: 'MOBS MehrunesRazor.esp'
-    tag:
-      - Stats
-  - name: 'Mehrunes_mobs.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/28537' ]
-    tag:
-      - NoMerge
-      - Stats
-  - name: 'MehrunesRazor_MOBS.esp'
-    tag:
-      - Deactivate
-      - NoMerge
-      - Stats
   - name: 'Book Jackets DLC.esp'
     tag:
       - Graphics
@@ -6708,12 +6695,6 @@ plugins:
   - name: 'Potion Sorter-2081.esp'
     tag:
       - Names
-  - name: 'ThievesDen_MOBS.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/28537' ]
-    tag:
-      - Deactivate
-      - NoMerge
-      - Stats
   - name: 'ORM-TamriellicGlassDLC7.esp'
     tag:
       - Graphics
@@ -6956,9 +6937,6 @@ plugins:
   - name: 'MrSiikaRabbitsforOOO.esp'
     inc: [ '"Mart''s Monster Mod for OOO.esp' ]
     msg: [ *alreadyInFCOM ]
-  - name: 'OMOBS_OOO_missing_Oblivion_Bow_Ammo.esp'
-    tag:
-      - Stats
   - name: 'a4sFlamingNightmare-OOO.esp'
     tag:
       - Graphics
@@ -7127,26 +7105,6 @@ plugins:
   - name: 'Hemingweys Capes for FCOM_FrancescosNamedBosses.esp'
     tag:
       - Invent
-  - name: 'OMOBS.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/28537' ]
-    tag:
-      - NoMerge
-      - Stats
-  - name: 'OMOBS_SI.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/28537' ]
-    tag:
-      - NoMerge
-      - Stats
-  - name: 'OMOBS_Optionial Combat Settings.esp'
-    inc:
-      - 'Oscuro''s_Oblivion_Overhaul.esm'
-      - 'FCOM_Convergence.esm'
-    msg: [ *obsolete ]
-  - name: 'OMOBS Optional Combat Settings.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/28537' ]
-    inc:
-      - 'Oscuro''s_Oblivion_Overhaul.esm'
-      - 'FCOM_Convergence.esm'
   - name: 'mg19obsefix.esp'
     req: [ *OBSE ]
   - name: 'OOO-Better_Priced_Clutter.esp'
@@ -7447,12 +7405,6 @@ plugins:
     msg:
       - type: say
         content: 'MMM users should use ''VASE - Cyrodiil for MMM.esp'' instead.'
-  - name: 'OMOBS_MMM.esp'
-    tag:
-      - Stats
-  - name: 'OMOBS_MMM_H&C_Ammo.esp'
-    tag:
-      - Stats
   - name: 'Spiders Addon.esp'
     msg: [ *obsolete ]
   - name: 'Arachnophobia-2343.esp'
@@ -8727,11 +8679,6 @@ plugins:
         <<: *dirtyPlugin
         itm: 232
   - name: 'Akiviri Imports MOBS.esp'
-    msg:
-      - type: say
-        content: 'Use this instead ''Akaviri Imports.esp'' for FCOM. Deactivate or delete ''Akaviri Imports.esp'''
-        condition: 'file("Akaviri Imports.esp")'
-  - name: 'Akaviri Imports MOBS.esp'
     msg:
       - type: say
         content: 'Use this instead ''Akaviri Imports.esp'' for FCOM. Deactivate or delete ''Akaviri Imports.esp'''
@@ -12081,12 +12028,6 @@ plugins:
         <<: *dirtyPlugin
         udr: 14
         itm: 86
-  - name: 'BattleHorn_MOBS.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/28537' ]
-    tag:
-      - Deactivate
-      - NoMerge
-      - Stats
   - name: 'ORM-TamriellicGlassDLC6.esp'
     tag:
       - Graphics
@@ -12236,19 +12177,6 @@ plugins:
     tag:
       - Graphics
       - NoMerge
-  - name: 'Knights_MOBS.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/28537' ]
-    tag:
-      - Deactivate
-      - NoMerge
-      - Stats
-  - name: 'MOBS_Knights.esp'
-    tag:
-      - Stats
-  - name: 'MOBS Knights.esp'
-    tag:
-      - NoMerge
-      - Stats
   - name: 'QuietFeet.esp'
     msg:
       - *requiresBashedPatch
@@ -12269,24 +12197,6 @@ plugins:
       - type: error
         content: 'Use "FCOM_Knights.esp" instead.'
         condition: *FCOMCond
-  - name: 'DLC_MOBS.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/28537' ]
-    group: *latePatchesGroup
-    msg:
-      - type: say
-        content: 'Remove BattleHorn_MOBS.esp, VileLair_MOBS.esp, MehrunesRazor_MOBS.esp, Knights_MOBS.esp or ThievesDen_MOBS.esp - this includes all of those.'
-        condition: 'file("(BattleHorn|VileLair|MehrunesRazor|Knights|ThievesDen)_MOBS\.esp")'
-      - type: say
-        content: 'Recommended to use version 2.0 or greater: [MOBS](http://www.nexusmods.com/oblivion/mods/28537)'
-    tag:
-      - Deactivate
-      - Filter
-      - NoMerge
-      - Stats
-  - name: 'MOBS DLCs.esp'
-    tag:
-      - NoMerge
-      - Stats
   - name: 'Dragon Templar.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/31961' ]
     msg:
