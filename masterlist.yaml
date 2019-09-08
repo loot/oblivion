@@ -325,6 +325,32 @@ common:
       - lang: ru
         text: 'Похоже, что используется **%1%**, но патч совместимости для него не был подключен. Патч совместимости можно найти в установщике плагина.'
 
+  - &requiresOBSE
+    type: error
+    content:
+      - lang: en
+        text: 'You have installed %1% but OBSE was not found! See OBSE download page: [OBSE](http://obse.silverlock.org).'
+      - lang: da
+        text: 'Du har installeret %1% men OBSE blev ikke fundet! Se OBSE-downloadsiden: [OBSE](http://obse.silverlock.org).'
+      - lang: de
+        text: 'Sie haben %1% installiert, aber OBSE wurde nicht gefunden! OBSE kann hier heruntergeladen werden: [OBSE](http://obse.silverlock.org).'
+      - lang: es
+        text: 'Tienes %1% instalado pero OBSE no se pudo encontrar! Por favor descarga OBSE: [OBSE](http://obse.silverlock.org).'
+      - lang: ja
+        text: '%1%はインストールされていますが、OBSEが見つかりません！OBSEのダウンロードページを確認してください。[OBSE](http://obse.silverlock.org)'
+      - lang: ko
+        text: '%1%가 설치되었지만 OBSE를 찾을 수 없습니다! OBSE 다운로드 페이지를 참조하십시오: [OBSE](http://obse.silverlock.org).'
+      - lang: pl
+        text: 'Zainstalowałeś %1% ale nie odnaleziono OBSE! Odwiedź stronę pobierania OBSE: [OBSE](https://OBSE.silverlock.org).'
+      - lang: pt
+        text: 'Você instalou %1% mas o OBSE não foi encontrado! Veja a página de download do OBSE: [OBSE](http://obse.silverlock.org).'
+      - lang: pt_BR
+        text: 'Você tem %1% instalado mas o OBSE não foi encontrado! Veja a página de download do OBSE: [OBSE](https://OBSE.silverlock.org).'
+      - lang: ru
+        text: 'У вас установлен %1%, но OBSE не найден! Смотрите страницу загрузки [OBSE](http://obse.silverlock.org).'
+      - lang: zh_CN
+        text: '你已经安装了%1%，但是未发现OBSE！请查看OBSE的下载页面：[OBSE](http://obse.silverlock.org)。'
+
   - &requiresX
     type: warn
     content:
@@ -586,6 +612,11 @@ globals:
       - lang: zh_CN
         text: '[最新的LOOT版本](%1%)。'
     subs: [ 'https://loot.github.io/latest-thread/' ]
+
+# OBSE Plugins - Requirements
+  - <<: *requiresOBSE
+    subs: [ 'an OBSE Plugin' ]
+    condition: 'file("OBSE/Plugins/([^\.]+\.dll)") and not file("../obse_1_2_416.dll")'
 
 groups:
   - name: &gameMasterGroup Main Game Master
@@ -2235,7 +2266,6 @@ plugins:
   - name: 'SDR.esm'
     url: [ 'https://www.nexusmods.com/oblivion/mods/37385' ]
     req:
-      - *OBSE
       - name: 'OBSE/Plugins/sdr.dll'
         display: '[Sneaking Detection Recalibrated](http://www.nexusmods.com/oblivion/mods/37385)'
   - name: 'x117race.esm'
@@ -2269,9 +2299,7 @@ plugins:
       - Graphics
   - name: 'Diverse Magic Effects Resource.esm'
     url: [ 'https://www.nexusmods.com/oblivion/mods/35264' ]
-    req:
-      - *OBSE
-      - *MagicExtender
+    req: [ *MagicExtender ]
   - name: 'Essential_Merchants.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/26285' ]
     tag:
@@ -3225,8 +3253,7 @@ plugins:
     req:
       - 'DLCShiveringIsles.esp'
   - name: 'OBSE-Storms & Sound( SI)?\.esp'
-    req:
-      - *OBSE
+    req: [ *OBSE ]
     msg:
       - type: say
         content: 'This one is compatible with all weather mods.'
@@ -4010,7 +4037,6 @@ plugins:
         itm: 3
   - name: 'BetterMusicSystem.esp'
     req:
-      - *OBSE
       - *EnhancedMusicControl
       - *SoundCommands
     msg: [ *obsolete ]
@@ -4096,9 +4122,7 @@ plugins:
   - name: 'P-Froggys Corpse Carry EV.esp'
     req: [ *OBSE ]
   - name: 'pmRealTimeInteractions.esp'
-    req:
-      - *OBSE
-      - *MenuQue
+    req: [ *MenuQue ]
     dirty:
       - crc: 0x94805075
         <<: *dirtyPlugin
@@ -4544,12 +4568,9 @@ plugins:
   - name: 'CDM - Shivering Time.esp'
     req: [ *OBSE ]
   - name: 'CBMS_V2.esp'
-    req:
-      - *OBSE
-      - *EnhancedMusicControl
+    req: [ *EnhancedMusicControl ]
   - name: 'DarNifiedUI Config Addon.esp'
     req:
-      - *OBSE
       - name: 'textures/menus/darn/omg.dds'
         display: '[DarNified UI](http://www.nexusmods.com/oblivion/mods/10763) or [DarkUI''d DarN](http://www.nexusmods.com/oblivion/mods/11280)'
       - <<: *Pluggy
@@ -4577,9 +4598,7 @@ plugins:
       - type: say
         content: 'Incompatible with Cobl''s clock.'
   - name: 'NameThatHorse.esp'
-    req:
-      - *OBSE
-      - *Pluggy
+    req: [ *Pluggy ]
   - name: 'sycNiceToMeetYou.esp'
     req: [ *OBSE ]
   - name: 'NPC Height Randomizer.esp'
@@ -4598,13 +4617,10 @@ plugins:
         content: 'You must rename "OBSE_Elys_Pluggy.dll" to "OBSE_Elys_Pluggy_Hud.dll"'
         condition: 'file("OBSE/Plugins/OBSE_Elys_Pluggy.dll") and not file("OBSE/Plugins/OBSE_Elys_Pluggy_Hud.dll")'
     req:
-      - *OBSE
       - <<: *Pluggy
         condition: 'not file("OBSE/Plugins/OBSE_Elys_Pluggy_Hud.dll")'
   - name: 'VipCxj_RadarSystem.esp'
-    req:
-      - *OBSE
-      - *MenuQue
+    req: [ *MenuQue ]
   - name: 'Streamline 2.0.esp'
     msg: [ *obsolete ]
   - name: 'Streamline 2.1.esp'
@@ -9559,9 +9575,7 @@ plugins:
       - type: say
         content: 'it''s replace (DC) Sutch Reborn.esp'
   - name: 'Deepwood Adventures.esp'
-    req:
-      - *OBSE
-      - *SilentVoice
+    req: [ *SilentVoice ]
     msg:
       - type: say
         content: 'Very dirty - Compile All Scripts was used on the mod. Either use the CS or Tes4Edit to clean or use Wrye Bash''s Decompile All command.'
@@ -10865,7 +10879,6 @@ plugins:
   - name: 'PathoftheSkullBearer.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/39923' ]
     req:
-      - *OBSE
       - *SilentVoice
       - *SoundCommands
       - 'DLCShiveringIsles.esp'
@@ -11142,7 +11155,6 @@ plugins:
         itm: 3
   - name: 'Skingrad Market 1.0.esp'
     req:
-      - *OBSE
       - *SilentVoice
       - 'DLCShiveringIsles.esp'
       - 'Cobl Main.esm'
@@ -12701,7 +12713,6 @@ plugins:
   - name: 'BetterMusicSystem(Elsweyr).esp'
     req:
       - 'ElsweyrAnequina.esp'
-      - *OBSE
       - *EnhancedMusicControl
       - *SoundCommands
   - name: 'ElsweyrAnequina - Races HGEC-Robert.esp'
@@ -14805,9 +14816,7 @@ plugins:
         subs: [ 'Tweak Assorted: Darnified Books' ]
   - name: 'HUD Status Bars.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/34905' ]
-    req:
-      - *OBSE
-      - *MenuQue
+    req: [ *MenuQue ]
   - name: 'DDJailShackles.esp'
     msg: [ *obsolete ]
   - name: 'Decorator Assistant.esp'
@@ -16096,7 +16105,6 @@ plugins:
         udr: 4
   - name: 'SummonKnightofOrderOBME.esp'
     req:
-      - *OBSE
       - *MagicExtender
       - 'DLCShiveringIsles.esp'
   - name: 'Teleport.esp'
@@ -16577,7 +16585,6 @@ plugins:
   - name: 'DRSplatter.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/8273' ]
     req:
-      - *OBSE
       - name: 'OBSE/Plugins/OBGEv2.dll'
         display: '[Oblivion Graphics Extender](https://www.nexusmods.com/oblivion/mods/30054)'
     msg:
@@ -17115,9 +17122,7 @@ plugins:
     tag:
       - Graphics
   - name: 'Useful Houses.esp'
-    req:
-      - *OBSE
-      - *MenuQue
+    req: [ *MenuQue ]
   - name: 'Vanilla_Race_Overhaul.esp'
     tag:
       - Body-F
@@ -20868,7 +20873,6 @@ plugins:
         content: 'You must rename "OBSE_Elys_Pluggy.dll" to "OBSE_Elys_Pluggy_Hud.dll"'
         condition: 'file("OBSE/Plugins/OBSE_Elys_Pluggy.dll") and not file("OBSE/Plugins/OBSE_Elys_Pluggy_Hud.dll")'
     req:
-      - *OBSE
       - <<: *Pluggy
         condition: 'not file("OBSE/Plugins/OBSE_Elys_Pluggy_Hud.dll")'
   - name: 'TheOubliette.esp'
@@ -21008,7 +21012,6 @@ plugins:
       - NoMerge
   - name: 'kuerteeDetectLifeEffectNightEyeShader.esp'
     req:
-      - *OBSE
       - name: 'OBSE/Plugins/SwitchNightEyeShaders.dll'
         display: '[Night Eye Shader Switcher](https://www.nexusmods.com/oblivion/mods/19476)'
   - name: 'BNewShockBoltEffects20.esp'
