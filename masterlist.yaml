@@ -325,6 +325,20 @@ common:
       - lang: ru
         text: 'Похоже, что используется **%1%**, но патч совместимости для него не был подключен. Патч совместимости можно найти в установщике плагина.'
 
+  - &renameFile
+    type: say
+    content:
+          - lang: en
+            text: 'Rename this file to %1%.'
+          - lang: de
+            text: 'Benennen Sie diese Datei in %1% um.'
+          - lang: es
+            text: 'Renombra este archivo a %1%.'
+          - lang: ja
+            text: 'ファイル名を%1%に変更してください。'
+          - lang: ru
+            text: 'Переименуйте этот файл в %1%.'
+
   - &renameXtoY
     type: warn
     content:
@@ -10427,8 +10441,8 @@ plugins:
         udr: 152
   - name: 'LetThePeopleDrink-Cobl.esp'
     msg:
-      - type: say
-        content: 'This should be renamed to "LetThePeopleDrink.esp" to avoid breaking things.'
+      - <<: *renameFile
+        subs: [ 'LetThePeopleDrink.esp' ]
     dirty:
       - crc: 0xda32ead
         <<: *dirtyPlugin
@@ -14371,8 +14385,8 @@ plugins:
         content: 'Requires: Fighters Guild United.'
   - name: 'NPC new clothes V2.6 Modified.esp'
     msg:
-      - type: say
-        content: 'If using FCOM, rename this to ''NPC new clothes V2.6.esp'' or adjust the masterlist with Wrye Bash for ''FCOM_NewNPCClothes.esp''.'
+      - <<: *renameFile
+        subs: [ 'NPC new clothes V2.6.esp' ]
         condition: *FCOMCond
   - name: 'FCOM_NewNPCClothes.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/15165' ]
