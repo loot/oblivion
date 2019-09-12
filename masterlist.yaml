@@ -132,9 +132,6 @@ common:
     type: error
     content: 'road+bridges.esp has been detected. New Roads & Bridges Revised and all dependent patches must be uninstalled before using Roads of Cyrodiil. See Roads of Cyrodiil readme for upgrade instructions.'
     condition: 'file("road+bridges.esp")'
-  - &renameStormsAndSounds
-    type: say
-    content: 'Make sure to rename your main Storms & Sounds plugin (OBSE-Storms & Sound.esp, EW-Storms & Sound.esp, etc.) to "Storms & Sound.esp".'
   - &useIniTweakOrBashedPatch
     type: warn
     content: 'Use .ini tweak or Wrye Bash Bashed Patch tweak instead where possible to avoid conflicts.'
@@ -3267,6 +3264,9 @@ plugins:
   - name: '(AWS|NW|ANW|EW|OBSE)?(-)?Storms & Sound( SI)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/8711' ]
     msg:
+      - <<: *renameFile
+        subs: [ 'Storms & Sound.esp' ]
+        condition: 'not file("Storms & Sound.esp")'
       - <<: *useOnlyOneX
         type: error
         subs: [ 'Storms & Sound' ]
@@ -15693,29 +15693,6 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/37839' ]
     tag:
       - Relev
-  - name: 'Storms & Sound - AFK_Weye.esp'
-    msg: [ *renameStormsAndSounds ]
-  - name: 'Storms & Sound - Amajor7 Imperial Furniture.esp'
-    msg: [ *renameStormsAndSounds ]
-  - name: 'Storms & Sound - Imperial Furniture Renovated.esp'
-    msg: [ *renameStormsAndSounds ]
-  - name: 'Storms & Sound - Bank of Cyrodiil.esp'
-    msg: [ *renameStormsAndSounds ]
-  - name: 'Storms & Sound - Bartholm.esp'
-    msg: [ *renameStormsAndSounds ]
-  - name: 'Storms & Sound - Blood&Mud.esp'
-    msg: [ *renameStormsAndSounds ]
-  - name: 'Storms & Sound - The Lost Spires.esp'
-    msg: [ *renameStormsAndSounds ]
-  - name: 'Storms & Sound - Shezrie''s Villages.esp'
-    msg: [ *renameStormsAndSounds ]
-  - name: 'Storms & Sound - Better Cities.esp'
-    msg: [ *renameStormsAndSounds ]
-  - name: 'Storms & Sound Patches.esp'
-    msg:
-      - *renameStormsAndSounds
-      - type: say
-        content: 'This is a custom merge.'
   - name: 'SRJIrresponsibleHorses.esp'
     tag:
       - Actors.AIData
@@ -20546,11 +20523,6 @@ plugins:
   - name: 'Better Cities - Unique Landscape Skingrad Outskirts.esp'
     tag:
       - C.Water
-  - name: 'Better Cities - Storms & Sound.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/16513' ]
-    msg:
-      - type: say
-        content: 'Reassign the "Storms & Sounds.esp" master using Bash depending on which S&S ESP you are using.'
   - name: 'Better Cities - TIE Restricted Area.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/16513' ]
     tag:
@@ -21534,9 +21506,7 @@ plugins:
       - NoMerge
   - name: 'Storms & Sound - Filter Patch.esp'
     group: *latePatchesGroup
-    msg:
-      - *requiresBashedPatch
-      - *renameStormsAndSounds
+    msg: [ *requiresBashedPatch ]
     tag:
       - Filter
   - name: 'TIE Weapon + Armor Filter.esp'
