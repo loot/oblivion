@@ -325,6 +325,18 @@ common:
       - lang: ru
         text: 'Похоже, что используется **%1%**, но патч совместимости для него не был подключен. Патч совместимости можно найти в установщике плагина.'
 
+  - &renameXtoY
+    type: warn
+    content:
+      - lang: en
+        text: 'You need to rename %1% to %2% or this mod won''t work.'
+      - lang: de
+        text: 'Sie müssen %1% zu %2% umbenennen, ansonsten funktioniert diese Mod nicht.'
+      - lang: ja
+        text: '%1%を%2%にリネームしないと機能しません。'
+      - lang: ru
+        text: 'Вам нужно переименовать %1% в %2% для подключения ресурсов мода..'
+
   - &requiresOBSE
     type: error
     content:
@@ -1709,11 +1721,10 @@ plugins:
       - 'Francesco''s Leveled Creatures-Items Mod.esm'
       - 'Oscuro''s_Oblivion_Overhaul.esm'
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'The Mart''s Monster Mod BSA must be renamed to %1%. Failure to do so will result in missing resources ingame, as the BSA will not be loaded on game startup.'
-        subs: [ '**Mart''s Monster Mod.bsa**' ]
+      - <<: *renameXtoY
+        subs:
+          - '**Mart''s Monster Mod BSA**'
+          - '**Mart''s Monster Mod.bsa**'
         condition: 'not file("Mart''s Monster Mod.bsa") and not many("(FCOM_Convergence|(Mart''s Monster Mod( for Fran| for OOO)?))\.esp")'
     dirty:
       - <<: *quickClean
@@ -1722,11 +1733,10 @@ plugins:
         itm: 904
   - name: 'Mart''s Monster Mod for Fran.esp'
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'The Mart''s Monster Mod BSA must be renamed to %1%. Failure to do so will result in missing resources ingame, as the BSA will not be loaded on game startup.'
-        subs: [ '**Mart''s Monster Mod for Frans.bsa**' ]
+      - <<: *renameXtoY
+        subs:
+          - '**Mart''s Monster Mod BSA**'
+          - '**Mart''s Monster Mod for Frans.bsa**'
         condition: 'not file("Mart''s Monster Mod for Frans.bsa") and not many("(FCOM_Convergence|(Mart''s Monster Mod( for Fran| for OOO)?))\.esp")'
     dirty:
       - <<: *quickClean
@@ -1735,11 +1745,10 @@ plugins:
         itm: 870
   - name: 'Mart''s Monster Mod for OOO.esp'
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'The Mart''s Monster Mod BSA must be renamed to %1%. Failure to do so will result in missing resources ingame, as the BSA will not be loaded on game startup.'
-        subs: [ '**Mart''s Monster Mod for OOO.bsa**' ]
+      - <<: *renameXtoY
+        subs:
+          - '**Mart''s Monster Mod BSA**'
+          - '**Mart''s Monster Mod for OOO.bsa**'
         condition: 'not file("Mart''s Monster Mod for OOO.bsa") and not many("(FCOM_Convergence|(Mart''s Monster Mod( for Fran| for OOO)?))\.esp")'
     dirty:
       - <<: *quickClean
@@ -7265,11 +7274,10 @@ plugins:
       - <<: *requiresX
         subs: [ 'Mart''s Monster Mod BSA' ]
         condition: 'not file("Mart''s Monster Mod.bsa") or not file("Mart''s Monster Mod for Frans.bsa") or not file("Mart''s Monster Mod for OOO.bsa") or not file("FCOM_Convergence_Mart''s Monster Mod.bsa")'
-      - type: say
-        content:
-          - lang: en
-            text: 'The Mart''s Monster Mod BSA must be renamed to %1%. Failure to do so will result in missing resources ingame, as the BSA will not be loaded on game startup.'
-        subs: [ '**FCOM_Convergence_Mart''s Monster Mod.bsa**' ]
+      - <<: *renameXtoY
+        subs:
+          - '**Mart''s Monster Mod BSA**'
+          - '**FCOM_Convergence_Mart''s Monster Mod.bsa**'
         condition: 'not file("FCOM_Convergence_Mart''s Monster Mod.bsa") and not many("(FCOM_Convergence|(Mart''s Monster Mod( for Fran| for OOO)?))\.esp")'
     req:
       - 'FCOM_Convergence.esm'
