@@ -1477,10 +1477,7 @@ plugins:
         util: 'TES4Edit v4.0.2'
   - name: 'Cobl Tweaks.esp'
     group: *veryEarlyGroup
-    msg:
-      - <<: *alreadyInX
-        subs: [ 'FCOM Convergence' ]
-        condition: 'active("FCOM_Convergence.esm")'
+    msg: [ *alreadyInFCOM ]
     tag:
       - Invent
     clean:
