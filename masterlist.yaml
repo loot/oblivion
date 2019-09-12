@@ -3263,6 +3263,10 @@ plugins:
       - Sound
   - name: '(AWS|NW|ANW|EW|OBSE)?(-)?Storms & Sound( SI)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/8711' ]
+    inc:
+      - 'Weather Inside.esp'
+      - 'weather inside [seasons] v1.2.esp'
+      - 'weather inside [silent seasons] v1.2.esp'
     msg:
       - <<: *renameFile
         subs: [ 'Storms & Sound.esp' ]
@@ -3374,52 +3378,9 @@ plugins:
     tag:
       - Graphics
   - name: 'weather inside [seasons] v1.2.esp'
-    inc:
-      - 'Storms & Sound.esp'
-      - 'Storms & Sound SI.esp'
-      - 'AWS-Storms & Sound.esp'
-      - 'AWS-Storms & Sound SI.esp'
-      - 'NW-Storms & Sound.esp'
-      - 'NW Storms & Sound SI.esp'
-      - 'NW-Storms & Sound SI.esp'
-      - 'ANW-Storms & Sound.esp'
-      - 'ANW-Storms & Sound SI.esp'
-      - 'EW-Storms & Sound.esp'
-      - 'EW-Storms & Sound SI.esp'
-      - 'OBSE-Storms & Sound.esp'
-      - 'OBSE-Storms & Sound SI.esp'
-      - 'weather inside [silent seasons] v1.2.esp'
+    inc: [ 'weather inside [silent seasons] v1.2.esp' ]
   - name: 'weather inside [silent seasons] v1.2.esp'
-    inc:
-      - 'Storms & Sound.esp'
-      - 'Storms & Sound SI.esp'
-      - 'AWS-Storms & Sound.esp'
-      - 'AWS-Storms & Sound SI.esp'
-      - 'NW-Storms & Sound.esp'
-      - 'NW Storms & Sound SI.esp'
-      - 'NW-Storms & Sound SI.esp'
-      - 'ANW-Storms & Sound.esp'
-      - 'ANW-Storms & Sound SI.esp'
-      - 'EW-Storms & Sound.esp'
-      - 'EW-Storms & Sound SI.esp'
-      - 'OBSE-Storms & Sound.esp'
-      - 'OBSE-Storms & Sound SI.esp'
-      - 'weather inside [seasons] v1.2.esp'
-  - name: 'Weather Inside.esp'
-    inc:
-      - 'Storms & Sound.esp'
-      - 'Storms & Sound SI.esp'
-      - 'AWS-Storms & Sound.esp'
-      - 'AWS-Storms & Sound SI.esp'
-      - 'NW-Storms & Sound.esp'
-      - 'NW Storms & Sound SI.esp'
-      - 'NW-Storms & Sound SI.esp'
-      - 'ANW-Storms & Sound.esp'
-      - 'ANW-Storms & Sound SI.esp'
-      - 'EW-Storms & Sound.esp'
-      - 'EW-Storms & Sound SI.esp'
-      - 'OBSE-Storms & Sound.esp'
-      - 'OBSE-Storms & Sound SI.esp'
+    inc: [ 'weather inside [seasons] v1.2.esp' ]
   - name: 'Rainbows.esp'
     dirty:
       - crc: 0x71bddec0
