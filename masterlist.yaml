@@ -21596,8 +21596,8 @@ plugins:
     after: [ All Natural Nehrim.esp ]
   - name: 'ASTnehrimHotfixes01(EN).esp'
     msg:
-      - type: error
-        content: 'Outdated. Use the [update](http://www.nexusmods.com/oblivion/mods/39736) instead.'
+      - <<: *obsolete
+        subs: [ '[Nehrim English Supplemental](http://www.nexusmods.com/oblivion/mods/39736)' ]
   - name: 'WindowLightingSystem.esp'
     msg:
       - *masterReassign
@@ -21636,8 +21636,8 @@ plugins:
     msg: [ *masterReassign ]
   - name: 'NehrimTEMP_ENGRISH_TEXT.esp'
     msg:
-      - type: warn
-        content: 'Outdated. Use [this](http://www.nexusmods.com/oblivion/mods/39736) instead.'
+      - <<: *obsolete
+        subs: [ '[Nehrim English Supplemental](http://www.nexusmods.com/oblivion/mods/39736)' ]
   - name: 'SM Encumbrance and Fatigue.esp'
     msg: [ *masterReassign ]
   - name: 'Spell Delete And Item Remove.esp'
