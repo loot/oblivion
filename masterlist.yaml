@@ -20836,38 +20836,13 @@ plugins:
         itm: 32
   - name: 'Universitum Arcanorum.esp'
     after:
-      # 'Universitum Arcanorum.esp' should load after Better Cities, but nothing
-      # more specific is known and the plugin doesn't seem to be available for
-      # download and inspection any more, so all main Better Cities plugins are
-      # listed below.
-      - 'Better Cities ANVIL.esp'
-      - 'Better Cities BRAVIL.esp'
-      - 'Better Cities BRUMA.esp'
-      - 'Better Cities CHEYDINHAL.esp'
-      - 'Better Cities CHORROL.esp'
-      - 'Better Cities LEYAWIIN.esp'
-      - 'Better Cities SKINGRAD.esp'
-      - 'Better Cities Full.esp'
-      - 'Better Cities - Open Cities Reborn.esp'
       - 'Better Imperial City.esp'
-      - 'Better Cities IC Arboretum.esp'
       - 'Better Cities IC Arcane University.esp'
-      - 'Better Cities IC Arena.esp'
-      - 'Better Cities IC Elven Gardens.esp'
-      - 'Better Cities IC Green Emperor Way.esp'
-      - 'Better Cities IC Market.esp'
-      - 'Better Cities IC Prison.esp'
-      - 'Better Cities IC Talos Plaza.esp'
-      - 'Better Cities IC Temple.esp'
-      - 'Better Cities IC Waterfront.esp'
     dirty:
-      - crc: 0x9bdbb795
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x9BDBB795
+        util: '[TES4Edit v4.0.2f](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 121
-        udr: 1169
-      - crc: 0xd41dc29c
-        <<: *dirtyPlugin
-        itm: 9
         udr: 1169
   - name: 'ReallyImmersiveMessages.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/27720' ]
