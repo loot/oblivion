@@ -19963,41 +19963,16 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/46249'
         name: 'Compatibility Patches for nuska''s Oblivion Character Overhaul (v2)'
-  - name: 'OCO_DLCHorseArmor_Patch.esp'
-    tag:
-      - Actors.ACBS
-      - Actors.AIPackages
-      - Actors.Skeleton
-      - Actors.Stats
-      - NpcFaces
-  - name: 'OCO_DLCOrrery_Patch.esp'
-    tag:
-      - Actors.AIPackages
-      - NpcFaces
-  - name: 'OCO_DLCMehrunesRazor_Patch.esp'
-    tag:
-      - Actors.ACBS
-      - Actors.Skeleton
-      - NpcFaces
-  - name: 'OCO_DLCThievesDen_Patch.esp'
-    tag:
-      - Actors.ACBS
-      - Actors.AIPackages
-      - Actors.Skeleton
-      - Actors.Stats
-      - NpcFaces
-  - name: 'OCO_KnightsOTN_Patch.esp'
-    tag:
-      - Actors.ACBS
-      - Actors.AIPackages
-      - Actors.Stats
-      - NpcFaces
-  - name: 'OCO_UOP_USIP_Patch.esp'
-    tag:
-      - Actors.ACBS
-      - Actors.Skeleton
-      - Actors.Stats
-      - NpcFaces
+  - name: 'OCO_(DLCHorseArmor|DLCMehrunesRazor|DLCOrrery|DLCThievesDen|KnightsOTN|UOP_USIP)_Patch\.esp'
+    tag: [ NpcFaces ]
+  - name: 'OCO_(DLCHorseArmor|DLCMehrunesRazor|DLCThievesDen|KnightsOTN|UOP_USIP)_Patch\.esp'
+    tag: [ Actors.ACBS ]
+  - name: 'OCO_(DLCHorseArmor|DLCOrrery|DLCThievesDen|KnightsOTN)_Patch\.esp'
+    tag: [ Actors.AIPackages ]
+  - name: 'OCO_(DLCHorseArmor|DLCMehrunesRazor|DLCThievesDen|UOP_USIP)_Patch\.esp'
+    tag: [ Actors.Skeleton ]
+  - name: 'OCO_(DLCHorseArmor|DLCThievesDen|KnightsOTN|UOP_USIP)_Patch\.esp'
+    tag: [ Actors.Stats ]
   - name: 'Jjiinx_Long Ears.esp'
     tag:
       - Body-F
