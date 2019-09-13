@@ -132,9 +132,6 @@ common:
     type: error
     content: 'road+bridges.esp has been detected. New Roads & Bridges Revised and all dependent patches must be uninstalled before using Roads of Cyrodiil. See Roads of Cyrodiil readme for upgrade instructions.'
     condition: 'file("road+bridges.esp")'
-  - &renameStormsAndSounds
-    type: say
-    content: 'Make sure to rename your main Storms & Sounds plugin (OBSE-Storms & Sound.esp, EW-Storms & Sound.esp, etc.) to "Storms & Sound.esp".'
   - &useIniTweakOrBashedPatch
     type: warn
     content: 'Use .ini tweak or Wrye Bash Bashed Patch tweak instead where possible to avoid conflicts.'
@@ -324,6 +321,32 @@ common:
         text: 'Você aparenta estar usando **%1%**, mas não habilitou o patch de compatibilidade para este mod. Um patch de compatibilidade está incluso com o instalador desse plugin.'
       - lang: ru
         text: 'Похоже, что используется **%1%**, но патч совместимости для него не был подключен. Патч совместимости можно найти в установщике плагина.'
+
+  - &renameFile
+    type: say
+    content:
+          - lang: en
+            text: 'Rename this file to %1%.'
+          - lang: de
+            text: 'Benennen Sie diese Datei in %1% um.'
+          - lang: es
+            text: 'Renombra este archivo a %1%.'
+          - lang: ja
+            text: 'ファイル名を%1%に変更してください。'
+          - lang: ru
+            text: 'Переименуйте этот файл в %1%.'
+
+  - &renameXtoY
+    type: warn
+    content:
+      - lang: en
+        text: 'You need to rename %1% to %2% or this mod won''t work.'
+      - lang: de
+        text: 'Sie müssen %1% zu %2% umbenennen, ansonsten funktioniert diese Mod nicht.'
+      - lang: ja
+        text: '%1%を%2%にリネームしないと機能しません。'
+      - lang: ru
+        text: 'Вам нужно переименовать %1% в %2% для подключения ресурсов мода..'
 
   - &requiresOBSE
     type: error
@@ -1454,10 +1477,7 @@ plugins:
         util: 'TES4Edit v4.0.2'
   - name: 'Cobl Tweaks.esp'
     group: *veryEarlyGroup
-    msg:
-      - <<: *alreadyInX
-        subs: [ 'FCOM Convergence' ]
-        condition: 'active("FCOM_Convergence.esm")'
+    msg: [ *alreadyInFCOM ]
     tag:
       - Invent
     clean:
@@ -1709,11 +1729,10 @@ plugins:
       - 'Francesco''s Leveled Creatures-Items Mod.esm'
       - 'Oscuro''s_Oblivion_Overhaul.esm'
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'The Mart''s Monster Mod BSA must be renamed to %1%. Failure to do so will result in missing resources ingame, as the BSA will not be loaded on game startup.'
-        subs: [ '**Mart''s Monster Mod.bsa**' ]
+      - <<: *renameXtoY
+        subs:
+          - '**Mart''s Monster Mod BSA**'
+          - '**Mart''s Monster Mod.bsa**'
         condition: 'not file("Mart''s Monster Mod.bsa") and not many("(FCOM_Convergence|(Mart''s Monster Mod( for Fran| for OOO)?))\.esp")'
     dirty:
       - <<: *quickClean
@@ -1722,11 +1741,10 @@ plugins:
         itm: 904
   - name: 'Mart''s Monster Mod for Fran.esp'
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'The Mart''s Monster Mod BSA must be renamed to %1%. Failure to do so will result in missing resources ingame, as the BSA will not be loaded on game startup.'
-        subs: [ '**Mart''s Monster Mod for Frans.bsa**' ]
+      - <<: *renameXtoY
+        subs:
+          - '**Mart''s Monster Mod BSA**'
+          - '**Mart''s Monster Mod for Frans.bsa**'
         condition: 'not file("Mart''s Monster Mod for Frans.bsa") and not many("(FCOM_Convergence|(Mart''s Monster Mod( for Fran| for OOO)?))\.esp")'
     dirty:
       - <<: *quickClean
@@ -1735,11 +1753,10 @@ plugins:
         itm: 870
   - name: 'Mart''s Monster Mod for OOO.esp'
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'The Mart''s Monster Mod BSA must be renamed to %1%. Failure to do so will result in missing resources ingame, as the BSA will not be loaded on game startup.'
-        subs: [ '**Mart''s Monster Mod for OOO.bsa**' ]
+      - <<: *renameXtoY
+        subs:
+          - '**Mart''s Monster Mod BSA**'
+          - '**Mart''s Monster Mod for OOO.bsa**'
         condition: 'not file("Mart''s Monster Mod for OOO.bsa") and not many("(FCOM_Convergence|(Mart''s Monster Mod( for Fran| for OOO)?))\.esp")'
     dirty:
       - <<: *quickClean
@@ -3243,7 +3260,14 @@ plugins:
       - Sound
   - name: '(AWS|NW|ANW|EW|OBSE)?(-)?Storms & Sound( SI)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/8711' ]
+    inc:
+      - 'Weather Inside.esp'
+      - 'weather inside [seasons] v1.2.esp'
+      - 'weather inside [silent seasons] v1.2.esp'
     msg:
+      - <<: *renameFile
+        subs: [ 'Storms & Sound.esp' ]
+        condition: 'not file("Storms & Sound.esp")'
       - <<: *useOnlyOneX
         type: error
         subs: [ 'Storms & Sound' ]
@@ -3351,52 +3375,9 @@ plugins:
     tag:
       - Graphics
   - name: 'weather inside [seasons] v1.2.esp'
-    inc:
-      - 'Storms & Sound.esp'
-      - 'Storms & Sound SI.esp'
-      - 'AWS-Storms & Sound.esp'
-      - 'AWS-Storms & Sound SI.esp'
-      - 'NW-Storms & Sound.esp'
-      - 'NW Storms & Sound SI.esp'
-      - 'NW-Storms & Sound SI.esp'
-      - 'ANW-Storms & Sound.esp'
-      - 'ANW-Storms & Sound SI.esp'
-      - 'EW-Storms & Sound.esp'
-      - 'EW-Storms & Sound SI.esp'
-      - 'OBSE-Storms & Sound.esp'
-      - 'OBSE-Storms & Sound SI.esp'
-      - 'weather inside [silent seasons] v1.2.esp'
+    inc: [ 'weather inside [silent seasons] v1.2.esp' ]
   - name: 'weather inside [silent seasons] v1.2.esp'
-    inc:
-      - 'Storms & Sound.esp'
-      - 'Storms & Sound SI.esp'
-      - 'AWS-Storms & Sound.esp'
-      - 'AWS-Storms & Sound SI.esp'
-      - 'NW-Storms & Sound.esp'
-      - 'NW Storms & Sound SI.esp'
-      - 'NW-Storms & Sound SI.esp'
-      - 'ANW-Storms & Sound.esp'
-      - 'ANW-Storms & Sound SI.esp'
-      - 'EW-Storms & Sound.esp'
-      - 'EW-Storms & Sound SI.esp'
-      - 'OBSE-Storms & Sound.esp'
-      - 'OBSE-Storms & Sound SI.esp'
-      - 'weather inside [seasons] v1.2.esp'
-  - name: 'Weather Inside.esp'
-    inc:
-      - 'Storms & Sound.esp'
-      - 'Storms & Sound SI.esp'
-      - 'AWS-Storms & Sound.esp'
-      - 'AWS-Storms & Sound SI.esp'
-      - 'NW-Storms & Sound.esp'
-      - 'NW Storms & Sound SI.esp'
-      - 'NW-Storms & Sound SI.esp'
-      - 'ANW-Storms & Sound.esp'
-      - 'ANW-Storms & Sound SI.esp'
-      - 'EW-Storms & Sound.esp'
-      - 'EW-Storms & Sound SI.esp'
-      - 'OBSE-Storms & Sound.esp'
-      - 'OBSE-Storms & Sound SI.esp'
+    inc: [ 'weather inside [seasons] v1.2.esp' ]
   - name: 'Rainbows.esp'
     dirty:
       - crc: 0x71bddec0
@@ -7265,11 +7246,10 @@ plugins:
       - <<: *requiresX
         subs: [ 'Mart''s Monster Mod BSA' ]
         condition: 'not file("Mart''s Monster Mod.bsa") or not file("Mart''s Monster Mod for Frans.bsa") or not file("Mart''s Monster Mod for OOO.bsa") or not file("FCOM_Convergence_Mart''s Monster Mod.bsa")'
-      - type: say
-        content:
-          - lang: en
-            text: 'The Mart''s Monster Mod BSA must be renamed to %1%. Failure to do so will result in missing resources ingame, as the BSA will not be loaded on game startup.'
-        subs: [ '**FCOM_Convergence_Mart''s Monster Mod.bsa**' ]
+      - <<: *renameXtoY
+        subs:
+          - '**Mart''s Monster Mod BSA**'
+          - '**FCOM_Convergence_Mart''s Monster Mod.bsa**'
         condition: 'not file("FCOM_Convergence_Mart''s Monster Mod.bsa") and not many("(FCOM_Convergence|(Mart''s Monster Mod( for Fran| for OOO)?))\.esp")'
     req:
       - 'FCOM_Convergence.esm'
@@ -10419,8 +10399,8 @@ plugins:
         udr: 152
   - name: 'LetThePeopleDrink-Cobl.esp'
     msg:
-      - type: say
-        content: 'This should be renamed to "LetThePeopleDrink.esp" to avoid breaking things.'
+      - <<: *renameFile
+        subs: [ 'LetThePeopleDrink.esp' ]
     dirty:
       - crc: 0xda32ead
         <<: *dirtyPlugin
@@ -14363,8 +14343,8 @@ plugins:
         content: 'Requires: Fighters Guild United.'
   - name: 'NPC new clothes V2.6 Modified.esp'
     msg:
-      - type: say
-        content: 'If using FCOM, rename this to ''NPC new clothes V2.6.esp'' or adjust the masterlist with Wrye Bash for ''FCOM_NewNPCClothes.esp''.'
+      - <<: *renameFile
+        subs: [ 'NPC new clothes V2.6.esp' ]
         condition: *FCOMCond
   - name: 'FCOM_NewNPCClothes.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/15165' ]
@@ -15671,29 +15651,6 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/37839' ]
     tag:
       - Relev
-  - name: 'Storms & Sound - AFK_Weye.esp'
-    msg: [ *renameStormsAndSounds ]
-  - name: 'Storms & Sound - Amajor7 Imperial Furniture.esp'
-    msg: [ *renameStormsAndSounds ]
-  - name: 'Storms & Sound - Imperial Furniture Renovated.esp'
-    msg: [ *renameStormsAndSounds ]
-  - name: 'Storms & Sound - Bank of Cyrodiil.esp'
-    msg: [ *renameStormsAndSounds ]
-  - name: 'Storms & Sound - Bartholm.esp'
-    msg: [ *renameStormsAndSounds ]
-  - name: 'Storms & Sound - Blood&Mud.esp'
-    msg: [ *renameStormsAndSounds ]
-  - name: 'Storms & Sound - The Lost Spires.esp'
-    msg: [ *renameStormsAndSounds ]
-  - name: 'Storms & Sound - Shezrie''s Villages.esp'
-    msg: [ *renameStormsAndSounds ]
-  - name: 'Storms & Sound - Better Cities.esp'
-    msg: [ *renameStormsAndSounds ]
-  - name: 'Storms & Sound Patches.esp'
-    msg:
-      - *renameStormsAndSounds
-      - type: say
-        content: 'This is a custom merge.'
   - name: 'SRJIrresponsibleHorses.esp'
     tag:
       - Actors.AIData
@@ -20006,41 +19963,16 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/46249'
         name: 'Compatibility Patches for nuska''s Oblivion Character Overhaul (v2)'
-  - name: 'OCO_DLCHorseArmor_Patch.esp'
-    tag:
-      - Actors.ACBS
-      - Actors.AIPackages
-      - Actors.Skeleton
-      - Actors.Stats
-      - NpcFaces
-  - name: 'OCO_DLCOrrery_Patch.esp'
-    tag:
-      - Actors.AIPackages
-      - NpcFaces
-  - name: 'OCO_DLCMehrunesRazor_Patch.esp'
-    tag:
-      - Actors.ACBS
-      - Actors.Skeleton
-      - NpcFaces
-  - name: 'OCO_DLCThievesDen_Patch.esp'
-    tag:
-      - Actors.ACBS
-      - Actors.AIPackages
-      - Actors.Skeleton
-      - Actors.Stats
-      - NpcFaces
-  - name: 'OCO_KnightsOTN_Patch.esp'
-    tag:
-      - Actors.ACBS
-      - Actors.AIPackages
-      - Actors.Stats
-      - NpcFaces
-  - name: 'OCO_UOP_USIP_Patch.esp'
-    tag:
-      - Actors.ACBS
-      - Actors.Skeleton
-      - Actors.Stats
-      - NpcFaces
+  - name: 'OCO_(DLCHorseArmor|DLCMehrunesRazor|DLCOrrery|DLCThievesDen|KnightsOTN|UOP_USIP)_Patch\.esp'
+    tag: [ NpcFaces ]
+  - name: 'OCO_(DLCHorseArmor|DLCMehrunesRazor|DLCThievesDen|KnightsOTN|UOP_USIP)_Patch\.esp'
+    tag: [ Actors.ACBS ]
+  - name: 'OCO_(DLCHorseArmor|DLCOrrery|DLCThievesDen|KnightsOTN)_Patch\.esp'
+    tag: [ Actors.AIPackages ]
+  - name: 'OCO_(DLCHorseArmor|DLCMehrunesRazor|DLCThievesDen|UOP_USIP)_Patch\.esp'
+    tag: [ Actors.Skeleton ]
+  - name: 'OCO_(DLCHorseArmor|DLCThievesDen|KnightsOTN|UOP_USIP)_Patch\.esp'
+    tag: [ Actors.Stats ]
   - name: 'Jjiinx_Long Ears.esp'
     tag:
       - Body-F
@@ -20524,11 +20456,6 @@ plugins:
   - name: 'Better Cities - Unique Landscape Skingrad Outskirts.esp'
     tag:
       - C.Water
-  - name: 'Better Cities - Storms & Sound.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/16513' ]
-    msg:
-      - type: say
-        content: 'Reassign the "Storms & Sounds.esp" master using Bash depending on which S&S ESP you are using.'
   - name: 'Better Cities - TIE Restricted Area.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/16513' ]
     tag:
@@ -20884,38 +20811,13 @@ plugins:
         itm: 32
   - name: 'Universitum Arcanorum.esp'
     after:
-      # 'Universitum Arcanorum.esp' should load after Better Cities, but nothing
-      # more specific is known and the plugin doesn't seem to be available for
-      # download and inspection any more, so all main Better Cities plugins are
-      # listed below.
-      - 'Better Cities ANVIL.esp'
-      - 'Better Cities BRAVIL.esp'
-      - 'Better Cities BRUMA.esp'
-      - 'Better Cities CHEYDINHAL.esp'
-      - 'Better Cities CHORROL.esp'
-      - 'Better Cities LEYAWIIN.esp'
-      - 'Better Cities SKINGRAD.esp'
-      - 'Better Cities Full.esp'
-      - 'Better Cities - Open Cities Reborn.esp'
       - 'Better Imperial City.esp'
-      - 'Better Cities IC Arboretum.esp'
       - 'Better Cities IC Arcane University.esp'
-      - 'Better Cities IC Arena.esp'
-      - 'Better Cities IC Elven Gardens.esp'
-      - 'Better Cities IC Green Emperor Way.esp'
-      - 'Better Cities IC Market.esp'
-      - 'Better Cities IC Prison.esp'
-      - 'Better Cities IC Talos Plaza.esp'
-      - 'Better Cities IC Temple.esp'
-      - 'Better Cities IC Waterfront.esp'
     dirty:
-      - crc: 0x9bdbb795
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x9BDBB795
+        util: '[TES4Edit v4.0.2f](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 121
-        udr: 1169
-      - crc: 0xd41dc29c
-        <<: *dirtyPlugin
-        itm: 9
         udr: 1169
   - name: 'ReallyImmersiveMessages.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/27720' ]
@@ -20947,19 +20849,8 @@ plugins:
     msg:
       - type: say
         content: 'Possible to use with ''Syc_LongerDaysShorterNights.esp'''
-  - name: '[GFX]_Initial_Glow-all.esp'
-    tag:
-      - Graphics
-      - NoMerge
-  - name: 'GFX_Initial_Glow-all.esp'
-    tag:
-      - Graphics
-      - NoMerge
-  - name: '[GFX]_Initial_Glow-self.esp'
-    tag:
-      - Graphics
-      - NoMerge
-  - name: '[GFX]_Initial_Glow-creatures.esp'
+  - name: '[GFX]_Initial_Glow-(all|creatures|self)\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/5138/' ]
     tag:
       - Graphics
       - NoMerge
@@ -20988,27 +20879,8 @@ plugins:
     tag:
       - Graphics
       - Sound
-  - name: 'a4sEWVE_Full.esp'
-    tag:
-      - Graphics
-      - NoMerge
-  - name: 'a4sEWVE_Drains.esp'
-    tag:
-      - Graphics
-      - NoMerge
-  - name: 'a4sEWVE_Fire.esp'
-    tag:
-      - Graphics
-      - NoMerge
-  - name: 'a4sEWVE_Frost.esp'
-    tag:
-      - Graphics
-      - NoMerge
-  - name: 'a4sEWVE_Shock.esp'
-    tag:
-      - Graphics
-      - NoMerge
-  - name: 'a4sEWVE_SoulTrap.esp'
+  - name: 'a4sEWVE_(Drains|Fire|Frost|Full|Shock|SoulTrap)\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/35140/' ]
     tag:
       - Graphics
       - NoMerge
@@ -21512,9 +21384,7 @@ plugins:
       - NoMerge
   - name: 'Storms & Sound - Filter Patch.esp'
     group: *latePatchesGroup
-    msg:
-      - *requiresBashedPatch
-      - *renameStormsAndSounds
+    msg: [ *requiresBashedPatch ]
     tag:
       - Filter
   - name: 'TIE Weapon + Armor Filter.esp'
@@ -21646,8 +21516,8 @@ plugins:
     after: [ All Natural Nehrim.esp ]
   - name: 'ASTnehrimHotfixes01(EN).esp'
     msg:
-      - type: error
-        content: 'Outdated. Use the [update](http://www.nexusmods.com/oblivion/mods/39736) instead.'
+      - <<: *obsolete
+        subs: [ '[Nehrim English Supplemental](http://www.nexusmods.com/oblivion/mods/39736)' ]
   - name: 'WindowLightingSystem.esp'
     msg:
       - *masterReassign
@@ -21686,8 +21556,8 @@ plugins:
     msg: [ *masterReassign ]
   - name: 'NehrimTEMP_ENGRISH_TEXT.esp'
     msg:
-      - type: warn
-        content: 'Outdated. Use [this](http://www.nexusmods.com/oblivion/mods/39736) instead.'
+      - <<: *obsolete
+        subs: [ '[Nehrim English Supplemental](http://www.nexusmods.com/oblivion/mods/39736)' ]
   - name: 'SM Encumbrance and Fatigue.esp'
     msg: [ *masterReassign ]
   - name: 'Spell Delete And Item Remove.esp'
