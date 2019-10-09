@@ -1080,18 +1080,23 @@ plugins:
     after: [ All Natural Nehrim.esp ]
 
 
+  # Wrye Bash - Oblivion.esm swapping
   - name: 'Oblivion_1.1.esm'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/22368' ]
     msg:
       - <<: *deleteModdingPlugin
         condition: 'active("Oblivion_1.1.esm")'
   - name: 'Oblivion_SI.esm'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/22368' ]
     msg:
       - <<: *deleteModdingPlugin
         condition: 'active("Oblivion_1.1.esm")'
   - name: 'Oblivion_GOTY non-SI.esm'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/22368' ]
     msg:
       - <<: *deleteModdingPlugin
         condition: 'active("Oblivion_1.1.esm")'
+
   - name: 'XBOX_Controller.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/47215' ]
     group: *gameMasterGroup
