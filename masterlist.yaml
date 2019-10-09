@@ -13433,7 +13433,12 @@ plugins:
         <<: *dirtyPlugin
         itm: 47
         udr: 417
+  - name: 'xul(Ancient(Redwoods|Yews)|ArriusCreek|AspenWood|BeachesOfCyrodiilLostCoast|BlackwoodForest|BravilBarrowfields|BrenaRiverRavine|CheydinhalFalls|ChorrolHinterland(-BC6)?|CliffsOfAnvil|CloudtopMountains|ColovianHighlands_EV|darkforest|EntiusGorge|FallenleafEverglade|ImperialIsle|JerallGlacier|LushWoodlands|PantherRiver|Patch_AY_AC|RiverEthe|RollingHills_EV|SilverfishRiverValley|SkingradOutskirts|Snowdale|StendarrValley|TheEasternPeaks|TheHeath)\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/19370'
+        name: 'Unique Landscapes Compilation'
   - name: 'xuldarkforest.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/11162' ]
     tag:
       - C.Music
       - C.Water
@@ -13452,6 +13457,7 @@ plugins:
       - type: say
         content: 'Update to patch version 1.1 if using Stendarr Valley 1.2'
   - name: 'xulTheHeath.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/11165' ]
     tag:
       - C.Water
     dirty:
@@ -13472,6 +13478,7 @@ plugins:
         <<: *dirtyPlugin
         udr: 14
   - name: 'XulEntiusGorge.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/7037' ]
     tag:
       - C.Water
     dirty:
@@ -13482,6 +13489,7 @@ plugins:
   - name: 'ULFallenLeafEverglade.esp'
     msg: [ *obsolete ]
   - name: 'xulFallenleafEverglade.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/17562' ]
     tag:
       - C.Water
     dirty:
@@ -13524,6 +13532,7 @@ plugins:
         itm: 576
         udr: 217
   - name: 'xulChorrolHinterland.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/11189' ]
     msg:
       - <<: *alreadyInX
         subs: [ 'Cyrodiil Rebuild.esp' ]
@@ -13544,6 +13553,7 @@ plugins:
         <<: *dirtyPlugin
         itm: 1
   - name: 'xulBeachesOfCyrodiilLostCoast.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/14720' ]
     msg:
       - type: say
         content: 'Make sure version is 1.6.3 or later.'
@@ -13659,6 +13669,7 @@ plugins:
   - name: 'T-HMO.esp'
     msg: [ *needsCleaning ]
   - name: 'xulBravilBarrowfields.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/20426' ]
     dirty:
       - crc: 0xa29afdc3
         <<: *dirtyPlugin
@@ -13668,6 +13679,7 @@ plugins:
       - type: say
         content: 'Update to Bravil Barrowfields 1.3. Then deactivate this patch.'
   - name: 'xulLushWoodlands.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/11164' ]
     dirty:
       - crc: 0x62fb2c49
         <<: *dirtyPlugin
@@ -13685,6 +13697,7 @@ plugins:
       - type: say
         content: 'Obsolete if using Lush Woodlands 1.3 or higher.'
   - name: 'xulAncientYews.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/11458' ]
     dirty:
       - crc: 0x6b0d5e8e
         <<: *dirtyPlugin
@@ -13705,6 +13718,7 @@ plugins:
       - type: say
         content: 'Obsolete, update to latest AY and delete.'
   - name: 'xulAncientRedwoods.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/11163' ]
     dirty:
       - crc: 0x6387135
         <<: *dirtyPlugin
@@ -13715,6 +13729,7 @@ plugins:
       - type: say
         content: 'Obsolete if using Ancient Redwoods 1.6 or higher.'
   - name: 'xulCloudtopMountains.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/16677' ]
     dirty:
       - crc: 0xfab16618
         <<: *dirtyPlugin
@@ -13724,6 +13739,7 @@ plugins:
       - type: say
         content: 'Obsolete. Update to Cloudtop Mountains 1.0.1 or higher. Then delete this patch.'
   - name: 'xulArriusCreek.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/16818' ]
     tag:
       - C.Water
     dirty:
@@ -13748,6 +13764,7 @@ plugins:
         itm: 13
         udr: 14
   - name: 'xulRollingHills_EV_withoutWheat.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/10768' ]
     msg:
       - type: say
         content: 'Only use one UL Rolling Hills plugin.'
@@ -13761,6 +13778,7 @@ plugins:
       - type: say
         content: 'Only use one UL Rolling Hills plugin.'
   - name: 'xulRollingHills_EV.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/10768' ]
     msg:
       - type: say
         content: 'Only use one UL Rolling Hills plugin.'
@@ -13791,11 +13809,13 @@ plugins:
         content: 'Do not use with RedcourtCastle-RollingHills patch.esp or RedcourtCastle-AncientYews patch.esp.'
         condition: 'file("RedcourtCastle-AncientYews patch.esp") or file("RedcourtCastle-RollingHills patch.esp")'
   - name: 'xulPantherRiver.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/20332' ]
     dirty:
       - crc: 0x168e01a1
         <<: *dirtyPlugin
         udr: 90
   - name: 'xulRiverEthe.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/17330' ]
     tag:
       - C.Water
     dirty:
@@ -13823,6 +13843,7 @@ plugins:
         <<: *dirtyPlugin
         itm: 22
   - name: 'xulImperialIsle.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/9531' ]
     dirty:
       - crc: 0x9f8e4a43
         <<: *dirtyPlugin
@@ -13842,11 +13863,13 @@ plugins:
       - type: warn
         content: 'Do not use - has technical issues. Download the correct patch [here](http://www.nexusmods.com/oblivion/mods/20218).'
   - name: 'xulBlackwoodForest.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/25799' ]
     dirty:
       - crc: 0x781ac4eb
         <<: *dirtyPlugin
         itm: 39
   - name: 'xulCheydinhalFalls.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/27494' ]
     tag:
       - C.Water
   - name: 'KvatchRebuilt-CheydinhalFalls patch.esp'
@@ -13872,6 +13895,7 @@ plugins:
         content: 'West Roads.esp has been detected. West Roads and all dependent patches must be uninstalled before using Roads of Cyrodiil. See Roads of Cyrodiil readme for upgrade instructions.'
         condition: 'file("West Roads.esp")'
   - name: 'xulCliffsOfAnvil.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/36139' ]
     dirty:
       - crc: 0x701ef543
         <<: *dirtyPlugin
@@ -20911,6 +20935,7 @@ plugins:
         itm: 128
         udr: 257
   - name: 'xulSkingradOutskirts.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/29948' ]
     after:
       - 'Cyrodiil Rebuild.esp'
   - name: 'Better Cities SKINGRAD.esp'
