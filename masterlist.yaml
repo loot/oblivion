@@ -1073,6 +1073,13 @@ plugins:
       - crc: 0xCCDA5239
         util: 'TES4Edit v4.0.2'
 
+# Official Nehrim Files
+  - name: 'Nehrim(Data|English)\.esp'
+    url: [ 'https://sureai.net/games/nehrim/' ]
+  - name: 'NehrimEnglish.esp'
+    after: [ All Natural Nehrim.esp ]
+
+
   - name: 'Oblivion_1.1.esm'
     msg:
       - <<: *deleteModdingPlugin
@@ -21770,8 +21777,6 @@ plugins:
       - type: error
         content: 'This plugin should never be active. Deactivate immediately.'
         condition: 'active("FRLODToggleBasic.esp")'
-  - name: 'NehrimEnglish.esp'
-    after: [ All Natural Nehrim.esp ]
   - name: 'ASTnehrimHotfixes01(EN).esp'
     msg:
       - <<: *obsolete
