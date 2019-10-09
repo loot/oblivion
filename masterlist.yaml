@@ -17106,23 +17106,15 @@ plugins:
       - C.Light
       - Deactivate
 
-  - name: 'Let There Be Darkness.esp'
-    msg: [ *obsolete ]
-  - name: 'Let There Be Darkness - Shivering Isles.esp'
-    req:
-      - 'DLCShiveringIsles.esp'
-    msg: [ *obsolete ]
-  - name: 'Let There Be Darkness - Cyrodiil + SI.esp'
-    req:
-      - 'DLCShiveringIsles.esp'
-  - name: 'Let There Be Darkness All.esp'
-    group: *latePatchesGroup
-    tag:
-      - Filter
   - name: 'Let There Be Darkness.*\.esp'
+    url:
+      - 'https://www.nexusmods.com/oblivion/mods/22819'
+      - 'https://www.nexusmods.com/oblivion/mods/29692'
     tag:
       - C.Light
       - Deactivate
+  - name: 'Let There Be Darkness - Cyrodiil + SI.esp'
+    req: [ 'DLCShiveringIsles.esp' ]
 
   - name: 'Cava Obscura - Cyrodiil.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/35099' ]
