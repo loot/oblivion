@@ -3563,7 +3563,11 @@ plugins:
       - type: say
         content: 'demo mod, illustrates how to use the basic features of AddActorValues. Not need for use.'
   - name: 'AliveWaters.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/38366/' ]
+    url:
+      - 'https://www.nexusmods.com/oblivion/mods/6914/'
+      # Castle Sea View Farms Replacer Plugin
+      - 'https://www.nexusmods.com/oblivion/mods/38366'
+      - 'https://www.nexusmods.com/oblivion/mods/44069/'
     dirty:
       - crc: 0x717bf5a
         <<: *dirtyPlugin
@@ -3572,6 +3576,9 @@ plugins:
         <<: *dirtyPlugin
         itm: 19
   - name: 'AliveWaters - Koi Addon.esp'
+    url:
+      - 'https://www.nexusmods.com/oblivion/mods/6914/'
+      - 'https://www.nexusmods.com/oblivion/mods/44069/'
     dirty:
       - crc: 0x29f02eed
         <<: *dirtyPlugin
@@ -3580,6 +3587,7 @@ plugins:
         <<: *dirtyPlugin
         itm: 1
   - name: 'AliveWaters_nofish.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/44069/' ]
     dirty:
       - crc: 0x7618b1db
         <<: *dirtyPlugin
