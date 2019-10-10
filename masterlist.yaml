@@ -3508,32 +3508,36 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/13101' ]
     inc:
       - 'All Natural - Real Lights.esp'
-  - name: 'Illumination(Within|Without)( Rus)?\.esp'
+  - name: 'Illumination(Within|Without)\.esp'
     url: [ 'http://www.nexusmods.com/oblivion/mods/3700' ]
     after:
       - 'Finishing Touches -Bravil-.esp'
     msg:
       - <<: *useOnlyOneX
         subs: [ 'Illumination' ]
-        condition: 'many("Illumination(Within|Without)( Rus)?\.esp")'
+        condition: 'many("Illumination(Within|Without)\.esp")'
   - name: 'FT-Bravil-IW.esp'
     url: [ 'http://www.nexusmods.com/oblivion/mods/13664' ]
     after:
       - 'IlluminationWithin.esp'
       - 'IlluminationWithout.esp'
-  - name: 'IWR.?-.?Windows( Rus)?\.esp'
+  - name: 'IWR-Windows.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/6244' ]
     msg:
       - type: say
         content: 'Remember there are also the Retrofitted and Optimised IWR mods.'
-  - name: 'IWR.?-.?Lights( Rus)?\.esp'
+  - name: 'IWR-Lights.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/6244' ]
     msg:
       - type: say
         content: 'Remember there are also the Retrofitted and Optimised IWR mods.'
-  - name: 'IWR.?-.?Shutters( Rus)?\.esp'
+  - name: 'IWR-Shutters.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/6244' ]
     msg:
       - type: say
         content: 'Remember there are also the Retrofitted and Optimised IWR mods.'
   - name: 'IWR - Windows Lights Shutters - Optimised.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/6244' ]
     msg:
       - type: say
         content: 'Needs original IWR files.'
