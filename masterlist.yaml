@@ -1608,6 +1608,12 @@ plugins:
     msg: [ *requiresBashedPatch ]
   - name: 'Item interchange - Option, Ingredients in Bulk(, reduced)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17557' ]
+    after:
+      - 'Item interchange - Placement.esp'
+      - 'Item interchange - Placement for FCOM.esp'
+      - 'Item interchange - Placement for Frostcrag.esp'
+      - 'Item interchange - Placement for Frostcrag Reborn.esp'
+      - 'Item interchange - Placement for Frostcrag Spire Revisited.esp'
     req: [ 'Item interchange - Extraction.esp' ]
     msg:
       - <<: *useOnlyOneX
