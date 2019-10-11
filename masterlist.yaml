@@ -1073,18 +1073,30 @@ plugins:
       - crc: 0xCCDA5239
         util: 'TES4Edit v4.0.2'
 
+# Official Nehrim Files
+  - name: 'Nehrim(Data|English)\.esp'
+    url: [ 'https://sureai.net/games/nehrim/' ]
+  - name: 'NehrimEnglish.esp'
+    after: [ All Natural Nehrim.esp ]
+
+
+  # Wrye Bash - Oblivion.esm swapping
   - name: 'Oblivion_1.1.esm'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/22368' ]
     msg:
       - <<: *deleteModdingPlugin
         condition: 'active("Oblivion_1.1.esm")'
   - name: 'Oblivion_SI.esm'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/22368' ]
     msg:
       - <<: *deleteModdingPlugin
         condition: 'active("Oblivion_1.1.esm")'
   - name: 'Oblivion_GOTY non-SI.esm'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/22368' ]
     msg:
       - <<: *deleteModdingPlugin
         condition: 'active("Oblivion_1.1.esm")'
+
   - name: 'XBOX_Controller.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/47215' ]
     group: *gameMasterGroup
@@ -2180,14 +2192,16 @@ plugins:
   - name: 'Mart''s Monster Mod - (Increased|Reduced|Reduced Reduced) Spawn Rates\.esp'
     msg: [ *obsolete ]
 
-# MMM Optionial Addon and Patches https://www.nexusmods.com/oblivion/mods/22771
+  # MMM Optional Add-ons and Patches
   - name: 'Mart''s Monster Mod( for OOO)? - TNR Faces\.esp'
     inc: [ 'COBL Races TNR.esp' ]
   - name: 'Mart''s Monster Mod( for OOO)? - (COBL Races TNR|TNR Faces)\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/22771' ]
     tag:
       - NoMerge
       - NpcFaces
   - name: 'Mart''s Monster Mod - Diverse Runeskull( MMM| OOO)? Loot\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/22771' ]
     msg:
       - *obsolete
       - <<: *useOnlyOneX
@@ -2205,9 +2219,11 @@ plugins:
         display: '[MMMforOOO](https://www.nexusmods.com/oblivion/mods/17784) or [FCOM Convergence](https://www.nexusmods.com/oblivion/mods/12249)'
         condition: 'not file("FCOM_Convergence.esm")'
   - name: 'MMM - Playable Undead Armors( - Oblivion WarCry Compatability Patch)?\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/22771' ]
     tag: [ Invent ]
 
-# FranOOOMMM! https://www.nexusmods.com/oblivion/mods/8037
+  - name: 'FranOOOMMM_.*\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/8037' ]
   - name: 'FranOOOMMM_FranItemLists.esp'
     msg: [ *obsoleteUseFCOM ]
   - name: 'FranOOOMMM_GuardFix.esp'
@@ -2219,12 +2235,16 @@ plugins:
   - name: 'FranOOOMMM_WarCry_BobsArmory.esp'
     msg: [ *obsoleteUseFCOM ]
   - name: 'Mart''s Monster Mod - Diverse NPC faces nv.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/8037' ]
     msg: [ *obsoleteUseFCOM ]
   - name: 'Mart''s Monster Mod for Fran''s nvNPC.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/8037' ]
     msg: [ *obsoleteUseFCOM ]
   - name: 'Mart''s Monster Mod for Fran''s nvCNPC.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/8037' ]
     msg: [ *obsoleteUseFCOM ]
   - name: 'Oscuro''s Combat Behavior.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/8037' ]
     msg: [ *obsoleteUseFCOM ]
 
   - name: 'Waalx Animals & Creatures.esm'
@@ -2330,6 +2350,7 @@ plugins:
       - NoMerge
     group: *underridesGroup
   - name: 'HrmnsOblivionScriptOptimizationv1.0.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/13092' ]
     msg:
       - type: warn
         content: 'Not recommended for use as there is no measurable performance improvement, and it breaks the Shivering Isles by changing some FormIDs, causing a script to be written into cell data.'
@@ -2397,6 +2418,7 @@ plugins:
     group: *underridesGroup
 
   - name: 'Underdark v1.1 Delayer.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/25946/' ]
     msg: [ *obsolete ]
     group: *underridesGroup
   - name: '!Oblivion_PL.esp'
@@ -2412,6 +2434,7 @@ plugins:
       - Graphics
 # These should all be tagged with Deactivate, NoMerge, and NPCFaces, and should have priority -2.
   - name: 'Better Looking NPC.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/33995' ]
     tag:
       - Deactivate
       - NoMerge
@@ -2439,6 +2462,7 @@ plugins:
       - R.Teeth
     group: *underridesGroup
   - name: 'xeosp++.esp'
+    url: [ 'https://www.loverslab.com/topic/15185-xeo-sp/?ct=1568953713' ]
     tag:
       - Body-F
       - Body-M
@@ -2493,6 +2517,7 @@ plugins:
       - NpcFaces
     group: *underridesGroup
   - name: 'TweakedGenericFaces(-LITE)?\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/9119' ]
     tag:
       - Deactivate
       - NoMerge
@@ -2568,6 +2593,7 @@ plugins:
     group: *underridesGroup
 
   - name: 'emperorface.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/2473' ]
     tag:
       - Deactivate
       - NoMerge
@@ -2578,6 +2604,7 @@ plugins:
         <<: *dirtyPlugin
         itm: 3
   - name: 'Absolutely_Sexy_MarketDistrict.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/15675' ]
     tag:
       - Deactivate
       - Invent
@@ -2585,14 +2612,10 @@ plugins:
       - NpcFaces
     group: *underridesGroup
   - name: 'YoungerNPCs.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/2512' ]
     tag:
       - Deactivate
       - NoMerge
-      - NpcFaces
-    group: *underridesGroup
-  - name: 'Colourwheels Sexy Female NPCs( Vwalk)?\.esp'
-    tag:
-      - Deactivate
       - NpcFaces
     group: *underridesGroup
   - name: 'ChangeSomeCyrodiilLadies.esp'
@@ -2605,6 +2628,7 @@ plugins:
       - NpcFaces
     group: *underridesGroup
   - name: 'CSCP.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/47326' ]
     tag:
       - Deactivate
       - NoMerge
@@ -2617,12 +2641,14 @@ plugins:
       - NpcFaces
     group: *underridesGroup
   - name: 'BeautifulJensine.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/13203' ]
     tag:
       - Deactivate
       - NoMerge
       - NpcFaces
     group: *underridesGroup
   - name: 'Prettier Vampire Faces.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/3577' ]
     tag:
       - Deactivate
       - NoMerge
@@ -2701,6 +2727,7 @@ plugins:
       - type: error
         content: 'Remove. Fixed in official patch 1.5.11+.'
   - name: 'AdventurersItemMod.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/6316' ]
     msg:
       - type: say
         content: 'If not using Bash this must be loaded after UOP but then you will lose a lot of fixes from UOP.'
@@ -2713,6 +2740,7 @@ plugins:
         itm: 16
         udr: 126
   - name: 'Self-Preservation v1.0.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/24288' ]
     msg:
       - type: say
         content: 'If not using Bash this must be loaded after UOP/OOO/MMM/FCOM/any NPC editing mod but you''ll lose their NPC edits.'
@@ -2743,6 +2771,7 @@ plugins:
       - type: error
         content: 'Remove and use regular MOBS/OMOBS instead, using Bash Patch to merge.'
   - name: 'Primate Rank Fix.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/24656' ]
     tag:
       - Factions
   - name: 'Permanent Effects from Quest Items fix.esp'
@@ -2875,9 +2904,8 @@ plugins:
   - name: 'Beautiful Women Vwalk Full UOS.esp'
     msg: [ *updateSensualWalks ]
     tag: [ NpcFaces ]
-  - name: 'Colourwheels Sexy Female NPCs Vwalk UOS.esp'
-    tag: [ NpcFaces ]
   - name: 'Better Cities .esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/16513' ]
     msg: [ *dummyFileLoader ]
   - name: 'BSAloader.esp'
     msg: [ *dummyFileLoader ]
@@ -2894,10 +2922,12 @@ plugins:
   - name: 'TamRes.esp'
     msg: [ *dummyFileLoader ]
   - name: 'MrSiika''sFoxes.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/14267' ]
     msg:
       - type: say
         content: 'Do not use with MMM/FCOM. Already integrated.'
   - name: 'MrSiikaRabbits.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/14266' ]
     msg:
       - type: say
         content: 'Do not use with MMM/FCOM. Already integrated.'
@@ -2920,26 +2950,29 @@ plugins:
     tag:
       - Invent
   - name: 'MrSiikaRabbitsforFrans.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/14266' ]
     msg:
       - type: say
         content: 'Do not use with MMMforFrans. Already integrated.'
   - name: '7roads_screens.esp'
     tag:
       - Graphics
-  - name: 'Atmospheric Loading Screens.esp'
-    after:
-      - 'bgBalancingEVCore.esp'
+  - name: 'Atmospheric Loading Screens - No Text.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/8958' ]
     tag:
       - Graphics
   - name: 'Atmospheric Loading Screens - Original Text.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/8958' ]
     after:
       - 'bgBalancingEVCore.esp'
     tag:
       - Graphics
   - name: 'Atmospheric Loading Screens - Random Quotes.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/8958' ]
     tag:
       - Graphics
   - name: 'Gr_Loading_Screen.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/8412' ]
     tag:
       - Graphics
   - name: 'Loading Screens.esp'
@@ -2947,12 +2980,15 @@ plugins:
       - Graphics
       - NoMerge
   - name: 'LoadingScreens.esp'
-    tag:
-      - Graphics
+    url:
+      - 'https://www.nexusmods.com/oblivion/mods/13012'
+      - 'https://www.nexusmods.com/oblivion/mods/45482'
+    tag: [ Graphics ]
   - name: 'LoadingScreensDV.esp'
     tag:
       - Graphics
   - name: 'LoadingScreensSI.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/15852' ]
     tag:
       - Graphics
       - NoMerge
@@ -2961,10 +2997,15 @@ plugins:
       - Graphics
       - NoMerge
   - name: 'Loading Screens - Vanilla No Text.esp'
+    url:
+      - 'https://www.nexusmods.com/oblivion/mods/29561'
+      - 'https://www.nexusmods.com/oblivion/mods/30744'
+      - 'https://www.nexusmods.com/oblivion/mods/36777'
     tag:
       - Graphics
       - NoMerge
   - name: 'LoadingsAddon.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/48486' ]
     tag:
       - Graphics
       - NoMerge
@@ -3000,12 +3041,15 @@ plugins:
       - Graphics
       - NoMerge
   - name: 'LoadingScreenQuotes.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/5890' ]
     msg:
       - type: say
         content: 'Make sure that any mod that replaces the graphics of the loading screens is tagged with Graphics, otherwise this mod will revert them to vanilla'
   - name: 'oc_darker_nights.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/4135' ]
     msg: [ *incompatibleWithWeatherMods ]
   - name: '_darker_nights.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/14118' ]
     msg: [ *incompatibleWithWeatherMods ]
   - name: '_darker_nights_2_with_burning_kvatch.esp'
     msg: [ *incompatibleWithWeatherMods ]
@@ -3014,18 +3058,23 @@ plugins:
       - type: say
         content: 'This mod is incompatible with weather mods that affect Shivering Isles.'
   - name: 'fog.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/26535' ]
     msg: [ *incompatibleWithWeatherMods ]
   - name: 'RedBag - Fog.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/33424' ]
     msg: [ *incompatibleWithWeatherMods ]
   - name: 'PW_MorrowindFog.esp'
     msg: [ *incompatibleWithWeatherMods ]
   - name: 'sdn LOD Fog Full.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/25052' ]
     msg: [ *incompatibleWithWeatherMods ]
   - name: 'sdn LOD Fog Lite.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/25052' ]
     msg: [ *incompatibleWithWeatherMods ]
   - name: 'Arthur_ Natural weather with HDR.esp'
     msg: [ *obsolete ]
   - name: 'Natural_Weather_(HDR_)?(with_darker_Nights_)?by_Max_Tael?.*\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/14918' ]
     msg:
       - <<: *requiresX
         subs: [ '[Ryu Doppler''s fixed Natural Weather](https://www.nexusmods.com/oblivion/mods/14918)' ]
@@ -3052,12 +3101,15 @@ plugins:
         condition: 'many("Ls More Butterflies and ( )?Fireflies( Not In Interiors)?( Without Fairies)?( 4\.0| 5\.0)?( Halved| Quarter)?\.esp")'
 
   - name: 'EnhancedWeather - Darker Nights, 50.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/16544' ]
     inc:
       - 'EnhancedWeather - Darker Nights, 80.esp'
   - name: 'EnhancedWeather - Darker Nights, 80.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/16544' ]
     inc:
       - 'EnhancedWeather - Darker Nights, 50.esp'
   - name: 'Enhanced Weather - Across-The-Borders Mods Patch.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/16544' ]
     req: [ *OBSE ]
   - name: 'EnhancedWeather - Enhanced Seasons.esp'
     msg:
@@ -3070,6 +3122,7 @@ plugins:
   - name: 'EW-GTA2 Patch.esp'
     msg: [ *obsolete ]
   - name: 'All Natural.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/18305' ]
     msg:
       - type: say
         content: 'Required for All Natural. Make sure this is active and not just imported into your Bashed Patch.'
@@ -3077,6 +3130,7 @@ plugins:
       - C.Climate
       - MustBeActiveIfImported
   - name: 'All Natural - SI.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/18305' ]
     msg:
       - type: say
         content: 'Required for All Natural SI support. Make sure this is active and not just imported into your Bashed Patch.'
@@ -3084,6 +3138,7 @@ plugins:
       - C.Climate
       - MustBeActiveIfImported
   - name: 'All Natural - MMM Patch.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/18305' ]
     tag:
       - Scripts
   - name: 'All Natural - Enhanced Weather.esp'
@@ -3113,6 +3168,7 @@ plugins:
       - type: say
         content: 'Obsolete. Update to latest version of Gates To Aesgaard Episode 2 and remove this patch.'
   - name: 'Immersive Interiors.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/34199' ]
     req:
       - name: 'All Natural.esp'
         display: '[All Natural](http://www.nexusmods.com/oblivion/mods/18305)'
@@ -3128,14 +3184,17 @@ plugins:
     tag:
       - C.Climate
   - name: 'Natural Interiors - Cities.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/6249' ]
     msg:
       - <<: *alreadyInX
         subs: [ 'All Natural' ]
         condition: 'file("All Natural.esp")'
   - name: 'NoOblivionWeatherOutside.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/23173' ]
     inc:
       - 'All Natural.esp'
   - name: 'no wind-2578.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/2578' ]
     msg: [ *bashedPatchTweak ]
   - name: 'no_wind-2578.esp'
     msg: [ *bashedPatchTweak ]
@@ -3183,16 +3242,21 @@ plugins:
         <<: *dirtyPlugin
         itm: 5
   - name: 'Echo_ChapelChant.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/14868' ]
     dirty:
       - crc: 0x1463180e
         <<: *dirtyPlugin
         itm: 2
   - name: 'AmbientTownSounds.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/13009' ]
     dirty:
       - crc: 0x130e1d68
         <<: *dirtyPlugin
         itm: 3
   - name: 'MIS.esp'
+    url:
+      - 'https://www.nexusmods.com/oblivion/mods/5487'
+      - 'https://www.nexusmods.com/oblivion/mods/19038'
     dirty:
       - crc: 0xbca36827
         <<: *dirtyPlugin
@@ -3202,6 +3266,9 @@ plugins:
       - type: say
         content: 'Make sure you are using More Immersive Sounds Edited to benefit from bug fixes.'
   - name: 'MIS Low Wind.esp'
+    url:
+      - 'https://www.nexusmods.com/oblivion/mods/5487'
+      - 'https://www.nexusmods.com/oblivion/mods/19038'
     tag:
       - Scripts
     dirty:
@@ -3209,6 +3276,9 @@ plugins:
         <<: *dirtyPlugin
         itm: 2
   - name: 'Atmospheric Oblivion.esp'
+    url:
+      - 'https://www.nexusmods.com/oblivion/mods/7703'
+      - 'https://www.nexusmods.com/oblivion/mods/19487'
     tag:
       - Scripts
     dirty:
@@ -3223,39 +3293,48 @@ plugins:
     tag:
       - Sound
   - name: 'PowerAttack Voicemod.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/10980' ]
     msg:
       - type: say
         content: 'May cause unfixable animation bugs if used with ''Personality Idles'' or similar.'
   - name: 'PTCombatSpeechcraftEasy.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/31535' ]
     inc:
       - 'PTCombatSpeechcraftMedium.esp'
       - 'PTCombatSpeechcraftHard.esp'
   - name: 'PTCombatSpeechcraftMedium.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/31535' ]
     inc:
       - 'PTCombatSpeechcraftEasy.esp'
       - 'PTCombatSpeechcraftHard.esp'
   - name: 'PTCombatSpeechcraftHard.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/31535' ]
     inc:
       - 'PTCombatSpeechcraftEasy.esp'
       - 'PTCombatSpeechcraftMedium.esp'
   - name: 'Footstep Sound Fix.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/10969' ]
     msg: [ *bashedPatchTweak ]
   - name: 'Quiet Feet Complete.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/13016' ]
     msg:
       - type: say
         content: 'Recommended to upgrade to Quiet Feet MAX 2.0, which does not require a plugin and is more compatible.'
       - *bashedPatchTweak
   - name: 'QuietFeet Max.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/12331' ]
     msg:
       - *obsolete
       - *bashedPatchTweak
     tag:
       - Sound
   - name: 'QuietFeet HorseArmor.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/12331' ]
     msg: [ *bashedPatchTweak ]
     tag:
       - Sound
   - name: 'Sounds of Cyrodiil.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/39804' ]
     inc:
       - 'More Immersive Sound.esp'
       - 'Oblivifall - Ambiant Dungeon SFX.esp'
@@ -3376,13 +3455,17 @@ plugins:
         util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 45
   - name: 'SnakeLightningSpeed.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/5347' ]
     tag:
       - Graphics
   - name: 'weather inside [seasons] v1.2.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/5095' ]
     inc: [ 'weather inside [silent seasons] v1.2.esp' ]
   - name: 'weather inside [silent seasons] v1.2.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/5095' ]
     inc: [ 'weather inside [seasons] v1.2.esp' ]
   - name: 'Rainbows.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/8927' ]
     dirty:
       - crc: 0x71bddec0
         <<: *dirtyPlugin
@@ -3400,6 +3483,7 @@ plugins:
       - type: say
         content: 'Recommended to use All Natural''s Real Lights implementation, as it doesn''t suffer from this, fixes a huge number of bugs in the original, and can be used on its own.'
   - name: '_Real_Lights.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/10891' ]
     msg:
       - type: warn
         content: 'Breaks the Umbacano branch of The Collector quest, and causes save game bloating.'
@@ -3412,6 +3496,7 @@ plugins:
       - type: say
         content: 'Recommended to use All Natural''s Real Lights implementation, as it doesn''t suffer from this, fixes a huge number of bugs in the original, and can be used on its own.'
   - name: 'All Natural - Real Lights.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/18305' ]
     msg:
       - type: say
         content: 'Do not use with original Real Lights mod.'
@@ -3420,34 +3505,39 @@ plugins:
       - MustBeActiveIfImported
       - Scripts
   - name: 'CampfireBehavior.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/13101' ]
     inc:
       - 'All Natural - Real Lights.esp'
-  - name: 'Illumination(Within|Without)( Rus)?\.esp'
+  - name: 'Illumination(Within|Without)\.esp'
+    url: [ 'http://www.nexusmods.com/oblivion/mods/3700' ]
     after:
       - 'Finishing Touches -Bravil-.esp'
     msg:
       - <<: *useOnlyOneX
         subs: [ 'Illumination' ]
-        condition: 'many("Illumination(Within|Without)( Rus)?\.esp")'
-    url: [ 'http://www.nexusmods.com/oblivion/mods/3700' ]
+        condition: 'many("Illumination(Within|Without)\.esp")'
   - name: 'FT-Bravil-IW.esp'
+    url: [ 'http://www.nexusmods.com/oblivion/mods/13664' ]
     after:
       - 'IlluminationWithin.esp'
       - 'IlluminationWithout.esp'
-    url: [ 'http://www.nexusmods.com/oblivion/mods/13664' ]
-  - name: 'IWR.?-.?Windows( Rus)?\.esp'
+  - name: 'IWR-Windows.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/6244' ]
     msg:
       - type: say
         content: 'Remember there are also the Retrofitted and Optimised IWR mods.'
-  - name: 'IWR.?-.?Lights( Rus)?\.esp'
+  - name: 'IWR-Lights.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/6244' ]
     msg:
       - type: say
         content: 'Remember there are also the Retrofitted and Optimised IWR mods.'
-  - name: 'IWR.?-.?Shutters( Rus)?\.esp'
+  - name: 'IWR-Shutters.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/6244' ]
     msg:
       - type: say
         content: 'Remember there are also the Retrofitted and Optimised IWR mods.'
   - name: 'IWR - Windows Lights Shutters - Optimised.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/6244' ]
     msg:
       - type: say
         content: 'Needs original IWR files.'
@@ -3461,12 +3551,14 @@ plugins:
       - 'You Are Here.esm'
     msg: [ *obsolete ]
   - name: 'AmbientDungeons.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/18385' ]
     req:
       - *OBSE
       - name: 'ScreenEffects.esm'
         condition: 'version("AmbientDungeons.esp","1.3",<)'
       - 'You Are Here.esm'
   - name: '00crystalTorch.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/41940' ]
     dirty:
       - crc: 0xe7a1bce7
         <<: *dirtyPlugin
@@ -3484,10 +3576,12 @@ plugins:
       - type: say
         content: 'May have a problem with Storms and Sounds.'
   - name: '300_Lore Dialogue.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/9722' ]
     msg:
       - type: say
         content: 'May have a problem with Storms and Sounds.'
   - name: '300_Lore_Dialogue_Updated.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/25091' ]
     inc:
       - '300_Lore Dialogue.esp'
     dirty:
@@ -3498,10 +3592,16 @@ plugins:
         <<: *dirtyPlugin
         itm: 1
   - name: 'AddActorValues_example.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/33248' ]
     msg:
       - type: say
         content: 'demo mod, illustrates how to use the basic features of AddActorValues. Not need for use.'
   - name: 'AliveWaters.esp'
+    url:
+      - 'https://www.nexusmods.com/oblivion/mods/6914/'
+      # Castle Sea View Farms Replacer Plugin
+      - 'https://www.nexusmods.com/oblivion/mods/38366'
+      - 'https://www.nexusmods.com/oblivion/mods/44069/'
     dirty:
       - crc: 0x717bf5a
         <<: *dirtyPlugin
@@ -3510,6 +3610,9 @@ plugins:
         <<: *dirtyPlugin
         itm: 19
   - name: 'AliveWaters - Koi Addon.esp'
+    url:
+      - 'https://www.nexusmods.com/oblivion/mods/6914/'
+      - 'https://www.nexusmods.com/oblivion/mods/44069/'
     dirty:
       - crc: 0x29f02eed
         <<: *dirtyPlugin
@@ -3518,16 +3621,19 @@ plugins:
         <<: *dirtyPlugin
         itm: 1
   - name: 'AliveWaters_nofish.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/44069/' ]
     dirty:
       - crc: 0x7618b1db
         <<: *dirtyPlugin
         itm: 1
   - name: 'AdventurersAlchemy.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/18636' ]
     dirty:
       - crc: 0x8aa69408
         <<: *dirtyPlugin
         itm: 1
   - name: 'aLHerobook01.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/13397' ]
     msg:
       - type: say
         content: 'Obsolete. Delete and upgrade to Adult Books.'
@@ -3546,6 +3652,7 @@ plugins:
       - *alreadyInOrFixedByUOP
       - *useInsteadUOP
   - name: 'Anvil beach retexture.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/32790' ]
     tag:
       - Graphics
   - name: 'archrobe.esp'
@@ -3554,10 +3661,12 @@ plugins:
   - name: 'Automagic Bags 1.1.esp'
     msg: [ *obsolete ]
   - name: 'Ayleid Coin Add-on.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/10671' ]
     msg:
       - type: say
         content: 'Do not use with OOO, COBL, MMM G&GD - included. If using Fran use ''Fran-Ayleid Coin Add-on.esp'' instead.'
   - name: 'Ayleid Loot EXtension.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/22795' ]
     req:
       - name: 'Cobl Main.esm'
         condition: 'version("Ayleid Loot EXtension.esp","2.11",==)'
@@ -3567,6 +3676,7 @@ plugins:
     tag:
       - Graphics
   - name: 'aaaBorsBedrolls.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/6430' ]
     tag:
       - Invent
       - Relev
@@ -3576,9 +3686,9 @@ plugins:
       - type: say
         content: 'Probably not compatible with OOO. Untested.'
         condition: *OOOCond
-  - name: 'Better Wine SI.esp'
-    inc:
-      - 'Oscuro''s_Oblivion_Overhaul.esm'
+  - name: '(CM_Better Wine_SI|Better Wine SI)\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/14596' ]
+    inc: [ 'Oscuro''s_Oblivion_Overhaul.esm' ]
   - name: 'bgShaderStandAloneEV.esp'
     url:
       - 'http://theelderscrolls.info/?go=dlfile&fileid=336'
@@ -3592,17 +3702,21 @@ plugins:
     req:
       - 'DLCShiveringIsles.esp'
   - name: 'Bosmer Meat Mandate.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/7697' ]
     tag:
       - Invent
   - name: 'Brandy.esp'
     inc:
       - 'Oscuro''s_Oblivion_Overhaul.esm'
   - name: 'BAKAdventurerTorch.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/37863' ]
     req: [ *OBSEv20 ]
   - name: 'bnmDLTIC-1-6.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/3429' ]
     inc:
       - 'Oscuro''s_Oblivion_Overhaul.esm'
   - name: 'nmDLTIC-1-6.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/3429' ]
     inc:
       - 'Oscuro''s_Oblivion_Overhaul.esm'
   - name: 'BPMerchantStorage.esp'
@@ -3614,10 +3728,12 @@ plugins:
         <<: *dirtyPlugin
         udr: 3
   - name: 'Cobl Bookjackets.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/24890' ]
     tag:
       - Graphics
       - NoMerge
   - name: 'Cats & Rats.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/5276' ]
     msg:
       - type: say
         content: 'Conflicts slightly with Harvest Containers; some in city containers will not play HC anims while this mod is active.'
@@ -3626,10 +3742,12 @@ plugins:
   - name: 'Camera Redone.esp'
     req: [ *OBSEv16 ]
   - name: 'EnableFreeLookNoWheel.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/9499' ]
     msg:
       - type: say
         content: 'Only use if you do not have a mouse wheel.'
   - name: 'EnableFreeLookOBSE.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/9499' ]
     req: [ *OBSE ]
   - name: 'tw1_fov_adjustor.esp'
     req: [ *OBSE ]
@@ -3640,12 +3758,14 @@ plugins:
       - type: say
         content: 'Moving after overhauls may restore this mod''s functionality but may break some overhaul mod settings. Untested.'
   - name: 'Complete Names.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/2326' ]
     tag:
       - Names
   - name: 'Complete Names - DV.esp'
     tag:
       - Names
   - name: 'Rational Names, 2.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/28559' ]
     tag:
       - Names
   - name: 'SNR Fighter Guild UFF.esp'
@@ -3661,56 +3781,67 @@ plugins:
       - Hair
       - Invent
   - name: 'SNR Mage Guild UFF.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/13288' ]
     tag:
       - Eyes
       - Hair
       - Invent
   - name: 'SNR Mage Guild.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/13288' ]
     tag:
       - Eyes
       - Hair
       - Invent
   - name: 'SNR Citizens UFF.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/15809' ]
     tag:
       - Eyes
       - Hair
       - Invent
   - name: 'SNR Citizens.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/15809' ]
     tag:
       - Eyes
       - Hair
       - Invent
   - name: 'SNR Villains UFF.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/16058' ]
     tag:
       - Eyes
       - Hair
       - Invent
   - name: 'SNR Villains.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/16058' ]
     tag:
       - Eyes
       - Hair
       - Invent
   - name: 'SNR Guards.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/13289' ]
     tag:
       - Eyes
       - Hair
       - Invent
   - name: 'SNR Thieves Guild UFF.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/16802' ]
     tag:
       - Eyes
       - Hair
       - Invent
   - name: 'SNR Thieves Guild.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/16802' ]
     tag:
       - Eyes
       - Hair
       - Invent
   - name: 'SNR Dark brotherhood.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/16800' ]
     tag:
       - Eyes
       - Hair
       - Invent
   - name: 'SNR Dremorae UFF.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/12936' ]
     tag:
       - Body-F
       - Body-Size-F
@@ -3719,6 +3850,7 @@ plugins:
       - Invent
       - Voice-F
   - name: 'SNR Dremorae.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/12936' ]
     tag:
       - Body-F
       - Body-Size-F
@@ -3727,7 +3859,9 @@ plugins:
       - Invent
       - Voice-F
   - name: 'SNR Crowded Roads UFF.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/13264' ]
   - name: 'SNR Crowded Roads 2.1.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/13264' ]
   - name: 'ClocksOfCyrodiil.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/11778' ]
     group: *earlyLoadersGroup
@@ -3764,11 +3898,13 @@ plugins:
         <<: *dirtyPlugin
         itm: 25
   - name: 'CLS-Sailboats.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/17150' ]
     dirty:
       - crc: 0xa1ae724a
         <<: *dirtyPlugin
         itm: 12
   - name: 'CrimsonScarArmor.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/19627' ]
     tag:
       - Invent
   - name: 'Cryptic (Festive|Frosted|Blue Blood|Lake View|Snowy Oak|White Rose) Ayleid Dining Set\.esp'
@@ -3799,6 +3935,7 @@ plugins:
     tag:
       - Invent
   - name: 'CT-Com''s Torch Compendium.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/6472' ]
     tag:
       - Actors.AIData
     dirty:
@@ -3809,20 +3946,24 @@ plugins:
         <<: *dirtyPlugin
         itm: 3
   - name: 'Cyrodilic Brandy.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/4574' ]
     tag:
       - Deactivate
       - Graphics
   - name: 'ChallangingThieveryFull.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/5778' ]
     inc:
       - 'ChallangingThieveryNoHouseAdditions.esp'
     tag:
       - Invent
   - name: 'ChallangingThieveryNoHouseAdditions.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/5778' ]
     inc:
       - 'ChallangingThieveryFull.esp'
     tag:
       - Invent
   - name: 'Daedric Wargames.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/12935' ]
     req:
       - 'DLCShiveringIsles.esp'
   - name: 'Oblivion_Deutsch_v3_1.esp'
@@ -3835,10 +3976,12 @@ plugins:
       - Delev
       - Relev
   - name: 'Enhanced Key Functionality.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/27719' ]
     msg:
       - type: say
         content: 'Only use one EKF esp.'
   - name: 'Enhanced Key Functionality [Shivering Isles].esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/27719' ]
     msg:
       - type: say
         content: 'Only use one EKF esp.'
@@ -3847,11 +3990,13 @@ plugins:
   - name: 'Fatality Cam.esp'
     msg: [ *bashedPatchTweak ]
   - name: 'Fish! - v1.1.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/30260' ]
     dirty:
       - crc: 0x872545de
         <<: *dirtyPlugin
         itm: 36
   - name: 'Fishing in Cyrodiil.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/30260' ]
     msg:
       - type: say
         content: 'If using MMM or FCOM use ''Mart''s Monster Mod - Diverse WaterLife.esp'' instead.'
@@ -3885,6 +4030,7 @@ plugins:
       - type: say
         content: 'Incompatible with: UI systems other than DarNified UI/Dark''d DarN/other DarN variants.'
   - name: 'Inebriation.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/2495' ]
     inc:
       - 'Oscuro''s_Oblivion_Overhaul.esm'
     msg: [ *alreadyInOOO ]
@@ -3993,10 +4139,12 @@ plugins:
       - *OBSEv18
       - *MenuQue
   - name: 'M.O.E. - Undermined Leveled Gameplay - Creature Edition.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/7902' ]
     msg:
       - type: say
         content: 'Not overhaul mod compatible (Fran''s, OOO, MMM, FCOM).'
   - name: 'M.O.E. - Undermined Leveled Gameplay - Item Edition.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/7902' ]
     msg:
       - type: say
         content: 'Not overhaul mod compatible (Fran''s, OOO, MMM, FCOM).'
@@ -4382,7 +4530,8 @@ plugins:
   - name: 'wd purse of wonders.esp'
     tag:
       - Scripts
-  - name: 'Weed AND Beer inebriation 1.32.esp'
+  - name: 'Weed AND Beer inebriation.*\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/14393' ]
     msg: [ *alreadyInOOO ]
   - name: 'Willful Resistance.esp'
     msg:
@@ -4439,6 +4588,7 @@ plugins:
     inc:
       - 'Living Economy.esp'
   - name: 'moDem''s City Life - BP Compat.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/11278' ]
     msg:
       - type: say
         content: 'May cause crashes in the IC Market district. May have been fixed. Needs verification.'
@@ -4548,9 +4698,10 @@ plugins:
         itm: 2
     req: [ *OBSE ]
   - name: 'AutomaticPatrols.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/39751' ]
     msg:
       - <<: *alreadyInX
-        subs: [ 'Dynamic Leveled Lists' ]
+        subs: [ '[Dynamic Leveled Lists](https://www.nexusmods.com/oblivion/mods/37904)' ]
         condition: 'file("DynamicLeveledLists.esp")'
   - name: 'CDM - Shivering Time.esp'
     req: [ *OBSE ]
@@ -4665,6 +4816,7 @@ plugins:
   - name: 'FastShortcuts.esp'
     msg: [ *hotkeyBug ]
   - name: 'FastEquipping.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/34613' ]
     msg:
       - *hotkeyBug
       - *useNehrimVer
@@ -4713,6 +4865,7 @@ plugins:
       - Body-Size-F
       - Body-Size-M
   - name: 'EVE_StockEquipmentReplacer.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/24078/' ]
     msg:
       - type: say
         content: 'For vanilla use. Do not use with OOO/MMM/FCOM, use the applicable version instead.'
@@ -4800,7 +4953,7 @@ plugins:
         display: '[Biu''s Adventuress Body (BAB)](https://www.nexusmods.com/oblivion/mods/12536)'
         condition: 'checksum("1SB_RavenousEleganceOutfit.esp", 26841C94)'
       - name: 'TFF_Races_Base.esp'
-        display: '[Fantasy Figures](https://www.nexusmods.com/oblivion/mods/13356)'
+        display: '[Fantasy Figures](https://www.nexusmods.com/oblivion/mods/12073)'
         condition: 'checksum("1SB_RavenousEleganceOutfit.esp", 5EBF2923)'
   - name: 'AC Stock Armor.esp'
     tag:
@@ -5087,6 +5240,7 @@ plugins:
       - Invent
       - Stats
   - name: 'CM_Better Wine.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/4429' ]
     tag:
       - Deactivate
       - Graphics
@@ -5183,6 +5337,7 @@ plugins:
     tag:
       - Invent
   - name: 'Darkgreen Glass Armour.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/2996' ]
     tag:
       - Graphics
   - name: 'replace_glass.esp'
@@ -5342,6 +5497,7 @@ plugins:
     tag:
       - Invent
   - name: 'Hemingweys NPC Capes.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
     tag:
       - Invent
   - name: 'Hentai Compilation.esp'
@@ -5415,10 +5571,12 @@ plugins:
   - name: 'KohdiBladesofAnkewan Delayer.esp'
     msg: [ *obsolete ]
   - name: 'KohdiBladesofAnkewan v1.6 Delayer.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/25946/' ]
     msg: [ *obsolete ]
   - name: 'KohdiArmoryofAnsephaer Delayer.esp'
     msg: [ *obsolete ]
   - name: 'KohdiArmoryofAnsephaer v1.01 Delayer.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/25946/' ]
     msg: [ *obsolete ]
   - name: 'Kohdi Ankewan-Anesphar Delayer.esp'
     msg: [ *obsolete ]
@@ -5583,6 +5741,7 @@ plugins:
         <<: *dirtyPlugin
         udr: 2
   - name: 'M.O.E. - Unlocked Glenroy and Captain Renault Blades Armour.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/7902' ]
     msg:
       - type: say
         content: 'Use ''FCOM_MOECaptainRenaultArmor'' to fix compatibility issues with FCOM.'
@@ -5682,13 +5841,13 @@ plugins:
       - type: say
         content: 'May have landscape conflicts with Guards of Cyrodiil.'
   - name: 'Nicos Dreadweave Compilation.esp'
+    url: [ 'http://www.shsforums.net/files/file/214-nicos-dreadweave-complete/' ]
     inc:
       - 'Nico''s  Daes'' Rakan Swords.esp'
       - 'Nico''s Dreadweave Axes.esp'
       - 'Nico''s Dreadweave Armor_heavy.esp'
       - 'Nicos Dreadweave Armor_Light.esp'
       - 'Nico''s Dreadweave Bow and Arrows.esp'
-    url: [ 'http://www.shsforums.net/files/file/214-nicos-dreadweave-complete/' ]
   - name: 'Obsidian armor.esp'
     tag:
       - Graphics
@@ -5983,8 +6142,10 @@ plugins:
   - name: 'Tail_Amulet_Converter.esp'
     req: [ *OBSEv11 ]
   - name: 'Talon of Akatosh Claymore v1.1 Delayer.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/25946/' ]
     msg: [ *obsolete ]
   - name: 'Talon of Akatosh Longsword v1.1 Delayer.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/25946/' ]
     msg: [ *obsolete ]
   - name: 'tda_Armoury.esp'
     dirty:
@@ -6199,6 +6360,7 @@ plugins:
       - Graphics
       - NoMerge
   - name: 'Armamentium female.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/24078/' ]
     tag:
       - Graphics
       - NoMerge
@@ -6238,9 +6400,11 @@ plugins:
     tag:
       - Graphics
   - name: 'Colourwheels Sexy Stock Armor & Clothing Replacer.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/23143' ]
     tag:
       - Graphics
   - name: 'Colourwheels Sexy SI Armor & Clothing Replacer.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/23240' ]
     tag:
       - Graphics
   - name: 'DMRA BBB Armamentarium Complete.esp'
@@ -6254,6 +6418,7 @@ plugins:
     tag:
       - Graphics
   - name: 'TGND2 Better Cities Replacer.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/42065' ]
     tag:
       - Graphics
   - name: 'DMRA BBB Complete Clothing and Armor Replacer.esp'
@@ -6421,46 +6586,30 @@ plugins:
   - name: 'StockClothingArmorHGECFighterD.esp'
     tag:
       - Graphics
-  - name: 'TFF_Armor_Base.esp'
-    tag:
-      - Graphics
-  - name: 'TFF_Armor_OOO.esp'
-    tag:
-      - Graphics
   - name: 'TFF_Clothing_Base.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/12073' ]
     tag:
       - Graphics
   - name: 'TFF_Clothing_SI.esp'
-    tag:
-      - Graphics
-  - name: 'TFF_FantasyFigures_Armour_Fantasy.esp'
-    tag:
-      - Graphics
-  - name: 'TFF_FantasyFigures_Armour_RealGlass.esp'
-    tag:
-      - Graphics
-  - name: 'TFF_FantasyFigures_Clothing_Base.esp'
-    tag:
-      - Graphics
-  - name: 'TFF_FantasyFigures_Clothing_SI.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/12910' ]
     tag:
       - Graphics
   - name: 'TGND.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/30914' ]
     tag:
       - Graphics
       - NoMerge
   - name: 'TGND_SI.esp'
-    tag:
-      - Graphics
-      - NoMerge
-  - name: 'Armentarium TGND.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/30914' ]
     tag:
       - Graphics
       - NoMerge
   - name: 'TGND_EY_Vampirehunter.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/31344' ]
     inc:
       - EY_Vampirehunter.esp
   - name: 'TGNDNessaStore.esp'
+    url: [ 'https://www.loverslab.com/files/file/351-nessas-tgnd-stores' ]
     req: [ *OBSEv20 ]
     msg:
       - type: say
@@ -6722,6 +6871,7 @@ plugins:
   - name: 'LuckBasedLootForFrans.esp'
     msg: [ *alreadyInFCOM ]
   - name: 'Fran-Ayleid Coin Add-on.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/10671' ]
     inc:
       - 'Mart''s Monster Mod - Diverse Runeskulls Loot G&GD.esp'
       - 'Cobl Main.esm'
@@ -6938,6 +7088,7 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/46199/' ]
     msg: [ *alreadyInOOOFull ]
   - name: 'OOO-Ayleid Coin Add-on.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/10671' ]
     msg: [ *obsolete ]
   - name: 'OOO132RC3Hotfixes.esp'
     msg: [ *obsolete ]
@@ -6952,6 +7103,7 @@ plugins:
       - 'OOO-LightOfDawnFlamesWhenDrawnOBSE.esp'
     tag: [ Stats ]
   - name: 'MrSiikaRabbitsforOOO.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/14266' ]
     inc: [ '"Mart''s Monster Mod for OOO.esp' ]
     msg: [ *alreadyInFCOM ]
   - name: 'a4sFlamingNightmare-OOO.esp'
@@ -6984,20 +7136,24 @@ plugins:
     tag:
       - Graphics
   - name: 'Hemingweys Capes Improved for FCOM.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
     tag:
       - Invent
       - Scripts
       - Stats
   - name: 'Hemingweys Capes Improved for MMM.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
     tag:
       - Invent
       - Stats
   - name: 'Hemingweys Capes Improved for OOO.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
     tag:
       - Invent
       - Scripts
       - Stats
   - name: 'Hemingweys Capes Improved.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
     tag:
       - Invent
       - Stats
@@ -7006,32 +7162,41 @@ plugins:
         <<: *dirtyPlugin
         itm: 1
   - name: 'Hemingweys Capes Improved Merchants.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
     dirty:
       - crc: 0xfd2bf13d
         <<: *dirtyPlugin
         itm: 1
   - name: 'Hemingweys FCOM Boss Chest Cape Loot.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
     tag:
       - Invent
   - name: 'Hemingweys FCOM OOO Cape Patch.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
     tag:
       - Scripts
   - name: 'Hemingweys FCOM NPC Capes Improved Citizens.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
     tag:
       - Invent
   - name: 'Hemingweys FCOM NPC Capes Improved Enemies.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
     tag:
       - Invent
   - name: 'Hemingweys FCOM NPC Capes Improved Bosses Only.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
     tag:
       - Invent
   - name: 'Hemingweys FCOM NPC Capes Improved Legion Forester.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
     tag:
       - Invent
   - name: 'Hemingweys FCOM NPC Capes Improved Regional City Guards.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
     tag:
       - Invent
   - name: 'Hemingweys FCOM Show Amulets.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
     tag:
       - Stats
   - name: 'Hemingweys FCOM NPC Capes Improved IC Guards.esp'
@@ -7040,86 +7205,113 @@ plugins:
       - Invent
       - Scripts
   - name: 'Hemingweys MMM Boss Chest Cape Loot.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
     tag:
       - Invent
   - name: 'Hemingweys MMM NPC Capes Improved Citizens.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
     tag:
       - Invent
   - name: 'Hemingweys MMM NPC Capes Improved Enemies.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
     tag:
       - Invent
   - name: 'Hemingweys MMM NPC Capes Improved Bosses Only.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
     tag:
       - Invent
   - name: 'Hemingweys MMM NPC Capes Improved IC Guards.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
     tag:
       - Invent
   - name: 'Hemingweys MMM NPC Capes Improved Legion Forester.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
     tag:
       - Invent
   - name: 'Hemingweys MMM NPC Capes Improved Regional City Guards.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
     tag:
       - Invent
   - name: 'Hemingweys MMM Show Amulets.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
     tag:
       - Stats
   - name: 'Hemingweys OOO Boss Chest Cape Loot.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
     tag:
       - Invent
   - name: 'Hemingweys OOO Cape Patch.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
     tag:
       - Scripts
   - name: 'Hemingweys OOO NPC Capes Improved Citizens.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
     tag:
       - Invent
   - name: 'Hemingweys OOO NPC Capes Improved Enemies.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
     tag:
       - Invent
   - name: 'Hemingweys OOO NPC Capes Improved Bosses Only.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
     tag:
       - Invent
   - name: 'Hemingweys OOO NPC Capes Improved Legion Forester.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
     tag:
       - Invent
   - name: 'Hemingweys OOO NPC Capes Improved Regional City Guards.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
     tag:
       - Invent
   - name: 'Hemingweys OOO Show Amulets.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
     tag:
       - Stats
   - name: 'Hemingweys OOO NPC Capes Improved IC Guards.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
     tag:
       - Graphics
       - Invent
       - Scripts
   - name: 'Hemingweys VAN Boss Chest Cape Loot.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
     tag:
       - Invent
   - name: 'Hemingweys VAN NPC Capes Improved Citizens.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
     tag:
       - Invent
   - name: 'Hemingweys VAN NPC Capes Improved Enemies.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
     tag:
       - Invent
   - name: 'Hemingweys VAN NPC Capes Improved Bosses Only.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
     tag:
       - Invent
   - name: 'Hemingweys VAN NPC Capes Improved IC Guards.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
     tag:
       - Invent
   - name: 'Hemingweys VAN NPC Capes Improved Legion Forester.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
     tag:
       - Invent
   - name: 'Hemingweys VAN NPC Capes Improved Regional City Guards.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
     tag:
       - Invent
   - name: 'Hemingweys VAN Show Amulets.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
     tag:
       - Stats
   - name: 'Hemingweys Capes for EDI.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
     tag:
       - Invent
   - name: 'Hemingweys Capes for FCOM_FrancescosNamedBosses.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
     tag:
       - Invent
   - name: 'mg19obsefix.esp'
@@ -7229,6 +7421,7 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/3979' ]
     msg: [ *alreadyInOOO ]
   - name: 'Hemingweys NPC Capes for OOO and FCOM.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
     msg:
       - type: say
         content: 'Obselete if using MMM or FCOM. Update to latest version and use ''Mart''s Monster Mod - Hemingweys NPC and Guard Capes.esp'' instead.'
@@ -7394,10 +7587,12 @@ plugins:
   - name: 'Gems and Gem Dusts - MMM.esp'
     msg: [ *alreadyInOOOFull ]
   - name: 'MrSiika''sFarmAnimals.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/14265' ]
     msg:
       - type: say
         content: 'MMM users should use ''Mart''s Monster Mod - Farm Animals''.'
   - name: 'FarmAnimalsofCyrodiil.esp'
+    url: [ 'http://www.nexusmods.com/oblivion/mods/14265' ]
     msg:
       - type: say
         content: 'MMM users should use ''Mart''s Monster Mod - Farm Animals''.'
@@ -7406,8 +7601,8 @@ plugins:
         itm: 8
         udr: 0
         <<: *dirtyPlugin
-    url: [ 'http://www.nexusmods.com/oblivion/mods/14265' ]
   - name: 'MrSiikasBats.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/12486' ]
     inc:
       - 'Mart''s Monster Mod.esm'
   - name: 'OblivionDurzogs.esp'
@@ -7514,6 +7709,7 @@ plugins:
       - Names
       - NPC.Race
   - name: 'TGND2 WarCry Replacer.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/41937' ]
     tag:
       - Graphics
       - NoMerge
@@ -7801,6 +7997,7 @@ plugins:
     inc:
       - 'Qarls_Harvest addon.esp'
   - name: 'Fransfemale.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/24078/' ]
     tag:
       - Graphics
       - NoMerge
@@ -7813,6 +8010,7 @@ plugins:
       - Graphics
       - NoMerge
   - name: 'LoadingScreens-OOO.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/15057/' ]
     tag:
       - Graphics
       - NoMerge
@@ -7856,18 +8054,22 @@ plugins:
       - type: say
         content: 'Use the "Set LapMinLock to 0" console command instead.'
   - name: 'Cats & Rats for MMM.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/5276' ]
     msg:
       - type: say
         content: 'Conflicts slightly with Harvest Containers; some in city containers will not play HC anims while this mod is active.'
   - name: 'Cats & Rats for Francescos.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/5276' ]
     msg:
       - type: say
         content: 'Conflicts slightly with Harvest Containers; some in city containers will not play HC anims while this mod is active.'
   - name: 'TGND2 OOO Replacer.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/41928' ]
     tag:
       - Graphics
       - NoMerge
   - name: 'TGND2 Frans Replacer.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/41930' ]
     tag:
       - Graphics
       - NoMerge
@@ -7889,6 +8091,7 @@ plugins:
     inc:
       - 'Geomancy & Gem Dust OOO.esp'
   - name: 'EVE_StockEquipmentReplacer4FCOM.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/24078/' ]
     msg:
       - type: say
         content: 'For FCOM only, do not use with OOO/MMM or Eve_Stockequipmentreplacer.esp.'
@@ -7896,6 +8099,7 @@ plugins:
       - Graphics
       - NoMerge
   - name: 'EVE_StockEquipmentReplacer for OOO.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/24078/' ]
     msg:
       - type: say
         content: 'For OOO, do not use with MMM/FCOM or EVE_stockequipmentreplacer.esp.'
@@ -7907,6 +8111,7 @@ plugins:
       - Graphics
       - NoMerge
   - name: 'EVE_StockEquipmentReplacer4MMM.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/24078/' ]
     msg:
       - type: say
         content: 'For MMM, do not use with OOO/FCOM or EVE_stockequipmentreplacer.esp'
@@ -7955,10 +8160,6 @@ plugins:
     tag:
       - Graphics
       - NoMerge
-  - name: 'TGND - OOO.esp'
-    tag:
-      - Graphics
-      - NoMerge
   - name: 'Adventurers_1.0.esp'
     msg:
       - type: say
@@ -7968,10 +8169,12 @@ plugins:
       - Invent
       - Relev
   - name: 'TGND2 MMM Replacer.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/41946' ]
     tag:
       - Graphics
       - NoMerge
   - name: 'TGND2 FCOM Replacer.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/41957' ]
     tag:
       - Graphics
       - NoMerge
@@ -8397,21 +8600,22 @@ plugins:
     tag:
       - Stats
   - name: 'Morrowind_ob - Morroblivion_Chargen_And_Transport_Mod_v10.esp'
+    url: [ 'http://tesrenewal.com/forums/morroblivion/mods/753' ]
     dirty:
       - crc: 0x51563805
         <<: *dirtyPlugin
         itm: 3
-    url: [ 'http://tesrenewal.com/forums/morroblivion/mods/753' ]
   - name: 'Morrowind_ob - MorroblivionTreeReplacer.esp'
+    url: [ 'http://tesrenewal.com/forums/morroblivion/mods/753' ]
     dirty:
       - crc: 0x7AF5966F
         <<: *dirtyPlugin
         itm: 3043
-    url: [ 'http://tesrenewal.com/forums/morroblivion/mods/753' ]
   - name: 'Morrowind_ob - ClothingReplacer.esp'
-    tag: [ Names ]
     url: [ 'http://tesrenewal.com/forums/morroblivion/mods/753' ]
+    tag: [ Names ]
   - name: 'Morrowind_ob - UCWUS.esp'
+    url: [ 'http://tesrenewal.com/forums/morroblivion/mods/753' ]
     tag:
       - Invent
       - Names
@@ -8419,7 +8623,6 @@ plugins:
       - crc: 0x9F7F8D5F
         itm: 4
         <<: *dirtyPlugin
-    url: [ 'http://tesrenewal.com/forums/morroblivion/mods/753' ]
   - name: 'Enhanced Quest Roleplaying.esp'
     tag:
       - Factions
@@ -8582,6 +8785,9 @@ plugins:
         itm: 94
         udr: 1
   - name: '300 Regal Imperial City 2.esp'
+    url:
+      - 'https://www.nexusmods.com/oblivion/mods/9322'
+      - 'https://www.nexusmods.com/oblivion/mods/15500'
     dirty:
       - crc: 0x7ac8f55b
         <<: *dirtyPlugin
@@ -8934,6 +9140,7 @@ plugins:
         <<: *dirtyPlugin
         udr: 1
   - name: 'ArtifactsFemaleArmor.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/24078/' ]
     tag:
       - Graphics
       - NoMerge
@@ -9090,6 +9297,7 @@ plugins:
       - Graphics
       - Names
   - name: 'Better Camps.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/37883' ]
     dirty:
       - crc: 0x79278151
         <<: *dirtyPlugin
@@ -9107,18 +9315,21 @@ plugins:
         <<: *dirtyPlugin
         udr: 3
   - name: 'BeyondTheRealmsOfDeath.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/40837' ]
     dirty:
       - crc: 0xcd2c8bd8
         <<: *dirtyPlugin
         itm: 244
         udr: 18
   - name: 'AbandonedHouse.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/23803' ]
     inc: [ *BetterCities ]
     msg:
       - type: say
         content: 'Use AbandonedHouse Better Cities instead.'
         condition: 'file("Better Cities Resources.esm")'
   - name: 'Better Benirus Manor.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/18054' ]
     after:
       - 'Ghorak''s House.esp'
     tag:
@@ -9144,12 +9355,14 @@ plugins:
         content: 'Only use one BBM AN-II Patch.'
         condition: 'file("Better Benirus Manor (- Complete|for Cobl - Complete|- Interior Only) - AN-II Patch\.esp")'
   - name: 'Big Business.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/8236' ]
     dirty:
       - crc: 0xcec8bc70
         <<: *dirtyPlugin
         itm: 2
         udr: 3
   - name: 'ElsweyrFaregylRoad.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/19026' ]
     msg:
       - type: say
         content: 'Do not use if using ElsweyrAnequina.esp.'
@@ -9189,6 +9402,7 @@ plugins:
       - type: warn
         content: 'Requires: Screen Effects.'
   - name: 'BladeSong v1.3 Delayer.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/25946/' ]
     msg:
       - type: say
         content: 'Versions less than 3.1 may cause the quest being patched to restart if installed after the quest has started. Update to the latest delayer if you suspect a problem.'
@@ -9309,6 +9523,7 @@ plugins:
   - name: 'CaveOfWishcraft 1_1.esp'
     msg: [ *obsolete ]
   - name: 'CaveOfWishcraft v1.1 Delayer.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/25946/' ]
     msg: [ *obsolete ]
   - name: 'CottageInColoviaV1.6.esp'
     inc:
@@ -9489,6 +9704,7 @@ plugins:
         itm: 50
         udr: 892
   - name: 'CyrilliansStaff v1.0 Delayer.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/25946/' ]
     msg: [ *obsolete ]
   - name: 'Daedric Armor of Darkness.esp'
     dirty:
@@ -9573,6 +9789,7 @@ plugins:
   - name: 'Demonhunter Delayer.esp'
     msg: [ *obsolete ]
   - name: 'Demonhunter v1.01 Delayer.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/25946/' ]
     msg: [ *obsolete ]
   - name: 'DibellaTempleWillowLakeVillagev1.esp'
     dirty:
@@ -9779,8 +9996,10 @@ plugins:
         <<: *dirtyPlugin
         udr: 3
   - name: 'Gift of Kynareth_delayer.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/25859/' ]
     msg: [ *obsolete ]
   - name: 'Gift of Kynareth v2.1 Delayer.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/25946/' ]
     msg: [ *obsolete ]
   - name: 'Giskards Tales From the Tomb.esp'
     dirty:
@@ -9807,10 +10026,10 @@ plugins:
         <<: *dirtyPlugin
         itm: 157
         udr: 4
-  - name: 'GoldenCrestTGND.esp'
-    tag:
-      - Graphics
   - name: 'Gaenor in Dementia.esp'
+    url:
+      - 'https://www.nexusmods.com/oblivion/mods/7902'
+      - 'https://www.nexusmods.com/oblivion/mods/10373'
     dirty:
       - crc: 0x15fc9306
         <<: *dirtyPlugin
@@ -9869,6 +10088,7 @@ plugins:
         itm: 13
         udr: 5
   - name: 'Haunted_House_v1.5 Delayer.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/25946/' ]
     msg: [ *obsolete ]
   - name: 'HauntedLairMod.esp'
     dirty:
@@ -10320,6 +10540,7 @@ plugins:
   - name: 'Eiamod_delayer.esp'
     msg: [ *obsolete ]
   - name: 'EiAmod v1.2 Delayer.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/25946/' ]
     msg: [ *obsolete ]
   - name: 'Lady Stone Villa.esp'
     inc:
@@ -10484,6 +10705,7 @@ plugins:
         <<: *dirtyPlugin
         itm: 57
   - name: 'M.O.E. - Tools of Kagrenac - The Secret of White Gold Tower.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/7902' ]
     dirty:
       - crc: 0x2aa7f42a
         <<: *dirtyPlugin
@@ -10595,6 +10817,7 @@ plugins:
         itm: 88
         udr: 65
   - name: 'mrSiikasBetterPorts_CorvetteExpansion.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/15648' ]
     dirty:
       - crc: 0xa7eea5fc
         <<: *dirtyPlugin
@@ -10754,6 +10977,7 @@ plugins:
         itm: 2
         udr: 9
   - name: 'Nine Divines Robes.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/24656' ]
     req: [ *OBSE ]
   - name: 'NordRuins.esp'
     dirty:
@@ -10810,6 +11034,7 @@ plugins:
   - name: 'NNWARE05-Bawn.esp'
     msg: [ *obsolete ]
   - name: 'GTAesgaard.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/13814' ]
     dirty:
       - crc: 0x7d7ea42e
         <<: *dirtyPlugin
@@ -10823,14 +11048,17 @@ plugins:
       - type: say
         content: 'Obsolete. Remove this and update to the latest version of Gates To Aesgaard Episode 1.'
   - name: 'GTAesgaard_2.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/21693' ]
     dirty:
       - crc: 0xab1f2934
         <<: *dirtyPlugin
         itm: 13
         udr: 12
   - name: 'GTAesgaard I v1.2 Delayer.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/25946/' ]
     msg: [ *obsolete ]
   - name: 'GTAesgaard II v1.1 Delayer.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/25946/' ]
     msg: [ *obsolete ]
   - name: 'GTAesgaard 1and2 Delayer.esp'
     msg: [ *obsolete ]
@@ -11059,6 +11287,7 @@ plugins:
         itm: 46
         udr: 36
   - name: 'Rustle House - AN Patch.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/35252' ]
     msg:
       - type: say
         content: 'It is possible when using All Natural + CBash the first floor of the house may become flooded. If so remove the "KhRHInterior" record from the Bashed Patch every time you rebuild. Or consider installing the "Rustle House CBash Fix.esp".'
@@ -11228,6 +11457,7 @@ plugins:
         itm: 31
         udr: 1
   - name: 'Steve - Hitman (Patched) Delayer.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/25946/' ]
     msg: [ *obsolete ]
   - name: 'stWorldMonsters.esp'
     msg: [ *needsCleaning ]
@@ -11278,6 +11508,7 @@ plugins:
         itm: 49
         udr: 322
   - name: 'Tantrivaylia v0.99a Delayer.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/25946/' ]
     msg: [ *obsolete ]
   - name: 'Temple District Rebuild.esp'
     msg:
@@ -11447,6 +11678,7 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
     msg: [ *roadsAndBridgesDetected ]
   - name: 'TheForgottenShields v1.1 Delayer.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/25946/' ]
     msg: [ *obsolete ]
   - name: 'Thermae.esp'
     dirty:
@@ -11841,6 +12073,7 @@ plugins:
         itm: 24
         udr: 21
   - name: 'WeaponsOfTheNine v2.3 Delayer.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/25946/' ]
     msg: [ *obsolete ]
   - name: 'WellspringGrove.esp'
     dirty:
@@ -12113,37 +12346,28 @@ plugins:
   - name: 'ORM-TamriellicGlassDLC3.esp'
     tag:
       - Graphics
-  - name: 'Ulrim''s Horses - LegionArmor.esp'
-    msg: [ *obsolete ]
-    tag:
-      - Graphics
-  - name: 'Ulrim''s Horses - OOO+LegionArmor.esp'
-    msg: [ *obsolete ]
-    tag:
-      - Graphics
-  - name: 'Ulrim''s Horses for OOO.esp'
-    msg: [ *obsolete ]
-    tag:
-      - Graphics
-  - name: 'Ulrim''s Horses.esp'
-    tag:
-      - Graphics
   - name: 'Ulrim''s Horses - DLCHorseArmor+OOO.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/16688' ]
     tag:
       - Graphics
   - name: 'Ulrim''s Horses - DLCHorseArmor.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/16688' ]
     tag:
       - Graphics
   - name: 'Ulrim''s Horses - HRMHorseArmor+OOO.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/16688' ]
     tag:
       - Graphics
   - name: 'Ulrim''s Horses - HRMHorseArmor.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/16688' ]
     tag:
       - Graphics
   - name: 'Ulrim''s Horses - OOO.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/16688' ]
     tag:
       - Graphics
   - name: 'Ulrim''s Horses - Vanilla.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/16688' ]
     tag:
       - Graphics
   - name: 'Knights - Book Jackets.esp'
@@ -12160,6 +12384,7 @@ plugins:
     tag:
       - Graphics
   - name: 'EVE_KnightsoftheNine.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/24078/' ]
     tag:
       - Graphics
       - NoMerge
@@ -12168,6 +12393,7 @@ plugins:
       - Graphics
       - NoMerge
   - name: 'QuietFeet.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/12331' ]
     msg:
       - *requiresBashedPatch
       - type: say
@@ -12178,6 +12404,7 @@ plugins:
     tag:
       - Actors.AIPackages
   - name: 'TGND2 Knights Replacer.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/41812' ]
     tag:
       - Graphics
       - NoMerge
@@ -12423,6 +12650,7 @@ plugins:
   - name: 'The Lost Spires_delayer.esp'
     msg: [ *obsolete ]
   - name: 'The Lost Spires v14 Delayer.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/25946/' ]
     msg: [ *obsolete ]
   - name: 'Lost Paladins of the Divines.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/10505' ]
@@ -12487,6 +12715,7 @@ plugins:
         <<: *dirtyPlugin
         udr: 1
   - name: 'HoarfrostCastle v1.2.2 Delayer.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/25946/' ]
     msg: [ *obsolete ]
   - name: 'AFK_Weye.esp'
     tag:
@@ -12619,6 +12848,7 @@ plugins:
       - type: say
         content: 'EDI is almost certainly incompatible.'
   - name: 'Enhanced Daedric Invasion.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/9858' ]
     dirty:
       - crc: 0xd34d61bc
         <<: *dirtyPlugin
@@ -12634,6 +12864,9 @@ plugins:
         content: 'Delete. Use ''FCOM_EnhancedDaedricInvasion.esp'' instead.'
         condition: *FCOMCond
   - name: 'ElsweyrAnequina.esp'
+    url:
+      - 'https://www.nexusmods.com/oblivion/mods/25023'
+      - 'https://www.afkmods.com/index.php?/files/file/2170-elsweyr-anequina/'
     msg:
       - type: say
         content: 'Border region restrictions must be turned off: change bBorderRegionsEnabled to 0 in Oblivion.ini or use Wrye Bash bashed patch tweak.'
@@ -12664,35 +12897,43 @@ plugins:
         itm: 218
         udr: 1044
   - name: 'Unofficial Elsweyr Anequina Patch.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/39642' ]
     dirty:
       - crc: 0xad4131f8
         <<: *dirtyPlugin
         itm: 2
   - name: 'ElsweyrAnequina - SevereDesert.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/38397' ]
     inc:
       - 'ElsweyrAnequina - SevereDesert NoSpider.esp'
   - name: 'ElsweyrAnequina - SevereDesert NoSpider.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/38397' ]
     inc:
       - 'ElsweyrAnequina - SevereDesert.esp'
   - name: 'ElsweyrAnequina - NoSpider.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/38397' ]
     inc:
       - 'ElsweyrAnequina - IncreasedCreature.esp'
       - 'ElsweyrAnequina - IncreasedCreature NoSpider.esp'
       - 'ElsweyrAnequina - ModerateIncreasedCreature.esp'
       - 'ElsweyrAnequina - ModerateIncreasedCreature NoSpider.esp'
   - name: 'ElsweyrAnequina - IncreasedCreature.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/38397' ]
     inc:
       - 'ElsweyrAnequina - NoSpider.esp'
       - 'ElsweyrAnequina - IncreasedCreature NoSpider.esp'
   - name: 'ElsweyrAnequina - IncreasedCreature NoSpider.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/38397' ]
     inc:
       - 'ElsweyrAnequina - NoSpider.esp'
       - 'ElsweyrAnequina - IncreasedCreature.esp'
   - name: 'ElsweyrAnequina - ModerateIncreasedCreature.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/38397' ]
     inc:
       - 'ElsweyrAnequina - NoSpider.esp'
       - 'ElsweyrAnequina - ModerateIncreasedCreature NoSpider.esp'
   - name: 'ElsweyrAnequina - ModerateIncreasedCreature NoSpider.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/38397' ]
     inc:
       - 'ElsweyrAnequina - NoSpider.esp'
       - 'ElsweyrAnequina - ModerateIncreasedCreature.esp'
@@ -12702,6 +12943,7 @@ plugins:
       - *EnhancedMusicControl
       - *SoundCommands
   - name: 'ElsweyrAnequina - Races HGEC-Robert.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/30901' ]
     tag:
       - R.Mouth
       - R.Teeth
@@ -12714,6 +12956,7 @@ plugins:
       - Graphics
       - NoMerge
   - name: 'ElsweyrCityExtension.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/42349' ]
     dirty:
       - crc: 0x13e13c6b
         <<: *dirtyPlugin
@@ -12724,12 +12967,14 @@ plugins:
         itm: 1
         udr: 19
   - name: 'Reaper''s Esmeralda''s Desert Manor.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/25023' ]
     dirty:
       - crc: 0xdb57b73
         <<: *dirtyPlugin
         itm: 48
         udr: 32
   - name: 'ElsweyrC&CBlackwoodPatch.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/25023' ]
     msg: [ *obsolete ]
   - name: 'Enhanced Weather - Elsweyr Anequina Patch.esp'
     req: [ *OBSEv18 ]
@@ -12737,13 +12982,16 @@ plugins:
       - type: say
         content: 'Old. Use ''Enhanced Weather - Across-The-Borders Mods Patch'' instead.'
   - name: 'ElsweyrAnequinaNoSpiders.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/25023' ]
     tag:
       - Delev
   - name: 'ElsweyrAnequinaFemaleBody.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/25023' ]
     tag:
       - Body-F
       - Body-Size-F
   - name: 'Elsweyr plantations & co..esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/34931' ]
     dirty:
       - crc: 0x38efadea
         <<: *dirtyPlugin
@@ -12761,6 +13009,7 @@ plugins:
         itm: 224
         udr: 3
   - name: 'ElsweyrValenwoodImprovedPatch.esp'
+    url: [ 'https://www.afkmods.com/index.php?/files/file/2172-elsweyr-anequina-valenwood-improved-patch/' ]
     dirty:
       - crc: 0xf2ea526b
         <<: *dirtyPlugin
@@ -12771,6 +13020,7 @@ plugins:
         <<: *dirtyPlugin
         itm: 104
   - name: 'Walkabout.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/30816' ]
     dirty:
       - crc: 0x1796e52d
         <<: *dirtyPlugin
@@ -12813,6 +13063,9 @@ plugins:
         <<: *dirtyPlugin
         udr: 1
   - name: 'road+bridges.esp'
+    url:
+      - 'https://www.nexusmods.com/oblivion/mods/9181'
+      - 'https://www.nexusmods.com/oblivion/mods/20218'
     dirty:
       - crc: 0xca103402
         <<: *dirtyPlugin
@@ -12921,6 +13174,7 @@ plugins:
       - type: say
         content: 'Obsolete patch. Update to Heart of the Dead 5.5 and then delete this file.'
   - name: 'HOD_delayer.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/25859/' ]
     msg:
       - type: say
         content: 'only use without Open Cities'
@@ -12933,6 +13187,7 @@ plugins:
   - name: 'HeartOftheDeadv6.3 Delayer.esp'
     msg: [ *obsolete ]
   - name: 'HeartOfTheDeadv6.5 Delayer.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/25946/' ]
     msg:
       - type: say
         content: 'Fine with HoTD V6.3-6.5.'
@@ -12945,74 +13200,87 @@ plugins:
       - type: say
         content: 'Use the patch for UL Arrius Creek and The Heart of the Dead version 6.3 to resolve compatibility issues.'
   - name: 'Better daedric shrines Namira.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/34367/' ]
     dirty:
       - crc: 0x77ce697e
         <<: *dirtyPlugin
         udr: 8
   - name: 'Better daedric shrines sanguine.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/34367/' ]
     dirty:
       - crc: 0x2afea0ad
         <<: *dirtyPlugin
         udr: 56
   - name: 'Better daedric shrines Sheogorath.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/34367/' ]
     dirty:
       - crc: 0xffb0bba8
         <<: *dirtyPlugin
         itm: 3
         udr: 5
   - name: 'better daedric shrines Meridia.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/34367/' ]
     dirty:
       - crc: 0xa0c29155
         <<: *dirtyPlugin
         udr: 4
   - name: 'Better daedric shrines Clavicus.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/34367/' ]
     dirty:
       - crc: 0x1be37cea
         <<: *dirtyPlugin
         itm: 9
         udr: 31
   - name: 'Better daedric shrines Vaermina.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/34367/' ]
     dirty:
       - crc: 0x61154249
         <<: *dirtyPlugin
         itm: 117
         udr: 8
   - name: 'better daedric shrines Nocturnal.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/34367/' ]
     dirty:
       - crc: 0xd590b3c6
         <<: *dirtyPlugin
         itm: 5
         udr: 9
   - name: 'Better daedric shrines malacath.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/34367/' ]
     dirty:
       - crc: 0x3075b59
         <<: *dirtyPlugin
         itm: 10
         udr: 25
   - name: 'Better daedric shrines molag bal.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/34367/' ]
     dirty:
       - crc: 0xdf0548d3
         <<: *dirtyPlugin
         itm: 15
         udr: 1
   - name: 'Better daedric shrine Pyriate.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/34367/' ]
     dirty:
       - crc: 0x3a4a8659
         <<: *dirtyPlugin
         itm: 12
         udr: 31
   - name: 'Better daedric shrine Hircine.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/34367/' ]
     dirty:
       - crc: 0xbb04d78a
         <<: *dirtyPlugin
         udr: 5
   - name: 'Better daedric shrine Azura.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/34367/' ]
     dirty:
       - crc: 0x8ee4ea11
         <<: *dirtyPlugin
         itm: 6
         udr: 5
   - name: 'Better daedric shrines full.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/34367/' ]
     dirty:
       - crc: 0x5b2ac7e3
         <<: *dirtyPlugin
@@ -13037,12 +13305,14 @@ plugins:
         <<: *dirtyPlugin
         itm: 1
   - name: 'Unique Forts Fort Strand.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/40758' ]
     dirty:
       - crc: 0x5aaf40dc
         <<: *dirtyPlugin
         itm: 4
         udr: 35
   - name: 'Unique Forts Gold Coast.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/40758' ]
     dirty:
       - crc: 0x99c57ec6
         <<: *dirtyPlugin
@@ -13087,6 +13357,7 @@ plugins:
         itm: 72
         udr: 161
   - name: 'ElsweyrRiverhold.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/19026' ]
     inc:
       - 'ElsweyrAnequina.esp'
     msg:
@@ -13286,7 +13557,12 @@ plugins:
         <<: *dirtyPlugin
         itm: 47
         udr: 417
+  - name: 'xul(Ancient(Redwoods|Yews)|ArriusCreek|AspenWood|BeachesOfCyrodiilLostCoast|BlackwoodForest|BravilBarrowfields|BrenaRiverRavine|CheydinhalFalls|ChorrolHinterland(-BC6)?|CliffsOfAnvil|CloudtopMountains|ColovianHighlands_EV|darkforest|EntiusGorge|FallenleafEverglade|ImperialIsle|JerallGlacier|LushWoodlands|PantherRiver|Patch_AY_AC|RiverEthe|RollingHills_EV|SilverfishRiverValley|SkingradOutskirts|Snowdale|StendarrValley|TheEasternPeaks|TheHeath)\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/19370'
+        name: 'Unique Landscapes Compilation'
   - name: 'xuldarkforest.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/11162' ]
     tag:
       - C.Music
       - C.Water
@@ -13305,6 +13581,7 @@ plugins:
       - type: say
         content: 'Update to patch version 1.1 if using Stendarr Valley 1.2'
   - name: 'xulTheHeath.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/11165' ]
     tag:
       - C.Water
     dirty:
@@ -13325,6 +13602,7 @@ plugins:
         <<: *dirtyPlugin
         udr: 14
   - name: 'XulEntiusGorge.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/7037' ]
     tag:
       - C.Water
     dirty:
@@ -13335,6 +13613,7 @@ plugins:
   - name: 'ULFallenLeafEverglade.esp'
     msg: [ *obsolete ]
   - name: 'xulFallenleafEverglade.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/17562' ]
     tag:
       - C.Water
     dirty:
@@ -13342,6 +13621,7 @@ plugins:
         <<: *dirtyPlugin
         udr: 697
   - name: 'Valenwood Improved - Fallenleaf Everglade EV - Patch.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/22555' ]
     dirty:
       - crc: 0x8056a33c
         <<: *dirtyPlugin
@@ -13376,6 +13656,7 @@ plugins:
         itm: 576
         udr: 217
   - name: 'xulChorrolHinterland.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/11189' ]
     msg:
       - <<: *alreadyInX
         subs: [ 'Cyrodiil Rebuild.esp' ]
@@ -13396,6 +13677,7 @@ plugins:
         <<: *dirtyPlugin
         itm: 1
   - name: 'xulBeachesOfCyrodiilLostCoast.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/14720' ]
     msg:
       - type: say
         content: 'Make sure version is 1.6.3 or later.'
@@ -13511,6 +13793,7 @@ plugins:
   - name: 'T-HMO.esp'
     msg: [ *needsCleaning ]
   - name: 'xulBravilBarrowfields.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/20426' ]
     dirty:
       - crc: 0xa29afdc3
         <<: *dirtyPlugin
@@ -13520,6 +13803,7 @@ plugins:
       - type: say
         content: 'Update to Bravil Barrowfields 1.3. Then deactivate this patch.'
   - name: 'xulLushWoodlands.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/11164' ]
     dirty:
       - crc: 0x62fb2c49
         <<: *dirtyPlugin
@@ -13537,6 +13821,7 @@ plugins:
       - type: say
         content: 'Obsolete if using Lush Woodlands 1.3 or higher.'
   - name: 'xulAncientYews.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/11458' ]
     dirty:
       - crc: 0x6b0d5e8e
         <<: *dirtyPlugin
@@ -13557,6 +13842,7 @@ plugins:
       - type: say
         content: 'Obsolete, update to latest AY and delete.'
   - name: 'xulAncientRedwoods.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/11163' ]
     dirty:
       - crc: 0x6387135
         <<: *dirtyPlugin
@@ -13567,6 +13853,7 @@ plugins:
       - type: say
         content: 'Obsolete if using Ancient Redwoods 1.6 or higher.'
   - name: 'xulCloudtopMountains.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/16677' ]
     dirty:
       - crc: 0xfab16618
         <<: *dirtyPlugin
@@ -13576,6 +13863,7 @@ plugins:
       - type: say
         content: 'Obsolete. Update to Cloudtop Mountains 1.0.1 or higher. Then delete this patch.'
   - name: 'xulArriusCreek.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/16818' ]
     tag:
       - C.Water
     dirty:
@@ -13600,6 +13888,7 @@ plugins:
         itm: 13
         udr: 14
   - name: 'xulRollingHills_EV_withoutWheat.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/10768' ]
     msg:
       - type: say
         content: 'Only use one UL Rolling Hills plugin.'
@@ -13613,6 +13902,7 @@ plugins:
       - type: say
         content: 'Only use one UL Rolling Hills plugin.'
   - name: 'xulRollingHills_EV.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/10768' ]
     msg:
       - type: say
         content: 'Only use one UL Rolling Hills plugin.'
@@ -13643,11 +13933,13 @@ plugins:
         content: 'Do not use with RedcourtCastle-RollingHills patch.esp or RedcourtCastle-AncientYews patch.esp.'
         condition: 'file("RedcourtCastle-AncientYews patch.esp") or file("RedcourtCastle-RollingHills patch.esp")'
   - name: 'xulPantherRiver.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/20332' ]
     dirty:
       - crc: 0x168e01a1
         <<: *dirtyPlugin
         udr: 90
   - name: 'xulRiverEthe.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/17330' ]
     tag:
       - C.Water
     dirty:
@@ -13675,6 +13967,7 @@ plugins:
         <<: *dirtyPlugin
         itm: 22
   - name: 'xulImperialIsle.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/9531' ]
     dirty:
       - crc: 0x9f8e4a43
         <<: *dirtyPlugin
@@ -13694,11 +13987,13 @@ plugins:
       - type: warn
         content: 'Do not use - has technical issues. Download the correct patch [here](http://www.nexusmods.com/oblivion/mods/20218).'
   - name: 'xulBlackwoodForest.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/25799' ]
     dirty:
       - crc: 0x781ac4eb
         <<: *dirtyPlugin
         itm: 39
   - name: 'xulCheydinhalFalls.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/27494' ]
     tag:
       - C.Water
   - name: 'KvatchRebuilt-CheydinhalFalls patch.esp'
@@ -13724,6 +14019,7 @@ plugins:
         content: 'West Roads.esp has been detected. West Roads and all dependent patches must be uninstalled before using Roads of Cyrodiil. See Roads of Cyrodiil readme for upgrade instructions.'
         condition: 'file("West Roads.esp")'
   - name: 'xulCliffsOfAnvil.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/36139' ]
     dirty:
       - crc: 0x701ef543
         <<: *dirtyPlugin
@@ -13809,6 +14105,7 @@ plugins:
       - type: say
         content: 'Requires: Better/Open Cities IC Market District Components.'
   - name: 'West Roads.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/29523' ]
     dirty:
       - crc: 0xede05e56
         <<: *dirtyPlugin
@@ -13842,6 +14139,7 @@ plugins:
   - name: 'CSV_Farms_Road_Open_Cities.esp'
     msg: [ *obsolete ]
   - name: 'CSV_Farms_Road_Vanilla.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/38366/' ]
     msg:
       - *obsolete
       - *useOnlyOneRoadRecordFile
@@ -13849,8 +14147,10 @@ plugins:
       - Deactivate
       - Roads
   - name: 'CSV_Farms_Better_Cities.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/38366/' ]
     msg: [ *obsolete ]
   - name: 'Castle_Seaview v1.1 Delayer.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/25946/' ]
     msg: [ *obsolete ]
   - name: 'CastleSeaview+LostCoast Patch.esp'
     inc:
@@ -13865,39 +14165,48 @@ plugins:
         itm: 50
         udr: 260
   - name: 'Colourwheels Sexy Arena Revised HGEC.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/41609' ]
     tag:
       - Actors.ACBS
       - Invent
       - NpcFacesForceFullImport
   - name: 'Colourwheels Sexy Tavern HGEC.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/37959' ]
     dirty:
       - crc: 0x4223626a
         <<: *dirtyPlugin
         itm: 5
   - name: 'Colourwheels Sexy Skyrim Outpost HGEC.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/36975' ]
     dirty:
       - crc: 0x859a856f
         <<: *dirtyPlugin
         itm: 7
         udr: 7
   - name: 'Colourwheels Sexy Dark brotherhood.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/41550' ]
     dirty:
       - crc: 0x4f223f0e
         <<: *dirtyPlugin
         itm: 21
         udr: 8
   - name: 'Colourwheels Sexy Ayelid Shrine.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/37087' ]
     dirty:
       - crc: 0x68f17734
         <<: *dirtyPlugin
         itm: 28
         udr: 2
   - name: 'ColourWheels Sexy Milk Maid HGEC.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/42339' ]
     dirty:
       - crc: 0x8947202d
         <<: *dirtyPlugin
         udr: 1
   - name: 'The Ruins of Miscarcand.esp'
+    url:
+      - 'https://www.nexusmods.com/oblivion/mods/24471'
+      - 'https://www.nexusmods.com/oblivion/mods/42713'
     inc:
       - 'Miscarcand Expanded.esp'
     dirty:
@@ -13906,6 +14215,7 @@ plugins:
         itm: 10
         udr: 1910
   - name: 'Miscarcand Expanded.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/14337' ]
     inc:
       - 'The Ruins of Miscarcand.esp'
   - name: 'bartholm.esp'
@@ -13946,6 +14256,7 @@ plugins:
     tag:
       - Names
   - name: 'Lilyvale.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/35471' ]
     dirty:
       - crc: 0x881f401e
         <<: *dirtyPlugin
@@ -13958,16 +14269,19 @@ plugins:
         content: 'West Roads.esp has been detected. West Roads and all dependent patches must be uninstalled before using Roads of Cyrodiil. See Roads of Cyrodiil readme for upgrade instructions.'
         condition: 'file("West Roads.esp")'
   - name: 'Millstone_Farm.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/29126' ]
     dirty:
       - crc: 0x8bab5b62
         <<: *dirtyPlugin
         udr: 17
   - name: 'Millstone_Farm_COBL.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/29126' ]
     dirty:
       - crc: 0xa67e4087
         <<: *dirtyPlugin
         udr: 17
   - name: 'Millstone_UL_Patch.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/29126' ]
     dirty:
       - crc: 0xf7081b36
         <<: *dirtyPlugin
@@ -14290,6 +14604,7 @@ plugins:
         subs: [ 'DBs Oblivion Overhaul - OpenCities Full, Outer Districts or Full + Outer Districts' ]
         condition: 'many("DBOO - Open(Cities| Cities)(Full| Outer Districts|Full + Outer Districts)\.esp")'
   - name: 'Sounds of Cyrodiil - OC Reborn Patch.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/39804' ]
     dirty:
       - crc: 0x408c9e1f
         <<: *dirtyPlugin
@@ -14522,6 +14837,7 @@ plugins:
         content: 'May break MMM Hunting and Crafting. Not fully tested.'
         condition: 'file("Mart''s Monster Mod - Hunting & Crafting.esp")'
   - name: 'Automagic Bags.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/22414' ]
     dirty:
       - crc: 0xec777db4
         <<: *dirtyPlugin
@@ -14702,6 +15018,7 @@ plugins:
     tag:
       - Graphics
   - name: 'Colourwheels Sexy Imperial Legion.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/24436' ]
     tag:
       - Actors.ACBS
       - Invent
@@ -14757,6 +15074,7 @@ plugins:
       - Delev
       - Relev
   - name: 'CT-YABM.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/11317' ]
     inc:
       - 'CT-YABM - No Idle.esp'
   - name: 'Cyrodiil City Guards.esp'
@@ -15032,11 +15350,13 @@ plugins:
       - type: say
         content: 'German mod.'
   - name: 'Jhaerik''s Dungeon Fog Remover.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/40555' ]
     dirty:
       - crc: 0xfa68a64e
         <<: *dirtyPlugin
         udr: 1523
   - name: 'Jhaerik''s Dungeon Fog Remover Lite.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/40555' ]
     dirty:
       - crc: 0x51999419
         <<: *dirtyPlugin
@@ -15082,15 +15402,18 @@ plugins:
     inc:
       - 'LessHealthfulRest.esp'
   - name: 'M.O.E. - Bone Names and Priced Skull.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/7902' ]
     msg:
       - type: say
         content: 'May not be compatible with MMM bone loot - untested.'
   - name: 'M.O.E. - Lycanthropy and Lichcraft.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/7902' ]
     dirty:
       - crc: 0x412cbb2c
         <<: *dirtyPlugin
         itm: 61
   - name: 'M.O.E. - Realistic Prices, Realistic Weights, No Quest Items.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/7902' ]
     msg:
       - type: say
         content: 'May cause unexpected results with Living Economy, Fran''s, OOO, MMM and/or FCOM.'
@@ -15104,6 +15427,7 @@ plugins:
       - Deactivate
       - Stats
   - name: 'RedBag - Items Repriced v2.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/22089' ]
     tag:
       - Deactivate
       - Stats
@@ -15212,6 +15536,7 @@ plugins:
       - type: say
         content: 'Highly likely to be incompatible with every overhaul out there.'
   - name: 'NoWindSI.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/10902' ]
     msg: [ *bashedPatchTweak ]
   - name: 'No Wait Regenerate.esp'
     req: [ *OBSE ]
@@ -15775,7 +16100,8 @@ plugins:
         udr: 1
   - name: 'LCE-addon.esp'
     msg: [ *corrupt ]
-  - name: 'CLS-craftybits.esp'
+  - name: 'CLS-Craftybits.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/13085' ]
     dirty:
       - crc: 0x4c5bc5ec
         <<: *dirtyPlugin
@@ -15927,6 +16253,7 @@ plugins:
       - C.Light
       - Actors.ACBS
   - name: 'LTDVampireOverhaul.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/27329' ]
     dirty:
       - crc: 0xbc307c34
         <<: *dirtyPlugin
@@ -15949,6 +16276,7 @@ plugins:
       - Graphics
       - Scripts
   - name: 'M.O.E. - Vampire Clan Raelu.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/7902' ]
     msg:
       - type: say
         content: 'May have problems with OOO.'
@@ -16110,11 +16438,13 @@ plugins:
       - Graphics
       - Names
   - name: 'SM_ShiveringIsles.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/12466' ]
     dirty:
       - crc: 0xfa560808
         <<: *dirtyPlugin
         itm: 1
   - name: 'SM_NoPoisonLevitationEffects.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/12466' ]
     msg:
       - type: say
         content: 'Obsolete, you can update to Supreme Magicka 0.89b+ and set ''zzSMConfigurationQuest.bNoPoisonLevitationEffects'' to 1 in the ini for the same result.'
@@ -16164,6 +16494,7 @@ plugins:
     tag:
       - Invent
   - name: 'OSPS-TalesftTomb-MidasMagic-Patch.esp'
+    # Not available
     inc:
       - 'Rathunas01.esp'
   - name: 'Midas PowDur(1\.5|2|3|4)x\.esp'
@@ -16348,6 +16679,7 @@ plugins:
       - 'Oscuro''s_Oblivion_Overhaul.esm'
     msg: [ *alreadyInOOO ]
   - name: 'SM Security.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/16136' ]
     msg:
       - type: say
         content: 'Partly included with OOO. May not be OOO compatible.'
@@ -16656,6 +16988,7 @@ plugins:
   - name: 'Mercantile Leveling-Fixed.esp'
     req: [ *OBSEv15 ]
   - name: 'Jhaerik''s Anti Power-Gaming Leveling System [1234] ((Very Easy )|(Easy)|(Balanced)|(Hard))?\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/40554' ]
     msg:
       - <<: *useOnlyOneX
         subs: [ 'Jhaerik''s Anti Power-Gaming Leveling System' ]
@@ -16893,6 +17226,7 @@ plugins:
         <<: *dirtyPlugin
         itm: 3
   - name: 'immersive_caves_manual.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/4666' ]
     tag:
       - Sound
   - name: 'Immersive Caves.esp'
@@ -16903,15 +17237,18 @@ plugins:
       - Names
       - Sound
   - name: 'immersive_caves_auto.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/4666' ]
     tag:
       - Graphics
       - Names
       - Sound
   - name: 'Dark Dungeons.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/8802' ]
     tag:
       - C.Light
       - Deactivate
   - name: 'Dark Dungeons -  SI.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/8802' ]
     tag:
       - C.Light
       - Deactivate
@@ -16924,6 +17261,7 @@ plugins:
       - C.Light
       - Deactivate
   - name: '_darker_dungeons.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/14118' ]
     tag:
       - C.Light
       - Deactivate
@@ -16936,35 +17274,30 @@ plugins:
       - C.Light
       - Deactivate
 
-  - name: 'Let There Be Darkness.esp'
-    msg: [ *obsolete ]
-  - name: 'Let There Be Darkness - Shivering Isles.esp'
-    req:
-      - 'DLCShiveringIsles.esp'
-    msg: [ *obsolete ]
-  - name: 'Let There Be Darkness - Cyrodiil + SI.esp'
-    req:
-      - 'DLCShiveringIsles.esp'
-  - name: 'Let There Be Darkness All.esp'
-    group: *latePatchesGroup
-    tag:
-      - Filter
   - name: 'Let There Be Darkness.*\.esp'
+    url:
+      - 'https://www.nexusmods.com/oblivion/mods/22819'
+      - 'https://www.nexusmods.com/oblivion/mods/29692'
     tag:
       - C.Light
       - Deactivate
+  - name: 'Let There Be Darkness - Cyrodiil + SI.esp'
+    req: [ 'DLCShiveringIsles.esp' ]
 
   - name: 'Cava Obscura - Cyrodiil.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/35099' ]
     tag:
       - C.Light
       - Deactivate
       - NoMerge
   - name: 'Cava Obscura - SI.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/35099' ]
     tag:
       - C.Light
       - Deactivate
       - NoMerge
   - name: 'Cava Obscura - Filter Patch For Mods.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/35099' ]
     group: *latePatchesGroup
     tag:
       - C.Light
@@ -17033,43 +17366,50 @@ plugins:
         subs: [ 'Ingredients in Bulk' ]
         condition: 'many("Item interchange - Option, Ingredients in Bulk(, reduced)?\.esp")'
       - *requiresBashedPatch
-  - name: 'Atmospheric Loading Screens - No Text.esp'
-    tag:
-      - Graphics
   - name: 'Alternate Script Effect Icon.esp'
     tag:
       - Graphics
   - name: 'Different Script Effect Icon - Darkness.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/18843' ]
     tag:
       - Graphics
   - name: 'Different Script Effect Icon - Fortify.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/18843' ]
     tag:
       - Graphics
   - name: 'Different Script Effect Icon - Lock.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/18843' ]
     tag:
       - Graphics
   - name: 'Different Script Effect Icon - Reflect Spell.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/18843' ]
     tag:
       - Graphics
   - name: 'Different Script Effect Icon - Resist.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/18843' ]
     tag:
       - Graphics
   - name: 'Different Script Effect Icon - Silence.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/18843' ]
     tag:
       - Graphics
   - name: 'Different Script Effect Icon - Stunted Magicka.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/18843' ]
     tag:
       - Graphics
   - name: 'Different Script Effect Icon - Sun Damage.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/18843' ]
     tag:
       - Graphics
   - name: 'Different Script Effect Icon - Vampirism.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/18843' ]
     tag:
       - Graphics
   - name: 'ScriptEffectIconReplace.esp'
     tag:
       - Graphics
   - name: 'M.O.E. - Better Icon for Script Effects.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/7902' ]
     tag:
       - Graphics
   - name: 'SciptIcon Replacer.esp'
@@ -17082,11 +17422,13 @@ plugins:
     tag:
       - Graphics
   - name: 'ScriptEffectSubduer.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/27329' ]
     tag:
       - Graphics
   - name: 'Useful Houses.esp'
     req: [ *MenuQue ]
   - name: 'Vanilla_Race_Overhaul.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/39823' ]
     tag:
       - Body-F
       - Body-M
@@ -17137,6 +17479,7 @@ plugins:
       - Graphics
       - Hair
   - name: 'CT-Argonian Headstyles.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/6553' ]
     tag:
       - Graphics
       - Hair
@@ -17244,11 +17587,13 @@ plugins:
       - Eyes
       - Hair
   - name: 'BP-Cosmetic_Compilation-Alternative.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/24171' ]
     tag:
       - Eyes
       - Hair
       - NpcFaces
   - name: 'BP-Cosmetic_Compilation-Alternative-VanillaRaceonly.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/24171' ]
     tag:
       - Eyes
       - Hair
@@ -17294,6 +17639,7 @@ plugins:
       - Eyes
       - Hair
   - name: 'Cool Hair & Eyelashes for Cobl.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/38291/' ]
     tag:
       - Hair
       - NpcFaces
@@ -17333,16 +17679,19 @@ plugins:
       - Eyes
       - Hair
   - name: 'CT-Argonian Headstyles-EE.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/6553' ]
     tag:
       - Eyes
       - Graphics
       - Hair
   - name: 'CT-Argonian Headstyles-MM.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/6553' ]
     tag:
       - Eyes
       - Graphics
       - Hair
   - name: 'CT-Argonian Headstyles-EE+MM.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/6553' ]
     tag:
       - Eyes
       - Graphics
@@ -17430,6 +17779,7 @@ plugins:
       - NpcFaces
       - R.Description
   - name: 'Asian Race.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/8395' ]
     tag:
       - Eyes
       - Hair
@@ -18106,6 +18456,7 @@ plugins:
       - NpcFaces
       - R.Relations
   - name: 'Sotha Sil Race.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/36605' ]
     tag:
       - Eyes
       - Graphics
@@ -18113,6 +18464,7 @@ plugins:
       - NpcFaces
       - R.Ears
   - name: 'TFF_Races_Base.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/12073' ]
     tag:
       - Body-F
       - Body-Size-F
@@ -18131,6 +18483,7 @@ plugins:
       - R.Mouth
       - R.Teeth
   - name: 'Beautiful People.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/5175' ]
     tag:
       - Eyes
       - Graphics
@@ -18847,6 +19200,7 @@ plugins:
       - Hair
       - NpcFaces
   - name: 'Beautiful People Robert - Hair merged.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/13312' ]
     tag:
       - Body-M
       - Body-Size-M
@@ -18855,6 +19209,7 @@ plugins:
       - Hair
       - NpcFaces
   - name: 'BP_Roberts_BR_Hair.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/13312' ]
     tag:
       - Body-M
       - Body-Size-M
@@ -18899,11 +19254,13 @@ plugins:
       - NpcFaces
       - R.Teeth
   - name: 'BeautifulPeople2.2+TweakedGenericFacesLITE.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/9119' ]
     tag:
       - Eyes
       - Hair
       - NpcFaces
   - name: 'BeautifulPeople2.2+TweakedGenericFaces.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/9119' ]
     tag:
       - Eyes
       - Hair
@@ -19076,6 +19433,7 @@ plugins:
       - NpcFaces
       - R.Relations
   - name: 'Colourwheels Sexy Pym Companion.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/42300' ]
     dirty:
       - crc: 0x224844ca
         <<: *dirtyPlugin
@@ -19087,6 +19445,7 @@ plugins:
       - NpcFaces
       - R.Relations
   - name: 'Colourwheels Sexy Tifa.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/22393' ]
     tag:
       - NpcFaces
   - name: 'AmidalaSaramHair.esp'
@@ -19723,6 +20082,7 @@ plugins:
       - Eyes
       - Hair
   - name: 'Colourwheels Sexy Oblivion OverHaul.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/36387/' ]
     tag:
       - name: Actors.ACBS
         condition: 'file("Banes Guilds United.esp")'
@@ -19738,6 +20098,7 @@ plugins:
         itm: 112
         udr: 11
   - name: 'Nephs Stock Shoes Real High Heels.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/42212/' ]
     tag:
       - Graphics
       - Scripts
@@ -19748,14 +20109,17 @@ plugins:
       - Graphics
       - Scripts
   - name: 'BulkyNord.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/3464/' ]
     tag:
       - Body-Size-F
       - Body-Size-M
   - name: 'BulkyOrcs.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/3462/' ]
     tag:
       - Body-Size-F
       - Body-Size-M
   - name: 'EVE_KhajiitFix.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/24078/' ]
     tag:
       - Body-F
       - Body-Size-F
@@ -19764,6 +20128,7 @@ plugins:
       - Body-F
       - Body-Size-F
   - name: 'khajiittextfix.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/40048/' ]
     tag:
       - Body-F
       - Body-Size-F
@@ -19772,14 +20137,17 @@ plugins:
       - Body-Size-F
       - Body-Size-M
   - name: 'Bigger_Dremora-2369.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/2369/' ]
     tag:
       - Body-Size-F
       - Body-Size-M
   - name: 'Bigger Nords & Orcs.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/28304/' ]
     tag:
       - Body-Size-F
       - Body-Size-M
   - name: 'Slof''s Oblivion Better Beasts.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/28304/' ]
     msg:
       - <<: *alreadyInX
         subs: [ 'Slof''s Better Bodies' ]
@@ -19801,6 +20169,7 @@ plugins:
       - R.Mouth
       - R.Teeth
   - name: 'EyelashesVannilaRaces.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/18185/' ]
     tag:
       - NpcFaces
       - R.Mouth
@@ -19811,10 +20180,12 @@ plugins:
       - R.Mouth
       - R.Teeth
   - name: 'Jjiinx_MorrowindStyleArgonians.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/13444/' ]
     tag:
       - NoMerge
       - NpcFaces
   - name: 'Better Redguard v2.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/10753/' ]
     msg:
       - <<: *useBashTweakRecommended
         subs: [ 'Tweak Actors: Redguard FGTS Nuller' ]
@@ -19826,6 +20197,7 @@ plugins:
       - NpcFaces
       - R.Head
   - name: 'Better Looking Dark Elves.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/31801/' ]
     tag:
       - Body-F
       - Body-M
@@ -19835,6 +20207,7 @@ plugins:
       - R.Ears
       - R.Head
   - name: 'Better Looking Dremora.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/31567/' ]
     tag:
       - Body-F
       - Body-M
@@ -19844,6 +20217,7 @@ plugins:
       - R.Ears
       - R.Head
   - name: 'Better Looking Redguards.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/31174/' ]
     tag:
       - Body-F
       - Body-M
@@ -19853,6 +20227,7 @@ plugins:
       - R.Head
       - R.Relations
   - name: 'Better Looking Redguards v2.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/31174/' ]
     tag:
       - Body-F
       - Body-M
@@ -19862,6 +20237,7 @@ plugins:
       - R.Head
       - R.Relations
   - name: 'Better Looking Redguards-Mergeable.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/31174/' ]
     tag:
       - Body-F
       - Body-M
@@ -19871,6 +20247,7 @@ plugins:
       - R.Ears
       - R.Head
   - name: 'Better Looking Wood Elves Vanilla.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/31143/' ]
     tag:
       - Body-F
       - Body-M
@@ -19880,6 +20257,7 @@ plugins:
       - R.Ears
       - R.Head
   - name: 'Better Looking Wood Elves Vanilla Black Eyes.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/31143/' ]
     tag:
       - Body-F
       - Body-M
@@ -19889,6 +20267,7 @@ plugins:
       - R.Ears
       - R.Head
   - name: 'Better Looking Wood Elves COBL.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/31143/' ]
     tag:
       - Body-F
       - Body-M
@@ -19898,6 +20277,7 @@ plugins:
       - R.Ears
       - R.Head
   - name: 'Redguard Guards.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/31174/' ]
     tag:
       - Body-F
       - Body-M
@@ -19908,6 +20288,7 @@ plugins:
       - R.Ears
       - R.Head
   - name: 'BigDunmerEars.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/13331/' ]
     tag:
       - Body-F
       - Body-M
@@ -19915,6 +20296,7 @@ plugins:
       - Body-Size-M
       - NpcFaces
   - name: 'Smaller Elf ears.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/7942/' ]
     tag:
       - Body-F
       - Body-M
@@ -20408,6 +20790,7 @@ plugins:
     tag:
       - C.Water
   - name: 'Better Cities - Knights of the Nine.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/16513' ]
     req:
       - 'Better Cities - Open Better Cities.esp'
   - name: 'Better Cities Anvil Open - Knights of the Nine.esp'
@@ -20492,6 +20875,7 @@ plugins:
         content: 'You Only need this patch. Remove the Better Cities - Unique Landscape Imperial Isle.esp'
         condition: 'file("Better Cities - Unique Landscape Imperial Isle.esp")'
   - name: 'OSPS_BC_IC-II_UL-II_TalosBridge_Patch.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/45817' ]
     msg:
       - type: warn
         content: 'You Only need this patch. Remove the Better Cities - Unique Landscape Imperial Isle.esp'
@@ -20508,6 +20892,7 @@ plugins:
     tag:
       - C.Water
   - name: 'OSPS_BC_IC-II_UL-II_TalosBridge_RRLR_Patch.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/45817' ]
     msg:
       - type: warn
         content: 'You Only need this patch. Remove the Better Cities - Unique Landscape Imperial Isle.esp'
@@ -20691,6 +21076,7 @@ plugins:
       - 'Better Imperial City.esp'
     msg: [ *obsolete ]
   - name: 'Cyrodiil Rebuild.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/42654' ]
     inc:
       - 'AnvilBayExpansion.esp'
       - 'Better Cities CHORROL.esp'
@@ -20714,6 +21100,7 @@ plugins:
         itm: 128
         udr: 257
   - name: 'xulSkingradOutskirts.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/29948' ]
     after:
       - 'Cyrodiil Rebuild.esp'
   - name: 'Better Cities SKINGRAD.esp'
@@ -20721,6 +21108,7 @@ plugins:
     after:
       - 'Cyrodiil Rebuild.esp'
   - name: 'Cyrodiil Rebuild II.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/43743' ]
     tag:
       - Actors.ACBS
       - Actors.AIPackages
@@ -20735,6 +21123,7 @@ plugins:
       - type: say
         content: 'For both Unique Landscapes and Better Cities use CRpatchForBSandULskingrad.esp instead'
   - name: 'CSV_Farms_Open(_Better)?_Cities\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/38366/' ]
     msg:
       - <<: *useOnlyOneX
         subs: [ 'Castle Sea View Farms' ]
@@ -20743,22 +21132,27 @@ plugins:
     tag:
       - Stats
   - name: 'HTSCl_base.esp'
+    url: [ 'https://www.loverslab.com/topic/171-htsclight-english/?ct=1568338462/' ]
     req: [ *OBSEv20 ]
     tag:
       - Invent
   - name: 'HTSCl_cobl.esp'
+    url: [ 'https://www.loverslab.com/topic/171-htsclight-english/?ct=1568338462/' ]
     req:
       - 'Cobl Main.esm'
   - name: 'HTSCl_mmm.esp'
+    url: [ 'https://www.loverslab.com/topic/171-htsclight-english/?ct=1568338462/' ]
     req:
       - 'Mart''s Monster Mod.esm'
     tag:
       - Graphics
       - Invent
   - name: 'HTSCl_ooo.esp'
+    url: [ 'https://www.loverslab.com/topic/171-htsclight-english/?ct=1568338462/' ]
     req:
       - 'Oscuro''s_Oblivion_Overhaul.esm'
   - name: 'HTSCl_si.esp'
+    url: [ 'https://www.loverslab.com/topic/171-htsclight-english/?ct=1568338462/' ]
     req:
       - 'DLCShiveringIsles.esp'
   - name: 'HTSCl_bbc.esp'
@@ -20801,6 +21195,7 @@ plugins:
     req:
       - 'ElsweyrAnequina.esp'
   - name: 'HTSCl_hud.esp'
+    url: [ 'https://www.loverslab.com/topic/171-htsclight-english/?ct=1568338462/' ]
     msg:
       - type: warn
         content: 'You must rename "OBSE_Elys_Pluggy.dll" to "OBSE_Elys_Pluggy_Hud.dll"'
@@ -20809,6 +21204,7 @@ plugins:
       - <<: *Pluggy
         condition: 'not file("OBSE/Plugins/OBSE_Elys_Pluggy_Hud.dll")'
   - name: 'TheOubliette.esp'
+    url: [ 'http://tesalliance.org/forums/index.php?/files/file/1883-the-oubliette/' ]
     dirty:
       - crc: 0x2f16c1c5
         <<: *dirtyPlugin
@@ -21071,6 +21467,7 @@ plugins:
       - NoMerge
       - Scripts
   - name: 'Hemingweys Capes.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
     msg:
       - type: say
         content: 'Don''t use Wrye Bash''s Bashed Patch unlimited amulet''s tweak with this.'
@@ -21081,12 +21478,16 @@ plugins:
     tag:
       - Invent
   - name: 'MassA.I.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/8158' ]
     msg: [ *bashedPatchTweak ]
   - name: 'MassA.I-30.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/8158' ]
     msg: [ *bashedPatchTweak ]
   - name: 'MassA.I-40.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/8158' ]
     msg: [ *bashedPatchTweak ]
   - name: 'MassA.I-50.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/8158' ]
     msg: [ *bashedPatchTweak ]
   - name: 'KSE_v3.esp'
     inc:
@@ -21151,6 +21552,7 @@ plugins:
         subs: [ '[Unnecessary Violence III](https://www.nexusmods.com/oblivion/mods/40310)' ]
 
   - name: 'Real Hunger, Cobl.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/21106' ]
     msg:
       - type: say
         content: 'Realistic hunger mods and vampire mods may conflict seriously.'
@@ -21174,6 +21576,7 @@ plugins:
         itm: 6
         <<: *dirtyPlugin
   - name: 'UnderdarkSaga v1.2 Delayer.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/25946/' ]
     msg: [ *obsolete ]
   - name: 'Sensual Walks.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/28223' ]
@@ -21274,6 +21677,7 @@ plugins:
       - Deactivate
       - Roads
   - name: 'ROC Standard Road Record.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
     msg: [ *roadsAndBridgesDetected ]
     req:
       - 'Roads of Cyrodiil.esp'
@@ -21281,6 +21685,7 @@ plugins:
       - Deactivate
       - Roads
   - name: 'ROC - OCReborn Road Record.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
     msg: [ *roadsAndBridgesDetected ]
     req:
       - 'Open Cities Reborn.esp'
@@ -21289,6 +21694,7 @@ plugins:
       - Deactivate
       - Roads
   - name: 'CSVF_Road_Record_OC.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/38366/' ]
     msg: [ *useOnlyOneRoadRecordFile ]
     req:
       - 'Open Cities.esp'
@@ -21296,6 +21702,7 @@ plugins:
       - Deactivate
       - Roads
   - name: 'CSVF_Road_Record_OC+RB.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/38366/' ]
     msg: [ *useOnlyOneRoadRecordFile ]
     req:
       - 'Open Cities.esp'
@@ -21304,6 +21711,7 @@ plugins:
       - Deactivate
       - Roads
   - name: 'CSVF_Road_Record_BBC.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/38366/' ]
     msg: [ *useOnlyOneRoadRecordFile ]
     req:
       - 'Better Cities Full.esp'
@@ -21311,6 +21719,7 @@ plugins:
       - Deactivate
       - Roads
   - name: 'CSVF_Road_Record_BBC+OC.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/38366/' ]
     msg: [ *useOnlyOneRoadRecordFile ]
     req:
       - 'Better Cities - Open Better Cities.esp'
@@ -21318,6 +21727,7 @@ plugins:
       - Deactivate
       - Roads
   - name: 'CSVF_Road_Record_BBC+RB.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/38366/' ]
     msg: [ *useOnlyOneRoadRecordFile ]
     req:
       - 'Better Cities Full.esp'
@@ -21326,6 +21736,7 @@ plugins:
       - Deactivate
       - Roads
   - name: 'CSVF_Road_Record_BBC+OC+RB.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/38366/' ]
     msg: [ *useOnlyOneRoadRecordFile ]
     req:
       - 'Better Cities - Open Better Cities.esp'
@@ -21334,6 +21745,7 @@ plugins:
       - Deactivate
       - Roads
   - name: 'CSVF_Road_Record_RB.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/38366/' ]
     msg: [ *useOnlyOneRoadRecordFile ]
     req:
       - 'road+bridges.esp'
@@ -21341,6 +21753,7 @@ plugins:
       - Deactivate
       - Roads
   - name: 'Bashed Delayers - MERGE ONLY\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/25946/' ]
     msg:
       - type: say
         content: 'Versions less than 3.1 may cause the quest being patched to restart if installed after the quest has started. Update to the latest delayer if you suspect a problem.'
@@ -21351,6 +21764,7 @@ plugins:
       - Deactivate
       - Filter
   - name: 'CoreRandmonClothing4Npcs.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/27474/' ]
     group: *latePatchesGroup
     msg: [ *requiresBashedPatch ]
     tag:
@@ -21367,18 +21781,21 @@ plugins:
       - Invent
       - Scripts
   - name: 'OOO Harvest Containers Filter patch for mods.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/35127' ]
     group: *latePatchesGroup
     msg: [ *requiresBashedPatch ]
     tag:
       - Deactivate
       - Filter
   - name: 'Harvest Containers Filter patch for mods.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/35155' ]
     group: *latePatchesGroup
     msg: [ *requiresBashedPatch ]
     tag:
       - Deactivate
       - Filter
   - name: 'All Natural - Indoor Weather Filter For Mods.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/18305' ]
     group: *latePatchesGroup
     msg: [ *requiresBashedPatch ]
     tag:
@@ -21387,6 +21804,7 @@ plugins:
       - Filter
       - NoMerge
   - name: 'Storms & Sound - Filter Patch.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/38379' ]
     group: *latePatchesGroup
     msg: [ *requiresBashedPatch ]
     tag:
@@ -21426,10 +21844,12 @@ plugins:
       - type: say
         content: 'Obsolete. Upgrade to SDR version 8.2'
   - name: 'TES4Merged.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/11536/' ]
     group: *dynamicPatchesGroup
     tag:
       - NoMerge
   - name: 'Bashed Patch.*\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/22368' ]
     group: *dynamicPatchesGroup
     after:
       - 'TES4Merged.esp'
@@ -21458,10 +21878,12 @@ plugins:
       - type: say
         content: 'Obsolete. Remove and use newer version of Lovers with PK. Integrated into 1.3.1 Rev41 and newer.'
   - name: 'Rustle House CBash Fix.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/35252' ]
     msg:
       - type: say
         content: 'ONLY needed if you find the house basement flooded. This happens sometimes when using All Natural + CBash. Instead of using this fix you can alternately remove the "KhRHInterior" record from the Bash Patch each time you rebuild.'
   - name: 'Vanilla Weapon Stat Override( - SI)?\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/39914' ]
     msg: [ *doNotClean ]
   - name: 'PalePassIce.esp'
     url: [ 'http://www.nexusmods.com/oblivion/mods/43496' ]
@@ -21502,27 +21924,29 @@ plugins:
   - name: 'Duke Patrick''s SCA Combat Archery patch for (CnC|LAME|MMM|OOO v2|RBP( No SI)?|xulLostCoast)\.esp'
     msg: [ *obsolete ]
   - name: 'KRLODToggleRestored.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/37701' ]
     msg:
       - type: error
         content: 'This plugin should never be active. Deactivate immediately.'
         condition: 'active("KRLODToggleRestored.esp")'
   - name: 'KRLODToggleBurnt.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/37701' ]
     msg:
       - type: error
         content: 'This plugin should never be active. Deactivate immediately.'
         condition: 'active("KRLODToggleBurnt.esp")'
   - name: 'FRLODToggleBasic.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/37701' ]
     msg:
       - type: error
         content: 'This plugin should never be active. Deactivate immediately.'
         condition: 'active("FRLODToggleBasic.esp")'
-  - name: 'NehrimEnglish.esp'
-    after: [ All Natural Nehrim.esp ]
   - name: 'ASTnehrimHotfixes01(EN).esp'
     msg:
       - <<: *obsolete
         subs: [ '[Nehrim English Supplemental](http://www.nexusmods.com/oblivion/mods/39736)' ]
   - name: 'WindowLightingSystem.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/19628' ]
     msg:
       - *masterReassign
       - type: say
@@ -21538,12 +21962,15 @@ plugins:
   - name: 'Duke Patricks - Who Goes There.esp'
     msg: [ *masterReassign ]
   - name: 'Immersive Combat Music.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/23545' ]
     msg: [ *masterReassign ]
   - name: 'Side''s EAX Control.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/32128' ]
     msg: [ *masterReassign ]
   - name: 'Spells Delete Only 3.2.esp'
     msg: [ *masterReassign ]
   - name: 'Oblivion Graphics Extender Support.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/30054' ]
     msg:
       - *masterReassign
       - type: warn
@@ -21553,22 +21980,29 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/34735' ]
     msg: [ *masterReassign ]
   - name: 'FastEquippingNehrim.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/34613' ]
     msg: [ *hotkeyBug ]
   - name: 'DropLitTorchOBSE.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/16282/' ]
     msg: [ *masterReassign ]
   - name: 'ROM Drop Lit Torches.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/34644/' ]
     msg: [ *masterReassign ]
   - name: 'NehrimTEMP_ENGRISH_TEXT.esp'
     msg:
       - <<: *obsolete
         subs: [ '[Nehrim English Supplemental](http://www.nexusmods.com/oblivion/mods/39736)' ]
   - name: 'SM Encumbrance and Fatigue.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/12074/' ]
     msg: [ *masterReassign ]
   - name: 'Spell Delete And Item Remove.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/23069/' ]
     msg: [ *masterReassign ]
   - name: 'Spell Delete.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/23069/' ]
     msg: [ *masterReassign ]
   - name: 'Item Remove.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/23069/' ]
     msg: [ *masterReassign ]
   - name: 'attack and hide medium v2.1.esp'
     msg: [ *masterReassign ]
@@ -21577,6 +22011,7 @@ plugins:
   - name: 'attack and hide harder v2.1.esp'
     msg: [ *masterReassign ]
   - name: 'SM Combat Hide.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/20303/' ]
     msg: [ *masterReassign ]
   - name: 'SDR Perks And Patches - Oblivion.esp'
     msg: [ *useNehrimVer ]
@@ -21587,18 +22022,28 @@ plugins:
     after:
       - 'Oblivion XP.esp'
   - name: 'StealthOverhaul.esp'
+    url:
+      - 'https://www.nexusmods.com/oblivion/mods/6359/'
+      - 'https://www.nexusmods.com/oblivion/mods/31908/'
     msg: [ *masterReassign ]
   - name: 'Realistic Sneak for NPCs.esp'
     msg: [ *masterReassign ]
   - name: 'ZumbsLockpickingMod - OBSE.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/17894/' ]
     msg: [ *masterReassign ]
   - name: 'ZumbsLockpickingMod - Hide Difficulty Addon.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/17894/' ]
     msg: [ *masterReassign ]
   - name: 'Enhanced Grabbing.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/19847/' ]
     msg: [ *masterReassign ]
   - name: 'Armorer''s Advantage.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/26288/' ]
     msg: [ *masterReassign ]
   - name: 'BetterBlocking.esp'
+    url:
+      - 'https://www.nexusmods.com/oblivion/mods/27947/'
+      - 'https://www.nexusmods.com/oblivion/mods/37055/'
     msg: [ *masterReassign ]
   - name: 'Denock Arrows.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/9333' ]
@@ -21743,6 +22188,7 @@ plugins:
         udr: 1528
         <<: *dirtyPlugin
   - name: 'Better Bell Sounds.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/5286' ]
     tag: [ Scripts ]
   - name: 'QOTW Season Three.esp'
     url: [ 'http://www.nexusmods.com/oblivion/mods/36336' ]
@@ -21753,11 +22199,11 @@ plugins:
         itm: 99
         udr: 1
   - name: 'Morrowind_ob - Conversation.esp'
+    url: [ 'http://tesrenewal.com/forums/morroblivion/mods/753' ]
     tag:
       - Factions
       - Invent
       - Names
-    url: [ 'http://tesrenewal.com/forums/morroblivion/mods/753' ]
   - name: 'Blue-Glass Armor.esp'
     url: [ 'http://www.nexusmods.com/oblivion/mods/9291' ]
     dirty:
@@ -21842,6 +22288,7 @@ plugins:
         content: 'Use OSPS-BC_IC-II_UL-II_Patch.esp instead.'
         condition: 'file("xulImperialIsle.esp")'
   - name: 'OSPS-BC_Imperial_Isle-UL_Imperial_Isle_Talos_Bridge_Gatehouse-Region_Revive_Patch.esp'
+    # Not available
     tag:
       - C.Water
     inc:
@@ -21880,6 +22327,7 @@ plugins:
     tag:
       - C.Light
   - name: 'Ak- Morroblivion Maps HD.esp'
+    url: [ 'https://tesrenewal.com/forums/morroblivion/mods/2610' ]
     group: *mapGroup
   - name: 'Hiboriamap.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/26570' ]
@@ -21905,6 +22353,7 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/37120' ]
     group: *mapGroup
   - name: 'Better Cities (ANVIL|Full|- Open Cities Reborn)\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/16513' ]
     after:
       - name: 'TR_Stirk.esp'
         condition: 'not active("Stirk_Compatibility_Patch.esp")'
