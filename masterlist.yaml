@@ -1555,6 +1555,10 @@ plugins:
       - 'Francesco''s Optional Files 3.esp'
       - 'Francesco''s Optional Files 4.esp'
       - 'TamrielTravellersItemsCobl.esp'
+    msg:
+      - <<: *obsolete
+        subs: [ '[Item interchange](https://www.nexusmods.com/oblivion/mods/17557)' ]
+        condition: 'version("Item interchange - Extraction.esp", "88", <)'
   - name: 'Item interchange - Placement( for FCOM)?\.esp'
     req: [ 'Item interchange - Extraction.esp' ]
     msg:
