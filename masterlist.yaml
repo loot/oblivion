@@ -105,9 +105,6 @@ common:
     type: warn
     content: 'A tweak exists for this in Wrye Bash''s Bashed Patch "Tweak Settings" section.'
     condition: 'file("Bashed Patch.*\.esp")'
-  - &useStandaloneMOBS
-    type: error
-    content: 'Use Standalone MOBS if using Frans or OMOBS if using FCOM/OOO. Both versions can be found [here](http://www.nexusmods.com/oblivion/mods/28537)'
   - &incompatibleWithWeatherMods
     type: say
     content: 'This mod is incompatible with weather mods.'
@@ -2560,20 +2557,6 @@ plugins:
     msg:
       - type: error
         content: 'Outdated. Included in Unofficial Shivering Isles Patch 1.5.1+'
-  - name: 'FIX_Unofficial Shivering Isles Patch_1.4_MOBS_FCOM.esp'
-    msg: [ *useStandaloneMOBS ]
-  - name: 'Unofficial_Shivering_Isles_Patch_10MOBS.esp'
-    msg: [ *useStandaloneMOBS ]
-  - name: 'Unofficial Shivering Isles Patch 10MOBS.esp'
-    msg: [ *useStandaloneMOBS ]
-  - name: 'Unofficial Shivering Isles Patch MOBS.esp'
-    msg: [ *useStandaloneMOBS ]
-  - name: 'Unofficial_Shivering_Isles_Patch_MOBS.esp'
-    msg: [ *useStandaloneMOBS ]
-  - name: 'Unofficial Shivering Isles Patch-MOBS.esp'
-    msg: [ *useStandaloneMOBS ]
-  - name: 'Unofficial Shivering Isles Patch-MOBS-FCOM.esp'
-    msg: [ *useStandaloneMOBS ]
   - name: 'S.I.C.A.F.U.I.S.v1.2.esp'
     tag:
       - Actors.ACBS
