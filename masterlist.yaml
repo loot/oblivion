@@ -1541,9 +1541,54 @@ plugins:
       - crc: 0x82EE4E0B
         util: 'TES4Edit v4.0.2'
 
-  - name: 'Item interchange.esm'
+### Item interchange ###
+  - name: 'Item interchange - .*\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17557' ]
-    msg: [ *obsolete ]
+    msg: [ *requiresBashedPatch ]
+    tag: [ Deactivate ]
+  - name: 'Item interchange - Extraction.esp'
+    group: *latePatchesGroup
+    inc:
+      - 'Francesco''s Optional Files.esp'
+      - 'Francesco''s Optional Files 1.esp'
+      - 'Francesco''s Optional Files 2.esp'
+      - 'Francesco''s Optional Files 3.esp'
+      - 'Francesco''s Optional Files 4.esp'
+      - 'TamrielTravellersItemsCobl.esp'
+  - name: 'Item interchange - Placement( for FCOM)?\.esp'
+    req: [ 'Item interchange - Extraction.esp' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Item interchange Placement or Item interchange Placement for FCOM' ]
+        condition: 'many("Item interchange - Placement( for FCOM)?\.esp")'
+  - name: 'Item interchange - Placement.esp'
+    inc: [ 'FCOM_Convergence.esm' ]
+  - name: 'Item interchange - Placement for FCOM.esp'
+    req: [ 'FCOM_Convergence.esm' ]
+  - name: 'Item interchange - Placement for Frostcrag( Reborn| Spire Revisited)?\.esp'
+    req:
+      - 'Item interchange - Extraction.esp'
+      - name: 'Item interchange - Placement.esp'
+        condition: 'not file("Item interchange - Placement for FCOM.esp") and not file("FCOM_Convergence.esm")'
+      - name: 'Item interchange - Placement for FCOM.esp'
+        condition: 'file("FCOM_Convergence.esm")'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Item interchange Placement for Frostcrag' ]
+        condition: 'many("Item interchange - Placement for Frostcrag( Reborn| Spire Revisited)?\.esp")'
+  - name: 'Item interchange - Option, Ingredients in Bulk(, reduced)?\.esp'
+    after:
+      - 'Item interchange - Placement.esp'
+      - 'Item interchange - Placement for FCOM.esp'
+      - 'Item interchange - Placement for Frostcrag.esp'
+      - 'Item interchange - Placement for Frostcrag Reborn.esp'
+      - 'Item interchange - Placement for Frostcrag Spire Revisited.esp'
+    req: [ 'Item interchange - Extraction.esp' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Item interchange Ingredients in Bulk' ]
+        condition: 'many("Item interchange - Option, Ingredients in Bulk(, reduced)?\.esp")'
+
   - name: 'Qarls_Harvest.esm'
     url: [ 'https://www.nexusmods.com/oblivion/mods/8113' ]
     tag: [ Scripts ]
@@ -16006,68 +16051,17 @@ plugins:
       - Deactivate
       - Filter
       - NoMerge
-  - name: 'Item interchange - Extraction.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/17557' ]
-    group: *latePatchesGroup
-    msg: [ *requiresBashedPatch ]
-    tag:
-      - Deactivate
-      - Filter
   - name: 'Capes4NPCs - Extraction.esp'
     group: *latePatchesGroup
     tag:
       - Deactivate
       - Filter
-  - name: 'Item interchange - Placement.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/17557' ]
-    msg:
-      - type: error
-        content: 'Delete. Use II''s ''Item Interchange - Placement for FCOM.esp'' instead.'
-        condition: *FCOMCond
-      - *requiresBashedPatch
   - name: 'Capes4NPCs - Placement.esp'
     group: *latePatchesGroup
     tag:
       - Filter
       - IIM
       - Invent
-  - name: 'Item interchange - Placement for FCOM.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/17557' ]
-    group: *latePatchesGroup
-    msg:
-      - *requiresBashedPatch
-      - type: say
-        content: 'This is the FCOM version; use ''Item interchange - Placement.esp'' instead.'
-        condition: 'not file("FCOM_Convergence.esm")'
-    tag:
-      - Deactivate
-      - Delev
-      - Filter
-      - IIM
-      - Invent
-      - Relev
-  - name: 'Item interchange - Placement for Frostcrag.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/17557' ]
-    group: *latePatchesGroup
-    msg: [ *requiresBashedPatch ]
-    tag:
-      - Deactivate
-      - Filter
-      - IIM
-      - Invent
-  - name: 'Item interchange - Placement for Frostcrag Reborn.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/17557' ]
-    msg: [ *requiresBashedPatch ]
-  - name: 'Item interchange - Placement for Frostcrag Spire Revisited.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/17557' ]
-    msg: [ *requiresBashedPatch ]
-  - name: 'Item interchange - Option, Ingredients in Bulk(, reduced)?\.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/17557' ]
-    msg:
-      - <<: *useOnlyOneX
-        subs: [ 'Ingredients in Bulk' ]
-        condition: 'many("Item interchange - Option, Ingredients in Bulk(, reduced)?\.esp")'
-      - *requiresBashedPatch
   - name: 'Alternate Script Effect Icon.esp'
     tag: [ Graphics ]
   - name: 'Different Script Effect Icon - Darkness.esp'
