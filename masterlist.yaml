@@ -1551,6 +1551,7 @@ plugins:
       - Filter
   - name: 'Item interchange - Placement.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17557' ]
+    req: [ 'Item interchange - Extraction.esp' ]
     msg:
       - type: error
         content: 'Delete. Use II''s ''Item Interchange - Placement for FCOM.esp'' instead.'
@@ -1559,6 +1560,7 @@ plugins:
   - name: 'Item interchange - Placement for FCOM.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17557' ]
     group: *latePatchesGroup
+    req: [ 'Item interchange - Extraction.esp' ]
     msg:
       - *requiresBashedPatch
       - type: say
@@ -1574,6 +1576,7 @@ plugins:
   - name: 'Item interchange - Placement for Frostcrag.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17557' ]
     group: *latePatchesGroup
+    req: [ 'Item interchange - Extraction.esp' ]
     msg: [ *requiresBashedPatch ]
     tag:
       - Deactivate
@@ -1582,12 +1585,15 @@ plugins:
       - Invent
   - name: 'Item interchange - Placement for Frostcrag Reborn.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17557' ]
+    req: [ 'Item interchange - Extraction.esp' ]
     msg: [ *requiresBashedPatch ]
   - name: 'Item interchange - Placement for Frostcrag Spire Revisited.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17557' ]
+    req: [ 'Item interchange - Extraction.esp' ]
     msg: [ *requiresBashedPatch ]
   - name: 'Item interchange - Option, Ingredients in Bulk(, reduced)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17557' ]
+    req: [ 'Item interchange - Extraction.esp' ]
     msg:
       - <<: *useOnlyOneX
         subs: [ 'Ingredients in Bulk' ]
