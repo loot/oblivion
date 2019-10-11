@@ -900,7 +900,6 @@ plugins:
       - 'SwampyCaveFix.esp'
       - 'UnRacefix.esp'
       - 'Ultimate_Heist_Fix-4880.esp'
-  - name: 'Unofficial Oblivion Patch( DV|-mobs)?\.esp'
     tag:
       - Actors.ACBS
       - Actors.AIData
@@ -957,11 +956,6 @@ plugins:
     inc:
       - 'FormIDReferenceBugFix.esp'
       - 'FormID_Reference_Bug_Fix.esp'
-    clean:
-      # version: 1.5.9
-      - crc: 0x19ADA30F
-        util: 'TES4Edit v4.0.2'
-  - name: 'Unofficial Shivering Isles Patch( DV|-mobs)?\.esp'
     tag:
       - Actors.ACBS
       - Actors.AIData
@@ -980,6 +974,10 @@ plugins:
       - Relev
       - Scripts
       - Stats
+    clean:
+      # version: 1.5.9
+      - crc: 0x19ADA30F
+        util: 'TES4Edit v4.0.2'
   - name: 'USIPS Additional Changes.esp'
     group: *unofficialPatchesGroup
     tag:
