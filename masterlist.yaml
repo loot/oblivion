@@ -1549,6 +1549,11 @@ plugins:
     tag:
       - Deactivate
       - Filter
+  - name: 'Item interchange - Placement( for FCOM)?\.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'II Placement or II Placement for FCOM' ]
+        condition: 'many("Item interchange - Placement( for FCOM)?\.esp")'
   - name: 'Item interchange - Placement.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17557' ]
     req: [ 'Item interchange - Extraction.esp' ]
