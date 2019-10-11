@@ -1559,7 +1559,7 @@ plugins:
     req: [ 'Item interchange - Extraction.esp' ]
     msg:
       - <<: *useOnlyOneX
-        subs: [ 'II Placement or II Placement for FCOM' ]
+        subs: [ 'Item interchange Placement or Item interchange Placement for FCOM' ]
         condition: 'many("Item interchange - Placement( for FCOM)?\.esp")'
   - name: 'Item interchange - Placement.esp'
     inc: [ 'FCOM_Convergence.esm' ]
@@ -1574,7 +1574,7 @@ plugins:
         condition: 'file("FCOM_Convergence.esm")'
     msg:
       - <<: *useOnlyOneX
-        subs: [ 'II Placement for Frostcrag' ]
+        subs: [ 'Item interchange Placement for Frostcrag' ]
         condition: 'many("Item interchange - Placement for Frostcrag( Reborn| Spire Revisited)?\.esp")'
   - name: 'Item interchange - Option, Ingredients in Bulk(, reduced)?\.esp'
     after:
@@ -1586,7 +1586,7 @@ plugins:
     req: [ 'Item interchange - Extraction.esp' ]
     msg:
       - <<: *useOnlyOneX
-        subs: [ 'Ingredients in Bulk' ]
+        subs: [ 'Item interchange Ingredients in Bulk' ]
         condition: 'many("Item interchange - Option, Ingredients in Bulk(, reduced)?\.esp")'
 
   - name: 'Qarls_Harvest.esm'
