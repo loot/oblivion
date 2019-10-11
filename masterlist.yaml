@@ -1423,6 +1423,7 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/21104' ]
   - name: 'Cobl Main.esm'
     inc:
+      - 'Duke Patricks Basic Denock Arrows.esp'
       - 'Tamrielic Ingredients.esm'
     msg:
       - <<: *patchIncluded
@@ -13711,48 +13712,6 @@ plugins:
       - <<: *useOnlyOneX
         subs: [ 'PersonalPackGuars colour' ]
         condition: 'many("PersonalPackGuars (White|Black|Striped)\.esp")'
-  - name: 'Duke Patricks Sickness Alarm.esp'
-    tag:
-      - Sound
-  - name: 'Duke Patricks Street Performer.esp'
-    msg: [ *obsolete ]
-  - name: 'Duke Patricks Dont Be A Soch.esp'
-    msg: [ *obsolete ]
-  - name: 'Duke Patrick''s Health Alarm.esp'
-    msg:
-      - type: say
-        content: 'Only use one ''Health Alarm'' mod. Choose.'
-        condition: 'file("Duke Patrick''?s Health Alar(m RED DEATH with heartbeat NO human yells|m with Fadeout|m with RED DEATH|m RED DEATH with heartbeat|m RED DEATH and Heartbeat|m RED DEATH NO Heartbeat)\.esp")'
-    tag:
-      - Sound
-  - name: 'Duke Patrick''s Health Alarm RED DEATH with heartbeat NO human yells.esp'
-    msg:
-      - type: say
-        content: 'Only use one ''Health Alarm'' mod. Choose.'
-        condition: 'file("Duke Patrick''?s Health Alar(m|m with Fadeout|m with RED DEATH|m RED DEATH with heartbeat|m RED DEATH and Heartbeat|m RED DEATH NO Heartbeat)\.esp")'
-    tag:
-      - Sound
-  - name: 'Duke Patrick''s Health Alarm with Fadeout.esp'
-    msg:
-      - type: say
-        content: 'Only use one ''Health Alarm'' mod. Choose.'
-        condition: 'file("Duke Patrick''?s Health Alar(m|m RED DEATH with heartbeat NO human yells|m with RED DEATH|m RED DEATH with heartbeat|m RED DEATH and Heartbeat|m RED DEATH NO Heartbeat)\.esp")'
-    tag:
-      - Sound
-  - name: 'Duke Patrick''s Health Alarm with RED DEATH.esp'
-    msg:
-      - type: say
-        content: 'Only use one ''Health Alarm'' mod. Choose.'
-        condition: 'file("Duke Patrick''?s Health Alar(m|m RED DEATH with heartbeat NO human yells|m with Fadeout|m RED DEATH with heartbeat|m RED DEATH and Heartbeat|m RED DEATH NO Heartbeat)\.esp")'
-    tag:
-      - Sound
-  - name: 'Duke Patricks - Health Alarm RED DEATH with heartbeat.esp'
-    msg:
-      - type: say
-        content: 'Only use one ''Health Alarm'' mod. Choose.'
-        condition: 'file("Duke Patrick''?s Health Alar(m|m RED DEATH with heartbeat NO human yells|m with Fadeout|m with RED DEATH|m RED DEATH and Heartbeat|m RED DEATH NO Heartbeat)\.esp")'
-    tag:
-      - Sound
   - name: 'Duke Patrick''s Health Alarm RED DEATH and Heartbeat.esp'
     url: [ 'http://tesalliance.org/forums/index.php?/files/file/1014-duke-patricks-health-alarm-and-red-death-screen/' ]
     msg:
@@ -13769,8 +13728,6 @@ plugins:
         condition: 'file("Duke Patrick''?s Health Alar(m|m RED DEATH with heartbeat NO human yells|m with Fadeout|m with RED DEATH|m RED DEATH with heartbeat|m RED DEATH and Heartbeat)\.esp")'
     tag:
       - Sound
-  - name: 'Duke Patricks The Lady said NO.esp'
-    msg: [ *obsolete ]
   - name: 'SPD-SailableRivers.esp'
     msg:
       - type: say
@@ -15584,8 +15541,6 @@ plugins:
     msg:
       - type: say
         content: 'Old, update to ''Tyler''s Hungry, Thirsty, Sleepy, Tired.esp''.'
-  - name: 'Duke Patricks Running Backwards RISK.esp'
-    msg: [ *obsolete ]
   - name: 'Natural Hunger v2_0 by QF.esp'
     msg: [ *obsolete ]
   - name: 'pmQFNaturalHunger.esp'
@@ -15595,8 +15550,6 @@ plugins:
     msg: [ *obsolete ]
   - name: 'ReneerKeyLockMod.esp'
     req: [ *OBSE ]
-  - name: 'Duke Patricks Hydration and Water Harvesting.esp'
-    msg: [ *obsolete ]
   - name: 'MHE v(2|2 Tail|2 - UFF&Robert Tail|2 - UFF&Robert|2 - Exnem&Robert Tail|2 - Exnem&Robert)\.esp'
     msg:
       - <<: *useOnlyOneX
@@ -15660,10 +15613,6 @@ plugins:
   - name: 'BloodIsEverything.esp'
     tag:
       - Relations
-  - name: 'Duke Patricks Nosferatu Vampires.esp'
-    msg: [ *obsolete ]
-    tag:
-      - Sound
   - name: 'Duke Patricks - Nosferatu Class Vampires.esp'
     url: [ 'http://tesalliance.org/forums/index.php?/files/file/668-duke-patricks-nosferatu-class-vampires/' ]
     tag:
@@ -16122,9 +16071,6 @@ plugins:
         condition: 'file("West Roads.esp")'
   - name: 'Enhanced Grabbing - Debug.esp'
     msg: [ *obsolete ]
-  - name: 'Duke Patrick''s Lockpick challange Autopick.esp'
-    inc:
-      - 'Duke Patrick''s Lockpick challange Manual.esp'
   - name: 'Adrenaline-Fuelled Combat.esp'
     msg: [ *obsolete ]
   - name: 'Adrenaline Fuelled Archery- Bow Sway.esp'
@@ -16144,9 +16090,6 @@ plugins:
     url: [ 'http://tesalliance.org/forums/index.php?/files/file/514-duke-patricks-combat-archery/' ]
     inc:
       - 'MOBS Optional Combat Settings.esp'
-  - name: 'Duke Patricks Basic Denock Arrows.esp'
-    inc:
-      - name: 'Cobl Main.esm' # COBL includes a denock arrow feature
   - name: 'Bow_Damage_Equalizer.esp'
     tag:
       - Stats
@@ -16259,32 +16202,8 @@ plugins:
     msg:
       - type: say
         content: 'Make sure to set calculateFromVanilla in the included ini file to 0 when used alongside other combat mods.'
-  - name: 'Duke Patricks Near Miss Arrow Shot Alerts The Target.esp'
-    msg: [ *obsolete ]
-  - name: 'Duke Patricks - Near Miss Arrow Shot Alerts The Target.esp'
-    msg: [ *obsolete ]
-  - name: 'Duke Patricks - arrow shots alarm the targets.esp'
-    msg: [ *obsolete ]
-  - name: 'Duke Patricks - Near Miss Magic And Arrow Shots Alert The Target.esp'
-    msg: [ *obsolete ]
-  - name: 'Duke Patricks - Stat Based Bob And Weave.esp'
-    msg: [ *obsolete ]
-  - name: 'Duke Patricks Bob and Weave Dodge GOLD Edition.esp'
-    msg: [ *obsolete ]
-  - name: 'Duke Patricks - Bob and Weave Dodge Mark II.esp'
-    msg: [ *obsolete ]
   - name: 'Double-tap dodge.esp'
     req: [ *OBSEv19 ]
-  - name: 'Duke Patricks - NPCs Now Bob Under Your Shots.esp'
-    msg: [ *obsolete ]
-  - name: 'Duke Patrick''s NPCs Now Bob Under Your Shots.esp'
-    msg: [ *obsolete ]
-  - name: 'Duke Patrick''s Vampires Bob Under Your Shots.esp'
-    msg: [ *obsolete ]
-  - name: 'Duke Patricks NPC Arrow Shots Can Miss Now.esp'
-    msg: [ *obsolete ]
-  - name: 'Duke Patricks - NPC MAGIC and Arrows Can Miss Now.esp'
-    msg: [ *obsolete ]
   - name: 'Duke Patricks - Actors Can Miss Now.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17706' ]
     msg:
@@ -16296,18 +16215,6 @@ plugins:
       - crc: 0xfb7500c0
         <<: *dirtyPlugin
         itm: 3
-  - name: 'Duke Patrick''s Zombie Flied 4p1.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Remove this and install Duke Patrick''s Combat Geometry.'
-  - name: 'Duke Patricks Contagious Zombies.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Remove this and install Duke Patrick''s Combat Geometry.'
-  - name: 'Duke Patrick''s Smash of the Titans.esp'
-    msg: [ *obsolete ]
-  - name: 'Duke Patrick`s Smash of the Titans.esp'
-    msg: [ *obsolete ]
   - name: 'MM_AllowAlchemy.esp'
     msg: [ *bashedPatchTweak ]
   - name: 'Phitt''s Phighting Phixes.esp'
@@ -20524,16 +20431,6 @@ plugins:
     tag:
       - Graphics
       - NoMerge
-  - name: 'Duke Patrick''s magic you can believe in 4p5.esp'
-    msg: [ *obsolete ]
-    tag:
-      - Graphics
-      - Sound
-  - name: 'Duke Patrick''s magic you can believe in 5.esp'
-    msg: [ *obsolete ]
-    tag:
-      - Graphics
-      - Sound
   - name: 'Duke Patricks - Magic you can believe in.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/30635' ]
     tag:
@@ -20776,15 +20673,6 @@ plugins:
   - name: 'Duke Patricks Script Effect Silencer.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/23541' ]
     msg: [ *obsolete ]
-  - name: 'Duke Patricks Script Effect Silencer Rev 2.esp'
-    msg: [ *obsolete ]
-  - name: 'Duke Patricks Script Effect Silencer Silver Edition.esp'
-    msg: [ *obsolete ]
-  - name: 'Duke Patricks Script Effect Silencer Gold Edition.esp'
-    msg: [ *obsolete ]
-  - name: 'Duke Patricks - BASIC Script Effect Silencer BETA.esp'
-    msg: [ *obsolete ]
-
   - name: 'UVIII.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/40310' ]
     clean:
@@ -21147,38 +21035,6 @@ plugins:
       - crc: 0x10547198
         <<: *dirtyPlugin
         udr: 27
-# Mods that are not available for download. They have been sorted according to Duke Patrick's load order guidelines, where given.
-  - name: 'Duke Patrick ShiveringIsles patch 1.1.esp'
-    msg: [ *obsolete ]
-  - name: 'Duke Patrick''s more & better loot.esp'
-    msg: [ *obsolete ]
-  - name: 'Duke Patricks - Custom Melee Weapons Made Compatible.esp'
-    msg: [ *obsolete ]
-  - name: 'Duke Patrick''s So you think you are a war god 1.2.esp'
-    msg: [ *obsolete ]
-  - name: 'Duke Patricks So you think you are a war god MARK II.esp'
-    msg: [ *obsolete ]
-  - name: 'Duke Patricks (- )?Momentum (Lite |Super )?Damage (Bonus| And Jump Risk)( Light)?\.esp'
-    msg:
-      - <<: *useOnlyOneX
-        subs: [ 'Duke Patricks Momentum Damage' ]
-        condition: 'many("Duke Patricks (- )?Momentum (Lite |Super )?Damage (Bonus| And Jump Risk)( Light)?\.esp")'
-  - name: 'Duke Patricks - Shield Charge.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Replaced by SCA Shield Tricks.'
-  - name: 'Duke Patricks SCA Melee combat with NO RECOIL.esp'
-    msg: [ *obsolete ]
-  - name: 'Duke Patrick''s SCA style combat NO RECOIL Rev 6.esp'
-    msg: [ *obsolete ]
-  - name: 'Duke Patricks SCA Combat Archery.esp'
-    msg: [ *obsolete ]
-  - name: 'Duke Patricks - SCA Combat Archery.esp'
-    msg: [ *obsolete ]
-  - name: 'Duke_Patricks SCA_Combat_Archery_Patch_for_MMM.esp'
-    msg: [ *obsolete ]
-  - name: 'Duke Patrick''s SCA Combat Archery patch for (CnC|LAME|MMM|OOO v2|RBP( No SI)?|xulLostCoast)\.esp'
-    msg: [ *obsolete ]
   - name: 'KRLODToggleRestored.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/37701' ]
     msg:
@@ -21210,8 +21066,6 @@ plugins:
         condition: *nehrimCond
   - name: 'BookTrackerOBSE.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/18434' ]
-    msg: [ *masterReassign ]
-  - name: 'Duke Patricks - Who Goes There.esp'
     msg: [ *masterReassign ]
   - name: 'Immersive Combat Music.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/23545' ]
