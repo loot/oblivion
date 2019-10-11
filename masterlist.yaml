@@ -2359,12 +2359,6 @@ plugins:
         itm: 8
         udr: 233
 
-  - name: 'Oblivion Vwalk.esp'
-    group: *underridesGroup
-  - name: 'Oblivion_SI Vwalk Full.esp'
-    msg: [ *updateSensualWalks ]
-    group: *underridesGroup
-
   - name: 'Underdark v1.1 Delayer.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/25946/' ]
     msg: [ *obsolete ]
@@ -2497,8 +2491,6 @@ plugins:
       - NoMerge
       - NpcFaces
     group: *underridesGroup
-  - name: 'Beautiful Women Vwalk Full.esp'
-    msg: [ *updateSensualWalks ]
 
   - name: 'Beautiful_Women_Revised(_SI|_NotSoNice|_DB)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/24003' ]
@@ -2793,22 +2785,6 @@ plugins:
         subs: [ 'VileLair_MOBS.esp' ]
         condition: 'file("VileLair_MOBS.esp")'
 
-  - name: 'Oblivion Vwalk UOS.esp'
-    tag: [ NpcFaces ]
-  - name: 'Oblivion_SI Vwalk Full( TNR)? UOS\.esp'
-    msg: [ *updateSensualWalks ]
-    tag: [ NpcFaces ]
-  - name: 'DLCShiveringIsles Vwalk( DG_DS)? UOS\.esp'
-    tag: [ NpcFaces ]
-  - name: 'TNR ALL RACES FINAL Vwalk UOS.esp'
-    tag: [ NpcFaces ]
-  - name: 'TNR - ShiveringIsles no helms Vwalk UOS.esp'
-    tag: [ NpcFaces ]
-  - name: 'Beautiful_Women_(DB_Addon|NiceOnly|NotSoNice_Bonus|SI|Vampires(_50)?) Vwalk UOS\.esp'
-    tag: [ NpcFaces ]
-  - name: 'Beautiful Women Vwalk Full UOS.esp'
-    msg: [ *updateSensualWalks ]
-    tag: [ NpcFaces ]
   - name: 'Better Cities .esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/16513' ]
     msg: [ *dummyFileLoader ]
@@ -11307,16 +11283,8 @@ plugins:
         <<: *dirtyPlugin
         itm: 50
         udr: 3
-  - name: 'Sylar_INNMergedCyrodillInnsRevised vwalk.esp'
-    msg:
-      - type: say
-        content: 'Redundant - Use the latest version of Inns Revised in Cyrodiil, which is Sensual Walks Ready, and update to the latest version of Sensual Walks.'
   - name: 'Sylar_INNMergedCyrodillInnsRevisedV1.1.esp'
     msg: [ *obsolete ]
-  - name: 'Sylar_INNMergedCyrodillInnsRevisedV1.1 vwalk.esp'
-    msg:
-      - type: say
-        content: 'Outdated - Update to latest version of Inns Revised in Cyrodiil and Sensual Walks.'
   - name: 'BetterInns + NewHomeOwners.esp'
     tag:
       - Actors.AIPackages
@@ -13228,10 +13196,6 @@ plugins:
     msg:
       - type: say
         content: 'Obsolete. Update Faregyl Village to 1.0.10 and use Faregyl+Anequina Patch.esp with it. Then remove this plugin.'
-  - name: 'Cyrodiil Travel-Vergayun-Faregyl Vwalk.esp'
-    msg: [ *updateSensualWalks ]
-  - name: 'Cyrodiil Travel-Feldscar-Vergayun-Faregyl Vwalk.esp'
-    msg: [ *updateSensualWalks ]
   - name: 'HackdirtAlive.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/42948' ]
     dirty:
@@ -13888,8 +13852,6 @@ plugins:
     msg: [ *obsolete ]
   - name: 'LtPD+NRB4+UL-II Patch.esp'
     msg: [ *obsolete ]
-  - name: 'xul Vwalk Full.esp'
-    msg: [ *updateSensualWalks ]
   - name: 'OblivionCollectibleCards-UniqueLandscapes Merged patch.esp'
     msg:
       - type: say
