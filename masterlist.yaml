@@ -1576,7 +1576,12 @@ plugins:
   - name: 'Item interchange - Placement for Frostcrag.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17557' ]
     group: *latePatchesGroup
-    req: [ 'Item interchange - Extraction.esp' ]
+    req:
+      - 'Item interchange - Extraction.esp'
+      - name: 'Item interchange - Placement.esp'
+        condition: 'not file("Item interchange - Placement for FCOM.esp") and not file("FCOM_Convergence.esm")'
+      - name: 'Item interchange - Placement for FCOM.esp'
+        condition: 'file("FCOM_Convergence.esm")'
     msg: [ *requiresBashedPatch ]
     tag:
       - Deactivate
@@ -1585,11 +1590,21 @@ plugins:
       - Invent
   - name: 'Item interchange - Placement for Frostcrag Reborn.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17557' ]
-    req: [ 'Item interchange - Extraction.esp' ]
+    req:
+      - 'Item interchange - Extraction.esp'
+      - name: 'Item interchange - Placement.esp'
+        condition: 'not file("Item interchange - Placement for FCOM.esp") and not file("FCOM_Convergence.esm")'
+      - name: 'Item interchange - Placement for FCOM.esp'
+        condition: 'file("FCOM_Convergence.esm")'
     msg: [ *requiresBashedPatch ]
   - name: 'Item interchange - Placement for Frostcrag Spire Revisited.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17557' ]
-    req: [ 'Item interchange - Extraction.esp' ]
+    req:
+      - 'Item interchange - Extraction.esp'
+      - name: 'Item interchange - Placement.esp'
+        condition: 'not file("Item interchange - Placement for FCOM.esp") and not file("FCOM_Convergence.esm")'
+      - name: 'Item interchange - Placement for FCOM.esp'
+        condition: 'file("FCOM_Convergence.esm")'
     msg: [ *requiresBashedPatch ]
   - name: 'Item interchange - Option, Ingredients in Bulk(, reduced)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17557' ]
