@@ -1542,8 +1542,11 @@ plugins:
         util: 'TES4Edit v4.0.2'
 
 ### Item interchange ###
-  - name: 'Item interchange - Extraction.esp'
+  - name: 'Item interchange - .*\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17557' ]
+    msg: [ *requiresBashedPatch ]
+    tag: [ Deactivate ]
+  - name: 'Item interchange - Extraction.esp'
     group: *latePatchesGroup
     inc:
       - 'Francesco''s Optional Files.esp'
@@ -1552,63 +1555,28 @@ plugins:
       - 'Francesco''s Optional Files 3.esp'
       - 'Francesco''s Optional Files 4.esp'
       - 'TamrielTravellersItemsCobl.esp'
-    msg: [ *requiresBashedPatch ]
-    tag: [ Deactivate ]
   - name: 'Item interchange - Placement( for FCOM)?\.esp'
+    req: [ 'Item interchange - Extraction.esp' ]
     msg:
       - <<: *useOnlyOneX
         subs: [ 'II Placement or II Placement for FCOM' ]
         condition: 'many("Item interchange - Placement( for FCOM)?\.esp")'
   - name: 'Item interchange - Placement.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/17557' ]
     inc: [ 'FCOM_Convergence.esm' ]
-    req: [ 'Item interchange - Extraction.esp' ]
-    msg: [ *requiresBashedPatch ]
-    tag: [ Deactivate ]
   - name: 'Item interchange - Placement for FCOM.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/17557' ]
+    req: [ 'FCOM_Convergence.esm' ]
+  - name: 'Item interchange - Placement for Frostcrag( Reborn| Spire Revisited)?\.esp'
     req:
       - 'Item interchange - Extraction.esp'
-      - 'FCOM_Convergence.esm'
-    msg: [ *requiresBashedPatch ]
-    tag: [ Deactivate ]
-  - name: 'Item interchange - Placement for Frostcrag( Reborn| Spire Revisited)?\.esp'
+      - name: 'Item interchange - Placement.esp'
+        condition: 'not file("Item interchange - Placement for FCOM.esp") and not file("FCOM_Convergence.esm")'
+      - name: 'Item interchange - Placement for FCOM.esp'
+        condition: 'file("FCOM_Convergence.esm")'
     msg:
       - <<: *useOnlyOneX
         subs: [ 'II Placement for Frostcrag' ]
         condition: 'many("Item interchange - Placement for Frostcrag( Reborn| Spire Revisited)?\.esp")'
-  - name: 'Item interchange - Placement for Frostcrag.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/17557' ]
-    req:
-      - 'Item interchange - Extraction.esp'
-      - name: 'Item interchange - Placement.esp'
-        condition: 'not file("Item interchange - Placement for FCOM.esp") and not file("FCOM_Convergence.esm")'
-      - name: 'Item interchange - Placement for FCOM.esp'
-        condition: 'file("FCOM_Convergence.esm")'
-    msg: [ *requiresBashedPatch ]
-    tag: [ Deactivate ]
-  - name: 'Item interchange - Placement for Frostcrag Reborn.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/17557' ]
-    req:
-      - 'Item interchange - Extraction.esp'
-      - name: 'Item interchange - Placement.esp'
-        condition: 'not file("Item interchange - Placement for FCOM.esp") and not file("FCOM_Convergence.esm")'
-      - name: 'Item interchange - Placement for FCOM.esp'
-        condition: 'file("FCOM_Convergence.esm")'
-    msg: [ *requiresBashedPatch ]
-    tag: [ Deactivate ]
-  - name: 'Item interchange - Placement for Frostcrag Spire Revisited.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/17557' ]
-    req:
-      - 'Item interchange - Extraction.esp'
-      - name: 'Item interchange - Placement.esp'
-        condition: 'not file("Item interchange - Placement for FCOM.esp") and not file("FCOM_Convergence.esm")'
-      - name: 'Item interchange - Placement for FCOM.esp'
-        condition: 'file("FCOM_Convergence.esm")'
-    msg: [ *requiresBashedPatch ]
-    tag: [ Deactivate ]
   - name: 'Item interchange - Option, Ingredients in Bulk(, reduced)?\.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/17557' ]
     after:
       - 'Item interchange - Placement.esp'
       - 'Item interchange - Placement for FCOM.esp'
@@ -1620,8 +1588,6 @@ plugins:
       - <<: *useOnlyOneX
         subs: [ 'Ingredients in Bulk' ]
         condition: 'many("Item interchange - Option, Ingredients in Bulk(, reduced)?\.esp")'
-      - *requiresBashedPatch
-    tag: [ Deactivate ]
 
   - name: 'Qarls_Harvest.esm'
     url: [ 'https://www.nexusmods.com/oblivion/mods/8113' ]
