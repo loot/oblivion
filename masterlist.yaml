@@ -1553,9 +1553,7 @@ plugins:
       - 'Francesco''s Optional Files 4.esp'
       - 'TamrielTravellersItemsCobl.esp'
     msg: [ *requiresBashedPatch ]
-    tag:
-      - Deactivate
-      - Filter
+    tag: [ Deactivate ]
   - name: 'Item interchange - Placement( for FCOM)?\.esp'
     msg:
       - <<: *useOnlyOneX
@@ -1566,6 +1564,7 @@ plugins:
     inc: [ 'FCOM_Convergence.esm' ]
     req: [ 'Item interchange - Extraction.esp' ]
     msg: [ *requiresBashedPatch ]
+    tag: [ Deactivate ]
   - name: 'Item interchange - Placement for FCOM.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17557' ]
     group: *latePatchesGroup
@@ -1573,13 +1572,7 @@ plugins:
       - 'Item interchange - Extraction.esp'
       - 'FCOM_Convergence.esm'
     msg: [ *requiresBashedPatch ]
-    tag:
-      - Deactivate
-      - Delev
-      - Filter
-      - IIM
-      - Invent
-      - Relev
+    tag: [ Deactivate ]
   - name: 'Item interchange - Placement for Frostcrag( Reborn| Spire Revisited)?\.esp'
     msg:
       - <<: *useOnlyOneX
@@ -1595,11 +1588,7 @@ plugins:
       - name: 'Item interchange - Placement for FCOM.esp'
         condition: 'file("FCOM_Convergence.esm")'
     msg: [ *requiresBashedPatch ]
-    tag:
-      - Deactivate
-      - Filter
-      - IIM
-      - Invent
+    tag: [ Deactivate ]
   - name: 'Item interchange - Placement for Frostcrag Reborn.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17557' ]
     req:
@@ -1609,6 +1598,7 @@ plugins:
       - name: 'Item interchange - Placement for FCOM.esp'
         condition: 'file("FCOM_Convergence.esm")'
     msg: [ *requiresBashedPatch ]
+    tag: [ Deactivate ]
   - name: 'Item interchange - Placement for Frostcrag Spire Revisited.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17557' ]
     req:
@@ -1618,6 +1608,7 @@ plugins:
       - name: 'Item interchange - Placement for FCOM.esp'
         condition: 'file("FCOM_Convergence.esm")'
     msg: [ *requiresBashedPatch ]
+    tag: [ Deactivate ]
   - name: 'Item interchange - Option, Ingredients in Bulk(, reduced)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17557' ]
     after:
@@ -1632,6 +1623,7 @@ plugins:
         subs: [ 'Ingredients in Bulk' ]
         condition: 'many("Item interchange - Option, Ingredients in Bulk(, reduced)?\.esp")'
       - *requiresBashedPatch
+    tag: [ Deactivate ]
 
   - name: 'Qarls_Harvest.esm'
     url: [ 'https://www.nexusmods.com/oblivion/mods/8113' ]
