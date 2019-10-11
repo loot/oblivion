@@ -1559,22 +1559,14 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/17557' ]
     inc: [ 'FCOM_Convergence.esm' ]
     req: [ 'Item interchange - Extraction.esp' ]
-    msg:
-      - type: error
-        content: 'Delete. Use II''s ''Item Interchange - Placement for FCOM.esp'' instead.'
-        condition: *FCOMCond
-      - *requiresBashedPatch
+    msg: [ *requiresBashedPatch ]
   - name: 'Item interchange - Placement for FCOM.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17557' ]
     group: *latePatchesGroup
     req:
       - 'Item interchange - Extraction.esp'
       - 'FCOM_Convergence.esm'
-    msg:
-      - *requiresBashedPatch
-      - type: say
-        content: 'This is the FCOM version; use ''Item interchange - Placement.esp'' instead.'
-        condition: 'not file("FCOM_Convergence.esm")'
+    msg: [ *requiresBashedPatch ]
     tag:
       - Deactivate
       - Delev
