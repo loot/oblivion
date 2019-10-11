@@ -1566,7 +1566,9 @@ plugins:
   - name: 'Item interchange - Placement for FCOM.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17557' ]
     group: *latePatchesGroup
-    req: [ 'Item interchange - Extraction.esp' ]
+    req:
+      - 'Item interchange - Extraction.esp'
+      - 'FCOM_Convergence.esm'
     msg:
       - *requiresBashedPatch
       - type: say
