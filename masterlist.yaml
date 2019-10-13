@@ -15855,63 +15855,10 @@ plugins:
       - type: say
         content: 'Requires: "AddActorValues.dll"'
         condition: '( version("Sneaking Detection Recalibrated.esp","4.0",==) ) and not file("AddActorValues.dll")'
-  - name: 'SDR Compatibility Patches.esp'
-    msg:
-      - type: say
-        content: 'Deprecated. Do not use with v4.0+ of Sneaking Detection Recalibrated.'
-        condition: 'version("Sneaking Detection Recalibrated.esp","4.0",>=)'
-  - name: 'SDR_Core.esp'
-    inc:
-      - name: 'SDR_NPC Behavior.esp'
-        condition: 'version("SDR_Core.esp","4.5.0",>=)'
-    req:
-      - 'OBSE/Plugins/SDR_obse.dll'
-      - 'OBSE/Plugins/AddActorValues.dll'
-      - '../obse_1_2_416.dll'
-  - name: 'SDR_NPC Behavior.esp'
-    inc:
-      - name: 'SM Combat Hide.esp'
-        display: 'SM Combat Hide'
-  - name: 'SDR_ThievesArsenal_Patch.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Upgrade to SDR version 8.2'
-  - name: 'SDR_Detect Life Shader Patch (Oblivion).esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Upgrade to SDR version 8.2'
-  - name: 'SDR_Detect Life Shader Patch (Nehrim).esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Upgrade to SDR version 8.2'
   - name: 'Oblivion XP - Journal Mod Patch.esp'
     msg:
       - type: say
         content: 'Edits "ObXPMiscScript" from version 4.1.5. Important: use this patch with that version only!'
-  - name: 'SDR Perks And Patches - Nehrim.esp'
-    after:
-      - 'Oblivion XP.esp'
-    msg:
-      - type: error
-        content: 'Use the Oblivion version.'
-      - type: say
-        content: 'Obsolete. Upgrade to SDR version 8.2'
-  - name: 'SDR_Perks And Patches (Nehrim).esp'
-    after:
-      - 'Oblivion XP.esp'
-    msg:
-      - type: error
-        content: 'Use the Oblivion version.'
-      - type: say
-        content: 'Obsolete. Upgrade to SDR version 8.2'
-  - name: 'SDR_Trip Wire Pressure Plate Patch [Oblivion].esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Upgrade to SDR version 8.2'
-  - name: 'SDR_Trip Wire Pressure Plate Patch [Nehrim].esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Upgrade to SDR version 8.2'
   - name: 'DMRequirements.esp'
     msg: [ *obsolete ]
   - name: 'Toaster''s Legendary Skills.esp'
@@ -19983,14 +19930,6 @@ plugins:
       - crc: 0x3f990ded
         <<: *dirtyPlugin
         itm: 2
-  - name: 'SDR_Perks And Patches [Oblivion].esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Upgrade to SDR version 8.2'
-  - name: 'SDR_Detect Life Shader Patch [Oblivion].esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Upgrade to SDR version 8.2'
   - name: 'Shining Creatures(_Atronach(Flame|Frost)|_WillOWisp|_DLCFrostcrag)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/29735' ]
     tag: [ Invent ]
@@ -20388,10 +20327,6 @@ plugins:
       - Relations
       - Relev
       - Stats
-  - name: 'SDR Perks and Patches [Oblivion].esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Upgrade to SDR version 8.2'
   - name: 'TES4Merged.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/11536/' ]
     group: *dynamicPatchesGroup
@@ -20511,14 +20446,6 @@ plugins:
   - name: 'SM Combat Hide.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/20303/' ]
     msg: [ *masterReassign ]
-  - name: 'SDR Perks And Patches - Oblivion.esp'
-    msg: [ *useNehrimVer ]
-    after:
-      - 'Oblivion XP.esp'
-  - name: 'SDR_Perks And Patches (Oblivion).esp'
-    msg: [ *useNehrimVer ]
-    after:
-      - 'Oblivion XP.esp'
   - name: 'StealthOverhaul.esp'
     url:
       - 'https://www.nexusmods.com/oblivion/mods/6359/'
