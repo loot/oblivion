@@ -11337,14 +11337,6 @@ plugins:
       - <<: *alreadyInX
         subs: [ 'Better Cities Imperial City plugins' ]
         condition: 'active("Better Imperial City.esp") or active("Better Cities IC (Arboretum|Arcane University|Arena|Elven Gardens|Green Emperor Way|Market|Prison|Temple|Waterfront)\.esp")'
-  - name: 'Lynges Thieves Highway.esp'
-    msg:
-      - <<: *alreadyInX
-        subs: [ 'Better Cities Imperial City plugins' ]
-        condition: 'active("Better Imperial City.esp") or active("Better Cities IC (Arboretum|Arcane University|Arena|Elven Gardens|Green Emperor Way|Market|Prison|Temple|Waterfront)\.esp")'
-      - type: say
-        content: 'OOO detected. ''Use Lynges Thieves Highway - OOO.esp'' instead.'
-        condition: *OOOCond
   - name: 'Lynges Thieves Highway - OOO.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/25383' ]
     msg:
