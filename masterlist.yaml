@@ -2597,6 +2597,7 @@ plugins:
         subs: [ '(OBSE) Oblivion Script Extender' ]
         condition: 'file("../obse_1_2_416.dll") and version("../obse_1_2_416.dll","0.21.0.0", >=)'
   - name: 'USIPCutterFix.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/42196' ]
     msg:
       - type: error
         content: 'Outdated. Included in Unofficial Shivering Isles Patch 1.5.1+'
@@ -2657,6 +2658,7 @@ plugins:
   - name: 'FraNewItems.esp'
     msg: [ *dummyFileLoader ]
   - name: 'Fra.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/17621' ]
     msg: [ *dummyFileLoader ]
   - name: 'Francesco.esp'
     msg: [ *dummyFileLoader ]
@@ -2677,10 +2679,12 @@ plugins:
       - type: say
         content: 'Do not use with MMM/FCOM. Already integrated.'
   - name: 'FranDarkSeducerWeapFix.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/17621' ]
     tag:
       - Delev
       - Relev
   - name: 'Fran Armor Add-on.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/11483' ]
     req:
       - name: 'meshes/armor/Bonemold/bone.nif'
         display: 'Meshes from the "[Bonemold Helmet](http://www.nexusmods.com/oblivion/mods/6997)" and "Cryos Ordinator Indoril Armor" mods'
@@ -2846,6 +2850,7 @@ plugins:
   - name: 'Enhanced Water.*\.esp'
     tag: [ C.Water ]
   - name: 'Realistic Water.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/37794' ]
     dirty:
       - crc: 0xb049e8e
         <<: *dirtyPlugin
@@ -3227,6 +3232,7 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/32790' ]
     tag: [ Graphics ]
   - name: 'archrobe.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/16941' ]
     tag: [ Graphics ]
   - name: 'Ayleid Coin Add-on.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/10671' ]
@@ -3492,6 +3498,7 @@ plugins:
       - 'Oscuro''s_Oblivion_Overhaul.esm'
     msg: [ *alreadyInOOO ]
   - name: 'GW71_Soulgems.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/17499' ]
     tag: [ Graphics ]
   - name: 'HUDI.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/34713' ]
@@ -3508,15 +3515,18 @@ plugins:
       - 'Oscuro''s_Oblivion_Overhaul.esm'
     msg: [ *alreadyInOOO ]
   - name: 'Insanity''s Beverage Replacer.esp'
+    url: [ 'http://tesalliance.org/forums/index.php?/files/file/1026-insanitys-beverage-replacer/' ]
     tag:
       - Graphics
       - NoMerge
   - name: 'Inscription Profession.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/39962' ]
     dirty:
       - crc: 0xcc8dfd00
         <<: *dirtyPlugin
         itm: 1
   - name: 'Item Crafting v4.2.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/12044' ]
     tag: [ Invent ]
   - name: 'JPWikiMod.esp'
     msg:
@@ -3528,17 +3538,21 @@ plugins:
       - type: say
         content: 'Does not add anything to the game except some examples in the testing hall - deactivate and keep resources is most often the best thing to do.'
   - name: 'Katana Store.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/16424' ]
     msg:
       - type: say
         content: 'Requires patch to use with Kalikuts.'
   - name: 'LIPTemplate.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/13742' ]
     msg: [ *deleteModdingPlugin ]
   - name: 'LadyLis_dainties.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/17405' ]
     dirty:
       - crc: 0xb3ec8302
         <<: *dirtyPlugin
         itm: 21
   - name: 'LadyLiy_Leckerli.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/17405' ]
     dirty:
       - crc: 0xb3ca457
         <<: *dirtyPlugin
@@ -3549,15 +3563,18 @@ plugins:
         <<: *dirtyPlugin
         itm: 21
   - name: 'Lamps of Oblivion.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/7614' ]
     dirty:
       - crc: 0xef38faac
         <<: *dirtyPlugin
         itm: 18
   - name: 'Lock Bash v1.1.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/4076' ]
     inc:
       - 'Oscuro''s_Oblivion_Overhaul.esm'
     msg: [ *alreadyInOOO ]
   - name: 'Lock Bash v99.9.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/4999' ]
     inc:
       - 'Oscuro''s_Oblivion_Overhaul.esm'
     msg:
@@ -3568,21 +3585,25 @@ plugins:
       - 'Oscuro''s_Oblivion_Overhaul.esm'
     msg: [ *alreadyInOOO ]
   - name: 'Morag Tong Assassins v1-1.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/28496' ]
     dirty:
       - crc: 0xebabfce8
         <<: *dirtyPlugin
         itm: 56
   - name: 'Morag Tong Assassins(V1.2).esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/28496' ]
     dirty:
       - crc: 0xee106b87
         <<: *dirtyPlugin
         itm: 54
   - name: 'Morag Tong Assassins(V1.3).esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/28496' ]
     dirty:
       - crc: 0x6d3b25d4
         <<: *dirtyPlugin
         itm: 54
   - name: 'Lyn-StoriesFromTheSeaMod.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/12100' ]
     tag: [ Invent ]
     dirty:
       - crc: 0x182a6977
@@ -3591,6 +3612,7 @@ plugins:
   - name: 'MageGuild_simbol.esp'
     tag: [ Graphics ]
   - name: 'Mage Guild Sorters v3.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/35354' ]
     req:
       - 'Cobl Main.esm'
   - name: 'MeosPotionReplacer.esp'
@@ -3939,10 +3961,12 @@ plugins:
       - Graphics
       - NoMerge
   - name: 'VA_BetterGold.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/1826' ]
     tag:
       - Graphics
       - NoMerge
   - name: 'VAs Better Gold with no Menu Icon.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/5122' ]
     tag:
       - Graphics
       - NoMerge
@@ -4830,6 +4854,7 @@ plugins:
   - name: 'Fighters Guild Scalemail Full.esp'
     tag: [ Invent ]
   - name: 'FineWeapons.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/7317' ]
     tag: [ Graphics ]
   - name: 'FlameGlassEquipment.esp'
     tag: [ Graphics ]
@@ -4888,6 +4913,7 @@ plugins:
         <<: *dirtyPlugin
         itm: 13
   - name: 'Insanity''s Kill Bill Katanas.esp'
+    url: [ 'http://tesalliance.org/forums/index.php?/files/file/279-insanitys-kill-bill-katanas/' ]
     tag: [ Invent ]
   - name: 'IP_Magerobes.esp'
     tag: [ Graphics ]
@@ -5288,6 +5314,7 @@ plugins:
   - name: 'Rune of Independence.esp'
     req: [ *OBSEv19 ]
   - name: 'RustyItems.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/7190' ]
     tag: [ Graphics ]
   - name: 'RTFemaleReplacerV12.esp'
     msg:
@@ -5571,6 +5598,7 @@ plugins:
   - name: 'Zatoichi.esp'
     tag: [ Invent ]
   - name: 'Thieves Arsenal.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/9655' ]
     req: [ *OBSE ]
     dirty:
       - crc: 0x2de5b6d1
@@ -6360,10 +6388,12 @@ plugins:
   - name: 'Alluring Potion Bottles v2.esp'
     tag: [ Graphics ]
   - name: 'Alluring Potion Bottles v3.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/33531' ]
     tag:
       - Graphics
       - MustBeActiveIfImported
   - name: 'Alluring Wine Bottles.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/34111' ]
     tag:
       - Graphics
       - MustBeActiveIfImported
@@ -6524,6 +6554,7 @@ plugins:
   - name: 'mg19obsefix.esp'
     req: [ *OBSE ]
   - name: 'OOO-Better_Priced_Clutter.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/29633/' ]
     tag: [ Stats ]
   - name: 'OOOCreatureAddons.esp'
     url:
@@ -6567,6 +6598,7 @@ plugins:
       - 'ArmamentariumLL4OOO.esp'
       - 'ArmamentariumLLVendors.esp'
   - name: 'Better Hunting for OOO.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/35223' ]
     tag: [ Stats ]
   - name: 'FCOM_Cobl.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/12249/' ]
@@ -7220,8 +7252,8 @@ plugins:
       - Names
       - Relations
   - name: 'Geomancy & Gem Dust OOO (No Spell Change).esp'
-    inc:
-      - 'Geomancy & Gem Dust OOO.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/21102' ]
+    inc: [ 'Geomancy & Gem Dust OOO.esp' ]
   - name: 'EVE_StockEquipmentReplacer4FCOM.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/24078/' ]
     msg:
@@ -9776,6 +9808,7 @@ plugins:
       - type: say
         content: 'Consider upgrading to Werewolf - Legends of the North.'
   - name: 'Lynges_Dark_Brotherhood_Assassins-8654.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/8654' ]
     dirty:
       - crc: 0xb5cd930f
         <<: *dirtyPlugin
@@ -11331,6 +11364,7 @@ plugins:
         subs: [ 'Better Cities Imperial City plugins' ]
         condition: 'active("Better Imperial City.esp") or active("Better Cities IC (Arboretum|Arcane University|Arena|Elven Gardens|Green Emperor Way|Market|Prison|Temple|Waterfront)\.esp")'
   - name: 'Lynges_Thieves_Highway-10256.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/10256' ]
     msg:
       - <<: *alreadyInX
         subs: [ 'Better Cities Imperial City plugins' ]
@@ -11354,6 +11388,7 @@ plugins:
         content: 'OOO detected. ''Use Lynges Thieves Highway - OOO.esp'' instead.'
         condition: *OOOCond
   - name: 'Lynges Thieves Highway - OOO.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/25383' ]
     msg:
       - <<: *alreadyInX
         subs: [ 'Better Cities Imperial City plugins' ]
@@ -11766,6 +11801,9 @@ plugins:
         <<: *dirtyPlugin
         itm: 15
   - name: 'MannimarcoRevisited.esp'
+    url:
+      - 'https://www.nexusmods.com/oblivion/mods/14200'
+      - 'https://www.nexusmods.com/oblivion/mods/42261'
     tag:
       - Actors.ACBS
       - Actors.AIData
@@ -11782,6 +11820,9 @@ plugins:
         <<: *dirtyPlugin
         udr: 261
   - name: 'MannimarcoRevisitedOOO.esp'
+    url:
+      - 'https://www.nexusmods.com/oblivion/mods/14200'
+      - 'https://www.nexusmods.com/oblivion/mods/42261'
     tag:
       - Actors.ACBS
       - Actors.AIData
@@ -13787,6 +13828,7 @@ plugins:
         <<: *dirtyPlugin
         itm: 3
   - name: 'Banes Guilds United.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/42261' ]
     msg:
       - type: error
         content: 'OOO users should be using "Banes Guilds UnitedOOO.esp" instead.'
@@ -13801,7 +13843,9 @@ plugins:
         udr: 1661
         itm: 45
   - name: 'Banes Guilds UnitedOOO.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/46199/' ]
+    url:
+      - 'https://www.nexusmods.com/oblivion/mods/42261'
+      - 'https://www.nexusmods.com/oblivion/mods/46199/'
     msg:
       - type: error
         content: 'Use "Banes Guilds United.esp" instead.'
@@ -14210,6 +14254,9 @@ plugins:
   - name: 'GoldItems_1C.esp'
     tag: [ Stats ]
   - name: 'Golden Perch Inn.esp'
+    url:
+    - 'https://www.nexusmods.com/oblivion/mods/38101'
+    - 'https://www.nexusmods.com/oblivion/mods/45701'
     inc:
       - '(DC) Sutch Reborn.esp'
     msg:
@@ -14226,6 +14273,7 @@ plugins:
         udr: 2
         itm: 37
   - name: 'Golden Perch Inn - AN Patch.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/38101' ]
     tag: [ C.Climate ]
   - name: 'GP_Lockpicks.esp'
     inc:
@@ -14377,6 +14425,10 @@ plugins:
       - Deactivate
       - Stats
   - name: 'Mage_Guild_Teleport.esp'
+    url:
+    - 'https://www.nexusmods.com/oblivion/mods/2494'
+    - 'https://www.nexusmods.com/oblivion/mods/14712'
+    - 'https://www.nexusmods.com/oblivion/mods/38583'
     dirty:
       - crc: 0xe5dfd452
         <<: *dirtyPlugin
@@ -14454,6 +14506,7 @@ plugins:
   - name: 'No Wait Regenerate.esp'
     req: [ *OBSE ]
   - name: 'NPC Static Level.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/4905' ]
     msg:
       - type: say
         content: 'Almost certainly not compatible with Fran''s, MMM, OOO or FCOM.'
@@ -14625,6 +14678,7 @@ plugins:
       - 'kuerteeGoldIsAnInventoryItem.esp'
       - 'DBWGP.esp'
   - name: 'kuerteeGoldIsAnInventoryItem.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/21881' ]
     inc:
       - 'ReneersGoldMod.esp'
       - 'DBWGP.esp'
@@ -14930,6 +14984,7 @@ plugins:
         itm: 4
         udr: 1
   - name: 'kuerteeDeathHasPenalties.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/22121' ]
     msg:
       - type: say
         content: 'Obsolete. Upgrade to Kuertee''s "Alternatives To Death And Reload."'
@@ -15568,9 +15623,11 @@ plugins:
   - name: 'RenGuardOverhaulShiveringIsles.esp'
     msg: [ *obsolete ]
   - name: 'kuerteeCrimeHasWitnesses.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/22894' ]
     inc:
       - 'RenGuardOverhaul.esp'
   - name: 'kuerteeLootingDeadGuardsIsStealing.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/21784' ]
     inc:
       - 'RenGuardOverhaul.esp'
   - name: 'TRN One of the Gang.esp'
@@ -15715,6 +15772,7 @@ plugins:
         content: 'Remove this. Known to cause crashes and save game corruption.'
 
   - name: 'kuerteeAttributeAndSkillBasedDamageModifiers.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/23062' ]
     msg:
       - type: say
         content: 'Make sure to set calculateFromVanilla in the included ini file to 0 when used alongside other combat mods.'
@@ -19793,6 +19851,7 @@ plugins:
       - Graphics
       - NoMerge
   - name: 'kuerteeDetectLifeEffectNightEyeShader.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/36407' ]
     req:
       - name: 'OBSE/Plugins/SwitchNightEyeShaders.dll'
         display: '[Night Eye Shader Switcher](https://www.nexusmods.com/oblivion/mods/19476)'
