@@ -11566,12 +11566,6 @@ plugins:
       - crc: 0xfb2ec779
         <<: *dirtyPlugin
         udr: 6
-  - name: 'CUO_Bravil.esp'
-    dirty:
-      - crc: 0xa1a0caa2
-        <<: *dirtyPlugin
-        itm: 42
-        udr: 729
   - name: 'SoT_TheOrderofNibenay.esp'
     msg:
       - <<: *wildEdits
@@ -11644,7 +11638,6 @@ plugins:
       - 'https://www.nexusmods.com/oblivion/mods/12997'
       - 'http://www.lostspires.com/pages/downloads.htm'
     after:
-      - 'CUO_Bravil.esp'
       - 'Aundae.esp'
       - 'Aundae_OBSE_addon.esp'
       - 'Blood&Mud.esp'
@@ -12543,29 +12536,6 @@ plugins:
     msg:
       - *sortMasters
       - *needsCleaning
-  - name: 'CUO_Bruma.esp'
-    msg:
-      - type: say
-        content: 'Kvatch Aftermath Bruma Features - disable them.'
-        condition: 'file("KvatchAftermath.esp")'
-    tag: [ Invent ]
-    dirty:
-      - crc: 0x79e62dcd
-        <<: *dirtyPlugin
-        itm: 11
-        udr: 5
-  - name: 'CUO_Chorrol.esp'
-    dirty:
-      - crc: 0xa7af03a3
-        <<: *dirtyPlugin
-        itm: 29
-        udr: 468
-  - name: 'CUO_Leyawiin.esp'
-    dirty:
-      - crc: 0xff5feee3
-        <<: *dirtyPlugin
-        itm: 47
-        udr: 417
   - name: 'xul(Ancient(Redwoods|Yews)|ArriusCreek|AspenWood|BeachesOfCyrodiilLostCoast|BlackwoodForest|BravilBarrowfields|BrenaRiverRavine|CheydinhalFalls|ChorrolHinterland(-BC6)?|CliffsOfAnvil|CloudtopMountains|ColovianHighlands_EV|darkforest|EntiusGorge|FallenleafEverglade|ImperialIsle|JerallGlacier|LushWoodlands|PantherRiver|Patch_AY_AC|RiverEthe|RollingHills_EV|SilverfishRiverValley|SkingradOutskirts|Snowdale|StendarrValley|TheEasternPeaks|TheHeath)\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/19370'
@@ -14007,33 +13977,6 @@ plugins:
       - crc: 0xe138ff22
         <<: *dirtyPlugin
         itm: 78
-  - name: 'CUO_FightersGuildContracts_SAFE.esp'
-    msg: [ *needsCleaning ]
-  - name: 'CUO_UnLeveledPotions.esp'
-    msg:
-      - type: say
-        content: 'Needs to be Bashed Patched to integrate fully into Fran''s. May have problems with disabling content from some overhaul mods. Should work with MMM and Fran''s.'
-    tag:
-      - Delev
-      - Relev
-  - name: 'CUO_NewFactionDialog_SAFE.esp'
-    msg:
-      - type: say
-        content: 'MAY have problems with disabling content from some overhaul mods. Should work with MMM and Fran''s.'
-  - name: 'CUO_BadGuy_Specific_Loot_DIRTY.esp'
-    msg:
-      - type: say
-        content: 'Needs to be Bashed Patched to integrate fully into Fran''s. May have problems with disabling content from some overhaul mods. Should work with MMM and Fran''s.'
-    tag:
-      - Delev
-      - Relev
-  - name: 'CUO_UnleveledNpcs&Creatures.esp'
-    msg:
-      - type: say
-        content: 'Needs to be Bashed Patched to work properly with Fran''s and MMM. May have problems with disabling content from some overhaul mods.'
-    tag:
-      - Delev
-      - Relev
   - name: 'DarkUI Fix.esp'
     msg:
       - type: say
@@ -19331,20 +19274,6 @@ plugins:
     tag:
       - Graphics
       - Invent
-  - name: 'HTSCl_cuo.esp'
-    inc:
-      - 'HTSCl_cuo_inElderCouncil.esp'
-    msg:
-      - type: say
-        content: 'Requires: Cyrodiil Upgrade Overhaul.'
-    tag: [ Graphics ]
-  - name: 'HTSCl_cuo_inElderCouncil.esp'
-    inc:
-      - 'HTSCl_cuo.esp'
-    msg:
-      - type: say
-        content: 'Requires: CUO, The Elder Council.'
-    tag: [ Graphics ]
   - name: 'HTSCl_elsweyr.esp'
     req:
       - 'ElsweyrAnequina.esp'
@@ -19727,8 +19656,6 @@ plugins:
       - NoMerge
   - name: '(Knights|DLC(Frostcrag|MehrunesRazor|Orrery|ThievesDen)) Vwalk\.esp'
     group: *veryEarlyGroup
-  - name: 'CyrodiilUpgradeResourcePack Vwalk.esp'
-    group: *underridesGroup
   - name: 'SoVvM Vwalk.esp'
     group: *underridesGroup
   - name: 'TNR ALL RACES FINAL Vwalk.esp'
