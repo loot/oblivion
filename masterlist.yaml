@@ -8645,8 +8645,6 @@ plugins:
         udr: 1057
   - name: 'Castle_Highrock.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/9363' ]
-    inc:
-      - 'TheNecromancer.esp'
     dirty:
       - crc: 0x5822a5fd
         <<: *dirtyPlugin
@@ -11674,16 +11672,6 @@ plugins:
         <<: *dirtyPlugin
         itm: 4569
         udr: 16
-  - name: 'TheNecromancer.esp'
-    msg:
-      - type: say
-        content: 'Has some landscape issues with OOO.'
-        condition: *OOOCond
-    dirty:
-      - crc: 0x6798b41
-        <<: *dirtyPlugin
-        itm: 108
-        udr: 178
   - name: 'HoarfrostCastle.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/14714' ]
     tag: [ Hair ]
@@ -12532,10 +12520,6 @@ plugins:
       - C.Water
   - name: 'xulBrenaRiverRavine02.esp'
     msg: [ *obsolete ]
-  - name: 'TheNecromancer-StendarrValley patch.esp'
-    msg:
-      - type: say
-        content: 'Obsolete as of version 1.2 of Stendarr Valley.'
   - name: 'Ravenpride-Stendarr patch.esp'
     msg:
       - type: say
@@ -13330,11 +13314,6 @@ plugins:
         content: 'Use the UL Jerall Glacier version of this patch!'
         condition: 'file("xulJerallGlacier.esp")'
   - name: 'OotD_FAR_Patch.esp'
-    msg:
-      - type: warn
-        content: 'Use the UL Jerall Glacier version of this patch!'
-        condition: 'file("xulJerallGlacier.esp")'
-  - name: 'OotD_ULJerall_TheNecromancer_Patch.esp'
     msg:
       - type: warn
         content: 'Use the UL Jerall Glacier version of this patch!'
