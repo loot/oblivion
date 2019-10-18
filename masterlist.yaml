@@ -3816,9 +3816,11 @@ plugins:
       - Graphics
       - Invent
   - name: 'Redecoration.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/24498' ]
     dirty:
-      - crc: 0x31844e23
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x6A712D9B
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 3
   - name: 'Real_Mannequin.esp'
     tag: [ C.Names ]
