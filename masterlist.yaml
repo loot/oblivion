@@ -3535,15 +3535,17 @@ plugins:
   - name: 'LadyLis_dainties.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17405' ]
     dirty:
-      - crc: 0xb3ec8302
-        <<: *dirtyPlugin
-        itm: 21
+      - <<: *quickClean
+        crc: 0xB3EC8302
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
   - name: 'LadyLiy_Leckerli.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17405' ]
     dirty:
-      - crc: 0xb3ca457
-        <<: *dirtyPlugin
-        itm: 21
+      - <<: *quickClean
+        crc: 0x0B3CA457
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
   - name: 'Lamps of Oblivion.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/7614' ]
     dirty:
