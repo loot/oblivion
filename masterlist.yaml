@@ -7570,18 +7570,21 @@ plugins:
     tag:
       - Actors.Skeleton
       - NoMerge
-  - name: 'WAC - Female Armor Refine -No Low Body.esp'
+  - name: 'WAC - Female Armor Refine( -No Low Body)?\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/40324' ]
     tag: [ Graphics ]
-    dirty:
-      - crc: 0x24ff137b
-        <<: *dirtyPlugin
-        itm: 87
   - name: 'WAC - Female Armor Refine.esp'
-    tag: [ Graphics ]
     dirty:
-      - crc: 0x87d74399
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x87D74399
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 40
+  - name: 'WAC - Female Armor Refine -No Low Body.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x24FF137B
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 42
   - name: 'WAC - HGEC Equipment Replacer.esp'
     tag: [ Graphics ]
   - name: 'beardy.esp'
