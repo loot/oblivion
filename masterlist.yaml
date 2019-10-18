@@ -3164,8 +3164,9 @@ plugins:
   - name: '00crystalTorch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/41940' ]
     dirty:
-      - crc: 0xe7a1bce7
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x8485ACD5
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
   - name: '00 Realistic Player Speech.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/46243' ]
