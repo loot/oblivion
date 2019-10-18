@@ -3216,9 +3216,10 @@ plugins:
   - name: 'AdventurersAlchemy.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/18636' ]
     dirty:
-      - crc: 0x8aa69408
-        <<: *dirtyPlugin
-        itm: 1
+      - <<: *quickClean
+        crc: 0x8AA69408
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 3
   - name: 'aLHerobook01.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/13397' ]
     msg:
