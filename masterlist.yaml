@@ -3714,12 +3714,11 @@ plugins:
   - name: 'personality_idles_custom.esp'
     msg: [ *doNotClean ]
   - name: 'P1DseeYouSleep.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/16005' ]
     dirty:
-      - crc: 0x41c990c4
-        <<: *dirtyPlugin
-        itm: 7
-      - crc: 0xa72d68f1
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x41C990C4
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 7
   - name: 'See You Sleep DLL.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/42649' ]
