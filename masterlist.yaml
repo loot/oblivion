@@ -3184,11 +3184,9 @@ plugins:
     inc:
       - '300_Lore Dialogue.esp'
     dirty:
-      - crc: 0x366c8d97
-        <<: *dirtyPlugin
-        itm: 1
-      - crc: 0x876daca1
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x366C8D97
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
   - name: 'AddActorValues_example.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/33248' ]
