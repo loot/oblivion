@@ -3781,28 +3781,12 @@ plugins:
     msg:
       - type: say
         content: 'Don''t use with MMM/OOO/FCOM; use ''Qarls_Harvest addon_MMM/OOO'''
-  - name: 'QQuix - Rock, rock, rock your ship - V2.0.esp'
-    msg: [ *obsolete ]
-    dirty:
-      - crc: 0x275d6c94
-        <<: *dirtyPlugin
-        itm: 3
-      - crc: 0xdd45007e
-        <<: *dirtyPlugin
-        itm: 3
   - name: 'QQuix - Rock, rock, rock your ship - V3.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/29649' ]
     dirty:
-      - crc: 0x2e1085a5
-        <<: *dirtyPlugin
-        itm: 12
-      - crc: 0xda6f223c
-        <<: *dirtyPlugin
-        itm: 12
-      - crc: 0xe4a111c4
-        <<: *dirtyPlugin
-        itm: 12
-      - crc: 0x2ae99607
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x2E1085A5
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 12
   - name: 'QuickEquipSwap.esp'
     req: [ *OBSE ]
