@@ -12628,12 +12628,11 @@ plugins:
   - name: 'xulBeachesOfCyrodiilLostCoast.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/14720' ]
     msg:
-      - type: say
-        content: 'Make sure version is 1.6.3 or later.'
-    dirty:
-      - crc: 0x8955ece
-        <<: *dirtyPlugin
-        udr: 1371
+      - <<: *obsolete
+        condition: 'not checksum("xulBeachesOfCyrodiilLostCoast.esp", C66FED9E)'
+    clean:
+      - crc: 0xC66FED9E
+        util: 'TES4Edit v4.0.2i'
   - name: 'Cybiades-Lost Coast patch.esp'
     msg:
       - type: say
