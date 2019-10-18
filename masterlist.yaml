@@ -3617,9 +3617,11 @@ plugins:
         content: 'Probably not compatible with OOO. Untested.'
         condition: *OOOCond
   - name: 'More_Vegetables.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/11459' ]
     dirty:
-      - crc: 0x2eaee466
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x2EAEE466
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 3
   - name: 'BetterMusicSystem.esp'
     req:
