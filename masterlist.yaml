@@ -3770,8 +3770,9 @@ plugins:
   - name: 'Qarls_Harvest.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/8113' ]
     dirty:
-      - crc: 0x31844e23
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x31844E23
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 8
         udr: 105
   - name: 'Qarls_Harvest addon.esp'
