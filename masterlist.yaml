@@ -2770,8 +2770,9 @@ plugins:
         condition: 'not active("Natural_Weather_HDR_2.1.3_coloroverride.esp.esp") and not active("Natural_Weather_HDR_by_Max_Tae_CO_RD.esp")'
   - name: 'Natural_Weather_HDR_by_Max_Tael_RD.esp'
     dirty:
-      - crc: 0x9233fd80
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x9233FD80
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 2
   - name: 'Natural_Weather_(non-HDR|HDR|non-HDR\+Darker_Nights|HDR\+Darker_Nights)?_2.1.2_(bugfree|coloroverride)?.*\.esp'
     msg:
