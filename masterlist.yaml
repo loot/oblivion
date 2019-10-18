@@ -3858,14 +3858,16 @@ plugins:
   - name: '1HweaponOnBack.esp'
     msg: [ *obsolete ]
   - name: 'Shouts of the Dovahkiin.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/39896' ]
     tag:
       - Actors.Anims
       - Actors.CombatStyle
       - Voice-M
     dirty:
-      - crc: 0x844a23d8
-        <<: *dirtyPlugin
-        itm: 13
+      - <<: *quickClean
+        crc: 0x844A23D8
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 19
   - name: 'SkinMannequinVan.esp'
     dirty:
       - crc: 0xb3148f27
