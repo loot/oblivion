@@ -1684,23 +1684,23 @@ plugins:
       - crc: 0xD25FFD1E
         util: 'TES4Edit v4.0.2i'
   ### OOO Respawn Rate Options
+  - name: 'OOO-Respawn_(Month|Two_Week|Week|Year)\.esp'
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings: World Cell Respawn Time' ]
   - name: 'OOO-Respawn_Month.esp'
-    msg: [ *bashedPatchTweak ]
     clean:
       - crc: 0xB57F7C18
         util: 'TES4Edit v4.0.2i'
   - name: 'OOO-Respawn_Two_Week.esp'
-    msg: [ *bashedPatchTweak ]
     clean:
       - crc: 0xF6344872
         util: 'TES4Edit v4.0.2i'
   - name: 'OOO-Respawn_Week.esp'
-    msg: [ *bashedPatchTweak ]
     clean:
       - crc: 0xB4241C0D
         util: 'TES4Edit v4.0.2i'
   - name: 'OOO-Respawn_Year.esp'
-    msg: [ *bashedPatchTweak ]
     clean:
       - crc: 0x9EF9532F
         util: 'TES4Edit v4.0.2i'
