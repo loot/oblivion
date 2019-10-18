@@ -3410,9 +3410,10 @@ plugins:
         content: 'For use with Better Cities use ''ClocksOfCyrodiil_BC_OBC_OC_OCLR_Vanilla.esp'' instead.'
         condition: 'file("Better Cities Resources.esm") and version("Better Cities Resources.esm", "6.0.0", <)'
     dirty:
-      - crc: 0x6910c69
-        <<: *dirtyPlugin
-        itm: 46
+      - <<: *quickClean
+        crc: 0x06910C69
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 48
         udr: 20
   - name: 'Better Clocks.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/36384/' ]
