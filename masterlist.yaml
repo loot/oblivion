@@ -3482,21 +3482,6 @@ plugins:
       - crc: 0xa2300d21
         <<: *dirtyPlugin
         itm: 36
-  - name: 'Gold is now Gold.esp'
-    tag:
-      - Graphics
-      - NoMerge
-  - name: 'Grand Potions.esp'
-    msg:
-      - type: say
-        content: 'May need Wrye Bashed Patch to work with overhaul mods.'
-    tag:
-      - Delev
-      - Relev
-  - name: 'GuildOwnership1.2.esp'
-    inc:
-      - 'Oscuro''s_Oblivion_Overhaul.esm'
-    msg: [ *alreadyInOOO ]
   - name: 'GW71_Soulgems.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17499' ]
     tag: [ Graphics ]
@@ -3507,10 +3492,6 @@ plugins:
         content: 'Incompatible with: UI systems other than DarNified UI/Dark''d DarN/other DarN variants.'
   - name: 'Inebriation.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/2495' ]
-    inc:
-      - 'Oscuro''s_Oblivion_Overhaul.esm'
-    msg: [ *alreadyInOOO ]
-  - name: 'Inebriation Rus.esp'
     inc:
       - 'Oscuro''s_Oblivion_Overhaul.esm'
     msg: [ *alreadyInOOO ]
@@ -3528,11 +3509,6 @@ plugins:
   - name: 'Item Crafting v4.2.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/12044' ]
     tag: [ Invent ]
-  - name: 'JPWikiMod.esp'
-    msg:
-      - type: say
-        content: 'If little of the translated text shows move lower but may then overwrite other mods.'
-    tag: [ Names ]
   - name: 'JQPotionBottlesTest.esp'
     msg:
       - type: say
@@ -3557,11 +3533,6 @@ plugins:
       - crc: 0xb3ca457
         <<: *dirtyPlugin
         itm: 21
-  - name: 'Gâteaux et sucreries.esp'
-    dirty:
-      - crc: 0xf4deec
-        <<: *dirtyPlugin
-        itm: 21
   - name: 'Lamps of Oblivion.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/7614' ]
     dirty:
@@ -3573,14 +3544,8 @@ plugins:
     inc:
       - 'Oscuro''s_Oblivion_Overhaul.esm'
     msg: [ *alreadyInOOO ]
-  - name: 'Lock Bash v99.9.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/4999' ]
-    inc:
-      - 'Oscuro''s_Oblivion_Overhaul.esm'
-    msg:
-      - *alreadyInOOO
-      - *obsolete
   - name: 'Lock Bash v99.91.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/4999' ]
     inc:
       - 'Oscuro''s_Oblivion_Overhaul.esm'
     msg: [ *alreadyInOOO ]
@@ -3609,8 +3574,6 @@ plugins:
       - crc: 0x182a6977
         <<: *dirtyPlugin
         itm: 7
-  - name: 'MageGuild_simbol.esp'
-    tag: [ Graphics ]
   - name: 'Mage Guild Sorters v3.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/35354' ]
     req:
@@ -8682,8 +8645,6 @@ plugins:
         udr: 1057
   - name: 'Castle_Highrock.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/9363' ]
-    inc:
-      - 'TheNecromancer.esp'
     dirty:
       - crc: 0x5822a5fd
         <<: *dirtyPlugin
@@ -9120,12 +9081,6 @@ plugins:
   - name: 'Gift of Kynareth v2.1 Delayer.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/25946/' ]
     msg: [ *obsolete ]
-  - name: 'Giskards Tales From the Tomb.esp'
-    dirty:
-      - crc: 0x90f0f66
-        <<: *dirtyPlugin
-        itm: 1
-        udr: 24
   - name: 'Gold Coast''s Hillsborough Estate.esp'
     inc:
       - name: 'Unique Landscapes.esp'
@@ -10451,16 +10406,6 @@ plugins:
         <<: *dirtyPlugin
         itm: 313
         udr: 2
-  - name: 'Sheogoraths_Accords_of_Madness.esp'
-    tag:
-      - Actors.ACBS
-      - Actors.Stats
-      - Invent
-    dirty:
-      - crc: 0xc7afc21d
-        <<: *dirtyPlugin
-        itm: 98
-        udr: 71
   - name: 'Silgrad_Tower.esp'
     dirty:
       - crc: 0xc8844cd5
@@ -10755,11 +10700,6 @@ plugins:
         <<: *dirtyPlugin
         itm: 274
         udr: 192
-  - name: 'TheElderCouncil_TempleOfTheOne.esp'
-    dirty:
-      - crc: 0x5bee0900
-        <<: *dirtyPlugin
-        itm: 15
   - name: 'TheForgottenShields.esp'
     dirty:
       - crc: 0x33817d08
@@ -11358,11 +11298,6 @@ plugins:
       - type: say
         content: 'Use FCOM compatibility version instead.'
         condition: *FCOMCond
-  - name: 'Lynges_Thieves_Highway.esp'
-    msg:
-      - <<: *alreadyInX
-        subs: [ 'Better Cities Imperial City plugins' ]
-        condition: 'active("Better Imperial City.esp") or active("Better Cities IC (Arboretum|Arcane University|Arena|Elven Gardens|Green Emperor Way|Market|Prison|Temple|Waterfront)\.esp")'
   - name: 'Lynges_Thieves_Highway-10256.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/10256' ]
     msg:
@@ -11379,14 +11314,6 @@ plugins:
       - <<: *alreadyInX
         subs: [ 'Better Cities Imperial City plugins' ]
         condition: 'active("Better Imperial City.esp") or active("Better Cities IC (Arboretum|Arcane University|Arena|Elven Gardens|Green Emperor Way|Market|Prison|Temple|Waterfront)\.esp")'
-  - name: 'Lynges Thieves Highway.esp'
-    msg:
-      - <<: *alreadyInX
-        subs: [ 'Better Cities Imperial City plugins' ]
-        condition: 'active("Better Imperial City.esp") or active("Better Cities IC (Arboretum|Arcane University|Arena|Elven Gardens|Green Emperor Way|Market|Prison|Temple|Waterfront)\.esp")'
-      - type: say
-        content: 'OOO detected. ''Use Lynges Thieves Highway - OOO.esp'' instead.'
-        condition: *OOOCond
   - name: 'Lynges Thieves Highway - OOO.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/25383' ]
     msg:
@@ -11616,12 +11543,6 @@ plugins:
       - crc: 0xfb2ec779
         <<: *dirtyPlugin
         udr: 6
-  - name: 'CUO_Bravil.esp'
-    dirty:
-      - crc: 0xa1a0caa2
-        <<: *dirtyPlugin
-        itm: 42
-        udr: 729
   - name: 'SoT_TheOrderofNibenay.esp'
     msg:
       - <<: *wildEdits
@@ -11694,7 +11615,6 @@ plugins:
       - 'https://www.nexusmods.com/oblivion/mods/12997'
       - 'http://www.lostspires.com/pages/downloads.htm'
     after:
-      - 'CUO_Bravil.esp'
       - 'Aundae.esp'
       - 'Aundae_OBSE_addon.esp'
       - 'Blood&Mud.esp'
@@ -11727,35 +11647,12 @@ plugins:
         <<: *dirtyPlugin
         itm: 6
         udr: 3
-  - name: 'Origin of the Mages Guild.esp'
-    tag:
-      - Actors.AIPackages
-      - Relations
-    dirty:
-      - crc: 0x440ff00
-        <<: *dirtyPlugin
-        itm: 173
-        udr: 383
-      - crc: 0xd4a96591
-        <<: *dirtyPlugin
-        itm: 153
-        udr: 119
   - name: 'The Mystery of the Dulan cult.esp'
     dirty:
       - crc: 0x6845a1e
         <<: *dirtyPlugin
         itm: 4569
         udr: 16
-  - name: 'TheNecromancer.esp'
-    msg:
-      - type: say
-        content: 'Has some landscape issues with OOO.'
-        condition: *OOOCond
-    dirty:
-      - crc: 0x6798b41
-        <<: *dirtyPlugin
-        itm: 108
-        udr: 178
   - name: 'HoarfrostCastle.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/14714' ]
     tag: [ Hair ]
@@ -12593,29 +12490,6 @@ plugins:
     msg:
       - *sortMasters
       - *needsCleaning
-  - name: 'CUO_Bruma.esp'
-    msg:
-      - type: say
-        content: 'Kvatch Aftermath Bruma Features - disable them.'
-        condition: 'file("KvatchAftermath.esp")'
-    tag: [ Invent ]
-    dirty:
-      - crc: 0x79e62dcd
-        <<: *dirtyPlugin
-        itm: 11
-        udr: 5
-  - name: 'CUO_Chorrol.esp'
-    dirty:
-      - crc: 0xa7af03a3
-        <<: *dirtyPlugin
-        itm: 29
-        udr: 468
-  - name: 'CUO_Leyawiin.esp'
-    dirty:
-      - crc: 0xff5feee3
-        <<: *dirtyPlugin
-        itm: 47
-        udr: 417
   - name: 'xul(Ancient(Redwoods|Yews)|ArriusCreek|AspenWood|BeachesOfCyrodiilLostCoast|BlackwoodForest|BravilBarrowfields|BrenaRiverRavine|CheydinhalFalls|ChorrolHinterland(-BC6)?|CliffsOfAnvil|CloudtopMountains|ColovianHighlands_EV|darkforest|EntiusGorge|FallenleafEverglade|ImperialIsle|JerallGlacier|LushWoodlands|PantherRiver|Patch_AY_AC|RiverEthe|RollingHills_EV|SilverfishRiverValley|SkingradOutskirts|Snowdale|StendarrValley|TheEasternPeaks|TheHeath)\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/19370'
@@ -12627,10 +12501,6 @@ plugins:
       - C.Water
   - name: 'xulBrenaRiverRavine02.esp'
     msg: [ *obsolete ]
-  - name: 'TheNecromancer-StendarrValley patch.esp'
-    msg:
-      - type: say
-        content: 'Obsolete as of version 1.2 of Stendarr Valley.'
   - name: 'Ravenpride-Stendarr patch.esp'
     msg:
       - type: say
@@ -13429,11 +13299,6 @@ plugins:
       - type: warn
         content: 'Use the UL Jerall Glacier version of this patch!'
         condition: 'file("xulJerallGlacier.esp")'
-  - name: 'OotD_ULJerall_TheNecromancer_Patch.esp'
-    msg:
-      - type: warn
-        content: 'Use the UL Jerall Glacier version of this patch!'
-        condition: 'file("xulJerallGlacier.esp")'
   - name: 'OBCBravil-Barrowfields patch.esp'
     msg:
       - type: say
@@ -13633,12 +13498,6 @@ plugins:
   - name: 'ROC+RR Patch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
     msg: [ *roadsAndBridgesDetected ]
-  - name: 'FightersGuildContracts.esp'
-    dirty:
-      - crc: 0xbb0d71d0
-        <<: *dirtyPlugin
-        itm: 28
-        udr: 9
   - name: '(JQ) Fighters Guild United.esp'
     tag: [ Invent ]
   - name: 'JQ-Fighters_Guild_United.esp'
@@ -14057,33 +13916,6 @@ plugins:
       - crc: 0xe138ff22
         <<: *dirtyPlugin
         itm: 78
-  - name: 'CUO_FightersGuildContracts_SAFE.esp'
-    msg: [ *needsCleaning ]
-  - name: 'CUO_UnLeveledPotions.esp'
-    msg:
-      - type: say
-        content: 'Needs to be Bashed Patched to integrate fully into Fran''s. May have problems with disabling content from some overhaul mods. Should work with MMM and Fran''s.'
-    tag:
-      - Delev
-      - Relev
-  - name: 'CUO_NewFactionDialog_SAFE.esp'
-    msg:
-      - type: say
-        content: 'MAY have problems with disabling content from some overhaul mods. Should work with MMM and Fran''s.'
-  - name: 'CUO_BadGuy_Specific_Loot_DIRTY.esp'
-    msg:
-      - type: say
-        content: 'Needs to be Bashed Patched to integrate fully into Fran''s. May have problems with disabling content from some overhaul mods. Should work with MMM and Fran''s.'
-    tag:
-      - Delev
-      - Relev
-  - name: 'CUO_UnleveledNpcs&Creatures.esp'
-    msg:
-      - type: say
-        content: 'Needs to be Bashed Patched to work properly with Fran''s and MMM. May have problems with disabling content from some overhaul mods.'
-    tag:
-      - Delev
-      - Relev
   - name: 'DarkUI Fix.esp'
     msg:
       - type: say
@@ -14576,10 +14408,6 @@ plugins:
       - NoMerge
   - name: 'OriginalLeather.esp'
     tag: [ Names ]
-  - name: 'omg-shadows-v1.esp'
-    tag: [ C.Name ]
-  - name: 'omg-shadows-v1-all-activated.esp'
-    tag: [ C.Name ]
   - name: 'OriginalLeatherSI.esp'
     tag: [ Names ]
   - name: 'ORM-TamriellicGlassCORE.esp'
@@ -15395,10 +15223,6 @@ plugins:
   - name: 'FrostcragMidasLab.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/15951' ]
     tag: [ Invent ]
-  - name: 'OSPS-TalesftTomb-MidasMagic-Patch.esp'
-    # Not available
-    inc:
-      - 'Rathunas01.esp'
   - name: 'Midas PowDur(1\.5|2|3|4)x\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/32952' ]
     after:
@@ -15855,63 +15679,10 @@ plugins:
       - type: say
         content: 'Requires: "AddActorValues.dll"'
         condition: '( version("Sneaking Detection Recalibrated.esp","4.0",==) ) and not file("AddActorValues.dll")'
-  - name: 'SDR Compatibility Patches.esp'
-    msg:
-      - type: say
-        content: 'Deprecated. Do not use with v4.0+ of Sneaking Detection Recalibrated.'
-        condition: 'version("Sneaking Detection Recalibrated.esp","4.0",>=)'
-  - name: 'SDR_Core.esp'
-    inc:
-      - name: 'SDR_NPC Behavior.esp'
-        condition: 'version("SDR_Core.esp","4.5.0",>=)'
-    req:
-      - 'OBSE/Plugins/SDR_obse.dll'
-      - 'OBSE/Plugins/AddActorValues.dll'
-      - '../obse_1_2_416.dll'
-  - name: 'SDR_NPC Behavior.esp'
-    inc:
-      - name: 'SM Combat Hide.esp'
-        display: 'SM Combat Hide'
-  - name: 'SDR_ThievesArsenal_Patch.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Upgrade to SDR version 8.2'
-  - name: 'SDR_Detect Life Shader Patch (Oblivion).esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Upgrade to SDR version 8.2'
-  - name: 'SDR_Detect Life Shader Patch (Nehrim).esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Upgrade to SDR version 8.2'
   - name: 'Oblivion XP - Journal Mod Patch.esp'
     msg:
       - type: say
         content: 'Edits "ObXPMiscScript" from version 4.1.5. Important: use this patch with that version only!'
-  - name: 'SDR Perks And Patches - Nehrim.esp'
-    after:
-      - 'Oblivion XP.esp'
-    msg:
-      - type: error
-        content: 'Use the Oblivion version.'
-      - type: say
-        content: 'Obsolete. Upgrade to SDR version 8.2'
-  - name: 'SDR_Perks And Patches (Nehrim).esp'
-    after:
-      - 'Oblivion XP.esp'
-    msg:
-      - type: error
-        content: 'Use the Oblivion version.'
-      - type: say
-        content: 'Obsolete. Upgrade to SDR version 8.2'
-  - name: 'SDR_Trip Wire Pressure Plate Patch [Oblivion].esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Upgrade to SDR version 8.2'
-  - name: 'SDR_Trip Wire Pressure Plate Patch [Nehrim].esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Upgrade to SDR version 8.2'
   - name: 'DMRequirements.esp'
     msg: [ *obsolete ]
   - name: 'Toaster''s Legendary Skills.esp'
@@ -19280,103 +19051,6 @@ plugins:
       - crc: 0x8687bbcc
         <<: *dirtyPlugin
         udr: 3
-  - name: 'Better Cities Full - B&M Edition FPS Patch.esp'
-    req:
-      - 'Better Cities Full - B&M Edition.esp'
-  - name: 'Better Cities Skingrad FPS Patch.esp'
-    inc:
-      - 'Better Cities Full.esp'
-  - name: 'Better Cities Leyawiin FPS Patch.esp'
-    inc:
-      - 'Better Cities Full.esp'
-  - name: 'Better Cities Chorrol FPS Patch.esp'
-    inc:
-      - 'Better Cities Full.esp'
-  - name: 'Better Cities Cheydinhal FPS Patch.esp'
-    inc:
-      - 'Better Cities Full.esp'
-  - name: 'Better Cities Bruma FPS Patch.esp'
-    inc:
-      - 'Better Cities Full.esp'
-  - name: 'Better Cities Bravil FPS Patch.esp'
-    inc:
-      - 'Better Cities Full.esp'
-    msg:
-      - type: say
-        content: 'Do not use with Blood & Mud version of Better Cities.'
-  - name: 'Better Cities Bravil - Blood & Mud FPS Patch.esp'
-    inc:
-      - 'Better Cities Full.esp'
-    msg:
-      - type: say
-        content: 'Only use if using Blood & Mud version of Better Cities.'
-  - name: 'Better Cities Anvil FPS Patch.esp'
-    inc:
-      - 'Better Cities Full.esp'
-  - name: 'Better Cities IC Temple FPS Patch.esp'
-    inc:
-      - 'Better Cities Full.esp'
-      - 'Better Imperial City.esp'
-  - name: 'Better Cities IC Talos Plaza FPS Patch.esp'
-    inc:
-      - 'Better Cities Full.esp'
-      - 'Better Imperial City.esp'
-  - name: 'Better Cities IC Prison FPS Patch.esp'
-    inc:
-      - 'Better Cities Full.esp'
-      - 'Better Imperial City.esp'
-  - name: 'Better Cities IC Market FPS Patch.esp'
-    inc:
-      - 'Better Cities Full.esp'
-      - 'Better Imperial City.esp'
-  - name: 'Better Cities IC Green Emperor Way FPS Patch.esp'
-    inc:
-      - 'Better Cities Full.esp'
-      - 'Better Imperial City.esp'
-  - name: 'Better Cities IC Elven Gardens FPS Patch.esp'
-    inc:
-      - 'Better Cities Full.esp'
-      - 'Better Imperial City.esp'
-  - name: 'Better Cities IC Arena FPS Patch.esp'
-    inc:
-      - 'Better Cities Full.esp'
-      - 'Better Imperial City.esp'
-  - name: 'Better Cities IC Arcane University FPS Patch.esp'
-    inc:
-      - 'Better Cities Full.esp'
-      - 'Better Imperial City.esp'
-  - name: 'Better Cities IC Arboretum FPS Patch.esp'
-    inc:
-      - 'Better Cities Full.esp'
-      - 'Better Imperial City.esp'
-  - name: 'Better Cities( Full)?( B&M)? - CUO Bravil( Patch)?\.esp'
-    msg:
-      - <<: *useOnlyOneX
-        subs: [ 'Better Cities *version* - CUO Bravil Patch' ]
-        condition: 'many("Better Cities( Full)?( B&M)? - CUO Bravil( Patch)?\.esp")'
-  - name: 'BCBravilFULL-Barrowfields patch.esp'
-    msg:
-      - type: say
-        content: 'Same as ''Better Cities - Unique Landscape Barrowfields.esp'' - only use ONE of these.'
-        condition: 'file("Better Cities - Unique Landscape Barrowfields.esp")'
-  - name: 'Better Cities( Full)?( B&M)? - CUO Chorrol Patch\.esp'
-    msg:
-      - <<: *useOnlyOneX
-        subs: [ 'Better Cities *version* - CUO Chorrol Patch' ]
-        condition: 'many("Better Cities( Full)?( B&M)? - CUO Chorrol Patch\.esp")'
-  - name: 'BCChorrol-ChorrolHinterland fix.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Remove this and use ''Better Cities - Unique Landscape Chorrol Hinterland.esp'' or ''BCChorrol-ChorrolHinterland patch.esp'' instead.'
-    tag: [ C.Water ]
-  - name: 'BCChorrol-ChorrolHinterland patch.esp'
-    msg:
-      - type: say
-        content: 'Same as ''Better Cities - Unique Landscape Chorrol Hinterland.esp'' - only use ONE of these.'
-        condition: 'file("Better Cities - Unique Landscape Chorrol Hinterland.esp")'
-    tag: [ C.Water ]
-  - name: 'Better Cities - Unique Landscape Chorrol Hinterland.esp'
-    tag: [ C.Water ]
   - name: 'Better Cities - Knights of the Nine.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/16513' ]
     req:
@@ -19385,66 +19059,12 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/16513' ]
     req:
       - 'Better Cities - Open Better Cities.esp'
-  - name: 'BCCheydinhal(FULL)?(B&M)?-CheydinhalFalls patch\.esp'
-    msg:
-      - <<: *useOnlyOneX
-        subs: [ 'Better Cities Cheydinhal & CheydinhalFalls patch' ]
-        condition: 'many("BCCheydinhal(FULL)?(B&M)?-CheydinhalFalls patch\.esp")'
-      - <<: *useOnlyOneX
-        subs: [ 'Same as Better Cities & Unique Landscape - Cheydinhal Falls Patch' ]
-        condition: 'many("Better Cities( Full)?( B&M)? - Unique Landscape Cheydinhal Falls\.esp")'
-    tag: [ C.Water ]
-  - name: 'Better Cities( Full)?( B&M)? - Unique Landscape Cheydinhal Falls\.esp'
-    msg:
-      - <<: *useOnlyOneX
-        subs: [ 'Better Cities & Unique Landscape - Cheydinhal Falls Patch' ]
-        condition: 'many("Better Cities - Unique Landscape Cheydinhal Falls.esp")'
-      - <<: *useOnlyOneX
-        subs: [ 'Same as Better Cities Cheydinhal - CheydinhalFalls patch' ]
-        condition: 'many("BCCheydinhal(FULL)?(B&M)?-CheydinhalFalls patch\.esp")'
-    tag: [ C.Water ]
-  - name: 'Better Cities - CUO Bruma Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/16513' ]
-    msg:
-      - type: say
-        content: 'Only use one version of the Better Cities - CUO Bruma Patch.'
-        condition: 'file("Better Cities (Full|Full B&M) - CUO Bruma Patch\.esp")'
-  - name: 'Better Cities Full - CUO Bruma Patch.esp'
-    msg:
-      - type: say
-        content: 'Only use one version of the Better Cities - CUO Bruma Patch.'
-        condition: 'file("Better Cities (Full B&M )?- CUO Bruma Patch\.esp")'
-  - name: 'Better Cities Full B&M - CUO Bruma Patch.esp'
-    msg:
-      - type: say
-        content: 'Only use one version of the Better Cities - CUO Bruma Patch.'
-        condition: 'file("Better Cities (Full )?- CUO Bruma Patch\.esp")'
-  - name: 'BCSkingrad-SkingradOutskirts patch.esp'
-    msg:
-      - type: say
-        content: 'Same as ''Better Cities - Unique Landscape Skingrad Outskirts.esp'' - only use ONE of these.'
-        condition: 'file("Better Cities - Unique Landscape Skingrad Outskirts.esp")'
-    tag: [ C.Water ]
-  - name: 'Better Cities - Unique Landscape Skingrad Outskirts.esp'
-    tag: [ C.Water ]
   - name: 'Better Cities - TIE Restricted Area.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/16513' ]
     tag: [ Scripts ]
   - name: 'BICDist_OotD_Patch.esp'
     req:
       - 'Better Cities IC Green Emperor Way.esp'
-  - name: 'Better Cities - OMG( Patch)?.*\.esp'
-    msg:
-      - <<: *useOnlyOneX
-        subs: [ 'Better Cities & OMG Patch' ]
-        condition: 'many("Better Cities - OMG( Patch)?\.esp")'
-  - name: 'Better Imperial City - OMG( Patch)?.*\.esp'
-    msg:
-      - <<: *useOnlyOneX
-        subs: [ 'Better Imperial City & OMG Patch' ]
-        condition: 'many("Better Imperial City - OMG( Patch)?\.esp")'
-  - name: 'Better Cities - Stranded Light.esp'
-    msg: [ *obsolete ]
   - name: 'Better Cities - COBL.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/16513' ]
     dirty:
@@ -19486,175 +19106,7 @@ plugins:
         content: 'You Only need this patch. Remove the wb_TBG_RR-LR_UL-II_patch.esp'
         condition: 'file("wb_TBG_RR-LR_UL-II_patch.esp")'
     tag: [ C.Water ]
-  - name: 'Better Cities IC Districts.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Remove this and update to the latest version of Better Cities.'
-  - name: 'BCAnvil-LostCoast Fix.esp'
-    msg: [ *obsolete ]
-  - name: 'Better Cities - Unique Landscape Lost Coast.esp'
-    msg: [ *obsolete ]
-  - name: 'Better Cities Full - City Defences.esp'
-    msg: [ *obsolete ]
-  - name: 'Better Cities - TESFU.esp'
-    msg: [ *obsolete ]
-  - name: 'Better Cities ICMarket.esp'
-    msg: [ *obsolete ]
-  - name: 'Better Cities - ICMarket Additions.esp'
-    msg: [ *obsolete ]
-  - name: 'Better Cities - ICMarket FPS Improver.esp'
-    msg: [ *obsolete ]
-  - name: 'Better Cities - SKINGRAD Additions.esp'
-    msg: [ *obsolete ]
-  - name: 'Better Cities - Skingrad FPS Improver.esp'
-    msg: [ *obsolete ]
-  - name: 'Better Cities - Bravil FPS Improver.esp'
-    msg: [ *obsolete ]
-  - name: 'Better Cities - ANVIL Additions.esp'
-    msg: [ *obsolete ]
-  - name: 'Better Cities - Anvil FPS Improver.esp'
-    msg: [ *obsolete ]
-  - name: 'Better Cities - CHORROL Additions.esp'
-    msg: [ *obsolete ]
-  - name: 'Better Cities - Chorrol FPS Improver.esp'
-    msg: [ *obsolete ]
-  - name: 'Better Cities - CHEYDINHAL Additions.esp'
-    msg: [ *obsolete ]
-  - name: 'Better Cities - Cheydinhal FPS Improver.esp'
-    msg: [ *obsolete ]
-  - name: 'Better Cities - LEYAWIIN Additions.esp'
-    msg: [ *obsolete ]
-  - name: 'Better Cities - Leyawiin FPS Improver.esp'
-    msg: [ *obsolete ]
-  - name: 'Better Cities - Auriel''s Books.esp'
-    msg: [ *obsolete ]
-  - name: 'Better Cities - Blood&Mud.esp'
-    msg: [ *obsolete ]
-  - name: 'Better Cities - Full Additions.esp'
-    msg: [ *obsolete ]
-  - name: 'Better Cities - Lost Spires.esp'
-    msg: [ *obsolete ]
-  - name: 'Better Cities - B&M LS RTT TotF.esp'
-    msg: [ *obsolete ]
-  - name: 'Better Cities - B&M LS RTT.esp'
-    msg: [ *obsolete ]
-  - name: 'Better Cities - B&M LS ToTF RTT.esp'
-    msg: [ *obsolete ]
-  - name: 'Better Cities - B&M LS ToTF.esp'
-    msg: [ *obsolete ]
-  - name: 'Better Cities - B&M RTT.esp'
-    msg: [ *obsolete ]
-  - name: 'Better Cities - B&M ToTF RTT.esp'
-    msg: [ *obsolete ]
-  - name: 'Better Cities - B&M ToTF.esp'
-    msg: [ *obsolete ]
-  - name: 'Better Cities - Blood&Mud LostSpires.esp'
-    msg: [ *obsolete ]
-  - name: 'Better Cities - LS RTT TotF.esp'
-    msg: [ *obsolete ]
-  - name: 'Better Cities - LS RTT.esp'
-    msg: [ *obsolete ]
-  - name: 'Better Cities - LS TotF.esp'
-    msg: [ *obsolete ]
-  - name: 'Better Cities - RTT TotF.esp'
-    msg: [ *obsolete ]
-  - name: 'Better Cities - Bruma FPS Improver.esp'
-    msg: [ *obsolete ]
   - name: 'WBA Arboretum.esp'
-    msg: [ *obsolete ]
-  - name: 'Better Cities - WBA FPS Improver.esp'
-    msg: [ *obsolete ]
-  - name: 'Better Cities LEYAWIIN - No Flooding.esp'
-    msg: [ *obsolete ]
-  - name: 'Better Cities Full - LEYAWIIN No Flooding.esp'
-    msg: [ *obsolete ]
-  - name: 'Better Cities Full Patch.esp'
-    msg: [ *obsolete ]
-  - name: 'Better Cities Full - B&M Edition Patch.esp'
-    msg:
-      - type: say
-        content: 'Only use if using Better Cities Full - B&M Edition.esp'
-      - *obsolete
-  - name: 'Better Cities Skingrad Patch.esp'
-    inc:
-      - 'Better Cities Full.esp'
-    msg: [ *obsolete ]
-  - name: 'Better Cities Leyawiin Patch.esp'
-    inc:
-      - 'Better Cities Full.esp'
-    msg: [ *obsolete ]
-  - name: 'Better Cities Chorrol Patch.esp'
-    inc:
-      - 'Better Cities Full.esp'
-    msg: [ *obsolete ]
-  - name: 'Better Cities Cheydinhal Patch.esp'
-    inc:
-      - 'Better Cities Full.esp'
-    msg: [ *obsolete ]
-  - name: 'Better Cities Bruma Patch.esp'
-    inc:
-      - 'Better Cities Full.esp'
-    msg: [ *obsolete ]
-  - name: 'Better Cities Bravil Patch.esp'
-    inc:
-      - 'Better Cities Full.esp'
-    msg: [ *obsolete ]
-  - name: 'Better Cities Bravil - Blood & Mud Patch.esp'
-    inc:
-      - 'Better Cities Full.esp'
-    msg: [ *obsolete ]
-  - name: 'Better Cities Anvil Patch.esp'
-    inc:
-      - 'Better Cities Full.esp'
-    msg: [ *obsolete ]
-  - name: 'Better Imperial City Patch.esp'
-    req:
-      - 'Better Imperial City.esp'
-    msg: [ *obsolete ]
-  - name: 'Better Cities IC Temple Patch.esp'
-    inc:
-      - 'Better Cities Full.esp'
-      - 'Better Imperial City.esp'
-    msg: [ *obsolete ]
-  - name: 'Better Cities IC Talos Plaza Patch.esp'
-    inc:
-      - 'Better Cities Full.esp'
-      - 'Better Imperial City.esp'
-    msg: [ *obsolete ]
-  - name: 'Better Cities IC Prison Patch.esp'
-    inc:
-      - 'Better Cities Full.esp'
-      - 'Better Imperial City.esp'
-    msg: [ *obsolete ]
-  - name: 'Better Cities IC Market Patch.esp'
-    inc:
-      - 'Better Cities Full.esp'
-      - 'Better Imperial City.esp'
-    msg: [ *obsolete ]
-  - name: 'Better Cities IC Green Emperor Way Patch.esp'
-    inc:
-      - 'Better Cities Full.esp'
-      - 'Better Imperial City.esp'
-    msg: [ *obsolete ]
-  - name: 'Better Cities IC Elven Gardens Patch.esp'
-    inc:
-      - 'Better Cities Full.esp'
-      - 'Better Imperial City.esp'
-    msg: [ *obsolete ]
-  - name: 'Better Cities IC Arena Patch.esp'
-    inc:
-      - 'Better Cities Full.esp'
-      - 'Better Imperial City.esp'
-    msg: [ *obsolete ]
-  - name: 'Better Cities IC Arcane University Patch.esp'
-    inc:
-      - 'Better Cities Full.esp'
-      - 'Better Imperial City.esp'
-    msg: [ *obsolete ]
-  - name: 'Better Cities IC Arboretum Patch.esp'
-    inc:
-      - 'Better Cities Full.esp'
-      - 'Better Imperial City.esp'
     msg: [ *obsolete ]
   - name: 'Cyrodiil Rebuild.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/42654' ]
@@ -19753,20 +19205,6 @@ plugins:
     tag:
       - Graphics
       - Invent
-  - name: 'HTSCl_cuo.esp'
-    inc:
-      - 'HTSCl_cuo_inElderCouncil.esp'
-    msg:
-      - type: say
-        content: 'Requires: Cyrodiil Upgrade Overhaul.'
-    tag: [ Graphics ]
-  - name: 'HTSCl_cuo_inElderCouncil.esp'
-    inc:
-      - 'HTSCl_cuo.esp'
-    msg:
-      - type: say
-        content: 'Requires: CUO, The Elder Council.'
-    tag: [ Graphics ]
   - name: 'HTSCl_elsweyr.esp'
     req:
       - 'ElsweyrAnequina.esp'
@@ -19983,14 +19421,6 @@ plugins:
       - crc: 0x3f990ded
         <<: *dirtyPlugin
         itm: 2
-  - name: 'SDR_Perks And Patches [Oblivion].esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Upgrade to SDR version 8.2'
-  - name: 'SDR_Detect Life Shader Patch [Oblivion].esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Upgrade to SDR version 8.2'
   - name: 'Shining Creatures(_Atronach(Flame|Frost)|_WillOWisp|_DLCFrostcrag)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/29735' ]
     tag: [ Invent ]
@@ -20022,14 +19452,6 @@ plugins:
       - R.Teeth
       - Voice-F
       - Voice-M
-  - name: 'Enhanced Economy - Soulgems.esp'
-    # No longer available
-    msg:
-      - type: say
-        content: 'Obsolete. Remove this and install [Soulgem Magic](http://www.nexusmods.com/oblivion/mods/35393).'
-    tag:
-      - NoMerge
-      - Scripts
   - name: 'Hemingweys Capes.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
     msg:
@@ -20157,8 +19579,6 @@ plugins:
       - NoMerge
   - name: '(Knights|DLC(Frostcrag|MehrunesRazor|Orrery|ThievesDen)) Vwalk\.esp'
     group: *veryEarlyGroup
-  - name: 'CyrodiilUpgradeResourcePack Vwalk.esp'
-    group: *underridesGroup
   - name: 'SoVvM Vwalk.esp'
     group: *underridesGroup
   - name: 'TNR ALL RACES FINAL Vwalk.esp'
@@ -20388,10 +19808,6 @@ plugins:
       - Relations
       - Relev
       - Stats
-  - name: 'SDR Perks and Patches [Oblivion].esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Upgrade to SDR version 8.2'
   - name: 'TES4Merged.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/11536/' ]
     group: *dynamicPatchesGroup
@@ -20421,24 +19837,9 @@ plugins:
       - 'Bashed Patch, 0.esp'  # The default filename for a Bashed Patch.
     req: [ *OBSEv21 ]
 
-  - name: 'LoversIdleForceReset.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Remove and use newer version of Lovers with PK. Integrated into 1.3.1 Rev41 and newer.'
-  - name: 'Rustle House CBash Fix.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/35252' ]
-    msg:
-      - type: say
-        content: 'ONLY needed if you find the house basement flooded. This happens sometimes when using All Natural + CBash. Instead of using this fix you can alternately remove the "KhRHInterior" record from the Bash Patch each time you rebuild.'
   - name: 'Vanilla Weapon Stat Override( - SI)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/39914' ]
     msg: [ *doNotClean ]
-  - name: 'PalePassIce.esp'
-    url: [ 'http://www.nexusmods.com/oblivion/mods/43496' ]
-    dirty:
-      - crc: 0x10547198
-        <<: *dirtyPlugin
-        udr: 27
   - name: 'KRLODToggleRestored.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/37701' ]
     msg:
@@ -20457,10 +19858,6 @@ plugins:
       - type: error
         content: 'This plugin should never be active. Deactivate immediately.'
         condition: 'active("FRLODToggleBasic.esp")'
-  - name: 'ASTnehrimHotfixes01(EN).esp'
-    msg:
-      - <<: *obsolete
-        subs: [ '[Nehrim English Supplemental](http://www.nexusmods.com/oblivion/mods/39736)' ]
   - name: 'WindowLightingSystem.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/19628' ]
     msg:
@@ -20511,20 +19908,10 @@ plugins:
   - name: 'SM Combat Hide.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/20303/' ]
     msg: [ *masterReassign ]
-  - name: 'SDR Perks And Patches - Oblivion.esp'
-    msg: [ *useNehrimVer ]
-    after:
-      - 'Oblivion XP.esp'
-  - name: 'SDR_Perks And Patches (Oblivion).esp'
-    msg: [ *useNehrimVer ]
-    after:
-      - 'Oblivion XP.esp'
   - name: 'StealthOverhaul.esp'
     url:
       - 'https://www.nexusmods.com/oblivion/mods/6359/'
       - 'https://www.nexusmods.com/oblivion/mods/31908/'
-    msg: [ *masterReassign ]
-  - name: 'Realistic Sneak for NPCs.esp'
     msg: [ *masterReassign ]
   - name: 'ZumbsLockpickingMod - OBSE.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17894/' ]
