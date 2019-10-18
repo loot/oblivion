@@ -3563,24 +3563,13 @@ plugins:
     inc:
       - 'Oscuro''s_Oblivion_Overhaul.esm'
     msg: [ *alreadyInOOO ]
-  - name: 'Morag Tong Assassins v1-1.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/28496' ]
-    dirty:
-      - crc: 0xebabfce8
-        <<: *dirtyPlugin
-        itm: 56
-  - name: 'Morag Tong Assassins(V1.2).esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/28496' ]
-    dirty:
-      - crc: 0xee106b87
-        <<: *dirtyPlugin
-        itm: 54
   - name: 'Morag Tong Assassins(V1.3).esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/28496' ]
     dirty:
-      - crc: 0x6d3b25d4
-        <<: *dirtyPlugin
-        itm: 54
+      - <<: *quickClean
+        crc: 0x6D3B25D4
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 17
   - name: 'Lyn-StoriesFromTheSeaMod.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/12100' ]
     tag: [ Invent ]
