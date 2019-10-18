@@ -2915,8 +2915,9 @@ plugins:
       - 'https://www.nexusmods.com/oblivion/mods/19487'
     tag: [ Scripts ]
     dirty:
-      - crc: 0x9a266ec1
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x9A266EC1
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
   - name: 'PowerAttack Voicemod.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/10980' ]
