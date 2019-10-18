@@ -3521,6 +3521,7 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/12044' ]
     tag: [ Invent ]
   - name: 'JQPotionBottlesTest.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/33946' ]
     msg:
       - type: say
         content: 'Does not add anything to the game except some examples in the testing hall - deactivate and keep resources is most often the best thing to do.'
@@ -3661,10 +3662,12 @@ plugins:
   - name: 'NR500.esp'
     req: [ *OBSEv15 ]
   - name: 'New Potions by Tealpanda.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/33946' ]
     dirty:
-      - crc: 0xe5983547
-        <<: *dirtyPlugin
-        itm: 1
+      - <<: *quickClean
+        crc: 0x6F0792AF
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 3
   - name: 'New Potions.esp'
     tag:
       - Graphics
