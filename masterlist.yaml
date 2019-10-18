@@ -3513,8 +3513,9 @@ plugins:
   - name: 'Inscription Profession.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/39962' ]
     dirty:
-      - crc: 0xcc8dfd00
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xCC8DFD00
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
   - name: 'Item Crafting v4.2.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/12044' ]
