@@ -13564,11 +13564,10 @@ plugins:
         content: 'Probably incompatible with Better Cities.'
         condition: 'file("Better Cities Resources.esm")'
   - name: 'Imperial City Redux.esp'
-    dirty:
-      - crc: 0xc6d93343
-        <<: *dirtyPlugin
-        itm: 789
-        udr: 2758
+    url: [ 'https://www.nexusmods.com/oblivion/mods/25113' ]
+    clean:
+      - crc: 0x06D10790
+        util: 'TES4Edit v4.0.2i'
   - name: 'Natural_Vegetation_by_Max_Tael.esp'
     msg:
       - type: say
