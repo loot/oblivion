@@ -3425,8 +3425,16 @@ plugins:
   - name: 'CLS-Sailboats.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17150' ]
     dirty:
-      - crc: 0xa1ae724a
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xA1AE724A
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 12
+  - name: 'CLS-Sailboats-COBL.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/17150' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xE193CD35
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 12
   - name: 'CrimsonScarArmor.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/19627' ]
