@@ -4058,17 +4058,15 @@ plugins:
         condition: 'file("Better Cities Resources.esm")'
     tag: [ Hair ]
   - name: 'moDem''s City Life.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/11351' ]
     msg:
       - type: say
         content: 'May cause crashes in the IC Market district. May have been fixed. Needs verification.'
     dirty:
-      - crc: 0x88d5a5ee
-        <<: *dirtyPlugin
-        itm: 286
-        udr: 19
-      - crc: 0xd4007433
-        <<: *dirtyPlugin
-        itm: 286
+      - <<: *quickClean
+        crc: 0x88D5A5EE
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 287
         udr: 19
   - name: 'Oblivion Alive.esp'
     msg:
