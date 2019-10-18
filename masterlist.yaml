@@ -3193,36 +3193,26 @@ plugins:
     msg:
       - type: say
         content: 'demo mod, illustrates how to use the basic features of AddActorValues. Not need for use.'
-  - name: 'AliveWaters.esp'
-    url:
-      - 'https://www.nexusmods.com/oblivion/mods/6914/'
-      # Castle Sea View Farms Replacer Plugin
-      - 'https://www.nexusmods.com/oblivion/mods/38366'
-      - 'https://www.nexusmods.com/oblivion/mods/44069/'
-    dirty:
-      - crc: 0x717bf5a
-        <<: *dirtyPlugin
-        itm: 299
-      - crc: 0xd28f1569
-        <<: *dirtyPlugin
-        itm: 19
-  - name: 'AliveWaters - Koi Addon.esp'
-    url:
-      - 'https://www.nexusmods.com/oblivion/mods/6914/'
-      - 'https://www.nexusmods.com/oblivion/mods/44069/'
-    dirty:
-      - crc: 0x29f02eed
-        <<: *dirtyPlugin
-        itm: 1
-      - crc: 0x47a85077
-        <<: *dirtyPlugin
-        itm: 1
-  - name: 'AliveWaters_nofish.esp'
+  - name: 'AliveWaters( - (Koi|Slaughterfish) Addon|_nofish)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/44069/' ]
+  - name: 'AliveWaters.esp'
     dirty:
-      - crc: 0x7618b1db
-        <<: *dirtyPlugin
-        itm: 1
+      - <<: *quickClean
+        crc: 0x37EA19F9
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 36
+  - name: 'AliveWaters - Koi Addon.esp'
+    clean:
+      - crc: 0xDD380B77
+        util: 'TES4Edit v4.0.2i'
+  - name: 'AliveWaters - Slaughterfish Addon.esp'
+    clean:
+      - crc: 0x51FA7E8C
+        util: 'TES4Edit v4.0.2i'
+  - name: 'AliveWaters_nofish.esp'
+    clean:
+      - crc: 0xCD7F2867
+        util: 'TES4Edit v4.0.2i'
   - name: 'AdventurersAlchemy.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/18636' ]
     dirty:
