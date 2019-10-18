@@ -1876,9 +1876,10 @@ plugins:
   - name: 'OOOEquipmentAddon.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/46028/' ]
     dirty:
-      - crc: 0xb951292d
-        <<: *dirtyPlugin
-        itm: 1
+      - <<: *quickClean
+        crc: 0xCBB473A5
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 3
 
   ### OOO 3rd Party Patches and Addons ###
   - name: 'Better Hunting for OOO.esp'
