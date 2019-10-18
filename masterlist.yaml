@@ -4015,21 +4015,31 @@ plugins:
       - type: say
         content: 'Not needed if using option in Enhanced Economy.'
   - name: 'Living Economy.esp'
-    inc:
-      - 'Living Economy - SI.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/4432' ]
+    inc: [ 'Living Economy - SI.esp' ]
+    clean:
+      - crc: 0x486C64F8
+        util: 'TES4Edit v4.0.2i'
   - name: 'Living Economy - SI.esp'
-    req:
-      - 'DLCShiveringIsles.esp'
-    inc:
-      - 'Living Economy.esp'
-  - name: 'SI Living Economy.esp'
-    msg: [ *obsolete ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/4432' ]
+    req: [ 'DLCShiveringIsles.esp' ]
+    inc: [ 'Living Economy.esp' ]
+    clean:
+      - crc: 0x646C0AC5
+        util: 'TES4Edit v4.0.2i'
   - name: 'Living Economy - Items.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/4432' ]
     dirty:
-      - crc: 0x1f0a2ab8
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x1F0A2AB8
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 10
         udr: 2
+  - name: 'Cutthroat Merchants.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/4432' ]
+    clean:
+      - crc: 0x5DCDC3A3
+        util: 'TES4Edit v4.0.2i'
   - name: 'GoldAdjustment.esp'
     msg:
       - type: say
