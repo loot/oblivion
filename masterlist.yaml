@@ -3903,12 +3903,11 @@ plugins:
   - name: 'the punished girlbox.esp'
     tag: [ Graphics ]
   - name: 'Treasure Hunt.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/19216' ]
     dirty:
-      - crc: 0x1402e41f
-        <<: *dirtyPlugin
-        itm: 6
-      - crc: 0x4fd118f2
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x4FD118F2
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 2
   - name: 'TreasureChest - Hard.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/44066' ]
