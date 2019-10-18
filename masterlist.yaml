@@ -3477,8 +3477,9 @@ plugins:
   - name: 'Fish! - v1.1.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/30260' ]
     dirty:
-      - crc: 0x872545de
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x872545DE
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 36
   - name: 'Fishing in Cyrodiil.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/30260' ]
@@ -3487,8 +3488,9 @@ plugins:
         content: 'If using MMM or FCOM use ''Mart''s Monster Mod - Diverse WaterLife.esp'' instead.'
     tag: [ Invent ]
     dirty:
-      - crc: 0xa2300d21
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xA2300D21
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 36
   - name: 'GW71_Soulgems.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17499' ]
