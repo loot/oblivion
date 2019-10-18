@@ -3090,8 +3090,9 @@ plugins:
   - name: 'Rainbows.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/8927' ]
     dirty:
-      - crc: 0x71bddec0
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x71BDDEC0
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 3
   - name: 'Better Rainbows.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/36566' ]
