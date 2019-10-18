@@ -1842,6 +1842,10 @@ plugins:
       - 'OOOAddonUndead.esp'
       - 'OOOAddonWilderness.esp'
       - 'OOODangerousDaedra.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'OOOExtended.esp' ]
+        condition: 'active("OOOExtended.esp")'
     dirty:
       - <<: *quickClean
         crc: 0xD9A4F3B2
@@ -1850,6 +1854,10 @@ plugins:
   ### OOO Equipment Add-on ###
   - name: 'OOOEquipmentAddon.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/46028/' ]
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'OOOExtended.esp' ]
+        condition: 'active("OOOExtended.esp")'
     dirty:
       - <<: *quickClean
         crc: 0xCBB473A5
