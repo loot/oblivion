@@ -3733,11 +3733,11 @@ plugins:
   - name: 'P-Froggys Corpse Carry EV.esp'
     req: [ *OBSE ]
   - name: 'pmRealTimeInteractions.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/39679' ]
     req: [ *MenuQue ]
-    dirty:
-      - crc: 0x94805075
-        <<: *dirtyPlugin
-        itm: 1
+    clean:
+      - crc: 0x0EDA5741
+        util: 'TES4Edit v4.0.2i'
   - name: 'Portable Campsite.esp'
     dirty:
       - crc: 0xedd4b869
