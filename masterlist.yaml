@@ -3629,14 +3629,34 @@ plugins:
       - *SoundCommands
     msg: [ *obsolete ]
   - name: 'Mud Crabs!(_(coMbO|MMM|OOO))?\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/12982' ]
     msg:
       - <<: *useOnlyOneX
         subs: [ 'Mud Crabs!' ]
         condition: 'many("Mud Crabs!(_(coMbO|MMM|OOO))?\.esp")'
+  - name: 'Mud Crabs!.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0xA25F26CB
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 16
+  - name: 'Mud Crabs!_MMM.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x65DC4572
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 16
+  - name: 'Mud Crabs!_OOO.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x64FCD082
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 16
   - name: 'Mud Crabs!_coMbO.esp'
     dirty:
-      - crc: 0xc4750e07
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xC4750E07
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 16
   - name: 'NR500.esp'
     req: [ *OBSEv15 ]
