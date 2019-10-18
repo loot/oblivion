@@ -2478,8 +2478,9 @@ plugins:
       - NoMerge
       - NpcFaces
     dirty:
-      - crc: 0x2c6e9200
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x2C6E9200
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 10
   - name: 'Beautiful_Women(_SI|_NiceOnly|_NotSoNice_Bonus|_DB_Addon|_Vampires(_50)?)\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17189' ]
@@ -2519,8 +2520,9 @@ plugins:
       - NpcFaces
     group: *underridesGroup
     dirty:
-      - crc: 0xaa25a555
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xAA25A555
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 3
   - name: 'Absolutely_Sexy_MarketDistrict.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/15675' ]
@@ -2573,9 +2575,10 @@ plugins:
       - Invent
       - Relations
     dirty:
-      - crc: 0xd32dae95
-        <<: *dirtyPlugin
-        itm: 16
+      - <<: *quickClean
+        crc: 0xD32DAE95
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 13
         udr: 126
   - name: 'Self-Preservation v1.0.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/24288' ]
@@ -2584,8 +2587,9 @@ plugins:
         content: 'If not using Bash this must be loaded after UOP/OOO/MMM/FCOM/any NPC editing mod but you''ll lose their NPC edits.'
     tag: [ Scripts ]
     dirty:
-      - crc: 0x3bb14891
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x3BB14891
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 12
   - name: 'Primate Rank Fix.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/24656' ]
@@ -2766,8 +2770,9 @@ plugins:
         condition: 'not active("Natural_Weather_HDR_2.1.3_coloroverride.esp.esp") and not active("Natural_Weather_HDR_by_Max_Tae_CO_RD.esp")'
   - name: 'Natural_Weather_HDR_by_Max_Tael_RD.esp'
     dirty:
-      - crc: 0x9233fd80
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x9233FD80
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 2
   - name: 'Natural_Weather_(non-HDR|HDR|non-HDR\+Darker_Nights|HDR\+Darker_Nights)?_2.1.2_(bugfree|coloroverride)?.*\.esp'
     msg:
@@ -2852,43 +2857,40 @@ plugins:
   - name: 'Realistic Water.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/37794' ]
     dirty:
-      - crc: 0xb049e8e
-        <<: *dirtyPlugin
-        itm: 5
-      - crc: 0x4b04a062
-        <<: *dirtyPlugin
-        itm: 5
-      - crc: 0xeaf3b550
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xEAF3B550
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 3
   - name: 'Skyrimized Water(s)?( v1)? HD( BLUE)?( eng| ita| - SI Addon)\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/41599' ]
     tag: [ C.Water ]
   - name: 'Idle Dialogue.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/38466' ]
-    dirty:
-      - crc: 0xf3ddd964
-        <<: *dirtyPlugin
-        itm: 5
+    clean:
+      - crc: 0x1B070498
+        util: 'TES4Edit v4.0.2i'
   - name: 'Echo_ChapelChant.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/14868' ]
     dirty:
-      - crc: 0x1463180e
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x1463180E
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 2
   - name: 'AmbientTownSounds.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/13009' ]
     dirty:
-      - crc: 0x130e1d68
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x130E1D68
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 3
   - name: 'MIS.esp'
     url:
       - 'https://www.nexusmods.com/oblivion/mods/5487'
       - 'https://www.nexusmods.com/oblivion/mods/19038'
     dirty:
-      - crc: 0xbca36827
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xBCA36827
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
   - name: 'MIS Low Wind.esp'
     url:
@@ -2896,17 +2898,26 @@ plugins:
       - 'https://www.nexusmods.com/oblivion/mods/19038'
     tag: [ Scripts ]
     dirty:
-      - crc: 0xf343d8ea
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xF343D8EA
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 2
+  - name: 'MIS New Sounds Optional Part.esp'
+    url:
+      - 'https://www.nexusmods.com/oblivion/mods/5487'
+      - 'https://www.nexusmods.com/oblivion/mods/19038'
+    clean:
+      - crc: 0xE2973B88
+        util: 'TES4Edit v4.0.2i'
   - name: 'Atmospheric Oblivion.esp'
     url:
       - 'https://www.nexusmods.com/oblivion/mods/7703'
       - 'https://www.nexusmods.com/oblivion/mods/19487'
     tag: [ Scripts ]
     dirty:
-      - crc: 0x9a266ec1
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x9A266EC1
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
   - name: 'PowerAttack Voicemod.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/10980' ]
@@ -3079,14 +3090,16 @@ plugins:
   - name: 'Rainbows.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/8927' ]
     dirty:
-      - crc: 0x71bddec0
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x71BDDEC0
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 3
   - name: 'Better Rainbows.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/36566' ]
     dirty:
-      - crc: 0x71bddec0
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x71BDDEC0
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 3
   - name: '_Real_Lights.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/10891' ]
@@ -3151,16 +3164,16 @@ plugins:
   - name: '00crystalTorch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/41940' ]
     dirty:
-      - crc: 0xe7a1bce7
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x8485ACD5
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
   - name: '00 Realistic Player Speech.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/46243' ]
     tag: [ Names ]
-    dirty:
-      - crc: 0x46716219
-        <<: *dirtyPlugin
-        itm: 2
+    clean:
+      - crc: 0x06B037D8
+        util: 'TES4Edit v4.0.2i'
   - name: '300_Lore Dialogue.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/9722' ]
     msg:
@@ -3171,53 +3184,42 @@ plugins:
     inc:
       - '300_Lore Dialogue.esp'
     dirty:
-      - crc: 0x366c8d97
-        <<: *dirtyPlugin
-        itm: 1
-      - crc: 0x876daca1
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x366C8D97
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
   - name: 'AddActorValues_example.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/33248' ]
     msg:
       - type: say
         content: 'demo mod, illustrates how to use the basic features of AddActorValues. Not need for use.'
-  - name: 'AliveWaters.esp'
-    url:
-      - 'https://www.nexusmods.com/oblivion/mods/6914/'
-      # Castle Sea View Farms Replacer Plugin
-      - 'https://www.nexusmods.com/oblivion/mods/38366'
-      - 'https://www.nexusmods.com/oblivion/mods/44069/'
-    dirty:
-      - crc: 0x717bf5a
-        <<: *dirtyPlugin
-        itm: 299
-      - crc: 0xd28f1569
-        <<: *dirtyPlugin
-        itm: 19
-  - name: 'AliveWaters - Koi Addon.esp'
-    url:
-      - 'https://www.nexusmods.com/oblivion/mods/6914/'
-      - 'https://www.nexusmods.com/oblivion/mods/44069/'
-    dirty:
-      - crc: 0x29f02eed
-        <<: *dirtyPlugin
-        itm: 1
-      - crc: 0x47a85077
-        <<: *dirtyPlugin
-        itm: 1
-  - name: 'AliveWaters_nofish.esp'
+  - name: 'AliveWaters( - (Koi|Slaughterfish) Addon|_nofish)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/44069/' ]
+  - name: 'AliveWaters.esp'
     dirty:
-      - crc: 0x7618b1db
-        <<: *dirtyPlugin
-        itm: 1
+      - <<: *quickClean
+        crc: 0x37EA19F9
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 36
+  - name: 'AliveWaters - Koi Addon.esp'
+    clean:
+      - crc: 0xDD380B77
+        util: 'TES4Edit v4.0.2i'
+  - name: 'AliveWaters - Slaughterfish Addon.esp'
+    clean:
+      - crc: 0x51FA7E8C
+        util: 'TES4Edit v4.0.2i'
+  - name: 'AliveWaters_nofish.esp'
+    clean:
+      - crc: 0xCD7F2867
+        util: 'TES4Edit v4.0.2i'
   - name: 'AdventurersAlchemy.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/18636' ]
     dirty:
-      - crc: 0x8aa69408
-        <<: *dirtyPlugin
-        itm: 1
+      - <<: *quickClean
+        crc: 0x8AA69408
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 3
   - name: 'aLHerobook01.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/13397' ]
     msg:
@@ -3408,21 +3410,31 @@ plugins:
         content: 'For use with Better Cities use ''ClocksOfCyrodiil_BC_OBC_OC_OCLR_Vanilla.esp'' instead.'
         condition: 'file("Better Cities Resources.esm") and version("Better Cities Resources.esm", "6.0.0", <)'
     dirty:
-      - crc: 0x6910c69
-        <<: *dirtyPlugin
-        itm: 46
+      - <<: *quickClean
+        crc: 0x06910C69
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 48
         udr: 20
   - name: 'Better Clocks.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/36384/' ]
     dirty:
-      - crc: 0xefeaa850
-        <<: *dirtyPlugin
-        itm: 25
+      - <<: *quickClean
+        crc: 0xEFEAA850
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 27
   - name: 'CLS-Sailboats.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17150' ]
     dirty:
-      - crc: 0xa1ae724a
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xA1AE724A
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 12
+  - name: 'CLS-Sailboats-COBL.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/17150' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xE193CD35
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 12
   - name: 'CrimsonScarArmor.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/19627' ]
@@ -3430,13 +3442,9 @@ plugins:
   - name: 'CT-Com''s Torch Compendium.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/6472' ]
     tag: [ Actors.AIData ]
-    dirty:
-      - crc: 0xc3c7144b
-        <<: *dirtyPlugin
-        itm: 3
-      - crc: 0xe0c0457d
-        <<: *dirtyPlugin
-        itm: 3
+    clean:
+      - crc: 0xB4BDEDF9
+        util: 'TES4Edit v4.0.2i'
   - name: 'Cyrodilic Brandy.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/4574' ]
     tag:
@@ -3469,8 +3477,9 @@ plugins:
   - name: 'Fish! - v1.1.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/30260' ]
     dirty:
-      - crc: 0x872545de
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x872545DE
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 36
   - name: 'Fishing in Cyrodiil.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/30260' ]
@@ -3479,8 +3488,9 @@ plugins:
         content: 'If using MMM or FCOM use ''Mart''s Monster Mod - Diverse WaterLife.esp'' instead.'
     tag: [ Invent ]
     dirty:
-      - crc: 0xa2300d21
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xA2300D21
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 36
   - name: 'GW71_Soulgems.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17499' ]
@@ -3503,13 +3513,15 @@ plugins:
   - name: 'Inscription Profession.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/39962' ]
     dirty:
-      - crc: 0xcc8dfd00
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xCC8DFD00
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
   - name: 'Item Crafting v4.2.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/12044' ]
     tag: [ Invent ]
   - name: 'JQPotionBottlesTest.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/33946' ]
     msg:
       - type: say
         content: 'Does not add anything to the game except some examples in the testing hall - deactivate and keep resources is most often the best thing to do.'
@@ -3524,20 +3536,23 @@ plugins:
   - name: 'LadyLis_dainties.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17405' ]
     dirty:
-      - crc: 0xb3ec8302
-        <<: *dirtyPlugin
-        itm: 21
+      - <<: *quickClean
+        crc: 0xB3EC8302
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
   - name: 'LadyLiy_Leckerli.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17405' ]
     dirty:
-      - crc: 0xb3ca457
-        <<: *dirtyPlugin
-        itm: 21
+      - <<: *quickClean
+        crc: 0x0B3CA457
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
   - name: 'Lamps of Oblivion.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/7614' ]
     dirty:
-      - crc: 0xef38faac
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xEF38FAAC
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 18
   - name: 'Lock Bash v1.1.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/4076' ]
@@ -3549,30 +3564,20 @@ plugins:
     inc:
       - 'Oscuro''s_Oblivion_Overhaul.esm'
     msg: [ *alreadyInOOO ]
-  - name: 'Morag Tong Assassins v1-1.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/28496' ]
-    dirty:
-      - crc: 0xebabfce8
-        <<: *dirtyPlugin
-        itm: 56
-  - name: 'Morag Tong Assassins(V1.2).esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/28496' ]
-    dirty:
-      - crc: 0xee106b87
-        <<: *dirtyPlugin
-        itm: 54
   - name: 'Morag Tong Assassins(V1.3).esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/28496' ]
     dirty:
-      - crc: 0x6d3b25d4
-        <<: *dirtyPlugin
-        itm: 54
+      - <<: *quickClean
+        crc: 0x6D3B25D4
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 17
   - name: 'Lyn-StoriesFromTheSeaMod.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/12100' ]
     tag: [ Invent ]
     dirty:
-      - crc: 0x182a6977
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x182A6977
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 7
   - name: 'Mage Guild Sorters v3.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/35354' ]
@@ -3613,9 +3618,11 @@ plugins:
         content: 'Probably not compatible with OOO. Untested.'
         condition: *OOOCond
   - name: 'More_Vegetables.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/11459' ]
     dirty:
-      - crc: 0x2eaee466
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x2EAEE466
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 3
   - name: 'BetterMusicSystem.esp'
     req:
@@ -3623,22 +3630,44 @@ plugins:
       - *SoundCommands
     msg: [ *obsolete ]
   - name: 'Mud Crabs!(_(coMbO|MMM|OOO))?\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/12982' ]
     msg:
       - <<: *useOnlyOneX
         subs: [ 'Mud Crabs!' ]
         condition: 'many("Mud Crabs!(_(coMbO|MMM|OOO))?\.esp")'
+  - name: 'Mud Crabs!.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0xA25F26CB
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 16
+  - name: 'Mud Crabs!_MMM.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x65DC4572
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 16
+  - name: 'Mud Crabs!_OOO.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x64FCD082
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 16
   - name: 'Mud Crabs!_coMbO.esp'
     dirty:
-      - crc: 0xc4750e07
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xC4750E07
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 16
   - name: 'NR500.esp'
     req: [ *OBSEv15 ]
   - name: 'New Potions by Tealpanda.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/33946' ]
     dirty:
-      - crc: 0xe5983547
-        <<: *dirtyPlugin
-        itm: 1
+      - <<: *quickClean
+        crc: 0x6F0792AF
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 3
   - name: 'New Potions.esp'
     tag:
       - Graphics
@@ -3648,16 +3677,20 @@ plugins:
       - Graphics
       - NoMerge
   - name: 'Oblivion Cats v0.22b.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/4348' ]
     dirty:
-      - crc: 0x1ce8a9dd
-        <<: *dirtyPlugin
-        itm: 18
+      - <<: *quickClean
+        crc: 0x1CE8A9DD
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 17
   - name: 'Oblivion Collectible Cards.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/19140' ]
     tag: [ Invent ]
     dirty:
-      - crc: 0xac9752e5
-        <<: *dirtyPlugin
-        itm: 1
+      - <<: *quickClean
+        crc: 0xEDF9B36F
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 3
   - name: 'Passion Fruit.esp'
     tag: [ Graphics ]
   - name: 'personality_idles4.esp'
@@ -3681,12 +3714,11 @@ plugins:
   - name: 'personality_idles_custom.esp'
     msg: [ *doNotClean ]
   - name: 'P1DseeYouSleep.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/16005' ]
     dirty:
-      - crc: 0x41c990c4
-        <<: *dirtyPlugin
-        itm: 7
-      - crc: 0xa72d68f1
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x41C990C4
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 7
   - name: 'See You Sleep DLL.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/42649' ]
@@ -3701,20 +3733,24 @@ plugins:
   - name: 'P-Froggys Corpse Carry EV.esp'
     req: [ *OBSE ]
   - name: 'pmRealTimeInteractions.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/39679' ]
     req: [ *MenuQue ]
-    dirty:
-      - crc: 0x94805075
-        <<: *dirtyPlugin
-        itm: 1
+    clean:
+      - crc: 0x0EDA5741
+        util: 'TES4Edit v4.0.2i'
   - name: 'Portable Campsite.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/5684' ]
     dirty:
-      - crc: 0xedd4b869
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xEDD4B869
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 4
   - name: 'Portable Campsite - Quickstart.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/5684' ]
     dirty:
-      - crc: 0xfe300f35
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xFE300F35
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 4
   - name: 'Q - More and Moldy Ingredients v1.1.esp'
     tag: [ Relev ]
@@ -3734,8 +3770,9 @@ plugins:
   - name: 'Qarls_Harvest.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/8113' ]
     dirty:
-      - crc: 0x31844e23
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x31844E23
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 8
         udr: 105
   - name: 'Qarls_Harvest addon.esp'
@@ -3744,28 +3781,12 @@ plugins:
     msg:
       - type: say
         content: 'Don''t use with MMM/OOO/FCOM; use ''Qarls_Harvest addon_MMM/OOO'''
-  - name: 'QQuix - Rock, rock, rock your ship - V2.0.esp'
-    msg: [ *obsolete ]
-    dirty:
-      - crc: 0x275d6c94
-        <<: *dirtyPlugin
-        itm: 3
-      - crc: 0xdd45007e
-        <<: *dirtyPlugin
-        itm: 3
   - name: 'QQuix - Rock, rock, rock your ship - V3.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/29649' ]
     dirty:
-      - crc: 0x2e1085a5
-        <<: *dirtyPlugin
-        itm: 12
-      - crc: 0xda6f223c
-        <<: *dirtyPlugin
-        itm: 12
-      - crc: 0xe4a111c4
-        <<: *dirtyPlugin
-        itm: 12
-      - crc: 0x2ae99607
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x2E1085A5
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 12
   - name: 'QuickEquipSwap.esp'
     req: [ *OBSE ]
@@ -3782,12 +3803,6 @@ plugins:
   - name: 'Respawning Containers.esp'
     req:
       - 'DLCShiveringIsles.esp'
-  - name: 'RealitySpectre''sBetterPotions.esp'
-    tag: [ Graphics ]
-    dirty:
-      - crc: 0xe8944779
-        <<: *dirtyPlugin
-        itm: 5
   - name: 'RealWalk.esp'
     tag:
       - Actors.Anims
@@ -3801,9 +3816,11 @@ plugins:
       - Graphics
       - Invent
   - name: 'Redecoration.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/24498' ]
     dirty:
-      - crc: 0x31844e23
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x6A712D9B
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 3
   - name: 'Real_Mannequin.esp'
     tag: [ C.Names ]
@@ -3841,23 +3858,29 @@ plugins:
   - name: '1HweaponOnBack.esp'
     msg: [ *obsolete ]
   - name: 'Shouts of the Dovahkiin.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/39896' ]
     tag:
       - Actors.Anims
       - Actors.CombatStyle
       - Voice-M
     dirty:
-      - crc: 0x844a23d8
-        <<: *dirtyPlugin
-        itm: 13
+      - <<: *quickClean
+        crc: 0x844A23D8
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 19
   - name: 'SkinMannequinVan.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/31218' ]
     dirty:
-      - crc: 0xb3148f27
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xB3148F27
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 10
   - name: 'SkinMannequinVan-nosleep.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/31218' ]
     dirty:
-      - crc: 0x65249775
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x65249775
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 10
   - name: 'Skyrim Ingredients.esp'
     tag:
@@ -3880,12 +3903,11 @@ plugins:
   - name: 'the punished girlbox.esp'
     tag: [ Graphics ]
   - name: 'Treasure Hunt.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/19216' ]
     dirty:
-      - crc: 0x1402e41f
-        <<: *dirtyPlugin
-        itm: 6
-      - crc: 0x4fd118f2
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x4FD118F2
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 2
   - name: 'TreasureChest - Hard.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/44066' ]
@@ -3933,10 +3955,9 @@ plugins:
     tag:
       - Graphics
       - NoMerge
-    dirty:
-      - crc: 0xc0a002b4
-        <<: *dirtyPlugin
-        udr: 1
+    clean:
+      - crc: 0xC0A002B4
+        util: 'TES4Edit v4.0.2i'
   - name: 'AC_Gold_Coins.esp'
     tag:
       - Graphics
@@ -3994,21 +4015,31 @@ plugins:
       - type: say
         content: 'Not needed if using option in Enhanced Economy.'
   - name: 'Living Economy.esp'
-    inc:
-      - 'Living Economy - SI.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/4432' ]
+    inc: [ 'Living Economy - SI.esp' ]
+    clean:
+      - crc: 0x486C64F8
+        util: 'TES4Edit v4.0.2i'
   - name: 'Living Economy - SI.esp'
-    req:
-      - 'DLCShiveringIsles.esp'
-    inc:
-      - 'Living Economy.esp'
-  - name: 'SI Living Economy.esp'
-    msg: [ *obsolete ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/4432' ]
+    req: [ 'DLCShiveringIsles.esp' ]
+    inc: [ 'Living Economy.esp' ]
+    clean:
+      - crc: 0x646C0AC5
+        util: 'TES4Edit v4.0.2i'
   - name: 'Living Economy - Items.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/4432' ]
     dirty:
-      - crc: 0x1f0a2ab8
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x1F0A2AB8
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 10
         udr: 2
+  - name: 'Cutthroat Merchants.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/4432' ]
+    clean:
+      - crc: 0x5DCDC3A3
+        util: 'TES4Edit v4.0.2i'
   - name: 'GoldAdjustment.esp'
     msg:
       - type: say
@@ -4027,17 +4058,15 @@ plugins:
         condition: 'file("Better Cities Resources.esm")'
     tag: [ Hair ]
   - name: 'moDem''s City Life.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/11351' ]
     msg:
       - type: say
         content: 'May cause crashes in the IC Market district. May have been fixed. Needs verification.'
     dirty:
-      - crc: 0x88d5a5ee
-        <<: *dirtyPlugin
-        itm: 286
-        udr: 19
-      - crc: 0xd4007433
-        <<: *dirtyPlugin
-        itm: 286
+      - <<: *quickClean
+        crc: 0x88D5A5EE
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 287
         udr: 19
   - name: 'Oblivion Alive.esp'
     msg:
@@ -7541,18 +7570,21 @@ plugins:
     tag:
       - Actors.Skeleton
       - NoMerge
-  - name: 'WAC - Female Armor Refine -No Low Body.esp'
+  - name: 'WAC - Female Armor Refine( -No Low Body)?\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/40324' ]
     tag: [ Graphics ]
-    dirty:
-      - crc: 0x24ff137b
-        <<: *dirtyPlugin
-        itm: 87
   - name: 'WAC - Female Armor Refine.esp'
-    tag: [ Graphics ]
     dirty:
-      - crc: 0x87d74399
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x87D74399
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 40
+  - name: 'WAC - Female Armor Refine -No Low Body.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x24FF137B
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 42
   - name: 'WAC - HGEC Equipment Replacer.esp'
     tag: [ Graphics ]
   - name: 'beardy.esp'
@@ -12596,20 +12628,14 @@ plugins:
     msg: [ *obsolete ]
   - name: 'MOEVampireClanRaelu-ChorrolHinterland patch.esp'
     msg: [ *obsolete ]
-  - name: 'WAC-ULchorrolhinterland-patch.esp'
-    dirty:
-      - crc: 0xd31bdfef
-        <<: *dirtyPlugin
-        itm: 1
   - name: 'xulBeachesOfCyrodiilLostCoast.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/14720' ]
     msg:
-      - type: say
-        content: 'Make sure version is 1.6.3 or later.'
-    dirty:
-      - crc: 0x8955ece
-        <<: *dirtyPlugin
-        udr: 1371
+      - <<: *obsolete
+        condition: 'not checksum("xulBeachesOfCyrodiilLostCoast.esp", C66FED9E)'
+    clean:
+      - crc: 0xC66FED9E
+        util: 'TES4Edit v4.0.2i'
   - name: 'Cybiades-Lost Coast patch.esp'
     msg:
       - type: say
@@ -12655,12 +12681,6 @@ plugins:
     msg:
       - type: say
         content: 'If using this patch move Cybiades.esp in between this and Unique Landscapes - Beaches of Cyrodiil DV.esp - also do not use the prepatched version of the Cybiades esp.'
-  - name: 'WAC - xulBCLostCoast.esp'
-    dirty:
-      - crc: 0x905f14af
-        <<: *dirtyPlugin
-        itm: 2
-        udr: 2
   - name: 'UL Beaches of Cyrodiil - DMwardrobe patch.esp'
     msg:
       - type: say
@@ -13535,11 +13555,10 @@ plugins:
         content: 'Probably incompatible with Better Cities.'
         condition: 'file("Better Cities Resources.esm")'
   - name: 'Imperial City Redux.esp'
-    dirty:
-      - crc: 0xc6d93343
-        <<: *dirtyPlugin
-        itm: 789
-        udr: 2758
+    url: [ 'https://www.nexusmods.com/oblivion/mods/25113' ]
+    clean:
+      - crc: 0x06D10790
+        util: 'TES4Edit v4.0.2i'
   - name: 'Natural_Vegetation_by_Max_Tael.esp'
     msg:
       - type: say
@@ -19967,10 +19986,10 @@ plugins:
   - name: 'Legends of Zefaro.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/43240' ]
     dirty:
-      - crc: 0xDDFA1BAA
-        itm: 17
+      - <<: *quickClean
+        crc: 0x518F9FCB
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
         udr: 19
-        <<: *dirtyPlugin
   - name: 'Glowing Respawning Varla & Welkynd Stones (7-14|14-28) Days.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/46187'
