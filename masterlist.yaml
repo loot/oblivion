@@ -3418,9 +3418,10 @@ plugins:
   - name: 'Better Clocks.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/36384/' ]
     dirty:
-      - crc: 0xefeaa850
-        <<: *dirtyPlugin
-        itm: 25
+      - <<: *quickClean
+        crc: 0xEFEAA850
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 27
   - name: 'CLS-Sailboats.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17150' ]
     dirty:
