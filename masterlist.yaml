@@ -3739,14 +3739,18 @@ plugins:
       - crc: 0x0EDA5741
         util: 'TES4Edit v4.0.2i'
   - name: 'Portable Campsite.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/5684' ]
     dirty:
-      - crc: 0xedd4b869
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xEDD4B869
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 4
   - name: 'Portable Campsite - Quickstart.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/5684' ]
     dirty:
-      - crc: 0xfe300f35
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xFE300F35
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 4
   - name: 'Q - More and Moldy Ingredients v1.1.esp'
     tag: [ Relev ]
