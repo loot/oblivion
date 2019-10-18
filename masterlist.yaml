@@ -1821,9 +1821,8 @@ plugins:
   ### OOO Shivering Isles ###
   - name: 'OOOShiveringIsles.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/46508/' ]
-    msg:
-      - type: say
-        content: 'Disable the "R.Head" Bash Tag from OOOShiveringIsles.esp to avoid conflicts with Oblivion Character Overhaul.'
+    tag:
+      - name: -R.Head
         condition: 'file("Oblivion_Character_Overhaul.esp")'
     dirty:
       - <<: *quickClean
