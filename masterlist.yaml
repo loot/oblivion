@@ -2888,8 +2888,9 @@ plugins:
       - 'https://www.nexusmods.com/oblivion/mods/5487'
       - 'https://www.nexusmods.com/oblivion/mods/19038'
     dirty:
-      - crc: 0xbca36827
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xBCA36827
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
   - name: 'MIS Low Wind.esp'
     url:
@@ -2897,9 +2898,17 @@ plugins:
       - 'https://www.nexusmods.com/oblivion/mods/19038'
     tag: [ Scripts ]
     dirty:
-      - crc: 0xf343d8ea
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xF343D8EA
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 2
+  - name: 'MIS New Sounds Optional Part.esp'
+    url:
+      - 'https://www.nexusmods.com/oblivion/mods/5487'
+      - 'https://www.nexusmods.com/oblivion/mods/19038'
+    clean:
+      - crc: 0xE2973B88
+        util: 'TES4Edit v4.0.2i'
   - name: 'Atmospheric Oblivion.esp'
     url:
       - 'https://www.nexusmods.com/oblivion/mods/7703'
