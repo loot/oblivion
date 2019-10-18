@@ -1849,9 +1849,17 @@ plugins:
       - type: say
         content: 'Disable the "R.Head" Bash Tag from OOOShiveringIsles.esp to avoid conflicts with Oblivion Character Overhaul.'
         condition: 'file("Oblivion_Character_Overhaul.esp")'
+    dirty:
+      - <<: *quickClean
+        crc: 0xB82FC0B0
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 55
   - name: 'OOOSIArcheryPatch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/46508/' ]
     tag: [ NoMerge ]
+    clean:
+      - crc: 0xC52A442B
+        util: 'TES4Edit v4.0.2i'
   ### OOO Creature Add-ons ###
   - name: 'OOOCreatureAddons.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/45380/' ]
