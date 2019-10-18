@@ -1880,6 +1880,19 @@ plugins:
         crc: 0xCBB473A5
         util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 3
+  ### OOO Extended ###
+  - name: 'OOOExtended.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/47177/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x7E3B1AE5
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 4
+  - name: 'OOOExtendedArcheryPatch.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/47177/' ]
+    clean:
+      - crc: 0xDB360623
+        util: 'TES4Edit v4.0.2i'
 
   ### OOO 3rd Party Patches and Addons ###
   - name: 'Better Hunting for OOO.esp'
