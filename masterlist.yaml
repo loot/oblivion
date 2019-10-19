@@ -1668,6 +1668,9 @@ plugins:
     msg:
       - <<: *useBashTweakInstead
         subs: [ 'Tweak Settings: World Cell Respawn Time' ]
+      - <<: *useOnlyOneX
+        subs: [ 'OOO Respawn Rate Options esp' ]
+        condition: 'many("OOO-Respawn_(Month|Two_Week|Week|Year)\.esp")'
   - name: 'OOO-Respawn_Month.esp'
     clean:
       - crc: 0xB57F7C18
