@@ -2767,6 +2767,16 @@ plugins:
   - name: 'WAC - (HGEC Equipment Replacer|Legion_FemaleFix)\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/37594' ]
     tag: [ Graphics ]
+  - name: 'WAC - No Custom Races.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/48276' ]
+    after:
+      - 'WAC - TCOS.esp'
+      - 'WAC - TCOS Shops.esp'
+    msg: [ *doNotClean ]
+    req:
+      - name: 'OBSE/Plugins/Blockhead.dll'
+        display: '[Blockhead](https://www.nexusmods.com/oblivion/mods/43752)'
+    tag: [ NPC.Race ]
 
   - name: 'FranOOOMMM_.*\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/8037' ]
