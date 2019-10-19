@@ -1838,10 +1838,6 @@ plugins:
   ### OOO Creature Add-ons ###
   - name: 'OOOCreatureAddons.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/45380/' ]
-    inc:
-      - 'OOOAddonUndead.esp'
-      - 'OOOAddonWilderness.esp'
-      - 'OOODangerousDaedra.esp'
     msg:
       - <<: *alreadyInX
         subs: [ 'OOOExtended.esp' ]
@@ -1851,6 +1847,16 @@ plugins:
         crc: 0xD9A4F3B2
         util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 2
+  - name: 'OOO(AddonUndead|OOOAddonWilderness|OOODangerousDaedra)\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/45380/' ]
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'OOOCreatureAddons.esp' ]
+        condition: 'active("OOOCreatureAddons.esp")'
+      - <<: *alreadyInX
+        subs: [ 'OOOExtended.esp' ]
+        condition: 'active("OOOExtended.esp")'
+
   ### OOO Equipment Add-on ###
   - name: 'OOOEquipmentAddon.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/46028/' ]
