@@ -7434,12 +7434,6 @@ plugins:
     tag:
       - Delev
       - Invent
-  - name: 'WAC - ItemLootFix4v1.0bTIE.esp'
-    tag:
-      - Delev
-      - Invent
-      - Relev
-      - Stats
   - name: 'AFK_Tweaks.esp'
     tag:
       - Actors.ACBS
@@ -7735,79 +7729,8 @@ plugins:
     tag:
       - Graphics
       - NoMerge
-  - name: 'WAC - ItemLootFix4v1.0bMMM.esp'
-    req:
-      - name: 'Mart''s Monster Mod.esm'
-        condition: 'not active("FCOM_Convergence.esm")'
-      - name: 'FCOM_Convergence.esm'
-        condition: 'not active("Mart''s Monster Mod.esm")'
-    msg:
-      - type: error
-        content: 'Requires either Mart''s Monster Mod or FCOM.'
-        condition: 'not active("Mart''s Monster Mod.esm") and not active("FCOM_Convergence.esm")'
-  - name: 'WAC - ItemLootFix4v1.0bOWCND.esp'
-    req:
-      - 'OWC - New Dimension.esp'
-  - name: 'WAC OgrePatch.esp'
-    tag: [ Graphics ]
-  - name: 'WAC v1 BulkyMonsters.esp'
-    tag: [ Graphics ]
-  - name: 'WAC Giants Patch.esp'
-    tag: [ Graphics ]
-  - name: 'WAC GiantPatch plus.esp'
-    tag:
-      - Actors.ACBS
-      - Actors.Spells
-      - Actors.Stats
-      - Graphics
-  - name: 'WAC BM plus.esp'
-    tag:
-      - Actors.ACBS
-      - Actors.Spells
-      - Actors.Stats
-      - Graphics
-  - name: 'WAC MinotaurPatch plus.esp'
-    tag:
-      - Actors.ACBS
-      - Actors.Anims
-      - Actors.Spells
-      - Graphics
-  - name: 'WAC - OverSpawn4OOO.esp'
-    tag:
-      - Delev
-      - Relev
-  - name: 'WAC - OverSpawn4v1.0bOWCND.esp'
-    tag:
-      - Delev
-      - Relev
-  - name: 'WAC - OverSpawn4v1.0bOWCND ILF.esp'
-    tag:
-      - Delev
-      - Relev
-  - name: 'WAC HorsePath v1.esp'
-    tag: [ Graphics ]
-  - name: 'WAC - TCOS Invent only.esp'
-    tag: [ Invent ]
-  - name: 'WAC - TCOSFix.esp'
-    tag:
-      - Delev
-      - Invent
-      - Relev
   - name: 'WAC - Legion_FemaleFix.esp'
     tag: [ Graphics ]
-  - name: 'WAC - QuietFeet.esp'
-    msg: [ *bashedPatchTweak ]
-  - name: 'WACESM_MiscItemsRebal.esp'
-    tag: [ Stats ]
-  - name: 'WACESM_Ingredients_Rebalance.esp'
-    tag: [ Stats ]
-  - name: 'WAC-OOO.esp'
-    req:
-      - 'Oscuro''s_Oblivion_Overhaul.esm'
-  - name: 'WAC - Cat Crash Fix.esp'
-    tag:
-      - Actors.Skeleton
-      - NoMerge
   - name: 'WAC - Female Armor Refine( -No Low Body)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/40324' ]
     tag: [ Graphics ]
@@ -19431,22 +19354,6 @@ plugins:
   - name: 'HTSCl_bbc.esp'
     req: [ *BetterCities ]
     tag: [ Graphics ]
-  - name: 'HTSCl_wac.esp'
-    inc:
-      - 'HTSCl_wac_ItemLootFix.esp'
-    req:
-      - 'Waalx Animals & Creatures.esm'
-    tag:
-      - Graphics
-      - Invent
-  - name: 'HTSCl_wac_ItemLootFix.esp'
-    inc:
-      - 'HTSCl_wac.esp'
-    req:
-      - 'WAC - ItemLootFix4v1.0b.esp'
-    tag:
-      - Graphics
-      - Invent
   - name: 'HTSCl_elsweyr.esp'
     req:
       - 'ElsweyrAnequina.esp'
