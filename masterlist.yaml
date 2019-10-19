@@ -1646,6 +1646,11 @@ plugins:
         util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 2
   ### OOO Level Rate Options
+  - name: 'OOO-Level_(Normal|Slow|Stock)\.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'OOO Level Rate Options esp' ]
+        condition: 'many("OOO-Level_(Normal|Slow|Stock)\.esp")'
   - name: 'OOO-Level_Normal.esp'
     clean:
       - crc: 0x295CB490
