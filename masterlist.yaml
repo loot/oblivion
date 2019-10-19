@@ -2501,6 +2501,255 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/22771' ]
     tag: [ Invent ]
 
+###### (WAC) Waalx Animals & Creatures ######
+  - name: 'Waalx Animals & Creatures.esm'
+    url: [ 'http://tesalliance.org/forums/index.php?/files/file/1318-wac-waalx-animals-creatures/' ]
+    clean:
+      - crc: 0x8A731536
+        util: 'TES4Edit v4.0.2i'
+  - name: 'WAC.esp'
+    url: [ 'http://tesalliance.org/forums/index.php?/files/file/1318-wac-waalx-animals-creatures/' ]
+    tag: [ Graphics ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xC8D70EC3
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 20
+  ### WAC Optional files
+  - name: 'WAC - .*\.esp'
+    url: [ 'http://tesalliance.org/forums/index.php?/files/file/1318-wac-waalx-animals-creatures/' ]
+  - name: 'WAC - 8th Gate.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x04482A34
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 175
+  - name: 'WAC - Birds&Insects.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x5F1400A3
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 15
+  - name: 'WAC - BlackBootDungeon.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x7C253683
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 4
+  - name: 'WAC - Companions.esp'
+    tag: [ Factions ]
+    clean:
+      - crc: 0xD90FF6A5
+        util: 'TES4Edit v4.0.2i'
+  - name: 'WAC - Crowded Roads Revisited.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0xE49CCD66
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 3
+  - name: 'WAC - Dead Knights.esp'
+    tag:
+      - Actors.ACBS
+      - Actors.AIData
+      - Actors.AIPackages
+      - Actors.Stats
+    clean:
+      - crc: 0x4580162E
+        util: 'TES4Edit v4.0.2i'
+  - name: 'WAC - Gladiator.esp'
+    tag:
+      - Actors.AIPackages
+      - Delev
+      - Graphics
+      - Invent
+      - Relev
+      - Stats
+    dirty:
+      - <<: *quickClean
+        crc: 0xD1C31B3B
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 9
+        udr: 159
+  - name: 'WAC - Horses.esp'
+    tag:
+      - Delev
+      - Graphics
+      - Names
+      - Relev
+    dirty:
+      - <<: *quickClean
+        crc: 0x1ABE5A11
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 3
+  - name: 'WAC - Legion.esp'
+    tag:
+      - Graphics
+      - Invent
+    dirty:
+      - <<: *quickClean
+        crc: 0x062F45EE
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 3
+  - name: 'WAC - Magic.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x290989F0
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 3
+  - name: 'WAC - OverSpawn.esp'
+    tag:
+      - Actors.ACBS
+      - Actors.Spells
+      - Actors.Stats
+      - Delev
+      - Graphics
+      - Invent
+      - Relations
+      - Relev
+    dirty:
+      - <<: *quickClean
+        crc: 0x030C2196
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 6
+  - name: 'WAC - Player Summons.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0xEA321AD6
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 30
+  - name: 'WAC - TCOS.esp'
+    tag:
+      - Actors.ACBS
+      - Actors.Stats
+      - Delev
+      - Eyes
+      - Graphics
+      - Invent
+      - NPC.Race
+      - R.Teeth
+      - Relev
+    dirty:
+      - <<: *quickClean
+        crc: 0xFDBEF368
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 3
+  - name: 'WAC - TCOS Shops.esp'
+    tag:
+      - Graphics
+      - Invent
+    dirty:
+      - <<: *quickClean
+        crc: 0xBBC15780
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 3
+  ### WAC - Item & Loot Fix ###
+  - name: 'WAC - Crowded Roads Revisited Fix4v1.0b.esp'
+    tag:
+      - Delev
+      - Relev
+    clean:
+      - crc: 0x372D4AD5
+        util: 'TES4Edit v4.0.2i'
+  - name: 'WAC - Dead Knights Fix.esp'
+    tag: [ Relations ]
+    clean:
+      - crc: 0x9E9B5389
+        util: 'TES4Edit v4.0.2i'
+  - name: 'WAC - ItemLootFix4v1\.0b(Fran|MMMorFCOM|OOO)?\.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'WAC - ItemLootFix' ]
+        condition: 'many("WAC - ItemLootFix4v1\.0b(Fran|MMMorFCOM|OOO)?\.esp")'
+    tag:
+      - Actors.AIData
+      - Actors.Stats
+      - Delev
+      - Factions
+      - Invent
+      - Relations
+      - Relev
+      - Stats
+  - name: 'WAC - ItemLootFix4v1.0b.esp'
+    clean:
+      - crc: 0xDAF6AD49
+        util: 'TES4Edit v4.0.2i'
+  - name: 'WAC - ItemLootFix4v1.0bFran.esp'
+    req: [ 'Francesco''s Optional New Creatures Add-On.esm' ]
+    clean:
+      - crc: 0x5100B5C2
+        util: 'TES4Edit v4.0.2i'
+  - name: 'WAC - ItemLootFix4v1.0bMMMorFCOM.esp'
+    req: [ 'Mart''s Monster Mod.esm' ]
+    clean:
+      - crc: 0xC632890C
+        util: 'TES4Edit v4.0.2i'
+  - name: 'WAC - ItemLootFix4v1.0bOOO.esp'
+    req: [ 'Oscuro''s_Oblivion_Overhaul.esm' ]
+    clean:
+      - crc: 0x9B9B363E
+        util: 'TES4Edit v4.0.2i'
+  - name: 'WAC - NoMapMarker.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x9BD8F9C2
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 16
+  - name: 'WAC - OverSpawn4v1\.0b(FCOM|Fran|OOO|TIE)\.esp'
+    tag:
+      - Delev
+      - Relev
+  - name: 'WAC - OverSpawn4v1.0bFCOM.esp'
+    req: [ 'FCOM_Convergence.esm' ]
+    clean:
+      - crc: 0x21775FCA
+        util: 'TES4Edit v4.0.2i'
+  - name: 'WAC - OverSpawn4v1.0bFran.esp'
+    req: [ 'Francesco''s Leveled Creatures-Items Mod.esm' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xA41860A7
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 17
+  - name: 'WAC - OverSpawn4v1.0bOOO.esp'
+    req: [ 'Oscuro''s_Oblivion_Overhaul.esm' ]
+    clean:
+      - crc: 0xD258BFDC
+        util: 'TES4Edit v4.0.2i'
+  - name: 'WAC - OverSpawn4v1.0bTIE.esp'
+    req: [ 'Tamrielic Ingredients.esm' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x2D0ABEDD
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 5
+  - name: 'WAC - TCOSFix4v1.0b.esp'
+    tag:
+      - Delev
+      - Invent
+      - Relev
+    clean:
+      - crc: 0xDF334E3B
+        util: 'TES4Edit v4.0.2i'
+  - name: 'WAC - WeaponNoScript.esp'
+    clean:
+      - crc: 0xA05B8EEB
+        util: 'TES4Edit v4.0.2i'
+  - name: 'WAC - WeaponNoScriptMOBS.esp'
+    clean:
+      - crc: 0xCA629DFF
+        util: 'TES4Edit v4.0.2i'
+  - name: 'WAC - WeaponReachMOBS.esp'
+    tag: [ Stats ]
+    clean:
+      - crc: 0x03B30B71
+        util: 'TES4Edit v4.0.2i'
+  ### WAC Patches or Fixes ###
+  - name: 'WAC Gargoyles Fix.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/47031' ]
+    clean:
+      - crc: 0x772D76B2
+        util: 'TES4Edit v4.0.2i'
+
   - name: 'FranOOOMMM_.*\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/8037' ]
   - name: 'FranOOOMMM_FranItemLists.esp'
@@ -2526,13 +2775,6 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/8037' ]
     msg: [ *obsoleteUseFCOM ]
 
-  - name: 'Waalx Animals & Creatures.esm'
-    url: [ 'http://tesalliance.org/forums/index.php?/files/file/1318-wac-waalx-animals-creatures/' ]
-    inc:
-      - 'FCOM_Convergence.esm'
-      - 'Oscuro''s_Oblivion_Overhaul.esm'
-      - 'Francesco''s Leveled Creatures-Items Mod.esm'
-      - 'Mart''s Monster Mod.esm'
   - name: 'FCOM_Convergence.esm'
     url: [ 'http://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/' ]
     tag:
@@ -4363,17 +4605,6 @@ plugins:
       - crc: 0x239802c4
         <<: *dirtyPlugin
         itm: 4
-  - name: 'WAC - Crowded Roads Revisited.esp'
-    url: [ 'http://tesalliance.org/forums/index.php?/files/file/1318-wac-waalx-animals-creatures/' ]
-    dirty:
-      - crc: 0xe49ccd66
-        <<: *dirtyPlugin
-        itm: 3
-  - name: 'WAC - Crowded Roads Revisited Fix4v1.0b.esp'
-    url: [ 'http://tesalliance.org/forums/index.php?/files/file/1318-wac-waalx-animals-creatures/' ]
-    tag:
-      - Delev
-      - Relev
   - name: 'travellers a.esp'
     msg: [ *obsolete ]
   - name: 'travellers b.esp'
@@ -7504,37 +7735,7 @@ plugins:
     tag:
       - Graphics
       - NoMerge
-  - name: 'WAC - ItemLootFix4v1\.0b(Fran|OOO|MMM|MMMorFCOM|OWCND|VNT)?\.esp'
-    msg:
-      - <<: *useOnlyOneX
-        subs: [ 'WAC - ItemLootFix' ]
-        condition: 'many("WAC - ItemLootFix4v1\.0b(Fran|OOO|MMM|MMMorFCOM|OWCND|VNT)?\.esp")'
-    tag:
-      - Actors.AIData
-      - Actors.Stats
-      - Delev
-      - Factions
-      - Invent
-      - Relations
-      - Relev
-      - Stats
-  - name: 'WAC - ItemLootFix4v1.0bOOO.esp'
-    url: [ 'http://tesalliance.org/forums/index.php?/files/file/1318-wac-waalx-animals-creatures/' ]
-    req:
-      - 'Oscuro''s_Oblivion_Overhaul.esm'
   - name: 'WAC - ItemLootFix4v1.0bMMM.esp'
-    url: [ 'http://tesalliance.org/forums/index.php?/files/file/1318-wac-waalx-animals-creatures/' ]
-    req:
-      - name: 'Mart''s Monster Mod.esm'
-        condition: 'not active("FCOM_Convergence.esm")'
-      - name: 'FCOM_Convergence.esm'
-        condition: 'not active("Mart''s Monster Mod.esm")'
-    msg:
-      - type: error
-        content: 'Requires either Mart''s Monster Mod or FCOM.'
-        condition: 'not active("Mart''s Monster Mod.esm") and not active("FCOM_Convergence.esm")'
-  - name: 'WAC - ItemLootFix4v1.0bMMMorFCOM.esp'
-    url: [ 'http://tesalliance.org/forums/index.php?/files/file/1318-wac-waalx-animals-creatures/' ]
     req:
       - name: 'Mart''s Monster Mod.esm'
         condition: 'not active("FCOM_Convergence.esm")'
@@ -7547,18 +7748,8 @@ plugins:
   - name: 'WAC - ItemLootFix4v1.0bOWCND.esp'
     req:
       - 'OWC - New Dimension.esp'
-  - name: 'WAC - WeaponReachMOBS.esp'
-    url: [ 'http://tesalliance.org/forums/index.php?/files/file/1318-wac-waalx-animals-creatures/' ]
-    tag: [ Stats ]
   - name: 'WAC OgrePatch.esp'
     tag: [ Graphics ]
-  - name: 'WAC.esp'
-    url: [ 'http://tesalliance.org/forums/index.php?/files/file/1318-wac-waalx-animals-creatures/' ]
-    tag: [ Graphics ]
-    dirty:
-      - crc: 0xc8d70ec3
-        <<: *dirtyPlugin
-        itm: 34
   - name: 'WAC v1 BulkyMonsters.esp'
     tag: [ Graphics ]
   - name: 'WAC Giants Patch.esp'
@@ -7575,21 +7766,6 @@ plugins:
       - Actors.Spells
       - Actors.Stats
       - Graphics
-  - name: 'WAC - OverSpawn.esp'
-    url: [ 'http://tesalliance.org/forums/index.php?/files/file/1318-wac-waalx-animals-creatures/' ]
-    tag:
-      - Actors.ACBS
-      - Actors.Spells
-      - Actors.Stats
-      - Delev
-      - Graphics
-      - Invent
-      - Relations
-      - Relev
-    dirty:
-      - crc: 0x30c2196
-        <<: *dirtyPlugin
-        itm: 3
   - name: 'WAC MinotaurPatch plus.esp'
     tag:
       - Actors.ACBS
@@ -7597,21 +7773,6 @@ plugins:
       - Actors.Spells
       - Graphics
   - name: 'WAC - OverSpawn4OOO.esp'
-    tag:
-      - Delev
-      - Relev
-  - name: 'WAC - OverSpawn4v1.0bFran.esp'
-    url: [ 'http://tesalliance.org/forums/index.php?/files/file/1318-wac-waalx-animals-creatures/' ]
-    tag:
-      - Delev
-      - Relev
-  - name: 'WAC - OverSpawn4v1.0bOOO.esp'
-    url: [ 'http://tesalliance.org/forums/index.php?/files/file/1318-wac-waalx-animals-creatures/' ]
-    tag:
-      - Delev
-      - Relev
-  - name: 'WAC - OverSpawn4v1.0bFCOM.esp'
-    url: [ 'http://tesalliance.org/forums/index.php?/files/file/1318-wac-waalx-animals-creatures/' ]
     tag:
       - Delev
       - Relev
@@ -7623,110 +7784,17 @@ plugins:
     tag:
       - Delev
       - Relev
-  - name: 'WAC - OverSpawn4v1.0bTIE.esp'
-    url: [ 'http://tesalliance.org/forums/index.php?/files/file/1318-wac-waalx-animals-creatures/' ]
-    tag:
-      - Delev
-      - Relev
-  - name: 'WAC - BlackBootDungeon.esp'
-    url: [ 'http://tesalliance.org/forums/index.php?/files/file/1318-wac-waalx-animals-creatures/' ]
-    dirty:
-      - crc: 0x7c253683
-        <<: *dirtyPlugin
-        itm: 4
-  - name: 'WAC - Dead Knights.esp'
-    url: [ 'http://tesalliance.org/forums/index.php?/files/file/1318-wac-waalx-animals-creatures/' ]
-    tag:
-      - Actors.ACBS
-      - Actors.AIData
-      - Actors.AIPackages
-      - Actors.Stats
-  - name: 'WAC - Dead Knights Fix.esp'
-    url: [ 'http://tesalliance.org/forums/index.php?/files/file/1318-wac-waalx-animals-creatures/' ]
-    tag: [ Relations ]
-  - name: 'WAC - Player Summons.esp'
-    url: [ 'http://tesalliance.org/forums/index.php?/files/file/1318-wac-waalx-animals-creatures/' ]
-    dirty:
-      - crc: 0x77ff1d67
-        <<: *dirtyPlugin
-        itm: 21
-      - crc: 0xea321ad6
-        <<: *dirtyPlugin
-        itm: 30
-  - name: 'WAC - Birds&Insects.esp'
-    url: [ 'http://tesalliance.org/forums/index.php?/files/file/1318-wac-waalx-animals-creatures/' ]
-    dirty:
-      - crc: 0x34e5daec
-        <<: *dirtyPlugin
-        itm: 11
-  - name: 'WAC - Companions.esp'
-    url: [ 'http://tesalliance.org/forums/index.php?/files/file/1318-wac-waalx-animals-creatures/' ]
-    tag: [ Factions ]
-  - name: 'WAC - Horses.esp'
-    url: [ 'http://tesalliance.org/forums/index.php?/files/file/1318-wac-waalx-animals-creatures/' ]
-    tag:
-      - Delev
-      - Graphics
-      - Names
-      - Relev
-    dirty:
-      - crc: 0x1abe5a11
-        <<: *dirtyPlugin
-        itm: 3
   - name: 'WAC HorsePath v1.esp'
     tag: [ Graphics ]
-  - name: 'WAC - TCOS.esp'
-    url: [ 'http://tesalliance.org/forums/index.php?/files/file/1318-wac-waalx-animals-creatures/' ]
-    tag:
-      - Actors.ACBS
-      - Actors.Stats
-      - Delev
-      - Eyes
-      - Graphics
-      - Invent
-      - NPC.Race
-      - R.Teeth
-      - Relev
   - name: 'WAC - TCOS Invent only.esp'
     tag: [ Invent ]
-  - name: 'WAC - TCOS Shops.esp'
-    url: [ 'http://tesalliance.org/forums/index.php?/files/file/1318-wac-waalx-animals-creatures/' ]
-    tag:
-      - Graphics
-      - Invent
   - name: 'WAC - TCOSFix.esp'
     tag:
       - Delev
       - Invent
       - Relev
-  - name: 'WAC - TCOSFix4v1.0b.esp'
-    url: [ 'http://tesalliance.org/forums/index.php?/files/file/1318-wac-waalx-animals-creatures/' ]
-    tag:
-      - Delev
-      - Invent
-      - Relev
-  - name: 'WAC - Legion.esp'
-    url: [ 'http://tesalliance.org/forums/index.php?/files/file/1318-wac-waalx-animals-creatures/' ]
-    tag:
-      - Graphics
-      - Invent
   - name: 'WAC - Legion_FemaleFix.esp'
     tag: [ Graphics ]
-  - name: 'WAC - Gladiator.esp'
-    url: [ 'http://tesalliance.org/forums/index.php?/files/file/1318-wac-waalx-animals-creatures/' ]
-    tag:
-      - Actors.AIPackages
-      - Delev
-      - Graphics
-      - Invent
-      - Relev
-      - Stats
-  - name: 'WAC - Magic.esp'
-    url: [ 'http://tesalliance.org/forums/index.php?/files/file/1318-wac-waalx-animals-creatures/' ]
-    dirty:
-      - crc: 0x290989f0
-        <<: *dirtyPlugin
-        itm: 3
   - name: 'WAC - QuietFeet.esp'
     msg: [ *bashedPatchTweak ]
   - name: 'WACESM_MiscItemsRebal.esp'
@@ -19953,12 +20021,6 @@ plugins:
       - Filter
       - NoMerge
       - Stats
-  - name: 'WAC - NoMapMarker.esp'
-    url: [ 'http://tesalliance.org/forums/index.php?/files/file/1318-wac-waalx-animals-creatures/' ]
-    dirty:
-      - crc: 0x9bd8f9c2
-        itm: 16
-        <<: *dirtyPlugin
   - name: 'The Big Merger.esp'
     tag:
       - Actors.ACBS
