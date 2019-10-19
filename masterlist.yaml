@@ -1661,10 +1661,7 @@ plugins:
       - name: -Relations
         condition: 'file("Mart''s Monster Mod for OOO.esm") or file("FCOM_Convergence.esm")'
   - name: 'Oscuro''s_Oblivion_Overhaul - Knights of Nine.esp'
-    msg:
-      - type: error
-        content: 'Use "FCOM_Knights.esp" instead.'
-        condition: *FCOMCond
+    inc: [ 'FCOM_Convergence.esm' ]
     dirty:
       - <<: *quickClean
         crc: 0x2D3B8E8F
