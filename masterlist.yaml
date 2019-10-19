@@ -1617,19 +1617,261 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/5075/' ]
     inc:
       - 'Oscuro''s_Oblivion_Overhaul.esm'
-  - name: 'Oscuro''s_Oblivion_Overhaul.esm'
+
+###### (OOO) Oscuro's Oblivion Overhaul ######
+  - name: 'Oscuro''s_Oblivion_Overhaul( - Knights of Nine)?\.es(m|p)'
     url: [ 'https://www.nexusmods.com/oblivion/mods/46199/' ]
-    msg: [ *doNotClean ]
+  - name: 'OOO-.*\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/46199/' ]
+  - name: 'Oscuro''s_Oblivion_Overhaul.esm'
     tag:
-      - Actors.Spells
-      - Graphics
-      - Invent
-      - Relations
-      - Scripts
-      - Stats
       - name: -Relations
         condition: 'file("Mart''s Monster Mod for OOO.esm") or file("FCOM_Convergence.esm")'
-
+    clean:
+      - crc: 0x82322ED1
+        util: 'TES4Edit v4.0.2i'
+  - name: 'Oscuro''s_Oblivion_Overhaul.esp'
+    after: [ 'Oblivion WarCry EV.esp' ]
+    msg: [ *doNotClean ]
+    tag:
+      - name: -Factions
+        condition: 'file("Mart''s Monster Mod for OOO.esm") or file("FCOM_Convergence.esm")'
+      - name: -Relations
+        condition: 'file("Mart''s Monster Mod for OOO.esm") or file("FCOM_Convergence.esm")'
+  - name: 'Oscuro''s_Oblivion_Overhaul - Knights of Nine.esp'
+    inc: [ 'FCOM_Convergence.esm' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x2D3B8E8F
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
+  ### OOO Level Rate Options
+  - name: 'OOO-Level_(Normal|Slow|Stock)\.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'OOO Level Rate Options esp' ]
+        condition: 'many("OOO-Level_(Normal|Slow|Stock)\.esp")'
+  - name: 'OOO-Level_Normal.esp'
+    clean:
+      - crc: 0x295CB490
+        util: 'TES4Edit v4.0.2i'
+  - name: 'OOO-Level_Slow.esp'
+    clean:
+      - crc: 0x2D0F52CE
+        util: 'TES4Edit v4.0.2i'
+  - name: 'OOO-Level_Stock.esp'
+    clean:
+      - crc: 0xD25FFD1E
+        util: 'TES4Edit v4.0.2i'
+  ### OOO Respawn Rate Options
+  - name: 'OOO-Respawn_(Month|Two_Week|Week|Year)\.esp'
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings: World Cell Respawn Time' ]
+      - <<: *useOnlyOneX
+        subs: [ 'OOO Respawn Rate Options esp' ]
+        condition: 'many("OOO-Respawn_(Month|Two_Week|Week|Year)\.esp")'
+  - name: 'OOO-Respawn_Month.esp'
+    clean:
+      - crc: 0xB57F7C18
+        util: 'TES4Edit v4.0.2i'
+  - name: 'OOO-Respawn_Two_Week.esp'
+    clean:
+      - crc: 0xF6344872
+        util: 'TES4Edit v4.0.2i'
+  - name: 'OOO-Respawn_Week.esp'
+    clean:
+      - crc: 0xB4241C0D
+        util: 'TES4Edit v4.0.2i'
+  - name: 'OOO-Respawn_Year.esp'
+    clean:
+      - crc: 0x9EF9532F
+        util: 'TES4Edit v4.0.2i'
+  ### OOO Compatibility Options
+  - name: 'OOO-Container_Trap_Instant_Effects.esp'
+    clean:
+      - crc: 0x1560A30A
+        util: 'TES4Edit v4.0.2i'
+  - name: 'OOO-Magic_Script_Effect_Fix.esp'
+    tag:
+      - Graphics
+      - Sound
+    clean:
+      - crc: 0x7AD033AE
+        util: 'TES4Edit v4.0.2i'
+  - name: 'OOO-No_Guild_Ownership.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x788EADC4
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 3330
+  ### OOO Other Options
+  - name: 'OOO-Map_Markers_Stock.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0xA8FC19E3
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 43
+  - name: 'OOO-Water_Weeds.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x5FD2D492
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1
+  ### OOO Add-ons for Full version Only
+  - name: 'OOO-DLT_Remover.esp'
+    clean:
+      - crc: 0xC4D121FF
+        util: 'TES4Edit v4.0.2i'
+  ### OOO Add-ons for lite version Only
+  - name: 'OOO-Armor_Perks_WearRate_Repair.esp'
+    msg: [ *alreadyInOOOFull ]
+    clean:
+      - crc: 0x09CB6B84
+        util: 'TES4Edit v4.0.2i'
+  - name: 'OOO-Birthsigns.esp'
+    msg: [ *alreadyInOOOFull ]
+    clean:
+      - crc: 0xE0BB5D6C
+        util: 'TES4Edit v4.0.2i'
+  - name: 'OOO-Combat_Skills_Perks_Marksmanship.esp'
+    msg: [ *alreadyInOOOFull ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xA72465BC
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
+  - name: 'OOO-DaedraLord_Quests.esp'
+    msg: [ *alreadyInOOOFull ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x4088F6EB
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
+  - name: 'OOO-Dangerous_traps.esp'
+    msg: [ *alreadyInOOOFull ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xEBBF4F85
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
+  - name: 'OOO-Deadly_Combat.esp'
+    msg: [ *alreadyInOOOFull ]
+    clean:
+      - crc: 0x8B51CA66
+        util: 'TES4Edit v4.0.2i'
+  - name: 'OOO-DLT_Immersion.esp'
+    msg: [ *alreadyInOOOFull ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x5B6F42F5
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1
+  - name: 'OOO-Magic_Effects+Enchantments.esp'
+    msg: [ *alreadyInOOOFull ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x6A5D183A
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1
+  - name: 'OOO-Magic_Effects+Spells.esp'
+    msg: [ *alreadyInOOOFull ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xBFE98741
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
+  - name: 'OOO-Magic_Game_Settings.esp'
+    msg: [ *alreadyInOOOFull ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xDC4B4EDF
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1
+  - name: 'OOO-Potions.esp'
+    msg: [ *alreadyInOOOFull ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x7AAE9B27
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 15
+  - name: 'OOO-ThiefGuild_Difficult.esp'
+    msg: [ *alreadyInOOOFull ]
+    clean:
+      - crc: 0xDDBB8479
+        util: 'TES4Edit v4.0.2i'
+  ### OOO Shivering Isles ###
+  - name: 'OOOShiveringIsles.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/46508/' ]
+    tag:
+      - name: -R.Head
+        condition: 'file("Oblivion_Character_Overhaul.esp")'
+    dirty:
+      - <<: *quickClean
+        crc: 0xB82FC0B0
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 55
+  - name: 'OOOSIArcheryPatch.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/46508/' ]
+    clean:
+      - crc: 0xC52A442B
+        util: 'TES4Edit v4.0.2i'
+  ### OOO Creature Add-ons ###
+  - name: 'OOOCreatureAddons.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/45380/' ]
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'OOOExtended.esp' ]
+        condition: 'active("OOOExtended.esp")'
+    dirty:
+      - <<: *quickClean
+        crc: 0xD9A4F3B2
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
+  - name: 'OOO(AddonUndead|OOOAddonWilderness|OOODangerousDaedra)\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/45380/' ]
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'OOOCreatureAddons.esp' ]
+        condition: 'active("OOOCreatureAddons.esp")'
+      - <<: *alreadyInX
+        subs: [ 'OOOExtended.esp' ]
+        condition: 'active("OOOExtended.esp")'
+  ### OOO Equipment Add-on ###
+  - name: 'OOOEquipmentAddon.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/46028/' ]
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'OOOExtended.esp' ]
+        condition: 'active("OOOExtended.esp")'
+    dirty:
+      - <<: *quickClean
+        crc: 0xCBB473A5
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 3
+  ### OOO Extended ###
+  - name: 'OOOExtended.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/47177/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x7E3B1AE5
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 4
+  - name: 'OOOExtendedArcheryPatch.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/47177/' ]
+    clean:
+      - crc: 0xDB360623
+        util: 'TES4Edit v4.0.2i'
+  ### OOO 3rd Party Patches and Addons ###
+  - name: 'Better Hunting for OOO.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/35223' ]
+    tag: [ Stats ]
+  - name: 'OOO-Better_Priced_Clutter.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
+    tag: [ Stats ]
+  - name: 'Geomancy & Gem Dust OOO (No Spell Change).esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/21102' ]
+    inc: [ 'Geomancy & Gem Dust OOO.esp' ]
 
 # (MMM) Martigen’s Monster Mod
   - name: 'Mart''s Monster Mod.*\.es(m|p)'
@@ -6287,71 +6529,6 @@ plugins:
     inc:
       - 'FCOM_WarCry.esp'
     tag: [ Stats ]
-  - name: 'Oscuro''s_Oblivion_Overhaul.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/46199/' ]
-    after: [ 'Oblivion WarCry EV.esp' ]
-    msg: [ *doNotClean ]
-    tag:
-      - Actors.ACBS
-      - Actors.AIData
-      - Actors.AIPackages
-      - Actors.CombatStyle
-      - Actors.Spells
-      - Actors.Stats
-      - Delev
-      - Factions
-      - Graphics
-      - Invent
-      - Names
-      - R.ChangeSpells
-      - Relations
-      - Relev
-      - Scripts
-      - Stats
-      - name: -Factions
-        condition: 'file("Mart''s Monster Mod for OOO.esm") or file("FCOM_Convergence.esm")'
-      - name: -Relations
-        condition: 'file("Mart''s Monster Mod for OOO.esm") or file("FCOM_Convergence.esm")'
-  - name: 'OOO-Armor_Perks_WearRate_Repair.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/46199/' ]
-    msg: [ *alreadyInOOOFull ]
-  - name: 'OOO-Birthsigns.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/46199/' ]
-    msg: [ *alreadyInOOOFull ]
-  - name: 'OOO-Combat_Skills_Perks_Marksmanship.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/46199/' ]
-    msg: [ *alreadyInOOOFull ]
-  - name: 'OOO-DaedricLord_Quests.esp'
-    msg: [ *alreadyInOOOFull ]
-  - name: 'OOO-DaedraLord_Quests.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/46199/' ]
-    msg: [ *alreadyInOOOFull ]
-  - name: 'OOO-Dangerous_traps.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/46199/' ]
-    msg: [ *alreadyInOOOFull ]
-  - name: 'OOO-Deadly_Combat.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/46199/' ]
-    msg: [ *alreadyInOOOFull ]
-  - name: 'OOO-DLT_Immersion.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/46199/' ]
-    msg: [ *alreadyInOOOFull ]
-  - name: 'OOO-Magic_Effects+Enchantments.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/46199/' ]
-    msg: [ *alreadyInOOOFull ]
-  - name: 'OOO-Magic_Effects+Spells.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/46199/' ]
-    msg: [ *alreadyInOOOFull ]
-  - name: 'OOO-Magic_Game_Settings.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/46199/' ]
-    msg: [ *alreadyInOOOFull ]
-  - name: 'OOO-Potions.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/46199/' ]
-    msg: [ *alreadyInOOOFull ]
-  - name: 'OOO-Thief_Guild_Difficult.esp'
-    msg: [ *alreadyInOOOFull ]
-  - name: 'OOO-ThiefGuild_Difficult.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/46199/' ]
-    msg: [ *alreadyInOOOFull ]
   - name: 'OOO-Ayleid Coin Add-on.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/10671' ]
     msg: [ *obsolete ]
@@ -6545,23 +6722,6 @@ plugins:
     tag: [ Invent ]
   - name: 'mg19obsefix.esp'
     req: [ *OBSE ]
-  - name: 'OOO-Better_Priced_Clutter.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29633/' ]
-    tag: [ Stats ]
-  - name: 'OOOCreatureAddons.esp'
-    url:
-      - 'https://www.nexusmods.com/oblivion/mods/45380/'
-      - 'https://www.nexusmods.com/oblivion/mods/46199/'
-    inc:
-      - 'OOOAddonUndead.esp'
-      - 'OOOAddonWilderness.esp'
-      - 'OOODangerousDaedra.esp'
-  - name: 'OOOEquipmentAddon.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/46028/' ]
-    dirty:
-      - crc: 0xb951292d
-        <<: *dirtyPlugin
-        itm: 1
   - name: 'RealitySpectreStars2HeavenBetterPotionsOOOEffects.esp'
     tag: [ Graphics ]
   - name: 'AGEHA Tortured Souls OOO.esp'
@@ -6589,9 +6749,6 @@ plugins:
     inc:
       - 'ArmamentariumLL4OOO.esp'
       - 'ArmamentariumLLVendors.esp'
-  - name: 'Better Hunting for OOO.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/35223' ]
-    tag: [ Stats ]
   - name: 'FCOM_Cobl.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/12249/' ]
     msg:
@@ -7243,9 +7400,6 @@ plugins:
       - C.Owner
       - Names
       - Relations
-  - name: 'Geomancy & Gem Dust OOO (No Spell Change).esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/21102' ]
-    inc: [ 'Geomancy & Gem Dust OOO.esp' ]
   - name: 'EVE_StockEquipmentReplacer4FCOM.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/24078/' ]
     msg:
@@ -11435,12 +11589,6 @@ plugins:
     tag:
       - Graphics
       - NoMerge
-  - name: 'Oscuro''s_Oblivion_Overhaul - Knights of Nine.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/46199/' ]
-    msg:
-      - type: error
-        content: 'Use "FCOM_Knights.esp" instead.'
-        condition: *FCOMCond
   - name: 'Dragon Templar.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/31961' ]
     msg:
@@ -18814,15 +18962,6 @@ plugins:
         itm: 1
   - name: 'ZUSIO-SM Plugin Refurbish SI-patch.esp'
     tag: [ Scripts ]
-  - name: 'OOOShiveringIsles.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/46508/' ]
-    msg:
-      - type: say
-        content: 'Disable the "R.Head" Bash Tag from OOOShiveringIsles.esp to avoid conflicts with Oblivion Character Overhaul.'
-        condition: 'file("Oblivion_Character_Overhaul.esp")'
-  - name: 'OOOSIArcheryPatch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/46508/' ]
-    tag: [ NoMerge ]
   - name: 'bgMagic(D|E)V.esp'
     msg: [ *doNotClean ]
     tag:
@@ -19256,9 +19395,6 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/27720' ]
     after:
       - 'Oscuro''s_Oblivion_Overhaul.esp'
-  - name: 'OOO-Respawn_(Year|Month|(Two_)?Week)\.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/46199/' ]
-    msg: [ *bashedPatchTweak ]
   - name: 'Z 1 Hour respawn.esp'
     msg: [ *bashedPatchTweak ]
   - name: 'ThingasTime 1-15 Scale.esp'
@@ -19507,11 +19643,6 @@ plugins:
     tag:
       - Graphics
       - Names
-      - Sound
-  - name: 'OOO-Magic_Script_Effect_Fix.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/46199/' ]
-    tag:
-      - Graphics
       - Sound
   - name: 'NoScriptHitVisual.esp'
     tag:
