@@ -1625,12 +1625,6 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/46199/' ]
   - name: 'Oscuro''s_Oblivion_Overhaul.esm'
     tag:
-      - Actors.Spells
-      - Graphics
-      - Invent
-      - Relations
-      - Scripts
-      - Stats
       - name: -Relations
         condition: 'file("Mart''s Monster Mod for OOO.esm") or file("FCOM_Convergence.esm")'
     clean:
@@ -1640,22 +1634,6 @@ plugins:
     after: [ 'Oblivion WarCry EV.esp' ]
     msg: [ *doNotClean ]
     tag:
-      - Actors.ACBS
-      - Actors.AIData
-      - Actors.AIPackages
-      - Actors.CombatStyle
-      - Actors.Spells
-      - Actors.Stats
-      - Delev
-      - Factions
-      - Graphics
-      - Invent
-      - Names
-      - R.ChangeSpells
-      - Relations
-      - Relev
-      - Scripts
-      - Stats
       - name: -Factions
         condition: 'file("Mart''s Monster Mod for OOO.esm") or file("FCOM_Convergence.esm")'
       - name: -Relations
@@ -1828,7 +1806,6 @@ plugins:
         itm: 55
   - name: 'OOOSIArcheryPatch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/46508/' ]
-    tag: [ NoMerge ]
     clean:
       - crc: 0xC52A442B
         util: 'TES4Edit v4.0.2i'
