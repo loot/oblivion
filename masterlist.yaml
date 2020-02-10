@@ -298,7 +298,7 @@ common:
     condition: 'file("Armamentarium.esm") and version("Armamentarium.esm","1.35",<)'
 
   - &patch3rdParty
-    type: warn
+    type: say
     content:
       - lang: en
         text: 'You seem to be using **%1%**, but you have not enabled a compatibility patch for this mod. A third party patch is available here: %2%'
@@ -9763,29 +9763,39 @@ plugins:
       - Invent
   - name: 'Kvatch Rebuilt.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/15412' ]
+    msg:
+      - <<: *patch3rdParty
+        subs:
+          - 'Oblivion Character Overhaul v2'
+          - '[Compatibility Patches for nuska''s Oblivion Character Overhaul (v2)](https://www.nexusmods.com/oblivion/mods/46249)'
+        condition: 'active("Oblivion_Character_Overhaul.esp") and not file("OCO_KvatchRebuilt_Patch.esp")'
+      - <<: *patch3rdParty
+        subs:
+          - 'Open Cities Reborn'
+          - '[Open Cities Patches](https://www.nexusmods.com/oblivion/mods/32925)'
+        condition: 'active("Open Cities Reborn.esp") and not file("OCR + Kvatch Rebuilt Patch.esp")'
+      - <<: *patch3rdParty
+        subs:
+          - 'Oscuro''s Oblivion Overhaul'
+          - '[Kvatch Rebuild OOO Adaptation](https://www.nexusmods.com/oblivion/mods/49825)'
+        condition: 'active("Oscuro''s_Oblivion_Overhaul.esm") and not file("Kvatch Rebuilt - OOO Adaptation.esp")'
+      - <<: *patch3rdParty
+        subs:
+          - 'Unique Landscapes'
+          - '[Unique Landscapes Compatibility Patches](https://www.nexusmods.com/oblivion/mods/13834)'
+        condition: 'active("xulCheydinhalFalls.esp") and not active("ULE KvatchRebuilt-CheydinhalFalls patch.esp")'
+    req:
+      - *OBSE
+      - name: 'OBSE/Plugins/EngineBugFixes.dll'
+        display: '[EngineBugFixes](https://www.nexusmods.com/oblivion/mods/47085)'
     tag:
       - Actors.AIPackages
       - Invent
     dirty:
-      - crc: 0x34a9fac9
-        <<: *dirtyPlugin
-        itm: 26
-        udr: 4
-      - crc: 0x74FA387E
-        <<: *dirtyPlugin
-        itm: 26
-        udr: 4
-      - crc: 0xA26D1D81
-        <<: *dirtyPlugin
-        itm: 26
-        udr: 4
-      - crc: 0x61f4a8b9
-        <<: *dirtyPlugin
-        itm: 32
-      - crc: 0xcc9713b1
-        <<: *dirtyPlugin
-        itm: 32
-        udr: 2
+      - <<: *quickClean
+        crc: 0x50EEF62E
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 138
   - name: 'Kvatch Rebuilt - Leveled Guards - FCOM.esp'
     req:
       - 'FCOM_Convergence.esm'
