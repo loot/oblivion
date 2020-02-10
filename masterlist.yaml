@@ -9763,6 +9763,12 @@ plugins:
       - Invent
   - name: 'Kvatch Rebuilt.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/15412' ]
+    msg:
+      - <<: *patch3rdParty
+        subs:
+          - 'Unique Landscapes'
+          - '[Unique Landscapes Compatibility Patches](https://www.nexusmods.com/oblivion/mods/13834)'
+        condition: 'active("xulCheydinhalFalls.esp") and not active("ULE KvatchRebuilt-CheydinhalFalls patch.esp")'
     req:
       - *OBSE
       - name: 'OBSE/Plugins/EngineBugFixes.dll'
