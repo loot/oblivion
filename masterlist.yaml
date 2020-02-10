@@ -15966,28 +15966,6 @@ plugins:
     msg:
       - type: say
         content: 'Highly recommended to use the MAO patcher in Wrye Bash version 275+.'
-  - name: 'SW01.esp'
-    msg:
-      - type: say
-        content: 'Use ''SW01.esp'' or ''SW01Plus.esp'' but not both at the same time. SW01Plus affects the player as well.'
-        condition: 'file("SW01Plus.esp")'
-      - *needsCleaning
-    tag:
-      - Actors.Anims
-      - NoMerge
-  - name: 'SW01Plus.esp'
-    msg:
-      - type: say
-        content: 'Use ''SW01.esp'' or ''SW01Plus.esp'' but not both at the same time. SW01Plus affects the player as well.'
-        condition: 'file("SW01.esp")'
-      - *needsCleaning
-    tag:
-      - Actors.Anims
-      - NoMerge
-  - name: 'SW01Minus.esp'
-    tag:
-      - Actors.Anims
-      - NoMerge
   - name: 'SexyPlOneHand.esp'
     tag:
       - Actors.Anims
