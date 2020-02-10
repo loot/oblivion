@@ -298,7 +298,7 @@ common:
     condition: 'file("Armamentarium.esm") and version("Armamentarium.esm","1.35",<)'
 
   - &patch3rdParty
-    type: warn
+    type: say
     content:
       - lang: en
         text: 'You seem to be using **%1%**, but you have not enabled a compatibility patch for this mod. A third party patch is available here: %2%'
