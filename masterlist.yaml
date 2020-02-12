@@ -4595,8 +4595,6 @@ plugins:
       - <<: *alreadyInX
         subs: [ '[Dynamic Leveled Lists](https://www.nexusmods.com/oblivion/mods/37904)' ]
         condition: 'file("DynamicLeveledLists.esp")'
-  - name: 'CDM - Shivering Time.esp'
-    req: [ *OBSE ]
   - name: 'CBMS_V2.esp'
     req: [ *EnhancedMusicControl ]
   - name: 'DarNifiedUI Config Addon.esp'
@@ -6359,9 +6357,6 @@ plugins:
       - Scripts
   - name: 'Athletics While Riding.esp'
     req: [ *OBSEv18 ]
-  - name: 'CDM-Horses.esp'
-    req:
-      - 'DLCShiveringIsles.esp'
   - name: 'MigHorseArmor.esp'
     dirty:
       - crc: 0x1c8f1c26
@@ -13786,11 +13781,6 @@ plugins:
     tag: [ Scripts ]
   - name: 'CaesarOneWithNature.esp'
     tag: [ Factions ]
-  - name: 'CDM-Dogs.esp'
-    msg:
-      - <<: *alreadyInX
-        subs: [ 'Mart''s Monster Mod' ]
-        condition: 'active("Mart''s Monster Mod.esp")'
   - name: 'CHILDREN ANNUAD.esp'
     tag:
       - Actors.ACBS
@@ -15629,24 +15619,6 @@ plugins:
       - type: say
         content: 'Incompatible with: Progress*.esp'
         condition: 'file("[pP]rogress.*\.esp")'
-  - name: 'CDM-CGO (Horse Armor|Orrery|Thieves Den|Vile Lair|Battlehorn|Shivering Isles|Frostcrag) Compatibility\.esp'
-    inc:
-      - 'DLCSpellTomes - Unofficial Patch.esp'
-      - 'SM Plugin Refurbish - Battlehorn.esp'
-      - 'SM Plugin Refurbish - Frostcrag.esp'
-      - 'SM Plugin Refurbish - HorseArmor.esp'
-      - 'SM Plugin Refurbish - Knights.esp'
-      - 'SM Plugin Refurbish - MehrunesRazor.esp'
-      - 'SM Plugin Refurbish - Orrery.esp'
-      - 'SM Plugin Refurbish - SI.esp'
-      - 'SM Plugin Refurbish - ThievesDen.esp'
-      - 'SM Plugin Refurbish - VileLair.esp'
-      - 'SM Plugin Refurbish(Merged).esp'
-  - name: 'CDM-CGO (Vanilla|Standard) Skill Levelling( Slower| Faster)?\.esp'
-    msg:
-      - <<: *useOnlyOneX
-        subs: [ 'CDM-CGO Skill Levelling plugin' ]
-        condition: 'many("CDM-CGO (Vanilla|Standard) Skill Levelling( Slower| Faster)?\.esp")'
   - name: 'ExperienceBasedTraining.esp'
     req: [ *OBSEv16 ]
   - name: 'Mercantile Leveling-Fixed.esp'
