@@ -7141,19 +7141,6 @@ plugins:
         <<: *dirtyPlugin
         itm: 87
         udr: 20
-  - name: 'Ivellon.esp'
-    msg:
-      - type: say
-        content: 'Border regions must be turned off for OOO compatibility. Change bBorderRegionsEnabled to 0 in Oblivion.ini or use Wrye Bash bashed patch tweak.'
-        condition: *OOOCond
-    dirty:
-      - crc: 0xbf5cf18
-        <<: *dirtyPlugin
-        udr: 13
-      - crc: 0x645e2c6d
-        <<: *dirtyPlugin
-        itm: 9
-        udr: 13
   - name: 'Cyrodiil Border Regions 1.2.esp'
     msg:
       - type: say
