@@ -7489,15 +7489,6 @@ plugins:
       - crc: 0x4446b5c1
         <<: *dirtyPlugin
         itm: 2875
-  - name: 'AuriCloudRulerAddons.esp'
-    msg:
-      - <<: *wildEdits
-        subs: [ '[Cleaning instructions](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide#AuriCloudRulerAddons.esp_Special_Cleaning_Instructions)' ]
-        condition: 'checksum("AuriCloudRulerAddons.esp", 3BCDEE6F)'
-    dirty:
-      - crc: 0x3bcdee6f
-        <<: *dirtyPlugin
-        itm: 1
   - name: 'Automagicon.esp'
     inc:
       - 'Automagicon_Cobl.esp'
