@@ -9252,29 +9252,6 @@ plugins:
         <<: *dirtyPlugin
         itm: 9
         udr: 152
-  - name: 'LetThePeopleDrink-Cobl.esp'
-    msg:
-      - <<: *renameFile
-        subs: [ 'LetThePeopleDrink.esp' ]
-    dirty:
-      - crc: 0xda32ead
-        <<: *dirtyPlugin
-        itm: 1
-  - name: 'LetThePeopleDrink-fountainonly.esp'
-    dirty:
-      - crc: 0x2a1a281b
-        <<: *dirtyPlugin
-        itm: 6
-        udr: 93
-  - name: 'LetThePeopleDrink-fountainonly-Cobl.esp'
-    dirty:
-      - crc: 0x3b07da89
-        <<: *dirtyPlugin
-        itm: 6
-        udr: 93
-      - crc: 0xfc8a8b5f
-        <<: *dirtyPlugin
-        itm: 1
   - name: 'LeyawiinPort-AlphaRelease.esp'
     msg:
       - <<: *alreadyInX
@@ -11659,10 +11636,6 @@ plugins:
       - crc: 0xca103402
         <<: *dirtyPlugin
         udr: 16
-  - name: 'LetThePeopleDrink-NRB patch.esp'
-    msg:
-      - type: error
-        content: 'Do not use - has technical issues. Download the correct patch [here](http://www.nexusmods.com/oblivion/mods/20218).'
   - name: 'Roads of Cyrodiil.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
     msg:
@@ -12426,10 +12399,6 @@ plugins:
       - type: say
         content: 'Don''t use UL Imperial Isle Adense Epic Dungeon Patch.esp in conjunction with ImperialCitySuburbs-ImperialIsle patch.esp (causes land tears)'
         condition: 'file("UL Imperial Isle Adense Epic Dungeon Patch.esp")'
-  - name: 'LetThePeopleDrink-ImperialIsle-NRB4 patch.esp'
-    msg:
-      - type: warn
-        content: 'Do not use - has technical issues. Download the correct patch [here](http://www.nexusmods.com/oblivion/mods/20218).'
   - name: 'xulBlackwoodForest.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/25799' ]
     dirty:
