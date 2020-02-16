@@ -10451,16 +10451,6 @@ plugins:
         <<: *dirtyPlugin
         itm: 8
         udr: 16
-  - name: 'Waterfront Shack.esp'
-    msg:
-      - <<: *wildEdits
-        subs: [ '[Cleaning instructions](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide#Waterfront_Shack.esp_Special_Cleaning_Instructions)' ]
-        condition: 'checksum("Waterfront Shack.esp", 4FD37830)'
-    dirty:
-      - crc: 0x4fd37830
-        <<: *dirtyPlugin
-        udr: 8
-        itm: 1
   - name: 'WeaponsOfTheNine.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/7013' ]
     dirty:
