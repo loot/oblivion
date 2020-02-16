@@ -12232,15 +12232,6 @@ plugins:
     msg:
       - type: say
         content: 'Outdated. Update the affected UL mods and then delete this patch.'
-  - name: 'Imperial City Waterfront Tunnel Entrance v(2\.1|3\.0)\.esp'
-    inc:
-      - 'Better Imperial City.esp'
-      - 'Better Cities IC Waterfront.esp'
-    msg:
-      - *obsolete
-      - <<: *alreadyInX
-        subs: [ 'Better Cities - Imperial City & IC Waterfront' ]
-        condition: 'active("Better Imperial City.esp") or active("Better Cities IC Waterfront.esp")'
   - name: 'Imperil_City_Tunnel.esp'
     inc: [ *BetterCities ]
   - name: 'IC Tunnel.esp'
