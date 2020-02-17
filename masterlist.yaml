@@ -1142,15 +1142,14 @@ plugins:
       - R.Relations
 
 ###### Morroblivion ######
-  - name: 'Morrowind_ob.esm'
+  - name: 'Morrowind_ob.*\.es(m|p)'
     url: [ 'http://morroblivion.com/forums/morroblivion/mods/753' ]
+  - name: 'Morrowind_ob.esm'
     group: *veryEarlyGroup
     msg: [ *moveWorldspaces ]
   - name: 'Morrowind_ob.esp'
-    url: [ 'http://morroblivion.com/forums/morroblivion/mods/753' ]
     msg: [ *doNotClean ]
   - name: 'Morrowind_ob - UCWUS.esp'
-    url: [ 'http://morroblivion.com/forums/morroblivion/mods/753' ]
     tag:
       - Invent
       - Names
@@ -1159,12 +1158,10 @@ plugins:
         util: 'TES4Edit v4.0.3'
   ### Optional files ###
   - name: 'Morrowind_ob - Chargen and Transport Mod'
-    url: [ 'http://morroblivion.com/forums/morroblivion/mods/753' ]
     clean:
       - crc: 0x69EC1141
         util: 'TES4Edit v4.0.3'
   - name: 'Morrowind_ob - Conversation.esp'
-    url: [ 'http://morroblivion.com/forums/morroblivion/mods/753' ]
     tag:
       - Factions
       - Invent
@@ -1173,19 +1170,16 @@ plugins:
       - crc: 0x9FEE61F9
         util: 'TES4Edit v4.0.3'
   - name: 'Morrowind_ob - MorroblivionTreeReplacer.esp'
-    url: [ 'http://morroblivion.com/forums/morroblivion/mods/753' ]
     clean:
       - crc: 0x465A2C76
         util: 'TES4Edit v4.0.3'
   - name: 'Morrowind_ob - Morroblivion Maps.esp'
-    url: [ 'http://morroblivion.com/forums/morroblivion/mods/753' ]
     group: *mapGroup
     dirty:
       - <<: *quickClean
         crc: 0x6A14D022
         util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
-
   ### 3rd Party files ###
   - name: 'Morroblivion item rebalance.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/39710' ]
