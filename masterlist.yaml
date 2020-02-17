@@ -1177,6 +1177,14 @@ plugins:
     clean:
       - crc: 0x465A2C76
         util: 'TES4Edit v4.0.3'
+  - name: 'Morrowind_ob - Morroblivion Maps.esp'
+    url: [ 'http://morroblivion.com/forums/morroblivion/mods/753' ]
+    group: *mapGroup
+    dirty:
+      - <<: *quickClean
+        crc: 0x6A14D022
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1
 
   ### 3rd Party files ###
   - name: 'Morrowind_ob - ClothingReplacer.esp'
