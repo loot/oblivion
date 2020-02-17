@@ -2012,7 +2012,7 @@ plugins:
         condition: 'active("FCOM_Convergence.esp")'
       - <<: *requiresX
         subs: [ 'Mart''s Monster Mod BSA' ]
-        condition: 'not file("Mart''s Monster Mod.bsa") or not file("Mart''s Monster Mod for Frans.bsa") or not file("Mart''s Monster Mod for OOO.bsa") or not file("FCOM_Convergence_Mart''s Monster Mod.bsa")'
+        condition: 'not file("Mart''s Monster Mod.bsa") and not file("Mart''s Monster Mod for Frans.bsa") and not file("Mart''s Monster Mod for OOO.bsa") and not file("FCOM_Convergence_Mart''s Monster Mod.bsa")'
       - <<: *useOnlyOneX
         subs: [ 'Mart''s Monster Mod esp' ]
         condition: 'many("Mart''s Monster Mod( for Fran| for OOO)?\.esp")'
@@ -6680,7 +6680,7 @@ plugins:
       - *doNotClean
       - <<: *requiresX
         subs: [ 'Mart''s Monster Mod BSA' ]
-        condition: 'not file("Mart''s Monster Mod.bsa") or not file("Mart''s Monster Mod for Frans.bsa") or not file("Mart''s Monster Mod for OOO.bsa") or not file("FCOM_Convergence_Mart''s Monster Mod.bsa")'
+        condition: 'not file("Mart''s Monster Mod.bsa") and not file("Mart''s Monster Mod for Frans.bsa") and not file("Mart''s Monster Mod for OOO.bsa") and not file("FCOM_Convergence_Mart''s Monster Mod.bsa")'
       - <<: *renameXtoY
         subs:
           - '**Mart''s Monster Mod BSA**'
