@@ -1158,6 +1158,7 @@ plugins:
       - 'personality_idles4_nopc.esp'
       - 'personality_idlespcb.esp'
   - name: 'Morrowind_ob - UCWUS.esp'
+    req: [ 'Morrowind_ob.esp' ]
     tag:
       - Invent
       - Names
@@ -1166,10 +1167,12 @@ plugins:
         util: 'TES4Edit v4.0.3'
   ### Optional files ###
   - name: 'Morrowind_ob - Chargen and Transport Mod'
+    req: [ 'Morrowind_ob.esp' ]
     clean:
       - crc: 0x69EC1141
         util: 'TES4Edit v4.0.3'
   - name: 'Morrowind_ob - Conversation.esp'
+    req: [ 'Morrowind_ob.esp' ]
     tag:
       - Factions
       - Invent
@@ -1178,11 +1181,13 @@ plugins:
       - crc: 0x9FEE61F9
         util: 'TES4Edit v4.0.3'
   - name: 'Morrowind_ob - MorroblivionTreeReplacer.esp'
+    req: [ 'Morrowind_ob.esp' ]
     clean:
       - crc: 0x465A2C76
         util: 'TES4Edit v4.0.3'
   - name: 'Morrowind_ob - Morroblivion Maps.esp'
     group: *mapGroup
+    req: [ 'Morrowind_ob.esp' ]
     dirty:
       - <<: *quickClean
         crc: 0x6A14D022
