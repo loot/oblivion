@@ -1131,10 +1131,6 @@ plugins:
     msg:
       - <<: *deleteOrDeactivateX
         subs: [ 'Part of Chronicles of Reeb. Do not use. Has serious landscape issues due to editing the Tamriel worldspace.' ]
-  - name: 'Morrowind_ob.esm'
-    url: [ 'http://tesrenewal.com/forums/morroblivion/mods/753' ]
-    group: *veryEarlyGroup
-    msg: [ *moveWorldspaces ]
   - name: 'Beautiful People 2ch-Ed.esm'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/37368'
@@ -1144,6 +1140,63 @@ plugins:
       - Graphics
       - Hair
       - R.Relations
+
+###### Morroblivion ######
+  - name: 'Morrowind_ob.*\.es(m|p)'
+    url: [ 'http://morroblivion.com/forums/morroblivion/mods/753' ]
+  - name: 'Morrowind_ob.esm'
+    group: *gameMasterGroup
+    msg: [ *moveWorldspaces ]
+  - name: 'Morrowind_ob.esp'
+    msg: [ *doNotClean ]
+    after:
+      - 'Personality Idles - Modified version.esp'
+      - 'personality_idles3b.esp'
+      - 'personality_idles3b_nc.esp'
+      - 'personality_idles4.esp'
+      - 'personality_idles4_nnpc.esp'
+      - 'personality_idles4_nopc.esp'
+      - 'personality_idlespcb.esp'
+  - name: 'Morrowind_ob - UCWUS.esp'
+    req: [ 'Morrowind_ob.esp' ]
+    tag:
+      - Invent
+      - Names
+    clean:
+      - crc: 0x1BDEB554
+        util: 'TES4Edit v4.0.3'
+  ### Optional files ###
+  - name: 'Morrowind_ob - Chargen and Transport Mod'
+    req: [ 'Morrowind_ob.esp' ]
+    clean:
+      - crc: 0x69EC1141
+        util: 'TES4Edit v4.0.3'
+  - name: 'Morrowind_ob - Conversation.esp'
+    req: [ 'Morrowind_ob.esp' ]
+    tag:
+      - Factions
+      - Invent
+      - Names
+    clean:
+      - crc: 0x9FEE61F9
+        util: 'TES4Edit v4.0.3'
+  - name: 'Morrowind_ob - MorroblivionTreeReplacer.esp'
+    req: [ 'Morrowind_ob.esp' ]
+    clean:
+      - crc: 0x465A2C76
+        util: 'TES4Edit v4.0.3'
+  - name: 'Morrowind_ob - Morroblivion Maps.esp'
+    group: *mapGroup
+    req: [ 'Morrowind_ob.esp' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x6A14D022
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1
+  ### 3rd Party files ###
+  - name: 'Morroblivion item rebalance.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/39710' ]
+    tag: [ Stats ]
 
 # Francescos Creatures and Items V5
   - name: 'Francesco''s (Creatures|Leveled|More|Optional).*\.es(m|p)'
@@ -7354,34 +7407,6 @@ plugins:
       - crc: 0x13f4cf76
         <<: *dirtyPlugin
         itm: 1
-  - name: 'Morrowind_ob.esp'
-    msg: [ *doNotClean ]
-  - name: 'Morroblivion item rebalance.esp'
-    tag: [ Stats ]
-  - name: 'Morrowind_ob - Morroblivion_Chargen_And_Transport_Mod_v10.esp'
-    url: [ 'http://tesrenewal.com/forums/morroblivion/mods/753' ]
-    dirty:
-      - crc: 0x51563805
-        <<: *dirtyPlugin
-        itm: 3
-  - name: 'Morrowind_ob - MorroblivionTreeReplacer.esp'
-    url: [ 'http://tesrenewal.com/forums/morroblivion/mods/753' ]
-    dirty:
-      - crc: 0x7AF5966F
-        <<: *dirtyPlugin
-        itm: 3043
-  - name: 'Morrowind_ob - ClothingReplacer.esp'
-    url: [ 'http://tesrenewal.com/forums/morroblivion/mods/753' ]
-    tag: [ Names ]
-  - name: 'Morrowind_ob - UCWUS.esp'
-    url: [ 'http://tesrenewal.com/forums/morroblivion/mods/753' ]
-    tag:
-      - Invent
-      - Names
-    dirty:
-      - crc: 0x9F7F8D5F
-        itm: 4
-        <<: *dirtyPlugin
   - name: 'Enhanced Quest Roleplaying.esp'
     tag: [ Factions ]
     dirty:
@@ -19144,12 +19169,6 @@ plugins:
         util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 99
         udr: 1
-  - name: 'Morrowind_ob - Conversation.esp'
-    url: [ 'http://tesrenewal.com/forums/morroblivion/mods/753' ]
-    tag:
-      - Factions
-      - Invent
-      - Names
   - name: 'Blue-Glass Armor.esp'
     url: [ 'http://www.nexusmods.com/oblivion/mods/9291' ]
     dirty:
