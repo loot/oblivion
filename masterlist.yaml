@@ -1143,13 +1143,14 @@ plugins:
 
 ###### Morroblivion ######
   - name: 'Morrowind_ob.esm'
-    url: [ 'http://tesrenewal.com/forums/morroblivion/mods/753' ]
+    url: [ 'http://morroblivion.com/forums/morroblivion/mods/753' ]
     group: *veryEarlyGroup
     msg: [ *moveWorldspaces ]
   - name: 'Morrowind_ob.esp'
+    url: [ 'http://morroblivion.com/forums/morroblivion/mods/753' ]
     msg: [ *doNotClean ]
   - name: 'Morrowind_ob - UCWUS.esp'
-    url: [ 'http://tesrenewal.com/forums/morroblivion/mods/753' ]
+    url: [ 'http://morroblivion.com/forums/morroblivion/mods/753' ]
     tag:
       - Invent
       - Names
@@ -1159,28 +1160,29 @@ plugins:
         <<: *dirtyPlugin
   ### Optional files ###
   - name: 'Morrowind_ob - Morroblivion_Chargen_And_Transport_Mod_v10.esp'
-    url: [ 'http://tesrenewal.com/forums/morroblivion/mods/753' ]
+    url: [ 'http://morroblivion.com/forums/morroblivion/mods/753' ]
     dirty:
       - crc: 0x51563805
         <<: *dirtyPlugin
         itm: 3
   - name: 'Morrowind_ob - Conversation.esp'
-    url: [ 'http://tesrenewal.com/forums/morroblivion/mods/753' ]
+    url: [ 'http://morroblivion.com/forums/morroblivion/mods/753' ]
     tag:
       - Factions
       - Invent
       - Names
   - name: 'Morrowind_ob - MorroblivionTreeReplacer.esp'
-    url: [ 'http://tesrenewal.com/forums/morroblivion/mods/753' ]
+    url: [ 'http://morroblivion.com/forums/morroblivion/mods/753' ]
     dirty:
       - crc: 0x7AF5966F
         <<: *dirtyPlugin
         itm: 3043
+
   ### 3rd Party files ###
   - name: 'Morrowind_ob - ClothingReplacer.esp'
-    url: [ 'http://tesrenewal.com/forums/morroblivion/mods/753' ]
     tag: [ Names ]
   - name: 'Morroblivion item rebalance.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/39710' ]
     tag: [ Stats ]
 
 # Francescos Creatures and Items V5
