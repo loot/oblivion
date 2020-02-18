@@ -1196,9 +1196,6 @@ plugins:
   ### Unofficial Patch ###
   - name: 'Morroblivion_Unofficial_Patch.*\.esp'
     url: [ 'https://morroblivion.com/forums/morroblivion-mod-releases/rel-morroblivion-unofficial-patch-2017-dec-18' ]
-  - name: 'MOB_(FastTravel_Cheat|Firemoth_Enemy_Mage_Rebalance|NoHavok_Bottles_and_Cluter)\.esp'
-    url: [ 'https://morroblivion.com/forums/morroblivion-mod-releases/rel-morroblivion-unofficial-patch-2017-dec-18' ]
-    after: [ 'Morroblivion_Unofficial_Patch.esp' ]
   - name: 'Morroblivion_Unofficial_Patch.esp'
     after:
       - 'Morrowind_ob - Conversation.esp'
@@ -1209,6 +1206,9 @@ plugins:
     clean:
       - crc: 0x20BCDF46
         util: 'TES4Edit v4.0.3'
+  - name: 'MOB_(FastTravel_Cheat|Firemoth_Enemy_Mage_Rebalance|NoHavok_Bottles_and_Cluter)\.esp'
+    url: [ 'https://morroblivion.com/forums/morroblivion-mod-releases/rel-morroblivion-unofficial-patch-2017-dec-18' ]
+    after: [ 'Morroblivion_Unofficial_Patch.esp' ]
   - name: 'MOB_FastTravel_Cheat.esp'
     msg: [ *doNotClean ]
   - name: 'MOB_Firemoth_Enemy_Mage_Rebalance.esp'
@@ -1221,7 +1221,7 @@ plugins:
         crc: 0xC1231962
         util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 805
-  ### Unofficial Patch - Hotfixes ###
+
   - name: 'Morroblivion_Unofficial_Patch_defaultmap_fix.esp'
     group: *mapGroup
     after: [ 'Morrowind_ob - Morroblivion Maps.esp' ]
