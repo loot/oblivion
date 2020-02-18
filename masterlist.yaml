@@ -1199,6 +1199,9 @@ plugins:
   - name: 'MOB_(FastTravel_Cheat|Firemoth_Enemy_Mage_Rebalance|NoHavok_Bottles_and_Cluter)\.esp'
     url: [ 'https://morroblivion.com/forums/morroblivion-mod-releases/rel-morroblivion-unofficial-patch-2017-dec-18' ]
   - name: 'Morroblivion_Unofficial_Patch.esp'
+    after:
+      - 'Morrowind_ob - Conversation.esp'
+      - 'Morrowind_ob - MorroblivionTreeReplacer.esp'
     msg: [ *doNotClean ]
   - name: 'Morroblivion_Unofficial_Patch_Magic_Addon.esp'
     group: *lateChangesGroup
