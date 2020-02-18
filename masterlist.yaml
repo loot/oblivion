@@ -1146,6 +1146,9 @@ plugins:
     url: [ 'http://morroblivion.com/forums/morroblivion/mods/753' ]
   - name: 'Morrowind_ob.esm'
     group: *gameMasterGroup
+    req:
+      - *OBSE
+      - *SilentVoice
     msg: [ *moveWorldspaces ]
   - name: 'Morrowind_ob.esp'
     msg: [ *doNotClean ]
@@ -1158,7 +1161,9 @@ plugins:
       - 'personality_idles4_nopc.esp'
       - 'personality_idlespcb.esp'
   - name: 'Morrowind_ob - UCWUS.esp'
-    req: [ 'Morrowind_ob.esp' ]
+    req:
+      - *MenuQue
+      - 'Morrowind_ob.esp'
     tag:
       - Invent
       - Names
@@ -1203,6 +1208,7 @@ plugins:
     msg: [ *doNotClean ]
   - name: 'Morroblivion_Unofficial_Patch_Magic_Addon.esp'
     group: *lateChangesGroup
+    req: [ *MagicExtender ]
     clean:
       - crc: 0x20BCDF46
         util: 'TES4Edit v4.0.3'
