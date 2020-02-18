@@ -1198,6 +1198,25 @@ plugins:
     url: [ 'https://morroblivion.com/forums/morroblivion-mod-releases/rel-morroblivion-unofficial-patch-2017-dec-18' ]
   - name: 'MOB_(FastTravel_Cheat|Firemoth_Enemy_Mage_Rebalance|NoHavok_Bottles_and_Cluter)\.esp'
     url: [ 'https://morroblivion.com/forums/morroblivion-mod-releases/rel-morroblivion-unofficial-patch-2017-dec-18' ]
+  - name: 'Morroblivion_Unofficial_Patch.esp'
+    msg: [ *doNotClean ]
+  - name: 'Morroblivion_Unofficial_Patch_Magic_Addon.esp'
+    clean:
+      - crc: 0x20BCDF46
+        util: 'TES4Edit v4.0.3'
+  - name: 'MOB_FastTravel_Cheat.esp'
+    msg: [ *doNotClean ]
+  - name: 'MOB_Firemoth_Enemy_Mage_Rebalance.esp'
+    clean:
+      - crc: 0xE17E6B0B
+        util: 'TES4Edit v4.0.3'
+  - name: 'MOB_NoHavok_Bottles_and_Cluter.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0xC1231962
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 805
+
   ### 3rd Party files ###
   - name: 'Morroblivion item rebalance.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/39710' ]
