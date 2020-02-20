@@ -965,8 +965,7 @@ plugins:
   - name: 'Unofficial Shivering Isles Patch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/10739' ]
     group: *unofficialPatchesGroup
-    req:
-      - 'DLCShiveringIsles.esp'
+    req: [ 'DLCShiveringIsles.esp' ]
     after:
       - 'Cobl Si.esp'
       - 'tes4SI-CHS-alpha.esp'
@@ -3226,8 +3225,7 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/11474' ]
     msg: [ *doNotClean ]
   - name: 'SM Plugin Refurbish(Merged).esp'
-    req:
-      - 'DLCShiveringIsles.esp'
+    req: [ 'DLCShiveringIsles.esp' ]
     msg:
       - *sortMasters
       - type: say
@@ -3599,8 +3597,7 @@ plugins:
     inc:
       - 'DLCShiveringIsles.esp'
   - name: '(AWS|NW|ANW|EW|OBSE)?(-)?Storms & Sound SI.esp'
-    req:
-      - 'DLCShiveringIsles.esp'
+    req: [ 'DLCShiveringIsles.esp' ]
   - name: 'OBSE-Storms & Sound( SI)?\.esp'
     req: [ *OBSE ]
     msg:
@@ -4077,8 +4074,7 @@ plugins:
     tag: [ Invent ]
   - name: 'Daedric Wargames.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/12935' ]
-    req:
-      - 'DLCShiveringIsles.esp'
+    req: [ 'DLCShiveringIsles.esp' ]
   - name: 'Enhanced Key Functionality.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/27719' ]
     msg:
@@ -4196,8 +4192,7 @@ plugins:
         itm: 7
   - name: 'Mage Guild Sorters v3.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/35354' ]
-    req:
-      - 'Cobl Main.esm'
+    req: [ 'Cobl Main.esm' ]
   - name: 'MeosPotionReplacer.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/29422' ]
     tag: [ Graphics ]
@@ -4410,8 +4405,7 @@ plugins:
       - 'Better Cities - VWD of the IC.esp'
   - name: 'Respawning Containers.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/25288' ]
-    req:
-      - 'DLCShiveringIsles.esp'
+    req: [ 'DLCShiveringIsles.esp' ]
   - name: 'RealWalk.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/27954' ]
     tag:
@@ -4517,14 +4511,12 @@ plugins:
       - 'TreasureChest - MMM.esp'
   - name: 'TreasureChest - ALEX.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/44066' ]
-    req:
-      - 'Cobl Main.esm'
+    req: [ 'Cobl Main.esm' ]
     inc:
       - 'TreasureChest - ALEX for OOO.esp'
   - name: 'TreasureChest - ALEX for OOO.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/44066' ]
-    req:
-      - 'Cobl Main.esm'
+    req: [ 'Cobl Main.esm' ]
     inc:
       - 'TreasureChest - ALEX.esp'
   - name: 'VA_BetterGold.esp'
@@ -6374,8 +6366,7 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/37823' ]
     inc:
       - 'Zira''s Horse Modpack - Heavy Legion Horses.esp'
-    req:
-      - 'DLCHorseArmor.esp'
+    req: [ 'DLCHorseArmor.esp' ]
   - name: 'MD Saddlebags V3.0.esp'
     msg:
       - type: say
@@ -6437,8 +6428,7 @@ plugins:
     tag: [ Graphics ]
   - name: 'Fran_Lv30Item_Maltz.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/15411' ]
-    req:
-      - 'Francesco''s Leveled Creatures-Items Mod.esm'
+    req: [ 'Francesco''s Leveled Creatures-Items Mod.esm' ]
   - name: 'LuckBasedLootForFrans.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/14212' ]
     msg: [ *alreadyInFCOM ]
@@ -6457,8 +6447,7 @@ plugins:
         content: 'Has bugs. Use Loot version or a patch or ''FCOM_KDCircletsOOOOptimizedNPCEquip.esp'' if using FCOM.'
   - name: 'FCOM_KDCircletsOOOOptimizedNPCEquip.esp'
     url: [ 'http://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/' ]
-    req:
-      - 'KDCircletsOOOOptimized - NPC Equip.esp'
+    req: [ 'KDCircletsOOOOptimized - NPC Equip.esp' ]
     inc:
       - 'Potion Belt.esp'
   - name: '(FCOM_)?ExnemRuneskulls(_ru)?\.esp'
@@ -6822,8 +6811,7 @@ plugins:
           - '**Mart''s Monster Mod BSA**'
           - '**FCOM_Convergence_Mart''s Monster Mod.bsa**'
         condition: 'not file("FCOM_Convergence_Mart''s Monster Mod.bsa") and not many("(FCOM_Convergence|(Mart''s Monster Mod( for Fran| for OOO)?))\.esp")'
-    req:
-      - 'FCOM_Convergence.esm'
+    req: [ 'FCOM_Convergence.esm' ]
     tag:
       - Actors.ACBS
       - Actors.AIData
@@ -6846,46 +6834,38 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/12249/' ]
     msg:
       - *obsolete
-    req:
-      - 'FCOM_Convergence.esm'
+    req: [ 'FCOM_Convergence.esm' ]
   - name: 'FCOM_OscurosOverhaul.esp'
     url: [ 'http://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/' ]
-    req:
-      - 'FCOM_Convergence.esm'
+    req: [ 'FCOM_Convergence.esm' ]
     msg:
       - type: say
         content: 'Only use when not using MMM.'
         condition: *FCOMCond
   - name: 'FCOM_EntropicOrderRebalance.esp'
     url: [ 'http://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/' ]
-    req:
-      - 'FCOM_Convergence.esm'
+    req: [ 'FCOM_Convergence.esm' ]
   - name: 'FCOM_EntropicOrderHardcore.esp'
     url: [ 'http://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/' ]
-    req:
-      - 'FCOM_Convergence.esm'
+    req: [ 'FCOM_Convergence.esm' ]
   - name: 'FCOM_RealSwords.esp'
     url: [ 'http://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/' ]
-    req:
-      - 'FCOM_Convergence.esm'
+    req: [ 'FCOM_Convergence.esm' ]
     tag:
       - Delev
       - Relev
   - name: 'More Effective Enchantments FCOM.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/33266' ]
-    req:
-      - 'FCOM_Convergence.esm'
+    req: [ 'FCOM_Convergence.esm' ]
   - name: 'FCOM_DurabilityAndDamage.esp'
     url: [ 'http://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/' ]
-    req:
-      - 'FCOM_Convergence.esm'
+    req: [ 'FCOM_Convergence.esm' ]
   - name: 'FCOM_SpawnRatesReduced.esp'
     url: [ 'http://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/' ]
     inc:
       - 'FCOM_SpawnRatesSlightlyReduced.esp'
       - 'FCOM_SpawnRatesStronger.esp'
-    req:
-      - 'FCOM_Convergence.esm'
+    req: [ 'FCOM_Convergence.esm' ]
     tag:
       - Delev
       - Relev
@@ -6894,8 +6874,7 @@ plugins:
     inc:
       - 'FCOM_SpawnRatesStronger.esp'
       - 'FCOM_SpawnRatesReduced.esp'
-    req:
-      - 'FCOM_Convergence.esm'
+    req: [ 'FCOM_Convergence.esm' ]
     tag:
       - Delev
       - Relev
@@ -6904,8 +6883,7 @@ plugins:
     inc:
       - 'FCOM_SpawnRatesReduced.esp'
       - 'FCOM_SpawnRatesSlightlyReduced.esp'
-    req:
-      - 'FCOM_Convergence.esm'
+    req: [ 'FCOM_Convergence.esm' ]
     msg:
       - type: say
         content: '''Stronger'' is the same as ''Reduced'' but spawns will be more powerful.'
@@ -6919,39 +6897,32 @@ plugins:
         content: 'Delete. Use Mart''s Monster Mod - More Wilderness Life.esp or Mart''s Monster Mod - More Wilderness Life No Gates.esp instead'
   - name: 'FCOM_SaferRoads.esp'
     url: [ 'http://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/' ]
-    req:
-      - 'FCOM_Convergence.esm'
+    req: [ 'FCOM_Convergence.esm' ]
     tag:
       - Delev
       - Relev
   - name: 'FCOM_LessRats.esp'
     url: [ 'http://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/' ]
-    req:
-      - 'FCOM_Convergence.esm'
+    req: [ 'FCOM_Convergence.esm' ]
   - name: 'FCOM_NoSpiders.esp'
     url: [ 'http://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/' ]
-    req:
-      - 'FCOM_Convergence.esm'
+    req: [ 'FCOM_Convergence.esm' ]
   - name: 'FCOM_NoWyverns.esp'
     url: [ 'http://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/' ]
-    req:
-      - 'FCOM_Convergence.esm'
+    req: [ 'FCOM_Convergence.esm' ]
   - name: 'FCOM_NoReaversInGates.esp'
     url: [ 'http://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/' ]
     inc:
       - 'FCOM_LessReaversInGates.esp'
-    req:
-      - 'FCOM_Convergence.esm'
+    req: [ 'FCOM_Convergence.esm' ]
   - name: 'FCOM_NoAdventurersInGates.esp'
     url: [ 'http://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/' ]
-    req:
-      - 'FCOM_Convergence.esm'
+    req: [ 'FCOM_Convergence.esm' ]
   - name: 'FCOM_LessReaversInGates.esp'
     url: [ 'http://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/' ]
     inc:
       - 'FCOM_NoReaversInGates.esp'
-    req:
-      - 'FCOM_Convergence.esm'
+    req: [ 'FCOM_Convergence.esm' ]
   - name: 'MrSiika''sFarmAnimals.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/14265' ]
     msg:
@@ -7014,8 +6985,7 @@ plugins:
       - 'Oscuro''s_Oblivion_Overhaul.esp'
   - name: 'Master-Crafting-1.1-MMM.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/19846' ]
-    req:
-      - 'Master-Crafting-1.1-MMM Greaves fix.esp'
+    req: [ 'Master-Crafting-1.1-MMM Greaves fix.esp' ]
   - name: 'Choices and Consequences - MMM - Looting NPCs & Creatures.esp'
     msg: [ *obsolete ]
   - name: 'OWC - Seaworld.esp'
@@ -7111,8 +7081,7 @@ plugins:
       - "-NoMerge"
   - name: 'TamrielTravellersItemsCobl.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/4387' ]
-    req:
-      - 'Cobl Main.esm'
+    req: [ 'Cobl Main.esm' ]
   - name: 'TamrielTravellersItemsVendor.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/4387' ]
     group: *latePatchesGroup
@@ -7131,8 +7100,7 @@ plugins:
         content: 'Not overhaul mod compatible.'
   - name: 'ShiveringIsleTravellers.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/4387' ]
-    req:
-      - 'DLCShiveringIsles.esp'
+    req: [ 'DLCShiveringIsles.esp' ]
     msg:
       - type: say
         content: 'Use of ''TamrielTravellersItemsNPC.esp'', ''TamrielTravellersItemsUnscaled.esp'', or ''TamrielTravellersItemsVendors.esp'' will remove SI items for sale.'
@@ -7160,8 +7128,7 @@ plugins:
     msg: [ *obsolete ]
   - name: 'FCOM_HungersUnitySI.esp'
     url: [ 'http://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/' ]
-    req:
-      - 'DLCShiveringIsles.esp'
+    req: [ 'DLCShiveringIsles.esp' ]
     tag:
       - Actors.Skeleton
       - Factions
@@ -7238,8 +7205,7 @@ plugins:
     url:
       - 'https://www.nexusmods.com/oblivion/mods/18071'
       - 'https://www.nexusmods.com/oblivion/mods/40679'
-    req:
-      - 'FCOM_Convergence.esm'
+    req: [ 'FCOM_Convergence.esm' ]
     msg:
       - type: say
         content: 'Recommend avoid using TNR.'
@@ -7510,8 +7476,7 @@ plugins:
         content: 'Use only if you have SI.'
   - name: 'Fran''s Ore Refiner.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/28511' ]
-    req:
-      - 'Francesco''s Optional Leveled Quests.esp'
+    req: [ 'Francesco''s Optional Leveled Quests.esp' ]
     dirty:
       - crc: 0xabe6443d
         <<: *dirtyPlugin
@@ -7741,8 +7706,7 @@ plugins:
       - 'A Not So Simple Cave Retreat - Coblized.esp'
   - name: 'A Not So Simple Cave Retreat - Coblized.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/31609' ]
-    req:
-      - 'Cobl Main.esm'
+    req: [ 'Cobl Main.esm' ]
     inc:
       - 'A Not So Simple Cave Retreat.esp'
   - name: 'A Sorceress Love 1_1.esp'
@@ -7760,8 +7724,7 @@ plugins:
         itm: 3
   - name: 'AbuEmir01.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/13257' ]
-    req:
-      - 'DLCShiveringIsles.esp'
+    req: [ 'DLCShiveringIsles.esp' ]
   - name: 'AdenseEpicDungeon.esp'
     url:
       - 'https://www.nexusmods.com/oblivion/mods/23170'
@@ -7901,8 +7864,7 @@ plugins:
         condition: 'many("Anvil_MorningGloryBetterCities_(Blue|Orange|Purple|Mixed)\.esp")'
   - name: 'Aqua_City_01.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/11717' ]
-    req:
-      - 'DLCShiveringIsles.esp'
+    req: [ 'DLCShiveringIsles.esp' ]
   - name: 'AR.esp'
     dirty:
       - crc: 0xeb70503
@@ -7920,8 +7882,7 @@ plugins:
         itm: 3
   - name: 'Archer Shop Ver. 4.2.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/28608' ]
-    req:
-      - 'DLCShiveringIsles.esp'
+    req: [ 'DLCShiveringIsles.esp' ]
   - name: 'ArchersLodge1.1.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/27763' ]
     dirty:
@@ -8033,8 +7994,7 @@ plugins:
       - 'Automagicon_Cobl.esp'
   - name: 'Automagicon_Cobl.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/31543' ]
-    req:
-      - 'Cobl Main.esm'
+    req: [ 'Cobl Main.esm' ]
     inc:
       - 'Automagicon.esp'
   - name: 'AWitchTale.esp'
@@ -8082,8 +8042,7 @@ plugins:
         udr: 2
   - name: 'Basement for Cobl - Sheep Wool addition.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/21139' ]
-    req:
-      - 'Mart''s Monster Mod.esm'
+    req: [ 'Mart''s Monster Mod.esm' ]
   - name: 'Battle4Morrowind.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/45467' ]
     msg:
@@ -8176,8 +8135,7 @@ plugins:
         condition: 'active("ElsweyrAnequina.esp")'
   - name: 'Black ocean.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22044' ]
-    req:
-      - 'DLCShiveringIsles.esp'
+    req: [ 'DLCShiveringIsles.esp' ]
     msg:
       - type: say
         content: 'Requires: Knights of the Nine, unless using the patch available from [here](http://blackocean.ucoz.ru).'
@@ -9359,8 +9317,7 @@ plugins:
         util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 138
   - name: 'Kvatch Rebuilt - Leveled Guards - FCOM.esp'
-    req:
-      - 'FCOM_Convergence.esm'
+    req: [ 'FCOM_Convergence.esm' ]
   - name: 'All Natural - Kvatch Rebuilt Weather Patch.esp'
     msg: [ *obsolete ]
   - name: 'KvatchCastleMakeover.esp'
@@ -9504,8 +9461,7 @@ plugins:
         subs: [ 'Better Cities Leyawiin' ]
         condition: 'active("Better Cities Full.esp") or active("Better Cities LEYAWIIN.esp")'
   - name: 'Litterbug.esp'
-    req:
-      - 'DLCShiveringIsles.esp'
+    req: [ 'DLCShiveringIsles.esp' ]
   - name: 'Locked Doors and Knocking v1.02.esp'
     inc: [ *BetterCities ]
     msg:
@@ -9600,8 +9556,7 @@ plugins:
         udr: 3
   - name: 'Mages Guild Quests.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/39591' ]
-    req:
-      - 'DLCShiveringIsles.esp'
+    req: [ 'DLCShiveringIsles.esp' ]
   - name: 'Martin.esp'
     dirty:
       - crc: 0xd12c13f3
@@ -9882,8 +9837,7 @@ plugins:
   - name: 'GTAesgaard I-II Delayer.esp'
     msg: [ *obsolete ]
   - name: 'OgramiradsUnmarkedPlaces.esp'
-    req:
-      - 'DLCShiveringIsles.esp'
+    req: [ 'DLCShiveringIsles.esp' ]
     dirty:
       - crc: 0xa738d15f
         <<: *dirtyPlugin
@@ -10015,8 +9969,7 @@ plugins:
         itm: 254
         udr: 461
   - name: 'Ravenrock.esp'
-    req:
-      - 'DLCShiveringIsles.esp'
+    req: [ 'DLCShiveringIsles.esp' ]
   - name: 'Ranokoas City Stealth Exits.esp'
     dirty:
       - crc: 0xb6e7250e
@@ -10256,8 +10209,7 @@ plugins:
         itm: 57
         udr: 159
   - name: 'SSS_1.0.esp'
-    req:
-      - 'DLCShiveringIsles.esp'
+    req: [ 'DLCShiveringIsles.esp' ]
   - name: 'Steve - Hitman.esp'
     dirty:
       - crc: 0x60af4a1f
@@ -10729,8 +10681,7 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/41987' ]
     tag: [ Invent ]
   - name: 'Treasuresofthedeep.esp'
-    req:
-      - 'Oscuro''s_Oblivion_Overhaul.esm'
+    req: [ 'Oscuro''s_Oblivion_Overhaul.esm' ]
   - name: 'Torynwyll.esp'
     dirty:
       - crc: 0x693fb4d9
@@ -10932,8 +10883,7 @@ plugins:
         udr: 10
   - name: 'YakumoIsle.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/37004' ]
-    req:
-      - 'DLCShiveringIsles.esp'
+    req: [ 'DLCShiveringIsles.esp' ]
     msg:
       - type: say
         content: 'Requires: HGEC'
@@ -12381,8 +12331,7 @@ plugins:
       - type: say
         content: 'Obsolete. Update to UL:Lost Coast 1.6.3 or higher, then delete this patch.'
   - name: 'SutchReborn-LostCoast patch.esp'
-    req:
-      - 'Sutch reborn Lighthouse Fix UL.esp'
+    req: [ 'Sutch reborn Lighthouse Fix UL.esp' ]
   - name: 'Sutch reborn Lighthouse Fix UL.esp'
     dirty:
       - crc: 0xc591afc5
@@ -13037,8 +12986,7 @@ plugins:
     url:
       - 'https://www.nexusmods.com/oblivion/mods/16360'
       - 'https://www.nexusmods.com/oblivion/mods/33003'
-    req:
-      - 'DLCShiveringIsles.esp'
+    req: [ 'DLCShiveringIsles.esp' ]
     tag: [ Actors.AIPackages ]
   - name: 'Open Cities Bartholm.esp'
     url:
@@ -13632,8 +13580,7 @@ plugins:
       - type: say
         content: 'Check version is 1.1 or later.'
   - name: 'dhsRTentwithSorter.esp'
-    req:
-      - 'Cobl Main.esm'
+    req: [ 'Cobl Main.esm' ]
   - name: 'DoB10mins.esp'
     inc:
       - 'DoB20mins.esp'
@@ -13646,8 +13593,7 @@ plugins:
       - type: say
         content: 'Outdated. Upgrade to Portable Sorters.'
   - name: 'DS Portable Sorters.esp'
-    req:
-      - 'Cobl Main.esm'
+    req: [ 'Cobl Main.esm' ]
   - name: 'Dwemer_Rename.esp'
     msg:
       - type: say
@@ -13972,8 +13918,7 @@ plugins:
       - type: say
         content: 'If using with an overhaul such as OOO (or many other mods) really should use Wrye Bash or you''ll have loss of some leveled list changes.'
   - name: 'TI-MM v04d.esp'
-    req:
-      - 'DLCShiveringIsles.esp'
+    req: [ 'DLCShiveringIsles.esp' ]
     msg:
       - type: say
         content: 'Requires: Qarl''s Harvest, Tamrielic Ingredients.'
@@ -14122,14 +14067,11 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/12367' ]
     tag: [ Relations ]
   - name: 'pmNPCServices.esp'
-    req:
-      - 'pmRealTimeInteractions.esp'
+    req: [ 'pmRealTimeInteractions.esp' ]
   - name: 'pmPersuasionOverhaul.esp'
-    req:
-      - 'pmRealTimeInteractions.esp'
+    req: [ 'pmRealTimeInteractions.esp' ]
   - name: 'pmRepairRecharge.esp'
-    req:
-      - 'pmRealTimeInteractions.esp'
+    req: [ 'pmRealTimeInteractions.esp' ]
   - name: 'PWRunSpeed.esp'
     tag:
       - Actors.Stats
@@ -14653,8 +14595,7 @@ plugins:
   - name: 'Natural Hunger v2_0 by QF.esp'
     msg: [ *obsolete ]
   - name: 'pmQFNaturalHunger.esp'
-    req:
-      - 'pmRealTimeInteractions.esp'
+    req: [ 'pmRealTimeInteractions.esp' ]
   - name: 'True Retroactive Health v2.2.esp'
     msg: [ *obsolete ]
   - name: 'ReneerKeyLockMod.esp'
@@ -14737,8 +14678,7 @@ plugins:
       - type: say
         content: 'Requires: RefStuff'
   - name: 'elPatrixF_SummonWorkshop_ShiveringIsles.esp'
-    req:
-      - 'DLCShiveringIsles.esp'
+    req: [ 'DLCShiveringIsles.esp' ]
   - name: 'Illusionary Summons.esp'
     dirty:
       - crc: 0x8bc62af5
@@ -14816,8 +14756,7 @@ plugins:
         <<: *dirtyPlugin
         itm: 9
   - name: 'Portal - SI.esp'
-    req:
-      - 'DLCShiveringIsles.esp'
+    req: [ 'DLCShiveringIsles.esp' ]
   - name: 'Silj''s Martigen''s Monster Mod summmon spells and conjuration compendium.esp'
     dirty:
       - crc: 0x3c6cc609
@@ -15067,14 +15006,11 @@ plugins:
         itm: 40
         udr: 4
   - name: 'pmCrimeHandler.esp'
-    req:
-      - 'pmRealTimeInteractions.esp'
+    req: [ 'pmRealTimeInteractions.esp' ]
   - name: 'pmLockpicking.esp'
-    req:
-      - 'pmRealTimeInteractions.esp'
+    req: [ 'pmRealTimeInteractions.esp' ]
   - name: 'pmSkoomaDeals.esp'
-    req:
-      - 'pmRealTimeInteractions.esp'
+    req: [ 'pmRealTimeInteractions.esp' ]
   - name: 'Attack & Hide.esp'
     msg: [ *obsolete ]
   - name: 'attack and hide medium.esp'
@@ -17553,8 +17489,7 @@ plugins:
         itm: 11
   - name: '1em_Vilja OOO FCOM Fix.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/28977' ]
-    req:
-      - 'Oscuro''s_Oblivion_Overhaul.esm'
+    req: [ 'Oscuro''s_Oblivion_Overhaul.esm' ]
     msg:
       - type: say
         content: 'Use this or "1em_Vilja MMM FCOM Fix.esp", but not both; The OOO Version offers less protection.'
@@ -17568,8 +17503,7 @@ plugins:
       - NoMerge
   - name: '1em_Vilja MMM FCOM Fix.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/28977' ]
-    req:
-      - 'Mart''s Monster Mod.esm'
+    req: [ 'Mart''s Monster Mod.esm' ]
     msg:
       - type: say
         content: 'Use this or "1em_Vilja OOO FCOM Fix.esp", but not both; The MMM Version offers more protection from certain Npc and Creatures.'
@@ -18030,8 +17964,7 @@ plugins:
         condition: 'file("KW-AlliesPlayNicer.esp")'
   - name: 'DiverseDremoraCoblRacesCosmetics.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/40461' ]
-    req:
-      - 'Cobl Main.esm'
+    req: [ 'Cobl Main.esm' ]
     msg:
       - type: say
         content: 'Requires: Cobl Races Cosmetics Resources'
@@ -18539,8 +18472,7 @@ plugins:
       - NpcFaces
   - name: 'bgBalancingEVOptionalSeamReducerHighElfFix.esp'
     url: [ 'http://theelderscrolls.info/?go=dlfile&fileid=215' ]
-    req:
-      - 'DLCShiveringIsles.esp'
+    req: [ 'DLCShiveringIsles.esp' ]
     msg:
       - type: say
         content: 'Requires: Luchaire''s Body Seam Reducer.'
@@ -18548,8 +18480,7 @@ plugins:
     tag: [ Body-M ]
   - name: 'bgBalancingDVOptionalSeamReducerHighElfFix.esp'
     url: [ 'http://theelderscrolls.info/?go=dlfile&fileid=222' ]
-    req:
-      - 'DLCShiveringIsles.esp'
+    req: [ 'DLCShiveringIsles.esp' ]
     msg:
       - type: say
         content: 'Requires: Luchaire''s Body Seam Reducer.'
@@ -18560,8 +18491,7 @@ plugins:
       - Body-Size-F
   - name: 'bgIntegrationEV.esp'
     url: [ 'http://theelderscrolls.info/?go=dlfile&fileid=349' ]
-    req:
-      - 'DLCShiveringIsles.esp'
+    req: [ 'DLCShiveringIsles.esp' ]
     msg:
       - type: say
         content: 'Requires: LAME and Race Balancing Project.'
@@ -18638,19 +18568,16 @@ plugins:
         udr: 3
   - name: 'Better Cities - Knights of the Nine.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/16513' ]
-    req:
-      - 'Better Cities - Open Better Cities.esp'
+    req: [ 'Better Cities - Open Better Cities.esp' ]
   - name: 'Better Cities Anvil Open - Knights of the Nine.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/16513' ]
-    req:
-      - 'Better Cities - Open Better Cities.esp'
+    req: [ 'Better Cities - Open Better Cities.esp' ]
   - name: 'Better Cities - TIE Restricted Area.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/16513' ]
     tag: [ Scripts ]
   - name: 'BICDist_OotD_Patch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/45611' ]
-    req:
-      - 'Better Cities IC Green Emperor Way.esp'
+    req: [ 'Better Cities IC Green Emperor Way.esp' ]
   - name: 'Better Cities - COBL.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/16513' ]
     dirty:
@@ -18754,23 +18681,19 @@ plugins:
     tag: [ Invent ]
   - name: 'HTSCl_cobl.esp'
     url: [ 'https://www.loverslab.com/topic/171-htsclight-english/?ct=1568338462/' ]
-    req:
-      - 'Cobl Main.esm'
+    req: [ 'Cobl Main.esm' ]
   - name: 'HTSCl_mmm.esp'
     url: [ 'https://www.loverslab.com/topic/171-htsclight-english/?ct=1568338462/' ]
-    req:
-      - 'Mart''s Monster Mod.esm'
+    req: [ 'Mart''s Monster Mod.esm' ]
     tag:
       - Graphics
       - Invent
   - name: 'HTSCl_ooo.esp'
     url: [ 'https://www.loverslab.com/topic/171-htsclight-english/?ct=1568338462/' ]
-    req:
-      - 'Oscuro''s_Oblivion_Overhaul.esm'
+    req: [ 'Oscuro''s_Oblivion_Overhaul.esm' ]
   - name: 'HTSCl_si.esp'
     url: [ 'https://www.loverslab.com/topic/171-htsclight-english/?ct=1568338462/' ]
-    req:
-      - 'DLCShiveringIsles.esp'
+    req: [ 'DLCShiveringIsles.esp' ]
   - name: 'HTSCl_hud.esp'
     url: [ 'https://www.loverslab.com/topic/171-htsclight-english/?ct=1568338462/' ]
     msg:
@@ -19085,8 +19008,7 @@ plugins:
   - name: 'ViconiaChapterTwo.esp'
     inc:
       - 'Viconia.esp'
-    req:
-      - 'Underdark.esm'
+    req: [ 'Underdark.esm' ]
   - name: 'UnderdarkSaga.esp'
     dirty:
       - crc: 0x453742b9
@@ -19173,8 +19095,7 @@ plugins:
   - name: 'NRB4 Standard Road Record.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
     msg: [ *useOnlyOneRoadRecordFile ]
-    req:
-      - 'road+bridges.esp'
+    req: [ 'road+bridges.esp' ]
     tag:
       - Deactivate
       - Roads
@@ -19186,16 +19107,14 @@ plugins:
   - name: 'NRB4 OCReborn Road Record.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
     msg: [ *useOnlyOneRoadRecordFile ]
-    req:
-      - 'Open Cities Reborn.esp'
+    req: [ 'Open Cities Reborn.esp' ]
     tag:
       - Deactivate
       - Roads
   - name: 'ROC Standard Road Record.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
     msg: [ *roadsAndBridgesDetected ]
-    req:
-      - 'Roads of Cyrodiil.esp'
+    req: [ 'Roads of Cyrodiil.esp' ]
     tag:
       - Deactivate
       - Roads
@@ -19211,8 +19130,7 @@ plugins:
   - name: 'CSVF_Road_Record_OC.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/38366/' ]
     msg: [ *useOnlyOneRoadRecordFile ]
-    req:
-      - 'Open Cities.esp'
+    req: [ 'Open Cities.esp' ]
     tag:
       - Deactivate
       - Roads
@@ -19228,16 +19146,14 @@ plugins:
   - name: 'CSVF_Road_Record_BBC.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/38366/' ]
     msg: [ *useOnlyOneRoadRecordFile ]
-    req:
-      - 'Better Cities Full.esp'
+    req: [ 'Better Cities Full.esp' ]
     tag:
       - Deactivate
       - Roads
   - name: 'CSVF_Road_Record_BBC+OC.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/38366/' ]
     msg: [ *useOnlyOneRoadRecordFile ]
-    req:
-      - 'Better Cities - Open Better Cities.esp'
+    req: [ 'Better Cities - Open Better Cities.esp' ]
     tag:
       - Deactivate
       - Roads
@@ -19262,8 +19178,7 @@ plugins:
   - name: 'CSVF_Road_Record_RB.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/38366/' ]
     msg: [ *useOnlyOneRoadRecordFile ]
-    req:
-      - 'road+bridges.esp'
+    req: [ 'road+bridges.esp' ]
     tag:
       - Deactivate
       - Roads
