@@ -737,8 +737,7 @@ plugins:
 # Official DLC
   - name: 'DLCShiveringIsles.esp'
     group: *dlcGroup
-    after:
-      - 'Unofficial Oblivion Patch.esp'
+    after: [ 'Unofficial Oblivion Patch.esp' ]
     clean:
       - crc: 0x2BB84977
         util: 'TES4Edit v4.0.3'
@@ -3321,8 +3320,7 @@ plugins:
     tag: [ Graphics ]
   - name: 'Atmospheric Loading Screens - Original Text.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/8958' ]
-    after:
-      - 'bgBalancingEVCore.esp'
+    after: [ 'bgBalancingEVCore.esp' ]
     tag: [ Graphics ]
   - name: 'Atmospheric Loading Screens - Random Quotes.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/8958' ]
@@ -3741,8 +3739,7 @@ plugins:
       - 'All Natural - Real Lights.esp'
   - name: 'Illumination(Within|Without)\.esp'
     url: [ 'http://www.nexusmods.com/oblivion/mods/3700' ]
-    after:
-      - 'Finishing Touches -Bravil-.esp'
+    after: [ 'Finishing Touches -Bravil-.esp' ]
     msg:
       - <<: *useOnlyOneX
         subs: [ 'Illumination' ]
@@ -6107,8 +6104,7 @@ plugins:
     tag: [ Graphics ]
   - name: 'DMRA BBB Complete Clothing and Armor Replacer.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/42033' ]
-    after:
-      - 'Colourwheels Sexy Oblivion OverHaul.esp'
+    after: [ 'Colourwheels Sexy Oblivion OverHaul.esp' ]
     tag: [ Graphics ]
   - name: 'DMRA BBB Better Cities.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/42072' ]
@@ -7685,8 +7681,7 @@ plugins:
       - '00RBScribeSupplies Intensive.esp'
   - name: '0WeynonPrioryAlive.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/43004' ]
-    after:
-      - 'SOC-RegionalFarms.esp'
+    after: [ 'SOC-RegionalFarms.esp' ]
     tag: [ Graphics ]
     dirty:
       - crc: 0x420f63bf
@@ -8164,8 +8159,7 @@ plugins:
         condition: 'file("Better Cities Resources.esm")'
   - name: 'Better Benirus Manor.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/18054' ]
-    after:
-      - 'Ghorak''s House.esp'
+    after: [ 'Ghorak''s House.esp' ]
     tag: [ C.Light ]
   - name: 'Big Business.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/8236' ]
@@ -9073,8 +9067,7 @@ plugins:
     inc:
       - 'Region Revive - Lake Rumare.esp'
   - name: 'ImpeREAL Empire - Unique Castles.esp'
-    after:
-      - 'Trade and Commerce.esp'
+    after: [ 'Trade and Commerce.esp' ]
     inc:
       - 'Better Cities Full.esp'
       - 'Better Imperial City.esp'
@@ -10276,8 +10269,7 @@ plugins:
     msg: [ *obsolete ]
   - name: 'SunderedKeep.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/37587' ]
-    after:
-      - 'Better dungeons.esp'
+    after: [ 'Better dungeons.esp' ]
     dirty:
       - crc: 0x70719f5b
         <<: *dirtyPlugin
@@ -14044,8 +14036,7 @@ plugins:
       - type: say
         content: 'Almost certainly not compatible with Fran''s, MMM, OOO or FCOM.'
   - name: 'Nude Humanlike Spriggan.esp'
-    after:
-      - 'Knights - Unofficial Patch.esp'
+    after: [ 'Knights - Unofficial Patch.esp' ]
     inc:
       - 'Oblivion Sexualized Monsters.esm'
       - 'Oblivion Sexualized Monsters-exclu TRM.esm'
@@ -14054,8 +14045,7 @@ plugins:
         content: 'USE ONE ''nude * Spriggan.esp'' ONLY'
         condition: 'file("Nude Humanlike Spriggan Tweaked.esp") or file("Nude Humanlike Spriggan HGEC B.esp") or file("Nude Male Spriggan.esp")'
   - name: 'Nude Humanlike Spriggan Tweaked.esp'
-    after:
-      - 'Knights - Unofficial Patch.esp'
+    after: [ 'Knights - Unofficial Patch.esp' ]
     inc:
       - 'Oblivion Sexualized Monsters.esm'
       - 'Oblivion Sexualized Monsters-exclu TRM.esm'
@@ -14064,8 +14054,7 @@ plugins:
         content: 'USE ONE ''nude * Spriggan.esp'' ONLY'
         condition: 'file("Nude Humanlike Spriggan.esp") or file("Nude Humanlike Spriggan HGEC B.esp") or file("Nude Male Spriggan.esp")'
   - name: 'Nude Humanlike Spriggan HGEC B.esp'
-    after:
-      - 'Knights - Unofficial Patch.esp'
+    after: [ 'Knights - Unofficial Patch.esp' ]
     inc:
       - 'Oblivion Sexualized Monsters.esm'
       - 'Oblivion Sexualized Monsters-exclu TRM.esm'
@@ -14076,8 +14065,7 @@ plugins:
         content: 'USE ONE ''nude * Spriggan.esp'' ONLY'
         condition: 'file("Nude Humanlike Spriggan.esp") or file("Nude Humanlike Spriggan Tweaked.esp") or file("Nude Male Spriggan.esp")'
   - name: 'Nude Male Spriggan.esp'
-    after:
-      - 'Knights - Unofficial Patch.esp'
+    after: [ 'Knights - Unofficial Patch.esp' ]
     inc:
       - 'Oblivion Sexualized Monsters.esm'
       - 'Oblivion Sexualized Monsters-exclu TRM.esm'
@@ -14455,8 +14443,7 @@ plugins:
     tag: [ Invent ]
   - name: 'SOC-Wildlife Variety.esp'
     tag: [ Relev ]
-    after:
-      - 'NaturalWildlife.esp'
+    after: [ 'NaturalWildlife.esp' ]
   - name: 'Teleport Everywhere.esp'
     req: [ *OBSE ]
   - name: 'Things Found Fence.esp'
@@ -14931,8 +14918,7 @@ plugins:
     tag: [ Invent ]
   - name: 'Midas PowDur(1\.5|2|3|4)x\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/32952' ]
-    after:
-      - 'midasspells.esp'
+    after: [ 'midasspells.esp' ]
     msg:
       - <<: *useOnlyOneX
         subs: [ 'Midas PowDur modifier' ]
@@ -18329,8 +18315,7 @@ plugins:
       - NpcFaces
       - R.Head
       - R.Mouth
-    after:
-      - 'MaleBodyReplacerV5.esp'
+    after: [ 'MaleBodyReplacerV5.esp' ]
   - name: 'OCOv2-BR.esp'
     tag:
       - NpcFaces
@@ -18646,8 +18631,7 @@ plugins:
         condition: 'file("Better Cities Full.esp")'
   - name: 'Better Imperial City.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/16513' ]
-    after:
-      - 'Sounds of Cyrodiil.esp'
+    after: [ 'Sounds of Cyrodiil.esp' ]
     dirty:
       - crc: 0x8687bbcc
         <<: *dirtyPlugin
@@ -18736,12 +18720,10 @@ plugins:
         udr: 257
   - name: 'xulSkingradOutskirts.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/29948' ]
-    after:
-      - 'Cyrodiil Rebuild.esp'
+    after: [ 'Cyrodiil Rebuild.esp' ]
   - name: 'Better Cities SKINGRAD.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/16513' ]
-    after:
-      - 'Cyrodiil Rebuild.esp'
+    after: [ 'Cyrodiil Rebuild.esp' ]
   - name: 'Cyrodiil Rebuild II.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/43743' ]
     tag:
@@ -18806,8 +18788,7 @@ plugins:
         itm: 32
   - name: 'ReallyImmersiveMessages.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/27720' ]
-    after:
-      - 'Oscuro''s_Oblivion_Overhaul.esp'
+    after: [ 'Oscuro''s_Oblivion_Overhaul.esp' ]
   - name: 'Z 1 Hour respawn.esp'
     msg: [ *bashedPatchTweak ]
   - name: 'ThingasTime 1-15 Scale.esp'
@@ -19003,8 +18984,7 @@ plugins:
     inc:
       - 'Shining Creatures.esp'
   - name: 'Shining Creatures_DLCFrostcrag.esp'
-    after:
-      - 'Shining Creatures_AtronachFlame.esp'
+    after: [ 'Shining Creatures_AtronachFlame.esp' ]
     req:
       - name: 'Shining Creatures.esp'
         display: 'Shining Creatures.esp or Shining Creatures_AtronachFlame.esp'
@@ -19366,8 +19346,7 @@ plugins:
   - name: 'Bashed Patch.*\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22368' ]
     group: *dynamicPatchesGroup
-    after:
-      - 'TES4Merged.esp'
+    after: [ 'TES4Merged.esp' ]
   - name: 'Creeper.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/16373' ]
     dirty:
@@ -19379,14 +19358,12 @@ plugins:
         udr: 2
   - name: 'Ahtata Arquamer spike4hair.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/20338' ]
-    after:
-      - 'Bashed Patch, 0.esp'  # The default filename for a Bashed Patch.
+    after: [ 'Bashed Patch, 0.esp' ]  # The default filename for a Bashed Patch.
 
   - name: 'Maskar''s Oblivion Overhaul.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/42780' ]
     group: *lateChangesGroup
-    after:
-      - 'Bashed Patch, 0.esp'  # The default filename for a Bashed Patch.
+    after: [ 'Bashed Patch, 0.esp' ]  # The default filename for a Bashed Patch.
     req: [ *OBSEv21 ]
 
   - name: 'Vanilla Weapon Stat Override( - SI)?\.esp'
@@ -19674,8 +19651,7 @@ plugins:
         condition: 'file("xulImperialIsle.esp")'
   - name: 'Dollparts'' Cherry Brooke Grove.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/37753' ]
-    after:
-      - 'Dollparts'' Cherry Brooke Grove - WAC Patch.esp'
+    after: [ 'Dollparts'' Cherry Brooke Grove - WAC Patch.esp' ]
   - name: 'Gold Road Cottage.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17158/' ]
     after:
@@ -19688,16 +19664,13 @@ plugins:
       - 'personality_idles4.esp'
   - name: 'Better Cities IC Lighting Overhaul.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/39149' ]
-    after:
-      - 'xulCheydinhalFalls.esp'
+    after: [ 'xulCheydinhalFalls.esp' ]
   - name: 'Better Clocks-Better Cities IC Light Overhaul.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/39149/' ]
-    after:
-      - 'xulCheydinhalFalls.esp'
+    after: [ 'xulCheydinhalFalls.esp' ]
   - name: 'Better Clocks for Better Cities 2_0.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/36994/' ]
-    after:
-      - 'xulCheydinhalFalls.esp'
+    after: [ 'xulCheydinhalFalls.esp' ]
   - name: 'OWC - Players Home.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/36260' ]
     tag: [ C.Light ]
