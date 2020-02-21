@@ -5045,8 +5045,9 @@ plugins:
   - name: 'ArynnsDemonatrixHGEC.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/19027' ]
     dirty:
-      - crc: 0xcb5bd995
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xCB5BD995
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 4
 
   - name: 'Armor of Heaven''s Fury(-Gold)?-Heavy(-Alt-helm)?\.esp'
