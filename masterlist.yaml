@@ -15693,16 +15693,25 @@ plugins:
         util: 'TES4Edit v4.0.3'
   - name: 'CM Partners More NPCs.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/7819' ]
+    tag:
+      - Eyes
+      - Hair
     clean:
       - crc: 0x49C3BCE9
         util: 'TES4Edit v4.0.3'
   - name: 'CM Partners More NPCs NE.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/7819' ]
+    tag:
+      - Eyes
+      - Hair
     clean:
       - crc: 0x7595FCF9
         util: 'TES4Edit v4.0.3'
   - name: 'CM Partners NPC.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/7819' ]
+    tag:
+      - Eyes
+      - Hair
     dirty:
       - <<: *quickClean
         crc: 0xACB522AC
@@ -15710,6 +15719,9 @@ plugins:
         itm: 7
   - name: 'CM Partners NPC NE.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/7819' ]
+    tag:
+      - Eyes
+      - Hair
     dirty:
       - <<: *quickClean
         crc: 0x5A56E8A2
@@ -15721,9 +15733,6 @@ plugins:
       - <<: *useOnlyOneX
         subs: [ 'CM Partners' ]
         condition: 'many("CM Partners (NPC( NE)?|More NPCs( NE)?)\.esp")'
-    tag:
-      - Eyes
-      - Hair
   - name: 'CM Partners Special NPCs.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/7819' ]
     tag:
