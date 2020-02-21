@@ -5228,8 +5228,9 @@ plugins:
   - name: 'CB Gothic Mistress.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/32682' ]
     dirty:
-      - crc: 0x64f42fd6
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x64F42FD6
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
   - name: 'CG - Necessity Pack.esp'
     url: [ 'http://tesalliance.org/forums/index.php?/files/file/585-classy-gentlemen-necessity-pack' ]
