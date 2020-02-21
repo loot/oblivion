@@ -5436,9 +5436,10 @@ plugins:
   - name: 'FLY Armor and Clothing - Non-replacers.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/41309' ]
     dirty:
-      - crc: 0xb0fdf6f
-        <<: *dirtyPlugin
-        itm: 4
+      - <<: *quickClean
+        crc: 0x0B0FDF6F
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 7
   - name: 'Frill Short Dress and Halloween Backpack.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/42902' ]
     tag: [ Graphics ]
