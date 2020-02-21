@@ -5365,8 +5365,9 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/2392' ]
     tag: [ Invent ]
     dirty:
-      - crc: 0xf67f213e
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xF67F213E
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 5
   - name: 'DFSLChina.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/21941' ]
