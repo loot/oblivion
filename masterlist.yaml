@@ -5066,11 +5066,19 @@ plugins:
   - name: 'ArmorOfTheWhiteFox.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/7208' ]
     tag: [ Invent ]
+  - name: 'Aspiria.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/26922' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x7B5AD295
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        udr: 16
   - name: 'Aspiria_EV.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/26922' ]
     dirty:
-      - crc: 0x30904f56
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x30904F56
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         udr: 16
   - name: 'AyleidGlass.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/13189' ]
