@@ -15689,36 +15689,24 @@ plugins:
       - crc: 0xE7224ABB
         util: 'TES4Edit v4.0.3'
   - name: 'CM Partners More NPCs.esp'
-    inc:
-      - 'CM Partners NPC.esp'
-      - 'CM Partners NPC NE.esp'
-      - 'CM Partners More NPCs NE.esp'
+    inc: [ 'CM Partners More NPCs NE.esp' ]
     clean:
       - crc: 0x49C3BCE9
         util: 'TES4Edit v4.0.3'
   - name: 'CM Partners More NPCs NE.esp'
-    inc:
-      - 'CM Partners NPC.esp'
-      - 'CM Partners NPC NE.esp'
-      - 'CM Partners More NPCs.esp'
+    inc: [ 'CM Partners More NPCs.esp' ]
     clean:
       - crc: 0x7595FCF9
         util: 'TES4Edit v4.0.3'
   - name: 'CM Partners NPC.esp'
-    inc:
-      - 'CM Partners NPC NE.esp'
-      - 'CM Partners More NPCs.esp'
-      - 'CM Partners More NPCs NE.esp'
+    inc: [ 'CM Partners NPC NE.esp' ]
     dirty:
       - <<: *quickClean
         crc: 0xACB522AC
         util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 7
   - name: 'CM Partners NPC NE.esp'
-    inc:
-      - 'CM Partners NPC.esp'
-      - 'CM Partners More NPCs.esp'
-      - 'CM Partners More NPCs NE.esp'
+    inc: [ 'CM Partners NPC.esp' ]
     dirty:
       - <<: *quickClean
         crc: 0x5A56E8A2
