@@ -5221,8 +5221,9 @@ plugins:
   - name: 'BrivasArmor.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/5267' ]
     dirty:
-      - crc: 0x5b43d642
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x5B43D642
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 11
   - name: 'CB Gothic Mistress.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/32682' ]
