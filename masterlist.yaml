@@ -5087,15 +5087,17 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/10568' ]
     inc: [ 'ACCCGR.esp' ]
     dirty:
-      - crc: 0xea8628a4
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xEA8628A4
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 13
   - name: 'ACCCGR.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/10568' ]
     inc: [ 'ACCCGR SI.esp' ]
     dirty:
-      - crc: 0x12cd76a5
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x12CD76A5
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 13
   - name: 'Altessian.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/3165' ]
