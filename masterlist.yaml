@@ -5412,8 +5412,9 @@ plugins:
   - name: 'Emarion Equipment.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/3468' ]
     dirty:
-      - crc: 0xa71070b4
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xA71070B4
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 4
   - name: 'FalxMod.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/20853' ]
