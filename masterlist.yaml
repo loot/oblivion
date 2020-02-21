@@ -5377,10 +5377,13 @@ plugins:
         util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
   - name: 'Deceiver''s Armour.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/11421' ]
+    url:
+      - 'https://www.nexusmods.com/oblivion/mods/11421'
+      - 'https://www.nexusmods.com/oblivion/mods/16639'
     dirty:
-      - crc: 0xad8df1c2
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xAD8DF1C2
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 5
   - name: 'Dynasty Armor DM-BBB.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/43341' ]
