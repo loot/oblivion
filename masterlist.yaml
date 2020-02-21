@@ -5515,8 +5515,9 @@ plugins:
   - name: 'Knight of Skeleton.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/29527' ]
     dirty:
-      - crc: 0x79e857e0
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x79E857E0
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
   - name: 'KohdiBladesofAnkewan v1.6 Delayer.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/25946/' ]
