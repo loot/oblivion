@@ -5353,8 +5353,9 @@ plugins:
       - 'https://www.nexusmods.com/oblivion/mods/12785'
       - 'https://www.nexusmods.com/oblivion/mods/26201'
     dirty:
-      - crc: 0xf4e53e26
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xF4E53E26
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 11
         udr: 1
   - name: 'Dark Katana.esp'
