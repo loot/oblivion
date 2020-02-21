@@ -4826,12 +4826,20 @@ plugins:
       - 'https://www.nexusmods.com/oblivion/mods/5475'
       - 'https://www.nexusmods.com/oblivion/mods/46915'
     msg: [ *vanillaMapMarkers ]
+  - name: 'HouseMapMarkers.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/3345' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x297BE460
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 25
   - name: 'HouseMapMarkersOnlyBought.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/3345' ]
     dirty:
-      - crc: 0x1664da76
-        <<: *dirtyPlugin
-        itm: 27
+      - <<: *quickClean
+        crc: 0x1664DA76
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 29
   - name: 'Clock Hotkey.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/38514' ]
     req: [ *OBSE ]
