@@ -5118,8 +5118,9 @@ plugins:
     inc: [ 'ArmamentariumWeapons4Npcs.esp' ]
     msg: [ *obsoleteArmamentarium ]
     dirty:
-      - crc: 0x65265f23
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x65265F23
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 10
   - name: 'ArmamentariumKatanas.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/15514' ]
