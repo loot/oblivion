@@ -5446,9 +5446,10 @@ plugins:
   - name: 'Full Metal Bikini Mark II.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/38579' ]
     dirty:
-      - crc: 0xc5ce3717
-        <<: *dirtyPlugin
-        itm: 9
+      - <<: *quickClean
+        crc: 0xC5CE3717
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 6
   - name: 'Griffon Fortress 0.3.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/14830' ]
     msg: [ *obsolete ]
