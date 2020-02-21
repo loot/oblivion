@@ -4670,8 +4670,9 @@ plugins:
   - name: 'Crowded Cities_Open.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/16851' ]
     dirty:
-      - crc: 0x10a7fba3
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x10A7FBA3
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 4
   - name: 'Crowded Roads Advanced.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/18251' ]
