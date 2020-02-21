@@ -15657,12 +15657,70 @@ plugins:
     tag:
       - Eyes
       - Hair
+
+###### CM Partners Basic ######
   - name: 'CM Partners.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/7819' ]
+    req:
+      - name: 'DLCShiveringIsles.esp'
+        condition: 'checksum("CM Partners.esp", ED17B93C) or checksum("CM Partners.esp", C85C4FB3)'
+    clean:
+      # ShiveringIsles with Invisibility (Default)
+      - crc: 0xED17B93C
+        util: 'TES4Edit v4.0.3'
+      # ShiveringIsles without Invisibility
+      - crc: 0xC85C4FB3
+        util: 'TES4Edit v4.0.3'
+      # No SI with Invisibility
+      - crc: 0xF5449C45
+        util: 'TES4Edit v4.0.3'
+      # No SI without Invisibility
+      - crc: 0x4598605F
+        util: 'TES4Edit v4.0.3'
+  - name: 'CM Partners (NPC|NPC NE|Extra NPCs|Marker NPCs|More NPCs|More NPCs NE|Special NPCs)\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/7819' ]
+    tag:
+      - Eyes
+      - Hair
+  - name: 'CM Partners Extra NPCs.esp'
     dirty:
-      - crc: 0xd1de9617
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x9EBE1E58
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 2
+  - name: 'CM Partners Marker NPCs.esp'
+    clean:
+      - crc: 0xE7224ABB
+        util: 'TES4Edit v4.0.3'
+  - name: 'CM Partners More NPCs.esp'
+    inc: [ 'CM Partners More NPCs NE.esp' ]
+    clean:
+      - crc: 0x49C3BCE9
+        util: 'TES4Edit v4.0.3'
+  - name: 'CM Partners More NPCs NE.esp'
+    inc: [ 'CM Partners More NPCs.esp' ]
+    clean:
+      - crc: 0x7595FCF9
+        util: 'TES4Edit v4.0.3'
+  - name: 'CM Partners NPC.esp'
+    inc: [ 'CM Partners NPC NE.esp' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xACB522AC
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 7
+  - name: 'CM Partners NPC NE.esp'
+    inc: [ 'CM Partners NPC.esp' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x5A56E8A2
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 7
+  - name: 'CM Partners Special NPCs.esp'
+    clean:
+      - crc: 0xCFCE92CF
+        util: 'TES4Edit v4.0.3'
+
   - name: '300_Anthems_Enhanced_Races-7820.esp'
     tag:
       - Eyes
@@ -17181,40 +17239,6 @@ plugins:
     req:
       - name: '_Ren_BeautyPack_full.esp'
         display: '[Rens Beauty Pack](https://www.nexusmods.com/oblivion/mods/4431)'
-  - name: 'CM Partners Special NPCs.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/7819' ]
-    tag:
-      - Eyes
-      - Hair
-  - name: 'CM Partners NPC.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/7819' ]
-    dirty:
-      - crc: 0xacb522ac
-        <<: *dirtyPlugin
-        itm: 7
-  - name: 'CM Partners (NPC( NE)?|More NPCs( NE)?)\.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/7819' ]
-    msg:
-      - <<: *useOnlyOneX
-        subs: [ 'CM Partners' ]
-        condition: 'many("CM Partners (NPC( NE)?|More NPCs( NE)?)\.esp")'
-    tag:
-      - Eyes
-      - Hair
-  - name: 'CM Partners Marker NPCs.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/7819' ]
-    tag:
-      - Eyes
-      - Hair
-  - name: 'CM Partners Extra NPCs.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/7819' ]
-    tag:
-      - Eyes
-      - Hair
-    dirty:
-      - crc: 0x9ebe1e58
-        <<: *dirtyPlugin
-        itm: 2
   - name: 'amQuests.esp'
     tag: [ Hair ]
   - name: 'CM Partners Eileen.esp'
