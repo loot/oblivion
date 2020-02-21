@@ -4656,14 +4656,16 @@ plugins:
   - name: 'Crowded Cities 15.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/6665' ]
     dirty:
-      - crc: 0xb9cc7c1a
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xB9CC7C1A
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 4
   - name: 'Crowded Cities 30.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/6665' ]
     dirty:
-      - crc: 0x3a67e15d
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x3A67E15D
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 4
   - name: 'Crowded Cities_Open.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/16851' ]
