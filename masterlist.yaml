@@ -11344,17 +11344,10 @@ plugins:
       - 'Aundae_OBSE_addon.esp'
       - 'Blood&Mud.esp'
     dirty:
-      - crc: 0x5b6adfb3
-        <<: *dirtyPlugin
-        itm: 165
-        udr: 433
-      - crc: 0x8bbd7f36
-        <<: *dirtyPlugin
-        itm: 164
-        udr: 433
-      - crc: 0xb90e1a6d
-        <<: *dirtyPlugin
-        itm: 163
+      - <<: *quickClean
+        crc: 0x5B6ADFB3
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 159
         udr: 433
   - name: 'The Lost Spires_delayer.esp'
     msg: [ *obsolete ]
