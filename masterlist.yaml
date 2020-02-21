@@ -5292,8 +5292,9 @@ plugins:
   - name: 'CV - Kilij.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/36457' ]
     dirty:
-      - crc: 0xc4e017b
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x214E30C2
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 4
   - name: 'Daedric Healer Robes.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/33573' ]
