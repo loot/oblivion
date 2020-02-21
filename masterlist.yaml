@@ -15657,12 +15657,48 @@ plugins:
     tag:
       - Eyes
       - Hair
+
   - name: 'CM Partners.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/7819' ]
     dirty:
       - crc: 0xd1de9617
         <<: *dirtyPlugin
         itm: 2
+  - name: 'CM Partners Extra NPCs.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/7819' ]
+    tag:
+      - Eyes
+      - Hair
+    dirty:
+      - crc: 0x9ebe1e58
+        <<: *dirtyPlugin
+        itm: 2
+  - name: 'CM Partners Marker NPCs.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/7819' ]
+    tag:
+      - Eyes
+      - Hair
+  - name: 'CM Partners NPC.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/7819' ]
+    dirty:
+      - crc: 0xacb522ac
+        <<: *dirtyPlugin
+        itm: 7
+  - name: 'CM Partners (NPC( NE)?|More NPCs( NE)?)\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/7819' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'CM Partners' ]
+        condition: 'many("CM Partners (NPC( NE)?|More NPCs( NE)?)\.esp")'
+    tag:
+      - Eyes
+      - Hair
+  - name: 'CM Partners Special NPCs.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/7819' ]
+    tag:
+      - Eyes
+      - Hair
+
   - name: '300_Anthems_Enhanced_Races-7820.esp'
     tag:
       - Eyes
@@ -17181,40 +17217,6 @@ plugins:
     req:
       - name: '_Ren_BeautyPack_full.esp'
         display: '[Rens Beauty Pack](https://www.nexusmods.com/oblivion/mods/4431)'
-  - name: 'CM Partners Special NPCs.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/7819' ]
-    tag:
-      - Eyes
-      - Hair
-  - name: 'CM Partners NPC.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/7819' ]
-    dirty:
-      - crc: 0xacb522ac
-        <<: *dirtyPlugin
-        itm: 7
-  - name: 'CM Partners (NPC( NE)?|More NPCs( NE)?)\.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/7819' ]
-    msg:
-      - <<: *useOnlyOneX
-        subs: [ 'CM Partners' ]
-        condition: 'many("CM Partners (NPC( NE)?|More NPCs( NE)?)\.esp")'
-    tag:
-      - Eyes
-      - Hair
-  - name: 'CM Partners Marker NPCs.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/7819' ]
-    tag:
-      - Eyes
-      - Hair
-  - name: 'CM Partners Extra NPCs.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/7819' ]
-    tag:
-      - Eyes
-      - Hair
-    dirty:
-      - crc: 0x9ebe1e58
-        <<: *dirtyPlugin
-        itm: 2
   - name: 'amQuests.esp'
     tag: [ Hair ]
   - name: 'CM Partners Eileen.esp'
