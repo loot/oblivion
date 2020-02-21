@@ -4979,9 +4979,18 @@ plugins:
   - name: 'Adonnays Elven Weaponry.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/4804' ]
     dirty:
-      - crc: 0x8a72e5f4
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x8A72E5F4
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 4
+        udr: 2
+  - name: 'Adonnays Elfische Waffen.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/4804' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x09E37D1E
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
         udr: 2
   - name: 'Akavirdownloadpack1.1.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/6301' ]
