@@ -5302,8 +5302,9 @@ plugins:
   - name: 'dan_HGEC-EcupTattooArmor.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/16557' ]
     dirty:
-      - crc: 0xf34115d4
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xF34115D4
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 2
   - name: 'DBShadowSet.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/4091' ]
