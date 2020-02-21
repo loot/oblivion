@@ -5654,14 +5654,9 @@ plugins:
   - name: 'New Frostmourne Sword by Jojjo v1_0.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17032' ]
     dirty:
-      - crc: 0x770a8bd4
-        <<: *dirtyPlugin
-        itm: 5
-      - crc: 0xaf56fd5c
-        <<: *dirtyPlugin
-        itm: 5
-      - crc: 0xe4c84842
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x0C14D953
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 5
   - name: 'NexonsArmoryENG.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/31340' ]
