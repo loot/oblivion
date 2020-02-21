@@ -4677,14 +4677,16 @@ plugins:
   - name: 'Crowded Roads Advanced.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/18251' ]
     dirty:
-      - crc: 0xe51bd6c2
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xE51BD6C2
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 19
   - name: 'Crowded Roads Advanced less crowded.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/18251' ]
     dirty:
-      - crc: 0xcba77ff
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x0CBA77FF
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 19
   - name: 'Crowded Roads Revisited.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/20575' ]
