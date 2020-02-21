@@ -5208,8 +5208,9 @@ plugins:
   - name: 'BisPainBringer.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/16838' ]
     dirty:
-      - crc: 0x6401529a
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x6401529A
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
   - name: 'Blades Ceremonial Armour.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/2878' ]
