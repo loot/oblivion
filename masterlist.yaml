@@ -5465,9 +5465,10 @@ plugins:
   - name: 'Hentai Compilation.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22990' ]
     dirty:
-      - crc: 0x204d7d47
-        <<: *dirtyPlugin
-        itm: 7
+      - <<: *quickClean
+        crc: 0x204D7D47
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 8
         udr: 4
   - name: 'Heretic Robe Replacer.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/30331' ]
