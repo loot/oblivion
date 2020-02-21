@@ -5538,9 +5538,10 @@ plugins:
   - name: 'LaserGun_v1.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/37147' ]
     dirty:
-      - crc: 0xbd23305f
-        <<: *dirtyPlugin
-        itm: 19
+      - <<: *quickClean
+        crc: 0xBD23305F
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 20
   - name: 'LDPGC.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/45209' ]
     msg:
