@@ -5372,8 +5372,9 @@ plugins:
   - name: 'DFSLChina.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/21941' ]
     dirty:
-      - crc: 0xe2cc52d8
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xE2CC52D8
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
   - name: 'Deceiver''s Armour.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/11421' ]
