@@ -5013,9 +5013,13 @@ plugins:
   - name: 'ArchmageSorceress.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/42646' ]
     dirty:
-      - crc: 0xa18bb8a9
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xA18BB8A9
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 3
+    clean:
+      - crc: 0x8DEE47DA
+        util: 'TES4Edit v4.0.3'
   - name: 'Armblade.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/19414' ]
     tag: [ Invent ]
