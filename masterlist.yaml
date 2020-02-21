@@ -15661,6 +15661,9 @@ plugins:
 ###### CM Partners Basic ######
   - name: 'CM Partners.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/7819' ]
+    req:
+      - name: 'DLCShiveringIsles.esp'
+        condition: 'checksum("CM Partners.esp", ED17B93C) or checksum("CM Partners.esp", C85C4FB3)'
     clean:
       # ShiveringIsles with Invisibility (Default)
       - crc: 0xED17B93C
