@@ -4691,8 +4691,9 @@ plugins:
   - name: 'Crowded Roads Revisited.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/20575' ]
     dirty:
-      - crc: 0x239802c4
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x239802C4
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 4
   - name: 'travellers a.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/3958' ]
