@@ -5388,8 +5388,9 @@ plugins:
   - name: 'Dynasty Armor DM-BBB.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/43341' ]
     dirty:
-      - crc: 0x3da8158c
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x3DA8158C
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 8
   - name: 'doofdillas_potions_recolored_unsorted_v0_2_1.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/3834' ]
