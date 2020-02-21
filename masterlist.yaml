@@ -4710,8 +4710,9 @@ plugins:
   - name: 'Immersive Travelers.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/19060' ]
     dirty:
-      - crc: 0xd9d40901
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xD9D40901
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 8
   - name: 'FF_Real_Thirst.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/14214/' ]
