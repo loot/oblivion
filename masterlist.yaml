@@ -5563,18 +5563,17 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/21863' ]
     tag: [ Invent ]
     dirty:
-      - crc: 0xadce83e6
-        <<: *dirtyPlugin
-        itm: 3
-      - crc: 0xcdb7d4e1
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xCDB7D4E1
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 2406
         udr: 2
   - name: 'LSB Skull Weapons (Clean).esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/21863' ]
     dirty:
-      - crc: 0x19b24219
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x19B24219
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         udr: 2
   - name: 'M&BAxes.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/23489' ]
