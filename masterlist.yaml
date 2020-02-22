@@ -12548,9 +12548,10 @@ plugins:
   # Bravil Docks by Greg Simmonds - OC Patch
   - name: 'OC+Bravil Docks Patch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/32925' ]
-    msg:
-      - type: say
-        content: 'Note - Be sure this is being used on Bravil Docks by Greg Simmonds. Will cause a CTD with the wrong file.'
+    req:
+      - name: 'Bravil Docks.esp'
+        display: '[Bravil Harbour v1.2+](https://www.nexusmods.com/oblivion/mods/22329)'
+        condition: 'not checksum("Bravil Docks.esp", 85EAA223)'
   # Clocks of Cyrodiil - OC Patch
   - name: 'COC + OCC-OCR Patch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/32925' ]
