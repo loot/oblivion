@@ -3214,13 +3214,38 @@ plugins:
 
   - name: 'SM Plugin Refurbish.*\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/11474' ]
+    group: *veryEarlyGroup
     msg: [ *doNotClean ]
   - name: 'SM Plugin Refurbish(Merged).esp'
+    after: [ 'Knights - Unofficial Patch.esp' ]
     req: [ 'DLCShiveringIsles.esp' ]
+    msg: [ *sortMasters ]
+  - name: 'SM Plugin Refurbish - SI.esp'
+    after: [ 'Unofficial Shivering Isles Patch.esp' ]
+    req: [ 'DLCShiveringIsles.esp' ]
+  - name: 'SM Plugin Refurbish - Battlehorn.esp'
+    after: [ 'DLCBattlehornCastle - Unofficial Patch.esp' ]
+  - name: 'SM Plugin Refurbish - Frostcrag.esp'
+    after: [ 'DLCFrostcrag - Unofficial Patch.esp' ]
+  - name: 'SM Plugin Refurbish - HorseArmor.esp'
+    after: [ 'DLCHorseArmor - Unofficial Patch.esp' ]
+  - name: 'SM Plugin Refurbish - Knights.esp'
+    after: [ 'Knights - Unofficial Patch.esp' ]
+  - name: 'SM Plugin Refurbish - MehrunesRazor.esp'
+    after: [ 'DLCMehrunesRazor - Unofficial Patch.esp' ]
+  - name: 'SM Plugin Refurbish - Orrery.esp'
+    after: [ 'DLCOrrery - Unofficial Patch.esp' ]
+  - name: 'SM Plugin Refurbish - ThievesDen.esp'
+    after:
+      - 'DLCThievesDen - Unofficial Patch.esp'
+      - 'DLCThievesDen - Unofficial Patch - SSSB.esp'
+  - name: 'SM Plugin Refurbish - VileLair.esp'
+    after: [ 'DLCOrrery - Unofficial Patch.esp' ]
+  - name: 'SM Plugin Refurbish - (Battlehorn|Frostcrag|HorseArmor|Knights|MehrunesRazor|Orrery|SI|ThievesDen|VileLair)\.esp'
     msg:
-      - *sortMasters
-      - type: say
-        content: 'Requires: all DLCs to be installed and active.'
+      - <<: *alreadyInX
+        subs: [ 'SM Plugin Refurbish(Merged).esp' ]
+        condition: 'file("SM Plugin Refurbish(Merged).esp")'
 
 
 ### MOBS - Medieval Oblivion Equipment Balance System ###
