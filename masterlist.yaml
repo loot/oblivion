@@ -17362,6 +17362,9 @@ plugins:
       - 'http://theelderscrolls.info/?go=dlfile&fileid=215'
       # Installation files for Race Balancing Project 10.5 EV & DV
       - 'http://theelderscrolls.info/?go=dlfile&fileid=293'
+    after:
+      - 'Open Cities Classic.esp'
+      - 'Open Cities Reborn.esp'
     msg:
       - type: say
         content: 'Do not use with COBL Races.'
@@ -17383,6 +17386,9 @@ plugins:
       - 'http://theelderscrolls.info/?go=dlfile&fileid=222'
       # Installation files for Race Balancing Project 10.5 EV & DV
       - 'http://theelderscrolls.info/?go=dlfile&fileid=293'
+    after:
+      - 'Open Cities Classic.esp'
+      - 'Open Cities Reborn.esp'
     msg:
       - type: say
         content: 'German version.'
@@ -17710,6 +17716,9 @@ plugins:
   - name: 'ZUSIO-SM Plugin Refurbish SI-patch.esp'
     tag: [ Scripts ]
   - name: 'bgMagic(D|E)V.esp'
+    after:
+      - 'Open Cities Classic.esp'
+      - 'Open Cities Reborn.esp'
     msg: [ *doNotClean ]
     tag:
       - C.RecordFlags
@@ -17874,8 +17883,15 @@ plugins:
     tag:
       - Body-F
       - Body-Size-F
+  - name: 'bgIntegrationDV.esp'
+    after:
+      - 'Open Cities Classic.esp'
+      - 'Open Cities Reborn.esp'
   - name: 'bgIntegrationEV.esp'
     url: [ 'http://theelderscrolls.info/?go=dlfile&fileid=349' ]
+    after:
+      - 'Open Cities Classic.esp'
+      - 'Open Cities Reborn.esp'
     req: [ 'DLCShiveringIsles.esp' ]
     msg:
       - type: say
