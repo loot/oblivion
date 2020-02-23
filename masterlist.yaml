@@ -12566,6 +12566,7 @@ plugins:
       - 'OC+CTN Patch.esp'
       - 'OCC+COBL Luggage Patch.esp'
       - 'OCR+COBL Luggage Patch.esp'
+      - 'OCOD+FrostcragSpire Patch.esp'
     clean:
       - crc: 0x11EF2688
         util: 'TES4Edit v4.0.3'
@@ -12589,6 +12590,11 @@ plugins:
       - name: 'ClocksOfCyrodiil.esp'
         display: 'Better Cities - Clocks of Cyrodiil'
         condition: 'version("ClocksOfCyrodiil.esp", "6.0.0", >=)'
+  # DLC Frostcrag Spire (Wizard's Tower) - OC Patch
+  - name: 'OCOD+FrostcragSpire Patch.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/32925' ]
+    group: *veryEarlyGroup
+    after: [ 'DLCFrostcrag - Unofficial Patch.esp' ]
   # DLC Knights of the Nine - OC Patch
   - name: 'OCC-KOTN-Patch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/32925' ]
