@@ -3221,6 +3221,11 @@ plugins:
     msg: [ *sortMasters ]
   - name: 'SM Plugin Refurbish - SI.esp'
     req: [ 'DLCShiveringIsles.esp' ]
+  - name: 'SM Plugin Refurbish - (Battlehorn|Frostcrag|HorseArmor|Knights|MehrunesRazor|Orrery|SI|ThievesDen|VileLair)\.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'SM Plugin Refurbish(Merged).esp' ]
+        condition: 'file("SM Plugin Refurbish(Merged).esp")'
 
 
 ### MOBS - Medieval Oblivion Equipment Balance System ###
