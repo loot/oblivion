@@ -12878,18 +12878,51 @@ plugins:
         name: 'Open Cities Classic'
       - link: 'https://www.nexusmods.com/oblivion/mods/33003'
         name: 'Open Cities Reborn'
+  - name: 'Open Cities Resources.esm'
+    clean:
+      - crc: 0x1CD1BD9A
+        util: 'TES4Edit v4.0.3'
+  - name: 'Open Cities Classic.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x239AE583
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 11
+  - name: 'Open Cities Classic B&M Additions.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x2EC7B19A
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        udr: 2
   - name: 'Open Cities Reborn.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/33003' ]
     tag: [ C.Name ]
+    clean:
+      - crc: 0x02DC7661
+        util: 'TES4Edit v4.0.3'
+  - name: 'Open Cities Reborn B&M Additions.esp'
+    clean:
+      - crc: 0xEE1AB11C
+        util: 'TES4Edit v4.0.3'
 
   ### Optional Files ###
   - name: 'Open Cities Bartholm.esp'
     req:
       - name: 'Bartholm.esp'
         display: '[Bartholm](http://www.nexusmods.com/oblivion/mods/5022)'
+    clean:
+      - crc: 0x88CA86E2
+        util: 'TES4Edit v4.0.3'
   - name: 'Open Cities New Sheoth.esp'
     req: [ 'DLCShiveringIsles.esp' ]
     tag: [ Actors.AIPackages ]
+    clean:
+      - crc: 0x9C4443AF
+        util: 'TES4Edit v4.0.3'
+  - name: 'Open Cities Outer Districts.esp'
+    clean:
+      - crc: 0x11EF2688
+        util: 'TES4Edit v4.0.3'
 
   ###### Open Cities Patches ######
   # Bravil Docks by Greg Simmonds - OC Patch
