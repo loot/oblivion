@@ -11201,11 +11201,6 @@ plugins:
     msg:
       - *obsolete
       - *needsCleaning
-  - name: 'OCC-RTT-Patch.esp'
-    msg:
-      - type: say
-        content: 'Works with RTT v2.5 only.'
-      - *obsolete
   - name: 'MoreSuburbLife.esp'
     msg:
       - type: say
@@ -11804,21 +11799,12 @@ plugins:
       - crc: 0x36834efa
         <<: *dirtyPlugin
         itm: 140
-  - name: 'OC-HOD-Patch.esp'
-    msg:
-      - type: say
-        content: 'Obsolete patch. Update to Heart of the Dead 5.5 and then delete this file.'
   - name: 'HOD_delayer.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/25859/' ]
     msg:
       - type: say
         content: 'only use without Open Cities'
         condition: 'file("Open Cities.*\.esp")'
-  - name: 'OC_HOD_delayer.esp'
-    msg:
-      - type: say
-        content: 'only use with Open Cities'
-        condition: 'not file("Open Cities.*\.esp")'
   - name: 'HeartOftheDeadv6.3 Delayer.esp'
     msg: [ *obsolete ]
   - name: 'HeartOfTheDeadv6.5 Delayer.esp'
@@ -12897,8 +12883,6 @@ plugins:
         condition: 'file("OBCBravil-Barrowfields patch.esp")'
   - name: 'BC+Vvardenfell Imports Patch.esp'
     inc: [ 'xulCheydinhalFalls.esp' ]
-  - name: 'Open Cities.esp'
-    msg: [ *obsolete ]
   - name: 'Open Cities New Sheoth.esp'
     url:
       - 'https://www.nexusmods.com/oblivion/mods/16360'
@@ -12912,67 +12896,6 @@ plugins:
     req:
       - name: 'Bartholm.esp'
         display: '[Bartholm](http://www.nexusmods.com/oblivion/mods/5022)'
-  - name: 'Open Cities Anvil.esp'
-    msg: [ *obsolete ]
-  - name: 'Open Cities Bravil.esp'
-    msg: [ *obsolete ]
-  - name: 'Open Cities Bravil Blood&Mud.esp'
-    req:
-      - name: 'Blood&Mud.esp'
-        display: '[Bravil Blood & Mud](http://www.nexusmods.com/oblivion/mods/12016)'
-    msg: [ *obsolete ]
-  - name: 'Open Cities Bruma.esp'
-    msg: [ *obsolete ]
-  - name: 'Open Cities Cheydinhal.esp'
-    msg: [ *obsolete ]
-  - name: 'Open Cities Chorrol.esp'
-    msg: [ *obsolete ]
-  - name: 'Open Cities Leyawiin.esp'
-    msg: [ *obsolete ]
-  - name: 'Open Cities Leyawiin Reborn.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Upgrade to Open Cities Reborn, and follow the readme for proper instructions.'
-  - name: 'Open Cities Skingrad.esp'
-    msg: [ *obsolete ]
-  - name: 'Open Cities Full.esp'
-    msg: [ *obsolete ]
-  - name: 'Open Cities Full + Bravil Blood&Mud.esp'
-    msg: [ *obsolete ]
-    req:
-      - name: 'Blood&Mud.esp'
-        display: '[Bravil Blood & Mud](http://www.nexusmods.com/oblivion/mods/12016)'
-  - name: 'Open_Cities_Complete-Leyawiin_Reborn.esp'
-    msg:
-      - type: say
-        content: 'Obsolete, unsupported. Please update to Open Cities Reborn 0.9 or above.'
-  - name: 'Open Cities Full + Leyawiin Reborn.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Upgrade to Open Cities Reborn, and follow the readme for proper instructions.'
-  - name: 'Open Cities Full + Bravil Blood & Mud + Leyawiin Reborn.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Upgrade to Open Cities Reborn, and follow the readme for proper instructions.'
-    req:
-      - name: 'Blood&Mud.esp'
-        display: '[Bravil Blood & Mud](http://www.nexusmods.com/oblivion/mods/12016)'
-  - name: 'Open Cities Reborn - Anvil.esp'
-    msg: [ *obsolete ]
-  - name: 'Open Cities Reborn - Bravil.esp'
-    msg: [ *obsolete ]
-  - name: 'Open Cities Reborn - Bruma.esp'
-    msg: [ *obsolete ]
-  - name: 'Open Cities Reborn - Cheydinhal.esp'
-    msg: [ *obsolete ]
-  - name: 'Open Cities Reborn - Chorrol.esp'
-    msg: [ *obsolete ]
-  - name: 'Open Cities Reborn - Leyawiin.esp'
-    msg: [ *obsolete ]
-  - name: 'Open Cities Reborn - Skingrad.esp'
-    msg: [ *obsolete ]
-  - name: 'Open Cities Reborn - Full Merge.esp'
-    msg: [ *obsolete ]
   - name: 'Open Cities Reborn.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/33003' ]
     tag: [ C.Name ]
@@ -12988,22 +12911,7 @@ plugins:
     msg:
       - type: say
         content: 'Note - Be sure this is being used on Bravil Docks by Greg Simmonds. Will cause a CTD with the wrong file.'
-  - name: 'OCC-ABE-LC-Land Patch.esp'
-    msg: [ *obsolete ]
-  - name: 'OCC-ABE-Patch.esp'
-    msg: [ *obsolete ]
-  - name: 'OCC-Roads-Patch.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Upgrade New Roads & Bridges and then delete this patch.'
-  - name: 'OCC-ULCH-Patch.esp'
-    msg:
-      - type: say
-        content: 'Do not use with Open Cities Reborn.'
-  - name: 'OCR+ULCH Patch.esp'
-    msg:
-      - type: say
-        content: 'Do not use with Open Cities Classic.'
+
   - name: 'ROC+ClassBeginning Patch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
     msg: [ *roadsAndBridgesDetected ]
@@ -13016,22 +12924,6 @@ plugins:
   - name: 'ROC+OCOD Patch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
     msg: [ *roadsAndBridgesDetected ]
-  - name: 'OCLR+ULBWForest Patch.esp'
-    msg:
-      - type: say
-        content: 'Outdated. Upgrade to Open Cities Reborn and use the corresponding patch.'
-  - name: 'OCC+Cheydinhal Falls Patch.esp'
-    tag: [ C.Water ]
-  - name: 'OCR+Cheydinhal Falls Patch.esp'
-    tag: [ C.Water ]
-  - name: 'OC+ULSkingradOutskirts Patch.esp'
-    msg:
-      - type: say
-        content: 'Upgrade to Open Cities Classic or Open Cities Reborn and use the corresponding patch file.'
-  - name: 'OC+ULSO+WestRoads Patch.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Update West Roads to version 1.2. Download and use "Open Cities - Skingrad Outskirts Patch v1_0" instead.'
   - name: 'DBOO - Open(Cities| Cities)(Full| Outer Districts|Full + Outer Districts)\.esp'
     msg:
       - <<: *useOnlyOneX
@@ -18413,10 +18305,6 @@ plugins:
     tag:
       - NoMerge
       - NpcFaces
-  - name: 'OCRAnvil+Integration Path Grid Fix.esp'
-    msg:
-      - type: say
-        content: 'Obsolete: Update to version 3.0 of the Open Cities Integration patch. Then delete this plugin.'
   - name: 'Integration faces revamped.esp'
     tag:
       - NoMerge
@@ -18974,32 +18862,6 @@ plugins:
       - Actors.Anims
       - NoMerge
 
-  - name: 'Open Cities Road Record.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Remove this and update to Open Cities Classic 3.5+.'
-    tag:
-      - Deactivate
-      - Roads
-  - name: 'Open Cities Classic Road Record.esp'
-    msg: [ *useOnlyOneRoadRecordFile ]
-    tag:
-      - Deactivate
-      - Roads
-  - name: 'Open Cities LR Road Record.esp'
-    msg:
-      - type: say
-        content: 'Obsolete. Remove this and install Open Cities Reborn.'
-    tag:
-      - Deactivate
-      - Roads
-  - name: 'Open Cities Reborn Road Record.esp'
-    msg:
-      - *obsolete
-      - *useOnlyOneRoadRecordFile
-    tag:
-      - Deactivate
-      - Roads
   - name: 'NRB4 Standard Road Record.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
     msg: [ *useOnlyOneRoadRecordFile ]
