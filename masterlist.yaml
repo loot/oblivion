@@ -11066,9 +11066,6 @@ plugins:
       - type: say
         content: 'Recommended to upgrade to Quiet Feet MAX 2.0, which does not require a plugin and is more compatible.'
       - *bashedPatchTweak
-  - name: 'OCC-KOTN-Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/32925' ]
-    tag: [ Actors.AIPackages ]
   - name: 'TGND2 Knights Replacer.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/41812' ]
     tag:
@@ -11186,16 +11183,6 @@ plugins:
     msg:
       - type: say
         content: 'Obsolete. Use RTT-Weye Relocation Patch.esp instead.'
-  - name: 'OCC-RTTv3 Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/32925' ]
-    msg:
-      - type: say
-        content: 'Works with RTT 3.0 only.'
-  - name: 'OCR + RTTv3 Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/32925' ]
-    msg:
-      - type: say
-        content: 'Works with RTT 3.0 only.'
   - name: 'Ruin.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/3027' ]
     msg:
@@ -12883,12 +12870,9 @@ plugins:
         condition: 'file("OBCBravil-Barrowfields patch.esp")'
   - name: 'BC+Vvardenfell Imports Patch.esp'
     inc: [ 'xulCheydinhalFalls.esp' ]
-  - name: 'Open Cities New Sheoth.esp'
-    url:
-      - 'https://www.nexusmods.com/oblivion/mods/16360'
-      - 'https://www.nexusmods.com/oblivion/mods/33003'
-    req: [ 'DLCShiveringIsles.esp' ]
-    tag: [ Actors.AIPackages ]
+  - name: 'Open Cities Reborn.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/33003' ]
+    tag: [ C.Name ]
   - name: 'Open Cities Bartholm.esp'
     url:
       - 'https://www.nexusmods.com/oblivion/mods/16360'
@@ -12896,9 +12880,17 @@ plugins:
     req:
       - name: 'Bartholm.esp'
         display: '[Bartholm](http://www.nexusmods.com/oblivion/mods/5022)'
-  - name: 'Open Cities Reborn.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/33003' ]
-    tag: [ C.Name ]
+  - name: 'Open Cities New Sheoth.esp'
+    url:
+      - 'https://www.nexusmods.com/oblivion/mods/16360'
+      - 'https://www.nexusmods.com/oblivion/mods/33003'
+    req: [ 'DLCShiveringIsles.esp' ]
+    tag: [ Actors.AIPackages ]
+  - name: 'OC+Bravil Docks Patch.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/32925' ]
+    msg:
+      - type: say
+        content: 'Note - Be sure this is being used on Bravil Docks by Greg Simmonds. Will cause a CTD with the wrong file.'
   - name: 'COC + OCC-OCR Patch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/32925' ]
     group: *underridesGroup
@@ -12906,11 +12898,19 @@ plugins:
       - name: 'ClocksOfCyrodiil.esp'
         display: 'Better Cities - Clocks of Cyrodiil'
         condition: 'version("ClocksOfCyrodiil.esp", "6.0.0", >=)'
-  - name: 'OC+Bravil Docks Patch.esp'
+  - name: 'OCC-KOTN-Patch.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/32925' ]
+    tag: [ Actors.AIPackages ]
+  - name: 'OCC-RTTv3 Patch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/32925' ]
     msg:
       - type: say
-        content: 'Note - Be sure this is being used on Bravil Docks by Greg Simmonds. Will cause a CTD with the wrong file.'
+        content: 'Works with RTT 3.0 only.'
+  - name: 'OCR + RTTv3 Patch.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/32925' ]
+    msg:
+      - type: say
+        content: 'Works with RTT 3.0 only.'
 
   - name: 'ROC+ClassBeginning Patch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
