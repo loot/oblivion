@@ -4656,38 +4656,44 @@ plugins:
   - name: 'Crowded Cities 15.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/6665' ]
     dirty:
-      - crc: 0xb9cc7c1a
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xB9CC7C1A
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 4
   - name: 'Crowded Cities 30.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/6665' ]
     dirty:
-      - crc: 0x3a67e15d
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x3A67E15D
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 4
   - name: 'Crowded Cities_Open.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/16851' ]
     dirty:
-      - crc: 0x10a7fba3
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x10A7FBA3
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 4
   - name: 'Crowded Roads Advanced.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/18251' ]
     dirty:
-      - crc: 0xe51bd6c2
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xE51BD6C2
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 19
   - name: 'Crowded Roads Advanced less crowded.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/18251' ]
     dirty:
-      - crc: 0xcba77ff
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x0CBA77FF
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 19
   - name: 'Crowded Roads Revisited.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/20575' ]
     dirty:
-      - crc: 0x239802c4
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x239802C4
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 4
   - name: 'travellers a.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/3958' ]
@@ -4704,8 +4710,9 @@ plugins:
   - name: 'Immersive Travelers.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/19060' ]
     dirty:
-      - crc: 0xd9d40901
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xD9D40901
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 8
   - name: 'FF_Real_Thirst.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/14214/' ]
@@ -4720,17 +4727,18 @@ plugins:
       - Invent
       - Relations
     dirty:
-      - crc: 0x56c59ac2
-        <<: *dirtyPlugin
-        itm: 100
-        udr: 50
+      - <<: *quickClean
+        crc: 0x859845F5
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 21
   - name: 'AutoEquip.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/34526' ]
-    dirty:
-      - crc: 0xa0675ea6
-        <<: *dirtyPlugin
-        itm: 2
     req: [ *OBSE ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xA0675EA6
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
   - name: 'AutomaticPatrols.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/39751' ]
     msg:
@@ -4818,12 +4826,20 @@ plugins:
       - 'https://www.nexusmods.com/oblivion/mods/5475'
       - 'https://www.nexusmods.com/oblivion/mods/46915'
     msg: [ *vanillaMapMarkers ]
+  - name: 'HouseMapMarkers.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/3345' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x297BE460
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 25
   - name: 'HouseMapMarkersOnlyBought.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/3345' ]
     dirty:
-      - crc: 0x1664da76
-        <<: *dirtyPlugin
-        itm: 27
+      - <<: *quickClean
+        crc: 0x1664DA76
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 29
   - name: 'Clock Hotkey.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/38514' ]
     req: [ *OBSE ]
@@ -4963,9 +4979,18 @@ plugins:
   - name: 'Adonnays Elven Weaponry.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/4804' ]
     dirty:
-      - crc: 0x8a72e5f4
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x8A72E5F4
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 4
+        udr: 2
+  - name: 'Adonnays Elfische Waffen.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/4804' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x09E37D1E
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
         udr: 2
   - name: 'Akavirdownloadpack1.1.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/6301' ]
@@ -4988,9 +5013,13 @@ plugins:
   - name: 'ArchmageSorceress.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/42646' ]
     dirty:
-      - crc: 0xa18bb8a9
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xA18BB8A9
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 3
+    clean:
+      - crc: 0x8DEE47DA
+        util: 'TES4Edit v4.0.3'
   - name: 'Armblade.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/19414' ]
     tag: [ Invent ]
@@ -5001,21 +5030,24 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/4417' ]
     tag: [ Invent ]
     dirty:
-      - crc: 0x148628bc
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x148628BC
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 4
   - name: 'Armor_skirts_nonlvl.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/4417' ]
     tag: [ Invent ]
     dirty:
-      - crc: 0xbdd952be
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xBDD952BE
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 4
   - name: 'ArynnsDemonatrixHGEC.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/19027' ]
     dirty:
-      - crc: 0xcb5bd995
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xCB5BD995
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 4
 
   - name: 'Armor of Heaven''s Fury(-Gold)?-Heavy(-Alt-helm)?\.esp'
@@ -5034,11 +5066,19 @@ plugins:
   - name: 'ArmorOfTheWhiteFox.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/7208' ]
     tag: [ Invent ]
+  - name: 'Aspiria.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/26922' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x7B5AD295
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        udr: 16
   - name: 'Aspiria_EV.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/26922' ]
     dirty:
-      - crc: 0x30904f56
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x30904F56
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         udr: 16
   - name: 'AyleidGlass.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/13189' ]
@@ -5047,22 +5087,26 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/10568' ]
     inc: [ 'ACCCGR.esp' ]
     dirty:
-      - crc: 0xea8628a4
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xEA8628A4
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 13
   - name: 'ACCCGR.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/10568' ]
     inc: [ 'ACCCGR SI.esp' ]
     dirty:
-      - crc: 0x12cd76a5
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x12CD76A5
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 13
   - name: 'Altessian.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/3165' ]
     dirty:
-      - crc: 0xe0be005d
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xE0BE005D
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 21
+        udr: 3
   - name: 'ArmamentariumTest.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/16975' ]
     msg: [ *obsoleteArmamentarium ]
@@ -5074,8 +5118,9 @@ plugins:
     inc: [ 'ArmamentariumWeapons4Npcs.esp' ]
     msg: [ *obsoleteArmamentarium ]
     dirty:
-      - crc: 0x65265f23
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x65265F23
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 10
   - name: 'ArmamentariumKatanas.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/15514' ]
@@ -5103,8 +5148,9 @@ plugins:
   - name: 'BarbarianShop.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/7106' ]
     dirty:
-      - crc: 0x11b8ba44
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x11B8BA44
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 3
         udr: 2
   - name: 'BBBRoseoftheGuard.esp'
@@ -5162,8 +5208,9 @@ plugins:
   - name: 'BisPainBringer.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/16838' ]
     dirty:
-      - crc: 0x6401529a
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x6401529A
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
   - name: 'Blades Ceremonial Armour.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/2878' ]
@@ -5174,14 +5221,16 @@ plugins:
   - name: 'BrivasArmor.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/5267' ]
     dirty:
-      - crc: 0x5b43d642
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x5B43D642
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 11
   - name: 'CB Gothic Mistress.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/32682' ]
     dirty:
-      - crc: 0x64f42fd6
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x64F42FD6
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
   - name: 'CG - Necessity Pack.esp'
     url: [ 'http://tesalliance.org/forums/index.php?/files/file/585-classy-gentlemen-necessity-pack' ]
@@ -5243,8 +5292,9 @@ plugins:
   - name: 'CV - Kilij.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/36457' ]
     dirty:
-      - crc: 0xc4e017b
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x214E30C2
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 4
   - name: 'Daedric Healer Robes.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/33573' ]
@@ -5252,8 +5302,9 @@ plugins:
   - name: 'dan_HGEC-EcupTattooArmor.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/16557' ]
     dirty:
-      - crc: 0xf34115d4
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xF34115D4
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 2
   - name: 'DBShadowSet.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/4091' ]
@@ -5302,8 +5353,9 @@ plugins:
       - 'https://www.nexusmods.com/oblivion/mods/12785'
       - 'https://www.nexusmods.com/oblivion/mods/26201'
     dirty:
-      - crc: 0xf4e53e26
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xF4E53E26
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 11
         udr: 1
   - name: 'Dark Katana.esp'
@@ -5313,26 +5365,32 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/2392' ]
     tag: [ Invent ]
     dirty:
-      - crc: 0xf67f213e
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xF67F213E
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 5
   - name: 'DFSLChina.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/21941' ]
     dirty:
-      - crc: 0xe2cc52d8
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xE2CC52D8
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
   - name: 'Deceiver''s Armour.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/11421' ]
+    url:
+      - 'https://www.nexusmods.com/oblivion/mods/11421'
+      - 'https://www.nexusmods.com/oblivion/mods/16639'
     dirty:
-      - crc: 0xad8df1c2
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xAD8DF1C2
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 5
   - name: 'Dynasty Armor DM-BBB.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/43341' ]
     dirty:
-      - crc: 0x3da8158c
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x3DA8158C
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 8
   - name: 'doofdillas_potions_recolored_unsorted_v0_2_1.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/3834' ]
@@ -5354,8 +5412,9 @@ plugins:
   - name: 'Emarion Equipment.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/3468' ]
     dirty:
-      - crc: 0xa71070b4
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xA71070B4
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 4
   - name: 'FalxMod.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/20853' ]
@@ -5377,18 +5436,20 @@ plugins:
   - name: 'FLY Armor and Clothing - Non-replacers.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/41309' ]
     dirty:
-      - crc: 0xb0fdf6f
-        <<: *dirtyPlugin
-        itm: 4
+      - <<: *quickClean
+        crc: 0x0B0FDF6F
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 7
   - name: 'Frill Short Dress and Halloween Backpack.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/42902' ]
     tag: [ Graphics ]
   - name: 'Full Metal Bikini Mark II.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/38579' ]
     dirty:
-      - crc: 0xc5ce3717
-        <<: *dirtyPlugin
-        itm: 9
+      - <<: *quickClean
+        crc: 0xC5CE3717
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 6
   - name: 'Griffon Fortress 0.3.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/14830' ]
     msg: [ *obsolete ]
@@ -5404,9 +5465,10 @@ plugins:
   - name: 'Hentai Compilation.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22990' ]
     dirty:
-      - crc: 0x204d7d47
-        <<: *dirtyPlugin
-        itm: 7
+      - <<: *quickClean
+        crc: 0x204D7D47
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 8
         udr: 4
   - name: 'Heretic Robe Replacer.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/30331' ]
@@ -5417,9 +5479,13 @@ plugins:
   - name: 'HTBUnholyChapelShop.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/41755' ]
     dirty:
-      - crc: 0xae3a26a9
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xAE3A26A9
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 13
+    clean:
+      - crc: 0xB6247D5B
+        util: 'TES4Edit v4.0.3'
   - name: 'Insanity''s Kill Bill Katanas.esp'
     url: [ 'http://tesalliance.org/forums/index.php?/files/file/279-insanitys-kill-bill-katanas/' ]
     tag: [ Invent ]
@@ -5449,8 +5515,9 @@ plugins:
   - name: 'Knight of Skeleton.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/29527' ]
     dirty:
-      - crc: 0x79e857e0
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x79E857E0
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
   - name: 'KohdiBladesofAnkewan v1.6 Delayer.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/25946/' ]
@@ -5461,8 +5528,9 @@ plugins:
   - name: 'Kurese Recolours.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/25721' ]
     dirty:
-      - crc: 0x4355daba
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x842D61E2
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 3
   - name: 'Kusanagi.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/26221' ]
@@ -5470,9 +5538,10 @@ plugins:
   - name: 'LaserGun_v1.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/37147' ]
     dirty:
-      - crc: 0xbd23305f
-        <<: *dirtyPlugin
-        itm: 19
+      - <<: *quickClean
+        crc: 0xBD23305F
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 20
   - name: 'LDPGC.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/45209' ]
     msg:
@@ -5494,18 +5563,17 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/21863' ]
     tag: [ Invent ]
     dirty:
-      - crc: 0xadce83e6
-        <<: *dirtyPlugin
-        itm: 3
-      - crc: 0xcdb7d4e1
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xCDB7D4E1
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 2406
         udr: 2
   - name: 'LSB Skull Weapons (Clean).esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/21863' ]
     dirty:
-      - crc: 0x19b24219
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x19B24219
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         udr: 2
   - name: 'M&BAxes.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/23489' ]
@@ -5586,14 +5654,9 @@ plugins:
   - name: 'New Frostmourne Sword by Jojjo v1_0.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17032' ]
     dirty:
-      - crc: 0x770a8bd4
-        <<: *dirtyPlugin
-        itm: 5
-      - crc: 0xaf56fd5c
-        <<: *dirtyPlugin
-        itm: 5
-      - crc: 0xe4c84842
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x0C14D953
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 5
   - name: 'NexonsArmoryENG.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/31340' ]
@@ -11275,17 +11338,10 @@ plugins:
       - 'Aundae_OBSE_addon.esp'
       - 'Blood&Mud.esp'
     dirty:
-      - crc: 0x5b6adfb3
-        <<: *dirtyPlugin
-        itm: 165
-        udr: 433
-      - crc: 0x8bbd7f36
-        <<: *dirtyPlugin
-        itm: 164
-        udr: 433
-      - crc: 0xb90e1a6d
-        <<: *dirtyPlugin
-        itm: 163
+      - <<: *quickClean
+        crc: 0x5B6ADFB3
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 159
         udr: 433
   - name: 'The Lost Spires_delayer.esp'
     msg: [ *obsolete ]
@@ -17330,13 +17386,9 @@ plugins:
         itm: 3
   - name: '1em_Vilja.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/28977' ]
-    dirty:
-      - crc: 0xcbb991e4
-        <<: *dirtyPlugin
-        itm: 11
-      - crc: 0x39E23090
-        <<: *dirtyPlugin
-        itm: 11
+    clean:
+      - crc: 0x7D9D9B53
+        util: 'TES4Edit v4.0.3'
   - name: '1em_Vilja OOO FCOM Fix.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/28977' ]
     req: [ 'Oscuro''s_Oblivion_Overhaul.esm' ]
@@ -17401,22 +17453,19 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/28977' ]
     tag: [ Hair ]
   - name: 'LakesideHome.esp'
-    dirty:
-      - crc: 0x12a14eda
-        <<: *dirtyPlugin
-        itm: 3
+    clean:
+      - crc: 0x9E89A294
+        util: 'TES4Edit v4.0.3'
   - name: 'ViljainLakeside.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/28977' ]
-    dirty:
-      - crc: 0x649d8691
-        <<: *dirtyPlugin
-        itm: 3
+    clean:
+      - crc: 0xB7D2DC90
+        util: 'TES4Edit v4.0.3'
   - name: 'ViljainRedRoseManor.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/28977' ]
-    dirty:
-      - crc: 0x1a496e57
-        <<: *dirtyPlugin
-        itm: 3
+    clean:
+      - crc: 0x83A83794
+        util: 'TES4Edit v4.0.3'
   - name: 'Aliyah.esp'
     msg:
       - type: say
