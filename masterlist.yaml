@@ -709,8 +709,12 @@ groups:
       - *earlyLoadersGroup
       - *underridesGroup
 
-  - name: &latePatchesGroup Late Patches
+  - name: &overridesGroup Overrides
+    description: 'A group for modules that should load after most other mods.'
     after: [ default ]
+
+  - name: &latePatchesGroup Late Patches
+    after: [ *overridesGroup ]
 
   - name: &dynamicPatchesGroup Dynamic Patches
     after: [ *latePatchesGroup ]
