@@ -2895,15 +2895,19 @@ plugins:
     msg: [ *obsoleteUseFCOM ]
 
 ###### FCOM: Convergence ######
+  - name: 'FCOM_.*\.es(m|p)'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/12249/'
+        name: 'FCOM Convergence Beta 0.9.9'
+      - link: 'https://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/'
+        name: 'FCOM Convergence 1.0'
   - name: 'FCOM_Convergence.esm'
-    url: [ 'http://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/' ]
     tag:
       - Delev
       - Factions
       - Relations
       - Relev
   - name: 'FCOM_Convergence.esp'
-    url: [ 'http://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/' ]
     msg:
       - *doNotClean
       - <<: *requiresX
@@ -2935,20 +2939,17 @@ plugins:
       - Stats
 
   - name: 'FCOM_Knights.esp'
-    url: [ 'http://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/' ]
     tag:
       - Delev
       - Factions
       - Relations
       - Relev
   - name: 'FCOM_RealSwords.esp'
-    url: [ 'http://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/' ]
     req: [ 'FCOM_Convergence.esm' ]
     tag:
       - Delev
       - Relev
   - name: 'FCOM_SpawnRatesReduced.esp'
-    url: [ 'http://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/' ]
     inc:
       - 'FCOM_SpawnRatesSlightlyReduced.esp'
       - 'FCOM_SpawnRatesStronger.esp'
@@ -2957,7 +2958,6 @@ plugins:
       - Delev
       - Relev
   - name: 'FCOM_SpawnRatesSlightlyReduced.esp'
-    url: [ 'http://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/' ]
     inc:
       - 'FCOM_SpawnRatesStronger.esp'
       - 'FCOM_SpawnRatesReduced.esp'
@@ -2966,7 +2966,6 @@ plugins:
       - Delev
       - Relev
   - name: 'FCOM_SpawnRatesStronger.esp'
-    url: [ 'http://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/' ]
     inc:
       - 'FCOM_SpawnRatesReduced.esp'
       - 'FCOM_SpawnRatesSlightlyReduced.esp'
@@ -2979,10 +2978,8 @@ plugins:
       - Relev
 
   - name: 'FCOM_EntropicOrderHardcore.esp'
-    url: [ 'http://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/' ]
     req: [ 'FCOM_Convergence.esm' ]
   - name: 'FCOM_EntropicOrderRebalance.esp'
-    url: [ 'http://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/' ]
     req: [ 'FCOM_Convergence.esm' ]
 
   - name: 'Bob''s Armory Oblivion.esp'
@@ -2997,7 +2994,6 @@ plugins:
         <<: *dirtyPlugin
         itm: 6
   - name: 'FCOM_BobsArmory.esp'
-    url: [ 'http://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/' ]
     tag:
       - Delev
       - Relev
@@ -3020,7 +3016,6 @@ plugins:
       - name: -Actors.DeathItem
         condition: 'version("Oblivion WarCry EV.esp","1.09",<)'
   - name: 'FCOM_WarCry.esp'
-    url: [ 'http://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/' ]
     inc: [ 'FCOM_WarCryNoSpawn.esp' ]
     tag:
       - Delev
@@ -3029,33 +3024,27 @@ plugins:
 
   ### FCOM - Optional Addons ###
   - name: 'FCOM_Archery.esp'
-    url: [ 'http://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/' ]
     tag:
       - NoMerge
       - Stats
   - name: 'FCOM_DiverseGuardUnity.esp'
-    url: [ 'http://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/' ]
     tag:
       - Actors.CombatStyle
       - Actors.Spells
       - Invent
       - Scripts
   - name: 'FCOM_DurabilityAndDamage.esp'
-    url: [ 'http://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/' ]
     req: [ 'FCOM_Convergence.esm' ]
   - name: 'FCOM_ExnemRuneskulls.esp'
-    url: [ 'http://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/' ]
     msg:
       - <<: *alreadyInX
         subs: [ 'Mart''s Monster Mod - Diverse Runeskulls' ]
         condition: 'active("Mart''s Monster Mod - Diverse Runeskulls.*\.esp")'
   - name: 'FCOM_FriendlierFactions.esp'
-    url: [ 'http://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/' ]
     tag:
       - NoMerge
       - Relations
   - name: 'FCOM_HungersUnitySI.esp'
-    url: [ 'http://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/' ]
     req: [ 'DLCShiveringIsles.esp' ]
     tag:
       - Actors.Skeleton
@@ -3064,31 +3053,23 @@ plugins:
       - Invent
       - Relev
   - name: 'FCOM_KDCircletsOOOOptimizedNPCEquip.esp'
-    url: [ 'http://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/' ]
     req: [ 'KDCircletsOOOOptimized - NPC Equip.esp' ]
     inc: [ 'Potion Belt.esp' ]
   - name: 'FCOM_LessRats.esp'
-    url: [ 'http://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/' ]
     req: [ 'FCOM_Convergence.esm' ]
   - name: 'FCOM_LessReaversInGates.esp'
-    url: [ 'http://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/' ]
     inc: [ 'FCOM_NoReaversInGates.esp' ]
     req: [ 'FCOM_Convergence.esm' ]
   - name: 'FCOM_NoAdventurersInGates.esp'
-    url: [ 'http://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/' ]
     req: [ 'FCOM_Convergence.esm' ]
   - name: 'FCOM_NoReaversInGates.esp'
-    url: [ 'http://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/' ]
     inc: [ 'FCOM_LessReaversInGates.esp' ]
     req: [ 'FCOM_Convergence.esm' ]
   - name: 'FCOM_NoSpiders.esp'
-    url: [ 'http://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/' ]
     req: [ 'FCOM_Convergence.esm' ]
   - name: 'FCOM_NoWyverns.esp'
-    url: [ 'http://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/' ]
     req: [ 'FCOM_Convergence.esm' ]
   - name: 'FCOM_OMG.esp'
-    url: [ 'http://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/' ]
     msg:
       - type: say
         content: 'If using both Origin of the Mage''s Guild and Slof''s Oblivion Robe trader, use ''FCOM_OMGSRT.esp'' as well.'
@@ -3097,20 +3078,17 @@ plugins:
       - Actors.AIPackages
       - Relations
   - name: 'FCOM_OscurosOverhaul.esp'
-    url: [ 'http://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/' ]
     req: [ 'FCOM_Convergence.esm' ]
     msg:
       - type: say
         content: 'Only use when not using MMM.'
         condition: *FCOMCond
   - name: 'FCOM_SaferRoads.esp'
-    url: [ 'http://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/' ]
     req: [ 'FCOM_Convergence.esm' ]
     tag:
       - Delev
       - Relev
   - name: 'FCOM_SlofsRobeTrader.esp'
-    url: [ 'http://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/' ]
     tag:
       - Delev
       - Graphics
@@ -3118,21 +3096,17 @@ plugins:
       - Names
       - Relev
   - name: 'FCOM_WarCryNoSpawn.esp'
-    url: [ 'http://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/' ]
     inc: [ 'FCOM_WarCry.esp' ]
     tag: [ Stats ]
   - name: 'FCOM_VanillaItemReleveler.esp'
-    url: [ 'http://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/' ]
     msg: [ *obsolete ]
 
   ### FCOM - Old version files ###
   - name: 'FCOM_ConvergenceNoFran.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/12249/' ]
     msg:
       - *obsolete
     req: [ 'FCOM_Convergence.esm' ]
   - name: 'FCOM_Cobl.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/12249/' ]
     msg:
       - type: error
         content: 'Do not use COBL and Tamerielic Ingredients at the same time.'
@@ -3143,7 +3117,6 @@ plugins:
       - Delev
       - Relev
   - name: 'FCOM_MoreWildernessLife.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/12249/' ]
     msg:
       - type: say
         content: 'Delete. Use Mart''s Monster Mod - More Wilderness Life.esp or Mart''s Monster Mod - More Wilderness Life No Gates.esp instead'
