@@ -2949,33 +2949,19 @@ plugins:
     tag:
       - Delev
       - Relev
-  - name: 'FCOM_SpawnRatesReduced.esp'
-    inc:
-      - 'FCOM_SpawnRatesSlightlyReduced.esp'
-      - 'FCOM_SpawnRatesStronger.esp'
+  - name: 'FCOM_SpawnRates(Reduced|SlightlyReduced|Stronger)\.esp'
     req: [ 'FCOM_Convergence.esm' ]
-    tag:
-      - Delev
-      - Relev
-  - name: 'FCOM_SpawnRatesSlightlyReduced.esp'
-    inc:
-      - 'FCOM_SpawnRatesStronger.esp'
-      - 'FCOM_SpawnRatesReduced.esp'
-    req: [ 'FCOM_Convergence.esm' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'FCOM SpawnRates' ]
+        condition: 'many("FCOM_SpawnRates(Reduced|SlightlyReduced|Stronger)\.esp")'
     tag:
       - Delev
       - Relev
   - name: 'FCOM_SpawnRatesStronger.esp'
-    inc:
-      - 'FCOM_SpawnRatesReduced.esp'
-      - 'FCOM_SpawnRatesSlightlyReduced.esp'
-    req: [ 'FCOM_Convergence.esm' ]
     msg:
       - type: say
         content: '''Stronger'' is the same as ''Reduced'' but spawns will be more powerful.'
-    tag:
-      - Delev
-      - Relev
 
   - name: 'FCOM_EntropicOrderHardcore.esp'
     req: [ 'FCOM_Convergence.esm' ]
