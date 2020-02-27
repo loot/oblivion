@@ -3495,9 +3495,6 @@ plugins:
         subs: [ 'VileLair_MOBS.esp' ]
         condition: 'file("VileLair_MOBS.esp")'
 
-  - name: 'Better Cities .esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/16513' ]
-    msg: [ *dummyFileLoader ]
   - name: 'BSAloader.esp'
     msg: [ *dummyFileLoader ]
   - name: 'FraNewItems.esp'
@@ -13107,6 +13104,52 @@ plugins:
   - name: 'BC+Vvardenfell Imports Patch.esp'
     inc: [ 'xulCheydinhalFalls.esp' ]
 
+###### Better Cities ######
+  - name: 'Better (Cities |Imperial City).*\.es(m|p)'
+    url:
+      - 'https://www.nexusmods.com/oblivion/mods/16513'
+      - 'https://www.theassimilationlab.com/forums/files/file/952-better-cities/'
+  - name: 'Better Cities .esp'
+    msg: [ *dummyFileLoader ]
+
+  - name: 'Better Cities - Open Cities Reborn.esp'
+    after:
+      - name: 'TR_Stirk.esp'
+        condition: 'not active("Stirk_Compatibility_Patch.esp")'
+
+  - name: 'Better Cities Full.esp'
+    after:
+      - name: 'TR_Stirk.esp'
+        condition: 'not active("Stirk_Compatibility_Patch.esp")'
+
+  - name: 'Better Cities ANVIL.esp'
+    after:
+      - name: 'TR_Stirk.esp'
+        condition: 'not active("Stirk_Compatibility_Patch.esp")'
+  - name: 'Better Cities SKINGRAD.esp'
+    after: [ 'Cyrodiil Rebuild.esp' ]
+
+  - name: 'Better Imperial City.esp'
+    after: [ 'Sounds of Cyrodiil.esp' ]
+    dirty:
+      - crc: 0x8687bbcc
+        <<: *dirtyPlugin
+        udr: 3
+
+  ### Better Cities - Patches ###
+  - name: 'Better Cities Anvil Open - Knights of the Nine.esp'
+    req: [ 'Better Cities - Open Better Cities.esp' ]
+  - name: 'Better Cities - COBL.esp'
+    dirty:
+      - crc: 0x52344ab9
+        <<: *dirtyPlugin
+        udr: 1
+  - name: 'Better Cities - TIE Restricted Area.esp'
+    tag: [ Scripts ]
+  ### Better Cities - Old version files ###
+  - name: 'Better Cities - Knights of the Nine.esp'
+    req: [ 'Better Cities - Open Better Cities.esp' ]
+
 ###### Open Cities ######
   - name: 'Open Cities (Resources|Bartholm|New Sheoth|Outer Districts)\.es(m|p)'
     url:
@@ -18698,31 +18741,9 @@ plugins:
       - type: say
         content: 'Do not use this plugin with Better Cities Full.esp'
         condition: 'file("Better Cities Full.esp")'
-  - name: 'Better Imperial City.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/16513' ]
-    after: [ 'Sounds of Cyrodiil.esp' ]
-    dirty:
-      - crc: 0x8687bbcc
-        <<: *dirtyPlugin
-        udr: 3
-  - name: 'Better Cities - Knights of the Nine.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/16513' ]
-    req: [ 'Better Cities - Open Better Cities.esp' ]
-  - name: 'Better Cities Anvil Open - Knights of the Nine.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/16513' ]
-    req: [ 'Better Cities - Open Better Cities.esp' ]
-  - name: 'Better Cities - TIE Restricted Area.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/16513' ]
-    tag: [ Scripts ]
   - name: 'BICDist_OotD_Patch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/45611' ]
     req: [ 'Better Cities IC Green Emperor Way.esp' ]
-  - name: 'Better Cities - COBL.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/16513' ]
-    dirty:
-      - crc: 0x52344ab9
-        <<: *dirtyPlugin
-        udr: 1
   - name: 'OSPS-BC_IC-II_UL-II_Patch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/45817' ]
     msg:
@@ -18786,9 +18807,6 @@ plugins:
         udr: 257
   - name: 'xulSkingradOutskirts.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/29948' ]
-    after: [ 'Cyrodiil Rebuild.esp' ]
-  - name: 'Better Cities SKINGRAD.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/16513' ]
     after: [ 'Cyrodiil Rebuild.esp' ]
   - name: 'Cyrodiil Rebuild II.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/43743' ]
@@ -19721,11 +19739,6 @@ plugins:
   - name: 'DWIngameMap.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/37120' ]
     group: *mapGroup
-  - name: 'Better Cities (ANVIL|Full|- Open Cities Reborn)\.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/16513' ]
-    after:
-      - name: 'TR_Stirk.esp'
-        condition: 'not active("Stirk_Compatibility_Patch.esp")'
 
   - name: 'BalancedMagic.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/45249' ]
