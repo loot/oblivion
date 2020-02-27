@@ -13112,23 +13112,22 @@ plugins:
   - name: 'Better Cities .esp'
     msg: [ *dummyFileLoader ]
 
-  - name: 'Better Cities ANVIL.esp'
+  - name: 'Better Cities - Open Cities Reborn.esp'
     after:
       - name: 'TR_Stirk.esp'
         condition: 'not active("Stirk_Compatibility_Patch.esp")'
-
-  - name: 'Better Cities SKINGRAD.esp'
-    after: [ 'Cyrodiil Rebuild.esp' ]
 
   - name: 'Better Cities Full.esp'
     after:
       - name: 'TR_Stirk.esp'
         condition: 'not active("Stirk_Compatibility_Patch.esp")'
 
-  - name: 'Better Cities - Open Cities Reborn.esp'
+  - name: 'Better Cities ANVIL.esp'
     after:
       - name: 'TR_Stirk.esp'
         condition: 'not active("Stirk_Compatibility_Patch.esp")'
+  - name: 'Better Cities SKINGRAD.esp'
+    after: [ 'Cyrodiil Rebuild.esp' ]
 
   - name: 'Better Imperial City.esp'
     after: [ 'Sounds of Cyrodiil.esp' ]
