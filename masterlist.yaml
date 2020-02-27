@@ -13105,34 +13105,32 @@ plugins:
     inc: [ 'xulCheydinhalFalls.esp' ]
 
 ###### Better Cities ######
+  - name: 'Better (Cities |Imperial City).*\.es(m|p)'
+    url:
+      - 'https://www.nexusmods.com/oblivion/mods/16513'
+      - 'https://www.theassimilationlab.com/forums/files/file/952-better-cities/'
   - name: 'Better Cities .esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/16513' ]
     msg: [ *dummyFileLoader ]
 
   - name: 'Better Cities ANVIL.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/16513' ]
     after:
       - name: 'TR_Stirk.esp'
         condition: 'not active("Stirk_Compatibility_Patch.esp")'
 
   - name: 'Better Cities SKINGRAD.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/16513' ]
     after: [ 'Cyrodiil Rebuild.esp' ]
 
   - name: 'Better Cities Full.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/16513' ]
     after:
       - name: 'TR_Stirk.esp'
         condition: 'not active("Stirk_Compatibility_Patch.esp")'
 
   - name: 'Better Cities - Open Cities Reborn.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/16513' ]
     after:
       - name: 'TR_Stirk.esp'
         condition: 'not active("Stirk_Compatibility_Patch.esp")'
 
   - name: 'Better Imperial City.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/16513' ]
     after: [ 'Sounds of Cyrodiil.esp' ]
     dirty:
       - crc: 0x8687bbcc
@@ -13141,20 +13139,16 @@ plugins:
 
   ### Better Cities - Patches ###
   - name: 'Better Cities Anvil Open - Knights of the Nine.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/16513' ]
     req: [ 'Better Cities - Open Better Cities.esp' ]
   - name: 'Better Cities - COBL.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/16513' ]
     dirty:
       - crc: 0x52344ab9
         <<: *dirtyPlugin
         udr: 1
   - name: 'Better Cities - TIE Restricted Area.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/16513' ]
     tag: [ Scripts ]
   ### Better Cities - Old version files ###
   - name: 'Better Cities - Knights of the Nine.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/16513' ]
     req: [ 'Better Cities - Open Better Cities.esp' ]
 
 ###### Open Cities ######
