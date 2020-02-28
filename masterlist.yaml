@@ -13097,6 +13097,10 @@ plugins:
     url:
       - 'https://www.nexusmods.com/oblivion/mods/16513'
       - 'https://www.theassimilationlab.com/forums/files/file/952-better-cities/'
+  - name: 'Better Cities Resources.esm'
+    clean:
+      - crc: 0x2A37B24E 
+        util: 'TES4Edit v4.0.3'
   - name: 'Better Cities .esp'
     msg: [ *dummyFileLoader ]
 
@@ -13104,36 +13108,169 @@ plugins:
     after:
       - name: 'TR_Stirk.esp'
         condition: 'not active("Stirk_Compatibility_Patch.esp")'
+    clean:
+      - crc: 0xDB227998
+        util: 'TES4Edit v4.0.3'
 
   - name: 'Better Cities Full.esp'
     after:
       - name: 'TR_Stirk.esp'
         condition: 'not active("Stirk_Compatibility_Patch.esp")'
+    dirty:
+      - <<: *quickClean
+        crc: 0xB2F74C1C
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 9
 
   - name: 'Better Cities ANVIL.esp'
     after:
       - name: 'TR_Stirk.esp'
         condition: 'not active("Stirk_Compatibility_Patch.esp")'
+    clean:
+      - crc: 0x787CFDCE
+        util: 'TES4Edit v4.0.3'
+  - name: 'Better Cities BRAVIL.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x4C67DB64
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 6
+  - name: 'Better Cities BRUMA.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0xF53D4578
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1
+  - name: 'Better Cities CHEYDINHAL.esp'
+    clean:
+      - crc: 0x9A6B21A9
+        util: 'TES4Edit v4.0.3'
+  - name: 'Better Cities CHORROL.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x5CBA4997
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1
+  - name: 'Better Cities LEYAWIIN.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x5F6B3907
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
   - name: 'Better Cities SKINGRAD.esp'
     after: [ 'Cyrodiil Rebuild.esp' ]
+    clean:
+      - crc: 0x16697810
+        util: 'TES4Edit v4.0.3'
 
   - name: 'Better Imperial City.esp'
     after: [ 'Sounds of Cyrodiil.esp' ]
     dirty:
-      - crc: 0x8687bbcc
-        <<: *dirtyPlugin
-        udr: 3
+      - <<: *quickClean
+        crc: 0xFE4F581D
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 19
+
+  - name: 'Better Cities IC Arboretum.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x6B1A4BC8
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 15
+  - name: 'Better Cities IC Arcane University.esp'
+    clean:
+      - crc: 0xDEFB8637
+        util: 'TES4Edit v4.0.3'
+  - name: 'Better Cities IC Arena.esp'
+    clean:
+      - crc: 0x04B64B30
+        util: 'TES4Edit v4.0.3'
+  - name: 'Better Cities IC Elven Gardens.esp'
+    clean:
+      - crc: 0x46299C45
+        util: 'TES4Edit v4.0.3'
+  - name: 'Better Cities IC Green Emperor Way.esp'
+    clean:
+      - crc: 0x983081B1
+        util: 'TES4Edit v4.0.3'
+  - name: 'Better Cities IC Market.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x3743AD87
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 4
+  - name: 'Better Cities IC Prison.esp'
+    clean:
+      - crc: 0x35B9130C
+        util: 'TES4Edit v4.0.3'
+  - name: 'Better Cities IC Talos Plaza.esp'
+    clean:
+      - crc: 0x40DD168F
+        util: 'TES4Edit v4.0.3'
+  - name: 'Better Cities IC Temple.esp'
+    clean:
+      - crc: 0x3D69B7FF
+        util: 'TES4Edit v4.0.3'
+  - name: 'Better Cities IC Waterfront.esp'
+    clean:
+      - crc: 0x2ECA5A07
+        util: 'TES4Edit v4.0.3'
+
+  ### Better Cities - Optional Files ###
+  - name: 'Better Cities - IC Imperial Isle.esp'
+    clean:
+      - crc: 0x96A5C9CC
+        util: 'TES4Edit v4.0.3'
+  - name: 'Better Cities - Leyawiin Flooded.esp'
+    clean:
+      - crc: 0x57D7201B
+        util: 'TES4Edit v4.0.3'
+  - name: 'Better Cities - Open Better Cities.esp'
+    clean:
+      - crc: 0x4864C67E
+        util: 'TES4Edit v4.0.3'
+  - name: 'Better Cities - VWD of the IC.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0xE9AACC70
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        udr: 6
+  - name: 'Better Imperial City FPS Patch.esp'
+    clean:
+      - crc: 0xAE574304
+        util: 'TES4Edit v4.0.3'
+  - name: 'Better Cities IC Waterfront FPS Patch.esp'
+    clean:
+      - crc: 0xD9E7270B
+        util: 'TES4Edit v4.0.3'
+
+  ### Better Cities - Optional Integration Files ###
+  - name: 'Better Cities - COBL.esp'
+    clean:
+      - crc: 0x96FD9C02
+        util: 'TES4Edit v4.0.3'
+  - name: 'Better Cities - House Price Patch.esp'
+    clean:
+      - crc: 0x5233D2E3
+        util: 'TES4Edit v4.0.3'
+  - name: 'Better Cities - MOBS.esp'
+    clean:
+      - crc: 0x8BEE2605
+        util: 'TES4Edit v4.0.3'
+  - name: 'Better Cities - Storms & Sound.esp'
+    clean:
+      - crc: 0x942B505A
+        util: 'TES4Edit v4.0.3'
+  - name: 'Better Cities - TIE Restricted Area.esp'
+    tag: [ Scripts ]
+    clean:
+      - crc: 0x711C8600
+        util: 'TES4Edit v4.0.3'
 
   ### Better Cities - Patches ###
   - name: 'Better Cities Anvil Open - Knights of the Nine.esp'
     req: [ 'Better Cities - Open Better Cities.esp' ]
-  - name: 'Better Cities - COBL.esp'
-    dirty:
-      - crc: 0x52344ab9
-        <<: *dirtyPlugin
-        udr: 1
-  - name: 'Better Cities - TIE Restricted Area.esp'
-    tag: [ Scripts ]
+
   ### Better Cities - Old version files ###
   - name: 'Better Cities - Knights of the Nine.esp'
     req: [ 'Better Cities - Open Better Cities.esp' ]
