@@ -3147,28 +3147,25 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/17034' ]
     msg: [ *obsoleteArmamentarium ]
   ### Complete (Latest Version) ###
-  - name: 'ArmamentariumArtifacts.esp'
+  - name: '(Armamentarium(Artifacts|LL|LL4OOO|LLArmaVendor|LLMagic|LLMagicOOO|LLVendors)|Artifacts-ArmaCompleteAddon)\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/18417' ]
+  - name: 'ArmamentariumArtifacts.esp'
     msg: [ *doNotClean ]
   - name: 'ArmamentariumLL.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/18417' ]
     inc: [ 'Oscuro''s_Oblivion_Overhaul.esm' ]
     msg:
       - <<: *useInstead
         subs: [ 'ArmamentariumLL4OOO.esp' ]
         condition: *OOOCond
   - name: 'ArmamentariumLLMagic.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/18417' ]
     inc: [ 'Oscuro''s_Oblivion_Overhaul.esm' ]
     msg:
       - <<: *useInstead
         subs: [ 'ArmamentariumLLMagicOOO.esp' ]
         condition: *OOOCond
   - name: 'ArmamentariumLLArmaVendor.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/18417' ]
     inc: [ 'Oscuro''s_Oblivion_Overhaul.esm' ]
   - name: 'ArmamentariumLLVendors.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/18417' ]
     inc: [ 'ArmamentariumLLArmaVendor.esp' ]
 
   - name: 'bookplacing.esm'
