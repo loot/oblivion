@@ -292,10 +292,6 @@ common:
   - &obsoleteUseFCOM
     <<: *obsolete
     subs: [ '[FCOM Convergence](https://www.nexusmods.com/oblivion/mods/12249)' ]
-  - &obsoleteArmamentarium
-    <<: *obsolete
-    subs: [ '[Armamentarium Complete](http://www.nexusmods.com/oblivion/mods/18417)' ]
-    condition: 'file("Armamentarium.esm") and version("Armamentarium.esm","1.35",<)'
 
   - &patch3rdParty
     type: say
@@ -3123,7 +3119,10 @@ plugins:
         util: 'TES4Edit v4.0.3'
   ### Old Versions ###
   - name: 'Armamentarium(Armor|Katanas|_MOBS|Staffs|Test|Vendors)?\.es(m|p)'
-    msg: [ *obsoleteArmamentarium ]
+    msg:
+      - <<: *obsolete
+        subs: [ '[Armamentarium Complete](http://www.nexusmods.com/oblivion/mods/18417)' ]
+        condition: 'file("Armamentarium.esm") and version("Armamentarium.esm","1.35",<)'
   - name: 'ArmamentariumTest.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/13884' ]
   - name: 'ArmamentariumVendors.esp'
