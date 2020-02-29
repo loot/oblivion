@@ -3152,9 +3152,10 @@ plugins:
     msg: [ *doNotClean ]
   - name: 'ArmamentariumLL.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/18417' ]
+    inc: [ 'Oscuro''s_Oblivion_Overhaul.esm' ]
     msg:
-      - type: say
-        content: 'Not for OOO. Remove this and use ''ArmamentariumLL4OOO.esp'' instead.'
+      - <<: *useInstead
+        subs: [ 'ArmamentariumLL4OOO.esp' ]
         condition: *OOOCond
   - name: 'ArmamentariumLLArmaVendor.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/18417' ]
