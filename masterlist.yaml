@@ -3119,6 +3119,9 @@ plugins:
         condition: 'version("Armamentarium.esm","1.35",<)'
     tag: [ Delev ]
     msg: [ *obsoleteArmamentarium ]
+    clean:
+      - crc: 0xBCF36F0D
+        util: 'TES4Edit v4.0.3'
   ### Old Versions ###
   - name: 'ArmamentariumTest.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/13884' ]
@@ -3148,23 +3151,51 @@ plugins:
   - name: '(Armamentarium(Artifacts|LL|LL4OOO|LLArmaVendor|LLMagic|LLMagicOOO|LLVendors)|Artifacts-ArmaCompleteAddon)\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/18417' ]
   - name: 'ArmamentariumArtifacts.esp'
-    msg: [ *doNotClean ]
+    clean:
+      - crc: 0x74D0F883
+        util: 'TES4Edit v4.0.3'
   - name: 'ArmamentariumLL.esp'
     inc: [ 'Oscuro''s_Oblivion_Overhaul.esm' ]
     msg:
       - <<: *useInstead
         subs: [ 'ArmamentariumLL4OOO.esp' ]
         condition: *OOOCond
+    clean:
+      - crc: 0xA3C52D14
+        util: 'TES4Edit v4.0.3'
+  - name: 'ArmamentariumLL4OOO.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x7FE9F55D
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 12
   - name: 'ArmamentariumLLMagic.esp'
     inc: [ 'Oscuro''s_Oblivion_Overhaul.esm' ]
     msg:
       - <<: *useInstead
         subs: [ 'ArmamentariumLLMagicOOO.esp' ]
         condition: *OOOCond
+    clean:
+      - crc: 0x0688A37D
+        util: 'TES4Edit v4.0.3'
+  - name: 'ArmamentariumLLMagicOOO.esp'
+    clean:
+      - crc: 0x9330907E
+        util: 'TES4Edit v4.0.3'
   - name: 'ArmamentariumLLArmaVendor.esp'
     inc: [ 'Oscuro''s_Oblivion_Overhaul.esm' ]
+    clean:
+      - crc: 0x245638D6
+        util: 'TES4Edit v4.0.3'
   - name: 'ArmamentariumLLVendors.esp'
     inc: [ 'ArmamentariumLLArmaVendor.esp' ]
+    clean:
+      - crc: 0x0A8CB72D
+        util: 'TES4Edit v4.0.3'
+  - name: 'Artifacts - ArmaCompleteAddon.esp'
+    clean:
+      - crc: 0x1FD522A4
+        util: 'TES4Edit v4.0.3'
 
   - name: 'bookplacing.esm'
     url: [ 'https://www.nexusmods.com/oblivion/mods/6262' ]
