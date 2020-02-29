@@ -292,10 +292,6 @@ common:
   - &obsoleteUseFCOM
     <<: *obsolete
     subs: [ '[FCOM Convergence](https://www.nexusmods.com/oblivion/mods/12249)' ]
-  - &obsoleteArmamentarium
-    <<: *obsolete
-    subs: [ '[Armamentarium Complete](http://www.nexusmods.com/oblivion/mods/18417)' ]
-    condition: 'file("Armamentarium.esm") and version("Armamentarium.esm","1.35",<)'
 
   - &patch3rdParty
     type: say
@@ -3107,6 +3103,7 @@ plugins:
       - type: say
         content: 'Delete. Use Mart''s Monster Mod - More Wilderness Life.esp or Mart''s Monster Mod - More Wilderness Life No Gates.esp instead'
 
+###### Armamentarium ######
   - name: 'Armamentarium.esm'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/13884'
@@ -3116,8 +3113,74 @@ plugins:
     inc:
       - name: 'FCOM_ArcheryArmamentarium.esp'
         condition: 'version("Armamentarium.esm","1.35",<)'
-    tag: [ Relev ]
-    msg: [ *obsoleteArmamentarium ]
+    tag: [ Delev ]
+    clean:
+      - crc: 0xBCF36F0D
+        util: 'TES4Edit v4.0.3'
+  ### Old Versions ###
+  - name: 'Armamentarium(Armor|Katanas|_MOBS|Staffs|Test|Vendors)?\.es(m|p)'
+    msg:
+      - <<: *obsolete
+        subs: [ '[Armamentarium Complete](http://www.nexusmods.com/oblivion/mods/18417)' ]
+        condition: 'file("Armamentarium.esm") and version("Armamentarium.esm","1.35",<)'
+  - name: 'Armamentarium_MOBS.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/14206' ]
+    inc: [ 'ArmamentariumWeapons4Npcs.esp' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x65265F23
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 10
+  ### Complete (Latest Version) ###
+  - name: '(Armamentarium(Artifacts|LL|LL4OOO|LLArmaVendor|LLMagic|LLMagicOOO|LLVendors)|Artifacts-ArmaCompleteAddon)\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/18417' ]
+  - name: 'ArmamentariumArtifacts.esp'
+    clean:
+      - crc: 0x74D0F883
+        util: 'TES4Edit v4.0.3'
+  - name: 'ArmamentariumLL.esp'
+    inc: [ 'Oscuro''s_Oblivion_Overhaul.esm' ]
+    msg:
+      - <<: *useInstead
+        subs: [ 'ArmamentariumLL4OOO.esp' ]
+        condition: *OOOCond
+    clean:
+      - crc: 0xA3C52D14
+        util: 'TES4Edit v4.0.3'
+  - name: 'ArmamentariumLL4OOO.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x7FE9F55D
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 12
+  - name: 'ArmamentariumLLMagic.esp'
+    inc: [ 'Oscuro''s_Oblivion_Overhaul.esm' ]
+    msg:
+      - <<: *useInstead
+        subs: [ 'ArmamentariumLLMagicOOO.esp' ]
+        condition: *OOOCond
+    clean:
+      - crc: 0x0688A37D
+        util: 'TES4Edit v4.0.3'
+  - name: 'ArmamentariumLLMagicOOO.esp'
+    clean:
+      - crc: 0x9330907E
+        util: 'TES4Edit v4.0.3'
+  - name: 'ArmamentariumLLArmaVendor.esp'
+    inc: [ 'Oscuro''s_Oblivion_Overhaul.esm' ]
+    clean:
+      - crc: 0x245638D6
+        util: 'TES4Edit v4.0.3'
+  - name: 'ArmamentariumLLVendors.esp'
+    inc: [ 'ArmamentariumLLArmaVendor.esp' ]
+    clean:
+      - crc: 0x0A8CB72D
+        util: 'TES4Edit v4.0.3'
+  - name: 'Artifacts - ArmaCompleteAddon.esp'
+    clean:
+      - crc: 0x1FD522A4
+        util: 'TES4Edit v4.0.3'
+
   - name: 'bookplacing.esm'
     url: [ 'https://www.nexusmods.com/oblivion/mods/6262' ]
     msg:
@@ -5311,30 +5374,6 @@ plugins:
         util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 21
         udr: 3
-  - name: 'ArmamentariumTest.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/16975' ]
-    msg: [ *obsoleteArmamentarium ]
-  - name: 'ArmamentariumArmor.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/16975' ]
-    msg: [ *obsoleteArmamentarium ]
-  - name: 'Armamentarium_MOBS.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/14206' ]
-    inc: [ 'ArmamentariumWeapons4Npcs.esp' ]
-    msg: [ *obsoleteArmamentarium ]
-    dirty:
-      - <<: *quickClean
-        crc: 0x65265F23
-        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 10
-  - name: 'ArmamentariumKatanas.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/15514' ]
-    msg: [ *obsoleteArmamentarium ]
-  - name: 'ArmamentariumVendors.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/13884' ]
-    msg: [ *obsoleteArmamentarium ]
-  - name: 'ArmamentariumStaffs.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/17034' ]
-    msg: [ *obsoleteArmamentarium ]
   - name: 'AGEHA Tortured Souls.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/26486' ]
     tag:
@@ -6939,25 +6978,6 @@ plugins:
   - name: 'Hemingweys Capes for FCOM_FrancescosNamedBosses.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
     tag: [ Invent ]
-  - name: 'ArmamentariumLL.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/18417' ]
-    msg:
-      - type: say
-        content: 'Not for OOO. Remove this and use ''ArmamentariumLL4OOO.esp'' instead.'
-        condition: *OOOCond
-  - name: 'ArmamentariumLLVendors.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/18417' ]
-    msg:
-      - type: say
-        content: 'Can be used with either ''ArmamentariumLL.esp'' or ''ArmamentariumLL4OOO.esp''.'
-  - name: 'ArmamentariumArtifacts.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/18417' ]
-    msg: [ *doNotClean ]
-  - name: 'ArmamentariumLLArmaVendor.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/18417' ]
-    inc:
-      - 'ArmamentariumLL4OOO.esp'
-      - 'ArmamentariumLLVendors.esp'
   - name: 'Harvest[Containers].esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/3979' ]
     msg: [ *alreadyInOOO ]
