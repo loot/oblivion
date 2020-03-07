@@ -3523,12 +3523,12 @@ plugins:
 
 
 ### MOBS - Medieval Oblivion Equipment Balance System ###
-  - name: '(MOBS|MOBS SI|OMOBS|OMOBS SI)\.esp'
+  - name: '(MOBS|MOBS SI|OMOBS|OMOBS_SI)\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/28537' ]
     msg:
       - <<: *useOnlyOneX
         subs: [ 'MOBS, MOBS SI, OMOBS OR OMOBS SI' ]
-        condition: 'many("(MOBS|MOBS SI|OMOBS|OMOBS SI)\.esp")'
+        condition: 'many("(MOBS|MOBS SI|OMOBS|OMOBS_SI)\.esp")'
     tag:
       - NoMerge
       - Stats
