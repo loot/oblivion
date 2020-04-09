@@ -12381,7 +12381,9 @@ plugins:
         util: 'TES4Edit v4.0.3'
 
   - name: 'Better Imperial City.esp'
-    after: [ 'Sounds of Cyrodiil.esp' ]
+    after:
+      - 'Better Cities - IC Imperial Isle.esp'
+      - 'Sounds of Cyrodiil.esp'
     dirty:
       - <<: *quickClean
         crc: 0xFE4F581D
