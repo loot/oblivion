@@ -12319,6 +12319,7 @@ plugins:
     after:
       - name: 'TR_Stirk.esp'
         condition: 'not active("Stirk_Compatibility_Patch.esp")'
+    inc: [ 'Better Cities Full.esp' ]
     clean:
       - crc: 0xDB227998
         util: 'TES4Edit v4.0.3'
@@ -12327,12 +12328,17 @@ plugins:
     after:
       - name: 'TR_Stirk.esp'
         condition: 'not active("Stirk_Compatibility_Patch.esp")'
+    inc: [ 'Better Cities - Open Cities Reborn.esp' ]
     dirty:
       - <<: *quickClean
         crc: 0xB2F74C1C
         util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 9
 
+  - name: 'Better Cities (ANVIL|BRAVIL|BRUMA|CHEYDINHAL|CHORROL|LEYAWIIN|SKINGRAD)\.esp'
+    inc:
+      - 'Better Cities Full.esp'
+      - 'Better Cities - Open Cities Reborn.esp'
   - name: 'Better Cities ANVIL.esp'
     after:
       - name: 'TR_Stirk.esp'
