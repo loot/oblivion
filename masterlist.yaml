@@ -12320,6 +12320,10 @@ plugins:
       - name: 'TR_Stirk.esp'
         condition: 'not active("Stirk_Compatibility_Patch.esp")'
     inc: [ 'Better Cities Full.esp' ]
+    msg:
+      - <<: *patchIncluded
+        subs: [ 'Open Cities Reborn Blood&Mud Additions' ]
+        condition: 'active("Open Cities Reborn B&M Additions.esp") and not file("Better Cities - Open Cities Reborn B&M Compatibility.esp")'
     clean:
       - crc: 0xDB227998
         util: 'TES4Edit v4.0.3'
