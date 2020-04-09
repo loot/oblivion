@@ -11929,6 +11929,7 @@ plugins:
         itm: 22
   - name: 'xulImperialIsle.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/9531' ]
+    after: [ 'road+bridges.esp' ]
     dirty:
       - crc: 0x9f8e4a43
         <<: *dirtyPlugin
@@ -12495,20 +12496,79 @@ plugins:
     clean:
       - crc: 0x1CD1BD9A
         util: 'TES4Edit v4.0.3'
+  - name: 'Open Cities (Classic|Reborn)\.esp'
+    after:
+      - 'Open Cities Bartholm.esp'
+      - 'Open Cities New Sheoth.esp'
+      - 'Open Cities Outer Districts.esp'
+      - 'Blood&Mud.esp'
+      - 'Bravil Docks.esp'
+      - 'BrumaMGRestored.esp'
+      - 'BrumaMGRestored-Frostcrag.esp'
+      - 'ClocksOfCyrodiil.esp'
+      - 'CLS-Sailboats.esp'
+      - 'COC + OCC-OCR Patch.esp'
+      - 'coffeeshop.esp'
+      - 'Cyrodiil transportation network OC.esp'
+      - 'DarkBrotherhoodChronicles.esp'
+      - 'GoldenCrest.esp'
+      - 'Hiyoko_Store.esp'
+      - 'HTS.esp'
+      - 'HTS-WithMessages.esp'
+      - 'Ivellon.esp'
+      - 'Malevolent.esp'
+      - 'MTCThievesGrotto.esp'
+      - 'MTCThievesGrottoV4.esp'
+      - 'MTCThievesGrottoV4.1.esp'
+      - 'MTCRiverShackv1.2.esp'
+      - 'NakedNord.esp'
+      - 'Oblivifall - Losing My Religion.esp'
+      - 'Oscuro''s_Oblivion_Overhaul.esp'
+      - 'OC+Cats&Rats Patch.esp'
+      - 'OC+Coffeshop Patch.esp'
+      - 'OCBruma+BrumaMGRestored Patch.esp'
+      - 'OCC-Hiyoko-Patch.esp'
+      - 'OCC-Ivellon-Patch.esp'
+      - 'OCLR-Sailboat-Patch.esp'
+      - 'ReclaimSancreTor.esp'
+      - 'road+bridges.esp'
+      - 'RTT.esp'
+      - 'Ruin.esp'
+      - 'The Lost Spires.esp'
+      - 'TOTF.esp'
+      - 'xulImperialIsle.esp'
+      - 'zCats & Rats.esp'
+    tag:
+      - C.Owner
+      - C.Regions
+      - Roads
   - name: 'Open Cities Classic.esp'
-    dirty:
-      - <<: *quickClean
-        crc: 0x239AE583
-        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 11
+    url: [ 'https://www.nexusmods.com/oblivion/mods/16360' ]
+    after:
+      - 'OCC+COBL Luggage Patch.esp'
+      - 'OCC-Lost Spires-Patch.esp'
+      - 'OCC-Malevolent-Patch.esp'
+      - 'OCC+NakedNord Patch.esp'
+      - 'OCC-RTTv3 Patch.esp'
+      - 'OCC-TOTF-Patch.esp'
+    clean:
+      - crc: 0x33606EC1
+        util: 'TES4Edit v4.0.3'
   - name: 'Open Cities Classic B&M Additions.esp'
-    dirty:
-      - <<: *quickClean
-        crc: 0x2EC7B19A
-        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
-        udr: 2
+    clean:
+      - crc: 0x790047D5
+        util: 'TES4Edit v4.0.3'
   - name: 'Open Cities Reborn.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/33003' ]
+    after:
+      - 'Kvatch Rebuilt.esp'
+      - 'OCR + Kvatch Rebuilt Patch.esp'
+      - 'OCR+COBL Luggage Patch.esp'
+      - 'OCR + Lost Spires Patch.esp'
+      - 'OCR + Malevolent Patch.esp'
+      - 'OCR+NakedNord Patch.esp'
+      - 'OCR + RTTv3 Patch.esp'
+      - 'OCR + TOTF Patch.esp'
     tag: [ C.Name ]
     clean:
       - crc: 0x02DC7661
@@ -12523,17 +12583,35 @@ plugins:
     req:
       - name: 'Bartholm.esp'
         display: '[Bartholm](http://www.nexusmods.com/oblivion/mods/5022)'
+    tag: [ C.Regions ]
     clean:
       - crc: 0x88CA86E2
         util: 'TES4Edit v4.0.3'
   - name: 'Open Cities New Sheoth.esp'
     req: [ 'DLCShiveringIsles.esp' ]
-    tag: [ Actors.AIPackages ]
+    tag:
+      - Actors.AIPackages
+      - C.Owner
+      - C.Regions
+      - Roads
     clean:
       - crc: 0x9C4443AF
         util: 'TES4Edit v4.0.3'
   - name: 'Open Cities Outer Districts.esp'
+    after:
+      - 'Cyrodiil transportation network OC.esp'
+      - 'OC+CTN Patch.esp'
+      - 'OCC+COBL Luggage Patch.esp'
+      - 'OCR+COBL Luggage Patch.esp'
+      - 'OCOD+FrostcragSpire Patch.esp'
+      - 'road+bridges.esp'
+      - 'xulImperialIsle.esp'
+    tag:
+      - C.Owner
+      - C.Regions
     clean:
+      - crc: 0xB3DA3186
+        util: 'TES4Edit v4.0.3'
       - crc: 0x11EF2688
         util: 'TES4Edit v4.0.3'
 
@@ -12541,9 +12619,13 @@ plugins:
   # Bravil Docks by Greg Simmonds - OC Patch
   - name: 'OC+Bravil Docks Patch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/32925' ]
-    msg:
-      - type: say
-        content: 'Note - Be sure this is being used on Bravil Docks by Greg Simmonds. Will cause a CTD with the wrong file.'
+    inc:
+      - 'Better Cities - Open Better Cities.esp'
+      - 'Better Cities - Open Cities Reborn.esp'
+    req:
+      - name: 'Bravil Docks.esp'
+        display: '[Bravil Harbour v1.2+](https://www.nexusmods.com/oblivion/mods/22329)'
+        condition: 'not checksum("Bravil Docks.esp", 85EAA223)'
   # Clocks of Cyrodiil - OC Patch
   - name: 'COC + OCC-OCR Patch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/32925' ]
@@ -12552,21 +12634,24 @@ plugins:
       - name: 'ClocksOfCyrodiil.esp'
         display: 'Better Cities - Clocks of Cyrodiil'
         condition: 'version("ClocksOfCyrodiil.esp", "6.0.0", >=)'
+  # DLC Frostcrag Spire (Wizard's Tower) - OC Patch
+  - name: 'OCOD+FrostcragSpire Patch.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/32925' ]
+    group: *veryEarlyGroup
+    after: [ 'DLCFrostcrag - Unofficial Patch.esp' ]
   # DLC Knights of the Nine - OC Patch
   - name: 'OCC-KOTN-Patch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/32925' ]
+    group: *veryEarlyGroup
+    after:
+      - 'Knights - Unofficial Patch.esp'
+      - 'SM Plugin Refurbish - Knights.esp'
+      - 'SM Plugin Refurbish(Merged).esp'
     tag: [ Actors.AIPackages ]
-  # Ruined Tail's Tale - OC Patch
-  - name: 'OCC-RTTv3 Patch.esp'
+  # Midas Magic - OC Patch
+  - name: 'OC+Midas Magic Patch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/32925' ]
-    msg:
-      - type: say
-        content: 'Works with RTT 3.0 only.'
-  - name: 'OCR + RTTv3 Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/32925' ]
-    msg:
-      - type: say
-        content: 'Works with RTT 3.0 only.'
+    req: [ 'Open Cities Outer Districts.esp' ]
 
   - name: 'ROC+ClassBeginning Patch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
@@ -17336,6 +17421,9 @@ plugins:
       - 'http://theelderscrolls.info/?go=dlfile&fileid=215'
       # Installation files for Race Balancing Project 10.5 EV & DV
       - 'http://theelderscrolls.info/?go=dlfile&fileid=293'
+    after:
+      - 'Open Cities Classic.esp'
+      - 'Open Cities Reborn.esp'
     msg:
       - type: say
         content: 'Do not use with COBL Races.'
@@ -17357,6 +17445,9 @@ plugins:
       - 'http://theelderscrolls.info/?go=dlfile&fileid=222'
       # Installation files for Race Balancing Project 10.5 EV & DV
       - 'http://theelderscrolls.info/?go=dlfile&fileid=293'
+    after:
+      - 'Open Cities Classic.esp'
+      - 'Open Cities Reborn.esp'
     msg:
       - type: say
         content: 'German version.'
@@ -17684,6 +17775,9 @@ plugins:
   - name: 'ZUSIO-SM Plugin Refurbish SI-patch.esp'
     tag: [ Scripts ]
   - name: 'bgMagic(D|E)V.esp'
+    after:
+      - 'Open Cities Classic.esp'
+      - 'Open Cities Reborn.esp'
     msg: [ *doNotClean ]
     tag:
       - C.RecordFlags
@@ -17848,8 +17942,15 @@ plugins:
     tag:
       - Body-F
       - Body-Size-F
+  - name: 'bgIntegrationDV.esp'
+    after:
+      - 'Open Cities Classic.esp'
+      - 'Open Cities Reborn.esp'
   - name: 'bgIntegrationEV.esp'
     url: [ 'http://theelderscrolls.info/?go=dlfile&fileid=349' ]
+    after:
+      - 'Open Cities Classic.esp'
+      - 'Open Cities Reborn.esp'
     req: [ 'DLCShiveringIsles.esp' ]
     msg:
       - type: say
