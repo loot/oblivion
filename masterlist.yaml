@@ -12538,6 +12538,10 @@ plugins:
       - 'TOTF.esp'
       - 'xulImperialIsle.esp'
       - 'zCats & Rats.esp'
+    tag:
+      - C.Owner
+      - C.Regions
+      - Roads
   - name: 'Open Cities Classic.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/16360' ]
     after:
@@ -12579,12 +12583,17 @@ plugins:
     req:
       - name: 'Bartholm.esp'
         display: '[Bartholm](http://www.nexusmods.com/oblivion/mods/5022)'
+    tag: [ C.Regions ]
     clean:
       - crc: 0x88CA86E2
         util: 'TES4Edit v4.0.3'
   - name: 'Open Cities New Sheoth.esp'
     req: [ 'DLCShiveringIsles.esp' ]
-    tag: [ Actors.AIPackages ]
+    tag:
+      - Actors.AIPackages
+      - C.Owner
+      - C.Regions
+      - Roads
     clean:
       - crc: 0x9C4443AF
         util: 'TES4Edit v4.0.3'
@@ -12597,6 +12606,9 @@ plugins:
       - 'OCOD+FrostcragSpire Patch.esp'
       - 'road+bridges.esp'
       - 'xulImperialIsle.esp'
+    tag:
+      - C.Owner
+      - C.Regions
     clean:
       - crc: 0xB3DA3186
         util: 'TES4Edit v4.0.3'
