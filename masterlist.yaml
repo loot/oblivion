@@ -12547,17 +12547,13 @@ plugins:
       - 'OCC+NakedNord Patch.esp'
       - 'OCC-RTTv3 Patch.esp'
       - 'OCC-TOTF-Patch.esp'
-    dirty:
-      - <<: *quickClean
-        crc: 0x239AE583
-        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 11
+    clean:
+      - crc: 0x33606EC1
+        util: 'TES4Edit v4.0.3'
   - name: 'Open Cities Classic B&M Additions.esp'
-    dirty:
-      - <<: *quickClean
-        crc: 0x2EC7B19A
-        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
-        udr: 2
+    clean:
+      - crc: 0x790047D5
+        util: 'TES4Edit v4.0.3'
   - name: 'Open Cities Reborn.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/33003' ]
     after:
@@ -12602,6 +12598,8 @@ plugins:
       - 'road+bridges.esp'
       - 'xulImperialIsle.esp'
     clean:
+      - crc: 0xB3DA3186
+        util: 'TES4Edit v4.0.3'
       - crc: 0x11EF2688
         util: 'TES4Edit v4.0.3'
 
