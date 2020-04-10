@@ -12334,7 +12334,9 @@ plugins:
     after:
       - name: 'TR_Stirk.esp'
         condition: 'not active("Stirk_Compatibility_Patch.esp")'
-    inc: [ 'Better Cities - Open Cities Reborn.esp' ]
+    inc:
+      - 'Better Cities - Open Cities Reborn.esp'
+      - 'Open Cities Reborn.esp'
     dirty:
       - <<: *quickClean
         crc: 0xB2F74C1C
