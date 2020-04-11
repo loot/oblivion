@@ -64,6 +64,7 @@ common:
   - &SilentVoice
     name: 'OBSE/Plugins/Elys_USV.dll'
     display: '[Elys- Universal Silent Voice](https://www.nexusmods.com/oblivion/mods/16622)'
+    condition: 'not file("OBSE/Plugins/voicefile_redirector.dll")'
   - &SoundCommands
     name: 'OBSE/Plugins/SoundCommands.dll'
     display: '[SoundCommands 4.0](https://www.nexusmods.com/oblivion/mods/16288)'
