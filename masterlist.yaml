@@ -18996,17 +18996,7 @@ plugins:
 
   - name: 'BalancedMagic.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/45249' ]
-    dirty:
-      # version: 2.5
-      - <<: *quickClean
-        crc: 0x0D32E9EA
-        util: '[TES4Edit v4.0.1](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 3
-      # version: 2.5, Esp without nature Summons
-      - <<: *quickClean
-        crc: 0xCEF52118
-        util: '[TES4Edit v4.0.1](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 2
+    msg: [ *doNotClean ]
 
   - name: 'BMEnchantmentRebalance.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/45249' ]
