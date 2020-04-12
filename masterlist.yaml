@@ -12402,6 +12402,11 @@ plugins:
         util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 19
 
+  - name: 'Better Cities IC (Arboretum|Arcane University|Arena|Elven Gardens|Green Emperor Way|Market|Prison|Talos Plaza|Temple|Waterfront)\.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'Better Imperial City.esp' ]
+        condition: 'active("Better Imperial City.esp")'
   - name: 'Better Cities IC Arboretum.esp'
     dirty:
       - <<: *quickClean
