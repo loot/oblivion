@@ -12346,10 +12346,13 @@ plugins:
 
   - name: 'Better Cities (ANVIL|BRAVIL|BRUMA|CHEYDINHAL|CHORROL|LEYAWIIN|SKINGRAD)\.esp'
     inc:
-      - 'Better Cities Full.esp'
       - 'Better Cities - Open Cities Reborn.esp'
       - 'Open Cities Classic.esp'
       - 'Open Cities Reborn.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'Better Cities Full.esp' ]
+        condition: 'active("Better Cities Full.esp")'
   - name: 'Better Cities ANVIL.esp'
     after:
       - name: 'TR_Stirk.esp'
