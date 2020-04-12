@@ -732,8 +732,12 @@ groups:
     description: 'A group for modules that should load after most other mods.'
     after: [ default ]
 
-  - name: &latePatchesGroup Late Patches
+  - name: &imperialCityGroup Imperial City
+    description: 'A group for modules that alter the Imperial City and need to be loaded late.'
     after: [ *overridesGroup ]
+
+  - name: &latePatchesGroup Late Patches
+    after: [ *imperialCityGroup ]
 
   - name: &dynamicPatchesGroup Dynamic Patches
     after: [ *latePatchesGroup ]
