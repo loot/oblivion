@@ -12451,6 +12451,7 @@ plugins:
         util: 'TES4Edit v4.0.3'
 
   - name: 'Better Imperial City.esp'
+    group: *imperialCityGroup
     after:
       - 'Better Cities - IC Imperial Isle.esp'
       - 'ClocksOfCyrodiil.esp'
@@ -12465,6 +12466,7 @@ plugins:
         itm: 19
 
   - name: 'Better Cities IC (Arboretum|Arcane University|Arena|Elven Gardens|Green Emperor Way|Market|Prison|Talos Plaza|Temple|Waterfront)\.esp'
+    group: *imperialCityGroup
     msg:
       - <<: *alreadyInX
         subs: [ 'Better Imperial City.esp' ]
@@ -12542,6 +12544,7 @@ plugins:
 
   ### Better Cities - Optional Files ###
   - name: 'Better Cities - IC Imperial Isle.esp'
+    group: *imperialCityGroup
     clean:
       - crc: 0x96A5C9CC
         util: 'TES4Edit v4.0.3'
