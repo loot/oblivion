@@ -12516,6 +12516,81 @@ plugins:
   - name: 'Better Cities Anvil Open - Knights of the Nine.esp'
     req: [ 'Better Cities - Open Better Cities.esp' ]
 
+  ### Better Imperial City Patches ###
+  # Blood & Mud
+  - name: 'Better Imperial City - Blood & Mud patch.esp'
+    after: [ 'Better Imperial City.esp' ]
+    req:
+      - name: 'Better Cities IC Waterfront.esp'
+        display: 'Better Imperial City.esp or Better Cities IC Waterfront.esp'
+        condition: 'not file("Better Imperial City.esp")'
+  # Kragenir's Death Quest
+  - name: 'Better Cities IC Arboretum - Kragenir''s Death Quest.esp'
+    after: [ 'Better Imperial City.esp' ]
+    req:
+      - name: 'Better Cities IC Arboretum.esp'
+        display: 'Better Imperial City.esp or Better Cities IC Arboretum.esp'
+        condition: 'not file("Better Imperial City.esp")'
+  # Oblivion Uncut
+  - name: 'Better Cities Market District - Oblivion Uncut.esp'
+    after: [ 'Better Imperial City.esp' ]
+    req:
+      - name: 'Better Cities IC Market.esp'
+        display: 'Better Imperial City.esp or Better Cities IC Market.esp'
+        condition: 'not file("Better Imperial City.esp")'
+  # Oscuro's Oblivion Overhaul
+  - name: 'Better Cities IC Arboretum - OOO.esp'
+    req: [ 'Better Cities IC Arboretum.esp' ]
+  - name: 'Better Cities IC Market - OOO.esp'
+    req: [ 'Better Cities IC Market.esp' ]
+  - name: 'Better Imperial City - OOO.esp'
+    req: [ 'Better Imperial City.esp' ]
+  # Origin of the Mages Guild
+  - name: 'Better Cities - Origin of the Mages Guild.esp'
+    after: [ 'Better Imperial City.esp' ]
+    req:
+      - name: 'Better Cities IC Arcane University.esp'
+        display: 'Better Imperial City.esp or Better Cities IC Arcane University.esp'
+        condition: 'not file("Better Imperial City.esp")'
+  # Reclaiming Sancre Tor
+  - name: 'Better Cities IC Arena - Reclaiming Sancre Tor.esp'
+    after: [ 'Better Imperial City.esp' ]
+    req:
+      - name: 'Better Cities IC Arena.esp'
+        display: 'Better Imperial City.esp or Better Cities IC Arena.esp'
+        condition: 'not file("Better Imperial City.esp")'
+  # Roads of Cyrodiil
+  - name: 'Better Cities IC Imperial Isle - Roads of Cyrodiil.esp'
+    req: [ 'Better Cities - IC Imperial Isle.esp' ]
+  # Sexlivion
+  - name: 'Better Cities - Sexlivion.*\.esp'
+    after: [ 'Better Imperial City.esp' ]
+    req:
+      - name: 'Better Cities IC Market.esp'
+        display: 'Better Imperial City.esp or Better Cities IC Market.esp'
+        condition: 'not file("Better Imperial City.esp")'
+  # Skyrim Nords
+  - name: 'Better Cities - Skyrim Nords.esp'
+    after: [ 'Better Imperial City.esp' ]
+    req:
+      - name: 'Better Cities IC Waterfront.esp'
+        display: 'Better Imperial City.esp or Better Cities IC Waterfront.esp'
+        condition: 'not file("Better Imperial City.esp")'
+  # Thievery in the Imperial City
+  - name: 'Better Cities - Thievery.esp'
+    after: [ 'Better Imperial City.esp' ]
+    req:
+      - name: 'Better Cities IC Waterfront.esp'
+        display: 'Better Imperial City.esp or Better Cities IC Waterfront.esp'
+        condition: 'not file("Better Imperial City.esp")'
+  # Waalx Animals & Creatures
+  - name: 'Better Cities IC Arena - WAC Gladiator.esp'
+    after: [ 'Better Imperial City.esp' ]
+    req:
+      - name: 'Better Cities IC Arena.esp'
+        display: 'Better Imperial City.esp or Better Cities IC Arena.esp'
+        condition: 'not file("Better Imperial City.esp")'
+
   ### Better Cities - Old version files ###
   - name: 'Better Cities - Knights of the Nine.esp'
     req: [ 'Better Cities - Open Better Cities.esp' ]
