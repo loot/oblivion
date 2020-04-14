@@ -12319,6 +12319,7 @@ plugins:
 
   - name: 'Better Cities - Open Cities Reborn.esp'
     after:
+      - 'Slof''s Oblivion Goth Shop.esp'
       - name: 'TR_Stirk.esp'
         condition: 'not active("Stirk_Compatibility_Patch.esp")'
     inc: [ 'Better Cities Full.esp' ]
@@ -12332,6 +12333,9 @@ plugins:
 
   - name: 'Better Cities Full.esp'
     after:
+      - '00RBScribeSupplies Intensive.esp'
+      - 'ClocksOfCyrodiil.esp'
+      - 'Slof''s Oblivion Goth Shop.esp'
       - name: 'TR_Stirk.esp'
         condition: 'not active("Stirk_Compatibility_Patch.esp")'
     inc:
@@ -12355,41 +12359,53 @@ plugins:
         condition: 'active("Better Cities Full.esp")'
   - name: 'Better Cities ANVIL.esp'
     after:
+      - 'ClocksOfCyrodiil.esp'
       - name: 'TR_Stirk.esp'
         condition: 'not active("Stirk_Compatibility_Patch.esp")'
     clean:
       - crc: 0x787CFDCE
         util: 'TES4Edit v4.0.3'
   - name: 'Better Cities BRAVIL.esp'
+    after:
+      - '00RBScribeSupplies Intensive.esp'
+      - 'ClocksOfCyrodiil.esp'
     dirty:
       - <<: *quickClean
         crc: 0x4C67DB64
         util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 6
   - name: 'Better Cities BRUMA.esp'
+    after: [ 'ClocksOfCyrodiil.esp' ]
     dirty:
       - <<: *quickClean
         crc: 0xF53D4578
         util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
   - name: 'Better Cities CHEYDINHAL.esp'
+    after: [ 'ClocksOfCyrodiil.esp' ]
     clean:
       - crc: 0x9A6B21A9
         util: 'TES4Edit v4.0.3'
   - name: 'Better Cities CHORROL.esp'
+    after:
+      - 'ClocksOfCyrodiil.esp'
+      - 'Slof''s Oblivion Goth Shop.esp'
     dirty:
       - <<: *quickClean
         crc: 0x5CBA4997
         util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
   - name: 'Better Cities LEYAWIIN.esp'
+    after: [ 'ClocksOfCyrodiil.esp' ]
     dirty:
       - <<: *quickClean
         crc: 0x5F6B3907
         util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 2
   - name: 'Better Cities SKINGRAD.esp'
-    after: [ 'Cyrodiil Rebuild.esp' ]
+    after:
+      - 'ClocksOfCyrodiil.esp'
+      - 'Cyrodiil Rebuild.esp'
     clean:
       - crc: 0x16697810
         util: 'TES4Edit v4.0.3'
@@ -12397,7 +12413,10 @@ plugins:
   - name: 'Better Imperial City.esp'
     after:
       - 'Better Cities - IC Imperial Isle.esp'
+      - 'ClocksOfCyrodiil.esp'
+      - 'ICEXPAND.esp'
       - 'Sounds of Cyrodiil.esp'
+      - 'The Mystery of the Dulan Cult.esp'
     inc: [ 'Open Cities Outer Districts.esp' ]
     dirty:
       - <<: *quickClean
@@ -12411,31 +12430,48 @@ plugins:
         subs: [ 'Better Imperial City.esp' ]
         condition: 'active("Better Imperial City.esp")'
   - name: 'Better Cities IC Arboretum.esp'
+    after:
+      - 'ClocksOfCyrodiil.esp'
+      - 'ICEXPAND.esp'
     dirty:
       - <<: *quickClean
         crc: 0x6B1A4BC8
         util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 15
   - name: 'Better Cities IC Arcane University.esp'
+    after:
+      - 'ClocksOfCyrodiil.esp'
     inc: [ 'Open Cities Outer Districts.esp' ]
     clean:
       - crc: 0xDEFB8637
         util: 'TES4Edit v4.0.3'
   - name: 'Better Cities IC Arena.esp'
-    after: [ 'Better Cities - IC Imperial Isle.esp' ]
+    after:
+      - 'Better Cities - IC Imperial Isle.esp'
+      - 'ClocksOfCyrodiil.esp'
+      - 'ICEXPAND.esp'
     clean:
       - crc: 0x04B64B30
         util: 'TES4Edit v4.0.3'
   - name: 'Better Cities IC Elven Gardens.esp'
-    after: [ 'Better Cities - IC Imperial Isle.esp' ]
+    after:
+      - 'Better Cities - IC Imperial Isle.esp'
+      - 'ClocksOfCyrodiil.esp'
+      - 'ICEXPAND.esp'
     clean:
       - crc: 0x46299C45
         util: 'TES4Edit v4.0.3'
   - name: 'Better Cities IC Green Emperor Way.esp'
+    after:
+      - 'ICEXPAND.esp'
     clean:
       - crc: 0x983081B1
         util: 'TES4Edit v4.0.3'
   - name: 'Better Cities IC Market.esp'
+    after:
+      - 'ClocksOfCyrodiil.esp'
+      - 'ICEXPAND.esp'
+      - 'The Mystery of the Dulan Cult.esp'
     dirty:
       - <<: *quickClean
         crc: 0x3743AD87
@@ -12447,14 +12483,22 @@ plugins:
       - crc: 0x35B9130C
         util: 'TES4Edit v4.0.3'
   - name: 'Better Cities IC Talos Plaza.esp'
+    after:
+      - 'ClocksOfCyrodiil.esp'
+      - 'ICEXPAND.esp'
     clean:
       - crc: 0x40DD168F
         util: 'TES4Edit v4.0.3'
   - name: 'Better Cities IC Temple.esp'
+    after:
+      - 'ClocksOfCyrodiil.esp'
+      - 'ICEXPAND.esp'
     clean:
       - crc: 0x3D69B7FF
         util: 'TES4Edit v4.0.3'
   - name: 'Better Cities IC Waterfront.esp'
+    after:
+      - 'ICEXPAND.esp'
     clean:
       - crc: 0x2ECA5A07
         util: 'TES4Edit v4.0.3'
