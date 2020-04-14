@@ -12509,7 +12509,12 @@ plugins:
       - crc: 0x96A5C9CC
         util: 'TES4Edit v4.0.3'
   - name: 'Better Cities - Leyawiin Flooded.esp'
+    after: [ 'Better Cities Full.esp' ]
     inc: [ 'Open Cities Reborn.esp' ]
+    req:
+      - name: 'Better Cities LEYAWIIN.esp'
+        display: 'Better Cities Full.esp or Better Cities LEYAWIIN.esp'
+        condition: 'not file("Better Cities Full.esp")'
     clean:
       - crc: 0x57D7201B
         util: 'TES4Edit v4.0.3'
