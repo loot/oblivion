@@ -12345,6 +12345,7 @@ plugins:
       - name: 'TR_Stirk.esp'
         condition: 'not active("Stirk_Compatibility_Patch.esp")'
     inc: [ 'Better Cities Full.esp' ]
+    tag: [ C.Regions ]
     msg:
       - <<: *patchIncluded
         subs: [ 'Open Cities Reborn Blood&Mud Additions' ]
@@ -12364,6 +12365,10 @@ plugins:
       - 'Better Cities - Open Cities Reborn.esp'
       - 'Open Cities Classic.esp'
       - 'Open Cities Reborn.esp'
+    tag:
+      - Actors.AIPackages
+      - C.Regions
+      - C.Water
     msg:
       - <<: *includesX
         subs: [ '[Blood and Mud](https://www.nexusmods.com/oblivion/mods/12016/)' ]
@@ -12379,6 +12384,7 @@ plugins:
       - 'Better Cities - Open Cities Reborn.esp'
       - 'Open Cities Classic.esp'
       - 'Open Cities Reborn.esp'
+    tag: [ C.Regions ]
     msg:
       - <<: *alreadyInX
         subs: [ 'Better Cities Full.esp' ]
@@ -12395,6 +12401,7 @@ plugins:
     after:
       - '00RBScribeSupplies Intensive.esp'
       - 'ClocksOfCyrodiil.esp'
+    tag: [ C.Water ]
     msg:
       - <<: *includesX
         subs: [ '[Blood and Mud](https://www.nexusmods.com/oblivion/mods/12016/)' ]
@@ -12406,6 +12413,7 @@ plugins:
         itm: 6
   - name: 'Better Cities BRUMA.esp'
     after: [ 'ClocksOfCyrodiil.esp' ]
+    tag: [ C.Water ]
     dirty:
       - <<: *quickClean
         crc: 0xF53D4578
@@ -12413,6 +12421,7 @@ plugins:
         itm: 1
   - name: 'Better Cities CHEYDINHAL.esp'
     after: [ 'ClocksOfCyrodiil.esp' ]
+    tag: [ C.Water ]
     clean:
       - crc: 0x9A6B21A9
         util: 'TES4Edit v4.0.3'
