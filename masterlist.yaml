@@ -266,6 +266,28 @@ common:
       - lang: zh_CN
         text: '不干净。"脏"数据是故意的，这是mod需要的功能。'
 
+  - &includesX
+    type: say
+    content:
+      - lang: en
+        text: '%1% is included with this mod.'
+      - lang: de
+        text: '%1% ist in dieser Mod enthalten.'
+      - lang: ja
+        text: '%1%はこのmodに含まれています。'
+      - lang: ko
+        text: '%1% 모드가 포함되어 있습니다.'
+      - lang: pl
+        text: '%1% jest już zawarte z tym modem.'
+      - lang: pt
+        text: '%1% vem incluído com este mod.'
+      - lang: pt_BR
+        text: '%1% está incluído neste mod.'
+      - lang: ru
+        text: '%1% уже включен в этот мод.'
+      - lang: sv
+        text: '%1% är inluderat med denna mod.'
+
   - &obsolete
     type: warn
     content:
@@ -12342,6 +12364,10 @@ plugins:
       - 'Better Cities - Open Cities Reborn.esp'
       - 'Open Cities Classic.esp'
       - 'Open Cities Reborn.esp'
+    msg:
+      - <<: *includesX
+        subs: [ '[Blood and Mud](https://www.nexusmods.com/oblivion/mods/12016/)' ]
+        condition: 'file("Blood&Mud.esp")'
     dirty:
       - <<: *quickClean
         crc: 0xB2F74C1C
@@ -12369,6 +12395,10 @@ plugins:
     after:
       - '00RBScribeSupplies Intensive.esp'
       - 'ClocksOfCyrodiil.esp'
+    msg:
+      - <<: *includesX
+        subs: [ '[Blood and Mud](https://www.nexusmods.com/oblivion/mods/12016/)' ]
+        condition: 'file("Blood&Mud.esp")'
     dirty:
       - <<: *quickClean
         crc: 0x4C67DB64
