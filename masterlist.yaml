@@ -12344,7 +12344,6 @@ plugins:
       - 'Slof''s Oblivion Goth Shop.esp'
       - name: 'TR_Stirk.esp'
         condition: 'not active("Stirk_Compatibility_Patch.esp")'
-    inc: [ 'Better Cities Full.esp' ]
     tag: [ C.Regions ]
     msg:
       - <<: *patchIncluded
@@ -12362,7 +12361,6 @@ plugins:
       - name: 'TR_Stirk.esp'
         condition: 'not active("Stirk_Compatibility_Patch.esp")'
     inc:
-      - 'Better Cities - Open Cities Reborn.esp'
       - 'Open Cities Classic.esp'
       - 'Open Cities Reborn.esp'
     tag:
@@ -12381,7 +12379,6 @@ plugins:
 
   - name: 'Better Cities (ANVIL|BRAVIL|BRUMA|CHEYDINHAL|CHORROL|LEYAWIIN|SKINGRAD)\.esp'
     inc:
-      - 'Better Cities - Open Cities Reborn.esp'
       - 'Open Cities Classic.esp'
       - 'Open Cities Reborn.esp'
     tag: [ C.Regions ]
@@ -12549,7 +12546,6 @@ plugins:
         util: 'TES4Edit v4.0.3'
   - name: 'Better Cities - Leyawiin Flooded.esp'
     after: [ 'Better Cities Full.esp' ]
-    inc: [ 'Open Cities Reborn.esp' ]
     req:
       - name: 'Better Cities LEYAWIIN.esp'
         display: 'Better Cities Full.esp or Better Cities LEYAWIIN.esp'
@@ -12566,7 +12562,6 @@ plugins:
       - 'Better Cities CHORROL.esp'
       - 'Better Cities LEYAWIIN.esp'
       - 'Better Cities SKINGRAD.esp'
-    inc: [ 'Open Cities Reborn.esp' ]
     req:
       - name: 'Better Cities Full.esp'
         display: 'Better Cities Full or Separate City ESPs'
