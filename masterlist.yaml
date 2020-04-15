@@ -12397,6 +12397,16 @@ plugins:
       - <<: *alreadyInX
         subs: [ 'Better Cities Full.esp' ]
         condition: 'active("Better Cities Full.esp")'
+  - name: 'Better Cities (ANVIL|BRAVIL|BRUMA|CHEYDINHAL|CHORROL|LEYAWIIN)\.esp'
+    after: [ 'Better Cities SKINGRAD.esp' ]
+  - name: 'Better Cities (ANVIL|BRUMA|CHEYDINHAL|CHORROL|LEYAWIIN)\.esp'
+    after: [ 'Better Cities BRAVIL.esp' ]
+  - name: 'Better Cities (BRUMA|CHEYDINHAL|CHORROL|LEYAWIIN)\.esp'
+    after: [ 'Better Cities ANVIL.esp' ]
+  - name: 'Better Cities (BRUMA|CHEYDINHAL|LEYAWIIN)\.esp'
+    after: [ 'Better Cities CHORROL.esp' ]
+  - name: 'Better Cities (BRUMA|LEYAWIIN)\.esp'
+    after: [ 'Better Cities CHEYDINHAL.esp' ]
   - name: 'Better Cities ANVIL.esp'
     after:
       - 'ClocksOfCyrodiil.esp'
@@ -12420,7 +12430,9 @@ plugins:
         util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 6
   - name: 'Better Cities BRUMA.esp'
-    after: [ 'ClocksOfCyrodiil.esp' ]
+    after:
+      - 'Better Cities LEYAWIIN.esp'
+      - 'ClocksOfCyrodiil.esp'
     tag: [ C.Water ]
     dirty:
       - <<: *quickClean
