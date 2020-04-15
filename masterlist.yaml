@@ -12558,7 +12558,19 @@ plugins:
       - crc: 0x57D7201B
         util: 'TES4Edit v4.0.3'
   - name: 'Better Cities - Open Better Cities.esp'
+    after:
+      - 'Better Cities ANVIL.esp'
+      - 'Better Cities BRAVIL.esp'
+      - 'Better Cities BRUMA.esp'
+      - 'Better Cities CHEYDINHAL.esp'
+      - 'Better Cities CHORROL.esp'
+      - 'Better Cities LEYAWIIN.esp'
+      - 'Better Cities SKINGRAD.esp'
     inc: [ 'Open Cities Reborn.esp' ]
+    req:
+      - name: 'Better Cities Full.esp'
+        display: 'Better Cities Full or Separate City ESPs'
+        condition: 'not file("Better Cities (ANVIL|BRAVIL|BRUMA|CHEYDINHAL|CHORROL|LEYAWIIN|SKINGRAD)\.esp")'
     clean:
       - crc: 0x4864C67E
         util: 'TES4Edit v4.0.3'
