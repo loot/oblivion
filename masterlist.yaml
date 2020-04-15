@@ -266,6 +266,28 @@ common:
       - lang: zh_CN
         text: '不干净。"脏"数据是故意的，这是mod需要的功能。'
 
+  - &includesX
+    type: say
+    content:
+      - lang: en
+        text: '%1% is included with this mod.'
+      - lang: de
+        text: '%1% ist in dieser Mod enthalten.'
+      - lang: ja
+        text: '%1%はこのmodに含まれています。'
+      - lang: ko
+        text: '%1% 모드가 포함되어 있습니다.'
+      - lang: pl
+        text: '%1% jest już zawarte z tym modem.'
+      - lang: pt
+        text: '%1% vem incluído com este mod.'
+      - lang: pt_BR
+        text: '%1% está incluído neste mod.'
+      - lang: ru
+        text: '%1% уже включен в этот мод.'
+      - lang: sv
+        text: '%1% är inluderat med denna mod.'
+
   - &obsolete
     type: warn
     content:
@@ -12313,116 +12335,203 @@ plugins:
       - crc: 0x2A37B24E 
         util: 'TES4Edit v4.0.3'
   - name: 'Better Cities .esp'
+    group: *veryEarlyGroup
+    after: [ 'DLCShiveringIsles.esp' ]
     msg: [ *dummyFileLoader ]
 
   - name: 'Better Cities - Open Cities Reborn.esp'
     after:
+      - 'Slof''s Oblivion Goth Shop.esp'
       - name: 'TR_Stirk.esp'
         condition: 'not active("Stirk_Compatibility_Patch.esp")'
+    tag: [ C.Regions ]
+    msg:
+      - <<: *patchIncluded
+        subs: [ 'Open Cities Reborn Blood&Mud Additions' ]
+        condition: 'active("Open Cities Reborn B&M Additions.esp") and not file("Better Cities - Open Cities Reborn B&M Compatibility.esp")'
     clean:
       - crc: 0xDB227998
         util: 'TES4Edit v4.0.3'
 
   - name: 'Better Cities Full.esp'
     after:
+      - '00RBScribeSupplies Intensive.esp'
+      - 'ClocksOfCyrodiil.esp'
+      - 'Slof''s Oblivion Goth Shop.esp'
       - name: 'TR_Stirk.esp'
         condition: 'not active("Stirk_Compatibility_Patch.esp")'
+    inc:
+      - 'Open Cities Classic.esp'
+      - 'Open Cities Reborn.esp'
+    tag:
+      - Actors.AIPackages
+      - C.Regions
+      - C.Water
+    msg:
+      - <<: *includesX
+        subs: [ '[Blood and Mud](https://www.nexusmods.com/oblivion/mods/12016/)' ]
+        condition: 'file("Blood&Mud.esp")'
     dirty:
       - <<: *quickClean
         crc: 0xB2F74C1C
         util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 9
 
+  - name: 'Better Cities (ANVIL|BRAVIL|BRUMA|CHEYDINHAL|CHORROL|LEYAWIIN|SKINGRAD)\.esp'
+    inc:
+      - 'Open Cities Classic.esp'
+      - 'Open Cities Reborn.esp'
+    tag: [ C.Regions ]
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'Better Cities Full.esp' ]
+        condition: 'active("Better Cities Full.esp")'
   - name: 'Better Cities ANVIL.esp'
     after:
+      - 'ClocksOfCyrodiil.esp'
       - name: 'TR_Stirk.esp'
         condition: 'not active("Stirk_Compatibility_Patch.esp")'
     clean:
       - crc: 0x787CFDCE
         util: 'TES4Edit v4.0.3'
   - name: 'Better Cities BRAVIL.esp'
+    after:
+      - '00RBScribeSupplies Intensive.esp'
+      - 'ClocksOfCyrodiil.esp'
+    tag: [ C.Water ]
+    msg:
+      - <<: *includesX
+        subs: [ '[Blood and Mud](https://www.nexusmods.com/oblivion/mods/12016/)' ]
+        condition: 'file("Blood&Mud.esp")'
     dirty:
       - <<: *quickClean
         crc: 0x4C67DB64
         util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 6
   - name: 'Better Cities BRUMA.esp'
+    after: [ 'ClocksOfCyrodiil.esp' ]
+    tag: [ C.Water ]
     dirty:
       - <<: *quickClean
         crc: 0xF53D4578
         util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
   - name: 'Better Cities CHEYDINHAL.esp'
+    after: [ 'ClocksOfCyrodiil.esp' ]
+    tag: [ C.Water ]
     clean:
       - crc: 0x9A6B21A9
         util: 'TES4Edit v4.0.3'
   - name: 'Better Cities CHORROL.esp'
+    after:
+      - 'ClocksOfCyrodiil.esp'
+      - 'Slof''s Oblivion Goth Shop.esp'
     dirty:
       - <<: *quickClean
         crc: 0x5CBA4997
         util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
   - name: 'Better Cities LEYAWIIN.esp'
+    after: [ 'ClocksOfCyrodiil.esp' ]
     dirty:
       - <<: *quickClean
         crc: 0x5F6B3907
         util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 2
   - name: 'Better Cities SKINGRAD.esp'
-    after: [ 'Cyrodiil Rebuild.esp' ]
+    after:
+      - 'ClocksOfCyrodiil.esp'
+      - 'Cyrodiil Rebuild.esp'
     clean:
       - crc: 0x16697810
         util: 'TES4Edit v4.0.3'
 
   - name: 'Better Imperial City.esp'
-    after: [ 'Sounds of Cyrodiil.esp' ]
+    after:
+      - 'Better Cities - IC Imperial Isle.esp'
+      - 'ClocksOfCyrodiil.esp'
+      - 'ICEXPAND.esp'
+      - 'Sounds of Cyrodiil.esp'
+      - 'The Mystery of the Dulan Cult.esp'
+    inc: [ 'Open Cities Outer Districts.esp' ]
     dirty:
       - <<: *quickClean
         crc: 0xFE4F581D
         util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 19
 
+  - name: 'Better Cities IC (Arboretum|Arcane University|Arena|Elven Gardens|Green Emperor Way|Market|Prison|Talos Plaza|Temple|Waterfront)\.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'Better Imperial City.esp' ]
+        condition: 'active("Better Imperial City.esp")'
   - name: 'Better Cities IC Arboretum.esp'
+    after:
+      - 'ClocksOfCyrodiil.esp'
+      - 'ICEXPAND.esp'
     dirty:
       - <<: *quickClean
         crc: 0x6B1A4BC8
         util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 15
   - name: 'Better Cities IC Arcane University.esp'
+    after: [ 'ClocksOfCyrodiil.esp' ]
+    inc: [ 'Open Cities Outer Districts.esp' ]
     clean:
       - crc: 0xDEFB8637
         util: 'TES4Edit v4.0.3'
   - name: 'Better Cities IC Arena.esp'
+    after:
+      - 'Better Cities - IC Imperial Isle.esp'
+      - 'ClocksOfCyrodiil.esp'
+      - 'ICEXPAND.esp'
     clean:
       - crc: 0x04B64B30
         util: 'TES4Edit v4.0.3'
   - name: 'Better Cities IC Elven Gardens.esp'
+    after:
+      - 'Better Cities - IC Imperial Isle.esp'
+      - 'ClocksOfCyrodiil.esp'
+      - 'ICEXPAND.esp'
     clean:
       - crc: 0x46299C45
         util: 'TES4Edit v4.0.3'
   - name: 'Better Cities IC Green Emperor Way.esp'
+    after: [ 'ICEXPAND.esp' ]
     clean:
       - crc: 0x983081B1
         util: 'TES4Edit v4.0.3'
   - name: 'Better Cities IC Market.esp'
+    after:
+      - 'ClocksOfCyrodiil.esp'
+      - 'ICEXPAND.esp'
+      - 'The Mystery of the Dulan Cult.esp'
     dirty:
       - <<: *quickClean
         crc: 0x3743AD87
         util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 4
   - name: 'Better Cities IC Prison.esp'
+    inc: [ 'Open Cities Outer Districts.esp' ]
     clean:
       - crc: 0x35B9130C
         util: 'TES4Edit v4.0.3'
   - name: 'Better Cities IC Talos Plaza.esp'
+    after:
+      - 'ClocksOfCyrodiil.esp'
+      - 'ICEXPAND.esp'
     clean:
       - crc: 0x40DD168F
         util: 'TES4Edit v4.0.3'
   - name: 'Better Cities IC Temple.esp'
+    after:
+      - 'ClocksOfCyrodiil.esp'
+      - 'ICEXPAND.esp'
     clean:
       - crc: 0x3D69B7FF
         util: 'TES4Edit v4.0.3'
   - name: 'Better Cities IC Waterfront.esp'
+    after: [ 'ICEXPAND.esp' ]
     clean:
       - crc: 0x2ECA5A07
         util: 'TES4Edit v4.0.3'
@@ -12433,10 +12542,27 @@ plugins:
       - crc: 0x96A5C9CC
         util: 'TES4Edit v4.0.3'
   - name: 'Better Cities - Leyawiin Flooded.esp'
+    after: [ 'Better Cities Full.esp' ]
+    req:
+      - name: 'Better Cities LEYAWIIN.esp'
+        display: 'Better Cities Full.esp or Better Cities LEYAWIIN.esp'
+        condition: 'not file("Better Cities Full.esp")'
     clean:
       - crc: 0x57D7201B
         util: 'TES4Edit v4.0.3'
   - name: 'Better Cities - Open Better Cities.esp'
+    after:
+      - 'Better Cities ANVIL.esp'
+      - 'Better Cities BRAVIL.esp'
+      - 'Better Cities BRUMA.esp'
+      - 'Better Cities CHEYDINHAL.esp'
+      - 'Better Cities CHORROL.esp'
+      - 'Better Cities LEYAWIIN.esp'
+      - 'Better Cities SKINGRAD.esp'
+    req:
+      - name: 'Better Cities Full.esp'
+        display: 'Better Cities Full or Separate City ESPs'
+        condition: 'not file("Better Cities (ANVIL|BRAVIL|BRUMA|CHEYDINHAL|CHORROL|LEYAWIIN|SKINGRAD)\.esp")'
     clean:
       - crc: 0x4864C67E
         util: 'TES4Edit v4.0.3'
@@ -12479,8 +12605,336 @@ plugins:
         util: 'TES4Edit v4.0.3'
 
   ### Better Cities - Patches ###
+  # All Natural
+  - name: 'Better Cities - All Natural.esp'
+    after:
+      - 'Better Cities BRUMA.esp'
+      - 'Better Cities CHORROL.esp'
+      - 'Better Cities SKINGRAD.esp'
+    req:
+      - name: 'Better Cities Full.esp'
+        display: 'Better Cities Full.esp or Better Cities BRUMA.esp or Better Cities CHORROL.esp or Better Cities SKINGRAD.esp'
+        condition: 'not file("Better Cities (BRUMA|CHORROL|SKINGRAD)\.esp")'
+  # Alternative Start Arrive by Ship
+  - name: 'Better Cities - Alternative Start Arrive by Ship.esp'
+    after: [ 'Better Cities Full.esp' ]
+    req:
+      - name: 'Better Cities LEYAWIIN.esp'
+        display: 'Better Cities Full.esp or Better Cities LEYAWIIN.esp'
+        condition: 'not file("Better Cities Full.esp")'
+  # Cyrodiil Upgrade Overhaul
+  - name: 'Better Cities - CUO Bravil Patch.esp'
+    after: [ 'Better Cities Full.esp' ]
+    req:
+      - name: 'Better Cities BRAVIL.esp'
+        display: 'Better Cities Full.esp or Better Cities BRAVIL.esp'
+        condition: 'not file("Better Cities Full.esp")'
+  - name: 'Better Cities - CUO Bruma Patch.esp'
+    after: [ 'Better Cities Full.esp' ]
+    req:
+      - name: 'Better Cities BRUMA.esp'
+        display: 'Better Cities Full.esp or Better Cities BRUMA.esp'
+        condition: 'not file("Better Cities Full.esp")'
+  - name: 'Better Cities - CUO Chorrol Patch.esp'
+    after: [ 'Better Cities Full.esp' ]
+    req:
+      - name: 'Better Cities CHORROL.esp'
+        display: 'Better Cities Full.esp or Better Cities CHORROL.esp'
+        condition: 'not file("Better Cities Full.esp")'
+  - name: 'Better Cities - CUO Leyawiin Patch.esp'
+    after: [ 'Better Cities Full.esp' ]
+    req:
+      - name: 'Better Cities LEYAWIIN.esp'
+        display: 'Better Cities Full.esp or Better Cities LEYAWIIN.esp'
+        condition: 'not file("Better Cities Full.esp")'
+  # Dark Brotherhood Chronicles: Awakening
+  - name: 'Better Cities - Dark Brotherhood Chronicles.esp'
+    after:
+      - 'Better Cities ANVIL.esp'
+      - 'Better Cities CHORROL.esp'
+    req:
+      - name: 'Better Cities Full.esp'
+        display: 'Better Cities Full.esp or Better Cities ANVIL.esp or Better Cities CHORROL.esp'
+        condition: 'not file("Better Cities (ANVIL|CHORROL)\.esp")'
+  # FCOM
+  - name: 'FCOM_BetterCities-Bravil.esp'
+    after: [ 'Better Cities Full.esp' ]
+    req:
+      - name: 'Better Cities BRAVIL.esp'
+        display: 'Better Cities Full.esp or Better Cities BRAVIL.esp'
+        condition: 'not file("Better Cities Full.esp")'
+  # Halcyon Island
+  - name: 'Better Cities - Halcyon Island.esp'
+    after: [ 'Better Cities Full.esp' ]
+    req:
+      - name: 'Better Cities ANVIL.esp'
+        display: 'Better Cities Full.esp or Better Cities ANVIL.esp'
+        condition: 'not file("Better Cities Full.esp")'
+  # Heart of the Dead
+  - name: 'Better Cities Chorrol - Heart of the Dead.esp'
+    after: [ 'Better Cities Full.esp' ]
+    req:
+      - name: 'Better Cities CHORROL.esp'
+        display: 'Better Cities Full.esp or Better Cities CHORROL.esp'
+        condition: 'not file("Better Cities Full.esp")'
+  # Immersive Interiors
+  - name: 'Better Cities Chorrol – Immersive Interiors.esp'
+    after: [ 'Better Cities Full.esp' ]
+    req:
+      - name: 'Better Cities CHORROL.esp'
+        display: 'Better Cities Full.esp or Better Cities CHORROL.esp'
+        condition: 'not file("Better Cities Full.esp")'
+  # Knightly Armory
+  - name: 'Better Cities - Knightly Armory.esp'
+    after: [ 'Better Cities Full.esp' ]
+    req:
+      - name: 'Better Cities CHORROL.esp'
+        display: 'Better Cities Full.esp or Better Cities CHORROL.esp'
+        condition: 'not file("Better Cities Full.esp")'
+  # Knights of the Nine
   - name: 'Better Cities Anvil Open - Knights of the Nine.esp'
-    req: [ 'Better Cities - Open Better Cities.esp' ]
+    after: [ 'Better Cities Full.esp' ]
+    req:
+      - name: 'Better Cities ANVIL.esp'
+        display: 'Better Cities Full.esp or Better Cities ANVIL.esp'
+        condition: 'not file("Better Cities Full.esp")'
+      - 'Better Cities - Open Better Cities.esp'
+  - name: 'Better Cities Chorrol - Knights of the Nine.esp'
+    after: [ 'Better Cities Full.esp' ]
+    req:
+      - name: 'Better Cities CHORROL.esp'
+        display: 'Better Cities Full.esp or Better Cities CHORROL.esp'
+        condition: 'not file("Better Cities Full.esp")'
+  # Nic-Vs Better Beggars
+  - name: 'Better Cities - Nic-V''s Better Beggars.esp'
+    after: [ 'Better Cities Full.esp' ]
+    req:
+      - name: 'Better Cities BRAVIL.esp'
+        display: 'Better Cities Full.esp or Better Cities BRAVIL.esp'
+        condition: 'not file("Better Cities Full.esp")'
+  # Oblivifall: Losing My Religion
+  - name: 'Oblivifall - Losing My Religion BC Bravil.esp'
+    after: [ 'Better Cities Full.esp' ]
+    req:
+      - name: 'Better Cities BRAVIL.esp'
+        display: 'Better Cities Full.esp or Better Cities BRAVIL.esp'
+        condition: 'not file("Better Cities Full.esp")'
+  - name: 'Oblivifall - Losing My Religion BC Bruma.esp'
+    after: [ 'Better Cities Full.esp' ]
+    req:
+      - name: 'Better Cities BRUMA.esp'
+        display: 'Better Cities Full.esp or Better Cities BRUMA.esp'
+        condition: 'not file("Better Cities Full.esp")'
+  - name: 'Better Cities Chorrol - Oblivifall Losing My Religion.esp'
+    after: [ 'Better Cities Full.esp' ]
+    req:
+      - name: 'Better Cities CHORROL.esp'
+        display: 'Better Cities Full.esp or Better Cities CHORROL.esp'
+        condition: 'not file("Better Cities Full.esp")'
+  - name: 'Better Cities Skingrad - Oblivifall Losing My Religion.esp'
+    after: [ 'Better Cities Full.esp' ]
+    req:
+      - name: 'Better Cities SKINGRAD.esp'
+        display: 'Better Cities Full.esp or Better Cities SKINGRAD.esp'
+        condition: 'not file("Better Cities Full.esp")'
+  # Oblivion Collectible Cards
+  - name: 'Better Cities - Oblivion Collectible Cards.esp'
+    after:
+      - 'Better Cities CHEYDINHAL.esp'
+      - 'Better Cities CHORROL.esp'
+    req:
+      - name: 'Better Cities Full.esp'
+        display: 'Better Cities Full.esp or Better Cities CHEYDINHAL.esp or Better Cities CHORROL.esp'
+        condition: 'not file("Better Cities (CHEYDINHAL|CHORROL)\.esp")'
+  # Oscuro's Oblivion Overhaul
+  - name: 'Better Cities Anvil - OOO.esp'
+    req: [ 'Better Cities ANVIL.esp' ]
+  - name: 'Better Cities Bravil - OOO.esp'
+    req: [ 'Better Cities BRAVIL.esp' ]
+  - name: 'Better Cities Bruma - OOO.esp'
+    req: [ 'Better Cities BRUMA.esp' ]
+  - name: 'Better Cities Cheydinhal - OOO.esp'
+    req: [ 'Better Cities CHEYDINHAL.esp' ]
+  - name: 'Better Cities Leyawiin - OOO.esp'
+    req: [ 'Better Cities LEYAWIIN.esp' ]
+  - name: 'Better Cities Skingrad - OOO.esp'
+    req: [ 'Better Cities SKINGRAD.esp' ]
+  - name: 'Better Cities Full - OOO.esp'
+    req: [ 'Better Cities Full.esp' ]
+  # Order of the Dragon
+  - name: 'Better Cities Chorrol - ODD patch.esp'
+    after: [ 'Better Cities Full.esp' ]
+    req:
+      - name: 'Better Cities CHORROL.esp'
+        display: 'Better Cities Full.esp or Better Cities CHORROL.esp'
+        condition: 'not file("Better Cities Full.esp")'
+  # Reclaiming Sancre Tor
+  - name: 'Better Cities Chorrol - Reclaiming Sancre Tor.esp'
+    after: [ 'Better Cities Full.esp' ]
+    req:
+      - name: 'Better Cities CHORROL.esp'
+        display: 'Better Cities Full.esp or Better Cities CHORROL.esp'
+        condition: 'not file("Better Cities Full.esp")'
+  - name: 'Better Cities Skingrad - Reclaiming Sancre Tor.esp'
+    after: [ 'Better Cities Full.esp' ]
+    req:
+      - name: 'Better Cities SKINGRAD.esp'
+        display: 'Better Cities Full.esp or Better Cities SKINGRAD.esp'
+        condition: 'not file("Better Cities Full.esp")'
+  # Roads of Cyrodiil
+  - name: 'Better Cities Skingrad - Roads of Cyrodiil.esp'
+    after: [ 'Better Cities Full.esp' ]
+    req:
+      - name: 'Better Cities SKINGRAD.esp'
+        display: 'Better Cities Full.esp or Better Cities SKINGRAD.esp'
+        condition: 'not file("Better Cities Full.esp")'
+  # Ruined Tail's Tale
+  - name: 'Better Cities - Ruined Tail''s Tale.esp'
+    after:
+      - 'Better Cities ANVIL.esp'
+      - 'Better Cities CHEYDINHAL.esp'
+      - 'Better Cities IC Market.esp'
+      - 'Better Imperial City.esp'
+    req:
+      - name: 'Better Cities Full.esp'
+        display: 'Better Cities Full.esp or Better Cities ANVIL.esp or Better Cities CHEYDINHAL.esp or Better Cities IC Market.esp or Better Imperial City.esp'
+        condition: 'not file("Better Cities (ANVIL|CHEYDINHAL|IC Market)\.esp") and not file("Better Imperial City.esp")'
+  # Skingrad Outer District
+  - name: 'Better Cities - Skingrad Outer District.esp'
+    after: [ 'Better Cities Full.esp' ]
+    req:
+      - name: 'Better Cities SKINGRAD.esp'
+        display: 'Better Cities Full.esp or Better Cities SKINGRAD.esp'
+        condition: 'not file("Better Cities Full.esp")'
+  # Tears of the Fiend
+  - name: 'Better Cities - Tears of the Fiend.esp'
+    after: [ 'Better Cities Full.esp' ]
+    req:
+      - name: 'Better Cities CHEYDINHAL.esp'
+        display: 'Better Cities Full.esp or Better Cities CHEYDINHAL.esp'
+        condition: 'not file("Better Cities Full.esp")'
+  # The Elder Council
+  - name: 'Better Cities Bruma - The Elder Council.esp'
+    after: [ 'Better Cities Full.esp' ]
+    req:
+      - name: 'Better Cities BRUMA.esp'
+        display: 'Better Cities Full.esp or Better Cities BRUMA.esp'
+        condition: 'not file("Better Cities Full.esp")'
+  # The Lost Spires
+  - name: 'Better Cities - The Lost Spires.esp'
+    after:
+      - 'Better Cities CHEYDINHAL.esp'
+      - 'Better Cities LEYAWIIN.esp'
+    req:
+      - name: 'Better Cities Full.esp'
+        display: 'Better Cities Full.esp or Better Cities CHEYDINHAL.esp or Better Cities LEYAWIIN.esp'
+        condition: 'not file("Better Cities (CHEYDINHAL|LEYAWIIN)\.esp")'
+  # Valley View Estate
+  - name: 'Better Cities - Valley View Estate.esp'
+    after: [ 'Better Cities Full.esp' ]
+    req:
+      - name: 'Better Cities CHEYDINHAL.esp'
+        display: 'Better Cities Full.esp or Better Cities CHEYDINHAL.esp'
+        condition: 'not file("Better Cities Full.esp")'
+  # Verona House: Bloodlines
+  - name: 'Better Cities - VHBloodlines.esp'
+    after:
+      - 'Better Cities CHORROL.esp'
+      - 'Better Cities IC Waterfront.esp'
+      - 'Better Imperial City.esp'
+    req:
+      - name: 'Better Cities Full.esp'
+        display: 'Better Cities Full.esp or Better Cities CHORROL.esp or Better Cities IC Waterfront.esp or Better Imperial City.esp'
+        condition: 'not file("Better Cities (CHORROL|IC Waterfront)\.esp") and not file("Better Imperial City.esp")'
+  # Vvardenfell Imports
+  - name: 'Better Cities - Vvardenfell Imports.esp'
+    after: [ 'Better Cities Full.esp' ]
+    req:
+      - name: 'Better Cities CHEYDINHAL.esp'
+        display: 'Better Cities Full.esp or Better Cities CHEYDINHAL.esp'
+        condition: 'not file("Better Cities Full.esp")'
+  # Werewolf - Legends of the North
+  - name: 'Better Cities - Werewolf-Legends.esp'
+    after: [ 'Better Cities Full.esp' ]
+    req:
+      - name: 'Better Cities CHORROL.esp'
+        display: 'Better Cities Full.esp or Better Cities CHORROL.esp'
+        condition: 'not file("Better Cities Full.esp")'
+
+  ### Better Imperial City Patches ###
+  # Blood & Mud
+  - name: 'Better Imperial City - Blood & Mud patch.esp'
+    after: [ 'Better Imperial City.esp' ]
+    req:
+      - name: 'Better Cities IC Waterfront.esp'
+        display: 'Better Imperial City.esp or Better Cities IC Waterfront.esp'
+        condition: 'not file("Better Imperial City.esp")'
+  # Kragenir's Death Quest
+  - name: 'Better Cities IC Arboretum - Kragenir''s Death Quest.esp'
+    after: [ 'Better Imperial City.esp' ]
+    req:
+      - name: 'Better Cities IC Arboretum.esp'
+        display: 'Better Imperial City.esp or Better Cities IC Arboretum.esp'
+        condition: 'not file("Better Imperial City.esp")'
+  # Oblivion Uncut
+  - name: 'Better Cities Market District - Oblivion Uncut.esp'
+    after: [ 'Better Imperial City.esp' ]
+    req:
+      - name: 'Better Cities IC Market.esp'
+        display: 'Better Imperial City.esp or Better Cities IC Market.esp'
+        condition: 'not file("Better Imperial City.esp")'
+  # Oscuro's Oblivion Overhaul
+  - name: 'Better Cities IC Arboretum - OOO.esp'
+    req: [ 'Better Cities IC Arboretum.esp' ]
+  - name: 'Better Cities IC Market - OOO.esp'
+    req: [ 'Better Cities IC Market.esp' ]
+  - name: 'Better Imperial City - OOO.esp'
+    req: [ 'Better Imperial City.esp' ]
+  # Origin of the Mages Guild
+  - name: 'Better Cities - Origin of the Mages Guild.esp'
+    after: [ 'Better Imperial City.esp' ]
+    req:
+      - name: 'Better Cities IC Arcane University.esp'
+        display: 'Better Imperial City.esp or Better Cities IC Arcane University.esp'
+        condition: 'not file("Better Imperial City.esp")'
+  # Reclaiming Sancre Tor
+  - name: 'Better Cities IC Arena - Reclaiming Sancre Tor.esp'
+    after: [ 'Better Imperial City.esp' ]
+    req:
+      - name: 'Better Cities IC Arena.esp'
+        display: 'Better Imperial City.esp or Better Cities IC Arena.esp'
+        condition: 'not file("Better Imperial City.esp")'
+  # Roads of Cyrodiil
+  - name: 'Better Cities IC Imperial Isle - Roads of Cyrodiil.esp'
+    req: [ 'Better Cities - IC Imperial Isle.esp' ]
+  # Sexlivion
+  - name: 'Better Cities - Sexlivion.*\.esp'
+    after: [ 'Better Imperial City.esp' ]
+    req:
+      - name: 'Better Cities IC Market.esp'
+        display: 'Better Imperial City.esp or Better Cities IC Market.esp'
+        condition: 'not file("Better Imperial City.esp")'
+  # Skyrim Nords
+  - name: 'Better Cities - Skyrim Nords.esp'
+    after: [ 'Better Imperial City.esp' ]
+    req:
+      - name: 'Better Cities IC Waterfront.esp'
+        display: 'Better Imperial City.esp or Better Cities IC Waterfront.esp'
+        condition: 'not file("Better Imperial City.esp")'
+  # Thievery in the Imperial City
+  - name: 'Better Cities - Thievery.esp'
+    after: [ 'Better Imperial City.esp' ]
+    req:
+      - name: 'Better Cities IC Waterfront.esp'
+        display: 'Better Imperial City.esp or Better Cities IC Waterfront.esp'
+        condition: 'not file("Better Imperial City.esp")'
+  # Waalx Animals & Creatures
+  - name: 'Better Cities IC Arena - WAC Gladiator.esp'
+    after: [ 'Better Imperial City.esp' ]
+    req:
+      - name: 'Better Cities IC Arena.esp'
+        display: 'Better Imperial City.esp or Better Cities IC Arena.esp'
+        condition: 'not file("Better Imperial City.esp")'
 
   ### Better Cities - Old version files ###
   - name: 'Better Cities - Knights of the Nine.esp'
