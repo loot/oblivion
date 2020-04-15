@@ -12614,7 +12614,7 @@ plugins:
     req:
       - name: 'Better Cities Full.esp'
         display: 'Better Cities Full.esp or Better Cities BRUMA.esp or Better Cities CHORROL.esp or Better Cities SKINGRAD.esp'
-        condition: 'not file("Better Cities BRUMA.esp") and not file("Better Cities CHORROL.esp") and not file("Better Cities SKINGRAD.esp")'
+        condition: 'not file("Better Cities (BRUMA|CHORROL|SKINGRAD)\.esp")'
   # Alternative Start Arrive by Ship
   - name: 'Better Cities - Alternative Start Arrive by Ship.esp'
     after: [ 'Better Cities Full.esp' ]
@@ -12655,7 +12655,7 @@ plugins:
     req:
       - name: 'Better Cities Full.esp'
         display: 'Better Cities Full.esp or Better Cities ANVIL.esp or Better Cities CHORROL.esp'
-        condition: 'not file("Better Cities ANVIL.esp") and not file("Better Cities CHORROL.esp")'
+        condition: 'not file("Better Cities (ANVIL|CHORROL)\.esp")'
   # FCOM
   - name: 'FCOM_BetterCities-Bravil.esp'
     after: [ 'Better Cities Full.esp' ]
@@ -12745,7 +12745,7 @@ plugins:
     req:
       - name: 'Better Cities Full.esp'
         display: 'Better Cities Full.esp or Better Cities CHEYDINHAL.esp or Better Cities CHORROL.esp'
-        condition: 'not file("Better Cities CHEYDINHAL.esp") and not file("Better Cities CHORROL.esp")'
+        condition: 'not file("Better Cities (CHEYDINHAL|CHORROL)\.esp")'
   # Oscuro's Oblivion Overhaul
   - name: 'Better Cities Anvil - OOO.esp'
     req: [ 'Better Cities ANVIL.esp' ]
@@ -12798,7 +12798,7 @@ plugins:
     req:
       - name: 'Better Cities Full.esp'
         display: 'Better Cities Full.esp or Better Cities ANVIL.esp or Better Cities CHEYDINHAL.esp or Better Cities IC Market.esp or Better Imperial City.esp'
-        condition: 'not file("Better Cities ANVIL.esp") and not file("Better Cities CHEYDINHAL.esp") and not file("Better Cities IC Market.esp") and not file("Better Imperial City.esp")'
+        condition: 'not file("Better Cities (ANVIL|CHEYDINHAL|IC Market)\.esp") and not file("Better Imperial City.esp")'
   # Skingrad Outer District
   - name: 'Better Cities - Skingrad Outer District.esp'
     after: [ 'Better Cities Full.esp' ]
@@ -12828,7 +12828,7 @@ plugins:
     req:
       - name: 'Better Cities Full.esp'
         display: 'Better Cities Full.esp or Better Cities CHEYDINHAL.esp or Better Cities LEYAWIIN.esp'
-        condition: 'not file("Better Cities CHEYDINHAL.esp") and not file("Better Cities LEYAWIIN.esp")'
+        condition: 'not file("Better Cities (CHEYDINHAL|LEYAWIIN)\.esp")'
   # Valley View Estate
   - name: 'Better Cities - Valley View Estate.esp'
     after: [ 'Better Cities Full.esp' ]
@@ -12845,7 +12845,7 @@ plugins:
     req:
       - name: 'Better Cities Full.esp'
         display: 'Better Cities Full.esp or Better Cities CHORROL.esp or Better Cities IC Waterfront.esp or Better Imperial City.esp'
-        condition: 'not file("Better Cities CHORROL.esp") and not file("Better Cities IC Waterfront.esp") and not file("Better Imperial City.esp")'
+        condition: 'not file("Better Cities (CHORROL|IC Waterfront)\.esp") and not file("Better Imperial City.esp")'
   # Vvardenfell Imports
   - name: 'Better Cities - Vvardenfell Imports.esp'
     after: [ 'Better Cities Full.esp' ]
