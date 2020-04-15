@@ -12467,10 +12467,27 @@ plugins:
 
   - name: 'Better Cities IC (Arboretum|Arcane University|Arena|Elven Gardens|Green Emperor Way|Market|Prison|Talos Plaza|Temple|Waterfront)\.esp'
     group: *imperialCityGroup
+    after: [ 'Better Cities - IC Imperial Isle.esp' ]
     msg:
       - <<: *alreadyInX
         subs: [ 'Better Imperial City.esp' ]
         condition: 'active("Better Imperial City.esp")'
+  - name: 'Better Cities IC (Arcane University|Arena|Elven Gardens|Green Emperor Way|Market|Prison|Talos Plaza|Temple|Waterfront)\.esp'
+    after: [ 'Better Cities IC Arboretum.esp' ]
+  - name: 'Better Cities IC (Arena|Elven Gardens|Green Emperor Way|Market|Prison|Talos Plaza|Temple|Waterfront)\.esp'
+    after: [ 'Better Cities IC Arcane University.esp' ]
+  - name: 'Better Cities IC (Elven Gardens|Green Emperor Way|Market|Prison|Talos Plaza|Temple|Waterfront)\.esp'
+    after: [ 'Better Cities IC Arena.esp' ]
+  - name: 'Better Cities IC (Green Emperor Way|Market|Prison|Talos Plaza|Temple|Waterfront)\.esp'
+    after: [ 'Better Cities IC Elven Gardens.esp' ]
+  - name: 'Better Cities IC (Market|Prison|Talos Plaza|Temple|Waterfront)\.esp'
+    after: [ 'Better Cities IC Green Emperor Way.esp' ]
+  - name: 'Better Cities IC (Prison|Talos Plaza|Temple|Waterfront)\.esp'
+    after: [ 'Better Cities IC Market.esp' ]
+  - name: 'Better Cities IC (Talos Plaza|Temple|Waterfront)\.esp'
+    after: [ 'Better Cities IC Prison.esp' ]
+  - name: 'Better Cities IC (Temple|Waterfront)\.esp'
+    after: [ 'Better Cities IC Talos Plaza.esp' ]
   - name: 'Better Cities IC Arboretum.esp'
     after:
       - 'ClocksOfCyrodiil.esp'
@@ -12488,7 +12505,6 @@ plugins:
         util: 'TES4Edit v4.0.3'
   - name: 'Better Cities IC Arena.esp'
     after:
-      - 'Better Cities - IC Imperial Isle.esp'
       - 'ClocksOfCyrodiil.esp'
       - 'ICEXPAND.esp'
     clean:
@@ -12496,7 +12512,6 @@ plugins:
         util: 'TES4Edit v4.0.3'
   - name: 'Better Cities IC Elven Gardens.esp'
     after:
-      - 'Better Cities - IC Imperial Isle.esp'
       - 'ClocksOfCyrodiil.esp'
       - 'ICEXPAND.esp'
     clean:
@@ -12537,7 +12552,9 @@ plugins:
       - crc: 0x3D69B7FF
         util: 'TES4Edit v4.0.3'
   - name: 'Better Cities IC Waterfront.esp'
-    after: [ 'ICEXPAND.esp' ]
+    after:
+      - 'Better Cities IC Temple.esp'
+      - 'ICEXPAND.esp'
     clean:
       - crc: 0x2ECA5A07
         util: 'TES4Edit v4.0.3'
