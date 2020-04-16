@@ -5999,8 +5999,9 @@ plugins:
   - name: 'Nature''s_bounty.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/21618' ]
     dirty:
-      - crc: 0x97d180f0
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x97D180F0
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
   - name: 'New Frostmourne Sword by Jojjo v1_0.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17032' ]
