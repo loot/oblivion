@@ -5875,8 +5875,8 @@ plugins:
   - name: 'Wearable GS and DS armor.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/13081' ]
     msg:
-      - type: say
-        content: 'Use ''for OOO'' version for better OOO/FCOM compatibility.'
+      - <<: *useInstead
+        subs: [ '[Wearable GS and DS armor for OOO](https://www.nexusmods.com/oblivion/mods/17647)' ]
         condition: *OOOCond
   - name: 'Midnight Gymnastics.esp'
     url:
