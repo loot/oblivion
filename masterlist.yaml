@@ -4496,10 +4496,9 @@ plugins:
     tag: [ Graphics ]
   - name: 'MigStatsCheck.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/44844' ]
-    msg:
-      - type: say
-        content: 'Requires: AddActorValues'
     req:
+      - name: 'OBSE/Plugins/AddActorValues.dll'
+        display: '[AddActorValues](https://www.nexusmods.com/oblivion/mods/33248)'
       - *OBSEv18
       - *MenuQue
   - name: 'M.O.E. - Undermined Leveled Gameplay - Creature Edition.esp'
