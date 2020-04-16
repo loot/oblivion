@@ -5982,13 +5982,20 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/5591' ]
     tag: [ Relev ]
     dirty:
-      - crc: 0x861d37a8
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xE6A410AA
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 3
         udr: 11
   - name: 'MC_Staff_Pack_NoLL.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/5591' ]
     inc: [ 'MC_Staff_Pack.esp' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x3926250D
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 3
+        udr: 11
   - name: 'Nature''s_bounty.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/21618' ]
     dirty:
