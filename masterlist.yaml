@@ -6361,8 +6361,9 @@ plugins:
   - name: 'wands.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/41398' ]
     dirty:
-      - crc: 0xba110e01
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xBA110E01
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 5
   - name: 'witchkingsword.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/4543' ]
