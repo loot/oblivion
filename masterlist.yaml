@@ -5716,6 +5716,7 @@ plugins:
     tag: [ Graphics ]
   - name: 'Hemingweys NPC Capes.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
+    msg: [ *obsolete ]
     tag: [ Invent ]
   - name: 'Hentai Compilation.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22990' ]
@@ -7018,13 +7019,8 @@ plugins:
     msg: [ *alreadyInOOO ]
   - name: 'Hemingweys NPC Capes for OOO and FCOM.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    msg:
-      - type: say
-        content: 'Obselete if using MMM or FCOM. Update to latest version and use ''Mart''s Monster Mod - Hemingweys NPC and Guard Capes.esp'' instead.'
-        condition: 'file("Mart''s Monster Mod.esm") or file("FCOM_Convergence.esm")'
-      - type: say
-        content: 'If you are running only OOO, but not MMM or FCOM, keep this installed.'
-        condition: *OOOCond
+    inc: [ 'Mart''s Monster Mod.esm' ]
+    msg: [ *obsolete ]
   - name: 'MTCDirtierBandits.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/30144' ]
     tag: [ Invent ]
