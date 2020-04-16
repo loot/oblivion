@@ -3627,8 +3627,9 @@ plugins:
   - name: 'MrSiikaRabbitsforFrans.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/14266' ]
     msg:
-      - type: say
-        content: 'Do not use with MMMforFrans. Already integrated.'
+      - <<: *alreadyInX
+        subs: [ 'Mart''s Monster Mod for Fran' ]
+        condition: 'active("Mart''s Monster Mod for Fran.esp")'
   - name: 'Atmospheric Loading Screens - No Text.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/8958' ]
     tag: [ Graphics ]
