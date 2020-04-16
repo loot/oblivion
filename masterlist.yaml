@@ -6812,9 +6812,10 @@ plugins:
         condition: 'active("FCOM_Convergence.esm")'
   - name: 'Oblivion WarCry.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/45570' ]
+    inc: [ 'FCOM_Convergence.esm' ]
     msg:
-      - type: error
-        content: 'German version not compatible with FCOM. Delete & Use ''Oblivion WarCry EV.esp'' instead.'
+      - <<: *useInstead
+        subs: [ '[Oblivion WarCry EV.esp](https://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/)' ]
         condition: *FCOMCond
       - type: say
         content: 'German version.'
