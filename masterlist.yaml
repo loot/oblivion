@@ -13559,18 +13559,10 @@ plugins:
       - C.Light
       - C.Water
     dirty:
-      - crc: 0x4908cb39
-        <<: *dirtyPlugin
-        itm: 43
-        udr: 2842
-      - crc: 0xadc761d9
-        <<: *dirtyPlugin
-        itm: 68
-        udr: 4164
-      - crc: 0xF6E3D7C4
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xF6E3D7C4
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 5
-        udr: 0
   - name: 'Better Loot v1.0.esp'
     msg:
       - type: say
