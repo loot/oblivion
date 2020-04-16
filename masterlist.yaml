@@ -6299,13 +6299,11 @@ plugins:
         util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 4
         udr: 5
-  - name: 'The Arsenal.esp'
+  - name: 'The Arsenal.esm'
     url: [ 'http://tesalliance.org/forums/index.php?/files/file/580-the-arsenal' ]
-    dirty:
-      - crc: 0x4d20f120
-        <<: *dirtyPlugin
-        itm: 15
-        udr: 20
+    clean:
+      - crc: 0xA7BC961A
+        util: 'TES4Edit v4.0.3'
   - name: 'Conan Swords - Atlantean 2Hand Fur Scabbard.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/14111' ]
     msg:
