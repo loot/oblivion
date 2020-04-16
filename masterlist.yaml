@@ -11199,18 +11199,10 @@ plugins:
       - type: say
         content: 'Border region restrictions must be turned off: change bBorderRegionsEnabled to 0 in Oblivion.ini or use Wrye Bash bashed patch tweak.'
     dirty:
-      - crc: 0x832bf961
-        <<: *dirtyPlugin
-        itm: 218
-        udr: 1044
-      - crc: 0x3EE060AB
-        <<: *dirtyPlugin
-        itm: 218
-        udr: 1044
-      - crc: 0x54674372
-        <<: *dirtyPlugin
-        itm: 218
-        udr: 1044
+      - <<: *quickClean
+        crc: 0xDD0F1E01
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 79
   - name: 'Unofficial Elsweyr Anequina Patch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/39642' ]
     dirty:
