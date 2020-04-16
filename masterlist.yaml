@@ -3486,14 +3486,13 @@ plugins:
         udr: 126
   - name: 'Self-Preservation v1.0.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/24288' ]
-    msg:
-      - type: say
-        content: 'If not using Bash this must be loaded after UOP/OOO/MMM/FCOM/any NPC editing mod but you''ll lose their NPC edits.'
+    group: *veryEarlyGroup
+    msg: [ *requiresBashedPatch ]
     tag: [ Scripts ]
     dirty:
       - <<: *quickClean
         crc: 0x3BB14891
-        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 12
   - name: 'Primate Rank Fix.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/24656' ]
