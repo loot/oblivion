@@ -162,6 +162,10 @@ common:
         text: 'Ta bort. Redan inkluderat i %1%'
       - lang: zh_CN
         text: '删除。已包含在%1%中。'
+  - &alreadyInMMM
+    <<: *alreadyInX
+    subs: [ 'Mart''s Monster Mod' ]
+    condition: 'active("Mart''s Monster Mod.esm") and not active("FCOM_Convergence.esm")'
   - &alreadyInOOO
     <<: *alreadyInX
     subs: [ 'Oscuro''s Oblivion Overhaul' ]
@@ -1409,10 +1413,7 @@ plugins:
         condition: 'not active("DLCShiveringIsles.esp")'
       - name: 'Mart''s Monster Mod.esm'
         condition: 'not active("FCOM_Convergence.esm")'
-    msg:
-      - <<: *alreadyInX
-        subs: [ 'Mart''s Monster Mod' ]
-        condition: 'active("Mart''s Monster Mod.esm") and not active("FCOM_Convergence.esm")'
+    msg: [ *alreadyInMMM ]
     clean:
       # version: 5.0B1
       - crc: 0x834225AC
@@ -1489,10 +1490,7 @@ plugins:
         condition: 'not active("DLCShiveringIsles.esp")'
       - name: 'Mart''s Monster Mod.esm'
         condition: 'not active("FCOM_Convergence.esm")'
-    msg:
-      - <<: *alreadyInX
-        subs: [ 'Mart''s Monster Mod' ]
-        condition: 'active("Mart''s Monster Mod.esm") and not active("FCOM_Convergence.esm")'
+    msg: [ *alreadyInMMM ]
     tag:
       - Actors.ACBS
       - Actors.Stats
@@ -3602,16 +3600,12 @@ plugins:
   - name: 'MrSiika''sFoxes.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/14267' ]
     msg:
-      - <<: *alreadyInX
-        subs: [ 'Mart''s Monster Mod' ]
-        condition: 'active("Mart''s Monster Mod.esm") and not active("FCOM_Convergence.esm")'
+      - *alreadyInMMM
       - *alreadyInFCOM
   - name: 'MrSiikaRabbits.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/14266' ]
     msg:
-      - <<: *alreadyInX
-        subs: [ 'Mart''s Monster Mod' ]
-        condition: 'active("Mart''s Monster Mod.esm") and not active("FCOM_Convergence.esm")'
+      - *alreadyInMMM
       - *alreadyInFCOM
   - name: 'FranDarkSeducerWeapFix.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17621' ]
