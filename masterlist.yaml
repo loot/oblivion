@@ -6107,8 +6107,9 @@ plugins:
   - name: 'SilverwareWeapons.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/13020' ]
     msg:
-      - type: say
-        content: 'If using FCOM it''s recommended that you use "Silverware Weapons - FCOM.esp" instead'
+      - <<: *useInstead
+        subs: [ '[Silverware Weapons - FCOM.esp](https://www.nexusmods.com/oblivion/mods/25382)' ]
+        condition: *FCOMCond
   - name: 'Sin''s Expanded Light Armor Kit [Chest].esp'
     url:
       - 'https://www.nexusmods.com/oblivion/mods/2960'
