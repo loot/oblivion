@@ -4326,8 +4326,8 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/11778' ]
     group: *earlyLoadersGroup
     msg:
-      - type: say
-        content: 'For use with Better Cities use ''ClocksOfCyrodiil_BC_OBC_OC_OCLR_Vanilla.esp'' instead.'
+      - <<: *useInstead
+        subs: [ 'ClocksOfCyrodiil_BC_OBC_OC_OCLR_Vanilla.esp' ]
         condition: 'file("Better Cities Resources.esm") and version("Better Cities Resources.esm", "6.0.0", <)'
     dirty:
       - <<: *quickClean
