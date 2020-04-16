@@ -6153,8 +6153,9 @@ plugins:
   - name: 'Sauron_Armor_Chest.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/7690' ]
     dirty:
-      - crc: 0xf496ae96
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xF496AE96
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 5
         udr: 1
   - name: 'SDHeartbreaker.esp'
