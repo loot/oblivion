@@ -3117,8 +3117,9 @@ plugins:
     req: [ 'FCOM_Convergence.esm' ]
   - name: 'FCOM_Cobl.esp'
     msg:
-      - type: say
-        content: 'Do not use with latest MMM/FCOM/COBL - superseded by MMM_Cobl.esp'
+      - <<: *useInstead
+        subs: [ 'MMM-Cobl.esp' ]
+        condition: 'version("Mart''s Monster Mod.esm", "3.7b", >=)'
     tag:
       - Delev
       - Relev
