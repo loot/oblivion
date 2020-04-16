@@ -14223,7 +14223,8 @@ plugins:
   - name: 'LoversAchievments.esp'
     url: [ 'https://www.loverslab.com/files/file/612-loversachievements' ]
     req:
-      - 'OBSE/Plugins/AddActorValues.dll'
+      - name: 'OBSE/Plugins/AddActorValues.dll'
+        display: '[AddActorValues](https://www.nexusmods.com/oblivion/mods/33248)'
       - *OBSEv20
   - name: 'LoversJoystick.esp'
     req: [ *OBSEv20 ]
@@ -15180,10 +15181,10 @@ plugins:
   - name: 'Intelligence Overhaul-RR.esp'
     req: [ *OBSEv11 ]
   - name: 'Sneaking Detection Recalibrated.esp'
-    msg:
-      - type: say
-        content: 'Requires: "AddActorValues.dll"'
-        condition: '( version("Sneaking Detection Recalibrated.esp","4.0",==) ) and not file("AddActorValues.dll")'
+    req:
+      - name: 'OBSE/Plugins/AddActorValues.dll'
+        display: '[AddActorValues](https://www.nexusmods.com/oblivion/mods/33248)'
+        condition: 'version("Sneaking Detection Recalibrated.esp","4.0",==)'
   - name: 'Oblivion XP - Journal Mod Patch.esp'
     msg:
       - type: say
