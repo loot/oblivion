@@ -4677,8 +4677,9 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/8285' ]
     inc: [ 'Qarls_Harvest addon_OOO.esp' ]
     msg:
-      - type: say
-        content: 'Don''t use with MMM/OOO/FCOM; use ''Qarls_Harvest addon_MMM/OOO'''
+      - <<: *useInstead
+        subs: [ 'Qarls_Harvest addon_MMM/OOO' ]
+        condition: 'active("Mart''s Monster Mod.esm")'
   - name: 'QQuix - Rock, rock, rock your ship.*\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/29649' ]
   - name: 'QQuix - Rock, rock, rock your ship - V3.esp'
