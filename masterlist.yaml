@@ -18493,41 +18493,6 @@ plugins:
   - name: 'BICDist_OotD_Patch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/45611' ]
     req: [ 'Better Cities IC Green Emperor Way.esp' ]
-  - name: 'OSPS-BC_IC-II_UL-II_Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/45817' ]
-    msg:
-      - type: warn
-        content: 'You Only need this patch. Remove the Better Cities - Unique Landscape Imperial Isle.esp'
-        condition: 'file("Better Cities - Unique Landscape Imperial Isle.esp")'
-  - name: 'OSPS_BC_IC-II_UL-II_TalosBridge_Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/45817' ]
-    msg:
-      - type: warn
-        content: 'You Only need this patch. Remove the Better Cities - Unique Landscape Imperial Isle.esp'
-        condition: 'file("Better Cities - Unique Landscape Imperial Isle.esp")'
-      - type: warn
-        content: 'You Only need this patch. Remove the TalosGatehouse + ULImperialIsle.esp'
-        condition: 'file("TalosGatehouse + ULImperialIsle.esp")'
-  - name: 'OSPS-BC_IC-II_UL-II_RRLR_Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/45817' ]
-    msg:
-      - type: warn
-        content: 'You Only need this patch. Remove the Better Cities - Unique Landscape Imperial Isle.esp'
-        condition: 'file("Better Cities - Unique Landscape Imperial Isle.esp")'
-    tag: [ C.Water ]
-  - name: 'OSPS_BC_IC-II_UL-II_TalosBridge_RRLR_Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/45817' ]
-    msg:
-      - type: warn
-        content: 'You Only need this patch. Remove the Better Cities - Unique Landscape Imperial Isle.esp'
-        condition: 'file("Better Cities - Unique Landscape Imperial Isle.esp")'
-      - type: warn
-        content: 'You Only need this patch. Remove the TalosGatehouse + ULImperialIsle.esp'
-        condition: 'file("TalosGatehouse + ULImperialIsle.esp")'
-      - type: warn
-        content: 'You Only need this patch. Remove the wb_TBG_RR-LR_UL-II_patch.esp'
-        condition: 'file("wb_TBG_RR-LR_UL-II_patch.esp")'
-    tag: [ C.Water ]
   - name: 'Cyrodiil Rebuild.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/42654' ]
     inc:
@@ -19401,13 +19366,12 @@ plugins:
     after:
       - 'LostSpiresImpeREALFortsPatch2.esp'
       - 'ImpeREALForts+LostSpires Patch.esp'
-  - name: 'OSPS-BC_IC-II_RRLR_Patch.esp'
+  - name: 'OSPS-BC_IC-II_RRLR_(TalosBridge_)?Patch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/45817' ]
+    inc:
+      - 'Unique Landscapes.esp'
+      - 'xulImperialIsle.esp'
     tag: [ C.Water ]
-    msg:
-      - type: warn
-        content: 'Use OSPS-BC_IC-II_UL-II_Patch.esp instead.'
-        condition: 'file("xulImperialIsle.esp")'
   - name: 'Dollparts'' Cherry Brooke Grove.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/37753' ]
     after: [ 'Dollparts'' Cherry Brooke Grove - WAC Patch.esp' ]
