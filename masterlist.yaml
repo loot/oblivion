@@ -12098,12 +12098,9 @@ plugins:
   - name: 'bartholm.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/5022' ]
     dirty:
-      - crc: 0x410debeb
-        <<: *dirtyPlugin
-        itm: 190
-        udr: 553
-      - crc: 0x7de84455
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x7DE84455
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 211
         udr: 553
   - name: 'Duke Patricks - HammerBlade.esp'
