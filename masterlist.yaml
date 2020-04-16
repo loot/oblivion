@@ -6561,10 +6561,14 @@ plugins:
       - EY_Vampirehunter.esp
   - name: 'TGNDNessaStore.esp'
     url: [ 'https://www.loverslab.com/files/file/351-nessas-tgnd-stores' ]
-    req: [ *OBSEv20 ]
+    req:
+      - *OBSEv20
+      - *SilentVoice
+      - name: 'TGND.esp'
+        display: '[TGND Body Replacer](https://www.loverslab.com/files/file/253-tgnd-body-replacer/)'
     msg:
       - type: say
-        content: 'Requires: TGND'
+        content: 'Requires: Skeleton nif replacer.'
   - name: 'UFF Amazon Armor.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/13339' ]
     tag: [ Graphics ]
