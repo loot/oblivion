@@ -13532,11 +13532,9 @@ plugins:
         content: 'Users are very strongly recommended to upgrade to v2+ of this mod to avoid serious issues. It can be found [here](http://www.nexusmods.com/oblivion/mods/42261).'
         condition: 'checksum("Banes Guilds United.esp",CFA556BC)'
     tag: [ Invent ]
-    dirty:
-      - crc: 0xcfa556bc
-        <<: *dirtyPlugin
-        udr: 1661
-        itm: 45
+    clean:
+      - crc: 0x54932F7A
+        util: 'TES4Edit v4.0.3'
   - name: 'Banes Guilds UnitedOOO.esp'
     url:
       - 'https://www.nexusmods.com/oblivion/mods/42261'
@@ -13546,6 +13544,12 @@ plugins:
         content: 'Use "Banes Guilds United.esp" instead.'
         condition: 'not file("Oscuro''s_Oblivion_Overhaul.esm")'
     tag: [ Invent ]
+    clean:
+      - crc: 0xAB803B0E
+        util: 'TES4Edit v4.0.3'
+      # OOO Misc Files version
+      - crc: 0x066E0C4B
+        util: 'TES4Edit v4.0.3'
   - name: 'betterArena.esp'
     tag: [ C.Water ]
     dirty:
