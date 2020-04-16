@@ -3119,9 +3119,6 @@ plugins:
     req: [ 'FCOM_Convergence.esm' ]
   - name: 'FCOM_Cobl.esp'
     msg:
-      - type: error
-        content: 'Do not use COBL and Tamerielic Ingredients at the same time.'
-        condition: 'file("Tamerielic Ingredients.*\.es[mp]")'
       - type: say
         content: 'Do not use with latest MMM/FCOM/COBL - superseded by MMM_Cobl.esp'
     tag:
