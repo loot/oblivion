@@ -6490,9 +6490,10 @@ plugins:
   - name: 'Bloodrayne Armor.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/20623' ]
     dirty:
-      - crc: 0x1e5ae2ef
+      - <<: *quickClean
+        crc: 0x1E5AE2EF
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 10
-        <<: *dirtyPlugin
   - name: 'Chrome Amazon Armor.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/14555' ]
     tag: [ Graphics ]
