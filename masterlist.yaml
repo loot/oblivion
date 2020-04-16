@@ -7716,13 +7716,10 @@ plugins:
   - name: '(DC) Kvatch Watch Towers.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/19691' ]
     dirty:
-      - crc: 0xdb273f0
-        <<: *dirtyPlugin
-        itm: 26
-        udr: 49
-      - crc: 0x88a0257f
-        <<: *dirtyPlugin
-        itm: 22
+      - <<: *quickClean
+        crc: 0x0DB273F0
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 20
         udr: 49
   - name: 'Halcyon Island_LowConflict.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/14939' ]
