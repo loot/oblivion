@@ -6316,8 +6316,9 @@ plugins:
   - name: 'Thori''Dal, The Stars'' Furyl - Legends of Azeroth Armory.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/42677' ]
     dirty:
-      - crc: 0xD50A68CC
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xD50A68CC
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 8
   - name: 'TLS Modded Mannequins.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/11461' ]
