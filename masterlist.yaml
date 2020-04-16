@@ -6219,9 +6219,10 @@ plugins:
   - name: 'SK_Berserk_v0.6.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17532' ]
     dirty:
-      - crc: 0xfc1d6b7f
-        <<: *dirtyPlugin
-        itm: 15
+      - <<: *quickClean
+        crc: 0xFC1D6B7F
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 17
         udr: 2
   - name: 'Kit Rae Weaponry.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/21108' ]
