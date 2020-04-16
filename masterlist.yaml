@@ -6018,17 +6018,19 @@ plugins:
   - name: 'Nicoroshi Creations DW Light.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/47910' ]
     dirty:
-      - crc: 0x3f5b9ab5
-        <<: *dirtyPlugin
-        itm: 5
-        udr: 135
+      - <<: *quickClean
+        crc: 0x3F5B9AB5
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 3
+        udr: 7
   - name: 'Nicoroshi Creations DW heavy.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/47910' ]
     dirty:
-      - crc: 0x99b70aed
-        <<: *dirtyPlugin
-        itm: 1
-        udr: 20
+      - <<: *quickClean
+        crc: 0x99B70AED
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 3
+        udr: 7
   - name: 'Nicos Dreadweave Compilation.esp'
     url: [ 'http://www.shsforums.net/files/file/214-nicos-dreadweave-complete/' ]
     inc:
