@@ -6177,9 +6177,13 @@ plugins:
       - 'https://www.nexusmods.com/oblivion/mods/37275'
       - 'https://www.nexusmods.com/oblivion/mods/38523'
     dirty:
-      - crc: 0x4be5bba2
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x4BE5BBA2
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
+    clean:
+      - crc: 0x98174697
+        util: 'TES4Edit v4.0.3'
   - name: 'Shdw_Armor Set_Sotonhorian.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/15562' ]
     dirty:
