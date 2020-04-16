@@ -6461,8 +6461,9 @@ plugins:
       - Relev
       - Stats
     dirty:
-      - crc: 0x60c24030
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x60C24030
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         udr: 23
   - name: 'Mage Equipment - No Manni.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/13695' ]
