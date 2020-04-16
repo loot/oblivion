@@ -162,6 +162,10 @@ common:
         text: 'Ta bort. Redan inkluderat i %1%'
       - lang: zh_CN
         text: '删除。已包含在%1%中。'
+  - &alreadyInMMM
+    <<: *alreadyInX
+    subs: [ 'Mart''s Monster Mod' ]
+    condition: 'active("Mart''s Monster Mod.esm") and not active("FCOM_Convergence.esm")'
   - &alreadyInOOO
     <<: *alreadyInX
     subs: [ 'Oscuro''s Oblivion Overhaul' ]
@@ -195,6 +199,10 @@ common:
     <<: *alreadyInOrFixedByX
     subs: [ 'Unofficial Oblivion Patch' ]
     condition: 'active("Unofficial Oblivion Patch.esp")'
+  - &alreadyInOrFixedByUSIP
+    <<: *alreadyInOrFixedByX
+    subs: [ 'Unofficial Shivering Isles Patch' ]
+    condition: 'active("Unofficial Shivering Isles Patch.esp")'
 
   - &corrupt
     type: warn
@@ -1405,10 +1413,7 @@ plugins:
         condition: 'not active("DLCShiveringIsles.esp")'
       - name: 'Mart''s Monster Mod.esm'
         condition: 'not active("FCOM_Convergence.esm")'
-    msg:
-      - <<: *alreadyInX
-        subs: [ 'Mart''s Monster Mod' ]
-        condition: 'active("Mart''s Monster Mod.esm") and not active("FCOM_Convergence.esm")'
+    msg: [ *alreadyInMMM ]
     clean:
       # version: 5.0B1
       - crc: 0x834225AC
@@ -1485,10 +1490,7 @@ plugins:
         condition: 'not active("DLCShiveringIsles.esp")'
       - name: 'Mart''s Monster Mod.esm'
         condition: 'not active("FCOM_Convergence.esm")'
-    msg:
-      - <<: *alreadyInX
-        subs: [ 'Mart''s Monster Mod' ]
-        condition: 'active("Mart''s Monster Mod.esm") and not active("FCOM_Convergence.esm")'
+    msg: [ *alreadyInMMM ]
     tag:
       - Actors.ACBS
       - Actors.Stats
@@ -1678,16 +1680,16 @@ plugins:
         itm: 36
   - name: 'OOO 1.32-Cobl.esp'
     msg:
-      - type: error
-        content: 'Requires: [Oscuro''s_Oblivion_Overhaul.esm v1.32+](https://www.nexusmods.com/oblivion/mods/46199/)'
+      - <<: *requiresX
+        subs: [ '[Oscuro''s_Oblivion_Overhaul.esm v1.32+](https://www.nexusmods.com/oblivion/mods/46199/)' ]
         condition: 'version("Oscuro''s_Oblivion_Overhaul.esm", "1.3.2", <)'
     clean:
       - crc: 0x23312D99
         util: 'TES4Edit v4.0.2'
   - name: 'MMM-Cobl.esp'
     msg:
-      - type: error
-        content: 'Requires: [Mart''s Monster Mod v3.7+](https://www.nexusmods.com/oblivion/mods/17784/)'
+      - <<: *requiresX
+        subs: [ '[Mart''s Monster Mod v3.7+](https://www.nexusmods.com/oblivion/mods/17784/)' ]
         condition: 'version("Mart''s Monster Mod.esm", "3.7b", <)'
     tag: [ -Delev ]
     clean:
@@ -3090,11 +3092,8 @@ plugins:
       - Actors.AIPackages
       - Relations
   - name: 'FCOM_OscurosOverhaul.esp'
+    inc: [ 'Mart''s Monster Mod.esm' ]
     req: [ 'FCOM_Convergence.esm' ]
-    msg:
-      - type: say
-        content: 'Only use when not using MMM.'
-        condition: *FCOMCond
   - name: 'FCOM_SaferRoads.esp'
     req: [ 'FCOM_Convergence.esm' ]
     tag:
@@ -3114,23 +3113,20 @@ plugins:
     msg: [ *obsolete ]
   ### FCOM - Old version files ###
   - name: 'FCOM_ConvergenceNoFran.esp'
-    msg:
-      - *obsolete
+    msg: [ *obsolete ]
     req: [ 'FCOM_Convergence.esm' ]
   - name: 'FCOM_Cobl.esp'
     msg:
-      - type: error
-        content: 'Do not use COBL and Tamerielic Ingredients at the same time.'
-        condition: 'file("Tamerielic Ingredients.*\.es[mp]")'
-      - type: say
-        content: 'Do not use with latest MMM/FCOM/COBL - superseded by MMM_Cobl.esp'
+      - <<: *useInstead
+        subs: [ 'MMM-Cobl.esp' ]
+        condition: 'version("Mart''s Monster Mod.esm", "3.7b", >=)'
     tag:
       - Delev
       - Relev
   - name: 'FCOM_MoreWildernessLife.esp'
     msg:
-      - type: say
-        content: 'Delete. Use Mart''s Monster Mod - More Wilderness Life.esp or Mart''s Monster Mod - More Wilderness Life No Gates.esp instead'
+      - <<: *useInstead
+        subs: [ 'Mart''s Monster Mod - More Wilderness Life.esp or Mart''s Monster Mod - More Wilderness Life No Gates.esp' ]
 
 ###### Armamentarium ######
   - name: 'Armamentarium.esm'
@@ -3477,9 +3473,7 @@ plugins:
       - *useInsteadUOP
   - name: 'AdventurersItemMod.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/6316' ]
-    msg:
-      - type: say
-        content: 'If not using Bash this must be loaded after UOP but then you will lose a lot of fixes from UOP.'
+    msg: [ *requiresBashedPatch ]
     tag:
       - Invent
       - Relations
@@ -3491,14 +3485,13 @@ plugins:
         udr: 126
   - name: 'Self-Preservation v1.0.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/24288' ]
-    msg:
-      - type: say
-        content: 'If not using Bash this must be loaded after UOP/OOO/MMM/FCOM/any NPC editing mod but you''ll lose their NPC edits.'
+    group: *veryEarlyGroup
+    msg: [ *requiresBashedPatch ]
     tag: [ Scripts ]
     dirty:
       - <<: *quickClean
         crc: 0x3BB14891
-        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 12
   - name: 'Primate Rank Fix.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/24656' ]
@@ -3511,9 +3504,7 @@ plugins:
         condition: 'file("../obse_1_2_416.dll") and version("../obse_1_2_416.dll","0.21.0.0", >=)'
   - name: 'USIPCutterFix.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/42196' ]
-    msg:
-      - type: error
-        content: 'Outdated. Included in Unofficial Shivering Isles Patch 1.5.1+'
+    msg: [ *alreadyInOrFixedByUSIP ]
 
 ###### SM Plugin Refurbish ######
   - name: 'SM Plugin Refurbish.*\.esp'
@@ -3606,13 +3597,13 @@ plugins:
   - name: 'MrSiika''sFoxes.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/14267' ]
     msg:
-      - type: say
-        content: 'Do not use with MMM/FCOM. Already integrated.'
+      - *alreadyInMMM
+      - *alreadyInFCOM
   - name: 'MrSiikaRabbits.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/14266' ]
     msg:
-      - type: say
-        content: 'Do not use with MMM/FCOM. Already integrated.'
+      - *alreadyInMMM
+      - *alreadyInFCOM
   - name: 'FranDarkSeducerWeapFix.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17621' ]
     tag:
@@ -3627,8 +3618,9 @@ plugins:
   - name: 'MrSiikaRabbitsforFrans.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/14266' ]
     msg:
-      - type: say
-        content: 'Do not use with MMMforFrans. Already integrated.'
+      - <<: *alreadyInX
+        subs: [ 'Mart''s Monster Mod for Fran' ]
+        condition: 'active("Mart''s Monster Mod for Fran.esp")'
   - name: 'Atmospheric Loading Screens - No Text.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/8958' ]
     tag: [ Graphics ]
@@ -3670,9 +3662,8 @@ plugins:
     tag: [ Graphics ]
   - name: 'LoadingScreenQuotes.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/5890' ]
-    msg:
-      - type: say
-        content: 'Make sure that any mod that replaces the graphics of the loading screens is tagged with Graphics, otherwise this mod will revert them to vanilla'
+    group: *veryEarlyGroup
+    tag: [ Text ]
   - name: 'oc_darker_nights.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/4135' ]
     msg: [ *incompatibleWithWeatherMods ]
@@ -3731,17 +3722,17 @@ plugins:
     req: [ *OBSE ]
   - name: 'All Natural.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/18305' ]
-    msg:
-      - type: say
-        content: 'Required for All Natural. Make sure this is active and not just imported into your Bashed Patch.'
     tag:
       - C.Climate
       - MustBeActiveIfImported
+    msg:
+      - <<: *patchIncluded
+        subs: [ 'DLC Shivering Isles' ]
+        condition: 'active("DLCShiveringIsles.esp") and not active("All Natural - SI.esp")'
   - name: 'All Natural - SI.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/18305' ]
-    msg:
-      - type: say
-        content: 'Required for All Natural SI support. Make sure this is active and not just imported into your Bashed Patch.'
+    after: [ 'All Natural.esp' ]
+    req: [ 'DLCShiveringIsles.esp' ]
     tag:
       - C.Climate
       - MustBeActiveIfImported
@@ -3868,8 +3859,8 @@ plugins:
   - name: 'Quiet Feet Complete.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/13016' ]
     msg:
-      - type: say
-        content: 'Recommended to upgrade to Quiet Feet MAX 2.0, which does not require a plugin and is more compatible.'
+      - <<: *obsolete
+        subs: [ '[Quiet Feet MAX 2.0](https://www.nexusmods.com/oblivion/mods/12331)' ]
       - *bashedPatchTweak
   - name: 'QuietFeet Max.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/12331' ]
@@ -4031,9 +4022,7 @@ plugins:
         content: 'Recommended to use All Natural''s Real Lights implementation, as it doesn''t suffer from this, fixes a huge number of bugs in the original, and can be used on its own.'
   - name: 'All Natural - Real Lights.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/18305' ]
-    msg:
-      - type: say
-        content: 'Do not use with original Real Lights mod.'
+    inc: [ '_Real_Lights.esp' ]
     tag:
       - Graphics
       - MustBeActiveIfImported
@@ -4108,9 +4097,7 @@ plugins:
         itm: 1
   - name: 'AddActorValues_example.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/33248' ]
-    msg:
-      - type: say
-        content: 'demo mod, illustrates how to use the basic features of AddActorValues. Not need for use.'
+    msg: [ *deleteModdingPlugin ]
   - name: 'AliveWaters( - (Koi|Slaughterfish) Addon|_nofish)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/44069/' ]
   - name: 'AliveWaters.esp'
@@ -4141,8 +4128,8 @@ plugins:
   - name: 'aLHerobook01.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/13397' ]
     msg:
-      - type: say
-        content: 'Obsolete. Delete and upgrade to Adult Books.'
+      - <<: *obsolete
+        subs: [ '[Adult Books](https://www.nexusmods.com/oblivion/mods/13397)' ]
   - name: 'DocksMapMarker.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/9528' ]
     msg:
@@ -4156,9 +4143,12 @@ plugins:
     tag: [ Graphics ]
   - name: 'Ayleid Coin Add-on.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/10671' ]
+    inc: [ 'Mart''s Monster Mod - Gems & Gem Dust.esp' ]
     msg:
-      - type: say
-        content: 'Do not use with OOO, COBL, MMM G&GD - included. If using Fran use ''Fran-Ayleid Coin Add-on.esp'' instead.'
+      - *alreadyInOOO
+      - <<: *useInstead
+        subs: [ 'Fran-Ayleid Coin Add-on.esp' ]
+        condition: 'active("Francesco''s Leveled Creatures-Items Mod.esm")'
   - name: 'Ayleid Loot EXtension.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22795' ]
     req:
@@ -4336,8 +4326,8 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/11778' ]
     group: *earlyLoadersGroup
     msg:
-      - type: say
-        content: 'For use with Better Cities use ''ClocksOfCyrodiil_BC_OBC_OC_OCLR_Vanilla.esp'' instead.'
+      - <<: *useInstead
+        subs: [ 'ClocksOfCyrodiil_BC_OBC_OC_OCLR_Vanilla.esp' ]
         condition: 'file("Better Cities Resources.esm") and version("Better Cities Resources.esm", "6.0.0", <)'
     dirty:
       - <<: *quickClean
@@ -4391,16 +4381,12 @@ plugins:
   - name: 'Daedric Wargames.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/12935' ]
     req: [ 'DLCShiveringIsles.esp' ]
-  - name: 'Enhanced Key Functionality.esp'
+  - name: 'Enhanced Key Functionality( \[Shivering Isles\])?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/27719' ]
     msg:
-      - type: say
-        content: 'Only use one EKF esp.'
-  - name: 'Enhanced Key Functionality [Shivering Isles].esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/27719' ]
-    msg:
-      - type: say
-        content: 'Only use one EKF esp.'
+      - <<: *useOnlyOneX
+        subs: [ 'Enhanced Key Functionality' ]
+        condition: 'many("Enhanced Key Functionality( \[Shivering Isles\])?\.esp")'
   - name: 'Fish! - v1.1.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/30260' ]
     dirty:
@@ -4411,8 +4397,9 @@ plugins:
   - name: 'Fishing in Cyrodiil.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/30260' ]
     msg:
-      - type: say
-        content: 'If using MMM or FCOM use ''Mart''s Monster Mod - Diverse WaterLife.esp'' instead.'
+      - <<: *useInstead
+        subs: [ 'Mart''s Monster Mod - Diverse WaterLife.esp' ]
+        condition: 'active("Mart''s Monster Mod.esm")'
     tag: [ Invent ]
     dirty:
       - <<: *quickClean
@@ -4448,9 +4435,7 @@ plugins:
     tag: [ Invent ]
   - name: 'JQPotionBottlesTest.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/33946' ]
-    msg:
-      - type: say
-        content: 'Does not add anything to the game except some examples in the testing hall - deactivate and keep resources is most often the best thing to do.'
+    msg: [ *deleteModdingPlugin ]
   - name: 'Katana Store.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/16424' ]
     msg:
@@ -4511,22 +4496,23 @@ plugins:
     tag: [ Graphics ]
   - name: 'MigStatsCheck.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/44844' ]
-    msg:
-      - type: say
-        content: 'Requires: AddActorValues'
     req:
+      - name: 'OBSE/Plugins/AddActorValues.dll'
+        display: '[AddActorValues](https://www.nexusmods.com/oblivion/mods/33248)'
       - *OBSEv18
       - *MenuQue
   - name: 'M.O.E. - Undermined Leveled Gameplay - Creature Edition.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/7902' ]
-    msg:
-      - type: say
-        content: 'Not overhaul mod compatible (Fran''s, OOO, MMM, FCOM).'
+    inc:
+      - 'Francesco''s Leveled Creatures-Items Mod.esm'
+      - 'Mart''s Monster Mod.esm'
+      - 'Oscuro''s_Oblivion_Overhaul.esm'
   - name: 'M.O.E. - Undermined Leveled Gameplay - Item Edition.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/7902' ]
-    msg:
-      - type: say
-        content: 'Not overhaul mod compatible (Fran''s, OOO, MMM, FCOM).'
+    inc:
+      - 'Francesco''s Leveled Creatures-Items Mod.esm'
+      - 'Mart''s Monster Mod.esm'
+      - 'Oscuro''s_Oblivion_Overhaul.esm'
   - name: 'More_Animals.esp'
     url:
       - 'https://www.nexusmods.com/oblivion/mods/18275'
@@ -4691,8 +4677,9 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/8285' ]
     inc: [ 'Qarls_Harvest addon_OOO.esp' ]
     msg:
-      - type: say
-        content: 'Don''t use with MMM/OOO/FCOM; use ''Qarls_Harvest addon_MMM/OOO'''
+      - <<: *useInstead
+        subs: [ 'Qarls_Harvest addon_MMM/OOO' ]
+        condition: 'active("Mart''s Monster Mod.esm")'
   - name: 'QQuix - Rock, rock, rock your ship.*\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/29649' ]
   - name: 'QQuix - Rock, rock, rock your ship - V3.esp'
@@ -5197,9 +5184,9 @@ plugins:
       - Body-Size-M
   - name: 'EVE_StockEquipmentReplacer.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/24078/' ]
-    msg:
-      - type: say
-        content: 'For vanilla use. Do not use with OOO/MMM/FCOM, use the applicable version instead.'
+    inc:
+      - 'Mart''s Monster Mod.esm'
+      - 'Oscuro''s_Oblivion_Overhaul.esm'
     tag:
       - Graphics
       - NoMerge
@@ -5729,6 +5716,7 @@ plugins:
     tag: [ Graphics ]
   - name: 'Hemingweys NPC Capes.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
+    msg: [ *obsolete ]
     tag: [ Invent ]
   - name: 'Hentai Compilation.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22990' ]
@@ -5888,8 +5876,8 @@ plugins:
   - name: 'Wearable GS and DS armor.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/13081' ]
     msg:
-      - type: say
-        content: 'Use ''for OOO'' version for better OOO/FCOM compatibility.'
+      - <<: *useInstead
+        subs: [ '[Wearable GS and DS armor for OOO](https://www.nexusmods.com/oblivion/mods/17647)' ]
         condition: *OOOCond
   - name: 'Midnight Gymnastics.esp'
     url:
@@ -6120,8 +6108,9 @@ plugins:
   - name: 'SilverwareWeapons.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/13020' ]
     msg:
-      - type: say
-        content: 'If using FCOM it''s recommended that you use "Silverware Weapons - FCOM.esp" instead'
+      - <<: *useInstead
+        subs: [ '[Silverware Weapons - FCOM.esp](https://www.nexusmods.com/oblivion/mods/25382)' ]
+        condition: *FCOMCond
   - name: 'Sin''s Expanded Light Armor Kit [Chest].esp'
     url:
       - 'https://www.nexusmods.com/oblivion/mods/2960'
@@ -6223,9 +6212,12 @@ plugins:
   - name: 'Conan Swords - Atlantean 2Hand Fur Scabbard.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/14111' ]
     msg:
-      - type: say
-        content: 'TheFatherSword.esp and 1.4TheAtlanteanSword mods included'
-        condition: 'file("1.4TheAtlanteanSword.esp") or file("1.4TheAtlanteanSword_leather.esp") or file("1.4TheAtlanteanSword2h_leather.esp") or file("TheFatherSword.esp")'
+      - <<: *includesX
+        subs: [ '[The Father Sword](https://www.nexusmods.com/oblivion/mods/4448)' ]
+        condition: 'file("TheFatherSword.esp")'
+      - <<: *includesX
+        subs: [ '[The Atlantean Sword](https://www.nexusmods.com/oblivion/mods/4594)' ]
+        condition: 'file("(\d\.\d)TheAtlanteanSword.*\.esp")'
   - name: 'Thori''Dal, The Stars'' Furyl - Legends of Azeroth Armory.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/42677' ]
     dirty:
@@ -6234,9 +6226,7 @@ plugins:
         itm: 8
   - name: 'TLS Modded Mannequins.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/11461' ]
-    msg:
-      - type: say
-        content: 'Do not use with Reznod''s Mannequins.'
+    inc: [ 'Reznod_Mannequin.esp' ]
   - name: 'Town Guard Armor Replacers.esp'
     url: [ 'http://tesalliance.org/forums/index.php?/files/file/563-town-guard-armor-replacer' ]
     tag: [ Graphics ]
@@ -6572,10 +6562,14 @@ plugins:
       - EY_Vampirehunter.esp
   - name: 'TGNDNessaStore.esp'
     url: [ 'https://www.loverslab.com/files/file/351-nessas-tgnd-stores' ]
-    req: [ *OBSEv20 ]
+    req:
+      - *OBSEv20
+      - *SilentVoice
+      - name: 'TGND.esp'
+        display: '[TGND Body Replacer](https://www.loverslab.com/files/file/253-tgnd-body-replacer/)'
     msg:
       - type: say
-        content: 'Requires: TGND'
+        content: 'Requires: Skeleton nif replacer.'
   - name: 'UFF Amazon Armor.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/13339' ]
     tag: [ Graphics ]
@@ -6823,9 +6817,10 @@ plugins:
         condition: 'active("FCOM_Convergence.esm")'
   - name: 'Oblivion WarCry.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/45570' ]
+    inc: [ 'FCOM_Convergence.esm' ]
     msg:
-      - type: error
-        content: 'German version not compatible with FCOM. Delete & Use ''Oblivion WarCry EV.esp'' instead.'
+      - <<: *useInstead
+        subs: [ '[Oblivion WarCry EV.esp](https://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/)' ]
         condition: *FCOMCond
       - type: say
         content: 'German version.'
@@ -7024,13 +7019,8 @@ plugins:
     msg: [ *alreadyInOOO ]
   - name: 'Hemingweys NPC Capes for OOO and FCOM.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    msg:
-      - type: say
-        content: 'Obselete if using MMM or FCOM. Update to latest version and use ''Mart''s Monster Mod - Hemingweys NPC and Guard Capes.esp'' instead.'
-        condition: 'file("Mart''s Monster Mod.esm") or file("FCOM_Convergence.esm")'
-      - type: say
-        content: 'If you are running only OOO, but not MMM or FCOM, keep this installed.'
-        condition: *OOOCond
+    inc: [ 'Mart''s Monster Mod.esm' ]
+    msg: [ *obsolete ]
   - name: 'MTCDirtierBandits.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/30144' ]
     tag: [ Invent ]
@@ -7041,21 +7031,20 @@ plugins:
   - name: 'More Effective Enchantments FCOM.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/33266' ]
     req: [ 'FCOM_Convergence.esm' ]
-  - name: 'MrSiika''sFarmAnimals.esp'
+  - name: '(FarmAnimalsofCyrodiil|MrSiika''sFarmAnimals)\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/14265' ]
     msg:
-      - type: say
-        content: 'MMM users should use ''Mart''s Monster Mod - Farm Animals''.'
+      - <<: *useInstead
+        subs: [ 'Mart''s Monster Mod - Farm Animals' ]
+        condition: 'file("Mart''s Monster Mod.esm")'
+  - name: 'MrSiika''sFarmAnimals.esp'
+    msg: [ *obsolete ]
   - name: 'FarmAnimalsofCyrodiil.esp'
-    url: [ 'http://www.nexusmods.com/oblivion/mods/14265' ]
-    msg:
-      - type: say
-        content: 'MMM users should use ''Mart''s Monster Mod - Farm Animals''.'
     dirty:
-      - crc: 0x79F13870
+      - <<: *quickClean
+        crc: 0x79F13870
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 8
-        udr: 0
-        <<: *dirtyPlugin
   - name: 'MrSiikasBats.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/12486' ]
     inc: [ 'Mart''s Monster Mod.esm' ]
@@ -14239,7 +14228,8 @@ plugins:
   - name: 'LoversAchievments.esp'
     url: [ 'https://www.loverslab.com/files/file/612-loversachievements' ]
     req:
-      - 'OBSE/Plugins/AddActorValues.dll'
+      - name: 'OBSE/Plugins/AddActorValues.dll'
+        display: '[AddActorValues](https://www.nexusmods.com/oblivion/mods/33248)'
       - *OBSEv20
   - name: 'LoversJoystick.esp'
     req: [ *OBSEv20 ]
@@ -15196,10 +15186,10 @@ plugins:
   - name: 'Intelligence Overhaul-RR.esp'
     req: [ *OBSEv11 ]
   - name: 'Sneaking Detection Recalibrated.esp'
-    msg:
-      - type: say
-        content: 'Requires: "AddActorValues.dll"'
-        condition: '( version("Sneaking Detection Recalibrated.esp","4.0",==) ) and not file("AddActorValues.dll")'
+    req:
+      - name: 'OBSE/Plugins/AddActorValues.dll'
+        display: '[AddActorValues](https://www.nexusmods.com/oblivion/mods/33248)'
+        condition: 'version("Sneaking Detection Recalibrated.esp","4.0",==)'
   - name: 'Oblivion XP - Journal Mod Patch.esp'
     msg:
       - type: say
@@ -18503,41 +18493,6 @@ plugins:
   - name: 'BICDist_OotD_Patch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/45611' ]
     req: [ 'Better Cities IC Green Emperor Way.esp' ]
-  - name: 'OSPS-BC_IC-II_UL-II_Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/45817' ]
-    msg:
-      - type: warn
-        content: 'You Only need this patch. Remove the Better Cities - Unique Landscape Imperial Isle.esp'
-        condition: 'file("Better Cities - Unique Landscape Imperial Isle.esp")'
-  - name: 'OSPS_BC_IC-II_UL-II_TalosBridge_Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/45817' ]
-    msg:
-      - type: warn
-        content: 'You Only need this patch. Remove the Better Cities - Unique Landscape Imperial Isle.esp'
-        condition: 'file("Better Cities - Unique Landscape Imperial Isle.esp")'
-      - type: warn
-        content: 'You Only need this patch. Remove the TalosGatehouse + ULImperialIsle.esp'
-        condition: 'file("TalosGatehouse + ULImperialIsle.esp")'
-  - name: 'OSPS-BC_IC-II_UL-II_RRLR_Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/45817' ]
-    msg:
-      - type: warn
-        content: 'You Only need this patch. Remove the Better Cities - Unique Landscape Imperial Isle.esp'
-        condition: 'file("Better Cities - Unique Landscape Imperial Isle.esp")'
-    tag: [ C.Water ]
-  - name: 'OSPS_BC_IC-II_UL-II_TalosBridge_RRLR_Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/45817' ]
-    msg:
-      - type: warn
-        content: 'You Only need this patch. Remove the Better Cities - Unique Landscape Imperial Isle.esp'
-        condition: 'file("Better Cities - Unique Landscape Imperial Isle.esp")'
-      - type: warn
-        content: 'You Only need this patch. Remove the TalosGatehouse + ULImperialIsle.esp'
-        condition: 'file("TalosGatehouse + ULImperialIsle.esp")'
-      - type: warn
-        content: 'You Only need this patch. Remove the wb_TBG_RR-LR_UL-II_patch.esp'
-        condition: 'file("wb_TBG_RR-LR_UL-II_patch.esp")'
-    tag: [ C.Water ]
   - name: 'Cyrodiil Rebuild.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/42654' ]
     inc:
@@ -19411,13 +19366,12 @@ plugins:
     after:
       - 'LostSpiresImpeREALFortsPatch2.esp'
       - 'ImpeREALForts+LostSpires Patch.esp'
-  - name: 'OSPS-BC_IC-II_RRLR_Patch.esp'
+  - name: 'OSPS-BC_IC-II_RRLR_(TalosBridge_)?Patch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/45817' ]
+    inc:
+      - 'Unique Landscapes.esp'
+      - 'xulImperialIsle.esp'
     tag: [ C.Water ]
-    msg:
-      - type: warn
-        content: 'Use OSPS-BC_IC-II_UL-II_Patch.esp instead.'
-        condition: 'file("xulImperialIsle.esp")'
   - name: 'Dollparts'' Cherry Brooke Grove.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/37753' ]
     after: [ 'Dollparts'' Cherry Brooke Grove - WAC Patch.esp' ]
