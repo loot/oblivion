@@ -5971,8 +5971,9 @@ plugins:
       - 'https://www.nexusmods.com/oblivion/mods/42985'
       - 'https://www.nexusmods.com/oblivion/mods/43029'
     dirty:
-      - crc: 0x8bca1742
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x8BCA1742
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
   - name: 'mnp Nighteye Goggles.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/7791' ]
