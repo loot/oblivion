@@ -4381,16 +4381,12 @@ plugins:
   - name: 'Daedric Wargames.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/12935' ]
     req: [ 'DLCShiveringIsles.esp' ]
-  - name: 'Enhanced Key Functionality.esp'
+  - name: 'Enhanced Key Functionality( \[Shivering Isles\])?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/27719' ]
     msg:
-      - type: say
-        content: 'Only use one EKF esp.'
-  - name: 'Enhanced Key Functionality [Shivering Isles].esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/27719' ]
-    msg:
-      - type: say
-        content: 'Only use one EKF esp.'
+      - <<: *useOnlyOneX
+        subs: [ 'Enhanced Key Functionality' ]
+        condition: 'many("Enhanced Key Functionality( \[Shivering Isles\])?\.esp")'
   - name: 'Fish! - v1.1.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/30260' ]
     dirty:
