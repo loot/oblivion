@@ -7031,21 +7031,20 @@ plugins:
   - name: 'More Effective Enchantments FCOM.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/33266' ]
     req: [ 'FCOM_Convergence.esm' ]
-  - name: 'MrSiika''sFarmAnimals.esp'
+  - name: '(FarmAnimalsofCyrodiil|MrSiika''sFarmAnimals)\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/14265' ]
     msg:
-      - type: say
-        content: 'MMM users should use ''Mart''s Monster Mod - Farm Animals''.'
+      - <<: *useInstead
+        subs: [ 'Mart''s Monster Mod - Farm Animals' ]
+        condition: 'file("Mart''s Monster Mod.esm")'
+  - name: 'MrSiika''sFarmAnimals.esp'
+    msg: [ *obsolete ]
   - name: 'FarmAnimalsofCyrodiil.esp'
-    url: [ 'http://www.nexusmods.com/oblivion/mods/14265' ]
-    msg:
-      - type: say
-        content: 'MMM users should use ''Mart''s Monster Mod - Farm Animals''.'
     dirty:
-      - crc: 0x79F13870
+      - <<: *quickClean
+        crc: 0x79F13870
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 8
-        udr: 0
-        <<: *dirtyPlugin
   - name: 'MrSiikasBats.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/12486' ]
     inc: [ 'Mart''s Monster Mod.esm' ]
