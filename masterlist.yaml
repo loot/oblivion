@@ -6287,8 +6287,9 @@ plugins:
   - name: 'tda_Armoury.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/25332' ]
     dirty:
-      - crc: 0xe1b7e45f
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xE1B7E45F
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 5
   - name: 'tda_WitchKingHelm.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/4839' ]
