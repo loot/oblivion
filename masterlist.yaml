@@ -6187,11 +6187,9 @@ plugins:
   - name: 'Shdw_Armor Set_Sotonhorian.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/15562' ]
     dirty:
-      - crc: 0x1c75b309
-        <<: *dirtyPlugin
-        itm: 1
-      - crc: 0x3d45c1f1
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x1C75B309
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
   - name: 'Shields Of Antiquity.esp'
     url:
