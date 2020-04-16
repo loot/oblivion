@@ -6368,8 +6368,9 @@ plugins:
   - name: 'witchkingsword.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/4543' ]
     dirty:
-      - crc: 0x65f472b4
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x65F472B4
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 5
   - name: 'XiaValentinesDayGift07.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/9111' ]
