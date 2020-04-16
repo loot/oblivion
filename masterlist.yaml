@@ -4143,9 +4143,12 @@ plugins:
     tag: [ Graphics ]
   - name: 'Ayleid Coin Add-on.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/10671' ]
+    inc: [ 'Mart''s Monster Mod - Gems & Gem Dust.esp' ]
     msg:
-      - type: say
-        content: 'Do not use with OOO, COBL, MMM G&GD - included. If using Fran use ''Fran-Ayleid Coin Add-on.esp'' instead.'
+      - *alreadyInOOO
+      - <<: *useInstead
+        subs: [ 'Fran-Ayleid Coin Add-on.esp' ]
+        condition: 'active("Francesco''s Leveled Creatures-Items Mod.esm")'
   - name: 'Ayleid Loot EXtension.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22795' ]
     req:
