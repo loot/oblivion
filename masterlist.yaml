@@ -7783,19 +7783,9 @@ plugins:
   - name: 'Trade and Commerce.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/39255' ]
     dirty:
-      - crc: 0x955a7549
-        <<: *dirtyPlugin
-        udr: 18
-      - crc: 0x111317d8
-        <<: *dirtyPlugin
-        udr: 18
-      - crc: 0xc5c1d187
-        <<: *dirtyPlugin
-        itm: 17
-        udr: 18
-      - crc: 0xdc6afccd
-        <<: *dirtyPlugin
-        itm: 9
+      - <<: *quickClean
+        crc: 0x955A7549
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         udr: 18
   - name: '001_LM_ElvenGardenRetreat.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/31772' ]
