@@ -6384,9 +6384,10 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/9655' ]
     req: [ *OBSE ]
     dirty:
-      - crc: 0x2de5b6d1
-        <<: *dirtyPlugin
-        itm: 368
+      - <<: *quickClean
+        crc: 0x2DE5B6D1
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 366
         udr: 1216
   - name: 'Robes Staves and Fists.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/26975' ]
