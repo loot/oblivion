@@ -6268,8 +6268,9 @@ plugins:
   - name: 'SwordDancer.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/19457' ]
     dirty:
-      - crc: 0xe5ef8132
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xE5EF8132
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 3
   - name: 'talon.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/18839' ]
