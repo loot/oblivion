@@ -195,6 +195,10 @@ common:
     <<: *alreadyInOrFixedByX
     subs: [ 'Unofficial Oblivion Patch' ]
     condition: 'active("Unofficial Oblivion Patch.esp")'
+  - &alreadyInOrFixedByUSIP
+    <<: *alreadyInOrFixedByX
+    subs: [ 'Unofficial Shivering Isles Patch' ]
+    condition: 'active("Unofficial Shivering Isles Patch.esp")'
 
   - &corrupt
     type: warn
@@ -3505,9 +3509,7 @@ plugins:
         condition: 'file("../obse_1_2_416.dll") and version("../obse_1_2_416.dll","0.21.0.0", >=)'
   - name: 'USIPCutterFix.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/42196' ]
-    msg:
-      - type: error
-        content: 'Outdated. Included in Unofficial Shivering Isles Patch 1.5.1+'
+    msg: [ *alreadyInOrFixedByUSIP ]
 
 ###### SM Plugin Refurbish ######
   - name: 'SM Plugin Refurbish.*\.esp'
