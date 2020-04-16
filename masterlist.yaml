@@ -3092,11 +3092,8 @@ plugins:
       - Actors.AIPackages
       - Relations
   - name: 'FCOM_OscurosOverhaul.esp'
+    inc: [ 'Mart''s Monster Mod.esm' ]
     req: [ 'FCOM_Convergence.esm' ]
-    msg:
-      - type: say
-        content: 'Only use when not using MMM.'
-        condition: *FCOMCond
   - name: 'FCOM_SaferRoads.esp'
     req: [ 'FCOM_Convergence.esm' ]
     tag:
