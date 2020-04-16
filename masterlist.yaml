@@ -4397,8 +4397,9 @@ plugins:
   - name: 'Fishing in Cyrodiil.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/30260' ]
     msg:
-      - type: say
-        content: 'If using MMM or FCOM use ''Mart''s Monster Mod - Diverse WaterLife.esp'' instead.'
+      - <<: *useInstead
+        subs: [ 'Mart''s Monster Mod - Diverse WaterLife.esp' ]
+        condition: 'active("Mart''s Monster Mod.esm")'
     tag: [ Invent ]
     dirty:
       - <<: *quickClean
