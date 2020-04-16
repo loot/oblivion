@@ -6082,14 +6082,16 @@ plugins:
   - name: 'PhoenixEquipment.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/4949' ]
     dirty:
-      - crc: 0x88c21554
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x88C21554
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 3
   - name: 'PhoenixWithoutArmorflame.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/4949' ]
     dirty:
-      - crc: 0x4aa60013
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x4AA60013
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 3
   - name: 'PinkGlassArmor.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/5274' ]
