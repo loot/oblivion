@@ -754,18 +754,13 @@ groups:
     after: [ *lateChangesGroup ]
 
 plugins:
-# Game Masters
+###### Official Game Files ######
   - name: 'Oblivion.esm'
     group: *gameMasterGroup
     msg:
       - type: error
         content: 'This must not be activated. However, it can be useful when porting Oblivion mods to Nehrim.'
         condition: 'active("Oblivion.esm") and active("Nehrim.esm")'
-  - name: 'Nehrim.esm'
-    url: [ 'https://sureai.net/games/nehrim/' ]
-    group: *gameMasterGroup
-
-# Official DLC
   - name: 'DLCShiveringIsles.esp'
     group: *dlcGroup
     after: [ 'Unofficial Oblivion Patch.esp' ]
@@ -933,7 +928,7 @@ plugins:
         itm: 115
         udr: 255
 
-# Unofficial Patches
+###### Unofficial Patches ######
   - name: 'Unofficial Oblivion Patch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/5296' ]
     group: *dlcGroup
@@ -993,7 +988,6 @@ plugins:
       # version: 3.5.6a
       - crc: 0xA57A5DAC
         util: 'TES4Edit v4.0.2'
-
   - name: 'Unofficial Shivering Isles Patch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/10739' ]
     group: *unofficialPatchesGroup
@@ -1027,7 +1021,6 @@ plugins:
       # version: 1.5.9
       - crc: 0x19ADA30F
         util: 'TES4Edit v4.0.2'
-
   - name: '(DLC(BattlehornCastle|ThievesDen|MehrunesRazor|VileLair|HorseArmor|Orrery|SpellTomes|Frostcrag)|Knights) - Unofficial Patch( - SSSB)?\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/9969'
@@ -1115,13 +1108,19 @@ plugins:
       - crc: 0xCCDA5239
         util: 'TES4Edit v4.0.2'
 
-# Official Nehrim Files
-  - name: 'Nehrim(Data|English)\.esp'
+###### Nehrim ######
+  - name: 'Nehrim(Data|English)\.es(m|p)'
     url: [ 'https://sureai.net/games/nehrim/' ]
+  - name: 'Nehrim.esm'
+    group: *gameMasterGroup
   - name: 'NehrimEnglish.esp'
     after: [ All Natural Nehrim.esp ]
 
-
+###### Modding Tools - Generated Files ######
+  - name: 'Bashed Patch.*\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/22368' ]
+    group: *dynamicPatchesGroup
+    after: [ 'TES4Merged.esp' ]
   # Wrye Bash - Oblivion.esm swapping
   - name: 'Oblivion_1.1.esm'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22368' ]
@@ -1138,6 +1137,12 @@ plugins:
     msg:
       - <<: *deleteModdingPlugin
         condition: 'active("Oblivion_1.1.esm")'
+
+  - name: 'TES4Merged.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/11536/' ]
+    group: *dynamicPatchesGroup
+    tag: [ NoMerge ]
+
 
   - name: 'XBOX_Controller.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/47215' ]
@@ -1200,7 +1205,7 @@ plugins:
     clean:
       - crc: 0x1BDEB554
         util: 'TES4Edit v4.0.3'
-  ### Optional files ###
+  ### Morroblivion - Optional files ###
   - name: 'Morrowind_ob - Chargen and Transport Mod.esp'
     req: [ 'Morrowind_ob.esp' ]
     clean:
@@ -1228,7 +1233,7 @@ plugins:
         crc: 0x6A14D022
         util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
-  ### Unofficial Patch ###
+  ### Morroblivion - Unofficial Patch ###
   - name: 'Morroblivion_Unofficial_Patch.*\.esp'
     url: [ 'https://morroblivion.com/forums/morroblivion-mod-releases/rel-morroblivion-unofficial-patch-2017-dec-18' ]
   - name: 'Morroblivion_Unofficial_Patch.esp'
@@ -1257,18 +1262,17 @@ plugins:
         crc: 0xC1231962
         util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 805
-
   - name: 'Morroblivion_Unofficial_Patch_defaultmap_fix.esp'
     group: *mapGroup
     after: [ 'Morrowind_ob - Morroblivion Maps.esp' ]
   - name: 'Morroblivion_Unofficial_Patch_Telvanni_ArchMagister_hotfix.esp'
     after: [ 'Morroblivion_Unofficial_Patch.esp' ]
-  ### 3rd Party files ###
+  ### Morroblivion - 3rd Party files ###
   - name: 'Morroblivion item rebalance.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/39710' ]
     tag: [ Stats ]
 
-# Francescos Creatures and Items V5
+###### Francescos Creatures and Items V5 ######
   - name: 'Francesco''s (Creatures|Leveled|More|Optional).*\.es(m|p)'
     url: [ 'https://www.nexusmods.com/oblivion/mods/40190' ]
   - name: 'Francesco''s Leveled Creatures-Items Mod.esm'
@@ -1525,7 +1529,7 @@ plugins:
     clean:
       - crc: 0x506AFA75
         util: 'TES4Edit v4.0.2'
-  # Older plugins
+  ### Fran's Old version plugins ###
   - name: 'Francesco''s Optional Files( [1234])?\.esp'
     msg: [ *deleteUseFransSeparateOptions ]
     tag:
@@ -1562,7 +1566,7 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/11084' ]
     inc: [ 'FCOM_Convergence.esm' ]
 
-# (Cobl) Common Oblivion
+###### (Cobl) Common Oblivion ######
   - name: '(Salmo the Baker, |OOO 1.32-|MMM-)?Cobl( Main| Mort Demo| Silent Equip Misc| Filter Late MERGE ONLY| Glue| Si| Tweaks| Races( - Balanced| TNR| TNR SI)?)?\.es(m|p)'
     url: [ 'https://www.nexusmods.com/oblivion/mods/21104' ]
   - name: 'Cobl Main.esm'
@@ -1690,7 +1694,7 @@ plugins:
       - crc: 0x82EE4E0B
         util: 'TES4Edit v4.0.2'
 
-### Item interchange ###
+###### Item interchange ######
   - name: 'Item interchange - .*\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17557' ]
     msg: [ *requiresBashedPatch ]
@@ -1779,7 +1783,7 @@ plugins:
         crc: 0x2D3B8E8F
         util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 2
-  ### OOO Level Rate Options
+  ### OOO Level Rate Options ###
   - name: 'OOO-Level_(Normal|Slow|Stock)\.esp'
     msg:
       - <<: *useOnlyOneX
@@ -1797,7 +1801,7 @@ plugins:
     clean:
       - crc: 0xD25FFD1E
         util: 'TES4Edit v4.0.2i'
-  ### OOO Respawn Rate Options
+  ### OOO Respawn Rate Options ###
   - name: 'OOO-Respawn_(Month|Two_Week|Week|Year)\.esp'
     msg:
       - <<: *useBashTweakInstead
@@ -1821,7 +1825,7 @@ plugins:
     clean:
       - crc: 0x9EF9532F
         util: 'TES4Edit v4.0.2i'
-  ### OOO Compatibility Options
+  ### OOO Compatibility Options ###
   - name: 'OOO-Container_Trap_Instant_Effects.esp'
     clean:
       - crc: 0x1560A30A
@@ -1839,7 +1843,7 @@ plugins:
         crc: 0x788EADC4
         util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 3330
-  ### OOO Other Options
+  ### OOO Other Options ###
   - name: 'OOO-Map_Markers_Stock.esp'
     dirty:
       - <<: *quickClean
@@ -1852,12 +1856,12 @@ plugins:
         crc: 0x5FD2D492
         util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
-  ### OOO Add-ons for Full version Only
+  ### OOO Add-ons for Full version Only ###
   - name: 'OOO-DLT_Remover.esp'
     clean:
       - crc: 0xC4D121FF
         util: 'TES4Edit v4.0.2i'
-  ### OOO Add-ons for lite version Only
+  ### OOO Add-ons for lite version Only ###
   - name: 'OOO-Armor_Perks_WearRate_Repair.esp'
     msg: [ *alreadyInOOOFull ]
     clean:
@@ -2007,7 +2011,7 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/21102' ]
     inc: [ 'Geomancy & Gem Dust OOO.esp' ]
 
-# (MMM) Martigen’s Monster Mod
+###### (MMM) Martigen’s Monster Mod ######
   - name: 'Mart''s Monster Mod.*\.es(m|p)'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
   - name: 'Mart''s Monster Mod.esm'
@@ -2101,8 +2105,7 @@ plugins:
         crc: 0x436D9B8D
         util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 2
-
-  # MMM ESPs
+  ### MMM ESP Options ###
   - name: 'Mart''s Monster Mod( for Fran| for OOO)?\.esp'
     after:
       - 'Francesco''s Optional Chance of Stronger Bosses.esp'
@@ -2176,8 +2179,7 @@ plugins:
         crc: 0x33A4E76A
         util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 402
-
-  # MMM Optionals
+  ### MMM Optionals ###
   - name: 'Mart''s Monster Mod - Additional Enemy NPC Vars.esp'
     msg:
       - type: say
@@ -2541,8 +2543,7 @@ plugins:
     clean:
       - crc: 0x6C98F68D
         util: 'TES4Edit v4.0.2'
-
-  # MMM Older versions
+  ### MMM Old version files ###
   # v370
   - name: 'Mart''s Monster Mod - Durzog Addon.esp'
     msg: [ *obsolete ]
@@ -2588,8 +2589,7 @@ plugins:
     msg: [ *obsolete ]
   - name: 'Mart''s Monster Mod - (Increased|Reduced|Reduced Reduced) Spawn Rates\.esp'
     msg: [ *obsolete ]
-
-  # MMM Optional Add-ons and Patches
+  ### MMM Optional Add-ons and Patches ###
   - name: 'Mart''s Monster Mod( for OOO)? - TNR Faces\.esp'
     inc: [ 'COBL Races TNR.esp' ]
   - name: 'Mart''s Monster Mod( for OOO)? - (COBL Races TNR|TNR Faces)\.esp'
@@ -2633,7 +2633,7 @@ plugins:
         crc: 0xC8D70EC3
         util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 20
-  ### WAC Optional files
+  ### WAC Optional files ###
   - name: 'WAC - .*\.esp'
     url: [ 'http://tesalliance.org/forums/index.php?/files/file/1318-wac-waalx-animals-creatures/' ]
   - name: 'WAC - 8th Gate.esp'
@@ -3034,7 +3034,6 @@ plugins:
       - Delev
       - Relev
       - Stats
-
   ### FCOM - Optional Addons ###
   - name: 'FCOM_Archery.esp'
     tag:
@@ -3113,7 +3112,6 @@ plugins:
     tag: [ Stats ]
   - name: 'FCOM_VanillaItemReleveler.esp'
     msg: [ *obsolete ]
-
   ### FCOM - Old version files ###
   - name: 'FCOM_ConvergenceNoFran.esp'
     msg:
@@ -3148,7 +3146,7 @@ plugins:
     clean:
       - crc: 0xBCF36F0D
         util: 'TES4Edit v4.0.3'
-  ### Old Versions ###
+  ### Armamentarium Old Versions ###
   - name: 'Armamentarium(Armor|Katanas|_MOBS|Staffs|Test|Vendors)?\.es(m|p)'
     msg:
       - <<: *obsolete
@@ -3162,7 +3160,7 @@ plugins:
         crc: 0x65265F23
         util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 10
-  ### Complete (Latest Version) ###
+  ### Armamentarium Complete (Latest Version) ###
   - name: '(Armamentarium(Artifacts|LL|LL4OOO|LLArmaVendor|LLMagic|LLMagicOOO|LLVendors)|Artifacts-ArmaCompleteAddon)\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/18417' ]
   - name: 'ArmamentariumArtifacts.esp'
@@ -3517,6 +3515,7 @@ plugins:
       - type: error
         content: 'Outdated. Included in Unofficial Shivering Isles Patch 1.5.1+'
 
+###### SM Plugin Refurbish ######
   - name: 'SM Plugin Refurbish.*\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/11474' ]
     group: *veryEarlyGroup
@@ -3552,8 +3551,7 @@ plugins:
         subs: [ 'SM Plugin Refurbish(Merged).esp' ]
         condition: 'file("SM Plugin Refurbish(Merged).esp")'
 
-
-### MOBS - Medieval Oblivion Equipment Balance System ###
+###### MOBS - Medieval Oblivion Equipment Balance System ######
   - name: '(MOBS|MOBS SI|OMOBS|OMOBS_SI)\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/28537' ]
     msg:
@@ -12346,7 +12344,6 @@ plugins:
     group: *veryEarlyGroup
     after: [ 'DLCShiveringIsles.esp' ]
     msg: [ *dummyFileLoader ]
-
   - name: 'Better Cities - Open Cities Reborn.esp'
     group: *citiesGroup
     after:
@@ -12361,7 +12358,6 @@ plugins:
     clean:
       - crc: 0xDB227998
         util: 'TES4Edit v4.0.3'
-
   - name: 'Better Cities Full.esp'
     group: *citiesGroup
     after:
@@ -12386,7 +12382,6 @@ plugins:
         crc: 0xB2F74C1C
         util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 9
-
   - name: 'Better Cities (ANVIL|BRAVIL|BRUMA|CHEYDINHAL|CHORROL|LEYAWIIN|SKINGRAD)\.esp'
     group: *citiesGroup
     inc:
@@ -12468,7 +12463,6 @@ plugins:
     clean:
       - crc: 0x16697810
         util: 'TES4Edit v4.0.3'
-
   - name: 'Better Imperial City.esp'
     group: *imperialCityGroup
     after:
@@ -12483,7 +12477,6 @@ plugins:
         crc: 0xFE4F581D
         util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 19
-
   - name: 'Better Cities IC (Arboretum|Arcane University|Arena|Elven Gardens|Green Emperor Way|Market|Prison|Talos Plaza|Temple|Waterfront)\.esp'
     group: *imperialCityGroup
     after: [ 'Better Cities - IC Imperial Isle.esp' ]
@@ -12577,7 +12570,6 @@ plugins:
     clean:
       - crc: 0x2ECA5A07
         util: 'TES4Edit v4.0.3'
-
   ### Better Cities - Optional Files ###
   - name: 'Better Cities - IC Imperial Isle.esp'
     group: *imperialCityGroup
@@ -12623,7 +12615,6 @@ plugins:
     clean:
       - crc: 0xD9E7270B
         util: 'TES4Edit v4.0.3'
-
   ### Better Cities - Optional Integration Files ###
   - name: 'Better Cities - COBL.esp'
     clean:
@@ -12646,7 +12637,6 @@ plugins:
     clean:
       - crc: 0x711C8600
         util: 'TES4Edit v4.0.3'
-
   ### Better Cities - Patches ###
   # All Natural
   - name: 'Better Cities - All Natural.esp'
@@ -12903,8 +12893,7 @@ plugins:
       - name: 'Better Cities CHORROL.esp'
         display: 'Better Cities Full.esp or Better Cities CHORROL.esp'
         condition: 'not file("Better Cities Full.esp")'
-
-  ### Better Imperial City Patches ###
+  ### Better Cities - Imperial City Patches ###
   # Blood & Mud
   - name: 'Better Imperial City - Blood & Mud patch.esp'
     after: [ 'Better Imperial City.esp' ]
@@ -12978,7 +12967,6 @@ plugins:
       - name: 'Better Cities IC Arena.esp'
         display: 'Better Imperial City.esp or Better Cities IC Arena.esp'
         condition: 'not file("Better Imperial City.esp")'
-
   ### Better Cities - Old version files ###
   - name: 'Better Cities - Knights of the Nine.esp'
     req: [ 'Better Cities - Open Better Cities.esp' ]
@@ -13075,8 +13063,7 @@ plugins:
     clean:
       - crc: 0xEE1AB11C
         util: 'TES4Edit v4.0.3'
-
-  ### Optional Files ###
+  ### Open Cities - Optional Files ###
   - name: 'Open Cities Bartholm.esp'
     req:
       - name: 'Bartholm.esp'
@@ -13112,8 +13099,7 @@ plugins:
         util: 'TES4Edit v4.0.3'
       - crc: 0x11EF2688
         util: 'TES4Edit v4.0.3'
-
-  ###### Open Cities Patches ######
+  ### Open Cities Patches ###
   # Bravil Docks by Greg Simmonds - OC Patch
   - name: 'OC+Bravil Docks Patch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/32925' ]
@@ -19132,14 +19118,6 @@ plugins:
       - Filter
       - NoMerge
       - Stats
-  - name: 'TES4Merged.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/11536/' ]
-    group: *dynamicPatchesGroup
-    tag: [ NoMerge ]
-  - name: 'Bashed Patch.*\.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/22368' ]
-    group: *dynamicPatchesGroup
-    after: [ 'TES4Merged.esp' ]
   - name: 'Creeper.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/16373' ]
     dirty:
@@ -19466,6 +19444,8 @@ plugins:
   - name: 'OWC - Players Home.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/36260' ]
     tag: [ C.Light ]
+
+###### Maps ######
   - name: 'Ak- Morroblivion Maps HD.esp'
     url: [ 'https://tesrenewal.com/forums/morroblivion/mods/2610' ]
     group: *mapGroup
