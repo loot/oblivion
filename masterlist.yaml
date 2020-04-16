@@ -6236,11 +6236,13 @@ plugins:
   - name: 'SnowySignatureOutfit.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/20275' ]
     dirty:
-      - crc: 0x20498f08
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x20498F08
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 4
-      - crc: 0x7e4799b7
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x7E4799B7
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 4
   - name: 'Spell Breaker Replacer.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/21847' ]
