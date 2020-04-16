@@ -3602,13 +3602,17 @@ plugins:
   - name: 'MrSiika''sFoxes.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/14267' ]
     msg:
-      - type: say
-        content: 'Do not use with MMM/FCOM. Already integrated.'
+      - <<: *alreadyInX
+        subs: [ 'Mart''s Monster Mod' ]
+        condition: 'active("Mart''s Monster Mod.esm") and not active("FCOM_Convergence.esm")'
+      - *alreadyInFCOM
   - name: 'MrSiikaRabbits.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/14266' ]
     msg:
-      - type: say
-        content: 'Do not use with MMM/FCOM. Already integrated.'
+      - <<: *alreadyInX
+        subs: [ 'Mart''s Monster Mod' ]
+        condition: 'active("Mart''s Monster Mod.esm") and not active("FCOM_Convergence.esm")'
+      - *alreadyInFCOM
   - name: 'FranDarkSeducerWeapFix.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17621' ]
     tag:
