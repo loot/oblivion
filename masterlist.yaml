@@ -6161,8 +6161,9 @@ plugins:
   - name: 'SDHeartbreaker.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/26849' ]
     dirty:
-      - crc: 0xf46a4dfa
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xF46A4DFA
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 4
   - name: 'SentientWeapon.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22226' ]
