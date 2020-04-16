@@ -3662,9 +3662,8 @@ plugins:
     tag: [ Graphics ]
   - name: 'LoadingScreenQuotes.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/5890' ]
-    msg:
-      - type: say
-        content: 'Make sure that any mod that replaces the graphics of the loading screens is tagged with Graphics, otherwise this mod will revert them to vanilla'
+    group: *veryEarlyGroup
+    tag: [ Text ]
   - name: 'oc_darker_nights.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/4135' ]
     msg: [ *incompatibleWithWeatherMods ]
