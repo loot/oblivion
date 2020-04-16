@@ -3474,9 +3474,7 @@ plugins:
       - *useInsteadUOP
   - name: 'AdventurersItemMod.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/6316' ]
-    msg:
-      - type: say
-        content: 'If not using Bash this must be loaded after UOP but then you will lose a lot of fixes from UOP.'
+    msg: [ *requiresBashedPatch ]
     tag:
       - Invent
       - Relations
