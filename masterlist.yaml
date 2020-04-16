@@ -6261,12 +6261,10 @@ plugins:
   - name: 'Silverlight Armor by Jojjo.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/28723' ]
     dirty:
-      - crc: 0xdf6caf40
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xA83ECBCB
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 3
-      - crc: 0xe3b2429f
-        <<: *dirtyPlugin
-        itm: 8
   - name: 'SwordDancer.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/19457' ]
     dirty:
