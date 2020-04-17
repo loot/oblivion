@@ -12199,10 +12199,19 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/16818' ]
     tag: [ C.Water ]
     dirty:
-      - crc: 0x4c4b30c8
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x7C67B9B4
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 3
-        udr: 37
+      - <<: *quickClean
+        crc: 0x37ADE11D
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 3
+  - name: 'xulPatch_AY_AC.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/16818' ]
+    clean:
+      - crc: 0xA5FCE14D
+        util: 'TES4Edit v4.0.3'
   ### UL Beaches of Cyrodiil (The Lost Coast) ###
   - name: 'xulBeachesOfCyrodiilLostCoast.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/14720' ]
