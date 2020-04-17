@@ -1166,6 +1166,10 @@ plugins:
     url:
       - 'https://www.nexusmods.com/oblivion/mods/24606'
       - 'https://www.nexusmods.com/oblivion/mods/49874'
+    msg:
+      - <<: *obsolete
+        subs: [ '[Clean Up Cleaned Up](https://www.nexusmods.com/oblivion/mods/49874)' ]
+        condition: 'version("kuerteeCleanUp.esp", "0.61", <)'
 
 ###### User Interface ######
   - name: 'Dynamic Map.esp'
