@@ -1168,6 +1168,12 @@ plugins:
       - 'https://www.nexusmods.com/oblivion/mods/49874'
     req: [ *OBSE ]
     msg:
+      - <<: *alsoUseX
+        subs: [ '[EngineBugFixes](https://www.nexusmods.com/oblivion/mods/47085)' ]
+        condition: 'not file("OBSE/Plugins/EngineBugFixes.dll")'
+      - <<: *alsoUseX
+        subs: [ '[Floating weapons Fix (Enemies keep weapons in inventory)](https://www.nexusmods.com/oblivion/mods/46674)' ]
+        condition: 'not file("Enemy Weapons dont drop.esp")'
       - <<: *obsolete
         subs: [ '[Clean Up Cleaned Up](https://www.nexusmods.com/oblivion/mods/49874)' ]
         condition: 'version("kuerteeCleanUp.esp", "0.61", <)'
