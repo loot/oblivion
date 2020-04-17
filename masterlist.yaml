@@ -12324,14 +12324,9 @@ plugins:
   ### UL Lush Woodland (The Great Forest) ###
   - name: 'xulLushWoodlands.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/11164' ]
-    dirty:
-      - crc: 0x62fb2c49
-        <<: *dirtyPlugin
-        udr: 648
-      - crc: 0xfa59eb15
-        <<: *dirtyPlugin
-        itm: 52
-        udr: 940
+    clean:
+      - crc: 0xE328D922
+        util: 'TES4Edit v4.0.3'
   ### UL Panther River ###
   - name: 'xulPantherRiver.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/20332' ]
