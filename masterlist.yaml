@@ -12171,31 +12171,53 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/19370'
         name: 'Unique Landscapes Compilation'
+  - name: 'Unique Landscapes.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/19370' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x9954652E
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 27
+      - <<: *quickClean
+        crc: 0xCE527B14
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 27
   ### UL Ancient Redwoods (The Great Forest) ###
   - name: 'xulAncientRedwoods.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/11163' ]
-    dirty:
-      - crc: 0x6387135
-        <<: *dirtyPlugin
-        itm: 361
-        udr: 734
+    clean:
+      - crc: 0xA30FFE0D
+        util: 'TES4Edit v4.0.3'
   ### UL Ancient Yews ###
   - name: 'xulAncientYews.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/11458' ]
-    dirty:
-      - crc: 0x6b0d5e8e
-        <<: *dirtyPlugin
-        itm: 1
-        udr: 4572
+    clean:
+      - crc: 0x3C411C97
+        util: 'TES4Edit v4.0.3'
   ### UL Arrius Creek ###
   - name: 'xulArriusCreek.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/16818' ]
     tag: [ C.Water ]
     dirty:
-      - crc: 0x4c4b30c8
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x7C67B9B4
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 3
-        udr: 37
+      - <<: *quickClean
+        crc: 0x37ADE11D
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 3
+  - name: 'xulPatch_AY_AC.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/16818' ]
+    clean:
+      - crc: 0xA5FCE14D
+        util: 'TES4Edit v4.0.3'
+  ### UL Aspen Wood ###
+  - name: 'xulAspenWood.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/28763' ]
+    clean:
+      - crc: 0x34823279
+        util: 'TES4Edit v4.0.3'
   ### UL Beaches of Cyrodiil (The Lost Coast) ###
   - name: 'xulBeachesOfCyrodiilLostCoast.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/14720' ]
@@ -12204,25 +12226,36 @@ plugins:
         condition: 'not checksum("xulBeachesOfCyrodiilLostCoast.esp", C66FED9E)'
     clean:
       - crc: 0xC66FED9E
-        util: 'TES4Edit v4.0.2i'
+        util: 'TES4Edit v4.0.3'
   ### UL Blackwood Forest ###
   - name: 'xulBlackwoodForest.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/25799' ]
     dirty:
-      - crc: 0x781ac4eb
-        <<: *dirtyPlugin
-        itm: 39
+      - <<: *quickClean
+        crc: 0x13F3F4E3
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 3
   ### UL Bravil Barrowfields ###
   - name: 'xulBravilBarrowfields.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/20426' ]
-    dirty:
-      - crc: 0xa29afdc3
-        <<: *dirtyPlugin
-        udr: 5260
+    clean:
+      - crc: 0x0F68C808
+        util: 'TES4Edit v4.0.3'
+  ### UL Brena River Ravine ###
+  - name: 'xulBrenaRiverRavine.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/23573' ]
+    clean:
+      - crc: 0xD3EC9DED
+        util: 'TES4Edit v4.0.3'
+      - crc: 0x46C72432
+        util: 'TES4Edit v4.0.3'
   ### UL Cheydinhal Falls ###
   - name: 'xulCheydinhalFalls.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/27494' ]
     tag: [ C.Water ]
+    clean:
+      - crc: 0x86A6BA6C
+        util: 'TES4Edit v4.0.3'
   ### UL Chorrol Hinterland ###
   - name: 'xulChorrolHinterland.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/11189' ]
@@ -12231,94 +12264,102 @@ plugins:
         subs: [ 'Cyrodiil Rebuild.esp' ]
         condition: 'active("Cyrodiil Rebuild.esp")'
     tag: [ C.Water ]
-    dirty:
-      - crc: 0xb7b4334a
-        <<: *dirtyPlugin
-        udr: 2326
+    clean:
+      - crc: 0x6BC2BF50
+        util: 'TES4Edit v4.0.3'
+  - name: 'xulChorrolHinterland-BC6.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/11189' ]
+    clean:
+      - crc: 0xDA99F8C7
+        util: 'TES4Edit v4.0.3'
   ### UL Cliffs of Anvil ###
   - name: 'xulCliffsOfAnvil.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/36139' ]
-    dirty:
-      - crc: 0x701ef543
-        <<: *dirtyPlugin
-        itm: 2
-      - crc: 0xe9aeb1bf
-        <<: *dirtyPlugin
-        itm: 5
+    clean:
+      - crc: 0x06739E89
+        util: 'TES4Edit v4.0.3'
   ### UL Cloudtop Mountains ###
   - name: 'xulCloudtopMountains.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/16677' ]
-    dirty:
-      - crc: 0xfab16618
-        <<: *dirtyPlugin
-        udr: 4984
+    clean:
+      - crc: 0x4CE7D32A
+        util: 'TES4Edit v4.0.3'
+  ### UL Colovian Highlands ###
+  - name: 'xulColovianHighlands_EV.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/15511' ]
+    clean:
+      - crc: 0x55577CF3
+        util: 'TES4Edit v4.0.3'
   ### UL The Dark Forest ###
   - name: 'xuldarkforest.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/11162' ]
     tag:
       - C.Music
       - C.Water
+    clean:
+      - crc: 0x4622159A
+        util: 'TES4Edit v4.0.3'
+  ### UL The Eastern Peaks ###
+  - name: 'xulTheEasternPeaks.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/41050' ]
+    clean:
+      - crc: 0x95796CED
+        util: 'TES4Edit v4.0.3'
   ### UL Entius Gorge ###
   - name: 'xulEntiusGorge.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/7037' ]
     tag: [ C.Water ]
-    dirty:
-      - crc: 0xce1fe795
-        <<: *dirtyPlugin
-        itm: 12
-        udr: 1319
+    clean:
+      - crc: 0xEEB511EA
+        util: 'TES4Edit v4.0.3'
   ### UL Fallenleaf Everglade ###
   - name: 'xulFallenleafEverglade.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17562' ]
     tag: [ C.Water ]
-    dirty:
-      - crc: 0xe17d276d
-        <<: *dirtyPlugin
-        udr: 697
+    clean:
+      - crc: 0xFCA668D5
+        util: 'TES4Edit v4.0.3'
   ### UL The Heath ###
   - name: 'xulTheHeath.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/11165' ]
     tag: [ C.Water ]
-    dirty:
-      - crc: 0x64c34f7d
-        <<: *dirtyPlugin
-        itm: 25
-        udr: 704
+    clean:
+      - crc: 0xE707A59F
+        util: 'TES4Edit v4.0.3'
   ### UL Imperial Isle ###
   - name: 'xulImperialIsle.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/9531' ]
     after: [ 'road+bridges.esp' ]
-    dirty:
-      - crc: 0x9f8e4a43
-        <<: *dirtyPlugin
-        itm: 19
-        udr: 49
+    clean:
+      - crc: 0x61026078
+        util: 'TES4Edit v4.0.3'
+  ### UL Jerall Glacier ###
+  - name: 'xulJerallGlacier.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/40731' ]
+    clean:
+      - crc: 0x6B8E6A78
+        util: 'TES4Edit v4.0.3'
   ### UL Lush Woodland (The Great Forest) ###
   - name: 'xulLushWoodlands.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/11164' ]
-    dirty:
-      - crc: 0x62fb2c49
-        <<: *dirtyPlugin
-        udr: 648
-      - crc: 0xfa59eb15
-        <<: *dirtyPlugin
-        itm: 52
-        udr: 940
+    clean:
+      - crc: 0xE328D922
+        util: 'TES4Edit v4.0.3'
   ### UL Panther River ###
   - name: 'xulPantherRiver.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/20332' ]
-    dirty:
-      - crc: 0x168e01a1
-        <<: *dirtyPlugin
-        udr: 90
+    clean:
+      - crc: 0xB622BCF1
+        util: 'TES4Edit v4.0.3'
   ### UL River Ethe ###
   - name: 'xulRiverEthe.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17330' ]
     tag: [ C.Water ]
     dirty:
-      - crc: 0xd3959ee4
-        <<: *dirtyPlugin
-        udr: 7847
+      - <<: *quickClean
+        crc: 0x3D1B8A0C
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 18
   ### UL Rolling Hills ###
   - name: 'xulRollingHills_EV(_withoutWheat)?.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/10768' ]
@@ -12327,21 +12368,36 @@ plugins:
         subs: [ 'UL Rolling Hills' ]
         condition: 'many("xulRollingHills_EV(_withoutWheat)?.esp")'
   - name: 'xulRollingHills_EV.esp'
-    dirty:
-      - crc: 0x3b943963
-        <<: *dirtyPlugin
-        itm: 20
-        udr: 282
-  - name: 'xulRollingHills_EV_withoutWheat.esp'
-    dirty:
-      - crc: 0x7518580e
-        <<: *dirtyPlugin
-        itm: 2
-        udr: 282
+    clean:
+      - crc: 0x401FE3A4
+        util: 'TES4Edit v4.0.3'
+  ### UL Silverfish River Valley ###
+  - name: 'xulSilverfishRiverValley.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/38313' ]
+    clean:
+      - crc: 0x54D3A20D
+        util: 'TES4Edit v4.0.3'
   ### UL Skingrad Outskirts ###
   - name: 'xulSkingradOutskirts.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/29948' ]
     after: [ 'Cyrodiil Rebuild.esp' ]
+    clean:
+      - crc: 0x7462C03D
+        util: 'TES4Edit v4.0.3'
+  ### UL Snowdale ###
+  - name: 'xulSnowdale.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/33125' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xECA0BA93
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 3
+  ### UL Stendarr Valley ###
+  - name: 'xulStendarrValley.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/7054' ]
+    clean:
+      - crc: 0x00F9BEE5
+        util: 'TES4Edit v4.0.3'
 
 ###### Better Cities ######
   - name: 'Better (Cities |Imperial City).*\.es(m|p)'
