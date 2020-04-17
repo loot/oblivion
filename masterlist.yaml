@@ -12338,9 +12338,10 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/17330' ]
     tag: [ C.Water ]
     dirty:
-      - crc: 0xd3959ee4
-        <<: *dirtyPlugin
-        udr: 7847
+      - <<: *quickClean
+        crc: 0x3D1B8A0C
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 18
   ### UL Rolling Hills ###
   - name: 'xulRollingHills_EV(_withoutWheat)?.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/10768' ]
