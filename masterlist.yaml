@@ -12225,9 +12225,10 @@ plugins:
   - name: 'xulBlackwoodForest.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/25799' ]
     dirty:
-      - crc: 0x781ac4eb
-        <<: *dirtyPlugin
-        itm: 39
+      - <<: *quickClean
+        crc: 0x13F3F4E3
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 3
   ### UL Bravil Barrowfields ###
   - name: 'xulBravilBarrowfields.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/20426' ]
