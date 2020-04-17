@@ -12325,7 +12325,7 @@ plugins:
     msg:
       - <<: *useOnlyOneX
         subs: [ 'UL Rolling Hills' ]
-        condition: 'xulRollingHills_EV(_withoutWheat)?.esp'
+        condition: 'many("xulRollingHills_EV(_withoutWheat)?.esp")'
   - name: 'xulRollingHills_EV.esp'
     dirty:
       - crc: 0x3b943963
