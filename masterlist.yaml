@@ -12269,13 +12269,9 @@ plugins:
   ### UL Cliffs of Anvil ###
   - name: 'xulCliffsOfAnvil.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/36139' ]
-    dirty:
-      - crc: 0x701ef543
-        <<: *dirtyPlugin
-        itm: 2
-      - crc: 0xe9aeb1bf
-        <<: *dirtyPlugin
-        itm: 5
+    clean:
+      - crc: 0x06739E89
+        util: 'TES4Edit v4.0.3'
   ### UL Cloudtop Mountains ###
   - name: 'xulCloudtopMountains.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/16677' ]
