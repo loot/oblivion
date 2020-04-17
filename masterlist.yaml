@@ -12320,21 +12320,19 @@ plugins:
         <<: *dirtyPlugin
         udr: 7847
   ### UL Rolling Hills ###
-  - name: 'xulRollingHills_EV.esp'
+  - name: 'xulRollingHills_EV(_withoutWheat)?.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/10768' ]
     msg:
-      - type: say
-        content: 'Only use one UL Rolling Hills plugin.'
+      - <<: *useOnlyOneX
+        subs: [ 'UL Rolling Hills' ]
+        condition: 'xulRollingHills_EV(_withoutWheat)?.esp'
+  - name: 'xulRollingHills_EV.esp'
     dirty:
       - crc: 0x3b943963
         <<: *dirtyPlugin
         itm: 20
         udr: 282
   - name: 'xulRollingHills_EV_withoutWheat.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/10768' ]
-    msg:
-      - type: say
-        content: 'Only use one UL Rolling Hills plugin.'
     dirty:
       - crc: 0x7518580e
         <<: *dirtyPlugin
