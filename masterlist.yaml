@@ -12350,17 +12350,9 @@ plugins:
         subs: [ 'UL Rolling Hills' ]
         condition: 'many("xulRollingHills_EV(_withoutWheat)?.esp")'
   - name: 'xulRollingHills_EV.esp'
-    dirty:
-      - crc: 0x3b943963
-        <<: *dirtyPlugin
-        itm: 20
-        udr: 282
-  - name: 'xulRollingHills_EV_withoutWheat.esp'
-    dirty:
-      - crc: 0x7518580e
-        <<: *dirtyPlugin
-        itm: 2
-        udr: 282
+    clean:
+      - crc: 0x401FE3A4
+        util: 'TES4Edit v4.0.3'
   ### UL Skingrad Outskirts ###
   - name: 'xulSkingradOutskirts.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/29948' ]
