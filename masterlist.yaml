@@ -1165,8 +1165,10 @@ plugins:
   ### MigMaster Script Resources ###
   - name: 'MigMaster.esm'
     url: [ 'https://www.nexusmods.com/oblivion/mods/45875' ]
+    req: [ *OBSE ]
   - name: 'SafeCloningFunction - Filter.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/45875' ]
+    msg: [ *requiresBashedPatch ]
 
 ###### Fixes ######
   - name: 'kuerteeCleanUp.esp'
