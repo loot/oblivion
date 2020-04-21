@@ -1217,6 +1217,10 @@ plugins:
     tag:
       - Graphics
       - NoMerge
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Diverse Dremora Armor' ]
+        condition: 'many("DiverseDremoraArmor(FCOM|MMM|MMMforOOO|OOO)?.esp")'
   - name: 'DiverseDremoraFemales.esp'
     tag:
       - Actors.ACBS
