@@ -1223,37 +1223,40 @@ plugins:
 
 ###### Environment, Landscape & Flora ######
   ### New Roads and Bridges ###
-  - name: 'road+bridges.esp'
+  - name: '(road\+bridges|NRB4).*\.esp'
     url:
-      - 'https://www.nexusmods.com/oblivion/mods/9181'
-      - 'https://www.nexusmods.com/oblivion/mods/20218'
+      - link: 'https://www.nexusmods.com/oblivion/mods/9181'
+        name: 'New Roads and Bridges'
+      - link: 'https://www.nexusmods.com/oblivion/mods/20218'
+        name: 'Roads of Cyrodiil'
+  - name: 'road+bridges.esp'
     dirty:
       - crc: 0xca103402
         <<: *dirtyPlugin
         udr: 16
   - name: 'NRB4 Standard Road Record.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
     msg: [ *useOnlyOneRoadRecordFile ]
     req: [ 'road+bridges.esp' ]
     tag:
       - Deactivate
       - Roads
   - name: 'NRB4 OCReborn Road Record.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
     msg: [ *useOnlyOneRoadRecordFile ]
     req: [ 'Open Cities Reborn.esp' ]
     tag:
       - Deactivate
       - Roads
   - name: 'NRB4+UL-II+LtPD Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
     dirty:
       - crc: 0x3e7ca082
         <<: *dirtyPlugin
         udr: 14
   ### Roads of Cyrodiil ###
+  - name: '(Roads of Cyrodiil|ROC).*\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/20218'
+        name: 'Roads of Cyrodiil'
   - name: 'Roads of Cyrodiil.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
     msg:
       - type: error
         content: 'road+bridges.esp has been detected. New Roads & Bridges Revised and all dependent patches must be uninstalled before using Roads of Cyrodiil. See Roads of Cyrodiil readme for upgrade instructions.'
@@ -1262,79 +1265,25 @@ plugins:
         content: 'West Roads.esp has been detected. West Roads and all dependent patches must be uninstalled before using Roads of Cyrodiil. See Roads of Cyrodiil readme for upgrade instructions.'
         condition: 'file("West Roads.esp")'
   - name: 'ROC Standard Road Record.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
     req: [ 'Roads of Cyrodiil.esp' ]
     tag:
       - Deactivate
       - Roads
   - name: 'ROC - OCReborn Road Record.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
     req:
       - 'Open Cities Reborn.esp'
       - 'Roads of Cyrodiil.esp'
     tag:
       - Deactivate
       - Roads
-  - name: 'ROC+AranMathi Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
-  - name: 'ROC+CastleWestWeald Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
-  - name: 'ROC+ClassBeginning Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
-  - name: 'ROC+DBC Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
-  - name: 'ROC+DC Villages Addon.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
   - name: 'ROC+Fighters Guild Quests.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
     inc:
       - 'Quest For The Elements.esp'
       - 'ROC+QFE Patch.esp'
-  - name: 'ROC+ForgottonShields Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
-  - name: 'ROC+Fort Akatosh Redux.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
-  - name: 'ROC+Hemingweys Capes Addon.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
-  - name: 'ROC+Highwood Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
-  - name: 'ROC+Lilyvale Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
-  - name: 'ROC+LtPD Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
-  - name: 'ROC+OCOD Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
   - name: 'ROC+QFE Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
     inc:
       - 'Fighters Guild Quests.esp'
       - 'ROC+Fighters Guild Quests.esp'
-  - name: 'ROC+RBWR Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
-  - name: 'ROC+Romancing Ahnassi Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
-  - name: 'ROC+RR Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
-  - name: 'ROC+RST+Skingrad Outskirts.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
-  - name: 'ROC+Shadowcrest Vineyard Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
-  - name: 'ROC+Tchos Alchemy Tower Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
-  - name: 'ROC+TRN One of the Gang Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
-  - name: 'ROC+UL-II Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
-  - name: 'ROC+UL-II+LtPD Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
-  - name: 'ROC+UL-II+LtPD+OCOD Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
-  - name: 'ROC+UL-II+OCOD Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
-  - name: 'ROC+UL Skingrad Outskirts Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
-  - name: 'ROC+WellspringVale Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
 
 ###### Gameplay - General ######
   - name: 'Zensalins Oblivion Overhaul.esp'
