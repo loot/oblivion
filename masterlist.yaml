@@ -1253,18 +1253,12 @@ plugins:
   - name: 'Bashed Delayers - MERGE ONLY.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/25946/' ]
     group: *latePatchesGroup
-    msg:
-      - *requiresBashedPatch
-      - type: say
-        content: 'Versions less than 3.1 may cause the quest being patched to restart if installed after the quest has started. Update to the latest delayer if you suspect a problem.'
+    msg: [ *requiresBashedPatch ]
     tag:
       - Deactivate
       - Filter
   - name: 'BladeSong v1.3 Delayer.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/25946/' ]
-    msg:
-      - type: say
-        content: 'Versions less than 3.1 may cause the quest being patched to restart if installed after the quest has started. Update to the latest delayer if you suspect a problem.'
   - name: 'Castle_Seaview v1.1 Delayer.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/25946/' ]
     msg: [ *obsolete ]
