@@ -1214,23 +1214,11 @@ plugins:
   - name: 'DiverseDremora.*\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/40461' ]
   - name: 'DiverseDremoraArmor(FCOM|MMM|MMMforOOO|OOO)?.esp'
-    tag:
-      - Graphics
-      - NoMerge
+    tag: [ NoMerge ]
     msg:
       - <<: *useOnlyOneX
         subs: [ 'Diverse Dremora Armor' ]
         condition: 'many("DiverseDremoraArmor(FCOM|MMM|MMMforOOO|OOO)?.esp")'
-  - name: 'DiverseDremoraFemales.esp'
-    tag:
-      - Actors.ACBS
-      - Actors.Stats
-      - NpcFaces
-      - Voice-F
-  - name: 'DiverseDremora(CoblRaces|RBP)Cosmetics.esp'
-    tag:
-      - Eyes
-      - Hair
   - name: 'DiverseDremoraCoblRacesCosmetics.esp'
     msg:
       - <<: *requiresX
