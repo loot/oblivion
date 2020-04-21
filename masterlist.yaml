@@ -1230,27 +1230,27 @@ plugins:
       - link: 'https://www.nexusmods.com/oblivion/mods/20218'
         name: 'Roads of Cyrodiil'
   - name: 'road+bridges.esp'
-    dirty:
-      - crc: 0xca103402
-        <<: *dirtyPlugin
-        udr: 16
+    clean:
+      - crc: 0xCCECE4CC
+        util: 'TES4Edit v4.0.3'
   - name: 'NRB4 Standard Road Record.esp'
     msg: [ *useOnlyOneRoadRecordFile ]
     req: [ 'road+bridges.esp' ]
     tag:
       - Deactivate
       - Roads
+    clean:
+      - crc: 0x7366D355
+        util: 'TES4Edit v4.0.3'
   - name: 'NRB4 OCReborn Road Record.esp'
     msg: [ *useOnlyOneRoadRecordFile ]
     req: [ 'Open Cities Reborn.esp' ]
     tag:
       - Deactivate
       - Roads
-  - name: 'NRB4+UL-II+LtPD Patch.esp'
-    dirty:
-      - crc: 0x3e7ca082
-        <<: *dirtyPlugin
-        udr: 14
+    clean:
+      - crc: 0x63EA1E4B
+        util: 'TES4Edit v4.0.3'
   ### Roads of Cyrodiil ###
   - name: '(Roads of Cyrodiil|ROC).*\.esp'
     url:
@@ -1264,11 +1264,17 @@ plugins:
       - type: error
         content: 'West Roads.esp has been detected. West Roads and all dependent patches must be uninstalled before using Roads of Cyrodiil. See Roads of Cyrodiil readme for upgrade instructions.'
         condition: 'file("West Roads.esp")'
+    clean:
+      - crc: 0x71F7DC2A
+        util: 'TES4Edit v4.0.3'
   - name: 'ROC Standard Road Record.esp'
     req: [ 'Roads of Cyrodiil.esp' ]
     tag:
       - Deactivate
       - Roads
+    clean:
+      - crc: 0xE300E526
+        util: 'TES4Edit v4.0.3'
   - name: 'ROC - OCReborn Road Record.esp'
     req:
       - 'Open Cities Reborn.esp'
@@ -1276,6 +1282,9 @@ plugins:
     tag:
       - Deactivate
       - Roads
+    clean:
+      - crc: 0x8E0B055C
+        util: 'TES4Edit v4.0.3'
   - name: 'ROC+Fighters Guild Quests.esp'
     inc:
       - 'Quest For The Elements.esp'
