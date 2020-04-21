@@ -1257,7 +1257,9 @@ plugins:
       - link: 'https://www.nexusmods.com/oblivion/mods/20218'
         name: 'Roads of Cyrodiil'
   - name: 'Roads of Cyrodiil.esp'
-    after: [ 'AranMathi.esp' ]
+    after:
+      - 'AranMathi.esp'
+      - 'MTCExpandedVillages.esp'
     msg:
       - type: error
         content: 'road+bridges.esp has been detected. New Roads & Bridges Revised and all dependent patches must be uninstalled before using Roads of Cyrodiil. See Roads of Cyrodiil readme for upgrade instructions.'
