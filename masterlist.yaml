@@ -1269,6 +1269,10 @@ plugins:
     tag:
       - Deactivate
       - Roads
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'ROC Road Record' ]
+        condition: 'many("ROC (Standard|- OCReborn) Road Record.esp")'
   - name: 'ROC Standard Road Record.esp'
     clean:
       - crc: 0xE300E526
