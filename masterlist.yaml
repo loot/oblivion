@@ -1248,6 +1248,20 @@ plugins:
         util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 135
 
+###### Gameplay - Quests ######
+  ### Bash-able Quest Delayers ###
+  - name: 'Bashed Delayers - MERGE ONLY.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/25946/' ]
+    group: *latePatchesGroup
+    req: [ *OBSEv18 ]
+    msg: [ *requiresBashedPatch ]
+    tag:
+      - Deactivate
+      - Filter
+  - name: '(BladeSong|Castle_Seaview|CaveOfWishcraft|Cybiades|CyrilliansStaff|Demonhunter|EiAmod|Gift of Kynareth|GTAesgaard I|GTAesgaard II|Haunted_House_|HeartOftheDead|HoarfrostCastle|KohdiArmoryofAnsephaer|KohdiBladesofAnkewan|OrderCloudKnights|PotR|sS-OrderOfAskarthe|Steve - Hitman (Patched)|Talon of Akatosh (Claymore|Longsword)|Tantrivaylia|templars|The Lost Spires|TheForgottenShields|Underdark|UnderdarkSaga|WeaponsOfTheNine|Werewolf-Legends).*\Delayer.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/25946/' ]
+    msg: [ *obsolete ]
+
   - name: 'Hammerfell.esm'
     url: [ 'https://www.nexusmods.com/oblivion/mods/34484' ]
     clean:
@@ -3387,10 +3401,6 @@ plugins:
         itm: 8
         udr: 233
 
-  - name: 'Underdark v1.1 Delayer.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/25946/' ]
-    msg: [ *obsolete ]
-    group: *underridesGroup
 # These should all be tagged with Deactivate, NoMerge, and NPCFaces, and should have priority -2.
   - name: 'Better Looking NPC.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/33995' ]
@@ -5863,12 +5873,6 @@ plugins:
         crc: 0x79E857E0
         util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
-  - name: 'KohdiBladesofAnkewan v1.6 Delayer.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/25946/' ]
-    msg: [ *obsolete ]
-  - name: 'KohdiArmoryofAnsephaer v1.01 Delayer.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/25946/' ]
-    msg: [ *obsolete ]
   - name: 'Kurese Recolours.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/25721' ]
     dirty:
@@ -6278,12 +6282,6 @@ plugins:
   - name: 'Tail_Amulet_Converter.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/13007' ]
     req: [ *OBSEv11 ]
-  - name: 'Talon of Akatosh Claymore v1.1 Delayer.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/25946/' ]
-    msg: [ *obsolete ]
-  - name: 'Talon of Akatosh Longsword v1.1 Delayer.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/25946/' ]
-    msg: [ *obsolete ]
   - name: 'tda_Armoury.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/25332' ]
     dirty:
@@ -8295,11 +8293,6 @@ plugins:
     msg:
       - type: warn
         content: 'Requires: Screen Effects.'
-  - name: 'BladeSong v1.3 Delayer.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/25946/' ]
-    msg:
-      - type: say
-        content: 'Versions less than 3.1 may cause the quest being patched to restart if installed after the quest has started. Update to the latest delayer if you suspect a problem.'
   - name: 'BHC_Expanded.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/27029/' ]
     group: *earlyLoadersGroup
@@ -8401,9 +8394,6 @@ plugins:
         udr: 2
   - name: 'CaveOfWishcraft 1_1.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/27926' ]
-    msg: [ *obsolete ]
-  - name: 'CaveOfWishcraft v1.1 Delayer.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/25946/' ]
     msg: [ *obsolete ]
   - name: 'CottageInColoviaV1.6.esp'
     inc: [ 'Waalx Animals & Creatures.esm' ]
@@ -8577,9 +8567,6 @@ plugins:
         <<: *dirtyPlugin
         itm: 50
         udr: 892
-  - name: 'CyrilliansStaff v1.0 Delayer.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/25946/' ]
-    msg: [ *obsolete ]
   - name: 'Daedric Armor of Darkness.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/29152' ]
     dirty:
@@ -8660,9 +8647,6 @@ plugins:
         <<: *dirtyPlugin
         itm: 2265
         udr: 45
-  - name: 'Demonhunter v1.01 Delayer.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/25946/' ]
-    msg: [ *obsolete ]
   - name: 'DibellaTempleWillowLakeVillagev1.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/13285' ]
     dirty:
@@ -8841,9 +8825,6 @@ plugins:
   - name: 'Gift of Kynareth_delayer.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/25859/' ]
     msg: [ *obsolete ]
-  - name: 'Gift of Kynareth v2.1 Delayer.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/25946/' ]
-    msg: [ *obsolete ]
   - name: 'GoldenCrest.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/33626' ]
     dirty:
@@ -8908,9 +8889,6 @@ plugins:
         <<: *dirtyPlugin
         itm: 13
         udr: 5
-  - name: 'Haunted_House_v1.5 Delayer.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/25946/' ]
-    msg: [ *obsolete ]
   - name: 'HauntedLairMod.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/24521' ]
     dirty:
@@ -9278,9 +9256,6 @@ plugins:
       - crc: 0x37abd205
         <<: *dirtyPlugin
         udr: 277
-  - name: 'EiAmod v1.2 Delayer.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/25946/' ]
-    msg: [ *obsolete ]
   - name: 'Lady Stone Villa.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/39113' ]
     inc:
@@ -9663,12 +9638,6 @@ plugins:
         <<: *dirtyPlugin
         itm: 13
         udr: 12
-  - name: 'GTAesgaard I v1.2 Delayer.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/25946/' ]
-    msg: [ *obsolete ]
-  - name: 'GTAesgaard II v1.1 Delayer.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/25946/' ]
-    msg: [ *obsolete ]
   - name: 'OgramiradsUnmarkedPlaces.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/21359' ]
     req: [ 'DLCShiveringIsles.esp' ]
@@ -10011,9 +9980,6 @@ plugins:
         <<: *dirtyPlugin
         itm: 31
         udr: 1
-  - name: 'Steve - Hitman (Patched) Delayer.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/25946/' ]
-    msg: [ *obsolete ]
   - name: 'SunderedKeep.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/37587' ]
     after: [ 'Better dungeons.esp' ]
@@ -10057,9 +10023,6 @@ plugins:
         <<: *dirtyPlugin
         itm: 49
         udr: 322
-  - name: 'Tantrivaylia v0.99a Delayer.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/25946/' ]
-    msg: [ *obsolete ]
   - name: 'Temple District Rebuild.esp'
     msg:
       - type: say
@@ -10208,9 +10171,6 @@ plugins:
   - name: 'ROC+ForgottonShields Patch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
     msg: [ *roadsAndBridgesDetected ]
-  - name: 'TheForgottenShields v1.1 Delayer.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/25946/' ]
-    msg: [ *obsolete ]
   - name: '__thermae_CustomVisitor.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/42709' ]
     msg: [ *obsolete ]
@@ -10561,9 +10521,6 @@ plugins:
         <<: *dirtyPlugin
         itm: 24
         udr: 21
-  - name: 'WeaponsOfTheNine v2.3 Delayer.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/25946/' ]
-    msg: [ *obsolete ]
   - name: 'WellspringGrove.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/10407' ]
     dirty:
@@ -11038,9 +10995,6 @@ plugins:
         util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 159
         udr: 433
-  - name: 'The Lost Spires v14 Delayer.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/25946/' ]
-    msg: [ *obsolete ]
   - name: 'Lost Paladins of the Divines.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/10505' ]
     dirty:
@@ -11075,9 +11029,6 @@ plugins:
         <<: *dirtyPlugin
         itm: 12
         udr: 738
-  - name: 'HoarfrostCastle v1.2.2 Delayer.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/25946/' ]
-    msg: [ *obsolete ]
   - name: 'AFK_Weye.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22828' ]
     tag:
@@ -11425,12 +11376,6 @@ plugins:
       - type: say
         content: 'only use without Open Cities'
         condition: 'file("Open Cities.*\.esp")'
-  - name: 'HeartOfTheDeadv6.5 Delayer.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/25946/' ]
-    msg:
-      - type: say
-        content: 'Fine with HoTD V6.3-6.5.'
-      - *obsolete
   - name: 'Dschinni.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/25530' ]
     msg:
@@ -11998,9 +11943,6 @@ plugins:
       - Roads
   - name: 'CSV_Farms_Better_Cities.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/38366/' ]
-    msg: [ *obsolete ]
-  - name: 'Castle_Seaview v1.1 Delayer.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/25946/' ]
     msg: [ *obsolete ]
   - name: 'CastleSeaview+LostCoast Patch.esp'
     inc: [ 'EaglesRest+LostCoast+CastleSeaview Patch.esp' ]
@@ -19007,9 +18949,6 @@ plugins:
       - crc: 0x453742b9
         itm: 6
         <<: *dirtyPlugin
-  - name: 'UnderdarkSaga v1.2 Delayer.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/25946/' ]
-    msg: [ *obsolete ]
   - name: 'Sensual Walks.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/28223' ]
     group: *veryEarlyGroup
@@ -19143,17 +19082,6 @@ plugins:
     tag:
       - Deactivate
       - Roads
-  - name: 'Bashed Delayers - MERGE ONLY\.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/25946/' ]
-    msg:
-      - type: say
-        content: 'Versions less than 3.1 may cause the quest being patched to restart if installed after the quest has started. Update to the latest delayer if you suspect a problem.'
-  - name: 'Bashed Delayers( (N)?E)? - MERGE ONLY.esp'
-    group: *latePatchesGroup
-    msg: [ *requiresBashedPatch ]
-    tag:
-      - Deactivate
-      - Filter
   - name: 'CoreRandmonClothing4Npcs.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/27474/' ]
     group: *latePatchesGroup
