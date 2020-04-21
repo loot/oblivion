@@ -1279,13 +1279,9 @@ plugins:
       - crc: 0x8E0B055C
         util: 'TES4Edit v4.0.3'
   - name: 'ROC+Fighters Guild Quests.esp'
-    inc:
-      - 'Quest For The Elements.esp'
-      - 'ROC+QFE Patch.esp'
+    inc: [ 'ROC+QFE Patch.esp' ]
   - name: 'ROC+QFE Patch.esp'
-    inc:
-      - 'Fighters Guild Quests.esp'
-      - 'ROC+Fighters Guild Quests.esp'
+    inc: [ 'ROC+Fighters Guild Quests.esp' ]
 
 ###### Gameplay - General ######
   - name: 'Zensalins Oblivion Overhaul.esp'
@@ -8810,9 +8806,7 @@ plugins:
         itm: 99
   - name: 'Fighters Guild Quests.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/41012' ]
-    inc:
-      - 'Quest For The Elements.esp'
-      - 'ROC+QFE Patch.esp'
+    inc: [ 'Quest For The Elements.esp' ]
     tag:
       - Actors.ACBS
       - Actors.AIPackages
@@ -9806,9 +9800,7 @@ plugins:
         content: 'Part of Chronicles of Reeb. Goes with Belas.esm. Do not use. This mod has serious landscape errors in the Tamriel worldspace.'
   - name: 'Quest For The Elements.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/6974' ]
-    inc:
-      - 'Fighters Guild Quests.esp'
-      - 'ROC+Fighters Guild Quests.esp'
+    inc: [ 'Fighters Guild Quests.esp' ]
     dirty:
       - crc: 0xd2e0b570
         <<: *dirtyPlugin
