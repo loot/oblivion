@@ -1233,21 +1233,18 @@ plugins:
     clean:
       - crc: 0xCCECE4CC
         util: 'TES4Edit v4.0.3'
-  - name: 'NRB4 Standard Road Record.esp'
-    msg: [ *useOnlyOneRoadRecordFile ]
+  - name: 'NRB4 (Standard|OCReborn) Road Record.esp'
     req: [ 'road+bridges.esp' ]
     tag:
       - Deactivate
       - Roads
+    msg: [ *useOnlyOneRoadRecordFile ]
+  - name: 'NRB4 Standard Road Record.esp'
     clean:
       - crc: 0x7366D355
         util: 'TES4Edit v4.0.3'
   - name: 'NRB4 OCReborn Road Record.esp'
-    msg: [ *useOnlyOneRoadRecordFile ]
     req: [ 'Open Cities Reborn.esp' ]
-    tag:
-      - Deactivate
-      - Roads
     clean:
       - crc: 0x63EA1E4B
         util: 'TES4Edit v4.0.3'
@@ -1267,21 +1264,17 @@ plugins:
     clean:
       - crc: 0x71F7DC2A
         util: 'TES4Edit v4.0.3'
-  - name: 'ROC Standard Road Record.esp'
+  - name: 'ROC (Standard|- OCReborn) Road Record.esp'
     req: [ 'Roads of Cyrodiil.esp' ]
     tag:
       - Deactivate
       - Roads
+  - name: 'ROC Standard Road Record.esp'
     clean:
       - crc: 0xE300E526
         util: 'TES4Edit v4.0.3'
   - name: 'ROC - OCReborn Road Record.esp'
-    req:
-      - 'Open Cities Reborn.esp'
-      - 'Roads of Cyrodiil.esp'
-    tag:
-      - Deactivate
-      - Roads
+    req: [ 'Open Cities Reborn.esp' ]
     clean:
       - crc: 0x8E0B055C
         util: 'TES4Edit v4.0.3'
