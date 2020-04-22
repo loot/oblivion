@@ -1472,6 +1472,19 @@ plugins:
       - Hair
       - R.Relations
 
+###### Locations - New Lands ######
+  - name: 'bartholm.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/5022' ]
+    after:
+      - 'Unique Landscapes.esp'
+      - 'xulPantherRiver.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x7DE84455
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 211
+        udr: 553
+
 ###### Morroblivion ######
   - name: 'Morrowind_ob.*\.es(m|p)'
     url: [ 'http://morroblivion.com/forums/morroblivion/mods/753' ]
@@ -12057,14 +12070,6 @@ plugins:
   - name: 'Miscarcand Expanded.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/14337' ]
     inc: [ 'The Ruins of Miscarcand.esp' ]
-  - name: 'bartholm.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/5022' ]
-    dirty:
-      - <<: *quickClean
-        crc: 0x7DE84455
-        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 211
-        udr: 553
   - name: 'Duke Patricks - HammerBlade.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/27949' ]
     msg:
