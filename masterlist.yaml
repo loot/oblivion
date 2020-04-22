@@ -126,10 +126,6 @@ common:
   - &useWithBashedPatch
     type: say
     content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
-  - &roadsAndBridgesDetected
-    type: error
-    content: 'road+bridges.esp has been detected. New Roads & Bridges Revised and all dependent patches must be uninstalled before using Roads of Cyrodiil. See Roads of Cyrodiil readme for upgrade instructions.'
-    condition: 'file("road+bridges.esp")'
   - &useIniTweakOrBashedPatch
     type: warn
     content: 'Use .ini tweak or Wrye Bash Bashed Patch tweak instead where possible to avoid conflicts.'
@@ -1224,6 +1220,176 @@ plugins:
       - <<: *requiresX
         subs: [ 'Optional file [Cobl Cosmetics Res 01](https://www.nexusmods.com/oblivion/mods/21104/)' ]
         condition: 'not file("Sound/Voice/Cobl Races.esp/xivilai/f/genericxiv_seen_00010baf_1.mp3")'
+
+###### Environment, Landscape & Flora ######
+  ### New Roads and Bridges ###
+  - name: '(road\+bridges|NRB4).*\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/9181'
+        name: 'New Roads and Bridges'
+      - link: 'https://www.nexusmods.com/oblivion/mods/20218'
+        name: 'Roads of Cyrodiil'
+    inc: [ 'Roads of Cyrodiil.esp' ]
+  - name: 'road+bridges.esp'
+    after:
+      - 'AranMathi.esp'
+      - 'CastleWestWeald.esp'
+      - 'Highwood.esp'
+      - 'LetThePeopleDrink.esp'
+      - 'Quest For The Elements.esp'
+      - 'Region Revive - Lake Rumare.esp'
+      - 'RomancingAhnassi.esp'
+      - 'Shadowcrest_Vineyard.esp'
+      - 'Shadowcrest_Vineyard_COBL.esp'
+      - 'Tchos Alchemy Tower.esp'
+      - 'TheForgottenShields.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'Roads of Cyrodiil' ]
+        condition: 'active("Roads of Cyrodiil.esp")'
+    clean:
+      - crc: 0xCCECE4CC
+        util: 'TES4Edit v4.0.3'
+  - name: 'NRB4 (Standard|OCReborn) Road Record.esp'
+    req: [ 'road+bridges.esp' ]
+    tag:
+      - Deactivate
+      - Roads
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'NRB4 Road Record' ]
+        condition: 'many("NRB4 (Standard|OCReborn) Road Record.esp")'
+  - name: 'NRB4 Standard Road Record.esp'
+    after: [ 'Open Cities Classic.esp' ]
+    inc: [ 'Open Cities Reborn.esp' ]
+    clean:
+      - crc: 0x7366D355
+        util: 'TES4Edit v4.0.3'
+  - name: 'NRB4 OCReborn Road Record.esp'
+    req: [ 'Open Cities Reborn.esp' ]
+    clean:
+      - crc: 0x63EA1E4B
+        util: 'TES4Edit v4.0.3'
+  # NRB4 Patches #
+  - name: 'NRB4(\+| \+ )(CastleWestWeald|Highwood|QFE|Romancing Ahnassi|RR|TchosTower|Vineyard)(-| )Patch.esp'
+    req: [ 'road+bridges.esp' ]
+  - name: 'NRB4+AranMathi Patch.esp'
+    req:
+      - name: 'AranMathi.esp'
+        display: '[Aranmathi Ayleid Home](https://www.nexusmods.com/oblivion/mods/10424)'
+  - name: 'NRB4 + Highwood Patch.esp'
+    req:
+      - name: 'Highwood.esp'
+        display: '[Highwood](https://www.nexusmods.com/oblivion/mods/40037/)'
+  - name: 'NRB4+QFE Patch.esp'
+    req:
+      - name: 'Quest For The Elements.esp'
+        display: '[Quest for the Elements](https://www.nexusmods.com/oblivion/mods/6974)'
+  - name: 'NRB4+RR Patch.esp'
+    req:
+      - name: 'Region Revive - Lake Rumare.esp'
+        display: '[Region Revive - Lake Rumare](https://www.nexusmods.com/oblivion/mods/22751)'
+  - name: 'NRB4+TchosTower-Patch.esp'
+    req:
+      - name: 'Tchos Alchemy Tower.esp'
+        display: '[Lavish Mage Tower of Alchemy Power](https://www.nexusmods.com/oblivion/mods/20630/)'
+  - name: 'NRB4+Vineyard Patch.esp'
+    req:
+      - name: 'Shadowcrest_Vineyard.esp'
+        display: '[Shadowcrest Vineyard](https://www.nexusmods.com/oblivion/mods/22810/)'
+        condition: 'not active("Shadowcrest_Vineyard_COBL.esp")'
+  ### Roads of Cyrodiil ###
+  - name: '(Roads of Cyrodiil|ROC).*\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/20218'
+        name: 'Roads of Cyrodiil'
+  - name: 'Roads of Cyrodiil.esp'
+    after:
+      - 'AranMathi.esp'
+      - 'CastleWestWeald.esp'
+      - 'ClassedBeginning.esp'
+      - 'DarkBrotherhoodChronicles.esp'
+      - 'ElsweyrAnequina.esp'
+      - 'ElsweyrFaregylRoad.esp'
+      - 'Fighters Guild Quests.esp'
+      - 'Highwood.esp'
+      - 'LetThePeopleDrink.esp'
+      - 'MTCExpandedVillages.esp'
+      - 'Quest For The Elements.esp'
+      - 'ReclaimSancreTor.esp'
+      - 'Region Revive - Lake Rumare.esp'
+      - 'RomancingAhnassi.esp'
+      - 'Shadowcrest_Vineyard.esp'
+      - 'Shadowcrest_Vineyard_COBL.esp'
+      - 'Tchos Alchemy Tower.esp'
+      - 'TheForgottenShields.esp'
+    msg:
+      - type: error
+        content: 'West Roads.esp has been detected. West Roads and all dependent patches must be uninstalled before using Roads of Cyrodiil. See Roads of Cyrodiil readme for upgrade instructions.'
+        condition: 'file("West Roads.esp")'
+    clean:
+      - crc: 0x71F7DC2A
+        util: 'TES4Edit v4.0.3'
+  - name: 'ROC (Standard|- OCReborn) Road Record.esp'
+    req: [ 'Roads of Cyrodiil.esp' ]
+    tag:
+      - Deactivate
+      - Roads
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'ROC Road Record' ]
+        condition: 'many("ROC (Standard|- OCReborn) Road Record.esp")'
+  - name: 'ROC Standard Road Record.esp'
+    after: [ 'Open Cities Classic.esp' ]
+    inc: [ 'Open Cities Reborn.esp' ]
+    clean:
+      - crc: 0xE300E526
+        util: 'TES4Edit v4.0.3'
+  - name: 'ROC - OCReborn Road Record.esp'
+    req: [ 'Open Cities Reborn.esp' ]
+    clean:
+      - crc: 0x8E0B055C
+        util: 'TES4Edit v4.0.3'
+  # RoC Patches #
+  - name: 'ROC\+(ClassBeginning|Highwood|QFE|Romancing Ahnassi|RR|Shadowcrest Vineyard|Tchos Alchemy Tower|TRN One of the Gang|WellspringVale) Patch.esp'
+    req: [ 'Roads of Cyrodiil.esp' ]
+  - name: 'ROC+AranMathi Patch.esp'
+    req:
+      - name: 'AranMathi.esp'
+        display: '[Aranmathi Ayleid Home](https://www.nexusmods.com/oblivion/mods/10424)'
+  - name: 'ROC+ClassBeginning Patch.esp'
+    req:
+      - name: 'ClassedBeginning.esp'
+        display: '[Classed Beginnings](http://tesalliance.org/forums/index.php?/files/file/667-classed-beginnings/)'
+  - name: 'ROC+Highwood Patch.esp'
+    req:
+      - name: 'Highwood.esp'
+        display: '[Highwood](https://www.nexusmods.com/oblivion/mods/40037/)'
+  - name: 'ROC+QFE Patch.esp'
+    req:
+      - name: 'Quest For The Elements.esp'
+        display: '[Quest for the Elements](https://www.nexusmods.com/oblivion/mods/6974)'
+  - name: 'ROC+RR Patch.esp'
+    req:
+      - name: 'Region Revive - Lake Rumare.esp'
+        display: '[Region Revive - Lake Rumare](https://www.nexusmods.com/oblivion/mods/22751)'
+  - name: 'ROC+Shadowcrest Vineyard Patch.esp'
+    req:
+      - name: 'Shadowcrest_Vineyard.esp'
+        display: '[Shadowcrest Vineyard](https://www.nexusmods.com/oblivion/mods/22810/)'
+        condition: 'not active("Shadowcrest_Vineyard_COBL.esp")'
+  - name: 'ROC+Tchos Alchemy Tower Patch.esp'
+    req:
+      - name: 'Tchos Alchemy Tower.esp'
+        display: '[Lavish Mage Tower of Alchemy Power](https://www.nexusmods.com/oblivion/mods/20630/)'
+  - name: 'ROC+TRN One of the Gang Patch.esp'
+    req:
+      - name: 'TRN One of the Gang.esp'
+        display: '[TRN One of the Gang](https://www.nexusmods.com/oblivion/mods/23526/)'
+  - name: 'ROC+WellspringVale Patch.esp'
+    req:
+      - name: 'Wellspring Vale.esp'
+        display: '[Wellspring Vale](http://tesalliance.org/forums/index.php?/files/file/594-wellspring-vale/)'
 
 ###### Gameplay - General ######
   - name: 'Zensalins Oblivion Overhaul.esp'
@@ -8748,9 +8914,7 @@ plugins:
         itm: 99
   - name: 'Fighters Guild Quests.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/41012' ]
-    inc:
-      - 'Quest For The Elements.esp'
-      - 'ROC+QFE Patch.esp'
+    inc: [ 'Quest For The Elements.esp' ]
     tag:
       - Actors.ACBS
       - Actors.AIPackages
@@ -9744,9 +9908,7 @@ plugins:
         content: 'Part of Chronicles of Reeb. Goes with Belas.esm. Do not use. This mod has serious landscape errors in the Tamriel worldspace.'
   - name: 'Quest For The Elements.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/6974' ]
-    inc:
-      - 'Fighters Guild Quests.esp'
-      - 'ROC+Fighters Guild Quests.esp'
+    inc: [ 'Fighters Guild Quests.esp' ]
     dirty:
       - crc: 0xd2e0b570
         <<: *dirtyPlugin
@@ -10152,9 +10314,6 @@ plugins:
       - crc: 0x33817d08
         <<: *dirtyPlugin
         itm: 6
-  - name: 'ROC+ForgottonShields Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
-    msg: [ *roadsAndBridgesDetected ]
   - name: '__thermae_CustomVisitor.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/42709' ]
     msg: [ *obsolete ]
@@ -11256,57 +11415,6 @@ plugins:
     clean:
       - crc: 0xBBE3D1F1
         util: 'TES4Edit v4.0.3'
-  - name: 'road+bridges.esp'
-    url:
-      - 'https://www.nexusmods.com/oblivion/mods/9181'
-      - 'https://www.nexusmods.com/oblivion/mods/20218'
-    dirty:
-      - crc: 0xca103402
-        <<: *dirtyPlugin
-        udr: 16
-  - name: 'Roads of Cyrodiil.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
-    msg:
-      - *roadsAndBridgesDetected
-      - type: error
-        content: 'West Roads.esp has been detected. West Roads and all dependent patches must be uninstalled before using Roads of Cyrodiil. See Roads of Cyrodiil readme for upgrade instructions.'
-        condition: 'file("West Roads.esp")'
-  - name: 'ROC+AranMathi Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
-    msg: [ *roadsAndBridgesDetected ]
-  - name: 'ROC+CastleWestWeald Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
-    msg: [ *roadsAndBridgesDetected ]
-  - name: 'ROC+Fighters Guild Quests.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
-    inc:
-      - 'Quest For The Elements.esp'
-      - 'ROC+QFE Patch.esp'
-    msg: [ *roadsAndBridgesDetected ]
-  - name: 'ROC+Hemingweys Capes Addon.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
-    msg: [ *roadsAndBridgesDetected ]
-  - name: 'ROC+Highwood Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
-    msg: [ *roadsAndBridgesDetected ]
-  - name: 'ROC+QFE Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
-    inc:
-      - 'Fighters Guild Quests.esp'
-      - 'ROC+Fighters Guild Quests.esp'
-    msg: [ *roadsAndBridgesDetected ]
-  - name: 'ROC+Romancing Ahnassi Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
-    msg: [ *roadsAndBridgesDetected ]
-  - name: 'ROC+Shadowcrest Vineyard Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
-    msg: [ *roadsAndBridgesDetected ]
-  - name: 'ROC+Tchos Alchemy Tower Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
-    msg: [ *roadsAndBridgesDetected ]
-  - name: 'ROC+DBC Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
-    msg: [ *roadsAndBridgesDetected ]
   - name: 'Immersive Prison sewer exit.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/38705' ]
     dirty:
@@ -11574,9 +11682,6 @@ plugins:
       - crc: 0x822438dc
         <<: *dirtyPlugin
         udr: 5
-  - name: 'ROC+RBWR Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
-    msg: [ *roadsAndBridgesDetected ]
   - name: 'Reaper''s Coldstone Town.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/28340' ]
     inc: [ 'HeartOftheDead.esp' ]
@@ -11611,12 +11716,6 @@ plugins:
       - crc: 0x846BDBAA
         <<: *dirtyPlugin
         udr: 89
-  - name: 'ROC+DC Villages Addon.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
-    msg:
-      - type: error
-        content: 'West Roads.esp has been detected. West Roads and all dependent patches must be uninstalled before using Roads of Cyrodiil. See Roads of Cyrodiil readme for upgrade instructions.'
-        condition: 'file("West Roads.esp")'
   - name: 'WaterfrontMarket.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22834' ]
     msg:
@@ -11659,12 +11758,6 @@ plugins:
         <<: *dirtyPlugin
         itm: 2
         udr: 134
-  - name: 'ROC+WellspringVale Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
-    msg:
-      - type: error
-        content: 'West Roads.esp has been detected. West Roads and all dependent patches must be uninstalled before using Roads of Cyrodiil. See Roads of Cyrodiil readme for upgrade instructions.'
-        condition: 'file("West Roads.esp")'
   - name: 'Ravenpride-Stendarr patch.esp'
     msg:
       - type: say
@@ -11818,39 +11911,12 @@ plugins:
       - crc: 0xdce9a024
         <<: *dirtyPlugin
         udr: 1
-  - name: 'ROC+UL Skingrad Outskirts Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
-    msg:
-      - type: error
-        content: 'West Roads.esp has been detected. West Roads and all dependent patches must be uninstalled before using Roads of Cyrodiil. See Roads of Cyrodiil readme for upgrade instructions.'
-        condition: 'file("West Roads.esp")'
-  - name: 'ROC+RST+Skingrad Outskirts.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
-    msg:
-      - type: error
-        content: 'West Roads.esp has been detected. West Roads and all dependent patches must be uninstalled before using Roads of Cyrodiil. See Roads of Cyrodiil readme for upgrade instructions.'
-        condition: 'file("West Roads.esp")'
   - name: 'OotD_UL_Jerall_Patch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/45611' ]
     msg:
       - type: warn
         content: 'You do not need both of these patches! Disable OotD_UL_Jerall_Patch.esp.'
         condition: 'file("OrdenDesDrachen-JerallGlacier patch.esp")'
-  - name: 'NRB4+UL-II+LtPD Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
-    dirty:
-      - crc: 0x3e7ca082
-        <<: *dirtyPlugin
-        udr: 14
-  - name: 'ROC+LtPD Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
-    msg: [ *roadsAndBridgesDetected ]
-  - name: 'ROC+UL-II Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
-    msg: [ *roadsAndBridgesDetected ]
-  - name: 'ROC+UL-II+LtPD Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
-    msg: [ *roadsAndBridgesDetected ]
 
   - name: 'ImpeREAL Empire - Unique Forts.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22965' ]
@@ -12012,9 +12078,6 @@ plugins:
   - name: 'Fort Akatosh Redux.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/21856' ]
     tag: [ Relations ]
-  - name: 'ROC+Fort Akatosh Redux.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
-    msg: [ *roadsAndBridgesDetected ]
   - name: 'Cyrodiil Legion Addon.esp'
     tag: [ Names ]
   - name: 'Legion Ranger Addon.esp'
@@ -12026,12 +12089,6 @@ plugins:
         <<: *dirtyPlugin
         itm: 35
         udr: 384
-  - name: 'ROC+Lilyvale Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
-    msg:
-      - type: error
-        content: 'West Roads.esp has been detected. West Roads and all dependent patches must be uninstalled before using Roads of Cyrodiil. See Roads of Cyrodiil readme for upgrade instructions.'
-        condition: 'file("West Roads.esp")'
   - name: 'Millstone_Farm.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/29126' ]
     dirty:
@@ -13187,18 +13244,6 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/32925' ]
     req: [ 'Open Cities Outer Districts.esp' ]
 
-  - name: 'ROC+ClassBeginning Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
-    msg: [ *roadsAndBridgesDetected ]
-  - name: 'ROC+UL-II+OCOD Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
-    msg: [ *roadsAndBridgesDetected ]
-  - name: 'ROC+UL-II+LtPD+OCOD Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
-    msg: [ *roadsAndBridgesDetected ]
-  - name: 'ROC+OCOD Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
-    msg: [ *roadsAndBridgesDetected ]
   - name: 'DBOO - Open(Cities| Cities)(Full| Outer Districts|Full + Outer Districts)\.esp'
     msg:
       - <<: *useOnlyOneX
@@ -13229,9 +13274,6 @@ plugins:
     msg:
       - type: say
         content: 'Do not use if UL Imperial Isle is installed.'
-  - name: 'ROC+RR Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
-    msg: [ *roadsAndBridgesDetected ]
   - name: '(JQ) Fighters Guild United.esp'
     tag: [ Invent ]
   - name: 'JQ-Fighters_Guild_United.esp'
@@ -15056,12 +15098,6 @@ plugins:
         <<: *dirtyPlugin
         itm: 89
         udr: 28
-  - name: 'ROC+TRN One of the Gang Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
-    msg:
-      - type: error
-        content: 'West Roads.esp has been detected. West Roads and all dependent patches must be uninstalled before using Roads of Cyrodiil. See Roads of Cyrodiil readme for upgrade instructions.'
-        condition: 'file("West Roads.esp")'
   - name: 'Enhanced Grabbing - Debug.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/19847' ]
     msg: [ *obsolete ]
@@ -18967,36 +19003,6 @@ plugins:
       - Actors.Anims
       - NoMerge
 
-  - name: 'NRB4 Standard Road Record.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
-    msg: [ *useOnlyOneRoadRecordFile ]
-    req: [ 'road+bridges.esp' ]
-    tag:
-      - Deactivate
-      - Roads
-  - name: 'NRB4 OCReborn Road Record.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
-    msg: [ *useOnlyOneRoadRecordFile ]
-    req: [ 'Open Cities Reborn.esp' ]
-    tag:
-      - Deactivate
-      - Roads
-  - name: 'ROC Standard Road Record.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
-    msg: [ *roadsAndBridgesDetected ]
-    req: [ 'Roads of Cyrodiil.esp' ]
-    tag:
-      - Deactivate
-      - Roads
-  - name: 'ROC - OCReborn Road Record.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/20218' ]
-    msg: [ *roadsAndBridgesDetected ]
-    req:
-      - 'Open Cities Reborn.esp'
-      - 'Roads of Cyrodiil.esp'
-    tag:
-      - Deactivate
-      - Roads
   - name: 'CSVF_Road_Record_OC.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/38366/' ]
     msg: [ *useOnlyOneRoadRecordFile ]
