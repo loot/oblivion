@@ -12473,6 +12473,10 @@ plugins:
       - 'Slof''s Oblivion Goth Shop.esp'
       - name: 'TR_Stirk.esp'
         condition: 'not active("Stirk_Compatibility_Patch.esp")'
+      # Afters for group, may not be required if main OC plugins are required.
+      - 'Open Cities Bartholm.esp'
+      - 'Open Cities New Sheoth.esp'
+      - 'Open Cities Outer Districts.esp'
     inc:
       - 'Open Cities Classic.esp'
       - 'Open Cities Reborn.esp'
@@ -12491,6 +12495,11 @@ plugins:
         itm: 9
   - name: 'Better Cities (ANVIL|BRAVIL|BRUMA|CHEYDINHAL|CHORROL|LEYAWIIN|SKINGRAD)\.esp'
     group: *citiesGroup
+    after:
+      # Afters for group, may not be required if main OC plugins are required.
+      - 'Open Cities Bartholm.esp'
+      - 'Open Cities New Sheoth.esp'
+      - 'Open Cities Outer Districts.esp'
     inc:
       - 'Open Cities Classic.esp'
       - 'Open Cities Reborn.esp'
