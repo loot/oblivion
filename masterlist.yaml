@@ -12473,6 +12473,10 @@ plugins:
       - 'Slof''s Oblivion Goth Shop.esp'
       - name: 'TR_Stirk.esp'
         condition: 'not active("Stirk_Compatibility_Patch.esp")'
+      # Afters for group, may not be required if main OC plugins are required.
+      - 'Open Cities Bartholm.esp'
+      - 'Open Cities New Sheoth.esp'
+      - 'Open Cities Outer Districts.esp'
     inc:
       - 'Open Cities Classic.esp'
       - 'Open Cities Reborn.esp'
@@ -12491,6 +12495,11 @@ plugins:
         itm: 9
   - name: 'Better Cities (ANVIL|BRAVIL|BRUMA|CHEYDINHAL|CHORROL|LEYAWIIN|SKINGRAD)\.esp'
     group: *citiesGroup
+    after:
+      # Afters for group, may not be required if main OC plugins are required.
+      - 'Open Cities Bartholm.esp'
+      - 'Open Cities New Sheoth.esp'
+      - 'Open Cities Outer Districts.esp'
     inc:
       - 'Open Cities Classic.esp'
       - 'Open Cities Reborn.esp'
@@ -13090,6 +13099,7 @@ plugins:
       - crc: 0x1CD1BD9A
         util: 'TES4Edit v4.0.3'
   - name: 'Open Cities (Classic|Reborn)\.esp'
+    group: *citiesGroup
     after:
       - 'Open Cities Bartholm.esp'
       - 'Open Cities New Sheoth.esp'
@@ -13172,6 +13182,8 @@ plugins:
         util: 'TES4Edit v4.0.3'
   ### Open Cities - Optional Files ###
   - name: 'Open Cities Bartholm.esp'
+    group: *citiesGroup
+    after: [ 'Open Cities New Sheoth.esp' ]
     req:
       - name: 'Bartholm.esp'
         display: '[Bartholm](http://www.nexusmods.com/oblivion/mods/5022)'
@@ -13180,6 +13192,7 @@ plugins:
       - crc: 0x88CA86E2
         util: 'TES4Edit v4.0.3'
   - name: 'Open Cities New Sheoth.esp'
+    group: *citiesGroup
     req: [ 'DLCShiveringIsles.esp' ]
     tag:
       - Actors.AIPackages
@@ -13190,7 +13203,10 @@ plugins:
       - crc: 0x9C4443AF
         util: 'TES4Edit v4.0.3'
   - name: 'Open Cities Outer Districts.esp'
+    group: *citiesGroup
     after:
+      - 'Open Cities Bartholm.esp'
+      - 'Open Cities New Sheoth.esp'
       - 'Cyrodiil transportation network OC.esp'
       - 'OC+CTN Patch.esp'
       - 'OCC+COBL Luggage Patch.esp'
