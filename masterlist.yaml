@@ -1229,7 +1229,12 @@ plugins:
         name: 'New Roads and Bridges'
       - link: 'https://www.nexusmods.com/oblivion/mods/20218'
         name: 'Roads of Cyrodiil'
+    inc: [ 'Roads of Cyrodiil.esp' ]
   - name: 'road+bridges.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'Roads of Cyrodiil' ]
+        condition: 'active("Roads of Cyrodiil.esp")'
     clean:
       - crc: 0xCCECE4CC
         util: 'TES4Edit v4.0.3'
@@ -1278,9 +1283,6 @@ plugins:
       - 'Tchos Alchemy Tower.esp'
       - 'TheForgottenShields.esp'
     msg:
-      - type: error
-        content: 'road+bridges.esp has been detected. New Roads & Bridges Revised and all dependent patches must be uninstalled before using Roads of Cyrodiil. See Roads of Cyrodiil readme for upgrade instructions.'
-        condition: 'file("road+bridges.esp")'
       - type: error
         content: 'West Roads.esp has been detected. West Roads and all dependent patches must be uninstalled before using Roads of Cyrodiil. See Roads of Cyrodiil readme for upgrade instructions.'
         condition: 'file("West Roads.esp")'
