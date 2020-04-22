@@ -1243,6 +1243,7 @@ plugins:
         subs: [ 'NRB4 Road Record' ]
         condition: 'many("NRB4 (Standard|OCReborn) Road Record.esp")'
   - name: 'NRB4 Standard Road Record.esp'
+    after: [ 'Open Cities Classic.esp' ]
     clean:
       - crc: 0x7366D355
         util: 'TES4Edit v4.0.3'
@@ -1292,6 +1293,7 @@ plugins:
         subs: [ 'ROC Road Record' ]
         condition: 'many("ROC (Standard|- OCReborn) Road Record.esp")'
   - name: 'ROC Standard Road Record.esp'
+    after: [ 'Open Cities Classic.esp' ]
     clean:
       - crc: 0xE300E526
         util: 'TES4Edit v4.0.3'
