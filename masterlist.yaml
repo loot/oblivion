@@ -1468,8 +1468,9 @@ plugins:
   # RBP Compatibility - Better Redguards #
   - name: 'bgBalancing(D|E)VOptionalBetterRedguards.esp'
     msg:
-      - type: say
-        content: 'Requires: Better Redguards installed with its ESP deactivated.'
+      - <<: *requiresX
+        subs: [ '[Better Redguards](https://www.nexusmods.com/oblivion/mods/10753/) installed with its ESP deactivated.' ]
+        condition: 'not file("Textures/characters/redguard/headredguard_n.dds") and not checksum("Textures/characters/redguard/headredguard_n.dds", 05EFE5E2)'
       - <<: *useBashTweakRecommended
         subs: [ 'Tweak Actors: Redguard FGTS Nuller' ]
   - name: 'bgBalancing(D|E)VOptionalNPCDiversity, (Beautification |TNR Merge |Vanilla )Better Redguards\.esp'
