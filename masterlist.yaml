@@ -1485,22 +1485,15 @@ plugins:
     tag:
       - Actors.ACBS
       - Actors.Stats
-      - NpcFaces
 
   - name: 'bgBalancingEVOptionalNPCDiversityLAME.esp'
     msg: [ *doNotClean ]
-    tag:
-      - NoMerge
-      - NpcFaces
 
   - name: 'bgBalancingEVOptionalNPCDiversity, (Beautification|TNR Merge|Vanilla)\.esp'
     msg:
       - <<: *useOnlyOneX
         subs: [ 'Race Balancing Project - NPC Diversity Module' ]
         condition: 'many("bgBalancingEVOptionalNPCDiversity, (Beautification|TNR Merge|Vanilla)\.esp")'
-    tag:
-      - NoMerge
-      - NpcFaces
 
   - name: 'bgBalancingEVOptionalNPCDiversity, (Beautification |TNR Merge |Vanilla )Better Redguards\.esp'
     msg:
@@ -1509,11 +1502,6 @@ plugins:
         condition: 'many("bgBalancingEVOptionalNPCDiversity, (Beautification |TNR Merge |Vanilla )Better Redguards\.esp")'
       - <<: *useBashTweakRecommended
         subs: [ 'Tweak Actors: Redguard FGTS Nuller' ]
-    tag:
-      - Invent
-      - NoMerge
-      - NpcFaces
-
 
   - name: 'bgBalancingOptionalNPCDiversityKvatchRebuilt, for Wrye Bash.esp'
     msg: [ *doNotClean ]
@@ -1540,9 +1528,6 @@ plugins:
 
   - name: 'bgBalancingDVOptionalNPCDiversityLAME.esp'
     msg: [ *doNotClean ]
-    tag:
-      - NoMerge
-      - NpcFaces
 
   - name: 'bgBalancingDVOptionalSeamReducerHighElfFix.esp'
     req: [ 'DLCShiveringIsles.esp' ]
