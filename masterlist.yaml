@@ -1481,6 +1481,10 @@ plugins:
       - <<: *useBashTweakRecommended
         subs: [ 'Tweak Actors: Redguard FGTS Nuller' ]
   # RBP NPCDiversity #
+  - name: 'bgBalancingDVOptionalNPCDiversity, (Beautification|TNR Merge|Vanilla).esp'
+    inc: [ 'bgBalancingDVOptionalBetterRedguards.esp' ]
+  - name: 'bgBalancingEVOptionalNPCDiversity, (Beautification|TNR Merge|Vanilla).esp'
+    inc: [ 'bgBalancingEVOptionalBetterRedguards.esp' ]
   - name: 'bgBalancing(D|E)VOptionalNPCDiversity, (Beautification|TNR Merge|Vanilla).*\.esp'
     after:
       - 'Open Cities Bartholm.esp'
