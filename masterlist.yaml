@@ -1515,6 +1515,11 @@ plugins:
   # RBP NPCDiversity - Kvatch Rebuilt #
   - name: 'bgBalancingOptionalNPCDiversityKvatchRebuilt, for Wrye Bash.esp'
     msg: [ *doNotClean ]
+  # RBP Gamesettings Resetters #
+  - name: 'bgBalancing(Optional|VanillaGMST).*\.esp'
+    after:
+      - 'bgBalancingDVCore.esp'
+      - 'bgBalancingEVCore.esp'
 
 ###### Gameplay - Quests ######
   ### Bash-able Quest Delayers ###
