@@ -1486,6 +1486,7 @@ plugins:
       - 'Open Cities Bartholm.esp'
       - 'Open Cities New Sheoth.esp'
     msg:
+      - *requiresBashedPatch
       - <<: *useOnlyOneX
         subs: [ 'Race Balancing Project - NPC Diversity Module' ]
         condition: 'many("bgBalancing(D|E)VOptionalNPCDiversity, (Beautification|TNR Merge|Vanilla).*\.esp")'
