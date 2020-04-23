@@ -1469,6 +1469,10 @@ plugins:
   - name: 'bgBalancing(D|E)VNoSIVersion_Core_still_required.esp'
     inc: [ 'DLCShiveringIsles.esp' ]
   # RBP Optional Modules #
+  - name: 'bgBalancingDVOptional.*\.esp'
+    req: [ 'bgBalancingDVCore.esp' ]
+  - name: 'bgBalancingEVOptional.*\.esp'
+    req: [ 'bgBalancingEVCore.esp' ]
   - name: 'bgBalancing(D|E)VOptionalFangs.esp'
     tag: [ R.Teeth ]
   # RBP Compatibility - Better Redguards #
