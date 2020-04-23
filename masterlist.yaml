@@ -1484,13 +1484,13 @@ plugins:
     msg:
       - <<: *useOnlyOneX
         subs: [ 'Race Balancing Project - NPC Diversity Better Redguards Module' ]
-        condition: 'many("bgBalancingEVOptionalNPCDiversity, (Beautification |TNR Merge |Vanilla )Better Redguards\.esp")'
+        condition: 'many("bgBalancing(D|E)VOptionalNPCDiversity, (Beautification |TNR Merge |Vanilla )Better Redguards\.esp")'
   # RBP NPCDiversity #
   - name: 'bgBalancing(D|E)VOptionalNPCDiversity, (Beautification|TNR Merge|Vanilla)\.esp'
     msg:
       - <<: *useOnlyOneX
         subs: [ 'Race Balancing Project - NPC Diversity Module' ]
-        condition: 'many("bgBalancingEVOptionalNPCDiversity, (Beautification|TNR Merge|Vanilla)\.esp")'
+        condition: 'many("bgBalancing(D|E)VOptionalNPCDiversity, (Beautification|TNR Merge|Vanilla)\.esp")'
   # RBP Additions - Less Annoying Magic Experience #
   - name: 'bgBalancing(D|E)V(OptionalNPCDiversity)?LAME(Addition|Glue)?\.esp'
     req: [ 'DLCShiveringIsles.esp' ]
@@ -1498,7 +1498,7 @@ plugins:
   - name: 'bgBalancing(D|E)VLAMEAddition.esp'
     tag: [ Relev ]
   # RBP Additions - OOO & MMM #
-  - name: 'bgBalancingEVOptionalFCOMAdditions.esp'
+  - name: 'bgBalancing(D|E)VOptionalFCOMAdditions.esp'
     tag:
       - Actors.ACBS
       - Actors.Stats
