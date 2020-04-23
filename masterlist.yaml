@@ -1482,6 +1482,9 @@ plugins:
         subs: [ 'Tweak Actors: Redguard FGTS Nuller' ]
   # RBP NPCDiversity #
   - name: 'bgBalancing(D|E)VOptionalNPCDiversity, (Beautification|TNR Merge|Vanilla).*\.esp'
+    after:
+      - 'Open Cities Bartholm.esp'
+      - 'Open Cities New Sheoth.esp'
     msg:
       - <<: *useOnlyOneX
         subs: [ 'Race Balancing Project - NPC Diversity Module' ]
