@@ -1500,8 +1500,9 @@ plugins:
   - name: 'bgBalancing(D|E)VOptionalSeamReducerHighElfFix.esp'
     req: [ 'DLCShiveringIsles.esp' ]
     msg:
-      - type: say
-        content: 'Requires: Luchaire''s Body Seam Reducer.'
+      - <<: *requiresX
+        subs: [ '[Luchaire''s Body Seam Reducer](https://www.nexusmods.com/oblivion/mods/19738/)' ]
+        condition: 'not file("meshes/characters/imperial/headhuman.egt") and not checksum("meshes/characters/imperial/headhuman.egt", 333FAB1A)'
       - *doNotClean
     tag: [ Body-M ]
   # RBP NPCDiversity - Kvatch Rebuilt #
