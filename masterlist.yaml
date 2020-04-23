@@ -1482,15 +1482,11 @@ plugins:
         subs: [ 'Race Balancing Project - NPC Diversity Module' ]
         condition: 'many("bgBalancingEVOptionalNPCDiversity, (Beautification|TNR Merge|Vanilla)\.esp")'
   # RBP Additions - Less Annoying Magic Experience #
+  - name: 'bgBalancing(D|E)V(OptionalNPCDiversity)?LAME(Addition|Glue)?\.esp'
+    req: [ 'DLCShiveringIsles.esp' ]
+    msg: [ *doNotClean ]
   - name: 'bgBalancing(D|E)VLAMEAddition.esp'
-    req: [ 'DLCShiveringIsles.esp' ]
-    msg: [ *doNotClean ]
     tag: [ Relev ]
-  - name: 'bgBalancing(D|E)VLAMEGlue.esp'
-    req: [ 'DLCShiveringIsles.esp' ]
-    msg: [ *doNotClean ]
-  - name: 'bgBalancing(D|E)VOptionalNPCDiversityLAME.esp'
-    msg: [ *doNotClean ]
   # RBP Additions - OOO & MMM #
   - name: 'bgBalancingEVOptionalFCOMAdditions.esp'
     tag:
