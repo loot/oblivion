@@ -1434,8 +1434,6 @@ plugins:
   ### Race Balancing Project ###
   - name: 'bgBalancing.*\.esp'
     url:
-      - link: 'http://theelderscrolls.info/?go=dlfile&fileid=293'
-        name: 'Race Balancing Project (Installation files)'
       - link: 'http://theelderscrolls.info/?go=dlfile&fileid=215'
         name: 'Race Balancing Project (English)'
       - link: 'http://theelderscrolls.info/?go=dlfile&fileid=222'
@@ -1449,7 +1447,11 @@ plugins:
       - 'Open Cities Classic.esp'
       - 'Open Cities Reborn.esp'
     inc: [ 'Cobl Races.esp' ]
-    msg: [ *doNotClean ]
+    msg:
+      - *doNotClean
+      - <<: *requiresX
+        subs: [ '[Race Balancing Project (Installation files)](http://theelderscrolls.info/?go=dlfile&fileid=293/)' ]
+        condition: 'not file("meshes/soya/soyastyle01.nif") and not checksum("bgBalancingEVCore.esp", 23CB78D5) and not checksum("bgBalancingDVCore.esp", BAF6C4D0)'
     tag:
       - Body-Size-F
       - Body-Size-M
