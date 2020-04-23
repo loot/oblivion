@@ -1455,7 +1455,7 @@ plugins:
       - *doNotClean
       - <<: *requiresX
         subs: [ '[Race Balancing Project (Installation files)](http://theelderscrolls.info/?go=dlfile&fileid=293/)' ]
-        condition: 'not file("meshes/soya/soyastyle01.nif") and not checksum("bgBalancingEVCore.esp", 23CB78D5) and not checksum("bgBalancingDVCore.esp", BAF6C4D0)'
+        condition: 'not file("meshes/soya/soyastyle01.nif") and not version("bgBalancingEVCore.esp", "10.0EV-L", ==) and not version("bgBalancingDVCore.esp", "10.0DV-L", ==)'
     tag:
       - Body-Size-F
       - Body-Size-M
