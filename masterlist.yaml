@@ -1440,7 +1440,7 @@ plugins:
         name: 'Race Balancing Project (English)'
       - link: 'http://theelderscrolls.info/?go=dlfile&fileid=222'
         name: 'Race Balancing Project (German)'
-  - name: 'bgBalancingEVCore.esp'
+  - name: 'bgBalancing(D|E)VCore.esp'
     after:
       - 'Open Cities Classic.esp'
       - 'Open Cities Reborn.esp'
@@ -1460,6 +1460,10 @@ plugins:
       - R.Relations
       - R.Skills
       - SpellStats
+  - name: 'bgBalancingDVCore.esp'
+    msg:
+      - type: say
+        content: 'German version.'
 
   - name: 'bgBalancingEVLAMEAddition.esp'
     req:
@@ -1533,28 +1537,6 @@ plugins:
         content: 'Requires: Luchaire''s Body Seam Reducer.'
       - *doNotClean
     tag: [ Body-M ]
-
-  - name: 'bgBalancingDVCore.esp'
-    after:
-      - 'Open Cities Classic.esp'
-      - 'Open Cities Reborn.esp'
-    msg:
-      - type: say
-        content: 'German version.'
-      - type: say
-        content: 'Do not use with COBL Races'
-      - *doNotClean
-    tag:
-      - Body-Size-F
-      - Body-Size-M
-      - Eyes
-      - Hair
-      - R.Attributes-F
-      - R.Attributes-M
-      - R.ChangeSpells
-      - R.Description
-      - R.Relations
-      - R.Skills
 
   - name: 'bgBalancingDVLAMEAddition.esp'
     req:
