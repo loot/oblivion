@@ -1463,39 +1463,39 @@ plugins:
       - type: say
         content: 'German version.'
 
-  - name: 'bgBalancingEVLAMEAddition.esp'
+  - name: 'bgBalancing(D|E)VLAMEAddition.esp'
     req: [ 'DLCShiveringIsles.esp' ]
     msg: [ *doNotClean ]
     tag: [ Relev ]
 
-  - name: 'bgBalancingEVLAMEGlue.esp'
+  - name: 'bgBalancing(D|E)VLAMEGlue.esp'
     req: [ 'DLCShiveringIsles.esp' ]
     msg: [ *doNotClean ]
 
-  - name: 'bgBalancingEVOptionalBetterRedguards.esp'
+  - name: 'bgBalancing(D|E)VOptionalBetterRedguards.esp'
     msg:
       - type: say
         content: 'Requires: Better Redguards installed with its ESP deactivated.'
       - <<: *useBashTweakRecommended
         subs: [ 'Tweak Actors: Redguard FGTS Nuller' ]
 
-  - name: 'bgBalancingEVOptionalFangs.esp'
+  - name: 'bgBalancing(D|E)VOptionalFangs.esp'
     tag: [ R.Teeth ]
   - name: 'bgBalancingEVOptionalFCOMAdditions.esp'
     tag:
       - Actors.ACBS
       - Actors.Stats
 
-  - name: 'bgBalancingEVOptionalNPCDiversityLAME.esp'
+  - name: 'bgBalancing(D|E)VOptionalNPCDiversityLAME.esp'
     msg: [ *doNotClean ]
 
-  - name: 'bgBalancingEVOptionalNPCDiversity, (Beautification|TNR Merge|Vanilla)\.esp'
+  - name: 'bgBalancing(D|E)VOptionalNPCDiversity, (Beautification|TNR Merge|Vanilla)\.esp'
     msg:
       - <<: *useOnlyOneX
         subs: [ 'Race Balancing Project - NPC Diversity Module' ]
         condition: 'many("bgBalancingEVOptionalNPCDiversity, (Beautification|TNR Merge|Vanilla)\.esp")'
 
-  - name: 'bgBalancingEVOptionalNPCDiversity, (Beautification |TNR Merge |Vanilla )Better Redguards\.esp'
+  - name: 'bgBalancing(D|E)VOptionalNPCDiversity, (Beautification |TNR Merge |Vanilla )Better Redguards\.esp'
     msg:
       - <<: *useOnlyOneX
         subs: [ 'Race Balancing Project - NPC Diversity Better Redguards Module' ]
@@ -1506,34 +1506,12 @@ plugins:
   - name: 'bgBalancingOptionalNPCDiversityKvatchRebuilt, for Wrye Bash.esp'
     msg: [ *doNotClean ]
 
-  - name: 'bgBalancingEVOptionalSeamReducerHighElfFix.esp'
+  - name: 'bgBalancing(D|E)VOptionalSeamReducerHighElfFix.esp'
     req: [ 'DLCShiveringIsles.esp' ]
     msg:
       - type: say
         content: 'Requires: Luchaire''s Body Seam Reducer.'
       - *doNotClean
-    tag: [ Body-M ]
-
-  - name: 'bgBalancingDVLAMEAddition.esp'
-    req: [ 'DLCShiveringIsles.esp' ]
-    msg: [ *doNotClean ]
-    tag: [ Relev ]
-
-  - name: 'bgBalancingDVLAMEGlue.esp'
-    req: [ 'DLCShiveringIsles.esp' ]
-    msg: [ *doNotClean ]
-
-  - name: 'bgBalancingDVOptionalFangs.esp'
-    tag: [ R.Teeth ]
-
-  - name: 'bgBalancingDVOptionalNPCDiversityLAME.esp'
-    msg: [ *doNotClean ]
-
-  - name: 'bgBalancingDVOptionalSeamReducerHighElfFix.esp'
-    req: [ 'DLCShiveringIsles.esp' ]
-    msg:
-      - type: say
-        content: 'Requires: Luchaire''s Body Seam Reducer.'
     tag: [ Body-M ]
 
 ###### Gameplay - Quests ######
