@@ -1458,39 +1458,16 @@ plugins:
       - R.Relations
       - R.Skills
       - SpellStats
-
-  - name: 'bgBalancing(D|E)VLAMEAddition.esp'
-    req: [ 'DLCShiveringIsles.esp' ]
-    msg: [ *doNotClean ]
-    tag: [ Relev ]
-
-  - name: 'bgBalancing(D|E)VLAMEGlue.esp'
-    req: [ 'DLCShiveringIsles.esp' ]
-    msg: [ *doNotClean ]
-
+  # RBP Optional Modules #
+  - name: 'bgBalancing(D|E)VOptionalFangs.esp'
+    tag: [ R.Teeth ]
+  # RBP Compatibility - Better Redguards #
   - name: 'bgBalancing(D|E)VOptionalBetterRedguards.esp'
     msg:
       - type: say
         content: 'Requires: Better Redguards installed with its ESP deactivated.'
       - <<: *useBashTweakRecommended
         subs: [ 'Tweak Actors: Redguard FGTS Nuller' ]
-
-  - name: 'bgBalancing(D|E)VOptionalFangs.esp'
-    tag: [ R.Teeth ]
-  - name: 'bgBalancingEVOptionalFCOMAdditions.esp'
-    tag:
-      - Actors.ACBS
-      - Actors.Stats
-
-  - name: 'bgBalancing(D|E)VOptionalNPCDiversityLAME.esp'
-    msg: [ *doNotClean ]
-
-  - name: 'bgBalancing(D|E)VOptionalNPCDiversity, (Beautification|TNR Merge|Vanilla)\.esp'
-    msg:
-      - <<: *useOnlyOneX
-        subs: [ 'Race Balancing Project - NPC Diversity Module' ]
-        condition: 'many("bgBalancingEVOptionalNPCDiversity, (Beautification|TNR Merge|Vanilla)\.esp")'
-
   - name: 'bgBalancing(D|E)VOptionalNPCDiversity, (Beautification |TNR Merge |Vanilla )Better Redguards\.esp'
     msg:
       - <<: *useOnlyOneX
@@ -1498,10 +1475,28 @@ plugins:
         condition: 'many("bgBalancingEVOptionalNPCDiversity, (Beautification |TNR Merge |Vanilla )Better Redguards\.esp")'
       - <<: *useBashTweakRecommended
         subs: [ 'Tweak Actors: Redguard FGTS Nuller' ]
-
-  - name: 'bgBalancingOptionalNPCDiversityKvatchRebuilt, for Wrye Bash.esp'
+  # RBP NPCDiversity #
+  - name: 'bgBalancing(D|E)VOptionalNPCDiversity, (Beautification|TNR Merge|Vanilla)\.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Race Balancing Project - NPC Diversity Module' ]
+        condition: 'many("bgBalancingEVOptionalNPCDiversity, (Beautification|TNR Merge|Vanilla)\.esp")'
+  # RBP Additions - Less Annoying Magic Experience #
+  - name: 'bgBalancing(D|E)VLAMEAddition.esp'
+    req: [ 'DLCShiveringIsles.esp' ]
     msg: [ *doNotClean ]
-
+    tag: [ Relev ]
+  - name: 'bgBalancing(D|E)VLAMEGlue.esp'
+    req: [ 'DLCShiveringIsles.esp' ]
+    msg: [ *doNotClean ]
+  - name: 'bgBalancing(D|E)VOptionalNPCDiversityLAME.esp'
+    msg: [ *doNotClean ]
+  # RBP Additions - OOO & MMM #
+  - name: 'bgBalancingEVOptionalFCOMAdditions.esp'
+    tag:
+      - Actors.ACBS
+      - Actors.Stats
+  # RBP Body Seam Reducer #
   - name: 'bgBalancing(D|E)VOptionalSeamReducerHighElfFix.esp'
     req: [ 'DLCShiveringIsles.esp' ]
     msg:
@@ -1509,6 +1504,9 @@ plugins:
         content: 'Requires: Luchaire''s Body Seam Reducer.'
       - *doNotClean
     tag: [ Body-M ]
+  # RBP NPCDiversity - Kvatch Rebuilt #
+  - name: 'bgBalancingOptionalNPCDiversityKvatchRebuilt, for Wrye Bash.esp'
+    msg: [ *doNotClean ]
 
 ###### Gameplay - Quests ######
   ### Bash-able Quest Delayers ###
