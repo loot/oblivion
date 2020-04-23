@@ -1444,10 +1444,8 @@ plugins:
     after:
       - 'Open Cities Classic.esp'
       - 'Open Cities Reborn.esp'
-    msg:
-      - type: say
-        content: 'Do not use with COBL Races.'
-      - *doNotClean
+    inc: [ 'Cobl Races.esp' ]
+    msg: [ *doNotClean ]
     tag:
       - Body-Size-F
       - Body-Size-M
