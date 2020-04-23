@@ -1432,11 +1432,15 @@ plugins:
 
 ###### Gameplay - Character Classes & Races ######
   ### Race Balancing Project ###
-  - name: 'bgBalancingEVCore.esp'
+  - name: 'bgBalancing.*\.esp'
     url:
-      - 'http://theelderscrolls.info/?go=dlfile&fileid=215'
-      # Installation files for Race Balancing Project 10.5 EV & DV
-      - 'http://theelderscrolls.info/?go=dlfile&fileid=293'
+      - link: 'http://theelderscrolls.info/?go=dlfile&fileid=293'
+        name: 'Race Balancing Project (Installation files)'
+      - link: 'http://theelderscrolls.info/?go=dlfile&fileid=215'
+        name: 'Race Balancing Project (English)'
+      - link: 'http://theelderscrolls.info/?go=dlfile&fileid=222'
+        name: 'Race Balancing Project (German)'
+  - name: 'bgBalancingEVCore.esp'
     after:
       - 'Open Cities Classic.esp'
       - 'Open Cities Reborn.esp'
@@ -1458,7 +1462,6 @@ plugins:
       - SpellStats
 
   - name: 'bgBalancingEVLAMEAddition.esp'
-    url: [ 'http://theelderscrolls.info/?go=dlfile&fileid=215' ]
     req:
       - name: 'bgMagicEV.esp'
         display: 'Less Annoying Magic Experience (L.A.M.E)'
@@ -1467,7 +1470,6 @@ plugins:
     tag: [ Relev ]
 
   - name: 'bgBalancingEVLAMEGlue.esp'
-    url: [ 'http://theelderscrolls.info/?go=dlfile&fileid=215' ]
     req:
       - name: 'bgMagicEV.esp'
         display: 'Less Annoying Magic Experience (L.A.M.E)'
@@ -1475,7 +1477,6 @@ plugins:
     msg: [ *doNotClean ]
 
   - name: 'bgBalancingEVOptionalBetterRedguards.esp'
-    url: [ 'http://theelderscrolls.info/?go=dlfile&fileid=215' ]
     msg:
       - type: say
         content: 'Requires: Better Redguards installed with its ESP deactivated.'
@@ -1483,24 +1484,20 @@ plugins:
         subs: [ 'Tweak Actors: Redguard FGTS Nuller' ]
 
   - name: 'bgBalancingEVOptionalFangs.esp'
-    url: [ 'http://theelderscrolls.info/?go=dlfile&fileid=215' ]
     tag: [ R.Teeth ]
   - name: 'bgBalancingEVOptionalFCOMAdditions.esp'
-    url: [ 'http://theelderscrolls.info/?go=dlfile&fileid=215' ]
     tag:
       - Actors.ACBS
       - Actors.Stats
       - NpcFaces
 
   - name: 'bgBalancingEVOptionalNPCDiversityLAME.esp'
-    url: [ 'http://theelderscrolls.info/?go=dlfile&fileid=215' ]
     msg: [ *doNotClean ]
     tag:
       - NoMerge
       - NpcFaces
 
   - name: 'bgBalancingEVOptionalNPCDiversity, (Beautification|TNR Merge|Vanilla)\.esp'
-    url: [ 'http://theelderscrolls.info/?go=dlfile&fileid=215' ]
     msg:
       - <<: *useOnlyOneX
         subs: [ 'Race Balancing Project - NPC Diversity Module' ]
@@ -1510,7 +1507,6 @@ plugins:
       - NpcFaces
 
   - name: 'bgBalancingEVOptionalNPCDiversity, (Beautification |TNR Merge |Vanilla )Better Redguards\.esp'
-    url: [ 'http://theelderscrolls.info/?go=dlfile&fileid=215' ]
     msg:
       - <<: *useOnlyOneX
         subs: [ 'Race Balancing Project - NPC Diversity Better Redguards Module' ]
@@ -1528,11 +1524,9 @@ plugins:
         content: 'Replace with ''bgBalancingEVOptionalNPCDiversity, Vanilla.esp'''
 
   - name: 'bgBalancingOptionalNPCDiversityKvatchRebuilt, for Wrye Bash.esp'
-    url: [ 'http://theelderscrolls.info/?go=dlfile&fileid=215' ]
     msg: [ *doNotClean ]
 
   - name: 'bgBalancingEVOptionalSeamReducerHighElfFix.esp'
-    url: [ 'http://theelderscrolls.info/?go=dlfile&fileid=215' ]
     req: [ 'DLCShiveringIsles.esp' ]
     msg:
       - type: say
@@ -1541,10 +1535,6 @@ plugins:
     tag: [ Body-M ]
 
   - name: 'bgBalancingDVCore.esp'
-    url:
-      - 'http://theelderscrolls.info/?go=dlfile&fileid=222'
-      # Installation files for Race Balancing Project 10.5 EV & DV
-      - 'http://theelderscrolls.info/?go=dlfile&fileid=293'
     after:
       - 'Open Cities Classic.esp'
       - 'Open Cities Reborn.esp'
@@ -1567,7 +1557,6 @@ plugins:
       - R.Skills
 
   - name: 'bgBalancingDVLAMEAddition.esp'
-    url: [ 'http://theelderscrolls.info/?go=dlfile&fileid=222' ]
     req:
       - name: 'bgMagicEV.esp'
         display: 'Less Annoying Magic Experience (L.A.M.E)'
@@ -1576,7 +1565,6 @@ plugins:
     tag: [ Relev ]
 
   - name: 'bgBalancingDVLAMEGlue.esp'
-    url: [ 'http://theelderscrolls.info/?go=dlfile&fileid=222' ]
     req:
       - name: 'bgMagicEV.esp'
         display: 'Less Annoying Magic Experience (L.A.M.E)'
@@ -1584,18 +1572,15 @@ plugins:
     msg: [ *doNotClean ]
 
   - name: 'bgBalancingDVOptionalFangs.esp'
-    url: [ 'http://theelderscrolls.info/?go=dlfile&fileid=222' ]
     tag: [ R.Teeth ]
 
   - name: 'bgBalancingDVOptionalNPCDiversityLAME.esp'
-    url: [ 'http://theelderscrolls.info/?go=dlfile&fileid=222' ]
     msg: [ *doNotClean ]
     tag:
       - NoMerge
       - NpcFaces
 
   - name: 'bgBalancingDVOptionalSeamReducerHighElfFix.esp'
-    url: [ 'http://theelderscrolls.info/?go=dlfile&fileid=222' ]
     req: [ 'DLCShiveringIsles.esp' ]
     msg:
       - type: say
