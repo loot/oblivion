@@ -1447,6 +1447,10 @@ plugins:
       - 'Open Cities Classic.esp'
       - 'Open Cities Reborn.esp'
     inc: [ 'Cobl Races.esp' ]
+    req:
+      - name: 'DLCShiveringIsles.esp'
+        display: 'DLCShiveringIsles.esp or NoSIVersion_Core_still_required.esp'
+        condition: 'not file("bgBalancing(D|E)VNoSIVersion_Core_still_required.esp") and not version("bgBalancingEVCore.esp", "10.0EV-L", ==) and not version("bgBalancingDVCore.esp", "10.0DV-L", ==)'
     msg:
       - *doNotClean
       - <<: *requiresX
