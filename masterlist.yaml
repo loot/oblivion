@@ -1430,6 +1430,101 @@ plugins:
         util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 135
 
+###### Gameplay - Character Classes & Races ######
+  ### Race Balancing Project ###
+  - name: 'bgBalancing.*\.esp'
+    url:
+      - link: 'http://theelderscrolls.info/?go=dlfile&fileid=215'
+        name: 'Race Balancing Project (English)'
+      - link: 'http://theelderscrolls.info/?go=dlfile&fileid=222'
+        name: 'Race Balancing Project (German)'
+      - link: 'http://theelderscrolls.info/?go=dlfile&fileid=318'
+        name: 'Race Balancing Project LIGHT (English)'
+      - link: 'http://theelderscrolls.info/?go=dlfile&fileid=317'
+        name: 'Race Balancing Project LIGHT (German)'
+  - name: 'bgBalancing(D|E)VCore.esp'
+    after: [ 'Blood&Mud.esp' ]
+    inc: [ 'Cobl Races.esp' ]
+    req:
+      - name: 'DLCShiveringIsles.esp'
+        display: 'DLCShiveringIsles.esp or NoSIVersion_Core_still_required.esp'
+        condition: 'not file("bgBalancing(D|E)VNoSIVersion_Core_still_required.esp") and not version("bgBalancingEVCore.esp", "10.0EV-L", ==) and not version("bgBalancingDVCore.esp", "10.0DV-L", ==)'
+    msg:
+      - *doNotClean
+      - <<: *requiresX
+        subs: [ '[Race Balancing Project (Installation files)](http://theelderscrolls.info/?go=dlfile&fileid=293/)' ]
+        condition: 'not file("meshes/soya/soyastyle01.nif") and not version("bgBalancingEVCore.esp", "10.0EV-L", ==) and not version("bgBalancingDVCore.esp", "10.0DV-L", ==)'
+    tag:
+      - Body-Size-F
+      - Body-Size-M
+      - R.Attributes-F
+      - R.Attributes-M
+      - R.ChangeSpells
+      - R.Description
+      - R.Relations
+      - R.Skills
+      - SpellStats
+  - name: 'bgBalancing(D|E)VNoSIVersion_Core_still_required.esp'
+    inc: [ 'DLCShiveringIsles.esp' ]
+  # RBP Optional Modules #
+  - name: 'bgBalancingDVOptional.*\.esp'
+    req: [ 'bgBalancingDVCore.esp' ]
+  - name: 'bgBalancingEVOptional.*\.esp'
+    req: [ 'bgBalancingEVCore.esp' ]
+  - name: 'bgBalancing(D|E)VOptionalFangs.esp'
+    tag: [ R.Teeth ]
+  # RBP Compatibility - Better Redguards #
+  - name: 'bgBalancing(D|E)VOptionalBetterRedguards.esp'
+    msg:
+      - <<: *requiresX
+        subs: [ '[Better Redguards](https://www.nexusmods.com/oblivion/mods/10753/) installed with its ESP deactivated.' ]
+        condition: 'not file("Textures/characters/redguard/headredguard_n.dds") and not checksum("Textures/characters/redguard/headredguard_n.dds", 05EFE5E2)'
+      - <<: *useBashTweakRecommended
+        subs: [ 'Tweak Actors: Redguard FGTS Nuller' ]
+  # RBP NPCDiversity #
+  - name: 'bgBalancingDVOptionalNPCDiversity, (Beautification|TNR Merge|Vanilla).esp'
+    inc: [ 'bgBalancingDVOptionalBetterRedguards.esp' ]
+  - name: 'bgBalancingEVOptionalNPCDiversity, (Beautification|TNR Merge|Vanilla).esp'
+    inc: [ 'bgBalancingEVOptionalBetterRedguards.esp' ]
+  - name: 'bgBalancingDVOptionalNPCDiversity, (Beautification|TNR Merge|Vanilla) Better Redguards.esp'
+    req: [ 'bgBalancingDVOptionalBetterRedguards.esp' ]
+  - name: 'bgBalancingEVOptionalNPCDiversity, (Beautification|TNR Merge|Vanilla) Better Redguards.esp'
+    req: [ 'bgBalancingEVOptionalBetterRedguards.esp' ]
+  - name: 'bgBalancing(D|E)VOptionalNPCDiversity, (Beautification|TNR Merge|Vanilla).*\.esp'
+    after:
+      - 'Open Cities Bartholm.esp'
+      - 'Open Cities New Sheoth.esp'
+    msg:
+      - *requiresBashedPatch
+      - <<: *useOnlyOneX
+        subs: [ 'Race Balancing Project - NPC Diversity Module' ]
+        condition: 'many("bgBalancing(D|E)VOptionalNPCDiversity, (Beautification|TNR Merge|Vanilla).*\.esp")'
+  # RBP Additions - Less Annoying Magic Experience #
+  - name: 'bgBalancing(D|E)V(OptionalNPCDiversity)?LAME(Addition|Glue)?\.esp'
+    req: [ 'DLCShiveringIsles.esp' ]
+    msg: [ *doNotClean ]
+  - name: 'bgBalancing(D|E)VLAMEAddition.esp'
+    tag: [ Relev ]
+  # RBP Additions - OOO & MMM #
+  - name: 'bgBalancing(D|E)VOptionalFCOMAdditions.esp'
+    tag:
+      - Actors.ACBS
+      - Actors.Stats
+  # RBP Body Seam Reducer #
+  - name: 'bgBalancing(D|E)VOptionalSeamReducerHighElfFix.esp'
+    req: [ 'DLCShiveringIsles.esp' ]
+    msg:
+      - <<: *requiresX
+        subs: [ '[Luchaire''s Body Seam Reducer](https://www.nexusmods.com/oblivion/mods/19738/)' ]
+        condition: 'not file("meshes/characters/imperial/headhuman.egt") and not checksum("meshes/characters/imperial/headhuman.egt", 333FAB1A)'
+      - *doNotClean
+    tag: [ Body-M ]
+  # RBP Gamesettings Resetters #
+  - name: 'bgBalancing(Optional|VanillaGMST).*\.esp'
+    after:
+      - 'bgBalancingDVCore.esp'
+      - 'bgBalancingEVCore.esp'
+
 ###### Gameplay - Quests ######
   ### Bash-able Quest Delayers ###
   - name: 'Bashed Delayers - MERGE ONLY.esp'
@@ -17995,55 +18090,6 @@ plugins:
       - type: say
         content: 'Includes ''KW-AlliesPlayNicer.esp'' so don''t use that with this.'
         condition: 'file("KW-AlliesPlayNicer.esp")'
-  - name: 'bgBalancingEVCore.esp'
-    url:
-      - 'http://theelderscrolls.info/?go=dlfile&fileid=215'
-      # Installation files for Race Balancing Project 10.5 EV & DV
-      - 'http://theelderscrolls.info/?go=dlfile&fileid=293'
-    after:
-      - 'Open Cities Classic.esp'
-      - 'Open Cities Reborn.esp'
-    msg:
-      - type: say
-        content: 'Do not use with COBL Races.'
-      - *doNotClean
-    tag:
-      - Body-Size-F
-      - Body-Size-M
-      - Eyes
-      - Hair
-      - R.Attributes-F
-      - R.Attributes-M
-      - R.ChangeSpells
-      - R.Description
-      - R.Relations
-      - R.Skills
-      - SpellStats
-  - name: 'bgBalancingDVCore.esp'
-    url:
-      - 'http://theelderscrolls.info/?go=dlfile&fileid=222'
-      # Installation files for Race Balancing Project 10.5 EV & DV
-      - 'http://theelderscrolls.info/?go=dlfile&fileid=293'
-    after:
-      - 'Open Cities Classic.esp'
-      - 'Open Cities Reborn.esp'
-    msg:
-      - type: say
-        content: 'German version.'
-      - type: say
-        content: 'Do not use with COBL Races'
-      - *doNotClean
-    tag:
-      - Body-Size-F
-      - Body-Size-M
-      - Eyes
-      - Hair
-      - R.Attributes-F
-      - R.Attributes-M
-      - R.ChangeSpells
-      - R.Description
-      - R.Relations
-      - R.Skills
   - name: 'Colourwheels Sexy Oblivion OverHaul.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/36387/' ]
     tag:
@@ -18406,112 +18452,6 @@ plugins:
       - crc: 0x970cacd1
         <<: *dirtyPlugin
         itm: 1
-  - name: 'bgBalancingEVOptionalFangs.esp'
-    url: [ 'http://theelderscrolls.info/?go=dlfile&fileid=215' ]
-    tag: [ R.Teeth ]
-  - name: 'bgBalancingDVOptionalFangs.esp'
-    url: [ 'http://theelderscrolls.info/?go=dlfile&fileid=222' ]
-    tag: [ R.Teeth ]
-  - name: 'bgBalancingEVOptionalNPCDiversity, (Beautification|TNR Merge|Vanilla)\.esp'
-    url: [ 'http://theelderscrolls.info/?go=dlfile&fileid=215' ]
-    msg:
-      - <<: *useOnlyOneX
-        subs: [ 'Race Balancing Project - NPC Diversity Module' ]
-        condition: 'many("bgBalancingEVOptionalNPCDiversity, (Beautification|TNR Merge|Vanilla)\.esp")'
-    tag:
-      - NoMerge
-      - NpcFaces
-  - name: 'bgBalancingEVOptionalNPCDiversity, for Wrye Bash.esp'
-    msg:
-      - type: say
-        content: 'Replace with ''bgBalancingEVOptionalNPCDiversity, Vanilla.esp'''
-  - name: 'bgBalancingEVOptionalNPCDiversity, (Beautification |TNR Merge |Vanilla )Better Redguards\.esp'
-    url: [ 'http://theelderscrolls.info/?go=dlfile&fileid=215' ]
-    msg:
-      - <<: *useOnlyOneX
-        subs: [ 'Race Balancing Project - NPC Diversity Better Redguards Module' ]
-        condition: 'many("bgBalancingEVOptionalNPCDiversity, (Beautification |TNR Merge |Vanilla )Better Redguards\.esp")'
-      - <<: *useBashTweakRecommended
-        subs: [ 'Tweak Actors: Redguard FGTS Nuller' ]
-    tag:
-      - Invent
-      - NoMerge
-      - NpcFaces
-  - name: 'bgBalancingEVOptionalBetterRedguards.esp'
-    url: [ 'http://theelderscrolls.info/?go=dlfile&fileid=215' ]
-    msg:
-      - type: say
-        content: 'Requires: Better Redguards installed with its ESP deactivated.'
-      - <<: *useBashTweakRecommended
-        subs: [ 'Tweak Actors: Redguard FGTS Nuller' ]
-  - name: 'bgBalancingEVOptionalFCOMAdditions.esp'
-    url: [ 'http://theelderscrolls.info/?go=dlfile&fileid=215' ]
-    tag:
-      - Actors.ACBS
-      - Actors.Stats
-      - NpcFaces
-  - name: 'bgBalancingOptionalFranAddition.esp'
-    inc: [ 'FCOM_Convergence.esm' ]
-  - name: 'bgBalancingOptionalNPCDiversityKvatchRebuilt, for Wrye Bash.esp'
-    url: [ 'http://theelderscrolls.info/?go=dlfile&fileid=215' ]
-    msg: [ *doNotClean ]
-  - name: 'bgBalancingEVLAMEAddition.esp'
-    url: [ 'http://theelderscrolls.info/?go=dlfile&fileid=215' ]
-    req:
-      - name: 'bgMagicEV.esp'
-        display: 'Less Annoying Magic Experience (L.A.M.E)'
-      - 'DLCShiveringIsles.esp'
-    msg: [ *doNotClean ]
-    tag: [ Relev ]
-  - name: 'bgBalancingDVLAMEAddition.esp'
-    url: [ 'http://theelderscrolls.info/?go=dlfile&fileid=222' ]
-    req:
-      - name: 'bgMagicEV.esp'
-        display: 'Less Annoying Magic Experience (L.A.M.E)'
-      - 'DLCShiveringIsles.esp'
-    msg: [ *doNotClean ]
-    tag: [ Relev ]
-  - name: 'bgBalancingEVLAMEGlue.esp'
-    url: [ 'http://theelderscrolls.info/?go=dlfile&fileid=215' ]
-    req:
-      - name: 'bgMagicEV.esp'
-        display: 'Less Annoying Magic Experience (L.A.M.E)'
-      - 'DLCShiveringIsles.esp'
-    msg: [ *doNotClean ]
-  - name: 'bgBalancingDVLAMEGlue.esp'
-    url: [ 'http://theelderscrolls.info/?go=dlfile&fileid=222' ]
-    req:
-      - name: 'bgMagicEV.esp'
-        display: 'Less Annoying Magic Experience (L.A.M.E)'
-      - 'DLCShiveringIsles.esp'
-    msg: [ *doNotClean ]
-  - name: 'bgBalancingEVOptionalNPCDiversityLAME.esp'
-    url: [ 'http://theelderscrolls.info/?go=dlfile&fileid=215' ]
-    msg: [ *doNotClean ]
-    tag:
-      - NoMerge
-      - NpcFaces
-  - name: 'bgBalancingDVOptionalNPCDiversityLAME.esp'
-    url: [ 'http://theelderscrolls.info/?go=dlfile&fileid=222' ]
-    msg: [ *doNotClean ]
-    tag:
-      - NoMerge
-      - NpcFaces
-  - name: 'bgBalancingEVOptionalSeamReducerHighElfFix.esp'
-    url: [ 'http://theelderscrolls.info/?go=dlfile&fileid=215' ]
-    req: [ 'DLCShiveringIsles.esp' ]
-    msg:
-      - type: say
-        content: 'Requires: Luchaire''s Body Seam Reducer.'
-      - *doNotClean
-    tag: [ Body-M ]
-  - name: 'bgBalancingDVOptionalSeamReducerHighElfFix.esp'
-    url: [ 'http://theelderscrolls.info/?go=dlfile&fileid=222' ]
-    req: [ 'DLCShiveringIsles.esp' ]
-    msg:
-      - type: say
-        content: 'Requires: Luchaire''s Body Seam Reducer.'
-    tag: [ Body-M ]
   - name: 'k_HOD_RBP_patch.esp'
     tag:
       - Body-F
