@@ -1480,17 +1480,12 @@ plugins:
         condition: 'not file("Textures/characters/redguard/headredguard_n.dds") and not checksum("Textures/characters/redguard/headredguard_n.dds", 05EFE5E2)'
       - <<: *useBashTweakRecommended
         subs: [ 'Tweak Actors: Redguard FGTS Nuller' ]
-  - name: 'bgBalancing(D|E)VOptionalNPCDiversity, (Beautification |TNR Merge |Vanilla )Better Redguards\.esp'
-    msg:
-      - <<: *useOnlyOneX
-        subs: [ 'Race Balancing Project - NPC Diversity Better Redguards Module' ]
-        condition: 'many("bgBalancing(D|E)VOptionalNPCDiversity, (Beautification |TNR Merge |Vanilla )Better Redguards\.esp")'
   # RBP NPCDiversity #
-  - name: 'bgBalancing(D|E)VOptionalNPCDiversity, (Beautification|TNR Merge|Vanilla)\.esp'
+  - name: 'bgBalancing(D|E)VOptionalNPCDiversity, (Beautification|TNR Merge|Vanilla).*\.esp'
     msg:
       - <<: *useOnlyOneX
         subs: [ 'Race Balancing Project - NPC Diversity Module' ]
-        condition: 'many("bgBalancing(D|E)VOptionalNPCDiversity, (Beautification|TNR Merge|Vanilla)\.esp")'
+        condition: 'many("bgBalancing(D|E)VOptionalNPCDiversity, (Beautification|TNR Merge|Vanilla).*\.esp")'
   # RBP Additions - Less Annoying Magic Experience #
   - name: 'bgBalancing(D|E)V(OptionalNPCDiversity)?LAME(Addition|Glue)?\.esp'
     req: [ 'DLCShiveringIsles.esp' ]
