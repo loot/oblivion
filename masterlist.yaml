@@ -1525,6 +1525,43 @@ plugins:
       - 'bgBalancingDVCore.esp'
       - 'bgBalancingEVCore.esp'
 
+###### Gameplay - Magic & Abilities ######
+  ### (L.A.M.E) Less Annoying Magic Experience ###
+  - name: 'bgMagic.*\.esp'
+    url:
+      - link: 'http://www.theelderscrolls.info/?go=dlfile&fileid=219'
+        name: 'Less Annoying Magic Experience'
+      - link: 'http://www.theelderscrolls.info/?go=dlfile&fileid=220'
+        name: 'Less Annoying Magic Experience [Deutsche Version 1.7]'
+  - name: 'bgMagic(D|E)V.esp'
+    after:
+      - 'Open Cities Classic.esp'
+      - 'Open Cities Reborn.esp'
+    msg: [ *doNotClean ]
+    tag:
+      - C.RecordFlags
+      - Delev
+      - Names
+      - Relev
+      - SpellStats
+  - name: 'bgMagicDV.*\.esp'
+    msg:
+      - type: say
+        content: 'German version.'
+  - name: 'bgMagic(DV|EV)?(AddEnVar|Bonus|ItemSigil|Lightningbolt|Shader|ShaderLifeDetect|SpellTomes_for_WryeBash)\.esp'
+    msg: [ *doNotClean ]
+  - name: 'bgMagic(DV|EV)?(AddEnVar|SpellTomes_for_WryeBash)\.esp'
+    tag: [ Relev ]
+  - name: 'bgMagicEVPaperChase.esp'
+    dirty:
+      - <<: *dirtyPlugin
+        crc: 0x6dc9fa83
+        itm: 19
+  - name: 'bgMagic(DV|EV)?Shader.esp'
+    tag:
+      - Graphics
+      - NoMerge
+
 ###### Gameplay - Quests ######
   ### Bash-able Quest Delayers ###
   - name: 'Bashed Delayers - MERGE ONLY.esp'
@@ -18394,40 +18431,6 @@ plugins:
         itm: 1
   - name: 'ZUSIO-SM Plugin Refurbish SI-patch.esp'
     tag: [ Scripts ]
-  - name: 'bgMagic(D|E)V.esp'
-    after:
-      - 'Open Cities Classic.esp'
-      - 'Open Cities Reborn.esp'
-    msg: [ *doNotClean ]
-    tag:
-      - C.RecordFlags
-      - Delev
-      - Names
-      - Relev
-      - SpellStats
-  - name: 'bgMagic.*\.esp'
-    url:
-      - link: 'http://www.theelderscrolls.info/?go=dlfile&fileid=219'
-        name: 'Less Annoying Magic Experience'
-      - link: 'http://www.theelderscrolls.info/?go=dlfile&fileid=220'
-        name: 'Less Annoying Magic Experience [Deutsche Version 1.7]'
-  - name: 'bgMagic(DV|EV)?(AddEnVar|Bonus|ItemSigil|Lightningbolt|Shader|ShaderLifeDetect|SpellTomes_for_WryeBash)\.esp'
-    msg: [ *doNotClean ]
-  - name: 'bgMagic(DV|EV)?Shader.esp'
-    tag:
-      - Graphics
-      - NoMerge
-  - name: 'bgMagic(DV|EV)?(AddEnVar|SpellTomes_for_WryeBash)\.esp'
-    tag: [ Relev ]
-  - name: 'bgMagicDV.*\.esp'
-    msg:
-      - type: say
-        content: 'German version.'
-  - name: 'bgMagicEVPaperChase.esp'
-    dirty:
-      - <<: *dirtyPlugin
-        crc: 0x6dc9fa83
-        itm: 19
   - name: 'LoversCreature_SexualOrgans_LAME.esp'
     tag:
       - Graphics
