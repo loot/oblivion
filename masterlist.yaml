@@ -1582,10 +1582,7 @@ plugins:
       - 'Open Cities Classic.esp'
       - 'Open Cities Reborn.esp'
     req: [ 'DLCShiveringIsles.esp' ]
-    msg:
-      - type: say
-        content: 'Requires: LAME and Race Balancing Project.'
-      - *doNotClean
+    msg: [ *doNotClean ]
   - name: 'bgIntegrationDV.esp'
     after:
       - 'Open Cities Classic.esp'
