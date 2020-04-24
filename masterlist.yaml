@@ -1535,15 +1535,10 @@ plugins:
         name: 'Less Annoying Magic Experience [Deutsche Version 1.7]'
   - name: 'bgMagic(D|E)V.esp'
     msg: [ *doNotClean ]
-    tag:
-      - C.RecordFlags
-      - Delev
-      - Names
-      - Relev
-      - SpellStats
+    tag: [ SpellStats ]
   - name: 'bgMagicItemSigil.esp'
     msg: [ *doNotClean ]
-  - name: 'bgMagic(DV|EV)?(AddEnVar|SpellTomes_for_WryeBash)\.esp'
+  - name: 'bgMagicSpellTomes_for_WryeBash.esp'
     tag: [ Relev ]
   - name: 'bgMagicEVPaperChase.esp'
     dirty:
@@ -1551,10 +1546,6 @@ plugins:
         crc: 0x6DC9FA83
         util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 19
-  - name: 'bgMagic(DV|EV)?Shader.esp'
-    tag:
-      - Graphics
-      - NoMerge
 
 ###### Gameplay - Quests ######
   ### Bash-able Quest Delayers ###
