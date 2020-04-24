@@ -1575,6 +1575,32 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/25946/' ]
     msg: [ *obsolete ]
 
+  ### Integration - The Stranded Light ###
+  - name: 'bgIntegrationEV.esp'
+    url: [ 'http://theelderscrolls.info/?go=dlfile&fileid=349' ]
+    after:
+      - 'Open Cities Classic.esp'
+      - 'Open Cities Reborn.esp'
+    req: [ 'DLCShiveringIsles.esp' ]
+    msg:
+      - type: say
+        content: 'Requires: LAME and Race Balancing Project.'
+      - *doNotClean
+  - name: 'bgIntegrationDV.esp'
+    after:
+      - 'Open Cities Classic.esp'
+      - 'Open Cities Reborn.esp'
+  # Integration Addons #
+  - name: 'bgIntegrationEV - Alternative NPC Faces by LazyMonk.esp'
+    url: [ 'http://theelderscrolls.info/?go=dlfile&fileid=368' ]
+    tag:
+      - NoMerge
+      - NpcFaces
+  - name: 'Integration faces revamped.esp'
+    tag:
+      - NoMerge
+      - NpcFaces
+
   - name: 'Hammerfell.esm'
     url: [ 'https://www.nexusmods.com/oblivion/mods/34484' ]
     clean:
@@ -18458,29 +18484,6 @@ plugins:
     tag:
       - Body-F
       - Body-Size-F
-  - name: 'bgIntegrationDV.esp'
-    after:
-      - 'Open Cities Classic.esp'
-      - 'Open Cities Reborn.esp'
-  - name: 'bgIntegrationEV.esp'
-    url: [ 'http://theelderscrolls.info/?go=dlfile&fileid=349' ]
-    after:
-      - 'Open Cities Classic.esp'
-      - 'Open Cities Reborn.esp'
-    req: [ 'DLCShiveringIsles.esp' ]
-    msg:
-      - type: say
-        content: 'Requires: LAME and Race Balancing Project.'
-      - *doNotClean
-  - name: 'bgIntegrationEV - Alternative NPC Faces by LazyMonk.esp'
-    url: [ 'http://theelderscrolls.info/?go=dlfile&fileid=368' ]
-    tag:
-      - NoMerge
-      - NpcFaces
-  - name: 'Integration faces revamped.esp'
-    tag:
-      - NoMerge
-      - NpcFaces
   - name: 'Trap.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/26216' ]
     tag:
