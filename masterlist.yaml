@@ -1186,6 +1186,10 @@ plugins:
   - name: 'Different Script Effect Icon - (Darkness|Fortify|Lock|Reflect Spell|Resist|Silence|Stunted Magicka|Sun Damage|Vampirism)\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/18843' ]
     tag: [ Graphics ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Different Script Effect Icon ESP' ]
+        condition: 'many("Different Script Effect Icon - (Darkness|Fortify|Lock|Reflect Spell|Resist|Silence|Stunted Magicka|Sun Damage|Vampirism)\.esp")'
 
   - name: 'Dynamic Map.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/35969' ]
