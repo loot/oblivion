@@ -1203,36 +1203,25 @@ plugins:
     req: [ *OBSEv21 ]
 
 ###### Character Appearance - NPCs ######
-  - name: 'Better Looking Redguards.esp'
+  - name: '(Better Looking Redguards|Redguard Guards).*\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/31174/' ]
     tag:
       - Actors.ACBS
       - Actors.Stats
+  - name: 'Better Looking Redguards(-Mergeable)?.esp'
+    tag:
       - -Body-Size-F
       - -Body-Size-M
   - name: 'Better Looking Redguards-Mergeable.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/31174/' ]
     tag:
-      - Actors.ACBS
-      - Actors.Stats
-      - -Body-Size-F
-      - -Body-Size-M
       - R.Ears
       - R.Head
+  - name: '(Better Looking Redguards v2|Redguard Guards)\.esp'
+    tag: [ NPC.Race ]
   - name: 'Better Looking Redguards v2.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/31174/' ]
-    tag:
-      - Actors.ACBS
-      - Actors.Stats
-      - NPC.Race
-      - R.Relations
+    tag: [ R.Relations ]
   - name: 'Redguard Guards.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/31174/' ]
-    tag:
-      - Actors.ACBS
-      - Actors.Stats
-      - NPC.Race
-      - NpcFaces
+    tag: [ NpcFaces ]
 
   ### Diverse Dremora Project ###
   - name: 'DiverseDremora.*\.esp'
