@@ -1183,6 +1183,14 @@ plugins:
         condition: 'version("kuerteeCleanUp.esp", "0.61", <)'
 
 ###### User Interface ######
+  - name: 'Different Script Effect Icon - (Darkness|Fortify|Lock|Reflect Spell|Resist|Silence|Stunted Magicka|Sun Damage|Vampirism)\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/18843' ]
+    tag: [ Graphics ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Different Script Effect Icon ESP' ]
+        condition: 'many("Different Script Effect Icon - (Darkness|Fortify|Lock|Reflect Spell|Resist|Silence|Stunted Magicka|Sun Damage|Vampirism)\.esp")'
+
   - name: 'Dynamic Map.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/35969' ]
     req: [ *MenuQue ]
@@ -15730,33 +15738,6 @@ plugins:
       - IIM
       - Invent
   - name: 'Alternate Script Effect Icon.esp'
-    tag: [ Graphics ]
-  - name: 'Different Script Effect Icon - Darkness.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/18843' ]
-    tag: [ Graphics ]
-  - name: 'Different Script Effect Icon - Fortify.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/18843' ]
-    tag: [ Graphics ]
-  - name: 'Different Script Effect Icon - Lock.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/18843' ]
-    tag: [ Graphics ]
-  - name: 'Different Script Effect Icon - Reflect Spell.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/18843' ]
-    tag: [ Graphics ]
-  - name: 'Different Script Effect Icon - Resist.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/18843' ]
-    tag: [ Graphics ]
-  - name: 'Different Script Effect Icon - Silence.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/18843' ]
-    tag: [ Graphics ]
-  - name: 'Different Script Effect Icon - Stunted Magicka.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/18843' ]
-    tag: [ Graphics ]
-  - name: 'Different Script Effect Icon - Sun Damage.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/18843' ]
-    tag: [ Graphics ]
-  - name: 'Different Script Effect Icon - Vampirism.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/18843' ]
     tag: [ Graphics ]
   - name: 'ScriptEffectIconReplace.esp'
     tag: [ Graphics ]
