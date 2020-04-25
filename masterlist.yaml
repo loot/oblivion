@@ -532,9 +532,6 @@ common:
         text: 'Använd endast en %1%.'
       - lang: zh_CN
         text: '只使用一个%1%。'
-  - &useOnlyOneRoadRecordFile
-    <<: *useOnlyOneX
-    subs: [ 'road record file' ]
 
   - &wildEdits
     type: warn
@@ -1574,6 +1571,65 @@ plugins:
   - name: '(BladeSong|Castle_Seaview|CaveOfWishcraft|Cybiades|CyrilliansStaff|Demonhunter|EiAmod|Gift of Kynareth|GTAesgaard I|GTAesgaard II|Haunted_House_|HeartOftheDead|HoarfrostCastle|KohdiArmoryofAnsephaer|KohdiBladesofAnkewan|OrderCloudKnights|PotR|sS-OrderOfAskarthe|Steve - Hitman (Patched)|Talon of Akatosh (Claymore|Longsword)|Tantrivaylia|templars|The Lost Spires|TheForgottenShields|Underdark|UnderdarkSaga|WeaponsOfTheNine|Werewolf-Legends).*\Delayer.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/25946/' ]
     msg: [ *obsolete ]
+
+  - name: 'Castle_Seaview.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/25574'
+        name: 'Castle Seaview'
+      - link: 'https://www.nexusmods.com/oblivion/mods/32594'
+        name: 'Castle Seaview Friend or Foe'
+    dirty:
+      - <<: *quickClean
+        crc: 0xAC0443CD
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 4
+        udr: 7
+    clean:
+      - crc: 0xFA749FD6
+        util: 'TES4Edit v4.0.3'
+      - crc: 0x3FE5B43D
+        util: 'TES4Edit v4.0.3'
+      - crc: 0x916917C5
+        util: 'TES4Edit v4.0.3'
+  # CSV Addons #
+  - name: '(CSV|CSVF)_.*\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/38366'
+        name: 'Castle Sea View Farms'
+  - name: 'CSV_Farms.esp'
+    msg: [ *corrupt ]
+  - name: '(CSV_Farms_Road_Vanilla|CSVF_Road_Record_(BBC|OC|RB)(\+OC)?(\+RB)?)\.esp'
+    inc:
+      - 'NRB4 OCReborn Road Record.esp'
+      - 'NRB4 Standard Road Record.esp'
+      - 'ROC - OCReborn Road Record.esp'
+      - 'ROC Standard Road Record.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Castle Sea View Farms Road Record' ]
+        condition: 'many("(CSV_Farms_Road_Vanilla|CSVF_Road_Record_(BBC|OC|RB)(\+OC)?(\+RB)?)\.esp")'
+    tag:
+      - Deactivate
+      - Roads
+  - name: '(CSV_Farms_(Better_Cities|Open_Cities|Open_Better_Cities)|CSVF_Road_Record_(BBC|OC|RB)(\+OC)?(\+RB)?)\.esp'
+    msg:
+      - type: warn
+        content:
+          - lang: en
+            text: 'This patch is outdated and may not be compatible with the latest version of the patched mod.'
+  - name: 'CSV_Farms_(Better_Cities|Open_Cities|Open_Better_Cities)\.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'CSV Farms Open/Better Cities ESP' ]
+        condition: 'many("CSV_Farms_(Better_Cities|Open_Cities|Open_Better_Cities)\.esp")'
+  - name: 'CSVF_Road_Record_(BBC|BBC\+RB)\.esp'
+    req: [ 'Better Cities Full.esp' ]
+  - name: 'CSVF_Road_Record_(BBC\+OC|BBC\+OC\+RB)\.esp'
+    req: [ 'Better Cities - Open Better Cities.esp' ]
+  - name: 'CSVF_Road_Record_(OC|OC\+RB)\.esp'
+    req: [ 'Open Cities.esp' ]
+  - name: 'CSVF_Road_Record_(RB|BBC\+RB|BBC\+OC\+RB|OC\+RB)\.esp'
+    req: [ 'road+bridges.esp' ]
 
   ### Integration - The Stranded Light ###
   - name: 'bgIntegrationEV.esp'
@@ -12141,24 +12197,6 @@ plugins:
       - type: say
         content: 'Needs Wrye Bash''s "Remove World Orphans" fix.'
         condition: 'checksum("Oblivifall - Losing My Religion Kvatch Rebuilt West Roads Patch.esp",EDF95E8A)'
-  - name: 'Castle_Seaview.esp'
-    dirty:
-      - crc: 0xd347242f
-        <<: *dirtyPlugin
-        itm: 3
-  - name: 'CSV_Farms_Road_Open_Cities.esp'
-    msg: [ *obsolete ]
-  - name: 'CSV_Farms_Road_Vanilla.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/38366/' ]
-    msg:
-      - *obsolete
-      - *useOnlyOneRoadRecordFile
-    tag:
-      - Deactivate
-      - Roads
-  - name: 'CSV_Farms_Better_Cities.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/38366/' ]
-    msg: [ *obsolete ]
   - name: 'CastleSeaview+LostCoast Patch.esp'
     inc: [ 'EaglesRest+LostCoast+CastleSeaview Patch.esp' ]
   - name: 'EaglesRest+LostCoast+CastleSeaview Patch.esp'
@@ -18572,12 +18610,6 @@ plugins:
     msg:
       - type: say
         content: 'For both Unique Landscapes and Better Cities use CRpatchForBSandULskingrad.esp instead'
-  - name: 'CSV_Farms_Open(_Better)?_Cities\.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/38366/' ]
-    msg:
-      - <<: *useOnlyOneX
-        subs: [ 'Castle Sea View Farms' ]
-        condition: 'many("CSV_Farms_Open(_Better)?_Cities\.esp")'
   - name: 'ROM Patch - Better Cities.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/33114' ]
     tag: [ Stats ]
@@ -18964,61 +18996,6 @@ plugins:
       - Actors.Anims
       - NoMerge
 
-  - name: 'CSVF_Road_Record_OC.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/38366/' ]
-    msg: [ *useOnlyOneRoadRecordFile ]
-    req: [ 'Open Cities.esp' ]
-    tag:
-      - Deactivate
-      - Roads
-  - name: 'CSVF_Road_Record_OC+RB.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/38366/' ]
-    msg: [ *useOnlyOneRoadRecordFile ]
-    req:
-      - 'Open Cities.esp'
-      - 'road+bridges.esp'
-    tag:
-      - Deactivate
-      - Roads
-  - name: 'CSVF_Road_Record_BBC.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/38366/' ]
-    msg: [ *useOnlyOneRoadRecordFile ]
-    req: [ 'Better Cities Full.esp' ]
-    tag:
-      - Deactivate
-      - Roads
-  - name: 'CSVF_Road_Record_BBC+OC.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/38366/' ]
-    msg: [ *useOnlyOneRoadRecordFile ]
-    req: [ 'Better Cities - Open Better Cities.esp' ]
-    tag:
-      - Deactivate
-      - Roads
-  - name: 'CSVF_Road_Record_BBC+RB.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/38366/' ]
-    msg: [ *useOnlyOneRoadRecordFile ]
-    req:
-      - 'Better Cities Full.esp'
-      - 'road+bridges.esp'
-    tag:
-      - Deactivate
-      - Roads
-  - name: 'CSVF_Road_Record_BBC+OC+RB.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/38366/' ]
-    msg: [ *useOnlyOneRoadRecordFile ]
-    req:
-      - 'Better Cities - Open Better Cities.esp'
-      - 'road+bridges.esp'
-    tag:
-      - Deactivate
-      - Roads
-  - name: 'CSVF_Road_Record_RB.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/38366/' ]
-    msg: [ *useOnlyOneRoadRecordFile ]
-    req: [ 'road+bridges.esp' ]
-    tag:
-      - Deactivate
-      - Roads
   - name: 'CoreRandmonClothing4Npcs.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/27474/' ]
     group: *latePatchesGroup
