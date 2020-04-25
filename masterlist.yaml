@@ -1575,6 +1575,12 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/25946/' ]
     msg: [ *obsolete ]
 
+  - name: 'Castle_Seaview.esp'
+    dirty:
+      - crc: 0xd347242f
+        <<: *dirtyPlugin
+        itm: 3
+
   ### Integration - The Stranded Light ###
   - name: 'bgIntegrationEV.esp'
     url: [ 'http://theelderscrolls.info/?go=dlfile&fileid=349' ]
@@ -12141,11 +12147,6 @@ plugins:
       - type: say
         content: 'Needs Wrye Bash''s "Remove World Orphans" fix.'
         condition: 'checksum("Oblivifall - Losing My Religion Kvatch Rebuilt West Roads Patch.esp",EDF95E8A)'
-  - name: 'Castle_Seaview.esp'
-    dirty:
-      - crc: 0xd347242f
-        <<: *dirtyPlugin
-        itm: 3
   - name: 'CSV_Farms_Road_Open_Cities.esp'
     msg: [ *obsolete ]
   - name: 'CSV_Farms_Road_Vanilla.esp'
