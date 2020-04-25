@@ -1599,6 +1599,11 @@ plugins:
   - name: 'CSV_Farms.esp'
     msg: [ *corrupt ]
   - name: '(CSV_Farms_Road_Vanilla|CSVF_Road_Record_(BBC|OC|RB)(\+OC)?(\+RB)?)\.esp'
+    inc:
+      - 'NRB4 OCReborn Road Record.esp'
+      - 'NRB4 Standard Road Record.esp'
+      - 'ROC - OCReborn Road Record.esp'
+      - 'ROC Standard Road Record.esp'
     msg:
       - <<: *useOnlyOneX
         subs: [ 'Castle Sea View Farms Road Record' ]
