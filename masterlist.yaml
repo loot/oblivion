@@ -1203,6 +1203,26 @@ plugins:
     req: [ *OBSEv21 ]
 
 ###### Character Appearance - NPCs ######
+  - name: '(Better Looking Redguards|Redguard Guards).*\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/31174/' ]
+    tag:
+      - Actors.ACBS
+      - Actors.Stats
+  - name: 'Better Looking Redguards(-Mergeable)?.esp'
+    tag:
+      - -Body-Size-F
+      - -Body-Size-M
+  - name: 'Better Looking Redguards-Mergeable.esp'
+    tag:
+      - R.Ears
+      - R.Head
+  - name: '(Better Looking Redguards v2|Redguard Guards)\.esp'
+    tag: [ NPC.Race ]
+  - name: 'Better Looking Redguards v2.esp'
+    tag: [ R.Relations ]
+  - name: 'Redguard Guards.esp'
+    tag: [ NpcFaces ]
+
   ### Diverse Dremora Project ###
   - name: 'DiverseDremora.*\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/40461' ]
@@ -18292,36 +18312,6 @@ plugins:
       - Hair
       - R.Ears
       - R.Head
-  - name: 'Better Looking Redguards.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/31174/' ]
-    tag:
-      - Body-F
-      - Body-M
-      - Hair
-      - NpcFaces
-      - R.Ears
-      - R.Head
-      - R.Relations
-  - name: 'Better Looking Redguards v2.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/31174/' ]
-    tag:
-      - Body-F
-      - Body-M
-      - Hair
-      - NpcFaces
-      - R.Ears
-      - R.Head
-      - R.Relations
-  - name: 'Better Looking Redguards-Mergeable.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/31174/' ]
-    tag:
-      - Body-F
-      - Body-M
-      - Body-Size-F
-      - Body-Size-M
-      - Hair
-      - R.Ears
-      - R.Head
   - name: 'Better Looking Wood Elves Vanilla.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/31143/' ]
     tag:
@@ -18350,17 +18340,6 @@ plugins:
       - Body-Size-F
       - Body-Size-M
       - Hair
-      - R.Ears
-      - R.Head
-  - name: 'Redguard Guards.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/31174/' ]
-    tag:
-      - Body-F
-      - Body-M
-      - Body-Size-F
-      - Body-Size-M
-      - Hair
-      - NpcFaces
       - R.Ears
       - R.Head
   - name: 'BigDunmerEars.esp'
