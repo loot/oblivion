@@ -1601,11 +1601,11 @@ plugins:
         name: 'Castle Sea View Farms'
   - name: 'CSV_Farms.esp'
     msg: [ *corrupt ]
-  - name: '(CSV_Farms_Road_Vanilla|CSVF_Road_Record_(BBC|OC|RB)(/+OC)?(/+RB)?)\.esp'
+  - name: '(CSV_Farms_Road_Vanilla|CSVF_Road_Record_(BBC|OC|RB)(\+OC)?(\+RB)?)\.esp'
     msg:
       - <<: *useOnlyOneX
         subs: [ 'Castle Sea View Farms Road Record' ]
-        condition: 'many("(CSV_Farms_Road_Vanilla|CSVF_Road_Record_(BBC|OC|RB)(/+OC)?(/+RB)?)\.esp")'
+        condition: 'many("(CSV_Farms_Road_Vanilla|CSVF_Road_Record_(BBC|OC|RB)(\+OC)?(\+RB)?)\.esp")'
     tag:
       - Deactivate
       - Roads
