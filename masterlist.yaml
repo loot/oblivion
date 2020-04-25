@@ -1741,14 +1741,11 @@ plugins:
         content: 'TES4Edit displays "Target is not persistent" messages when undeleting and disabling references, just click "Undelete and Disable References" again until it processes all the records.'
         condition: 'checksum("DBSRebuiltComplete.esp", 543D21FB) or checksum("DBSRebuiltComplete.esp", D49DA10B)'
     dirty:
-      - crc: 0x543D21FB
-        <<: *dirtyPlugin
-        udr: 299
+      - <<: *quickClean
+        crc: 0xD49DA10B
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
-      - crc: 0xD49DA10B
-        <<: *dirtyPlugin
-        udr: 299
-        itm: 1
+        udr: 293
 
 ###### Morroblivion ######
   - name: 'Morrowind_ob.*\.es(m|p)'
