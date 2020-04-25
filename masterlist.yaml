@@ -1542,6 +1542,16 @@ plugins:
       - 'bgBalancingDVCore.esp'
       - 'bgBalancingEVCore.esp'
 
+###### Gameplay - Combat ######
+  - name: 'MassA.I(-[345]0)?.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/8158' ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings: AI Max Active Actors & Combat Max Actors' ]
+      - <<: *useOnlyOneX
+        subs: [ 'Mass AI ESP' ]
+        condition: 'many("MassA.I(-[345]0)?.esp")'
+
 ###### Gameplay - Magic & Abilities ######
   ### (L.A.M.E) Less Annoying Magic Experience ###
   - name: 'bgMagic.*\.esp'
@@ -18850,18 +18860,6 @@ plugins:
         content: 'If you''re using this with the mod "Beast Characters lose tails no more", temporarily move it below the Bashed Patch whenever you rebuild it'
   - name: 'JazzJRKhajiitfeets.esp'
     tag: [ Invent ]
-  - name: 'MassA.I.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/8158' ]
-    msg: [ *bashedPatchTweak ]
-  - name: 'MassA.I-30.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/8158' ]
-    msg: [ *bashedPatchTweak ]
-  - name: 'MassA.I-40.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/8158' ]
-    msg: [ *bashedPatchTweak ]
-  - name: 'MassA.I-50.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/8158' ]
-    msg: [ *bashedPatchTweak ]
   - name: 'KSE_v3.esp'
     inc:
       - 'Vim_and_Vigor.esp'
