@@ -1598,13 +1598,16 @@ plugins:
   - name: 'CSV_Farms.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/38366' ]
     msg: [ *corrupt ]
+  - name: '(CSV_Farms_Road_Vanilla|CSVF_Road_Record_(BBC|OC|RB)(/+OC)?(/+RB)?)\.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Castle Sea View Farms Road Record' ]
+        condition: 'many("(CSV_Farms_Road_Vanilla|CSVF_Road_Record_(BBC|OC|RB)(/+OC)?(/+RB)?)\.esp")'
   - name: 'CSV_Farms_Road_Open_Cities.esp'
     msg: [ *obsolete ]
   - name: 'CSV_Farms_Road_Vanilla.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/38366/' ]
-    msg:
-      - *obsolete
-      - *useOnlyOneRoadRecordFile
+    msg: [ *obsolete ]
     tag:
       - Deactivate
       - Roads
@@ -1619,21 +1622,18 @@ plugins:
         condition: 'many("CSV_Farms_Open(_Better)?_Cities\.esp")'
   - name: 'CSVF_Road_Record_BBC.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/38366/' ]
-    msg: [ *useOnlyOneRoadRecordFile ]
     req: [ 'Better Cities Full.esp' ]
     tag:
       - Deactivate
       - Roads
   - name: 'CSVF_Road_Record_BBC+OC.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/38366/' ]
-    msg: [ *useOnlyOneRoadRecordFile ]
     req: [ 'Better Cities - Open Better Cities.esp' ]
     tag:
       - Deactivate
       - Roads
   - name: 'CSVF_Road_Record_BBC+RB.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/38366/' ]
-    msg: [ *useOnlyOneRoadRecordFile ]
     req:
       - 'Better Cities Full.esp'
       - 'road+bridges.esp'
@@ -1642,7 +1642,6 @@ plugins:
       - Roads
   - name: 'CSVF_Road_Record_BBC+OC+RB.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/38366/' ]
-    msg: [ *useOnlyOneRoadRecordFile ]
     req:
       - 'Better Cities - Open Better Cities.esp'
       - 'road+bridges.esp'
@@ -1651,14 +1650,12 @@ plugins:
       - Roads
   - name: 'CSVF_Road_Record_OC.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/38366/' ]
-    msg: [ *useOnlyOneRoadRecordFile ]
     req: [ 'Open Cities.esp' ]
     tag:
       - Deactivate
       - Roads
   - name: 'CSVF_Road_Record_OC+RB.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/38366/' ]
-    msg: [ *useOnlyOneRoadRecordFile ]
     req:
       - 'Open Cities.esp'
       - 'road+bridges.esp'
@@ -1667,7 +1664,6 @@ plugins:
       - Roads
   - name: 'CSVF_Road_Record_RB.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/38366/' ]
-    msg: [ *useOnlyOneRoadRecordFile ]
     req: [ 'road+bridges.esp' ]
     tag:
       - Deactivate
