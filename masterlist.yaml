@@ -1609,8 +1609,12 @@ plugins:
     tag:
       - Deactivate
       - Roads
-  - name: 'CSV_Farms_Road_Open_Cities.esp'
-    msg: [ *obsolete ]
+  - name: '(CSV_Farms_(Better_Cities|Open_Cities|Open_Better_Cities)|CSVF_Road_Record_(BBC|OC|RB)(\+OC)?(\+RB)?)\.esp'
+    msg:
+      - type: warn
+        content:
+          - lang: en
+            text: 'This patch is outdated and may not be compatible with the latest version of the patched mod.'
   - name: 'CSV_Farms_Road_Vanilla.esp'
     msg: [ *obsolete ]
   - name: 'CSV_Farms_Better_Cities.esp'
