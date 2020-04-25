@@ -1545,7 +1545,9 @@ plugins:
 ###### Gameplay - Combat ######
   - name: 'MassA.I(-[345]0)?.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/8158' ]
-    msg: [ *bashedPatchTweak ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings: AI Max Active Actors & Combat Max Actors' ]
 
 ###### Gameplay - Magic & Abilities ######
   ### (L.A.M.E) Less Annoying Magic Experience ###
