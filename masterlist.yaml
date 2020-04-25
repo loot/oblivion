@@ -1620,25 +1620,13 @@ plugins:
       - <<: *useOnlyOneX
         subs: [ 'CSV Farms Open/Better Cities ESP' ]
         condition: 'many("CSV_Farms_(Better_Cities|Open_Cities|Open_Better_Cities)\.esp")'
-  - name: 'CSVF_Road_Record_BBC.esp'
+  - name: 'CSVF_Road_Record_(BBC|BBC\+RB)\.esp'
     req: [ 'Better Cities Full.esp' ]
-  - name: 'CSVF_Road_Record_BBC+OC.esp'
+  - name: 'CSVF_Road_Record_(BBC\+OC|BBC\+OC\+RB)\.esp'
     req: [ 'Better Cities - Open Better Cities.esp' ]
-  - name: 'CSVF_Road_Record_BBC+RB.esp'
-    req:
-      - 'Better Cities Full.esp'
-      - 'road+bridges.esp'
-  - name: 'CSVF_Road_Record_BBC+OC+RB.esp'
-    req:
-      - 'Better Cities - Open Better Cities.esp'
-      - 'road+bridges.esp'
-  - name: 'CSVF_Road_Record_OC.esp'
+  - name: 'CSVF_Road_Record_(OC|OC\+RB)\.esp'
     req: [ 'Open Cities.esp' ]
-  - name: 'CSVF_Road_Record_OC+RB.esp'
-    req:
-      - 'Open Cities.esp'
-      - 'road+bridges.esp'
-  - name: 'CSVF_Road_Record_RB.esp'
+  - name: 'CSVF_Road_Record_(RB|BBC\+RB|BBC\+OC\+RB|OC\+RB)\.esp'
     req: [ 'road+bridges.esp' ]
 
   ### Integration - The Stranded Light ###
