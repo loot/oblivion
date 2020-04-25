@@ -1737,9 +1737,6 @@ plugins:
     msg:
       - type: say
         content: 'Compatibility with other DB Sanctuary mods is unlikely due to the number of persistent references which have been deleted.'
-      - type: say
-        content: 'TES4Edit displays "Target is not persistent" messages when undeleting and disabling references, just click "Undelete and Disable References" again until it processes all the records.'
-        condition: 'checksum("DBSRebuiltComplete.esp", 543D21FB) or checksum("DBSRebuiltComplete.esp", D49DA10B)'
     dirty:
       - <<: *quickClean
         crc: 0xD49DA10B
