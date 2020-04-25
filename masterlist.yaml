@@ -1615,11 +1615,11 @@ plugins:
         content:
           - lang: en
             text: 'This patch is outdated and may not be compatible with the latest version of the patched mod.'
-  - name: 'CSV_Farms_Open(_Better)?_Cities\.esp'
+  - name: 'CSV_Farms_(Better_Cities|Open_Cities|Open_Better_Cities)\.esp'
     msg:
       - <<: *useOnlyOneX
         subs: [ 'Castle Sea View Farms' ]
-        condition: 'many("CSV_Farms_Open(_Better)?_Cities\.esp")'
+        condition: 'many("CSV_Farms_(Better_Cities|Open_Cities|Open_Better_Cities)\.esp")'
   - name: 'CSVF_Road_Record_BBC.esp'
     req: [ 'Better Cities Full.esp' ]
   - name: 'CSVF_Road_Record_BBC+OC.esp'
