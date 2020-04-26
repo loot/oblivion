@@ -1289,6 +1289,12 @@ plugins:
       - R.Ears
       - R.Head
       - R.Mouth
+    msg:
+      - <<: *patch3rdParty
+        subs:
+          - 'Wrye Bash Bashed Patch'
+          - '[OCOv2 - Bashed Patch Eyes Fix](https://www.nexusmods.com/oblivion/mods/49988)'
+        condition: 'version("Oblivion_Character_Overhaul.esp", "2.0", >=) and file("Bashed Patch.*\.esp") and not file("OCO_Eyes_Fix.esp")'
 
 ###### Environment, Landscape & Flora ######
   ### New Roads and Bridges ###
