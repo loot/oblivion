@@ -1248,6 +1248,10 @@ plugins:
       - Hair
       - NpcFaces
       - R.Head
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Better Looking Wood Elves ESP' ]
+        condition: 'many("Better Looking Wood Elves (Vanilla|Vanilla Black Eyes|Beautiful People 2ch|COBL)\.esp")'
 
   ### Diverse Dremora Project ###
   - name: 'DiverseDremora.*\.esp'
