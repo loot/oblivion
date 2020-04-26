@@ -1276,9 +1276,11 @@ plugins:
         name: 'Oblivion Character Overhaul v2 - Unofficial Patch'
     after: [ 'MaleBodyReplacerV5.esp' ]
     req:
-      - *OBSE
+      - <<: *OBSE
+        condition: 'version("Oblivion_Character_Overhaul.esp", "2.0", >=)'
       - name: 'OBSE/Plugins/Blockhead.dll'
         display: '[Blockhead](https://www.nexusmods.com/oblivion/mods/43752)'
+        condition: 'version("Oblivion_Character_Overhaul.esp", "2.0", >=)'
     tag:
       - Body-F
       - Body-M
