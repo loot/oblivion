@@ -1268,6 +1268,34 @@ plugins:
         subs: [ 'Optional file [Cobl Cosmetics Res 01](https://www.nexusmods.com/oblivion/mods/21104/)' ]
         condition: 'not file("Sound/Voice/Cobl Races.esp/xivilai/f/genericxiv_seen_00010baf_1.mp3")'
 
+  - name: 'Oblivion_Character_Overhaul.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/44676'
+        name: 'Oblivion Character Overhaul v2'
+      - link: 'https://www.nexusmods.com/oblivion/mods/48136'
+        name: 'Oblivion Character Overhaul v2 - Unofficial Patch'
+    after: [ 'MaleBodyReplacerV5.esp' ]
+    req:
+      - <<: *OBSE
+        condition: 'version("Oblivion_Character_Overhaul.esp", "2.0", >=)'
+      - name: 'OBSE/Plugins/Blockhead.dll'
+        display: '[Blockhead](https://www.nexusmods.com/oblivion/mods/43752)'
+        condition: 'version("Oblivion_Character_Overhaul.esp", "2.0", >=)'
+    tag:
+      - Body-F
+      - Body-M
+      - Eyes
+      - NpcFaces
+      - R.Ears
+      - R.Head
+      - R.Mouth
+    msg:
+      - <<: *patch3rdParty
+        subs:
+          - 'Wrye Bash Bashed Patch'
+          - '[OCOv2 - Bashed Patch Eyes Fix](https://www.nexusmods.com/oblivion/mods/49988)'
+        condition: 'version("Oblivion_Character_Overhaul.esp", "2.0", >=) and file("Bashed Patch.*\.esp") and not file("OCO_Eyes_Fix.esp")'
+
 ###### Environment, Landscape & Flora ######
   ### New Roads and Bridges ###
   - name: '(road\+bridges|NRB4).*\.esp'
@@ -18361,37 +18389,6 @@ plugins:
       - Graphics
       - R.Mouth
       - R.Teeth
-  - name: 'Oblivion_Character_Overhaul.esp'
-    url:
-      - link: 'https://www.nexusmods.com/oblivion/mods/44676'
-        name: 'Oblivion Character Overhaul v2'
-      - link: 'https://www.nexusmods.com/oblivion/mods/48136'
-        name: 'Oblivion Character Overhaul v2 - Unofficial Patch'
-    tag:
-      - Eyes
-      - NpcFaces
-      - R.Head
-      - R.Mouth
-    after: [ 'MaleBodyReplacerV5.esp' ]
-  - name: 'OCOv2-BR.esp'
-    tag:
-      - NpcFaces
-      - R.Body
-      - R.Head
-  - name: 'OCO_(DLCHorseArmor|DLCMehrunesRazor|DLCOrrery|DLCThievesDen|KnightsOTN|UOP_USIP|KvatchRebuilt)_Patch\.esp'
-    url:
-      - link: 'https://www.nexusmods.com/oblivion/mods/46249'
-        name: 'Compatibility Patches for nuska''s Oblivion Character Overhaul (v2)'
-  - name: 'OCO_(DLCHorseArmor|DLCMehrunesRazor|DLCOrrery|DLCThievesDen|KnightsOTN|UOP_USIP)_Patch\.esp'
-    tag: [ NpcFaces ]
-  - name: 'OCO_(DLCHorseArmor|DLCMehrunesRazor|DLCThievesDen|KnightsOTN|UOP_USIP)_Patch\.esp'
-    tag: [ Actors.ACBS ]
-  - name: 'OCO_(DLCHorseArmor|DLCOrrery|DLCThievesDen|KnightsOTN)_Patch\.esp'
-    tag: [ Actors.AIPackages ]
-  - name: 'OCO_(DLCHorseArmor|DLCMehrunesRazor|DLCThievesDen|UOP_USIP)_Patch\.esp'
-    tag: [ Actors.Skeleton ]
-  - name: 'OCO_(DLCHorseArmor|DLCThievesDen|KnightsOTN|UOP_USIP)_Patch\.esp'
-    tag: [ Actors.Stats ]
   - name: 'Jjiinx_Long Ears.esp'
     tag:
       - Body-F
