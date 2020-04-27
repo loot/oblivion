@@ -1477,8 +1477,9 @@ plugins:
   - name: 'West Roads.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/29523' ]
     dirty:
-      - crc: 0xede05e56
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xEDE05E56
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 5
         udr: 10
 
