@@ -1406,10 +1406,6 @@ plugins:
       - 'Shadowcrest_Vineyard_COBL.esp'
       - 'Tchos Alchemy Tower.esp'
       - 'TheForgottenShields.esp'
-    msg:
-      - type: error
-        content: 'West Roads.esp has been detected. West Roads and all dependent patches must be uninstalled before using Roads of Cyrodiil. See Roads of Cyrodiil readme for upgrade instructions.'
-        condition: 'file("West Roads.esp")'
     clean:
       - crc: 0x71F7DC2A
         util: 'TES4Edit v4.0.3'
@@ -1473,6 +1469,28 @@ plugins:
     req:
       - name: 'Wellspring Vale.esp'
         display: '[Wellspring Vale](http://tesalliance.org/forums/index.php?/files/file/594-wellspring-vale/)'
+
+  - name: 'West Roads.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/29523' ]
+    after: [ 'Villages1.1.esp' ]
+    inc: [ 'Roads of Cyrodiil.esp' ]
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'Roads of Cyrodiil' ]
+        condition: 'active("Roads of Cyrodiil.esp")'
+    dirty:
+      - <<: *quickClean
+        crc: 0xEDE05E56
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 5
+        udr: 10
+  - name: 'WR OotG Addon.esp'
+    req: [ 'West Roads.esp' ]
+  - name: 'WR Villages Addon.esp'
+    req:
+      - name: 'Villages1.1.esp'
+        display: '[Dragon Captions - Villages](https://www.nexusmods.com/oblivion/mods/36522)'
+      - 'West Roads.esp'
 
 ###### Gameplay - General ######
   - name: 'Zensalins Oblivion Overhaul.esp'
@@ -12266,13 +12284,6 @@ plugins:
     msg:
       - type: say
         content: 'Requires: Better/Open Cities IC Market District Components.'
-  - name: 'West Roads.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29523' ]
-    dirty:
-      - crc: 0xede05e56
-        <<: *dirtyPlugin
-        itm: 5
-        udr: 10
   - name: 'Oblivifall - Losing My Religion West Roads Patch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/31668' ]
     msg:
