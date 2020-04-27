@@ -1473,6 +1473,10 @@ plugins:
   - name: 'West Roads.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/29523' ]
     inc: [ 'Roads of Cyrodiil.esp' ]
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'Roads of Cyrodiil' ]
+        condition: 'active("Roads of Cyrodiil.esp")'
     dirty:
       - <<: *quickClean
         crc: 0xEDE05E56
