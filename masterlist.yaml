@@ -12527,6 +12527,7 @@ plugins:
   - name: 'Unique Landscapes.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/19370' ]
     after:
+      - '300_Akaviri_Stronghold.esp'
       - 'Blood&Mud.esp'
       - 'JolardHome.esp'
     tag:
@@ -12590,6 +12591,7 @@ plugins:
   ### UL Beaches of Cyrodiil (The Lost Coast) ###
   - name: 'xulBeachesOfCyrodiilLostCoast.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/14720' ]
+    after: [ '300_Akaviri_Stronghold.esp' ]
     msg:
       - <<: *obsolete
         condition: 'not checksum("xulBeachesOfCyrodiilLostCoast.esp", C66FED9E)'
