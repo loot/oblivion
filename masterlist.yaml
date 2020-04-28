@@ -12599,6 +12599,10 @@ plugins:
   ### UL Chorrol Hinterland ###
   - name: 'xulChorrolHinterland.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/11189' ]
+    inc:
+      - name: 'Better Cities Resources.esm'
+        display: '[Better Cities v6+](https://www.nexusmods.com/oblivion/mods/16513)'
+        condition: 'version("Better Cities Resources.esm", "6.0.0", >=)'
     msg:
       - <<: *alreadyInX
         subs: [ 'Cyrodiil Rebuild.esp' ]
