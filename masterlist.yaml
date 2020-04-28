@@ -12528,6 +12528,7 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/19370' ]
     after:
       - '300_Akaviri_Stronghold.esp'
+      - 'AltVillageStart.esp'
       - 'Blood&Mud.esp'
       - 'JolardHome.esp'
     tag:
@@ -12636,6 +12637,7 @@ plugins:
   ### UL Chorrol Hinterland ###
   - name: 'xulChorrolHinterland.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/11189' ]
+    after: [ 'AltVillageStart.esp' ]
     inc:
       - name: 'Better Cities Resources.esm'
         display: '[Better Cities v6+](https://www.nexusmods.com/oblivion/mods/16513)'
@@ -12734,6 +12736,7 @@ plugins:
   ### UL Lush Woodland (The Great Forest) ###
   - name: 'xulLushWoodlands.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/11164' ]
+    after: [ 'AltVillageStart.esp' ]
     clean:
       - crc: 0xE328D922
         util: 'TES4Edit v4.0.3'
