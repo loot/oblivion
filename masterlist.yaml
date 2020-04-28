@@ -12613,6 +12613,10 @@ plugins:
         util: 'TES4Edit v4.0.3'
   - name: 'xulChorrolHinterland-BC6.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/11189' ]
+    req:
+      - name: 'Better Cities Resources.esm'
+        display: '[Better Cities v6+](https://www.nexusmods.com/oblivion/mods/16513)'
+        condition: 'version("Better Cities Resources.esm", "6.0.0", >=)'
     clean:
       - crc: 0xDA99F8C7
         util: 'TES4Edit v4.0.3'
