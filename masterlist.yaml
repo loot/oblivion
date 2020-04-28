@@ -12526,7 +12526,9 @@ plugins:
         name: 'Unique Landscapes Compilation'
   - name: 'Unique Landscapes.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/19370' ]
-    after: [ 'Blood&Mud.esp' ]
+    after:
+      - 'Blood&Mud.esp'
+      - 'JolardHome.esp'
     tag:
       - C.Music
       - C.RecordFlags
@@ -12559,6 +12561,7 @@ plugins:
   ### UL Arrius Creek ###
   - name: 'xulArriusCreek.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/16818' ]
+    after: [ 'JolardHome.esp' ]
     tag: [ C.Water ]
     dirty:
       - <<: *quickClean
@@ -12621,7 +12624,9 @@ plugins:
   ### UL Cheydinhal Falls ###
   - name: 'xulCheydinhalFalls.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/27494' ]
-    after: [ 'Blood&Mud.esp' ]
+    after:
+      - 'Blood&Mud.esp'
+      - 'JolardHome.esp'
     tag: [ C.Water ]
     clean:
       - crc: 0x86A6BA6C
@@ -12720,6 +12725,7 @@ plugins:
   ### UL Jerall Glacier ###
   - name: 'xulJerallGlacier.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/40731' ]
+    after: [ 'JolardHome.esp' ]
     clean:
       - crc: 0x6B8E6A78
         util: 'TES4Edit v4.0.3'
