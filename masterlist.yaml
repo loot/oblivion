@@ -1219,6 +1219,102 @@ plugins:
     group: *gameMasterGroup
     req: [ *OBSEv21 ]
 
+###### AudioVisual - Weather ######
+  - name: '(AWS|NW|ANW|EW|OBSE)?(-)?Storms & Sound( SI)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/8711'
+        name: 'Storms & Sound'
+    inc:
+      - 'Weather Inside.esp'
+      - 'weather inside [seasons] v1.2.esp'
+      - 'weather inside [silent seasons] v1.2.esp'
+    msg:
+      - <<: *renameFile
+        subs: [ 'Storms & Sound.esp' ]
+        condition: 'not file("Storms & Sound.esp")'
+      - <<: *useOnlyOneX
+        type: error
+        subs: [ 'Storms & Sound' ]
+        condition: 'many("(AWS|NW|ANW|EW|OBSE)?(-)?Storms & Sound( SI)?\.esp")'
+  - name: '(AWS|NW|ANW|EW|OBSE)?(-)Storms & Sound.esp'
+    inc: [ 'DLCShiveringIsles.esp' ]
+  - name: '(AWS|NW|ANW|EW|OBSE)?(-)?Storms & Sound SI.esp'
+    req: [ 'DLCShiveringIsles.esp' ]
+  - name: 'OBSE-Storms & Sound( SI)?\.esp'
+    req: [ *OBSE ]
+    msg:
+      - type: say
+        content: 'This one is compatible with all weather mods.'
+  - name: 'Storms & Sound.esp'
+    inc:
+      - name: 'DLCShiveringIsles.esp'
+        condition: 'checksum("Storms & Sound.esp", 2DBAAA1A) or checksum("Storms & Sound.esp", 082936DE)'
+    msg:
+      - <<: *wildEdits
+        subs: [ 'Remove record **00049BD5**, blocks Unofficial Patch change.' ]
+      # CRCs of renamed plugins(NO SI 2DBAAA1A, SI 9A124534, OBSE 5A07EB4E, OBSE SI AB61AA5A, NW AC2CE763, NW SI 6761AAF1, ANW C23EEEE9, ANW SI 30E0955F, AWS 6E7BFAB6, AWS SI 993A2165, EW C439BDBB, EW SI AACF47E6)
+        condition: 'checksum("Storms & Sound.esp", 2DBAAA1A) or checksum("Storms & Sound.esp", 9A124534) or checksum("Storms & Sound.esp", 5A07EB4E) or checksum("Storms & Sound.esp", AB61AA5A) or checksum("Storms & Sound.esp", AC2CE763)  or checksum("Storms & Sound.esp", 6761AAF1) or checksum("Storms & Sound.esp", C23EEEE9) or checksum("Storms & Sound.esp", 30E0955F) or checksum("Storms & Sound.esp", 6E7BFAB6) or checksum("Storms & Sound.esp", 993A2165) or checksum("Storms & Sound.esp", C439BDBB) or checksum("Storms & Sound.esp", AACF47E6)'
+    dirty:
+      - <<: *quickClean
+        crc: 0x082936DE
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 45
+      # SI esp Renamed
+      - <<: *quickClean
+        crc: 0x4920A5B5
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 45
+      # OBSE esp Renamed
+      - <<: *quickClean
+        crc: 0x1E086559
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 46
+      # OBSE SI esp Renamed
+      - <<: *quickClean
+        crc: 0x94D50B3C
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 45
+      # Natural Weather esp Renamed
+      - <<: *quickClean
+        crc: 0xD2CC567C
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 45
+      # Natural Weather SI esp Renamed
+      - <<: *quickClean
+        crc: 0xBDE5A610
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 45
+      # Arthur's Natural Weather esp Renamed
+      - <<: *quickClean
+        crc: 0xDA888D0B
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 45
+      # Arthur's Natural Weather SI esp Renamed
+      - <<: *quickClean
+        crc: 0x68883828
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 45
+      # Atmosperic Weather System esp Renamed
+      - <<: *quickClean
+        crc: 0x41FB59B4
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 45
+      # Atmosperic Weather System SI esp Renamed
+      - <<: *quickClean
+        crc: 0xB0123585
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 45
+      # Enhanced Weather esp Renamed
+      - <<: *quickClean
+        crc: 0xCC7902D8
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 45
+      # Enhanced Weather SI esp Renamed
+      - <<: *quickClean
+        crc: 0x774395C5
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 45
+
 ###### Character Appearance - NPCs ######
   - name: '(Better Looking Redguards|Redguard Guards).*\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/31174/' ]
@@ -4536,117 +4632,6 @@ plugins:
       - 'Oblivifall - Ambiant Dungeon SFX.esp'
       - 'AmbientTownSounds.esp'
     tag: [ Sound ]
-  - name: '(AWS|NW|ANW|EW|OBSE)?(-)?Storms & Sound( SI)?\.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/8711' ]
-    inc:
-      - 'Weather Inside.esp'
-      - 'weather inside [seasons] v1.2.esp'
-      - 'weather inside [silent seasons] v1.2.esp'
-    msg:
-      - <<: *renameFile
-        subs: [ 'Storms & Sound.esp' ]
-        condition: 'not file("Storms & Sound.esp")'
-      - <<: *useOnlyOneX
-        type: error
-        subs: [ 'Storms & Sound' ]
-        condition: 'many("(AWS|NW|ANW|EW|OBSE)?(-)?Storms & Sound( SI)?\.esp")'
-  - name: '(AWS|NW|ANW|EW|OBSE)?(-)?Storms & Sound.esp'
-    inc: [ 'DLCShiveringIsles.esp' ]
-  - name: '(AWS|NW|ANW|EW|OBSE)?(-)?Storms & Sound SI.esp'
-    req: [ 'DLCShiveringIsles.esp' ]
-  - name: 'OBSE-Storms & Sound( SI)?\.esp'
-    req: [ *OBSE ]
-    msg:
-      - type: say
-        content: 'This one is compatible with all weather mods.'
-  - name: 'Storms & Sound.esp'
-    msg:
-      - <<: *wildEdits
-        subs: [ 'Remove record **00049BD5**, blocks Unofficial Patch change.' ]
-        condition: 'checksum("Storms & Sound.esp", 96BE8115)'
-    dirty:
-      # Version: 3.0
-      - <<: *quickClean
-        crc: 0x2DBAAA1A
-        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 45
-  - name: 'Storms & Sound SI.esp'
-    dirty:
-      # Version: 3.0
-      - <<: *quickClean
-        crc: 0x9A124534
-        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 45
-  - name: 'AWS-Storms & Sound.esp'
-    dirty:
-      # Version: 3.0
-      - <<: *quickClean
-        crc: 0x6E7BFAB6
-        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 45
-  - name: 'AWS-Storms & Sound SI.esp'
-    dirty:
-      # Version: 3.0
-      - <<: *quickClean
-        crc: 0x993A2165
-        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 45
-  - name: 'NW-Storms & Sound.esp'
-    dirty:
-      # Version: 3.0
-      - <<: *quickClean
-        crc: 0xAC2CE763
-        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 45
-  - name: 'NW-Storms & Sound SI.esp'
-    dirty:
-      # Version: 3.0
-      - <<: *quickClean
-        crc: 0x6761AAF1
-        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 45
-  - name: 'ANW-Storms & Sound.esp'
-    dirty:
-      # Version: 3.0
-      - <<: *quickClean
-        crc: 0xC23EEEE9
-        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 45
-  - name: 'ANW-Storms & Sound SI.esp'
-    dirty:
-      # Version: 3.0
-      - <<: *quickClean
-        crc: 0x30E0955F
-        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 45
-  - name: 'EW-Storms & Sound.esp'
-    dirty:
-      # Version: 3.0
-      - <<: *quickClean
-        crc: 0xC439BDBB
-        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 45
-  - name: 'EW-Storms & Sound SI.esp'
-    dirty:
-      # Version: 3.0
-      - <<: *quickClean
-        crc: 0xAACF47E6
-        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 45
-  - name: 'OBSE-Storms & Sound.esp'
-    dirty:
-      # Version: 3.0
-      - <<: *quickClean
-        crc: 0x5A07EB4E
-        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 46
-  - name: 'OBSE-Storms & Sound SI.esp'
-    dirty:
-      # Version: 3.0
-      - <<: *quickClean
-        crc: 0xAB61AA5A
-        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 45
   - name: 'SnakeLightningSpeed.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/5347' ]
     tag: [ Graphics ]
