@@ -1234,7 +1234,7 @@ plugins:
         type: error
         subs: [ 'Storms & Sound' ]
         condition: 'many("(AWS|NW|ANW|EW|OBSE)?(-)?Storms & Sound( SI)?\.esp")'
-  - name: '(AWS|NW|ANW|EW|OBSE)?(-)?Storms & Sound.esp'
+  - name: '(AWS|NW|ANW|EW|OBSE)?(-)Storms & Sound.esp'
     inc: [ 'DLCShiveringIsles.esp' ]
   - name: '(AWS|NW|ANW|EW|OBSE)?(-)?Storms & Sound SI.esp'
     req: [ 'DLCShiveringIsles.esp' ]
@@ -1244,6 +1244,9 @@ plugins:
       - type: say
         content: 'This one is compatible with all weather mods.'
   - name: 'Storms & Sound.esp'
+    inc:
+      - name: 'DLCShiveringIsles.esp'
+        condition: 'checksum("Storms & Sound.esp", 2DBAAA1A) or checksum("Storms & Sound.esp", 082936DE)'
     msg:
       - <<: *wildEdits
         subs: [ 'Remove record **00049BD5**, blocks Unofficial Patch change.' ]
