@@ -751,9 +751,13 @@ groups:
     description: 'A group for modules that should load after most other mods.'
     after: [ default ]
 
+  - name: &landscapeGroup Landscape
+    description: 'A group for plugins that modify landscapes to fix issues and/or improve visuals.'
+    after: [ *overridesGroup ]
+
   - name: &citiesGroup Cities
     description: 'A group for modules that alter Cities and need to be loaded late.'
-    after: [ *overridesGroup ]
+    after: [ *landscapeGroup ]
 
   - name: &imperialCityGroup Imperial City
     description: 'A group for modules that alter the Imperial City and need to be loaded late.'
