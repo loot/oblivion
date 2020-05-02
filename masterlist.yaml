@@ -1247,12 +1247,67 @@ plugins:
     msg:
       - <<: *wildEdits
         subs: [ 'Remove record **00049BD5**, blocks Unofficial Patch change.' ]
-        condition: 'checksum("Storms & Sound.esp", 2DBAAA1A)'
+      # CRCs of renamed plugins(NO SI 2DBAAA1A, SI 9A124534, OBSE 5A07EB4E, OBSE SI AB61AA5A, NW AC2CE763, NW SI 6761AAF1, ANW C23EEEE9, ANW SI 30E0955F, AWS 6E7BFAB6, AWS SI 993A2165, EW C439BDBB, EW SI AACF47E6)
+        condition: 'checksum("Storms & Sound.esp", 2DBAAA1A) or checksum("Storms & Sound.esp", 9A124534) or checksum("Storms & Sound.esp", 5A07EB4E) or checksum("Storms & Sound.esp", AB61AA5A) or checksum("Storms & Sound.esp", AC2CE763)  or checksum("Storms & Sound.esp", 6761AAF1) or checksum("Storms & Sound.esp", C23EEEE9) or checksum("Storms & Sound.esp", 30E0955F) or checksum("Storms & Sound.esp", 6E7BFAB6) or checksum("Storms & Sound.esp", 993A2165) or checksum("Storms & Sound.esp", C439BDBB) or checksum("Storms & Sound.esp", AACF47E6)'
     dirty:
-      # Version: 3.0
       - <<: *quickClean
         crc: 0x082936DE
-        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 45
+      # SI esp Renamed
+      - <<: *quickClean
+        crc: 0x4920A5B5
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 45
+      # OBSE esp Renamed
+      - <<: *quickClean
+        crc: 0x1E086559
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 46
+      # OBSE SI esp Renamed
+      - <<: *quickClean
+        crc: 0x94D50B3C
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 45
+      # Natural Weather esp Renamed
+      - <<: *quickClean
+        crc: 0xD2CC567C
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 45
+      # Natural Weather SI esp Renamed
+      - <<: *quickClean
+        crc: 0xBDE5A610
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 45
+      # Arthur's Natural Weather esp Renamed
+      - <<: *quickClean
+        crc: 0xDA888D0B
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 45
+      # Arthur's Natural Weather SI esp Renamed
+      - <<: *quickClean
+        crc: 0x68883828
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 45
+      # Atmosperic Weather System esp Renamed
+      - <<: *quickClean
+        crc: 0x41FB59B4
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 45
+      # Atmosperic Weather System SI esp Renamed
+      - <<: *quickClean
+        crc: 0xB0123585
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 45
+      # Enhanced Weather esp Renamed
+      - <<: *quickClean
+        crc: 0xCC7902D8
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 45
+      # Enhanced Weather SI esp Renamed
+      - <<: *quickClean
+        crc: 0x774395C5
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 45
 
 ###### Character Appearance - NPCs ######
