@@ -12786,6 +12786,11 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/13834'
         name: 'Unique Landscapes Compatibility Patches'
+  # Either full or separate version patches
+  - name: 'ULE .*\patch.esp'
+    after:
+      - name: 'Unique Landscapes.esp'
+        condition: 'version("Unique Landscapes.esp", "2.0.0", >=)'
 
 ###### Better Cities ######
   - name: 'Better (Cities |Imperial City).*\.es(m|p)'
