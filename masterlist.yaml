@@ -12902,6 +12902,16 @@ plugins:
   - name: 'ULE .*\-xulPatch_AY_AC patch.esp'
     after: [ 'xulPatch_AY_AC.esp' ]
 
+  # AltStart Town Lindum #
+  - name: 'UL(M|S) Lindum.*\patch.esp'
+    req:
+      - name: 'AltVillageStart.esp'
+        display: '[AltStart Town Lindum](https://www.nexusmods.com/oblivion/mods/44903)'
+  - name: 'UL(M|S) Lindum.*(BetterCitiesChorrol).*\patch.esp'
+    req:
+      - name: 'Better Cities CHORROL.esp'
+        display: 'Better Cities Full or CHORROL'
+        condition: 'not file("Better Cities Full.esp")'
 ###### Better Cities ######
   - name: 'Better (Cities |Imperial City).*\.es(m|p)'
     url:
