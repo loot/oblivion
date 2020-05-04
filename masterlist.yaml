@@ -13110,6 +13110,16 @@ plugins:
     req:
       - name: 'ImpeREAL Empire - Unique Forts.esp'
         display: '[ImpeREAL Empire: Unique Forts](https://www.nexusmods.com/oblivion/mods/22965)'
+  # Integration: The Stranded Light #
+  - name: 'ULE IntegrationTheStrandedLight-SilverfishRiverValley patch.esp'
+    after:
+      - 'bgIntegrationDV.esp'
+      - 'bgIntegrationIntegratedEV.esp'
+    inc: [ 'SilverfishFalls.esp' ]
+    req:
+      - name: 'bgIntegrationEV.esp'
+        display: '[Integration: The Stranded Light](http://theelderscrolls.info/?go=dlfile&fileid=349) or [Integration - The Stranded Light - Integrated!](http://theelderscrolls.info/?go=dlfile&fileid=441)'
+        condition: 'not file("bgIntegrationIntegratedEV.esp") and not file("bgIntegrationDV.esp")'
 ###### Better Cities ######
   - name: 'Better (Cities |Imperial City).*\.es(m|p)'
     url:
