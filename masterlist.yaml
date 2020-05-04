@@ -12956,6 +12956,13 @@ plugins:
       - name: 'Better Cities Full.esp'
         display: 'Better Cities Full or BRAVIL & BRUMA & CHEYDINHAL & SKINGRAD'
         condition: 'not file("Better Cities BRAVIL.esp") and not file("Better Cities BRUMA.esp") and not file("Better Cities CHEYDINHAL.esp") and not file("Better Cities SKINGRAD.esp")'
+  # Blood & Mud #
+  - name: 'ULE Blood&Mud.*\patch.esp'
+    req:
+      - name: 'Blood&Mud.esp'
+        display: '[Blood & Mud Dirt Deluxe Anglais](https://www.nexusmods.com/oblivion/mods/12016)'
+  - name: 'ULE Blood&Mud-UniqueLandscapes merged patch.esp'
+    after: [ 'xulCheydinhalFalls.esp' ]
 ###### Better Cities ######
   - name: 'Better (Cities |Imperial City).*\.es(m|p)'
     url:
