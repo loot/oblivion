@@ -12927,6 +12927,35 @@ plugins:
     req:
       - name: 'Atah wizard home - eng.esp'
         display: '[Atahnoral: The Wizard''s Home](https://www.nexusmods.com/oblivion/mods/37356)'
+  # Better Cities #
+  - name: 'UL(E|M|S) .*(BetterCities).*\patch.esp'
+    after: [ 'Better Cities Full.esp' ]
+  - name: 'UL(E|M|S) BetterCitiesBravil.*\patch.esp'
+    req:
+      - name: 'Better Cities BRAVIL.esp'
+        display: 'Better Cities Full or BRAVIL'
+        condition: 'not file("Better Cities Full.esp")'
+  - name: 'UL(E|M|S) BetterCitiesBruma.*\patch.esp'
+    req:
+      - name: 'Better Cities BRUMA.esp'
+        display: 'Better Cities Full or BRUMA'
+        condition: 'not file("Better Cities Full.esp")'
+  - name: 'UL(E|M|S) BetterCitiesCheydinhal.*\patch.esp'
+    req:
+      - name: 'Better Cities CHEYDINHAL.esp'
+        display: 'Better Cities Full or CHEYDINHAL'
+        condition: 'not file("Better Cities Full.esp")'
+  - name: 'UL(E|M|S) BetterCitiesSkingrad.*\patch.esp'
+    req:
+      - name: 'Better Cities SKINGRAD.esp'
+        display: 'Better Cities Full or SKINGRAD'
+        condition: 'not file("Better Cities Full.esp")'
+  - name: 'ULM BetterCities-UniqueLandscapes merged patch.esp'
+    after: [ 'Better Cities CHEYDINHAL.esp' ]
+    req:
+      - name: 'Better Cities Full.esp'
+        display: 'Better Cities Full or BRAVIL & BRUMA & CHEYDINHAL & SKINGRAD'
+        condition: 'not file("Better Cities BRAVIL.esp") and not file("Better Cities BRUMA.esp") and not file("Better Cities CHEYDINHAL.esp") and not file("Better Cities SKINGRAD.esp")'
 ###### Better Cities ######
   - name: 'Better (Cities |Imperial City).*\.es(m|p)'
     url:
