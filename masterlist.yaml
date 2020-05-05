@@ -13317,6 +13317,13 @@ plugins:
       - <<: *useInstead
         subs: [ 'ULE LostSpires-DarkForest patch.esp & ULE LostSpires-FallenleafEverglade patch.esp' ]
         condition: 'file("ImpeREAL Empire - Unique Forts.esp")'
+  # The Orange Maple Inn #
+  - name: 'ULE OrangeMaple-LushWoodlands patch.esp'
+    after: [ 'OrangeInnCOBL.esp' ]
+    req:
+      - name: 'OrangeInn.esp'
+        display: '[The Orange Maple Inn](https://www.nexusmods.com/oblivion/mods/16360)'
+        condition: 'not file("OrangeInnCOBL.esp")'
 ###### Better Cities ######
   - name: 'Better (Cities |Imperial City).*\.es(m|p)'
     url:
