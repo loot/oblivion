@@ -13264,6 +13264,13 @@ plugins:
   # Snowy Road To Bruma #
   - name: 'ULE SnowyRoad-ULCombo patch.esp'
     after: [ 'xulJerallGlacier.esp' ]
+  # The Dwarves Of The Mountain #
+  - name: 'ULE DwarvenMines-AncientYews patch.esp'
+    req:
+      - name: 'Dwarven Mines.esp'
+        display: '[The Dwarves Of The Mountain](https://www.nexusmods.com/oblivion/mods/22268)'
+  - name: 'ULE DwarvenMines-UniqueLandscapes merged patch.esp'
+    after: [ 'xulAncientYews.esp' ]
 ###### Better Cities ######
   - name: 'Better (Cities |Imperial City).*\.es(m|p)'
     url:
