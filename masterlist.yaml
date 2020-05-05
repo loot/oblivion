@@ -13204,6 +13204,14 @@ plugins:
     req:
       - name: 'ReclaimSancreTor.esp'
         display: '[Reclaiming Sancre Tor](https://www.nexusmods.com/oblivion/mods/40757)'
+  # Redcourt Castle #
+  - name: 'ULE RedcourtCastle-.*\patch.esp'
+    req:
+      - name: 'RedcourtCastle v1_25.esp'
+        display: '[Redcourt Castle](https://www.nexusmods.com/oblivion/mods/14509)'
+        condition: 'not file("RedcourtCastleFREE v1_25.esp")'
+  - name: 'ULE RedcourtCastle-UniqueLandscapes merged patch.esp'
+    after: [ 'xulRollingHills_EV.esp' ]
 ###### Better Cities ######
   - name: 'Better (Cities |Imperial City).*\.es(m|p)'
     url:
