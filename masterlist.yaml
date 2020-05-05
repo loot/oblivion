@@ -13281,6 +13281,12 @@ plugins:
   # The Golden Crest #
   - name: 'ULE GoldenCrest-UniqueLandscapes merged patch.esp'
     after: [ 'xulSnowdale.esp' ]
+  # The Griffon Fortress #
+  - name: 'UL(M|S) GriffonFortress-EasternPeaks patch.esp'
+    req:
+      - name: 'Griffon Fortress 0.3.esp'
+        display: '[The Griffon Fortress](https://www.nexusmods.com/oblivion/mods/14830) OR [Griffon Fortress Update](https://www.nexusmods.com/oblivion/mods/24805)'
+        condition: 'not file("Griffon Fortress.*\.esp")'
 ###### Better Cities ######
   - name: 'Better (Cities |Imperial City).*\.es(m|p)'
     url:
