@@ -13059,6 +13059,12 @@ plugins:
         display: '[Fighters Guild Quests](https://www.nexusmods.com/oblivion/mods/41012)'
   - name: 'ULE FightersGuildQuests-SnowyRoad-ULCombo Patch.esp'
     after: [ 'xulJerallGlacier.esp' ]
+  # Frostcrag Reborn De-Isolated #
+  - name: 'UL(M|S) FrostcragReborn-Snowdale patch.esp'
+    req:
+      - name: 'DLCFrostcragReborn.esp'
+        display: '[Frostcrag Reborn De-Isolated](https://www.nexusmods.com/oblivion/mods/40752/)'
+        condition: 'not version("DLCfrostcrag.esp", "3.0" >=)'
   # Fuse's Snail Racing #
   - name: 'UL(M|S) FuseSnailRacing-ImperialIsle patch.esp'
     req:
