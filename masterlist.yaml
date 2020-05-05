@@ -13120,6 +13120,13 @@ plugins:
       - name: 'bgIntegrationEV.esp'
         display: '[Integration: The Stranded Light](http://theelderscrolls.info/?go=dlfile&fileid=349) or [Integration - The Stranded Light - Integrated!](http://theelderscrolls.info/?go=dlfile&fileid=441)'
         condition: 'not file("bgIntegrationIntegratedEV.esp") and not file("bgIntegrationDV.esp")'
+  # Kragenir's Death Quest #
+  - name: 'ULE KragenirsDeathQuest.*\patch.esp'
+    req:
+      - name: 'Kragenir''s Death Quest.esp'
+        display: '[Kragenir''s Death Quest](https://www.nexusmods.com/oblivion/mods/26219)'
+  - name: 'ULE KragenirsDeathQuest-UniqueLandscapes merged patch.esp'
+    after: [ 'xulTheEasternPeaks.esp' ]
 ###### Better Cities ######
   - name: 'Better (Cities |Imperial City).*\.es(m|p)'
     url:
