@@ -13271,6 +13271,13 @@ plugins:
         display: '[The Dwarves Of The Mountain](https://www.nexusmods.com/oblivion/mods/22268)'
   - name: 'ULE DwarvenMines-UniqueLandscapes merged patch.esp'
     after: [ 'xulAncientYews.esp' ]
+  # The Golden Arrow Archers Shop #
+  - name: 'ULE GoldenArrowArcheryShop-RollingHills patch.esp'
+    after: [ 'goldenarrowarcheryshopfixedprices.esp' ]
+    req:
+      - name: 'goldenarrowarcheryshop.esp'
+        display: '[The Golden Arrow Archers Shop](https://www.nexusmods.com/oblivion/mods/2203)'
+        condition: 'not file("goldenarrowarcheryshopfixedprices.esp")'
 ###### Better Cities ######
   - name: 'Better (Cities |Imperial City).*\.es(m|p)'
     url:
