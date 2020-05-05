@@ -13303,6 +13303,20 @@ plugins:
     req:
       - name: 'Zedar.esp'
         display: '[The Lost Province of Zedar](https://www.nexusmods.com/oblivion/mods/17018)'
+  # The Lost Spires #
+  - name: 'UL(E|M|S) LostSpires-.*\patch.esp'
+    req:
+      - name: 'The Lost Spires.esp'
+        display: '[The Lost Spires](http://www.lostspires.com/pages/downloads.htm)'
+  - name: 'ULE LostSpires-SilverfishRiverValley patch.esp'
+    inc: [ 'ImpeREAL Empire - Unique Forts.esp' ]
+  - name: 'ULE LostSpires-UniqueLandscapes merged patch.esp'
+    after: [ 'xulSilverfishRiverValley.esp' ]
+    inc: [ 'ImpeREAL Empire - Unique Forts.esp' ]
+    msg:
+      - <<: *useInstead
+        subs: [ 'ULE LostSpires-DarkForest patch.esp & ULE LostSpires-FallenleafEverglade patch.esp' ]
+        condition: 'file("ImpeREAL Empire - Unique Forts.esp")'
 ###### Better Cities ######
   - name: 'Better (Cities |Imperial City).*\.es(m|p)'
     url:
