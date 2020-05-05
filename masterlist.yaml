@@ -13215,6 +13215,12 @@ plugins:
   # Region Revive: Lake Rumare #
   - name: 'UL(M|S) RegionReviveLakeRumare-ImperialIsle patch.esp'
     inc: [ 'RR - LTPDPatch.esp' ]
+  # Roads of Cyrodiil #
+  - name: 'ULE ROC+RST+Skingrad Outskirts.esp'
+    after:
+      - 'Unique Landscapes.esp'
+      - 'xulSkingradOutskirts.esp'
+    req: [ 'ReclaimSancreTor.esp' ]
 ###### Better Cities ######
   - name: 'Better (Cities |Imperial City).*\.es(m|p)'
     url:
