@@ -13287,6 +13287,17 @@ plugins:
       - name: 'Griffon Fortress 0.3.esp'
         display: '[The Griffon Fortress](https://www.nexusmods.com/oblivion/mods/14830) OR [Griffon Fortress Update](https://www.nexusmods.com/oblivion/mods/24805)'
         condition: 'not file("Griffon Fortress.*\.esp")'
+  # The Hesu Mod Collection #
+  - name: 'UL(M|S) GreatForestGorge-LushWoodlands patch.esp'
+    inc: [ 'HoarfrostCastle.esp' ]
+  - name: 'UL(M|S) KoyoTown-LushWoodlands patch.esp'
+    inc: [ 'ClearwaterFarms.esp' ]
+  - name: 'ULE SkyrimTemple-Snowdale patch.esp'
+    req:
+      - name: 'HESU SkyrimTemple.esp'
+        display: '[The Hesu Mod Collection - The Skyrim Temple](https://www.nexusmods.com/oblivion/mods/46090)'
+  - name: 'UL(M|S) SmokeTown-JerallGlacier patch.esp'
+    inc: [ 'HESU SkyrimTemple.esp' ]
 ###### Better Cities ######
   - name: 'Better (Cities |Imperial City).*\.es(m|p)'
     url:
