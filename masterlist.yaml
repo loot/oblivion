@@ -13271,6 +13271,58 @@ plugins:
         display: '[The Dwarves Of The Mountain](https://www.nexusmods.com/oblivion/mods/22268)'
   - name: 'ULE DwarvenMines-UniqueLandscapes merged patch.esp'
     after: [ 'xulAncientYews.esp' ]
+  # The Jerall Mountain Compendium Patch #
+  - name: 'ULE JMC - Layer.*\patch.esp'
+    after:
+      - name: 'Unique Landscapes.esp'
+        condition: 'version("Unique Landscapes.esp", "2.0.0", >=)'
+  - name: 'ULE JMC - Layer 1.esp'
+    after:
+      - 'ULM FrostcragReborn-Snowdale patch.esp'
+      - 'ULM OrdenDesDrachen-UniqueLandscapes patch.esp'
+      - 'ULS FrostcragReborn-Snowdale patch.esp'
+      - 'ULS OrdenDesDrachen-Snowdale patch.esp'
+    req:
+      - name: 'DLCFrostcragReborn.esp'
+        display: '[Frostcrag Reborn De-Isolated](https://www.nexusmods.com/oblivion/mods/40752/)'
+      - name: 'Orden des Drachen.esp'
+        display: '[Order of the Dragon](https://www.nexusmods.com/oblivion/mods/45258/)'
+      - name: 'xulSnowdale.esp'
+        condition: 'not version("Unique Landscapes.esp", "2.0.0", >=)'
+  - name: 'ULE JMC - Layer 1b.esp'
+    after:
+      - 'ULM JMC - Layer 2.esp'
+      - 'ULS JMC - Layer 2.esp'
+      - 'ULM OrdenDesDrachen-UniqueLandscapes patch.esp'
+      - 'ULS OrdenDesDrachen-Snowdale patch.esp'
+    req:
+      - name: 'Orden des Drachen.esp'
+        display: '[Order of the Dragon](https://www.nexusmods.com/oblivion/mods/45258/)'
+      - name: 'xulSnowdale.esp'
+        condition: 'not version("Unique Landscapes.esp", "2.0.0", >=)'
+    inc: [ 'DLCFrostcragReborn.esp' ]
+  - name: 'ULE JMC - Layer 1b+2.esp'
+    req:
+      - 'ULE JMC - Layer 1b.esp'
+      - name: 'ULM JMC - Layer 2.esp'
+        condition: 'file("Unique Landscapes.esp") and version("Unique Landscapes.esp", "2.0.0", >=)'
+      - name: 'ULS JMC - Layer 2.esp'
+        condition: 'file("xulJerallGlacier.esp")'
+  - name: 'UL(M|S) JMC - Layer 2.esp'
+    req:
+      - name: 'Orden des Drachen.esp'
+        display: '[Order of the Dragon](https://www.nexusmods.com/oblivion/mods/45258)'
+  - name: 'ULM JMC - Layer 2.esp'
+    after:
+      - 'ULM GatesToAesgaardEp1-JerallGlacier patch.esp'
+      - 'ULM OrdenDesDrachen-UniqueLandscapes patch.esp'
+  - name: 'ULS JMC - Layer 2.esp'
+    after:
+      - 'ULS GatesToAesgaardEp1-JerallGlacier patch.esp'
+      - 'ULS OrdenDesDrachen-JerallGlacier patch.esp'
+  - name: 'UL(M|S) JMC - Layer 3.esp'
+    after: [ 'DLCFrostcrag Reborn - Frostcrag Village Patch.esp' ]
+    req: [ 'ULE JMC - Layer 1.esp' ]
   # The Golden Arrow Archers Shop #
   - name: 'ULE GoldenArrowArcheryShop-RollingHills patch.esp'
     after: [ 'goldenarrowarcheryshopfixedprices.esp' ]
