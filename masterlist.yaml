@@ -1982,8 +1982,9 @@ plugins:
         udr: 17
   - name: 'Millstone(_UL_Patch|COBL_UL_Patch)\.esp'
     msg:
-      - <<: *obsolete
+      - <<: *useInstead
         subs: [ '[Unique Landscapes Compatibility Patches](https://www.nexusmods.com/oblivion/mods/13834)' ]
+        condition: 'version("xulAncientYews.esp", "2", >=) or version("Unique Landscapes.esp", "2", >=)'
 
 ###### Morroblivion ######
   - name: 'Morrowind_ob.*\.es(m|p)'
