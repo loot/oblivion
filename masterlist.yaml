@@ -1969,20 +1969,16 @@ plugins:
         name: 'Millstone Farm And Millstone Farm COBL'
   - name: 'Millstone_Farm.esp'
     dirty:
-      - crc: 0x8bab5b62
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xA5571223
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         udr: 17
   - name: 'Millstone_Farm_COBL.esp'
     dirty:
-      - crc: 0xa67e4087
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xA67E4087
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         udr: 17
-  - name: 'Millstone_UL_Patch.esp'
-    dirty:
-      - crc: 0xf7081b36
-        <<: *dirtyPlugin
-        itm: 13
-        udr: 116
 
 ###### Morroblivion ######
   - name: 'Morrowind_ob.*\.es(m|p)'
