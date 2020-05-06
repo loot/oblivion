@@ -1952,6 +1952,59 @@ plugins:
       - crc: 0xAF477DE5
         util: 'TES4Edit v4.0.3'
 
+  - name: 'ImpeREAL Empire - Unique Forts.*\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/22965' ]
+  - name: 'ImpeREAL Empire - Unique Forts.esp'
+    after:
+      - 'EastbrinkBasic.esp'
+      - 'HammerfellBorders.esp'
+      - 'JDNT_Brina Cross.esp'
+      - 'The Lost Spires.esp'
+      - 'Unique Landscapes.esp'
+      - 'xulSilverfishRiverValley.esp'
+    clean:
+      - crc: 0x82D86B94
+        util: 'TES4Edit v4.0.3'
+  - name: 'ImpeREAL Empire - Unique Forts - (Clydesdale|Slofs) Horses - By Xtudo.esp'
+    tag: [ NoMerge ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Clydesdale or Slofs Horses Patch' ]
+        condition: 'many("ImpeREAL Empire - Unique Forts - (Clydesdale|Slofs) Horses - By Xtudo.esp")'
+  - name: 'ImpeREAL Empire - Unique Forts - Clydesdale Horses - By Xtudo.esp'
+    msg:
+      - type: warn
+        content:
+          - lang: en
+            text: 'Requires resources (Models, Textures etc. Plugins not required.) from %1%.'
+        subs: [ '[Zira''s Clydesdale Horses](https://www.nexusmods.com/oblivion/mods/33560)' ]
+        condition: 'not file("meshes/creatures/horse/Z_CH_Body_Bay.nif")'
+    clean:
+      - crc: 0xF090990C
+        util: 'TES4Edit v4.0.3'
+  - name: 'ImpeREAL Empire - Unique Forts - Slofs Horses - By Xtudo.esp'
+    msg:
+      - type: warn
+        content:
+          - lang: en
+            text: 'Requires resources (Models, Textures etc. Plugins not required.) from %1%.'
+        subs: [ '[Slof''s Oblivion Horses](https://www.nexusmods.com/oblivion/mods/48925)' ]
+        condition: 'not file("meshes/creatures/horse/ashorsebay1gelding.nif") and not file("Mart''s Monster Mod.esm")'
+    clean:
+      - crc: 0x3E5AC53A
+        util: 'TES4Edit v4.0.3'
+  - name: 'ImpeREAL Empire - Unique Forts - OOO FCOM patch by Xtudo.esp'
+    tag: [ Invent ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x58328D81
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 3
+  - name: 'ImpeREALFortsHammerfellpatch.esp'
+    clean:
+      - crc: 0x7BB722C0
+        util: 'TES4Edit v4.0.3'
+
   - name: 'Sutch Village.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/40882' ]
     after:
@@ -12319,31 +12372,6 @@ plugins:
         content: 'You do not need both of these patches! Disable OotD_UL_Jerall_Patch.esp.'
         condition: 'file("OrdenDesDrachen-JerallGlacier patch.esp")'
 
-  - name: 'ImpeREAL Empire - Unique Forts.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/22965' ]
-    after:
-      - 'The Lost Spires.esp'
-      - 'EastbrinkBasic.esp'
-    dirty:
-      - crc: 0xad577f04
-        <<: *dirtyPlugin
-        itm: 15
-  - name: 'ImpeREAL Empire - Unique Forts - Slofs Horses - By Xtudo.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/22965' ]
-    tag:
-      - Graphics
-      - NoMerge
-  - name: 'ImpeREAL Empire - Unique Forts - OOO FCOM patch by Xtudo.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/22965' ]
-    msg:
-      - type: say
-        content: 'Don''t use with ''ImpeREAL Empire - Unique Forts - Black Rock - OOO FCOM plugin by Xtudo.esp''.'
-        condition: 'file("ImpeREAL Empire - Unique Forts - Black Rock - OOO FCOM plugin by Xtudo.esp")'
-    tag: [ Invent ]
-    dirty:
-      - crc: 0x58328d81
-        <<: *dirtyPlugin
-        itm: 3
   - name: 'UL II Immersive Prison Sewer exit.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/38705' ]
     dirty:
