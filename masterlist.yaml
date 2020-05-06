@@ -1963,6 +1963,13 @@ plugins:
         <<: *dirtyPlugin
         itm: 15
   - name: 'ImpeREAL Empire - Unique Forts - Slofs Horses - By Xtudo.esp'
+    msg:
+      - type: warn
+        content:
+          - lang: en
+            text: 'Requires resources (Models, Textures etc.) from %1%.'
+        subs: [ '[Slof''s Oblivion Horses](https://www.nexusmods.com/oblivion/mods/48925)' ]
+        condition: 'not file("meshes\creatures\horse\ashorsebay1gelding.nif") and not file("Mart''s Monster Mod.esm")'
     tag:
       - Graphics
       - NoMerge
