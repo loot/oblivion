@@ -1952,6 +1952,32 @@ plugins:
       - crc: 0xAF477DE5
         util: 'TES4Edit v4.0.3'
 
+  - name: 'ImpeREAL Empire - Unique Forts.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/22965' ]
+    after:
+      - 'The Lost Spires.esp'
+      - 'EastbrinkBasic.esp'
+    dirty:
+      - crc: 0xad577f04
+        <<: *dirtyPlugin
+        itm: 15
+  - name: 'ImpeREAL Empire - Unique Forts - Slofs Horses - By Xtudo.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/22965' ]
+    tag:
+      - Graphics
+      - NoMerge
+  - name: 'ImpeREAL Empire - Unique Forts - OOO FCOM patch by Xtudo.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/22965' ]
+    msg:
+      - type: say
+        content: 'Don''t use with ''ImpeREAL Empire - Unique Forts - Black Rock - OOO FCOM plugin by Xtudo.esp''.'
+        condition: 'file("ImpeREAL Empire - Unique Forts - Black Rock - OOO FCOM plugin by Xtudo.esp")'
+    tag: [ Invent ]
+    dirty:
+      - crc: 0x58328d81
+        <<: *dirtyPlugin
+        itm: 3
+
   - name: 'Sutch Village.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/40882' ]
     after:
@@ -12319,31 +12345,6 @@ plugins:
         content: 'You do not need both of these patches! Disable OotD_UL_Jerall_Patch.esp.'
         condition: 'file("OrdenDesDrachen-JerallGlacier patch.esp")'
 
-  - name: 'ImpeREAL Empire - Unique Forts.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/22965' ]
-    after:
-      - 'The Lost Spires.esp'
-      - 'EastbrinkBasic.esp'
-    dirty:
-      - crc: 0xad577f04
-        <<: *dirtyPlugin
-        itm: 15
-  - name: 'ImpeREAL Empire - Unique Forts - Slofs Horses - By Xtudo.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/22965' ]
-    tag:
-      - Graphics
-      - NoMerge
-  - name: 'ImpeREAL Empire - Unique Forts - OOO FCOM patch by Xtudo.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/22965' ]
-    msg:
-      - type: say
-        content: 'Don''t use with ''ImpeREAL Empire - Unique Forts - Black Rock - OOO FCOM plugin by Xtudo.esp''.'
-        condition: 'file("ImpeREAL Empire - Unique Forts - Black Rock - OOO FCOM plugin by Xtudo.esp")'
-    tag: [ Invent ]
-    dirty:
-      - crc: 0x58328d81
-        <<: *dirtyPlugin
-        itm: 3
   - name: 'UL II Immersive Prison Sewer exit.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/38705' ]
     dirty:
