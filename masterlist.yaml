@@ -1922,6 +1922,10 @@ plugins:
 ###### Locations - New Structures & Landmarks ######
   - name: 'Colourwheels Sexy Tavern HGEC.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/37959' ]
+    msg:
+      - <<: *requiresX
+        subs: [ '[HG EyeCandy Body](https://www.nexusmods.com/oblivion/mods/15802/)' ]
+        condition: 'not checksum("Textures\characters\argonian\female\footfemale.dds", B5EB803E)'
     dirty:
       - <<: *quickClean
         crc: 0x4223626A
