@@ -1592,6 +1592,10 @@ plugins:
 ###### Gameplay - General ######
   - name: 'Duke Patricks - (Combat Magic II.esp|Fortress of Fear).esp'
     url: [ 'http://tesalliance.org/forums/index.php?/files/file/780-duke-patricks-combat-magic-ii-duke-patricks-incursion-into-fortress-of-fear/' ]
+    req:
+      - 'DLCShiveringIsles.esp'
+      - *OBSE
+      - *SilentVoice
   - name: 'Duke Patricks - Combat Magic II.esp'
     after: [ 'Duke Patricks - Fortress of Fear.esp' ]
     clean:
