@@ -1962,6 +1962,30 @@ plugins:
         itm: 1
         udr: 293
 
+###### Location - Player homes ######
+  - name: 'Millstone_Farm(_COBL)?.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/29126' ]
+    after:
+      - 'Unique Landscapes.esp'
+      - 'xulAncientYews.esp'
+  - name: 'Millstone_Farm.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0xA5571223
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        udr: 17
+  - name: 'Millstone_Farm_COBL.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0xA67E4087
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        udr: 17
+  - name: 'Millstone(_UL_Patch|COBL_UL_Patch)\.esp'
+    msg:
+      - <<: *useInstead
+        subs: [ '[Unique Landscapes Compatibility Patches](https://www.nexusmods.com/oblivion/mods/13834)' ]
+        condition: 'version("xulAncientYews.esp", "2", >=) or version("Unique Landscapes.esp", "2", >=)'
+
 ###### Morroblivion ######
   - name: 'Morrowind_ob.*\.es(m|p)'
     url: [ 'http://morroblivion.com/forums/morroblivion/mods/753' ]
@@ -12413,25 +12437,6 @@ plugins:
         <<: *dirtyPlugin
         itm: 35
         udr: 384
-  - name: 'Millstone_Farm.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29126' ]
-    dirty:
-      - crc: 0x8bab5b62
-        <<: *dirtyPlugin
-        udr: 17
-  - name: 'Millstone_Farm_COBL.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29126' ]
-    dirty:
-      - crc: 0xa67e4087
-        <<: *dirtyPlugin
-        udr: 17
-  - name: 'Millstone_UL_Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29126' ]
-    dirty:
-      - crc: 0xf7081b36
-        <<: *dirtyPlugin
-        itm: 13
-        udr: 116
   - name: 'VeronaHouseBloodlines-UL patches Merged.esp'
     msg:
       - type: say
