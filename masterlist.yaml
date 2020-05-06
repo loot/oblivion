@@ -1178,6 +1178,10 @@ plugins:
           - lang: en
             text: 'This plugin is outdated and may not be compatible with the latest version of the patched mod.'
   - name: 'FRLODToggle(Basic|Full).esp'
+    req:
+      - name: 'DLCFrostcragReborn.esp'
+        display: '[Frostcrag Reborn De-Isolated](https://www.nexusmods.com/oblivion/mods/40752/)'
+        condition: 'not version("DLCfrostcrag.esp", "3.0", >=)'
     msg:
       - <<: *useOnlyOneX
         subs: [ 'Frostcrag Reborn LOD Toggler' ]
