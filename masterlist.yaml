@@ -1962,6 +1962,27 @@ plugins:
         itm: 1
         udr: 293
 
+###### Location - Player homes ######
+  - name: 'Millstone_Farm.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/29126' ]
+    dirty:
+      - crc: 0x8bab5b62
+        <<: *dirtyPlugin
+        udr: 17
+  - name: 'Millstone_Farm_COBL.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/29126' ]
+    dirty:
+      - crc: 0xa67e4087
+        <<: *dirtyPlugin
+        udr: 17
+  - name: 'Millstone_UL_Patch.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/29126' ]
+    dirty:
+      - crc: 0xf7081b36
+        <<: *dirtyPlugin
+        itm: 13
+        udr: 116
+
 ###### Morroblivion ######
   - name: 'Morrowind_ob.*\.es(m|p)'
     url: [ 'http://morroblivion.com/forums/morroblivion/mods/753' ]
@@ -12413,25 +12434,6 @@ plugins:
         <<: *dirtyPlugin
         itm: 35
         udr: 384
-  - name: 'Millstone_Farm.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29126' ]
-    dirty:
-      - crc: 0x8bab5b62
-        <<: *dirtyPlugin
-        udr: 17
-  - name: 'Millstone_Farm_COBL.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29126' ]
-    dirty:
-      - crc: 0xa67e4087
-        <<: *dirtyPlugin
-        udr: 17
-  - name: 'Millstone_UL_Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29126' ]
-    dirty:
-      - crc: 0xf7081b36
-        <<: *dirtyPlugin
-        itm: 13
-        udr: 116
   - name: 'VeronaHouseBloodlines-UL patches Merged.esp'
     msg:
       - type: say
