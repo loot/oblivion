@@ -772,6 +772,10 @@ groups:
   - name: &mapGroup Maps
     after: [ *lateChangesGroup ]
 
+  - name: &lodGroup LOD
+    description: 'A group for modules that add or alter LOD.'
+    after: [ *mapGroup ]
+
 plugins:
 ###### Official Game Files ######
   - name: 'Oblivion.esm'
