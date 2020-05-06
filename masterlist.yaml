@@ -1177,6 +1177,11 @@ plugins:
         content:
           - lang: en
             text: 'This plugin is outdated and may not be compatible with the latest version of the patched mod.'
+  - name: 'FRLODToggle(Basic|Full).esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Frostcrag Reborn LOD Toggler' ]
+        condition: 'many("FRLODToggle(Basic|Full).esp")'
 
   ### MigMaster Script Resources ###
   - name: 'MigMaster.esm'
