@@ -1168,31 +1168,11 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/37701'
         name: 'LOD Togglers for Mods'
-  - name: 'FRLODToggleBasic.esp'
     msg:
       - type: error
-        content: 'This plugin should never be active. Deactivate immediately.'
-        condition: 'active("FRLODToggleBasic.esp")'
-  - name: 'FRLODToggleFull.esp'
-    msg:
-      - type: error
-        content: 'This plugin should never be active. Deactivate immediately.'
-        condition: 'active("FRLODToggleFull.esp")'
-  - name: 'KRLODToggleRestored.esp'
-    msg:
-      - type: error
-        content: 'This plugin should never be active. Deactivate immediately.'
-        condition: 'active("KRLODToggleRestored.esp")'
-  - name: 'KRLODToggleBurnt.esp'
-    msg:
-      - type: error
-        content: 'This plugin should never be active. Deactivate immediately.'
-        condition: 'active("KRLODToggleBurnt.esp")'
-  - name: 'RSTLODToggler.esp'
-    msg:
-      - type: error
-        content: 'This plugin should never be active. Deactivate immediately.'
-        condition: 'active("RSTLODToggler.esp")'
+        content:
+          - lang: en
+            text: 'Remove this plugin from your load order after DistantLOD has been generated with [TES4LODGen](https://www.nexusmods.com/oblivion/mods/15781).'
 
   ### MigMaster Script Resources ###
   - name: 'MigMaster.esm'
