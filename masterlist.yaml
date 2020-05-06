@@ -1920,6 +1920,23 @@ plugins:
         udr: 553
 
 ###### Locations - New Structures & Landmarks ######
+  - name: 'Frostcrag Village.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/37655' ]
+    after:
+      - 'Unique Landscapes.esp'
+      - 'xulSnowdale.esp'
+    inc:
+      - name: 'DLCfrostcrag.esp'
+        display: 'Frostcrag Reborn'
+        condition: 'version("DLCfrostcrag.esp", "1.0", >=)'
+    req:
+      - *OBSE
+      - *SilentVoice
+    tag: [ C.Regions ]
+    clean:
+      - crc: 0xAF477DE5
+        util: 'TES4Edit v4.0.3'
+
   - name: 'Sutch Village.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/40882' ]
     after:
@@ -12382,11 +12399,6 @@ plugins:
     msg:
       - type: say
         content: 'Small land tears if used with UL Lush Woodlands.'
-  - name: 'Frostcrag Village.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/37655' ]
-    msg:
-      - type: say
-        content: 'Requires: Official Frostcrag Spire DLC'
   - name: 'Fort Akatosh Redux.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/21856' ]
     tag: [ Relations ]
