@@ -1164,6 +1164,25 @@ plugins:
     tag: [ NoMerge ]
 
 ###### Resources ######
+  - name: 'FRLODToggleBasic.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/37701' ]
+    msg:
+      - type: error
+        content: 'This plugin should never be active. Deactivate immediately.'
+        condition: 'active("FRLODToggleBasic.esp")'
+  - name: 'KRLODToggleRestored.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/37701' ]
+    msg:
+      - type: error
+        content: 'This plugin should never be active. Deactivate immediately.'
+        condition: 'active("KRLODToggleRestored.esp")'
+  - name: 'KRLODToggleBurnt.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/37701' ]
+    msg:
+      - type: error
+        content: 'This plugin should never be active. Deactivate immediately.'
+        condition: 'active("KRLODToggleBurnt.esp")'
+
   ### MigMaster Script Resources ###
   - name: 'MigMaster.esm'
     url: [ 'https://www.nexusmods.com/oblivion/mods/45875' ]
@@ -19777,24 +19796,6 @@ plugins:
   - name: 'Vanilla Weapon Stat Override( - SI)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/39914' ]
     msg: [ *doNotClean ]
-  - name: 'KRLODToggleRestored.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/37701' ]
-    msg:
-      - type: error
-        content: 'This plugin should never be active. Deactivate immediately.'
-        condition: 'active("KRLODToggleRestored.esp")'
-  - name: 'KRLODToggleBurnt.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/37701' ]
-    msg:
-      - type: error
-        content: 'This plugin should never be active. Deactivate immediately.'
-        condition: 'active("KRLODToggleBurnt.esp")'
-  - name: 'FRLODToggleBasic.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/37701' ]
-    msg:
-      - type: error
-        content: 'This plugin should never be active. Deactivate immediately.'
-        condition: 'active("FRLODToggleBasic.esp")'
   - name: 'WindowLightingSystem.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/19628' ]
     msg:
