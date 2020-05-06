@@ -1962,6 +1962,7 @@ plugins:
       - crc: 0x82D86B94
         util: 'TES4Edit v4.0.3'
   - name: 'ImpeREAL Empire - Unique Forts - (Clydesdale|Slofs) Horses - By Xtudo.esp'
+    tag: [ NoMerge ]
     msg:
       - <<: *useOnlyOneX
         subs: [ 'Clydesdale or Slofs Horses Patch' ]
@@ -1985,9 +1986,6 @@ plugins:
             text: 'Requires resources (Models, Textures etc.) from %1%.'
         subs: [ '[Slof''s Oblivion Horses](https://www.nexusmods.com/oblivion/mods/48925)' ]
         condition: 'not file("meshes\creatures\horse\ashorsebay1gelding.nif") and not file("Mart''s Monster Mod.esm")'
-    tag:
-      - Graphics
-      - NoMerge
     clean:
       - crc: 0x3E5AC53A
         util: 'TES4Edit v4.0.3'
