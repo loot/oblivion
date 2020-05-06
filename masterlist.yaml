@@ -1922,9 +1922,10 @@ plugins:
 ###### Locations - New Structures & Landmarks ######
   - name: 'Frostcrag Village.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/37655' ]
-    msg:
-      - type: say
-        content: 'Requires: Official Frostcrag Spire DLC'
+    inc:
+      - name: 'DLCfrostcrag.esp'
+        display: 'Frostcrag Reborn'
+        condition: 'version("DLCfrostcrag.esp", "1.0", >=)'
 
   - name: 'Sutch Village.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/40882' ]
