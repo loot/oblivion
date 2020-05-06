@@ -1923,8 +1923,9 @@ plugins:
   - name: 'Colourwheels Sexy Tavern HGEC.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/37959' ]
     dirty:
-      - crc: 0x4223626a
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x4223626A
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 5
 
   - name: 'Frostcrag Village.esp'
