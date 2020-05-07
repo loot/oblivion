@@ -1898,8 +1898,9 @@ plugins:
       - 'https://www.nexusmods.com/oblivion/mods/12828'
     tag: [ Factions ]
     dirty:
-      - crc: 0x1d1c58b3
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x1D1C58B3
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 19
 
   ### Integration - The Stranded Light ###
