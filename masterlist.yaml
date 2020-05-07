@@ -1830,7 +1830,6 @@ plugins:
     msg:
       - type: say
         content: 'For compatibility with Knights of the Nine, get the [patch](http://tamriel.ru/7roadsmod/Knights_Patch_02.zip).'
-      - *needsCleaning
     tag:
       - Actors.ACBS
       - Actors.Stats
@@ -1840,6 +1839,12 @@ plugins:
       - Relations
       - Scripts
       - Sound
+    dirty:
+      - <<: *quickClean
+        crc: 0x42FB2825
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1238
+        udr: 2400
 
   ### Bash-able Quest Delayers ###
   - name: 'Bashed Delayers - MERGE ONLY.esp'
