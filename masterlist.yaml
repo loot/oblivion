@@ -1892,6 +1892,22 @@ plugins:
   - name: 'CSVF_Road_Record_(RB|BBC\+RB|BBC\+OC\+RB|OC\+RB)\.esp'
     req: [ 'road+bridges.esp' ]
 
+  - name: 'Enhanced Quest Roleplaying.esp'
+    url:
+      - 'https://www.nexusmods.com/oblivion/mods/6488'
+      - 'https://www.nexusmods.com/oblivion/mods/12828'
+    tag:
+      - Actors.CombatStyle
+      - Actors.Spells
+      - Factions
+      - Invent.Add
+      - Scripts
+    dirty:
+      - <<: *quickClean
+        crc: 0x1D1C58B3
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 19
+
   ### Integration - The Stranded Light ###
   - name: 'bgIntegrationEV.esp'
     url: [ 'http://theelderscrolls.info/?go=dlfile&fileid=349' ]
@@ -8386,13 +8402,6 @@ plugins:
       - crc: 0x13f4cf76
         <<: *dirtyPlugin
         itm: 1
-  - name: 'Enhanced Quest Roleplaying.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/6488' ]
-    tag: [ Factions ]
-    dirty:
-      - crc: 0x1d1c58b3
-        <<: *dirtyPlugin
-        itm: 19
   - name: 'Oblivifall - Something''s Not Right.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/27145' ]
     dirty:
