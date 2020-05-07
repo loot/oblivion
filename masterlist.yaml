@@ -1828,8 +1828,11 @@ plugins:
       - 'RenCorpseMod.esp'
       - 'Unique Landscapes.esp'
     msg:
-      - type: say
-        content: 'For compatibility with Knights of the Nine, get the [patch](http://tamriel.ru/7roadsmod/Knights_Patch_02.zip).'
+      - <<: *patch3rdParty
+        subs:
+          - 'Knights of the Nine'
+          - '[KotN Patch (Direct link) http://tamriel.ru/7roadsmod/Knights_Patch_02.zip](http://tamriel.ru/7roadsmod/Knights_Patch_02.zip)'
+        condition: 'active("Knights.esp") and not file("Knights Patch.esp")'
     tag:
       - Actors.ACBS
       - Actors.Stats
