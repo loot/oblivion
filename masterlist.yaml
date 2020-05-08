@@ -13315,6 +13315,15 @@ plugins:
         subs: [ 'UL Rolling Hills' ]
         condition: 'many("xulRollingHills_EV(_withoutWheat)?.esp")'
   - name: 'xulRollingHills_EV.esp'
+    after:
+      - 'BeldaElysium.esp'
+      - 'CDM-Necromancy.esp'
+      - 'goldenarrowarcheryshop.esp'
+      - 'goldenarrowarcheryshopfixedprices.esp'
+      - 'Kragenir''s Death Quest.esp'
+      - 'RedcourtCastle v1_25.esp'
+      - 'RedcourtCastleFREE v1_25.esp'
+      - 'treasure maps captus demus.esp'
     clean:
       - crc: 0x401FE3A4
         util: 'TES4Edit v4.0.3'
