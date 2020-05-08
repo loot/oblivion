@@ -13344,7 +13344,12 @@ plugins:
   ### UL Skingrad Outskirts ###
   - name: 'xulSkingradOutskirts.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/29948' ]
-    after: [ 'Cyrodiil Rebuild.esp' ]
+    after:
+      - 'Cyrodiil Rebuild.esp'
+      - 'Oranstad.esp'
+      - 'ReclaimSancreTor.esp'
+      - 'Roads of Cyrodiil.esp'
+      - 'The Black Cat Jewelry Store - Daedric Statues.esp'
     clean:
       - crc: 0x7462C03D
         util: 'TES4Edit v4.0.3'
