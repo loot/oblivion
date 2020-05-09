@@ -1816,6 +1816,19 @@ plugins:
     msg: [ *requiresBashedPatch ]
     tag: [ Relev ]
 
+  - name: 'MidasSpells.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/9562' ]
+    tag: [ Invent ]
+    dirty:
+      - crc: 0xe39af0ac
+        <<: *dirtyPlugin
+        itm: 49
+        udr: 11
+      - crc: 0x49120D50
+        <<: *dirtyPlugin
+        itm: 49
+        udr: 11
+
 ###### Gameplay - Quests ######
   - name: '7roads.esp'
     url:
@@ -16034,18 +16047,6 @@ plugins:
     msg:
       - type: say
         content: 'Obsolete, you can update to Supreme Magicka 0.89b+ and set ''zzSMConfigurationQuest.bNoPoisonLevitationEffects'' to 1 in the ini for the same result.'
-  - name: 'MidasSpells.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/9562' ]
-    tag: [ Invent ]
-    dirty:
-      - crc: 0xe39af0ac
-        <<: *dirtyPlugin
-        itm: 49
-        udr: 11
-      - crc: 0x49120D50
-        <<: *dirtyPlugin
-        itm: 49
-        udr: 11
   - name: 'Rathunas01.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/45880' ]
     req:
