@@ -1820,12 +1820,14 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/9562' ]
     tag: [ Invent ]
     dirty:
-      - crc: 0xe39af0ac
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x1FB27B78
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 49
         udr: 11
-      - crc: 0x49120D50
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xE39AF0AC
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 49
         udr: 11
 
