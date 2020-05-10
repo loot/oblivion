@@ -2043,20 +2043,18 @@ plugins:
         udr: 8
 
 ###### Items ######
-  - name: 'TreasureChest.esp'
+  - name: 'TreasureChest.*\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/44066' ]
+  - name: 'TreasureChest.esp'
     req: [ *OBSEv14 ]
   - name: 'TreasureChest - (FCOM|MMM|OOO).esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/44066' ]
     msg:
       - <<: *useOnlyOneX
         subs: [ 'FCOM, MMM or OOO Patch' ]
         condition: 'many("TreasureChest - (FCOM|MMM|OOO).esp")'
   - name: 'TreasureChest - ALEX.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/44066' ]
     inc: [ 'TreasureChest - ALEX for OOO.esp' ]
   - name: 'TreasureChest - ALEX for OOO.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/44066' ]
     req: [ 'Oscuro''s_Oblivion_Overhaul.esp' ]
     inc: [ 'TreasureChest - ALEX.esp' ]
 
