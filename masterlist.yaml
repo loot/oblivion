@@ -4009,6 +4009,11 @@ plugins:
         condition: 'not file("Mart''s Monster Mod.bsa") and not file("Mart''s Monster Mod for Frans.bsa") and not file("Mart''s Monster Mod for OOO.bsa") and not file("FCOM_Convergence_Mart''s Monster Mod.bsa")'
       - <<: *renameXtoY
         subs:
+          - '**Francesco''s Creatures and Items Resources.bsa**'
+          - '**FCOM_Convergence_FraNewItems.bsa**'
+        condition: 'file("Francesco''s Creatures and Items Resources.bsa") and not file("FCOM_Convergence_FraNewItems.bsa")'
+      - <<: *renameXtoY
+        subs:
           - '**Mart''s Monster Mod BSA**'
           - '**FCOM_Convergence_Mart''s Monster Mod.bsa**'
         condition: 'not file("FCOM_Convergence_Mart''s Monster Mod.bsa") and not many("(FCOM_Convergence|(Mart''s Monster Mod( for Fran| for OOO)?))\.esp")'
