@@ -2448,7 +2448,8 @@ plugins:
     after: [ 'DLCShiveringIsles.esp' ]
     msg:
       - <<: *deleteOrDeactivateX
-        condition: 'file("FCOM_Convergence_FraNewItems.bsa")'
+        subs: [ 'BSA is now loaded by FCOM_Convergence.esp' ]
+        condition: 'file("FCOM_Convergence.esm") and file("FCOM_Convergence_FraNewItems.bsa")'
       - *dummyFileLoader
       - <<: *requiresX
         subs: [ 'Francesco''s Creatures and Items Resources - Items.bsa' ]
