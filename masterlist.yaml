@@ -4418,7 +4418,8 @@ plugins:
     inc: [ 'Cobl Races TNR SI.esp' ]
     tag:
       - Deactivate
-      - NoMerge
+      - name: NoMerge
+        condition: 'not active("FCOM_Convergence.esp")'
       - NpcFaces
   - name: 'TweakedGenericFaces(-LITE)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/9119' ]
