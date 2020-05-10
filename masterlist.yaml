@@ -2446,7 +2446,14 @@ plugins:
   - name: 'Francesco''s Creatures and Items Resources.esp'
     group: *veryEarlyGroup
     after: [ 'DLCShiveringIsles.esp' ]
-    msg: [ *dummyFileLoader ]
+    msg:
+      - <<: *deleteOrDeactivateX
+        subs: [ 'BSA is now loaded by FCOM_Convergence.esp' ]
+        condition: 'file("FCOM_Convergence.esm") and file("FCOM_Convergence_FraNewItems.bsa")'
+      - *dummyFileLoader
+      - <<: *requiresX
+        subs: [ 'Francesco''s Creatures and Items Resources - Items.bsa' ]
+        condition: 'not file("Francesco''s Creatures and Items Resources - Items.bsa") and not file("FCOM_Convergence.esm")'
   - name: 'Francesco''s More Wilderness Life.esp'
     inc:
       - 'FCOM_Convergence.esm'
@@ -3247,6 +3254,7 @@ plugins:
         itm: 402
   ### MMM Optionals ###
   - name: 'Mart''s Monster Mod - Additional Enemy NPC Vars.esp'
+    inc: [ 'FCOM_Convergence.esp' ]
     msg:
       - type: say
         content: 'Can increase the chances of a CTD in a heavily modded game due to increased processor load.'
@@ -4004,8 +4012,16 @@ plugins:
     msg:
       - *doNotClean
       - <<: *requiresX
+        subs: [ 'Francesco''s Creatures and Items Resources - Items.bsa' ]
+        condition: 'not file("Francesco''s Creatures and Items Resources - Items.bsa") and not file("FCOM_Convergence_FraNewItems.bsa") and not file("FraNewItems.bsa")'
+      - <<: *requiresX
         subs: [ 'Mart''s Monster Mod BSA' ]
         condition: 'not file("Mart''s Monster Mod.bsa") and not file("Mart''s Monster Mod for Frans.bsa") and not file("Mart''s Monster Mod for OOO.bsa") and not file("FCOM_Convergence_Mart''s Monster Mod.bsa")'
+      - <<: *renameXtoY
+        subs:
+          - '**Francesco''s Creatures and Items Resources - Items.bsa**'
+          - '**FCOM_Convergence_FraNewItems.bsa**'
+        condition: 'not file("FCOM_Convergence_FraNewItems.bsa")'
       - <<: *renameXtoY
         subs:
           - '**Mart''s Monster Mod BSA**'
@@ -4016,6 +4032,7 @@ plugins:
       - Actors.ACBS
       - Actors.AIData
       - Actors.AIPackages
+      - Actors.AIPackagesForceAdd
       - Actors.CombatStyle
       - Actors.DeathItem
       - Actors.Spells
@@ -4159,6 +4176,10 @@ plugins:
     tag:
       - Delev
       - Relev
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'FCOM Spawn Rates' ]
+        condition: 'file("FCOM_SpawnRates(Reduced|SlightlyReduced|Stronger)\.esp")'
   - name: 'FCOM_SlofsRobeTrader.esp'
     tag:
       - Delev
@@ -4417,7 +4438,8 @@ plugins:
     inc: [ 'Cobl Races TNR SI.esp' ]
     tag:
       - Deactivate
-      - NoMerge
+      - name: NoMerge
+        condition: 'not active("FCOM_Convergence.esp")'
       - NpcFaces
   - name: 'TweakedGenericFaces(-LITE)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/9119' ]
