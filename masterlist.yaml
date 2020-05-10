@@ -1347,6 +1347,17 @@ plugins:
         util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 45
 
+###### Character Appearance - Body,face & hair ######
+  - name: 'Beautiful People 2ch-Ed.esm'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/37368'
+        name: 'Modular Beautiful People 2ch Edition Plus Plus'
+    tag:
+      - Eyes
+      - Graphics
+      - Hair
+      - R.Relations
+
 ###### Character Appearance - NPCs ######
   - name: '(Better Looking Redguards|Redguard Guards).*\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/31174/' ]
@@ -1959,6 +1970,26 @@ plugins:
   - name: 'CSVF_Road_Record_(RB|BBC\+RB|BBC\+OC\+RB|OC\+RB)\.esp'
     req: [ 'road+bridges.esp' ]
 
+  - name: 'DibellasWatch.esm'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/37120' ]
+    group: *veryEarlyGroup
+    msg: [ *moveWorldspaces ]
+  - name: 'DibellasWatchAdditions.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/37120' ]
+    dirty:
+      - crc: 0x6d051c88
+        <<: *dirtyPlugin
+        udr: 40
+  - name: 'DWAnvilTransport.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/37120' ]
+    dirty:
+      - crc: 0xfef1b464
+        <<: *dirtyPlugin
+        itm: 7
+  - name: 'DWIngameMap.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/37120' ]
+    group: *mapGroup
+
   - name: 'Enhanced Quest Roleplaying.esp'
     url:
       - 'https://www.nexusmods.com/oblivion/mods/6488'
@@ -1974,6 +2005,29 @@ plugins:
         crc: 0x1D1C58B3
         util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 19
+
+  - name: 'GTAesgaard.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/13814' ]
+    dirty:
+      - crc: 0x7d7ea42e
+        <<: *dirtyPlugin
+        itm: 77
+      - crc: 0x94a96b7d
+        <<: *dirtyPlugin
+        itm: 107
+        udr: 8
+
+  - name: 'GTAesgaard_2.esm'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/21693' ]
+    group: *veryEarlyGroup
+    msg: [ *moveWorldspaces ]
+  - name: 'GTAesgaard_2.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/21693' ]
+    dirty:
+      - crc: 0xab1f2934
+        <<: *dirtyPlugin
+        itm: 13
+        udr: 12
 
   ### Integration - The Stranded Light ###
   - name: 'bgIntegrationEV.esp'
@@ -2058,34 +2112,6 @@ plugins:
     req: [ 'Oscuro''s_Oblivion_Overhaul.esp' ]
     inc: [ 'TreasureChest - ALEX.esp' ]
 
-  - name: 'Hammerfell.esm'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/34484' ]
-    clean:
-      - crc: 0xE84E8476
-        util: 'TES4Edit v4.0.2'
-  - name: 'GTAesgaard_2.esm'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/21693' ]
-    group: *veryEarlyGroup
-    msg: [ *moveWorldspaces ]
-  - name: 'DibellasWatch.esm'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/37120' ]
-    group: *veryEarlyGroup
-    msg: [ *moveWorldspaces ]
-  - name: 'Belas.esm'
-    url: [ 'https://www.moddb.com/mods/the-chronicles-of-reeb-working-title/downloads/the-chronicles-of-reeb' ]
-    msg:
-      - <<: *deleteOrDeactivateX
-        subs: [ 'Part of Chronicles of Reeb. Do not use. Has serious landscape issues due to editing the Tamriel worldspace.' ]
-  - name: 'Beautiful People 2ch-Ed.esm'
-    url:
-      - link: 'https://www.nexusmods.com/oblivion/mods/37368'
-        name: 'Modular Beautiful People 2ch Edition Plus Plus'
-    tag:
-      - Eyes
-      - Graphics
-      - Hair
-      - R.Relations
-
 ###### Locations - New Lands ######
   - name: 'bartholm.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/5022' ]
@@ -2098,6 +2124,24 @@ plugins:
         util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 211
         udr: 553
+
+  ### Chronicles of Reeb ###
+  - name: 'Belas.esm'
+    url: [ 'https://www.moddb.com/mods/the-chronicles-of-reeb-working-title/downloads/the-chronicles-of-reeb' ]
+    msg:
+      - <<: *deleteOrDeactivateX
+        subs: [ 'Part of Chronicles of Reeb. Do not use. Has serious landscape issues due to editing the Tamriel worldspace.' ]
+  - name: 'Quest.esp'
+    url: [ 'https://www.moddb.com/mods/the-chronicles-of-reeb-working-title/downloads/the-chronicles-of-reeb' ]
+    msg:
+      - type: warn
+        content: 'Part of Chronicles of Reeb. Goes with Belas.esm. Do not use. This mod has serious landscape errors in the Tamriel worldspace.'
+
+  - name: 'Hammerfell.esm'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/34484' ]
+    clean:
+      - crc: 0xE84E8476
+        util: 'TES4Edit v4.0.2'
 
 ###### Locations - New Structures & Landmarks ######
   - name: 'Colourwheels Sexy Tavern HGEC.esp'
@@ -9434,18 +9478,6 @@ plugins:
         <<: *dirtyPlugin
         itm: 444
         udr: 934
-  - name: 'DibellasWatchAdditions.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/37120' ]
-    dirty:
-      - crc: 0x6d051c88
-        <<: *dirtyPlugin
-        udr: 40
-  - name: 'DWAnvilTransport.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/37120' ]
-    dirty:
-      - crc: 0xfef1b464
-        <<: *dirtyPlugin
-        itm: 7
   - name: 'delivery_job.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/33191' ]
     msg:
@@ -10399,23 +10431,6 @@ plugins:
         <<: *dirtyPlugin
         itm: 116
         udr: 27
-  - name: 'GTAesgaard.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/13814' ]
-    dirty:
-      - crc: 0x7d7ea42e
-        <<: *dirtyPlugin
-        itm: 77
-      - crc: 0x94a96b7d
-        <<: *dirtyPlugin
-        itm: 107
-        udr: 8
-  - name: 'GTAesgaard_2.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/21693' ]
-    dirty:
-      - crc: 0xab1f2934
-        <<: *dirtyPlugin
-        itm: 13
-        udr: 12
   - name: 'OgramiradsUnmarkedPlaces.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/21359' ]
     req: [ 'DLCShiveringIsles.esp' ]
@@ -10531,11 +10546,6 @@ plugins:
       - crc: 0xe2d9635d
         <<: *dirtyPlugin
         itm: 132
-  - name: 'Quest.esp'
-    url: [ 'https://www.moddb.com/mods/the-chronicles-of-reeb-working-title/downloads/the-chronicles-of-reeb' ]
-    msg:
-      - type: warn
-        content: 'Part of Chronicles of Reeb. Goes with Belas.esm. Do not use. This mod has serious landscape errors in the Tamriel worldspace.'
   - name: 'Quest For The Elements.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/6974' ]
     inc: [ 'Fighters Guild Quests.esp' ]
@@ -20258,9 +20268,6 @@ plugins:
     group: *mapGroup
   - name: 'TWMP_Tamriel_Ingame_ Map.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/27235/' ]
-    group: *mapGroup
-  - name: 'DWIngameMap.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/37120' ]
     group: *mapGroup
 
   - name: 'BalancedMagic.esp'
