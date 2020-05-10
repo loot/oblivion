@@ -2450,6 +2450,9 @@ plugins:
       - <<: *deleteOrDeactivateX
         condition: 'file("FCOM_Convergence_FraNewItems.bsa")'
       - *dummyFileLoader
+      - <<: *requiresX
+        subs: [ 'Francesco''s Creatures and Items Resources - Items.bsa' ]
+        condition: 'not file("Francesco''s Creatures and Items Resources - Items.bsa") and not file("FCOM_Convergence.esm")'
   - name: 'Francesco''s More Wilderness Life.esp'
     inc:
       - 'FCOM_Convergence.esm'
