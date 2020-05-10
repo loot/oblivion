@@ -2446,7 +2446,10 @@ plugins:
   - name: 'Francesco''s Creatures and Items Resources.esp'
     group: *veryEarlyGroup
     after: [ 'DLCShiveringIsles.esp' ]
-    msg: [ *dummyFileLoader ]
+    msg:
+      - <<: *deleteOrDeactivateX
+        condition: 'file("FCOM_Convergence_FraNewItems.bsa")'
+      - *dummyFileLoader
   - name: 'Francesco''s More Wilderness Life.esp'
     inc:
       - 'FCOM_Convergence.esm'
