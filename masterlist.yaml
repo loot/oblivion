@@ -4008,6 +4008,9 @@ plugins:
     msg:
       - *doNotClean
       - <<: *requiresX
+        subs: [ 'Francesco''s Creatures and Items Resources.bsa' ]
+        condition: 'not file("Francesco''s Creatures and Items Resources.bsa") and not file("FCOM_Convergence_FraNewItems.bsa") and not file("FraNewItems.bsa")'
+      - <<: *requiresX
         subs: [ 'Mart''s Monster Mod BSA' ]
         condition: 'not file("Mart''s Monster Mod.bsa") and not file("Mart''s Monster Mod for Frans.bsa") and not file("Mart''s Monster Mod for OOO.bsa") and not file("FCOM_Convergence_Mart''s Monster Mod.bsa")'
       - <<: *renameXtoY
