@@ -2042,6 +2042,34 @@ plugins:
         itm: 225
         udr: 8
 
+###### Items ######
+  - name: 'TreasureChest - Hard.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/44066' ]
+    req: [ *OBSEv14 ]
+  - name: 'TreasureChest - MMM.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/44066' ]
+    inc:
+      - 'TreasureChest - OOO.esp'
+      - 'TreasureChest - FCOM.esp'
+  - name: 'TreasureChest - OOO.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/44066' ]
+    inc:
+      - 'TreasureChest - FCOM.esp'
+      - 'TreasureChest - MMM.esp'
+  - name: 'TreasureChest - FCOM.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/44066' ]
+    inc:
+      - 'TreasureChest - OOO.esp'
+      - 'TreasureChest - MMM.esp'
+  - name: 'TreasureChest - ALEX.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/44066' ]
+    req: [ 'Cobl Main.esm' ]
+    inc: [ 'TreasureChest - ALEX for OOO.esp' ]
+  - name: 'TreasureChest - ALEX for OOO.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/44066' ]
+    req: [ 'Cobl Main.esm' ]
+    inc: [ 'TreasureChest - ALEX.esp' ]
+
   - name: 'Hammerfell.esm'
     url: [ 'https://www.nexusmods.com/oblivion/mods/34484' ]
     clean:
@@ -5754,32 +5782,6 @@ plugins:
         crc: 0x4FD118F2
         util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 2
-  - name: 'TreasureChest - Hard.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/44066' ]
-    req: [ *OBSEv14 ]
-  - name: 'TreasureChest - MMM.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/44066' ]
-    inc:
-      - 'TreasureChest - OOO.esp'
-      - 'TreasureChest - FCOM.esp'
-  - name: 'TreasureChest - OOO.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/44066' ]
-    inc:
-      - 'TreasureChest - FCOM.esp'
-      - 'TreasureChest - MMM.esp'
-  - name: 'TreasureChest - FCOM.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/44066' ]
-    inc:
-      - 'TreasureChest - OOO.esp'
-      - 'TreasureChest - MMM.esp'
-  - name: 'TreasureChest - ALEX.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/44066' ]
-    req: [ 'Cobl Main.esm' ]
-    inc: [ 'TreasureChest - ALEX for OOO.esp' ]
-  - name: 'TreasureChest - ALEX for OOO.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/44066' ]
-    req: [ 'Cobl Main.esm' ]
-    inc: [ 'TreasureChest - ALEX.esp' ]
   - name: 'VA_BetterGold.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/1826' ]
     tag:
