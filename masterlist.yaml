@@ -4161,6 +4161,10 @@ plugins:
     tag:
       - Delev
       - Relev
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'FCOM Spawn Rates' ]
+        condition: 'file("FCOM_SpawnRates(Reduced|SlightlyReduced|Stronger)\.esp")'
   - name: 'FCOM_SlofsRobeTrader.esp'
     tag:
       - Delev
