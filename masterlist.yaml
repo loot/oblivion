@@ -2159,6 +2159,23 @@ plugins:
         util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 5
 
+  - name: 'Faregyl.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/21562' ]
+    after:
+      - 'JQ-Return_of_Dagoth_Ur.esp'
+      - 'Roads of Cyrodiil.esp'
+    req:
+      - *OBSE
+      - *SilentVoice
+    tag:
+      - Actors.AIPackages
+      - C.Regions
+      - Factions
+      - Relations
+    clean:
+      - crc: 0xFBDB023E
+        util: 'TES4Edit v4.0.3'
+
   - name: 'Frostcrag Village.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/37655' ]
     after:
@@ -12280,12 +12297,6 @@ plugins:
         <<: *dirtyPlugin
         itm: 39
         udr: 356
-  - name: 'Faregyl.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/21562' ]
-    tag:
-      - Actors.AIPackages
-      - Factions
-      - Relations
   - name: 'HackdirtAlive.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/42948' ]
     dirty:
