@@ -2133,17 +2133,19 @@ plugins:
       - Actors.AIData
       - Actors.AIPackages
     dirty:
-      - crc: 0x4fbe3dc0
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x4FBE3DC0
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 45
         udr: 756
-      - crc: 0x8187f096
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x8187F096
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 45
         udr: 756
-      - crc: 0xce62618b
-        <<: *dirtyPlugin
-        itm: 1
+    clean:
+      - crc: 0xF036F8CF
+        util: 'TES4Edit v4.0.3'
 
 ###### Items ######
   - name: 'TreasureChest.*\.esp'
