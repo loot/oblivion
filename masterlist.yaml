@@ -2122,6 +2122,29 @@ plugins:
       - crc: 0xBBE3D1F1
         util: 'TES4Edit v4.0.3'
 
+  - name: 'VHBloodlines 1.2.esp'
+    url:
+      - 'https://www.nexusmods.com/oblivion/mods/14601'
+      - 'https://www.nexusmods.com/oblivion/mods/36389'
+    msg:
+      - type: say
+        content: 'If you have SI installed, make sure you''re using the [update](http://www.nexusmods.com/oblivion/mods/36389).'
+    tag:
+      - Actors.AIData
+      - Actors.AIPackages
+    dirty:
+      - crc: 0x4fbe3dc0
+        <<: *dirtyPlugin
+        itm: 45
+        udr: 756
+      - crc: 0x8187f096
+        <<: *dirtyPlugin
+        itm: 45
+        udr: 756
+      - crc: 0xce62618b
+        <<: *dirtyPlugin
+        itm: 1
+
 ###### Items ######
   - name: 'TreasureChest.*\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/44066' ]
@@ -11321,28 +11344,6 @@ plugins:
       - Factions
       - Invent
       - Scripts
-  - name: 'VHBloodlines 1.2.esp'
-    url:
-      - 'https://www.nexusmods.com/oblivion/mods/14601'
-      - 'https://www.nexusmods.com/oblivion/mods/36389'
-    msg:
-      - type: say
-        content: 'If you have SI installed, make sure you''re using the [update](http://www.nexusmods.com/oblivion/mods/36389).'
-    tag:
-      - Actors.AIData
-      - Actors.AIPackages
-    dirty:
-      - crc: 0x4fbe3dc0
-        <<: *dirtyPlugin
-        itm: 45
-        udr: 756
-      - crc: 0x8187f096
-        <<: *dirtyPlugin
-        itm: 45
-        udr: 756
-      - crc: 0xce62618b
-        <<: *dirtyPlugin
-        itm: 1
   - name: 'VHBloodlines 1.2 Vwalk.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/28223' ]
     msg:
