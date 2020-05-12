@@ -2274,6 +2274,27 @@ plugins:
       - crc: 0x6F4B21A9
         util: 'TES4Edit v4.0.3'
 
+  - name: 'Vergayun.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/26643' ]
+    after:
+      - 'Midland.esp'
+      - 'road+bridges.esp'
+      - 'Roads of Cyrodiil.esp'
+    inc:
+      - name: 'Midland.esp'
+        condition: 'not file("(ROC-)?Midland-Vergayun(-FAR)? patch.esp")'
+    req: [ *OBSEv20 ]
+    tag:
+      - C.Regions
+      - Relations
+    msg:
+      - <<: *alsoUseX
+        subs: [ '[Elys- Universal Silent Voice](https://www.nexusmods.com/oblivion/mods/16622) or [VoiceFile Redirector OBSE](https://github.com/ponyrider0/voicefile-redirector/releases)' ]
+        condition: 'not file("OBSE/Plugins/Elys_USV.dll") and not file("OBSE/Plugins/voicefile_redirector.dll")'
+    clean:
+      - crc: 0x9FC729A3
+        util: 'TES4Edit v4.0.3'
+
 ###### Location - Overhauls ######
   - name: 'AFK_Weye.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22828' ]
