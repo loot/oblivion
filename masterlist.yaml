@@ -2276,6 +2276,11 @@ plugins:
 
   - name: 'Vergayun.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/26643' ]
+    after:
+      - 'Midland.esp'
+    inc:
+      - name: 'Midland.esp'
+        condition: 'not file("(ROC-)?Midland-Vergayun(-FAR)? patch.esp")'
     req: [ *OBSEv20 ]
     msg:
       - <<: *alsoUseX
