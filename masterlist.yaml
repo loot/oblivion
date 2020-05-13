@@ -2318,6 +2318,7 @@ plugins:
       - 'xulBeachesOfCyrodiilLostCoast.esp'
     tag:
       - C.Regions
+      - C.Water
       - Factions
     clean:
       - crc: 0x6F4B21A9
@@ -2361,7 +2362,9 @@ plugins:
       - 'Region Revive - Lake Rumare.esp'
       - 'RTT.esp'
     req: [ *SilentVoice ]
-    tag: [ Actors.AIPackages ]
+    tag:
+      - Actors.AIPackages
+      - C.Regions
     clean:
       - crc: 0x5A1114F9
         util: 'TES4Edit v4.0.3'
@@ -14528,6 +14531,7 @@ plugins:
       - 'OCC+NakedNord Patch.esp'
       - 'OCC-RTTv3 Patch.esp'
       - 'OCC-TOTF-Patch.esp'
+    tag: [ C.Water ]
     clean:
       - crc: 0x33606EC1
         util: 'TES4Edit v4.0.3'
