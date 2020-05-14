@@ -374,6 +374,28 @@ common:
       - lang: sv
         text: 'Det verkar som att du använder **%1%**, men du har inte aktiverat en kompabilitetspatch för denna mod. En kompabilitetspatch är inkluderad i denna plugins installationsprogram.'
 
+  - &patchProvided
+    type: say
+    content:
+      - lang: en
+        text: 'You seem to be using **%1%**, but you have not enabled a compatibility patch for this mod. A compatibility patch is provided on this plugin''s mod page.'
+      - lang: de
+        text: 'Sie scheinen **%1%** zu nutzen, aber Sie haben keinen Kompatibilitätspatch für diese Mod aktiviert. Ein Kompatibilitätspatch wird auf dieser Plugins Mod-Seite zur Verfügung gestellt.'
+      - lang: ja
+        text: '**%1%**を使用しているようですが、このmodの互換性パッチが有効になっていません。互換性パッチは、このプラグインのmodページにあります。.'
+      - lang: ko
+        text: '**%1%** 모드와 사용하기 위한 호환성 패치가 작동 중이지 않습니다. 호환성 패치는 이 플러그인의 모드 페이지에서 제공 중입니다.'
+      - lang: pl
+        text: 'Wygląda na to że używasz **%1%**, ale nie masz aktywnej łatki zgodności dla tego moda. Łatka zgodności jest dostarczona na stronie internetowej tej wtyczki.'
+      - lang: pt
+        text: 'Você aparenta estar a utilizar **%1%**, mas não ativou o patch de compatibilidade para este mod. Um patch de compatibilidade está disponível na página mod deste plugin.'
+      - lang: pt_BR
+        text: 'Você aparenta estar usando **%1%**, mas não habilitou o patch de compatibilidade para este mod. Um patch de compatibilidade é provido na página desse plugin.'
+      - lang: ru
+        text: 'Похоже, что используется **%1%**, но патч совместимости для него не был подключен. Патч совместимости можно найти на странице плагина.'
+      - lang: sv
+        text: 'Det verkar som att du använder **%1%**, men du har inte aktiverat en kompabilitetspatch för denna mod. En kompabilitetspatch finns på denna plugins modsida.'
+
   - &renameFile
     type: say
     content:
@@ -1877,6 +1899,83 @@ plugins:
         condition: 'many("MassA.I(-[345]0)?.esp")'
 
 ###### Gameplay - Magic & Abilities ######
+  - name: 'Av Latta Magicka.es(m|p)'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/49096' ]
+  - name: 'Av Latta Magicka.esm'
+    req:
+      - *OBSEv21
+      - name: 'OBSE/Plugins/AddActorValues.dll'
+        display: '[AddActorValues](https://www.nexusmods.com/oblivion/mods/33248)'
+      - *MagicExtender
+      - *MenuQue
+    inc:
+      - 'CustomSpellIcons.esm'
+      - name: 'Druid Mod.esp'
+        condition: 'not file("Druid Mod - OBME Patch.esp")'
+      - 'Minionz.esp'
+      - name: 'Paladin.esp'
+        condition: 'not file("Paladin - OBME Patch.esp")'
+    msg:
+      - <<: *patchProvided
+        subs: [ 'A Champions Death' ]
+        condition: 'active("MigNoDeath.esp") and not file("Av Latta Magicka - MigNoDeath Patch.esp")'
+      - <<: *patchProvided
+        subs: [ 'Druid Mod Remade' ]
+        condition: 'active("Druid Mod.esp") and not file("Druid Mod - OBME Patch.esp")'
+      - <<: *patchProvided
+        subs: [ 'Paladin Mod: The Hand of Arkay' ]
+        condition: 'active("Paladin.esp") and not file("Paladin - OBME Patch.esp")'
+      - <<: *useInstead
+        subs: [ '[Custom Spell Icons Updated](https://www.nexusmods.com/oblivion/mods/43709/)' ]
+        condition: 'active("CustomSpellIcons.esm")'
+    clean:
+      - crc: 0xC5FDA74C
+        util: 'TES4Edit v4.0.3'
+  - name: 'Av Latta Magicka.esp'
+    clean:
+      - crc: 0x5D8FCDAA
+        util: 'TES4Edit v4.0.3'
+  - name: 'Av Latta Magicka - Rebalance Complete.esp'
+    tag:
+      - Graphics
+      - Names
+      - Stats
+    clean:
+      - crc: 0x31DD16AC
+        util: 'TES4Edit v4.0.3'
+  - name: 'Av Latta Magicka - (Enchantments|Potion|Vanilla Spell) Rebalance.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'Av Latta Magicka - Rebalance Complete.esp' ]
+        condition: 'active("Av Latta Magicka - Rebalance Complete.esp")'
+  - name: 'Av Latta Magicka - Enchantments Rebalance.esp'
+    clean:
+      - crc: 0x4E032BA8
+        util: 'TES4Edit v4.0.3'
+  - name: 'Av Latta Magicka - Potion Rebalance.esp'
+    tag:
+      - Graphics
+      - Names
+      - Stats
+    clean:
+      - crc: 0x6625D64C
+        util: 'TES4Edit v4.0.3'
+  - name: 'Av Latta Magicka - Vanilla Spell Rebalance.esp'
+    clean:
+      - crc: 0xC1E8CC42
+        util: 'TES4Edit v4.0.3'
+  - name: 'Av Latta Magicka - Birthsigns.esp'
+    tag: [ Text ]
+    clean:
+      - crc: 0x3FCF965D
+        util: 'TES4Edit v4.0.3'
+  - name: 'Av Latta Magicka - MigNoDeath Patch.esp'
+    req: [ 'Av Latta Magicka.esm' ]
+  - name: 'Druid Mod - OBME Patch.esp'
+    inc: [ 'OBSE/Plugins/DruidModCustomSpellIcons.dll' ]
+  - name: 'Paladin - OBME Patch.esp'
+    inc: [ 'OBSE/Plugins/PaladinModCustomSpellIcons.dll' ]
+
   ### (L.A.M.E) Less Annoying Magic Experience ###
   - name: 'bgMagic.*\.esp'
     url:
