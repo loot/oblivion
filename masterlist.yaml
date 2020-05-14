@@ -1915,6 +1915,9 @@ plugins:
       - <<: *patchProvided
         subs: [ 'A Champions Death' ]
         condition: 'active("MigNoDeath.esp") and not file("Av Latta Magicka - MigNoDeath Patch.esp")'
+      - <<: *useInstead
+        subs: [ '[Custom Spell Icons Updated](https://www.nexusmods.com/oblivion/mods/43709/)' ]
+        condition: 'active("CustomSpellIcons.esm")'
     clean:
       - crc: 0xC5FDA74C
         util: 'TES4Edit v4.0.3'
