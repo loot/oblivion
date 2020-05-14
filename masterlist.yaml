@@ -1924,6 +1924,11 @@ plugins:
     clean:
       - crc: 0x31DD16AC
         util: 'TES4Edit v4.0.3'
+  - name: 'Av Latta Magicka - (Enchantments|Potion|Vanilla Spell) Rebalance.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'Av Latta Magicka - Rebalance Complete.esp' ]
+        condition: 'active("Av Latta Magicka - Rebalance Complete.esp")'
   - name: 'Av Latta Magicka - Enchantments Rebalance.esp'
     clean:
       - crc: 0x4E032BA8
