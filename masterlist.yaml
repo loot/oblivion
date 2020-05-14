@@ -1919,6 +1919,12 @@ plugins:
       - <<: *patchProvided
         subs: [ 'A Champions Death' ]
         condition: 'active("MigNoDeath.esp") and not file("Av Latta Magicka - MigNoDeath Patch.esp")'
+      - <<: *patchProvided
+        subs: [ 'Druid Mod Remade' ]
+        condition: 'active("Druid Mod.esp") and not file("Druid Mod - OBME Patch.esp")'
+      - <<: *patchProvided
+        subs: [ 'Paladin Mod: The Hand of Arkay' ]
+        condition: 'active("Paladin.esp") and not file("Paladin - OBME Patch.esp")'
       - <<: *useInstead
         subs: [ '[Custom Spell Icons Updated](https://www.nexusmods.com/oblivion/mods/43709/)' ]
         condition: 'active("CustomSpellIcons.esm")'
