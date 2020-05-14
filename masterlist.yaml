@@ -743,6 +743,14 @@ globals:
     subs: [ 'an OBSE Plugin' ]
     condition: 'file("OBSE/Plugins/([^\.]+\.dll)") and not file("../obse_1_2_416.dll")'
 
+# OBSE Plugins - Latest
+  - <<: *versionOldX
+    subs: [ '**([NVAC - New Vegas Anti Crash](https://www.nexusmods.com/newvegas/mods/53635))**' ]
+    condition: 'file("OBSE/Plugins/nvac.dll") and version("OBSE/Plugins/nvac.dll", "7.5.0.0", <)'
+  - <<: *versionUpToDateX
+    subs: [ '**([NVAC - New Vegas Anti Crash](https://www.nexusmods.com/newvegas/mods/53635))**' ]
+    condition: 'file("OBSE/Plugins/nvac.dll") and version("OBSE/Plugins/nvac.dll", "7.5.0.0", >=)'
+
 groups:
   - name: &gameMasterGroup Main Game Master
 
