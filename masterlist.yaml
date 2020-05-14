@@ -814,7 +814,10 @@ plugins:
       - 'DLCShiveringIsles.esp'
       - 'DLCHorseArmor.esp'
       - 'Unofficial Oblivion Patch.esp'
-    tag: [ Actors.AIPackages ]
+    tag:
+      - Actors.AIPackages
+      - C.Light
+      - Sound
     dirty:
       - <<: *quickClean
         crc: 0x5BC59DB4
@@ -846,6 +849,7 @@ plugins:
       - 'DLCOrrery.esp'
       - 'DLCVileLair.esp'
       - 'Unofficial Oblivion Patch.esp'
+    tag: [ Factions ]
     dirty:
       - <<: *quickClean
         crc: 0xCB413740
@@ -881,8 +885,14 @@ plugins:
       - Actors.ACBS
       - Actors.AIPackages
       - Actors.Stats
+      - C.Climate
       - C.Light
+      - C.Music
       - C.Name
+      - C.Owner
+      - C.Water
+      - Invent
+      - Names
     dirty:
       - <<: *quickClean
         crc: 0x05DB8CCC
@@ -900,6 +910,7 @@ plugins:
       - 'DLCSpellTomes.esp'
       - 'DLCThievesDen.esp'
       - 'Unofficial Oblivion Patch.esp'
+    tag: [ Sound ]
     dirty:
       - <<: *quickClean
         crc: 0x7048C609
@@ -920,10 +931,12 @@ plugins:
       - 'DLCBattlehornCastle.esp'
       - 'Unofficial Oblivion Patch.esp'
     tag:
+      - C.Light
       - C.Name
       - C.Owner
       - C.Regions
       - Factions
+      - Sound
     dirty:
       - <<: *quickClean
         crc: 0x2A7665FB
@@ -949,6 +962,8 @@ plugins:
       - Actors.Stats
       - Factions
       - Graphics
+      - Invent
+      - Names
     dirty:
       - <<: *quickClean
         crc: 0xF1F478FA
@@ -978,27 +993,13 @@ plugins:
       - 'UnRacefix.esp'
       - 'Ultimate_Heist_Fix-4880.esp'
     tag:
-      - Actors.ACBS
-      - Actors.AIData
-      - Actors.AIPackages
-      - Actors.CombatStyle
-      - Actors.DeathItem
-      - Actors.Stats
-      - C.Climate
-      - C.Light
-      - C.Music
-      - C.Name
-      - C.Owner
-      - Creatures.Blood
-      - Delev
-      - Factions
-      - Invent
-      - Names
-      - NPC.Class
-      - Relations
-      - Relev
-      - Scripts
-      - Stats
+      - Actors.Spells
+      - C.RecordFlags
+      - Graphics
+      - Invent.Change
+      - Sound
+      - SpellStats
+      - Text
       - name: "-C.Water"
         condition: 'version("Unofficial Oblivion Patch.esp","3.4.0",>=)'
   - name: 'Oblivion Citadel Door Fix.esp'
@@ -1028,23 +1029,14 @@ plugins:
       - 'FormIDReferenceBugFix.esp'
       - 'FormID_Reference_Bug_Fix.esp'
     tag:
-      - Actors.ACBS
-      - Actors.AIData
-      - Actors.AIPackages
-      - Actors.DeathItem
-      - Actors.Stats
-      - C.Climate
-      - C.Light
-      - C.Name
-      - C.Owner
-      - Delev
-      - Factions
-      - Invent
-      - Names
-      - Relations
-      - Relev
-      - Scripts
-      - Stats
+      - Actors.Skeleton
+      - Actors.Spells
+      - C.Music
+      - Graphics
+      - NPC.Class
+      - Sound
+      - SpellStats
+      - Text
     clean:
       # version: 1.5.9
       - crc: 0x19ADA30F
@@ -1055,27 +1047,35 @@ plugins:
         name: 'Unofficial Oblivion DLC Patches'
     group: *unofficialPatchesGroup
   - name: 'DLCHorseArmor - Unofficial Patch.esp'
-    tag: [ C.Owner ]
     clean:
       # version: 24
       - crc: 0xC5A61F9E
         util: 'TES4Edit v4.0.2'
   - name: 'DLCOrrery - Unofficial Patch.esp'
+    tag: [ Graphics ]
     clean:
       # version: 24
       - crc: 0xFCF99B11
         util: 'TES4Edit v4.0.2'
   - name: 'DLCVileLair - Unofficial Patch.esp'
-    tag: [ Graphics ]
+    tag:
+      - Actors.ACBS
+      - Actors.AIData
+      - Actors.AIPackages
+      - C.Water
+      - Npc.EyesOnly
+      - Npc.HairOnly
+      - Stats
+      - Text
     clean:
       # version: 24
       - crc: 0x84ABAB20
         util: 'TES4Edit v4.0.2'
   - name: 'DLCMehrunesRazor - Unofficial Patch.esp'
     tag:
-      - Delev
-      - Invent
-      - Relev
+      - C.Light
+      - Graphics
+      - Text
     clean:
       # version: 24
       - crc: 0xFDD28667
@@ -1087,14 +1087,12 @@ plugins:
         util: 'TES4Edit v4.0.2'
   - name: 'DLCThievesDen - Unofficial Patch.esp'
     tag:
-      - Actors.ACBS
-      - Actors.AIData
-      - Actors.Stats
-      - C.Light
-      - C.Music
-      - C.Name
-      - Delev
-      - Relev
+      - Invent
+      - Invent.Change
+      - NPC.Class
+      - Npc.EyesOnly
+      - Scripts
+      - Text
     clean:
       # version: 24
       - crc: 0xF7685DB5
@@ -1108,29 +1106,44 @@ plugins:
       - crc: 0xF8731FE7
         util: 'TES4Edit v4.0.2'
   - name: 'DLCBattlehornCastle - Unofficial Patch.esp'
+    tag:
+      - Actors.ACBS
+      - Actors.AIPackages
+      - C.Light
+      - Graphics
+      - Names
+      - Npc.EyesOnly
+      - Stats
+      - Text
     clean:
       # version: 24
       - crc: 0x1F6B40D8
         util: 'TES4Edit v4.0.2'
   - name: 'DLCFrostcrag - Unofficial Patch.esp'
     tag:
-      - Actors.ACBS
-      - C.Name
-      - C.Owner
-      - Creatures.Blood
-      - -C.Climate
-      - -C.Light
+      - Actors.Spells
+      - C.Light
+      - Scripts
+      - Sound
     clean:
       # version: 24
       - crc: 0x7835C46D
         util: 'TES4Edit v4.0.2'
   - name: 'Knights - Unofficial Patch.esp'
     tag:
-      - Actors.ACBS
-      - Actors.AIPackages
-      - Factions
-      - Relations
+      - Actors.AIData
+      - Actors.Stats
+      - C.Light
+      - C.Music
+      - C.Name
+      - Graphics
+      - NpcFaces
+      - NPC.Class
       - Relev
+      - Scripts
+      - Sound
+      - Stats
+      - Text
     clean:
       # version: 24
       - crc: 0xCCDA5239
