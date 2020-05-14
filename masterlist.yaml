@@ -1908,7 +1908,9 @@ plugins:
         display: '[AddActorValues](https://www.nexusmods.com/oblivion/mods/33248)'
       - *MagicExtender
       - *MenuQue
-    inc: [ 'Minionz.esp' ]
+    inc:
+      - 'CustomSpellIcons.esm'
+      - 'Minionz.esp'
     msg:
       - <<: *patchProvided
         subs: [ 'A Champions Death' ]
