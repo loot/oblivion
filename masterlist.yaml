@@ -1910,7 +1910,11 @@ plugins:
       - *MenuQue
     inc:
       - 'CustomSpellIcons.esm'
+      - name: 'Druid Mod.esp'
+        condition: 'not file("Druid Mod - OBME Patch.esp")'
       - 'Minionz.esp'
+      - name: 'Paladin.esp'
+        condition: 'not file("Paladin - OBME Patch.esp")'
     msg:
       - <<: *patchProvided
         subs: [ 'A Champions Death' ]
