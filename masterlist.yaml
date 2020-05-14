@@ -751,6 +751,15 @@ globals:
     subs: [ '**([NVAC - New Vegas Anti Crash](https://www.nexusmods.com/newvegas/mods/53635))**' ]
     condition: 'file("OBSE/Plugins/nvac.dll") and version("OBSE/Plugins/nvac.dll", "7.5.0.0", >=)'
 
+# OBSE Plugins - Other messages
+  - type: warn
+    condition: 'file("NVSE/Plugins/nvac.dll")'
+    content:
+      - lang: en
+        text: 'NVAC is installed under "NVSE/Plugins" but needs to be moved to "OBSE/Plugins" for OBSE to pick it up for Oblivion.'
+      - lang: de
+        text: 'NVAC ist unter "NVSE/Plugins" installiert aber es muss nach "OBSE/Plugins" verschoben werden um von OBSE erkannt zu werden für Oblivion.'
+
 groups:
   - name: &gameMasterGroup Main Game Master
 
