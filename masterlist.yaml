@@ -1880,6 +1880,12 @@ plugins:
   - name: 'Av Latta Magicka.es(m|p)'
     url: [ 'https://www.nexusmods.com/oblivion/mods/49096' ]
   - name: 'Av Latta Magicka.esm'
+    req:
+      - *OBSEv21
+      - name: 'OBSE/Plugins/AddActorValues.dll'
+        display: '[AddActorValues](https://www.nexusmods.com/oblivion/mods/33248)'
+      - *MagicExtender
+      - *MenuQue
     clean:
       - crc: 0xC5FDA74C
         util: 'TES4Edit v4.0.3'
