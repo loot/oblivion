@@ -1929,6 +1929,14 @@ plugins:
         itm: 49
         udr: 11
 
+###### Gameplay - NPC Behaviour & Dialogue ######
+  - name: 'PTCombatSpeechcraft(Easy|Medium|Hard).esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/31535' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Combat Speechcraft ESP' ]
+        condition: 'many("PTCombatSpeechcraft(Easy|Medium|Hard).esp")'
+
 ###### Gameplay - Quests ######
   - name: '7roads.esp'
     url:
@@ -5170,21 +5178,6 @@ plugins:
     msg:
       - type: say
         content: 'May cause unfixable animation bugs if used with ''Personality Idles'' or similar.'
-  - name: 'PTCombatSpeechcraftEasy.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/31535' ]
-    inc:
-      - 'PTCombatSpeechcraftMedium.esp'
-      - 'PTCombatSpeechcraftHard.esp'
-  - name: 'PTCombatSpeechcraftMedium.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/31535' ]
-    inc:
-      - 'PTCombatSpeechcraftEasy.esp'
-      - 'PTCombatSpeechcraftHard.esp'
-  - name: 'PTCombatSpeechcraftHard.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/31535' ]
-    inc:
-      - 'PTCombatSpeechcraftEasy.esp'
-      - 'PTCombatSpeechcraftMedium.esp'
   - name: 'Footstep Sound Fix.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/10969' ]
     msg: [ *bashedPatchTweak ]
