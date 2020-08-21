@@ -1729,6 +1729,13 @@ plugins:
 
   - name: 'MigHorseArmor.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/43037' ]
+    req:
+      - 'DLCHorseArmor.esp'
+      - *OBSE
+    msg:
+      - <<: *requiresX
+        subs: [ '[Horse Armor Revamped](https://www.nexusmods.com/oblivion/mods/46657/) BSA from .omod, HRMHorseArmor.bsa' ]
+        condition: 'not file("HRMHorseArmor.bsa") or not file("MigHorseArmor.bsa")'
     clean:
       - crc: 0x1C8F1C26
         util: 'TES4Edit v4.0.3'
