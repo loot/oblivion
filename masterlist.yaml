@@ -1727,6 +1727,32 @@ plugins:
       - crc: 0xE2A5D879
         util: 'TES4Edit v4.0.3'
 
+  - name: 'MigHorseArmor.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/43037' ]
+    req:
+      - 'DLCHorseArmor.esp'
+      - *OBSE
+    msg:
+      - <<: *alsoUseX
+        subs: [ '[Elys- Universal Silent Voice](https://www.nexusmods.com/oblivion/mods/16622) or [VoiceFile Redirector OBSE](https://github.com/ponyrider0/voicefile-redirector/releases)' ]
+        condition: 'not file("OBSE/Plugins/Elys_USV.dll") and not file("OBSE/Plugins/voicefile_redirector.dll")'
+      - <<: *renameXtoY
+        subs:
+          - '**HRMHorseArmor.bsa**'
+          - '**MigHorseArmor.bsa**'
+        condition: 'not file("MigHorseArmor.bsa") and file("HRMHorseArmor.bsa")'
+      - type: say
+        content:
+          - lang: en
+            text: 'Requires resources (Models, Textures etc. Plugins not required.) from %1%.'
+          - lang: de
+            text: 'Benötigt Ressourcen (Models, Texturen usw. Plugins werden nicht benötigt.) von %1%.'
+        subs: [ '[Horse Armor Revamped](https://www.nexusmods.com/oblivion/mods/46657/)' ]
+        condition: 'not file("HRMHorseArmor.bsa") and not file("MigHorseArmor.bsa") and not file("sound/voice/hrmhorsearmor.esp/nord/f/hrmhorsearmor_hrmhorsearmortopic_00000cf0_1.mp3")'
+    clean:
+      - crc: 0x1C8F1C26
+        util: 'TES4Edit v4.0.3'
+
   - name: 'Oblivion Content Restoration Project.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/45909' ]
     req: [ *OBSE ]
@@ -7956,12 +7982,6 @@ plugins:
   - name: 'Athletics While Riding.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/37432' ]
     req: [ *OBSEv18 ]
-  - name: 'MigHorseArmor.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/43037' ]
-    dirty:
-      - crc: 0x1c8f1c26
-        <<: *dirtyPlugin
-        udr: 5
   - name: 'Slof''s Horses Base.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/48925' ]
     tag: [ Graphics ]
