@@ -1741,9 +1741,14 @@ plugins:
           - '**HRMHorseArmor.bsa**'
           - '**MigHorseArmor.bsa**'
         condition: 'not file("MigHorseArmor.bsa") and file("HRMHorseArmor.bsa")'
-      - <<: *requiresX
-        subs: [ '[Horse Armor Revamped](https://www.nexusmods.com/oblivion/mods/46657/) BSA from .omod, HRMHorseArmor.bsa' ]
-        condition: 'not file("HRMHorseArmor.bsa") and not file("MigHorseArmor.bsa")'
+      - type: say
+        content:
+          - lang: en
+            text: 'Requires resources (Models, Textures etc. Plugins not required.) from %1%.'
+          - lang: de
+            text: 'Benötigt Ressourcen (Models, Texturen usw. Plugins werden nicht benötigt.) von %1%.'
+        subs: [ '[Horse Armor Revamped](https://www.nexusmods.com/oblivion/mods/46657/)' ]
+        condition: 'not file("HRMHorseArmor.bsa") and not file("MigHorseArmor.bsa") and not file("sound/voice/hrmhorsearmor.esp/nord/f/hrmhorsearmor_hrmhorsearmortopic_00000cf0_1.mp3")'
     clean:
       - crc: 0x1C8F1C26
         util: 'TES4Edit v4.0.3'
