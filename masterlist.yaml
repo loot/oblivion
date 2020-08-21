@@ -1727,6 +1727,13 @@ plugins:
       - crc: 0xE2A5D879
         util: 'TES4Edit v4.0.3'
 
+  - name: 'MigHorseArmor.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/43037' ]
+    dirty:
+      - crc: 0x1c8f1c26
+        <<: *dirtyPlugin
+        udr: 5
+
   - name: 'Oblivion Content Restoration Project.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/45909' ]
     req: [ *OBSE ]
@@ -7956,12 +7963,6 @@ plugins:
   - name: 'Athletics While Riding.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/37432' ]
     req: [ *OBSEv18 ]
-  - name: 'MigHorseArmor.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/43037' ]
-    dirty:
-      - crc: 0x1c8f1c26
-        <<: *dirtyPlugin
-        udr: 5
   - name: 'Slof''s Horses Base.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/48925' ]
     tag: [ Graphics ]
