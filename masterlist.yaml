@@ -1733,6 +1733,11 @@ plugins:
       - 'DLCHorseArmor.esp'
       - *OBSE
     msg:
+      - <<: *renameXtoY
+        subs:
+          - '**HRMHorseArmor.bsa**'
+          - '**MigHorseArmor.bsa**'
+        condition: 'not file("MigHorseArmor.bsa") and file("HRMHorseArmor.bsa")'
       - <<: *requiresX
         subs: [ '[Horse Armor Revamped](https://www.nexusmods.com/oblivion/mods/46657/) BSA from .omod, HRMHorseArmor.bsa' ]
         condition: 'not file("HRMHorseArmor.bsa") or not file("MigHorseArmor.bsa")'
