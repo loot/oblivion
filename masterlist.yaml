@@ -1729,10 +1729,9 @@ plugins:
 
   - name: 'MigHorseArmor.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/43037' ]
-    dirty:
-      - crc: 0x1c8f1c26
-        <<: *dirtyPlugin
-        udr: 5
+    clean:
+      - crc: 0x1C8F1C26
+        util: 'TES4Edit v4.0.3'
 
   - name: 'Oblivion Content Restoration Project.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/45909' ]
