@@ -1743,7 +1743,7 @@ plugins:
         condition: 'not file("MigHorseArmor.bsa") and file("HRMHorseArmor.bsa")'
       - <<: *requiresX
         subs: [ '[Horse Armor Revamped](https://www.nexusmods.com/oblivion/mods/46657/) BSA from .omod, HRMHorseArmor.bsa' ]
-        condition: 'not file("HRMHorseArmor.bsa") or not file("MigHorseArmor.bsa")'
+        condition: 'not file("HRMHorseArmor.bsa") and not file("MigHorseArmor.bsa")'
     clean:
       - crc: 0x1C8F1C26
         util: 'TES4Edit v4.0.3'
