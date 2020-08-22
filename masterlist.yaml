@@ -1283,6 +1283,14 @@ plugins:
         util: 'TES4Edit v4.0.3'
 
 ###### User Interface ######
+  - name: 'Ak- Morroblivion Maps HD.esp'
+    url: [ 'https://morroblivion.com/forums/morroblivion/mods/2610' ]
+    group: *mapGroup
+
+  - name: 'Colored Map for Elsweyr 1.1.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/25150/' ]
+    group: *mapGroup
+
   - name: 'Different Script Effect Icon - (Darkness|Fortify|Lock|Reflect Spell|Resist|Silence|Stunted Magicka|Sun Damage|Vampirism)\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/18843' ]
     tag: [ Graphics ]
@@ -1295,6 +1303,14 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/35969' ]
     req: [ *MenuQue ]
 
+  - name: 'Elsweyr Color Map.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/28432/' ]
+    group: *mapGroup
+
+  - name: 'Hiboriamap.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/26570' ]
+    group: *mapGroup
+
   - name: 'LootMenu.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/48027' ]
     req:
@@ -1304,6 +1320,18 @@ plugins:
       - <<: *alsoUseX
         subs: [ '[EngineBugFixes](https://www.nexusmods.com/oblivion/mods/47085)' ]
         condition: 'not file("OBSE/Plugins/EngineBugFixes.dll")'
+
+  - name: 'MergedMaps.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/26329' ]
+    group: *mapGroup
+
+  - name: 'TamrielWorldspaceCompleteWorldMap.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/24044/' ]
+    group: *mapGroup
+
+  - name: 'TWMP_Tamriel_Ingame_ Map.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/27235/' ]
+    group: *mapGroup
 
   - name: 'WorldMapsForAllWorldspaces.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/48914' ]
@@ -20550,29 +20578,6 @@ plugins:
   - name: 'OWC - Players Home.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/36260' ]
     tag: [ C.Light ]
-
-###### Maps ######
-  - name: 'Ak- Morroblivion Maps HD.esp'
-    url: [ 'https://tesrenewal.com/forums/morroblivion/mods/2610' ]
-    group: *mapGroup
-  - name: 'Hiboriamap.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/26570' ]
-    group: *mapGroup
-  - name: 'MergedMaps.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/26329' ]
-    group: *mapGroup
-  - name: 'Elsweyr Color Map.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/28432/' ]
-    group: *mapGroup
-  - name: 'Colored Map for Elsweyr 1.1.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/25150/' ]
-    group: *mapGroup
-  - name: 'TamrielWorldspaceCompleteWorldMap.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/24044/' ]
-    group: *mapGroup
-  - name: 'TWMP_Tamriel_Ingame_ Map.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/27235/' ]
-    group: *mapGroup
 
   - name: 'BalancedMagic.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/45249' ]
