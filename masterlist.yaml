@@ -2162,8 +2162,9 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/25612' ]
     req: [ *OBSE ]
     msg:
-      - type: say
-        content: 'Requires: HGEC'
+      - <<: *requiresX
+        type: say
+        subs: [ '[HG EyeCandy Body](https://www.nexusmods.com/oblivion/mods/15802/)' ]
     tag:
       - C.Owner
       - Hair
