@@ -2170,33 +2170,19 @@ plugins:
       - Invent
       - Scripts
     dirty:
-      - crc: 0x2a340d11
-        <<: *dirtyPlugin
-        itm: 1738
-        udr: 425
-      - crc: 0x840b603e
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x840B603E
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1675
-        udr: 425
-      - crc: 0xe35522fe
-        <<: *dirtyPlugin
-        itm: 908
         udr: 425
 
   - name: 'HentaiMania2.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/34179/' ]
     dirty:
-      - crc: 0x1411e7e6
-        <<: *dirtyPlugin
-        itm: 265
-        udr: 556
-      - crc: 0x3ef2ba9c
-        <<: *dirtyPlugin
-        itm: 536
-        udr: 562
-      - crc: 0xfd040a00
-        <<: *dirtyPlugin
-        itm: 271
+      - <<: *quickClean
+        crc: 0xFD040A00
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 267
         udr: 556
   - name: 'HentaiMania2(Hentai).esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/34179/' ]
