@@ -2624,6 +2624,13 @@ plugins:
       - crc: 0x6F4B21A9
         util: 'TES4Edit v4.0.3'
 
+  - name: 'Tona''s_ModsStore.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/29090' ]
+    req: [ *OBSE ]
+    clean:
+      - crc: 0x8DD1E120
+        util: 'TES4Edit v4.0.3'
+
   - name: 'Urasek.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/40762' ]
     after:
@@ -11387,12 +11394,6 @@ plugins:
         <<: *dirtyPlugin
         itm: 11
         udr: 46
-  - name: 'Tona''s_ModsStore.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29090' ]
-    dirty:
-      - crc: 0x8dd1e120
-        <<: *dirtyPlugin
-        udr: 103
   - name: 'tq3-Blood-and-Gold.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/36058' ]
     dirty:
