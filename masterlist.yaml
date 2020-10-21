@@ -1536,6 +1536,13 @@ plugins:
         condition: 'version("Oblivion_Character_Overhaul.esp", "2.0", >=) and file("Bashed Patch.*\.esp") and not file("OCO_Eyes_Fix.esp")'
 
 ###### Encounters - Allies ######
+  - name: 'StokerWolff.esp'
+    dirty:
+      - crc: 0x52afa081
+        <<: *dirtyPlugin
+        itm: 11
+        udr: 3
+
   - name: 'Viconia.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/15200' ]
     inc: [ 'Cheydinhal Petshop.esp' ]
@@ -20169,12 +20176,7 @@ plugins:
     msg:
       - type: say
         content: 'Realistic hunger mods and vampire mods may conflict seriously.'
-  - name: 'StokerWolff.esp'
-    dirty:
-      - crc: 0x52afa081
-        <<: *dirtyPlugin
-        itm: 11
-        udr: 3
+
   - name: 'Sensual Walks.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/28223' ]
     group: *veryEarlyGroup
