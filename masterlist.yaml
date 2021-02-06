@@ -258,32 +258,6 @@ common:
     subs: [ 'This plugin should not be used. Reinstall Fran''s and select "Separate Files" when the option is presented.' ]
     condition: *FCOMCond
 
-  - &doNotClean
-    type: say
-    content:
-      - lang: en
-        text: 'Do not clean ITM records, they are intentional and required for the mod to function. It is safe to undelete records, but do not do anything other than that.'
-      - lang: da
-        text: 'Rengør ikke ITM-poster: de er forsætlige og krævede for at mod’en fungerer. Det er sikkert at gendanne poster, men gør ikke andet end dét.'
-      - lang: de
-        text: 'ITM-Einträge in diesem Plugin sollten nicht gesäubert werden, sie sind absichtlich enthalten und werden benötigt, damit die Mod richtig funktioniert. Gelöschte Einträge wiederherzustellen ist in Ordnung, alles andere aber nicht.'
-      - lang: es
-        text: 'No limpiar las referencias ITM (iguales al master), ya que son intencionales y necesarias para que el Mod funcione. Sí es seguro restaurar las UDR (referencias borradas), pero no haga más que eso.'
-      - lang: ja
-        text: 'IMTレコードはクリーンしないでください。これらは意図的に残されたデータであり、Modを機能させるために必要です。削除の取り消しは安全に行えますが、それ以外のことは行わないでください。'
-      - lang: ko
-        text: 'ITM 자료를 삭제하지 마십시오. 모드가 정상 작동하기 위해 의도적으로 남겨진 자료입니다. 삭제를 취소하는 것 이외에는 안전하지 않습니다.'
-      - lang: pl
-        text: 'Nie czyść rekordów ITM, są one zamierzone i potrzebne do działania tego moda. Jest bezpieczne aby cofnąć usunięcie rekordów (UDR), ale nie rób nic innego ponad to. '
-      - lang: pt
-        text: 'Não apagar os registos ITM. São intencionais e necessárias para o funcionamento do mod. É seguro restaurar os registos, mas não faça nada mais que isso.'
-      - lang: ru
-        text: 'Не очищать ITM-записи. "Грязные" правки оставлены специально и требуются для функционирования мода. Восстановить удаленные записи (UDR) можно безопасно, но идентичные мастерфайлу лучше оставить.'
-      - lang: sv
-        text: 'Städa inte bort ITM records, de är avsiktliga och krävs för att modden ska fungera. Det är säkert att återställa records, men gör ingenting förutom det.'
-      - lang: zh_CN
-        text: '不干净。"脏"数据是故意的，这是mod需要的功能。'
-
   - &includesX
     type: say
     content:
@@ -1018,7 +992,7 @@ plugins:
   - name: 'Unofficial Oblivion Patch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/5296' ]
     group: *dlcGroup
-    msg: [ *doNotClean ]
+    # doNotClean
     inc:
       - 'Arcana Restored.esp'
       - 'ArenaChampionHotfix.esp'
@@ -1920,7 +1894,7 @@ plugins:
         display: 'DLCShiveringIsles.esp or NoSIVersion_Core_still_required.esp'
         condition: 'not file("bgBalancing(D|E)VNoSIVersion_Core_still_required.esp") and not version("bgBalancingEVCore.esp", "10.0EV-L", ==) and not version("bgBalancingDVCore.esp", "10.0DV-L", ==)'
     msg:
-      - *doNotClean
+      # doNotClean
       - <<: *requiresX
         subs: [ '[Race Balancing Project (Installation files)](http://theelderscrolls.info/?go=dlfile&fileid=293/)' ]
         condition: 'not file("meshes/soya/soyastyle01.nif") and not version("bgBalancingEVCore.esp", "10.0EV-L", ==) and not version("bgBalancingDVCore.esp", "10.0DV-L", ==)'
@@ -1972,7 +1946,7 @@ plugins:
   # RBP Additions - Less Annoying Magic Experience #
   - name: 'bgBalancing(D|E)V(OptionalNPCDiversity)?LAME(Addition|Glue)?\.esp'
     req: [ 'DLCShiveringIsles.esp' ]
-    msg: [ *doNotClean ]
+    # doNotClean
   - name: 'bgBalancing(D|E)VLAMEAddition.esp'
     tag: [ Relev ]
   # RBP Additions - OOO & MMM #
@@ -1984,10 +1958,10 @@ plugins:
   - name: 'bgBalancing(D|E)VOptionalSeamReducerHighElfFix.esp'
     req: [ 'DLCShiveringIsles.esp' ]
     msg:
+      # doNotClean
       - <<: *requiresX
         subs: [ '[Luchaire''s Body Seam Reducer](https://www.nexusmods.com/oblivion/mods/19738/)' ]
         condition: 'not file("meshes/characters/imperial/headhuman.egt") and not checksum("meshes/characters/imperial/headhuman.egt", 333FAB1A)'
-      - *doNotClean
     tag: [ Body-M ]
   # RBP Gamesettings Resetters #
   - name: 'bgBalancing(Optional|VanillaGMST).*\.esp'
@@ -2093,7 +2067,7 @@ plugins:
   - name: 'bgMagic(D|E)V.esp'
     after: [ 'Tiefling Races.esp' ]
     inc: [ 'Tiefling Races.esp' ]
-    msg: [ *doNotClean ]
+    # doNotClean
     tag: [ SpellStats ]
   # LAME - Optional modules #
   - name: 'bgMagic(D|E)VAddEnVar.esp'
@@ -2107,7 +2081,7 @@ plugins:
   - name: 'bgMagic(Bonus|ItemSigil)\.esp'
     req: [ 'bgMagicEV.esp' ]
   - name: 'bgMagic(DV)?ItemSigil.esp'
-    msg: [ *doNotClean ]
+    # doNotClean
   - name: 'bgMagicEVPaperChase.esp'
     dirty:
       - <<: *quickClean
@@ -2359,9 +2333,9 @@ plugins:
       - 'xulSilverfishRiverValley.esp'
       - 'xulSnowdale.esp'
       - 'xulTheEasternPeaks.esp'
+    # doNotClean
     inc: [ 'bgIntegrationIntegratedEV.esp' ]
     req: [ 'DLCShiveringIsles.esp' ]
-    msg: [ *doNotClean ]
   # Integration Addons #
   - name: 'bgIntegrationEV - Alternative NPC Faces by LazyMonk.esp'
     url: [ 'http://theelderscrolls.info/?go=dlfile&fileid=368' ]
@@ -2780,7 +2754,7 @@ plugins:
       - *SilentVoice
     msg: [ *moveWorldspaces ]
   - name: 'Morrowind_ob.esp'
-    msg: [ *doNotClean ]
+    # doNotClean
     after:
       - 'Personality Idles - Modified version.esp'
       - 'personality_idles3b.esp'
@@ -2834,7 +2808,7 @@ plugins:
     after:
       - 'Morrowind_ob - Conversation.esp'
       - 'Morrowind_ob - MorroblivionTreeReplacer.esp'
-    msg: [ *doNotClean ]
+    # doNotClean
   - name: 'Morroblivion_Unofficial_Patch_Magic_Addon.esp'
     group: *lateChangesGroup
     req: [ *MagicExtender ]
@@ -2845,7 +2819,7 @@ plugins:
     url: [ 'https://morroblivion.com/forums/morroblivion-mod-releases/rel-morroblivion-unofficial-patch-2017-dec-18' ]
     after: [ 'Morroblivion_Unofficial_Patch.esp' ]
   - name: 'MOB_FastTravel_Cheat.esp'
-    msg: [ *doNotClean ]
+    # doNotClean
   - name: 'MOB_Firemoth_Enemy_Mage_Rebalance.esp'
     clean:
       - crc: 0xE17E6B0B
@@ -3365,7 +3339,7 @@ plugins:
         util: 'TES4Edit v4.0.2i'
   - name: 'Oscuro''s_Oblivion_Overhaul.esp'
     after: [ 'Oblivion WarCry EV.esp' ]
-    msg: [ *doNotClean ]
+    # doNotClean
     tag:
       - name: -Factions
         condition: 'file("Mart''s Monster Mod for OOO.esm") or file("FCOM_Convergence.esm")'
@@ -3778,13 +3752,13 @@ plugins:
   - name: 'Mart''s Monster Mod - Additional Enemy NPC Vars.esp'
     inc: [ 'FCOM_Convergence.esp' ]
     msg:
+      # doNotClean
       - type: say
         content: 'Can increase the chances of a CTD in a heavily modded game due to increased processor load.'
-      - *doNotClean
   - name: 'Mart''s Monster Mod - City Defences.esp'
     after: [ 'Mart''s Monster Mod - More Wilderness Life No Gates.esp' ]
     inc: [ *BetterCities ]
-    msg: [ *doNotClean ]
+    # doNotClean
   - name: 'Mart''s Monster Mod - Curse of Hircine.esp'
     clean:
       - crc: 0xBD0F4261
@@ -3954,7 +3928,7 @@ plugins:
         util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 18
   - name: 'Mart''s Monster Mod - More Wilderness Life No Gates.esp'
-    msg: [ *doNotClean ]
+    # doNotClean
   - name: 'Mart''s Monster Mod - No Adventurers.esp'
     msg:
       - <<: *useInstead
@@ -4486,7 +4460,7 @@ plugins:
     after:
       - 'WAC - TCOS.esp'
       - 'WAC - TCOS Shops.esp'
-    msg: [ *doNotClean ]
+    # doNotClean
     req:
       - name: 'OBSE/Plugins/Blockhead.dll'
         display: '[Blockhead](https://www.nexusmods.com/oblivion/mods/43752)'
@@ -4532,7 +4506,7 @@ plugins:
       - Relev
   - name: 'FCOM_Convergence.esp'
     msg:
-      - *doNotClean
+      # doNotClean
       - <<: *requiresX
         subs: [ 'Francesco''s Creatures and Items Resources - Items.bsa' ]
         condition: 'not file("Francesco''s Creatures and Items Resources - Items.bsa") and not file("FCOM_Convergence_FraNewItems.bsa") and not file("FraNewItems.bsa")'
@@ -4616,7 +4590,7 @@ plugins:
     url:
       - 'https://www.nexusmods.com/oblivion/mods/12249'
       - 'http://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/'
-    msg: [ *doNotClean ]
+    # doNotClean
     tag:
       - Actors.ACBS
       - Actors.AIData
@@ -5110,7 +5084,7 @@ plugins:
   - name: 'SM Plugin Refurbish.*\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/11474' ]
     group: *veryEarlyGroup
-    msg: [ *doNotClean ]
+    # doNotClean
   - name: 'SM Plugin Refurbish(Merged).esp'
     after: [ 'Knights - Unofficial Patch.esp' ]
     req: [ 'DLCShiveringIsles.esp' ]
@@ -6076,23 +6050,23 @@ plugins:
     tag: [ Graphics ]
   - name: 'personality_idles4.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/14280' ]
-    msg: [ *doNotClean ]
+    # doNotClean
   - name: 'Personality Idles - Modified version.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/30829' ]
-    msg: [ *doNotClean ]
+    # doNotClean
     tag: [ Actors.Anims ]
   - name: 'personality_idles4_C.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/14280' ]
-    msg: [ *doNotClean ]
+    # doNotClean
   - name: 'personality_idles4_nnpc_C.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/14280' ]
-    msg: [ *doNotClean ]
+    # doNotClean
   - name: 'personality_idles4_nnpc.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/14280' ]
-    msg: [ *doNotClean ]
+    # doNotClean
   - name: 'personality_idles4_nopc.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/14280' ]
-    msg: [ *doNotClean ]
+    # doNotClean
   - name: 'P1DseeYouSleep.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/16005' ]
     dirty:
@@ -8263,12 +8237,12 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/45570' ]
     inc: [ 'FCOM_Convergence.esm' ]
     msg:
+      # doNotClean
       - <<: *useInstead
         subs: [ '[Oblivion WarCry EV.esp](https://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/)' ]
         condition: *FCOMCond
       - type: say
         content: 'German version.'
-      - *doNotClean
     tag:
       - Actors.ACBS
       - Actors.AIData
@@ -9928,7 +9902,7 @@ plugins:
     msg: [ *needsCleaning ]
   - name: 'DSoSFortNocturnaSuppressio.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/41456' ]
-    msg: [ *doNotClean ]
+    # doNotClean
   - name: 'DSoSMalamath.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/36968' ]
     msg:
@@ -10160,7 +10134,7 @@ plugins:
       - Stats
   - name: 'FCOM_Hentai Mania.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/33339' ]
-    msg: [ *doNotClean ]
+    # doNotClean
     tag:
       - Actors.ACBS
       - Actors.Stats
@@ -16226,7 +16200,7 @@ plugins:
         itm: 56
         udr: 664
   - name: 'CB-DepositsForges.esp'
-    msg: [ *doNotClean ]
+    # doNotClean
   - name: 'Erics Crafting Mod.esp'
     msg:
       - type: say
@@ -16510,7 +16484,7 @@ plugins:
         condition: 'file("bgMagicEV_Conjuration_for_Supreme_Magicka.esp")'
       - 'lumi_enchantments.esp'
       - 'lumi_enchantments_subtle.esp'
-    msg: [ *doNotClean ]
+    # doNotClean
     tag:
       - Graphics
       - Names
@@ -20300,7 +20274,7 @@ plugins:
 
   - name: 'Vanilla Weapon Stat Override( - SI)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/39914' ]
-    msg: [ *doNotClean ]
+    # doNotClean
   - name: 'WindowLightingSystem.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/19628' ]
     msg:
@@ -20583,7 +20557,7 @@ plugins:
 
   - name: 'BalancedMagic.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/45249' ]
-    msg: [ *doNotClean ]
+    # doNotClean
 
   - name: 'BMEnchantmentRebalance.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/45249' ]
