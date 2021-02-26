@@ -6552,9 +6552,14 @@ plugins:
     msg: [ *vanillaMapMarkers ]
   - name: 'Landmarks, w Wells.esp'
     url:
-      - 'https://www.nexusmods.com/oblivion/mods/5475'
-      - 'https://www.nexusmods.com/oblivion/mods/46915'
-    msg: [ *vanillaMapMarkers ]
+      - link: 'https://www.nexusmods.com/oblivion/mods/5475/'
+        name: 'Landmarks with Wells'
+      - link: 'https://www.nexusmods.com/oblivion/mods/46915/'
+        name: 'Landmarks with Wells 1-12'
+    msg:
+      - <<: *corrupt
+        condition: 'checksum("Landmarks, w Wells.esp", C01600A4)'
+      - *vanillaMapMarkers
   - name: 'HouseMapMarkers.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/3345' ]
     dirty:
