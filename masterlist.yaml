@@ -75,14 +75,14 @@ common:
     display: '[Better Cities](https://www.nexusmods.com/oblivion/mods/16513)'
 
 # Conditions
+  - &OOOCond
+    active("Oscuro's_Oblivion_Overhaul.esm")
+  - &FCOMCond
+    active("FCOM_Convergence.esm")
   - &nehrimCond
     active("Nehrim.esm")
   - &tes4Cond
     active("Oblivion.esm")
-  - &FCOMCond
-    active("FCOM_Convergence.esm")
-  - &OOOCond
-    active("Oscuro's_Oblivion_Overhaul.esm")
 # Messages
   - &masterReassign
     type: say
@@ -558,6 +558,116 @@ common:
         text: 'Använd endast en %1%.'
       - lang: zh_CN
         text: '只使用一个%1%。'
+
+  - &useVersion
+    type: error
+    content:
+      - lang: en
+        text: 'Use %1% version.'
+      - lang: de
+        text: 'Benutzen Sie die %1% Version.'
+      - lang: ja
+        text: '%1%バージョンを使用してください。'
+      - lang: pl
+        text: 'Użyj wersji %1%'
+      - lang: ru
+        text: 'Используйте версию для %1%'
+      - lang: sv
+        text: 'Använd version %1%.'
+  - &useVersionHorseArmor
+    <<: *useVersion
+    subs: [ 'HorseArmor' ]
+    condition: 'active("DLCHorseArmor.esp")'
+  - &useVersionOrrery
+    <<: *useVersion
+    subs: [ 'Orrery' ]
+    condition: 'active("DLCOrrery.esp")'
+  - &useVersionFrostcrag
+    <<: *useVersion
+    subs: [ 'Frostcrag' ]
+    condition: 'active("DLCFrostcrag.esp")'
+  - &useVersionThievesDen
+    <<: *useVersion
+    subs: [ 'ThievesDen' ]
+    condition: 'active("DLCThievesDen.esp")'
+  - &useVersionMehrunesRazor
+    <<: *useVersion
+    subs: [ 'MehrunesRazor' ]
+    condition: 'active("DLCMehrunesRazor.esp")'
+  - &useVersionVileLair
+    <<: *useVersion
+    subs: [ 'VileLair' ]
+    condition: 'active("DLCVileLair.esp")'
+  - &useVersionSpellTomes
+    <<: *useVersion
+    subs: [ 'SpellTomes' ]
+    condition: 'active("DLCSpellTomes.esp")'
+  - &useVersionKnights
+    <<: *useVersion
+    subs: [ 'Knights' ]
+    condition: 'active("Knights.esp")'
+  - &useVersionShiveringIsles
+    <<: *useVersion
+    subs: [ 'ShiveringIsles' ]
+    condition: 'active("DLCShiveringIsles.esp")'
+  - &useVersionBattlehornCastle
+    <<: *useVersion
+    subs: [ 'BattlehornCastle' ]
+    condition: 'active("DLCBattlehornCastle.esp")'
+
+  - &useVersionNon
+    type: error
+    content:
+      - lang: en
+        text: 'Use non-%1% version.'
+      - lang: de
+        text: 'Benutzen Sie die Nicht-%1% Version.'
+      - lang: ja
+        text: '%1%バージョン以外を使用してください。'
+      - lang: pl
+        text: 'Użyj wersji innej niż %1%.'
+      - lang: sv
+        text: 'Använd en icke-%1% version.'
+  - &useVersionNonHorseArmor
+    <<: *useVersionNon
+    subs: [ 'HorseArmor' ]
+    condition: 'not active("DLCHorseArmor.esp")'
+  - &useVersionNonOrrery
+    <<: *useVersionNon
+    subs: [ 'Orrery' ]
+    condition: 'not active("DLCOrrery.esp")'
+  - &useVersionNonFrostcrag
+    <<: *useVersionNon
+    subs: [ 'Frostcrag' ]
+    condition: 'not active("DLCFrostcrag.esp")'
+  - &useVersionNonThievesDen
+    <<: *useVersionNon
+    subs: [ 'ThievesDen' ]
+    condition: 'not active("DLCThievesDen.esp")'
+  - &useVersionNonMehrunesRazor
+    <<: *useVersionNon
+    subs: [ 'MehrunesRazor' ]
+    condition: 'not active("DLCMehrunesRazor.esp")'
+  - &useVersionNonVileLair
+    <<: *useVersionNon
+    subs: [ 'VileLair' ]
+    condition: 'not active("DLCVileLair.esp")'
+  - &useVersionNonSpellTomes
+    <<: *useVersionNon
+    subs: [ 'SpellTomes' ]
+    condition: 'not active("DLCSpellTomes.esp")'
+  - &useVersionNonKnights
+    <<: *useVersionNon
+    subs: [ 'Knights' ]
+    condition: 'not active("Knights.esp")'
+  - &useVersionNonShiveringIsles
+    <<: *useVersionNon
+    subs: [ 'ShiveringIsles' ]
+    condition: 'not active("DLCShiveringIsles.esp")'
+  - &useVersionNonBattlehornCastle
+    <<: *useVersionNon
+    subs: [ 'BattlehornCastle' ]
+    condition: 'not active("DLCBattlehornCastle.esp")'
 
   - &wildEdits
     type: warn
