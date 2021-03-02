@@ -2403,23 +2403,30 @@ plugins:
     req: [ 'road+bridges.esp' ]
 
   - name: 'DibellasWatch.esm'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/37120' ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/37120/' ]
     group: *veryEarlyGroup
     msg: [ *moveWorldspaces ]
-  - name: 'DibellasWatchAdditions.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/37120' ]
     dirty:
-      - crc: 0x6d051c88
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xAC17B7FF
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536/)'
+        itm: 1
+  - name: 'DibellasWatchAdditions.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/37120/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x6D051C88
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536/)'
         udr: 40
   - name: 'DWAnvilTransport.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/37120' ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/37120/' ]
     dirty:
-      - crc: 0xfef1b464
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xFEF1B464
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536/)'
         itm: 7
   - name: 'DWIngameMap.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/37120' ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/37120/' ]
     group: *mapGroup
 
   - name: 'Enhanced Quest Roleplaying.esp'
