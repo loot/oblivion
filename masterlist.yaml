@@ -8108,11 +8108,16 @@ plugins:
       - Graphics
       - NoMerge
   - name: 'StockClothingArmor-forExnems.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/11824' ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/11824/' ]
     dirty:
-      - crc: 0x97bd3c1a
+      - <<: *quickClean
+        crc: 0x6F08DE12
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536/)'
         itm: 3
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x97BD3C1A
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536/)'
+        itm: 3
     tag:
       - Graphics
       - NoMerge
