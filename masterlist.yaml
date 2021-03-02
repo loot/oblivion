@@ -8048,10 +8048,11 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/16499' ]
     tag: [ Graphics ]
   - name: 'HGEC_Companionmail.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/18405' ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/18405/' ]
     dirty:
-      - crc: 0xe43eeefb
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xE43EEEFB
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536/)'
         itm: 2
   - name: 'HGEC Glass Replacement.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/28313' ]
