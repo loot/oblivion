@@ -8179,11 +8179,12 @@ plugins:
       - Graphics
       - NoMerge
   - name: 'Zombie Slayer Armor.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/35182' ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/35182/' ]
     dirty:
-      - crc: 0xaba4972b
+      - <<: *quickClean
+        crc: 0xABA4972B
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536/)'
         itm: 1
-        <<: *dirtyPlugin
   - name: 'Dark_Mistress.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/19744' ]
     dirty:
