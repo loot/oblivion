@@ -8167,10 +8167,11 @@ plugins:
         itm: 9
         udr: 1
   - name: 'Velveteen_Armor_HGEC.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/25375' ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/25375/' ]
     dirty:
-      - crc: 0x5ede9a39
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x5EDE9A39
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536/)'
         itm: 1
   - name: 'YAARM_Steel.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/33381' ]
