@@ -8085,11 +8085,16 @@ plugins:
       - Graphics
       - NoMerge
   - name: 'R18PN - Lingeries.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/23589' ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/23589/' ]
     dirty:
-      - crc: 0xc8f5d0fd
+      - <<: *quickClean
+        crc: 0x6395F5B2
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536/)'
         itm: 4
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xC8F5D0FD
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536/)'
+        itm: 4
   - name: 'Sexy Ghost Armor.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/35631' ]
     dirty:
