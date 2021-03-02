@@ -2452,14 +2452,18 @@ plugins:
         util: 'TES4Edit v4.0.3f'
 
   - name: 'GTAesgaard_2.esm'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/21693' ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/21693/' ]
     group: *veryEarlyGroup
     msg: [ *moveWorldspaces ]
+    clean:
+      - crc: 0x379577AC
+        util: 'TES4Edit v4.0.3f'
   - name: 'GTAesgaard_2.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/21693' ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/21693/' ]
     dirty:
-      - crc: 0xab1f2934
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xAB1F2934
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536/)'
         itm: 13
         udr: 12
 
