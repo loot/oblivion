@@ -2403,23 +2403,30 @@ plugins:
     req: [ 'road+bridges.esp' ]
 
   - name: 'DibellasWatch.esm'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/37120' ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/37120/' ]
     group: *veryEarlyGroup
     msg: [ *moveWorldspaces ]
-  - name: 'DibellasWatchAdditions.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/37120' ]
     dirty:
-      - crc: 0x6d051c88
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xAC17B7FF
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536/)'
+        itm: 1
+  - name: 'DibellasWatchAdditions.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/37120/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x6D051C88
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536/)'
         udr: 40
   - name: 'DWAnvilTransport.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/37120' ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/37120/' ]
     dirty:
-      - crc: 0xfef1b464
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xFEF1B464
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536/)'
         itm: 7
   - name: 'DWIngameMap.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/37120' ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/37120/' ]
     group: *mapGroup
 
   - name: 'Enhanced Quest Roleplaying.esp'
@@ -2439,25 +2446,24 @@ plugins:
         itm: 19
 
   - name: 'GTAesgaard.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/13814' ]
-    dirty:
-      - crc: 0x7d7ea42e
-        <<: *dirtyPlugin
-        itm: 77
-      - crc: 0x94a96b7d
-        <<: *dirtyPlugin
-        itm: 107
-        udr: 8
+    url: [ 'https://www.nexusmods.com/oblivion/mods/13814/' ]
+    clean:
+      - crc: 0xE8F9347F
+        util: 'TES4Edit v4.0.3f'
 
   - name: 'GTAesgaard_2.esm'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/21693' ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/21693/' ]
     group: *veryEarlyGroup
     msg: [ *moveWorldspaces ]
+    clean:
+      - crc: 0x379577AC
+        util: 'TES4Edit v4.0.3f'
   - name: 'GTAesgaard_2.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/21693' ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/21693/' ]
     dirty:
-      - crc: 0xab1f2934
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xAB1F2934
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536/)'
         itm: 13
         udr: 12
 
@@ -8046,10 +8052,11 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/16499' ]
     tag: [ Graphics ]
   - name: 'HGEC_Companionmail.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/18405' ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/18405/' ]
     dirty:
-      - crc: 0xe43eeefb
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xE43EEEFB
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536/)'
         itm: 2
   - name: 'HGEC Glass Replacement.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/28313' ]
@@ -8066,39 +8073,51 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/2474' ]
     tag: [ Graphics ]
   - name: 'IndigoArmor.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/16645' ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/16645/' ]
     dirty:
-      - crc: 0xfed76787
+      - <<: *quickClean
+        crc: 0xFED76787
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536/)'
         itm: 2
-        <<: *dirtyPlugin
   - name: 'LexMiscClothesII.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/37202' ]
     tag:
       - Graphics
       - NoMerge
   - name: 'R18PN - Lingeries.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/23589' ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/23589/' ]
     dirty:
-      - crc: 0xc8f5d0fd
+      - <<: *quickClean
+        crc: 0x6395F5B2
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536/)'
         itm: 4
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xC8F5D0FD
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536/)'
+        itm: 4
   - name: 'Sexy Ghost Armor.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/35631' ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/35631/' ]
     dirty:
-      - crc: 0x21b8da71
+      - <<: *quickClean
+        crc: 0x21B8DA71
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536/)'
         itm: 2
-        <<: *dirtyPlugin
   - name: 'StockClothingArmorBBBHGEC_Standard_ECupLBotPPN.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/16750' ]
     tag:
       - Graphics
       - NoMerge
   - name: 'StockClothingArmor-forExnems.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/11824' ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/11824/' ]
     dirty:
-      - crc: 0x97bd3c1a
+      - <<: *quickClean
+        crc: 0x6F08DE12
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536/)'
         itm: 3
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x97BD3C1A
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536/)'
+        itm: 3
     tag:
       - Graphics
       - NoMerge
@@ -8140,17 +8159,19 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/13339' ]
     tag: [ Graphics ]
   - name: 'UFF & RM Gold and Silver Daedric Armor.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/15948' ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/15948/' ]
     dirty:
-      - crc: 0x9dfb019
-        itm: 10
+      - <<: *quickClean
+        crc: 0x09DFB019
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536/)'
+        itm: 9
         udr: 1
-        <<: *dirtyPlugin
   - name: 'Velveteen_Armor_HGEC.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/25375' ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/25375/' ]
     dirty:
-      - crc: 0x5ede9a39
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x5EDE9A39
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536/)'
         itm: 1
   - name: 'YAARM_Steel.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/33381' ]
@@ -8158,20 +8179,23 @@ plugins:
       - Graphics
       - NoMerge
   - name: 'Zombie Slayer Armor.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/35182' ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/35182/' ]
     dirty:
-      - crc: 0xaba4972b
+      - <<: *quickClean
+        crc: 0xABA4972B
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536/)'
         itm: 1
-        <<: *dirtyPlugin
   - name: 'Dark_Mistress.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/19744' ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/19744/' ]
     dirty:
-      - crc: 0x86f22d28
+      - <<: *quickClean
+        crc: 0xEF8D5819
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536/)'
         itm: 3
-        <<: *dirtyPlugin
-      - crc: 0xc1861491
+      - <<: *quickClean
+        crc: 0x86F22D28
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536/)'
         itm: 3
-        <<: *dirtyPlugin
   - name: 'a4sFlamingNightmare3.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/35219' ]
     tag:
@@ -8182,34 +8206,44 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/37432' ]
     req: [ *OBSEv18 ]
   - name: 'Slof''s Horses Base.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/48925' ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/48925/' ]
     tag: [ Graphics ]
     dirty:
-      - crc: 0x66c78539
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x66C78539
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536/)'
         itm: 18
   - name: 'Slof''s Extra Horses.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/48925' ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/48925/' ]
     tag: [ Graphics ]
     dirty:
-      - crc: 0x8ba333fa
-        <<: *dirtyPlugin
-        itm: 28
+      - <<: *quickClean
+        crc: 0x8BA333FA
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536/)'
+        itm: 30
+  - name: 'Slof''s Extra Horses 2.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/48925/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xC807F902
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536/)'
+        itm: 3
   - name: 'Slof''s Black Unicorn.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/48112' ]
     tag: [ Graphics ]
   - name: 'HRMHorseArmor.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/46657' ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/46657/' ]
     tag: [ Graphics ]
     dirty:
-      - crc: 0x452eb6ff
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x452EB6FF
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536/)'
         itm: 4
   - name: 'HRMHorseArmorSlofsHorsesPatch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/46657' ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/46657/' ]
     tag: [ Graphics ]
   - name: 'HRMHorseArmorSlofsHorsesPatch20.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/46657' ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/46657/' ]
     tag: [ Graphics ]
   - name: 'DappleClydesdaleupdate.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/12767' ]
@@ -8221,12 +8255,24 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/28006' ]
     tag: [ Graphics ]
   - name: 'Shadow Steed.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/8050' ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/8050/' ]
     inc: [ 'DLCHorseArmor.esp' ]
     dirty:
-      - crc: 0xeddab6db
-        <<: *dirtyPlugin
-        itm: 1
+      - <<: *quickClean
+        crc: 0xEDDAB6DB
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536/)'
+        itm: 3
+      - <<: *quickClean
+        crc: 0xD6549898
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536/)'
+        itm: 3
+  - name: 'Shadow Steed Nightmare.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/8050/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x10173A02
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536/)'
+        itm: 3
   - name: 'TJ_HorseNames.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/1831' ]
     tag: [ Names ]
@@ -8234,10 +8280,25 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/3352' ]
     tag: [ Graphics ]
   - name: 'Mounted_Spellcasting.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/8962' ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/8962/' ]
     dirty:
-      - crc: 0xd60bcb81
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xD60BCB81
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536/)'
+        itm: 3
+  - name: 'Mounted_Steering.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/8962/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x9D9AB3D1
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536/)'
+        itm: 3
+  - name: 'Mounted_Trampling.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/8962/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x2E52E7D4
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536/)'
         itm: 3
   - name: 'Zira''s Horse Modpack - Heavy Legion Horses.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/37823' ]
