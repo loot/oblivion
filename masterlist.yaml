@@ -3,46 +3,46 @@ common:
 # Files
   - &OBSE
     name: '../obse_1_2_416.dll'
-    display: '[OBSE](http://obse.silverlock.org)'
+    display: '[OBSE](https://obse.silverlock.org)'
   - &OBSEv11
     name: '../obse_1_2_416.dll'
-    display: '[OBSE](http://obse.silverlock.org) v11+'
+    display: '[OBSE](https://obse.silverlock.org) v11+'
     condition: 'version("../obse_1_2_416.dll","0.11.0.0",<)'
   - &OBSEv12
     name: '../obse_1_2_416.dll'
-    display: '[OBSE](http://obse.silverlock.org) v12+'
+    display: '[OBSE](https://obse.silverlock.org) v12+'
     condition: 'version("../obse_1_2_416.dll","0.12.0.0",<)'
   - &OBSEv14
     name: '../obse_1_2_416.dll'
-    display: '[OBSE](http://obse.silverlock.org) v14+'
+    display: '[OBSE](https://obse.silverlock.org) v14+'
     condition: 'version("../obse_1_2_416.dll","0.14.0.0",<)'
   - &OBSEv15
     name: '../obse_1_2_416.dll'
-    display: '[OBSE](http://obse.silverlock.org) v15+'
+    display: '[OBSE](https://obse.silverlock.org) v15+'
     condition: 'version("../obse_1_2_416.dll","0.15.0.0",<)'
   - &OBSEv16
     name: '../obse_1_2_416.dll'
-    display: '[OBSE](http://obse.silverlock.org) v16+'
+    display: '[OBSE](https://obse.silverlock.org) v16+'
     condition: 'version("../obse_1_2_416.dll","0.16.0.0",<)'
   - &OBSEv17
     name: '../obse_1_2_416.dll'
-    display: '[OBSE](http://obse.silverlock.org) v17+'
+    display: '[OBSE](https://obse.silverlock.org) v17+'
     condition: 'version("../obse_1_2_416.dll","0.17.0.0",<)'
   - &OBSEv18
     name: '../obse_1_2_416.dll'
-    display: '[OBSE](http://obse.silverlock.org) v18+'
+    display: '[OBSE](https://obse.silverlock.org) v18+'
     condition: 'version("../obse_1_2_416.dll","0.18.0.0",<)'
   - &OBSEv19
     name: '../obse_1_2_416.dll'
-    display: '[OBSE](http://obse.silverlock.org) v19+'
+    display: '[OBSE](https://obse.silverlock.org) v19+'
     condition: 'version("../obse_1_2_416.dll","0.19.0.0",<)'
   - &OBSEv20
     name: '../obse_1_2_416.dll'
-    display: '[OBSE](http://obse.silverlock.org) v20+'
+    display: '[OBSE](https://obse.silverlock.org) v20+'
     condition: 'version("../obse_1_2_416.dll","0.20.0.0",<)'
   - &OBSEv21
     name: '../obse_1_2_416.dll'
-    display: '[OBSE](http://obse.silverlock.org) v21+'
+    display: '[OBSE](https://obse.silverlock.org) v21+'
     condition: 'version("../obse_1_2_416.dll","0.21.0.0",<)'
 
   # OBSE Plugins
@@ -54,13 +54,13 @@ common:
     display: '[Oblivion Magic Extender](https://www.nexusmods.com/oblivion/mods/31981)'
   - &MenuQue
     name: 'OBSE/Plugins/MenuQue.dll'
-    display: '[MenuQue](http://www.nexusmods.com/oblivion/mods/32200)'
+    display: '[MenuQue](https://www.nexusmods.com/oblivion/mods/32200)'
   - &NifSE
     name: 'obse/plugins/NifSE.dll'
-    display: '[NifSE](http://www.nexusmods.com/oblivion/mods/21292)'
+    display: '[NifSE](https://www.nexusmods.com/oblivion/mods/21292)'
   - &Pluggy
     name: 'OBSE/Plugins/OBSE_Elys_Pluggy.dll'
-    display: '[Pluggy](http://www.nexusmods.com/oblivion/mods/23979)'
+    display: '[Pluggy](https://www.nexusmods.com/oblivion/mods/23979)'
   - &SilentVoice
     name: 'OBSE/Plugins/Elys_USV.dll'
     display: '[Elys- Universal Silent Voice](https://www.nexusmods.com/oblivion/mods/16622) or [VoiceFile Redirector OBSE](https://github.com/ponyrider0/voicefile-redirector/releases)'
@@ -98,7 +98,7 @@ common:
     content: 'Dummy file to load .BSA files. Using a file to load a BSA means the BSA must NOT be listed in Oblivion.ini at the same time or the game will not load. This is ususally only a problem when automatic installers insert the name into Oblivion.ini then the user creates a BSA redirection file later.'
   - &needsCleaning
     type: say
-    content: 'Needs [TES4Edit cleaning](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide).'
+    content: 'Needs [TES4Edit cleaning](https://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide).'
   - &moveWorldspaces
     type: warn
     content: 'This needs to load directly after Oblivion.esm to avoid landscape issues caused by a failure by the mod author to use TES4Gecko''s "Move Worldspaces" function.'
@@ -696,7 +696,7 @@ common:
 
 # Dirty Aliases
   - &dirtyPlugin
-    util: '[TES4Edit](http://www.nexusmods.com/oblivion/mods/11536/)'
+    util: '[TES4Edit](https://www.nexusmods.com/oblivion/mods/11536/)'
     info:
       - lang: en
         text: 'An explanation of Dirty Edits is available [here](https://tes5edit.github.io/docs/6-mod-cleaning-and-error-checking.html#AppendixA).'
@@ -713,7 +713,7 @@ common:
       - lang: ru
         text: 'Объяснение по грязным правкам доступно [здесь](https://tes5edit.github.io/docs/6-mod-cleaning-and-error-checking.html#AppendixA).'
   - &quickClean
-    util: '[TES4Edit](http://www.nexusmods.com/oblivion/mods/11536/)'
+    util: '[TES4Edit](https://www.nexusmods.com/oblivion/mods/11536/)'
     info:
       - lang: en
         text: 'A guide to cleaning plugins using xEdit can be found [here](https://tes5edit.github.io/docs/7-mod-cleaning-and-error-checking.html#ThreeEasyStepstocleanMods).'
@@ -732,7 +732,7 @@ common:
       - lang: sv
         text: 'En guide till att rensa plugins med xEdit finns [här](https://tes5edit.github.io/docs/7-mod-cleaning-and-error-checking.html#ThreeEasyStepstocleanMods).'
   - &reqManualFix
-    util: '[TES4Edit](http://www.nexusmods.com/oblivion/mods/11536/)'
+    util: '[TES4Edit](https://www.nexusmods.com/oblivion/mods/11536/)'
     info:
       - lang: en
         text: 'It is strongly recommended not to use mods that contain **Deleted navmeshes** as they''re known to cause crashes. **Deleted navmeshes** must be corrected manually(A complex process that should be done by the mod author). More information on **Deleted navmeshes** is provided [here](https://www.creationkit.com/index.php?title=Fixing_Navmesh_Deletion_Tutorial).'
