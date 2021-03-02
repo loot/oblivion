@@ -8159,12 +8159,13 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/13339' ]
     tag: [ Graphics ]
   - name: 'UFF & RM Gold and Silver Daedric Armor.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/15948' ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/15948/' ]
     dirty:
-      - crc: 0x9dfb019
-        itm: 10
+      - <<: *quickClean
+        crc: 0x09DFB019
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536/)'
+        itm: 9
         udr: 1
-        <<: *dirtyPlugin
   - name: 'Velveteen_Armor_HGEC.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/25375' ]
     dirty:
