@@ -8255,12 +8255,24 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/28006' ]
     tag: [ Graphics ]
   - name: 'Shadow Steed.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/8050' ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/8050/' ]
     inc: [ 'DLCHorseArmor.esp' ]
     dirty:
-      - crc: 0xeddab6db
-        <<: *dirtyPlugin
-        itm: 1
+      - <<: *quickClean
+        crc: 0xEDDAB6DB
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536/)'
+        itm: 3
+      - <<: *quickClean
+        crc: 0xD6549898
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536/)'
+        itm: 3
+  - name: 'Shadow Steed Nightmare.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/8050/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x10173A02
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536/)'
+        itm: 3
   - name: 'TJ_HorseNames.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/1831' ]
     tag: [ Names ]
