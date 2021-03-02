@@ -8232,17 +8232,18 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/48112' ]
     tag: [ Graphics ]
   - name: 'HRMHorseArmor.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/46657' ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/46657/' ]
     tag: [ Graphics ]
     dirty:
-      - crc: 0x452eb6ff
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x452EB6FF
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536/)'
         itm: 4
   - name: 'HRMHorseArmorSlofsHorsesPatch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/46657' ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/46657/' ]
     tag: [ Graphics ]
   - name: 'HRMHorseArmorSlofsHorsesPatch20.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/46657' ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/46657/' ]
     tag: [ Graphics ]
   - name: 'DappleClydesdaleupdate.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/12767' ]
