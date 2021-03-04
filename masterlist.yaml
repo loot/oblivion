@@ -8766,8 +8766,9 @@ plugins:
         content: 'Delete. ''Use TamrielTravellers4OOO.esp'' and ''FCOM_TamrielTravelers.esp'' instead.'
         condition: *FCOMCond
     dirty:
-      - crc: 0xeb4a4d83
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xEB4A4D83
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 38
   - name: 'TamrielTravellers4MMM.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/4387' ]
@@ -8776,9 +8777,10 @@ plugins:
         content: 'Delete. ''Use TamrielTravellers4OOO.esp'' and ''FCOM_TamrielTravelers.esp'' instead.'
         condition: *FCOMCond
     dirty:
-      - crc: 0xc0cecfea
-        <<: *dirtyPlugin
-        itm: 37
+      - <<: *quickClean
+        crc: 0xC0CECFEA
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 38
   - name: 'Travellers4MMMHostileFactions.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/4387' ]
     inc: [ 'FCOM_Convergence.esm' ]
@@ -8788,11 +8790,9 @@ plugins:
   - name: 'TamrielTravellers4OOO.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/4387' ]
     dirty:
-      - crc: 0x2cb068db
-        <<: *dirtyPlugin
-        itm: 78
-      - crc: 0xe75d466d
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x2CB068DB
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 78
   - name: 'TamrielTravellersItemsNPC.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/4387' ]
@@ -8802,7 +8802,7 @@ plugins:
       - Delev
       - Filter
       - Relev
-      - "-NoMerge"
+      - -NoMerge
   - name: 'TamrielTravellersItemsCobl.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/4387' ]
     req: [ 'Cobl Main.esm' ]
@@ -8814,7 +8814,7 @@ plugins:
       - Delev
       - Filter
       - Relev
-      - "-NoMerge"
+      - -NoMerge
   - name: 'TamrielTravellersItemsUnscaled.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/4387' ]
     inc: [ 'FCOM_Convergence.esm' ]
@@ -8829,11 +8829,9 @@ plugins:
         content: 'Use of ''TamrielTravellersItemsNPC.esp'', ''TamrielTravellersItemsUnscaled.esp'', or ''TamrielTravellersItemsVendors.esp'' will remove SI items for sale.'
         condition: 'file("TamrielTravellersItemsNPC.esp") or file("TamrielTravellersItemsUnscaled.esp") or file("TamrielTravellersItemsVendors.esp")'
     dirty:
-      - crc: 0x36dd18e
-        <<: *dirtyPlugin
-        itm: 7
-      - crc: 0x8d5a0190
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x036DD18E
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 7
   - name: 'TamrielTravellersHorseTextures.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/4387' ]
