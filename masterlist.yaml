@@ -8351,8 +8351,9 @@ plugins:
   - name: 'The Last Queen Of The Ayleids.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/20528' ]
     dirty:
-      - crc: 0x8e806bb1
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x8E806BB1
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 6
         udr: 164
   - name: 'Ranokoas Organized Potions.esp'
