@@ -8860,15 +8860,17 @@ plugins:
   - name: 'T.I.E4MODS.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/18138' ]
     dirty:
-      - crc: 0x2fd81eb9
-        <<: *dirtyPlugin
-        itm: 6
+      - <<: *quickClean
+        crc: 0x2FD81EB9
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 8
         udr: 392
   - name: 'T.I.E4MODSOOO+FCOM.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/18138' ]
     dirty:
-      - crc: 0xa7e5fb03
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xA7E5FB03
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 8
   - name: 'TIE In.esp'
     url:
