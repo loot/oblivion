@@ -9282,11 +9282,14 @@ plugins:
         udr: 86
   - name: '300 Regal Imperial City 2.esp'
     url:
-      - 'https://www.nexusmods.com/oblivion/mods/9322'
-      - 'https://www.nexusmods.com/oblivion/mods/15500'
+      - link: 'https://www.nexusmods.com/oblivion/mods/9322'
+        name: 'Darker Regal IC'
+      - link: 'https://www.nexusmods.com/oblivion/mods/15500'
+        name: 'Darker Regal IC Redimized'
     dirty:
-      - crc: 0x7ac8f55b
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x7AC8F55B
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
         udr: 130
   - name: '300_Artifacts.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/2732' ]
