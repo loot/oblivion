@@ -9193,8 +9193,9 @@ plugins:
   - name: 'KnightlyArmory.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/19228' ]
     dirty:
-      - crc: 0xcb971f26
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xCB971F26
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 7
         udr: 9
   - name: 'Castle Ravenpride.esp'
