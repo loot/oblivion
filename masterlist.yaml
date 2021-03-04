@@ -9244,8 +9244,9 @@ plugins:
       - type: say
         content: 'Requires a patch if used with UL Imperial Isle.'
     dirty:
-      - crc: 0xdf00178c
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xDF00178C
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 15
         udr: 31
   - name: 'Trade and Commerce.esp'
