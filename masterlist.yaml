@@ -9319,9 +9319,10 @@ plugins:
   - name: 'A Sorceress Love 1_1.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/24968' ]
     dirty:
-      - crc: 0xc720fa75
-        <<: *dirtyPlugin
-        itm: 78
+      - <<: *quickClean
+        crc: 0xC720FA75
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 81
         udr: 6
   - name: 'ABloodyNight.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/14015' ]
