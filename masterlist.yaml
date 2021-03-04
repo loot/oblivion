@@ -9160,8 +9160,9 @@ plugins:
   - name: 'Oblivifall - Something''s Not Right.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/27145' ]
     dirty:
-      - crc: 0x274ba125
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x274BA125
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 13
   - name: 'Roleplaying_Expansion.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/30827' ]
