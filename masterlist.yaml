@@ -8698,15 +8698,24 @@ plugins:
   - name: 'Choices and Consequences - MMM - Looting NPCs & Creatures.esp'
     msg: [ *obsolete ]
   - name: 'OWC - Seaworld.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/39202' ]
-    dirty:
-      - crc: 0xa9894cf0
-        <<: *dirtyPlugin
-        udr: 1
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/34673'
+        name: 'Oblivion War Cry - New Dimension DV - EV - RU - Japan'
+      - link: 'https://www.nexusmods.com/oblivion/mods/39202'
+        name: 'Oblivion War Cry New Dimension - EV by Phinix'
+    clean:
+      - crc: 0xE0C559FA
+        util: 'TES4Edit v4.0.3f'
+      - crc: 0x32096955
+        util: 'TES4Edit v4.0.3f'
   - name: 'OWC - New Dimension.esp'
     url:
-      - 'https://www.nexusmods.com/oblivion/mods/36260'
-      - 'https://www.nexusmods.com/oblivion/mods/39202'
+      - link: 'https://www.nexusmods.com/oblivion/mods/34673'
+        name: 'Oblivion War Cry - New Dimension DV - EV - RU - Japan'
+      - link: 'https://www.nexusmods.com/oblivion/mods/36260'
+        name: 'NNWs Mods for OWC ND'
+      - link: 'https://www.nexusmods.com/oblivion/mods/39202'
+        name: 'Oblivion War Cry New Dimension - EV by Phinix'
     tag:
       - Actors.ACBS
       - Actors.AIData
@@ -8734,9 +8743,17 @@ plugins:
       - Scripts
       - Stats
     dirty:
-      - crc: 0x6450282
-        <<: *dirtyPlugin
-        itm: 198
+      - <<: *quickClean
+        crc: 0x86005DB5
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 4
+      - <<: *quickClean
+        crc: 0x37B3810C
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 90
+    clean:
+      - crc: 0xA4802738
+        util: 'TES4Edit v4.0.3f'
   - name: 'TGND2 WarCry Replacer.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/41937' ]
     tag:
