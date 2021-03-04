@@ -9270,9 +9270,15 @@ plugins:
     after: [ 'SOC-RegionalFarms.esp' ]
     tag: [ Graphics ]
     dirty:
-      - crc: 0x420f63bf
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x420F63BF
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 8
+        udr: 86
+      - <<: *quickClean
+        crc: 0x3A892D9F
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 13
         udr: 86
   - name: '300 Regal Imperial City 2.esp'
     url:
