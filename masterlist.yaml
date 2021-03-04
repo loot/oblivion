@@ -8395,12 +8395,10 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/48973' ]
     tag: [ Graphics ]
     dirty:
-      - crc: 0x2613c2f9
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x2613C2F9
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
-      - crc: 0x9d2961cb
-        <<: *dirtyPlugin
-        itm: 4
   - name: 'FF_Real_Thirst, Cobl.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/15168' ]
     msg:
