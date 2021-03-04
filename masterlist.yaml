@@ -9112,11 +9112,9 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/22280' ]
     tag: [ Invent ]
     dirty:
-      - crc: 0x224f122
-        <<: *dirtyPlugin
-        itm: 3
-      - crc: 0x25b1445d
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x25B1445D
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 3
   - name: 'Daggerfall NPCs.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/29161' ]
