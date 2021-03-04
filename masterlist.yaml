@@ -9105,8 +9105,9 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/28511' ]
     req: [ 'Francesco''s Optional Leveled Quests.esp' ]
     dirty:
-      - crc: 0xabe6443d
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xABE6443D
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
   - name: 'GrayFoxOutfit.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22280' ]
