@@ -9419,12 +9419,20 @@ plugins:
       - name: 'Basic Personal Hygiene.esp'
         display: '[Basic Personal Hygiene](https://www.nexusmods.com/oblivion/mods/42038)'
   - name: 'Astralis.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/41311' ]
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/41973/'
+        name: 'Astralis - the dark awakening'
+      - link: 'https://www.nexusmods.com/oblivion/mods/41311/'
+        name: 'Astralis - das duestere Erwachen'
     dirty:
-      - crc: 0xfce9262
-        <<: *dirtyPlugin
-        itm: 23
+      - <<: *quickClean
+        crc: 0x295E4BC7
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 19
         udr: 2
+    clean:
+      - crc: 0x8DC12552
+        util: 'TES4Edit v4.0.3f'
   - name: 'AlchemistsCave-COBL.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/15474' ]
     dirty:
