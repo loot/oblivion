@@ -9436,9 +9436,10 @@ plugins:
   - name: 'AlchemistsCave-COBL.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/15474' ]
     dirty:
-      - crc: 0x5838b616
-        <<: *dirtyPlugin
-        itm: 43
+      - <<: *quickClean
+        crc: 0x5838B616
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 3
   - name: 'allinonebasement.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/29834' ]
     dirty:
