@@ -9383,8 +9383,9 @@ plugins:
   - name: 'Alastus.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/42282' ]
     dirty:
-      - crc: 0xf39e2389
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xF39E2389
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 9
   - name: 'Ald-Khull.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/38009' ]
