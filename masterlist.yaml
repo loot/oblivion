@@ -9503,11 +9503,12 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/11717' ]
     req: [ 'DLCShiveringIsles.esp' ]
   - name: 'AR.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/24726/' ]
     dirty:
-      - crc: 0xeb70503
-        <<: *dirtyPlugin
-        itm: 76
-        udr: 44
+      - <<: *quickClean
+        crc: 0xC90823FD
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 34
   - name: 'Arcane Services.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/30962' ]
     req:
