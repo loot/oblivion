@@ -9533,8 +9533,9 @@ plugins:
   - name: 'Armageddon.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/37487' ]
     dirty:
-      - crc: 0xe3e69608
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x75EB9753
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 62
         udr: 7
   - name: 'Artefacts of the Ancestors.esp'
