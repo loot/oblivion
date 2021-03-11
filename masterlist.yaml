@@ -9461,9 +9461,10 @@ plugins:
   - name: 'Amajor7 Imperial Furniture.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/4703' ]
     dirty:
-      - crc: 0x7acea2cc
-        <<: *dirtyPlugin
-        itm: 6
+      - <<: *quickClean
+        crc: 0x7ACEA2CC
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 8
   - name: 'Alternative Entrances.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/37848' ]
     dirty:
