@@ -9391,8 +9391,9 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/38009' ]
     inc: [ 'Village of Lily 2.0.esp' ]
     dirty:
-      - crc: 0x9585ac0c
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x9585AC0C
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
         udr: 1
   - name: 'adTreeHome.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/13237' ]
