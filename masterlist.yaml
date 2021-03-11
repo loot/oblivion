@@ -9440,24 +9440,24 @@ plugins:
         crc: 0x5838B616
         util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 3
-  - name: 'allinonebasement.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29834' ]
-    dirty:
-      - crc: 0xc5f94af4
-        <<: *dirtyPlugin
-        itm: 2
-  - name: 'allinonebasement_COBLnoCM.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29834' ]
-    dirty:
-      - crc: 0xa7c0e846
-        <<: *dirtyPlugin
-        itm: 2
   - name: 'allinonebasement(_COBLnoCM)?\.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29834' ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/29834/' ]
     msg:
       - <<: *useOnlyOneX
         subs: [ 'All In One Basement' ]
         condition: 'many("allinonebasement(_COBLnoCM)?\.esp")'
+  - name: 'allinonebasement.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0xC5F94AF4
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
+  - name: 'allinonebasement_COBLnoCM.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0xA7C0E846
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
   - name: 'Amajor7 Imperial Furniture.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/4703' ]
     dirty:
