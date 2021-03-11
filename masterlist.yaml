@@ -9468,9 +9468,10 @@ plugins:
   - name: 'Alternative Entrances.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/37848' ]
     dirty:
-      - crc: 0x717a46a2
-        <<: *dirtyPlugin
-        itm: 8
+      - <<: *quickClean
+        crc: 0x717A46A2
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 32
         udr: 2
   - name: 'Ancient Ruins - Ayleid Edition.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/31734' ]
