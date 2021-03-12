@@ -9547,15 +9547,14 @@ plugins:
         itm: 264
         udr: 3
   - name: 'Artefakte der Ahnen.esp'
-    url: [ 'https://www.elderscrollsportal.de/ressourcen/artefakte-der-ahnen.249' ]
-    msg:
-      - *needsCleaning
-      - type: say
-        content: 'Also see this plugin''s [special cleaning instructions](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide#Artefacts_of_the_Ancestors.esp_Special_Cleaning_Instructions)'
+    url:
+      - 'https://www.pagan-tes-mods.com/portal/index.php/oblivion/quests/120-artefakte-der-ahnen-v13-omod/'
+      - 'https://www.elderscrollsportal.de/ressourcen/artefakte-der-ahnen.249/'
     dirty:
-      - crc: 0x39cbae14
-        <<: *dirtyPlugin
-        itm: 86
+      - <<: *quickClean
+        crc: 0x1E1FA91D
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 16
         udr: 2
   - name: 'Artifacts.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/25309' ]
