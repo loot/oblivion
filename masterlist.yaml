@@ -9811,7 +9811,11 @@ plugins:
   - name: 'BossPhaitStygainHalls.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/38744' ]
     req: [ *OBSE ]
-    msg: [ *needsCleaning ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x99E53DE9
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 5
   - name: 'Bravil Docks.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/10126' ]
     inc:
