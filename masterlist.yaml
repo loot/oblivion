@@ -109,10 +109,6 @@ common:
   - &hotkeyBug
     type: say
     content: 'Don''t use hotkeys to change equipment sets. Game bug.'
-  - &useFCOMRealSwords
-    type: error
-    content: 'Delete. Use FCOM_RealSwords instead.'
-    condition: *FCOMCond
   - &useWithBashedPatch
     type: say
     content: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
@@ -518,6 +514,10 @@ common:
     <<: *useInstead
     subs: [ '[Unofficial Oblivion Patch](https://www.nexusmods.com/oblivion/mods/5296)' ]
     condition: 'not file("Unofficial Oblivion Patch.esp")'
+  - &useInsteadFCOMRealSwords
+    <<: *useInstead
+    subs: [ '**FCOM_RealSwords.esp**' ]
+    condition: *FCOMCond
 
   - &useOnlyOneX
     type: error
@@ -7865,49 +7865,49 @@ plugins:
   - name: 'RealSwords - Argonian( HI| LO)(-NPC)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/11208' ]
     msg:
-      - *useFCOMRealSwords
+      - *useInsteadFCOMRealSwords
       - *useWithBashedPatch
     tag: [ Invent ]
   - name: 'RealSwords - Bosmer( HI| LO)(-NPC)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/12365' ]
     msg:
-      - *useFCOMRealSwords
+      - *useInsteadFCOMRealSwords
       - *useWithBashedPatch
     tag: [ Invent ]
   - name: 'RealSwords - Breton( HI| LO)(-NPC)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/13370' ]
     msg:
-      - *useFCOMRealSwords
+      - *useInsteadFCOMRealSwords
       - *useWithBashedPatch
     tag: [ Invent ]
   - name: 'RealSwords - Dunmer( HI| LO)(-NPC)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/40063' ]
     msg:
-      - *useFCOMRealSwords
+      - *useInsteadFCOMRealSwords
       - *useWithBashedPatch
     tag: [ Invent ]
   - name: 'RealSwords - Khajiit( HI| LO)(-NPC)?( v1.3)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/11056' ]
     msg:
-      - *useFCOMRealSwords
+      - *useInsteadFCOMRealSwords
       - *useWithBashedPatch
     tag: [ Invent ]
   - name: 'RealSwords - Nord( HI| LO)(-NPC)?( SI|-SI)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/23150' ]
     msg:
-      - *useFCOMRealSwords
+      - *useInsteadFCOMRealSwords
       - *useWithBashedPatch
     tag: [ Invent ]
   - name: 'RealSwords - Orc( HI| LO)(-NPC)?( v1.0)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/11107' ]
     msg:
-      - *useFCOMRealSwords
+      - *useInsteadFCOMRealSwords
       - *useWithBashedPatch
     tag: [ Invent ]
   - name: 'RealSwords - Redguard( HI| LO)(-NPC)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/11698' ]
     msg:
-      - *useFCOMRealSwords
+      - *useInsteadFCOMRealSwords
       - *useWithBashedPatch
     tag: [ Invent ]
 
