@@ -9540,15 +9540,12 @@ plugins:
         udr: 7
   - name: 'Artefacts of the Ancestors.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/7079' ]
-    msg:
-      - *needsCleaning
-      - type: say
-        content: 'Also see this plugin''s [special cleaning instructions](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide#Artefacts_of_the_Ancestors.esp_Special_Cleaning_Instructions)'
     dirty:
-      - crc: 0xdb68939a
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xDB68939A
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 264
         udr: 3
-        itm: 255
   - name: 'Artefakte der Ahnen.esp'
     url: [ 'https://www.elderscrollsportal.de/ressourcen/artefakte-der-ahnen.249' ]
     msg:
