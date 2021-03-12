@@ -485,16 +485,6 @@ common:
     subs: [ '' ]
     condition: 'file("Bashed Patch.*\.esp")'
 
-  - &useBashTweakRecommended
-    type: say
-    content:
-      - lang: en
-        text: 'It''s recommended to use the following Bashed Patch tweak with this plugin. %1%'
-      - lang: de
-        text: 'Es wird empfohlen, den folgenden Bashed Patch Tweak mit diesem Plugin zu verwenden. %1%'
-    subs: [ '' ]
-    condition: 'file("Bashed Patch.*\.esp")'
-
   - &useInstead
     type: warn
     content:
@@ -2053,8 +2043,9 @@ plugins:
       - <<: *requiresX
         subs: [ '[Better Redguards](https://www.nexusmods.com/oblivion/mods/10753/) installed with its ESP deactivated.' ]
         condition: 'not file("Textures/characters/redguard/headredguard_n.dds") and not checksum("Textures/characters/redguard/headredguard_n.dds", 05EFE5E2)'
-      - <<: *useBashTweakRecommended
-        subs: [ 'Tweak Actors: Redguard FGTS Nuller' ]
+      - <<: *alsoUseX
+        subs: [ 'Bashed Patch: Tweak Actors -> Redguard FGTS Patcher' ]
+        condition: 'file("Bashed Patch.*\.esp")'
   # RBP NPCDiversity #
   - name: 'bgBalancingDVOptionalNPCDiversity, (Beautification|TNR Merge|Vanilla).esp'
     inc: [ 'bgBalancingDVOptionalBetterRedguards.esp' ]
@@ -16846,8 +16837,9 @@ plugins:
     msg: [ *useBashTweakInstead ]
   - name: 'Spell Ranks.esp'
     msg:
-      - <<: *useBashTweakRecommended
-        subs: [ 'Import Names: Rational_Names.csv' ]
+      - <<: *alsoUseX
+        subs: [ 'Bashed Patch: Import Names -> Rational_Names.csv' ]
+        condition: 'file("Bashed Patch.*\.esp")'
   - name: 'MagickOverlap.esp'
     req: [ *OBSEv14 ]
   - name: 'Poison Arrows.esp'
@@ -19903,8 +19895,9 @@ plugins:
   - name: 'Better Redguard v2.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/10753/' ]
     msg:
-      - <<: *useBashTweakRecommended
-        subs: [ 'Tweak Actors: Redguard FGTS Nuller' ]
+      - <<: *alsoUseX
+        subs: [ 'Bashed Patch: Tweak Actors -> Redguard FGTS Patcher' ]
+        condition: 'file("Bashed Patch.*\.esp")'
     tag:
       - Actors.ACBS
       - Actors.Stats
