@@ -88,10 +88,6 @@ common:
     type: say
     content: 'The Oblivion.esm master must be reassigned to "Nehrim.esm".'
     condition: *nehrimCond
-  - &useNehrimVer
-    type: error
-    content: 'Use the Nehrim version instead.'
-    condition: *nehrimCond
 
   - &dummyFileLoader
     type: say
@@ -608,6 +604,10 @@ common:
     <<: *useVersion
     subs: [ 'BattlehornCastle' ]
     condition: 'active("DLCBattlehornCastle.esp")'
+  - &useVersionNehrim
+    <<: *useVersion
+    subs: [ 'Nehrim' ]
+    condition: *nehrimCond
 
   - &useVersionNon
     type: error
@@ -6706,7 +6706,8 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/34613' ]
     msg:
       - *hotkeyBug
-      - *useNehrimVer
+      - *useVersionNehrim
+
   - name: 'Improved Hotkeys.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/18571' ]
     msg: [ *hotkeyBug ]
