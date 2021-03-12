@@ -9796,7 +9796,11 @@ plugins:
   - name: 'BossPhaitCrab.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/38965' ]
     req: [ *OBSEv20 ]
-    msg: [ *needsCleaning ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x26F8ED36
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 12
   - name: 'BossPhaitDismal.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/39191' ]
     req: [ *OBSEv20 ]
