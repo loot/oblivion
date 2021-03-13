@@ -5935,7 +5935,7 @@ plugins:
         content:
           - lang: en
             text: 'Only use if you do not have a mouse wheel.'
-          - lang: en
+          - lang: de
             text: 'Nur Nutzen wenn Sie kein Mausrad haben.'
   - name: 'EnableFreeLookOBSE.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/9499' ]
@@ -6559,6 +6559,8 @@ plugins:
         content:
           - lang: en
             text: 'Conflicts with Deadly Reflex. Minor Problems.'
+          - lang: de
+            text: 'Steht im Konflikt mit Deadly Reflex. Geringe Probleme '
         condition: 'file("Deadly Reflex.*\.esp")'
   - name: 'Walk to Oblivion.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/23690/' ]
@@ -8192,7 +8194,7 @@ plugins:
         content:
           - lang: en
             text: 'If using Mage Equipment Lite, load after SRT.'
-          - lang: en
+          - lang: de
             text: 'Wenn Mage Equipment Lite benutzt wird, dann nach SRT erst laden.'
     tag:
       - Delev
@@ -8218,7 +8220,7 @@ plugins:
         content:
           - lang: en
             text: 'If using Mage Equipment Lite, load after SRT.'
-          - lang: en
+          - lang: de
             text: 'Wenn Mage Equipment Lite benutzt wird, dann nach SRT erst laden.'
   - name: 'Francesco''s Mage Equipment.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/18875' ]
@@ -8433,6 +8435,8 @@ plugins:
       - type: say
         content:
           - lang: en
+            text: 'Requires: Skeleton nif replacer.'
+          - lang: de
             text: 'Benötigt: Skeleton nif Ersetzer.'
   - name: 'UFF Amazon Armor.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/13339' ]
@@ -8592,7 +8596,7 @@ plugins:
         content:
           - lang: en
             text: 'This mod adds the saddlebags to merchants only once. To ensure they are added to merchants who have been reset, also use "MD Saddlebags v3 alternative trader script".'
-          - lang: en
+          - lang: de
             text: 'Diese Mod fügt die Satteltaschen zu den Händlern nur einmal hinzu. Um sicherzustellen das diese auch den Händlern hinzugefügt werden die zurückgesetzt wurden, nutzen Sie auch "MD Saddlebags v3 alternative trader script".'
   - name: 'Horse Management.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/46021' ]
@@ -8669,6 +8673,8 @@ plugins:
       - type: say
         content:
           - lang: en
+            text: 'Has bugs. Use Loot version or a patch or ''FCOM_KDCircletsOOOOptimizedNPCEquip.esp'' if using FCOM.'
+          - lang: de
             text: 'Hat Fehler. Nutzen Sie Loot Version oder einen Patch oder ''FCOM_KDCircletsOOOOptimizedNPCEquip.esp'' wenn FCOM benutzt wird.'
   - name: 'ExnemRuneskulls(_ru)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/9412' ]
@@ -9079,6 +9085,8 @@ plugins:
         content:
           - lang: en
             text: 'Delete. ''Use TamrielTravellers4OOO.esp'' and ''FCOM_TamrielTravelers.esp'' instead.'
+          - lang: de
+            text: 'Löschen. ''Nutzen Sie TamrielTravellers4OOO.esp'' und ''FCOM_TamrielTravelers.esp'' stattdessen.'
         condition: *FCOMCond
     dirty:
       - <<: *quickClean
@@ -9092,6 +9100,8 @@ plugins:
         content:
           - lang: en
             text: 'Delete. ''Use TamrielTravellers4OOO.esp'' and ''FCOM_TamrielTravelers.esp'' instead.'
+          - lang: de
+            text: 'Löschen. ''Nutzen Sie TamrielTravellers4OOO.esp'' und ''FCOM_TamrielTravelers.esp'' stattdessen.'
         condition: *FCOMCond
     dirty:
       - <<: *quickClean
@@ -9140,6 +9150,8 @@ plugins:
         content:
           - lang: en
             text: 'Not overhaul mod compatible.'
+          - lang: de
+            text: 'Nicht Überhol-Mod kompatibel.'
   - name: 'ShiveringIsleTravellers.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/4387' ]
     req: [ 'DLCShiveringIsles.esp' ]
@@ -9148,6 +9160,8 @@ plugins:
         content:
           - lang: en
             text: 'Use of ''TamrielTravellersItemsNPC.esp'', ''TamrielTravellersItemsUnscaled.esp'', or ''TamrielTravellersItemsVendors.esp'' will remove SI items for sale.'
+          - lang: de
+            text: 'Das Nutzen von ''TamrielTravellersItemsNPC.esp'', ''TamrielTravellersItemsUnscaled.esp'', oder ''TamrielTravellersItemsVendors.esp'' wird SI Gegenstände vom Verkauf entfernen.'
         condition: 'file("TamrielTravellersItemsNPC.esp") or file("TamrielTravellersItemsUnscaled.esp") or file("TamrielTravellersItemsVendors.esp")'
     dirty:
       - <<: *quickClean
@@ -9203,6 +9217,8 @@ plugins:
         content:
           - lang: en
             text: 'Recommend avoid using TNR.'
+          - lang: de
+            text: 'Empfohlen TNR nicht zu nutzen.'
   - name: 'TIE In - FCOM Convergence.esp'
     url:
       - 'https://www.nexusmods.com/oblivion/mods/18071'
@@ -9271,6 +9287,8 @@ plugins:
         content:
           - lang: en
             text: 'Use ''BladesSmithyOOO.esp'' instead.'
+          - lang: de
+            text: 'Nutzen Sie stattdessen ''BladesSmithyOOO.esp''.'
         condition: *OOOCond
   - name: 'OOO-Lockfix.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/12847' ]
@@ -9279,6 +9297,8 @@ plugins:
         content:
           - lang: en
             text: 'Use the "Set LapMinLock to 0" console command instead.'
+          - lang: de
+            text: 'Nutzen Sie stattdessen den "Set LapMinLock to 0" Konsolenbefehl.'
   - name: 'TGND2 OOO Replacer.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/41928' ]
     tag:
@@ -9296,6 +9316,8 @@ plugins:
         content:
           - lang: en
             text: 'Consider Upgrading to Tamrielic Ingredients.'
+          - lang: de
+            text: 'Erwägen Sie zu Tamrielic Ingredients upzugraden.'
   - name: 'C&C - The Blackwood Company - OOO.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17448' ]
     tag:
@@ -9309,6 +9331,8 @@ plugins:
         content:
           - lang: en
             text: 'For FCOM only, do not use with OOO/MMM or Eve_Stockequipmentreplacer.esp.'
+          - lang: de
+            text: 'Nur Für FCOM, Nit mit OOO/MMM oder Eve_Stockequipmentreplacer.esp nutzen.'
     tag:
       - Graphics
       - NoMerge
@@ -9319,6 +9343,8 @@ plugins:
         content:
           - lang: en
             text: 'For OOO, do not use with MMM/FCOM or EVE_stockequipmentreplacer.esp.'
+          - lang: de
+            text: 'Nur Für OOO, Nicht mit MMM/FCOM oder Eve_Stockequipmentreplacer.esp nutzen.'
     tag:
       - Graphics
       - NoMerge
@@ -9329,6 +9355,8 @@ plugins:
         content:
           - lang: en
             text: 'For MMM, do not use with OOO/FCOM or EVE_stockequipmentreplacer.esp'
+          - lang: de
+            text: 'Nur Für MMM, Nicht mit OOO/FCOM oder Eve_Stockequipmentreplacer.esp nutzen.'
     tag:
       - Graphics
       - NoMerge
@@ -9344,6 +9372,8 @@ plugins:
         content:
           - lang: en
             text: 'Use Diverse Guard Armor.esp instead for MMM/MMMForFrans (merged in MMMforOOO) or use Diverse Guard Unity for FCOM.'
+          - lang: de
+            text: 'Nutze stattdessen Diverse Guard Armor.esp für MMM/MMMForFrans (in MMMforOOO fusioniert) oder nutzen Sie Diverse Guard Unity für FCOM.'
         condition: 'file("Mart''s Monster Mod for Fran.esp") or file("Mart''s Monster Mod.esm") or file("Mart''s Monster Mod for OOO.esm") or file("FCOM_Convergence.esm")'
   - name: 'Adventurers_1.0.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/4025' ]
@@ -9352,6 +9382,8 @@ plugins:
         content:
           - lang: en
             text: 'Probably incompatible with every other overhaul out there - although with Wrye Bash *should* be able to be made to work with MMM.'
+          - lang: de
+            text: 'Wahrscheinlich inkompatibel mit jeder anderen Überhol-Mod die es gibt - obwohl Wrye Bash das fusionieren können *sollte* um mit MMM zu funktionieren.'
   - name: 'un-leveled-shops.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/3507' ]
     tag:
@@ -9377,6 +9409,8 @@ plugins:
         content:
           - lang: en
             text: 'Use ''CNRP Bruma4OOO.esp'' instead.'
+          - lang: de
+            text: 'Nutzen Sie stattdessen ''CNRP Bruma4OOO.esp''.'
         condition: 'active("FCOM_Convergence.esm") or active("Oscuro''s_Oblivion_Overhaul.esm")'
     tag: [ Invent ]
   - name: 'CNRP Bruma4OOO.esp'
@@ -9389,6 +9423,8 @@ plugins:
         content:
           - lang: en
             text: 'Use ''CNRP Chorrol4OOO.esp'' instead.'
+          - lang: de
+            text: 'Nutzen Sie stattdessen ''CNRP Chorrol4OOO.esp''.'
         condition: 'active("FCOM_Convergence.esm") or active("Oscuro''s_Oblivion_Overhaul.esm")'
     tag: [ Invent ]
   - name: 'CNRP Chorrol4OOO.esp'
@@ -9401,6 +9437,8 @@ plugins:
         content:
           - lang: en
             text: 'Use ''CNPR DB for OOO.esp'' instead.'
+          - lang: de
+            text: 'Nutzen Sie stattdessen ''CNPR DB for OOO.esp''.'
         condition: 'active("FCOM_Convergence.esm") or active("Oscuro''s_Oblivion_Overhaul.esm")'
     tag:
       - Graphics
@@ -9412,6 +9450,8 @@ plugins:
         content:
           - lang: en
             text: 'Use ''CNRP Cheydinhall4OOO.esp'' instead.'
+          - lang: de
+            text: 'Nutzen Sie stattdessen ''CNRP Cheydinhall4OOO.esp''.'
         condition: 'active("FCOM_Convergence.esm") or active("Oscuro''s_Oblivion_Overhaul.esm")'
     tag: [ Invent ]
   - name: 'CNRP Cheydinhal4OOO.esp'
@@ -9427,6 +9467,8 @@ plugins:
         content:
           - lang: en
             text: 'Use ''CNRP FightersGuild4OOO.esp'' instead.'
+          - lang: de
+            text: 'Nutzen Sie stattdessen ''CNRP FightersGuild4OOO.esp''.'
         condition: 'active("FCOM_Convergence.esm") or active("Oscuro''s_Oblivion_Overhaul.esm")'
     tag: [ Invent ]
   - name: 'CNRP FightersGuild4OOO.esp'
@@ -9446,7 +9488,9 @@ plugins:
       - type: say
         content:
           - lang: en
-            text: 'If usng SM Plugin Refurbish VL, use DBSQR - Vile Lair SMPR.esp or DBSQR - Vile Lair SMPR Full.esp as well.'
+            text: 'If using SM Plugin Refurbish VL, use DBSQR - Vile Lair SMPR.esp or DBSQR - Vile Lair SMPR Full.esp as well.'
+          - lang: de
+            text: 'Wenn SM Plugin Refurbish VL genutzt wird, nutzen Sie auch DBSQR - Vile Lair SMPR.esp oder DBSQR - Vile Lair SMPR Full.esp.'
   - name: 'Fran''s Ore Refiner - SI only.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/28511' ]
     msg:
@@ -9454,6 +9498,8 @@ plugins:
         content:
           - lang: en
             text: 'Use only if you have SI.'
+          - lang: de
+            text: 'Nur nutzen wenn Sie SI haben.'
   - name: 'Fran''s Ore Refiner.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/28511' ]
     req: [ 'Francesco''s Optional Leveled Quests.esp' ]
@@ -9480,11 +9526,15 @@ plugins:
         content:
           - lang: en
             text: 'Has minor incompatibility with OOO - changes Meridia quest & script back to level 10'
+          - lang: de
+            text: 'Hat geringfügige Inkompatibilitäten mit OOO - ändert Meridia Quest & Skript zurück zu Level 10'
         condition: *OOOCond
       - type: say
         content:
           - lang: en
             text: 'Only use one IABane Oils X.esp'
+          - lang: de
+            text: 'Nur ein IABane Oils X.esp nutzen'
     tag: [ Factions ]
   - name: 'Weapon Expansion Pack for Oblivion Nthusiasts.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/35560' ]
@@ -9548,6 +9598,8 @@ plugins:
         content:
           - lang: en
             text: 'Rename to Halcyon Island.esp if using the file ''Better Cities - Halcyon Island.esp''.'
+          - lang: de
+            text: 'Benennen Sie es zu Halcyon Island.esp um wenn Sie die Datei ''Better Cities - Halcyon Island.esp'' nutzen.'
         condition: 'file("Better Cities - Halcyon Island.esp")'
   - name: 'KnightlyArmory.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/19228' ]
@@ -9570,14 +9622,18 @@ plugins:
       - type: say
         content:
           - lang: en
-            text: 'Check you''re using v1.3 or later.'
+            text: 'Check if you''re using v1.3 or later.'
+          - lang: de
+            text: 'Überprüfen Sie ob Sie v1.3 oder neuer nutzen.'
   - name: 'cyrodiil transportation network wz.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/4520' ]
     msg:
       - type: say
         content:
           - lang: en
-            text: 'Check you''re using v1.3 or later.'
+            text: 'Check if you''re using v1.3 or later.'
+          - lang: de
+            text: 'Überprüfen Sie ob Sie v1.3 oder neuer nutzen.'
   - name: 'cyrodiil transportation network 1.3 wz.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/4520' ]
     dirty:
@@ -9598,6 +9654,8 @@ plugins:
         content:
           - lang: en
             text: 'Use .ini tweak or Wrye Bash Bashed Patch tweak instead where possible.'
+          - lang: de
+            text: 'Nutzen Sie stattdessen den .ini-Tweak oder Wrye Bash Bashed Patch Tweak wo möglich.'
     dirty:
       - <<: *quickClean
         crc: 0x1BDBE6E9
@@ -9610,6 +9668,8 @@ plugins:
         content:
           - lang: en
             text: 'Requires a patch if used with UL Imperial Isle.'
+          - lang: de
+            text: 'Benötigt einen Patch wenn es mit UL Imperial Isle genutzt wird.'
     dirty:
       - <<: *quickClean
         crc: 0xDF00178C
@@ -9665,6 +9725,8 @@ plugins:
         content:
           - lang: en
             text: 'May require Wrye Bash''s "Remove World Orphans" function run on it.'
+          - lang: de
+            text: 'Kann Ausführung von Wrye Bash''s "Remove World Orphans" Funktion darauf benötigen.'
     dirty:
       - <<: *quickClean
         crc: 0xEE1BF7BC
@@ -9712,6 +9774,8 @@ plugins:
         content:
           - lang: en
             text: 'Newest version has the same name as the original. Check that you''re using at least v1.5.2.'
+          - lang: de
+            text: 'Neueste Version hat den selben Namen wie das Original. Überprüfen Sie das sie mindestens v1.5.2 nutzen.'
   - name: 'Aetheric Cuteblade.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/41246' ]
     msg: [ *corrupt ]
@@ -9737,12 +9801,16 @@ plugins:
       - type: say
         content:
           - lang: en
-            text: 'Incompatible with: TOTF.esp Disable on time of game. Enable only after complete quests AHP.esp'
+            text: 'Incompatible with: TOTF.esp Disable on time of game. Enable only after AHP.esp quests have been completed'
+          - lang: de
+            text: 'Inkompatibel mit: TOTF.esp Deaktivieren Sie time of game. Nur Aktivieren nachdem AHP.esp Quests abgeschlossen wurden'
         condition: 'file("TOTF.esp")'
       - type: say
         content:
           - lang: en
-            text: 'Incompatible with: See You Sleep. Disable on time of game. Enable only after complete quests AHP.esp'
+            text: 'Incompatible with: See You Sleep. Disable on time of game. Enable only after AHP.esp quests have been completed'
+          - lang: de
+            text: 'Inkompatibel mit: See You Sleep. Deaktivieren Sie time of game. Nur Aktivieren nachdem AHP.esp Quests abgeschlossen wurden'
     tag: [ Invent ]
     dirty:
       - <<: *quickClean
@@ -9756,6 +9824,8 @@ plugins:
         content:
           - lang: en
             text: 'Use this instead ''Akaviri Imports.esp'' for FCOM. Deactivate or delete ''Akaviri Imports.esp'''
+          - lang: de
+            text: 'Nutzen Sie stattdessen ''Akaviri Imports.esp'' für FCOM. Deaktivieren oder entfernen Sie ''Akaviri Imports.esp'''
         condition: 'file("Akaviri Imports.esp")'
   - name: 'Alastus.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/42282' ]
@@ -10038,6 +10108,8 @@ plugins:
         content:
           - lang: en
             text: 'German Version'
+          - lang: de
+            text: 'Deutsche Version'
   - name: 'Bandit Hideouts.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/11260' ]
     inc: [ 'CastleWestWeald.esp' ]
@@ -10056,6 +10128,8 @@ plugins:
         content:
           - lang: en
             text: 'Incompatible with: anything that changes Legion Armor.'
+          - lang: de
+            text: 'Inkompatibel mit: jeglichem das Legion Armor abändert.'
     dirty:
       - crc: 0xba133af8
         <<: *dirtyPlugin
@@ -10125,6 +10199,8 @@ plugins:
         content:
           - lang: en
             text: 'Use AbandonedHouse Better Cities instead.'
+          - lang: de
+            text: 'Nutzen Sie stattdessen AbandonedHouse Better Cities.'
         condition: 'file("Better Cities Resources.esm")'
   - name: 'Better Benirus Manor.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/18054' ]
@@ -10144,6 +10220,8 @@ plugins:
         content:
           - lang: en
             text: 'Do not use if using ElsweyrAnequina.esp.'
+          - lang: de
+            text: 'Nicht nutzen wenn ElsweyrAnequina.esp genutzt wird.'
         condition: 'active("ElsweyrAnequina.esp")'
   - name: 'Black ocean.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22044' ]
@@ -10153,6 +10231,8 @@ plugins:
         content:
           - lang: en
             text: 'Requires: Knights of the Nine, unless using the patch available from [here](http://blackocean.ucoz.ru).'
+          - lang: de
+            text: 'Benötigt: Knights of the Nine, außer man nutzt den Patch der [hier](http://blackocean.ucoz.ru) verfügbar ist.'
     dirty:
       - crc: 0xab24aeb2
         <<: *dirtyPlugin
@@ -10169,6 +10249,8 @@ plugins:
         content:
           - lang: en
             text: 'Requires: Screen Effects.'
+          - lang: de
+            text: 'Benötigt: Screen Effects.'
   - name: 'BHC_Expanded.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/27029/' ]
     group: *earlyLoadersGroup
@@ -10239,6 +10321,8 @@ plugins:
         content:
           - lang: en
             text: 'Requires: Oblivion XP'
+          - lang: de
+            text: 'Benötigt: Oblivion XP'
   - name: 'BuryCorpse.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/43134' ]
     req: [ *OBSEv20 ]
@@ -10273,6 +10357,8 @@ plugins:
         content:
           - lang: en
             text: 'May require Wrye Bash''s "Remove World Orphans" function run on it.'
+          - lang: de
+            text: 'Kann Ausführung von Wrye Bash''s "Remove World Orphans" Funktion darauf benötigen.'
     dirty:
       - crc: 0x99857fbf
         <<: *dirtyPlugin
@@ -10347,6 +10433,8 @@ plugins:
         content:
           - lang: en
             text: 'Has critical flaw affecting numerous mods. Remove immediately. Recommend replacing with Insanity''s Pet Shop for same functionality.'
+          - lang: de
+            text: 'Hat kritischen Fehler die zahlreiche Mods betrifft. Umgehend zu Löschen. Empfohlen durch Insanity''s Pet Shop zu ersetzen für die selbe Funktionalität.'
   - name: 'cloudcity mod V1.1.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/8722' ]
     dirty:
@@ -10374,6 +10462,8 @@ plugins:
         content:
           - lang: en
             text: 'Silenced character fix for The Contented Prisoner V 2.'
+          - lang: de
+            text: 'Stummer Charakter Fix für The Contented Prisoner V 2.'
   - name: 'Clintmichs Beautiful Imperial City Arboretum.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/30114' ]
     msg:
@@ -10381,6 +10471,8 @@ plugins:
         content:
           - lang: en
             text: 'Probably incompatible with Better Cities IC Arboretum and similar.'
+          - lang: de
+            text: 'Wahrscheinlich inkompatibel mit Better Cities IC Arboretum und ähnlichem.'
         condition: 'file("Better Cities Resources.esm")'
   - name: 'Clintmichs Beautiful Imperial City Arboretum v1.1.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/30114' ]
@@ -10389,6 +10481,8 @@ plugins:
         content:
           - lang: en
             text: 'Probably incompatible with Better Cities IC Arboretum and similar.'
+          - lang: de
+            text: 'Wahrscheinlich inkompatibel mit Better Cities IC Arboretum und ähnlichem.'
         condition: 'file("Better Cities Resources.esm")'
   - name: 'Clintmichs Beautiful Arcane University.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/30119' ]
@@ -10397,6 +10491,8 @@ plugins:
         content:
           - lang: en
             text: 'Probably incompatible with Better Cities.'
+          - lang: de
+            text: 'Wahrscheinlich inkompatibel mit Better Cities.'
         condition: 'file("Better Cities Resources.esm")'
   - name: 'The Beautiful Market District.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/30012' ]
@@ -10405,6 +10501,8 @@ plugins:
         content:
           - lang: en
             text: 'Probably incompatible with Better Cities.'
+          - lang: de
+            text: 'Wahrscheinlich inkompatibel mit Better Cities.'
         condition: 'file("Better Cities Resources.esm")'
   - name: 'Clintmichs Beautiful Market District v1.3.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/30012' ]
@@ -10413,6 +10511,8 @@ plugins:
         content:
           - lang: en
             text: 'Probably incompatible with Better Cities.'
+          - lang: de
+            text: 'Wahrscheinlich inkompatibel mit Better Cities.'
         condition: 'file("Better Cities Resources.esm")'
   - name: 'Clintmichs Beautiful Elven Gardens District v1.0.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/30088' ]
@@ -10422,6 +10522,8 @@ plugins:
         content:
           - lang: en
             text: 'Probably incompatible with Better Cities.'
+          - lang: de
+            text: 'Wahrscheinlich inkompatibel mit Better Cities.'
         condition: 'file("Better Cities Resources.esm")'
   - name: 'Clintmichs Beautiful Elven Gardens District v1.1.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/30088' ]
@@ -10430,6 +10532,8 @@ plugins:
         content:
           - lang: en
             text: 'Probably incompatible with Better Cities.'
+          - lang: de
+            text: 'Wahrscheinlich inkompatibel mit Better Cities.'
         condition: 'file("Better Cities Resources.esm")'
   - name: 'Clintmichs Improved Prison District v1.1.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/30136' ]
@@ -10438,6 +10542,8 @@ plugins:
         content:
           - lang: en
             text: 'Probably incompatible with Better Cities.'
+          - lang: de
+            text: 'Wahrscheinlich inkompatibel mit Better Cities.'
         condition: 'file("Better Cities Resources.esm")'
   - name: 'Clintmichs Beautiful Talos Plaza District.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/30168' ]
@@ -10446,6 +10552,8 @@ plugins:
         content:
           - lang: en
             text: 'Probably incompatible with Better Cities.'
+          - lang: de
+            text: 'Wahrscheinlich inkompatibel mit Better Cities.'
         condition: 'file("Better Cities Resources.esm")'
   - name: 'COR-Episode1 Secret of Enourk.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/6875' ]
@@ -10488,6 +10596,8 @@ plugins:
         content:
           - lang: en
             text: 'Requires: Tamriel Heightmaps, Tamriel Landscape Pack, Tamriel Resource Pack, Mr_Siikas Highrock Resources'
+          - lang: de
+            text: 'Benötigt: Tamriel Heightmaps, Tamriel Landscape Pack, Tamriel Resource Pack, Mr_Siikas Highrock Resources'
     dirty:
       - crc: 0x9fffaa26
         <<: *dirtyPlugin
@@ -10530,7 +10640,9 @@ plugins:
       - type: say
         content:
           - lang: en
-            text: 'it''s replace (DC) Sutch Reborn.esp'
+            text: 'it replaces (DC) Sutch Reborn.esp'
+          - lang: de
+            text: 'Es ersetzt (DC) Sutch Reborn.esp'
   - name: 'Deepwood Adventures.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/38017' ]
     req: [ *SilentVoice ]
@@ -10538,7 +10650,9 @@ plugins:
       - type: say
         content:
           - lang: en
-            text: 'Very dirty - Compile All Scripts was used on the mod. Either use the CS or Tes4Edit to clean or use Wrye Bash''s Decompile All command.'
+            text: 'Very dirty - Compile All Scripts was used on the mod. Either use CS or Tes4Edit to clean or use Wrye Bash''s Decompile All command.'
+          - lang: de
+            text: 'Sehr unsauber - Compile All Scripts wurde auf dieser Mod genutzt. Entweder nutzen Sie CS oder Tes4Edit zum Säubern oder Sie nutzen Wrye Bash''s Decompile All Befehl.'
     dirty:
       - crc: 0xad5233bc
         <<: *dirtyPlugin
@@ -10596,6 +10710,8 @@ plugins:
         content:
           - lang: en
             text: 'Be sure to update to version 2.0. Version 1.x could break the Dark Brotherhood quest line.'
+          - lang: de
+            text: 'Stellen Sie sicher zu Version 2.0 zu updaten. Version 1.x kann die Dark Brotherhood Questreihe brechen.'
   - name: 'DSPirateIsleBeta.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/6886' ]
     msg: [ *obsolete ]
@@ -10679,6 +10795,8 @@ plugins:
         content:
           - lang: en
             text: 'Do not use. This mod is confirmed to break a number of vanilla quests. Delete immediately.'
+          - lang: de
+            text: 'Nicht nutzen. Diese Mod bricht nachgewiesenermaßen eine gewisse Anzahl von Original-Quests zu brechen. Unverzüglich entfernen.'
   - name: 'Forgrum''s Travelogue v2.0.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/3842' ]
     msg:
@@ -10686,6 +10804,8 @@ plugins:
         content:
           - lang: en
             text: 'Do not use. This mod is confirmed to break a number of vanilla quests. Delete immediately.'
+          - lang: de
+            text: 'Nicht nutzen. Diese Mod bricht nachgewiesenermaßen eine gewisse Anzahl von Original-Quests zu brechen. Unverzüglich entfernen.'
   - name: 'Forgrum''s Travelogue v2.1 Beta.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/5711' ]
     msg:
@@ -10693,17 +10813,23 @@ plugins:
         content:
           - lang: en
             text: 'French, no English translation appears to be available.'
+          - lang: de
+            text: 'Französisch, keine Englische Übersetzung scheint verfügbar zu sein.'
       - type: warn
         content:
           - lang: en
             text: 'Do not use. This mod is confirmed to break a number of vanilla quests. Delete immediately.'
+          - lang: de
+            text: 'Nicht nutzen. Diese Mod bricht nachgewiesenermaßen eine gewisse Anzahl von Original-Quests zu brechen. Unverzüglich entfernen.'
   - name: 'FuseSnailRacing.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/4596' ]
     msg:
       - type: say
         content:
           - lang: en
-            text: 'If using UL:Imperial Isle use the patch ''Fuses Snail Racing Unique Landscapes Imperial Isle patch.esp''.'
+            text: 'If using UL:Imperial Isle, use the patch ''Fuses Snail Racing Unique Landscapes Imperial Isle patch.esp''.'
+          - lang: de
+            text: 'Wenn UL:Imperial Isle genutzt wird, nutzen Sie auch den Patch ''Fuses Snail Racing Unique Landscapes Imperial Isle patch.esp''.'
   - name: 'GatewayRealm.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/33984' ]
     dirty:
@@ -10849,6 +10975,8 @@ plugins:
         content:
           - lang: en
             text: 'Requires: Tamriel Heightmaps, Tamriel Landscape Pack, Tamriel Resource Pack, Mr_Siikas Highrock Resources'
+          - lang: de
+            text: 'Benötigt: Tamriel Heightmaps, Tamriel Landscape Pack, Tamriel Resource Pack, Mr_Siikas Highrock Resources'
     dirty:
       - crc: 0xd1e9f459
         <<: *dirtyPlugin
@@ -10982,6 +11110,8 @@ plugins:
         content:
           - lang: en
             text: 'If not using WB you may have to move this above some item mods (thereby losing some changes from this) or lose some items from those mods.'
+          - lang: de
+            text: 'Wenn WB nicht genutzt, Muss dieses womöglich vor anderen Gegenstände-Mods platziert werden (dadurch ein paar Änderungen davon verlierend) oder einige Gegenstände von diesen Mods verlieren.'
   - name: 'Dirtier Waterfront.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/12183' ]
     dirty:
@@ -10996,6 +11126,8 @@ plugins:
         content:
           - lang: en
             text: 'May conflict with many mods that alter the IC palace.'
+          - lang: de
+            text: 'Kann im Konflikt stehen mit vielen Mods die den IC Palast abändern.'
   - name: 'Improved dungeons.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/29378' ]
     msg:
@@ -11003,6 +11135,8 @@ plugins:
         content:
           - lang: en
             text: 'Update to latest version, called "The Lost Treasures Of Cyrodiil".'
+          - lang: de
+            text: 'Updaten Sie zur neuesten Version, genannt "The Lost Treasures Of Cyrodiil".'
   - name: 'Insomonias Ruins.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/38426' ]
     dirty:
@@ -11179,6 +11313,8 @@ plugins:
         content:
           - lang: en
             text: 'Requires: USV, HGEC or Exnem body.'
+          - lang: de
+            text: 'Benötigt: USV, HGEC ode Exnem body.'
   - name: 'Legion Faction Mod.esp'
     tag: [ Relations ]
     dirty:
@@ -11229,6 +11365,8 @@ plugins:
         content:
           - lang: en
             text: 'Incompatible with Better Cities, and probably other city altering mods.'
+          - lang: de
+            text: 'Inkompatibel mit Better Cities, und vermutlich anderen Städte-verändernden Mods.'
   - name: 'LostSwordOfTheAylied.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/20184' ]
     dirty:
@@ -11247,6 +11385,8 @@ plugins:
         content:
           - lang: en
             text: 'Consider upgrading to Werewolf - Legends of the North.'
+          - lang: de
+            text: 'Erwägen Sie zu Werewolf - Legends of the North upzugraden.'
   - name: 'Lycanthrope 2.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/23597' ]
     msg:
@@ -11254,6 +11394,8 @@ plugins:
         content:
           - lang: en
             text: 'Consider upgrading to Werewolf - Legends of the North.'
+          - lang: de
+            text: 'Erwägen Sie zu Werewolf - Legends of the North upzugraden.'
   - name: 'Lynges_Dark_Brotherhood_Assassins-8654.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/8654' ]
     dirty:
@@ -11280,6 +11422,8 @@ plugins:
         content:
           - lang: en
             text: 'Use ''MadMagesTower-CloudtopMountains patch.esp'' compatibility patch when using Unique Landscapes Cloudtop Mountain.'
+          - lang: de
+            text: 'Nutzen Sie ''MadMagesTower-CloudtopMountains patch.esp'' Kompatibilitäts-Patch wenn Unique Landscapes Cloudtop Mountain genutzt wird.'
   - name: 'MadMagesTowerBASIC.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/20993' ]
     inc: [ 'MadMagesTower.esp' ]
@@ -11288,6 +11432,8 @@ plugins:
         content:
           - lang: en
             text: 'Use ''MadMagesTowerBASIC-CloudtopMountains patch.esp'' compatibility patch when using Unique Landscapes Cloudtop Mountain.'
+          - lang: de
+            text: 'Nutzen Sie ''MadMagesTowerBASIC-CloudtopMountains patch.esp'' Kompatibilitäts-Patch wenn Unique Landscapes Cloudtop Mountain genutzt wird.'
   - name: 'Mad Mike''s Crypts of Cyrodiil.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/15060' ]
     dirty:
@@ -11325,6 +11471,8 @@ plugins:
         content:
           - lang: en
             text: 'Use ''The Imperial Water - BETTER CITIES.esp'' instead.'
+          - lang: de
+            text: 'Nutzen Sie stattdessen ''The Imperial Water - BETTER CITIES.esp''.'
         condition: 'file("Better Cities Resources.esm")'
   - name: 'The Imperial Water - BETTER CITIES.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/25804' ]
@@ -11361,6 +11509,8 @@ plugins:
         content:
           - lang: en
             text: 'Incompatible with: Anything that modifies the Chorrol cathedral interior or exterior.'
+          - lang: de
+            text: 'Inkompatibel mit: Jeglichem das die das Äußere oder Innere der Chorrol Kathedrale modifiziert.'
   - name: 'Malevolent.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17781' ]
     msg:
@@ -11368,6 +11518,8 @@ plugins:
         content:
           - lang: en
             text: 'Recommended to use after you complete the main quest of Oblivion'
+          - lang: de
+            text: 'Nutzung erst empfohlen nachdem Sie die Oblivion Hauptquest abgeschlossen haben.'
     dirty:
       - crc: 0x969eedb3
         <<: *dirtyPlugin
@@ -11395,8 +11547,10 @@ plugins:
         content:
           - lang: en
             text: 'Needs compatibility patch when used with Unique Landscapes Bravil Barrowfields.'
+          - lang: de
+            text: 'Brauch Kompatibilitäts-Patch wenn es mit Unique Landscapes Bravil Barrowfields genutzt wird.'
       - <<: *wildEdits
-        subs: [ 'Requires manual [TES4Edit cleaning](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide) of a  deleted static record for 0008060C and one wild edit in CELL 0002FF46 (Bravil Skooma Den)' ]
+        subs: [ 'Requires manual [TES4Edit cleaning](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide) of a deleted static record for 0008060C and one wild edit in CELL 0002FF46 (Bravil Skooma Den)' ]
     dirty:
       - crc: 0x47777b7d
         <<: *dirtyPlugin
@@ -11444,6 +11598,8 @@ plugins:
         content:
           - lang: en
             text: 'Use this patch or "MTCVillages-LakeRumarePatch.esp", but not both.'
+          - lang: de
+            text: 'Nutzen Sie diesen Patch oder "MTCVillages-LakeRumarePatch.esp", aber nicht beides gleichzeitig.'
         condition: 'file("MTCVillages-LakeRumarePatch.esp")'
   - name: 'Museum.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/7593' ]
@@ -11478,6 +11634,8 @@ plugins:
         content:
           - lang: en
             text: 'May cause NPCs to generate the message "The ghosts mouth moves but you cannot hear what he says."'
+          - lang: de
+            text: 'Kann verursachen das NPCs die Nachricht generieren "The ghosts mouth moves but you cannot hear what he says."'
   - name: 'Nanaelas Heartbreak.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/13687' ]
     dirty:
@@ -11571,6 +11729,8 @@ plugins:
         content:
           - lang: en
             text: 'Requires: The original Path of the Skull Bearer mod''s files and requirements.'
+          - lang: de
+            text: 'Benötigt: Die original Path of the Skull Bearer mod''s Dateien und dessen Abhängigkeiten.'
     dirty:
       - crc: 0x376285c0
         <<: *dirtyPlugin
@@ -11583,6 +11743,8 @@ plugins:
         content:
           - lang: en
             text: 'Use the Better Cities version instead.'
+          - lang: de
+            text: 'Nutzen Sie stattdessen die Better Cities Version.'
         condition: 'file("Better Cities Resources.esm")'
   - name: 'PearlFarm.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/38032' ]
@@ -11607,6 +11769,8 @@ plugins:
         content:
           - lang: en
             text: 'Requires: Jojjo''s Lich King''s armour, shield, and Frostmourne sword. (<http://www.nexusmods.com/oblivion/mods/17032>)'
+          - lang: de
+            text: 'Benötigt: Jojjo''s Lich King''s armour, shield, und Frostmourne sword. (<http://www.nexusmods.com/oblivion/mods/17032>)'
     dirty:
       - crc: 0xd7023a76
         <<: *dirtyPlugin
@@ -11688,6 +11852,8 @@ plugins:
         content:
           - lang: en
             text: 'Incompatible with: most Weye-related mods.'
+          - lang: de
+            text: 'Inkompatibel mit: Meisten Weye-bezogenen Mods.'
     dirty:
       - crc: 0x4d8fa617
         <<: *dirtyPlugin
@@ -11699,10 +11865,14 @@ plugins:
         content:
           - lang: en
             text: 'Patch for FuseSnailRacing.esp'
+          - lang: de
+            text: 'Patch für FuseSnailRacing.esp'
       - type: say
         content:
           - lang: en
-            text: 'If loaded after OOO.esp this cause OOO''s lockbash feature to fail. To fix this simply load RL-LR before OOO.esp.'
+            text: 'Loading this after OOO.esp causes OOO''s lockbash feature to fail. To fix this simply load RL-LR before OOO.esp.'
+          - lang: de
+            text: 'Wenn es nach OOO.esp geladen wird führt dies dazu das OOO''s Schloss-Einschlag Funktion fehlschlägt. Zum Beheben einfach RL-LR vor OOO.esp laden.'
         condition: *OOOCond
   - name: 'MTCVillages-LakeRumarePatch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/42098' ]
@@ -11739,10 +11909,14 @@ plugins:
         content:
           - lang: en
             text: 'Has a small landscape conflict with Unique Landcapes: Chorrol Hinterland.'
+          - lang: de
+            text: 'Hat einen kleinen Konflikt bezüglich Landschaften mit Unique Landcapes: Chorrol Hinterland.'
       - type: warn
         content:
           - lang: en
             text: 'Requires manual cleaning.'
+          - lang: de
+            text: 'Benötigt manuelle Säuberung.'
     tag: [ NpcFaces ]
     dirty:
       - crc: 0x9654b520
@@ -11755,7 +11929,9 @@ plugins:
       - type: say
         content:
           - lang: en
-            text: 'Very dirty - Compile All Scripts was used on the mod. Either use the CS or Tes4Edit to clean or use Wrye Bash''s Decompile All command.'
+            text: 'Very dirty - Compile All Scripts was used on the mod. Either use CS or Tes4Edit to clean or use Wrye Bash''s Decompile All command.'
+          - lang: de
+            text: 'Sehr unsauber - Compile All Scripts wurde auf dieser Mod genutzt. Entweder nutzen Sie CS oder Tes4Edit zum Säubern oder Sie nutzen Wrye Bash''s Decompile All Befehl.'
     dirty:
       - crc: 0xc320276c
         <<: *dirtyPlugin
@@ -11768,6 +11944,8 @@ plugins:
         content:
           - lang: en
             text: 'It is possible when using All Natural + CBash the first floor of the house may become flooded. If so remove the "KhRHInterior" record from the Bashed Patch every time you rebuild. Or consider installing the "Rustle House CBash Fix.esp".'
+          - lang: de
+            text: 'Es ist möglich das wenn All Natural + CBash benutzt wird dass das Erdgeschoss des Hauses geflutet wird. Wenn dem so ist, entfernen Sie den "KhRHInterior" Eintrag von dem Bashed Patch jedes mal wenn sie neu-bauen. Oder erwägen Sie die Installation vom "Rustle House CBash Fix.esp".'
     tag: [ C.Climate ]
   - name: 'Sacred Duty.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/38287' ]
@@ -11796,6 +11974,8 @@ plugins:
         content:
           - lang: en
             text: 'Use ''SeawatchAbode-LostCoast patch.esp'' compatibility patch if using Unique Landscapes Lost Coast.'
+          - lang: de
+            text: 'Nutzen Sie ''SeawatchAbode-LostCoast patch.esp'' Kompatibilitäts-Patch wenn Sie Unique Landscapes Lost Coast nutzen.'
   - name: 'SecludedGladeCottage.esp'
     url: [ 'https://tesalliance.org/forums/index.php?/files/file/438-secluded-glade/' ]
     tag: [ Invent ]
@@ -11912,6 +12092,8 @@ plugins:
         content:
           - lang: en
             text: 'If using Harvest Containers v0.99.14, this plugin will need its master changed using Wrye Bash or TES4Gecko to reference the correct plugin, the addition of the Graphics and Scripts tags, e.g. {{BASH: Graphics, Scripts}}, and the removal of the Filter tag.'
+          - lang: de
+            text: 'Wenn Harvest Containers v0.99.14 genutzt, muss dieses Plugin den Master abgeändert werden mithilfe von Wrye Bash oder TES4Gecko um das korrekte Plugin zu referenzieren, das Hinzufügen von den Graphics und Scripts Tags, wie {{BASH: Graphics, Scripts}}, and die Entfernung des Filter Tags.'
   - name: 'TamrielSnacks11-EV.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/20105' ]
     dirty:
@@ -11939,12 +12121,16 @@ plugins:
         content:
           - lang: en
             text: 'Don''t use unless you''ve finished the main quest!'
+          - lang: de
+            text: 'Nicht nutzen bis Sie die Haupt-Quest abgeschlossen haben!'
   - name: 'Temple District Rebuild_1C.esp'
     msg:
       - type: say
         content:
           - lang: en
             text: 'Don''t use unless you''ve finished the main quest!'
+          - lang: de
+            text: 'Nicht nutzen bis Sie die Haupt-Quest abgeschlossen haben!'
   - name: 'TheHole.esp'
     url:
       - 'https://www.nexusmods.com/oblivion/mods/40950'
@@ -12034,6 +12220,8 @@ plugins:
         content:
           - lang: en
             text: 'may be incompatible with AN/RL - to be confirmed.'
+          - lang: de
+            text: 'Kann inkompatibel mit AN/RL sein - muss noch nachgeforscht werden.'
   - name: 'The Black Sacrament.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/21808' ]
     req: [ *OBSE ]
@@ -12046,6 +12234,8 @@ plugins:
         content:
           - lang: en
             text: 'Possible CTDs. Enable only on time of game in TheForgottenRealm.esp'
+          - lang: de
+            text: 'Mögliche CTDs. On time of game nur aktivieren in TheForgottenRealm.esp'
   - name: 'The forgotten Castle.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/15301' ]
     tag: [ Hair ]
@@ -12098,6 +12288,8 @@ plugins:
         content:
           - lang: en
             text: 'A fixed version can be found [here](http://www.nexusmods.com/oblivion/mods/7809).'
+          - lang: de
+            text: 'Eine fehlerfreie Version kann [hier](http://www.nexusmods.com/oblivion/mods/7809) abgerufen werden.'
     dirty:
       - crc: 0x2414a8ef
         <<: *dirtyPlugin
@@ -12126,6 +12318,8 @@ plugins:
         content:
           - lang: en
             text: 'Requires: Modular Beautiful People 2ch Edition Plus Plus'
+          - lang: de
+            text: 'Benötigt: Modular Beautiful People 2ch Edition Plus Plus'
   - name: 'ToiletMod.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/42472' ]
     dirty:
@@ -12144,6 +12338,8 @@ plugins:
         content:
           - lang: en
             text: 'Deletes a door in the Cheydinhal Castle Private Quarters.'
+          - lang: de
+            text: 'Löscht eine Tür in Cheydinhal Castle Private Quarters.'
     dirty:
       - crc: 0xc5c868bd
         <<: *dirtyPlugin
@@ -12208,7 +12404,9 @@ plugins:
       - type: say
         content:
           - lang: en
-            text: 'Use instead ''Trails of Cyrodiil Merged UL Colovian Highlands.esp''.'
+            text: 'Instead use ''Trails of Cyrodiil Merged UL Colovian Highlands.esp''.'
+          - lang: en
+            text: 'Benutzen Sie ''Trails of Cyrodiil Merged UL Colovian Highlands.esp'' stattdessen.'
     dirty:
       # version: 1
       - <<: *quickClean
@@ -12261,6 +12459,8 @@ plugins:
         content:
           - lang: en
             text: 'Incompatible with: UL mod(s).'
+          - lang: de
+            text: 'Inkompatibel mit: UL Mod(s).'
   - name: 'Treasure Maps-Blood Ransom-UL edition.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/41987' ]
     tag: [ Invent ]
@@ -12271,6 +12471,8 @@ plugins:
         content:
           - lang: en
             text: 'Incompatible with: UL mod(s).'
+          - lang: de
+            text: 'Inkompatibel mit: UL Mod(s).'
     dirty:
       - crc: 0xa30496fe
         <<: *dirtyPlugin
@@ -12289,6 +12491,8 @@ plugins:
         content:
           - lang: en
             text: 'Incompatible with: UL mod(s).'
+          - lang: de
+            text: 'Inkompatibel mit: UL Mod(s).'
     dirty:
       - crc: 0x100f394c
         <<: *dirtyPlugin
@@ -12303,6 +12507,8 @@ plugins:
         content:
           - lang: en
             text: 'Incompatible with: UL mod(s).'
+          - lang: de
+            text: 'Inkompatibel mit: UL Mod(s).'
       - <<: *wildEdits
         subs: [ '[Cleaning instructions](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide#Treasure_Maps_The_Legend_Of_Jauffres_Gold.esp_Special_Cleaning_Instructions)' ]
         condition: 'checksum("Treasure_Maps_The_Legend_Of_Jauffres_Gold.esp", 9BEABF59)'
@@ -12318,6 +12524,8 @@ plugins:
         content:
           - lang: en
             text: 'Incompatible with: UL mod(s).'
+          - lang: de
+            text: 'Inkompatibel mit: UL Mod(s).'
     dirty:
       - crc: 0x41e287b2
         <<: *dirtyPlugin
@@ -12387,10 +12595,14 @@ plugins:
         content:
           - lang: en
             text: 'Mark Mergeable and deactivate - Merge animations does not seem to work properly for the original version of VH Bloodlines.'
+          - lang: de
+            text: 'Mit Mergeable(Zusammenführbar) markieren und deaktivieren - Animationen zusammenführen scheint nicht ordentlich zu funktionieren für die originale Version von VH Bloodlines.'
       - type: say
         content:
           - lang: en
             text: 'Sensual Walks for Arthmoor''s Verona House Bloodines SI Fixed contains bash tags to merge the animations, which work correctly on his version'
+          - lang: de
+            text: 'Sensual Walks for Arthmoor''s Verona House Bloodines SI Fixed enthält Bash Tags zum Zusammenführen der Animation, welche korrekt funktionieren mit dieser Version'
   - name: 'Apachii_Goddess_Store.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/13437' ]
     msg:
@@ -12398,6 +12610,8 @@ plugins:
         content:
           - lang: en
             text: 'Recommended to enable only after you save game in IC Waterfront District'
+          - lang: de
+            text: 'Empfohlen dies erst zu aktivieren nachdem im IC Waterfront Abteil abgespeichert wurde'
     dirty:
       - crc: 0x6633e61d
         <<: *dirtyPlugin
@@ -12491,6 +12705,8 @@ plugins:
         content:
           - lang: en
             text: 'Requires: HGEC'
+          - lang: de
+            text: 'Benötigt: HGEC'
   - name: 'YokudaBattleCat.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/45029' ]
     dirty:
@@ -12524,6 +12740,8 @@ plugins:
         content:
           - lang: en
             text: 'For use with Better Cities use replacing fix for BBC.'
+          - lang: de
+            text: 'Für die Nutzung von Better Cities, nutzen Sie replacing fix for BBC.'
     dirty:
       - crc: 0x831eb9fa
         <<: *dirtyPlugin
@@ -12549,6 +12767,8 @@ plugins:
         content:
           - lang: en
             text: 'Unlikely to work with other IC Arena mods'
+          - lang: de
+            text: 'Unwahrscheinlich zu funktionieren mit anderen IC Arena Mods'
   - name: 'Angel''s Arena Loot rus.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/14163' ]
     msg:
@@ -12556,6 +12776,8 @@ plugins:
         content:
           - lang: en
             text: 'Unlikely to work with other IC Arena mods'
+          - lang: de
+            text: 'Unwahrscheinlich zu funktionieren mit anderen IC Arena Mods'
   - name: '24HrArenaAliveV2.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/13099' ]
     dirty:
@@ -12651,6 +12873,8 @@ plugins:
         content:
           - lang: en
             text: 'Delete ''Lynges Thieves Highway.esp and use this instead.'
+          - lang: de
+            text: 'Entfernen Sie ''Lynges Thieves Highway.esp und nutzen Sie dies stattdessen.'
         condition: '( file("Lynges Thieves Highway.esp") ) and active("Oscuro''s_Oblivion_Overhaul.esm")'
   - name: 'DSoSFrostCragRebornExteriorStairsFix.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/38278' ]
@@ -12665,6 +12889,8 @@ plugins:
         content:
           - lang: en
             text: 'If dummy esp for use with The Ayleid Steps consider upgrading to Frostcrag Reborn De-Isolated.'
+          - lang: de
+            text: 'Wenn eine Dummy-Esp für The Ayleid Steps genutzt wird, erwägen Sie zu Frostcrag Reborn De-Isolated upzugraden.'
   - name: 'BrumaMGRestored.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/12732' ]
     dirty:
@@ -12722,6 +12948,8 @@ plugins:
         content:
           - lang: en
             text: 'Recommended to upgrade to Quiet Feet MAX 2.0, which does not require a plugin and is more compatible.'
+          - lang: de
+            text: 'Empfohlen zu Quiet Feet MAX 2.0 upzugraden, welches kein Plugin voraussetzt and ist besser kompatibel.'
       - *useBashTweakInstead
   - name: 'TGND2 Knights Replacer.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/41812' ]
@@ -12735,6 +12963,8 @@ plugins:
         content:
           - lang: en
             text: 'Requires: Knights of the Nine'
+          - lang: de
+            text: 'Benötigt: Knights of the Nine'
   - name: 'ROM Revised Oblivion Mod.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/33114' ]
     tag:
@@ -12795,6 +13025,8 @@ plugins:
         content:
           - lang: en
             text: 'Do not use the (same name) compatible esp for UL:Lost; Update to the latest UL:Lost Coast.'
+          - lang: de
+            text: 'Nutzen Sie nicht den (selben Namen) kompatibel esp für UL:Lost; Updaten Sie zur neuesten UL:Lost Coast.'
     dirty:
       - crc: 0xa8970d81
         <<: *dirtyPlugin
@@ -12832,7 +13064,9 @@ plugins:
       - type: say
         content:
           - lang: en
-            text: 'If using RTT use MoreSuburbLife_RTT_patch.esp to prevent issues with the Wawnet Inn.'
+            text: 'If using RTT, use MoreSuburbLife_RTT_patch.esp to prevent issues with the Wawnet Inn.'
+          - lang: de
+            text: 'Wenn RTT genutzt wird, nutzen Sie MoreSuburbLife_RTT_patch.esp um Problemen mit Wawnet Inn vorzubeugen.'
   - name: 'TOS - Prelude.esp'
     url: [ 'http://www.planetoblivion.de/index.php?option=com_content&task=view&id=1341&Itemid=73' ]
     dirty:
@@ -12857,6 +13091,8 @@ plugins:
         content:
           - lang: en
             text: 'Needs Wrye Bash''s "Remove World Orphans" function run on it.'
+          - lang: de
+            text: 'Kann Ausführung von Wrye Bash''s "Remove World Orphans" Funktion darauf benötigen.'
     dirty:
       - crc: 0x8637ca07
         <<: *dirtyPlugin
@@ -12868,6 +13104,8 @@ plugins:
         content:
           - lang: en
             text: 'If using with Region Revive Lake Rumare, use ''GuardsofaCyrodiilRedux - RRLRpatch.esp'' as well.'
+          - lang: de
+            text: 'Wenn es auch mit Region Revive Lake Rumare genutzt wird, nutzen Sie auch ''GuardsofaCyrodiilRedux - RRLRpatch.esp''.'
   - name: 'Mighty Umbra.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/13398' ]
     msg:
@@ -12875,6 +13113,8 @@ plugins:
         content:
           - lang: en
             text: 'FCOM users should consider ''FCOM_MightyUmbra.esp''.'
+          - lang: de
+            text: 'FCOM Nutzer sollten auch ''FCOM_MightyUmbra.esp'' erwägen.'
         condition: *FCOMCond
     tag:
       - Graphics
@@ -13029,6 +13269,8 @@ plugins:
         content:
           - lang: en
             text: 'Use v1.5 or later to avoid extensive compatibility issues.'
+          - lang: de
+            text: 'Nutzen Sie v1.5 oder neuer um fortgeschrittene Kompatibilitäts-Probleme zu vermeiden.'
   - name: 'Daedric Shrine Ruins.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/31636' ]
     inc:
@@ -13079,6 +13321,8 @@ plugins:
         content:
           - lang: en
             text: 'Border region restrictions must be turned off: change bBorderRegionsEnabled to 0 in Oblivion.ini or use Wrye Bash bashed patch tweak.'
+          - lang: de
+            text: 'Regionsgrenzen Restriktionen muss abgeschaltet werden: Ändern Sie bBorderRegionsEnabled nach 0 in der Oblivion.ini oder nutzen Sie Wrye Bash bashed patch tweak.'
     dirty:
       - <<: *quickClean
         crc: 0xDD0F1E01
@@ -13206,6 +13450,8 @@ plugins:
         content:
           - lang: en
             text: 'Use ''ThievesGrotto-ColovianHighlands patch.esp'' if using UL Colovian Highlands.'
+          - lang: de
+            text: 'Nutzen Sie ''ThievesGrotto-ColovianHighlands patch.esp'' wenn UL Colovian Highlands genutzt wird.'
   - name: 'MTCThievesGrottoV4.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22197' ]
     msg:
@@ -13214,6 +13460,8 @@ plugins:
         content:
           - lang: en
             text: 'Use ''ThievesGrotto-ColovianHighlands patch.esp'' if using UL Colovian Highlands.'
+          - lang: de
+            text: 'Nutzen Sie ''ThievesGrotto-ColovianHighlands patch.esp'' wenn UL Colovian Highlands genutzt wird.'
   - name: 'MTCThievesGrottoV4.1.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22197' ]
     msg:
@@ -13221,6 +13469,8 @@ plugins:
         content:
           - lang: en
             text: 'Use ''ThievesGrotto-ColovianHighlands patch.esp'' if using UL Colovian Highlands.'
+          - lang: de
+            text: 'Nutzen Sie ''ThievesGrotto-ColovianHighlands patch.esp'' wenn UL Colovian Highlands genutzt wird.'
     dirty:
       - crc: 0x941bafd5
         <<: *dirtyPlugin
@@ -13233,6 +13483,8 @@ plugins:
         content:
           - lang: en
             text: 'Incompatible with: The Unique Landscapes mods.'
+          - lang: de
+            text: 'Inkompatibel mit: The Unique Landscapes Mods.'
     dirty:
       - crc: 0x46503b81
         <<: *dirtyPlugin
@@ -13254,6 +13506,8 @@ plugins:
         content:
           - lang: en
             text: 'only use without Open Cities'
+          - lang: de
+            text: 'Nur ohne Open Cities nutzen'
         condition: 'file("Open Cities.*\.esp")'
   - name: 'Dschinni.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/25530' ]
@@ -13262,11 +13516,15 @@ plugins:
         content:
           - lang: en
             text: 'Use the patch for Servant of the Dawn to resolve compatibility issues.'
+          - lang: de
+            text: 'Nutzen Sie den Patch für Servant of the Dawn um Kompatibilitäts-Probleme zu beheben.'
         condition: '( file("Servant of the Dawn.esp") ) and not file("Dschinni - Servant of the Dawn Patch.esp")'
       - type: say
         content:
           - lang: en
             text: 'Use the patch for UL Arrius Creek and The Heart of the Dead version 6.3 to resolve compatibility issues.'
+          - lang: de
+            text: 'Nutzen Sie den Patch für UL Arrius Creek und The Heart of the Dead Version 6.3 um Kompatibilitäts-Probleme zu beheben.'
   - name: 'Better daedric shrines Namira.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/34367/' ]
     dirty:
@@ -13392,6 +13650,8 @@ plugins:
         content:
           - lang: en
             text: 'Requires: Tamriel Heightmaps'
+          - lang: de
+            text: 'Benötigt: Tamriel Heightmaps'
   - name: 'ACharmingTown.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/42680' ]
     dirty:
@@ -13421,7 +13681,9 @@ plugins:
       - type: say
         content:
           - lang: en
-            text: 'Border region restrictions must be turned off: use Wrye Bash tweak or hand edit .ini file.'
+            text: 'Border region restrictions must be turned off: change bBorderRegionsEnabled to 0 in Oblivion.ini or use Wrye Bash bashed patch tweak.'
+          - lang: de
+            text: 'Regionsgrenzen Restriktionen muss abgeschaltet werden: Ändern Sie bBorderRegionsEnabled nach 0 in der Oblivion.ini oder nutzen Sie Wrye Bash bashed patch tweak.'
   - name: 'ExtendedAleswellEV.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/38351' ]
     dirty:
@@ -13459,7 +13721,9 @@ plugins:
       - type: say
         content:
           - lang: en
-            text: 'Border region restrictions must be turned off: use Wrye Bash tweak or hand edit .ini file.'
+            text: 'Border region restrictions must be turned off: change bBorderRegionsEnabled to 0 in Oblivion.ini or use Wrye Bash bashed patch tweak.'
+          - lang: de
+            text: 'Regionsgrenzen Restriktionen muss abgeschaltet werden: Ändern Sie bBorderRegionsEnabled nach 0 in der Oblivion.ini oder nutzen Sie Wrye Bash bashed patch tweak.'
   - name: 'Pinevale.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/23804' ]
     dirty:
@@ -13690,7 +13954,9 @@ plugins:
       - type: say
         content:
           - lang: en
-            text: 'Border region restrictions must be turned off: use Wrye Bash tweak or hand edit .ini file.'
+            text: 'Border region restrictions must be turned off: change bBorderRegionsEnabled to 0 in Oblivion.ini or use Wrye Bash bashed patch tweak.'
+          - lang: de
+            text: 'Regionsgrenzen Restriktionen muss abgeschaltet werden: Ändern Sie bBorderRegionsEnabled nach 0 in der Oblivion.ini oder nutzen Sie Wrye Bash bashed patch tweak.'
   - name: 'NakedNord.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/6406' ]
     dirty:
@@ -13708,12 +13974,16 @@ plugins:
         content:
           - lang: en
             text: 'Obselete - update to version 2.2.1 of BladeOfTheHaunted.esp, then disable/remove this esp.'
+          - lang: de
+            text: 'Veraltet - Updaten Sie zu Version 2.2.1 von BladeOfTheHaunted.esp, dann deaktivieren/entfernen Sie diese esp.'
   - name: 'ImperialCitySuburbs-ImperialIsle patch.esp'
     msg:
       - type: say
         content:
           - lang: en
             text: 'Don''t use UL Imperial Isle Adense Epic Dungeon Patch.esp in conjunction with ImperialCitySuburbs-ImperialIsle patch.esp (causes land tears)'
+          - lang: de
+            text: 'Nutzen Sie nicht UL Imperial Isle Adense Epic Dungeon Patch.esp in Verbindung mit ImperialCitySuburbs-ImperialIsle patch.esp (verursacht Landschaftsrisse)'
         condition: 'file("UL Imperial Isle Adense Epic Dungeon Patch.esp")'
   - name: 'KvatchRebuilt-CheydinhalFalls patch.esp'
     dirty:
@@ -13727,6 +13997,8 @@ plugins:
         content:
           - lang: en
             text: 'You do not need both of these patches! Disable OotD_UL_Jerall_Patch.esp.'
+          - lang: de
+            text: 'Sie brauchen nicht beide Patches! Deaktivieren Sie OotD_UL_Jerall_Patch.esp.'
         condition: 'file("OrdenDesDrachen-JerallGlacier patch.esp")'
 
   - name: 'UL II Immersive Prison Sewer exit.esp'
@@ -13741,6 +14013,8 @@ plugins:
         content:
           - lang: en
             text: 'Requires: Better/Open Cities IC Market District Components.'
+          - lang: de
+            text: 'Benötigt: Better/Open Cities IC Market District Components.'
   - name: 'Oblivifall - Losing My Religion West Roads Patch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/31668' ]
     msg:
@@ -13748,6 +14022,8 @@ plugins:
         content:
           - lang: en
             text: 'Needs Wrye Bash''s "Remove World Orphans" fix.'
+          - lang: de
+            text: 'Brauch Wrye Bash''s "Remove World Orphans" Fix.'
         condition: 'checksum("Oblivifall - Losing My Religion West Roads Patch.esp",1B777711)'
     dirty:
       - crc: 0x1489007c
@@ -13760,6 +14036,8 @@ plugins:
         content:
           - lang: en
             text: 'Needs Wrye Bash''s "Remove World Orphans" fix.'
+          - lang: de
+            text: 'Brauch Wrye Bash''s "Remove World Orphans" Fix.'
         condition: 'checksum("Oblivifall - Losing My Religion Kvatch Rebuilt West Roads Patch.esp",EDF95E8A)'
   - name: 'CastleSeaview+LostCoast Patch.esp'
     inc: [ 'EaglesRest+LostCoast+CastleSeaview Patch.esp' ]
@@ -13825,6 +14103,8 @@ plugins:
         content:
           - lang: en
             text: 'Small land tears if used with UL Lush Woodlands.'
+          - lang: de
+            text: 'Kleine Landschaftsrisse wenn es genutzt wird mit UL Lush Woodlands.'
   - name: 'Fort Akatosh Redux.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/21856' ]
     tag: [ Relations ]
@@ -13845,6 +14125,8 @@ plugins:
         content:
           - lang: en
             text: 'Outdated. Update the affected UL mods and then delete this patch.'
+          - lang: de
+            text: 'Veraltet. Updaten Sie die betroffenen UL Mods und löschen Sie dann diesen Patch.'
   - name: 'Waterfront Passage - Control of Goods.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/15974' ]
     inc: [ *BetterCities ]
@@ -13855,6 +14137,8 @@ plugins:
         content:
           - lang: en
             text: 'Probably not compatible with Better Cities.'
+          - lang: de
+            text: 'Wahrscheinlich nicht kompatibel mit Better Cities.'
         condition: 'file("Better Cities Resources.esm")'
   - name: 'Moriarcis.esp'
     tag: [ Hair ]
@@ -13880,6 +14164,8 @@ plugins:
         content:
           - lang: en
             text: 'Only use one ''Health Alarm'' mod. Choose.'
+          - lang: de
+            text: 'Nutzen Sie nur einen ''Health Alarm'' Mod. Wählen Sie aus.'
         condition: 'file("Duke Patrick''?s Health Alar(m|m RED DEATH with heartbeat NO human yells|m with Fadeout|m with RED DEATH|m RED DEATH with heartbeat|m RED DEATH NO Heartbeat)\.esp")'
     tag: [ Sound ]
   - name: 'Duke Patrick''s Health Alarm RED DEATH NO Heartbeat.esp'
@@ -13889,6 +14175,8 @@ plugins:
         content:
           - lang: en
             text: 'Only use one ''Health Alarm'' mod. Choose.'
+          - lang: de
+            text: 'Nutzen Sie nur einen ''Health Alarm'' Mod. Wählen Sie aus.'
         condition: 'file("Duke Patrick''?s Health Alar(m|m RED DEATH with heartbeat NO human yells|m with Fadeout|m with RED DEATH|m RED DEATH with heartbeat|m RED DEATH and Heartbeat)\.esp")'
     tag: [ Sound ]
   - name: 'SPD-SailableRivers.esp'
@@ -13897,6 +14185,8 @@ plugins:
         content:
           - lang: en
             text: 'Most likely incompatible with some ULs'
+          - lang: de
+            text: 'Sehr wahrscheinlich inkompatibel mit einigen ULs'
   - name: 'OotDPS-Necro-FAR-FotA-Patch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/45611' ]
     msg:
@@ -13904,6 +14194,8 @@ plugins:
         content:
           - lang: en
             text: 'Use the UL Jerall Glacier version of this patch!'
+          - lang: de
+            text: 'Nutzen Sie die UL Jerall Glacier Version dieses Patches!'
         condition: 'file("xulJerallGlacier.esp")'
   - name: 'OotDPS-FAR-FotA-Patch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/45611' ]
@@ -13912,6 +14204,8 @@ plugins:
         content:
           - lang: en
             text: 'Use the UL Jerall Glacier version of this patch!'
+          - lang: de
+            text: 'Nutzen Sie die UL Jerall Glacier Version dieses Patches!'
         condition: 'file("xulJerallGlacier.esp")'
   - name: 'OotDPS-FotA.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/45611' ]
@@ -13920,6 +14214,8 @@ plugins:
         content:
           - lang: en
             text: 'Use the UL Jerall Glacier version of this patch!'
+          - lang: de
+            text: 'Nutzen Sie die UL Jerall Glacier Version dieses Patches!'
         condition: 'file("xulJerallGlacier.esp")'
   - name: 'OotDPS_Necro_FotA_Patch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/45611' ]
@@ -13928,6 +14224,8 @@ plugins:
         content:
           - lang: en
             text: 'Use the UL Jerall Glacier version of this patch!'
+          - lang: de
+            text: 'Nutzen Sie die UL Jerall Glacier Version dieses Patches!'
         condition: 'file("xulJerallGlacier.esp")'
   - name: 'OotD_FAR_Necromancer_Patch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/45611' ]
@@ -13936,6 +14234,8 @@ plugins:
         content:
           - lang: en
             text: 'Use the UL Jerall Glacier version of this patch!'
+          - lang: de
+            text: 'Nutzen Sie die UL Jerall Glacier Version dieses Patches!'
         condition: 'file("xulJerallGlacier.esp")'
   - name: 'OotD_FAR_Patch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/45611' ]
@@ -13944,6 +14244,8 @@ plugins:
         content:
           - lang: en
             text: 'Use the UL Jerall Glacier version of this patch!'
+          - lang: de
+            text: 'Nutzen Sie die UL Jerall Glacier Version dieses Patches!'
         condition: 'file("xulJerallGlacier.esp")'
   - name: 'OBCBravil-Barrowfields patch.esp'
     msg:
@@ -13951,6 +14253,8 @@ plugins:
         content:
           - lang: en
             text: 'Use OBCBravil or OBCBravilB&M but not both at the same time.'
+          - lang: de
+            text: 'Nutzen Sie OBCBravil oder OBCBravilB&M aber nicht beide zur gleichen Zeit.'
         condition: 'file("OBCBravilB&M-Barrowfields patch.esp")'
   - name: 'OBCBravilB&M-Barrowfields patch.esp'
     msg:
@@ -13958,6 +14262,8 @@ plugins:
         content:
           - lang: en
             text: 'Use OBCBravil or OBCBravilB&M but not both at the same time.'
+          - lang: de
+            text: 'Nutzen Sie OBCBravil oder OBCBravilB&M aber nicht beide zur gleichen Zeit.'
         condition: 'file("OBCBravil-Barrowfields patch.esp")'
   - name: 'BC+Vvardenfell Imports Patch.esp'
     inc: [ 'xulCheydinhalFalls.esp' ]
@@ -15799,6 +16105,8 @@ plugins:
         content:
           - lang: en
             text: 'Do not use this with Better Cities or Open Better Cities.'
+          - lang: de
+            text: 'Nicht mit Better Cities oder Open Better Cities nutzen.'
   - name: 'RR - LTPDPatch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22751' ]
     msg:
@@ -15806,6 +16114,8 @@ plugins:
         content:
           - lang: en
             text: 'Do not use if UL Imperial Isle is installed.'
+          - lang: de
+            text: 'Nicht nutzen wenn UL Imperial Isle installiert ist'
   - name: '(JQ) Fighters Guild United.esp'
     tag: [ Invent ]
   - name: 'JQ-Fighters_Guild_United.esp'
@@ -15821,6 +16131,8 @@ plugins:
         content:
           - lang: en
             text: 'Requires: Fighters Guild United.'
+          - lang: de
+            text: 'Benötigt: Fighters Guild United.'
   - name: 'NPC new clothes V2.6 Modified.esp'
     msg:
       - <<: *renameFile
@@ -15833,12 +16145,16 @@ plugins:
         content:
           - lang: en
             text: 'Requires: ''New NPC Clothes 2.6''.'
+          - lang: de
+            text: 'Benötigt: ''New NPC Clothes 2.6''.'
   - name: 'KS - Cities FPS Boost.esp'
     msg:
       - type: say
         content:
           - lang: en
             text: 'Probably incompatible with Better Cities.'
+          - lang: de
+            text: 'Vermutlich inkompatibel mit Better Cities.'
         condition: 'file("Better Cities Resources.esm")'
   - name: 'KS - Imperial FPS Boost.esp'
     msg:
@@ -15846,6 +16162,8 @@ plugins:
         content:
           - lang: en
             text: 'Probably incompatible with Better Cities.'
+          - lang: de
+            text: 'Vermutlich inkompatibel mit Better Cities.'
         condition: 'file("Better Cities Resources.esm")'
   - name: 'KS - Kvatch FPS Boost.esp'
     msg:
@@ -15853,6 +16171,8 @@ plugins:
         content:
           - lang: en
             text: 'Probably incompatible with Better Cities.'
+          - lang: de
+            text: 'Vermutlich inkompatibel mit Better Cities.'
         condition: 'file("Better Cities Resources.esm")'
   - name: 'Imperial City Redux.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/25113' ]
@@ -15865,6 +16185,8 @@ plugins:
         content:
           - lang: en
             text: 'Put before Unique Landscape mods to return tree sizes there to normal.'
+          - lang: de
+            text: 'Vor Unique Landscape Mods platzieren um Bäume zur normalen Größe zurück zu verändern.'
     dirty:
       - crc: 0xb02b5753
         <<: *dirtyPlugin
@@ -15875,6 +16197,8 @@ plugins:
         content:
           - lang: en
             text: 'Put before Unique Landscape mods to return tree sizes there to normal.'
+          - lang: de
+            text: 'Vor Unique Landscape Mods platzieren um Bäume zur normalen Größe zurück zu verändern.'
   - name: 'Harvest [Flora].esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/2037' ]
     msg:
@@ -15882,6 +16206,8 @@ plugins:
         content:
           - lang: en
             text: 'Make sure you have v3.0.1 or later, which removes a CTD bug with the Harrada root.'
+          - lang: de
+            text: 'Stellen Sie sicher das Sie v3.0.1 oder neuer haben, welcher ein CTD Bug mit der Harrada Wurzel entfernt.'
     tag:
       - Graphics
       - Scripts
@@ -15927,6 +16253,8 @@ plugins:
         content:
           - lang: en
             text: 'If using HC decide which you want to have priority and move that one after the other (needs compatibility patch that is not currently available)'
+          - lang: de
+            text: 'Wenn HC genutzt wird, entscheiden Sie welcher für Sie Priorität hat und verschieben Sie diesen vor dem anderen (brauch Kompatibilitäts-Patch der momentan nicht verfügbar ist)'
     tag: [ Scripts ]
   - name: 'Real Lava v1.2.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/6854' ]
@@ -15947,6 +16275,8 @@ plugins:
         content:
           - lang: en
             text: 'May not work with Living Economy as LE scripts tend to overwrite pricing mods.'
+          - lang: de
+            text: 'Funktioniert womöglich nicht mit Living Economy da LE Skripte dazu tendieren Preisgestaltungs-Mods zu überschreiben.'
         condition: 'file("Living Economy.*\.esp")'
   - name: '(354|355)_Improved_(Maborel|Marobel)_horse(immortal)?\.esp'
     msg:
@@ -15959,6 +16289,8 @@ plugins:
         content:
           - lang: en
             text: 'May not work with Living Economy as LE scripts tend to overwrite pricing mods.'
+          - lang: de
+            text: 'Funktioniert womöglich nicht mit Living Economy da LE Skripte dazu tendieren Preisgestaltungs-Mods zu überschreiben.'
         condition: 'file("Living Economy.*\.esp")'
   - name: 'Addendum - Diabloblivion.esp'
     dirty:
@@ -16002,12 +16334,16 @@ plugins:
         content:
           - lang: en
             text: 'Try AutoBookPlacer v3 or later.'
+          - lang: de
+            text: 'Versuchen Sie AutoBookPlacer v3 oder neuer.'
   - name: 'Axebane_Hunters25.esp'
     msg:
       - type: say
         content:
           - lang: en
             text: 'May break MMM Hunting and Crafting. Not fully tested.'
+          - lang: de
+            text: 'Bricht vielleicht MMM Hunting and Crafting. Nicht vollständig getestet.'
         condition: 'file("Mart''s Monster Mod - Hunting & Crafting.esp")'
   - name: 'Automagic Bags.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22414' ]
@@ -16022,11 +16358,15 @@ plugins:
         content:
           - lang: en
             text: 'OOO users should be using "Banes Guilds UnitedOOO.esp" instead.'
+          - lang: de
+            text: 'OOO Nutzer sollten "Banes Guilds UnitedOOO.esp" stattdessen nutzen.'
         condition: *OOOCond
       - type: warn
         content:
           - lang: en
             text: 'Users are very strongly recommended to upgrade to v2+ of this mod to avoid serious issues. It can be found [here](http://www.nexusmods.com/oblivion/mods/42261).'
+          - lang: de
+            text: 'Nutzern wird stark empfohlen zu v2+ dieser Mod zu upgraden um verheerende Probleme zu vermeiden. Es kann [hier](http://www.nexusmods.com/oblivion/mods/42261) abgerufen werden.'
         condition: 'checksum("Banes Guilds United.esp",CFA556BC)'
     tag: [ Invent ]
     clean:
@@ -16041,6 +16381,8 @@ plugins:
         content:
           - lang: en
             text: 'Use "Banes Guilds United.esp" instead.'
+          - lang: de
+            text: 'Nutzen Sie stattdessen "Banes Guilds United.esp".'
         condition: 'not file("Oscuro''s_Oblivion_Overhaul.esm")'
     tag: [ Invent ]
     clean:
@@ -16072,6 +16414,8 @@ plugins:
         content:
           - lang: en
             text: 'Will totally FUBAR OOO''s item scaling.'
+          - lang: de
+            text: 'Wird totale Zerstörung für OOO''s Skalierung der Gegenstände bedeuten.'
         condition: *OOOCond
     tag: [ Delev ]
   - name: 'Better Potions and Poisons.esp'
@@ -16083,6 +16427,8 @@ plugins:
         content:
           - lang: en
             text: 'May not work with Living Economy as LE scripts tend to overwrite pricing mods.'
+          - lang: de
+            text: 'Funktioniert womöglich nicht mit Living Economy da LE Skripte dazu tendieren Preisgestaltungs-Mods zu überschreiben.'
         condition: 'file("Living Economy.*\.esp")'
   - name: 'BlackFineryWithAmulet.esp'
     msg:
@@ -16124,6 +16470,8 @@ plugins:
         content:
           - lang: en
             text: 'Renames a lot of names to Russian so either use older (v0.2) English version or live with those changes'
+          - lang: de
+            text: 'Benennt viele Namen zu Russisch um, also nutzen Sie entweder die ältere (v0.2) Englische Version oder leben Sie mit diesen Änderungen'
     tag: [ Scripts ]
   - name: 'BurningItems 0.2.esp'
     tag: [ Scripts ]
@@ -16164,6 +16512,8 @@ plugins:
         content:
           - lang: en
             text: 'Use ''Cliff''s Shacks Basements.esp'' or ''Cliff''s Shacks Basements-Radiant AI.esp'' but not both at the same time.'
+          - lang: de
+            text: 'Nutzen Sie entweder ''Cliff''s Shacks Basements.esp'' oder ''Cliff''s Shacks Basements-Radiant AI.esp'' aber nicht beide gleichzeitig.'
         condition: 'file("Cliff''s Shacks Basements-Radiant AI.esp")'
     dirty:
       - crc: 0x680bcbc2
@@ -16175,6 +16525,8 @@ plugins:
         content:
           - lang: en
             text: 'Use ''Cliff''s Shacks Basements.esp'' or ''Cliff''s Shacks Basements-Radiant AI.esp'' but not both at the same time.'
+          - lang: de
+            text: 'Nutzen Sie entweder ''Cliff''s Shacks Basements.esp'' oder ''Cliff''s Shacks Basements-Radiant AI.esp'' aber nicht beide gleichzeitig.'
         condition: 'file("Cliff''s Shacks Basements.esp")'
     dirty:
       - crc: 0xc076fe76
@@ -16232,6 +16584,8 @@ plugins:
         content:
           - lang: en
             text: 'Incompatible with: Probably most overhauls if they touch creatures at all.'
+          - lang: de
+            text: 'Inkompatibel mit: Vermutlich meisten Überhol-Mods die irgendwie Kreaturen modifizieren.'
     tag:
       - Actors.AIData
       - Factions
@@ -16243,6 +16597,8 @@ plugins:
         content:
           - lang: en
             text: 'Incompatible with: Overhauls'
+          - lang: de
+            text: 'Inkompatibel mit: Überhol-Mods'
     tag:
       - Delev
       - Relev
@@ -16260,6 +16616,8 @@ plugins:
         content:
           - lang: en
             text: 'Old file. Not needed with DarkUI''d DarN 1.5.5 or newer.'
+          - lang: de
+            text: 'Alte Datei. Nicht benötigt mit DarkUI''d DarN 1.5.5 oder neuer.'
   - name: 'DarNified Books.*\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/10763' ]
     msg:
@@ -16273,7 +16631,9 @@ plugins:
       - type: say
         content:
           - lang: en
-            text: 'Check version is 1.1 or later.'
+            text: 'Check if the version is 1.1 or later.'
+          - lang: de
+            text: 'Überprüfen Sie ob die Version 1.1 oder neuer ist.'
   - name: 'dhsRTentwithSorter.esp'
     req: [ 'Cobl Main.esm' ]
   - name: 'DoB10mins.esp'
@@ -16284,12 +16644,16 @@ plugins:
         content:
           - lang: en
             text: 'Requires: Mod Daedric Lord Armor'
+          - lang: de
+            text: 'Benötigt: Mod Daedric Lord Armor'
   - name: 'DS Alchemy Pouch.esp'
     msg:
       - type: say
         content:
           - lang: en
             text: 'Outdated. Upgrade to Portable Sorters.'
+          - lang: de
+            text: 'Veraltet. Upgraden Sie zu Portable Sorters.'
   - name: 'DS Portable Sorters.esp'
     req: [ 'Cobl Main.esm' ]
   - name: 'Dwemer_Rename.esp'
@@ -16298,6 +16662,8 @@ plugins:
         content:
           - lang: en
             text: 'If using Wrye Bash use the Bashed Patch Tweak instead and delete.'
+          - lang: de
+            text: 'Wenn Sie Wyre Bach nutzen, nutzen Sie stattdessen den Bashed Patch Tweak und löschen Sie es.'
   - name: 'Dwarven-S.esp'
     tag:
       - Graphics
@@ -16381,6 +16747,8 @@ plugins:
         content:
           - lang: en
             text: 'Consider using Bash Patch tweaks instead, if possible.'
+          - lang: de
+            text: 'Erwägen Sie stattdessen den Bash Patch tweaks zu verwenden, wenn möglich.'
   - name: 'Gems.esp'
     tag:
       - NoMerge
@@ -16454,6 +16822,8 @@ plugins:
         content:
           - lang: en
             text: 'Use "GuildAdvancementBGU.esp" instead.'
+          - lang: de
+            text: 'Nutzen Sie stattdessen "GuildAdvancementBGU.esp".'
         condition: '( file("Banes Guilds United.esp") ) or file("Banes Guilds UnitedOOO.esp")'
   - name: 'GuildAdvancementBGU.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/42870' ]
@@ -16462,6 +16832,8 @@ plugins:
         content:
           - lang: en
             text: 'Use "GuildAdvancement.esp" instead.'
+          - lang: de
+            text: 'Nutzen Sie stattdessen "GuildAdvancement.esp".'
         condition: '( not file("Banes Guilds United.esp") ) and not file("Banes Guilds UnitedOOO.esp")'
   - name: 'GuilesNameReplace-Scrolls.esp'
     tag: [ Names ]
@@ -16471,6 +16843,8 @@ plugins:
         content:
           - lang: en
             text: 'ONLY Activate this if you want to remove the changes made by the Classic Travel mod components ct4 & ct1.'
+          - lang: de
+            text: 'NUR aktivieren wenn Sie möchten dass die Änderungen von Classic Travel mod components ct4 & ct1 rückgängig gemacht werden.'
   - name: 'cf_Improved_Barter_Gold.esp'
     dirty:
       - crc: 0xa4f37e72
@@ -16509,6 +16883,8 @@ plugins:
         content:
           - lang: en
             text: 'Don''t use with Leviathan Soulgems (included).'
+          - lang: de
+            text: 'Nicht mit Leviathan Soulgems nutzen (inkludiert).'
         condition: 'file("Leviathan Soul.*\.esp")'
   - name: 'Kosai''s Welkynd Armor.esp'
     dirty:
@@ -16524,6 +16900,8 @@ plugins:
         content:
           - lang: en
             text: 'Requires: Tibixe''s String Function Collection and Leviathan Soulgems.'
+          - lang: de
+            text: 'Benötigt: Tibixe''s String Function Collection und Leviathan Soulgems.'
   - name: 'LessHealthfulRest.esp'
     inc: [ 'LessHealthfulWaiting.esp' ]
   - name: 'LessHealthfulWaiting.esp'
@@ -16535,6 +16913,8 @@ plugins:
         content:
           - lang: en
             text: 'May not be compatible with MMM bone loot - untested.'
+          - lang: de
+            text: 'Womöglich nicht kompatibel mit MMM bone loot - Ungetestet.'
   - name: 'M.O.E. - Lycanthropy and Lichcraft.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/7902' ]
     dirty:
@@ -16548,10 +16928,14 @@ plugins:
         content:
           - lang: en
             text: 'May cause unexpected results with Living Economy, Fran''s, OOO, MMM and/or FCOM.'
+          - lang: de
+            text: 'Kann zu unerwarteten Folgen führen mit Living Economy, Fran''s, OOO, MMM und/oder FCOM.'
       - type: say
         content:
           - lang: en
             text: 'May cause some quest items to revert to vanilla stats when using overhaul mods. Will not remove quest status from non-vanilla quests.'
+          - lang: de
+            text: 'Kann dazu führen das einige Quest-Gegenstände zurück zu Ihren ursprünglichen Eigenschaften zurückkehren. Wird nicht den Quest-Status von nicht-originalen Quests entfernen.'
     tag:
       - Deactivate
       - Stats
@@ -16615,7 +16999,9 @@ plugins:
       - type: say
         content:
           - lang: en
-            text: 'If using with an overhaul such as OOO (or many other mods) really should use Wrye Bash or you''ll have loss of some leveled list changes.'
+            text: 'If using with an overhaul such as OOO (or many other mods), you really should use Wrye Bash or you''ll have loss of some leveled list changes.'
+          - lang: de
+            text: 'Wenn dies genutzt wird mit einer Überhol-Mod wie OOO (oder vielen anderen Mods) dann sollten Sie ersthaft Wyre Bash nutzen oder Sie verlieren Änderungen die an Leveled List gemacht wurden.'
   - name: 'TI-MM v04d.esp'
     req: [ 'DLCShiveringIsles.esp' ]
     msg:
@@ -16623,6 +17009,8 @@ plugins:
         content:
           - lang: en
             text: 'Requires: Qarl''s Harvest, Tamrielic Ingredients.'
+          - lang: de
+            text: 'Benötigt: Qarl''s Harvest, Tamrielic Ingredients.'
   - name: 'NameReplacer-Clothing.esp'
     tag: [ Names ]
   - name: '[Natcalsar] DontHideRings&Amulets_LA V1.0.esp'
@@ -16631,48 +17019,64 @@ plugins:
         content:
           - lang: en
             text: 'If possible use the Wrye Bash Bashed Patch tweak instead.'
+          - lang: de
+            text: 'Wenn möglich, nutzen Sie stattdessen den Wrye Bash Bashed Patch tweak.'
   - name: '[Natcalsar] DontHideRings&Amulets_HA V1.0.esp'
     msg:
       - type: say
         content:
           - lang: en
             text: 'If possible use the Wrye Bash Bashed Patch tweak instead.'
+          - lang: de
+            text: 'Wenn möglich, nutzen Sie stattdessen den Wrye Bash Bashed Patch tweak.'
   - name: '[Natcalsar] DontHideRings&Amulets_Clothing V1.0.esp'
     msg:
       - type: say
         content:
           - lang: en
             text: 'If possible use the Wrye Bash Bashed Patch tweak instead.'
+          - lang: de
+            text: 'Wenn möglich, nutzen Sie stattdessen den Wrye Bash Bashed Patch tweak.'
   - name: '[Natcalsar] DontHideRings&Amulets_KOTN+SI V1.0.esp'
     msg:
       - type: say
         content:
           - lang: en
             text: 'If possible use the Wrye Bash Bashed Patch tweak instead.'
+          - lang: de
+            text: 'Wenn möglich, nutzen Sie stattdessen den Wrye Bash Bashed Patch tweak.'
   - name: '[Calsar] DontHideRings&Amulets_HA V1.0.esp'
     msg:
       - type: say
         content:
           - lang: en
             text: 'If possible use the Wrye Bash Bashed Patch tweak instead.'
+          - lang: de
+            text: 'Wenn möglich, nutzen Sie stattdessen den Wrye Bash Bashed Patch tweak.'
   - name: '[Calsar] DontHideRings&Amulets_KOTN+SI V1.0.esp'
     msg:
       - type: say
         content:
           - lang: en
             text: 'If possible use the Wrye Bash Bashed Patch tweak instead.'
+          - lang: de
+            text: 'Wenn möglich, nutzen Sie stattdessen den Wrye Bash Bashed Patch tweak.'
   - name: '[Calsar] DontHideRings&Amulets_Clothing V1.0.esp'
     msg:
       - type: say
         content:
           - lang: en
             text: 'If possible use the Wrye Bash Bashed Patch tweak instead.'
+          - lang: de
+            text: 'Wenn möglich, nutzen Sie stattdessen den Wrye Bash Bashed Patch tweak.'
   - name: 'Near100PercentArrowRecovery.esp'
     msg:
       - type: say
         content:
           - lang: en
             text: 'Consider using Bash Patch tweaks instead.'
+          - lang: de
+            text: 'Erwägen Sie stattdessen den Bash Patch tweaks zu nutzen.'
   - name: 'Nephs Unique Thievery.esp'
     tag: [ Invent ]
   - name: 'newsheogorath.esp'
@@ -16685,12 +17089,16 @@ plugins:
         content:
           - lang: en
             text: 'Highly likely to be incompatible with every overhaul out there.'
+          - lang: de
+            text: 'Höchst wahrscheinlich inkompatibel mit jeder verfügbaren Überhol-Mod.'
   - name: 'NoObsoleteLoot.esp'
     msg:
       - type: say
         content:
           - lang: en
             text: 'Highly likely to be incompatible with every overhaul out there.'
+          - lang: de
+            text: 'Höchst wahrscheinlich inkompatibel mit jeder verfügbaren Überhol-Mod.'
   - name: 'NoWindSI.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/10902' ]
     msg: [ *useBashTweakInstead ]
@@ -16703,6 +17111,8 @@ plugins:
         content:
           - lang: en
             text: 'Almost certainly not compatible with Fran''s, MMM, OOO or FCOM.'
+          - lang: de
+            text: 'Sehr wahrscheinlich nicht kompatibel mit Fran''s, MMM, OOO oder FCOM.'
   - name: 'Nude Humanlike Spriggan.esp'
     after: [ 'Knights - Unofficial Patch.esp' ]
     inc:
@@ -16713,6 +17123,8 @@ plugins:
         content:
           - lang: en
             text: 'USE ONE ''nude * Spriggan.esp'' ONLY'
+          - lang: de
+            text: 'NUTZEN SIE NUR EINE ''nude * Spriggan.esp'''
         condition: 'file("Nude Humanlike Spriggan Tweaked.esp") or file("Nude Humanlike Spriggan HGEC B.esp") or file("Nude Male Spriggan.esp")'
   - name: 'Nude Humanlike Spriggan Tweaked.esp'
     after: [ 'Knights - Unofficial Patch.esp' ]
@@ -16724,6 +17136,8 @@ plugins:
         content:
           - lang: en
             text: 'USE ONE ''nude * Spriggan.esp'' ONLY'
+          - lang: de
+            text: 'NUTZEN SIE NUR EINE ''nude * Spriggan.esp'''
         condition: 'file("Nude Humanlike Spriggan.esp") or file("Nude Humanlike Spriggan HGEC B.esp") or file("Nude Male Spriggan.esp")'
   - name: 'Nude Humanlike Spriggan HGEC B.esp'
     after: [ 'Knights - Unofficial Patch.esp' ]
@@ -16735,10 +17149,14 @@ plugins:
         content:
           - lang: en
             text: 'Requires: HGEC Body replacer'
+          - lang: de
+            text: 'Benötigt: HGEC Body replacer'
       - type: say
         content:
           - lang: en
             text: 'USE ONE ''nude * Spriggan.esp'' ONLY'
+          - lang: de
+            text: 'NUTZEN SIE NUR EINE ''nude * Spriggan.esp'''
         condition: 'file("Nude Humanlike Spriggan.esp") or file("Nude Humanlike Spriggan Tweaked.esp") or file("Nude Male Spriggan.esp")'
   - name: 'Nude Male Spriggan.esp'
     after: [ 'Knights - Unofficial Patch.esp' ]
@@ -16750,10 +17168,14 @@ plugins:
         content:
           - lang: en
             text: 'Requires: Robert Male Body v5'
+          - lang: de
+            text: 'Benötigt: Robert Male Body v5'
       - type: say
         content:
           - lang: en
             text: 'USE ONE ''nude * Spriggan.esp'' ONLY'
+          - lang: de
+            text: 'NUTZEN SIE NUR EINE ''nude * Spriggan.esp'''
         condition: 'file("Nude Humanlike Spriggan.esp") or file("Nude Humanlike Spriggan Tweaked.esp") or file("Nude Humanlike Spriggan HGEC B.esp")'
   - name: 'Oblivifall - Ambiant Dungeon SFX.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/29676' ]
@@ -16838,6 +17260,8 @@ plugins:
         content:
           - lang: en
             text: 'If used with another potion graphics replacer, remove the Graphics tag to ensure compatibility. I.e. only the mod you want to be dominant should have a Graphics tag.'
+          - lang: de
+            text: 'Wenn dies mit einer anderen Zaubertrank-Graphik Ersetzer genutzt wird, Entfernen Sie den Graphics Tag um Kompatibilität zu gewährleisten. Bedeutet, nur die Mod die Sie verwenden wollen sollte den Graphics Tag haben.'
   - name: 'Repair Anytime-9384.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/9384' ]
     msg:
@@ -16848,7 +17272,9 @@ plugins:
       - type: say
         content:
           - lang: en
-            text: 'Very dirty - Compile All Scripts was used on the mod. Either use the CS or Tes4Edit to clean or use Wrye Bash''s Decompile All command.'
+            text: 'Very dirty - Compile All Scripts was used on the mod. Either use CS or Tes4Edit to clean or use Wrye Bash''s Decompile All command.'
+          - lang: de
+            text: 'Sehr unsauber - Compile All Scripts wurde auf dieser Mod genutzt. Entweder nutzen Sie CS oder Tes4Edit zum Säubern oder Sie nutzen Wrye Bash''s Decompile All Befehl.'
     tag: [ Scripts ]
   - name: 'Realistic Creature Rarity.esp'
     msg:
@@ -16856,18 +17282,24 @@ plugins:
         content:
           - lang: en
             text: 'Almost certainly not compatible with Fran''s, MMM, OOO or FCOM.'
+          - lang: de
+            text: 'Großer Wahrscheinlichkeit nicht kompatibel mit Fran''s, MMM, OOO oder FCOM.'
   - name: 'RareItemsv1.18.esp'
     msg:
       - type: say
         content:
           - lang: en
             text: 'Almost certainly not compatible with Fran''s, MMM, OOO or FCOM.'
+          - lang: de
+            text: 'Großer Wahrscheinlichkeit nicht kompatibel mit Fran''s, MMM, OOO oder FCOM.'
   - name: 'RareItemsv1.18 for RCR.esp'
     msg:
       - type: say
         content:
           - lang: en
             text: 'Almost certainly not compatible with Fran''s, MMM, OOO or FCOM.'
+          - lang: de
+            text: 'Großer Wahrscheinlichkeit nicht kompatibel mit Fran''s, MMM, OOO oder FCOM.'
   - name: 'realistic_weapon_reach_mod_ks_d.esp'
     tag: [ Stats ]
   - name: 'realistic_weapon_reach_mod_ks.esp'
@@ -16908,6 +17340,8 @@ plugins:
         content:
           - lang: en
             text: 'May not be compatible with MMM crafting - untested.'
+          - lang: de
+            text: 'Möglicherweise nicht kompatibel mit MMM Crafting - Ungetestet.'
     dirty:
       - crc: 0x4aa8ee9a
         <<: *dirtyPlugin
@@ -16918,6 +17352,8 @@ plugins:
         content:
           - lang: en
             text: 'Removes border region limmitation too.'
+          - lang: de
+            text: 'Entfernt auch Grenzregion Restriktionen.'
     dirty:
       - crc: 0x4cfabd99
         <<: *dirtyPlugin
@@ -16929,12 +17365,16 @@ plugins:
         content:
           - lang: en
             text: 'Part of the Rowboats mod.'
+          - lang: en
+            text: 'Teil der Rowboats Mod.'
   - name: 'Safer Roads v1.0.esp'
     msg:
       - type: say
         content:
           - lang: en
             text: 'Don''t use with MMM or FCOM - unknown with other overhauls'
+          - lang: de
+            text: 'Nicht Benutzen mit MMM oder FCOM - unbekannt bezüglich anderen Überhol-Mods'
   - name: 'SecretsoftheAyleidsClosure.esp'
     dirty:
       - crc: 0xe9500749
@@ -16952,6 +17392,8 @@ plugins:
         content:
           - lang: en
             text: 'German version.'
+          - lang: en
+            text: 'Deutsche Version.'
   - name: 'Vtoy.esp'
     tag:
       - Eyes
@@ -16973,6 +17415,8 @@ plugins:
         content:
           - lang: en
             text: 'Obsolete. Use LoversAdultPlayPlus.esp instead.'
+          - lang: de
+            text: 'Veraltet. Nutzen Sie stattdessen LoversAdultPlayPlus.esp.'
   - name: 'LoversSpringSale.esp'
     inc: [ 'LoversAdultPlay.esp' ]
     msg:
@@ -16980,6 +17424,8 @@ plugins:
         content:
           - lang: en
             text: 'Obsolete. Use LoversAdultPlayPlus.esp instead.'
+          - lang: de
+            text: 'Veraltet. Nutzen Sie stattdessen LoversAdultPlayPlus.esp.'
   - name: 'LoversAdultPlayPlus.esp'
     url: [ 'https://www.loverslab.com/files/file/5-outdated-lovers-minor-mod-pack' ]
     inc: [ 'LoversAdultPlayPlusforSSP.esp' ]
@@ -17005,6 +17451,8 @@ plugins:
         content:
           - lang: en
             text: 'Requires: LAPF v1.4, SetBody Blockhead 0.4'
+          - lang: de
+            text: 'Benötigt: LAPF v1.4, SetBody Blockhead 0.4'
   - name: 'LoversCreature_SexualOrgans.esp'
     tag:
       - Graphics
@@ -17035,18 +17483,24 @@ plugins:
         content:
           - lang: en
             text: 'Old, update to LoversCharactors.esp'
+          - lang: en
+            text: 'Alt, Updaten Sie zu LoversCharactors.esp'
   - name: 'LoversBorn.esp'
     msg:
       - type: say
         content:
           - lang: en
             text: 'Requires: the meshes from ''DskRing'' mods, but not the ESPs.'
+          - lang: de
+            text: 'Benötigt: Die Meshes von ''DskRing'' Mods, aber nicht die ESPs.'
   - name: 'LoversFOV.esp'
     msg:
       - type: error
         content:
           - lang: en
             text: 'Delete. Use newer version of Lovers with PK. Integrated into 1.3.1 Rev38 and newer.'
+          - lang: de
+            text: 'Zu entfernen. Nutzen Sie neuere Version vom Lovers with PK. Integriert in 1.3.1 Rev38 oder neuer.'
         condition: *FCOMCond
   - name: 'LoversLoser.esp'
     msg:
@@ -17054,18 +17508,24 @@ plugins:
         content:
           - lang: en
             text: 'Obsolete. Use LoversLandE.esp instead.'
+          - lang: de
+            text: 'Veraltet. Nutzen Sie stattdessen LoversLandE.esp.'
   - name: 'LoversVoiceSound.esp'
     msg:
       - type: say
         content:
           - lang: en
             text: 'Obsolete. Use Lovers with PK.esp instead.'
+          - lang: de
+            text: 'Veraltet. Nutzen Sie stattdessen Lovers with PK.esp.'
   - name: 'LoversAfterVoice.esp'
     msg:
       - type: error
         content:
           - lang: en
             text: 'Delete. Use newer version of Lovers with PK. Integrated into 1.3.1 Rev38 and newer.'
+          - lang: de
+            text: 'Zu entfernen. Nutzen Sie neuere Version vom Lovers with PK. Integriert in 1.3.1 Rev38 oder neuer.'
         condition: *FCOMCond
   - name: 'LoversStopCombat.esp'
     msg:
@@ -17073,6 +17533,8 @@ plugins:
         content:
           - lang: en
             text: 'Delete. Use newer version of Lovers with PK. Integrated into 1.3.1 Rev38 and newer.'
+          - lang: de
+            text: 'Zu entfernen. Nutzen Sie neuere Version vom Lovers with PK. Integriert in 1.3.1 Rev38 oder neuer.'
         condition: *FCOMCond
   - name: 'SPS.esp'
     dirty:
@@ -17097,19 +17559,25 @@ plugins:
       - type: say
         content:
           - lang: en
-            text: 'obselete get Oblivion Sexualized Monsters.esm and OSM-All Genders.esp instead.'
+            text: 'Obselete. Get Oblivion Sexualized Monsters.esm and OSM-All Genders.esp instead.'
+          - lang: de
+            text: 'Veraltet. Holen Sie sich stattdessen Oblivion Sexualized Monsters.esm und OSM-All Genders.esp.'
   - name: 'Sexual_Minotaur.esp'
     msg:
       - type: say
         content:
           - lang: en
-            text: 'obselete get Oblivion Sexualized Monsters.esm and OSM-All Genders.esp instead.'
+            text: 'Obselete. Get Oblivion Sexualized Monsters.esm and OSM-All Genders.esp instead.'
+          - lang: de
+            text: 'Veraltet. Holen Sie sich stattdessen Oblivion Sexualized Monsters.esm und OSM-All Genders.esp.'
   - name: 'Sexual_Ogre.esp'
     msg:
       - type: say
         content:
           - lang: en
-            text: 'obselete get Oblivion Sexualized Monsters.esm and OSM-All Genders.esp instead.'
+            text: 'Obselete. Get Oblivion Sexualized Monsters.esm and OSM-All Genders.esp instead.'
+          - lang: de
+            text: 'Veraltet. Holen Sie sich stattdessen Oblivion Sexualized Monsters.esm und OSM-All Genders.esp.'
   - name: 'Enhanced Vegetation \[1[0125]...\.esp'
     msg:
       - <<: *useOnlyOneX
@@ -17127,6 +17595,8 @@ plugins:
         content:
           - lang: en
             text: 'Conflicts with OOO''s changes to skill perks and their descriptions.'
+          - lang: de
+            text: 'Steht im Konflikt mit OOO''s Änderungen an den Fähigkeits-Perks und deren Beschreibungen.'
         condition: *OOOCond
   - name: 'Steel Helm Replacer.esp'
     tag:
@@ -17141,6 +17611,8 @@ plugins:
         content:
           - lang: en
             text: 'Don''t need to use this if you use MMM as it already includes dogs.'
+          - lang: en
+            text: 'Wird nicht benötigt wenn Sie MMM nutzen, da es Hunde bereits enthält.'
   - name: 'Soulgem Magic.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/35393' ]
     req: [ *OBSEv20 ]
@@ -17152,6 +17624,8 @@ plugins:
         content:
           - lang: en
             text: 'Probably not compatible with OOO. Update to version 2.0+.'
+          - lang: en
+            text: 'Wahrscheinlich nicht kompatibel mit OOO. Updaten Sie zur Version 2.0+.'
         condition: *OOOCond
   - name: 'SPTDiverseGuardsMRAll.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/24614' ]
@@ -17236,25 +17710,33 @@ plugins:
         content:
           - lang: en
             text: 'Obsolete. Upgrade to Kuertee''s "Alternatives To Death And Reload."'
+          - lang: de
+            text: 'Veraltet. Upgraden Sie zu Kuertee''s "Alternatives To Death And Reload."'
   - name: 'EnchantedGems_Geomancy.esp'
     msg:
       - type: say
         content:
           - lang: en
-            text: 'Similar to OOO and MMM Gems and Gem Dust- is almost certainly incompatible with those. Untested.'
+            text: 'Similar to OOO and MMM Gems and Gem Dust - is almost certainly incompatible with those. Untested.'
+          - lang: de
+            text: 'Ähnlich zu OOO und MMM Gems und Gem Dust - ist sehr wahrscheinlich inkompatibel mit diesen. Ungetestet.'
     tag: [ Scripts ]
   - name: 'geomancy.esp'
     msg:
       - type: say
         content:
           - lang: en
-            text: 'Similar to OOO and MMM Gems and Gem Dust- is almost certainly incompatible with those. Untested.'
+            text: 'Similar to OOO and MMM Gems and Gem Dust - is almost certainly incompatible with those. Untested.'
+          - lang: de
+            text: 'Ähnlich zu OOO und MMM Gems und Gem Dust - ist sehr wahrscheinlich inkompatibel mit diesen. Ungetestet.'
   - name: 'TUR_GemDust.esp'
     msg:
       - type: say
         content:
           - lang: en
             text: 'Similar to OOO and MMM Gems and Gem Dust - is almost certainly incompatible with those. Untested.'
+          - lang: de
+            text: 'Ähnlich zu OOO und MMM Gems und Gem Dust - ist sehr wahrscheinlich inkompatibel mit diesen. Ungetestet.'
     tag: [ Scripts ]
   - name: 'Ayleid Wells.esp'
     tag: [ Scripts ]
@@ -17289,6 +17771,8 @@ plugins:
         content:
           - lang: en
             text: 'If it doesn''t work move past your bashed patch (author recommends that placement but the tags added here should fix that... to be investigated)'
+          - lang: en
+            text: 'Wenn es nicht funktioniert, bewegen Sie es nach Ihrem Bashed Patch (Mod-Autor empfiehlt diese Platzierung aber die Tags die hier hinzugefügt wurden, sollten das beheben... muss noch untersucht werden)'
     tag:
       - Invent
       - Scripts
@@ -17298,6 +17782,8 @@ plugins:
         content:
           - lang: en
             text: 'Needs Shivering Isles. Otherwise use ''Tim_No_SI''.'
+          - lang: en
+            text: 'Braucht Shivering Isles. Alternativ nutzen Sie ''Tim_No_SI''.'
   - name: 'Tim_No_SI.esp'
     inc: [ 'DLCShiveringIsles.esp' ]
     msg:
@@ -17305,6 +17791,8 @@ plugins:
         content:
           - lang: en
             text: 'Use this without Shivering Isles. Otherwise use ''Merchant_Tim''.'
+          - lang: de
+            text: 'Nutzen Sie diesen ohne Shivering Isles. Alternativ nutzen Sie ''Merchant_Tim''.'
   - name: 'Borderless Cyrodiil-3578.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/3578' ]
     msg: [ *useIniTweakOrBashedPatch ]
@@ -17337,7 +17825,9 @@ plugins:
       - type: warn
         content:
           - lang: en
-            text: 'Contains corrupt identical-to-master records. Automated cleaning wth TES4Edit will remove them.'
+            text: 'Contains corrupt identical-to-master records. Automated cleaning with TES4Edit will remove them.'
+          - lang: en
+            text: 'Enthält korrupte Identisch-zum-Master Einträge. Automatische Säuberung mit TES4Edit wird diese entfernen.'
         condition: 'checksum("Quest Award Leveller - Knights of the Nine.esp", A80CD1A4)'
     dirty:
       - crc: 0xA80CD1A4
@@ -17364,6 +17854,8 @@ plugins:
         content:
           - lang: en
             text: 'Check to make sure you''re using v1.26 or later.'
+          - lang: de
+            text: 'Stellen Sie sicher das Sie v1.26 oder neuer nutzen.'
   - name: 'ROM Patch - Alternative Start.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/33114' ]
     tag: [ Scripts ]
@@ -17373,24 +17865,32 @@ plugins:
         content:
           - lang: en
             text: 'Old, update to ''Tyler''s Hungry, Thirsty, Sleepy, Tired.esp''.'
+          - lang: de
+            text: 'Alt, Updaten Sie zu ''Tyler''s Hungry, Thirsty, Sleepy, Tired.esp''.'
   - name: 'Addendum - Hungry.esp'
     msg:
       - type: say
         content:
           - lang: en
             text: 'Old, update to ''Tyler''s Hungry, Thirsty, Sleepy, Tired.esp''.'
+          - lang: de
+            text: 'Alt, Updaten Sie zu ''Tyler''s Hungry, Thirsty, Sleepy, Tired.esp''.'
   - name: 'Addendum - Sleepy.esp'
     msg:
       - type: say
         content:
           - lang: en
             text: 'Old, update to ''Tyler''s Hungry, Thirsty, Sleepy, Tired.esp''.'
+          - lang: de
+            text: 'Alt, Updaten Sie zu ''Tyler''s Hungry, Thirsty, Sleepy, Tired.esp''.'
   - name: 'Addendum - Thirsty.esp'
     msg:
       - type: say
         content:
           - lang: en
             text: 'Old, update to ''Tyler''s Hungry, Thirsty, Sleepy, Tired.esp''.'
+          - lang: de
+            text: 'Alt, Updaten Sie zu ''Tyler''s Hungry, Thirsty, Sleepy, Tired.esp''.'
   - name: 'pmQFNaturalHunger.esp'
     req: [ 'pmRealTimeInteractions.esp' ]
   - name: 'ReneerKeyLockMod.esp'
@@ -17420,6 +17920,8 @@ plugins:
         content:
           - lang: en
             text: 'Has problems with OOO (StarX vampires will fight OOO vampires, and some chests/weapons will be in skewed places).'
+          - lang: de
+            text: 'Hat Probleme mit OOO (StarX Vampire werden mit OOO Vampiren kämpfen, und einige Truhen/Waffen werden in verstellten Orten sein).'
         condition: *OOOCond
     tag:
       - C.Light
@@ -17446,6 +17948,8 @@ plugins:
         content:
           - lang: en
             text: 'May have problems with OOO.'
+          - lang: de
+            text: 'Kann Probleme mit OOO haben.'
         condition: *OOOCond
     dirty:
       - crc: 0x277ff034
@@ -17462,6 +17966,8 @@ plugins:
         content:
           - lang: en
             text: 'Suspected of messing up your magicka multiplier.'
+          - lang: de
+            text: 'Verdächtigt Ihren Magicka Multiplikator zu vermasseln.'
   - name: 'CompanionRepair.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/29263' ]
     req: [ *OBSE ]
@@ -17470,6 +17976,8 @@ plugins:
         content:
           - lang: en
             text: 'Requires: RefStuff'
+          - lang: de
+            text: 'Benötigt: RefStuff'
   - name: 'elPatrixF_SummonWorkshop_ShiveringIsles.esp'
     req: [ 'DLCShiveringIsles.esp' ]
   - name: 'Illusionary Summons.esp'
@@ -17496,6 +18004,8 @@ plugins:
         content:
           - lang: en
             text: 'Do not activate alongside other horse summoning mods. Use only one .esp.'
+          - lang: de
+            text: 'Nicht mit anderen Pferd-Beschwörungs-Mods gleichzeitig nutzen. Nutzen Sie nur eine .esp.'
   - name: 'MadCompanionshipSpells.esp'
     req: [ *OBSEv19 ]
   - name: 'MarkRecall.esp'
@@ -17504,6 +18014,8 @@ plugins:
         content:
           - lang: en
             text: 'Consider using Mark Recall 3 if using OBSE.'
+          - lang: de
+            text: 'Erwägen Sie Mark Recall 3 zu benutzen bei der Nutzung von OBSE.'
         condition: 'file("../obse_1_2_416.dll")'
   - name: 'Mark3.esp'
     req: [ *OBSE ]
@@ -17573,6 +18085,8 @@ plugins:
         content:
           - lang: en
             text: 'DO NOT USE. This plugin is corrupt. It may be fixed by loading it in the CS and truncating the file when prompted.'
+          - lang: de
+            text: 'NICHT NUTZEN. Dieses Plugin ist korrupt. Es kann behoben werden durch Laden in der CS und die Datei zu kürzen wenn man gefragt wird.'
         condition: 'checksum("training spells.esp", DD4985A)'
   - name: 'Judgement of the Nine.esp'
     tag: [ Graphics ]
@@ -17615,6 +18129,8 @@ plugins:
         content:
           - lang: en
             text: 'Obsolete, you can update to Supreme Magicka 0.89b+ and set ''zzSMConfigurationQuest.bNoPoisonLevitationEffects'' to 1 in the ini for the same result.'
+          - lang: de
+            text: 'Veraltet, Sie können zu Supreme Magicka 0.89b+ updaten und ''zzSMConfigurationQuest.bNoPoisonLevitationEffects'' zu 1 setzen in der ini für das selbe Resultat.'
   - name: 'Rathunas01.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/45880' ]
     req:
@@ -17625,6 +18141,8 @@ plugins:
         content:
           - lang: en
             text: 'Requires: Unique Landscapes-Brena River Ravine'
+          - lang: de
+            text: 'Benötigt: Unique Landscapes-Brena River Ravine'
   - name: 'MidasSpellTomes.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/18398' ]
     tag: [ Relev ]
@@ -17724,6 +18242,8 @@ plugins:
         content:
           - lang: en
             text: 'Do not have Jpm''s original active at the same time as this.'
+          - lang: de
+            text: 'Haben Sie nicht Jpm''s original aktiv zur selben Zeit wie dies.'
         condition: 'file("Jpm''s Miniature Necromancy.esp") or file("Jpm''s Miniature Necromancy RUS.esp")'
   - name: 'TFE - Restore Cost.esp'
     msg:
@@ -17731,6 +18251,8 @@ plugins:
         content:
           - lang: en
             text: 'Not needed if using LAME.'
+          - lang: de
+            text: 'Nicht nötig wenn LAME genutzt wird.'
   - name: 'PMSneakySummons-ForVanilla.esp'
     inc: [ 'PMSneakySummonCompatibility.esp' ]
     msg:
@@ -17738,12 +18260,16 @@ plugins:
         content:
           - lang: en
             text: 'To have magic overhaul features move before magic overhauls (but then you won''t get the features of this)'
+          - lang: de
+            text: 'Um Magie-Überhol Funktionalitäten zu haben, bewegen Sie es vor Magie-Überhol-Mods (aber dann bekommen Sie nicht die Funktionalitäten hiervon)'
   - name: 'Poisoned Apple Fix.esp'
     msg:
       - type: say
         content:
           - lang: en
             text: 'Will probably break Dark Botherhood guild quest.'
+          - lang: de
+            text: 'Wird wahrscheinlich die Dark Botherhood Gilden Quest brechen.'
   - name: 'Potion_Sorter-2081.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/2081' ]
     tag: [ Names ]
@@ -17753,6 +18279,8 @@ plugins:
         content:
           - lang: en
             text: 'Incompatible with: mods that alter Welkynd or Varla stones or the AyleidWell script.'
+          - lang: de
+            text: 'Inkompatibel mit: Mods die Welkynd oder Varla stones oder die AyleidWell Skripte abändern.'
   - name: 'pmAlchemyOverhaul.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/41283' ]
     msg:
@@ -17760,12 +18288,16 @@ plugins:
         content:
           - lang: en
             text: 'Requires: Real-time Interactions'
+          - lang: de
+            text: 'Benötigt: Real-time Interactions'
   - name: 'Harvest [Flora] - Patch.esp'
     msg:
       - type: say
         content:
           - lang: en
             text: 'Use only with the ''Herbalism'' mod. Otherwise use ''Harvest [Flora]'' v3.0.1 or later which removes a CTD with the Harrada root.'
+          - lang: de
+            text: 'Nur nutzen mit der ''Herbalism'' Mod. Alternativ dazu nutzen Sie ''Harvest [Flora]'' v3.0.1 oder neuer welcher ein CTD entfernt bezüglich der Harrada Wurzel.'
   - name: 'IshMultipleApparelEnchantments.esp'
     req: [ *OBSE ]
   - name: 'Soolie''sBetterEnchantmentEffects.esp'
@@ -17798,13 +18330,17 @@ plugins:
         content:
           - lang: en
             text: 'Partly included with OOO. May not be OOO compatible.'
+          - lang: de
+            text: 'Teilweise beinhaltet von OOO. Möglicherweise nicht kompatibel mit OOO.'
         condition: *OOOCond
   - name: 'Thievery_(Easy|Normal|Hard)(_Thrill)?\.esp'
     msg:
       - type: say
         content:
           - lang: en
-            text: 'only use one of the ''Worthwhile Thievery'' ESPs.'
+            text: 'Only use one of the ''Worthwhile Thievery'' ESPs.'
+          - lang: de
+            text: 'Nutzen Sie nur eine der ''Worthwhile Thievery'' ESPs.'
   - name: 'Morrowind Lockpicking.esp'
     inc: [ 'ZumbsLockpickingMod.esp' ]
     tag: [ Relev ]
@@ -17840,10 +18376,14 @@ plugins:
         content:
           - lang: en
             text: 'If using The Elder Council use the [patch](http://www.nexusmods.com/oblivion/mods/23526).'
+          - lang: de
+            text: 'Wenn Sie The Elder Council benutzen, nutzen Sie den [Patch](http://www.nexusmods.com/oblivion/mods/23526).'
       - type: say
         content:
           - lang: en
             text: 'If using Kuertee''s Clothing Matters, edit Clothing Matters.ini and change kCMQuest.guardArmourCrimeGold and kCMQuest.guardArmourIsADisguise to 0'
+          - lang: de
+            text: 'Wenn Sie Kuertee''s Clothing Matters benutzen, editieren Sie Clothing Matters.ini und ändern Sie kCMQuest.guardArmourCrimeGold und kCMQuest.guardArmourIsADisguise zu 0 ab'
     dirty:
       - crc: 0xa3c5adac
         <<: *dirtyPlugin
@@ -17873,6 +18413,8 @@ plugins:
         content:
           - lang: en
             text: 'Only use one Erics * for archers.esp.'
+          - lang: de
+            text: 'Nutzen Sie nur eine Erics * for archers.esp.'
   - name: 'Fast Arrow Collection.esp'
     req: [ *OBSEv16 ]
   - name: 'More_Arrows_Recovered-2169.esp'
@@ -17916,6 +18458,8 @@ plugins:
         content:
           - lang: en
             text: 'Incompatible with: Deadly Reflex'
+          - lang: de
+            text: 'Inkompatibel mit: Deadly Reflex'
         condition: 'file("Deadly Reflex.*\.esp")'
   - name: 'HTHAdvanced - Normal.esp'
     inc: [ 'HTHAdvanced - Sinkpoint.esp' ]
@@ -17923,7 +18467,9 @@ plugins:
       - type: say
         content:
           - lang: en
-            text: 'Use ''Sinkpoint'' version if using using Sinkpoints Martial Arts Animation Replacer.'
+            text: 'Use ''Sinkpoint'' version if using Sinkpoints Martial Arts Animation Replacer.'
+          - lang: de
+            text: 'Nutzen Sie die ''Sinkpoint'' Version wenn Sie Sinkpoints Martial Arts Animation Replacer nutzen.'
   - name: 'JM''s Bar Fights mortal.esp'
     inc: [ 'JM''s Bar Fights.esp' ]
   - name: 'Longer_KnockOut-6523.esp'
@@ -17938,6 +18484,8 @@ plugins:
         content:
           - lang: en
             text: 'To use both DR6b101 and NifSE 1.0+ you need the [fix file](http://www.nexusmods.com/oblivion/mods/40336).'
+          - lang: de
+            text: 'Um beides, DR6b101 und NifSE 1.0+ zu nutzen, setzt dies die [Fix-Datei](http://www.nexusmods.com/oblivion/mods/40336) voraus.'
         condition: 'not file("Deadly Reflex 6 - HeX NifSE Patch.esp")'
     req:
       - *NifSE
@@ -17977,6 +18525,8 @@ plugins:
         content:
           - lang: en
             text: 'Remove this. Known to cause crashes and save game corruption.'
+          - lang: de
+            text: 'Entfernen Sie dies. Bekannt dafür Crashes und Spielstand-Korruption auszulösen.'
 
   - name: 'kuerteeAttributeAndSkillBasedDamageModifiers.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/23062' ]
@@ -17985,6 +18535,8 @@ plugins:
         content:
           - lang: en
             text: 'Make sure to set calculateFromVanilla in the included ini file to 0 when used alongside other combat mods.'
+          - lang: de
+            text: 'Stellen Sie sicher calculateFromVanilla in der mitgelieferten ini Datei auf 0 zu setzen wenn es gleichzeitig mit anderen Kampf-Mods genutzt wird.'
   - name: 'Double-tap dodge.esp'
     req: [ *OBSEv19 ]
   - name: 'Duke Patricks - Actors Can Miss Now.esp'
@@ -17994,6 +18546,8 @@ plugins:
         content:
           - lang: en
             text: 'Causes CTD with companions. Use ''Duke Patricks - Friendship Ring For Companion Detection'' to avoid this.'
+          - lang: de
+            text: 'Verursacht CTD mit Begleitern. Nutzen Sie ''Duke Patricks - Friendship Ring For Companion Detection'' um dies zu vermeiden.'
   - name: 'Duke Patricks - Fresh Kills Now Alert The NPCs.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/18065' ]
     dirty:
@@ -18009,6 +18563,8 @@ plugins:
         content:
           - lang: en
             text: 'Don''t need to use ''PTActorsCare.esp'', ''PTDamageFinal.esp'', ''PTDoorExploitBegone.esp'', ''PTLessKnockback.esp'' or NoRunningBackwards mod with this.'
+          - lang: de
+            text: 'Sie brauchen ''PTActorsCare.esp'', ''PTDamageFinal.esp'', ''PTDoorExploitBegone.esp'', ''PTLessKnockback.esp'' oder NoRunningBackwards Mod nicht mit diesem.'
         condition: 'file("PTActorsCare.esp") or file("PTDamageFinal.esp") or file("PTDoorExploitBegone.esp") or file("PTLessKnockback.esp") or file("NoBackwardsRunning.esp") or file("NoBackwardsRunning_fran.esp")'
       - *masterReassign
   - name: 'BFG''s Enhanced Armory.esp'
@@ -18029,6 +18585,8 @@ plugins:
         content:
           - lang: en
             text: 'Incompatible with: Progress*.esp'
+          - lang: de
+            text: 'Inkompatibel mit: Progress*.esp'
         condition: 'file("[pP]rogress.*\.esp")'
   - name: 'ExperienceBasedTraining.esp'
     req: [ *OBSEv16 ]
@@ -18046,6 +18604,8 @@ plugins:
         content:
           - lang: en
             text: 'Use ''OOO-Intelligence Overhaul BJ'' instead.'
+          - lang: de
+            text: 'Nutzen Sie stattdessen ''OOO-Intelligence Overhaul BJ''.'
         condition: *OOOCond
   - name: 'Intelligence Overhaul-RR.esp'
     req: [ *OBSEv11 ]
@@ -18060,6 +18620,8 @@ plugins:
         content:
           - lang: en
             text: 'Edits "ObXPMiscScript" from version 4.1.5. Important: use this patch with that version only!'
+          - lang: de
+            text: 'Bearbeitet "ObXPMiscScript" von Version 4.1.5. Wichtig: Nutzen Sie diesen Patch nur mit dieser Version!'
   - name: 'DMRequirements.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/23005' ]
     msg: [ *obsolete ]
@@ -18070,13 +18632,17 @@ plugins:
         content:
           - lang: en
             text: 'Use this plugin instead of ''Toaster''s Legendary Skills & Stats.esp'' if you have any problems with the stats.'
+          - lang: de
+            text: 'Nutzen Sie dieses Plugin stattdessen von ''Toaster''s Legendary Skills & Stats.esp'' wenn Sie Probleme mit den Statistiken haben.'
   - name: 'Toaster''s Legendary Mastery.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/3664' ]
     msg:
       - type: say
         content:
           - lang: en
-            text: 'Included in ''Hentai Mania.esp'',  delete or deactivate if you use Hentai Mania mod.'
+            text: 'Included in ''Hentai Mania.esp'', delete or deactivate if you use Hentai Mania mod.'
+          - lang: de
+            text: 'Beinhaltet von ''Hentai Mania.esp'', löschen oder deaktivieren Sie diesen wenn Sie die Hentai Mania Mod nutzen.'
         condition: 'file("Hentai *Mania.*\.esp")'
   - name: 'seorin''s Leveling System.esp'
     msg:
@@ -18084,6 +18650,8 @@ plugins:
         content:
           - lang: en
             text: 'Use just one Seorin''s Leveling System mod file.'
+          - lang: de
+            text: 'Nutzen Sie einfach nur eine Seorin''s Leveling System Mod Datei.'
   - name: 'Legendary Abilities-Shield MOJ.esp'
     dirty:
       - crc: 0x51d68248
@@ -18133,6 +18701,8 @@ plugins:
         content:
           - lang: en
             text: 'All character attributes MUST be below 95 if adding one of those uncapper mods and this SPAM plugin.'
+          - lang: de
+            text: 'Alle Charakter Attribute MÜSSEN unter 95 sein wenn Sie einer der Uncapper-Mods und dieses SPAM Plugin hinzufügen.'
   - name: 'S.P.A.M. option - Faste(r|st) Major.esp'
     msg:
       - <<: *useOnlyOneX
@@ -18151,6 +18721,8 @@ plugins:
         content:
           - lang: en
             text: 'Highly recommended to use the MAO patcher in Wrye Bash version 275+.'
+          - lang: de
+            text: 'Strengstens empfohlen den MAO Patcher in Wrye Bash Version 275+ zu nutzen.'
   - name: 'SexyPlOneHand.esp'
     tag:
       - Actors.Anims
@@ -18405,6 +18977,8 @@ plugins:
         content:
           - lang: en
             text: 'These eyes will not work properly with the Vanilla eye meshes. You need Elaborate Eyes or the Beautiful People 2.7 mod to use these eye textures.'
+          - lang: de
+            text: 'Diese Augen werden nicht ordnungsgemäß mit den ursprünglichen Augen-Meshes funktionieren. Sie brauchen Elaborate Eyes oder the Beautiful People 2.7 Mod um diese Augen-Texturen zu verwenden.'
     tag: [ Eyes ]
   - name: 'Unique Eyes Selection - DV.esp'
     tag: [ Eyes ]
@@ -18470,6 +19044,8 @@ plugins:
         content:
           - lang: en
             text: 'Outdated. Update to latest version.'
+          - lang: en
+            text: 'Veraltet. Updaten Sie zur neuesten Version.'
     tag:
       - Eyes
       - Hair
@@ -18853,6 +19429,8 @@ plugins:
         content:
           - lang: en
             text: 'Requires: Robert''s Male v4 or v5'
+          - lang: de
+            text: 'Benötigt: Robert''s Male v4 oder v5'
     tag:
       - Eyes
       - Graphics
@@ -18867,6 +19445,8 @@ plugins:
         content:
           - lang: en
             text: 'Requires: HG EyeCandy Body OR TeamFF Fantasy Figures OR Robert''s Female v12'
+          - lang: de
+            text: 'Benötigt: HG EyeCandy Body ODER TeamFF Fantasy Figures ODER Robert''s Female v12'
     tag:
       - Eyes
       - Graphics
@@ -18955,7 +19535,9 @@ plugins:
       - type: say
         content:
           - lang: en
-            text: 'Consider updating to DACompilation_GO.esp/DACompilation_GO_APN.esp - in other words has some fixes and improvements but not gamedestroying update now or you will die stuff.'
+            text: 'Consider updating to DACompilation_GO.esp/DACompilation_GO_APN.esp - this has some fixes and improvements and fixes game-destroying issues.'
+          - lang: de
+            text: 'Erwägen Sie zu DACompilation_GO.esp/DACompilation_GO_APN.esp upzudaten - Dies hat einige Fixes und Verbesserungen und behebt Spiel-zerstörende Probleme.'
     tag:
       - Eyes
       - Hair
@@ -19099,7 +19681,9 @@ plugins:
       - type: say
         content:
           - lang: en
-            text: 'Delete and update to newer version - ''Manga Elves.esp'''
+            text: 'Delete and update to newest version - ''Manga Elves.esp'''
+          - lang: de
+            text: 'Entfernen und Updaten Sie zur neuesten Version - ''Manga Elves.esp'''
     tag:
       - Eyes
       - Graphics
@@ -19322,6 +19906,8 @@ plugins:
         content:
           - lang: en
             text: 'Use ''for MMM'' version if using MMM/FCOM.'
+          - lang: en
+            text: 'Nutzen Sie die ''for MMM'' Version wenn Sie MMM/FCOM nutzen.'
     tag:
       - Eyes
       - Hair
@@ -19638,6 +20224,8 @@ plugins:
         content:
           - lang: en
             text: 'Requires: Hairs from Corean mod FULL 1.8'
+          - lang: de
+            text: 'Benötigt: Hairs from Corean mod FULL 1.8'
     tag:
       - Eyes
       - Graphics
@@ -20105,6 +20693,8 @@ plugins:
         content:
           - lang: en
             text: 'Requires: TNR, Ren''s Hair, Elaborate Eyes.'
+          - lang: de
+            text: 'Benötigt: TNR, Ren''s Hair, Elaborate Eyes.'
     tag:
       - Eyes
       - Graphics
@@ -20141,6 +20731,8 @@ plugins:
         content:
           - lang: en
             text: 'Requires: Xenius'' Deus Obscura race'
+          - lang: de
+            text: 'Benötigt: Xenius'' Deus Obscura race'
     tag:
       - Hair
       - NpcFaces
@@ -20181,6 +20773,8 @@ plugins:
         content:
           - lang: en
             text: 'Requires: CM Partners Basic'
+          - lang: de
+            text: 'Benötigt: CM Partners Basic'
   - name: 'CMpartnerTifa.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22980' ]
     tag:
@@ -20279,7 +20873,9 @@ plugins:
       - type: say
         content:
           - lang: en
-            text: 'Use this or "1em_Vilja MMM FCOM Fix.esp", but not both; The OOO Version offers less protection.'
+            text: 'Use this or "1em_Vilja MMM FCOM Fix.esp", but not both; The OOO version offers less protection.'
+          - lang: de
+            text: 'Nutzen Sie dieses oder "1em_Vilja MMM FCOM Fix.esp", aber nicht beides; Die OOO Version bietet weniger Schutz.'
     tag:
       - Factions
       - NoMerge
@@ -20295,7 +20891,9 @@ plugins:
       - type: say
         content:
           - lang: en
-            text: 'Use this or "1em_Vilja OOO FCOM Fix.esp", but not both; The MMM Version offers more protection from certain Npc and Creatures.'
+            text: 'Use this or "1em_Vilja OOO FCOM Fix.esp", but not both; The MMM Version offers more protection from certain NPCs and Creatures.'
+          - lang: de
+            text: 'Nutzen Sie dieses oder "1em_Vilja MMM FCOM Fix.esp", aber nicht beides; Die MMM Version bietet mehr Schutz gegenüber einigen NPCs und Kreaturen.'
     tag:
       - Factions
       - NoMerge
@@ -20311,14 +20909,18 @@ plugins:
       - type: say
         content:
           - lang: en
-            text: 'Requires: Requires resources from [Abriael Human Races Revamped](http://www.nexusmods.com/oblivion/mods/25524), the ESP file is not required.'
+            text: 'Requires: Resources from [Abriael Human Races Revamped](http://www.nexusmods.com/oblivion/mods/25524), the ESP file is not required.'
+          - lang: de
+            text: 'Benötigt: Ressourcen von [Abriael Human Races Revamped](http://www.nexusmods.com/oblivion/mods/25524), die ESP Datei wird nicht benötigt.'
   - name: '1em_Vilja_as_High_Imperial.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/28977' ]
     msg:
       - type: say
         content:
           - lang: en
-            text: 'Requires: Requires resources from [Deathknowz''s High Imperials Race](http://www.nexusmods.com/oblivion/mods/33044) (all three files), the ESP file is not required.'
+            text: 'Requires: Resources from [Deathknowz''s High Imperials Race](http://www.nexusmods.com/oblivion/mods/33044) (all three files), the ESP file is not required.'
+          - lang: de
+            text: 'Benötigt: Ressourcen von [Deathknowz''s High Imperials Race](http://www.nexusmods.com/oblivion/mods/33044) (all drei Dateien), die ESP Datei wird nicht benötigt.'
   - name: '1em_Vilja_?(cool|Ren)(hair)?\d\d?g?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/28977' ]
     msg:
@@ -20364,7 +20966,9 @@ plugins:
       - type: say
         content:
           - lang: en
-            text: 'Consider updating to DACompilation_GO.esp/DACompilation_GO_APN.esp - in other words has some fixes and improvements but not gamedestroying update now or you will die stuff.'
+            text: 'Consider updating to DACompilation_GO.esp/DACompilation_GO_APN.esp - this has some fixes and improvements and fixes game-destroying issues.'
+          - lang: de
+            text: 'Erwägen Sie zu DACompilation_GO.esp/DACompilation_GO_APN.esp upzudaten - Dies hat einige Fixes und Verbesserungen und behebt Spiel-zerstörende Probleme.'
     dirty:
       - crc: 0xc4c3d868
         <<: *dirtyPlugin
@@ -20379,6 +20983,8 @@ plugins:
         content:
           - lang: en
             text: 'If you use Entius Gorge you need the compatibility patch found [here](http://www.nexusmods.com/oblivion/mods/13834).'
+          - lang: de
+            text: 'Wenn Sie Entius Gorge nutzen, brauchen Sie den Kompatibilitäts-Patch der [hier](http://www.nexusmods.com/oblivion/mods/13834) abgerufen werden kann.'
   - name: 'Companion-Hilda.esp'
     inc: [ 'Companion Neeshka.esp' ]
   - name: 'Companion Neeshka.esp'
@@ -20393,6 +20999,8 @@ plugins:
         content:
           - lang: en
             text: 'May be incompatible with plugins affecting sleep.'
+          - lang: de
+            text: 'Möglicherweise inkompatibel mit Plugins die Schlaf beeinflussen.'
     tag:
       - Eyes
       - Hair
@@ -20411,7 +21019,9 @@ plugins:
       - type: say
         content:
           - lang: en
-            text: 'Consider updating to DACompilation_GO.esp/DACompilation_GO_APN.esp - in other words has some fixes and improvements but not gamedestroying update now or you will die stuff.'
+            text: 'Consider updating to DACompilation_GO.esp/DACompilation_GO_APN.esp - this has some fixes and improvements and fixes game-destroying issues.'
+          - lang: de
+            text: 'Erwägen Sie zu DACompilation_GO.esp/DACompilation_GO_APN.esp upzudaten - Dies hat einige Fixes und Verbesserungen und behebt Spiel-zerstörende Probleme.'
     tag:
       - Eyes
       - Hair
@@ -20438,7 +21048,8 @@ plugins:
         content:
           - lang: en
             text: 'Requires: Underdark: The Realm of Northdark.'
-  - name: 'GG_Valeria_Revived.esp'
+          - lang: de
+            text: 'Benötigt: Underdark: The Realm of Northdark.'
     tag:
       - Eyes
       - Hair
@@ -20563,7 +21174,9 @@ plugins:
       - type: say
         content:
           - lang: en
-            text: 'Consider updating to DACompilation_GO.esp/DACompilation_GO_APN.esp - in other words has some fixes and improvements but not gamedestroying update now or you will die stuff.'
+            text: 'Consider updating to DACompilation_GO.esp/DACompilation_GO_APN.esp - this has some fixes and improvements and fixes game-destroying issues.'
+          - lang: de
+            text: 'Erwägen Sie zu DACompilation_GO.esp/DACompilation_GO_APN.esp upzudaten - Dies hat einige Fixes und Verbesserungen und behebt Spiel-zerstörende Probleme.'
     tag:
       - Eyes
       - Hair
@@ -20613,7 +21226,9 @@ plugins:
       - type: say
         content:
           - lang: en
-            text: 'Consider updating to DACompilation_GO.esp/DACompilation_GO_APN.esp - in other words has some fixes and improvements but not gamedestroying update now or you will die stuff.'
+            text: 'Consider updating to DACompilation_GO.esp/DACompilation_GO_APN.esp - this has some fixes and improvements and fixes game-destroying issues.'
+          - lang: de
+            text: 'Erwägen Sie zu DACompilation_GO.esp/DACompilation_GO_APN.esp upzudaten - Dies hat einige Fixes und Verbesserungen und behebt Spiel-zerstörende Probleme.'
     tag:
       - Eyes
       - Hair
@@ -20623,7 +21238,9 @@ plugins:
       - type: say
         content:
           - lang: en
-            text: 'Consider updating to DACompilation_GO.esp/DACompilation_GO_APN.esp - in other words has some fixes and improvements but not gamedestroying update now or you will die stuff.'
+            text: 'Consider updating to DACompilation_GO.esp/DACompilation_GO_APN.esp - this has some fixes and improvements and fixes game-destroying issues.'
+          - lang: de
+            text: 'Erwägen Sie zu DACompilation_GO.esp/DACompilation_GO_APN.esp upzudaten - Dies hat einige Fixes und Verbesserungen und behebt Spiel-zerstörende Probleme.'
     tag:
       - Eyes
       - Hair
@@ -20643,7 +21260,9 @@ plugins:
       - type: say
         content:
           - lang: en
-            text: 'Consider updating to DACompilation_GO.esp/DACompilation_GO_APN.esp - in other words has some fixes and improvements but not gamedestroying update now or you will die stuff.'
+            text: 'Consider updating to DACompilation_GO.esp/DACompilation_GO_APN.esp - this has some fixes and improvements and fixes game-destroying issues.'
+          - lang: de
+            text: 'Erwägen Sie zu DACompilation_GO.esp/DACompilation_GO_APN.esp upzudaten - Dies hat einige Fixes und Verbesserungen und behebt Spiel-zerstörende Probleme.'
     tag:
       - Eyes
       - Hair
@@ -20663,7 +21282,9 @@ plugins:
       - type: say
         content:
           - lang: en
-            text: 'Consider updating to DACompilation_GO.esp/DACompilation_GO_APN.esp - in other words has some fixes and improvements but not gamedestroying update now or you will die stuff.'
+            text: 'Consider updating to DACompilation_GO.esp/DACompilation_GO_APN.esp - this has some fixes and improvements and fixes game-destroying issues.'
+          - lang: de
+            text: 'Erwägen Sie zu DACompilation_GO.esp/DACompilation_GO_APN.esp upzudaten - Dies hat einige Fixes und Verbesserungen und behebt Spiel-zerstörende Probleme.'
     tag:
       - Eyes
       - Hair
@@ -20678,7 +21299,9 @@ plugins:
       - type: say
         content:
           - lang: en
-            text: 'Consider updating to DACompilation_GO.esp/DACompilation_GO_APN.esp - in other words has some fixes and improvements but not gamedestroying update now or you will die stuff.'
+            text: 'Consider updating to DACompilation_GO.esp/DACompilation_GO_APN.esp - this has some fixes and improvements and fixes game-destroying issues.'
+          - lang: de
+            text: 'Erwägen Sie zu DACompilation_GO.esp/DACompilation_GO_APN.esp upzudaten - Dies hat einige Fixes und Verbesserungen und behebt Spiel-zerstörende Probleme.'
     tag:
       - Eyes
       - Hair
@@ -20698,7 +21321,9 @@ plugins:
       - type: say
         content:
           - lang: en
-            text: 'Consider updating to DACompilation_GO.esp/DACompilation_GO_APN.esp - in other words has some fixes and improvements but not gamedestroying update now or you will die stuff.'
+            text: 'Consider updating to DACompilation_GO.esp/DACompilation_GO_APN.esp - this has some fixes and improvements and fixes game-destroying issues.'
+          - lang: de
+            text: 'Erwägen Sie zu DACompilation_GO.esp/DACompilation_GO_APN.esp upzudaten - Dies hat einige Fixes und Verbesserungen und behebt Spiel-zerstörende Probleme.'
     tag:
       - Eyes
       - Hair
@@ -20732,7 +21357,9 @@ plugins:
       - type: say
         content:
           - lang: en
-            text: 'Consider updating to DACompilation_GO.esp/DACompilation_GO_APN.esp - in other words has some fixes and improvements but not gamedestroying update now or you will die stuff.'
+            text: 'Consider updating to DACompilation_GO.esp/DACompilation_GO_APN.esp - this has some fixes and improvements and fixes game-destroying issues.'
+          - lang: de
+            text: 'Erwägen Sie zu DACompilation_GO.esp/DACompilation_GO_APN.esp upzudaten - Dies hat einige Fixes und Verbesserungen und behebt Spiel-zerstörende Probleme.'
     tag:
       - Eyes
       - Hair
@@ -20741,7 +21368,9 @@ plugins:
       - type: say
         content:
           - lang: en
-            text: 'Consider updating to DACompilation_GO.esp/DACompilation_GO_APN.esp - in other words has some fixes and improvements but not gamedestroying update now or you will die stuff.'
+            text: 'Consider updating to DACompilation_GO.esp/DACompilation_GO_APN.esp - this has some fixes and improvements and fixes game-destroying issues.'
+          - lang: de
+            text: 'Erwägen Sie zu DACompilation_GO.esp/DACompilation_GO_APN.esp upzudaten - Dies hat einige Fixes und Verbesserungen und behebt Spiel-zerstörende Probleme.'
     tag:
       - Eyes
       - Hair
@@ -20750,7 +21379,9 @@ plugins:
       - type: say
         content:
           - lang: en
-            text: 'Consider updating to DACompilation_GO.esp/DACompilation_GO_APN.esp - in other words has some fixes and improvements but not gamedestroying update now or you will die stuff.'
+            text: 'Consider updating to DACompilation_GO.esp/DACompilation_GO_APN.esp - this has some fixes and improvements and fixes game-destroying issues.'
+          - lang: de
+            text: 'Erwägen Sie zu DACompilation_GO.esp/DACompilation_GO_APN.esp upzudaten - Dies hat einige Fixes und Verbesserungen und behebt Spiel-zerstörende Probleme.'
     tag:
       - Eyes
       - Hair
@@ -20763,7 +21394,9 @@ plugins:
       - type: say
         content:
           - lang: en
-            text: 'Consider updating to DACompilation_GO.esp/DACompilation_GO_APN.esp - in other words has some fixes and improvements but not gamedestroying update now or you will die stuff.'
+            text: 'Consider updating to DACompilation_GO.esp/DACompilation_GO_APN.esp - this has some fixes and improvements and fixes game-destroying issues.'
+          - lang: de
+            text: 'Erwägen Sie zu DACompilation_GO.esp/DACompilation_GO_APN.esp upzudaten - Dies hat einige Fixes und Verbesserungen und behebt Spiel-zerstörende Probleme.'
     tag:
       - Eyes
       - Hair
@@ -20805,6 +21438,8 @@ plugins:
         content:
           - lang: en
             text: 'Includes ''KW-AlliesPlayNicer.esp'' so don''t use that with this.'
+          - lang: de
+            text: 'Beinhaltet ''KW-AlliesPlayNicer.esp'' also nutzen Sie das nicht mit diesem.'
         condition: 'file("KW-AlliesPlayNicer.esp")'
   - name: 'Colourwheels Sexy Oblivion OverHaul.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/36387/' ]
@@ -20947,6 +21582,8 @@ plugins:
         content:
           - lang: en
             text: 'Incompatible with: Non-Robert''s body mods, Improved Facial Textures, Facial Textures by Enayla and Luchairs HGEC body seam reducer.'
+          - lang: de
+            text: 'Inkompatibel mit: Non-Robert''s body mods, Improved Facial Textures, Facial Textures by Enayla und Luchairs HGEC body seam reducer.'
     tag:
       - Body-F
       - Body-M
@@ -20986,6 +21623,8 @@ plugins:
         content:
           - lang: en
             text: 'If using Mighty Magic, use ''cidnothumpMMversion.esp'' instead.'
+          - lang: de
+            text: 'Wenn Mighty Magic genutzt wird, nutzen Sie stattdessen ''cidnothumpMMversion.esp''.'
     tag: [ Sound ]
   - name: 'PMSneakySummonCompatibility.esp'
     group: *latePatchesGroup
@@ -20994,6 +21633,8 @@ plugins:
         content:
           - lang: en
             text: 'Requires: Wrye Bash for proper use'
+          - lang: de
+            text: 'Benötigt: Wrye Bash für angemessene Nutzung'
     tag:
       - Deactivate
       - Filter
@@ -21028,6 +21669,8 @@ plugins:
         content:
           - lang: en
             text: 'May be a bit imbalanced when used with Race Balancing Project.'
+          - lang: de
+            text: 'Kann ein bisschen unausgewogen sein wenn es mit Race Balancing Project genutzt wird.'
   - name: 'Diverse Races.esp'
     tag:
       - Body-Size-F
@@ -21038,6 +21681,8 @@ plugins:
         content:
           - lang: en
             text: 'Only use one willpower equals magicka resistance/weakness type mod at once.'
+          - lang: de
+            text: 'Nutzen Sie nur eine Willensstärke enspricht Magicka Resistenz/Schwäche Art von Modifikation.'
   - name: 'ArgonianFeets.esp'
     tag: [ Invent ]
   - name: 'KT_CustomRaceFix.esp'
@@ -21055,6 +21700,8 @@ plugins:
         content:
           - lang: en
             text: 'It must be used if using Cosmetic Compilation.esp.'
+          - lang: de
+            text: 'Es muss genutzt werden wenn Cosmetic Compilation.esp genutzt wird.'
         condition: 'file("Cosmetic Compilation.esp")'
   - name: 'RaceFix_1C.esp'
     msg: [ *alreadyInOrFixedByUOP ]
@@ -21064,10 +21711,14 @@ plugins:
         content:
           - lang: en
             text: 'For use with Better Cities uncheck Better Cities SKINGRAD.esp'
+          - lang: de
+            text: 'Für die Benutzung von Better Cities, deaktivieren Sie Better Cities SKINGRAD.esp'
       - type: say
         content:
           - lang: en
             text: 'Do not use this plugin with Better Cities Full.esp'
+          - lang: de
+            text: 'Nutzen Sie dieses Plugin nicht mit Better Cities Full.esp'
         condition: 'file("Better Cities Full.esp")'
   - name: 'BICDist_OotD_Patch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/45611' ]
@@ -21088,6 +21739,8 @@ plugins:
         content:
           - lang: en
             text: 'For Better Cities and Unique Landscapes use esp included in Cyrodiil Rebuild archive.'
+          - lang: de
+            text: 'Für Better Cities and Unique Landscapes, nutzen Sie die ESPs die im Cyrodiil Rebuild Archiv enthalten sind.'
     tag:
       - Actors.ACBS
       - Actors.AIPackages
@@ -21111,12 +21764,16 @@ plugins:
         content:
           - lang: en
             text: 'For both Unique Landscapes and Better Cities use CRpatchForBSandULskingrad.esp instead'
+          - lang: de
+            text: 'Für beides, Unique Landscapes und Better Cities, nutzen Sie stattdessen CRpatchForBSandULskingrad.esp'
   - name: 'CRpatchForBCskingrad.esp'
     msg:
       - type: say
         content:
           - lang: en
             text: 'For both Unique Landscapes and Better Cities use CRpatchForBSandULskingrad.esp instead'
+          - lang: de
+            text: 'Für beides, Unique Landscapes und Better Cities, nutzen Sie stattdessen CRpatchForBSandULskingrad.esp'
   - name: 'ROM Patch - Better Cities.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/33114' ]
     tag: [ Stats ]
@@ -21146,6 +21803,8 @@ plugins:
         content:
           - lang: en
             text: 'You must rename "OBSE_Elys_Pluggy.dll" to "OBSE_Elys_Pluggy_Hud.dll"'
+          - lang: de
+            text: 'Sie müssen "OBSE_Elys_Pluggy.dll" in "OBSE_Elys_Pluggy_Hud.dll" umbenennen'
         condition: 'file("OBSE/Plugins/OBSE_Elys_Pluggy.dll") and not file("OBSE/Plugins/OBSE_Elys_Pluggy_Hud.dll")'
     req:
       - <<: *Pluggy
@@ -21180,12 +21839,16 @@ plugins:
         content:
           - lang: en
             text: 'Possible to use with ''Syc_LongerNightsforVampires.esp'''
+          - lang: de
+            text: 'Möglich dies mit ''Syc_LongerNightsforVampires.esp'' zu nutzen'
   - name: 'Syc_LongerNightsforVampires.esp'
     msg:
       - type: say
         content:
           - lang: en
             text: 'Possible to use with ''Syc_LongerDaysShorterNights.esp'''
+          - lang: de
+            text: 'Möglich dies mit ''Syc_LongerDaysShorterNights.esp'' zu nutzen'
   - name: '[GFX]_Initial_Glow-(all|creatures|self)\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/5138/' ]
     tag:
@@ -21381,11 +22044,15 @@ plugins:
         content:
           - lang: en
             text: 'Don''t use Wrye Bash''s Bashed Patch unlimited amulet''s tweak with this.'
+          - lang: de
+            text: 'Nutzen Sie nicht Wrye Bash''s Bashed Patch unlimited amulet''s Tweak hiermit.'
         condition: 'file("Bashed Patch.*\.esp")'
       - type: say
         content:
           - lang: en
             text: 'If you''re using this with the mod "Beast Characters lose tails no more", temporarily move it below the Bashed Patch whenever you rebuild it'
+          - lang: de
+            text: 'Wenn Sie dies nutzen mit der Mod "Beast Characters lose tails no more", verschieben Sie es temporär nach dem Bashed Patch immer wenn Sie es erneut-bauen'
   - name: 'JazzJRKhajiitfeets.esp'
     tag: [ Invent ]
   - name: 'KSE_v3.esp'
@@ -21427,6 +22094,8 @@ plugins:
         content:
           - lang: en
             text: 'If using with Supreme Magicka and experiencing frequent swirling pink or green clouds, set ''zzSMConfigurationQuest.bNoPoisonLevitationEffects'' to 1 in SupremeMagicka.ini.'
+          - lang: de
+            text: 'Wenn dies mit Supreme Magicka genutzt wird Sie erleben häufig wirbelnde pinke oder grüne Wolken, setzen Sie ''zzSMConfigurationQuest.bNoPoisonLevitationEffects'' auf 1 in der SupremeMagicka.ini.'
         condition: 'file("SupremeMagicka.esp")'
   - name: 'ptThrowing(Weapons|Knives)\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/23353' ]
@@ -21441,6 +22110,8 @@ plugins:
         content:
           - lang: en
             text: 'Realistic hunger mods and vampire mods may conflict seriously.'
+          - lang: de
+            text: 'Realistische Hunger-Mods und Vampir-Mods können ernsthaft im Konflikt stehen.'
 
   - name: 'Sensual Walks.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/28223' ]
@@ -21557,6 +22228,8 @@ plugins:
         content:
           - lang: en
             text: 'Unnecessary as many windows are already lit.'
+          - lang: de
+            text: 'Unnötig da viele Fenster bereits beleuchtet sind.'
         condition: *nehrimCond
   - name: 'BookTrackerOBSE.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/18434' ]
@@ -21575,6 +22248,8 @@ plugins:
         content:
           - lang: en
             text: 'The support plugin does not work. Shaders must be loaded using the shaderlist.'
+          - lang: de
+            text: 'Das Support Plugin funktioniert nicht. Shader müssen mit der Shaderlist geladen werden.'
         condition: *nehrimCond
   - name: 'Enhanced Hotkeys.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/34735' ]
@@ -21646,6 +22321,8 @@ plugins:
         content:
           - lang: en
             text: 'Some menu functions may not work.'
+          - lang: de
+            text: 'Einige Menü Funktionen könnten nicht funktionieren.'
         condition: *nehrimCond
   - name: 'ScreenControls.esp'
     url:
