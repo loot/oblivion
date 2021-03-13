@@ -8320,13 +8320,19 @@ plugins:
     tag: [ Scripts ]
   - name: 'HorseTurnSpeed-Faster.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/27967' ]
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings -> Player: Horse Turning Speed' ]
   - name: 'HorseTurnSpeed-Fast.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/27967' ]
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings -> Player: Horse Turning Speed' ]
   - name: 'HorseTurnSpeed-Fastest.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/27967' ]
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings -> Player: Horse Turning Speed' ]
   - name: 'Goblin Realswords+Tribal Shields.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22906' ]
     inc:
