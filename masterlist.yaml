@@ -20165,15 +20165,25 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/27720' ]
     after: [ 'Oscuro''s_Oblivion_Overhaul.esp' ]
   - name: 'Z 1 Hour respawn.esp'
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings -> World: Cell Respawn Time' ]
   - name: 'ThingasTime 1-15 Scale.esp'
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings -> World: Timescale' ]
   - name: 'Timescale \d\d?x Real-Life\.esp'
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings -> World: Timescale' ]
   - name: 'Time-2hr-realtime.esp'
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings -> World: Timescale' ]
   - name: 'TF_timemod1-\d\d?.esp'
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings -> World: Timescale' ]
   - name: 'Dynamic TimeScale.esp'
     req:
       - *OBSEv15
