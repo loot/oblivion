@@ -17036,9 +17036,13 @@ plugins:
   - name: 'Arrows Extra Damage.esp'
     tag: [ Stats ]
   - name: 'Arrows In Cell x3.esp'
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings -> Arrow: Litter Count' ]
   - name: 'Arrows Remain 10min.esp'
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings -> Arrow: Litter Time' ]
   - name: 'Duke Patricks - Combat Archery.esp'
     url: [ 'http://tesalliance.org/forums/index.php?/files/file/514-duke-patricks-combat-archery/' ]
     inc: [ 'MOBS Optional Combat Settings.esp' ]
