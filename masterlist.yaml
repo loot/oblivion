@@ -3231,12 +3231,14 @@ plugins:
     tag:
       - Delev
       - Relev
-  - name: 'Francesco''s \d\d? days respawn time - 1-\d\d day lenght rescale\.esp'
-    msg: [ *useBashTweakInstead ]
-  - name: 'Francesco''s day lenght rescale 1-\d\d\.esp'
-    msg: [ *useBashTweakInstead ]
-  - name: 'Francesco''s \d\d? days respawn time\.esp'
-    msg: [ *useBashTweakInstead ]
+  - name: 'Francesco''s.*days respawn time.*\.esp'
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings -> World: Cell Respawn Time' ]
+  - name: 'Francesco''s.*day lenght rescale.*\.esp'
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings -> World: Timescale' ]
 
   - name: 'Combat Behavior 2.11b.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/2073' ]
