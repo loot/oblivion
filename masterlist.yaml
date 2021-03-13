@@ -2147,7 +2147,9 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/8158' ]
     msg:
       - <<: *useBashTweakInstead
-        subs: [ 'Tweak Settings: AI Max Active Actors & Combat Max Actors' ]
+        subs: [ 'Tweak Settings -> AI: Max Active Actors' ]
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings -> Combat: Max Actors' ]
       - <<: *useOnlyOneX
         subs: [ 'Mass AI ESP' ]
         condition: 'many("MassA.I(-[345]0)?.esp")'
@@ -3294,12 +3296,14 @@ plugins:
     tag:
       - Delev
       - Relev
-  - name: 'Francesco''s \d\d? days respawn time - 1-\d\d day lenght rescale\.esp'
-    msg: [ *useBashTweakInstead ]
-  - name: 'Francesco''s day lenght rescale 1-\d\d\.esp'
-    msg: [ *useBashTweakInstead ]
-  - name: 'Francesco''s \d\d? days respawn time\.esp'
-    msg: [ *useBashTweakInstead ]
+  - name: 'Francesco''s.*days respawn time.*\.esp'
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings -> World: Cell Respawn Time' ]
+  - name: 'Francesco''s.*day lenght rescale.*\.esp'
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings -> World: Timescale' ]
 
   - name: 'Combat Behavior 2.11b.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/2073' ]
@@ -3350,7 +3354,7 @@ plugins:
   - name: 'Cobl Silent Equip Misc.esp'
     msg:
       - <<: *useBashTweakInstead
-        subs: [ 'Tweak Settings: Equip Misc. Item' ]
+        subs: [ 'Tweak Settings -> Msg: Equip Misc. Item' ]
     clean:
       - crc: 0x5860AF9A
         util: 'TES4Edit v4.0.2'
@@ -3568,7 +3572,7 @@ plugins:
   - name: 'OOO-Respawn_(Month|Two_Week|Week|Year)\.esp'
     msg:
       - <<: *useBashTweakInstead
-        subs: [ 'Tweak Settings: World Cell Respawn Time' ]
+        subs: [ 'Tweak Settings -> World: Cell Respawn Time' ]
       - <<: *useOnlyOneX
         subs: [ 'OOO Respawn Rate Options esp' ]
         condition: 'many("OOO-Respawn_(Month|Two_Week|Week|Year)\.esp")'
@@ -5005,7 +5009,9 @@ plugins:
         condition: 'not version("bookplacing.esm", "1.2", ==)'
   - name: 'No Lights Flicker.esm'
     url: [ 'https://www.nexusmods.com/oblivion/mods/6150' ]
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Assorted -> No Light Flicker' ]
   - name: 'TLS Modded Mannequins.esm'
     url: [ 'https://www.nexusmods.com/oblivion/mods/11461' ]
     inc: [ 'Reznod_Mannequin.esp' ]
@@ -5264,8 +5270,9 @@ plugins:
   - name: '(nVidia )?Black Screen Fix\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/11167' ]
     msg:
-      - *useBashTweakInstead
       - *alreadyInOrFixedByUOP
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Assorted -> Nvidia Fog Fix' ]
       - *useInsteadUOP
   - name: 'AdventurersItemMod.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/6316' ]
@@ -5552,7 +5559,9 @@ plugins:
     inc: [ 'All Natural.esp' ]
   - name: 'no wind-2578.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/2578' ]
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Assorted -> Disable Wind' ]
   - name: 'Enhanced Water v[1].[015] (ND|HD)\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/8011' ]
     msg: [ *obsolete ]
@@ -5640,13 +5649,16 @@ plugins:
             text: 'Kann unbehebare Animations-Fehler verursachen wenn es zusammen mit ''Personality Idles'' oder vergleichbaren verwendet wird.'
   - name: 'Footstep Sound Fix.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/10969' ]
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Actors -> Quiet Feet' ]
   - name: 'Quiet Feet Complete.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/13016' ]
     msg:
       - <<: *obsolete
         subs: [ '[Quiet Feet MAX 2.0](https://www.nexusmods.com/oblivion/mods/12331)' ]
-      - *useBashTweakInstead
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Actors -> Quiet Feet' ]
   - name: 'QuietFeet Max.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/12331' ]
     msg:
@@ -5655,7 +5667,9 @@ plugins:
     tag: [ Sound ]
   - name: 'QuietFeet HorseArmor.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/12331' ]
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Actors -> Quiet Feet' ]
     tag: [ Sound ]
   - name: 'Sounds of Cyrodiil.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/39804' ]
@@ -6997,7 +7011,10 @@ plugins:
       - Graphics
   - name: 'VORB_no_mods.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/37013' ]
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *alsoUseX
+        subs: [ 'Bashed Patch: Tweak Actors -> VadersApp''s Oblivion Real Bodies Skeleton Tweaker' ]
+        condition: 'file("Bashed Patch.*\.esp")'
     tag:
       - Actors.Skeleton
       - NoMerge
@@ -7046,7 +7063,6 @@ plugins:
     tag: [ Invent ]
   - name: 'Alchemist''s Tome.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/26104' ]
-    msg: [ *useBashTweakInstead ]
   - name: 'Alir''sArmor.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/35421' ]
     inc: [ 'Better Imperial City.esp' ]
@@ -8606,13 +8622,19 @@ plugins:
     tag: [ Scripts ]
   - name: 'HorseTurnSpeed-Faster.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/27967' ]
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings -> Player: Horse Turning Speed' ]
   - name: 'HorseTurnSpeed-Fast.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/27967' ]
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings -> Player: Horse Turning Speed' ]
   - name: 'HorseTurnSpeed-Fastest.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/27967' ]
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings -> Player: Horse Turning Speed' ]
   - name: 'Goblin Realswords+Tribal Shields.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22906' ]
     inc:
@@ -12950,7 +12972,8 @@ plugins:
             text: 'Recommended to upgrade to Quiet Feet MAX 2.0, which does not require a plugin and is more compatible.'
           - lang: de
             text: 'Empfohlen zu Quiet Feet MAX 2.0 upzugraden, welches kein Plugin voraussetzt and ist besser kompatibel.'
-      - *useBashTweakInstead
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Actors -> Quiet Feet' ]
   - name: 'TGND2 Knights Replacer.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/41812' ]
     tag:
@@ -16260,15 +16283,21 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/6854' ]
     msg: [ *obsolete ]
   - name: '100%FloraHarvest.esp'
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Assorted -> Harvest Chance' ]
   - name: '100% Harvest Chance.esp'
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Assorted -> Harvest Chance' ]
   - name: '100% Harvest Chance Pitcher & Lilly.esp'
     msg:
       - <<: *useBashTweakInstead
-        subs: [ 'Tweak Assorted: Harvest Chance' ]
+        subs: [ 'Tweak Assorted -> Harvest Chance' ]
   - name: '100% Harvest Chance Shivering Isles.esp'
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Assorted -> Harvest Chance' ]
   - name: '1229-Priced Clutter-TESSource.esp'
     msg:
       - type: say
@@ -16433,7 +16462,7 @@ plugins:
   - name: 'BlackFineryWithAmulet.esp'
     msg:
       - <<: *useBashTweakInstead
-        subs: [ 'Tweak Clothes: Robes Show Amulets' ]
+        subs: [ 'Tweak Clothes -> Robes Show Amulets' ]
   - name: 'Blunt Is Now Hafted.esp'
     tag:
       - Deactivate
@@ -16551,19 +16580,19 @@ plugins:
   - name: 'Compass-Disable_POIs.esp'
     msg:
       - <<: *useBashTweakInstead
-        subs: [ 'Tweak Setting: Compass' ]
+        subs: [ 'Tweak Setting -> Compass: Disable' ]
   - name: 'Compass-Disable_QuestMarkers.esp'
     msg:
       - <<: *useBashTweakInstead
-        subs: [ 'Tweak Setting: Compass' ]
+        subs: [ 'Tweak Setting -> Compass: Disable' ]
   - name: 'Compass-Disable_Both.esp'
     msg:
       - <<: *useBashTweakInstead
-        subs: [ 'Tweak Setting: Compass' ]
+        subs: [ 'Tweak Setting -> Compass: Disable' ]
   - name: 'Compass_Marker_Reducer.esp'
     msg:
       - <<: *useBashTweakInstead
-        subs: [ 'Tweak Setting: Compass' ]
+        subs: [ 'Tweak Setting -> Compass: Recognition Distance' ]
   - name: 'Creatures20.esp'
     tag:
       - Actors.AIData
@@ -16622,7 +16651,7 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/10763' ]
     msg:
       - <<: *useBashTweakInstead
-        subs: [ 'Tweak Assorted: Darnified Books' ]
+        subs: [ 'Tweak Assorted -> DarNified Books' ]
   - name: 'HUD Status Bars.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/34905' ]
     req: [ *MenuQue ]
@@ -17101,7 +17130,9 @@ plugins:
             text: 'Höchst wahrscheinlich inkompatibel mit jeder verfügbaren Überhol-Mod.'
   - name: 'NoWindSI.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/10902' ]
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Assorted -> Disable Wind' ]
   - name: 'No Wait Regenerate.esp'
     req: [ *OBSE ]
   - name: 'NPC Static Level.esp'
@@ -17266,7 +17297,7 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/9384' ]
     msg:
       - <<: *useBashTweakInstead
-        subs: [ 'Tweak Settings: Combat Repair' ]
+        subs: [ 'Tweak Settings -> Combat: Repair' ]
   - name: 'real_tools.esp'
     msg:
       - type: say
@@ -17657,25 +17688,49 @@ plugins:
   - name: 'TrollResurrection.esp'
     tag: [ SpellStats ]
   - name: 'Unlimited Rings 1.0.esp'
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Clothes -> Unlimited Rings' ]
   - name: 'Unlimited Rings 1.0 Rus.esp'
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Clothes -> Unlimited Rings' ]
   - name: 'Unlimited Amulets 1.0.esp'
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Clothes -> Unlimited Amulets' ]
   - name: 'Unlimited Amulets - Shivering Isles.esp'
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Clothes -> Unlimited Amulets' ]
   - name: 'Unlimited Amulets.esp'
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Clothes -> Unlimited Amulets' ]
   - name: 'Unlimited Amulets and Rings - Shivering Isles.esp'
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Clothes -> Unlimited Amulets' ]
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Clothes -> Unlimited Rings' ]
   - name: 'Unlimited Rings - Shivering Isles.esp'
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Clothes -> Unlimited Rings' ]
   - name: 'Unhide_amulets.esp'
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Clothes -> Unlimited Amulets' ]
   - name: 'Unlimited_AmulRings_1C.esp'
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Clothes -> Unlimited Amulets' ]
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Clothes -> Unlimited Rings' ]]
   - name: 'Unlimited Amulets 1.0_ru.esp'
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Clothes -> Unlimited Amulets' ]
   - name: 'undercover.esp'
     dirty:
       - crc: 0x757f1f42
@@ -18211,19 +18266,33 @@ plugins:
         itm: 31
         udr: 27
   - name: 'ArcaneVelocity150.esp'
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings -> Magic: Bolt Speed' ]
   - name: 'arcanevelocity200.esp'
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings -> Magic: Bolt Speed' ]
   - name: 'ArcaneVelocitySTA200.esp'
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings -> Magic: Bolt Speed' ]
   - name: 'Faster Spells.esp'
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings -> Magic: Bolt Speed' ]
   - name: 'FasterArrows150.esp'
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings -> Arrow: Speed' ]
   - name: 'FasterArrows200.esp'
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings -> Arrow: Speed' ]
   - name: 'FasterArrows250.esp'
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings -> Arrow: Speed' ]
   - name: 'Spell Ranks.esp'
     msg:
       - <<: *alsoUseX
@@ -18399,9 +18468,13 @@ plugins:
   - name: 'Arrows Extra Damage.esp'
     tag: [ Stats ]
   - name: 'Arrows In Cell x3.esp'
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings -> Arrow: Litter Count' ]
   - name: 'Arrows Remain 10min.esp'
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings -> Arrow: Litter Time' ]
   - name: 'Duke Patricks - Combat Archery.esp'
     url: [ 'http://tesalliance.org/forums/index.php?/files/file/514-duke-patricks-combat-archery/' ]
     inc: [ 'MOBS Optional Combat Settings.esp' ]
@@ -18419,25 +18492,41 @@ plugins:
     req: [ *OBSEv16 ]
   - name: 'More_Arrows_Recovered-2169.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/2169' ]
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings -> Arrow: Recovery From Actor' ]
   - name: '[Calsar] ArrowSpeedRealism.esp'
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings -> Arrow: Speed' ]
   - name: '[Calsar] ArrowSpeedRealismSI.esp'
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings -> Arrow: Speed' ]
   - name: 'ArrowVelocity.esp'
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings -> Arrow: Speed' ]
   - name: 'change arrow speed x2.esp'
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings -> Arrow: Speed' ]
   - name: 'Pfeilgeschwindigkeit.esp'
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings -> Arrow: Speed' ]
   - name: 'Arrow Realism.esp'
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings -> Arrow: Speed' ]
   - name: 'Simple Dual Wielding.esp'
     req:
       - *NifSE
       - *OBSEv20
   - name: 'More_Arrows_Recovered.esp'
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings -> Arrow: Recovery From Actor' ]
   - name: 'Enter The Shinobi - Coors916.esp'
     dirty:
       - crc: 0xa32969be
@@ -18445,7 +18534,9 @@ plugins:
         itm: 33
         udr: 4
   - name: 'mighty_bows_arrows_recovery.esp'
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings -> Arrow: Recovery From Actor' ]
   - name: 'mighty_bows_full.esp'
     tag: [ Stats ]
   - name: 'mighty_bows_damage_bonus.esp'
@@ -18473,9 +18564,13 @@ plugins:
   - name: 'JM''s Bar Fights mortal.esp'
     inc: [ 'JM''s Bar Fights.esp' ]
   - name: 'Longer_KnockOut-6523.esp'
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings -> Actor: Unconsciousness Duration' ]
   - name: 'Unconscious For 5min.esp'
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings -> Actor: Unconsciousness Duration' ]
 
   - name: 'DeadlyReflex 6 - Combat Moves.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/8273' ]
@@ -18555,7 +18650,9 @@ plugins:
         <<: *dirtyPlugin
         itm: 3
   - name: 'MM_AllowAlchemy.esp'
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings -> Combat: Alchemy' ]
   - name: 'Phitt''s Phighting Phixes.esp'
     req: [ *OBSEv17 ]
     msg:
@@ -21819,15 +21916,25 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/27720' ]
     after: [ 'Oscuro''s_Oblivion_Overhaul.esp' ]
   - name: 'Z 1 Hour respawn.esp'
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings -> World: Cell Respawn Time' ]
   - name: 'ThingasTime 1-15 Scale.esp'
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings -> World: Timescale' ]
   - name: 'Timescale \d\d?x Real-Life\.esp'
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings -> World: Timescale' ]
   - name: 'Time-2hr-realtime.esp'
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings -> World: Timescale' ]
   - name: 'TF_timemod1-\d\d?.esp'
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings -> World: Timescale' ]
   - name: 'Dynamic TimeScale.esp'
     req:
       - *OBSEv15
@@ -21855,13 +21962,19 @@ plugins:
       - Graphics
       - NoMerge
   - name: 'Chameleon-NoRefraction.esp'
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings -> Magic: Chameleon Refraction' ]
   - name: 'Chameleon-NoRefraction-2411.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/2411' ]
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings -> Magic: Chameleon Refraction' ]
   - name: '1310-chamelion-norefraction-tessource.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/2411' ]
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings -> Magic: Chameleon Refraction' ]
   - name: 'spellstrip 1.0.esp'
     tag:
       - Graphics
