@@ -5175,8 +5175,9 @@ plugins:
   - name: '(nVidia )?Black Screen Fix\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/11167' ]
     msg:
-      - *useBashTweakInstead
       - *alreadyInOrFixedByUOP
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Assorted -> Nvidia Fog Fix' ]
       - *useInsteadUOP
   - name: 'AdventurersItemMod.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/6316' ]
