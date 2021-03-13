@@ -12186,7 +12186,8 @@ plugins:
       - *requiresBashedPatch
       - type: say
         content: 'Recommended to upgrade to Quiet Feet MAX 2.0, which does not require a plugin and is more compatible.'
-      - *useBashTweakInstead
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Actors -> Quiet Feet' ]
   - name: 'TGND2 Knights Replacer.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/41812' ]
     tag:
