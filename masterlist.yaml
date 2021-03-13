@@ -17056,7 +17056,9 @@ plugins:
     req: [ *OBSEv16 ]
   - name: 'More_Arrows_Recovered-2169.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/2169' ]
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings -> Arrow: Recovery From Actor' ]
   - name: '[Calsar] ArrowSpeedRealism.esp'
     msg:
       - <<: *useBashTweakInstead
@@ -17086,7 +17088,9 @@ plugins:
       - *NifSE
       - *OBSEv20
   - name: 'More_Arrows_Recovered.esp'
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings -> Arrow: Recovery From Actor' ]
   - name: 'Enter The Shinobi - Coors916.esp'
     dirty:
       - crc: 0xa32969be
@@ -17094,7 +17098,9 @@ plugins:
         itm: 33
         udr: 4
   - name: 'mighty_bows_arrows_recovery.esp'
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings -> Arrow: Recovery From Actor' ]
   - name: 'mighty_bows_full.esp'
     tag: [ Stats ]
   - name: 'mighty_bows_damage_bonus.esp'
