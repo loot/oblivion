@@ -20283,13 +20283,19 @@ plugins:
       - Graphics
       - NoMerge
   - name: 'Chameleon-NoRefraction.esp'
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings -> Magic: Chameleon Refraction' ]
   - name: 'Chameleon-NoRefraction-2411.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/2411' ]
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings -> Magic: Chameleon Refraction' ]
   - name: '1310-chamelion-norefraction-tessource.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/2411' ]
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings -> Magic: Chameleon Refraction' ]
   - name: 'spellstrip 1.0.esp'
     tag:
       - Graphics
