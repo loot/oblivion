@@ -15948,7 +15948,9 @@ plugins:
         content: 'Highly likely to be incompatible with every overhaul out there.'
   - name: 'NoWindSI.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/10902' ]
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Assorted -> Disable Wind' ]
   - name: 'No Wait Regenerate.esp'
     req: [ *OBSE ]
   - name: 'NPC Static Level.esp'
