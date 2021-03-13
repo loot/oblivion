@@ -15275,15 +15275,21 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/6854' ]
     msg: [ *obsolete ]
   - name: '100%FloraHarvest.esp'
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Assorted -> Harvest Chance' ]
   - name: '100% Harvest Chance.esp'
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Assorted -> Harvest Chance' ]
   - name: '100% Harvest Chance Pitcher & Lilly.esp'
     msg:
       - <<: *useBashTweakInstead
         subs: [ 'Tweak Assorted -> Harvest Chance' ]
   - name: '100% Harvest Chance Shivering Isles.esp'
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Assorted -> Harvest Chance' ]
   - name: '1229-Priced Clutter-TESSource.esp'
     msg:
       - type: say
