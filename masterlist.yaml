@@ -17120,9 +17120,13 @@ plugins:
   - name: 'JM''s Bar Fights mortal.esp'
     inc: [ 'JM''s Bar Fights.esp' ]
   - name: 'Longer_KnockOut-6523.esp'
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings -> Actor: Unconsciousness Duration' ]
   - name: 'Unconscious For 5min.esp'
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings -> Actor: Unconsciousness Duration' ]
 
   - name: 'DeadlyReflex 6 - Combat Moves.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/8273' ]
