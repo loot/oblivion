@@ -4922,7 +4922,9 @@ plugins:
         condition: 'not version("bookplacing.esm", "1.2", ==)'
   - name: 'No Lights Flicker.esm'
     url: [ 'https://www.nexusmods.com/oblivion/mods/6150' ]
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Assorted -> No Light Flicker' ]
   - name: 'TLS Modded Mannequins.esm'
     url: [ 'https://www.nexusmods.com/oblivion/mods/11461' ]
     inc: [ 'Reznod_Mannequin.esp' ]
