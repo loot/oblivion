@@ -5550,22 +5550,28 @@ plugins:
         content: 'May cause unfixable animation bugs if used with ''Personality Idles'' or similar.'
   - name: 'Footstep Sound Fix.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/10969' ]
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Actors -> Quiet Feet' ]
   - name: 'Quiet Feet Complete.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/13016' ]
     msg:
       - <<: *obsolete
         subs: [ '[Quiet Feet MAX 2.0](https://www.nexusmods.com/oblivion/mods/12331)' ]
-      - *useBashTweakInstead
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Actors -> Quiet Feet' ]
   - name: 'QuietFeet Max.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/12331' ]
     msg:
       - *obsolete
-      - *useBashTweakInstead
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Actors -> Quiet Feet' ]
     tag: [ Sound ]
   - name: 'QuietFeet HorseArmor.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/12331' ]
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Actors -> Quiet Feet' ]
     tag: [ Sound ]
   - name: 'Sounds of Cyrodiil.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/39804' ]
