@@ -5464,7 +5464,9 @@ plugins:
     inc: [ 'All Natural.esp' ]
   - name: 'no wind-2578.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/2578' ]
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Assorted -> Disable Wind' ]
   - name: 'Enhanced Water v[1].[015] (ND|HD)\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/8011' ]
     msg: [ *obsolete ]
