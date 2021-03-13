@@ -16878,13 +16878,21 @@ plugins:
         itm: 31
         udr: 27
   - name: 'ArcaneVelocity150.esp'
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings -> Magic: Bolt Speed' ]
   - name: 'arcanevelocity200.esp'
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings -> Magic: Bolt Speed' ]
   - name: 'ArcaneVelocitySTA200.esp'
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings -> Magic: Bolt Speed' ]
   - name: 'Faster Spells.esp'
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings -> Magic: Bolt Speed' ]
   - name: 'FasterArrows150.esp'
     msg: [ *useBashTweakInstead ]
   - name: 'FasterArrows200.esp'
