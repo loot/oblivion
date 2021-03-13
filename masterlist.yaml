@@ -5663,7 +5663,8 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/12331' ]
     msg:
       - *obsolete
-      - *useBashTweakInstead
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Actors -> Quiet Feet' ]
     tag: [ Sound ]
   - name: 'QuietFeet HorseArmor.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/12331' ]
@@ -13801,6 +13802,8 @@ plugins:
         content:
           - lang: en
             text: 'Probably incompatible with Better Cities.'
+          - lang: de
+            text: 'Wahrscheinlich inkompatibel mit Better Cities.'
         condition: 'file("Better Cities Resources.esm")'
     dirty:
       - crc: 0x72eb5289
@@ -13814,6 +13817,8 @@ plugins:
         content:
           - lang: en
             text: 'Probably incompatible with Better Cities.'
+          - lang: de
+            text: 'Wahrscheinlich inkompatibel mit Better Cities.'
         condition: 'file("Better Cities Resources.esm")'
   - name: 'WatersEdgeImproved.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/36896' ]
@@ -13822,6 +13827,8 @@ plugins:
         content:
           - lang: en
             text: 'Needs Wrye Bash "Remove World Orphans" fix.'
+          - lang: de
+            text: 'Brauch Wrye Bash "Remove World Orphans" Fix.'
     dirty:
       - crc: 0x53a73fa1
         <<: *dirtyPlugin
@@ -13848,12 +13855,16 @@ plugins:
         content:
           - lang: en
             text: 'Obsolete as of version 1.2 of Stendarr Valley.'
+          - lang: de
+            text: 'Veraltet vom Stand der Version 1.2 aus von Stendarr Valley.'
   - name: 'WindspearTower-StendarrValley compatibility patch.esp'
     msg:
       - type: say
         content:
           - lang: en
             text: 'Update to patch version 1.1 if using Stendarr Valley 1.2'
+          - lang: de
+            text: 'Update Zum Patcher der Version 1.1 wenn Stendarr Valley 1.2 genutzt wird'
   - name: 'Valenwood Improved - Fallenleaf Everglade EV - Patch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22555' ]
     dirty:
@@ -13866,6 +13877,8 @@ plugins:
         content:
           - lang: en
             text: 'If using ''xulColovianHighlands.esp'', it must be manually renamed to ''xulColovianHighlands_EV.esp'' for this patch to work.'
+          - lang: de
+            text: 'Wenn ''xulColovianHighlands.esp'' genutzt wird, muss es manuell zu ''xulColovianHighlands_EV.esp'' umbenannt werden damit der Patch funktioniert.'
         condition: 'file("xulColovianHighlands.esp")'
   - name: 'Trails of Cyrodiil - Colovian Highlands UL.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/44766' ]
@@ -13881,6 +13894,8 @@ plugins:
         content:
           - lang: en
             text: 'Contains xulColovianHighlands.esp. ONLY load Meshes and Textures from UL Colovian Highlands when using this plugin.'
+          - lang: de
+            text: 'Beinhaltet xulColovianHighlands.esp. Laden Sie NUR Meshes und Texturen von UL Colovian Highlands wenn Sie dieses Plugin nutzen.'
         condition: 'file("xulColovianHighlands.esp")'
     dirty:
       # version: 1
@@ -13899,6 +13914,8 @@ plugins:
         content:
           - lang: en
             text: 'Be sure to use the right version depending on Unique Landscapes Beachs of Cyrodiil being used.'
+          - lang: de
+            text: 'Stellen Sie sicher die richtige Version zu verwenden abhängig von dem Unique Landscapes Beachs of Cyrodiil das genutzt wird.'
     dirty:
       - crc: 0x40e0f4da
         <<: *dirtyPlugin
@@ -13917,18 +13934,24 @@ plugins:
         content:
           - lang: en
             text: 'Update to Bravil Barrowfields 1.3. Then deactivate this patch.'
+          - lang: de
+            text: 'Updaten Sie zu Bravil Barrowfields 1.3. Deaktivieren Sie dann diesen Patch.'
   - name: 'VeronaHouseBloodlines-LushWoodlands fix.esp'
     msg:
       - type: say
         content:
           - lang: en
             text: 'Obsolete if using Lush Woodlands 1.3 or higher.'
+          - lang: de
+            text: 'Veraltet wenn Lush Woodlands 1.3 oder neuer genutzt wird.'
   - name: 'EtInArkay-LushWoodlands patch.esp'
     msg:
       - type: say
         content:
           - lang: en
             text: 'Obsolete if using Lush Woodlands 1.3 or higher.'
+          - lang: de
+            text: 'Veraltet wenn Lush Woodlands 1.3 oder neuer genutzt wird.'
   - name: 'Verwen Brewery (UL_AY_AC|UL Ancient Yews) Compatable\.esp'
     msg:
       - <<: *useOnlyOneX
@@ -13945,6 +13968,8 @@ plugins:
         content:
           - lang: en
             text: 'Obsolete if using Ancient Redwoods 1.6 or higher.'
+          - lang: de
+            text: 'Veraltet wenn Ancient Redwoods 1.6 oder neuer genutzt wird.'
   - name: 'HeartoftheDead-ArriusCreek patch.esp'
     dirty:
       - crc: 0xea1f2756
@@ -13956,6 +13981,8 @@ plugins:
         content:
           - lang: en
             text: 'Do not use with ''ColdstoneTown-BravilBarrowfields patch.esp''; ColdstoneTown-BravilBarrowfields patch.esp includes the changes from this patch.'
+          - lang: de
+            text: 'Nicht nutzen mit ''ColdstoneTown-BravilBarrowfields patch.esp''; ColdstoneTown-BravilBarrowfields patch.esp enthält die Änderungen von diesem Patch.'
         condition: 'file("ColdstoneTown-BravilBarrowfields patch.esp")'
   - name: 'RedcourtCastle-UniqueLandscapes Merged patch.esp'
     msg:
@@ -13963,6 +13990,8 @@ plugins:
         content:
           - lang: en
             text: 'Do not use with RedcourtCastle-RollingHills patch.esp or RedcourtCastle-AncientYews patch.esp.'
+          - lang: de
+            text: 'Nicht nutzen mit RedcourtCastle-RollingHills patch.esp oder RedcourtCastle-AncientYews patch.esp.'
         condition: 'file("RedcourtCastle-AncientYews patch.esp") or file("RedcourtCastle-RollingHills patch.esp")'
   - name: 'ValleyViewEstate-RiverEthe patch.esp'
     msg: [ *obsolete ]
@@ -13972,6 +14001,8 @@ plugins:
         content:
           - lang: en
             text: 'Obselete - update to West Roads version 1.3+.'
+          - lang: de
+            text: 'Veraltet - Updaten Sie zu West Roads Version 1.3+.'
   - name: 'Unique Landscapes - Brena River Ravine DV.esp'
     msg:
       - type: say
