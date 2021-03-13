@@ -6801,7 +6801,10 @@ plugins:
       - Graphics
   - name: 'VORB_no_mods.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/37013' ]
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *alsoUseX
+        subs: [ 'Bashed Patch: Tweak Actors -> VadersApp''s Oblivion Real Bodies Skeleton Tweaker' ]
+        condition: 'file("Bashed Patch.*\.esp")'
     tag:
       - Actors.Skeleton
       - NoMerge
