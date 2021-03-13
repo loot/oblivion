@@ -16388,9 +16388,13 @@ plugins:
   - name: 'TrollResurrection.esp'
     tag: [ SpellStats ]
   - name: 'Unlimited Rings 1.0.esp'
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Clothes -> Unlimited Rings' ]
   - name: 'Unlimited Rings 1.0 Rus.esp'
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Clothes -> Unlimited Rings' ]
   - name: 'Unlimited Amulets 1.0.esp'
     msg: [ *useBashTweakInstead ]
   - name: 'Unlimited Amulets - Shivering Isles.esp'
@@ -16398,13 +16402,19 @@ plugins:
   - name: 'Unlimited Amulets.esp'
     msg: [ *useBashTweakInstead ]
   - name: 'Unlimited Amulets and Rings - Shivering Isles.esp'
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Clothes -> Unlimited Rings' ]
   - name: 'Unlimited Rings - Shivering Isles.esp'
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Clothes -> Unlimited Rings' ]
   - name: 'Unhide_amulets.esp'
     msg: [ *useBashTweakInstead ]
   - name: 'Unlimited_AmulRings_1C.esp'
-    msg: [ *useBashTweakInstead ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Clothes -> Unlimited Rings' ]
   - name: 'Unlimited Amulets 1.0_ru.esp'
     msg: [ *useBashTweakInstead ]
   - name: 'undercover.esp'
