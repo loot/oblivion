@@ -9252,8 +9252,8 @@ plugins:
   - name: 'Cyrodiil Border Regions 1.2.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/12246' ]
     msg:
-      - type: say
-        content: 'Use .ini tweak or Wrye Bash Bashed Patch tweak instead where possible.'
+      - <<: *useINITweakInstead
+        subs: [ '[bBorderRegionsEnabled=0](http://wiki.tesnexus.com/index.php/Removing_In-Game_Borders)' ]
     dirty:
       - <<: *quickClean
         crc: 0x1BDBE6E9
@@ -16536,11 +16536,17 @@ plugins:
         content: 'Use this without Shivering Isles. Otherwise use ''Merchant_Tim''.'
   - name: 'Borderless Cyrodiil-3578.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/3578' ]
-    msg: [ *useIniTweakOrBashedPatch ]
+    msg:
+      - <<: *useINITweakInstead
+        subs: [ '[bBorderRegionsEnabled=0](http://wiki.tesnexus.com/index.php/Removing_In-Game_Borders)' ]
   - name: 'Border-Region-disabled.esp'
-    msg: [ *useIniTweakOrBashedPatch ]
+    msg:
+      - <<: *useINITweakInstead
+        subs: [ '[bBorderRegionsEnabled=0](http://wiki.tesnexus.com/index.php/Removing_In-Game_Borders)' ]
   - name: 'Border Removal.esp'
-    msg: [ *useIniTweakOrBashedPatch ]
+    msg:
+      - <<: *useINITweakInstead
+        subs: [ '[bBorderRegionsEnabled=0](http://wiki.tesnexus.com/index.php/Removing_In-Game_Borders)' ]
   - name: 'Shadow Ranger.esp'
     msg:
       - <<: *wildEdits
