@@ -13473,22 +13473,20 @@ plugins:
       - crc: 0xd34d61bc
         <<: *dirtyPlugin
         itm: 126
+
   - name: 'ElsweyrAnequina.esp'
     url:
       - 'https://www.nexusmods.com/oblivion/mods/25023'
       - 'https://www.afkmods.com/index.php?/files/file/2170-elsweyr-anequina/'
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Border region restrictions must be turned off: change bBorderRegionsEnabled to 0 in Oblivion.ini or use Wrye Bash bashed patch tweak.'
-          - lang: de
-            text: 'Regionsgrenzen Restriktionen muss abgeschaltet werden: Ändern Sie bBorderRegionsEnabled nach 0 in der Oblivion.ini oder nutzen Sie Wrye Bash bashed patch tweak.'
+      - <<: *alsoUseX
+        subs: [ 'INI tweak [bBorderRegionsEnabled=0](http://wiki.tesnexus.com/index.php/Removing_In-Game_Borders)' ]
     dirty:
       - <<: *quickClean
         crc: 0xDD0F1E01
         util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 79
+
   - name: 'Unofficial Elsweyr Anequina Patch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/39642' ]
     dirty:
