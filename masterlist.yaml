@@ -457,6 +457,19 @@ common:
     subs: [ '' ]
     condition: 'file("Bashed Patch.*\.esp")'
 
+  - &useINITweakInstead
+    type: say
+    content:
+      - lang: en
+        text: 'An INI tweak can be used instead of this plugin. %1%'
+      - lang: de
+        text: 'Ein INI Tweak kann anstelle dieses Plugins verwendet werden. %1%'
+      - lang: ja
+        text: 'このプラグインの代わりに、INI の調整機能を使用できます。%1%'
+      - lang: sv
+        text: 'En INI Tweak kan användas istället för det här pluginet. %1%'
+    subs: [ '' ]
+
   - &useInstead
     type: warn
     content:
