@@ -2450,8 +2450,8 @@ plugins:
 
   - name: 'DibellasWatch.esm'
     url: [ 'https://www.nexusmods.com/oblivion/mods/37120/' ]
-    group: *veryEarlyGroup
-    msg: [ *moveWorldspaces ]
+    group: *gameMasterGroup
+    inc: [ 'GTAesgaard_2.esm' ]
     dirty:
       - <<: *quickClean
         crc: 0xAC17B7FF
@@ -2499,8 +2499,7 @@ plugins:
 
   - name: 'GTAesgaard_2.esm'
     url: [ 'https://www.nexusmods.com/oblivion/mods/21693/' ]
-    group: *veryEarlyGroup
-    msg: [ *moveWorldspaces ]
+    group: *gameMasterGroup
     clean:
       - crc: 0x379577AC
         util: 'TES4Edit v4.0.3f'
@@ -2951,7 +2950,9 @@ plugins:
     req:
       - *OBSE
       - *SilentVoice
-    msg: [ *moveWorldspaces ]
+    inc:
+      - 'DibellasWatch.esm'
+      - 'GTAesgaard_2.esm'
   - name: 'Morrowind_ob.esp'
     # doNotClean
     after:
