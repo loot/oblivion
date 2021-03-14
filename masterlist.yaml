@@ -13833,16 +13833,14 @@ plugins:
         <<: *dirtyPlugin
         itm: 72
         udr: 161
+
   - name: 'ElsweyrRiverhold.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/19026' ]
     inc: [ 'ElsweyrAnequina.esp' ]
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Border region restrictions must be turned off: change bBorderRegionsEnabled to 0 in Oblivion.ini or use Wrye Bash bashed patch tweak.'
-          - lang: de
-            text: 'Regionsgrenzen Restriktionen muss abgeschaltet werden: Ändern Sie bBorderRegionsEnabled nach 0 in der Oblivion.ini oder nutzen Sie Wrye Bash bashed patch tweak.'
+      - <<: *alsoUseX
+        subs: [ 'INI tweak [bBorderRegionsEnabled=0](http://wiki.tesnexus.com/index.php/Removing_In-Game_Borders)' ]
+
   - name: 'ExtendedAleswellEV.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/38351' ]
     dirty:
