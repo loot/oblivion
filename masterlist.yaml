@@ -100,13 +100,6 @@ common:
         text: 'Dummy file to load .BSA files. Using a file to load a BSA means the BSA must NOT be listed in Oblivion.ini at the same time or the game will not load. This is ususally only a problem when automatic installers insert the name into Oblivion.ini then the user creates a BSA redirection file later.'
       - lang: de
         text: 'Pseudo-Datei um .BSA Dateien zu laden. Beim nutzen einer Datei zum Laden einer BSA bedeutet das die BSA NICHT in der Oblivion.ini gleichzeitig gelistet sein darf oder das Spiel wird nicht laden. Dies ist gewöhnlich nur ein Problem wenn automatische Installer den Namen in die Oblivion.ini einfügen und der Nutzer später eine BSA Umleitung erstellt.'
-  - &moveWorldspaces
-    type: warn
-    content:
-      - lang: en
-        text: 'This needs to load directly after Oblivion.esm to avoid landscape issues caused by a failure by the mod author to use TES4Gecko''s "Move Worldspaces" function.'
-      - lang: de
-        text: 'Dies muss direkt nach Oblivion.esm geladen werden um Landschafts-Probleme zu vermeiden, die verursacht wurden vom Versagen des Mod-Autor die TES4Gecko''s "Move Worldspaces" Funktion zu nutzen.'
   - &incompatibleWithWeatherMods
     type: say
     content:
@@ -2450,8 +2443,8 @@ plugins:
 
   - name: 'DibellasWatch.esm'
     url: [ 'https://www.nexusmods.com/oblivion/mods/37120/' ]
-    group: *veryEarlyGroup
-    msg: [ *moveWorldspaces ]
+    group: *gameMasterGroup
+    inc: [ 'GTAesgaard_2.esm' ]
     dirty:
       - <<: *quickClean
         crc: 0xAC17B7FF
@@ -2499,8 +2492,7 @@ plugins:
 
   - name: 'GTAesgaard_2.esm'
     url: [ 'https://www.nexusmods.com/oblivion/mods/21693/' ]
-    group: *veryEarlyGroup
-    msg: [ *moveWorldspaces ]
+    group: *gameMasterGroup
     clean:
       - crc: 0x379577AC
         util: 'TES4Edit v4.0.3f'
@@ -2951,7 +2943,9 @@ plugins:
     req:
       - *OBSE
       - *SilentVoice
-    msg: [ *moveWorldspaces ]
+    inc:
+      - 'DibellasWatch.esm'
+      - 'GTAesgaard_2.esm'
   - name: 'Morrowind_ob.esp'
     # doNotClean
     after:
