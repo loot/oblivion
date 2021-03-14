@@ -13872,15 +13872,13 @@ plugins:
   - name: 'Lakeview.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/19984' ]
     inc: [ 'ShezriesTownsMaster.esp' ]
+
   - name: 'New Valen.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/36550' ]
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Border region restrictions must be turned off: change bBorderRegionsEnabled to 0 in Oblivion.ini or use Wrye Bash bashed patch tweak.'
-          - lang: de
-            text: 'Regionsgrenzen Restriktionen muss abgeschaltet werden: Ändern Sie bBorderRegionsEnabled nach 0 in der Oblivion.ini oder nutzen Sie Wrye Bash bashed patch tweak.'
+      - <<: *alsoUseX
+        subs: [ 'INI tweak [bBorderRegionsEnabled=0](http://wiki.tesnexus.com/index.php/Removing_In-Game_Borders)' ]
+
   - name: 'Pinevale.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/23804' ]
     dirty:
