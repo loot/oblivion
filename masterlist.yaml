@@ -136,13 +136,6 @@ common:
         text: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
       - lang: de
         text: 'Benötigt Wrye Bash für Kompatibilität mit Überhol-Mods wie OOO/MMM/Fran''s.'
-  - &useIniTweakOrBashedPatch
-    type: warn
-    content:
-      - lang: en
-        text: 'Use .ini tweak or Wrye Bash Bashed Patch tweak instead where possible to avoid conflicts.'
-      - lang: de
-        text: 'Nutzen Sie stattdessen den .ini-Tweak oder Wrye Bash Bashed Patch Tweak wo möglich um Konflikte zu vermeiden.'
 
 # Messages - Localized
   - &alreadyInX
@@ -426,34 +419,6 @@ common:
       - lang: ru
         text: 'Вам нужно переименовать %1% в %2% для подключения ресурсов мода..'
 
-  - &requiresOBSE
-    type: error
-    content:
-      - lang: en
-        text: 'You have installed %1% but OBSE was not found! See OBSE download page: [OBSE](https://obse.silverlock.org).'
-      - lang: da
-        text: 'Du har installeret %1% men OBSE blev ikke fundet! Se OBSE-downloadsiden: [OBSE](https://obse.silverlock.org).'
-      - lang: de
-        text: 'Sie haben %1% installiert, aber OBSE wurde nicht gefunden! OBSE kann hier heruntergeladen werden: [OBSE](https://obse.silverlock.org).'
-      - lang: es
-        text: 'Tienes %1% instalado pero OBSE no se pudo encontrar! Por favor descarga OBSE: [OBSE](https://obse.silverlock.org).'
-      - lang: ja
-        text: '%1%はインストールされていますが、OBSEが見つかりません！OBSEのダウンロードページを確認してください。[OBSE](https://obse.silverlock.org)'
-      - lang: ko
-        text: '%1%가 설치되었지만 OBSE를 찾을 수 없습니다! OBSE 다운로드 페이지를 참조하십시오: [OBSE](https://obse.silverlock.org).'
-      - lang: pl
-        text: 'Zainstalowałeś %1% ale nie odnaleziono OBSE! Odwiedź stronę pobierania OBSE: [OBSE](https://OBSE.silverlock.org).'
-      - lang: pt
-        text: 'Você instalou %1% mas o OBSE não foi encontrado! Veja a página de download do OBSE: [OBSE](https://obse.silverlock.org).'
-      - lang: pt_BR
-        text: 'Você tem %1% instalado mas o OBSE não foi encontrado! Veja a página de download do OBSE: [OBSE](https://OBSE.silverlock.org).'
-      - lang: ru
-        text: 'У вас установлен %1%, но OBSE не найден! Смотрите страницу загрузки [OBSE](https://obse.silverlock.org).'
-      - lang: sv
-        text: 'Du har installerat %1% men OBSE kunde inte hittas! Läs mer på OBSE:s nedladdningssisda: [OBSE](https://obse.silverlock.org).'
-      - lang: zh_CN
-        text: '你已经安装了%1%，但是未发现OBSE！请查看OBSE的下载页面：[OBSE](https://obse.silverlock.org)。'
-
   - &requiresX
     type: warn
     content:
@@ -516,6 +481,19 @@ common:
         text: 'En Bashed Patch Tweak kan användas istället för det här pluginet. %1%'
     subs: [ '' ]
     condition: 'file("Bashed Patch.*\.esp")'
+
+  - &useINITweakInstead
+    type: say
+    content:
+      - lang: en
+        text: 'An INI tweak can be used instead of this plugin. %1%'
+      - lang: de
+        text: 'Ein INI Tweak kann anstelle dieses Plugins verwendet werden. %1%'
+      - lang: ja
+        text: 'このプラグインの代わりに、INI の調整機能を使用できます。%1%'
+      - lang: sv
+        text: 'En INI Tweak kan användas istället för det här pluginet. %1%'
+    subs: [ '' ]
 
   - &useInstead
     type: warn
@@ -743,6 +721,8 @@ common:
         text: 'Гид по очистке с помощью xEdit можно найти [здесь](https://tes5edit.github.io/docs/7-mod-cleaning-and-error-checking.html#ThreeEasyStepstocleanMods).'
       - lang: sv
         text: 'En guide till att rensa plugins med xEdit finns [här](https://tes5edit.github.io/docs/7-mod-cleaning-and-error-checking.html#ThreeEasyStepstocleanMods).'
+      - lang: zh_CN
+        text: 'xEdit的清洁插件指南可以在[这里](https://tes5edit.github.io/docs/7-mod-cleaning-and-error-checking.html#ThreeEasyStepstocleanMods)找到。'
   - &reqManualFix
     util: '[TES4Edit](https://www.nexusmods.com/oblivion/mods/11536/)'
     info:
@@ -875,8 +855,35 @@ globals:
     subs: [ 'https://loot.github.io/latest-thread/' ]
 
 # OBSE Plugins - Requirements
-  - <<: *requiresOBSE
-    subs: [ 'an OBSE Plugin' ]
+  - type: error
+    content:
+      - lang: en
+        text: 'You have installed an %1% Plugin but %1% was not found! See %1% download page: %2%.'
+      - lang: da
+        text: 'Du har installeret an %1% Plugin men %1% blev ikke fundet! Se %1%-downloadsiden: %2%.'
+      - lang: de
+        text: 'Sie haben an %1% Plugin installiert, aber %1% wurde nicht gefunden! %1% kann hier heruntergeladen werden: %2%.'
+      - lang: es
+        text: 'Tienes an %1% Plugin instalado pero %1% no se pudo encontrar! Por favor descarga %1%: %2%.'
+      - lang: ja
+        text: 'an %1% Pluginはインストールされていますが、%1%が見つかりません！%1%のダウンロードページを確認してください。%2%'
+      - lang: ko
+        text: 'an %1% Plugin가 설치되었지만 %1%를 찾을 수 없습니다! %1% 다운로드 페이지를 참조하십시오: %2%.'
+      - lang: pl
+        text: 'Zainstalowałeś an %1% Plugin ale nie odnaleziono %1%! Odwiedź stronę pobierania %1%: %2%.'
+      - lang: pt
+        text: 'Você instalou an %1% Plugin mas o %1% não foi encontrado! Veja a página de download do %1%: %2%.'
+      - lang: pt_BR
+        text: 'Você tem an %1% Plugin instalado mas o %1% não foi encontrado! Veja a página de download do %1%: %2%.'
+      - lang: ru
+        text: 'У вас установлен an %1% Plugin, но %1% не найден! Смотрите страницу загрузки %2%.'
+      - lang: sv
+        text: 'Du har installerat an %1% Plugin men %1% kunde inte hittas! Läs mer på %1%:s nedladdningssisda: %2%.'
+      - lang: zh_CN
+        text: '你已经安装了an %1% Plugin，但是未发现%1%！请查看%1%的下载页面：%2%。'
+    subs:
+      - 'OBSE'
+      - '[OBSE](https://obse.silverlock.org)'
     condition: 'file("OBSE/Plugins/([^\.]+\.dll)") and not file("../obse_1_2_416.dll")'
 
 # OBSE Plugins - Other messages
@@ -9673,12 +9680,8 @@ plugins:
   - name: 'Cyrodiil Border Regions 1.2.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/12246' ]
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Use .ini tweak or Wrye Bash Bashed Patch tweak instead where possible.'
-          - lang: de
-            text: 'Nutzen Sie stattdessen den .ini-Tweak oder Wrye Bash Bashed Patch Tweak wo möglich.'
+      - <<: *useINITweakInstead
+        subs: [ '[bBorderRegionsEnabled=0](http://wiki.tesnexus.com/index.php/Removing_In-Game_Borders)' ]
     dirty:
       - <<: *quickClean
         crc: 0x1BDBE6E9
@@ -17881,11 +17884,17 @@ plugins:
             text: 'Nutzen Sie diesen ohne Shivering Isles. Alternativ nutzen Sie ''Merchant_Tim''.'
   - name: 'Borderless Cyrodiil-3578.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/3578' ]
-    msg: [ *useIniTweakOrBashedPatch ]
+    msg:
+      - <<: *useINITweakInstead
+        subs: [ '[bBorderRegionsEnabled=0](http://wiki.tesnexus.com/index.php/Removing_In-Game_Borders)' ]
   - name: 'Border-Region-disabled.esp'
-    msg: [ *useIniTweakOrBashedPatch ]
+    msg:
+      - <<: *useINITweakInstead
+        subs: [ '[bBorderRegionsEnabled=0](http://wiki.tesnexus.com/index.php/Removing_In-Game_Borders)' ]
   - name: 'Border Removal.esp'
-    msg: [ *useIniTweakOrBashedPatch ]
+    msg:
+      - <<: *useINITweakInstead
+        subs: [ '[bBorderRegionsEnabled=0](http://wiki.tesnexus.com/index.php/Removing_In-Game_Borders)' ]
   - name: 'Shadow Ranger.esp'
     msg:
       - <<: *wildEdits
