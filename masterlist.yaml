@@ -91,6 +91,8 @@ common:
         text: 'The Oblivion.esm master must be reassigned to "Nehrim.esm".'
       - lang: de
         text: 'Der Oblivion.esm Master muss "Nehrim.esm" neu zugewiesen werden.'
+      - lang: pt_BR
+        text: 'O mestre Oblivion.esm deve ser realocado para "Nehrim.esm"'
     condition: *nehrimCond
 
   - &dummyFileLoader
@@ -100,6 +102,8 @@ common:
         text: 'Dummy file to load .BSA files. Using a file to load a BSA means the BSA must NOT be listed in Oblivion.ini at the same time or the game will not load. This is ususally only a problem when automatic installers insert the name into Oblivion.ini then the user creates a BSA redirection file later.'
       - lang: de
         text: 'Pseudo-Datei um .BSA Dateien zu laden. Beim nutzen einer Datei zum Laden einer BSA bedeutet das die BSA NICHT in der Oblivion.ini gleichzeitig gelistet sein darf oder das Spiel wird nicht laden. Dies ist gewöhnlich nur ein Problem wenn automatische Installer den Namen in die Oblivion.ini einfügen und der Nutzer später eine BSA Umleitung erstellt.'
+      - lang: pt_BR
+        text: 'Arquivo fictício para carregar arquivos .BSA. Usar um arquivo para carregar BSAs significa que a BSA NÃO pode estar listada no Oblivion.ini ao mesmo tempo ou o jogo não irá carregar. Isso é somente um problema quanto instaladores automáticos inserem o nome no Oblivion.ini e então o usuário cria um arquivo de redirecionamento de BSAs depois.'
   - &incompatibleWithWeatherMods
     type: say
     content:
@@ -107,6 +111,8 @@ common:
         text: 'This mod is incompatible with weather mods.'
       - lang: de
         text: 'Diese Mod ist inkompatibel mit Wetter-Mods.'
+      - lang: pt_BR
+        text: 'Este mod é incompatível com mods de clima.'
   - &vanillaMapMarkers
     type: say
     content:
@@ -114,6 +120,8 @@ common:
         text: 'Move this after OOO if you desire initial city map markers a la vanilla.'
       - lang: de
         text: 'Verschieben Sie diese Mod nach OOO wenn Sie sich die ursprünglichen Karten-Markierungen der Städte wünschen.'
+      - lang: pt_BR
+        text: 'Mova esse mod após OOO caso você deseje ter marcadores de mapa iniciais de cidade como no vanilla.'
     condition: *OOOCond
   - &hotkeyBug
     type: say
@@ -122,6 +130,8 @@ common:
         text: 'Don''t use hotkeys to change equipment sets. Game bug.'
       - lang: de
         text: 'Nutzen Sie nicht Hotkeys um Ausrüstungssets zu wechseln. Spiel-Fehler.'
+      - lang: pt_BR
+        text: 'Não use atalhos para mudar sets de equipamento. Bug do jogo.'
   - &useWithBashedPatch
     type: say
     content:
@@ -129,6 +139,8 @@ common:
         text: 'Requires Wrye Bash for compatibility with overhaul mods like OOO/MMM/Fran''s.'
       - lang: de
         text: 'Benötigt Wrye Bash für Kompatibilität mit Überhol-Mods wie OOO/MMM/Fran''s.'
+      - lang: pt_BR
+        text: 'Requer o Wrye Bash para ter compatibilidade com mods de reformulação como OOO/MMM/Fran''s.'
 
 # Messages - Localized
   - &alreadyInX
