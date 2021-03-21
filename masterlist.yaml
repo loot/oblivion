@@ -93,6 +93,8 @@ common:
         text: 'Oblivion.esm трябва да бъде преназначен като "Nehrim.esm".'
       - lang: de
         text: 'Der Oblivion.esm Master muss "Nehrim.esm" neu zugewiesen werden.'
+      - lang: ko
+        text: 'Oblivion.esm 마스터는 "Nehrim.esm"에 다시 할당되어야합니다.'
       - lang: pt_BR
         text: 'O mestre Oblivion.esm deve ser realocado para "Nehrim.esm"'
     condition: *nehrimCond
@@ -106,6 +108,8 @@ common:
         text: 'Това е фиктивен файл за зареждане на .BSA файлове. Когато го използвате, .BSA файлът не бива да е включен в Oblivion.ini, в противен случай играта няма да зареди.'
       - lang: de
         text: 'Pseudo-Datei um .BSA Dateien zu laden. Beim nutzen einer Datei zum Laden einer BSA bedeutet das die BSA NICHT in der Oblivion.ini gleichzeitig gelistet sein darf oder das Spiel wird nicht laden. Dies ist gewöhnlich nur ein Problem wenn automatische Installer den Namen in die Oblivion.ini einfügen und der Nutzer später eine BSA Umleitung erstellt.'
+      - lang: ko
+        text: '.BSA 파일을 로드하기 위한 더미 파일입니다. 파일을 사용하여 BSA를 로드하면 BSA가 동시에 Oblivion.ini에 나열되지 않아야합니다. 그렇지 않으면 게임이 로드되지 않습니다. 이것은 일반적으로 자동 설치 프로그램이 이름을 Oblivion.ini에 삽입한 다음 사용자가 나중에 BSA 리다이렉션 파일을 만드는 경우에만 발생하는 문제입니다.'
       - lang: pt_BR
         text: 'Arquivo fictício para carregar arquivos .BSA. Usar um arquivo para carregar BSAs significa que a BSA NÃO pode estar listada no Oblivion.ini ao mesmo tempo ou o jogo não irá carregar. Isso é somente um problema quanto instaladores automáticos inserem o nome no Oblivion.ini e então o usuário cria um arquivo de redirecionamento de BSAs depois.'
   - &incompatibleWithWeatherMods
@@ -117,6 +121,8 @@ common:
         text: 'Този мод не е съвместим с модовете, които променят метеорологичното време.'
       - lang: de
         text: 'Diese Mod ist inkompatibel mit Wetter-Mods.'
+      - lang: ko
+        text: '이 모드는 날씨 모드와 호환되지 않습니다.'
       - lang: pt_BR
         text: 'Este mod é incompatível com mods de clima.'
   - &vanillaMapMarkers
@@ -128,6 +134,8 @@ common:
         text: 'Преместете след ООО, ако искате да използвате стандартните маркери по градската карта.'
       - lang: de
         text: 'Verschieben Sie diese Mod nach OOO wenn Sie sich die ursprünglichen Karten-Markierungen der Städte wünschen.'
+      - lang: ko
+        text: '바닐라 도시 맵의 마커를 원하는 경우 OOO 이후로 이동하십시오.'
       - lang: pt_BR
         text: 'Mova esse mod após OOO caso você deseje ter marcadores de mapa iniciais de cidade como no vanilla.'
     condition: *OOOCond
@@ -140,6 +148,8 @@ common:
         text: 'Не използвайте клавишни комбинации за промяна на екипировката. Това е технически дефект в играта.'
       - lang: de
         text: 'Nutzen Sie nicht Hotkeys um Ausrüstungssets zu wechseln. Spiel-Fehler.'
+      - lang: ko
+        text: '장비 세트를 변경하려고 단축키를 사용하지 마십시오. 게임 버그입니다.'
       - lang: pt_BR
         text: 'Não use atalhos para mudar sets de equipamento. Bug do jogo.'
   - &useWithBashedPatch
@@ -151,6 +161,8 @@ common:
         text: 'Изисква Wrye Bash за съвместимост с модовете на Francescos, OOO и MMM.'
       - lang: de
         text: 'Benötigt Wrye Bash für Kompatibilität mit Überhol-Mods wie OOO/MMM/Fran''s.'
+      - lang: ko
+        text: 'OOO/MMM/Fran''s와 같은 대형 모드와의 호환성을 위해 Wrye Bash가 필요합니다.'
       - lang: pt_BR
         text: 'Requer o Wrye Bash para ter compatibilidade com mods de reformulação como OOO/MMM/Fran''s.'
 
@@ -217,6 +229,8 @@ common:
         text: 'Borrar. Esta incluido, o de otra modo, arreglado en el %1%.'
       - lang: ja
         text: '削除してください。%1%にすでに含まれているか修正されています。'
+      - lang: ko
+        text: '삭제하십시오. 이미 %1%에 포함되었거나 수정되었습니다.'
       - lang: pl
         text: 'Usuń. Już zawarte lub naprawione w %1%'
       - lang: pt_BR
@@ -245,6 +259,8 @@ common:
         text: 'Es wird dringend empfohlen, dass Sie auch %1% benutzen.'
       - lang: ja
         text: '%1%の併用を強く推奨します。'
+      - lang: ko
+        text: '%1%도 함께 사용하는 것을 매우 권장합니다.'
       - lang: pl
         text: 'Jest wysoce wskazane abyś używał także %1%.'
       - lang: pt_BR
@@ -289,6 +305,8 @@ common:
         text: 'Lösche oder deaktiviere. %1%'
       - lang: ja
         text: '%1%を削除するか非アクティブにしてください。'
+      - lang: ko
+        text: '%1%을 제거하거나 비활성화하십시오.'
       - lang: pl
         text: 'Usuń lub dezaktywuj. %1%'
       - lang: pt_BR
@@ -451,6 +469,8 @@ common:
         text: 'Renombra este archivo a %1%.'
       - lang: ja
         text: 'ファイル名を%1%に変更してください。'
+      - lang: ko
+        text: '이 파일의 이름을 %1%로 바꿉니다.'
       - lang: pt_BR
         text: 'Renomeie este arquivo para %1%.'
       - lang: ru
@@ -467,6 +487,8 @@ common:
         text: 'Sie müssen %1% zu %2% umbenennen, ansonsten funktioniert diese Mod nicht.'
       - lang: ja
         text: '%1%を%2%にリネームしないと機能しません。'
+      - lang: ko
+        text: '%1%의 이름을 %2%로 변경하지 않으면 이 모드가 작동하지 않습니다.'
       - lang: pt_BR
         text: 'Você precisa renomear %1% para %2%, caso contrário esse mod não irá funcionar.'
       - lang: ru
@@ -538,6 +560,8 @@ common:
         text: 'Ein Bashed Patch Tweak kann anstelle dieses Plugins verwendet werden. %1%'
       - lang: ja
         text: 'このプラグインの代わりに、Bashed Patch の調整機能を使用できます。%1%'
+      - lang: ko
+        text: '이 플러그인 대신 Bashed Patch의 트윅을 사용할 수 있습니다. %1%'
       - lang: pt_BR
         text: 'Uma tweak do Bashed Patch pode ser utilizada no lugar deste plugin. %1%'
       - lang: sv
@@ -556,6 +580,8 @@ common:
         text: 'Ein INI Tweak kann anstelle dieses Plugins verwendet werden. %1%'
       - lang: ja
         text: 'このプラグインの代わりに、INI の調整機能を使用できます。%1%'
+      - lang: ko
+        text: '이 플러그인 대신 INI 조정을 사용할 수 있습니다. %1%'
       - lang: pt_BR
         text: 'Uma INI Tweak pode ser usada ao invés deste plugin. %1%'
       - lang: sv
@@ -573,6 +599,8 @@ common:
         text: 'Nutzen Sie %1% stattdessen.'
       - lang: ja
         text: '代わりに%1%を使用してください。'
+      - lang: ko
+        text: '대신 %1%를 사용하십시오.'
       - lang: pt_BR
         text: 'Use %1% ao invés disso.'
       - lang: sv
@@ -629,6 +657,8 @@ common:
         text: 'Benutzen Sie die %1% Version.'
       - lang: ja
         text: '%1%バージョンを使用してください。'
+      - lang: ko
+        text: '%1% 버전을 사용하십시오.'
       - lang: pl
         text: 'Użyj wersji %1%'
       - lang: pt_BR
@@ -693,6 +723,8 @@ common:
         text: 'Benutzen Sie die Nicht-%1% Version.'
       - lang: ja
         text: '%1%バージョン以外を使用してください。'
+      - lang: ko
+        text: '%1%가 아닌 버전을 사용하십시오.'
       - lang: pl
         text: 'Użyj wersji innej niż %1%.'
       - lang: pt_BR
@@ -755,6 +787,8 @@ common:
         text: 'Tämä liitännäinen sisältää villejä muokkauksia ITM- ja UDR-tietueiden sekä poistettujen navmeshien lisäksi. Manuaalinen lisäpuhdistaminen voi olla tarpeen yhteensopivuuden takaamiseksi. %1%'
       - lang: ja
         text: 'このプラグインにはITMおよびUDRレコード以外の誤った編集(Wild Edit)が含まれており、navmeshが削除されています。他のmodと干渉しないように、追加の手動クリーニングが必要になる場合があります。%1%'
+      - lang: ko
+        text: '이 플러그인은 ITM 및 UDR 레코드 이외의 잘못된 편집이 포함되어 있으며, Navmesh가 삭제되어 있습니다. 다른 모드를 방해하지 않도록 추가적인 수동 청소가 필요할 수 있습니다. %1%'
       - lang: pl
         text: 'Ta wtyczka zawiera dzikie edycje (Wild Edit) poza rekordami ITM i UDR oraz usunięte siatki nawigacyjne i może wymagać dodatkowego ręcznego czyszczenia aby nie kolidować z innymi modami. %1%'
       - lang: pt
@@ -798,6 +832,8 @@ common:
         text: 'Ohjeet liitännäisten puhdistamiseen xEditillä löytyvät [tästä linkistä](https://tes5edit.github.io/docs/7-mod-cleaning-and-error-checking.html#ThreeEasyStepstocleanMods).'
       - lang: ja
         text: 'xEditを使ったプラグインのクリーニングのガイドは[こちら](https://tes5edit.github.io/docs/7-mod-cleaning-and-error-checking.html#ThreeEasyStepstocleanMods)にあります。'
+      - lang: ko
+        text: 'xEdit을 사용한 플러그인 정리에 대한 가이드는 [여기](https://tes5edit.github.io/docs/7-mod-cleaning-and-error-checking.html#ThreeEasyStepstocleanMods)에서 찾을 수 있습니다.'
       - lang: pt
         text: 'Um guia para limpar plugins utilizando xEdit pode ser encontrado [aqui](https://tes5edit.github.io/docs/7-mod-cleaning-and-error-checking.html#ThreeEasyStepstocleanMods)'
       - lang: pt_BR
@@ -819,6 +855,8 @@ common:
         text: 'Es wird streng empfohlen, keine Mods zu verwenden die **Gelöschte Navmeshes** beinhalten, da diese dafür bekannt sind Abstürze auszulösen. **Gelöschte Navmeshes** müssen manuell korrigiert werden (ein komplexer Prozess der vom Mod-Autor erledigt werden sollte). Mehr Informationen über **Gelöschte Navmeshes** werden [hier](https://www.creationkit.com/index.php?title=Fixing_Navmesh_Deletion_Tutorial) geboten.'
       - lang: ja
         text: '**navmeshの削除**を含むmodは使用しないことを強く推奨します。クラッシュの原因になります。**navmeshの削除**は手動で修正する必要があります(mod作成者が行う必要がある複雑なプロセスです)。**navmeshの削除**の詳細については[ここ](https://www.creationkit.com/index.php?title=Fixing_Navmesh_Deletion_Tutorial)を参照してください。'
+      - lang: ko
+        text: '**삭제된 Navmesh**가 포함된 모드는 크래시를 유발하는 것으로 알려져 있으므로 사용하지 않는 것이 좋습니다. **삭제된 Navmesh**는 수동으로 수정해야합니다(모드 작성자가 수행해야하는 복잡한 프로세스). **삭제된 Navmesh**에 대한 자세한 정보는 [여기](https://www.creationkit.com/index.php?title=Fixing_Navmesh_Deletion_Tutorial)에서 제공됩니다.'
       - lang: pl
         text: 'Jest silnie zalecane aby nie używać modów zawierających **Usunięte navmeshe** jako że są znane jako powód awarii. **Usunięte navmeshe** muszą zostać poprawione ręcznie(skomplikowany proces który powinien być wykonany przez autora modu). Więcej informacji o **Usuniętych navmeshach** można znaleźć [tutaj](https://www.creationkit.com/index.php?title=Fixing_Navmesh_Deletion_Tutorial).'
       - lang: pt
@@ -988,6 +1026,8 @@ globals:
         text: 'Приставката NVAC е инсталирана в **NVSE/Plugins**, но трябва да бъде преместена в **%1%/Plugins** за да може %1% да използва нейните функции в %2%.'
       - lang: de
         text: 'NVAC ist unter **NVSE/Plugins** installiert aber es muss nach **%1%/Plugins** verschoben werden um von %1% erkannt zu werden für %2%.'
+      - lang: ko
+        text: 'NVAC는 **NVSE/플러그인** 아래에 설치되지만 %2%에 대해 선택하려면 %1%에 대해 **%1%/Plugins**로 이동해야합니다.'
       - lang: pt_BR
         text: 'O NVAC está instalado em **NVSE/Plugins** porém precisa ser movido para **%1%/Plugins** para que o %1% o reconheça para o %2%.'
     subs:
