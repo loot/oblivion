@@ -125,20 +125,7 @@ common:
         text: '이 모드는 날씨 모드와 호환되지 않습니다.'
       - lang: pt_BR
         text: 'Este mod é incompatível com mods de clima.'
-  - &vanillaMapMarkers
-    type: say
-    content:
-      - lang: en
-        text: 'Move this after OOO if you desire initial city map markers a la vanilla.'
-      - lang: bg
-        text: 'Преместете след ООО, ако искате да използвате стандартните маркери по градската карта.'
-      - lang: de
-        text: 'Verschieben Sie diese Mod nach OOO wenn Sie sich die ursprünglichen Karten-Markierungen der Städte wünschen.'
-      - lang: ko
-        text: '바닐라 도시 맵의 마커를 원하는 경우 OOO 이후로 이동하십시오.'
-      - lang: pt_BR
-        text: 'Mova esse mod após OOO caso você deseje ter marcadores de mapa iniciais de cidade como no vanilla.'
-    condition: *OOOCond
+
   - &hotkeyBug
     type: say
     content:
@@ -493,6 +480,12 @@ common:
         text: 'Você precisa renomear %1% para %2%, caso contrário esse mod não irá funcionar.'
       - lang: ru
         text: 'Вам нужно переименовать %1% в %2% для подключения ресурсов мода.'
+
+  - &requiresResources
+    type: warn
+    content:
+      - lang: en
+        text: 'Requires resources (e.g. meshes, textures; not plugins) from %1%.'
 
   - &requiresX
     type: warn
@@ -6984,19 +6977,19 @@ plugins:
   - name: 'Note to Self.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/37909' ]
     req: [ *OBSE ]
+
   - name: 'SimpleHUDClock.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/31431' ]
-    msg:
-      - type: warn
-        content:
-          - lang: en
-            text: 'You must rename "OBSE_Elys_Pluggy.dll" to "OBSE_Elys_Pluggy_Hud.dll"'
-          - lang: de
-            text: 'Sie müssen "OBSE_Elys_Pluggy.dll" in "OBSE_Elys_Pluggy_Hud.dll" umbenennen'
-        condition: 'file("OBSE/Plugins/OBSE_Elys_Pluggy.dll") and not file("OBSE/Plugins/OBSE_Elys_Pluggy_Hud.dll")'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/31431/' ]
     req:
       - <<: *Pluggy
         condition: 'not file("OBSE/Plugins/OBSE_Elys_Pluggy_Hud.dll")'
+    msg:
+      - <<: *renameXtoY
+        subs:
+          - 'OBSE_Elys_Pluggy.dll'
+          - 'OBSE_Elys_Pluggy_Hud.dll'
+        condition: 'file("OBSE/Plugins/OBSE_Elys_Pluggy.dll") and not file("OBSE/Plugins/OBSE_Elys_Pluggy_Hud.dll")'
+
   - name: 'VipCxj_RadarSystem.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/35343' ]
     req: [ *MenuQue ]
@@ -7009,9 +7002,7 @@ plugins:
   - name: 'Streamline 3.0.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/10400' ]
     msg: [ *obsolete ]
-  - name: 'Landmarks.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/2502' ]
-    msg: [ *vanillaMapMarkers ]
+
   - name: 'Landmarks, w Wells.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/5475/'
@@ -7021,7 +7012,7 @@ plugins:
     msg:
       - <<: *corrupt
         condition: 'checksum("Landmarks, w Wells.esp", C01600A4)'
-      - *vanillaMapMarkers
+
   - name: 'HouseMapMarkers.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/3345' ]
     dirty:
@@ -13473,22 +13464,20 @@ plugins:
       - crc: 0xd34d61bc
         <<: *dirtyPlugin
         itm: 126
+
   - name: 'ElsweyrAnequina.esp'
     url:
       - 'https://www.nexusmods.com/oblivion/mods/25023'
       - 'https://www.afkmods.com/index.php?/files/file/2170-elsweyr-anequina/'
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Border region restrictions must be turned off: change bBorderRegionsEnabled to 0 in Oblivion.ini or use Wrye Bash bashed patch tweak.'
-          - lang: de
-            text: 'Regionsgrenzen Restriktionen muss abgeschaltet werden: Ändern Sie bBorderRegionsEnabled nach 0 in der Oblivion.ini oder nutzen Sie Wrye Bash bashed patch tweak.'
+      - <<: *alsoUseX
+        subs: [ 'INI tweak [bBorderRegionsEnabled=0](http://wiki.tesnexus.com/index.php/Removing_In-Game_Borders)' ]
     dirty:
       - <<: *quickClean
         crc: 0xDD0F1E01
         util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 79
+
   - name: 'Unofficial Elsweyr Anequina Patch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/39642' ]
     dirty:
@@ -13835,16 +13824,14 @@ plugins:
         <<: *dirtyPlugin
         itm: 72
         udr: 161
+
   - name: 'ElsweyrRiverhold.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/19026' ]
     inc: [ 'ElsweyrAnequina.esp' ]
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Border region restrictions must be turned off: change bBorderRegionsEnabled to 0 in Oblivion.ini or use Wrye Bash bashed patch tweak.'
-          - lang: de
-            text: 'Regionsgrenzen Restriktionen muss abgeschaltet werden: Ändern Sie bBorderRegionsEnabled nach 0 in der Oblivion.ini oder nutzen Sie Wrye Bash bashed patch tweak.'
+      - <<: *alsoUseX
+        subs: [ 'INI tweak [bBorderRegionsEnabled=0](http://wiki.tesnexus.com/index.php/Removing_In-Game_Borders)' ]
+
   - name: 'ExtendedAleswellEV.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/38351' ]
     dirty:
@@ -13876,15 +13863,13 @@ plugins:
   - name: 'Lakeview.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/19984' ]
     inc: [ 'ShezriesTownsMaster.esp' ]
+
   - name: 'New Valen.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/36550' ]
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Border region restrictions must be turned off: change bBorderRegionsEnabled to 0 in Oblivion.ini or use Wrye Bash bashed patch tweak.'
-          - lang: de
-            text: 'Regionsgrenzen Restriktionen muss abgeschaltet werden: Ändern Sie bBorderRegionsEnabled nach 0 in der Oblivion.ini oder nutzen Sie Wrye Bash bashed patch tweak.'
+      - <<: *alsoUseX
+        subs: [ 'INI tweak [bBorderRegionsEnabled=0](http://wiki.tesnexus.com/index.php/Removing_In-Game_Borders)' ]
+
   - name: 'Pinevale.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/23804' ]
     dirty:
@@ -14140,14 +14125,7 @@ plugins:
             text: 'Obselete - update to West Roads version 1.3+.'
           - lang: de
             text: 'Veraltet - Updaten Sie zu West Roads Version 1.3+.'
-  - name: 'Unique Landscapes - Brena River Ravine DV.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Border region restrictions must be turned off: change bBorderRegionsEnabled to 0 in Oblivion.ini or use Wrye Bash bashed patch tweak.'
-          - lang: de
-            text: 'Regionsgrenzen Restriktionen muss abgeschaltet werden: Ändern Sie bBorderRegionsEnabled nach 0 in der Oblivion.ini oder nutzen Sie Wrye Bash bashed patch tweak.'
+
   - name: 'NakedNord.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/6406' ]
     dirty:
@@ -17545,27 +17523,15 @@ plugins:
       - crc: 0x4aa8ee9a
         <<: *dirtyPlugin
         itm: 1
+
   - name: 'Rowboats.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Removes border region limmitation too.'
-          - lang: de
-            text: 'Entfernt auch Grenzregion Restriktionen.'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/6690/' ]
     dirty:
       - crc: 0x4cfabd99
         <<: *dirtyPlugin
         itm: 3
         udr: 11
-  - name: 'Leyawin Bridge.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Part of the Rowboats mod.'
-          - lang: de
-            text: 'Teil der Rowboats Mod.'
+
   - name: 'Safer Roads v1.0.esp'
     msg:
       - type: say
@@ -17803,15 +17769,13 @@ plugins:
       - NoMerge
   - name: 'Sleep to Save.esp'
     req: [ *OBSEv11 ]
+
   - name: 'Slof''s Dogs.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/48920' ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/48920/' ]
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Don''t need to use this if you use MMM as it already includes dogs.'
-          - lang: de
-            text: 'Wird nicht benötigt wenn Sie MMM nutzen, da es Hunde bereits enthält.'
+      - *alreadyInMMM
+      - *alreadyInFCOM
+
   - name: 'Soulgem Magic.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/35393' ]
     req: [ *OBSEv20 ]
@@ -18850,16 +18814,11 @@ plugins:
     tag:
       - Graphics
       - Sound
+
   - name: 'Bundlement.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/41005' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Incompatible with: Progress*.esp'
-          - lang: de
-            text: 'Inkompatibel mit: Progress*.esp'
-        condition: 'file("[pP]rogress.*\.esp")'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/41005/' ]
+    inc: [ 'Progress.esm' ]
+
   - name: 'ExperienceBasedTraining.esp'
     req: [ *OBSEv16 ]
   - name: 'Mercantile Leveling-Fixed.esp'
@@ -18987,14 +18946,14 @@ plugins:
         condition: 'many("S.P.A.M. option - Faste(r|st) Minor.esp")'
   - name: 'The Versatile Adventurer.esp'
     req: [ *OBSE ]
+
   - name: 'Mayu''s Animation Overhaul.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/19796/' ]
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Highly recommended to use the MAO patcher in Wrye Bash version 275+.'
-          - lang: de
-            text: 'Strengstens empfohlen den MAO Patcher in Wrye Bash Version 275+ zu nutzen.'
+      - <<: *alsoUseX
+        subs: [ 'Bashed Patch: Tweak Actors -> Mayu''s Animation Overhaul Skeleton Tweaker' ]
+        condition: 'file("Bashed Patch.*\.esp")'
+
   - name: 'SexyPlOneHand.esp'
     tag:
       - Actors.Anims
@@ -21133,43 +21092,26 @@ plugins:
       - crc: 0x436f457d
         <<: *dirtyPlugin
         itm: 3
+
+  ### Companion Vilja ###
   - name: '1em_Vilja.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/28977' ]
     clean:
       - crc: 0x7D9D9B53
         util: 'TES4Edit v4.0.3'
-  - name: '1em_Vilja OOO FCOM Fix.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/28977' ]
-    req: [ 'Oscuro''s_Oblivion_Overhaul.esm' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Use this or "1em_Vilja MMM FCOM Fix.esp", but not both; The OOO version offers less protection.'
-          - lang: de
-            text: 'Nutzen Sie dieses oder "1em_Vilja MMM FCOM Fix.esp", aber nicht beides; Die OOO Version bietet weniger Schutz.'
-    tag:
-      - Factions
-      - NoMerge
-      - Relations
   - name: '1em_Vilja MMM Fix.esp'
     tag:
       - Factions
       - NoMerge
-  - name: '1em_Vilja MMM FCOM Fix.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/28977' ]
-    req: [ 'Mart''s Monster Mod.esm' ]
+
+  # FCOM Patches #
+  - name: '1em_Vilja (OOO|MMM) FCOM Fix\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/28977/' ]
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Use this or "1em_Vilja OOO FCOM Fix.esp", but not both; The MMM Version offers more protection from certain NPCs and Creatures.'
-          - lang: de
-            text: 'Nutzen Sie dieses oder "1em_Vilja MMM FCOM Fix.esp", aber nicht beides; Die MMM Version bietet mehr Schutz gegenüber einigen NPCs und Kreaturen.'
-    tag:
-      - Factions
-      - NoMerge
-      - Relations
+      - <<: *useOnlyOneX
+        subs: [ 'FCOM Fix ESP' ]
+        condition: 'many("1em_Vilja (OOO|MMM) FCOM Fix\.esp")'
+
   - name: '1em_Vilja_as_(Argonian|(Blood|Chocolate|Moonshadow|Nec_Mystic_High)_Elf(_MU|_Stranger|-Remake)?|High_Imperial|Tabaxi|Vampire(_Reloaded)?|Custom| Synx)(_by_(Xtudo|4GVN|Gonzoguns))?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/28977' ]
     msg:
@@ -21178,21 +21120,14 @@ plugins:
         condition: 'many("1em_Vilja_as_(Argonian|(Blood|Chocolate|Moonshadow|Nec_Mystic_High)_Elf(_MU|_Stranger|\-Remake)?|High_Imperial|Tabaxi|Vampire(_Reloaded)?|Custom| Synx)(_by_(Xtudo|4GVN|Gonzoguns))?\.esp")'
   - name: '1em_Vilja_as_Custom_by_Gonzoguns.esp'
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Requires: Resources from [Abriael Human Races Revamped](http://www.nexusmods.com/oblivion/mods/25524), the ESP file is not required.'
-          - lang: de
-            text: 'Benötigt: Ressourcen von [Abriael Human Races Revamped](http://www.nexusmods.com/oblivion/mods/25524), die ESP Datei wird nicht benötigt.'
+      - <<: *requiresResources
+        subs: [ '[Abriael Human Races Revamped](http://www.nexusmods.com/oblivion/mods/25524/)' ]
+        condition: 'not file("meshes/Soya/soyastyle01.nif")'
   - name: '1em_Vilja_as_High_Imperial.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/28977' ]
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Requires: Resources from [Deathknowz''s High Imperials Race](http://www.nexusmods.com/oblivion/mods/33044) (all three files), the ESP file is not required.'
-          - lang: de
-            text: 'Benötigt: Ressourcen von [Deathknowz''s High Imperials Race](http://www.nexusmods.com/oblivion/mods/33044) (all drei Dateien), die ESP Datei wird nicht benötigt.'
+      - <<: *requiresResources
+        subs: [ '[DK High Imperials](http://www.nexusmods.com/oblivion/mods/33044/)' ]
+        condition: 'not file("Meshes/Characters/DKImperial/Eyes/Ren_Eye01L.nif") or not file("Meshes/Characters/DKImperial/Coolhairs/Coolfhair41/coolfhair41.nif") or checksum("Meshes/Characters/DKImperial/Head/H06_Fem3.tri", 580CE1F5)'
   - name: '1em_Vilja_?(cool|Ren)(hair)?\d\d?g?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/28977' ]
     msg:
@@ -21217,11 +21152,6 @@ plugins:
   - name: '1em_Vilja_babehair03.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/28977' ]
     tag: [ Hair ]
-  - name: 'LakesideHome.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/36320' ]
-    clean:
-      - crc: 0x9E89A294
-        util: 'TES4Edit v4.0.3'
   - name: 'ViljainLakeside.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/28977' ]
     clean:
@@ -21231,6 +21161,12 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/28977' ]
     clean:
       - crc: 0x83A83794
+        util: 'TES4Edit v4.0.3'
+
+  - name: 'LakesideHome.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/36320' ]
+    clean:
+      - crc: 0x9E89A294
         util: 'TES4Edit v4.0.3'
   - name: 'Aliyah.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/12082' ]
@@ -22031,22 +21967,18 @@ plugins:
       - Actors.AIPackages
       - Invent
       - Relations
+
+  - name: 'CRpatchFor(XULskingradOutskirts|BCskingrad)\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/42085/' ]
+    msg:
+      - <<: *useInstead
+        subs: [ 'CRpatchForBSandULskingrad.esp' ]
+        condition: 'active("Better Cities Resources.esm") and active("Unique Landscapes.esp")'
   - name: 'CRpatchForXULskingradOutskirts.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'For both Unique Landscapes and Better Cities use CRpatchForBSandULskingrad.esp instead'
-          - lang: de
-            text: 'Für beides, Unique Landscapes und Better Cities, nutzen Sie stattdessen CRpatchForBSandULskingrad.esp'
+    inc: [ *BetterCities ]
   - name: 'CRpatchForBCskingrad.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'For both Unique Landscapes and Better Cities use CRpatchForBSandULskingrad.esp instead'
-          - lang: de
-            text: 'Für beides, Unique Landscapes und Better Cities, nutzen Sie stattdessen CRpatchForBSandULskingrad.esp'
+    inc: [ 'Unique Landscapes.esp' ]
+
   - name: 'ROM Patch - Better Cities.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/33114' ]
     tag: [ Stats ]
@@ -22509,17 +22441,14 @@ plugins:
   - name: 'Vanilla Weapon Stat Override( - SI)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/39914' ]
     # doNotClean
+
   - name: 'WindowLightingSystem.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/19628' ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/19628/' ]
     msg:
-      - *masterReassign
-      - type: say
-        content:
-          - lang: en
-            text: 'Unnecessary as many windows are already lit.'
-          - lang: de
-            text: 'Unnötig da viele Fenster bereits beleuchtet sind.'
+      - <<: *alreadyInOrFixedByX
+        subs: [ 'Nehrim' ]
         condition: *nehrimCond
+
   - name: 'BookTrackerOBSE.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/18434' ]
     msg: [ *masterReassign ]
