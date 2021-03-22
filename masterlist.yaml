@@ -22469,17 +22469,14 @@ plugins:
   - name: 'Vanilla Weapon Stat Override( - SI)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/39914' ]
     # doNotClean
+
   - name: 'WindowLightingSystem.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/19628' ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/19628/' ]
     msg:
-      - *masterReassign
-      - type: say
-        content:
-          - lang: en
-            text: 'Unnecessary as many windows are already lit.'
-          - lang: de
-            text: 'Unnötig da viele Fenster bereits beleuchtet sind.'
+      - <<: *alreadyInOrFixedByX
+        subs: [ 'Nehrim' ]
         condition: *nehrimCond
+
   - name: 'BookTrackerOBSE.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/18434' ]
     msg: [ *masterReassign ]
