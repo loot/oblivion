@@ -21991,22 +21991,18 @@ plugins:
       - Actors.AIPackages
       - Invent
       - Relations
+
+  - name: 'CRpatchFor(XULskingradOutskirts|BCskingrad)\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/42085/' ]
+    msg:
+      - <<: *useInstead
+        subs: [ 'CRpatchForBSandULskingrad.esp' ]
+        condition: 'active("Better Cities Resources.esm") and active("Unique Landscapes.esp")'
   - name: 'CRpatchForXULskingradOutskirts.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'For both Unique Landscapes and Better Cities use CRpatchForBSandULskingrad.esp instead'
-          - lang: de
-            text: 'Für beides, Unique Landscapes und Better Cities, nutzen Sie stattdessen CRpatchForBSandULskingrad.esp'
+    inc: [ *BetterCities ]
   - name: 'CRpatchForBCskingrad.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'For both Unique Landscapes and Better Cities use CRpatchForBSandULskingrad.esp instead'
-          - lang: de
-            text: 'Für beides, Unique Landscapes und Better Cities, nutzen Sie stattdessen CRpatchForBSandULskingrad.esp'
+    inc: [ 'Unique Landscapes.esp' ]
+
   - name: 'ROM Patch - Better Cities.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/33114' ]
     tag: [ Stats ]
