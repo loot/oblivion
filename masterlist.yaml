@@ -6971,19 +6971,19 @@ plugins:
   - name: 'Note to Self.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/37909' ]
     req: [ *OBSE ]
+
   - name: 'SimpleHUDClock.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/31431' ]
-    msg:
-      - type: warn
-        content:
-          - lang: en
-            text: 'You must rename "OBSE_Elys_Pluggy.dll" to "OBSE_Elys_Pluggy_Hud.dll"'
-          - lang: de
-            text: 'Sie müssen "OBSE_Elys_Pluggy.dll" in "OBSE_Elys_Pluggy_Hud.dll" umbenennen'
-        condition: 'file("OBSE/Plugins/OBSE_Elys_Pluggy.dll") and not file("OBSE/Plugins/OBSE_Elys_Pluggy_Hud.dll")'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/31431/' ]
     req:
       - <<: *Pluggy
         condition: 'not file("OBSE/Plugins/OBSE_Elys_Pluggy_Hud.dll")'
+    msg:
+      - <<: *renameXtoY
+        subs:
+          - 'OBSE_Elys_Pluggy.dll'
+          - 'OBSE_Elys_Pluggy_Hud.dll'
+        condition: 'file("OBSE/Plugins/OBSE_Elys_Pluggy.dll") and not file("OBSE/Plugins/OBSE_Elys_Pluggy_Hud.dll")'
+
   - name: 'VipCxj_RadarSystem.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/35343' ]
     req: [ *MenuQue ]
