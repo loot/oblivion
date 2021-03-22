@@ -18940,14 +18940,14 @@ plugins:
         condition: 'many("S.P.A.M. option - Faste(r|st) Minor.esp")'
   - name: 'The Versatile Adventurer.esp'
     req: [ *OBSE ]
+
   - name: 'Mayu''s Animation Overhaul.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/19796/' ]
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Highly recommended to use the MAO patcher in Wrye Bash version 275+.'
-          - lang: de
-            text: 'Strengstens empfohlen den MAO Patcher in Wrye Bash Version 275+ zu nutzen.'
+      - <<: *alsoUseX
+        subs: [ 'Bashed Patch: Tweak Actors -> Mayu''s Animation Overhaul Skeleton Tweaker' ]
+        condition: 'file("Bashed Patch.*\.esp")'
+
   - name: 'SexyPlOneHand.esp'
     tag:
       - Actors.Anims
