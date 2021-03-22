@@ -18810,16 +18810,11 @@ plugins:
     tag:
       - Graphics
       - Sound
+
   - name: 'Bundlement.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/41005' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Incompatible with: Progress*.esp'
-          - lang: de
-            text: 'Inkompatibel mit: Progress*.esp'
-        condition: 'file("[pP]rogress.*\.esp")'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/41005/' ]
+    inc: [ 'Progress.esm' ]
+
   - name: 'ExperienceBasedTraining.esp'
     req: [ *OBSEv16 ]
   - name: 'Mercantile Leveling-Fixed.esp'
