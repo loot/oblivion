@@ -21092,43 +21092,26 @@ plugins:
       - crc: 0x436f457d
         <<: *dirtyPlugin
         itm: 3
+
+  ### Companion Vilja ###
   - name: '1em_Vilja.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/28977' ]
     clean:
       - crc: 0x7D9D9B53
         util: 'TES4Edit v4.0.3'
-  - name: '1em_Vilja OOO FCOM Fix.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/28977' ]
-    req: [ 'Oscuro''s_Oblivion_Overhaul.esm' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Use this or "1em_Vilja MMM FCOM Fix.esp", but not both; The OOO version offers less protection.'
-          - lang: de
-            text: 'Nutzen Sie dieses oder "1em_Vilja MMM FCOM Fix.esp", aber nicht beides; Die OOO Version bietet weniger Schutz.'
-    tag:
-      - Factions
-      - NoMerge
-      - Relations
   - name: '1em_Vilja MMM Fix.esp'
     tag:
       - Factions
       - NoMerge
-  - name: '1em_Vilja MMM FCOM Fix.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/28977' ]
-    req: [ 'Mart''s Monster Mod.esm' ]
+
+  # FCOM Patches #
+  - name: '1em_Vilja (OOO|MMM) FCOM Fix\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/28977/' ]
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Use this or "1em_Vilja OOO FCOM Fix.esp", but not both; The MMM Version offers more protection from certain NPCs and Creatures.'
-          - lang: de
-            text: 'Nutzen Sie dieses oder "1em_Vilja MMM FCOM Fix.esp", aber nicht beides; Die MMM Version bietet mehr Schutz gegenüber einigen NPCs und Kreaturen.'
-    tag:
-      - Factions
-      - NoMerge
-      - Relations
+      - <<: *useOnlyOneX
+        subs: [ 'FCOM Fix ESP' ]
+        condition: 'many("1em_Vilja (OOO|MMM) FCOM Fix\.esp")'
+
   - name: '1em_Vilja_as_(Argonian|(Blood|Chocolate|Moonshadow|Nec_Mystic_High)_Elf(_MU|_Stranger|-Remake)?|High_Imperial|Tabaxi|Vampire(_Reloaded)?|Custom| Synx)(_by_(Xtudo|4GVN|Gonzoguns))?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/28977' ]
     msg:
@@ -21137,21 +21120,14 @@ plugins:
         condition: 'many("1em_Vilja_as_(Argonian|(Blood|Chocolate|Moonshadow|Nec_Mystic_High)_Elf(_MU|_Stranger|\-Remake)?|High_Imperial|Tabaxi|Vampire(_Reloaded)?|Custom| Synx)(_by_(Xtudo|4GVN|Gonzoguns))?\.esp")'
   - name: '1em_Vilja_as_Custom_by_Gonzoguns.esp'
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Requires: Resources from [Abriael Human Races Revamped](http://www.nexusmods.com/oblivion/mods/25524), the ESP file is not required.'
-          - lang: de
-            text: 'Benötigt: Ressourcen von [Abriael Human Races Revamped](http://www.nexusmods.com/oblivion/mods/25524), die ESP Datei wird nicht benötigt.'
+      - <<: *requiresResources
+        subs: [ '[Abriael Human Races Revamped](http://www.nexusmods.com/oblivion/mods/25524/)' ]
+        condition: 'not file("meshes/Soya/soyastyle01.nif")'
   - name: '1em_Vilja_as_High_Imperial.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/28977' ]
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Requires: Resources from [Deathknowz''s High Imperials Race](http://www.nexusmods.com/oblivion/mods/33044) (all three files), the ESP file is not required.'
-          - lang: de
-            text: 'Benötigt: Ressourcen von [Deathknowz''s High Imperials Race](http://www.nexusmods.com/oblivion/mods/33044) (all drei Dateien), die ESP Datei wird nicht benötigt.'
+      - <<: *requiresResources
+        subs: [ '[DK High Imperials](http://www.nexusmods.com/oblivion/mods/33044/)' ]
+        condition: 'not file("Meshes/Characters/DKImperial/Eyes/Ren_Eye01L.nif") or not file("Meshes/Characters/DKImperial/Coolhairs/Coolfhair41/coolfhair41.nif") or checksum("Meshes/Characters/DKImperial/Head/H06_Fem3.tri", 580CE1F5)'
   - name: '1em_Vilja_?(cool|Ren)(hair)?\d\d?g?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/28977' ]
     msg:
@@ -21176,11 +21152,6 @@ plugins:
   - name: '1em_Vilja_babehair03.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/28977' ]
     tag: [ Hair ]
-  - name: 'LakesideHome.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/36320' ]
-    clean:
-      - crc: 0x9E89A294
-        util: 'TES4Edit v4.0.3'
   - name: 'ViljainLakeside.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/28977' ]
     clean:
@@ -21190,6 +21161,12 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/28977' ]
     clean:
       - crc: 0x83A83794
+        util: 'TES4Edit v4.0.3'
+
+  - name: 'LakesideHome.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/36320' ]
+    clean:
+      - crc: 0x9E89A294
         util: 'TES4Edit v4.0.3'
   - name: 'Aliyah.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/12082' ]
