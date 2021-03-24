@@ -2537,34 +2537,6 @@ plugins:
       - SpellStats
       - Text
 
-  - name: 'Hentai Mania.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/25612' ]
-    req: [ *OBSE ]
-    msg:
-      - <<: *requiresX
-        type: say
-        subs: [ '[HG EyeCandy Body](https://www.nexusmods.com/oblivion/mods/15802/)' ]
-    tag:
-      - C.Owner
-      - Hair
-      - Invent
-      - Scripts
-    dirty:
-      - <<: *quickClean
-        crc: 0x840B603E
-        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 1675
-        udr: 425
-
-  - name: 'HentaiMania2.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/34179/' ]
-    dirty:
-      - <<: *quickClean
-        crc: 0xFD040A00
-        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 267
-        udr: 556
-
   - name: 'Listener Overhaul.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/36002' ]
     dirty:
@@ -2701,6 +2673,34 @@ plugins:
         util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536/)'
         itm: 13
         udr: 12
+
+  - name: 'Hentai Mania.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/25612' ]
+    req: [ *OBSE ]
+    msg:
+      - <<: *requiresX
+        type: say
+        subs: [ '[HG EyeCandy Body](https://www.nexusmods.com/oblivion/mods/15802/)' ]
+    tag:
+      - C.Owner
+      - Hair
+      - Invent
+      - Scripts
+    dirty:
+      - <<: *quickClean
+        crc: 0x840B603E
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1675
+        udr: 425
+
+  - name: 'HentaiMania2.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/34179/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xFD040A00
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 267
+        udr: 556
 
   - name: 'JolardHome.esp'
     url:
