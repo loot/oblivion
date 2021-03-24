@@ -2468,46 +2468,10 @@ plugins:
         itm: 1238
         udr: 2400
 
-  - name: 'Hentai Mania.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/25612' ]
-    req: [ *OBSE ]
-    msg:
-      - <<: *requiresX
-        type: say
-        subs: [ '[HG EyeCandy Body](https://www.nexusmods.com/oblivion/mods/15802/)' ]
-    tag:
-      - C.Owner
-      - Hair
-      - Invent
-      - Scripts
-    dirty:
-      - <<: *quickClean
-        crc: 0x840B603E
-        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 1675
-        udr: 425
-
-  - name: 'HentaiMania2.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/34179/' ]
-    dirty:
-      - <<: *quickClean
-        crc: 0xFD040A00
-        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 267
-        udr: 556
-
-  - name: 'Listener Overhaul.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/36002' ]
-    dirty:
-      - <<: *quickClean
-        crc: 0x95AFBF72
-        util: '[TES4Edit v4.0.3b](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 3
-        udr: 1
-
-  ### Bash-able Quest Delayers ###
   - name: 'Bashed Delayers - MERGE ONLY.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/25946/' ]
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/25946/'
+        name: 'Bash-able Quest Delayers'
     group: *latePatchesGroup
     req: [ *OBSEv18 ]
     msg: [ *requiresBashedPatch ]
@@ -2517,6 +2481,61 @@ plugins:
   - name: '(BladeSong|Castle_Seaview|CaveOfWishcraft|Cybiades|CyrilliansStaff|Demonhunter|EiAmod|Gift of Kynareth|GTAesgaard I|GTAesgaard II|Haunted_House_|HeartOftheDead|HoarfrostCastle|KohdiArmoryofAnsephaer|KohdiBladesofAnkewan|OrderCloudKnights|PotR|sS-OrderOfAskarthe|Steve - Hitman (Patched)|Talon of Akatosh (Claymore|Longsword)|Tantrivaylia|templars|The Lost Spires|TheForgottenShields|Underdark|UnderdarkSaga|WeaponsOfTheNine|Werewolf-Legends).*\Delayer.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/25946/' ]
     msg: [ *obsolete ]
+
+  - name: 'bgIntegrationEV.esp'
+    url:
+      - link: 'https://theelderscrolls.info/?go=dlfile&fileid=349'
+        name: 'Integration - The Stranded Light'
+    after:
+      - 'Open Cities Classic.esp'
+      - 'Open Cities Reborn.esp'
+      - 'Unique Landscapes.esp'
+      - 'xulSilverfishRiverValley.esp'
+      - 'xulSnowdale.esp'
+      - 'xulTheEasternPeaks.esp'
+    # doNotClean
+    inc: [ 'bgIntegrationIntegratedEV.esp' ]
+    req: [ 'DLCShiveringIsles.esp' ]
+  # Integration Addons #
+  - name: 'bgIntegrationEV - Alternative NPC Faces by LazyMonk.esp'
+    url: [ 'http://theelderscrolls.info/?go=dlfile&fileid=368' ]
+    tag:
+      - NoMerge
+      - NpcFaces
+  - name: 'Integration faces revamped.esp'
+    url: [ 'https://www.moddb.com/addons/integration-alternate-npc-faces-plugin' ]
+    tag:
+      - NoMerge
+      - NpcFaces
+
+  - name: 'bgIntegrationIntegratedEV.esp'
+    url:
+      - link: 'https://theelderscrolls.info/?go=dlfile&fileid=441'
+        name: 'Integration - The Stranded Light - Integrated!'
+    after:
+      - 'Unique Landscapes.esp'
+      - 'xulSilverfishRiverValley.esp'
+      - 'xulSnowdale.esp'
+      - 'xulTheEasternPeaks.esp'
+    inc:
+      - 'bgBalancingEVCore.esp'
+      - 'bgMagicEV.esp'
+    tag:
+      - C.Regions
+      - Delev
+      - Eyes
+      - Hair
+      - Names
+      - Relations
+      - Relev
+      - R.Attributes-F
+      - R.Attributes-M
+      - R.ChangeSpells
+      - R.Description
+      - R.Relations
+      - R.Skills
+      - SpellStats
+      - Text
 
   - name: 'Castle_Seaview.esp'
     url:
@@ -2646,57 +2665,33 @@ plugins:
         itm: 13
         udr: 12
 
-  ### Integration - The Stranded Light ###
-  - name: 'bgIntegrationEV.esp'
-    url: [ 'http://theelderscrolls.info/?go=dlfile&fileid=349' ]
-    after:
-      - 'Open Cities Classic.esp'
-      - 'Open Cities Reborn.esp'
-      - 'Unique Landscapes.esp'
-      - 'xulSilverfishRiverValley.esp'
-      - 'xulSnowdale.esp'
-      - 'xulTheEasternPeaks.esp'
-    # doNotClean
-    inc: [ 'bgIntegrationIntegratedEV.esp' ]
-    req: [ 'DLCShiveringIsles.esp' ]
-  # Integration Addons #
-  - name: 'bgIntegrationEV - Alternative NPC Faces by LazyMonk.esp'
-    url: [ 'http://theelderscrolls.info/?go=dlfile&fileid=368' ]
+  - name: 'Hentai Mania.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/25612' ]
+    req: [ *OBSE ]
+    msg:
+      - <<: *requiresX
+        type: say
+        subs: [ '[HG EyeCandy Body](https://www.nexusmods.com/oblivion/mods/15802/)' ]
     tag:
-      - NoMerge
-      - NpcFaces
-  - name: 'Integration faces revamped.esp'
-    url: [ 'https://www.moddb.com/addons/integration-alternate-npc-faces-plugin' ]
-    tag:
-      - NoMerge
-      - NpcFaces
-  ### Integration - The Stranded Light - Integrated! ###
-  - name: 'bgIntegrationIntegratedEV.esp'
-    url: [ 'http://theelderscrolls.info/?go=dlfile&fileid=441' ]
-    after:
-      - 'Unique Landscapes.esp'
-      - 'xulSilverfishRiverValley.esp'
-      - 'xulSnowdale.esp'
-      - 'xulTheEasternPeaks.esp'
-    inc:
-      - 'bgBalancingEVCore.esp'
-      - 'bgMagicEV.esp'
-    tag:
-      - C.Regions
-      - Delev
-      - Eyes
+      - C.Owner
       - Hair
-      - Names
-      - Relations
-      - Relev
-      - R.Attributes-F
-      - R.Attributes-M
-      - R.ChangeSpells
-      - R.Description
-      - R.Relations
-      - R.Skills
-      - SpellStats
-      - Text
+      - Invent
+      - Scripts
+    dirty:
+      - <<: *quickClean
+        crc: 0x840B603E
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1675
+        udr: 425
+
+  - name: 'HentaiMania2.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/34179/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xFD040A00
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 267
+        udr: 556
 
   - name: 'JolardHome.esp'
     url:
@@ -2729,6 +2724,15 @@ plugins:
       - crc: 0xA0C60505
         util: 'TES4Edit v4.0.3'
 
+  - name: 'Listener Overhaul.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/36002' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x95AFBF72
+        util: '[TES4Edit v4.0.3b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 3
+        udr: 1
+
   - name: 'ReclaimSancreTor.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/40757' ]
     tag:
@@ -2738,6 +2742,41 @@ plugins:
     clean:
       - crc: 0xBBE3D1F1
         util: 'TES4Edit v4.0.3'
+
+  - name: 'SM Plugin Refurbish.*\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/11474' ]
+    group: *veryEarlyGroup
+    # doNotClean
+  - name: 'SM Plugin Refurbish(Merged).esp'
+    after: [ 'Knights - Unofficial Patch.esp' ]
+    req: [ 'DLCShiveringIsles.esp' ]
+    msg: [ *sortMasters ]
+  - name: 'SM Plugin Refurbish - SI.esp'
+    after: [ 'Unofficial Shivering Isles Patch.esp' ]
+    req: [ 'DLCShiveringIsles.esp' ]
+  - name: 'SM Plugin Refurbish - Battlehorn.esp'
+    after: [ 'DLCBattlehornCastle - Unofficial Patch.esp' ]
+  - name: 'SM Plugin Refurbish - Frostcrag.esp'
+    after: [ 'DLCFrostcrag - Unofficial Patch.esp' ]
+  - name: 'SM Plugin Refurbish - HorseArmor.esp'
+    after: [ 'DLCHorseArmor - Unofficial Patch.esp' ]
+  - name: 'SM Plugin Refurbish - Knights.esp'
+    after: [ 'Knights - Unofficial Patch.esp' ]
+  - name: 'SM Plugin Refurbish - MehrunesRazor.esp'
+    after: [ 'DLCMehrunesRazor - Unofficial Patch.esp' ]
+  - name: 'SM Plugin Refurbish - Orrery.esp'
+    after: [ 'DLCOrrery - Unofficial Patch.esp' ]
+  - name: 'SM Plugin Refurbish - ThievesDen.esp'
+    after:
+      - 'DLCThievesDen - Unofficial Patch.esp'
+      - 'DLCThievesDen - Unofficial Patch - SSSB.esp'
+  - name: 'SM Plugin Refurbish - VileLair.esp'
+    after: [ 'DLCOrrery - Unofficial Patch.esp' ]
+  - name: 'SM Plugin Refurbish - (Battlehorn|Frostcrag|HorseArmor|Knights|MehrunesRazor|Orrery|SI|ThievesDen|VileLair)\.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'SM Plugin Refurbish(Merged).esp' ]
+        condition: 'file("SM Plugin Refurbish(Merged).esp")'
 
   - name: 'VHBloodlines 1.2.esp'
     url:
@@ -5450,42 +5489,6 @@ plugins:
   - name: 'USIPCutterFix.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/42196' ]
     msg: [ *alreadyInOrFixedByUSIP ]
-
-###### SM Plugin Refurbish ######
-  - name: 'SM Plugin Refurbish.*\.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/11474' ]
-    group: *veryEarlyGroup
-    # doNotClean
-  - name: 'SM Plugin Refurbish(Merged).esp'
-    after: [ 'Knights - Unofficial Patch.esp' ]
-    req: [ 'DLCShiveringIsles.esp' ]
-    msg: [ *sortMasters ]
-  - name: 'SM Plugin Refurbish - SI.esp'
-    after: [ 'Unofficial Shivering Isles Patch.esp' ]
-    req: [ 'DLCShiveringIsles.esp' ]
-  - name: 'SM Plugin Refurbish - Battlehorn.esp'
-    after: [ 'DLCBattlehornCastle - Unofficial Patch.esp' ]
-  - name: 'SM Plugin Refurbish - Frostcrag.esp'
-    after: [ 'DLCFrostcrag - Unofficial Patch.esp' ]
-  - name: 'SM Plugin Refurbish - HorseArmor.esp'
-    after: [ 'DLCHorseArmor - Unofficial Patch.esp' ]
-  - name: 'SM Plugin Refurbish - Knights.esp'
-    after: [ 'Knights - Unofficial Patch.esp' ]
-  - name: 'SM Plugin Refurbish - MehrunesRazor.esp'
-    after: [ 'DLCMehrunesRazor - Unofficial Patch.esp' ]
-  - name: 'SM Plugin Refurbish - Orrery.esp'
-    after: [ 'DLCOrrery - Unofficial Patch.esp' ]
-  - name: 'SM Plugin Refurbish - ThievesDen.esp'
-    after:
-      - 'DLCThievesDen - Unofficial Patch.esp'
-      - 'DLCThievesDen - Unofficial Patch - SSSB.esp'
-  - name: 'SM Plugin Refurbish - VileLair.esp'
-    after: [ 'DLCOrrery - Unofficial Patch.esp' ]
-  - name: 'SM Plugin Refurbish - (Battlehorn|Frostcrag|HorseArmor|Knights|MehrunesRazor|Orrery|SI|ThievesDen|VileLair)\.esp'
-    msg:
-      - <<: *alreadyInX
-        subs: [ 'SM Plugin Refurbish(Merged).esp' ]
-        condition: 'file("SM Plugin Refurbish(Merged).esp")'
 
 ###### MOBS - Medieval Oblivion Equipment Balance System ######
   - name: '(MOBS|MOBS SI|OMOBS|OMOBS_SI)\.esp'
