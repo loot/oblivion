@@ -2754,13 +2754,42 @@ plugins:
         util: 'TES4Edit v4.0.3'
 
   - name: 'SM Plugin Refurbish.*\.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/11474' ]
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/11474/'
+        name: 'SM DLC Plugin Refurbish'
     group: *veryEarlyGroup
-    # doNotClean
+  - name: 'SM Plugin Refurbish Lite.esp'
+    after:
+      - 'Knights - Unofficial Patch.esp'
+      - 'Knights Infamy.esp'
+    msg:
+      - <<: *alsoUseX
+        subs: [ '[Elys- Universal Silent Voice](https://www.nexusmods.com/oblivion/mods/16622) or [VoiceFile Redirector OBSE](https://github.com/ponyrider0/voicefile-redirector/releases)' ]
+        condition: 'not file("OBSE/Plugins/Elys_USV.dll") and not file("OBSE/Plugins/voicefile_redirector.dll")'
+      - <<: *sortMasters
+        condition: 'checksum("SM Plugin Refurbish Lite.esp", 0466DC3B)'
+    clean:
+      - crc: 0x0466DC3B
+        util: 'TES4Edit v4.0.3'
+      - crc: 0xAEBBCD33
+        util: 'TES4Edit v4.0.3'
+  - name: 'SM Plugin Refurbish Lite Levels.esp'
+    msg:
+      - <<: *sortMasters
+        condition: 'checksum("SM Plugin Refurbish Lite Levels.esp", 4165CF51)'
+    clean:
+      - crc: 0x4165CF51
+        util: 'TES4Edit v4.0.3'
+      - crc: 0x7935FF26
+        util: 'TES4Edit v4.0.3'
+  # Legacy Files #
   - name: 'SM Plugin Refurbish(Merged).esp'
     after: [ 'Knights - Unofficial Patch.esp' ]
+    inc: [ 'SM Plugin Refurbish Lite.esp' ]
     req: [ 'DLCShiveringIsles.esp' ]
-    msg: [ *sortMasters ]
+    msg:
+      - <<: *sortMasters
+        condition: 'checksum("SM Plugin Refurbish(Merged).esp", 0DE2D83B)'
   - name: 'SM Plugin Refurbish - SI.esp'
     after: [ 'Unofficial Shivering Isles Patch.esp' ]
     req: [ 'DLCShiveringIsles.esp' ]
@@ -2783,6 +2812,7 @@ plugins:
   - name: 'SM Plugin Refurbish - VileLair.esp'
     after: [ 'DLCOrrery - Unofficial Patch.esp' ]
   - name: 'SM Plugin Refurbish - (Battlehorn|Frostcrag|HorseArmor|Knights|MehrunesRazor|Orrery|SI|ThievesDen|VileLair)\.esp'
+    inc: [ 'SM Plugin Refurbish Lite.esp' ]
     msg:
       - <<: *alreadyInX
         subs: [ 'SM Plugin Refurbish(Merged).esp' ]
