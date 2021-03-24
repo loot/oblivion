@@ -2482,6 +2482,61 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/25946/' ]
     msg: [ *obsolete ]
 
+  - name: 'bgIntegrationEV.esp'
+    url:
+      - link: 'https://theelderscrolls.info/?go=dlfile&fileid=349'
+        name: 'Integration - The Stranded Light'
+    after:
+      - 'Open Cities Classic.esp'
+      - 'Open Cities Reborn.esp'
+      - 'Unique Landscapes.esp'
+      - 'xulSilverfishRiverValley.esp'
+      - 'xulSnowdale.esp'
+      - 'xulTheEasternPeaks.esp'
+    # doNotClean
+    inc: [ 'bgIntegrationIntegratedEV.esp' ]
+    req: [ 'DLCShiveringIsles.esp' ]
+  # Integration Addons #
+  - name: 'bgIntegrationEV - Alternative NPC Faces by LazyMonk.esp'
+    url: [ 'http://theelderscrolls.info/?go=dlfile&fileid=368' ]
+    tag:
+      - NoMerge
+      - NpcFaces
+  - name: 'Integration faces revamped.esp'
+    url: [ 'https://www.moddb.com/addons/integration-alternate-npc-faces-plugin' ]
+    tag:
+      - NoMerge
+      - NpcFaces
+
+  - name: 'bgIntegrationIntegratedEV.esp'
+    url:
+      - link: 'https://theelderscrolls.info/?go=dlfile&fileid=441'
+        name: 'Integration - The Stranded Light - Integrated!'
+    after:
+      - 'Unique Landscapes.esp'
+      - 'xulSilverfishRiverValley.esp'
+      - 'xulSnowdale.esp'
+      - 'xulTheEasternPeaks.esp'
+    inc:
+      - 'bgBalancingEVCore.esp'
+      - 'bgMagicEV.esp'
+    tag:
+      - C.Regions
+      - Delev
+      - Eyes
+      - Hair
+      - Names
+      - Relations
+      - Relev
+      - R.Attributes-F
+      - R.Attributes-M
+      - R.ChangeSpells
+      - R.Description
+      - R.Relations
+      - R.Skills
+      - SpellStats
+      - Text
+
   - name: 'Hentai Mania.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/25612' ]
     req: [ *OBSE ]
@@ -2646,58 +2701,6 @@ plugins:
         util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536/)'
         itm: 13
         udr: 12
-
-  ### Integration - The Stranded Light ###
-  - name: 'bgIntegrationEV.esp'
-    url: [ 'http://theelderscrolls.info/?go=dlfile&fileid=349' ]
-    after:
-      - 'Open Cities Classic.esp'
-      - 'Open Cities Reborn.esp'
-      - 'Unique Landscapes.esp'
-      - 'xulSilverfishRiverValley.esp'
-      - 'xulSnowdale.esp'
-      - 'xulTheEasternPeaks.esp'
-    # doNotClean
-    inc: [ 'bgIntegrationIntegratedEV.esp' ]
-    req: [ 'DLCShiveringIsles.esp' ]
-  # Integration Addons #
-  - name: 'bgIntegrationEV - Alternative NPC Faces by LazyMonk.esp'
-    url: [ 'http://theelderscrolls.info/?go=dlfile&fileid=368' ]
-    tag:
-      - NoMerge
-      - NpcFaces
-  - name: 'Integration faces revamped.esp'
-    url: [ 'https://www.moddb.com/addons/integration-alternate-npc-faces-plugin' ]
-    tag:
-      - NoMerge
-      - NpcFaces
-  ### Integration - The Stranded Light - Integrated! ###
-  - name: 'bgIntegrationIntegratedEV.esp'
-    url: [ 'http://theelderscrolls.info/?go=dlfile&fileid=441' ]
-    after:
-      - 'Unique Landscapes.esp'
-      - 'xulSilverfishRiverValley.esp'
-      - 'xulSnowdale.esp'
-      - 'xulTheEasternPeaks.esp'
-    inc:
-      - 'bgBalancingEVCore.esp'
-      - 'bgMagicEV.esp'
-    tag:
-      - C.Regions
-      - Delev
-      - Eyes
-      - Hair
-      - Names
-      - Relations
-      - Relev
-      - R.Attributes-F
-      - R.Attributes-M
-      - R.ChangeSpells
-      - R.Description
-      - R.Relations
-      - R.Skills
-      - SpellStats
-      - Text
 
   - name: 'JolardHome.esp'
     url:
