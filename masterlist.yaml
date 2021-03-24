@@ -1548,13 +1548,6 @@ plugins:
     group: *latePatchesGroup
     msg: [ *requiresBashedPatch ]
     tag: [ Deactivate ]
-  - name: 'Cobl Tweaks.esp'
-    group: *veryEarlyGroup
-    msg: [ *alreadyInFCOM ]
-    tag: [ Invent ]
-    clean:
-      - crc: 0x905EBDCE
-        util: 'TES4Edit v4.0.2'
   - name: 'Cobl Silent Equip Misc.esp'
     msg:
       - <<: *useBashTweakInstead
@@ -1625,6 +1618,9 @@ plugins:
         itm: 36
   - name: 'Cobl Mort Demo.esp'
     msg: [ *moddingPlugin ]
+  # Old Version Files #
+  - name: 'Cobl Tweaks.esp'
+    msg: [ *obsolete ]
   - name: 'OOO 1.32-Cobl.esp'
     msg: [ *obsolete ]
   - name: 'MMM-Cobl.esp'
