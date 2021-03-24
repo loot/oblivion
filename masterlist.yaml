@@ -2763,6 +2763,9 @@ plugins:
       - 'Knights - Unofficial Patch.esp'
       - 'Knights Infamy.esp'
     msg:
+      - <<: *alsoUseX
+        subs: [ '[Elys- Universal Silent Voice](https://www.nexusmods.com/oblivion/mods/16622) or [VoiceFile Redirector OBSE](https://github.com/ponyrider0/voicefile-redirector/releases)' ]
+        condition: 'not file("OBSE/Plugins/Elys_USV.dll") and not file("OBSE/Plugins/voicefile_redirector.dll")'
       - <<: *sortMasters
         condition: 'checksum("SM Plugin Refurbish Lite.esp", 0466DC3B)'
     clean:
