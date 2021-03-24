@@ -2759,6 +2759,9 @@ plugins:
         name: 'SM DLC Plugin Refurbish'
     group: *veryEarlyGroup
   - name: 'SM Plugin Refurbish Lite.esp'
+    after:
+      - 'Knights - Unofficial Patch.esp'
+      - 'Knights Infamy.esp'
     clean:
       - crc: 0x0466DC3B
         util: 'TES4Edit v4.0.3'
