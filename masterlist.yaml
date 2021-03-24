@@ -1529,21 +1529,19 @@ plugins:
         subs: [ 'DLC Shivering Isles' ]
         condition: 'active("DLCShiveringIsles.esp") and not active("Cobl Si.esp")'
     clean:
-      - crc: 0x8284D0E6
-        util: 'TES4Edit v4.0.2'
+      - crc: 0xFEB841DF
+        util: 'TES4Edit v4.0.3'
   - name: 'Cobl Si.esp'
     group: *veryEarlyGroup
     req: [ 'DLCShiveringIsles.esp' ]
     clean:
       - crc: 0xF7ADF908
-        util: 'TES4Edit v4.0.2'
+        util: 'TES4Edit v4.0.3'
   - name: 'Cobl Glue.esp'
     group: *veryEarlyGroup
-    dirty:
-      - <<: *quickClean
-        crc: 0xEAB6315A
-        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
-        udr: 14
+    clean:
+      - crc: 0x17B115EE
+        util: 'TES4Edit v4.0.3'
   - name: 'Cobl Filter Late MERGE ONLY.esp'
     group: *latePatchesGroup
     msg: [ *requiresBashedPatch ]
@@ -1552,9 +1550,6 @@ plugins:
     msg:
       - <<: *useBashTweakInstead
         subs: [ 'Tweak Settings -> Msg: Equip Misc. Item' ]
-    clean:
-      - crc: 0x5860AF9A
-        util: 'TES4Edit v4.0.2'
   - name: 'Cobl Races( - Balanced)?\.esp'
     inc: [ 'bgBalancingEVCore.esp' ]
   - name: 'Cobl Races.esp'
@@ -1562,7 +1557,7 @@ plugins:
     tag: [ -R.Relations ]
     clean:
       - crc: 0xAA29DCA8
-        util: 'TES4Edit v4.0.2'
+        util: 'TES4Edit v4.0.3'
   - name: 'Cobl Races - Balanced.esp'
     tag:
       - -Body-F
@@ -1576,7 +1571,7 @@ plugins:
       - R.Skills
     clean:
       - crc: 0x8C1A854E
-        util: 'TES4Edit v4.0.2'
+        util: 'TES4Edit v4.0.3'
   - name: 'Cobl Races( TNR( SI)?)?\.esp'
     msg:
       - <<: *requiresX
@@ -1588,11 +1583,11 @@ plugins:
   - name: 'Cobl Races TNR.esp'
     clean:
       - crc: 0xEE36BE6B
-        util: 'TES4Edit v4.0.2'
+        util: 'TES4Edit v4.0.3'
   - name: 'Cobl Races TNR SI.esp'
     clean:
       - crc: 0x1BF099CF
-        util: 'TES4Edit v4.0.2'
+        util: 'TES4Edit v4.0.3'
   - name: 'Salmo the Baker, Cobl.esp'
     msg:
       - type: say
@@ -1611,11 +1606,9 @@ plugins:
       - Invent
       - Names
       - NPC.Class
-    dirty:
-      - <<: *quickClean
-        crc: 0xE02E250D
-        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 36
+    clean:
+      - crc: 0x830795C5
+        util: 'TES4Edit v4.0.3'
   - name: 'Cobl Mort Demo.esp'
     msg: [ *moddingPlugin ]
   # Old Version Files #
