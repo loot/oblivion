@@ -1516,8 +1516,10 @@ plugins:
     tag: [ NoMerge ]
 
 ###### Resources ######
-  - name: '(Salmo the Baker, |OOO 1.32-|MMM-)?Cobl( Main| Mort Demo| Silent Equip Misc| Filter Late MERGE ONLY| Glue| Si| Tweaks| Races( - Balanced| TNR| TNR SI)?)?\.es(m|p)'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/21104' ]
+  - name: '.*(Cobl).*\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/21104/'
+        name: 'Common Oblivion (Cobl)'
   - name: 'Cobl Main.esm'
     inc:
       - 'Duke Patricks Basic Denock Arrows.esp'
