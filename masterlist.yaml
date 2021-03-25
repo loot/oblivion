@@ -1515,28 +1515,25 @@ plugins:
     group: *dynamicPatchesGroup
     after: [ 'TES4Merged.esp' ]
   # Wrye Bash - Oblivion.esm swapping
+  - name: 'Oblivion_(1.1|1.1b|SI|GOTY non-SI|GBR SI)\.esm'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/22368/' ]
   - name: 'Oblivion_1.1.esm'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/22368' ]
     msg:
       - <<: *deleteModdingPlugin
         condition: 'active("Oblivion_1.1.esm")'
   - name: 'Oblivion_1.1b.esm'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/22368' ]
     msg:
       - <<: *deleteModdingPlugin
         condition: 'active("Oblivion_1.1b.esm")'
   - name: 'Oblivion_SI.esm'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/22368' ]
     msg:
       - <<: *deleteModdingPlugin
         condition: 'active("Oblivion_SI.esm")'
   - name: 'Oblivion_GOTY non-SI.esm'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/22368' ]
     msg:
       - <<: *deleteModdingPlugin
         condition: 'active("Oblivion_GOTY non-SI.esm")'
   - name: 'Oblivion_GBR SI.esm'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/22368' ]
     msg:
       - <<: *deleteModdingPlugin
         condition: 'active("Oblivion_GBR SI.esm")'
