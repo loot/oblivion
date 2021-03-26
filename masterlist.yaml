@@ -8386,12 +8386,14 @@ plugins:
             text: 'Nicht kompatibel mit jeder Mod die "ModPCSpellEffectiveness" nutzt.'
     req: [ *OBSE ]
 
-  - name: 'RealSwords - Argonian( HI| LO)(-NPC)?\.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/11208' ]
-    msg:
-      - *useInsteadFCOMRealSwords
-      - *useWithBashedPatch
-    tag: [ Invent ]
+  - name: 'RealSwords - Argonian (HI|LO)(-NPC)?\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/11208/' ]
+    msg: [ *useInsteadFCOMRealSwords ]
+    tag:
+      - Invent.Add
+      - Invent.Change
+  - name: 'RealSwords - Argonian (HI|LO)-NPC\.esp'
+    tag: [ Invent.Remove ]
   - name: 'RealSwords - Bosmer( HI| LO)(-NPC)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/12365' ]
     msg:
