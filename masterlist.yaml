@@ -1537,6 +1537,9 @@ plugins:
     tag: [ Deactivate ]
   - name: 'Cobl Glue.esp'
     group: *veryEarlyGroup
+    tag:
+      - C.Name
+      - C.Owner
     clean:
       - crc: 0x17B115EE
         util: 'TES4Edit v4.0.3'
@@ -1551,42 +1554,49 @@ plugins:
       - <<: *useBashTweakInstead
         subs: [ 'Tweak Settings -> Msg: Equip Misc. Item' ]
   - name: 'Cobl Tweaks - FCOM.esp'
+    tag: [ Relev ]
     dirty:
       - <<: *quickClean
         crc: 0xC00D4A0F
         util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 2
   - name: 'Cobl Tweaks - FCOM Mergeable.esp'
+    tag: [ Relev ]
     dirty:
       - <<: *quickClean
         crc: 0x7837D2B7
         util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 2
   - name: 'Cobl Tweaks - MMM.esp'
+    tag: [ Relev ]
     dirty:
       - <<: *quickClean
         crc: 0x1CC5CCCC
         util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 2
   - name: 'Cobl Tweaks - MMM4OOO.esp'
+    tag: [ Relev ]
     dirty:
       - <<: *quickClean
         crc: 0x5D229DB6
         util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 4
   - name: 'Cobl Tweaks - MMM4OOO Mergeable.esp'
+    tag: [ Relev ]
     dirty:
       - <<: *quickClean
         crc: 0x1BE66F0E
         util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 4
   - name: 'Cobl Tweaks - OOO.esp'
+    tag: [ Relev ]
     dirty:
       - <<: *quickClean
         crc: 0x407B9672
         util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 2
   - name: 'Cobl Tweaks - OOO Mergeable.esp'
+    tag: [ Relev ]
     dirty:
       - <<: *quickClean
         crc: 0x31B2C3D3
@@ -1594,11 +1604,17 @@ plugins:
         itm: 2
   - name: 'Cobl Tweaks - SI.esp'
     req: [ 'DLCShiveringIsles.esp' ]
+    tag:
+      - Actors.DeathItem
+      - Invent.Add
+      - Invent.Remove
+      - Relev
     clean:
       - crc: 0xCCD73AB3
         util: 'TES4Edit v4.0.3f'
   - name: 'Cobl Tweaks - Vanilla.esp'
     inc: [ 'DLCShiveringIsles.esp' ]
+    tag: [ Relev ]
     dirty:
       - <<: *quickClean
         crc: 0xB74F4402
