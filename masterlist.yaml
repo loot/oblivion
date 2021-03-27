@@ -1548,10 +1548,7 @@ plugins:
     clean:
       - crc: 0xF7ADF908
         util: 'TES4Edit v4.0.3'
-  - name: 'Cobl Patch - Silent Misc Item Equip.esp'
-    msg:
-      - <<: *useBashTweakInstead
-        subs: [ 'Tweak Settings -> Msg: Equip Misc. Item' ]
+  ### Cobl - Tweaks ###
   - name: 'Cobl Tweaks - (Vanilla|SI|OOO|MMM|MMM4OOO|FCOM)( Mergeable)?\.esp'
     tag: [ Relev ]
     msg:
@@ -1618,6 +1615,7 @@ plugins:
         crc: 0xB74F4402
         util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 3
+  ### Cobl - Races ###
   - name: 'Cobl Races.esp'
     req: [ 'DLCShiveringIsles.esp' ]
     inc: [ 'bgBalancingEVCore.esp' ]
@@ -1660,6 +1658,13 @@ plugins:
     clean:
       - crc: 0x1BF099CF
         util: 'TES4Edit v4.0.3'
+  ### Cobl - Patches & Extras ###
+  - name: 'Cobl Mort Demo.esp'
+    msg: [ *moddingPlugin ]
+  - name: 'Cobl Patch - Silent Misc Item Equip.esp'
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings -> Msg: Equip Misc. Item' ]
   - name: 'Salmo the Baker, Cobl.esp'
     tag:
       - Actors.ACBS
@@ -1674,8 +1679,6 @@ plugins:
     clean:
       - crc: 0x830795C5
         util: 'TES4Edit v4.0.3'
-  - name: 'Cobl Mort Demo.esp'
-    msg: [ *moddingPlugin ]
   # Old Version Files #
   - name: 'Cobl Tweaks.esp'
     msg: [ *obsolete ]
