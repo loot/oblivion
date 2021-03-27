@@ -1602,15 +1602,19 @@ plugins:
         crc: 0xB74F4402
         util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 3
-  - name: 'Cobl Races( - Balanced)?\.esp'
-    inc: [ 'bgBalancingEVCore.esp' ]
   - name: 'Cobl Races.esp'
     req: [ 'DLCShiveringIsles.esp' ]
+    inc: [ 'bgBalancingEVCore.esp' ]
     tag: [ -R.Relations ]
+    msg:
+      - <<: *requiresX
+        subs: [ 'Optional file [Cobl Cosmetics Res 01](https://www.nexusmods.com/oblivion/mods/21104/)' ]
+        condition: 'not file("Sound/Voice/Cobl Races.esp/xivilai/f/genericxiv_seen_00010baf_1.mp3")'
     clean:
       - crc: 0xAA29DCA8
         util: 'TES4Edit v4.0.3'
   - name: 'Cobl Races - Balanced.esp'
+    inc: [ 'bgBalancingEVCore.esp' ]
     tag:
       - -Body-F
       - -Body-M
@@ -1624,14 +1628,13 @@ plugins:
     clean:
       - crc: 0x8C1A854E
         util: 'TES4Edit v4.0.3'
-  - name: 'Cobl Races( TNR( SI)?)?\.esp'
+  - name: 'Cobl Races TNR( SI)?\.esp'
+    group: *veryEarlyGroup
+    tag: [ Deactivate ]
     msg:
       - <<: *requiresX
         subs: [ 'Optional file [Cobl Cosmetics Res 01](https://www.nexusmods.com/oblivion/mods/21104/)' ]
         condition: 'not file("Sound/Voice/Cobl Races.esp/xivilai/f/genericxiv_seen_00010baf_1.mp3")'
-  - name: 'Cobl Races TNR( SI)?\.esp'
-    group: *veryEarlyGroup
-    tag: [ Deactivate ]
   - name: 'Cobl Races TNR.esp'
     clean:
       - crc: 0xEE36BE6B
