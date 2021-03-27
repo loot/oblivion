@@ -1512,26 +1512,7 @@ plugins:
   # Wrye Bash - Oblivion.esm swapping
   - name: 'Oblivion_(1.1|1.1b|SI|GOTY non-SI|GBR SI)\.esm'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22368/' ]
-  - name: 'Oblivion_1.1.esm'
-    msg:
-      - <<: *moddingPlugin
-        condition: 'active("Oblivion_1.1.esm")'
-  - name: 'Oblivion_1.1b.esm'
-    msg:
-      - <<: *moddingPlugin
-        condition: 'active("Oblivion_1.1b.esm")'
-  - name: 'Oblivion_SI.esm'
-    msg:
-      - <<: *moddingPlugin
-        condition: 'active("Oblivion_SI.esm")'
-  - name: 'Oblivion_GOTY non-SI.esm'
-    msg:
-      - <<: *moddingPlugin
-        condition: 'active("Oblivion_GOTY non-SI.esm")'
-  - name: 'Oblivion_GBR SI.esm'
-    msg:
-      - <<: *moddingPlugin
-        condition: 'active("Oblivion_GBR SI.esm")'
+    msg: [ *moddingPlugin ]
 
   - name: 'TES4Merged.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/11536/' ]
