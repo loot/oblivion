@@ -1817,6 +1817,55 @@ plugins:
       - 'Av Latta Magicka - Potion Rebalance.esp'
       - 'Av Latta Magicka - Rebalance Complete.esp'
 
+###### AudioVisual - Animations & Physics ######
+  - name: 'Sensual Walks.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/28223' ]
+    group: *veryEarlyGroup
+    tag:
+      - Actors.Anims
+      - NoMerge
+  - name: 'Sensual Walks SI.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/28223' ]
+    group: *veryEarlyGroup
+    tag:
+      - Actors.Anims
+      - NoMerge
+  - name: 'Sensual Walks SI DS + GS.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/28223' ]
+    group: *veryEarlyGroup
+    tag:
+      - Actors.Anims
+      - NoMerge
+  # Catch all for Sensual Walk patches
+  - name: '([^\.]+(\d\.\d)? Vwalk).*\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/28223'
+        name: 'Sensual Walks for Female NPCs'
+    tag:
+      - Actors.Anims
+      - NoMerge
+  - name: '(Knights|DLC(Frostcrag|MehrunesRazor|Orrery|ThievesDen)) Vwalk\.esp'
+    group: *veryEarlyGroup
+  - name: 'SoVvM Vwalk.esp'
+    group: *underridesGroup
+  - name: 'TNR ALL RACES FINAL Vwalk.esp'
+    group: *underridesGroup
+  - name: 'xeoex Vwalk.esp'
+    group: *underridesGroup
+  - name: 'xeosp++ Vwalk.esp'
+    group: *underridesGroup
+  - name: 'Younger Hotter NPC''s v1.0 Vwalk.esp'
+    group: *underridesGroup
+  # Catch all for Obsolete Walk mods
+  - name: '([^\.]+(\d\.\d)? (R|S)walk).*\.esp'
+    msg:
+      - *obsolete
+      - <<: *useInstead
+        subs: [ '[Sensual Walks for Female NPCs](https://www.nexusmods.com/oblivion/mods/28223)' ]
+    tag:
+      - Actors.Anims
+      - NoMerge
+
 ###### AudioVisual - Weather ######
   - name: '(AWS|NW|ANW|EW|OBSE)?(-)?Storms & Sound( SI)?\.esp'
     url:
@@ -22487,54 +22536,6 @@ plugins:
             text: 'Realistic hunger mods and vampire mods may conflict seriously.'
           - lang: de
             text: 'Realistische Hunger-Mods und Vampir-Mods können ernsthaft im Konflikt stehen.'
-
-  - name: 'Sensual Walks.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/28223' ]
-    group: *veryEarlyGroup
-    tag:
-      - Actors.Anims
-      - NoMerge
-  - name: 'Sensual Walks SI.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/28223' ]
-    group: *veryEarlyGroup
-    tag:
-      - Actors.Anims
-      - NoMerge
-  - name: 'Sensual Walks SI DS + GS.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/28223' ]
-    group: *veryEarlyGroup
-    tag:
-      - Actors.Anims
-      - NoMerge
-  # Catch all for Sensual Walk patches
-  - name: '([^\.]+(\d\.\d)? Vwalk).*\.esp'
-    url:
-      - link: 'https://www.nexusmods.com/oblivion/mods/28223'
-        name: 'Sensual Walks for Female NPCs'
-    tag:
-      - Actors.Anims
-      - NoMerge
-  - name: '(Knights|DLC(Frostcrag|MehrunesRazor|Orrery|ThievesDen)) Vwalk\.esp'
-    group: *veryEarlyGroup
-  - name: 'SoVvM Vwalk.esp'
-    group: *underridesGroup
-  - name: 'TNR ALL RACES FINAL Vwalk.esp'
-    group: *underridesGroup
-  - name: 'xeoex Vwalk.esp'
-    group: *underridesGroup
-  - name: 'xeosp++ Vwalk.esp'
-    group: *underridesGroup
-  - name: 'Younger Hotter NPC''s v1.0 Vwalk.esp'
-    group: *underridesGroup
-  # Catch all for Obsolete Walk mods
-  - name: '([^\.]+(\d\.\d)? (R|S)walk).*\.esp'
-    msg:
-      - *obsolete
-      - <<: *useInstead
-        subs: [ '[Sensual Walks for Female NPCs](https://www.nexusmods.com/oblivion/mods/28223)' ]
-    tag:
-      - Actors.Anims
-      - NoMerge
 
   - name: 'CoreRandmonClothing4Npcs.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/27474/' ]
