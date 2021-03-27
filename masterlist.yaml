@@ -1514,23 +1514,23 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/22368/' ]
   - name: 'Oblivion_1.1.esm'
     msg:
-      - <<: *deleteModdingPlugin
+      - <<: *moddingPlugin
         condition: 'active("Oblivion_1.1.esm")'
   - name: 'Oblivion_1.1b.esm'
     msg:
-      - <<: *deleteModdingPlugin
+      - <<: *moddingPlugin
         condition: 'active("Oblivion_1.1b.esm")'
   - name: 'Oblivion_SI.esm'
     msg:
-      - <<: *deleteModdingPlugin
+      - <<: *moddingPlugin
         condition: 'active("Oblivion_SI.esm")'
   - name: 'Oblivion_GOTY non-SI.esm'
     msg:
-      - <<: *deleteModdingPlugin
+      - <<: *moddingPlugin
         condition: 'active("Oblivion_GOTY non-SI.esm")'
   - name: 'Oblivion_GBR SI.esm'
     msg:
-      - <<: *deleteModdingPlugin
+      - <<: *moddingPlugin
         condition: 'active("Oblivion_GBR SI.esm")'
 
   - name: 'TES4Merged.esp'
@@ -3609,7 +3609,7 @@ plugins:
       - crc: 0x8284D0E6
         util: 'TES4Edit v4.0.2'
   - name: 'Cobl Mort Demo.esp'
-    msg: [ *deleteModdingPlugin ]
+    msg: [ *moddingPlugin ]
   - name: 'Cobl Silent Equip Misc.esp'
     msg:
       - <<: *useBashTweakInstead
@@ -6082,7 +6082,7 @@ plugins:
         itm: 1
   - name: 'AddActorValues_example.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/33248' ]
-    msg: [ *deleteModdingPlugin ]
+    msg: [ *moddingPlugin ]
   - name: 'AliveWaters( - (Koi|Slaughterfish) Addon|_nofish)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/44069/' ]
   - name: 'AliveWaters.esp'
@@ -6440,7 +6440,7 @@ plugins:
     tag: [ Invent ]
   - name: 'JQPotionBottlesTest.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/33946' ]
-    msg: [ *deleteModdingPlugin ]
+    msg: [ *moddingPlugin ]
   - name: 'Katana Store.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/16424' ]
     msg:
@@ -6452,7 +6452,7 @@ plugins:
             text: 'Benötigt Patch um mit Kalikuts genutzt zu werden.'
   - name: 'LIPTemplate.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/13742' ]
-    msg: [ *deleteModdingPlugin ]
+    msg: [ *moddingPlugin ]
   - name: 'LadyLis_dainties.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17405' ]
     dirty:
