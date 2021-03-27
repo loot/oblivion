@@ -112,19 +112,6 @@ common:
         text: '.BSA 파일을 로드하기 위한 더미 파일입니다. 파일을 사용하여 BSA를 로드하면 BSA가 동시에 Oblivion.ini에 나열되지 않아야합니다. 그렇지 않으면 게임이 로드되지 않습니다. 이것은 일반적으로 자동 설치 프로그램이 이름을 Oblivion.ini에 삽입한 다음 사용자가 나중에 BSA 리다이렉션 파일을 만드는 경우에만 발생하는 문제입니다.'
       - lang: pt_BR
         text: 'Arquivo fictício para carregar arquivos .BSA. Usar um arquivo para carregar BSAs significa que a BSA NÃO pode estar listada no Oblivion.ini ao mesmo tempo ou o jogo não irá carregar. Isso é somente um problema quanto instaladores automáticos inserem o nome no Oblivion.ini e então o usuário cria um arquivo de redirecionamento de BSAs depois.'
-  - &incompatibleWithWeatherMods
-    type: say
-    content:
-      - lang: en
-        text: 'This mod is incompatible with weather mods.'
-      - lang: bg
-        text: 'Този мод не е съвместим с модовете, които променят метеорологичното време.'
-      - lang: de
-        text: 'Diese Mod ist inkompatibel mit Wetter-Mods.'
-      - lang: ko
-        text: '이 모드는 날씨 모드와 호환되지 않습니다.'
-      - lang: pt_BR
-        text: 'Este mod é incompatível com mods de clima.'
 
   - &hotkeyBug
     type: say
@@ -5697,24 +5684,69 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/5890' ]
     group: *veryEarlyGroup
     tag: [ Text ]
+
   - name: 'oc_darker_nights.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/4135' ]
-    msg: [ *incompatibleWithWeatherMods ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/4135/' ]
+    inc:
+      - '_darker_nights.esp'
+      - 'All Natural Base.esm'
+      - 'AWS-Core.esm'
+      - 'EnhancedWeather.esm'
+      - 'fog.esp'
+      - 'Natural_Weather_by_Max_Tael.esp'
+      - 'Natural_Weather_HDR_by_Max_Tael.esp'
+      - 'RedBag - Fog.esp'
+      - 'sdn LOD Fog Full.esp'
+      - 'sdn LOD Fog Lite.esp'
+
   - name: '_darker_nights.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/14118' ]
-    msg: [ *incompatibleWithWeatherMods ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/14118/' ]
+    inc:
+      - 'All Natural Base.esm'
+      - 'AWS-Core.esm'
+      - 'EnhancedWeather.esm'
+      - 'fog.esp'
+      - 'Natural_Weather_by_Max_Tael.esp'
+      - 'Natural_Weather_HDR_by_Max_Tael.esp'
+      - 'RedBag - Fog.esp'
+      - 'sdn LOD Fog Full.esp'
+      - 'sdn LOD Fog Lite.esp'
+
   - name: 'fog.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/26535' ]
-    msg: [ *incompatibleWithWeatherMods ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/26535/' ]
+    inc:
+      - 'All Natural Base.esm'
+      - 'AWS-Core.esm'
+      - 'EnhancedWeather.esm'
+      - 'Natural_Weather_by_Max_Tael.esp'
+      - 'Natural_Weather_HDR_by_Max_Tael.esp'
+      - 'RedBag - Fog.esp'
+      - 'sdn LOD Fog Full.esp'
+      - 'sdn LOD Fog Lite.esp'
+
   - name: 'RedBag - Fog.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/33424' ]
-    msg: [ *incompatibleWithWeatherMods ]
-  - name: 'sdn LOD Fog Full.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/25052' ]
-    msg: [ *incompatibleWithWeatherMods ]
-  - name: 'sdn LOD Fog Lite.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/25052' ]
-    msg: [ *incompatibleWithWeatherMods ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/33424/' ]
+    inc:
+      - 'All Natural Base.esm'
+      - 'AWS-Core.esm'
+      - 'EnhancedWeather.esm'
+      - 'Natural_Weather_by_Max_Tael.esp'
+      - 'Natural_Weather_HDR_by_Max_Tael.esp'
+      - 'sdn LOD Fog Full.esp'
+      - 'sdn LOD Fog Lite.esp'
+
+  - name: 'sdn LOD Fog (Full|Lite)\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/25052/' ]
+    inc:
+      - 'All Natural Base.esm'
+      - 'AWS-Core.esm'
+      - 'EnhancedWeather.esm'
+      - 'Natural_Weather_by_Max_Tael.esp'
+      - 'Natural_Weather_HDR_by_Max_Tael.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'sdn LOD Fog ESP' ]
+        condition: 'many("sdn LOD Fog (Full|Lite)\.esp")'
 
   - name: 'Natural_Weather_(HDR_)?(with_darker_Nights_)?by_Max_Tael?.*\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/14918' ]
