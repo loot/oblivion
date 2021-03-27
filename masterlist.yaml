@@ -5697,9 +5697,21 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/5890' ]
     group: *veryEarlyGroup
     tag: [ Text ]
+
   - name: 'oc_darker_nights.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/4135' ]
-    msg: [ *incompatibleWithWeatherMods ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/4135/' ]
+    inc:
+      - '_darker_nights.esp'
+      - 'All Natural Base.esm'
+      - 'AWS-Core.esm'
+      - 'EnhancedWeather.esm'
+      - 'fog.esp'
+      - 'Natural_Weather_by_Max_Tael.esp'
+      - 'Natural_Weather_HDR_by_Max_Tael.esp'
+      - 'RedBag - Fog.esp'
+      - 'sdn LOD Fog Full.esp'
+      - 'sdn LOD Fog Lite.esp'
+
   - name: '_darker_nights.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/14118' ]
     msg: [ *incompatibleWithWeatherMods ]
