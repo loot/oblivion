@@ -1553,6 +1553,11 @@ plugins:
     msg:
       - <<: *useBashTweakInstead
         subs: [ 'Tweak Settings -> Msg: Equip Misc. Item' ]
+  - name: 'Cobl Tweaks - (Vanilla|SI|OOO|MMM|MMM4OOO|FCOM)( Mergeable)?\.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Cobl Tweaks ESP' ]
+        condition: 'many("Cobl Tweaks - (Vanilla|SI|OOO|MMM|MMM4OOO|FCOM)( Mergeable)?\.esp")'
   - name: 'Cobl Tweaks - FCOM.esp'
     tag: [ Relev ]
     dirty:
