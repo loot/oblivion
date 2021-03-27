@@ -1602,6 +1602,7 @@ plugins:
         util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 2
   - name: 'Cobl Tweaks - SI.esp'
+    group: *veryEarlyGroup
     req: [ 'DLCShiveringIsles.esp' ]
     tag:
       - Actors.DeathItem
@@ -1611,6 +1612,7 @@ plugins:
       - crc: 0xCCD73AB3
         util: 'TES4Edit v4.0.3f'
   - name: 'Cobl Tweaks - Vanilla.esp'
+    group: *veryEarlyGroup
     inc: [ 'DLCShiveringIsles.esp' ]
     dirty:
       - <<: *quickClean
