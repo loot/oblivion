@@ -1531,21 +1531,21 @@ plugins:
     clean:
       - crc: 0xFEB841DF
         util: 'TES4Edit v4.0.3'
+  - name: 'Cobl Filter Late MERGE ONLY.esp'
+    group: *latePatchesGroup
+    msg: [ *requiresBashedPatch ]
+    tag: [ Deactivate ]
+  - name: 'Cobl Glue.esp'
+    group: *veryEarlyGroup
+    clean:
+      - crc: 0x17B115EE
+        util: 'TES4Edit v4.0.3'
   - name: 'Cobl Si.esp'
     group: *veryEarlyGroup
     req: [ 'DLCShiveringIsles.esp' ]
     clean:
       - crc: 0xF7ADF908
         util: 'TES4Edit v4.0.3'
-  - name: 'Cobl Glue.esp'
-    group: *veryEarlyGroup
-    clean:
-      - crc: 0x17B115EE
-        util: 'TES4Edit v4.0.3'
-  - name: 'Cobl Filter Late MERGE ONLY.esp'
-    group: *latePatchesGroup
-    msg: [ *requiresBashedPatch ]
-    tag: [ Deactivate ]
   - name: 'Cobl Silent Equip Misc.esp'
     msg:
       - <<: *useBashTweakInstead
