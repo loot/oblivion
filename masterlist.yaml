@@ -10468,13 +10468,16 @@ plugins:
         <<: *dirtyPlugin
         itm: 116
         udr: 532
+
   - name: 'AStrangeCave.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/10540' ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/10540/' ]
     dirty:
-      - crc: 0xbdbcf7a8
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xBDBCF7A8
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 10
         udr: 2
+
   - name: 'ATW_Castle_Vet_v1.3.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/41696' ]
     dirty:
