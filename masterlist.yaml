@@ -2315,12 +2315,7 @@ plugins:
           - '**HRMHorseArmor.bsa**'
           - '**MigHorseArmor.bsa**'
         condition: 'not file("MigHorseArmor.bsa") and file("HRMHorseArmor.bsa")'
-      - type: say
-        content:
-          - lang: en
-            text: 'Requires resources (Models, Textures etc. Plugins not required.) from %1%.'
-          - lang: de
-            text: 'Benötigt Ressourcen (Models, Texturen usw. Plugins werden nicht benötigt.) von %1%.'
+      - <<: *requiresResources
         subs: [ '[Horse Armor Revamped](https://www.nexusmods.com/oblivion/mods/46657/)' ]
         condition: 'not file("HRMHorseArmor.bsa") and not file("MigHorseArmor.bsa") and not file("sound/voice/hrmhorsearmor.esp/nord/f/hrmhorsearmor_hrmhorsearmortopic_00000cf0_1.mp3")'
     clean:
@@ -3204,26 +3199,16 @@ plugins:
         condition: 'many("ImpeREAL Empire - Unique Forts - (Clydesdale|Slofs) Horses - By Xtudo.esp")'
   - name: 'ImpeREAL Empire - Unique Forts - Clydesdale Horses - By Xtudo.esp'
     msg:
-      - type: warn
-        content:
-          - lang: en
-            text: 'Requires resources (Models, Textures etc. Plugins not required.) from %1%.'
-          - lang: de
-            text: 'Benötigt Ressourcen (Models, Texturen usw. Plugins nicht benötigt.) von %1%.'
-        subs: [ '[Zira''s Clydesdale Horses](https://www.nexusmods.com/oblivion/mods/33560)' ]
+      - <<: *requiresResources
+        subs: [ '[Zira''s Clydesdale Horses](https://www.nexusmods.com/oblivion/mods/33560/)' ]
         condition: 'not file("meshes/creatures/horse/Z_CH_Body_Bay.nif")'
     clean:
       - crc: 0xF090990C
         util: 'TES4Edit v4.0.3'
   - name: 'ImpeREAL Empire - Unique Forts - Slofs Horses - By Xtudo.esp'
     msg:
-      - type: warn
-        content:
-          - lang: en
-            text: 'Requires resources (Models, Textures etc. Plugins not required.) from %1%.'
-          - lang: de
-            text: 'Benötigt Ressourcen (Models, Texturen usw. Plugins nicht benötigt.) von %1%.'
-        subs: [ '[Slof''s Oblivion Horses](https://www.nexusmods.com/oblivion/mods/48925)' ]
+      - <<: *requiresResources
+        subs: [ '[Slof''s Oblivion Horses](https://www.nexusmods.com/oblivion/mods/48925/)' ]
         condition: 'not file("meshes/creatures/horse/ashorsebay1gelding.nif") and not file("Mart''s Monster Mod.esm")'
     clean:
       - crc: 0x3E5AC53A
