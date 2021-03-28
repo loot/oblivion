@@ -10543,20 +10543,18 @@ plugins:
         udr: 77
 
   - name: 'AyleidTemple.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/41613' ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/41613/' ]
     msg:
       - <<: *wildEdits
-        subs: [ 'Makes a wild edit to the water level in Shagol gro-Bumph''s house (block 6,1).' ]
-        condition: 'checksum("AyleidTemple.esp", 4B14E3CD)'
+        subs: [ 'Delete 0002F7D4 & 00015C3D.' ]
+        condition: 'checksum("AyleidTemple.esp", DA96FB24)'
     dirty:
-      - crc: 0x4b14e3cd
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x4B14E2CD
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 39
         udr: 24
-      - crc: 0x4b14e2cd
-        <<: *dirtyPlugin
-        itm: 39
-        udr: 24
+
   - name: 'AzurasServices_de.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/12187' ]
     msg:
