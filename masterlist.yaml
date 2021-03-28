@@ -10441,15 +10441,15 @@ plugins:
         util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 16
         udr: 2
+
   - name: 'Artifacts.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/25309' ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/25309/' ]
     dirty:
-      - crc: 0x3d5a25d1
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x3D5A25D1
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         udr: 1
-      - crc: 0x66b9b580
-        <<: *dirtyPlugin
-        udr: 1
+
   - name: 'ArtifactsFemaleArmor.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/24078/' ]
     tag:
