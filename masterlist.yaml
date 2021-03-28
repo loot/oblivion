@@ -10523,13 +10523,16 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/31543' ]
     req: [ 'Cobl Main.esm' ]
     inc: [ 'Automagicon.esp' ]
+
   - name: 'AWitchTale.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/43009' ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/43009/' ]
     dirty:
-      - crc: 0xc7f27f01
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xC7F27F01
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 4
         udr: 2
+
   - name: 'AyleidArrows.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/10740' ]
     dirty:
