@@ -1,133 +1,111 @@
-# LOOT ignores anything that doesn''t come under ''globals'' or ''plugins'', so a section like this is useful for storing data that gets re-used.
+# LOOT ignores anything that doesn't come under 'bash_tags', 'globals',
+# 'groups', or 'plugins', so a section like 'common' is useful for storing
+# data that gets re-used.
 common:
-# Files
+# File Anchors
   - &OBSE
     name: '../obse_1_2_416.dll'
     display: '[OBSE](https://obse.silverlock.org)'
+
   - &OBSEv11
     name: '../obse_1_2_416.dll'
     display: '[OBSE](https://obse.silverlock.org) v11+'
-    condition: 'version("../obse_1_2_416.dll","0.11.0.0",<)'
+    condition: 'version("../obse_1_2_416.dll", "0.11.0.0", <)'
+
   - &OBSEv12
     name: '../obse_1_2_416.dll'
     display: '[OBSE](https://obse.silverlock.org) v12+'
-    condition: 'version("../obse_1_2_416.dll","0.12.0.0",<)'
+    condition: 'version("../obse_1_2_416.dll", "0.12.0.0", <)'
+
   - &OBSEv14
     name: '../obse_1_2_416.dll'
     display: '[OBSE](https://obse.silverlock.org) v14+'
-    condition: 'version("../obse_1_2_416.dll","0.14.0.0",<)'
+    condition: 'version("../obse_1_2_416.dll", "0.14.0.0", <)'
+
   - &OBSEv15
     name: '../obse_1_2_416.dll'
     display: '[OBSE](https://obse.silverlock.org) v15+'
-    condition: 'version("../obse_1_2_416.dll","0.15.0.0",<)'
+    condition: 'version("../obse_1_2_416.dll", "0.15.0.0", <)'
+
   - &OBSEv16
     name: '../obse_1_2_416.dll'
     display: '[OBSE](https://obse.silverlock.org) v16+'
-    condition: 'version("../obse_1_2_416.dll","0.16.0.0",<)'
+    condition: 'version("../obse_1_2_416.dll", "0.16.0.0", <)'
+
   - &OBSEv17
     name: '../obse_1_2_416.dll'
     display: '[OBSE](https://obse.silverlock.org) v17+'
-    condition: 'version("../obse_1_2_416.dll","0.17.0.0",<)'
+    condition: 'version("../obse_1_2_416.dll", "0.17.0.0", <)'
+
   - &OBSEv18
     name: '../obse_1_2_416.dll'
     display: '[OBSE](https://obse.silverlock.org) v18+'
-    condition: 'version("../obse_1_2_416.dll","0.18.0.0",<)'
+    condition: 'version("../obse_1_2_416.dll", "0.18.0.0", <)'
+
   - &OBSEv19
     name: '../obse_1_2_416.dll'
     display: '[OBSE](https://obse.silverlock.org) v19+'
-    condition: 'version("../obse_1_2_416.dll","0.19.0.0",<)'
+    condition: 'version("../obse_1_2_416.dll", "0.19.0.0", <)'
+
   - &OBSEv20
     name: '../obse_1_2_416.dll'
     display: '[OBSE](https://obse.silverlock.org) v20+'
-    condition: 'version("../obse_1_2_416.dll","0.20.0.0",<)'
+    condition: 'version("../obse_1_2_416.dll", "0.20.0.0", <)'
+
   - &OBSEv21
     name: '../obse_1_2_416.dll'
     display: '[OBSE](https://obse.silverlock.org) v21+'
-    condition: 'version("../obse_1_2_416.dll","0.21.0.0",<)'
+    condition: 'version("../obse_1_2_416.dll", "0.21.0.0", <)'
 
   # OBSE Plugins
   - &EnhancedMusicControl
     name: 'OBSE/Plugins/EnhancedMusicControl.dll'
     display: '[Enhanced Music & Control](https://www.nexusmods.com/oblivion/mods/19772)'
+
   - &MagicExtender
     name: 'OBSE/Plugins/OBME.dll'
     display: '[Oblivion Magic Extender](https://www.nexusmods.com/oblivion/mods/31981)'
+
   - &MenuQue
     name: 'OBSE/Plugins/MenuQue.dll'
     display: '[MenuQue](https://www.nexusmods.com/oblivion/mods/32200)'
+
   - &NifSE
     name: 'obse/plugins/NifSE.dll'
     display: '[NifSE](https://www.nexusmods.com/oblivion/mods/21292)'
+
   - &Pluggy
     name: 'OBSE/Plugins/OBSE_Elys_Pluggy.dll'
     display: '[Pluggy](https://www.nexusmods.com/oblivion/mods/23979)'
+
   - &SilentVoice
     name: 'OBSE/Plugins/Elys_USV.dll'
-    display: '[Elys- Universal Silent Voice](https://www.nexusmods.com/oblivion/mods/16622) or [VoiceFile Redirector OBSE](https://github.com/ponyrider0/voicefile-redirector/releases)'
+    display: '[Elys Universal Silent Voice](https://www.nexusmods.com/oblivion/mods/16622) or [VoiceFile Redirector OBSE](https://github.com/ponyrider0/voicefile-redirector/releases)'
     condition: 'not file("OBSE/Plugins/voicefile_redirector.dll")'
+
   - &SoundCommands
     name: 'OBSE/Plugins/SoundCommands.dll'
     display: '[SoundCommands 4.0](https://www.nexusmods.com/oblivion/mods/16288)'
 
-  # Mod files
+  # Mod Files
   - &BetterCities
     name: 'Better Cities Resources.esm'
     display: '[Better Cities](https://www.nexusmods.com/oblivion/mods/16513)'
 
-# Conditions
+# Condition Anchors
   - &OOOCond
     active("Oscuro's_Oblivion_Overhaul.esm")
+
   - &FCOMCond
     active("FCOM_Convergence.esm")
+
   - &nehrimCond
     active("Nehrim.esm")
+
   - &tes4Cond
     active("Oblivion.esm")
-# Messages
-  - &masterReassign
-    type: say
-    content:
-      - lang: en
-        text: 'The **Oblivion.esm** master must be reassigned to **Nehrim.esm**.'
-      - lang: bg
-        text: '**Oblivion.esm** трябва да бъде преназначен като **Nehrim.esm**.'
-      - lang: de
-        text: 'Der **Oblivion.esm** Master muss **Nehrim.esm** neu zugewiesen werden.'
-      - lang: ko
-        text: '**Oblivion.esm** 마스터는 **Nehrim.esm**에 다시 할당되어야합니다.'
-      - lang: pt_BR
-        text: 'O mestre **Oblivion.esm** deve ser realocado para **Nehrim.esm**.'
-    condition: *nehrimCond
 
-  - &dummyFileLoader
-    type: say
-    content:
-      - lang: en
-        text: 'Dummy file to load .BSA files. Using a file to load a BSA means the BSA must NOT be listed in Oblivion.ini at the same time or the game will not load. This is ususally only a problem when automatic installers insert the name into Oblivion.ini then the user creates a BSA redirection file later.'
-      - lang: bg
-        text: 'Това е фиктивен файл за зареждане на .BSA файлове. Когато го използвате, .BSA файлът не бива да е включен в Oblivion.ini, в противен случай играта няма да зареди.'
-      - lang: de
-        text: 'Pseudo-Datei um .BSA Dateien zu laden. Beim nutzen einer Datei zum Laden einer BSA bedeutet das die BSA NICHT in der Oblivion.ini gleichzeitig gelistet sein darf oder das Spiel wird nicht laden. Dies ist gewöhnlich nur ein Problem wenn automatische Installer den Namen in die Oblivion.ini einfügen und der Nutzer später eine BSA Umleitung erstellt.'
-      - lang: ko
-        text: '.BSA 파일을 로드하기 위한 더미 파일입니다. 파일을 사용하여 BSA를 로드하면 BSA가 동시에 Oblivion.ini에 나열되지 않아야합니다. 그렇지 않으면 게임이 로드되지 않습니다. 이것은 일반적으로 자동 설치 프로그램이 이름을 Oblivion.ini에 삽입한 다음 사용자가 나중에 BSA 리다이렉션 파일을 만드는 경우에만 발생하는 문제입니다.'
-      - lang: pt_BR
-        text: 'Arquivo fictício para carregar arquivos .BSA. Usar um arquivo para carregar BSAs significa que a BSA NÃO pode estar listada no Oblivion.ini ao mesmo tempo ou o jogo não irá carregar. Isso é somente um problema quanto instaladores automáticos inserem o nome no Oblivion.ini e então o usuário cria um arquivo de redirecionamento de BSAs depois.'
-
-  - &hotkeyBug
-    type: say
-    content:
-      - lang: en
-        text: 'Don''t use hotkeys to change equipment sets. Game bug.'
-      - lang: bg
-        text: 'Не използвайте клавишни комбинации за промяна на екипировката. Това е технически дефект в играта.'
-      - lang: de
-        text: 'Nutzen Sie nicht Hotkeys um Ausrüstungssets zu wechseln. Spiel-Fehler.'
-      - lang: ko
-        text: '장비 세트를 변경하려고 단축키를 사용하지 마십시오. 게임 버그입니다.'
-      - lang: pt_BR
-        text: 'Não use atalhos para mudar sets de equipamento. Bug do jogo.'
-
-# Messages - Localized
+# Message Anchors
   - &alreadyInX
     type: error
     content:
@@ -293,6 +271,34 @@ common:
     subs: [ 'This plugin should not be used. Reinstall Fran''s and select "Separate Files" when the option is presented.' ]
     condition: *FCOMCond
 
+  - &dummyFileLoader
+    type: say
+    content:
+      - lang: en
+        text: 'Dummy file to load .BSA files. Using a file to load a BSA means the BSA must NOT be listed in Oblivion.ini at the same time or the game will not load. This is ususally only a problem when automatic installers insert the name into Oblivion.ini then the user creates a BSA redirection file later.'
+      - lang: bg
+        text: 'Това е фиктивен файл за зареждане на .BSA файлове. Когато го използвате, .BSA файлът не бива да е включен в Oblivion.ini, в противен случай играта няма да зареди.'
+      - lang: de
+        text: 'Pseudo-Datei um .BSA Dateien zu laden. Beim nutzen einer Datei zum Laden einer BSA bedeutet das die BSA NICHT in der Oblivion.ini gleichzeitig gelistet sein darf oder das Spiel wird nicht laden. Dies ist gewöhnlich nur ein Problem wenn automatische Installer den Namen in die Oblivion.ini einfügen und der Nutzer später eine BSA Umleitung erstellt.'
+      - lang: ko
+        text: '.BSA 파일을 로드하기 위한 더미 파일입니다. 파일을 사용하여 BSA를 로드하면 BSA가 동시에 Oblivion.ini에 나열되지 않아야합니다. 그렇지 않으면 게임이 로드되지 않습니다. 이것은 일반적으로 자동 설치 프로그램이 이름을 Oblivion.ini에 삽입한 다음 사용자가 나중에 BSA 리다이렉션 파일을 만드는 경우에만 발생하는 문제입니다.'
+      - lang: pt_BR
+        text: 'Arquivo fictício para carregar arquivos .BSA. Usar um arquivo para carregar BSAs significa que a BSA NÃO pode estar listada no Oblivion.ini ao mesmo tempo ou o jogo não irá carregar. Isso é somente um problema quanto instaladores automáticos inserem o nome no Oblivion.ini e então o usuário cria um arquivo de redirecionamento de BSAs depois.'
+
+  - &hotkeyBug
+    type: say
+    content:
+      - lang: en
+        text: 'Don''t use hotkeys to change equipment sets. Game bug.'
+      - lang: bg
+        text: 'Не използвайте клавишни комбинации за промяна на екипировката. Това е технически дефект в играта.'
+      - lang: de
+        text: 'Nutzen Sie nicht Hotkeys um Ausrüstungssets zu wechseln. Spiel-Fehler.'
+      - lang: ko
+        text: '장비 세트를 변경하려고 단축키를 사용하지 마십시오. 게임 버그입니다.'
+      - lang: pt_BR
+        text: 'Não use atalhos para mudar sets de equipamento. Bug do jogo.'
+
   - &includesX
     type: say
     content:
@@ -320,6 +326,21 @@ common:
         text: '%1% уже включен в этот мод.'
       - lang: sv
         text: '%1% är inluderat med denna mod.'
+
+  - &masterReassign
+    type: say
+    content:
+      - lang: en
+        text: 'The **Oblivion.esm** master must be reassigned to **Nehrim.esm**.'
+      - lang: bg
+        text: '**Oblivion.esm** трябва да бъде преназначен като **Nehrim.esm**.'
+      - lang: de
+        text: 'Der **Oblivion.esm** Master muss **Nehrim.esm** neu zugewiesen werden.'
+      - lang: ko
+        text: '**Oblivion.esm** 마스터는 **Nehrim.esm**에 다시 할당되어야합니다.'
+      - lang: pt_BR
+        text: 'O mestre **Oblivion.esm** deve ser realocado para **Nehrim.esm**.'
+    condition: *nehrimCond
 
   - &moddingPlugin
     type: error
@@ -838,24 +859,7 @@ common:
         text: 'Denna plugin innehåller vilda föränringar utanför ITM och UDR-records samt borttagna navmeshes och kan kräva ytterligare manuell rensning för att inte störa andra moddar. %1%'
     subs: [ '' ]
 
-# Dirty Aliases
-  - &dirtyPlugin
-    util: '[TES4Edit](https://www.nexusmods.com/oblivion/mods/11536/)'
-    info:
-      - lang: en
-        text: 'An explanation of Dirty Edits is available [here](https://tes5edit.github.io/docs/6-mod-cleaning-and-error-checking.html#AppendixA).'
-      - lang: de
-        text: 'Eine englische Säuberungsanleitung ist [hier](https://tes5edit.github.io/docs/6-mod-cleaning-and-error-checking.html#AppendixA) verfügbar.'
-      - lang: ja
-        text: 'Dirty Editsについては[ここ](https://tes5edit.github.io/docs/6-mod-cleaning-and-error-checking.html#AppendixA)を参照してください。'
-      - lang: pl
-        text: 'Wytłumaczenie o brudnych wtyczkach (Dirty Edits) jest dostępne [tutaj](https://tes5edit.github.io/docs/6-mod-cleaning-and-error-checking.html#AppendixA).'
-      - lang: pt
-        text: 'Uma explição em inglês de Edição Suja (Dirty Edits) está disponível [aqui](https://tes5edit.github.io/docs/6-mod-cleaning-and-error-checking.html#AppendixA).'
-      - lang: pt_BR
-        text: 'Uma explicação de Edições Sujas (Dirty Edits) está disponível [aqui](https://tes5edit.github.io/docs/6-mod-cleaning-and-error-checking.html#AppendixA).'
-      - lang: ru
-        text: 'Объяснение по грязным правкам доступно [здесь](https://tes5edit.github.io/docs/6-mod-cleaning-and-error-checking.html#AppendixA).'
+# Cleaning Data Anchors
   - &quickClean
     util: '[TES4Edit](https://www.nexusmods.com/oblivion/mods/11536/)'
     info:
@@ -883,6 +887,7 @@ common:
         text: 'En guide till att rensa plugins med xEdit finns [här](https://tes5edit.github.io/docs/7-mod-cleaning-and-error-checking.html#ThreeEasyStepstocleanMods).'
       - lang: zh_CN
         text: 'xEdit的清洁插件指南可以在[这里](https://tes5edit.github.io/docs/7-mod-cleaning-and-error-checking.html#ThreeEasyStepstocleanMods)找到。'
+
   - &reqManualFix
     util: '[TES4Edit](https://www.nexusmods.com/oblivion/mods/11536/)'
     info:
@@ -908,6 +913,25 @@ common:
         text: 'Настоятельно не рекомендуется использовать моды с **удаленными навмешами** т.к. известно, что они вызывают вылеты. **удаленные навмеши** должны быть исправлены вручную(Комплексный процесс, который должен быть выполнен автором мода). Больше информации о **удаленных навмешах** можно найти [здесь](https://www.creationkit.com/index.php?title=Fixing_Navmesh_Deletion_Tutorial).'
       - lang: sv
         text: 'Det är starkt rekommenderat att inte använda mods som innehåller **Borttagna navmeshes** eftersom de kan orsaka krascher. **Borttagna navmeshes** måste korrigeras manuellt (en komplex process som borde göras av modskaparen). Mer information om **Borttagna navmeshes** hittar du [här](https://www.creationkit.com/index.php?title=Fixing_Navmesh_Deletion_Tutorial).'
+
+# Deprecated Anchors
+  - &dirtyPlugin
+    util: '[TES4Edit](https://www.nexusmods.com/oblivion/mods/11536/)'
+    info:
+      - lang: en
+        text: 'An explanation of Dirty Edits is available [here](https://tes5edit.github.io/docs/6-mod-cleaning-and-error-checking.html#AppendixA).'
+      - lang: de
+        text: 'Eine englische Säuberungsanleitung ist [hier](https://tes5edit.github.io/docs/6-mod-cleaning-and-error-checking.html#AppendixA) verfügbar.'
+      - lang: ja
+        text: 'Dirty Editsについては[ここ](https://tes5edit.github.io/docs/6-mod-cleaning-and-error-checking.html#AppendixA)を参照してください。'
+      - lang: pl
+        text: 'Wytłumaczenie o brudnych wtyczkach (Dirty Edits) jest dostępne [tutaj](https://tes5edit.github.io/docs/6-mod-cleaning-and-error-checking.html#AppendixA).'
+      - lang: pt
+        text: 'Uma explição em inglês de Edição Suja (Dirty Edits) está disponível [aqui](https://tes5edit.github.io/docs/6-mod-cleaning-and-error-checking.html#AppendixA).'
+      - lang: pt_BR
+        text: 'Uma explicação de Edições Sujas (Dirty Edits) está disponível [aqui](https://tes5edit.github.io/docs/6-mod-cleaning-and-error-checking.html#AppendixA).'
+      - lang: ru
+        text: 'Объяснение по грязным правкам доступно [здесь](https://tes5edit.github.io/docs/6-mod-cleaning-and-error-checking.html#AppendixA).'
 
 bash_tags:
   - 'Actors.ACBS'
@@ -1026,7 +1050,7 @@ globals:
         text: '[最新的LOOT版本](%1%)。'
     subs: [ 'https://loot.github.io/latest-thread/' ]
 
-# OBSE Plugins - Requirements
+# OBSE Plugin Requirements
   - type: error
     content:
       - lang: en
