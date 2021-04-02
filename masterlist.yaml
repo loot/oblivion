@@ -10660,17 +10660,38 @@ plugins:
         itm: 244
         udr: 18
 
+  - name: 'AbandonedHouse(BC)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/23803/'
+        name: 'Cheydinhal Abandoned House REBORN'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Cheydinhal Abandoned House REBORN ESP' ]
+        condition: 'many("AbandonedHouse(BC)?\.esp")'
   - name: 'AbandonedHouse.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/23803' ]
     inc: [ *BetterCities ]
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Use AbandonedHouse Better Cities instead.'
-          - lang: de
-            text: 'Nutzen Sie stattdessen AbandonedHouse Better Cities.'
+      - <<: *useVersion
+        subs: [ 'Better Cities' ]
         condition: 'file("Better Cities Resources.esm")'
+    dirty:
+      - <<: *quickClean
+        crc: 0xB87A346B
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 21
+        udr: 123
+  - name: 'AbandonedHouseBC.esp'
+    msg:
+      - <<: *useVersionNon
+        subs: [ 'Better Cities' ]
+        condition: 'not file("Better Cities Resources.esm")'
+    dirty:
+      - <<: *quickClean
+        crc: 0xB9C49EDC
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 35
+        udr: 138
+
   - name: 'Better Benirus Manor.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/18054' ]
     after: [ 'Ghorak''s House.esp' ]
