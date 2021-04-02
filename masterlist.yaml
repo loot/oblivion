@@ -6766,19 +6766,19 @@ plugins:
   - name: 'personality_idles4_nopc.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/14280' ]
     # doNotClean
+
   - name: 'P1DseeYouSleep.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/16005' ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/16005/' ]
+    inc:
+      - 'See You Sleep DLL.esp'
+      - 'See You Sleep DLL - DLCVileLair.esp'
+      - 'See You Sleep DLL - Vampire Bedroll Anims.esp'
     dirty:
       - <<: *quickClean
         crc: 0x41C990C4
-        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 7
-  - name: 'See You Sleep DLL.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/42649' ]
-    inc: [ 'P1DseeYouSleep.esp' ]
-  - name: 'See You Sleep DLL - Vampire Bedroll Anims.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/42649' ]
-    inc: [ 'P1DseeYouSleep.esp' ]
+
   - name: 'P-Froggys Corpse Carry( EV)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/28987' ]
     req: [ *OBSE ]
@@ -7316,9 +7316,6 @@ plugins:
         type: error
         subs: [ '**DLCHorseArmor.esp**' ]
 
-  - name: 'See You Sleep DLL - DLCVileLair.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/42649' ]
-    inc: [ 'P1DseeYouSleep.esp' ]
   - name: 'Book Jackets DLC.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/16247' ]
     tag:
