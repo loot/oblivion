@@ -10706,16 +10706,6 @@ plugins:
         itm: 4
         udr: 3
 
-  - name: 'ElsweyrFaregylRoad.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/19026' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Do not use if using ElsweyrAnequina.esp.'
-          - lang: de
-            text: 'Nicht nutzen wenn ElsweyrAnequina.esp genutzt wird.'
-        condition: 'active("ElsweyrAnequina.esp")'
   - name: 'Black ocean.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22044' ]
     req: [ 'DLCShiveringIsles.esp' ]
@@ -14173,6 +14163,16 @@ plugins:
     msg:
       - <<: *alsoUseX
         subs: [ 'INI tweak [bBorderRegionsEnabled=0](http://wiki.tesnexus.com/index.php/Removing_In-Game_Borders)' ]
+  - name: 'ElsweyrFaregylRoad.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/19026' ]
+    msg:
+      - type: say
+        content:
+          - lang: en
+            text: 'Do not use if using ElsweyrAnequina.esp.'
+          - lang: de
+            text: 'Nicht nutzen wenn ElsweyrAnequina.esp genutzt wird.'
+        condition: 'active("ElsweyrAnequina.esp")'
 
   - name: 'ExtendedAleswellEV.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/38351' ]
