@@ -14167,8 +14167,20 @@ plugins:
     msg:
       - <<: *alsoUseX
         subs: [ 'INI tweak [bBorderRegionsEnabled=0](http://wiki.tesnexus.com/index.php/Removing_In-Game_Borders)' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x8E7B6735
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 7
+        udr: 2
   - name: 'ElsweyrFaregylRoad.esp'
     req: [ 'ElsweyrRiverhold.esp' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x609CAF7B
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 33
+        udr: 46
 
   - name: 'ExtendedAleswellEV.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/38351' ]
