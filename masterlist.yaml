@@ -10441,15 +10441,15 @@ plugins:
         util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 16
         udr: 2
+
   - name: 'Artifacts.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/25309' ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/25309/' ]
     dirty:
-      - crc: 0x3d5a25d1
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x3D5A25D1
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         udr: 1
-      - crc: 0x66b9b580
-        <<: *dirtyPlugin
-        udr: 1
+
   - name: 'ArtifactsFemaleArmor.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/24078/' ]
     tag:
@@ -10461,26 +10461,33 @@ plugins:
     tag:
       - Graphics
       - NoMerge
+
   - name: 'AraenyaRealm.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/28512' ]
-    dirty:
-      - crc: 0x3cb0c878
-        <<: *dirtyPlugin
-        itm: 116
-        udr: 532
+    url: [ 'https://www.nexusmods.com/oblivion/mods/28512/' ]
+    msg:
+      - <<: *corrupt
+        condition: 'checksum("AraenyaRealm.esp", 5C9BCB00) or checksum("AraenyaRealm.esp", A8049381) or checksum("AraenyaRealm.esp", 3CB0C878)'
+
   - name: 'AStrangeCave.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/10540' ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/10540/' ]
     dirty:
-      - crc: 0xbdbcf7a8
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xBDBCF7A8
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 10
         udr: 2
+
+  - name: 'ATW_Castle_Vet_v1\.(3|4)\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/41696/' ]
   - name: 'ATW_Castle_Vet_v1.3.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/41696' ]
+    msg: [ *obsolete ]
+  - name: 'ATW_Castle_Vet_v1.4.esp'
     dirty:
-      - crc: 0xab48455d
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x63A97648
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         udr: 14
+
   - name: 'Auriel''s Books.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/14957' ]
     inc:
@@ -10492,17 +10499,22 @@ plugins:
         util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 21
         udr: 3
+
   - name: 'Auriel''s_Retreat.esp'
     url:
-      - 'https://www.nexusmods.com/oblivion/mods/27730'
-      - 'https://www.nexusmods.com/oblivion/mods/28558'
+      - 'https://www.nexusmods.com/oblivion/mods/27730/'
+      - link: 'https://www.nexusmods.com/oblivion/mods/28558/'
+        name: 'Non-Cobl'
     dirty:
-      - crc: 0xcb6ef46d
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xCB6EF46D
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 2875
-      - crc: 0x4446b5c1
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xF75E0FA1
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 2875
+
   - name: 'Automagicon.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/31543' ]
     inc: [ 'Automagicon_Cobl.esp' ]
@@ -10510,35 +10522,38 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/31543' ]
     req: [ 'Cobl Main.esm' ]
     inc: [ 'Automagicon.esp' ]
+
   - name: 'AWitchTale.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/43009' ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/43009/' ]
     dirty:
-      - crc: 0xc7f27f01
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xC7F27F01
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 4
         udr: 2
+
   - name: 'AyleidArrows.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/10740' ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/10740/' ]
     dirty:
-      - crc: 0x1b13049a
-        <<: *dirtyPlugin
-        itm: 32
+      - <<: *quickClean
+        crc: 0x1B13049A
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 8
         udr: 77
+
   - name: 'AyleidTemple.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/41613' ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/41613/' ]
     msg:
       - <<: *wildEdits
-        subs: [ 'Makes a wild edit to the water level in Shagol gro-Bumph''s house (block 6,1).' ]
-        condition: 'checksum("AyleidTemple.esp", 4B14E3CD)'
+        subs: [ 'Delete 0002F7D4 & 00015C3D.' ]
+        condition: 'checksum("AyleidTemple.esp", DA96FB24)'
     dirty:
-      - crc: 0x4b14e3cd
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x4B14E2CD
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 39
         udr: 24
-      - crc: 0x4b14e2cd
-        <<: *dirtyPlugin
-        itm: 39
-        udr: 24
+
   - name: 'AzurasServices_de.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/12187' ]
     msg:
@@ -10548,19 +10563,23 @@ plugins:
             text: 'German Version'
           - lang: de
             text: 'Deutsche Version'
+
   - name: 'Bandit Hideouts.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/11260' ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/11260/' ]
     inc: [ 'CastleWestWeald.esp' ]
     dirty:
-      - crc: 0xeb5bf385
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xEB5BF385
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 12
         udr: 2
+
   - name: 'Basement for Cobl - Sheep Wool addition.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/21139' ]
     req: [ 'Mart''s Monster Mod.esm' ]
+
   - name: 'Battle4Morrowind.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/45467' ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/45467/' ]
     msg:
       - type: say
         content:
@@ -10569,34 +10588,42 @@ plugins:
           - lang: de
             text: 'Inkompatibel mit: jeglichem das Legion Armor abändert.'
     dirty:
-      - crc: 0xba133af8
-        <<: *dirtyPlugin
-        itm: 19
-        udr: 24
+      - <<: *quickClean
+        crc: 0x03223B93
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 22
+
   - name: 'BeastHeadInn.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/40990' ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/40990/' ]
     dirty:
-      - crc: 0xfc965cd1
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xFC965CD1
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
+
   - name: 'BeldaElysium.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/47300' ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/47300/' ]
     dirty:
-      - crc: 0x2aed0c2f
-        <<: *dirtyPlugin
-        itm: 279
+      - <<: *quickClean
+        crc: 0x3C982E26
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 253
         udr: 66
-      - crc: 0x3c982e26
-        <<: *dirtyPlugin
-        itm: 279
+      - <<: *quickClean
+        crc: 0x2AED0C2F
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 253
         udr: 66
+
   - name: 'Benirus Manor Remade.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/12715' ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/12715/' ]
     dirty:
-      - crc: 0xaed6fbb3
-        <<: *dirtyPlugin
-        itm: 41
+      - <<: *quickClean
+        crc: 0xAED6FBB3
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 40
         udr: 30
+
   - name: 'Better Abandoned House.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/25319' ]
     tag:
@@ -10604,31 +10631,35 @@ plugins:
       - C.Owner
       - Graphics
       - Names
+
   - name: 'Better Camps.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/37883' ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/37883/' ]
     dirty:
-      - crc: 0x79278151
-        <<: *dirtyPlugin
-        itm: 21
+      - <<: *quickClean
+        crc: 0x79278151
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
+
   - name: 'Better Dark Brotherhood Sanctuary.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/22135' ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/22135/' ]
     tag:
       - Names
       - NpcFaces
-    dirty:
-      - crc: 0x42c36bf9
-        <<: *dirtyPlugin
-        udr: 3
-      - crc: 0xc208f695
-        <<: *dirtyPlugin
-        udr: 3
+    clean:
+      - crc: 0xBB886C9B
+        util: 'TES4Edit v4.0.3f'
+      - crc: 0xE56FED21
+        util: 'TES4Edit v4.0.3f'
+
   - name: 'BeyondTheRealmsOfDeath.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/40837' ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/40837/' ]
     dirty:
-      - crc: 0xcd2c8bd8
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xCD2C8BD8
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 244
         udr: 18
+
   - name: 'AbandonedHouse.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/23803' ]
     inc: [ *BetterCities ]
@@ -10644,13 +10675,16 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/18054' ]
     after: [ 'Ghorak''s House.esp' ]
     tag: [ C.Light ]
+
   - name: 'Big Business.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/8236' ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/8236/' ]
     dirty:
-      - crc: 0xcec8bc70
-        <<: *dirtyPlugin
-        itm: 2
+      - <<: *quickClean
+        crc: 0xCEC8BC70
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 4
         udr: 3
+
   - name: 'ElsweyrFaregylRoad.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/19026' ]
     msg:
