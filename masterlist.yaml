@@ -10660,8 +10660,11 @@ plugins:
         itm: 244
         udr: 18
 
+  - name: 'AbandonedHouse(BC)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/23803/'
+        name: 'Cheydinhal Abandoned House REBORN'
   - name: 'AbandonedHouse.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/23803' ]
     inc: [ *BetterCities ]
     msg:
       - type: say
@@ -10671,6 +10674,7 @@ plugins:
           - lang: de
             text: 'Nutzen Sie stattdessen AbandonedHouse Better Cities.'
         condition: 'file("Better Cities Resources.esm")'
+
   - name: 'Better Benirus Manor.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/18054' ]
     after: [ 'Ghorak''s House.esp' ]
