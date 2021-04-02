@@ -10641,17 +10641,16 @@ plugins:
         itm: 2
 
   - name: 'Better Dark Brotherhood Sanctuary.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/22135' ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/22135/' ]
     tag:
       - Names
       - NpcFaces
-    dirty:
-      - crc: 0x42c36bf9
-        <<: *dirtyPlugin
-        udr: 3
-      - crc: 0xc208f695
-        <<: *dirtyPlugin
-        udr: 3
+    clean:
+      - crc: 0xBB886C9B
+        util: 'TES4Edit v4.0.3f'
+      - crc: 0xE56FED21
+        util: 'TES4Edit v4.0.3f'
+
   - name: 'BeyondTheRealmsOfDeath.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/40837' ]
     dirty:
