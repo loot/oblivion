@@ -10681,6 +10681,10 @@ plugins:
         itm: 21
         udr: 123
   - name: 'AbandonedHouseBC.esp'
+    msg:
+      - <<: *useVersionNon
+        subs: [ 'Better Cities' ]
+        condition: 'not file("Better Cities Resources.esm")'
     dirty:
       - <<: *quickClean
         crc: 0xB9C49EDC
