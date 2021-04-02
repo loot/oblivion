@@ -10602,16 +10602,19 @@ plugins:
         itm: 1
 
   - name: 'BeldaElysium.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/47300' ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/47300/' ]
     dirty:
-      - crc: 0x2aed0c2f
-        <<: *dirtyPlugin
-        itm: 279
+      - <<: *quickClean
+        crc: 0x3C982E26
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 253
         udr: 66
-      - crc: 0x3c982e26
-        <<: *dirtyPlugin
-        itm: 279
+      - <<: *quickClean
+        crc: 0x2AED0C2F
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 253
         udr: 66
+
   - name: 'Benirus Manor Remade.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/12715' ]
     dirty:
