@@ -10563,14 +10563,17 @@ plugins:
             text: 'German Version'
           - lang: de
             text: 'Deutsche Version'
+
   - name: 'Bandit Hideouts.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/11260' ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/11260/' ]
     inc: [ 'CastleWestWeald.esp' ]
     dirty:
-      - crc: 0xeb5bf385
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xEB5BF385
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 12
         udr: 2
+
   - name: 'Basement for Cobl - Sheep Wool addition.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/21139' ]
     req: [ 'Mart''s Monster Mod.esm' ]
