@@ -10594,11 +10594,13 @@ plugins:
         itm: 22
 
   - name: 'BeastHeadInn.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/40990' ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/40990/' ]
     dirty:
-      - crc: 0xfc965cd1
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xFC965CD1
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
+
   - name: 'BeldaElysium.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/47300' ]
     dirty:
