@@ -10616,12 +10616,14 @@ plugins:
         udr: 66
 
   - name: 'Benirus Manor Remade.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/12715' ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/12715/' ]
     dirty:
-      - crc: 0xaed6fbb3
-        <<: *dirtyPlugin
-        itm: 41
+      - <<: *quickClean
+        crc: 0xAED6FBB3
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 40
         udr: 30
+
   - name: 'Better Abandoned House.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/25319' ]
     tag:
