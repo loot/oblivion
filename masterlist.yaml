@@ -10675,13 +10675,16 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/18054' ]
     after: [ 'Ghorak''s House.esp' ]
     tag: [ C.Light ]
+
   - name: 'Big Business.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/8236' ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/8236/' ]
     dirty:
-      - crc: 0xcec8bc70
-        <<: *dirtyPlugin
-        itm: 2
+      - <<: *quickClean
+        crc: 0xCEC8BC70
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 4
         udr: 3
+
   - name: 'ElsweyrFaregylRoad.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/19026' ]
     msg:
