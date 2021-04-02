@@ -10664,6 +10664,10 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/23803/'
         name: 'Cheydinhal Abandoned House REBORN'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Cheydinhal Abandoned House REBORN ESP' ]
+        condition: 'many("AbandonedHouse(BC)?\.esp")'
   - name: 'AbandonedHouse.esp'
     inc: [ *BetterCities ]
     msg:
