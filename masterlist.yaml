@@ -14159,21 +14159,16 @@ plugins:
 
   - name: 'Elsweyr(Riverhold|FaregylRoad)\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/19026/' ]
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'Elsweyr: The Deserts of Anequina' ]
+        condition: 'active("ElsweyrAnequina.esp")'
   - name: 'ElsweyrRiverhold.esp'
-    inc: [ 'ElsweyrAnequina.esp' ]
     msg:
       - <<: *alsoUseX
         subs: [ 'INI tweak [bBorderRegionsEnabled=0](http://wiki.tesnexus.com/index.php/Removing_In-Game_Borders)' ]
   - name: 'ElsweyrFaregylRoad.esp'
     req: [ 'ElsweyrRiverhold.esp' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Do not use if using ElsweyrAnequina.esp.'
-          - lang: de
-            text: 'Nicht nutzen wenn ElsweyrAnequina.esp genutzt wird.'
-        condition: 'active("ElsweyrAnequina.esp")'
 
   - name: 'ExtendedAleswellEV.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/38351' ]
