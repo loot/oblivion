@@ -10652,12 +10652,14 @@ plugins:
         util: 'TES4Edit v4.0.3f'
 
   - name: 'BeyondTheRealmsOfDeath.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/40837' ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/40837/' ]
     dirty:
-      - crc: 0xcd2c8bd8
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xCD2C8BD8
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 244
         udr: 18
+
   - name: 'AbandonedHouse.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/23803' ]
     inc: [ *BetterCities ]
