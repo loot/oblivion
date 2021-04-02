@@ -10461,13 +10461,12 @@ plugins:
     tag:
       - Graphics
       - NoMerge
+
   - name: 'AraenyaRealm.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/28512' ]
-    dirty:
-      - crc: 0x3cb0c878
-        <<: *dirtyPlugin
-        itm: 116
-        udr: 532
+    url: [ 'https://www.nexusmods.com/oblivion/mods/28512/' ]
+    msg:
+      - <<: *corrupt
+        condition: 'checksum("AraenyaRealm.esp", 5C9BCB00) or checksum("AraenyaRealm.esp", A8049381) or checksum("AraenyaRealm.esp", 3CB0C878)'
 
   - name: 'AStrangeCave.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/10540/' ]
