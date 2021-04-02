@@ -7312,42 +7312,19 @@ plugins:
   - name: 'Clock Hotkey.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/38514' ]
     req: [ *OBSE ]
-  - name: 'Expanded Hotkeys and Spell Delete V2.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/48869' ]
-    msg: [ *hotkeyBug ]
-  - name: 'Hov''s Hotkeys.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/13443' ]
-    msg: [ *hotkeyBug ]
-  - name: 'Lem - Hotkey Cyclers.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/17402' ]
-    msg: [ *hotkeyBug ]
-  - name: 'Uncommon Controls.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/18092' ]
-    msg: [ *hotkeyBug ]
-  - name: 'FastShortcuts.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/13718' ]
-    msg: [ *hotkeyBug ]
-  - name: 'FastEquipping.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/34613' ]
-    msg:
-      - *hotkeyBug
-      - *useVersionNehrim
 
-  - name: 'Improved Hotkeys.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/18571' ]
-    msg: [ *hotkeyBug ]
-  - name: 'Improved Hotkeys_Extended.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/27156' ]
-    msg: [ *hotkeyBug ]
+  - name: 'FastEquipping.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/34613/' ]
+    msg: [ *useVersionNehrim ]
+
   - name: 'Quick Clothes and Spells.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/14794' ]
-    msg: [ *hotkeyBug ]
-  - name: 'sr_super_hotkeys.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/22326' ]
-    msg: [ *hotkeyBug ]
-  - name: 'STHotkeys.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/30673' ]
-    msg: [ *hotkeyBug ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/14794/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xA0DEA1A5
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 3
+
   - name: 'SellHorses_Incl_Saddlebags_and_CallSteed.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/6903' ]
     msg:
@@ -22774,9 +22751,7 @@ plugins:
   - name: 'Enhanced Hotkeys.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/34735' ]
     msg: [ *masterReassign ]
-  - name: 'FastEquippingNehrim.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/34613' ]
-    msg: [ *hotkeyBug ]
+
   - name: 'DropLitTorchOBSE.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/16282/' ]
     msg: [ *masterReassign ]
