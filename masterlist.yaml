@@ -10671,12 +10671,8 @@ plugins:
   - name: 'AbandonedHouse.esp'
     inc: [ *BetterCities ]
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Use AbandonedHouse Better Cities instead.'
-          - lang: de
-            text: 'Nutzen Sie stattdessen AbandonedHouse Better Cities.'
+      - <<: *useVersion
+        subs: [ 'Better Cities' ]
         condition: 'file("Better Cities Resources.esm")'
 
   - name: 'Better Benirus Manor.esp'
