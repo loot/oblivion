@@ -7310,14 +7310,12 @@ plugins:
         itm: 3
 
   - name: 'SellHorses_Incl_Saddlebags_and_CallSteed.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/6903' ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/6903/' ]
     msg:
-      - type: error
-        content:
-          - lang: en
-            text: 'Rename this file to "DLCHorseArmor.esp", after backing up the original.'
-          - lang: de
-            text: 'Benennen Sie die Datei in "DLCHorseArmor.esp" um, nach einer Sicherung des Originals.'
+      - <<: *renameFile
+        type: error
+        subs: [ '**DLCHorseArmor.esp**' ]
+
   - name: 'See You Sleep DLL - DLCVileLair.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/42649' ]
     inc: [ 'P1DseeYouSleep.esp' ]
