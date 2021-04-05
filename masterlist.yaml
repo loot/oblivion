@@ -10674,7 +10674,9 @@ plugins:
         udr: 3
 
   - name: 'Black ocean.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/22044' ]
+    url:
+      - 'https://www.nexusmods.com/oblivion/mods/22044/'
+      - 'https://tesall.ru/files/modi-dlya-oblivion/kvesti/1221-chernii-okean'
     req: [ 'DLCShiveringIsles.esp' ]
     msg:
       - type: say
@@ -10688,6 +10690,7 @@ plugins:
         <<: *dirtyPlugin
         itm: 273
         udr: 547
+
   - name: 'BladeOfTheHaunted.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/33089' ]
     tag: [ Factions ]
