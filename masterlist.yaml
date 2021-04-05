@@ -3453,6 +3453,17 @@ plugins:
         util: 'TES4Edit v4.0.2'
 
 ###### Locations - New Structures & Landmarks ######
+  - name: 'BXX_Mines.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/8284/'
+        name: 'Mining Company'
+    dirty:
+      - <<: *quickClean
+        crc: 0x82845758
+        util: '[TES4Edit v4.0.3g](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 42
+        udr: 23
+
   - name: 'Colourwheels Sexy Tavern HGEC.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/37959' ]
     after:
@@ -10936,13 +10947,6 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/43134' ]
     req: [ *OBSEv20 ]
 
-  - name: 'BXX_Mines.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/8284' ]
-    dirty:
-      - crc: 0x82845758
-        <<: *dirtyPlugin
-        itm: 40
-        udr: 23
   - name: 'BXX Tamriel Resource Exchange.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/13320' ]
     req: [ *OBSE ]
