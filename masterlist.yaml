@@ -3073,6 +3073,17 @@ plugins:
       - SpellStats
       - Text
 
+  - name: 'BossPhaitDismal.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/39191/'
+        name: 'Boss Fight - The Dismal Thicket'
+    req: [ *OBSEv20 ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x6D467EB0
+        util: '[TES4Edit v4.0.3g](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 7
+
   - name: 'Castle_Seaview.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/25574'
@@ -10875,14 +10886,7 @@ plugins:
         crc: 0x26F8ED36
         util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 12
-  - name: 'BossPhaitDismal.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/39191' ]
-    req: [ *OBSEv20 ]
-    dirty:
-      - <<: *quickClean
-        crc: 0x6D467EB0
-        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536/)'
-        itm: 7
+
   - name: 'BossPhaitStygainHalls.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/38744' ]
     req: [ *OBSE ]
