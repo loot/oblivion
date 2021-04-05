@@ -3201,6 +3201,19 @@ plugins:
         itm: 13
         udr: 12
 
+  - name: 'HackdirtTheDeepOnes.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/36224/' ]
+    inc: [ 'HackdirtCaverns.esp' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xEED773A7
+        util: '[TES4Edit v4.0.3g](https://www.nexusmods.com/oblivion/mods/11536)'
+        udr: 4
+      - <<: *quickClean
+        crc: 0x9B9DB370
+        util: '[TES4Edit v4.0.3g](https://www.nexusmods.com/oblivion/mods/11536)'
+        udr: 4
+
   - name: 'Hentai Mania.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/25612' ]
     req: [ *OBSE ]
@@ -10890,14 +10903,7 @@ plugins:
       - <<: *alreadyInX
         subs: [ 'Better Cities - Full' ]
         condition: 'active("Better Cities Full.esp")'
-  - name: 'HackdirtTheDeepOnes.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/36224' ]
-    inc: [ 'HackdirtCaverns.esp' ]
-    dirty:
-      - <<: *quickClean
-        crc: 0xEED773A7
-        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536/)'
-        udr: 4
+
   - name: 'BrotherhoodRenewed.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/31773' ]
     tag:
