@@ -10180,6 +10180,10 @@ plugins:
       - 'https://www.nexusmods.com/oblivion/mods/41246/'
       - 'https://tesall.ru/files/modi-dlya-oblivion/kvesti/3644-efirnii-klinok'
     req: [ *OBSEv20 ]
+    msg:
+      - <<: *alsoUseX
+        subs: [ '[Elys- Universal Silent Voice](https://www.nexusmods.com/oblivion/mods/16622) or [VoiceFile Redirector OBSE](https://github.com/ponyrider0/voicefile-redirector/releases)' ]
+        condition: 'not file("OBSE/Plugins/Elys_USV.dll") and not file("OBSE/Plugins/voicefile_redirector.dll")'
     dirty:
       - <<: *quickClean
         crc: 0xC17B383E
