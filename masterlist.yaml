@@ -10677,14 +10677,11 @@ plugins:
     url:
       - 'https://www.nexusmods.com/oblivion/mods/22044/'
       - 'https://tesall.ru/files/modi-dlya-oblivion/kvesti/1221-chernii-okean'
-    req: [ 'DLCShiveringIsles.esp' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Requires: Knights of the Nine, unless using the patch available from [here](http://blackocean.ucoz.ru).'
-          - lang: de
-            text: 'Benötigt: Knights of the Nine, außer man nutzt den Patch der [hier](http://blackocean.ucoz.ru) verfügbar ist.'
+    req:
+      - 'DLCShiveringIsles.esp'
+      - name: 'Knights.esp'
+        display: 'Knights of the Nine DLC'
+        condition: 'not file("meshes/effects/nd10orbofsmitting.nif")'
     dirty:
       - <<: *quickClean
         crc: 0x023424D4
