@@ -5603,19 +5603,11 @@ plugins:
         subs: [ 'Handsome Gents Vampires Addon' ]
         condition: 'many("Handsome_Gents_Vampires(_50)?\.esp(\.ghost)?")'
 
-  - name: 'Beautiful_Women_Revised(_SI|_NotSoNice|_DB)?\.esp'
+  - name: '(Handsome_Gents|Beautiful_Women)_Revised(_DB|_NotSoNice|_SI)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/24003' ]
     tag:
-      - Deactivate
-      - NoMerge
-      - NpcFaces
-    group: *underridesGroup
-  - name: 'Handsome_Gents_Revised(_SI|_DB)?\.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/24003' ]
-    tag:
-      - Deactivate
-      - NoMerge
-      - NpcFaces
+      - NPC.FaceGen
+      - NPC.Hair
     group: *underridesGroup
 
   - name: 'emperorface.esp'
