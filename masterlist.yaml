@@ -4201,7 +4201,7 @@ plugins:
     dirty:
       - <<: *quickClean
         crc: 0xFA08DE55
-        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
   - name: 'Mart''s Monster Mod for OOO.esm'
     inc: [ 'FCOM_Convergence.esm' ]
@@ -4236,7 +4236,7 @@ plugins:
     dirty:
       - <<: *quickClean
         crc: 0xDF4B7C20
-        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 3
   - name: 'Mart''s Monster Mod( - Knights| for OOO - Knights )\.esp'
     inc: [ 'FCOM_Convergence.esm' ]
@@ -4430,7 +4430,7 @@ plugins:
     dirty:
       - <<: *quickClean
         crc: 0xD8C0168F
-        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 2
   - name: 'Mart''s Monster Mod - Farm Animals.esp'
     clean:
@@ -4469,13 +4469,13 @@ plugins:
     dirty:
       - <<: *quickClean
         crc: 0x497A32B5
-        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 106
   - name: 'Mart''s Monster Mod - Hemingweys NPC Capes Improved.esp'
     dirty:
       - <<: *quickClean
         crc: 0x56442922
-        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 10
   - name: 'Mart''s Monster Mod - Hunting & Crafting.esp'
     tag:
@@ -4525,7 +4525,7 @@ plugins:
     dirty:
       - <<: *quickClean
         crc: 0xFEA2D531
-        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 18
   - name: 'Mart''s Monster Mod - More Wilderness Life No Gates.esp'
     # doNotClean
@@ -4708,11 +4708,8 @@ plugins:
     dirty:
       - <<: *quickClean
         crc: 0xE037E256
-        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 12
-    clean:
-      - crc: 0x8D76C7D9
-        util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - Zombies for Body Meshes.esp'
     clean:
       - crc: 0x6C98F68D
@@ -6465,7 +6462,7 @@ plugins:
     dirty:
       - <<: *quickClean
         crc: 0x06910C69
-        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 48
         udr: 20
   - name: 'Better Clocks.esp'
@@ -9204,8 +9201,9 @@ plugins:
       - Invent
       - Stats
     dirty:
-      - crc: 0x397cb5dd
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x397CB5DD
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
   - name: 'Hemingweys Capes Improved Merchants.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
@@ -11792,10 +11790,11 @@ plugins:
         subs: [ '[Cleaning instructions](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide#GlenvarCastle.esp_Special_Cleaning_Instructions)' ]
         condition: 'checksum("GlenvarCastle.esp", 718904AC)'
     dirty:
-      - crc: 0x718904ac
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x718904AC
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 31
         udr: 712
-        itm: 38
   - name: 'LetThePeopleDrink.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/10223' ]
     group: *earlyLoadersGroup
@@ -11975,9 +11974,10 @@ plugins:
           - lang: de
             text: 'Nutzung erst empfohlen nachdem Sie die Oblivion Hauptquest abgeschlossen haben.'
     dirty:
-      - crc: 0x969eedb3
-        <<: *dirtyPlugin
-        itm: 88
+      - <<: *quickClean
+        crc: 0x969EEDB3
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 79
         udr: 65
   - name: 'mrSiikasBetterPorts_CorvetteExpansion.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/15648' ]
@@ -13015,10 +13015,11 @@ plugins:
   - name: 'Valley_View_Estate.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/9324' ]
     dirty:
-      - crc: 0xbc0e798
-        <<: *dirtyPlugin
-        udr: 15
+      - <<: *quickClean
+        crc: 0x0BC0E798
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 28
+        udr: 15
   - name: 'VaultsofCyrodiil.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/9357' ]
     dirty:
@@ -13499,9 +13500,10 @@ plugins:
   - name: 'TOTF.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/11598' ]
     dirty:
-      - crc: 0x14bba6ee
-        <<: *dirtyPlugin
-        itm: 76
+      - <<: *quickClean
+        crc: 0x14BBA6EE
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 58
         udr: 2
   - name: 'RTT.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/3027' ]
@@ -16576,8 +16578,9 @@ plugins:
   - name: 'Sounds of Cyrodiil - OC Reborn Patch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/39804' ]
     dirty:
-      - crc: 0x408c9e1f
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x408C9E1F
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
         udr: 35
   - name: 'SB Open Cities Add-on - Total IC Isle v3.1.esp'
