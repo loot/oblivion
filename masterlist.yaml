@@ -5573,44 +5573,41 @@ plugins:
       - NoMerge
       - NpcFaces
     group: *underridesGroup
-  - name: 'Beautiful_Women_NiceOnly.esp'
+
+  - name: 'Beautiful_Women(_SI|_NiceOnly|_NotSoNice_Bonus|_DB_Addon|_Vampires(_50)?)\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17189' ]
+    group: *underridesGroup
     tag:
-      - NoMerge
-      - NpcFaces
+      - NPC.FaceGen
+      - NPC.Hair
+  - name: 'Beautiful_Women_Vampires(_50)?\.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Beautiful Women Vampires Addon' ]
+        condition: 'many("Beautiful_Women_Vampires(_50)?\.esp(\.ghost)?")'
+  - name: 'Beautiful_Women_NiceOnly.esp'
     dirty:
       - <<: *quickClean
         crc: 0x2C6E9200
         util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 10
-  - name: 'Beautiful_Women(_SI|_NiceOnly|_NotSoNice_Bonus|_DB_Addon|_Vampires(_50)?)\.esp'
+  - name: 'Handsome_Gents(_Bonus|_SI|(_DB)?_Addon|_Vampires(_50)?)\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17189' ]
     tag:
-      - Deactivate
-      - NoMerge
-      - NpcFaces
+      - NPC.FaceGen
+      - NPC.Hair
     group: *underridesGroup
-  - name: 'Handsome_Gents(_Bonus|_SI|(_DB)?_Addon|_Vampires(_50)?)?\.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/17189' ]
-    tag:
-      - Deactivate
-      - NoMerge
-      - NpcFaces
-    group: *underridesGroup
+  - name: 'Handsome_Gents_Vampires(_50)?\.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Handsome Gents Vampires Addon' ]
+        condition: 'many("Handsome_Gents_Vampires(_50)?\.esp(\.ghost)?")'
 
-  - name: 'Beautiful_Women_Revised(_SI|_NotSoNice|_DB)?\.esp'
+  - name: '(Handsome_Gents|Beautiful_Women)_Revised(_DB|_NotSoNice|_SI)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/24003' ]
     tag:
-      - Deactivate
-      - NoMerge
-      - NpcFaces
-    group: *underridesGroup
-  - name: 'Handsome_Gents_Revised(_SI|_DB)?\.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/24003' ]
-    tag:
-      - Deactivate
-      - NoMerge
-      - NpcFaces
+      - NPC.FaceGen
+      - NPC.Hair
     group: *underridesGroup
 
   - name: 'emperorface.esp'
