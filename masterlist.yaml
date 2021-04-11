@@ -18467,15 +18467,7 @@ plugins:
       - 'DLCShiveringIsles.esp'
   - name: 'Teleport.esp'
     req: [ *OBSE ]
-  - name: 'training spells.esp'
-    msg:
-      - type: error
-        content:
-          - lang: en
-            text: 'DO NOT USE. This plugin is corrupt. It may be fixed by loading it in the CS and truncating the file when prompted.'
-          - lang: de
-            text: 'NICHT NUTZEN. Dieses Plugin ist korrupt. Es kann behoben werden durch Laden in der CS und die Datei zu kürzen wenn man gefragt wird.'
-        condition: 'checksum("training spells.esp", DD4985A)'
+
   - name: 'Judgement of the Nine.esp'
     tag: [ Graphics ]
 
