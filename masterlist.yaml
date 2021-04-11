@@ -6132,21 +6132,13 @@ plugins:
         crc: 0x71BDDEC0
         util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 3
+
   - name: '_Real_Lights.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/10891' ]
     msg:
-      - type: warn
-        content:
-          - lang: en
-            text: 'Breaks the Umbacano branch of The Collector quest, and causes save game bloating.'
-          - lang: de
-            text: 'Bricht den Umbacano Zweig der The Collector Quest, und verursacht Spielstand-Aufblähungen.'
-      - type: say
-        content:
-          - lang: en
-            text: 'Recommended to use All Natural''s Real Lights implementation, as it doesn''t suffer from this, fixes a huge number of bugs in the original, and can be used on its own.'
-          - lang: de
-            text: 'Es wird empfohlen All Natural''s Real Lights Implementation zu nutzen, da dies nicht darunter leidet, behebt eine riesige Anzahl von Fehlern des Originals, und kann eigenständig genutzt werden.'
+      - <<: *obsolete
+        subs: [ '[**All Natural - Real Lights.esp**](https://www.nexusmods.com/oblivion/mods/18305/)' ]
+
   - name: 'All Natural - Real Lights.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/18305' ]
     inc: [ '_Real_Lights.esp' ]
