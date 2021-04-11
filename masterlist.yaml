@@ -18244,12 +18244,8 @@ plugins:
   - name: 'kuerteeDeathHasPenalties.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22121' ]
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Obsolete. Upgrade to Kuertee''s "Alternatives To Death And Reload."'
-          - lang: de
-            text: 'Veraltet. Upgraden Sie zu Kuertee''s "Alternatives To Death And Reload."'
+      - <<: *obsolete
+        subs: [ '[Alternatives to death and reload](https://www.nexusmods.com/oblivion/mods/23862)' ]
   - name: 'EnchantedGems_Geomancy.esp'
     msg:
       - type: say
