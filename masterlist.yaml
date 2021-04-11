@@ -18070,30 +18070,6 @@ plugins:
       - crc: 0x7718c0ce
         <<: *dirtyPlugin
         itm: 4
-  - name: 'Sexual_Spriggan.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Obselete. Get Oblivion Sexualized Monsters.esm and OSM-All Genders.esp instead.'
-          - lang: de
-            text: 'Veraltet. Holen Sie sich stattdessen Oblivion Sexualized Monsters.esm und OSM-All Genders.esp.'
-  - name: 'Sexual_Minotaur.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Obselete. Get Oblivion Sexualized Monsters.esm and OSM-All Genders.esp instead.'
-          - lang: de
-            text: 'Veraltet. Holen Sie sich stattdessen Oblivion Sexualized Monsters.esm und OSM-All Genders.esp.'
-  - name: 'Sexual_Ogre.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Obselete. Get Oblivion Sexualized Monsters.esm and OSM-All Genders.esp instead.'
-          - lang: de
-            text: 'Veraltet. Holen Sie sich stattdessen Oblivion Sexualized Monsters.esm und OSM-All Genders.esp.'
   - name: 'Enhanced Vegetation \[1[0125]...\.esp'
     msg:
       - <<: *useOnlyOneX
@@ -18244,12 +18220,8 @@ plugins:
   - name: 'kuerteeDeathHasPenalties.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22121' ]
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Obsolete. Upgrade to Kuertee''s "Alternatives To Death And Reload."'
-          - lang: de
-            text: 'Veraltet. Upgraden Sie zu Kuertee''s "Alternatives To Death And Reload."'
+      - <<: *obsolete
+        subs: [ '[Alternatives to death and reload](https://www.nexusmods.com/oblivion/mods/23862)' ]
   - name: 'EnchantedGems_Geomancy.esp'
     msg:
       - type: say
@@ -18403,38 +18375,6 @@ plugins:
   - name: 'ROM Patch - Alternative Start.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/33114' ]
     tag: [ Scripts ]
-  - name: 'Addendum - Tired.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Old, update to ''Tyler''s Hungry, Thirsty, Sleepy, Tired.esp''.'
-          - lang: de
-            text: 'Alt, Updaten Sie zu ''Tyler''s Hungry, Thirsty, Sleepy, Tired.esp''.'
-  - name: 'Addendum - Hungry.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Old, update to ''Tyler''s Hungry, Thirsty, Sleepy, Tired.esp''.'
-          - lang: de
-            text: 'Alt, Updaten Sie zu ''Tyler''s Hungry, Thirsty, Sleepy, Tired.esp''.'
-  - name: 'Addendum - Sleepy.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Old, update to ''Tyler''s Hungry, Thirsty, Sleepy, Tired.esp''.'
-          - lang: de
-            text: 'Alt, Updaten Sie zu ''Tyler''s Hungry, Thirsty, Sleepy, Tired.esp''.'
-  - name: 'Addendum - Thirsty.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Old, update to ''Tyler''s Hungry, Thirsty, Sleepy, Tired.esp''.'
-          - lang: de
-            text: 'Alt, Updaten Sie zu ''Tyler''s Hungry, Thirsty, Sleepy, Tired.esp''.'
   - name: 'pmQFNaturalHunger.esp'
     req: [ 'pmRealTimeInteractions.esp' ]
   - name: 'ReneerKeyLockMod.esp'
@@ -19620,17 +19560,6 @@ plugins:
     tag:
       - Eyes
       - Hair
-  - name: 'Comprehensive Style Collection RM.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Outdated. Update to latest version.'
-          - lang: de
-            text: 'Veraltet. Updaten Sie zur neuesten Version.'
-    tag:
-      - Eyes
-      - Hair
   - name: 'Cool Hair & Eyelashes for Cobl.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/38291/' ]
     tag:
@@ -20259,18 +20188,10 @@ plugins:
       - Hair
       - NpcFaces
   - name: 'Cute Sexy Elves.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/34449' ]
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Delete and update to newest version - ''Manga Elves.esp'''
-          - lang: de
-            text: 'Entfernen und Updaten Sie zur neuesten Version - ''Manga Elves.esp'''
-    tag:
-      - Eyes
-      - Graphics
-      - Hair
-      - NpcFaces
+      - <<: *obsolete
+        subs: [ '[Manga Elves](https://www.nexusmods.com/oblivion/mods/34449)' ]
   - name: 'Manga Elves.esp'
     inc: [ 'Cute Sexy Elves.esp' ]
     tag:
