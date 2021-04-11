@@ -3664,7 +3664,6 @@ plugins:
       - <<: *deleteOrDeactivateX
         subs: [ 'BSA is now loaded by FCOM_Convergence.esp' ]
         condition: 'file("FCOM_Convergence.esm") and file("FCOM_Convergence_FraNewItems.bsa")'
-      - *dummyFileLoader
       - <<: *requiresX
         subs: [ 'Francesco''s Creatures and Items Resources - Items.bsa' ]
         condition: 'not file("Francesco''s Creatures and Items Resources - Items.bsa") and not file("FCOM_Convergence.esm")'
@@ -5733,22 +5732,10 @@ plugins:
         subs: [ 'VileLair_MOBS.esp' ]
         condition: 'file("VileLair_MOBS.esp")'
 
-  - name: 'BSAloader.esp'
-    msg: [ *dummyFileLoader ]
-  - name: 'FraNewItems.esp'
-    msg: [ *dummyFileLoader ]
   - name: 'Fra.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17621' ]
-    msg: [ *dummyFileLoader ]
-  - name: 'Francesco.esp'
-    msg: [ *dummyFileLoader ]
-  - name: 'MMM.esp'
-    msg: [ *dummyFileLoader ]
-  - name: 'Oblivion.esp'
-    msg: [ *dummyFileLoader ]
   - name: 'TamRes.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/24822' ]
-    msg: [ *dummyFileLoader ]
   - name: 'MrSiika''sFoxes.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/14267' ]
     msg:
@@ -15736,7 +15723,6 @@ plugins:
   - name: 'Better Cities .esp'
     group: *veryEarlyGroup
     after: [ 'DLCShiveringIsles.esp' ]
-    msg: [ *dummyFileLoader ]
   - name: 'Better Cities - Open Cities Reborn.esp'
     group: *citiesGroup
     after:
