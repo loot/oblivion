@@ -837,6 +837,65 @@ common:
         text: 'Denna plugin innehåller vilda föränringar utanför ITM och UDR-records samt borttagna navmeshes och kan kräva ytterligare manuell rensning för att inte störa andra moddar. %1%'
     subs: [ '' ]
 
+  - &xVersion
+    type: say
+    content:
+      - lang: en
+        text: '%1% version.'
+      - lang: de
+        text: '%1% Version.'
+  - &xVersionEnglish
+    <<: *xVersion
+    subs: [ 'English **en**' ]
+  - &xVersionBulgarian
+    <<: *xVersion
+    subs: [ 'Bulgarian **bg**' ]
+  - &xVersionChineseSimplified
+    <<: *xVersion
+    subs: [ 'Chinese (Simplified) **zh_CN**' ]
+  - &xVersionCzech
+    <<: *xVersion
+    subs: [ 'Czech **cs**' ]
+  - &xVersionDanish
+    <<: *xVersion
+    subs: [ 'Danish **da**' ]
+  - &xVersionFinnish
+    <<: *xVersion
+    subs: [ 'Finnish **fi**' ]
+  - &xVersionFrench
+    <<: *xVersion
+    subs: [ 'French **fr**' ]
+  - &xVersionGerman
+    <<: *xVersion
+    subs: [ 'German **de**' ]
+  - &xVersionItalian
+    <<: *xVersion
+    subs: [ 'Italian **it**' ]
+  - &xVersionJapanese
+    <<: *xVersion
+    subs: [ 'Japanese **ja**' ]
+  - &xVersionKorean
+    <<: *xVersion
+    subs: [ 'Korean **ko**' ]
+  - &xVersionPolish
+    <<: *xVersion
+    subs: [ 'Polish **pl**' ]
+  - &xVersionPortuguese
+    <<: *xVersion
+    subs: [ 'Portuguese **pt_PT**' ]
+  - &xVersionPortugueseBrazil
+    <<: *xVersion
+    subs: [ 'Portuguese (Brazil) **pt_BR**' ]
+  - &xVersionRussian
+    <<: *xVersion
+    subs: [ 'Russian **ru**' ]
+  - &xVersionSpanish
+    <<: *xVersion
+    subs: [ 'Spanish **es**' ]
+  - &xVersionSwedish
+    <<: *xVersion
+    subs: [ 'Swedish **sv**' ]
+
 # Cleaning Data Anchors
   - &quickClean
     util: '[TES4Edit](https://www.nexusmods.com/oblivion/mods/11536/)'
