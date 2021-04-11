@@ -20255,18 +20255,10 @@ plugins:
       - Hair
       - NpcFaces
   - name: 'Cute Sexy Elves.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/34449' ]
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Delete and update to newest version - ''Manga Elves.esp'''
-          - lang: de
-            text: 'Entfernen und Updaten Sie zur neuesten Version - ''Manga Elves.esp'''
-    tag:
-      - Eyes
-      - Graphics
-      - Hair
-      - NpcFaces
+      - <<: *obsolete
+        subs: [ '[Manga Elves](https://www.nexusmods.com/oblivion/mods/34449)' ]
   - name: 'Manga Elves.esp'
     inc: [ 'Cute Sexy Elves.esp' ]
     tag:
