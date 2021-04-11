@@ -303,6 +303,71 @@ common:
       - lang: sv
         text: '%1% är inluderat med denna mod.'
 
+  - &languageX
+    type: say
+    content:
+      - lang: en
+        text: 'Language: %1%'
+      - lang: de
+        text: 'Sprache: %1%'
+      - lang: es
+        text: 'Lengua: %1%'
+      - lang: pt_BR
+        text: 'Língua: %1%'
+      - lang: pt_PT
+        text: 'Língua: %1%'
+  - &languageXEnglish
+    <<: *languageX
+    subs: [ '**en**' ]
+  - &languageXBulgarian
+    <<: *languageX
+    subs: [ '**bg**' ]
+  - &languageXChineseSimplified
+    <<: *languageX
+    subs: [ '**zh_CN**' ]
+  - &languageXCzech
+    <<: *languageX
+    subs: [ '**cs**' ]
+  - &languageXDanish
+    <<: *languageX
+    subs: [ '**da**' ]
+  - &languageXFinnish
+    <<: *languageX
+    subs: [ '**fi**' ]
+  - &languageXFrench
+    <<: *languageX
+    subs: [ '**fr**' ]
+  - &languageXGerman
+    <<: *languageX
+    subs: [ '**de**' ]
+  - &languageXItalian
+    <<: *languageX
+    subs: [ '**it**' ]
+  - &languageXJapanese
+    <<: *languageX
+    subs: [ '**ja**' ]
+  - &languageXKorean
+    <<: *languageX
+    subs: [ '**ko**' ]
+  - &languageXPolish
+    <<: *languageX
+    subs: [ '**pl**' ]
+  - &languageXPortuguese
+    <<: *languageX
+    subs: [ '**pt_PT**' ]
+  - &languageXPortugueseBrazil
+    <<: *languageX
+    subs: [ '**pt_BR**' ]
+  - &languageXRussian
+    <<: *languageX
+    subs: [ '**ru**' ]
+  - &languageXSpanish
+    <<: *languageX
+    subs: [ '**es**' ]
+  - &languageXSwedish
+    <<: *languageX
+    subs: [ '**sv**' ]
+
   - &masterReassign
     type: say
     content:
@@ -836,65 +901,6 @@ common:
       - lang: sv
         text: 'Denna plugin innehåller vilda föränringar utanför ITM och UDR-records samt borttagna navmeshes och kan kräva ytterligare manuell rensning för att inte störa andra moddar. %1%'
     subs: [ '' ]
-
-  - &xVersion
-    type: say
-    content:
-      - lang: en
-        text: '%1% version.'
-      - lang: de
-        text: '%1% Version.'
-  - &xVersionEnglish
-    <<: *xVersion
-    subs: [ 'English **en**' ]
-  - &xVersionBulgarian
-    <<: *xVersion
-    subs: [ 'Bulgarian **bg**' ]
-  - &xVersionChineseSimplified
-    <<: *xVersion
-    subs: [ 'Chinese (Simplified) **zh_CN**' ]
-  - &xVersionCzech
-    <<: *xVersion
-    subs: [ 'Czech **cs**' ]
-  - &xVersionDanish
-    <<: *xVersion
-    subs: [ 'Danish **da**' ]
-  - &xVersionFinnish
-    <<: *xVersion
-    subs: [ 'Finnish **fi**' ]
-  - &xVersionFrench
-    <<: *xVersion
-    subs: [ 'French **fr**' ]
-  - &xVersionGerman
-    <<: *xVersion
-    subs: [ 'German **de**' ]
-  - &xVersionItalian
-    <<: *xVersion
-    subs: [ 'Italian **it**' ]
-  - &xVersionJapanese
-    <<: *xVersion
-    subs: [ 'Japanese **ja**' ]
-  - &xVersionKorean
-    <<: *xVersion
-    subs: [ 'Korean **ko**' ]
-  - &xVersionPolish
-    <<: *xVersion
-    subs: [ 'Polish **pl**' ]
-  - &xVersionPortuguese
-    <<: *xVersion
-    subs: [ 'Portuguese **pt_PT**' ]
-  - &xVersionPortugueseBrazil
-    <<: *xVersion
-    subs: [ 'Portuguese (Brazil) **pt_BR**' ]
-  - &xVersionRussian
-    <<: *xVersion
-    subs: [ 'Russian **ru**' ]
-  - &xVersionSpanish
-    <<: *xVersion
-    subs: [ 'Spanish **es**' ]
-  - &xVersionSwedish
-    <<: *xVersion
-    subs: [ 'Swedish **sv**' ]
 
 # Cleaning Data Anchors
   - &quickClean
