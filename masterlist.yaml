@@ -808,6 +808,10 @@ common:
     <<: *useVersion
     subs: [ 'Nehrim' ]
     condition: *nehrimCond
+  - &useVersionOOO_FCOM
+    <<: *useVersion
+    subs: [ 'FCOM/OOO' ]
+    condition: 'active("FCOM_Convergence.esm") or active("Oscuro''s_Oblivion_Overhaul.esm")'
 
   - &useVersionNon
     type: error
@@ -9841,23 +9845,16 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/21388' ]
     tag: [ Graphics ]
   - name: 'CNRP Brumav02.esp'
-    msg:
-      - <<: *useInstead
-        subs: [ 'CNRP Bruma4OOO.esp' ]
-        condition: 'active("FCOM_Convergence.esm") or active("Oscuro''s_Oblivion_Overhaul.esm")'
+    msg: [ *useVersionOOO_FCOM ]
 
   - name: 'CNRP Chorrol(4OOO)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/21628' ]
     tag: [ Graphics ]
   - name: 'CNRP Chorrol.esp'
-    msg:
-      - <<: *useInstead
-        subs: [ 'CNRP Chorrol4OOO.esp' ]
-        condition: 'active("FCOM_Convergence.esm") or active("Oscuro''s_Oblivion_Overhaul.esm")'
+    msg: [ *useVersionOOO_FCOM ]
 
-  - name: 'CNRP DB( for OOO)?\.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/28027' ]
   - name: 'CNRP DB.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/28027' ]
     msg:
       - <<: *useInstead
         subs: [ '[CNPR DB for OOO.esp](https://www.nexusmods.com/oblivion/mods/29428)' ]
@@ -9867,18 +9864,12 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/24509' ]
     tag: [ Graphics ]
   - name: 'CNRP Cheydinhal.esp'
-    msg:
-      - <<: *useInstead
-        subs: [ 'CNRP Cheydinhal4OOO.esp' ]
-        condition: 'active("FCOM_Convergence.esm") or active("Oscuro''s_Oblivion_Overhaul.esm")'
+    msg: [ *useVersionOOO_FCOM ]
 
   - name: 'CNRP FightersGuild(4OOO)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22884' ]
   - name: 'CNRP FightersGuild.esp'
-    msg:
-      - <<: *useInstead
-        subs: [ 'CNRP FightersGuild4OOO.esp' ]
-        condition: 'active("FCOM_Convergence.esm") or active("Oscuro''s_Oblivion_Overhaul.esm")'
+    msg: [ *useVersionOOO_FCOM ]
 
   - name: 'DrI_Poisons.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/18667' ]
