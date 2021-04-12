@@ -8445,26 +8445,28 @@ plugins:
   - name: 'Town Guard Armor Replacers.esp'
     url: [ 'http://tesalliance.org/forums/index.php?/files/file/563-town-guard-armor-replacer' ]
     tag: [ Graphics ]
-  - name: 'mz_Shields.esp'
+
+  - name: 'mz_Shields(_SI)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/10376' ]
-    tag:
-      - Deactivate
-      - Graphics
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Magic Shields' ]
+        condition: 'many("mz_Shields(_SI)?\.esp")'
+    tag: [ Graphics ]
+  - name: 'mz_Shields.esp'
+    msg: [ *useVersionShiveringIsles ]
     dirty:
       - <<: *quickClean
         crc: 0xB1D9EF78
-        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 3
   - name: 'mz_Shields_SI.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/10376' ]
-    tag:
-      - Graphics
-      - NoMerge
     dirty:
       - <<: *quickClean
         crc: 0x050C5ECE
-        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 3
+
   - name: 'TT-EquipableBeardsLEVELEDLIST.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/10870' ]
     tag: [ Delev ]
