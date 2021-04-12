@@ -13555,21 +13555,32 @@ plugins:
         <<: *dirtyPlugin
         itm: 5
         udr: 3
+
   - name: 'Blood&Mud.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/12016' ]
-    tag:
-      - Hair
-      - NpcFaces
     msg:
       - <<: *wildEdits
-        subs: [ 'Record names have been changed, you can use the xEdit script **Restore record names from master** to correct them.' ]
-        condition: 'checksum("Blood&Mud.esp", 23A62955)'
+        subs: [ 'Incorrectly renames various records, use the **Restore record names from master** TES4Edit script to fix them.' ]
+        condition: 'checksum("Blood&Mud.esp", 23A62955) or checksum("Blood&Mud.esp", E9B56954)' # Pre- and post-cleaning
     dirty:
       - <<: *quickClean
-        crc: 0xB5963089
-        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 47
+        crc: 0x23A62955
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 36
         udr: 401
+      - <<: *quickClean
+        crc: 0xE11C0D7E
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1
+    tag:
+      - Graphics
+      - Invent.Add
+      - Invent.Remove
+      - NPC.Eyes
+      - NPC.Hair
+      - NPC.FaceGen
+      - R.Hair
+
   - name: 'The Lost Spires.esp'
     url:
       - 'https://www.nexusmods.com/oblivion/mods/12997'
