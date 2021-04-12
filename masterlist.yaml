@@ -18473,16 +18473,33 @@ plugins:
         condition: 'checksum("training spells.esp", DD4985A)'
   - name: 'Judgement of the Nine.esp'
     tag: [ Graphics ]
-  - name: 'AgarMoreVariedSpellEffects.esp'
+
+  - name: '(AgarMoreVariedSpellEffects|AgarVariedSpellSounds_SupremeMagicka)\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/14799' ]
     tag: [ Sound ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Varied Spell Sounds' ]
+        condition: 'many("(AgarMoreVariedSpellEffects|AgarVariedSpellSounds_SupremeMagicka)\.esp")'
+  - name: 'AgarVariedSpellSounds_SupremeMagicka.esp'
+    inc: [ 'SupremeMagicka.esp' ]
+    tag:
+      - Actors.ACBS
+      - Actors.RecordFlags
+      - Actors.Stats
+      - EffectStats
+      - Graphics
+      - Scripts
+      - SpellStats
+      - Stats
+    dirty:
+      - <<: *quickClean
+        crc: 0xF66F81A3
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 17
+
   - name: 'cidnothumpMMversion.esp'
     tag: [ Sound ]
-  - name: 'AgarVariedSpellSounds_SupremeMagicka.esp'
-    tag: [ Sound ]
-    dirty:
-      - crc: 0xf66f81a3
-        <<: *dirtyPlugin
-        itm: 17
   - name: 'SupremeMagicka.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/10791'
