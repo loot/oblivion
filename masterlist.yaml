@@ -6226,23 +6226,15 @@ plugins:
     clean:
       - crc: 0x06B037D8
         util: 'TES4Edit v4.0.2i'
-  - name: '300_Lore Dialogue.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/9722' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'May have a problem with Storms and Sounds.'
-          - lang: de
-            text: 'Kann ein Problem mit Storms and Sounds haben.'
+
   - name: '300_Lore_Dialogue_Updated.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/25091' ]
-    inc: [ '300_Lore Dialogue.esp' ]
     dirty:
       - <<: *quickClean
         crc: 0x366C8D97
         util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
+
   - name: 'AddActorValues_example.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/33248' ]
     msg: [ *moddingPlugin ]
@@ -6998,16 +6990,7 @@ plugins:
             text: 'Requires: Coronerras Maximum Compatibility Skeletons, VipCxj''s Plugin Collection v3'
           - lang: de
             text: 'Benötigt: Coronerras Maximum Compatibility Skeletons, VipCxj''s Plugin Collection v3'
-  - name: 'Vows and Covenants.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/20736' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Conflicts with Deadly Reflex. Minor Problems.'
-          - lang: de
-            text: 'Steht im Konflikt mit Deadly Reflex. Geringe Probleme.'
-        condition: 'file("Deadly Reflex.*\.esp")'
+
   - name: 'Walk to Oblivion.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/23690/' ]
     msg:
@@ -11305,15 +11288,7 @@ plugins:
             text: 'Do not use. This mod is confirmed to break a number of vanilla quests. Delete immediately.'
           - lang: de
             text: 'Nicht nutzen. Diese Mod bricht nachgewiesenermaßen eine gewisse Anzahl von Original-Quests zu brechen. Unverzüglich entfernen.'
-  - name: 'FuseSnailRacing.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/4596' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'If using UL:Imperial Isle, use the patch ''Fuses Snail Racing Unique Landscapes Imperial Isle patch.esp''.'
-          - lang: de
-            text: 'Wenn UL:Imperial Isle genutzt wird, nutzen Sie auch den Patch ''Fuses Snail Racing Unique Landscapes Imperial Isle patch.esp''.'
+
   - name: 'GatewayRealm.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/33984' ]
     dirty:
@@ -14318,14 +14293,7 @@ plugins:
         <<: *dirtyPlugin
         itm: 2
         udr: 134
-  - name: 'Ravenpride-Stendarr patch.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Obsolete as of version 1.2 of Stendarr Valley.'
-          - lang: de
-            text: 'Veraltet vom Stand der Version 1.2 aus von Stendarr Valley.'
+
   - name: 'WindspearTower-StendarrValley compatibility patch.esp'
     msg:
       - type: say
@@ -14413,14 +14381,7 @@ plugins:
             text: 'Obsolete if using Lush Woodlands 1.3 or higher.'
           - lang: de
             text: 'Veraltet wenn Lush Woodlands 1.3 oder neuer genutzt wird.'
-  - name: 'EtInArkay-LushWoodlands patch.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Obsolete if using Lush Woodlands 1.3 or higher.'
-          - lang: de
-            text: 'Veraltet wenn Lush Woodlands 1.3 oder neuer genutzt wird.'
+
   - name: 'Verwen Brewery (UL_AY_AC|UL Ancient Yews) Compatable\.esp'
     msg:
       - <<: *useOnlyOneX
