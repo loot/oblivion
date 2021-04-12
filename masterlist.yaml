@@ -9863,23 +9863,14 @@ plugins:
         subs: [ '[CNPR DB for OOO.esp](https://www.nexusmods.com/oblivion/mods/29428)' ]
         condition: 'active("FCOM_Convergence.esm") or active("Oscuro''s_Oblivion_Overhaul.esm")'
 
+  - name: 'CNRP Cheydinhal(4OOO)?\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/24509' ]
+    tag: [ Graphics ]
   - name: 'CNRP Cheydinhal.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/24509' ]
     msg:
-      - type: warn
-        content:
-          - lang: en
-            text: 'Use ''CNRP Cheydinhall4OOO.esp'' instead.'
-          - lang: de
-            text: 'Nutzen Sie stattdessen ''CNRP Cheydinhall4OOO.esp''.'
+      - <<: *useInstead
+        subs: [ 'CNRP Cheydinhal4OOO.esp' ]
         condition: 'active("FCOM_Convergence.esm") or active("Oscuro''s_Oblivion_Overhaul.esm")'
-    tag: [ Invent ]
-  - name: 'CNRP Cheydinhal4OOO.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/24509' ]
-    tag: [ Invent ]
-    clean:
-      - crc: 0xF0416E43
-        util: 'TES4Edit v4.0.3f'
 
   - name: 'CNRP FightersGuild(4OOO)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22884' ]
