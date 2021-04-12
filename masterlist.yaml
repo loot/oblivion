@@ -18301,21 +18301,27 @@ plugins:
       - R.Ears
       - R.Relations
       - R.Teeth
+
   - name: 'StarX Vanilla Vampires Revised.esp'
     url:
       - 'https://www.nexusmods.com/oblivion/mods/16417'
       - 'https://www.nexusmods.com/oblivion/mods/42912'
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Has problems with OOO (StarX vampires will fight OOO vampires, and some chests/weapons will be in skewed places).'
-          - lang: de
-            text: 'Hat Probleme mit OOO (StarX Vampire werden mit OOO Vampiren kämpfen, und einige Truhen/Waffen werden in verstellten Orten sein).'
-        condition: *OOOCond
+      - <<: *obsolete
+        subs: [ '[StarX VVR Updated](https://www.nexusmods.com/oblivion/mods/42912)' ]
+        condition: 'checksum("StarX Vanilla Vampires Revised.esp", B892AF92)'
+      - <<: *patchProvided
+        subs: [ 'FCOM/OOO' ]
+        condition: '(active("FCOM_Convergence.esm") or active("Oscuro''s_Oblivion_Overhaul.esm")) and not active("StarX VVR_OOO_FCOM Patch.esp")'
+      - <<: *wildEdits
+        subs: [ 'Delete the **00023E39** record from this file using TES4Edit.' ]
+        condition: 'checksum("StarX Vanilla Vampires Revised.esp", 6C4E57D4)'
     tag:
-      - C.Light
       - Actors.ACBS
+      - Actors.Spells
+      - Actors.Stats
+      - Relations.Change
+
   - name: 'LTDVampireOverhaul.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/27329' ]
     dirty:
