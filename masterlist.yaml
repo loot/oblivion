@@ -9846,20 +9846,15 @@ plugins:
         subs: [ 'CNRP Bruma4OOO.esp' ]
         condition: 'active("FCOM_Convergence.esm") or active("Oscuro''s_Oblivion_Overhaul.esm")'
 
+  - name: 'CNRP Chorrol(4OOO)?\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/21628' ]
+    tag: [ Graphics ]
   - name: 'CNRP Chorrol.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/21628' ]
     msg:
-      - type: warn
-        content:
-          - lang: en
-            text: 'Use ''CNRP Chorrol4OOO.esp'' instead.'
-          - lang: de
-            text: 'Nutzen Sie stattdessen ''CNRP Chorrol4OOO.esp''.'
+      - <<: *useInstead
+        subs: [ 'CNRP Chorrol4OOO.esp' ]
         condition: 'active("FCOM_Convergence.esm") or active("Oscuro''s_Oblivion_Overhaul.esm")'
-    tag: [ Invent ]
-  - name: 'CNRP Chorrol4OOO.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/21628' ]
-    tag: [ Invent ]
+
   - name: 'CNRP DB.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/28027' ]
     msg:
