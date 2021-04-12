@@ -13562,12 +13562,6 @@ plugins:
       - <<: *wildEdits
         subs: [ 'Incorrectly renames various records, use the **Restore record names from master** TES4Edit script to fix them.' ]
         condition: 'checksum("Blood&Mud.esp", 23A62955) or checksum("Blood&Mud.esp", FAC5765D)'
-    dirty:
-      - <<: *quickClean
-        crc: 0x23A62955
-        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 37
-        udr: 401
     tag:
       - Graphics
       - Invent.Add
@@ -13576,6 +13570,12 @@ plugins:
       - NPC.Hair
       - NPC.FaceGen
       - R.Hair
+    dirty:
+      - <<: *quickClean
+        crc: 0x23A62955
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 37
+        udr: 401
 
   - name: 'The Lost Spires.esp'
     url:
