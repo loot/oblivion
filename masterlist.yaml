@@ -9855,19 +9855,14 @@ plugins:
         subs: [ 'CNRP Chorrol4OOO.esp' ]
         condition: 'active("FCOM_Convergence.esm") or active("Oscuro''s_Oblivion_Overhaul.esm")'
 
-  - name: 'CNRP DB.esp'
+  - name: 'CNRP DB( for OOO)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/28027' ]
+  - name: 'CNRP DB.esp'
     msg:
-      - type: warn
-        content:
-          - lang: en
-            text: 'Use ''CNPR DB for OOO.esp'' instead.'
-          - lang: de
-            text: 'Nutzen Sie stattdessen ''CNPR DB for OOO.esp''.'
+      - <<: *useInstead
+        subs: [ '[CNPR DB for OOO.esp](https://www.nexusmods.com/oblivion/mods/29428)' ]
         condition: 'active("FCOM_Convergence.esm") or active("Oscuro''s_Oblivion_Overhaul.esm")'
-    tag:
-      - Graphics
-      - Invent
+
   - name: 'CNRP Cheydinhal.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/24509' ]
     msg:
