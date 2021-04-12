@@ -808,6 +808,10 @@ common:
     <<: *useVersion
     subs: [ 'Nehrim' ]
     condition: *nehrimCond
+  - &useVersionOOO_FCOM
+    <<: *useVersion
+    subs: [ 'FCOM/OOO' ]
+    condition: 'active("FCOM_Convergence.esm") or active("Oscuro''s_Oblivion_Overhaul.esm")'
 
   - &useVersionNon
     type: error
@@ -9819,78 +9823,37 @@ plugins:
   - name: 'Skyrimesque Counts and Countesses.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/43420' ]
     tag: [ Invent ]
+
+  - name: 'CNRP Bruma(v02|4OOO)\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/21388' ]
+    tag: [ Graphics ]
   - name: 'CNRP Brumav02.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/21388' ]
-    msg:
-      - type: warn
-        content:
-          - lang: en
-            text: 'Use ''CNRP Bruma4OOO.esp'' instead.'
-          - lang: de
-            text: 'Nutzen Sie stattdessen ''CNRP Bruma4OOO.esp''.'
-        condition: 'active("FCOM_Convergence.esm") or active("Oscuro''s_Oblivion_Overhaul.esm")'
-    tag: [ Invent ]
-  - name: 'CNRP Bruma4OOO.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/21388' ]
-    tag: [ Invent ]
+    msg: [ *useVersionOOO_FCOM ]
+
+  - name: 'CNRP Chorrol(4OOO)?\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/21628' ]
+    tag: [ Graphics ]
   - name: 'CNRP Chorrol.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/21628' ]
-    msg:
-      - type: warn
-        content:
-          - lang: en
-            text: 'Use ''CNRP Chorrol4OOO.esp'' instead.'
-          - lang: de
-            text: 'Nutzen Sie stattdessen ''CNRP Chorrol4OOO.esp''.'
-        condition: 'active("FCOM_Convergence.esm") or active("Oscuro''s_Oblivion_Overhaul.esm")'
-    tag: [ Invent ]
-  - name: 'CNRP Chorrol4OOO.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/21628' ]
-    tag: [ Invent ]
+    msg: [ *useVersionOOO_FCOM ]
+
   - name: 'CNRP DB.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/28027' ]
     msg:
-      - type: warn
-        content:
-          - lang: en
-            text: 'Use ''CNPR DB for OOO.esp'' instead.'
-          - lang: de
-            text: 'Nutzen Sie stattdessen ''CNPR DB for OOO.esp''.'
+      - <<: *useInstead
+        subs: [ '[CNPR DB for OOO.esp](https://www.nexusmods.com/oblivion/mods/29428)' ]
         condition: 'active("FCOM_Convergence.esm") or active("Oscuro''s_Oblivion_Overhaul.esm")'
-    tag:
-      - Graphics
-      - Invent
+
+  - name: 'CNRP Cheydinhal(4OOO)?\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/24509' ]
+    tag: [ Graphics ]
   - name: 'CNRP Cheydinhal.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/24509' ]
-    msg:
-      - type: warn
-        content:
-          - lang: en
-            text: 'Use ''CNRP Cheydinhall4OOO.esp'' instead.'
-          - lang: de
-            text: 'Nutzen Sie stattdessen ''CNRP Cheydinhall4OOO.esp''.'
-        condition: 'active("FCOM_Convergence.esm") or active("Oscuro''s_Oblivion_Overhaul.esm")'
-    tag: [ Invent ]
-  - name: 'CNRP Cheydinhal4OOO.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/24509' ]
-    tag: [ Invent ]
-    clean:
-      - crc: 0xF0416E43
-        util: 'TES4Edit v4.0.3f'
+    msg: [ *useVersionOOO_FCOM ]
+
+  - name: 'CNRP FightersGuild(4OOO)?\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/22884' ]
   - name: 'CNRP FightersGuild.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/22884' ]
-    msg:
-      - type: warn
-        content:
-          - lang: en
-            text: 'Use ''CNRP FightersGuild4OOO.esp'' instead.'
-          - lang: de
-            text: 'Nutzen Sie stattdessen ''CNRP FightersGuild4OOO.esp''.'
-        condition: 'active("FCOM_Convergence.esm") or active("Oscuro''s_Oblivion_Overhaul.esm")'
-    tag: [ Invent ]
-  - name: 'CNRP FightersGuild4OOO.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/22884' ]
-    tag: [ Invent ]
+    msg: [ *useVersionOOO_FCOM ]
+
   - name: 'DrI_Poisons.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/18667' ]
     tag: [ Invent ]
