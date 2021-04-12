@@ -3249,10 +3249,14 @@ plugins:
   ### Chronicles of Reeb ###
   - name: 'Belas.esm'
     url: [ 'https://www.moddb.com/mods/the-chronicles-of-reeb-working-title/downloads/the-chronicles-of-reeb' ]
-    msg: [ *corrupt ]
+    msg:
+      - <<: *corrupt
+        condition: 'checksum("Belas.esm", DAA2FBF2)'
   - name: 'Quest.esp'
     url: [ 'https://www.moddb.com/mods/the-chronicles-of-reeb-working-title/downloads/the-chronicles-of-reeb' ]
-    msg: [ *corrupt ]
+    msg:
+      - <<: *corrupt
+        condition: 'checksum("Quest.esp", 4D6BBFB0)'
 
   - name: 'Hammerfell.esm'
     url: [ 'https://www.nexusmods.com/oblivion/mods/34484' ]
