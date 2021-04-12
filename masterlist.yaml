@@ -3254,18 +3254,13 @@ plugins:
   - name: 'Belas.esm'
     url: [ 'https://www.moddb.com/mods/the-chronicles-of-reeb-working-title/downloads/the-chronicles-of-reeb' ]
     msg:
-      - <<: *deleteOrDeactivateX
-        subs: [ 'Part of Chronicles of Reeb. Do not use. Has serious landscape issues due to editing the Tamriel worldspace.' ]
+      - <<: *corrupt
+        condition: 'checksum("Belas.esm", DAA2FBF2)'
   - name: 'Quest.esp'
     url: [ 'https://www.moddb.com/mods/the-chronicles-of-reeb-working-title/downloads/the-chronicles-of-reeb' ]
     msg:
-      - type: warn
-        content:
-          - lang: en
-            text: 'Part of Chronicles of Reeb. Goes with Belas.esm. Do not use. This mod has serious landscape errors in the Tamriel worldspace.'
-          - lang: de
-            text: 'Teil von Chronicles of Reeb. Geht mit Belas.esm. Nicht nutzen. Diese Mod hat ernste Landschafts-Fehler in der Tamriel-Umgebung.'
-
+      - <<: *corrupt
+        condition: 'checksum("Quest.esp", 4D6BBFB0)'
 
   - name: 'Hammerfell.esm'
     url: [ 'https://www.nexusmods.com/oblivion/mods/34484' ]
