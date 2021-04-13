@@ -2177,7 +2177,10 @@ plugins:
         name: 'Oblivion Character Overhaul v2'
       - link: 'https://www.nexusmods.com/oblivion/mods/48136'
         name: 'Oblivion Character Overhaul v2 - Unofficial Patch'
-    after: [ 'MaleBodyReplacerV5.esp' ]
+    after:
+      - 'MaleBodyReplacerV3.esp'
+      - 'MaleBodyReplacerV4.esp'
+      - 'MaleBodyReplacerV5.esp'
     req:
       - <<: *OBSE
         condition: 'version("Oblivion_Character_Overhaul.esp", "2.0", >=)'
@@ -2185,19 +2188,30 @@ plugins:
         display: '[Blockhead](https://www.nexusmods.com/oblivion/mods/43752)'
         condition: 'version("Oblivion_Character_Overhaul.esp", "2.0", >=)'
     tag:
-      - Body-F
-      - Body-M
-      - Eyes
-      - NpcFaces
+      - Actors.ACBS
+      - Graphics
+      - NPC.Eyes
+      - NPC.FaceGen
+      - NPC.Hair
+      - Body-F # R.Body-F
+      - Body-M # R.Body-M
+      - Body-Size-M # R.Body-Size-M
       - R.Ears
+      - Eyes # R.Eyes
+      - Hair # R.Hair
       - R.Head
       - R.Mouth
     msg:
       - <<: *patch3rdParty
         subs:
-          - 'Wrye Bash Bashed Patch'
+          - 'Wrye Bash''s Bashed Patch'
           - '[OCOv2 - Bashed Patch Eyes Fix](https://www.nexusmods.com/oblivion/mods/49988)'
         condition: 'version("Oblivion_Character_Overhaul.esp", "2.0", >=) and file("Bashed Patch.*\.esp") and not file("OCO_Eyes_Fix.esp")'
+    dirty:
+      - <<: *quickClean
+        crc: 0x5B7D8F89
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
 
 ###### Encounters - Allies ######
   - name: 'StokerWolff.esp'
