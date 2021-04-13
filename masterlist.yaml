@@ -156,6 +156,10 @@ common:
     <<: *alreadyInX
     subs: [ 'FCOM Convergence' ]
     condition: 'active("FCOM_Convergence.esm")'
+  - &alreadyInWEPON
+    <<: *alreadyInX
+    subs: [ 'Weapon Expansion Pack for Oblivion Nthusiasts' ]
+    condition: file("Weapon Expansion Pack for Oblivion Nthusiasts.esp")
 
   - &alreadyInOrFixedByX
     type: error
@@ -7852,9 +7856,12 @@ plugins:
   - name: 'Fighters Guild Scalemail Full.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/14195' ]
     tag: [ Invent ]
+
   - name: 'FineWeapons.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/7317' ]
+    msg: [ *alreadyInWEPON ]
     tag: [ Graphics ]
+
   - name: 'FlameGlassEquipment.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/4000' ]
     tag: [ Graphics ]
@@ -8104,6 +8111,16 @@ plugins:
         util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 3
         udr: 11
+
+  - name: 'Mithril and Orcish Weapon Sets by Ionis.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/6396' ]
+    msg: [ *alreadyInWEPON ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xD6C2B2AF
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 3
+
   - name: 'Nature''s_bounty.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/21618' ]
     dirty:
@@ -8237,9 +8254,12 @@ plugins:
   - name: 'Rune of Independence.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/36694' ]
     req: [ *OBSEv19 ]
+
   - name: 'RustyItems.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/7190' ]
+    msg: [ *alreadyInWEPON ]
     tag: [ Graphics ]
+
   - name: 'RTFemaleReplacerV12.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/15624' ]
     msg:
@@ -9900,13 +9920,9 @@ plugins:
           - lang: de
             text: 'Nur ein IABane Oils X.esp nutzen'
     tag: [ Factions ]
+
   - name: 'Weapon Expansion Pack for Oblivion Nthusiasts.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/35560' ]
-    inc:
-      - 'exhoffhandseries_Ionis_Mithril+Orcish.esp'
-      - 'FineWeapons.esp'
-      - 'Mithril and Orcish Weapon Sets by Ionis.esp'
-      - 'RustyItems.esp'
     tag:
       - Delev
       - Graphics
@@ -9928,6 +9944,7 @@ plugins:
         util: 'TES4Edit v4.0.3f'
       - crc: 0xC35D9987
         util: 'TES4Edit v4.0.3f'
+
   - name: 'Oblivifall - Something''s Not Right.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/27145' ]
     dirty:
