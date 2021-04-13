@@ -9453,7 +9453,7 @@ plugins:
     msg:
       - <<: *wildEdits
         subs: [ 'Delete the unused record **01000CE7** using TES4Edit, blocks merging into the Bashed Patch.' ]
-        condition: 'checksum("WCGL - Wilderness Creatures 1.1.esp", 187692FD)'
+        condition: 'active("Bashed Patch.*\.esp") and checksum("WCGL - Wilderness Creatures 1.1.esp", 187692FD)'
     tag:
       - Delev
       - Relev
