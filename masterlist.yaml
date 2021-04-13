@@ -9442,6 +9442,7 @@ plugins:
             text: 'Consider using Creature Diversity.esp or MMM or Frans instead.'
           - lang: de
             text: 'Erwägen Sie stattdessen Creature Diversity.esp oder MMM oder Frans zu nutzen.'
+
   - name: 'WCGL - Wilderness Creatures 1.1.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/1969' ]
     inc:
@@ -9449,6 +9450,19 @@ plugins:
       - 'Francesco''s Leveled Creatures-Items Mod.esm'
       - 'Mart''s Monster Mod.esm'
       - 'Oscuro''s_Oblivion_Overhaul.esp'
+    msg:
+      - <<: *wildEdits
+        subs: [ 'Delete the unused record **01000CE7** using TES4Edit, blocks merging into the Bashed Patch.' ]
+        condition: 'active("Bashed Patch.*\.esp") and checksum("WCGL - Wilderness Creatures 1.1.esp", 187692FD)'
+    tag:
+      - Delev
+      - Relev
+    dirty:
+      - <<: *quickClean
+        crc: 0x05F50AC9
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 6
+
   - name: 'Master-Crafting-1.1-MMM.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/19846' ]
     req: [ 'Master-Crafting-1.1-MMM Greaves fix.esp' ]
