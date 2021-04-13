@@ -12633,17 +12633,18 @@ plugins:
   - name: 'The Black Sacrament.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/21808' ]
     req: [ *OBSE ]
+
   - name: 'TheForgottenRealm.esp'
     url:
-      - 'https://www.nexusmods.com/oblivion/mods/32559'
-      - 'https://www.nexusmods.com/oblivion/mods/35696'
+      - link: 'https://www.nexusmods.com/oblivion/mods/32559/'
+        name: 'The Forgotten Realm OLD'
+      - link: 'https://www.nexusmods.com/oblivion/mods/35696/'
+        name: 'The Forgotten Realm Update'
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Possible CTDs. Enable only on time of game in TheForgottenRealm.esp'
-          - lang: de
-            text: 'Mögliche CTDs. On time of game nur aktivieren in TheForgottenRealm.esp'
+      - <<: *obsolete
+        subs: [ '[The Forgotten Realm Update](https://www.nexusmods.com/oblivion/mods/35696/)' ]
+        condition: 'checksum("TheForgottenRealm.esp", F6A76EB2) or checksum("TheForgottenRealm.esp", 0DF0A52C)'
+
   - name: 'The forgotten Castle.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/15301' ]
     tag: [ Hair ]
