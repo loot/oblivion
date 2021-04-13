@@ -6132,21 +6132,13 @@ plugins:
         crc: 0x71BDDEC0
         util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 3
+
   - name: '_Real_Lights.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/10891' ]
     msg:
-      - type: warn
-        content:
-          - lang: en
-            text: 'Breaks the Umbacano branch of The Collector quest, and causes save game bloating.'
-          - lang: de
-            text: 'Bricht den Umbacano Zweig der The Collector Quest, und verursacht Spielstand-Aufblähungen.'
-      - type: say
-        content:
-          - lang: en
-            text: 'Recommended to use All Natural''s Real Lights implementation, as it doesn''t suffer from this, fixes a huge number of bugs in the original, and can be used on its own.'
-          - lang: de
-            text: 'Es wird empfohlen All Natural''s Real Lights Implementation zu nutzen, da dies nicht darunter leidet, behebt eine riesige Anzahl von Fehlern des Originals, und kann eigenständig genutzt werden.'
+      - <<: *obsolete
+        subs: [ '[**All Natural - Real Lights.esp**](https://www.nexusmods.com/oblivion/mods/18305/)' ]
+
   - name: 'All Natural - Real Lights.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/18305' ]
     inc: [ '_Real_Lights.esp' ]
@@ -12641,17 +12633,18 @@ plugins:
   - name: 'The Black Sacrament.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/21808' ]
     req: [ *OBSE ]
+
   - name: 'TheForgottenRealm.esp'
     url:
-      - 'https://www.nexusmods.com/oblivion/mods/32559'
-      - 'https://www.nexusmods.com/oblivion/mods/35696'
+      - link: 'https://www.nexusmods.com/oblivion/mods/32559/'
+        name: 'The Forgotten Realm OLD'
+      - link: 'https://www.nexusmods.com/oblivion/mods/35696/'
+        name: 'The Forgotten Realm Update'
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Possible CTDs. Enable only on time of game in TheForgottenRealm.esp'
-          - lang: de
-            text: 'Mögliche CTDs. On time of game nur aktivieren in TheForgottenRealm.esp'
+      - <<: *obsolete
+        subs: [ '[The Forgotten Realm Update](https://www.nexusmods.com/oblivion/mods/35696/)' ]
+        condition: 'checksum("TheForgottenRealm.esp", F6A76EB2) or checksum("TheForgottenRealm.esp", 0DF0A52C)'
+
   - name: 'The forgotten Castle.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/15301' ]
     tag: [ Hair ]
@@ -18235,20 +18228,7 @@ plugins:
       - crc: 0x9d79b935
         <<: *dirtyPlugin
         itm: 65
-  - name: 'Quest Award Leveller - Knights of the Nine.esp'
-    tag: [ Scripts ]
-    msg:
-      - type: warn
-        content:
-          - lang: en
-            text: 'Contains corrupt identical-to-master records. Automated cleaning with TES4Edit will remove them.'
-          - lang: de
-            text: 'Enthält korrupte Identisch-zum-Master Einträge. Automatische Säuberung mit TES4Edit wird diese entfernen.'
-        condition: 'checksum("Quest Award Leveller - Knights of the Nine.esp", A80CD1A4)'
-    dirty:
-      - crc: 0xA80CD1A4
-        <<: *dirtyPlugin
-        itm: 7
+
   - name: 'AyleidMeteorIronWeaponsVANILLA.esp'
     tag:
       - Invent
@@ -18480,15 +18460,7 @@ plugins:
       - 'DLCShiveringIsles.esp'
   - name: 'Teleport.esp'
     req: [ *OBSE ]
-  - name: 'training spells.esp'
-    msg:
-      - type: error
-        content:
-          - lang: en
-            text: 'DO NOT USE. This plugin is corrupt. It may be fixed by loading it in the CS and truncating the file when prompted.'
-          - lang: de
-            text: 'NICHT NUTZEN. Dieses Plugin ist korrupt. Es kann behoben werden durch Laden in der CS und die Datei zu kürzen wenn man gefragt wird.'
-        condition: 'checksum("training spells.esp", DD4985A)'
+
   - name: 'Judgement of the Nine.esp'
     tag: [ Graphics ]
 
@@ -18972,16 +18944,9 @@ plugins:
     msg: [ *obsolete ]
   - name: 'DRSplatter.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/8273' ]
-    req:
-      - name: 'OBSE/Plugins/OBGEv2.dll'
-        display: '[Oblivion Graphics Extender](https://www.nexusmods.com/oblivion/mods/30054)'
     msg:
-      - type: warn
-        content:
-          - lang: en
-            text: 'Remove this. Known to cause crashes and save game corruption.'
-          - lang: de
-            text: 'Entfernen Sie dies. Bekannt dafür Crashes und Spielstand-Korruption auszulösen.'
+      - <<: *corrupt
+        condition: 'checksum("DRSplatter.esp", 74B7D119)'
 
   - name: 'kuerteeAttributeAndSkillBasedDamageModifiers.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/23062' ]
