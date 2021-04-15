@@ -188,6 +188,8 @@ common:
         text: 'Удалите. Уже включено в %1% или исправлено иным образом.'
       - lang: sv
         text: 'Ta bort. Redan inkluderat eller fixat i %1%.'
+      - lang: zh_CN
+        text: '删除。在%1%中已包含或修复。'
   - &alreadyInOrFixedByUOP
     <<: *alreadyInOrFixedByX
     subs: [ 'Unofficial Oblivion Patch' ]
@@ -220,6 +222,8 @@ common:
         text: 'É altamente recomendado que você também use %1%.'
       - lang: sv
         text: 'Det är rekommenderat att du också använder %1%.'
+      - lang: zh_CN
+        text: '强烈建议您使用%1%。'
   - &alsoUseSilentVoice
     <<: *alsoUseX
     subs: [ '[**Elys Universal Silent Voice**](https://www.nexusmods.com/oblivion/mods/16622/) or [**VoiceFile Redirector**](https://github.com/ponyrider0/voicefile-redirector/releases/)' ]
@@ -254,6 +258,8 @@ common:
         text: 'Файл испорчен и не должен использоваться.'
       - lang: sv
         text: 'Denna fil är korrupt och borde inte användas.'
+      - lang: zh_CN
+        text: '该文件已损坏，不应使用。'
 
   - &deleteOrDeactivateX
     type: error
@@ -280,6 +286,8 @@ common:
         text: 'Не забудьте отключить или удалить. %1%'
       - lang: sv
         text: 'Ta bort eller avaktivera. %1%'
+      - lang: zh_CN
+        text: '删除或禁用。%1%'
     subs: [ '' ]
   - &deleteUseFransSeparateOptions
     <<: *deleteOrDeactivateX
@@ -314,6 +322,8 @@ common:
         text: '%1% уже включен в этот мод.'
       - lang: sv
         text: '%1% är inluderat med denna mod.'
+      - lang: zh_CN
+        text: '%1%已包含在这个mod中。'
 
   - &languageX
     type: say
@@ -330,6 +340,8 @@ common:
         text: 'Língua: %1%'
       - lang: pt_PT
         text: 'Língua: %1%'
+      - lang: zh_CN
+        text: '语言: %1%'
   - &languageXEnglish
     <<: *languageX
     subs: [ '**en**' ]
@@ -399,6 +411,8 @@ common:
         text: 'O mestre **Oblivion.esm** deve ser realocado para **Nehrim.esm**.'
       - lang: pt_PT
         text: 'O mestre **Oblivion.esm** deve ser reatribuído a **Nehrim.esm**.'
+      - lang: zh_CN
+        text: '**Oblivion.esm**必须重新分配给**Nehrim.esm**。'
     condition: *nehrimCond
 
   - &moddingPlugin
@@ -418,6 +432,8 @@ common:
         text: 'Este plugin é um recurso para a criação de mods e não deve ser usado no jogo.'
       - lang: sv
         text: 'Det här pluginet används som en modding resurs och borde inte användas i spelet.'
+      - lang: zh_CN
+        text: '这个插件是一个mod开发资源，不应该在游戏中使用。'
 
   - &obsolete
     type: warn
@@ -480,6 +496,8 @@ common:
         text: 'Похоже, что используется **%1%**, но патч совместимости для него не был подключен. Патч совместимости можно найти здесь: %2%'
       - lang: sv
         text: 'Det verkar som att du använder **%1%**, men du har inte aktiverat en kompabilitetspatch för denna mod. En patch från en tredje part finns här: %2%.'
+      - lang: zh_CN
+        text: '您似乎使用了**%1%**，但没有启用这个mod的兼容性补丁。第三方补丁可以在这里找到:%2%'
 
   - &patchIncluded
     type: say
@@ -506,6 +524,8 @@ common:
         text: 'Похоже, что используется **%1%**, но патч совместимости для него не был подключен. Патч совместимости можно найти в установщике плагина.'
       - lang: sv
         text: 'Det verkar som att du använder **%1%**, men du har inte aktiverat en kompabilitetspatch för denna mod. En kompabilitetspatch är inkluderad i denna plugins installationsprogram.'
+      - lang: zh_CN
+        text: '您似乎使用了**%1%**，但没有启用这个mod的兼容性补丁。这个插件的安装程序中包含了该补丁。'
 
   - &patchProvided
     type: say
@@ -532,6 +552,8 @@ common:
         text: 'Похоже, что используется **%1%**, но патч совместимости для него не был подключен. Патч совместимости можно найти на странице плагина.'
       - lang: sv
         text: 'Det verkar som att du använder **%1%**, men du har inte aktiverat en kompabilitetspatch för denna mod. En kompabilitetspatch finns på denna plugins modsida.'
+      - lang: zh_CN
+        text: '您似乎使用了**%1%**，但没有启用这个mod的兼容性补丁。这个插件的mod页面提供了该补丁。'
 
   - &renameFile
     type: say
@@ -558,6 +580,8 @@ common:
         text: 'Переименуйте этот файл в %1%.'
       - lang: sv
         text: 'Ändra den här filens namn till %1%.'
+      - lang: zh_CN
+        text: '将此文件重命名为%1%。'
 
   - &renameXtoY
     type: warn
@@ -582,6 +606,8 @@ common:
         text: 'Вам нужно переименовать %1% в %2% для подключения ресурсов мода.'
       - lang: sv
         text: 'Du behöver byta namn på %1% till %2% för att det här moddet ska fungera.'
+      - lang: zh_CN
+        text: '你需要把%1%重命名为%2%，否则这个mod将不起作用。'
 
   - &requiresResources
     type: warn
@@ -600,6 +626,8 @@ common:
         text: 'Requer recursos (ex: meshes, texturas; não plugins) vindos de %1%.'
       - lang: sv
         text: 'Behöver resurser (t.ex. meshar, texturer; inte plugin) från %1%.'
+      - lang: zh_CN
+        text: '需要%1%的资源(如网格，纹理;非插件)。'
 
   - &requiresX
     type: warn
@@ -628,6 +656,8 @@ common:
         text: 'Требуется: %1%'
       - lang: sv
         text: 'Kräver: %1%'
+      - lang: zh_CN
+        text: '需要:%1%'
   - &requiresBashedPatch
     <<: *requiresX
     type: error
@@ -661,6 +691,8 @@ common:
         text: 'Мастерфайлы плагина требуют сортировки.'
       - lang: sv
         text: 'Denna plugins master behöver sorteras'
+      - lang: zh_CN
+        text: '插件的主依赖需要排序。'
 
   - &useBashTweakInstead
     type: say
@@ -683,6 +715,8 @@ common:
         text: 'Um Bashed Patch modificado pode ser utilizado em vez deste plugin. %1%'
       - lang: sv
         text: 'En Bashed Patch Tweak kan användas istället för det här pluginet. %1%'
+      - lang: zh_CN
+        text: '可以使用一个Bashed Patch来代替这个插件。%1%'
     subs: [ '' ]
     condition: 'file("Bashed Patch.*\.esp")'
 
@@ -707,6 +741,8 @@ common:
         text: 'Um INI modificado pode ser usado ao invés deste plugin. %1%'
       - lang: sv
         text: 'En INI Tweak kan användas istället för det här pluginet. %1%'
+      - lang: zh_CN
+        text: '可以使用一个INI调整来代替这个插件。%1%'
     subs: [ '' ]
 
   - &useInstead
@@ -730,6 +766,8 @@ common:
         text: 'Use %1% ao invés disto.'
       - lang: sv
         text: 'Använd %1% istället.'
+      - lang: zh_CN
+        text: '使用%1%代替。'
   - &useInsteadUOP
     <<: *useInstead
     subs: [ '[Unofficial Oblivion Patch](https://www.nexusmods.com/oblivion/mods/5296)' ]
@@ -798,6 +836,8 @@ common:
         text: 'Используйте версию для %1%.'
       - lang: sv
         text: 'Använd version %1%.'
+      - lang: zh_CN
+        text: '使用%1%版本。'
   - &useVersionHorseArmor
     <<: *useVersion
     subs: [ 'HorseArmor' ]
@@ -870,6 +910,8 @@ common:
         text: 'Use a versão não-%1%.'
       - lang: sv
         text: 'Använd en icke-%1% version.'
+      - lang: zh_CN
+        text: '使用%1%以外的版本。'
   - &useVersionNonHorseArmor
     <<: *useVersionNon
     subs: [ 'HorseArmor' ]
@@ -940,6 +982,8 @@ common:
         text: 'Плагин содержит дикие правки, кроме ITM, UDR записей и удаленных навмешей и может потребовать дополнительной ручной чистки, чтобы не пересекаться с другими модами. %1%'
       - lang: sv
         text: 'Denna plugin innehåller vilda föränringar utanför ITM och UDR-records samt borttagna navmeshes och kan kräva ytterligare manuell rensning för att inte störa andra moddar. %1%'
+      - lang: zh_CN
+        text: '这个插件包含随意编辑的ITM和UDR记录以及已删除的navmeshes，可能需要额外的手动清理，以免干扰其他mod。%1%'
     subs: [ '' ]
 
 # Cleaning Data Anchors
@@ -996,6 +1040,8 @@ common:
         text: 'Настоятельно не рекомендуется использовать моды с **удаленными навмешами** т.к. известно, что они вызывают вылеты. **удаленные навмеши** должны быть исправлены вручную(Комплексный процесс, который должен быть выполнен автором мода). Больше информации о **удаленных навмешах** можно найти [здесь](https://www.creationkit.com/index.php?title=Fixing_Navmesh_Deletion_Tutorial).'
       - lang: sv
         text: 'Det är starkt rekommenderat att inte använda mods som innehåller **Borttagna navmeshes** eftersom de kan orsaka krascher. **Borttagna navmeshes** måste korrigeras manuellt (en komplex process som borde göras av modskaparen). Mer information om **Borttagna navmeshes** hittar du [här](https://www.creationkit.com/index.php?title=Fixing_Navmesh_Deletion_Tutorial).'
+      - lang: zh_CN
+        text: '强烈建议不要使用包含已删除navmeshes的mod，因为它们会导致崩溃。**已删除navmeshes**必须手动修正(一个复杂的过程，应该由mod作者完成)。更多关于**已删除navmeshes**的信息已提供[这里](https://www.creationkit.com/index.php?title=Fixing_Navmesh_Deletion_Tutorial)。'
 
 # Deprecated Anchors
   - &dirtyPlugin
@@ -1163,7 +1209,7 @@ globals:
       - lang: sv
         text: 'Du har installerat an %1% plugin men %1% kunde inte hittas! Läs mer på %1%:s nedladdningssisda: %2%.'
       - lang: zh_CN
-        text: '你已经安装了an %1% plugin，但是未发现%1%！请查看%1%的下载页面：%2%。'
+        text: '您已经安装了%1%插件，但是未发现%1%！请查看%1%的下载页面:%2%。'
     subs:
       - 'OBSE'
       - '[OBSE](https://obse.silverlock.org)'
@@ -1186,6 +1232,8 @@ globals:
         text: 'O NVAC está instalado em **NVSE/Plugins** porém precisa ser movido para **%1%/Plugins** para que o %1% o reconheça para o %2%.'
       - lang: pt_PT
         text: 'O NVAC está instalado em **NVSE/Plugins** porém precisa ser movido para **%1%/Plugins** para que o %1% o reconheça para o %2%.'
+      - lang: zh_CN
+        text: 'NVAC安装在**NVSE/Plugins**下，但需要移动到**%1%/Plugins**来让%1%获取%2%。'
     subs:
       - 'OBSE'
       - 'Oblivion'
