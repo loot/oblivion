@@ -435,6 +435,14 @@ common:
       - lang: zh_CN
         text: '这个插件是一个mod开发资源，不应该在游戏中使用。'
 
+  - &moveXFromYToZ
+    type: say
+    content:
+      - lang: en
+        text: 'Move %1% from %2% to %3%.'
+      - lang: zh_CN
+        text: '先以%1%到%2%然后再到%3%。'
+
   - &obsolete
     type: warn
     content:
@@ -2605,6 +2613,39 @@ plugins:
     tag:
       - Delev
       - Relev
+
+  - name: 'Walk to Oblivion( - OBSE| - OGMMR)?\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/23690/' ]
+    msg:
+      - <<: *moveXFromYToZ
+        subs:
+          - '**trigzone03.nif**'
+          - '**meshes/dungeons/misc**'
+          - '**meshes/dungeons/misc/triggers**'
+        condition: 'not file("meshes/dungeons/misc/triggers/trigzone03.nif")'
+      - <<: *useOnlyOneX
+        subs: [ 'Walk to Oblivion ESP' ]
+        conition: 'many("Walk to Oblivion( - OBSE| - OGMMR)?\.esp")'
+  - name: 'Walk to Oblivion( - OGMMR)?\.esp'
+    inc: [ 'Enhanced Daedric Invasion.esm' ]
+    tag: [ Scripts ]
+  - name: 'Walk to Oblivion.esp'
+    msg:
+      - <<: *useVersion
+        subs: [ 'Oblivion Gate Map Marker Remover' ]
+        condition: 'file("Oblivion Gate Map Marker Remover.esp")'
+    clean:
+      - crc: 0xBFBDDE54
+        util: 'TES4Edit v4.0.3g'
+  - name: 'Walk to Oblivion - OBSE.esp'
+    req: [ *OBSE ]
+    clean:
+      - crc: 0x673900E4
+        util: 'TES4Edit v4.0.3g'
+  - name: 'Walk to Oblivion - OGMMR.esp'
+    clean:
+      - crc: 0xD528F331
+        util: 'TES4Edit v4.0.3g'
 
   - name: 'TIE.*\.esp'
     url:
@@ -7076,15 +7117,6 @@ plugins:
           - lang: de
             text: 'Benötigt: Coronerras Maximum Compatibility Skeletons, VipCxj''s Plugin Collection v3'
 
-  - name: 'Walk to Oblivion.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/23690/' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Incompatible with: Mods like Enhanced Daedric Invasion that modify Oblivion Gate scripts. Use Walk to Oblivion - OBSE.esp if you need compatibility with those mods.'
-          - lang: de
-            text: 'Inkompatibel mit: Mods wie Enhanced Daedric Invasion die Oblivion Gate Scripts modifizieren. Nutzen Sie Walk to Oblivion - OBSE.esp wenn sie Kompatibilität mit diesen Mods brauchen.'
   - name: 'Wasabi the Mouse.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/35999' ]
     req: [ *OBSEv18 ]
