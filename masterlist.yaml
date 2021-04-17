@@ -2623,6 +2623,9 @@ plugins:
           - '**meshes/dungeons/misc**'
           - '**meshes/dungeons/misc/triggers**'
         condition: 'not file("meshes/dungeons/misc/triggers/trigzone03.nif")'
+      - <<: *useOnlyOneX
+        subs: [ 'Walk to Oblivion ESP' ]
+        conition: 'many("Walk to Oblivion( - OBSE| - OGMMR)?\.esp")'
 
   - name: 'TIE.*\.esp'
     url:
