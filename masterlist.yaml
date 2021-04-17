@@ -2616,6 +2616,13 @@ plugins:
 
   - name: 'Walk to Oblivion( - OBSE| - OGMMR)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/23690/' ]
+    msg:
+      - <<: *moveXFromYToZ
+        subs:
+          - '**trigzone03.nif**'
+          - '**meshes/dungeons/misc**'
+          - '**meshes/dungeons/misc/triggers**'
+        condition: 'not file("meshes/dungeons/misc/triggers/trigzone03.nif")'
 
   - name: 'TIE.*\.esp'
     url:
