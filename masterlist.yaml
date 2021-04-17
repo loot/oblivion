@@ -2634,8 +2634,18 @@ plugins:
       - <<: *useVersion
         subs: [ 'Oblivion Gate Map Marker Remover' ]
         condition: 'file("Oblivion Gate Map Marker Remover.esp")'
+    clean:
+      - crc: 0xBFBDDE54
+        util: 'TES4Edit v4.0.3g'
   - name: 'Walk to Oblivion - OBSE.esp'
     req: [ *OBSE ]
+    clean:
+      - crc: 0x673900E4
+        util: 'TES4Edit v4.0.3g'
+  - name: 'Walk to Oblivion - OGMMR.esp'
+    clean:
+      - crc: 0xD528F331
+        util: 'TES4Edit v4.0.3g'
 
   - name: 'TIE.*\.esp'
     url:
