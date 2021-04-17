@@ -2629,6 +2629,11 @@ plugins:
   - name: 'Walk to Oblivion( - OGMMR)?\.esp'
     inc: [ 'Enhanced Daedric Invasion.esm' ]
     tag: [ Scripts ]
+  - name: 'Walk to Oblivion.esp'
+    msg:
+      - <<: *useVersion
+        subs: [ 'Oblivion Gate Map Marker Remover' ]
+        condition: 'file("Oblivion Gate Map Marker Remover.esp")'
 
   - name: 'TIE.*\.esp'
     url:
