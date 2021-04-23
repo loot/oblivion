@@ -9370,9 +9370,13 @@ plugins:
   - name: 'Hemingweys Capes Improved Merchants.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
     dirty:
-      - crc: 0xfd2bf13d
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xFD2BF13D
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536/)'
         itm: 1
+    clean:
+      - crc: 0x4C85EDF0
+        util: 'TES4Edit v4.0.3'
   - name: 'Hemingweys FCOM Boss Chest Cape Loot.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
     tag: [ Invent ]
@@ -10145,9 +10149,10 @@ plugins:
   - name: 'Castle Ravenpride.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/11999' ]
     dirty:
-      - crc: 0x8682e3f3
-        <<: *dirtyPlugin
-        itm: 62
+      - <<: *quickClean
+        crc: 0x8682E3F3
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536/)'
+        itm: 67
         udr: 191
   - name: 'cyrodiil transportation network.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/4520' ]
@@ -10861,8 +10866,9 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/39191' ]
     req: [ *OBSEv20 ]
     dirty:
-      - crc: 0x6d467eb0
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x6D467EB0
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536/)'
         itm: 7
   - name: 'BossPhaitStygainHalls.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/38744' ]
@@ -10888,8 +10894,9 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/36224' ]
     inc: [ 'HackdirtCaverns.esp' ]
     dirty:
-      - crc: 0x9294634b
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xEED773A7
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536/)'
         udr: 4
   - name: 'BrotherhoodRenewed.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/31773' ]
@@ -10912,8 +10919,9 @@ plugins:
   - name: 'Butcher.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/37381' ]
     dirty:
-      - crc: 0x3d158713
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x3D158713
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536/)'
         itm: 11
         udr: 38
   - name: 'BXX_Mines.esp'
