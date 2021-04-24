@@ -3173,6 +3173,15 @@ plugins:
   - name: 'CSVF_Road_Record_(RB|BBC\+RB|BBC\+OC\+RB|OC\+RB)\.esp'
     req: [ 'road+bridges.esp' ]
 
+  - name: 'ChangeinManagement.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/5751/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x9715A726
+        util: '[TES4Edit v4.0.3g](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 57
+        udr: 1
+
   - name: 'DibellasWatch.esm'
     url: [ 'https://www.nexusmods.com/oblivion/mods/37120/' ]
     group: *gameMasterGroup
@@ -11053,13 +11062,6 @@ plugins:
   - name: 'CottageInColoviaV1.6.esp'
     inc: [ 'Waalx Animals & Creatures.esm' ]
 
-  - name: 'ChangeinManagement.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/5751' ]
-    dirty:
-      - crc: 0x9715a726
-        <<: *dirtyPlugin
-        itm: 40
-        udr: 1
   - name: 'Clamshell_Cottage_v1.5.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/26785' ]
     dirty:
