@@ -3664,6 +3664,18 @@ plugins:
       - name: 'xulArriusCreek.esp'
         condition: 'not version("Unique Landscapes.esp", "2.0.0", >=)'
 
+  - name: 'CDEP-UnderpallCave.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/13939/' ]
+    tag:
+      - C.Light
+      - C.Water
+    dirty:
+      - <<: *quickClean
+        crc: 0xB1052381
+        util: '[TES4Edit v4.0.3g](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 3
+        udr: 246
+
   - name: 'DBSRebuiltComplete.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/21125'
@@ -11041,16 +11053,6 @@ plugins:
   - name: 'CottageInColoviaV1.6.esp'
     inc: [ 'Waalx Animals & Creatures.esm' ]
 
-  - name: 'CDEP-UnderpallCave.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/13939' ]
-    tag:
-      - C.Light
-      - C.Water
-    dirty:
-      - crc: 0xb1052381
-        <<: *dirtyPlugin
-        itm: 3
-        udr: 246
   - name: 'ChangeinManagement.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/5751' ]
     dirty:
