@@ -3073,6 +3073,42 @@ plugins:
       - SpellStats
       - Text
 
+  - name: 'BossPhaitDismal.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/39191/'
+        name: 'Boss Fight - The Dismal Thicket'
+    req: [ *OBSEv20 ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x6D467EB0
+        util: '[TES4Edit v4.0.3g](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 7
+
+  - name: 'Butcher.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/37381/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x3D158713
+        util: '[TES4Edit v4.0.3g](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 11
+        udr: 38
+
+  - name: 'Castlevania.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/39538/' ]
+    msg:
+      - type: say
+        content:
+          - lang: en
+            text: 'May require Wrye Bash''s "Remove World Orphans" function run on it.'
+          - lang: de
+            text: 'Kann Ausführung von Wrye Bash''s "Remove World Orphans" Funktion darauf benötigen.'
+    dirty:
+      - <<: *quickClean
+        crc: 0x99857FBF
+        util: '[TES4Edit v4.0.3g](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 134
+        udr: 2
+
   - name: 'Castle_Seaview.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/25574'
@@ -3137,6 +3173,31 @@ plugins:
   - name: 'CSVF_Road_Record_(RB|BBC\+RB|BBC\+OC\+RB|OC\+RB)\.esp'
     req: [ 'road+bridges.esp' ]
 
+  - name: 'ChangeinManagement.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/5751/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x9715A726
+        util: '[TES4Edit v4.0.3g](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 57
+        udr: 1
+
+  - name: 'Comp_Cecilia.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/9252/'
+        name: 'Red Headed Gang'
+    dirty:
+      - <<: *quickClean
+        crc: 0x3C2322BD
+        util: '[TES4Edit v4.0.3g](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 28
+        udr: 2
+      - <<: *quickClean
+        crc: 0x7A05939E
+        util: '[TES4Edit v4.0.3g](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 28
+        udr: 2
+
   - name: 'DibellasWatch.esm'
     url: [ 'https://www.nexusmods.com/oblivion/mods/37120/' ]
     group: *gameMasterGroup
@@ -3200,6 +3261,19 @@ plugins:
         util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536/)'
         itm: 13
         udr: 12
+
+  - name: 'HackdirtTheDeepOnes.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/36224/' ]
+    inc: [ 'HackdirtCaverns.esp' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xEED773A7
+        util: '[TES4Edit v4.0.3g](https://www.nexusmods.com/oblivion/mods/11536)'
+        udr: 4
+      - <<: *quickClean
+        crc: 0x9B9DB370
+        util: '[TES4Edit v4.0.3g](https://www.nexusmods.com/oblivion/mods/11536)'
+        udr: 4
 
   - name: 'Hentai Mania.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/25612' ]
@@ -3413,13 +3487,60 @@ plugins:
       - <<: *corrupt
         condition: 'checksum("Quest.esp", 4D6BBFB0)'
 
+  - name: 'Castle_Dunkerlore_V1.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/6507/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xB8EFE8A1
+        util: '[TES4Edit v4.0.3g](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 14
+        udr: 1057
+
+  - name: 'cloudcity mod V1.1.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/8722/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xD89C1AC6
+        util: '[TES4Edit v4.0.3g](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 178
+        udr: 50
+
   - name: 'Hammerfell.esm'
     url: [ 'https://www.nexusmods.com/oblivion/mods/34484' ]
     clean:
       - crc: 0xE84E8476
         util: 'TES4Edit v4.0.2'
 
+  - name: 'The Contented Prisoner V 2.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/17498/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x1D8A8CB3
+        util: '[TES4Edit v4.0.3g](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 11
+        udr: 16
+  - name: 'TCP Silence remover.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/17498/' ]
+    msg:
+      - type: say
+        content:
+          - lang: en
+            text: 'Silenced character fix for The Contented Prisoner V 2.'
+          - lang: de
+            text: 'Stummer Charakter Fix für The Contented Prisoner V 2.'
+
 ###### Locations - New Structures & Landmarks ######
+  - name: 'BXX_Mines.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/8284/'
+        name: 'Mining Company'
+    dirty:
+      - <<: *quickClean
+        crc: 0x82845758
+        util: '[TES4Edit v4.0.3g](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 42
+        udr: 23
+
   - name: 'Colourwheels Sexy Tavern HGEC.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/37959' ]
     after:
@@ -3595,6 +3716,18 @@ plugins:
       - name: 'xulArriusCreek.esp'
         condition: 'not version("Unique Landscapes.esp", "2.0.0", >=)'
 
+  - name: 'CDEP-UnderpallCave.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/13939/' ]
+    tag:
+      - C.Light
+      - C.Water
+    dirty:
+      - <<: *quickClean
+        crc: 0xB1052381
+        util: '[TES4Edit v4.0.3g](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 3
+        udr: 246
+
   - name: 'DBSRebuiltComplete.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/21125'
@@ -3628,6 +3761,80 @@ plugins:
         util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 18
         udr: 9
+
+  - name: 'Cardac.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/40833/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xA19D9DE3
+        util: '[TES4Edit v4.0.3g](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 25
+        udr: 427
+
+  - name: 'Castle Arpenia - (Colovian Highlands|Gold Coast|Niben Bay)\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/26709/' ]
+  - name: 'Castle Arpenia - Colovian Highlands.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x67360E2C
+        util: '[TES4Edit v4.0.3g](https://www.nexusmods.com/oblivion/mods/11536)'
+        udr: 86
+  - name: 'Castle Arpenia - Gold Coast.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x9D18E45C
+        util: '[TES4Edit v4.0.3g](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 24
+        udr: 10
+  - name: 'Castle Arpenia - Niben Bay.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x89C89425
+        util: '[TES4Edit v4.0.3g](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 11
+        udr: 2
+
+  - name: 'CastleInTheMountain.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/9408/' ]
+    tag: [ Invent ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x466D7AF7
+        util: '[TES4Edit v4.0.3g](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 7
+        udr: 47
+
+  - name: 'CastleLegacy_V2.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/38365/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x80CEF8A7
+        util: '[TES4Edit v4.0.3g](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1
+        udr: 241
+
+  - name: 'Castle_Highrock.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/9363/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x5822A5FD
+        util: '[TES4Edit v4.0.3g](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 3
+
+  - name: 'Clamshell_Cottage_v1.5(_COBL)?\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/26785/' ]
+  - name: 'Clamshell_Cottage_v1.5.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x0F0C6B66
+        util: '[TES4Edit v4.0.3g](https://www.nexusmods.com/oblivion/mods/11536)'
+        udr: 15
+  - name: 'Clamshell_Cottage_v1.5_COBL.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x5E962438
+        util: '[TES4Edit v4.0.3g](https://www.nexusmods.com/oblivion/mods/11536)'
+        udr: 15
 
   - name: 'Greenview Manor.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/37580' ]
@@ -10862,14 +11069,7 @@ plugins:
         crc: 0x26F8ED36
         util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 12
-  - name: 'BossPhaitDismal.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/39191' ]
-    req: [ *OBSEv20 ]
-    dirty:
-      - <<: *quickClean
-        crc: 0x6D467EB0
-        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536/)'
-        itm: 7
+
   - name: 'BossPhaitStygainHalls.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/38744' ]
     req: [ *OBSE ]
@@ -10890,14 +11090,7 @@ plugins:
       - <<: *alreadyInX
         subs: [ 'Better Cities - Full' ]
         condition: 'active("Better Cities Full.esp")'
-  - name: 'HackdirtTheDeepOnes.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/36224' ]
-    inc: [ 'HackdirtCaverns.esp' ]
-    dirty:
-      - <<: *quickClean
-        crc: 0xEED773A7
-        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536/)'
-        udr: 4
+
   - name: 'BrotherhoodRenewed.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/31773' ]
     tag:
@@ -10916,107 +11109,17 @@ plugins:
   - name: 'BuryCorpse.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/43134' ]
     req: [ *OBSEv20 ]
-  - name: 'Butcher.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/37381' ]
-    dirty:
-      - <<: *quickClean
-        crc: 0x3D158713
-        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536/)'
-        itm: 11
-        udr: 38
-  - name: 'BXX_Mines.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/8284' ]
-    dirty:
-      - crc: 0x82845758
-        <<: *dirtyPlugin
-        itm: 40
-        udr: 23
+
   - name: 'BXX Tamriel Resource Exchange.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/13320' ]
     req: [ *OBSE ]
-  - name: 'Cardac.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/40833' ]
-    dirty:
-      - crc: 0x39f1a5a7
-        <<: *dirtyPlugin
-        itm: 23
-        udr: 427
-  - name: 'Castlevania.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/39538' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'May require Wrye Bash''s "Remove World Orphans" function run on it.'
-          - lang: de
-            text: 'Kann Ausführung von Wrye Bash''s "Remove World Orphans" Funktion darauf benötigen.'
-    dirty:
-      - crc: 0x99857fbf
-        <<: *dirtyPlugin
-        itm: 13
-        udr: 2
+
   - name: 'CaveOfWishcraft 1_1.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/27926' ]
     msg: [ *obsolete ]
   - name: 'CottageInColoviaV1.6.esp'
     inc: [ 'Waalx Animals & Creatures.esm' ]
-  - name: 'Castle Arpenia - Colovian Highlands.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/26709' ]
-    dirty:
-      - crc: 0x67360e2c
-        <<: *dirtyPlugin
-        itm: 3
-        udr: 86
-  - name: 'CastleInTheMountain.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/9408' ]
-    tag: [ Invent ]
-    dirty:
-      - crc: 0x466d7af7
-        <<: *dirtyPlugin
-        itm: 10
-        udr: 47
-  - name: 'Castle_Dunkerlore_V1.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/6507' ]
-    dirty:
-      - crc: 0xb8efe8a1
-        <<: *dirtyPlugin
-        itm: 12
-        udr: 1057
-  - name: 'Castle_Highrock.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/9363' ]
-    dirty:
-      - crc: 0x5822a5fd
-        <<: *dirtyPlugin
-        itm: 38
-  - name: 'CastleLegacy_V2.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/38365' ]
-    dirty:
-      - crc: 0x80cef8a7
-        <<: *dirtyPlugin
-        udr: 241
-  - name: 'CDEP-UnderpallCave.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/13939' ]
-    tag:
-      - C.Light
-      - C.Water
-    dirty:
-      - crc: 0xb1052381
-        <<: *dirtyPlugin
-        itm: 3
-        udr: 246
-  - name: 'ChangeinManagement.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/5751' ]
-    dirty:
-      - crc: 0x9715a726
-        <<: *dirtyPlugin
-        itm: 40
-        udr: 1
-  - name: 'Clamshell_Cottage_v1.5.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/26785' ]
-    dirty:
-      - crc: 0x21cf774
-        <<: *dirtyPlugin
-        udr: 15
+
   - name: 'Cheydinhal Petshop.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/2054' ]
     msg:
@@ -11026,35 +11129,7 @@ plugins:
             text: 'Has critical flaw affecting numerous mods. Remove immediately. Recommend replacing with Insanity''s Pet Shop for same functionality.'
           - lang: de
             text: 'Hat kritischen Fehler die zahlreiche Mods betrifft. Umgehend zu Löschen. Empfohlen durch Insanity''s Pet Shop zu ersetzen für die selbe Funktionalität.'
-  - name: 'cloudcity mod V1.1.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/8722' ]
-    dirty:
-      - crc: 0xd89c1ac6
-        <<: *dirtyPlugin
-        itm: 181
-        udr: 50
-  - name: 'Comp_Cecilia.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/9252' ]
-    dirty:
-      - crc: 0x3c2322bd
-        <<: *dirtyPlugin
-        itm: 24
-        udr: 2
-  - name: 'The Contented Prisoner V 2.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/17498' ]
-    dirty:
-      - crc: 0x1d8a8cb3
-        <<: *dirtyPlugin
-        udr: 16
-  - name: 'TCP Silence remover.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/17498' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Silenced character fix for The Contented Prisoner V 2.'
-          - lang: de
-            text: 'Stummer Charakter Fix für The Contented Prisoner V 2.'
+
   - name: 'Clintmichs Beautiful Imperial City Arboretum.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/30114' ]
     msg:
