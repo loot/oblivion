@@ -14506,13 +14506,10 @@ plugins:
           - lang: de
             text: 'Updaten Sie zu Bravil Barrowfields 1.3. Deaktivieren Sie dann diesen Patch.'
   - name: 'VeronaHouseBloodlines-LushWoodlands fix.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/14601' ]
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Obsolete if using Lush Woodlands 1.3 or higher.'
-          - lang: de
-            text: 'Veraltet wenn Lush Woodlands 1.3 oder neuer genutzt wird.'
+      - <<: *obsolete
+        condition: 'file("xulLushWoodlands.esp")'
 
   - name: 'Verwen Brewery (UL_AY_AC|UL Ancient Yews) Compatable\.esp'
     msg:
