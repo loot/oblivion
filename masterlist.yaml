@@ -3511,6 +3511,24 @@ plugins:
       - crc: 0xE84E8476
         util: 'TES4Edit v4.0.2'
 
+  - name: 'The Contented Prisoner V 2.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/17498/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x1D8A8CB3
+        util: '[TES4Edit v4.0.3g](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 11
+        udr: 16
+  - name: 'TCP Silence remover.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/17498/' ]
+    msg:
+      - type: say
+        content:
+          - lang: en
+            text: 'Silenced character fix for The Contented Prisoner V 2.'
+          - lang: de
+            text: 'Stummer Charakter Fix für The Contented Prisoner V 2.'
+
 ###### Locations - New Structures & Landmarks ######
   - name: 'BXX_Mines.esp'
     url:
@@ -11112,21 +11130,6 @@ plugins:
           - lang: de
             text: 'Hat kritischen Fehler die zahlreiche Mods betrifft. Umgehend zu Löschen. Empfohlen durch Insanity''s Pet Shop zu ersetzen für die selbe Funktionalität.'
 
-  - name: 'The Contented Prisoner V 2.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/17498' ]
-    dirty:
-      - crc: 0x1d8a8cb3
-        <<: *dirtyPlugin
-        udr: 16
-  - name: 'TCP Silence remover.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/17498' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Silenced character fix for The Contented Prisoner V 2.'
-          - lang: de
-            text: 'Stummer Charakter Fix für The Contented Prisoner V 2.'
   - name: 'Clintmichs Beautiful Imperial City Arboretum.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/30114' ]
     msg:
