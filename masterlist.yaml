@@ -3462,6 +3462,15 @@ plugins:
       - <<: *corrupt
         condition: 'checksum("Quest.esp", 4D6BBFB0)'
 
+  - name: 'Castle_Dunkerlore_V1.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/6507/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xB8EFE8A1
+        util: '[TES4Edit v4.0.3g](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 14
+        udr: 1057
+
   - name: 'Hammerfell.esm'
     url: [ 'https://www.nexusmods.com/oblivion/mods/34484' ]
     clean:
@@ -11015,13 +11024,6 @@ plugins:
   - name: 'CottageInColoviaV1.6.esp'
     inc: [ 'Waalx Animals & Creatures.esm' ]
 
-  - name: 'Castle_Dunkerlore_V1.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/6507' ]
-    dirty:
-      - crc: 0xb8efe8a1
-        <<: *dirtyPlugin
-        itm: 12
-        udr: 1057
   - name: 'Castle_Highrock.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/9363' ]
     dirty:
