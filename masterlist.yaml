@@ -3648,6 +3648,12 @@ plugins:
         itm: 178
         udr: 50
 
+  - name: 'Deepwood Adventures.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/38017/' ]
+    msg:
+      - <<: *corrupt
+        condition: 'checksum("Deepwood Adventures.esp", A3896464)'
+
   - name: 'Hammerfell.esm'
     url: [ 'https://www.nexusmods.com/oblivion/mods/34484' ]
     clean:
@@ -13320,21 +13326,7 @@ plugins:
             text: 'it replaces (DC) Sutch Reborn.esp'
           - lang: de
             text: 'Es ersetzt (DC) Sutch Reborn.esp'
-  - name: 'Deepwood Adventures.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/38017' ]
-    req: [ *SilentVoice ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Very dirty - Compile All Scripts was used on the mod. Either use CS or Tes4Edit to clean or use Wrye Bash''s Decompile All command.'
-          - lang: de
-            text: 'Sehr unsauber - Compile All Scripts wurde auf dieser Mod genutzt. Entweder nutzen Sie CS oder Tes4Edit zum Säubern oder Sie nutzen Wrye Bash''s Decompile All Befehl.'
-    dirty:
-      - crc: 0xad5233bc
-        <<: *dirtyPlugin
-        itm: 2265
-        udr: 45
+
   - name: 'DibellaTempleWillowLakeVillagev1.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/13285' ]
     dirty:
