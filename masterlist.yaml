@@ -3488,6 +3488,15 @@ plugins:
       - crc: 0xBBE3D1F1
         util: 'TES4Edit v4.0.3'
 
+  - name: 'RuinsofEvendallMod.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/25562/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xC320276C
+        util: '[TES4Edit v4.0.3g](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1710
+        udr: 36
+
   - name: 'SM Plugin Refurbish.*\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/11474/'
@@ -14586,20 +14595,7 @@ plugins:
         <<: *dirtyPlugin
         itm: 4440
         udr: 1
-  - name: 'RuinsofEvendallMod.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/25562' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Very dirty - Compile All Scripts was used on the mod. Either use CS or Tes4Edit to clean or use Wrye Bash''s Decompile All command.'
-          - lang: de
-            text: 'Sehr unsauber - Compile All Scripts wurde auf dieser Mod genutzt. Entweder nutzen Sie CS oder Tes4Edit zum Säubern oder Sie nutzen Wrye Bash''s Decompile All Befehl.'
-    dirty:
-      - crc: 0xc320276c
-        <<: *dirtyPlugin
-        itm: 46
-        udr: 36
+
   - name: 'Rustle House - AN Patch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/35252' ]
     msg:
