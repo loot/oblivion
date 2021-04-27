@@ -2639,6 +2639,20 @@ plugins:
       - 'West Roads.esp'
 
 ###### Gameplay - General ######
+  - name: 'Adventurers_1.0.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/4025/' ]
+    inc:
+      - 'FCOM_Convergence.esm'
+      - 'Francesco''s Leveled Creatures-Items Mod.esm'
+      - 'Mart''s Monster Mod.esm'
+      - 'Oscuro''s_Oblivion_Overhaul.esm'
+    dirty:
+      - <<: *quickClean
+        crc: 0xD39C1693
+        util: '[TES4Edit v4.0.3g](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 16
+        udr: 48
+
   - name: 'Duke Patricks - (Combat Magic II|Fortress of Fear).esp'
     url: [ 'http://tesalliance.org/forums/index.php?/files/file/780-duke-patricks-combat-magic-ii-duke-patricks-incursion-into-fortress-of-fear/' ]
     req:
@@ -12180,15 +12194,7 @@ plugins:
           - lang: de
             text: 'Nutze stattdessen Diverse Guard Armor.esp für MMM/MMMForFrans (in MMMforOOO fusioniert) oder nutzen Sie Diverse Guard Unity für FCOM.'
         condition: 'file("Mart''s Monster Mod for Fran.esp") or file("Mart''s Monster Mod.esm") or file("Mart''s Monster Mod for OOO.esm") or file("FCOM_Convergence.esm")'
-  - name: 'Adventurers_1.0.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/4025' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Probably incompatible with every other overhaul out there - although with Wrye Bash *should* be able to be made to work with MMM.'
-          - lang: de
-            text: 'Wahrscheinlich inkompatibel mit jeder anderen Überhol-Mod die es gibt - obwohl Wrye Bash das fusionieren können *sollte* um mit MMM zu funktionieren.'
+
   - name: 'un-leveled-shops.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/3507' ]
     tag:
