@@ -2877,6 +2877,17 @@ plugins:
         subs: [ 'Mass AI ESP' ]
         condition: 'many("MassA.I(-[345]0)?.esp")'
 
+###### Gameplay - Economy & Item Balance ######
+  - name: 'FG_Merchant Inventory Realism V 1_5.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/5561' ]
+    tag: [ Invent.Add ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x6FCF66A5
+        util: '[TES4Edit v4.0.3g](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 7
+        udr: 2
+
 ###### Gameplay - Magic & Abilities ######
   - name: 'Av Latta Magicka.es(m|p)'
     url: [ 'https://www.nexusmods.com/oblivion/mods/49096' ]
@@ -17367,16 +17378,6 @@ plugins:
         <<: *dirtyPlugin
         itm: 26
         udr: 24
-
-  - name: 'FG_Merchant Inventory Realism V 1_5.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/5561' ]
-    tag: [ Invent.Add ]
-    dirty:
-      - <<: *quickClean
-        crc: 0x6FCF66A5
-        util: '[TES4Edit v4.0.3g](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 7
-        udr: 2
 
   - name: 'First Person Messages.esp'
     msg: [ *alreadyInOOO ]
