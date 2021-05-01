@@ -295,6 +295,34 @@ common:
     subs: [ 'This plugin should not be used. Reinstall Fran''s and select "Separate Files" when the option is presented.' ]
     condition: *FCOMCond
 
+  - &deletePlugin
+    type: warn
+    content:
+      - lang: en
+        text: 'When using **%1%**, it''s recommended that you deactivate or delete this ESP file but keep the resources (e.g. meshes, textures) installed with this mod.'
+      - lang: bg
+        text: 'Когато използвате приставката **%1%**, трябва да деактивирате или изтриете този ESP файл, но да запазите неговите ресурси (триизмерни модели, текстури и други).'
+      - lang: de
+        text: 'Beim Nutzen von **%1%** ist es empfohlen, dass Sie die ESP-Datei deaktivieren oder löschen, aber die mitgelieferten Ressourcen (z.B Meshes, Texturen) beibehalten die mit dieser Mod mitinstalliert wurden.'
+      - lang: it
+        text: 'Quando si utilizza **%1%**, è fortemente consigliato disattivare o eliminare questo file ESP ma mantenerne le risorse (ad es. mesh, texture) installate con questa mod.'
+      - lang: ja
+        text: '**%1%**を使用中の場合。このespファイルは無効化あるいは削除するのはおすすめしますが、このmodによってインストールされたリソース(メッシュ、テクスチャなど)はそのままにしておいてください。'
+      - lang: ko
+        text: '**%1%**를 사용할 때 이 ESP 파일을 비활성화하거나 삭제하되, 이 모드와 함께 설치된 리소스(예: 메쉬, 텍스쳐)는 유지하는 것을 권장합니다.'
+      - lang: pl
+        text: 'Używając **%1%**, jest rekomendowane abyś dezaktywował lub usunął ten plik ESP, ale pozostawił zasoby (siatki, tekstury) zainstalowane z tym modem.'
+      - lang: pt_BR
+        text: 'Quando se usa **%1%**, é recomendado que você desative ou apague este arquivo ESP mas que mantenha os recursos (por ex. meshes, textures) instalados com esse mod.'
+      - lang: pt_PT
+        text: 'Ao utilizar **%1%**, é recomendado que você desative ou apage este ficheiro ESP, mas mantenha os recursos (ex. meshes, texturas) instalados por este mod.'
+      - lang: ru
+        text: 'Пока используется **%1%**, рекомендуется отключить или удалить esp этого мода, но оставить установленные ресурсы (meshes, textures).'
+      - lang: sv
+        text: 'När du använder **%1%** är det rekommenderat att du avaktiverar eller tar bort denna ESP-fil, men behåll resurserna (meshar och texturer) installerade med denna mod.'
+      - lang: zh_CN
+        text: '当使用**%1%**时，建议您禁用或删除这个ESP文件，但保留与此mod一起安装的资源(如网格，纹理等)。'
+
   - &includesX
     type: say
     content:
@@ -2009,6 +2037,14 @@ plugins:
     url: [ 'https://morroblivion.com/forums/morroblivion/mods/2610' ]
     group: *mapGroup
 
+  - name: 'Archery and Lockpicking.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/47829' ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Names -> Skyrim-style Text: Marksman -> Archery' ]
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Names -> Skyrim-style Text: Security -> Lockpicking' ]
+
   - name: 'Colored Map for Elsweyr 1.1.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/25150/' ]
     group: *mapGroup
@@ -2032,6 +2068,16 @@ plugins:
   - name: 'Hiboriamap.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/26570' ]
     group: *mapGroup
+
+  - name: 'Kobu''s Stamina Mod.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/1862' ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Names -> Skyrim-style Text: Fatigue -> Stamina' ]
+      - <<: *deletePlugin
+        type: say
+        subs: [ 'Skyrim-style Text: Fatigue -> Stamina' ]
+        condition: 'file("Bashed Patch.*\.esp")'
 
   - name: 'LootMenu.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/48027' ]
@@ -22941,11 +22987,3 @@ plugins:
       - Invent.Remove
       - Scripts
       - Sound
-
-  - name: 'Archery and Lockpicking.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/47829' ]
-    msg:
-      - <<: *useBashTweakInstead
-        subs: [ 'Tweak Names -> Skyrim-style Text: Marksman -> Archery' ]
-      - <<: *useBashTweakInstead
-        subs: [ 'Tweak Names -> Skyrim-style Text: Security -> Lockpicking' ]
