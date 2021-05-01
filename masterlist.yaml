@@ -17367,8 +17367,17 @@ plugins:
         <<: *dirtyPlugin
         itm: 26
         udr: 24
+
   - name: 'FG_Merchant Inventory Realism V 1_5.esp'
-    tag: [ Invent ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/5561' ]
+    tag: [ Invent.Add ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x6FCF66A5
+        util: '[TES4Edit v4.0.3g](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 7
+        udr: 2
+
   - name: 'First Person Messages.esp'
     msg: [ *alreadyInOOO ]
     dirty:
