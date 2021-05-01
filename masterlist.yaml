@@ -2037,6 +2037,14 @@ plugins:
     url: [ 'https://morroblivion.com/forums/morroblivion/mods/2610' ]
     group: *mapGroup
 
+  - name: 'Archery and Lockpicking.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/47829' ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Names -> Skyrim-style Text: Marksman -> Archery' ]
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Names -> Skyrim-style Text: Security -> Lockpicking' ]
+
   - name: 'Colored Map for Elsweyr 1.1.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/25150/' ]
     group: *mapGroup
@@ -2060,6 +2068,16 @@ plugins:
   - name: 'Hiboriamap.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/26570' ]
     group: *mapGroup
+
+  - name: 'Kobu''s Stamina Mod.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/1862' ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Names -> Skyrim-style Text: Fatigue -> Stamina' ]
+      - <<: *deletePlugin
+        type: say
+        subs: [ 'Skyrim-style Text: Fatigue -> Stamina' ]
+        condition: 'file("Bashed Patch.*\.esp")'
 
   - name: 'LootMenu.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/48027' ]
@@ -22969,21 +22987,3 @@ plugins:
       - Invent.Remove
       - Scripts
       - Sound
-
-  - name: 'Archery and Lockpicking.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/47829' ]
-    msg:
-      - <<: *useBashTweakInstead
-        subs: [ 'Tweak Names -> Skyrim-style Text: Marksman -> Archery' ]
-      - <<: *useBashTweakInstead
-        subs: [ 'Tweak Names -> Skyrim-style Text: Security -> Lockpicking' ]
-
-  - name: 'Kobu''s Stamina Mod.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/1862' ]
-    msg:
-      - <<: *useBashTweakInstead
-        subs: [ 'Tweak Names -> Skyrim-style Text: Fatigue -> Stamina' ]
-      - <<: *deletePlugin
-        type: say
-        subs: [ 'Skyrim-style Text: Fatigue -> Stamina' ]
-        condition: 'file("Bashed Patch.*\.esp")'
