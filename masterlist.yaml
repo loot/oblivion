@@ -2866,6 +2866,12 @@ plugins:
       - 'bgBalancingEVCore.esp'
 
 ###### Gameplay - Combat ######
+  - name: 'Duke Patricks - Actors Can Miss Now.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/17706' ]
+    msg:
+      - <<: *alsoUseX
+        subs: [ '[Duke Patricks - Friendship Ring For Companion Detection](https://www.nexusmods.com/oblivion/mods/21594)' ]
+
   - name: 'MassA.I(-[345]0)?.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/8158' ]
     msg:
@@ -19046,15 +19052,7 @@ plugins:
             text: 'Stellen Sie sicher calculateFromVanilla in der mitgelieferten ini Datei auf 0 zu setzen wenn es gleichzeitig mit anderen Kampf-Mods genutzt wird.'
   - name: 'Double-tap dodge.esp'
     req: [ *OBSEv19 ]
-  - name: 'Duke Patricks - Actors Can Miss Now.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/17706' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Causes CTD with companions. Use ''Duke Patricks - Friendship Ring For Companion Detection'' to avoid this.'
-          - lang: de
-            text: 'Verursacht CTD mit Begleitern. Nutzen Sie ''Duke Patricks - Friendship Ring For Companion Detection'' um dies zu vermeiden.'
+
   - name: 'Duke Patricks - Fresh Kills Now Alert The NPCs.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/18065' ]
     dirty:
