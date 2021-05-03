@@ -3957,8 +3957,10 @@ plugins:
       - *OBSE
       - *SilentVoice
     inc:
-      - 'DibellasWatch.esm'
-      - 'GTAesgaard_2.esm'
+      - name: 'DibellasWatch.esm'
+        condition: 'not file("OBSE/Plugins/EngineBugFixes.dll")'
+      - name: 'GTAesgaard_2.esm'
+        condition: 'not file("OBSE/Plugins/EngineBugFixes.dll")'
   - name: 'Morrowind_ob.esp'
     # doNotClean
     after:
