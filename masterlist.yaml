@@ -3263,6 +3263,9 @@ plugins:
   - name: 'DibellasWatch.esm'
     url: [ 'https://www.nexusmods.com/oblivion/mods/37120/' ]
     group: *gameMasterGroup
+    after:
+      - name: 'Morrowind_ob.esm'
+        condition: 'file("OBSE/Plugins/EngineBugFixes.dll")'
     inc: [ 'GTAesgaard_2.esm' ]
     dirty:
       - <<: *quickClean
