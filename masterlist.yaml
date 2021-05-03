@@ -3263,7 +3263,13 @@ plugins:
   - name: 'DibellasWatch.esm'
     url: [ 'https://www.nexusmods.com/oblivion/mods/37120/' ]
     group: *gameMasterGroup
-    inc: [ 'GTAesgaard_2.esm' ]
+    after:
+      - name: 'Morrowind_ob.esm'
+        condition: 'file("OBSE/Plugins/EngineBugFixes.dll")'
+    inc:
+      - name: 'GTAesgaard_2.esm'
+        condition: 'not file("OBSE/Plugins/EngineBugFixes.dll")'
+    msg: [ *alsoUseEngineBugFixes ]
     dirty:
       - <<: *quickClean
         crc: 0xAC17B7FF
@@ -3313,6 +3319,10 @@ plugins:
   - name: 'GTAesgaard_2.esm'
     url: [ 'https://www.nexusmods.com/oblivion/mods/21693/' ]
     group: *gameMasterGroup
+    after:
+      - name: 'Morrowind_ob.esm'
+        condition: 'file("OBSE/Plugins/EngineBugFixes.dll")'
+    msg: [ *alsoUseEngineBugFixes ]
     clean:
       - crc: 0x379577AC
         util: 'TES4Edit v4.0.3f'
@@ -3947,8 +3957,11 @@ plugins:
       - *OBSE
       - *SilentVoice
     inc:
-      - 'DibellasWatch.esm'
-      - 'GTAesgaard_2.esm'
+      - name: 'DibellasWatch.esm'
+        condition: 'not file("OBSE/Plugins/EngineBugFixes.dll")'
+      - name: 'GTAesgaard_2.esm'
+        condition: 'not file("OBSE/Plugins/EngineBugFixes.dll")'
+    msg: [ *alsoUseEngineBugFixes ]
   - name: 'Morrowind_ob.esp'
     # doNotClean
     after:
