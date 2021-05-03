@@ -224,6 +224,10 @@ common:
         text: 'Det är rekommenderat att du också använder %1%.'
       - lang: zh_CN
         text: '强烈建议您使用%1%。'
+  - &alsoUseEngineBugFixes
+    <<: *alsoUseX
+    subs: [ '[**EngineBugFixes**](https://www.nexusmods.com/oblivion/mods/47085/)' ]
+    condition: 'not file("OBSE/Plugins/EngineBugFixes.dll")'
   - &alsoUseSilentVoice
     <<: *alsoUseX
     subs: [ '[**Elys Universal Silent Voice**](https://www.nexusmods.com/oblivion/mods/16622/) or [**VoiceFile Redirector**](https://github.com/ponyrider0/voicefile-redirector/releases/)' ]
