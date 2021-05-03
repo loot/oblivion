@@ -2019,9 +2019,7 @@ plugins:
     group: *lateChangesGroup
     req: [ *OBSE ]
     msg:
-      - <<: *alsoUseX
-        subs: [ '[EngineBugFixes](https://www.nexusmods.com/oblivion/mods/47085)' ]
-        condition: 'not file("OBSE/Plugins/EngineBugFixes.dll")'
+      - *alsoUseEngineBugFixes
       - <<: *alsoUseX
         subs: [ '[Floating weapons Fix (Enemies keep weapons in inventory)](https://www.nexusmods.com/oblivion/mods/46674)' ]
         condition: 'not file("Enemy Weapons dont drop.esp")'
@@ -2088,10 +2086,7 @@ plugins:
     req:
       - *MenuQue
       - *OBSEv21
-    msg:
-      - <<: *alsoUseX
-        subs: [ '[EngineBugFixes](https://www.nexusmods.com/oblivion/mods/47085)' ]
-        condition: 'not file("OBSE/Plugins/EngineBugFixes.dll")'
+    msg: [ *alsoUseEngineBugFixes ]
 
   - name: 'MergedMaps.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/26329' ]
