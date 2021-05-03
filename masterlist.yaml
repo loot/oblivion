@@ -3322,6 +3322,7 @@ plugins:
     after:
       - name: 'Morrowind_ob.esm'
         condition: 'file("OBSE/Plugins/EngineBugFixes.dll")'
+    msg: [ *alsoUseEngineBugFixes ]
     clean:
       - crc: 0x379577AC
         util: 'TES4Edit v4.0.3f'
