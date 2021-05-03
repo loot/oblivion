@@ -3269,6 +3269,7 @@ plugins:
     inc:
       - name: 'GTAesgaard_2.esm'
         condition: 'not file("OBSE/Plugins/EngineBugFixes.dll")'
+    msg: [ *alsoUseEngineBugFixes ]
     dirty:
       - <<: *quickClean
         crc: 0xAC17B7FF
