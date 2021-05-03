@@ -3319,6 +3319,9 @@ plugins:
   - name: 'GTAesgaard_2.esm'
     url: [ 'https://www.nexusmods.com/oblivion/mods/21693/' ]
     group: *gameMasterGroup
+    after:
+      - name: 'Morrowind_ob.esm'
+        condition: 'file("OBSE/Plugins/EngineBugFixes.dll")'
     clean:
       - crc: 0x379577AC
         util: 'TES4Edit v4.0.3f'
