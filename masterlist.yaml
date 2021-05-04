@@ -428,6 +428,18 @@ common:
     <<: *languageX
     subs: [ '**sv**' ]
 
+  - &mainQuestCompleted
+    type: say
+    content:
+      - lang: en
+        text: 'Only use this plugin once the main quest of the game has been completed.'
+      - lang: bg
+        text: 'Използвайте тази приставка само след завършване на основната мисия на играта.'
+      - lang: de
+        text: 'Verwenden Sie dieses Plugin erst, wenn die Hauptquest des Spiels abgeschlossen ist.'
+      - lang: it
+        text: 'Utilizzare questo plugin solo quando la missione principale del gioco è stata completata.'
+
   - &masterReassign
     type: say
     content:
@@ -7433,13 +7445,14 @@ plugins:
     msg: [ *alreadyInOOO ]
   - name: 'Willful Resistance.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/11237' ]
+    inc: [ 'DBWBMR.esp' ]
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Only use one willpower equals magicka resistance/weakness type mod at once.'
-          - lang: de
-            text: 'Nutzen Sie nur eine Willensstärke enspricht Magicka Resistenz/Schwäche Art von Modifikation.'
+      - <<: *requiresX
+        subs: [ '[Fundament](https://www.nexusmods.com/oblivion/mods/41005)' ]
+        condition: 'not file("Fundament.esm")'
+    clean:
+      - crc: 0x89990CEF
+        util: 'TES4Edit v4.0.3g'
   - name: 'WWF - Gloom.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/28666' ]
     tag: [ Graphics ]
@@ -9435,13 +9448,11 @@ plugins:
     inc: [ 'Zira''s Horse Modpack - Heavy Legion Horses.esp' ]
     req: [ 'DLCHorseArmor.esp' ]
   - name: 'MD Saddlebags V3.0.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/2008' ]
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'This mod adds the saddlebags to merchants only once. To ensure they are added to merchants who have been reset, also use "MD Saddlebags v3 alternative trader script".'
-          - lang: de
-            text: 'Diese Mod fügt die Satteltaschen zu den Händlern nur einmal hinzu. Um sicherzustellen das diese auch den Händlern hinzugefügt werden die zurückgesetzt wurden, nutzen Sie auch "MD Saddlebags v3 alternative trader script".'
+      - <<: *alsoUseX
+        subs: [ '[MD Saddlebags v3 alternative trader script](https://www.nexusmods.com/oblivion/mods/22084)' ]
+        condition: 'not file("MD Saddlebags v3.0 Alternative Trader Script.esp")'
   - name: 'Horse Management.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/46021' ]
     req: [ *OBSEv21 ]
@@ -12864,21 +12875,8 @@ plugins:
         itm: 49
         udr: 322
   - name: 'Temple District Rebuild.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Don''t use unless you''ve finished the main quest!'
-          - lang: de
-            text: 'Nicht nutzen bis Sie die Haupt-Quest abgeschlossen haben!'
-  - name: 'Temple District Rebuild_1C.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Don''t use unless you''ve finished the main quest!'
-          - lang: de
-            text: 'Nicht nutzen bis Sie die Haupt-Quest abgeschlossen haben!'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/14570' ]
+    msg: [ *mainQuestCompleted ]
   - name: 'TheHole.esp'
     url:
       - 'https://www.nexusmods.com/oblivion/mods/40950'
@@ -19182,14 +19180,12 @@ plugins:
           - lang: de
             text: 'Beinhaltet von ''Hentai Mania.esp'', löschen oder deaktivieren Sie diesen wenn Sie die Hentai Mania Mod nutzen.'
         condition: 'file("Hentai *Mania.*\.esp")'
-  - name: 'seorin''s Leveling System.esp'
+  - name: 'seorin''s Leveling System( - light)?.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/3494' ]
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Use just one Seorin''s Leveling System mod file.'
-          - lang: de
-            text: 'Nutzen Sie einfach nur eine Seorin''s Leveling System Mod Datei.'
+      - <<: *useOnlyOneX
+        subs: [ 'Leveling System Plugin' ]
+        condition: 'many("seorin''s Leveling System( - light)?.esp")'
   - name: 'Legendary Abilities-Shield MOJ.esp'
     dirty:
       - crc: 0x51d68248
@@ -22111,13 +22107,11 @@ plugins:
   - name: 'JoinedJaws.esp'
     tag: [ R.Teeth ]
   - name: 'cidnothump.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/35118' ]
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'If using Mighty Magic, use ''cidnothumpMMversion.esp'' instead.'
-          - lang: de
-            text: 'Wenn Mighty Magic genutzt wird, nutzen Sie stattdessen ''cidnothumpMMversion.esp''.'
+      - <<: *useInstead
+        subs: [ '**cidnothumpMMversion.esp**' ]
+        condition: 'file("Mighty Magick - (Core|Races|Settings|Skills|Spells and Creatures).esp")'
     tag: [ Sound ]
   - name: 'PMSneakySummonCompatibility.esp'
     group: *latePatchesGroup
@@ -22169,13 +22163,11 @@ plugins:
       - Body-Size-F
       - Body-Size-M
   - name: 'DBWBMR.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Only use one willpower equals magicka resistance/weakness type mod at once.'
-          - lang: de
-            text: 'Nutzen Sie nur eine Willensstärke enspricht Magicka Resistenz/Schwäche Art von Modifikation.'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/25475' ]
+    inc: [ 'Willful Resistance.esp' ]
+    clean:
+      - crc: 0x9E24AFB7
+        util: 'TES4Edit v4.0.3g'
   - name: 'ArgonianFeets.esp'
     tag: [ Invent ]
   - name: 'KT_CustomRaceFix.esp'
