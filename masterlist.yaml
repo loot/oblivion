@@ -3874,6 +3874,21 @@ plugins:
       - name: 'xulArriusCreek.esp'
         condition: 'not version("Unique Landscapes.esp", "2.0.0", >=)'
 
+  - name: 'BetterInns .*\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/29333/' ]
+  - name: 'BetterInns + NewHomeOwners.esp'
+    tag:
+      - Actors.AIPackages
+      - C.Name
+      - Scripts
+  - name: 'BetterInns - Harvest Containers PATCH.esp'
+    msg:
+      - <<: *masterReassign
+        subs:
+          - 'Harvest[Containers].esp'
+          - 'Harvest[Containers].esm'
+        condition: 'file("Harvest[Containers].esm") and checksum("BetterInns - Harvest Containers PATCH.esp", 6CD0A481)'
+
   - name: 'CDEP-UnderpallCave.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/13939/' ]
     tag:
@@ -14735,24 +14750,7 @@ plugins:
         <<: *dirtyPlugin
         itm: 50
         udr: 3
-  - name: 'Sylar_INNMergedCyrodillInnsRevisedV1.1.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29333' ]
-    msg: [ *obsolete ]
-  - name: 'BetterInns + NewHomeOwners.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29333' ]
-    tag:
-      - Actors.AIPackages
-      - C.Name
-      - Scripts
-  - name: 'BetterInns - Harvest Containers PATCH.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29333' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'If using Harvest Containers v0.99.14, this plugin will need its master changed using Wrye Bash or TES4Gecko to reference the correct plugin, the addition of the Graphics and Scripts tags, e.g. {{BASH: Graphics, Scripts}}, and the removal of the Filter tag.'
-          - lang: de
-            text: 'Wenn Harvest Containers v0.99.14 genutzt, muss dieses Plugin den Master abgeändert werden mithilfe von Wrye Bash oder TES4Gecko um das korrekte Plugin zu referenzieren, das Hinzufügen von den Graphics und Scripts Tags, wie {{BASH: Graphics, Scripts}}, and die Entfernung des Filter Tags.'
+
   - name: 'TamrielSnacks11-EV.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/20105' ]
     dirty:
