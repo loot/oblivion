@@ -2114,6 +2114,14 @@ plugins:
         subs: [ 'Different Script Effect Icon ESP' ]
         condition: 'many("Different Script Effect Icon - (Darkness|Fortify|Lock|Reflect Spell|Resist|Silence|Stunted Magicka|Sun Damage|Vampirism)\.esp")'
 
+  - name: 'Dwemer_Rename.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/4894/'
+        name: 'Dwarven to Dwemer'
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Names -> Lore Friendly Text: Dwarven -> Dwemer' ]
+
   - name: 'Dynamic Map.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/35969' ]
     req: [ *MenuQue ]
@@ -17415,14 +17423,6 @@ plugins:
           - lang: de
             text: 'Benötigt: Mod Daedric Lord Armor'
 
-  - name: 'Dwemer_Rename.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'If using Wrye Bash use the Bashed Patch Tweak instead and delete.'
-          - lang: de
-            text: 'Wenn Sie Wyre Bach nutzen, nutzen Sie stattdessen den Bashed Patch Tweak und löschen Sie es.'
   - name: 'Dwarven-S.esp'
     tag:
       - Graphics
