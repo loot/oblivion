@@ -7445,13 +7445,14 @@ plugins:
     msg: [ *alreadyInOOO ]
   - name: 'Willful Resistance.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/11237' ]
+    inc: [ 'DBWBMR.esp' ]
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Only use one willpower equals magicka resistance/weakness type mod at once.'
-          - lang: de
-            text: 'Nutzen Sie nur eine Willensstärke enspricht Magicka Resistenz/Schwäche Art von Modifikation.'
+      - <<: *requiresX
+        subs: [ '[Fundament](https://www.nexusmods.com/oblivion/mods/41005)' ]
+        condition: 'not file("Fundament.esm")'
+    clean:
+      - crc: 0x89990CEF
+        util: 'TES4Edit v4.0.3g'
   - name: 'WWF - Gloom.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/28666' ]
     tag: [ Graphics ]
