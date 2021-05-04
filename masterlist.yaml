@@ -22162,13 +22162,11 @@ plugins:
       - Body-Size-F
       - Body-Size-M
   - name: 'DBWBMR.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Only use one willpower equals magicka resistance/weakness type mod at once.'
-          - lang: de
-            text: 'Nutzen Sie nur eine Willensstärke enspricht Magicka Resistenz/Schwäche Art von Modifikation.'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/25475' ]
+    inc: [ 'Willful Resistance.esp' ]
+    clean:
+      - crc: 0x9E24AFB7
+        util: 'TES4Edit v4.0.3g'
   - name: 'ArgonianFeets.esp'
     tag: [ Invent ]
   - name: 'KT_CustomRaceFix.esp'
