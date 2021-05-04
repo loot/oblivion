@@ -22106,13 +22106,11 @@ plugins:
   - name: 'JoinedJaws.esp'
     tag: [ R.Teeth ]
   - name: 'cidnothump.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/35118' ]
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'If using Mighty Magic, use ''cidnothumpMMversion.esp'' instead.'
-          - lang: de
-            text: 'Wenn Mighty Magic genutzt wird, nutzen Sie stattdessen ''cidnothumpMMversion.esp''.'
+      - <<: *useInstead
+        subs: [ '**cidnothumpMMversion.esp**' ]
+        condition: 'file("Mighty Magick - (Core|Races|Settings|Skills|Spells and Creatures).esp")'
     tag: [ Sound ]
   - name: 'PMSneakySummonCompatibility.esp'
     group: *latePatchesGroup
