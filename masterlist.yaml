@@ -9435,13 +9435,11 @@ plugins:
     inc: [ 'Zira''s Horse Modpack - Heavy Legion Horses.esp' ]
     req: [ 'DLCHorseArmor.esp' ]
   - name: 'MD Saddlebags V3.0.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/2008' ]
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'This mod adds the saddlebags to merchants only once. To ensure they are added to merchants who have been reset, also use "MD Saddlebags v3 alternative trader script".'
-          - lang: de
-            text: 'Diese Mod fügt die Satteltaschen zu den Händlern nur einmal hinzu. Um sicherzustellen das diese auch den Händlern hinzugefügt werden die zurückgesetzt wurden, nutzen Sie auch "MD Saddlebags v3 alternative trader script".'
+      - <<: *alsoUseX
+        subs: [ '[MD Saddlebags v3 alternative trader script](https://www.nexusmods.com/oblivion/mods/22084)' ]
+        condition: 'not file("MD Saddlebags v3.0 Alternative Trader Script.esp")'
   - name: 'Horse Management.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/46021' ]
     req: [ *OBSEv21 ]
