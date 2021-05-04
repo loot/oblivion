@@ -19180,14 +19180,12 @@ plugins:
           - lang: de
             text: 'Beinhaltet von ''Hentai Mania.esp'', löschen oder deaktivieren Sie diesen wenn Sie die Hentai Mania Mod nutzen.'
         condition: 'file("Hentai *Mania.*\.esp")'
-  - name: 'seorin''s Leveling System.esp'
+  - name: 'seorin''s Leveling System( - light)?.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/3494' ]
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Use just one Seorin''s Leveling System mod file.'
-          - lang: de
-            text: 'Nutzen Sie einfach nur eine Seorin''s Leveling System Mod Datei.'
+      - <<: *useOnlyOneX
+        subs: [ 'Leveling System Plugin' ]
+        condition: 'many("seorin''s Leveling System( - light)?.esp")'
   - name: 'Legendary Abilities-Shield MOJ.esp'
     dirty:
       - crc: 0x51d68248
