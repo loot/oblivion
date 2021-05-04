@@ -4048,6 +4048,15 @@ plugins:
         name: 'Unofficial Oblivion Patch - ITA Pack'
     group: *veryEarlyGroup
 
+###### 3rd Party Patches ######
+  - name: 'LostSpires_TheOrderofNibenay_patch.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/23657/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x8637CA07
+        util: '[TES4Edit v4.0.3g](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 15
+
 ###### Better Cities ######
   - name: 'Better (Cities |Imperial City).*\.es(m|p)'
     url: [ 'https://www.nexusmods.com/oblivion/mods/16513' ]
@@ -15724,19 +15733,7 @@ plugins:
         <<: *dirtyPlugin
         udr: 19
         itm: 129
-  - name: 'LostSpires_TheOrderofNibenay_patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/23657' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Needs Wrye Bash''s "Remove World Orphans" function run on it.'
-          - lang: de
-            text: 'Kann Ausführung von Wrye Bash''s "Remove World Orphans" Funktion darauf benötigen.'
-    dirty:
-      - crc: 0x8637ca07
-        <<: *dirtyPlugin
-        itm: 15
+
   - name: 'GuardsofCyrodiilRedux.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/28586' ]
     msg:
