@@ -2701,6 +2701,29 @@ plugins:
       - crc: 0x1C8F1C26
         util: 'TES4Edit v4.0.3'
 
+  - name: 'Oblivifall .*\.es(m|p)'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/31668/' ]
+  - name: 'Oblivifall - Losing My Religion.esp'
+    tag:
+      - Actors.AIPackages
+      - C.Name
+      - C.Owner
+      - Hair
+      - Invent
+  - name: 'Oblivifall - Losing My Religion KOTN.esp'
+    tag: [ Actors.AIPackages ]
+  - name: 'Oblivifall - Losing My Religion Blood&Mud.esp'
+    dirty:
+      - crc: 0x128c5f11
+        <<: *dirtyPlugin
+        itm: 1
+  - name: 'Oblivifall - Losing My Religion West Roads Patch.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x1B777711
+        util: '[TES4Edit v4.0.3g](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 16
+
   - name: 'Oblivion Content Restoration Project.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/45909' ]
     req: [ *OBSE ]
@@ -16254,23 +16277,7 @@ plugins:
         <<: *dirtyPlugin
         itm: 35
         udr: 158
-  - name: 'Oblivifall - Losing My Religion.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/31668' ]
-    tag:
-      - Actors.AIPackages
-      - C.Name
-      - C.Owner
-      - Hair
-      - Invent
-  - name: 'Oblivifall - Losing My Religion KOTN.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/31668' ]
-    tag: [ Actors.AIPackages ]
-  - name: 'Oblivifall - Losing My Religion Blood&Mud.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/31668' ]
-    dirty:
-      - crc: 0x128c5f11
-        <<: *dirtyPlugin
-        itm: 1
+
   - name: 'Unique Forts Fort Strand.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/40758' ]
     dirty:
@@ -16653,30 +16660,7 @@ plugins:
             text: 'Requires: Better/Open Cities IC Market District Components.'
           - lang: de
             text: 'Benötigt: Better/Open Cities IC Market District Components.'
-  - name: 'Oblivifall - Losing My Religion West Roads Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/31668' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Needs Wrye Bash''s "Remove World Orphans" fix.'
-          - lang: de
-            text: 'Brauch Wrye Bash''s "Remove World Orphans" Fix.'
-        condition: 'checksum("Oblivifall - Losing My Religion West Roads Patch.esp",1B777711)'
-    dirty:
-      - crc: 0x1489007c
-        <<: *dirtyPlugin
-        itm: 12
-  - name: 'Oblivifall - Losing My Religion Kvatch Rebuilt West Roads Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/31668' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Needs Wrye Bash''s "Remove World Orphans" fix.'
-          - lang: de
-            text: 'Brauch Wrye Bash''s "Remove World Orphans" Fix.'
-        condition: 'checksum("Oblivifall - Losing My Religion Kvatch Rebuilt West Roads Patch.esp",EDF95E8A)'
+
   - name: 'CastleSeaview+LostCoast Patch.esp'
     inc: [ 'EaglesRest+LostCoast+CastleSeaview Patch.esp' ]
   - name: 'EaglesRest+LostCoast+CastleSeaview Patch.esp'
