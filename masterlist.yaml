@@ -428,6 +428,18 @@ common:
     <<: *languageX
     subs: [ '**sv**' ]
 
+  - &mainQuestCompleted
+    type: say
+    content:
+      - lang: en
+        text: 'Only use this plugin once the main quest of the game has been completed.'
+      - lang: bg
+        text: 'Използвайте тази приставка само след завършване на основната мисия на играта.'
+      - lang: de
+        text: 'Verwenden Sie dieses Plugin erst, wenn die Hauptquest des Spiels abgeschlossen ist.'
+      - lang: it
+        text: 'Utilizzare questo plugin solo quando la missione principale del gioco è stata completata.'
+
   - &masterReassign
     type: say
     content:
