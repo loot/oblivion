@@ -2179,6 +2179,21 @@ plugins:
       - 'Av Latta Magicka - Potion Rebalance.esp'
       - 'Av Latta Magicka - Rebalance Complete.esp'
 
+  - name: '\[Natcalsar\] DontHideRings&Amulets.*\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/22012/' ]
+  - name: '\[Natcalsar\] DontHideRings&Amulets_(HA|LA) V1\.0\.esp'
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Assorted -> Armor Shows Amulets' ]
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Assorted -> Armor Shows Rings' ]
+  - name: '[Natcalsar] DontHideRings&Amulets_Clothing V1.0.esp'
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Assorted -> Clothing Shows Amulets' ]
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Assorted -> Clothing Shows Rings' ]
+
 ###### AudioVisual - Animations & Physics ######
   - name: 'Feminized_Animations_.*\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/47774' ]
@@ -17770,62 +17785,7 @@ plugins:
             text: 'Benötigt: Qarl''s Harvest, Tamrielic Ingredients.'
   - name: 'NameReplacer-Clothing.esp'
     tag: [ Names ]
-  - name: '[Natcalsar] DontHideRings&Amulets_LA V1.0.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'If possible use the Wrye Bash Bashed Patch tweak instead.'
-          - lang: de
-            text: 'Wenn möglich, nutzen Sie stattdessen den Wrye Bash Bashed Patch tweak.'
-  - name: '[Natcalsar] DontHideRings&Amulets_HA V1.0.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'If possible use the Wrye Bash Bashed Patch tweak instead.'
-          - lang: de
-            text: 'Wenn möglich, nutzen Sie stattdessen den Wrye Bash Bashed Patch tweak.'
-  - name: '[Natcalsar] DontHideRings&Amulets_Clothing V1.0.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'If possible use the Wrye Bash Bashed Patch tweak instead.'
-          - lang: de
-            text: 'Wenn möglich, nutzen Sie stattdessen den Wrye Bash Bashed Patch tweak.'
-  - name: '[Natcalsar] DontHideRings&Amulets_KOTN+SI V1.0.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'If possible use the Wrye Bash Bashed Patch tweak instead.'
-          - lang: de
-            text: 'Wenn möglich, nutzen Sie stattdessen den Wrye Bash Bashed Patch tweak.'
-  - name: '[Calsar] DontHideRings&Amulets_HA V1.0.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'If possible use the Wrye Bash Bashed Patch tweak instead.'
-          - lang: de
-            text: 'Wenn möglich, nutzen Sie stattdessen den Wrye Bash Bashed Patch tweak.'
-  - name: '[Calsar] DontHideRings&Amulets_KOTN+SI V1.0.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'If possible use the Wrye Bash Bashed Patch tweak instead.'
-          - lang: de
-            text: 'Wenn möglich, nutzen Sie stattdessen den Wrye Bash Bashed Patch tweak.'
-  - name: '[Calsar] DontHideRings&Amulets_Clothing V1.0.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'If possible use the Wrye Bash Bashed Patch tweak instead.'
-          - lang: de
-            text: 'Wenn möglich, nutzen Sie stattdessen den Wrye Bash Bashed Patch tweak.'
+
   - name: 'Near100PercentArrowRecovery.esp'
     msg:
       - type: say
