@@ -3144,6 +3144,26 @@ plugins:
         itm: 49
         udr: 11
 
+  - name: 'PMSneakySummon.*\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/25335/'
+        name: 'Pacific Morrowind''s Miscellany'
+  - name: 'PMSneakySummons-ForVanilla.esp'
+    inc: [ 'PMSneakySummonCompatibility.esp' ]
+    msg:
+      - type: say
+        content:
+          - lang: en
+            text: 'To have magic overhaul features move before magic overhauls (but then you won''t get the features of this)'
+          - lang: de
+            text: 'Um Magie-Überhol Funktionalitäten zu haben, bewegen Sie es vor Magie-Überhol-Mods (aber dann bekommen Sie nicht die Funktionalitäten hiervon)'
+  - name: 'PMSneakySummonCompatibility.esp'
+    group: *latePatchesGroup
+    msg: [ *requiresBashedPatch ]
+    tag:
+      - Deactivate
+      - -Invent.Remove
+
 ###### Gameplay - NPC Behaviour & Dialogue ######
   - name: 'PTCombatSpeechcraft(Easy|Medium|Hard).esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/31535' ]
@@ -18783,15 +18803,7 @@ plugins:
             text: 'Not needed if using LAME.'
           - lang: de
             text: 'Nicht nötig wenn LAME genutzt wird.'
-  - name: 'PMSneakySummons-ForVanilla.esp'
-    inc: [ 'PMSneakySummonCompatibility.esp' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'To have magic overhaul features move before magic overhauls (but then you won''t get the features of this)'
-          - lang: de
-            text: 'Um Magie-Überhol Funktionalitäten zu haben, bewegen Sie es vor Magie-Überhol-Mods (aber dann bekommen Sie nicht die Funktionalitäten hiervon)'
+
   - name: 'Poisoned Apple Fix.esp'
     msg:
       - type: say
@@ -22046,20 +22058,7 @@ plugins:
         subs: [ '**cidnothumpMMversion.esp**' ]
         condition: 'file("Mighty Magick - (Core|Races|Settings|Skills|Spells and Creatures).esp")'
     tag: [ Sound ]
-  - name: 'PMSneakySummonCompatibility.esp'
-    group: *latePatchesGroup
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Requires: Wrye Bash for proper use'
-          - lang: de
-            text: 'Benötigt: Wrye Bash für angemessene Nutzung'
-    tag:
-      - Deactivate
-      - Filter
-      - IIM
-      - Invent
+
   - name: 'Recastable Summons.esp'
     dirty:
       - crc: 0x970cacd1
