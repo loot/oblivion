@@ -3985,6 +3985,19 @@ plugins:
         itm: 1
         udr: 293
 
+  - name: 'IC Atmospheric Shops Mod.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/27973/' ]
+    tag:
+      - Actors.AIPackages
+      - Invent.Add
+      - Invent.Remove
+    dirty:
+      - <<: *quickClean
+        crc: 0x4A1F2563
+        util: '[TES4Edit v4.0.3g](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 88
+        udr: 512
+
   - name: 'Productive Mines.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/47722' ]
     tag: [ C.Name ]
@@ -13869,15 +13882,7 @@ plugins:
     inc:
       - 'Better Cities SKINGRAD.esp'
       - 'Better Cities Full.esp'
-  - name: 'IC Atmospheric Shops Mod.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/27973' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'If not using WB you may have to move this above some item mods (thereby losing some changes from this) or lose some items from those mods.'
-          - lang: de
-            text: 'Wenn WB nicht genutzt, muss dieses womöglich vor anderen Gegenstände-Mods platziert werden (dadurch ein paar Änderungen davon verlierend) oder einige Gegenstände von diesen Mods verlieren.'
+
   - name: 'Dirtier Waterfront.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/12183' ]
     dirty:
