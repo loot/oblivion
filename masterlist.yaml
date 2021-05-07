@@ -3014,6 +3014,12 @@ plugins:
         itm: 7
         udr: 2
 
+  - name: 'Get[ _]Your[ _]Arrows[ _]Back-9403\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/9403/' ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings -> Arrow: Recovery From Actor [100%]' ]
+
   - name: 'More Lockpicks.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/3737/' ]
     tag:
@@ -17551,15 +17557,7 @@ plugins:
       - 'SG012_MoonLight_Suit.esp'
       - 'SG013_Nazca.esp'
       - 'SG014_SparkleSweetSummer.esp'
-  - name: 'Get_Your_Arrows_Back-9403.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/9403' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Consider using Bash Patch tweaks instead, if possible.'
-          - lang: de
-            text: 'Erwägen Sie stattdessen den Bash Patch tweaks zu verwenden, wenn möglich.'
+
   - name: 'Gems.esp'
     tag:
       - NoMerge
