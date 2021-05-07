@@ -4020,6 +4020,15 @@ plugins:
         itm: 4
         udr: 121
 
+  - name: 'WatersEdgeImproved.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/36896/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x53A73FA1
+        util: '[TES4Edit v4.0.3g](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 30
+        udr: 14
+
 ###### Location - Player homes ######
   - name: '300_Akaviri_Stronghold.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/3292' ]
@@ -16526,20 +16535,7 @@ plugins:
           - lang: de
             text: 'Wahrscheinlich inkompatibel mit Better Cities.'
         condition: 'file("Better Cities Resources.esm")'
-  - name: 'WatersEdgeImproved.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/36896' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Needs Wrye Bash "Remove World Orphans" fix.'
-          - lang: de
-            text: 'Brauch Wrye Bash "Remove World Orphans" Fix.'
-    dirty:
-      - crc: 0x53a73fa1
-        <<: *dirtyPlugin
-        itm: 30
-        udr: 14
+
   - name: 'Wellspring Vale.esp'
     url: [ 'https://tesalliance.org/forums/index.php?/files/file/594-wellspring-vale' ]
     dirty:
