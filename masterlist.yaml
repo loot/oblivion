@@ -4132,6 +4132,17 @@ plugins:
         subs: [ '[Unique Landscapes Compatibility Patches](https://www.nexusmods.com/oblivion/mods/13834)' ]
         condition: 'version("xulAncientYews.esp", "2", >=) or version("Unique Landscapes.esp", "2", >=)'
 
+  - name: 'Rustle House.*\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/35252/' ]
+  - name: 'Rustle House.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x7CF13D29
+        util: '[TES4Edit v4.0.3g](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 3
+  - name: 'Rustle House - AN Patch.esp'
+    tag: [ -Graphics ]
+
 ###### Translations ######
   - name: 'ITA - FoT & Hexaae R3.esp'
     url:
@@ -14703,16 +14714,6 @@ plugins:
         itm: 4440
         udr: 1
 
-  - name: 'Rustle House - AN Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/35252' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'It is possible when using All Natural + CBash the first floor of the house may become flooded. If so remove the "KhRHInterior" record from the Bashed Patch every time you rebuild. Or consider installing the "Rustle House CBash Fix.esp".'
-          - lang: de
-            text: 'Es ist möglich das wenn All Natural + CBash benutzt wird dass das Erdgeschoss des Hauses geflutet wird. Wenn dem so ist, entfernen Sie den "KhRHInterior" Eintrag von dem Bashed Patch jedes mal wenn sie neu-bauen. Oder erwägen Sie die Installation vom "Rustle House CBash Fix.esp".'
-    tag: [ C.Climate ]
   - name: 'Sacred Duty.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/38287' ]
     dirty:
