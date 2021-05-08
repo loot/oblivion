@@ -4906,6 +4906,125 @@ plugins:
       - crc: 0xCFCE92CF
         util: 'TES4Edit v4.0.3'
 
+###### Hemingway's Capes ######
+  - name: 'Hemingweys.*\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/29012/' ]
+  - name: 'Hemingweys Capes Improved.esp'
+    msg:
+      - <<: *patchUnavailable
+        subs: [ 'Beast Characters lose tails no more' ]
+        condition: 'file("Argonians and Khajiit Lose Tails no More.esp")'
+    tag:
+      - Invent
+      - Stats
+    dirty:
+      - <<: *quickClean
+        crc: 0x397CB5DD
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1
+  - name: 'Hemingweys NPC Capes.esp'
+    msg: [ *obsolete ]
+    tag: [ Invent ]
+  - name: 'Hemingweys Capes Improved for FCOM.esp'
+    tag:
+      - Invent
+      - Scripts
+      - Stats
+  - name: 'Hemingweys Capes Improved for MMM.esp'
+    tag:
+      - Invent
+      - Stats
+  - name: 'Hemingweys Capes Improved for OOO.esp'
+    tag:
+      - Invent
+      - Scripts
+      - Stats
+  - name: 'Hemingweys Capes Improved Merchants.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0xFD2BF13D
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536/)'
+        itm: 1
+    clean:
+      - crc: 0x4C85EDF0
+        util: 'TES4Edit v4.0.3'
+  - name: 'Hemingweys FCOM Boss Chest Cape Loot.esp'
+    tag: [ Invent ]
+  - name: 'Hemingweys FCOM OOO Cape Patch.esp'
+    tag: [ Scripts ]
+  - name: 'Hemingweys FCOM NPC Capes Improved Citizens.esp'
+    tag: [ Invent ]
+  - name: 'Hemingweys FCOM NPC Capes Improved Enemies.esp'
+    tag: [ Invent ]
+  - name: 'Hemingweys FCOM NPC Capes Improved Bosses Only.esp'
+    tag: [ Invent ]
+  - name: 'Hemingweys FCOM NPC Capes Improved Legion Forester.esp'
+    tag: [ Invent ]
+  - name: 'Hemingweys FCOM NPC Capes Improved Regional City Guards.esp'
+    tag: [ Invent ]
+  - name: 'Hemingweys FCOM Show Amulets.esp'
+    tag: [ Stats ]
+  - name: 'Hemingweys MMM Boss Chest Cape Loot.esp'
+    tag: [ Invent ]
+  - name: 'Hemingweys MMM NPC Capes Improved Citizens.esp'
+    tag: [ Invent ]
+  - name: 'Hemingweys MMM NPC Capes Improved Enemies.esp'
+    tag: [ Invent ]
+  - name: 'Hemingweys MMM NPC Capes Improved Bosses Only.esp'
+    tag: [ Invent ]
+  - name: 'Hemingweys MMM NPC Capes Improved IC Guards.esp'
+    tag: [ Invent ]
+  - name: 'Hemingweys MMM NPC Capes Improved Legion Forester.esp'
+    tag: [ Invent ]
+  - name: 'Hemingweys MMM NPC Capes Improved Regional City Guards.esp'
+    tag: [ Invent ]
+  - name: 'Hemingweys MMM Show Amulets.esp'
+    tag: [ Stats ]
+  - name: 'Hemingweys OOO Boss Chest Cape Loot.esp'
+    tag: [ Invent ]
+  - name: 'Hemingweys OOO Cape Patch.esp'
+    tag: [ Scripts ]
+  - name: 'Hemingweys OOO NPC Capes Improved Citizens.esp'
+    tag: [ Invent ]
+  - name: 'Hemingweys OOO NPC Capes Improved Enemies.esp'
+    tag: [ Invent ]
+  - name: 'Hemingweys OOO NPC Capes Improved Bosses Only.esp'
+    tag: [ Invent ]
+  - name: 'Hemingweys OOO NPC Capes Improved Legion Forester.esp'
+    tag: [ Invent ]
+  - name: 'Hemingweys OOO NPC Capes Improved Regional City Guards.esp'
+    tag: [ Invent ]
+  - name: 'Hemingweys OOO Show Amulets.esp'
+    tag: [ Stats ]
+  - name: 'Hemingweys OOO NPC Capes Improved IC Guards.esp'
+    tag:
+      - Graphics
+      - Invent
+      - Scripts
+  - name: 'Hemingweys VAN Boss Chest Cape Loot.esp'
+    tag: [ Invent ]
+  - name: 'Hemingweys VAN NPC Capes Improved Citizens.esp'
+    tag: [ Invent ]
+  - name: 'Hemingweys VAN NPC Capes Improved Enemies.esp'
+    tag: [ Invent ]
+  - name: 'Hemingweys VAN NPC Capes Improved Bosses Only.esp'
+    tag: [ Invent ]
+  - name: 'Hemingweys VAN NPC Capes Improved IC Guards.esp'
+    tag: [ Invent ]
+  - name: 'Hemingweys VAN NPC Capes Improved Legion Forester.esp'
+    tag: [ Invent ]
+  - name: 'Hemingweys VAN NPC Capes Improved Regional City Guards.esp'
+    tag: [ Invent ]
+  - name: 'Hemingweys VAN Show Amulets.esp'
+    tag: [ Stats ]
+  - name: 'Hemingweys Capes for EDI.esp'
+    tag: [ Invent ]
+  - name: 'Hemingweys Capes for FCOM_FrancescosNamedBosses.esp'
+    tag: [ Invent ]
+  - name: 'Hemingweys NPC Capes for OOO and FCOM.esp'
+    inc: [ 'Mart''s Monster Mod.esm' ]
+    msg: [ *obsolete ]
+
 ###### Item Interchange ######
   - name: 'Item interchange - .*\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17557' ]
@@ -10426,10 +10545,7 @@ plugins:
   - name: 'Growlfs Hot Clothes.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17209' ]
     tag: [ Graphics ]
-  - name: 'Hemingweys NPC Capes.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    msg: [ *obsolete ]
-    tag: [ Invent ]
+
   - name: 'Hentai Compilation.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22990' ]
     dirty:
@@ -11735,158 +11851,11 @@ plugins:
   - name: 'CSR - Fine Iron.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/11451' ]
     tag: [ Graphics ]
-  - name: 'Hemingweys Capes Improved for FCOM.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag:
-      - Invent
-      - Scripts
-      - Stats
-  - name: 'Hemingweys Capes Improved for MMM.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag:
-      - Invent
-      - Stats
-  - name: 'Hemingweys Capes Improved for OOO.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag:
-      - Invent
-      - Scripts
-      - Stats
-  - name: 'Hemingweys Capes Improved.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag:
-      - Invent
-      - Stats
-    dirty:
-      - <<: *quickClean
-        crc: 0x397CB5DD
-        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 1
-  - name: 'Hemingweys Capes Improved Merchants.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    dirty:
-      - <<: *quickClean
-        crc: 0xFD2BF13D
-        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536/)'
-        itm: 1
-    clean:
-      - crc: 0x4C85EDF0
-        util: 'TES4Edit v4.0.3'
-  - name: 'Hemingweys FCOM Boss Chest Cape Loot.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag: [ Invent ]
-  - name: 'Hemingweys FCOM OOO Cape Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag: [ Scripts ]
-  - name: 'Hemingweys FCOM NPC Capes Improved Citizens.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag: [ Invent ]
-  - name: 'Hemingweys FCOM NPC Capes Improved Enemies.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag: [ Invent ]
-  - name: 'Hemingweys FCOM NPC Capes Improved Bosses Only.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag: [ Invent ]
-  - name: 'Hemingweys FCOM NPC Capes Improved Legion Forester.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag: [ Invent ]
-  - name: 'Hemingweys FCOM NPC Capes Improved Regional City Guards.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag: [ Invent ]
-  - name: 'Hemingweys FCOM Show Amulets.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag: [ Stats ]
-  - name: 'Hemingweys MMM Boss Chest Cape Loot.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag: [ Invent ]
-  - name: 'Hemingweys MMM NPC Capes Improved Citizens.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag: [ Invent ]
-  - name: 'Hemingweys MMM NPC Capes Improved Enemies.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag: [ Invent ]
-  - name: 'Hemingweys MMM NPC Capes Improved Bosses Only.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag: [ Invent ]
-  - name: 'Hemingweys MMM NPC Capes Improved IC Guards.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag: [ Invent ]
-  - name: 'Hemingweys MMM NPC Capes Improved Legion Forester.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag: [ Invent ]
-  - name: 'Hemingweys MMM NPC Capes Improved Regional City Guards.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag: [ Invent ]
-  - name: 'Hemingweys MMM Show Amulets.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag: [ Stats ]
-  - name: 'Hemingweys OOO Boss Chest Cape Loot.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag: [ Invent ]
-  - name: 'Hemingweys OOO Cape Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag: [ Scripts ]
-  - name: 'Hemingweys OOO NPC Capes Improved Citizens.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag: [ Invent ]
-  - name: 'Hemingweys OOO NPC Capes Improved Enemies.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag: [ Invent ]
-  - name: 'Hemingweys OOO NPC Capes Improved Bosses Only.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag: [ Invent ]
-  - name: 'Hemingweys OOO NPC Capes Improved Legion Forester.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag: [ Invent ]
-  - name: 'Hemingweys OOO NPC Capes Improved Regional City Guards.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag: [ Invent ]
-  - name: 'Hemingweys OOO Show Amulets.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag: [ Stats ]
-  - name: 'Hemingweys OOO NPC Capes Improved IC Guards.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag:
-      - Graphics
-      - Invent
-      - Scripts
-  - name: 'Hemingweys VAN Boss Chest Cape Loot.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag: [ Invent ]
-  - name: 'Hemingweys VAN NPC Capes Improved Citizens.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag: [ Invent ]
-  - name: 'Hemingweys VAN NPC Capes Improved Enemies.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag: [ Invent ]
-  - name: 'Hemingweys VAN NPC Capes Improved Bosses Only.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag: [ Invent ]
-  - name: 'Hemingweys VAN NPC Capes Improved IC Guards.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag: [ Invent ]
-  - name: 'Hemingweys VAN NPC Capes Improved Legion Forester.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag: [ Invent ]
-  - name: 'Hemingweys VAN NPC Capes Improved Regional City Guards.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag: [ Invent ]
-  - name: 'Hemingweys VAN Show Amulets.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag: [ Stats ]
-  - name: 'Hemingweys Capes for EDI.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag: [ Invent ]
-  - name: 'Hemingweys Capes for FCOM_FrancescosNamedBosses.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag: [ Invent ]
+
   - name: 'Harvest\[Containers\]( - Vanilla| - Player Home Add-on| - Flat-Top Barrels Add-on| - Havok Crates Add-on)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/3979/' ]
     msg: [ *alreadyInOOO ]
-  - name: 'Hemingweys NPC Capes for OOO and FCOM.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    inc: [ 'Mart''s Monster Mod.esm' ]
-    msg: [ *obsolete ]
+
   - name: 'MTCDirtierBandits.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/30144' ]
     tag: [ Invent ]
@@ -22462,22 +22431,7 @@ plugins:
       - R.Teeth
       - Voice-F
       - Voice-M
-  - name: 'Hemingweys Capes.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Don''t use Wrye Bash''s Bashed Patch unlimited amulet''s tweak with this.'
-          - lang: de
-            text: 'Nutzen Sie nicht Wrye Bash''s Bashed Patch unlimited amulet''s Tweak hiermit.'
-        condition: 'file("Bashed Patch.*\.esp")'
-      - type: say
-        content:
-          - lang: en
-            text: 'If you''re using this with the mod "Beast Characters lose tails no more", temporarily move it below the Bashed Patch whenever you rebuild it'
-          - lang: de
-            text: 'Wenn Sie dies nutzen mit der Mod "Beast Characters lose tails no more", verschieben Sie es temporär nach dem Bashed Patch immer wenn Sie es erneut-bauen'
+
   - name: 'JazzJRKhajiitfeets.esp'
     tag: [ Invent ]
   - name: 'KSE_v3.esp'
