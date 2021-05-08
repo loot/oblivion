@@ -2475,6 +2475,12 @@ plugins:
     msg:
       - *alreadyInFCOM
       - *alreadyInMMM
+      - <<: *useVersion
+        subs: [ 'Francesco''s Creatures and Items' ]
+        condition: 'active("Francesco''s Leveled Creatures-Items Mod.esm")'
+      - <<: *useVersion
+        subs: [ 'Oscuro''s Oblivion Overhaul' ]
+        condition: *OOOCond
   - name: 'MrSiika''sRabbitsforFrans.esp'
     msg:
       - <<: *alreadyInX
