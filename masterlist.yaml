@@ -2465,6 +2465,42 @@ plugins:
         util: 'TES4Edit v4.0.3'
 
 ###### Encounters - Neutral ######
+  - name: 'moDem''s City Life.esp'
+    url:
+      - 'https://www.nexusmods.com/oblivion/mods/9450/'
+      - 'https://www.nexusmods.com/oblivion/mods/11351/'
+    msg:
+      - type: say
+        content:
+          - lang: en
+            text: 'May cause crashes in the IC Market district. May have been fixed. Needs verification.'
+          - lang: de
+            text: 'Kann Abstürze im IC Markt Abteil verursachen. Kann schon behoben sein. Braucht Überprüfung.'
+    dirty:
+      - <<: *quickClean
+        crc: 0x88D5A5EE
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 287
+        udr: 19
+
+  - name: 'moDem''s City Life - BP Compat.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/11278/' ]
+    msg:
+      - type: say
+        content:
+          - lang: en
+            text: 'May cause crashes in the IC Market district. May have been fixed. Needs verification.'
+          - lang: de
+            text: 'Kann Abstürze im IC Markt Abteil verursachen. Kann schon behoben sein. Braucht Überprüfung.'
+      - type: say
+        content:
+          - lang: en
+            text: 'For use with Better Cities use replacing fix for BBC.'
+          - lang: de
+            text: 'Für die Nutzung von Better Cities nutzen Sie replacing fix for BBC.'
+        condition: 'file("Better Cities Resources.esm")'
+    tag: [ Hair ]
+
   - name: 'MrSiika''sRabbits(forFrans|forOOO)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/14266/' ]
     msg:
@@ -9739,40 +9775,7 @@ plugins:
   - name: 'Enhanced Economy.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/25078' ]
     inc: [ 'Living Economy.esp' ]
-  - name: 'moDem''s City Life - BP Compat.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/11278' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'May cause crashes in the IC Market district. May have been fixed. Needs verification.'
-          - lang: de
-            text: 'Kann Abstürze im IC Markt Abteil verursachen. Kann schon behoben sein. Braucht Überprüfung.'
-      - type: say
-        content:
-          - lang: en
-            text: 'For use with Better Cities use replacing fix for BBC.'
-          - lang: de
-            text: 'Für die Nutzung von Better Cities nutzen Sie replacing fix for BBC.'
-        condition: 'file("Better Cities Resources.esm")'
-    tag: [ Hair ]
-  - name: 'moDem''s City Life.esp'
-    url:
-      - 'https://www.nexusmods.com/oblivion/mods/9450'
-      - 'https://www.nexusmods.com/oblivion/mods/11351'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'May cause crashes in the IC Market district. May have been fixed. Needs verification.'
-          - lang: de
-            text: 'Kann Abstürze im IC Markt Abteil verursachen. Kann schon behoben sein. Braucht Überprüfung.'
-    dirty:
-      - <<: *quickClean
-        crc: 0x88D5A5EE
-        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 287
-        udr: 19
+
   - name: 'Bards of Cyrodiil.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/31671' ]
     tag: [ Relations ]
