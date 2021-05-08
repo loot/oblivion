@@ -2481,14 +2481,29 @@ plugins:
       - <<: *useVersion
         subs: [ 'Oscuro''s Oblivion Overhaul' ]
         condition: *OOOCond
+    dirty:
+      - <<: *quickClean
+        crc: 0xA0D38351
+        util: '[TES4Edit v4.0.3g](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1
   - name: 'MrSiika''sRabbitsforFrans.esp'
     msg:
       - <<: *alreadyInX
         subs: [ 'Mart''s Monster Mod for Fran' ]
         condition: 'active("Mart''s Monster Mod for Fran.esp")'
+    dirty:
+      - <<: *quickClean
+        crc: 0x22695898
+        util: '[TES4Edit v4.0.3g](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1
   - name: 'MrSiika''sRabbitsforOOO.esp'
     inc: [ 'Mart''s Monster Mod for OOO.esp' ]
     msg: [ *alreadyInFCOM ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xCAA03CA8
+        util: '[TES4Edit v4.0.3g](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1
 
 ###### Environment, Landscape & Flora ######
   - name: 'lLet there be Flowers.esp'
