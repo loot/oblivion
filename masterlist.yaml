@@ -2467,6 +2467,10 @@ plugins:
 ###### Encounters - Neutral ######
   - name: 'MrSiika''sRabbits(forFrans|forOOO)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/14266/' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Mr_Siika''s Rabbits ESP' ]
+        condition: 'many("MrSiika''sRabbits(forFrans|forOOO)?\.esp")'
   - name: 'MrSiika''sRabbits.esp'
     msg:
       - *alreadyInFCOM
