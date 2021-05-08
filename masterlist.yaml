@@ -2114,6 +2114,14 @@ plugins:
         subs: [ 'Different Script Effect Icon ESP' ]
         condition: 'many("Different Script Effect Icon - (Darkness|Fortify|Lock|Reflect Spell|Resist|Silence|Stunted Magicka|Sun Damage|Vampirism)\.esp")'
 
+  - name: 'Dwemer_Rename.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/4894/'
+        name: 'Dwarven to Dwemer'
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Names -> Lore Friendly Text: Dwarven -> Dwemer' ]
+
   - name: 'Dynamic Map.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/35969' ]
     req: [ *MenuQue ]
@@ -2170,6 +2178,21 @@ plugins:
     after:
       - 'Av Latta Magicka - Potion Rebalance.esp'
       - 'Av Latta Magicka - Rebalance Complete.esp'
+
+  - name: '\[Natcalsar\] DontHideRings&Amulets.*\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/22012/' ]
+  - name: '\[Natcalsar\] DontHideRings&Amulets_(HA|LA) V1\.0\.esp'
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Assorted -> Armor Shows Amulets' ]
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Assorted -> Armor Shows Rings' ]
+  - name: '[Natcalsar] DontHideRings&Amulets_Clothing V1.0.esp'
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Assorted -> Clothing Shows Amulets' ]
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Assorted -> Clothing Shows Rings' ]
 
 ###### AudioVisual - Animations & Physics ######
   - name: 'Feminized_Animations_.*\.esp'
@@ -2639,6 +2662,20 @@ plugins:
       - 'West Roads.esp'
 
 ###### Gameplay - General ######
+  - name: 'Adventurers_1.0.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/4025/' ]
+    inc:
+      - 'FCOM_Convergence.esm'
+      - 'Francesco''s Leveled Creatures-Items Mod.esm'
+      - 'Mart''s Monster Mod.esm'
+      - 'Oscuro''s_Oblivion_Overhaul.esm'
+    dirty:
+      - <<: *quickClean
+        crc: 0xD39C1693
+        util: '[TES4Edit v4.0.3g](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 16
+        udr: 48
+
   - name: 'Duke Patricks - (Combat Magic II|Fortress of Fear).esp'
     url: [ 'http://tesalliance.org/forums/index.php?/files/file/780-duke-patricks-combat-magic-ii-duke-patricks-incursion-into-fortress-of-fear/' ]
     req:
@@ -2657,6 +2694,12 @@ plugins:
     clean:
       - crc: 0xE2A5D879
         util: 'TES4Edit v4.0.3'
+
+  - name: 'Erics Crafting Mod.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/28087/' ]
+    tag:
+      - Invent.Add
+      - Scripts
 
   - name: 'Knights Infamy.esp'
     url:
@@ -2686,6 +2729,29 @@ plugins:
     clean:
       - crc: 0x1C8F1C26
         util: 'TES4Edit v4.0.3'
+
+  - name: 'Oblivifall .*\.es(m|p)'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/31668/' ]
+  - name: 'Oblivifall - Losing My Religion.esp'
+    tag:
+      - Actors.AIPackages
+      - C.Name
+      - C.Owner
+      - Hair
+      - Invent
+  - name: 'Oblivifall - Losing My Religion KOTN.esp'
+    tag: [ Actors.AIPackages ]
+  - name: 'Oblivifall - Losing My Religion Blood&Mud.esp'
+    dirty:
+      - crc: 0x128c5f11
+        <<: *dirtyPlugin
+        itm: 1
+  - name: 'Oblivifall - Losing My Religion West Roads Patch.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x1B777711
+        util: '[TES4Edit v4.0.3g](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 16
 
   - name: 'Oblivion Content Restoration Project.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/45909' ]
@@ -2948,6 +3014,18 @@ plugins:
         itm: 7
         udr: 2
 
+  - name: 'Get[ _]Your[ _]Arrows[ _]Back-9403\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/9403/' ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings -> Arrow: Recovery From Actor [100%]' ]
+
+  - name: 'More Lockpicks.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/3737/' ]
+    tag:
+      - Invent.Add
+      - Relev
+
 ###### Gameplay - Magic & Abilities ######
   - name: 'Av Latta Magicka.es(m|p)'
     url: [ 'https://www.nexusmods.com/oblivion/mods/49096' ]
@@ -3077,6 +3155,26 @@ plugins:
         util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 49
         udr: 11
+
+  - name: 'PMSneakySummon.*\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/25335/'
+        name: 'Pacific Morrowind''s Miscellany'
+  - name: 'PMSneakySummons-ForVanilla.esp'
+    inc: [ 'PMSneakySummonCompatibility.esp' ]
+    msg:
+      - type: say
+        content:
+          - lang: en
+            text: 'To have magic overhaul features move before magic overhauls (but then you won''t get the features of this)'
+          - lang: de
+            text: 'Um Magie-Überhol Funktionalitäten zu haben, bewegen Sie es vor Magie-Überhol-Mods (aber dann bekommen Sie nicht die Funktionalitäten hiervon)'
+  - name: 'PMSneakySummonCompatibility.esp'
+    group: *latePatchesGroup
+    msg: [ *requiresBashedPatch ]
+    tag:
+      - Deactivate
+      - -Invent.Remove
 
 ###### Gameplay - NPC Behaviour & Dialogue ######
   - name: 'PTCombatSpeechcraft(Easy|Medium|Hard).esp'
@@ -3212,13 +3310,6 @@ plugins:
 
   - name: 'Castlevania.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/39538/' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'May require Wrye Bash''s "Remove World Orphans" function run on it.'
-          - lang: de
-            text: 'Kann Ausführung von Wrye Bash''s "Remove World Orphans" Funktion darauf benötigen.'
     dirty:
       - <<: *quickClean
         crc: 0x99857FBF
@@ -3481,6 +3572,15 @@ plugins:
       - crc: 0xBBE3D1F1
         util: 'TES4Edit v4.0.3'
 
+  - name: 'RuinsofEvendallMod.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/25562/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xC320276C
+        util: '[TES4Edit v4.0.3g](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1710
+        udr: 36
+
   - name: 'SM Plugin Refurbish.*\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/11474/'
@@ -3575,6 +3675,14 @@ plugins:
         util: 'TES4Edit v4.0.3'
 
 ###### Items ######
+  - name: '300_Artifacts.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/2732/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xEE1BF7BC
+        util: '[TES4Edit v4.0.3g](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 13
+
   - name: 'TreasureChest.*\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/44066' ]
   - name: 'TreasureChest.esp'
@@ -3632,6 +3740,12 @@ plugins:
         util: '[TES4Edit v4.0.3g](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 178
         udr: 50
+
+  - name: 'Deepwood Adventures.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/38017/' ]
+    msg:
+      - <<: *corrupt
+        condition: 'checksum("Deepwood Adventures.esp", A3896464)'
 
   - name: 'Hammerfell.esm'
     url: [ 'https://www.nexusmods.com/oblivion/mods/34484' ]
@@ -3844,6 +3958,21 @@ plugins:
       - name: 'xulArriusCreek.esp'
         condition: 'not version("Unique Landscapes.esp", "2.0.0", >=)'
 
+  - name: 'BetterInns .*\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/29333/' ]
+  - name: 'BetterInns + NewHomeOwners.esp'
+    tag:
+      - Actors.AIPackages
+      - C.Name
+      - Scripts
+  - name: 'BetterInns - Harvest Containers PATCH.esp'
+    msg:
+      - <<: *masterReassign
+        subs:
+          - 'Harvest[Containers].esp'
+          - 'Harvest[Containers].esm'
+        condition: 'file("Harvest[Containers].esm") and checksum("BetterInns - Harvest Containers PATCH.esp", 6CD0A481)'
+
   - name: 'CDEP-UnderpallCave.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/13939/' ]
     tag:
@@ -3868,6 +3997,19 @@ plugins:
         itm: 1
         udr: 293
 
+  - name: 'IC Atmospheric Shops Mod.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/27973/' ]
+    tag:
+      - Actors.AIPackages
+      - Invent.Add
+      - Invent.Remove
+    dirty:
+      - <<: *quickClean
+        crc: 0x4A1F2563
+        util: '[TES4Edit v4.0.3g](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 88
+        udr: 512
+
   - name: 'Productive Mines.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/47722' ]
     tag: [ C.Name ]
@@ -3877,6 +4019,15 @@ plugins:
         util: '[TES4Edit v4.0.3b](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 4
         udr: 121
+
+  - name: 'WatersEdgeImproved.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/36896/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x53A73FA1
+        util: '[TES4Edit v4.0.3g](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 30
+        udr: 14
 
 ###### Location - Player homes ######
   - name: '300_Akaviri_Stronghold.esp'
@@ -3996,12 +4147,32 @@ plugins:
         subs: [ '[Unique Landscapes Compatibility Patches](https://www.nexusmods.com/oblivion/mods/13834)' ]
         condition: 'version("xulAncientYews.esp", "2", >=) or version("Unique Landscapes.esp", "2", >=)'
 
+  - name: 'Rustle House.*\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/35252/' ]
+  - name: 'Rustle House.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x7CF13D29
+        util: '[TES4Edit v4.0.3g](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 3
+  - name: 'Rustle House - AN Patch.esp'
+    tag: [ -Graphics ]
+
 ###### Translations ######
   - name: 'ITA - FoT & Hexaae R3.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/41740/'
         name: 'Unofficial Oblivion Patch - ITA Pack'
     group: *veryEarlyGroup
+
+###### 3rd Party Patches ######
+  - name: 'LostSpires_TheOrderofNibenay_patch.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/23657/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x8637CA07
+        util: '[TES4Edit v4.0.3g](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 15
 
 ###### Better Cities ######
   - name: 'Better (Cities |Imperial City).*\.es(m|p)'
@@ -4734,6 +4905,125 @@ plugins:
     clean:
       - crc: 0xCFCE92CF
         util: 'TES4Edit v4.0.3'
+
+###### Hemingway's Capes ######
+  - name: 'Hemingweys.*\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/29012/' ]
+  - name: 'Hemingweys Capes Improved.esp'
+    msg:
+      - <<: *patchUnavailable
+        subs: [ 'Beast Characters lose tails no more' ]
+        condition: 'file("Argonians and Khajiit Lose Tails no More.esp")'
+    tag:
+      - Invent
+      - Stats
+    dirty:
+      - <<: *quickClean
+        crc: 0x397CB5DD
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1
+  - name: 'Hemingweys NPC Capes.esp'
+    msg: [ *obsolete ]
+    tag: [ Invent ]
+  - name: 'Hemingweys Capes Improved for FCOM.esp'
+    tag:
+      - Invent
+      - Scripts
+      - Stats
+  - name: 'Hemingweys Capes Improved for MMM.esp'
+    tag:
+      - Invent
+      - Stats
+  - name: 'Hemingweys Capes Improved for OOO.esp'
+    tag:
+      - Invent
+      - Scripts
+      - Stats
+  - name: 'Hemingweys Capes Improved Merchants.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0xFD2BF13D
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536/)'
+        itm: 1
+    clean:
+      - crc: 0x4C85EDF0
+        util: 'TES4Edit v4.0.3'
+  - name: 'Hemingweys FCOM Boss Chest Cape Loot.esp'
+    tag: [ Invent ]
+  - name: 'Hemingweys FCOM OOO Cape Patch.esp'
+    tag: [ Scripts ]
+  - name: 'Hemingweys FCOM NPC Capes Improved Citizens.esp'
+    tag: [ Invent ]
+  - name: 'Hemingweys FCOM NPC Capes Improved Enemies.esp'
+    tag: [ Invent ]
+  - name: 'Hemingweys FCOM NPC Capes Improved Bosses Only.esp'
+    tag: [ Invent ]
+  - name: 'Hemingweys FCOM NPC Capes Improved Legion Forester.esp'
+    tag: [ Invent ]
+  - name: 'Hemingweys FCOM NPC Capes Improved Regional City Guards.esp'
+    tag: [ Invent ]
+  - name: 'Hemingweys FCOM Show Amulets.esp'
+    tag: [ Stats ]
+  - name: 'Hemingweys MMM Boss Chest Cape Loot.esp'
+    tag: [ Invent ]
+  - name: 'Hemingweys MMM NPC Capes Improved Citizens.esp'
+    tag: [ Invent ]
+  - name: 'Hemingweys MMM NPC Capes Improved Enemies.esp'
+    tag: [ Invent ]
+  - name: 'Hemingweys MMM NPC Capes Improved Bosses Only.esp'
+    tag: [ Invent ]
+  - name: 'Hemingweys MMM NPC Capes Improved IC Guards.esp'
+    tag: [ Invent ]
+  - name: 'Hemingweys MMM NPC Capes Improved Legion Forester.esp'
+    tag: [ Invent ]
+  - name: 'Hemingweys MMM NPC Capes Improved Regional City Guards.esp'
+    tag: [ Invent ]
+  - name: 'Hemingweys MMM Show Amulets.esp'
+    tag: [ Stats ]
+  - name: 'Hemingweys OOO Boss Chest Cape Loot.esp'
+    tag: [ Invent ]
+  - name: 'Hemingweys OOO Cape Patch.esp'
+    tag: [ Scripts ]
+  - name: 'Hemingweys OOO NPC Capes Improved Citizens.esp'
+    tag: [ Invent ]
+  - name: 'Hemingweys OOO NPC Capes Improved Enemies.esp'
+    tag: [ Invent ]
+  - name: 'Hemingweys OOO NPC Capes Improved Bosses Only.esp'
+    tag: [ Invent ]
+  - name: 'Hemingweys OOO NPC Capes Improved Legion Forester.esp'
+    tag: [ Invent ]
+  - name: 'Hemingweys OOO NPC Capes Improved Regional City Guards.esp'
+    tag: [ Invent ]
+  - name: 'Hemingweys OOO Show Amulets.esp'
+    tag: [ Stats ]
+  - name: 'Hemingweys OOO NPC Capes Improved IC Guards.esp'
+    tag:
+      - Graphics
+      - Invent
+      - Scripts
+  - name: 'Hemingweys VAN Boss Chest Cape Loot.esp'
+    tag: [ Invent ]
+  - name: 'Hemingweys VAN NPC Capes Improved Citizens.esp'
+    tag: [ Invent ]
+  - name: 'Hemingweys VAN NPC Capes Improved Enemies.esp'
+    tag: [ Invent ]
+  - name: 'Hemingweys VAN NPC Capes Improved Bosses Only.esp'
+    tag: [ Invent ]
+  - name: 'Hemingweys VAN NPC Capes Improved IC Guards.esp'
+    tag: [ Invent ]
+  - name: 'Hemingweys VAN NPC Capes Improved Legion Forester.esp'
+    tag: [ Invent ]
+  - name: 'Hemingweys VAN NPC Capes Improved Regional City Guards.esp'
+    tag: [ Invent ]
+  - name: 'Hemingweys VAN Show Amulets.esp'
+    tag: [ Stats ]
+  - name: 'Hemingweys Capes for EDI.esp'
+    tag: [ Invent ]
+  - name: 'Hemingweys Capes for FCOM_FrancescosNamedBosses.esp'
+    tag: [ Invent ]
+  - name: 'Hemingweys NPC Capes for OOO and FCOM.esp'
+    inc: [ 'Mart''s Monster Mod.esm' ]
+    msg: [ *obsolete ]
 
 ###### Item Interchange ######
   - name: 'Item interchange - .*\.esp'
@@ -8686,18 +8976,7 @@ plugins:
   - name: '(CM_Better Wine_SI|Better Wine SI)\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/14596' ]
     inc: [ 'Oscuro''s_Oblivion_Overhaul.esm' ]
-  - name: 'bgShaderStandAloneEV.esp'
-    url:
-      - 'http://theelderscrolls.info/?go=dlfile&fileid=336'
-      - 'https://www.nexusmods.com/oblivion/mods/47189'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Requires Wrye Bash if using spell mods.'
-          - lang: de
-            text: 'Benötigt Wrye Bash wenn Zauberspruch Mods genutzt werden.'
-    tag: [ Graphics ]
+
   - name: 'Bosmer Meat Mandate.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/7697' ]
     tag: [ Invent ]
@@ -10266,10 +10545,7 @@ plugins:
   - name: 'Growlfs Hot Clothes.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17209' ]
     tag: [ Graphics ]
-  - name: 'Hemingweys NPC Capes.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    msg: [ *obsolete ]
-    tag: [ Invent ]
+
   - name: 'Hentai Compilation.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22990' ]
     dirty:
@@ -11575,158 +11851,11 @@ plugins:
   - name: 'CSR - Fine Iron.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/11451' ]
     tag: [ Graphics ]
-  - name: 'Hemingweys Capes Improved for FCOM.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag:
-      - Invent
-      - Scripts
-      - Stats
-  - name: 'Hemingweys Capes Improved for MMM.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag:
-      - Invent
-      - Stats
-  - name: 'Hemingweys Capes Improved for OOO.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag:
-      - Invent
-      - Scripts
-      - Stats
-  - name: 'Hemingweys Capes Improved.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag:
-      - Invent
-      - Stats
-    dirty:
-      - <<: *quickClean
-        crc: 0x397CB5DD
-        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 1
-  - name: 'Hemingweys Capes Improved Merchants.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    dirty:
-      - <<: *quickClean
-        crc: 0xFD2BF13D
-        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536/)'
-        itm: 1
-    clean:
-      - crc: 0x4C85EDF0
-        util: 'TES4Edit v4.0.3'
-  - name: 'Hemingweys FCOM Boss Chest Cape Loot.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag: [ Invent ]
-  - name: 'Hemingweys FCOM OOO Cape Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag: [ Scripts ]
-  - name: 'Hemingweys FCOM NPC Capes Improved Citizens.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag: [ Invent ]
-  - name: 'Hemingweys FCOM NPC Capes Improved Enemies.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag: [ Invent ]
-  - name: 'Hemingweys FCOM NPC Capes Improved Bosses Only.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag: [ Invent ]
-  - name: 'Hemingweys FCOM NPC Capes Improved Legion Forester.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag: [ Invent ]
-  - name: 'Hemingweys FCOM NPC Capes Improved Regional City Guards.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag: [ Invent ]
-  - name: 'Hemingweys FCOM Show Amulets.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag: [ Stats ]
-  - name: 'Hemingweys MMM Boss Chest Cape Loot.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag: [ Invent ]
-  - name: 'Hemingweys MMM NPC Capes Improved Citizens.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag: [ Invent ]
-  - name: 'Hemingweys MMM NPC Capes Improved Enemies.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag: [ Invent ]
-  - name: 'Hemingweys MMM NPC Capes Improved Bosses Only.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag: [ Invent ]
-  - name: 'Hemingweys MMM NPC Capes Improved IC Guards.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag: [ Invent ]
-  - name: 'Hemingweys MMM NPC Capes Improved Legion Forester.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag: [ Invent ]
-  - name: 'Hemingweys MMM NPC Capes Improved Regional City Guards.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag: [ Invent ]
-  - name: 'Hemingweys MMM Show Amulets.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag: [ Stats ]
-  - name: 'Hemingweys OOO Boss Chest Cape Loot.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag: [ Invent ]
-  - name: 'Hemingweys OOO Cape Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag: [ Scripts ]
-  - name: 'Hemingweys OOO NPC Capes Improved Citizens.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag: [ Invent ]
-  - name: 'Hemingweys OOO NPC Capes Improved Enemies.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag: [ Invent ]
-  - name: 'Hemingweys OOO NPC Capes Improved Bosses Only.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag: [ Invent ]
-  - name: 'Hemingweys OOO NPC Capes Improved Legion Forester.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag: [ Invent ]
-  - name: 'Hemingweys OOO NPC Capes Improved Regional City Guards.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag: [ Invent ]
-  - name: 'Hemingweys OOO Show Amulets.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag: [ Stats ]
-  - name: 'Hemingweys OOO NPC Capes Improved IC Guards.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag:
-      - Graphics
-      - Invent
-      - Scripts
-  - name: 'Hemingweys VAN Boss Chest Cape Loot.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag: [ Invent ]
-  - name: 'Hemingweys VAN NPC Capes Improved Citizens.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag: [ Invent ]
-  - name: 'Hemingweys VAN NPC Capes Improved Enemies.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag: [ Invent ]
-  - name: 'Hemingweys VAN NPC Capes Improved Bosses Only.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag: [ Invent ]
-  - name: 'Hemingweys VAN NPC Capes Improved IC Guards.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag: [ Invent ]
-  - name: 'Hemingweys VAN NPC Capes Improved Legion Forester.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag: [ Invent ]
-  - name: 'Hemingweys VAN NPC Capes Improved Regional City Guards.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag: [ Invent ]
-  - name: 'Hemingweys VAN Show Amulets.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag: [ Stats ]
-  - name: 'Hemingweys Capes for EDI.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag: [ Invent ]
-  - name: 'Hemingweys Capes for FCOM_FrancescosNamedBosses.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    tag: [ Invent ]
+
   - name: 'Harvest\[Containers\]( - Vanilla| - Player Home Add-on| - Flat-Top Barrels Add-on| - Havok Crates Add-on)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/3979/' ]
     msg: [ *alreadyInOOO ]
-  - name: 'Hemingweys NPC Capes for OOO and FCOM.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    inc: [ 'Mart''s Monster Mod.esm' ]
-    msg: [ *obsolete ]
+
   - name: 'MTCDirtierBandits.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/30144' ]
     tag: [ Invent ]
@@ -12191,15 +12320,7 @@ plugins:
           - lang: de
             text: 'Nutze stattdessen Diverse Guard Armor.esp für MMM/MMMForFrans (in MMMforOOO fusioniert) oder nutzen Sie Diverse Guard Unity für FCOM.'
         condition: 'file("Mart''s Monster Mod for Fran.esp") or file("Mart''s Monster Mod.esm") or file("Mart''s Monster Mod for OOO.esm") or file("FCOM_Convergence.esm")'
-  - name: 'Adventurers_1.0.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/4025' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Probably incompatible with every other overhaul out there - although with Wrye Bash *should* be able to be made to work with MMM.'
-          - lang: de
-            text: 'Wahrscheinlich inkompatibel mit jeder anderen Überhol-Mod die es gibt - obwohl Wrye Bash das fusionieren können *sollte* um mit MMM zu funktionieren.'
+
   - name: 'un-leveled-shops.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/3507' ]
     tag:
@@ -12487,20 +12608,7 @@ plugins:
         crc: 0x7AC8F55B
         util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
         udr: 130
-  - name: '300_Artifacts.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/2732' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'May require Wrye Bash''s "Remove World Orphans" function run on it.'
-          - lang: de
-            text: 'Kann Ausführung von Wrye Bash''s "Remove World Orphans" Funktion darauf benötigen.'
-    dirty:
-      - <<: *quickClean
-        crc: 0xEE1BF7BC
-        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 13
+
   - name: 'A Blades House.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/15348' ]
     dirty:
@@ -13337,21 +13445,7 @@ plugins:
             text: 'it replaces (DC) Sutch Reborn.esp'
           - lang: de
             text: 'Es ersetzt (DC) Sutch Reborn.esp'
-  - name: 'Deepwood Adventures.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/38017' ]
-    req: [ *SilentVoice ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Very dirty - Compile All Scripts was used on the mod. Either use CS or Tes4Edit to clean or use Wrye Bash''s Decompile All command.'
-          - lang: de
-            text: 'Sehr unsauber - Compile All Scripts wurde auf dieser Mod genutzt. Entweder nutzen Sie CS oder Tes4Edit zum Säubern oder Sie nutzen Wrye Bash''s Decompile All Befehl.'
-    dirty:
-      - crc: 0xad5233bc
-        <<: *dirtyPlugin
-        itm: 2265
-        udr: 45
+
   - name: 'DibellaTempleWillowLakeVillagev1.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/13285' ]
     dirty:
@@ -13789,15 +13883,7 @@ plugins:
     inc:
       - 'Better Cities SKINGRAD.esp'
       - 'Better Cities Full.esp'
-  - name: 'IC Atmospheric Shops Mod.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/27973' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'If not using WB you may have to move this above some item mods (thereby losing some changes from this) or lose some items from those mods.'
-          - lang: de
-            text: 'Wenn WB nicht genutzt, muss dieses womöglich vor anderen Gegenstände-Mods platziert werden (dadurch ein paar Änderungen davon verlierend) oder einige Gegenstände von diesen Mods verlieren.'
+
   - name: 'Dirtier Waterfront.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/12183' ]
     dirty:
@@ -14611,30 +14697,7 @@ plugins:
         <<: *dirtyPlugin
         itm: 4440
         udr: 1
-  - name: 'RuinsofEvendallMod.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/25562' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Very dirty - Compile All Scripts was used on the mod. Either use CS or Tes4Edit to clean or use Wrye Bash''s Decompile All command.'
-          - lang: de
-            text: 'Sehr unsauber - Compile All Scripts wurde auf dieser Mod genutzt. Entweder nutzen Sie CS oder Tes4Edit zum Säubern oder Sie nutzen Wrye Bash''s Decompile All Befehl.'
-    dirty:
-      - crc: 0xc320276c
-        <<: *dirtyPlugin
-        itm: 46
-        udr: 36
-  - name: 'Rustle House - AN Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/35252' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'It is possible when using All Natural + CBash the first floor of the house may become flooded. If so remove the "KhRHInterior" record from the Bashed Patch every time you rebuild. Or consider installing the "Rustle House CBash Fix.esp".'
-          - lang: de
-            text: 'Es ist möglich das wenn All Natural + CBash benutzt wird dass das Erdgeschoss des Hauses geflutet wird. Wenn dem so ist, entfernen Sie den "KhRHInterior" Eintrag von dem Bashed Patch jedes mal wenn sie neu-bauen. Oder erwägen Sie die Installation vom "Rustle House CBash Fix.esp".'
-    tag: [ C.Climate ]
+
   - name: 'Sacred Duty.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/38287' ]
     dirty:
@@ -14764,24 +14827,7 @@ plugins:
         <<: *dirtyPlugin
         itm: 50
         udr: 3
-  - name: 'Sylar_INNMergedCyrodillInnsRevisedV1.1.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29333' ]
-    msg: [ *obsolete ]
-  - name: 'BetterInns + NewHomeOwners.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29333' ]
-    tag:
-      - Actors.AIPackages
-      - C.Name
-      - Scripts
-  - name: 'BetterInns - Harvest Containers PATCH.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29333' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'If using Harvest Containers v0.99.14, this plugin will need its master changed using Wrye Bash or TES4Gecko to reference the correct plugin, the addition of the Graphics and Scripts tags, e.g. {{BASH: Graphics, Scripts}}, and the removal of the Filter tag.'
-          - lang: de
-            text: 'Wenn Harvest Containers v0.99.14 genutzt, muss dieses Plugin den Master abgeändert werden mithilfe von Wrye Bash oder TES4Gecko um das korrekte Plugin zu referenzieren, das Hinzufügen von den Graphics und Scripts Tags, wie {{BASH: Graphics, Scripts}}, and die Entfernung des Filter Tags.'
+
   - name: 'TamrielSnacks11-EV.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/20105' ]
     dirty:
@@ -15755,19 +15801,7 @@ plugins:
         <<: *dirtyPlugin
         udr: 19
         itm: 129
-  - name: 'LostSpires_TheOrderofNibenay_patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/23657' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Needs Wrye Bash''s "Remove World Orphans" function run on it.'
-          - lang: de
-            text: 'Kann Ausführung von Wrye Bash''s "Remove World Orphans" Funktion darauf benötigen.'
-    dirty:
-      - crc: 0x8637ca07
-        <<: *dirtyPlugin
-        itm: 15
+
   - name: 'GuardsofCyrodiilRedux.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/28586' ]
     msg:
@@ -16288,23 +16322,7 @@ plugins:
         <<: *dirtyPlugin
         itm: 35
         udr: 158
-  - name: 'Oblivifall - Losing My Religion.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/31668' ]
-    tag:
-      - Actors.AIPackages
-      - C.Name
-      - C.Owner
-      - Hair
-      - Invent
-  - name: 'Oblivifall - Losing My Religion KOTN.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/31668' ]
-    tag: [ Actors.AIPackages ]
-  - name: 'Oblivifall - Losing My Religion Blood&Mud.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/31668' ]
-    dirty:
-      - crc: 0x128c5f11
-        <<: *dirtyPlugin
-        itm: 1
+
   - name: 'Unique Forts Fort Strand.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/40758' ]
     dirty:
@@ -16486,20 +16504,7 @@ plugins:
           - lang: de
             text: 'Wahrscheinlich inkompatibel mit Better Cities.'
         condition: 'file("Better Cities Resources.esm")'
-  - name: 'WatersEdgeImproved.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/36896' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Needs Wrye Bash "Remove World Orphans" fix.'
-          - lang: de
-            text: 'Brauch Wrye Bash "Remove World Orphans" Fix.'
-    dirty:
-      - crc: 0x53a73fa1
-        <<: *dirtyPlugin
-        itm: 30
-        udr: 14
+
   - name: 'Wellspring Vale.esp'
     url: [ 'https://tesalliance.org/forums/index.php?/files/file/594-wellspring-vale' ]
     dirty:
@@ -16687,30 +16692,7 @@ plugins:
             text: 'Requires: Better/Open Cities IC Market District Components.'
           - lang: de
             text: 'Benötigt: Better/Open Cities IC Market District Components.'
-  - name: 'Oblivifall - Losing My Religion West Roads Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/31668' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Needs Wrye Bash''s "Remove World Orphans" fix.'
-          - lang: de
-            text: 'Brauch Wrye Bash''s "Remove World Orphans" Fix.'
-        condition: 'checksum("Oblivifall - Losing My Religion West Roads Patch.esp",1B777711)'
-    dirty:
-      - crc: 0x1489007c
-        <<: *dirtyPlugin
-        itm: 12
-  - name: 'Oblivifall - Losing My Religion Kvatch Rebuilt West Roads Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/31668' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Needs Wrye Bash''s "Remove World Orphans" fix.'
-          - lang: de
-            text: 'Brauch Wrye Bash''s "Remove World Orphans" Fix.'
-        condition: 'checksum("Oblivifall - Losing My Religion Kvatch Rebuilt West Roads Patch.esp",EDF95E8A)'
+
   - name: 'CastleSeaview+LostCoast Patch.esp'
     inc: [ 'EaglesRest+LostCoast+CastleSeaview Patch.esp' ]
   - name: 'EaglesRest+LostCoast+CastleSeaview Patch.esp'
@@ -17465,14 +17447,6 @@ plugins:
           - lang: de
             text: 'Benötigt: Mod Daedric Lord Armor'
 
-  - name: 'Dwemer_Rename.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'If using Wrye Bash use the Bashed Patch Tweak instead and delete.'
-          - lang: de
-            text: 'Wenn Sie Wyre Bach nutzen, nutzen Sie stattdessen den Bashed Patch Tweak und löschen Sie es.'
   - name: 'Dwarven-S.esp'
     tag:
       - Graphics
@@ -17548,15 +17522,7 @@ plugins:
       - 'SG012_MoonLight_Suit.esp'
       - 'SG013_Nazca.esp'
       - 'SG014_SparkleSweetSummer.esp'
-  - name: 'Get_Your_Arrows_Back-9403.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/9403' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Consider using Bash Patch tweaks instead, if possible.'
-          - lang: de
-            text: 'Erwägen Sie stattdessen den Bash Patch tweaks zu verwenden, wenn möglich.'
+
   - name: 'Gems.esp'
     tag:
       - NoMerge
@@ -17802,14 +17768,7 @@ plugins:
       - Stats
   - name: 'MIEO-ae.esp'
     tag: [ Stats ]
-  - name: 'More Lockpicks.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'If using with an overhaul such as OOO (or many other mods), you really should use Wrye Bash or you''ll have loss of some leveled list changes.'
-          - lang: de
-            text: 'Wenn dies genutzt wird mit einer Überhol-Mod wie OOO (oder vielen anderen Mods) dann sollten Sie ersthaft Wyre Bash nutzen oder Sie verlieren Änderungen die an Leveled List gemacht wurden.'
+
   - name: 'TI-MM v04d.esp'
     req: [ 'DLCShiveringIsles.esp' ]
     msg:
@@ -17821,70 +17780,7 @@ plugins:
             text: 'Benötigt: Qarl''s Harvest, Tamrielic Ingredients.'
   - name: 'NameReplacer-Clothing.esp'
     tag: [ Names ]
-  - name: '[Natcalsar] DontHideRings&Amulets_LA V1.0.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'If possible use the Wrye Bash Bashed Patch tweak instead.'
-          - lang: de
-            text: 'Wenn möglich, nutzen Sie stattdessen den Wrye Bash Bashed Patch tweak.'
-  - name: '[Natcalsar] DontHideRings&Amulets_HA V1.0.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'If possible use the Wrye Bash Bashed Patch tweak instead.'
-          - lang: de
-            text: 'Wenn möglich, nutzen Sie stattdessen den Wrye Bash Bashed Patch tweak.'
-  - name: '[Natcalsar] DontHideRings&Amulets_Clothing V1.0.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'If possible use the Wrye Bash Bashed Patch tweak instead.'
-          - lang: de
-            text: 'Wenn möglich, nutzen Sie stattdessen den Wrye Bash Bashed Patch tweak.'
-  - name: '[Natcalsar] DontHideRings&Amulets_KOTN+SI V1.0.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'If possible use the Wrye Bash Bashed Patch tweak instead.'
-          - lang: de
-            text: 'Wenn möglich, nutzen Sie stattdessen den Wrye Bash Bashed Patch tweak.'
-  - name: '[Calsar] DontHideRings&Amulets_HA V1.0.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'If possible use the Wrye Bash Bashed Patch tweak instead.'
-          - lang: de
-            text: 'Wenn möglich, nutzen Sie stattdessen den Wrye Bash Bashed Patch tweak.'
-  - name: '[Calsar] DontHideRings&Amulets_KOTN+SI V1.0.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'If possible use the Wrye Bash Bashed Patch tweak instead.'
-          - lang: de
-            text: 'Wenn möglich, nutzen Sie stattdessen den Wrye Bash Bashed Patch tweak.'
-  - name: '[Calsar] DontHideRings&Amulets_Clothing V1.0.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'If possible use the Wrye Bash Bashed Patch tweak instead.'
-          - lang: de
-            text: 'Wenn möglich, nutzen Sie stattdessen den Wrye Bash Bashed Patch tweak.'
-  - name: 'Near100PercentArrowRecovery.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Consider using Bash Patch tweaks instead.'
-          - lang: de
-            text: 'Erwägen Sie stattdessen den Bash Patch tweaks zu nutzen.'
+
   - name: 'Nephs Unique Thievery.esp'
     tag: [ Invent ]
   - name: 'newsheogorath.esp'
@@ -18077,15 +17973,7 @@ plugins:
     msg:
       - <<: *useBashTweakInstead
         subs: [ 'Tweak Settings -> Combat: Repair' ]
-  - name: 'real_tools.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Very dirty - Compile All Scripts was used on the mod. Either use CS or Tes4Edit to clean or use Wrye Bash''s Decompile All command.'
-          - lang: de
-            text: 'Sehr unsauber - Compile All Scripts wurde auf dieser Mod genutzt. Entweder nutzen Sie CS oder Tes4Edit zum Säubern oder Sie nutzen Wrye Bash''s Decompile All Befehl.'
-    tag: [ Scripts ]
+
   - name: 'Realistic Creature Rarity.esp'
     msg:
       - type: say
@@ -18425,17 +18313,7 @@ plugins:
         udr: 664
   - name: 'CB-DepositsForges.esp'
     # doNotClean
-  - name: 'Erics Crafting Mod.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'If it doesn''t work move past your bashed patch (author recommends that placement but the tags added here should fix that... to be investigated)'
-          - lang: de
-            text: 'Wenn es nicht funktioniert, bewegen Sie es nach Ihrem Bashed Patch (Mod-Autor empfiehlt diese Platzierung aber die Tags die hier hinzugefügt wurden, sollten das beheben... muss noch untersucht werden)'
-    tag:
-      - Invent
-      - Scripts
+
   - name: 'Merchant_Tim.esp'
     msg:
       - type: say
@@ -18890,15 +18768,7 @@ plugins:
             text: 'Not needed if using LAME.'
           - lang: de
             text: 'Nicht nötig wenn LAME genutzt wird.'
-  - name: 'PMSneakySummons-ForVanilla.esp'
-    inc: [ 'PMSneakySummonCompatibility.esp' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'To have magic overhaul features move before magic overhauls (but then you won''t get the features of this)'
-          - lang: de
-            text: 'Um Magie-Überhol Funktionalitäten zu haben, bewegen Sie es vor Magie-Überhol-Mods (aber dann bekommen Sie nicht die Funktionalitäten hiervon)'
+
   - name: 'Poisoned Apple Fix.esp'
     msg:
       - type: say
@@ -22153,20 +22023,7 @@ plugins:
         subs: [ '**cidnothumpMMversion.esp**' ]
         condition: 'file("Mighty Magick - (Core|Races|Settings|Skills|Spells and Creatures).esp")'
     tag: [ Sound ]
-  - name: 'PMSneakySummonCompatibility.esp'
-    group: *latePatchesGroup
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Requires: Wrye Bash for proper use'
-          - lang: de
-            text: 'Benötigt: Wrye Bash für angemessene Nutzung'
-    tag:
-      - Deactivate
-      - Filter
-      - IIM
-      - Invent
+
   - name: 'Recastable Summons.esp'
     dirty:
       - crc: 0x970cacd1
@@ -22574,22 +22431,7 @@ plugins:
       - R.Teeth
       - Voice-F
       - Voice-M
-  - name: 'Hemingweys Capes.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29012' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Don''t use Wrye Bash''s Bashed Patch unlimited amulet''s tweak with this.'
-          - lang: de
-            text: 'Nutzen Sie nicht Wrye Bash''s Bashed Patch unlimited amulet''s Tweak hiermit.'
-        condition: 'file("Bashed Patch.*\.esp")'
-      - type: say
-        content:
-          - lang: en
-            text: 'If you''re using this with the mod "Beast Characters lose tails no more", temporarily move it below the Bashed Patch whenever you rebuild it'
-          - lang: de
-            text: 'Wenn Sie dies nutzen mit der Mod "Beast Characters lose tails no more", verschieben Sie es temporär nach dem Bashed Patch immer wenn Sie es erneut-bauen'
+
   - name: 'JazzJRKhajiitfeets.esp'
     tag: [ Invent ]
   - name: 'KSE_v3.esp'
