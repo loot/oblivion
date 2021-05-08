@@ -2464,6 +2464,47 @@ plugins:
       - crc: 0xD50F45C3
         util: 'TES4Edit v4.0.3'
 
+###### Encounters - Neutral ######
+  - name: 'MrSiika''sRabbits(forFrans|forOOO)?\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/14266/' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Mr_Siika''s Rabbits ESP' ]
+        condition: 'many("MrSiika''sRabbits(forFrans|forOOO)?\.esp")'
+  - name: 'MrSiika''sRabbits.esp'
+    msg:
+      - *alreadyInFCOM
+      - *alreadyInMMM
+      - <<: *useVersion
+        subs: [ 'Francesco''s Creatures and Items' ]
+        condition: 'active("Francesco''s Leveled Creatures-Items Mod.esm")'
+      - <<: *useVersion
+        subs: [ 'Oscuro''s Oblivion Overhaul' ]
+        condition: *OOOCond
+    dirty:
+      - <<: *quickClean
+        crc: 0xA0D38351
+        util: '[TES4Edit v4.0.3g](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1
+  - name: 'MrSiika''sRabbitsforFrans.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'Mart''s Monster Mod for Fran' ]
+        condition: 'active("Mart''s Monster Mod for Fran.esp")'
+    dirty:
+      - <<: *quickClean
+        crc: 0x22695898
+        util: '[TES4Edit v4.0.3g](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1
+  - name: 'MrSiika''sRabbitsforOOO.esp'
+    inc: [ 'Mart''s Monster Mod for OOO.esp' ]
+    msg: [ *alreadyInFCOM ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xCAA03CA8
+        util: '[TES4Edit v4.0.3g](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1
+
 ###### Environment, Landscape & Flora ######
   - name: 'lLet there be Flowers.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/49616/' ]
@@ -8464,11 +8505,7 @@ plugins:
     msg:
       - *alreadyInMMM
       - *alreadyInFCOM
-  - name: 'MrSiikaRabbits.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/14266' ]
-    msg:
-      - *alreadyInMMM
-      - *alreadyInFCOM
+
   - name: 'FranDarkSeducerWeapFix.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17621' ]
     tag:
@@ -8480,12 +8517,7 @@ plugins:
       - name: 'meshes/armor/Bonemold/bone.nif'
         display: 'Meshes from the "[Bonemold Helmet](http://www.nexusmods.com/oblivion/mods/6997)" and "Cryos Ordinator Indoril Armor" mods'
     tag: [ Invent ]
-  - name: 'MrSiikaRabbitsforFrans.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/14266' ]
-    msg:
-      - <<: *alreadyInX
-        subs: [ 'Mart''s Monster Mod for Fran' ]
-        condition: 'active("Mart''s Monster Mod for Fran.esp")'
+
   - name: 'Atmospheric Loading Screens - No Text.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/8958' ]
     tag: [ Graphics ]
@@ -11831,10 +11863,7 @@ plugins:
   - name: 'OOO-Ayleid Coin Add-on.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/10671' ]
     msg: [ *obsolete ]
-  - name: 'MrSiikaRabbitsforOOO.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/14266' ]
-    inc: [ '"Mart''s Monster Mod for OOO.esp' ]
-    msg: [ *alreadyInFCOM ]
+
   - name: 'Alluring Potion Bottles v3.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/33531' ]
     tag:
