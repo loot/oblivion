@@ -4102,6 +4102,26 @@ plugins:
         itm: 18
         udr: 9
 
+  - name: 'AzurasServices_(en|de)\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/12187/' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Azura''s Services ESP' ]
+        condition: 'many("AzurasServices_(en|de)\.esp")'
+  - name: 'AzuraServices_en.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0xE9F00985
+        util: '[TES4Edit v4.0.3g](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 3
+  - name: 'AzurasServices_de.esp'
+    msg: [ *languageGerman ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x2036A473
+        util: '[TES4Edit v4.0.3g](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 3
+
   - name: 'Cardac.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/40833/' ]
     dirty:
@@ -13010,16 +13030,6 @@ plugins:
         util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 39
         udr: 24
-
-  - name: 'AzurasServices_de.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/12187' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'German Version'
-          - lang: de
-            text: 'Deutsche Version'
 
   - name: 'Bandit Hideouts.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/11260/' ]
