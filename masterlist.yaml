@@ -6543,6 +6543,27 @@ plugins:
       - Stats
       - name: -Actors.DeathItem
         condition: 'version("Oblivion WarCry EV.esp","1.09",<)'
+
+  - name: 'Oblivion WarCry.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/45570/' ]
+    inc: [ 'FCOM_Convergence.esm' ]
+    msg:
+      # doNotClean
+      - *languageGerman
+      - <<: *useInstead
+        subs: [ '[Oblivion WarCry EV.esp](https://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/)' ]
+        condition: *FCOMCond
+    tag:
+      - Actors.ACBS
+      - Actors.AIData
+      - Actors.DeathItem
+      - Actors.Stats
+      - Delev
+      - Graphics
+      - Invent
+      - Relev
+      - Stats
+
   - name: 'FCOM_WarCry.esp'
     inc: [ 'FCOM_WarCryNoSpawn.esp' ]
     tag:
@@ -11835,30 +11856,7 @@ plugins:
       - <<: *useInstead
         subs: [ '"Loth''s Blunt Weapons for Npcs.esp" & "FCOM_LothsBluntWeapons.esp"' ]
         condition: 'active("FCOM_Convergence.esm")'
-  - name: 'Oblivion WarCry.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/45570' ]
-    inc: [ 'FCOM_Convergence.esm' ]
-    msg:
-      # doNotClean
-      - <<: *useInstead
-        subs: [ '[Oblivion WarCry EV.esp](https://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/)' ]
-        condition: *FCOMCond
-      - type: say
-        content:
-          - lang: en
-            text: 'German version.'
-          - lang: de
-            text: 'Deutsche Version.'
-    tag:
-      - Actors.ACBS
-      - Actors.AIData
-      - Actors.DeathItem
-      - Actors.Stats
-      - Delev
-      - Graphics
-      - Invent
-      - Relev
-      - Stats
+
   - name: 'OOO-Ayleid Coin Add-on.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/10671' ]
     msg: [ *obsolete ]
