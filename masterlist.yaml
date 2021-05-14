@@ -4102,6 +4102,26 @@ plugins:
         itm: 18
         udr: 9
 
+  - name: 'AzurasServices_(en|de)\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/12187/' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Azura''s Services ESP' ]
+        condition: 'many("AzurasServices_(en|de)\.esp")'
+  - name: 'AzuraServices_en.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0xE9F00985
+        util: '[TES4Edit v4.0.3g](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 3
+  - name: 'AzurasServices_de.esp'
+    msg: [ *languageGerman ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x2036A473
+        util: '[TES4Edit v4.0.3g](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 3
+
   - name: 'Cardac.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/40833/' ]
     dirty:
@@ -6523,6 +6543,27 @@ plugins:
       - Stats
       - name: -Actors.DeathItem
         condition: 'version("Oblivion WarCry EV.esp","1.09",<)'
+
+  - name: 'Oblivion WarCry.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/45570/' ]
+    inc: [ 'FCOM_Convergence.esm' ]
+    msg:
+      # doNotClean
+      - *languageGerman
+      - <<: *useInstead
+        subs: [ '[Oblivion WarCry EV.esp](https://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/)' ]
+        condition: *FCOMCond
+    tag:
+      - Actors.ACBS
+      - Actors.AIData
+      - Actors.DeathItem
+      - Actors.Stats
+      - Delev
+      - Graphics
+      - Invent
+      - Relev
+      - Stats
+
   - name: 'FCOM_WarCry.esp'
     inc: [ 'FCOM_WarCryNoSpawn.esp' ]
     tag:
@@ -9531,15 +9572,7 @@ plugins:
   - name: 'Q - More and Moldy Ingredients v1.1.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/5065' ]
     tag: [ Relev ]
-  - name: 'Q-Core - Icons.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/19378' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'German version?'
-          - lang: de
-            text: 'Deutsche Version?'
+
   - name: 'Qarls_Harvest.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/8113' ]
     dirty:
@@ -11823,30 +11856,7 @@ plugins:
       - <<: *useInstead
         subs: [ '"Loth''s Blunt Weapons for Npcs.esp" & "FCOM_LothsBluntWeapons.esp"' ]
         condition: 'active("FCOM_Convergence.esm")'
-  - name: 'Oblivion WarCry.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/45570' ]
-    inc: [ 'FCOM_Convergence.esm' ]
-    msg:
-      # doNotClean
-      - <<: *useInstead
-        subs: [ '[Oblivion WarCry EV.esp](https://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/)' ]
-        condition: *FCOMCond
-      - type: say
-        content:
-          - lang: en
-            text: 'German version.'
-          - lang: de
-            text: 'Deutsche Version.'
-    tag:
-      - Actors.ACBS
-      - Actors.AIData
-      - Actors.DeathItem
-      - Actors.Stats
-      - Delev
-      - Graphics
-      - Invent
-      - Relev
-      - Stats
+
   - name: 'OOO-Ayleid Coin Add-on.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/10671' ]
     msg: [ *obsolete ]
@@ -13018,16 +13028,6 @@ plugins:
         util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 39
         udr: 24
-
-  - name: 'AzurasServices_de.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/12187' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'German Version'
-          - lang: de
-            text: 'Deutsche Version'
 
   - name: 'Bandit Hideouts.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/11260/' ]
@@ -18088,14 +18088,7 @@ plugins:
         <<: *dirtyPlugin
         itm: 9
         udr: 13
-  - name: 'Sexier Sheogorath DV.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'German version.'
-          - lang: de
-            text: 'Deutsche Version.'
+
   - name: 'Vtoy.esp'
     tag:
       - Eyes
