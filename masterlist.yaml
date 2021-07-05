@@ -3237,8 +3237,11 @@ plugins:
       - <<: *useBashTweakInstead
         subs: [ 'Tweak Settings -> Arrow: Recovery From Actor [100%]' ]
 
+  - name: '(MOBS|MOBS SI|OMOBS|OMOBS_SI|(MOBS|MOBS SI|OMOBS) Optional Combat Settings|(DLC|BattleHorn|Knights|Lair|Mehrunes|ThievesDen|VileLair)_MOBS)\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/28537/'
+        name: 'MOBS - Medieval Oblivion Equipment Balance System'
   - name: '(MOBS|MOBS SI|OMOBS|OMOBS_SI)\.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/28537' ]
     msg:
       - <<: *useOnlyOneX
         subs: [ 'MOBS, MOBS SI, OMOBS OR OMOBS SI' ]
@@ -3247,14 +3250,11 @@ plugins:
       - NoMerge
       - Stats
   - name: '(MOBS|MOBS SI|OMOBS) Optional Combat Settings\.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/28537' ]
     inc: [ 'FCOM_Convergence.esm' ]
   - name: '(MOBS|MOBS SI) Optional Combat Settings\.esp'
     inc: [ 'Francesco''s Leveled Creatures-Items Mod.esm' ]
   - name: 'OMOBS Optional Combat Settings.esp'
     inc: [ 'Oscuro''s_Oblivion_Overhaul.esm' ]
-  - name: '(DLC|BattleHorn|Knights|Lair|Mehrunes|ThievesDen|VileLair)_MOBS\.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/28537' ]
   - name: 'DLC_MOBS.esp'
     group: *latePatchesGroup
     msg:
