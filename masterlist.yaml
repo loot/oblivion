@@ -3237,6 +3237,41 @@ plugins:
       - <<: *useBashTweakInstead
         subs: [ 'Tweak Settings -> Arrow: Recovery From Actor [100%]' ]
 
+  - name: '(MOBS|MOBS SI|OMOBS|OMOBS_SI|(DLC|BattleHorn|Knights|Lair|Mehrunes|ThievesDen|VileLair)_MOBS)\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/28537/'
+        name: 'MOBS - Medieval Oblivion Equipment Balance System'
+  - name: '(MOBS|MOBS SI|OMOBS|OMOBS_SI)\.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'MOBS, MOBS SI, OMOBS OR OMOBS SI' ]
+        condition: 'many("(MOBS|MOBS SI|OMOBS|OMOBS_SI)\.esp")'
+    tag:
+      - NoMerge
+      - Stats
+  - name: '(MOBS|MOBS SI|OMOBS) Optional Combat Settings\.esp'
+    inc: [ 'FCOM_Convergence.esm' ]
+  - name: '(MOBS|MOBS SI) Optional Combat Settings\.esp'
+    inc: [ 'Francesco''s Leveled Creatures-Items Mod.esm' ]
+  - name: 'OMOBS Optional Combat Settings.esp'
+    inc: [ 'Oscuro''s_Oblivion_Overhaul.esm' ]
+  - name: 'DLC_MOBS.esp'
+    group: *latePatchesGroup
+    msg:
+      - <<: *obsolete
+        subs: [ '[MOBS - Medieval Oblivion Equipment Balance System](http://www.nexusmods.com/oblivion/mods/28537)' ]
+        condition: 'version("DLC_MOBS.esp", "2.0", <)'
+  - name: '(BattleHorn|Knights|Lair|Mehrunes|ThievesDen|VileLair)_MOBS\.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'DLC_MOBS.esp' ]
+        condition: 'file("DLC_MOBS.esp")'
+  - name: 'Lair_MOBS.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'VileLair_MOBS.esp' ]
+        condition: 'file("VileLair_MOBS.esp")'
+
   - name: 'More Lockpicks.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/3737/' ]
     tag:
@@ -7817,42 +7852,6 @@ plugins:
   - name: 'MMM - Playable Undead Armors( - Oblivion WarCry Compatability Patch)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22771' ]
     tag: [ Invent ]
-
-###### MOBS - Medieval Oblivion Equipment Balance System ######
-  - name: '(MOBS|MOBS SI|OMOBS|OMOBS_SI)\.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/28537' ]
-    msg:
-      - <<: *useOnlyOneX
-        subs: [ 'MOBS, MOBS SI, OMOBS OR OMOBS SI' ]
-        condition: 'many("(MOBS|MOBS SI|OMOBS|OMOBS_SI)\.esp")'
-    tag:
-      - NoMerge
-      - Stats
-  - name: '(MOBS|MOBS SI|OMOBS) Optional Combat Settings\.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/28537' ]
-    inc: [ 'FCOM_Convergence.esm' ]
-  - name: '(MOBS|MOBS SI) Optional Combat Settings\.esp'
-    inc: [ 'Francesco''s Leveled Creatures-Items Mod.esm' ]
-  - name: 'OMOBS Optional Combat Settings.esp'
-    inc: [ 'Oscuro''s_Oblivion_Overhaul.esm' ]
-  - name: '(DLC|BattleHorn|Knights|Lair|Mehrunes|ThievesDen|VileLair)_MOBS\.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/28537' ]
-  - name: 'DLC_MOBS.esp'
-    group: *latePatchesGroup
-    msg:
-      - <<: *obsolete
-        subs: [ '[MOBS](http://www.nexusmods.com/oblivion/mods/28537)' ]
-        condition: 'version("DLC_MOBS.esp", "2.0", <)'
-  - name: '(BattleHorn|Knights|Lair|Mehrunes|ThievesDen|VileLair)_MOBS\.esp'
-    msg:
-      - <<: *alreadyInX
-        subs: [ 'DLC_MOBS.esp' ]
-        condition: 'file("DLC_MOBS.esp")'
-  - name: 'Lair_MOBS.esp'
-    msg:
-      - <<: *alreadyInX
-        subs: [ 'VileLair_MOBS.esp' ]
-        condition: 'file("VileLair_MOBS.esp")'
 
 ###### Oscuro's Oblivion Overhaul (OOO) ######
   - name: 'Oscuro''s_Oblivion_Overhaul( - Knights of Nine)?\.es(m|p)'
