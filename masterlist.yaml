@@ -4492,8 +4492,8 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/16513' ]
   - name: 'Better Cities Resources.esm'
     clean:
-      - crc: 0x2A37B24E
-        util: 'TES4Edit v4.0.3'
+      - crc: 0x311577C5
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
   - name: 'Better Cities .esp'
     group: *veryEarlyGroup
     after: [ 'DLCShiveringIsles.esp' ]
@@ -4534,11 +4534,9 @@ plugins:
       - <<: *includesX
         subs: [ '[Blood and Mud](https://www.nexusmods.com/oblivion/mods/12016/)' ]
         condition: 'file("Blood&Mud.esp")'
-    dirty:
-      - <<: *quickClean
-        crc: 0x7C9A53BC
-        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 9
+    clean:
+      - crc: 0x63B84BD4
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
   - name: 'Better Cities (ANVIL|BRAVIL|BRUMA|CHEYDINHAL|CHORROL|LEYAWIIN|SKINGRAD)\.esp'
     group: *citiesGroup
     after:
@@ -4570,8 +4568,8 @@ plugins:
       - name: 'TR_Stirk.esp'
         condition: 'not active("Stirk_Compatibility_Patch.esp")'
     clean:
-      - crc: 0x2EA39E8C
-        util: 'TES4Edit v4.0.3'
+      - crc: 0xE391D0D4
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
   - name: 'Better Cities BRAVIL.esp'
     after:
       - '00RBScribeSupplies Intensive.esp'
@@ -4581,50 +4579,46 @@ plugins:
       - <<: *includesX
         subs: [ '[Blood and Mud](https://www.nexusmods.com/oblivion/mods/12016/)' ]
         condition: 'file("Blood&Mud.esp")'
-    dirty:
-      - <<: *quickClean
-        crc: 0xEB780224
-        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 6
+    clean:
+      - crc: 0x32CC5DAE
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
   - name: 'Better Cities BRUMA.esp'
     after:
       - 'Better Cities LEYAWIIN.esp'
       - 'ClocksOfCyrodiil.esp'
     tag: [ C.Water ]
-    dirty:
-      - <<: *quickClean
-        crc: 0x77E90C9E
-        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 1
+    clean:
+      - crc: 0x5B75A4D5
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
   - name: 'Better Cities CHEYDINHAL.esp'
     after: [ 'ClocksOfCyrodiil.esp' ]
     tag: [ C.Water ]
     clean:
-      - crc: 0xE2D04D50
-        util: 'TES4Edit v4.0.3'
+      - crc: 0x80CE0E51
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
   - name: 'Better Cities CHORROL.esp'
     after:
       - 'ClocksOfCyrodiil.esp'
       - 'Slof''s Oblivion Goth Shop.esp'
     dirty:
       - <<: *quickClean
-        crc: 0xEC6BB5D9
-        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        crc: 0x566A0E20
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
   - name: 'Better Cities LEYAWIIN.esp'
     after: [ 'ClocksOfCyrodiil.esp' ]
-    dirty:
-      - <<: *quickClean
-        crc: 0xB78833B5
-        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 2
+    clean:
+      - crc: 0xA3A5BB46
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
   - name: 'Better Cities SKINGRAD.esp'
     after:
       - 'ClocksOfCyrodiil.esp'
       - 'Cyrodiil Rebuild.esp'
-    clean:
-      - crc: 0x5A17D1E9
-        util: 'TES4Edit v4.0.3'
+    dirty:
+      - <<: *quickClean
+        crc: 0x45E44430
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 29
   - name: 'Better Imperial City.esp'
     group: *imperialCityGroup
     after:
@@ -4634,11 +4628,9 @@ plugins:
       - 'Sounds of Cyrodiil.esp'
       - 'The Mystery of the Dulan Cult.esp'
     inc: [ 'Open Cities Outer Districts.esp' ]
-    dirty:
-      - <<: *quickClean
-        crc: 0x22770C3D
-        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 19
+    clean:
+      - crc: 0xBA85C1FF
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
   - name: 'Better Cities IC (Arboretum|Arcane University|Arena|Elven Gardens|Green Emperor Way|Market|Prison|Talos Plaza|Temple|Waterfront)\.esp'
     group: *imperialCityGroup
     after: [ 'Better Cities - IC Imperial Isle.esp' ]
@@ -4666,78 +4658,74 @@ plugins:
     after:
       - 'ClocksOfCyrodiil.esp'
       - 'ICEXPAND.esp'
-    dirty:
-      - <<: *quickClean
-        crc: 0x4EF51082
-        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 15
+    clean:
+      - crc: 0x4EBE1659
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
   - name: 'Better Cities IC Arcane University.esp'
     after: [ 'ClocksOfCyrodiil.esp' ]
     inc: [ 'Open Cities Outer Districts.esp' ]
     clean:
-      - crc: 0xA7E7A020
-        util: 'TES4Edit v4.0.3'
+      - crc: 0x88E02822
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
   - name: 'Better Cities IC Arena.esp'
     after:
       - 'ClocksOfCyrodiil.esp'
       - 'ICEXPAND.esp'
     clean:
-      - crc: 0x1ED6036E
-        util: 'TES4Edit v4.0.3'
+      - crc: 0xA575F345
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
   - name: 'Better Cities IC Elven Gardens.esp'
     after:
       - 'ClocksOfCyrodiil.esp'
       - 'ICEXPAND.esp'
     clean:
-      - crc: 0xFF5717D2
-        util: 'TES4Edit v4.0.3'
+      - crc: 0xF7645AD2
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
   - name: 'Better Cities IC Green Emperor Way.esp'
     after: [ 'ICEXPAND.esp' ]
     clean:
-      - crc: 0x214665C5
-        util: 'TES4Edit v4.0.3'
+      - crc: 0x6351245D
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
   - name: 'Better Cities IC Market.esp'
     after:
       - 'ClocksOfCyrodiil.esp'
       - 'ICEXPAND.esp'
       - 'The Mystery of the Dulan Cult.esp'
-    dirty:
-      - <<: *quickClean
-        crc: 0x86480A02
-        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 4
+    clean:
+      - crc: 0x12D74626
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
   - name: 'Better Cities IC Prison.esp'
     inc: [ 'Open Cities Outer Districts.esp' ]
     clean:
-      - crc: 0xDA2CE5AB
-        util: 'TES4Edit v4.0.3'
+      - crc: 0x666B1117
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
   - name: 'Better Cities IC Talos Plaza.esp'
     after:
       - 'ClocksOfCyrodiil.esp'
       - 'ICEXPAND.esp'
     clean:
-      - crc: 0x0B2FA563
-        util: 'TES4Edit v4.0.3'
+      - crc: 0x025C6131
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
   - name: 'Better Cities IC Temple.esp'
     after:
       - 'ClocksOfCyrodiil.esp'
       - 'ICEXPAND.esp'
     clean:
-      - crc: 0x29137885
-        util: 'TES4Edit v4.0.3'
+      - crc: 0x5A0306B4
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
   - name: 'Better Cities IC Waterfront.esp'
     after:
       - 'Better Cities IC Temple.esp'
       - 'ICEXPAND.esp'
     clean:
-      - crc: 0x2EE9444D
-        util: 'TES4Edit v4.0.3'
+      - crc: 0x3A6670CF
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
   ### Better Cities - Optional Files ###
   - name: 'Better Cities - IC Imperial Isle.esp'
     group: *imperialCityGroup
     clean:
-      - crc: 0x96A5C9CC
-        util: 'TES4Edit v4.0.3'
+      - crc: 0x9766EE6B
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
   - name: 'Better Cities - Leyawiin Flooded.esp'
     after: [ 'Better Cities Full.esp' ]
     req:
@@ -4746,7 +4734,7 @@ plugins:
         condition: 'not file("Better Cities Full.esp")'
     clean:
       - crc: 0x57D7201B
-        util: 'TES4Edit v4.0.3'
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
   - name: 'Better Cities - Open Better Cities.esp'
     after:
       - 'Better Cities ANVIL.esp'
@@ -4761,24 +4749,18 @@ plugins:
         display: 'Better Cities Full or Separate City ESPs'
         condition: 'not file("Better Cities (ANVIL|BRAVIL|BRUMA|CHEYDINHAL|CHORROL|LEYAWIIN|SKINGRAD)\.esp")'
     clean:
-      - crc: 0x154F9AF9
-        util: 'TES4Edit v4.0.3'
+      - crc: 0x5C553011
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
   - name: 'Better Cities - Open Cities Reborn B&M Compatibility.esp'
     req: [ 'Better Cities - Open Cities Reborn.esp' ]
-  - name: 'Better Cities - VWD of the IC.esp'
-    dirty:
-      - <<: *quickClean
-        crc: 0xE9AACC70
-        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
-        udr: 6
   - name: 'Better Imperial City FPS Patch.esp'
     clean:
-      - crc: 0xAE574304
-        util: 'TES4Edit v4.0.3'
+      - crc: 0x596DF446
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
   - name: 'Better Cities IC Waterfront FPS Patch.esp'
     clean:
-      - crc: 0xD9E7270B
-        util: 'TES4Edit v4.0.3'
+      - crc: 0xFF7D8AAB
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
   ### Better Cities - Optional Integration Files ###
   - name: 'Better Cities - COBL.esp'
     clean:
