@@ -3945,6 +3945,17 @@ plugins:
       - crc: 0xF036F8CF
         util: 'TES4Edit v4.0.3'
 
+###### Gameplay - User Interface ######
+  - name: 'Cliff_BetterLetters.esp'
+    tag: [ Names ]
+    dirty:
+      - crc: 0xe8007318
+        <<: *dirtyPlugin
+        itm: 8
+        udr: 81
+  - name: 'Cliff_BetterLetters_RU.esp'
+    tag: [ Names ]
+
 ###### Items ######
   - name: '300_Artifacts.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/2732/' ]
@@ -17507,15 +17518,6 @@ plugins:
         <<: *dirtyPlugin
         itm: 57
         udr: 3
-  - name: 'Cliff_BetterLetters.esp'
-    tag: [ Names ]
-    dirty:
-      - crc: 0xe8007318
-        <<: *dirtyPlugin
-        itm: 8
-        udr: 81
-  - name: 'Cliff_BetterLetters_RU.esp'
-    tag: [ Names ]
   - name: 'Cliff_CountyNames.esp'
     dirty:
       - crc: 0x5fc677bf
