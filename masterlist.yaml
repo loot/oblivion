@@ -6022,7 +6022,7 @@ plugins:
     req:
       - name: 'Unique Landscapes.esp'
         display: '[Unique Landscapes Compilation](https://www.nexusmods.com/oblivion/mods/19370/) Merged ESP'
-        condition: 'version("Unique Landscapes.esp", "2.0.0", >=)'
+        condition: 'not version("Unique Landscapes.esp", "2.0.0", >=)'
   - name: 'ULS .*patch\.esp'
     inc:
       - name: 'Unique Landscapes.esp'
