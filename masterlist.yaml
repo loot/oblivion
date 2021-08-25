@@ -3284,6 +3284,10 @@ plugins:
     tag:
       - NoMerge
       - Stats
+  - name: '(MOBS|OMOBS)\.esp'
+    inc: [ 'DLCShiveringIsles.esp' ]
+  - name: '(MOBS SI|OMOBS_SI|DLC_MOBS)\.esp'
+    req: [ 'DLCShiveringIsles.esp' ]
   - name: '(MOBS|MOBS SI|OMOBS) Optional Combat Settings\.esp'
     inc: [ 'FCOM_Convergence.esm' ]
   - name: '(MOBS|MOBS SI) Optional Combat Settings\.esp'
