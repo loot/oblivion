@@ -3261,18 +3261,22 @@ plugins:
       - link: 'https://www.nexusmods.com/oblivion/mods/28537/'
         name: 'MOBS - Medieval Oblivion Equipment Balance System'
   - name: 'MOBS.esp'
+    inc: [ 'DLCShiveringIsles.esp' ]
     clean:
       - crc: 0x897CF60A
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
   - name: 'MOBS SI.esp'
+    req: [ 'DLCShiveringIsles.esp' ]
     clean:
       - crc: 0x59E3DDC6
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
   - name: 'OMOBS.esp'
+    inc: [ 'DLCShiveringIsles.esp' ]
     clean:
       - crc: 0x59D0F1CA
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
   - name: 'OMOBS_SI.esp'
+    req: [ 'DLCShiveringIsles.esp' ]
     clean:
       - crc: 0x6F998DD2
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
@@ -3284,10 +3288,6 @@ plugins:
     tag:
       - NoMerge
       - Stats
-  - name: '(MOBS|OMOBS)\.esp'
-    inc: [ 'DLCShiveringIsles.esp' ]
-  - name: '(MOBS SI|OMOBS_SI)\.esp'
-    req: [ 'DLCShiveringIsles.esp' ]
   - name: '(MOBS|MOBS SI|OMOBS) Optional Combat Settings\.esp'
     inc: [ 'FCOM_Convergence.esm' ]
   - name: '(MOBS|MOBS SI) Optional Combat Settings\.esp'
