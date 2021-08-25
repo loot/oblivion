@@ -3260,6 +3260,26 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/28537/'
         name: 'MOBS - Medieval Oblivion Equipment Balance System'
+  - name: 'MOBS.esp'
+    inc: [ 'DLCShiveringIsles.esp' ]
+    clean:
+      - crc: 0x897CF60A
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
+  - name: 'MOBS SI.esp'
+    req: [ 'DLCShiveringIsles.esp' ]
+    clean:
+      - crc: 0x59E3DDC6
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
+  - name: 'OMOBS.esp'
+    inc: [ 'DLCShiveringIsles.esp' ]
+    clean:
+      - crc: 0x59D0F1CA
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
+  - name: 'OMOBS_SI.esp'
+    req: [ 'DLCShiveringIsles.esp' ]
+    clean:
+      - crc: 0x6F998DD2
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
   - name: '(MOBS|MOBS SI|OMOBS|OMOBS_SI)\.esp'
     msg:
       - <<: *useOnlyOneX
@@ -3276,10 +3296,9 @@ plugins:
     inc: [ 'Oscuro''s_Oblivion_Overhaul.esm' ]
   - name: 'DLC_MOBS.esp'
     group: *latePatchesGroup
-    msg:
-      - <<: *obsolete
-        subs: [ '[MOBS - Medieval Oblivion Equipment Balance System](http://www.nexusmods.com/oblivion/mods/28537)' ]
-        condition: 'version("DLC_MOBS.esp", "2.0", <)'
+    clean:
+      - crc: 0xF6F8A6C0
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
   - name: '(BattleHorn|Knights|Lair|Mehrunes|ThievesDen|VileLair)_MOBS\.esp'
     msg:
       - <<: *alreadyInX
