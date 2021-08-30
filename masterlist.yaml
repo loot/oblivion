@@ -3827,6 +3827,20 @@ plugins:
         util: '[TES4Edit v4.0.3g](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 19
 
+  - name: 'Fighters Guild Quests.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/41012/' ]
+    req: [ 'DLCShiveringIsles.esp' ]
+    inc: [ 'Quest For The Elements.esp' ]
+    tag: [ C.Regions ]
+    msg:
+      - <<: *includesX
+        type: error
+        subs: [ '[Tortuous Cavern](https://www.nexusmods.com/oblivion/mods/40759/)' ]
+        condition: 'file("Tortuous Cavern.esp")'
+    clean:
+      - crc: 0x7BBB46E5
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
+
   - name: 'GTAesgaard.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/13814/' ]
     clean:
@@ -13879,12 +13893,6 @@ plugins:
       - crc: 0xfaf6592a
         <<: *dirtyPlugin
         itm: 99
-  - name: 'Fighters Guild Quests.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/41012' ]
-    inc: [ 'Quest For The Elements.esp' ]
-    tag:
-      - Actors.ACBS
-      - Actors.AIPackages
   - name: 'FiveBlindMiceBeta.esp'
     url:
       - 'https://www.nexusmods.com/oblivion/mods/24580'
