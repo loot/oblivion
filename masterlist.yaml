@@ -5208,21 +5208,36 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/45817'
         name: 'OSPS - Better Cities Imperial Isle Compatibility Patches'
-  - name: 'OSPS-BC_IC-II_RRLR_Patch.esp'
-    inc: [ 'TalosBridgeGateHouse.esp' ]
-  - name: 'OSPS-BC_IC-II_RRLR_(TalosBridge_)?Patch.esp'
-    inc:
-      - 'Unique Landscapes.esp'
-      - 'xulImperialIsle.esp'
-    tag: [ C.Water ]
+  # OSPS BC IL - UL Imperial Isle Patches #
   - name: 'UL(M|S) OSPS-BC_IC-II_UL-II_Patch.esp'
+    req: [ 'Better Cities - IC Imperial Isle.esp' ]
     inc:
       - 'Region Revive - Lake Rumare.esp'
       - 'TalosBridgeGateHouse.esp'
+  # OSPS BC IL - UL Imperial Isle - Talos Bridge Gatehouse Patches #
+  - name: 'UL(M|S) OSPS_BC_IC-II_UL-II_TalosBridge_Patch.esp'
+    req:
+      - 'Better Cities - IC Imperial Isle.esp'
+      - 'TalosBridgeGateHouse.esp'
+    inc: [ 'Region Revive - Lake Rumare.esp' ]
+  # OSPS BC IL - UL Imperial Isle - Region Revive: Lake Rumare Patch #
   - name: 'UL(M|S) OSPS-BC_IC-II_UL-II_RRLR_Patch.esp'
     inc: [ 'TalosBridgeGateHouse.esp' ]
-  - name: 'UL(M|S) OSPS_BC_IC-II_UL-II_TalosBridge_Patch.esp'
-    inc: [ 'Region Revive - Lake Rumare.esp' ]
+  # OSPS BC IL - UL Imperial Isle - Region Revive: Lake Rumare & Talos Bridge Gatehouse Patch #
+  - name: 'UL(M|S) OSPS_BC_IC-II_UL-II_TalosBridge_RRLR_Patch.esp'
+    req: [ 'TalosBridgeGateHouse.esp' ]
+  # OSPS BC IL - Region Revive: Lake Rumare Patch #
+  - name: 'OSPS-BC_IC-II_RRLR_Patch.esp'
+    inc:
+      - 'TalosBridgeGateHouse.esp'
+      - 'Unique Landscapes.esp'
+      - 'xulImperialIsle.esp'
+  # OSPS BC IL - Region Revive: Lake Rumare & Talos Bridge Gatehouse Patch #
+  - name: 'OSPS-BC_IC-II_RRLR_TalosBridge_Patch.esp'
+    req: [ 'TalosBridgeGateHouse.esp' ]
+    inc:
+      - 'Unique Landscapes.esp'
+      - 'xulImperialIsle.esp'
 
 ###### CM Partners Basic ######
   - name: 'CM Partners.esp'
