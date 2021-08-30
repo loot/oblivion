@@ -2305,6 +2305,16 @@ plugins:
     group: *latePatchesGroup
     msg: [ *requiresBashedPatch ]
 
+  - name: 'TamRes(_LandscapeResource)?\.es(m|p)'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/24822/'
+        name: 'Under the sign of the dragon - Tamriel Resource Pack'
+  - name: 'TamRes_LandscapeResource.esm'
+    after: [ 'TamRes.esm' ]
+  - name: 'TamRes.esp'
+    group: *veryEarlyGroup
+    after: [ 'DLCShiveringIsles.esp' ]
+
 ###### Fixes ######
   - name: 'kuerteeCleanUp.esp'
     url:
