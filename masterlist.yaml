@@ -2491,6 +2491,22 @@ plugins:
     req:
       - *OBSE
       - *SilentVoice
+  - name: 'Sexdarkness.esm'
+    clean:
+      - crc: 0x342EE721
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
+  - name: 'Sexdarkness.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x9A84B213
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 18
+        udr: 4
+      - <<: *quickClean
+        crc: 0x738A42FC
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 17
+        udr: 4
 
 ###### AudioVisual - Weather ######
   - name: '(AWS|NW|ANW|EW|OBSE)?(-)?Storms & Sound( SI)?\.esp'
