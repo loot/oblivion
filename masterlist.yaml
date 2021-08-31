@@ -4660,6 +4660,8 @@ plugins:
       - <<: *useInstead
         subs: [ 'SnowyRoad-FrostcragVillage Patch.esp' ]
         condition: 'active("Frostcrag Village.esp") and not file("SnowyRoad-FrostcragVillage Patch.esp")'
+  - name: 'SnowyRoad-FrostcragVillage Patch.esp'
+    after: [ 'DLCFrostcrag-SnowyRoad Patch.esp' ]
 
   - name: 'LostSpires_TheOrderofNibenay_patch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/23657/' ]
