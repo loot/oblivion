@@ -4660,6 +4660,12 @@ plugins:
       - <<: *useInstead
         subs: [ 'SnowyRoad-FrostcragVillage Patch.esp' ]
         condition: 'active("Frostcrag Village.esp") and not file("SnowyRoad-FrostcragVillage Patch.esp")'
+  - name: 'SnowyRoad-BetterCities Patch.esp'
+    after: [ 'Better Cities Full.esp' ]
+    req:
+      - name: 'Better Cities BRUMA.esp'
+        display: 'Better Cities Full.esp or Better Cities BRUMA.esp'
+        condition: 'not file("Better Cities Full.esp")'
   - name: 'SnowyRoad-FrostcragVillage Patch.esp'
     after: [ 'DLCFrostcrag-SnowyRoad Patch.esp' ]
   - name: 'SnowyRoad-OpenCities Patch.esp'
