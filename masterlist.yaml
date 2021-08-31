@@ -4652,6 +4652,14 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/45336/'
         name: 'Snowy Road to Bruma Patch Collection'
+  - name: 'DLCFrostcrag-SnowyRoad Patch.esp'
+    msg:
+      - <<: *alreadyInOrFixedByX
+        subs: [ 'SnowyRoad-FrostcragVillage Patch.esp' ]
+        condition: 'active("Frostcrag Village.esp") and file("SnowyRoad-FrostcragVillage Patch.esp")'
+      - <<: *useInstead
+        subs: [ 'SnowyRoad-FrostcragVillage Patch.esp' ]
+        condition: 'active("Frostcrag Village.esp") and not file("SnowyRoad-FrostcragVillage Patch.esp")'
 
   - name: 'LostSpires_TheOrderofNibenay_patch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/23657/' ]
