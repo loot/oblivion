@@ -4648,6 +4648,30 @@ plugins:
         itm: 1
         udr: 2
 
+  - name: '(DLCFrostcrag-|MTC-|OOTD-)?SnowyRoad(-BetterCities|-Feldscar|-FrostcragVillage|-OpenCities)? Patch\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/45336/'
+        name: 'Snowy Road to Bruma Patch Collection'
+  - name: 'DLCFrostcrag-SnowyRoad Patch.esp'
+    msg:
+      - <<: *alreadyInOrFixedByX
+        subs: [ 'SnowyRoad-FrostcragVillage Patch.esp' ]
+        condition: 'active("Frostcrag Village.esp") and file("SnowyRoad-FrostcragVillage Patch.esp")'
+      - <<: *useInstead
+        subs: [ 'SnowyRoad-FrostcragVillage Patch.esp' ]
+        condition: 'active("Frostcrag Village.esp") and not file("SnowyRoad-FrostcragVillage Patch.esp")'
+  - name: 'SnowyRoad-BetterCities Patch.esp'
+    after: [ 'Better Cities Full.esp' ]
+    req:
+      - name: 'Better Cities BRUMA.esp'
+        display: 'Better Cities Full.esp or Better Cities BRUMA.esp'
+        condition: 'not file("Better Cities Full.esp")'
+    inc: [ 'Better Cities - Open Cities Reborn.esp' ]
+  - name: 'SnowyRoad-FrostcragVillage Patch.esp'
+    after: [ 'DLCFrostcrag-SnowyRoad Patch.esp' ]
+  - name: 'SnowyRoad-OpenCities Patch.esp'
+    after: [ 'Better Cities - Open Cities Reborn.esp' ]
+
   - name: 'LostSpires_TheOrderofNibenay_patch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/23657/' ]
     dirty:
@@ -6673,8 +6697,16 @@ plugins:
       - name: 'Snow Line Lodge.esp'
         display: '[Snow Line Lodge](http://tesalliance.org/forums/index.php?/files/file/4-snow-line-lodge/)'
   # ULC Patches - Snowy Road To Bruma #
+  - name: 'ULE SnowyRoad-(JerallGlacier|Snowdale|ULCombo) patch\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/45336/'
+        name: 'Snowy Road to Bruma Patch Collection'
+  - name: 'ULE SnowyRoad-Snowdale patch.esp'
+    after: [ 'SnowyRoad-FrostcragVillage Patch.esp' ]
   - name: 'ULE SnowyRoad-ULCombo patch.esp'
-    after: [ 'xulJerallGlacier.esp' ]
+    after:
+      - 'SnowyRoad-FrostcragVillage Patch.esp'
+      - 'xulJerallGlacier.esp'
   # ULC Patches - The Dwarves Of The Mountain #
   - name: 'ULE DwarvenMines-AncientYews patch.esp'
     req:
