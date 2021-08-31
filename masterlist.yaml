@@ -6697,8 +6697,12 @@ plugins:
       - name: 'Snow Line Lodge.esp'
         display: '[Snow Line Lodge](http://tesalliance.org/forums/index.php?/files/file/4-snow-line-lodge/)'
   # ULC Patches - Snowy Road To Bruma #
+  - name: 'ULE SnowyRoad-Snowdale patch.esp'
+    after: [ 'SnowyRoad-FrostcragVillage Patch.esp' ]
   - name: 'ULE SnowyRoad-ULCombo patch.esp'
-    after: [ 'xulJerallGlacier.esp' ]
+    after:
+      - 'SnowyRoad-FrostcragVillage Patch.esp'
+      - 'xulJerallGlacier.esp'
   # ULC Patches - The Dwarves Of The Mountain #
   - name: 'ULE DwarvenMines-AncientYews patch.esp'
     req:
