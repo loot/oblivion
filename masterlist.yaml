@@ -4075,6 +4075,23 @@ plugins:
         subs: [ 'SM Plugin Refurbish(Merged).esp' ]
         condition: 'file("SM Plugin Refurbish(Merged).esp")'
 
+  - name: 'The Mystery of the Dulan cult.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/7663/'
+        name: 'The Mysteries of the Dulan Cult'
+      - link: 'https://www.nexusmods.com/oblivion/mods/16513/'
+        name: 'Better Cities'
+    after: [ 'Knights - Revelation.esp' ]
+    msg:
+      - <<: *requiresResources
+        subs: [ '[The Mysteries of the Dulan Cult](https://www.nexusmods.com/oblivion/mods/7663/)' ]
+        condition: 'not file("meshes/pheaddoor/metatrondoor.nif")'
+    clean:
+      - crc: 0xE4450364
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
+      - crc: 0x5BA91DED
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
+
   - name: 'VHBloodlines 1.2.esp'
     url:
       - 'https://www.nexusmods.com/oblivion/mods/14601'
@@ -16309,13 +16326,6 @@ plugins:
         <<: *dirtyPlugin
         itm: 6
         udr: 3
-  - name: 'The Mystery of the Dulan cult.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/7663' ]
-    dirty:
-      - crc: 0x6845a1e
-        <<: *dirtyPlugin
-        itm: 4569
-        udr: 16
   - name: 'HoarfrostCastle.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/14714' ]
     tag: [ Hair ]
