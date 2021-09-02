@@ -4081,6 +4081,10 @@ plugins:
         name: 'The Mysteries of the Dulan Cult'
       - link: 'https://www.nexusmods.com/oblivion/mods/16513/'
         name: 'Better Cities'
+    msg:
+      - <<: *requiresResources
+        subs: [ '[The Mysteries of the Dulan Cult](https://www.nexusmods.com/oblivion/mods/7663/)' ]
+        condition: 'not file("meshes/pheaddoor/metatrondoor.nif")'
     clean:
       - crc: 0xE4450364
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
