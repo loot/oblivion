@@ -4309,6 +4309,10 @@ plugins:
         name: 'ICEXPAND - Imperial City Expanded'
       - link: 'https://www.nexusmods.com/oblivion/mods/16513/'
         name: 'Better Cities'
+    msg:
+      - <<: *requiresResources
+        subs: [ '[ICEXPAND - Imperial City Expanded](https://www.nexusmods.com/oblivion/mods/13692/)' ]
+        condition: 'not file("meshes/ICEXPAND/ICEXPPlaneSign.nif")'
     clean:
       - crc: 0x45E369DB
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
