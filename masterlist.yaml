@@ -2859,6 +2859,9 @@ plugins:
       - <<: *patchUpdateAvailable
         subs: [ '[Oblivion Grass Overhaul Compatibility for Unique Landscapes and More](https://www.nexusmods.com/oblivion/mods/49488/)' ]
         condition: 'checksum("Grass Overhaul.esp", 55DE0B74)'
+      - <<: *requiresResources
+        subs: [ '[Oblivion Grass Overhaul](https://www.nexusmods.com/oblivion/mods/42400/)' ]
+        condition: 'not file("meshes/plants/dementia/dementiagrass01.nif")'
 
   - name: 'lLet there be Flowers.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/49616/' ]
