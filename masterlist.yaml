@@ -4375,6 +4375,30 @@ plugins:
       - crc: 0xA082C1A4
         util: 'TES4Edit v4.0.3'
 
+  - name: 'ScarletMonastery(Patch)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/30028/'
+        name: 'The Scarlet Monastery'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'The Scarlet Monastery ESP **ScarletMonastery.esp** or **ScarletMonasteryPatch.esp**' ]
+        condition: 'many("ScarletMonastery(Patch)?\.esp")'
+  - name: 'ScarletMonastery.esp'
+    inc: [ 'DremoraCompanion.esp' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x70DAC030
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 28
+        udr: 255
+  - name: 'ScarletMonasteryPatch.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x99AF70F6
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 27
+        udr: 312
+
   - name: 'Sutch Village.esp'
     url:
       - 'https://www.afkmods.com/index.php?/files/file/256-sutch-village/'
@@ -15161,13 +15185,6 @@ plugins:
         <<: *dirtyPlugin
         itm: 41
         udr: 10
-  - name: 'ScarletMonastery.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/30028' ]
-    dirty:
-      - crc: 0xb4b5da1e
-        <<: *dirtyPlugin
-        itm: 28
-        udr: 255
   - name: 'SC-TrialsofTheNine.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/42699' ]
     dirty:
