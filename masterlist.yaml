@@ -4384,6 +4384,7 @@ plugins:
         subs: [ 'The Scarlet Monastery ESP **ScarletMonastery.esp** or **ScarletMonasteryPatch.esp**' ]
         condition: 'many("ScarletMonastery(Patch)?\.esp")'
   - name: 'ScarletMonastery.esp'
+    inc: [ 'DremoraCompanion.esp' ]
     dirty:
       - <<: *quickClean
         crc: 0x70DAC030
