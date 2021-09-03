@@ -2855,6 +2855,10 @@ plugins:
         name: 'Oblivion Grass Overhaul'
       - link: 'https://www.nexusmods.com/oblivion/mods/49488/'
         name: 'Oblivion Grass Overhaul Compatibility for Unique Landscapes and More'
+    msg:
+      - <<: *patchUpdateAvailable
+        subs: [ '[Oblivion Grass Overhaul Compatibility for Unique Landscapes and More](https://www.nexusmods.com/oblivion/mods/49488/)' ]
+        condition: 'checksum("Grass Overhaul.esp", 55DE0B74)'
 
   - name: 'lLet there be Flowers.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/49616/' ]
