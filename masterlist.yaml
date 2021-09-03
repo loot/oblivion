@@ -2849,6 +2849,25 @@ plugins:
         util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 103
 
+  - name: 'Grass Overhaul.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/42400/'
+        name: 'Oblivion Grass Overhaul'
+      - link: 'https://www.nexusmods.com/oblivion/mods/49488/'
+        name: 'Oblivion Grass Overhaul Compatibility for Unique Landscapes and More'
+    msg:
+      - <<: *patchUpdateAvailable
+        subs: [ '[Oblivion Grass Overhaul Compatibility for Unique Landscapes and More](https://www.nexusmods.com/oblivion/mods/49488/)' ]
+        condition: 'checksum("Grass Overhaul.esp", 55DE0B74)'
+      - <<: *requiresResources
+        subs: [ '[Oblivion Grass Overhaul](https://www.nexusmods.com/oblivion/mods/42400/)' ]
+        condition: 'not file("meshes/plants/dementia/dementiagrass01.nif")'
+  - name: 'Grass Overhaul_xUL_Imperial_Isle_patch.esp'
+    msg:
+      - <<: *deletePlugin
+        subs: [ '**Grass Overhaul.esp** from [Oblivion Grass Overhaul Compatibility for Unique Landscapes and More](https://www.nexusmods.com/oblivion/mods/49488/)' ]
+        condition: 'checksum("Grass Overhaul.esp", 8B9A2B23)'
+
   - name: 'lLet there be Flowers.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/49616/' ]
     after:
@@ -18094,11 +18113,6 @@ plugins:
     inc: [ 'Mart''s Monster Mod - Hunting & Crafting.esp' ]
   - name: 'gq Chapel Altars become Wayshrines.esp'
     tag: [ Scripts ]
-  - name: 'Grass Overhaul.esp'
-    tag:
-      - Deactivate
-      - Graphics
-      - NoMerge
   - name: 'GuardEquipAndStatFix.esp'
     tag:
       - Actors.Stats
@@ -18412,11 +18426,6 @@ plugins:
   - name: 'Oblivifall - New Classes Regular Fonts.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/27144' ]
     tag: [ R.Description ]
-  - name: 'Oblivion grass overhaul.esp'
-    tag:
-      - Deactivate
-      - Graphics
-      - NoMerge
   - name: 'OriginalLeather.esp'
     tag: [ Names ]
   - name: 'OriginalLeatherSI.esp'
