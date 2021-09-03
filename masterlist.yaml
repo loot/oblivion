@@ -4379,6 +4379,10 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/30028/'
         name: 'The Scarlet Monastery'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'The Scarlet Monastery ESP **ScarletMonastery.esp** or **ScarletMonasteryPatch.esp**' ]
+        condition: 'many("ScarletMonastery(Patch)?\.esp")'
   - name: 'ScarletMonastery.esp'
     dirty:
       - <<: *quickClean
