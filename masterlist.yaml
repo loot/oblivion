@@ -2749,9 +2749,11 @@ plugins:
       - R.Mouth
     msg:
       - <<: *alsoUseX
+        type: warn
         subs: [ '[Oblivion Character Overhaul V2 - DLC Faces](https://www.nexusmods.com/oblivion/mods/48557/)' ]
         condition: 'not file("OCO DLC Faces.esp") and active("DLC(MehrunesRazor|VileLair)\.esp")'
       - <<: *patch3rdParty
+        type: warn
         subs:
           - 'Wrye Bash''s Bashed Patch'
           - '[OCOv2 - Bashed Patch Eyes Fix](https://www.nexusmods.com/oblivion/mods/49988/)'
