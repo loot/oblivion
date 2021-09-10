@@ -2717,9 +2717,9 @@ plugins:
 
   - name: 'Oblivion_Character_Overhaul.esp'
     url:
-      - link: 'https://www.nexusmods.com/oblivion/mods/44676'
+      - link: 'https://www.nexusmods.com/oblivion/mods/44676/'
         name: 'Oblivion Character Overhaul v2'
-      - link: 'https://www.nexusmods.com/oblivion/mods/48136'
+      - link: 'https://www.nexusmods.com/oblivion/mods/48136/'
         name: 'Oblivion Character Overhaul v2 - Unofficial Patch'
     after:
       - 'MaleBodyReplacerV3.esp'
@@ -2729,7 +2729,7 @@ plugins:
       - <<: *OBSE
         condition: 'version("Oblivion_Character_Overhaul.esp", "2.0", >=)'
       - name: 'OBSE/Plugins/Blockhead.dll'
-        display: '[Blockhead](https://www.nexusmods.com/oblivion/mods/43752)'
+        display: '[Blockhead](https://www.nexusmods.com/oblivion/mods/43752/)'
         condition: 'version("Oblivion_Character_Overhaul.esp", "2.0", >=)'
     tag:
       - Actors.ACBS
@@ -2749,7 +2749,7 @@ plugins:
       - <<: *patch3rdParty
         subs:
           - 'Wrye Bash''s Bashed Patch'
-          - '[OCOv2 - Bashed Patch Eyes Fix](https://www.nexusmods.com/oblivion/mods/49988)'
+          - '[OCOv2 - Bashed Patch Eyes Fix](https://www.nexusmods.com/oblivion/mods/49988/)'
         condition: 'version("Oblivion_Character_Overhaul.esp", "2.0", >=) and file("Bashed Patch.*\.esp") and not file("OCO_Eyes_Fix.esp")'
     dirty:
       - <<: *quickClean
