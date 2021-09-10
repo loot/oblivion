@@ -3115,6 +3115,10 @@ plugins:
         name: '(HTSCL) Hunger Thirst Sleep with Cooking Light'
   - name: 'HTSClight.esm'
     req: [ *OBSEv20 ]
+    msg:
+      - <<: *requiresResources
+        subs: [ '[HTS with Cooking v2.044 (Requires Account)](https://www.4shared.com/zip/zIEoabnh/HTS_with_Cooking_v2044.html)' ]
+        condition: 'not file("Meshes/Drink/Gyuunyuu/gyuunyuubin01.nif")'
   - name: 'HTSCl_base.esp'
     tag: [ Graphics ]
   - name: 'HTSCl_(cobl|hud|mmm|ooo|si|tent)\.esp'
