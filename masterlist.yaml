@@ -3109,6 +3109,39 @@ plugins:
       - Invent.Add
       - Scripts
 
+  - name: 'HTSCl_base.esp'
+    url: [ 'https://www.loverslab.com/topic/171-htsclight-english/?ct=1568338462/' ]
+    req: [ *OBSEv20 ]
+    tag: [ Invent ]
+  - name: 'HTSCl_hud.esp'
+    url: [ 'https://www.loverslab.com/topic/171-htsclight-english/?ct=1568338462/' ]
+    msg:
+      - type: warn
+        content:
+          - lang: en
+            text: 'You must rename "OBSE_Elys_Pluggy.dll" to "OBSE_Elys_Pluggy_Hud.dll"'
+          - lang: de
+            text: 'Sie müssen "OBSE_Elys_Pluggy.dll" in "OBSE_Elys_Pluggy_Hud.dll" umbenennen'
+        condition: 'file("OBSE/Plugins/OBSE_Elys_Pluggy.dll") and not file("OBSE/Plugins/OBSE_Elys_Pluggy_Hud.dll")'
+    req:
+      - <<: *Pluggy
+        condition: 'not file("OBSE/Plugins/OBSE_Elys_Pluggy_Hud.dll")'
+  - name: 'HTSCl_si.esp'
+    url: [ 'https://www.loverslab.com/topic/171-htsclight-english/?ct=1568338462/' ]
+    req: [ 'DLCShiveringIsles.esp' ]
+  - name: 'HTSCl_cobl.esp'
+    url: [ 'https://www.loverslab.com/topic/171-htsclight-english/?ct=1568338462/' ]
+    req: [ 'Cobl Main.esm' ]
+  - name: 'HTSCl_mmm.esp'
+    url: [ 'https://www.loverslab.com/topic/171-htsclight-english/?ct=1568338462/' ]
+    req: [ 'Mart''s Monster Mod.esm' ]
+    tag:
+      - Graphics
+      - Invent
+  - name: 'HTSCl_ooo.esp'
+    url: [ 'https://www.loverslab.com/topic/171-htsclight-english/?ct=1568338462/' ]
+    req: [ 'Oscuro''s_Oblivion_Overhaul.esm' ]
+
   - name: 'Knights Infamy.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/50195/'
@@ -22616,38 +22649,6 @@ plugins:
   - name: 'ROM Patch - Better Cities.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/33114' ]
     tag: [ Stats ]
-  - name: 'HTSCl_base.esp'
-    url: [ 'https://www.loverslab.com/topic/171-htsclight-english/?ct=1568338462/' ]
-    req: [ *OBSEv20 ]
-    tag: [ Invent ]
-  - name: 'HTSCl_cobl.esp'
-    url: [ 'https://www.loverslab.com/topic/171-htsclight-english/?ct=1568338462/' ]
-    req: [ 'Cobl Main.esm' ]
-  - name: 'HTSCl_mmm.esp'
-    url: [ 'https://www.loverslab.com/topic/171-htsclight-english/?ct=1568338462/' ]
-    req: [ 'Mart''s Monster Mod.esm' ]
-    tag:
-      - Graphics
-      - Invent
-  - name: 'HTSCl_ooo.esp'
-    url: [ 'https://www.loverslab.com/topic/171-htsclight-english/?ct=1568338462/' ]
-    req: [ 'Oscuro''s_Oblivion_Overhaul.esm' ]
-  - name: 'HTSCl_si.esp'
-    url: [ 'https://www.loverslab.com/topic/171-htsclight-english/?ct=1568338462/' ]
-    req: [ 'DLCShiveringIsles.esp' ]
-  - name: 'HTSCl_hud.esp'
-    url: [ 'https://www.loverslab.com/topic/171-htsclight-english/?ct=1568338462/' ]
-    msg:
-      - type: warn
-        content:
-          - lang: en
-            text: 'You must rename "OBSE_Elys_Pluggy.dll" to "OBSE_Elys_Pluggy_Hud.dll"'
-          - lang: de
-            text: 'Sie müssen "OBSE_Elys_Pluggy.dll" in "OBSE_Elys_Pluggy_Hud.dll" umbenennen'
-        condition: 'file("OBSE/Plugins/OBSE_Elys_Pluggy.dll") and not file("OBSE/Plugins/OBSE_Elys_Pluggy_Hud.dll")'
-    req:
-      - <<: *Pluggy
-        condition: 'not file("OBSE/Plugins/OBSE_Elys_Pluggy_Hud.dll")'
   - name: 'TheOubliette.esp'
     url: [ 'http://tesalliance.org/forums/index.php?/files/file/1883-the-oubliette/' ]
     dirty:
