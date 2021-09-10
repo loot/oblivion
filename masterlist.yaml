@@ -17072,29 +17072,12 @@ plugins:
         itm: 2
         udr: 134
 
-  - name: 'WindspearTower-StendarrValley compatibility patch.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Update to patch version 1.1 if using Stendarr Valley 1.2'
-          - lang: de
-            text: 'Update Zum Patcher der Version 1.1 wenn Stendarr Valley 1.2 genutzt wird'
   - name: 'Valenwood Improved - Fallenleaf Everglade EV - Patch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22555' ]
     dirty:
       - crc: 0x8056a33c
         <<: *dirtyPlugin
         itm: 5
-  - name: 'EtInArkay-ColovianHighlands patch.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'If using ''xulColovianHighlands.esp'', it must be manually renamed to ''xulColovianHighlands_EV.esp'' for this patch to work.'
-          - lang: de
-            text: 'Wenn ''xulColovianHighlands.esp'' genutzt wird, muss es manuell zu ''xulColovianHighlands_EV.esp'' umbenannt werden damit der Patch funktioniert.'
-        condition: 'file("xulColovianHighlands.esp")'
   - name: 'Trails of Cyrodiil - Colovian Highlands UL.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/44766' ]
     dirty:
@@ -17136,8 +17119,6 @@ plugins:
         <<: *dirtyPlugin
         itm: 13
         udr: 1396
-  - name: 'SutchReborn-LostCoast patch.esp'
-    req: [ 'Sutch reborn Lighthouse Fix UL.esp' ]
   - name: 'Sutch reborn Lighthouse Fix UL.esp'
     dirty:
       - crc: 0xc591afc5
@@ -17167,11 +17148,6 @@ plugins:
       - crc: 0xe45679c7
         <<: *dirtyPlugin
         udr: 1
-  - name: 'HeartoftheDead-ArriusCreek patch.esp'
-    dirty:
-      - crc: 0xea1f2756
-        <<: *dirtyPlugin
-        udr: 1
   - name: 'ColdstoneTown-ArriusCreek patch.esp'
     msg:
       - type: say
@@ -17181,17 +17157,6 @@ plugins:
           - lang: de
             text: 'Nicht nutzen mit ''ColdstoneTown-BravilBarrowfields patch.esp''; ColdstoneTown-BravilBarrowfields patch.esp enthält die Änderungen von diesem Patch.'
         condition: 'file("ColdstoneTown-BravilBarrowfields patch.esp")'
-  - name: 'RedcourtCastle-UniqueLandscapes Merged patch.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Do not use with RedcourtCastle-RollingHills patch.esp or RedcourtCastle-AncientYews patch.esp.'
-          - lang: de
-            text: 'Nicht nutzen mit RedcourtCastle-RollingHills patch.esp oder RedcourtCastle-AncientYews patch.esp.'
-        condition: 'file("RedcourtCastle-AncientYews patch.esp") or file("RedcourtCastle-RollingHills patch.esp")'
-  - name: 'ValleyViewEstate-RiverEthe patch.esp'
-    msg: [ *obsolete ]
 
   - name: 'NakedNord.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/6406' ]
@@ -17204,20 +17169,6 @@ plugins:
       - crc: 0x4062e31e
         <<: *dirtyPlugin
         itm: 22
-  - name: 'ImperialCitySuburbs-ImperialIsle patch.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Don''t use UL Imperial Isle Adense Epic Dungeon Patch.esp in conjunction with ImperialCitySuburbs-ImperialIsle patch.esp (causes land tears)'
-          - lang: de
-            text: 'Nutzen Sie nicht UL Imperial Isle Adense Epic Dungeon Patch.esp in Verbindung mit ImperialCitySuburbs-ImperialIsle patch.esp (verursacht Landschaftsrisse)'
-        condition: 'file("UL Imperial Isle Adense Epic Dungeon Patch.esp")'
-  - name: 'KvatchRebuilt-CheydinhalFalls patch.esp'
-    dirty:
-      - crc: 0xdce9a024
-        <<: *dirtyPlugin
-        udr: 1
   - name: 'OotD_UL_Jerall_Patch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/45611' ]
     msg:
@@ -17246,8 +17197,6 @@ plugins:
 
   - name: 'CastleSeaview+LostCoast Patch.esp'
     inc: [ 'EaglesRest+LostCoast+CastleSeaview Patch.esp' ]
-  - name: 'EaglesRest+LostCoast+CastleSeaview Patch.esp'
-    inc: [ 'CastleSeaview+LostCoast Patch.esp' ]
   - name: 'Castle Wolfspike2.esp'
     dirty:
       - crc: 0x69690c28
@@ -17468,14 +17417,6 @@ plugins:
   - name: 'Dollparts'' Cherry Brooke Grove - AN Patch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/37753' ]
     tag: [ C.Climate ]
-  - name: 'BarrowFields-Blood&Mud-Patch.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Do not use this with Better Cities or Open Better Cities.'
-          - lang: de
-            text: 'Nicht mit Better Cities oder Open Better Cities nutzen.'
   - name: 'RR - LTPDPatch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22751' ]
     msg:
