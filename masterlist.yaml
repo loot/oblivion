@@ -3115,6 +3115,9 @@ plugins:
         name: '(HTSCL) Hunger Thirst Sleep with Cooking Light'
   - name: 'HTSClight.esm'
     req: [ *OBSEv20 ]
+    inc:
+      - 'HTS.esp'
+      - 'HTS with Cooking.esp'
     msg:
       - <<: *requiresResources
         subs: [ '[HTS with Cooking v2.044 (Requires Account)](https://www.4shared.com/zip/zIEoabnh/HTS_with_Cooking_v2044.html)' ]
