@@ -2756,6 +2756,9 @@ plugins:
       - <<: *patchUpdateAvailable
         subs: [ '[Oblivion Character Overhaul Cleaned - OCO Cleaned](https://www.nexusmods.com/oblivion/mods/51324/)' ]
         condition: 'not version("Oblivion_Character_Overhaul.esp", "2.03", >=) and not checksum("Oblivion_Character_Overhaul.esp", EBF6CC01)'
+      - <<: *requiresResources
+        subs: [ '[Oblivion Character Overhaul v2](https://www.nexusmods.com/oblivion/mods/44676/)' ]
+        condition: 'not file("Meshes/characters/nuska/nuArgonianEyeLeft.nif")'
     dirty:
       - <<: *quickClean
         crc: 0x5B7D8F89
