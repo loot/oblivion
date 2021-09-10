@@ -3113,9 +3113,12 @@ plugins:
     url:
       - link: 'https://www.loverslab.com/topic/171-htsclight-english/?ct=1568338462/'
         name: '(HTSCL) Hunger Thirst Sleep with Cooking Light'
-  - name: 'HTSCl_base.esp'
+  - name: 'HTSClight.esm'
     req: [ *OBSEv20 ]
+  - name: 'HTSCl_base.esp'
     tag: [ Graphics ]
+  - name: 'HTSCl_(cobl|hud|mmm|ooo|si|tent)\.esp'
+    req: [ 'HTSCl_base.esp' ]
   - name: 'HTSCl_hud.esp'
     req:
       - <<: *Pluggy
@@ -3128,12 +3131,6 @@ plugins:
         condition: 'file("OBSE/Plugins/OBSE_Elys_Pluggy.dll") and not file("OBSE/Plugins/OBSE_Elys_Pluggy_Hud.dll")'
   - name: 'HTSCl_si.esp'
     req: [ 'DLCShiveringIsles.esp' ]
-  - name: 'HTSCl_cobl.esp'
-    req: [ 'Cobl Main.esm' ]
-  - name: 'HTSCl_mmm.esp'
-    req: [ 'Mart''s Monster Mod.esm' ]
-  - name: 'HTSCl_ooo.esp'
-    req: [ 'Oscuro''s_Oblivion_Overhaul.esm' ]
 
   - name: 'Knights Infamy.esp'
     url:
