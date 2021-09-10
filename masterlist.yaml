@@ -2753,6 +2753,9 @@ plugins:
           - 'Wrye Bash''s Bashed Patch'
           - '[OCOv2 - Bashed Patch Eyes Fix](https://www.nexusmods.com/oblivion/mods/49988/)'
         condition: 'version("Oblivion_Character_Overhaul.esp", "2.0", >=) and file("Bashed Patch.*\.esp") and not file("OCO_Eyes_Fix.esp")'
+      - <<: *patchUpdateAvailable
+        subs: [ '[Oblivion Character Overhaul Cleaned - OCO Cleaned](https://www.nexusmods.com/oblivion/mods/51324/)' ]
+        condition: 'not version("Oblivion_Character_Overhaul.esp", "2.03", >=) and not checksum("Oblivion_Character_Overhaul.esp", EBF6CC01)'
     dirty:
       - <<: *quickClean
         crc: 0x5B7D8F89
