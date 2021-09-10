@@ -2717,10 +2717,12 @@ plugins:
 
   - name: 'Oblivion_Character_Overhaul.esp'
     url:
-      - link: 'https://www.nexusmods.com/oblivion/mods/44676'
+      - link: 'https://www.nexusmods.com/oblivion/mods/44676/'
         name: 'Oblivion Character Overhaul v2'
-      - link: 'https://www.nexusmods.com/oblivion/mods/48136'
+      - link: 'https://www.nexusmods.com/oblivion/mods/48136/'
         name: 'Oblivion Character Overhaul v2 - Unofficial Patch'
+      - link: 'https://www.nexusmods.com/oblivion/mods/51324/'
+        name: 'Oblivion Character Overhaul Cleaned - OCO Cleaned'
     after:
       - 'MaleBodyReplacerV3.esp'
       - 'MaleBodyReplacerV4.esp'
@@ -2729,7 +2731,7 @@ plugins:
       - <<: *OBSE
         condition: 'version("Oblivion_Character_Overhaul.esp", "2.0", >=)'
       - name: 'OBSE/Plugins/Blockhead.dll'
-        display: '[Blockhead](https://www.nexusmods.com/oblivion/mods/43752)'
+        display: '[Blockhead](https://www.nexusmods.com/oblivion/mods/43752/)'
         condition: 'version("Oblivion_Character_Overhaul.esp", "2.0", >=)'
     tag:
       - Actors.ACBS
@@ -2737,25 +2739,48 @@ plugins:
       - NPC.Eyes
       - NPC.FaceGen
       - NPC.Hair
-      - Body-F # R.Body-F
-      - Body-M # R.Body-M
-      - Body-Size-M # R.Body-Size-M
+      - R.Body-F
+      - R.Body-M
+      - R.Body-Size-M
       - R.Ears
-      - Eyes # R.Eyes
-      - Hair # R.Hair
+      - R.Eyes
+      - R.Hair
       - R.Head
       - R.Mouth
     msg:
+      - <<: *alsoUseX
+        type: warn
+        subs: [ '[Oblivion Character Overhaul V2 - DLC Faces](https://www.nexusmods.com/oblivion/mods/48557/)' ]
+        condition: 'not file("OCO DLC Faces.esp") and active("DLC(MehrunesRazor|VileLair)\.esp")'
       - <<: *patch3rdParty
+        type: warn
         subs:
           - 'Wrye Bash''s Bashed Patch'
-          - '[OCOv2 - Bashed Patch Eyes Fix](https://www.nexusmods.com/oblivion/mods/49988)'
+          - '[OCOv2 - Bashed Patch Eyes Fix](https://www.nexusmods.com/oblivion/mods/49988/)'
         condition: 'version("Oblivion_Character_Overhaul.esp", "2.0", >=) and file("Bashed Patch.*\.esp") and not file("OCO_Eyes_Fix.esp")'
+      - <<: *patchUpdateAvailable
+        subs: [ '[Oblivion Character Overhaul Cleaned - OCO Cleaned](https://www.nexusmods.com/oblivion/mods/51324/)' ]
+        condition: 'not version("Oblivion_Character_Overhaul.esp", "2.03", >=) and not checksum("Oblivion_Character_Overhaul.esp", EBF6CC01)'
+      - <<: *requiresResources
+        subs: [ '[Oblivion Character Overhaul v2](https://www.nexusmods.com/oblivion/mods/44676/)' ]
+        condition: 'not file("Meshes/characters/nuska/nuArgonianEyeLeft.nif")'
     dirty:
       - <<: *quickClean
         crc: 0x5B7D8F89
         util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 2
+    clean:
+      - crc: 0xAE4A35D7
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
+      - crc: 0xEBF6CC01
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
+  - name: 'OCO Cleaned - Vanilla Hair.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/51324/'
+        name: 'Oblivion Character Overhaul Cleaned - OCO Cleaned'
+    clean:
+      - crc: 0xCF743DF7
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
 
 ###### Encounters - Allies ######
   - name: 'StokerWolff.esp'
@@ -14596,11 +14621,6 @@ plugins:
   - name: 'Kvatch Rebuilt.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/15412' ]
     msg:
-      - <<: *patch3rdParty
-        subs:
-          - 'Oblivion Character Overhaul v2'
-          - '[Compatibility Patches for nuska''s Oblivion Character Overhaul (v2)](https://www.nexusmods.com/oblivion/mods/46249)'
-        condition: 'active("Oblivion_Character_Overhaul.esp") and not file("OCO_KvatchRebuilt_Patch.esp")'
       - <<: *patch3rdParty
         subs:
           - 'Open Cities Reborn'
