@@ -4512,6 +4512,9 @@ plugins:
       - <<: *alreadyInX
         subs: [ 'Better Cities' ]
         condition: 'active("Better Cities Resources.esm") and version("Better Cities Resources.esm", "6.0.0", >=)'
+      - <<: *obsolete
+        subs: [ '[Let the People Drink](https://www.nexusmods.com/oblivion/mods/10223/)' ]
+        condition: 'version("LetThePeopleDrink.esp", "2.7.0", <)'
     clean:
       - crc: 0x16D029DD
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
