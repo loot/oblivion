@@ -4589,13 +4589,10 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/22751' ]
   - name: 'RR - LTPDPatch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22751' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Do not use if UL Imperial Isle is installed.'
-          - lang: de
-            text: 'Nicht nutzen wenn UL Imperial Isle installiert ist'
+    inc:
+      - name: 'Unique Landscapes.esp'
+        condition: 'version("Unique Landscapes.esp", "2.0.0", >=)'
+      - 'xulImperialIsle.esp'
 
   - name: 'ScarletMonastery(Patch)?\.esp'
     url:
