@@ -4505,6 +4505,31 @@ plugins:
       - crc: 0x7BB722C0
         util: 'TES4Edit v4.0.3'
 
+  - name: 'LetThePeopleDrink.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/10223/' ]
+    group: *earlyLoadersGroup
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'Better Cities' ]
+        condition: 'active("Better Cities Resources.esm") and version("Better Cities Resources.esm", "6.0.0", >=)'
+      - <<: *obsolete
+        subs: [ '[Let the People Drink](https://www.nexusmods.com/oblivion/mods/10223/)' ]
+        condition: 'version("LetThePeopleDrink.esp", "2.7.0", <)'
+      - <<: *useVersion
+        type: warn
+        subs: [ 'Common Oblivion (Cobl)' ]
+        condition: 'active("Cobl Main.esm") and (checksum("LetThePeopleDrink.esp", 16D029DD) or checksum("LetThePeopleDrink.esp", 3E6FB8E9))'
+    tag: [ Graphics ]
+    clean:
+      - crc: 0x16D029DD
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
+      - crc: 0x2897F731
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
+      - crc: 0x3E6FB8E9
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
+      - crc: 0x5F3AE31E
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
+
   - name: 'Oaksdale.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/42915/' ]
     dirty:
@@ -14755,18 +14780,6 @@ plugins:
       - Invent
       - Relations
       - Stats
-  - name: 'LetThePeopleDrink.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/10223' ]
-    group: *earlyLoadersGroup
-    dirty:
-      - crc: 0x9d730b18
-        <<: *dirtyPlugin
-        itm: 9
-        udr: 152
-      - crc: 0xac6a3945
-        <<: *dirtyPlugin
-        itm: 9
-        udr: 152
   - name: 'Litterbug.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/39121' ]
     req: [ 'DLCShiveringIsles.esp' ]
