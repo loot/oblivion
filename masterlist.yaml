@@ -4515,6 +4515,10 @@ plugins:
       - <<: *obsolete
         subs: [ '[Let the People Drink](https://www.nexusmods.com/oblivion/mods/10223/)' ]
         condition: 'version("LetThePeopleDrink.esp", "2.7.0", <)'
+      - <<: *useVersion
+        type: warn
+        subs: [ 'Common Oblivion (Cobl)' ]
+        condition: 'active("Cobl Main.esm") and (checksum("LetThePeopleDrink.esp", 16D029DD) or checksum("LetThePeopleDrink.esp", 3E6FB8E9))'
     clean:
       - crc: 0x16D029DD
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
