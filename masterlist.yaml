@@ -4423,6 +4423,19 @@ plugins:
       - crc: 0xAF477DE5
         util: 'TES4Edit v4.0.3'
 
+  - name: 'GlenvarCastle.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/8235' ]
+    msg:
+      - <<: *wildEdits
+        subs: [ '[Cleaning instructions](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide#GlenvarCastle.esp_Special_Cleaning_Instructions)' ]
+        condition: 'checksum("GlenvarCastle.esp", 718904AC)'
+    dirty:
+      - <<: *quickClean
+        crc: 0x718904AC
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 31
+        udr: 712
+
   - name: 'ICEXPAND.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/13692/'
@@ -14736,18 +14749,6 @@ plugins:
       - Invent
       - Relations
       - Stats
-  - name: 'GlenvarCastle.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/8235' ]
-    msg:
-      - <<: *wildEdits
-        subs: [ '[Cleaning instructions](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide#GlenvarCastle.esp_Special_Cleaning_Instructions)' ]
-        condition: 'checksum("GlenvarCastle.esp", 718904AC)'
-    dirty:
-      - <<: *quickClean
-        crc: 0x718904AC
-        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 31
-        udr: 712
   - name: 'LetThePeopleDrink.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/10223' ]
     group: *earlyLoadersGroup
