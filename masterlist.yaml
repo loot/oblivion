@@ -4428,12 +4428,17 @@ plugins:
     msg:
       - <<: *wildEdits
         subs: [ '[Cleaning instructions](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide#GlenvarCastle.esp_Special_Cleaning_Instructions)' ]
-        condition: 'checksum("GlenvarCastle.esp", 718904AC)'
+        condition: 'checksum("GlenvarCastle.esp", 718904AC) or checksum("GlenvarCastle.esp", 4B95D982)'
     dirty:
       - <<: *quickClean
         crc: 0x718904AC
-        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 31
+        udr: 712
+      - <<: *quickClean
+        crc: 0x6514C994
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 26
         udr: 712
 
   - name: 'ICEXPAND.esp'
