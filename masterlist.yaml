@@ -4505,6 +4505,19 @@ plugins:
       - crc: 0x7BB722C0
         util: 'TES4Edit v4.0.3'
 
+  - name: 'LetThePeopleDrink.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/10223/' ]
+    group: *earlyLoadersGroup
+    dirty:
+      - crc: 0x9d730b18
+        <<: *dirtyPlugin
+        itm: 9
+        udr: 152
+      - crc: 0xac6a3945
+        <<: *dirtyPlugin
+        itm: 9
+        udr: 152
+
   - name: 'Oaksdale.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/42915/' ]
     dirty:
@@ -14755,18 +14768,6 @@ plugins:
       - Invent
       - Relations
       - Stats
-  - name: 'LetThePeopleDrink.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/10223' ]
-    group: *earlyLoadersGroup
-    dirty:
-      - crc: 0x9d730b18
-        <<: *dirtyPlugin
-        itm: 9
-        udr: 152
-      - crc: 0xac6a3945
-        <<: *dirtyPlugin
-        itm: 9
-        udr: 152
   - name: 'Litterbug.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/39121' ]
     req: [ 'DLCShiveringIsles.esp' ]
