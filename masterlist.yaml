@@ -4570,7 +4570,9 @@ plugins:
         util: 'TES4Edit v4.0.3'
 
   - name: 'Region Revive - Lake Rumare.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/22751' ]
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/22751/'
+        name: 'Region Revive - Lake Rumare'
     after:
       - 'TalosBridgeGateHouse.esp'
       - 'MTCExpandedVillages.esp'
@@ -4586,9 +4588,7 @@ plugins:
         <<: *dirtyPlugin
         udr: 45
   - name: 'Region_Revive_-_Lake_Rumare_FuseSnailRacing_Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/22751' ]
   - name: 'RR - LTPDPatch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/22751' ]
     inc:
       - name: 'Unique Landscapes.esp'
         condition: 'version("Unique Landscapes.esp", "2.0.0", >=)'
