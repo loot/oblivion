@@ -4316,6 +4316,14 @@ plugins:
         util: '[TES4Edit v4.0.3g](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 13
 
+  - name: 'CompleteMagePack.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/8385/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xAE14DF6D
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 3
+
   - name: 'TreasureChest.*\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/44066' ]
   - name: 'TreasureChest.esp'
@@ -14125,12 +14133,6 @@ plugins:
             text: 'Wahrscheinlich inkompatibel mit Better Cities.'
         condition: 'file("Better Cities Resources.esm")'
 
-  - name: 'CompleteMagePack.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/8385' ]
-    dirty:
-      - crc: 0xae14df6d
-        <<: *dirtyPlugin
-        itm: 3
   - name: 'CV - Templar Fortress.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/36364' ]
     dirty:
