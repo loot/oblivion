@@ -3957,6 +3957,20 @@ plugins:
         itm: 57
         udr: 1
 
+  - name: 'Children Of Rourken.esm'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/6875/' ]
+    clean:
+      - crc: 0xB104DE5B
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
+  - name: 'COR-Episode1 Secret of Enourk.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/6875/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x156247AC
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 22
+        udr: 16
+
   - name: 'Comp_Cecilia.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/9252/'
@@ -14100,13 +14114,7 @@ plugins:
           - lang: de
             text: 'Wahrscheinlich inkompatibel mit Better Cities.'
         condition: 'file("Better Cities Resources.esm")'
-  - name: 'COR-Episode1 Secret of Enourk.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/6875' ]
-    dirty:
-      - crc: 0x156247ac
-        <<: *dirtyPlugin
-        itm: 22
-        udr: 16
+
   - name: 'CRTRenewed.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/42929' ]
     tag: [ Invent ]
