@@ -4447,6 +4447,36 @@ plugins:
         util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 5
 
+  - name: 'DaggerfallResources02.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/38734/' ]
+    msg:
+      - type: say
+        content:
+          - lang: en
+            text: 'Requires: Tamriel Heightmaps, Tamriel Landscape Pack, Tamriel Resource Pack, Mr_Siikas Highrock Resources'
+          - lang: de
+            text: 'Benötigt: Tamriel Heightmaps, Tamriel Landscape Pack, Tamriel Resource Pack, Mr_Siikas Highrock Resources'
+    dirty:
+      - <<: *quickClean
+        crc: 0x410594DC
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 24
+        udr: 6
+  - name: 'HighrockVillage.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/38734/' ]
+    msg:
+      - type: say
+        content:
+          - lang: en
+            text: 'Requires: Tamriel Heightmaps, Tamriel Landscape Pack, Tamriel Resource Pack, Mr_Siikas Highrock Resources'
+          - lang: de
+            text: 'Benötigt: Tamriel Heightmaps, Tamriel Landscape Pack, Tamriel Resource Pack, Mr_Siikas Highrock Resources'
+    dirty:
+      - <<: *quickClean
+        crc: 0xF7B82CE2
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        udr: 72
+
   - name: 'Darbinshire Keep.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/10342/' ]
     dirty:
@@ -14150,20 +14180,6 @@ plugins:
             text: 'Wahrscheinlich inkompatibel mit Better Cities.'
         condition: 'file("Better Cities Resources.esm")'
 
-  - name: 'DaggerfallResources02.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/38734' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Requires: Tamriel Heightmaps, Tamriel Landscape Pack, Tamriel Resource Pack, Mr_Siikas Highrock Resources'
-          - lang: de
-            text: 'Benötigt: Tamriel Heightmaps, Tamriel Landscape Pack, Tamriel Resource Pack, Mr_Siikas Highrock Resources'
-    dirty:
-      - crc: 0x9fffaa26
-        <<: *dirtyPlugin
-        itm: 16
-        udr: 6
   - name: 'DarelothFrontDoorFix.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/33119' ]
     inc: [ 'Apachii_Goddess_Store.esp' ]
@@ -14501,19 +14517,7 @@ plugins:
       - Relations
       - Scripts
       - Stats
-  - name: 'HighrockVillage.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/38734' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Requires: Tamriel Heightmaps, Tamriel Landscape Pack, Tamriel Resource Pack, Mr_Siikas Highrock Resources'
-          - lang: de
-            text: 'Benötigt: Tamriel Heightmaps, Tamriel Landscape Pack, Tamriel Resource Pack, Mr_Siikas Highrock Resources'
-    dirty:
-      - crc: 0xd1e9f459
-        <<: *dirtyPlugin
-        udr: 73
+
   - name: 'HilltopLodge.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/42119' ]
     dirty:
