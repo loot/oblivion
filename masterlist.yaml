@@ -3220,6 +3220,10 @@ plugins:
   - name: 'Oblivifall .*\.es(m|p)'
     url: [ 'https://www.nexusmods.com/oblivion/mods/31668/' ]
   - name: 'Oblivifall - Losing My Religion.esp'
+    msg:
+      - <<: *wildEdits
+        subs: [ 'Delete **000260DF** & **00027807** in **Oblivifall - Losing My Religion.esp**.' ]
+        condition: 'checksum("Oblivifall - Losing My Religion.esp", 128C5F11)'
     tag:
       - Actors.AIPackages
       - C.Name
@@ -3230,8 +3234,9 @@ plugins:
     tag: [ Actors.AIPackages ]
   - name: 'Oblivifall - Losing My Religion Blood&Mud.esp'
     dirty:
-      - crc: 0x128c5f11
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x128C5F11
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
   - name: 'Oblivifall - Losing My Religion West Roads Patch.esp'
     dirty:
