@@ -3987,6 +3987,24 @@ plugins:
         itm: 28
         udr: 2
 
+  - name: 'DarkQuest.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/42830/' ]
+    msg:
+      - <<: *wildEdits
+        subs: [ 'Unnecessarily renames records, use the TES4Edit script **Restore record names from master** to fix them.' ]
+        condition: 'checksum("DarkQuest.esp", E0BEBD1B) or checksum("DarkQuest.esp", 667C336E)'
+    dirty:
+      - <<: *quickClean
+        crc: 0xE0BEBD1B
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 26
+        udr: 10
+      - <<: *quickClean
+        crc: 0xD4DCADA1
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 26
+        udr: 10
+
   - name: 'DibellasWatch.esm'
     url: [ 'https://www.nexusmods.com/oblivion/mods/37120/' ]
     group: *gameMasterGroup
@@ -14186,13 +14204,7 @@ plugins:
   - name: 'Dark Brotherhood Outpost v3.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/13277' ]
     msg: [ *obsolete ]
-  - name: 'DarkQuest.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/42830' ]
-    dirty:
-      - crc: 0x74e5f1c3
-        <<: *dirtyPlugin
-        itm: 43
-        udr: 10
+
   - name: 'DarknessHollows.esp'
     url: [ 'http://tesalliance.org/forums/index.php?/files/file/659-darkness-hollows-tesas-2010-halloween-challenge' ]
     dirty:
