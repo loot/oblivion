@@ -4569,6 +4569,29 @@ plugins:
       - crc: 0xA082C1A4
         util: 'TES4Edit v4.0.3'
 
+  - name: 'Region Revive - Lake Rumare.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/22751/'
+        name: 'Region Revive - Lake Rumare'
+      - link: 'https://www.nexusmods.com/oblivion/mods/48347/'
+        name: 'Region Revive - Lake Rumare Updated'
+    after:
+      - 'FuseSnailRacing.esp'
+      - 'TalosBridgeGateHouse.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x4D8FA617
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1
+    clean:
+      - crc: 0x4790A566
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
+  - name: 'RR - LTPDPatch.esp'
+    inc:
+      - name: 'Unique Landscapes.esp'
+        condition: 'version("Unique Landscapes.esp", "2.0.0", >=)'
+      - 'xulImperialIsle.esp'
+
   - name: 'ScarletMonastery(Patch)?\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/30028/'
@@ -15279,38 +15302,6 @@ plugins:
         <<: *dirtyPlugin
         itm: 6
         udr: 2
-  - name: 'Region Revive - Lake Rumare.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/22751' ]
-    after:
-      - 'TalosBridgeGateHouse.esp'
-      - 'MTCExpandedVillages.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Incompatible with: most Weye-related mods.'
-          - lang: de
-            text: 'Inkompatibel mit: Meisten Weye-bezogenen Mods.'
-    dirty:
-      - crc: 0x4d8fa617
-        <<: *dirtyPlugin
-        udr: 45
-  - name: 'Region_Revive_-_Lake_Rumare_FuseSnailRacing_Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/22751' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Patch for FuseSnailRacing.esp'
-          - lang: de
-            text: 'Patch für FuseSnailRacing.esp'
-      - type: say
-        content:
-          - lang: en
-            text: 'Loading this after OOO.esp causes OOO''s lockbash feature to fail. To fix this simply load RL-LR before OOO.esp.'
-          - lang: de
-            text: 'Wenn es nach OOO.esp geladen wird führt dies dazu das OOO''s Schloss-Einschlag Funktion fehlschlägt. Zum Beheben einfach RL-LR vor OOO.esp laden.'
-        condition: *OOOCond
   - name: 'MTCVillages-LakeRumarePatch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/42098' ]
     inc: [ 'MTC-WeyePatch.esp' ]
@@ -17515,15 +17506,6 @@ plugins:
   - name: 'Dollparts'' Cherry Brooke Grove - AN Patch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/37753' ]
     tag: [ C.Climate ]
-  - name: 'RR - LTPDPatch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/22751' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Do not use if UL Imperial Isle is installed.'
-          - lang: de
-            text: 'Nicht nutzen wenn UL Imperial Isle installiert ist'
 
   - name: 'NPC new clothes V2.6 Modified.esp'
     msg:
