@@ -3186,14 +3186,12 @@ plugins:
 
   - name: 'kuerteeCrimeHasWitnesses.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22894/' ]
-    inc: [ 'RenGuardOverhaul.esp' ]
     clean:
       - crc: 0x69D10411
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
 
   - name: 'kuerteeLootingDeadGuardsIsStealing.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/21784/' ]
-    inc: [ 'RenGuardOverhaul.esp' ]
     clean:
       - crc: 0x0E98B45B
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
@@ -3220,6 +3218,10 @@ plugins:
   - name: 'Oblivifall .*\.es(m|p)'
     url: [ 'https://www.nexusmods.com/oblivion/mods/31668/' ]
   - name: 'Oblivifall - Losing My Religion.esp'
+    msg:
+      - <<: *wildEdits
+        subs: [ 'Delete **000260DF** & **00027807** in **Oblivifall - Losing My Religion.esp**.' ]
+        condition: 'checksum("Oblivifall - Losing My Religion.esp", 128C5F11)'
     tag:
       - Actors.AIPackages
       - C.Name
@@ -3230,8 +3232,9 @@ plugins:
     tag: [ Actors.AIPackages ]
   - name: 'Oblivifall - Losing My Religion Blood&Mud.esp'
     dirty:
-      - crc: 0x128c5f11
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x128C5F11
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
   - name: 'Oblivifall - Losing My Religion West Roads Patch.esp'
     dirty:
@@ -3952,6 +3955,20 @@ plugins:
         itm: 57
         udr: 1
 
+  - name: 'Children Of Rourken.esm'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/6875/' ]
+    clean:
+      - crc: 0xB104DE5B
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
+  - name: 'COR-Episode1 Secret of Enourk.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/6875/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x156247AC
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 22
+        udr: 16
+
   - name: 'Comp_Cecilia.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/9252/'
@@ -3967,6 +3984,24 @@ plugins:
         util: '[TES4Edit v4.0.3g](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 28
         udr: 2
+
+  - name: 'DarkQuest.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/42830/' ]
+    msg:
+      - <<: *wildEdits
+        subs: [ 'Unnecessarily renames records, use the TES4Edit script **Restore record names from master** to fix them.' ]
+        condition: 'checksum("DarkQuest.esp", E0BEBD1B) or checksum("DarkQuest.esp", 667C336E)'
+    dirty:
+      - <<: *quickClean
+        crc: 0xE0BEBD1B
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 26
+        udr: 10
+      - <<: *quickClean
+        crc: 0xD4DCADA1
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 26
+        udr: 10
 
   - name: 'DibellasWatch.esm'
     url: [ 'https://www.nexusmods.com/oblivion/mods/37120/' ]
@@ -4297,6 +4332,22 @@ plugins:
         util: '[TES4Edit v4.0.3g](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 13
 
+  - name: 'CompleteMagePack.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/8385/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xAE14DF6D
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 3
+
+  - name: 'Daedric Armor of Darkness.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/29152/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xE17A73EA
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 6
+
   - name: 'TreasureChest.*\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/44066' ]
   - name: 'TreasureChest.esp'
@@ -4411,6 +4462,36 @@ plugins:
         crc: 0x4223626A
         util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 5
+
+  - name: 'DaggerfallResources02.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/38734/' ]
+    msg:
+      - type: say
+        content:
+          - lang: en
+            text: 'Requires: Tamriel Heightmaps, Tamriel Landscape Pack, Tamriel Resource Pack, Mr_Siikas Highrock Resources'
+          - lang: de
+            text: 'Benötigt: Tamriel Heightmaps, Tamriel Landscape Pack, Tamriel Resource Pack, Mr_Siikas Highrock Resources'
+    dirty:
+      - <<: *quickClean
+        crc: 0x410594DC
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 24
+        udr: 6
+  - name: 'HighrockVillage.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/38734/' ]
+    msg:
+      - type: say
+        content:
+          - lang: en
+            text: 'Requires: Tamriel Heightmaps, Tamriel Landscape Pack, Tamriel Resource Pack, Mr_Siikas Highrock Resources'
+          - lang: de
+            text: 'Benötigt: Tamriel Heightmaps, Tamriel Landscape Pack, Tamriel Resource Pack, Mr_Siikas Highrock Resources'
+    dirty:
+      - <<: *quickClean
+        crc: 0xF7B82CE2
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        udr: 72
 
   - name: 'Darbinshire Keep.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/10342/' ]
@@ -4742,6 +4823,16 @@ plugins:
         itm: 3
         udr: 246
 
+  - name: 'CRTRenewed.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/42929/' ]
+    tag: [ Invent ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xFF523675
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 13
+        udr: 122
+
   - name: 'DBSRebuiltComplete.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/21125'
@@ -4891,6 +4982,15 @@ plugins:
         crc: 0x5E962438
         util: '[TES4Edit v4.0.3g](https://www.nexusmods.com/oblivion/mods/11536)'
         udr: 15
+
+  - name: 'CV - Templar Fortress.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/36364/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x044E1671
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 47
+        udr: 892
 
   - name: 'Greenview Manor.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/37580' ]
@@ -6198,12 +6298,6 @@ plugins:
         util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
         udr: 35
-  - name: 'SB Open Cities Add-on - Total IC Isle v3.1.esp'
-    dirty:
-      - crc: 0xc1a57adc
-        <<: *dirtyPlugin
-        itm: 132
-        udr: 31
 
 ###### Unique Landscapes (UL) ######
   - name: 'xul(Ancient(Redwoods|Yews)|ArriusCreek|AspenWood|BeachesOfCyrodiilLostCoast|BlackwoodForest|BravilBarrowfields|BrenaRiverRavine|CheydinhalFalls|ChorrolHinterland(-BC6)?|CliffsOfAnvil|CloudtopMountains|ColovianHighlands_EV|darkforest|EntiusGorge|FallenleafEverglade|ImperialIsle|JerallGlacier|LushWoodlands|PantherRiver|Patch_AY_AC|RiverEthe|RollingHills_EV|SilverfishRiverValley|SkingradOutskirts|Snowdale|StendarrValley|TheEasternPeaks|TheHeath)\.esp'
@@ -14101,67 +14195,14 @@ plugins:
           - lang: de
             text: 'Wahrscheinlich inkompatibel mit Better Cities.'
         condition: 'file("Better Cities Resources.esm")'
-  - name: 'COR-Episode1 Secret of Enourk.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/6875' ]
-    dirty:
-      - crc: 0x156247ac
-        <<: *dirtyPlugin
-        itm: 22
-        udr: 16
-  - name: 'CRTRenewed.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/42929' ]
-    tag: [ Invent ]
-    dirty:
-      - crc: 0xff523675
-        <<: *dirtyPlugin
-        itm: 122
-        udr: 13
-  - name: 'CompleteMagePack.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/8385' ]
-    dirty:
-      - crc: 0xae14df6d
-        <<: *dirtyPlugin
-        itm: 3
-  - name: 'CV - Templar Fortress.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/36364' ]
-    dirty:
-      - crc: 0x44e1671
-        <<: *dirtyPlugin
-        itm: 50
-        udr: 892
-  - name: 'Daedric Armor of Darkness.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29152' ]
-    dirty:
-      - crc: 0xe17a73ea
-        <<: *dirtyPlugin
-        itm: 6
-  - name: 'DaggerfallResources02.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/38734' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Requires: Tamriel Heightmaps, Tamriel Landscape Pack, Tamriel Resource Pack, Mr_Siikas Highrock Resources'
-          - lang: de
-            text: 'Benötigt: Tamriel Heightmaps, Tamriel Landscape Pack, Tamriel Resource Pack, Mr_Siikas Highrock Resources'
-    dirty:
-      - crc: 0x9fffaa26
-        <<: *dirtyPlugin
-        itm: 16
-        udr: 6
+
   - name: 'DarelothFrontDoorFix.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/33119' ]
     inc: [ 'Apachii_Goddess_Store.esp' ]
   - name: 'Dark Brotherhood Outpost v3.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/13277' ]
     msg: [ *obsolete ]
-  - name: 'DarkQuest.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/42830' ]
-    dirty:
-      - crc: 0x74e5f1c3
-        <<: *dirtyPlugin
-        itm: 43
-        udr: 10
+
   - name: 'DarknessHollows.esp'
     url: [ 'http://tesalliance.org/forums/index.php?/files/file/659-darkness-hollows-tesas-2010-halloween-challenge' ]
     dirty:
@@ -14486,19 +14527,7 @@ plugins:
       - Relations
       - Scripts
       - Stats
-  - name: 'HighrockVillage.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/38734' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Requires: Tamriel Heightmaps, Tamriel Landscape Pack, Tamriel Resource Pack, Mr_Siikas Highrock Resources'
-          - lang: de
-            text: 'Benötigt: Tamriel Heightmaps, Tamriel Landscape Pack, Tamriel Resource Pack, Mr_Siikas Highrock Resources'
-    dirty:
-      - crc: 0xd1e9f459
-        <<: *dirtyPlugin
-        udr: 73
+
   - name: 'HilltopLodge.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/42119' ]
     dirty:
@@ -17667,11 +17696,7 @@ plugins:
           - lang: de
             text: 'Funktioniert womöglich nicht mit Living Economy da LE Skripte dazu tendieren Preisgestaltungs-Mods zu überschreiben.'
         condition: 'file("Living Economy.*\.esp")'
-  - name: 'Addendum - Diabloblivion.esp'
-    dirty:
-      - crc: 0xd6814dd
-        <<: *dirtyPlugin
-        itm: 1
+
   - name: 'Amulets and Rings for everybody.esp'
     tag:
       - Actors.ACBS
@@ -17766,13 +17791,7 @@ plugins:
       # OOO Misc Files version
       - crc: 0x066E0C4B
         util: 'TES4Edit v4.0.3'
-  - name: 'betterArena.esp'
-    tag: [ C.Water ]
-    dirty:
-      - crc: 0x94ec8c40
-        <<: *dirtyPlugin
-        itm: 30
-        udr: 18
+
   - name: 'Better dungeons.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/40392' ]
     tag:
@@ -17971,11 +17990,7 @@ plugins:
   - name: 'CT-YABM.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/11317' ]
     inc: [ 'CT-YABM - No Idle.esp' ]
-  - name: 'Cyrodiil City Guards.esp'
-    dirty:
-      - crc: 0xe138ff22
-        <<: *dirtyPlugin
-        itm: 78
+
   - name: 'DarNified Books.*\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/10763' ]
     msg:
@@ -18027,21 +18042,6 @@ plugins:
       - Names
       - Scripts
       - Stats
-  - name: 'Factions Dark Brotherhood.esp'
-    tag:
-      - Actors.ACBS
-      - Actors.AIPackages
-      - Actors.Stats
-      - Graphics
-      - Invent
-      - Names
-      - Scripts
-      - Stats
-    dirty:
-      - crc: 0xc9b0b2ea
-        <<: *dirtyPlugin
-        itm: 26
-        udr: 24
 
   - name: 'First Person Messages.esp'
     msg: [ *alreadyInOOO ]
@@ -18717,12 +18717,7 @@ plugins:
     req: [ *OBSE ]
   - name: 'Things Found Fence.esp'
     tag: [ Actors.AIData ]
-  - name: 'Tombstone Epitaphs.esp'
-    dirty:
-      - crc: 0x888fb064
-        <<: *dirtyPlugin
-        itm: 3
-        udr: 587
+
   - name: 'TrollResurrection.esp'
     tag: [ SpellStats ]
   - name: 'Unlimited Rings 1.0.esp'
@@ -19024,12 +19019,7 @@ plugins:
         itm: 3
   - name: 'IshMountedCombatSpellsOnSelf.esp'
     req: [ *OBSE ]
-  - name: 'K2_Summons.esp'
-    tag: [ Actors.Spells ]
-    dirty:
-      - crc: 0x49ace956
-        <<: *dirtyPlugin
-        itm: 2
+
   - name: 'JIM_(Summon|Balanced)_Doppleganger\.esp'
     msg:
       - <<: *useOnlyOneX
@@ -19104,12 +19094,7 @@ plugins:
         itm: 9
   - name: 'Portal - SI.esp'
     req: [ 'DLCShiveringIsles.esp' ]
-  - name: 'Silj''s Martigen''s Monster Mod summmon spells and conjuration compendium.esp'
-    dirty:
-      - crc: 0x3c6cc609
-        <<: *dirtyPlugin
-        itm: 13
-        udr: 4
+
   - name: 'SummonKnightofOrderOBME.esp'
     req:
       - *MagicExtender
@@ -19388,16 +19373,6 @@ plugins:
   - name: 'No psychic guards v1.2.esp'
     dirty:
       - crc: 0xa43be46f
-        <<: *dirtyPlugin
-        itm: 1
-  - name: 'RenGuardOverhaul.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/5977' ]
-    tag: [ Actors.AIData ]
-    dirty:
-      - crc: 0x54286fe0
-        <<: *dirtyPlugin
-        itm: 3
-      - crc: 0xb736932b
         <<: *dirtyPlugin
         itm: 1
 
@@ -19810,11 +19785,7 @@ plugins:
       - NoMerge
   - name: '1st Person Legs.esp'
     req: [ *OBSEv15 ]
-  - name: 'xxJump.esp'
-    dirty:
-      - crc: 0x6f92cd7c
-        <<: *dirtyPlugin
-        itm: 3
+
   - name: 'immersive_caves_manual.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/4666' ]
     tag: [ Sound ]
@@ -21812,11 +21783,6 @@ plugins:
     tag:
       - Eyes
       - Hair
-  - name: 'Siliane.esp'
-    dirty:
-      - crc: 0x436f457d
-        <<: *dirtyPlugin
-        itm: 3
 
   ### Companion Vilja ###
   - name: '1em_Vilja.esp'
@@ -22937,7 +22903,6 @@ plugins:
     inc:
       - 'Vim_and_Vigor.esp'
       - 'HotkeyCasting.esp'
-      - 'RenGuardOverhaul.esp'
       - '7roads.esp'
     tag:
       - Graphics
