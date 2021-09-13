@@ -4745,6 +4745,11 @@ plugins:
         util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 195
         udr: 158
+  - name: 'Better daedric shrine(s)? (Azura|Clavicus|Hircine|malacath|Meridia|molag bal|Namira|Nocturnal|Pyriate|sanguine|Sheogorath|Vaermina)\.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'Better daedric shrines full.esp' ]
+        condition: 'active("Better daedric shrines full.esp")'
   - name: 'Better daedric shrine Azura.esp'
     dirty:
       - <<: *quickClean
