@@ -3191,6 +3191,13 @@ plugins:
       - crc: 0x69D10411
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
 
+  - name: 'kuerteeLootingDeadGuardsIsStealing.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/21784/' ]
+    inc: [ 'RenGuardOverhaul.esp' ]
+    clean:
+      - crc: 0x0E98B45B
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
+
   - name: 'MigHorseArmor.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/43037' ]
     req:
@@ -19394,9 +19401,6 @@ plugins:
         <<: *dirtyPlugin
         itm: 1
 
-  - name: 'kuerteeLootingDeadGuardsIsStealing.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/21784' ]
-    inc: [ 'RenGuardOverhaul.esp' ]
   - name: 'TRN One of the Gang.esp'
     msg:
       - type: say
