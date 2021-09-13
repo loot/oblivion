@@ -5094,6 +5094,20 @@ plugins:
         itm: 25
         udr: 427
 
+  - name: 'Castle_Almgard-V2.esp'
+    msg:
+      - type: say
+        content:
+          - lang: en
+            text: 'Be sure to use the right version depending on Unique Landscapes Beachs of Cyrodiil being used.'
+          - lang: de
+            text: 'Stellen Sie sicher die richtige Version zu verwenden abhängig von dem Unique Landscapes Beachs of Cyrodiil das genutzt wird.'
+    dirty:
+      - crc: 0x40e0f4da
+        <<: *dirtyPlugin
+        itm: 13
+        udr: 1396
+
   - name: 'Castle Arpenia - (Colovian Highlands|Gold Coast|Niben Bay)\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/26709/' ]
   - name: 'Castle Arpenia - Colovian Highlands.esp'
@@ -17315,19 +17329,7 @@ plugins:
     msg: [ *obsolete ]
   - name: 'MOEVampireClanRaelu-ChorrolHinterland patch.esp'
     msg: [ *obsolete ]
-  - name: 'Castle_Almgard-V2.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Be sure to use the right version depending on Unique Landscapes Beachs of Cyrodiil being used.'
-          - lang: de
-            text: 'Stellen Sie sicher die richtige Version zu verwenden abhängig von dem Unique Landscapes Beachs of Cyrodiil das genutzt wird.'
-    dirty:
-      - crc: 0x40e0f4da
-        <<: *dirtyPlugin
-        itm: 13
-        udr: 1396
+
   - name: 'Sutch reborn Lighthouse Fix UL.esp'
     dirty:
       - crc: 0xc591afc5
