@@ -3637,6 +3637,15 @@ plugins:
   - name: 'Paladin - OBME Patch.esp'
     inc: [ 'OBSE/Plugins/PaladinModCustomSpellIcons.dll' ]
 
+  - name: 'Ayleid Wells.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/39926/'
+        name: 'Ayleid Wells Revamped - More Useful Ayleid Well Mod'
+    tag: [ -Scripts ]
+    clean:
+      - crc: 0x3E9D1FEC
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
+
   ### (L.A.M.E) Less Annoying Magic Experience ###
   - name: 'bgMagic.*\.esp'
     url:
@@ -18825,14 +18834,7 @@ plugins:
           - lang: de
             text: 'Ähnlich zu OOO und MMM Gems und Gem Dust - ist sehr wahrscheinlich inkompatibel mit diesen. Ungetestet.'
     tag: [ Scripts ]
-  - name: 'Ayleid Wells.esp'
-    tag: [ Scripts ]
-  - name: 'Ayelid Wells.esp'
-    tag: [ Scripts ]
-    dirty:
-      - crc: 0x62c163d8
-        <<: *dirtyPlugin
-        itm: 4
+
   - name: 'lorecreatures.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/7471' ]
     dirty:
