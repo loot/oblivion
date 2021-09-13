@@ -3186,14 +3186,12 @@ plugins:
 
   - name: 'kuerteeCrimeHasWitnesses.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22894/' ]
-    inc: [ 'RenGuardOverhaul.esp' ]
     clean:
       - crc: 0x69D10411
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
 
   - name: 'kuerteeLootingDeadGuardsIsStealing.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/21784/' ]
-    inc: [ 'RenGuardOverhaul.esp' ]
     clean:
       - crc: 0x0E98B45B
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
@@ -19421,16 +19419,6 @@ plugins:
       - crc: 0xa43be46f
         <<: *dirtyPlugin
         itm: 1
-  - name: 'RenGuardOverhaul.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/5977' ]
-    tag: [ Actors.AIData ]
-    dirty:
-      - crc: 0x54286fe0
-        <<: *dirtyPlugin
-        itm: 3
-      - crc: 0xb736932b
-        <<: *dirtyPlugin
-        itm: 1
 
   - name: 'TRN One of the Gang.esp'
     msg:
@@ -22968,7 +22956,6 @@ plugins:
     inc:
       - 'Vim_and_Vigor.esp'
       - 'HotkeyCasting.esp'
-      - 'RenGuardOverhaul.esp'
       - '7roads.esp'
     tag:
       - Graphics
