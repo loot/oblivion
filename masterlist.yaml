@@ -5287,6 +5287,20 @@ plugins:
         itm: 11
         udr: 2
 
+  - name: 'Castle Wolfspike2.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/34320/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x8137DE38
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 35
+        udr: 260
+      - <<: *quickClean
+        crc: 0x15063DD8
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 35
+        udr: 260
+
   - name: 'CastleInTheMountain.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/9408/' ]
     tag: [ Invent ]
@@ -17603,12 +17617,7 @@ plugins:
 
   - name: 'CastleSeaview+LostCoast Patch.esp'
     inc: [ 'EaglesRest+LostCoast+CastleSeaview Patch.esp' ]
-  - name: 'Castle Wolfspike2.esp'
-    dirty:
-      - crc: 0x69690c28
-        <<: *dirtyPlugin
-        itm: 50
-        udr: 260
+
   - name: 'Colourwheels Sexy Arena Revised HGEC.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/41609' ]
     tag:
