@@ -2884,6 +2884,14 @@ plugins:
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
 
 ###### Encounters - Allies ######
+  - name: 'CM Emilia.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/32760/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xDEB5D3C7
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 7
+
   - name: 'StokerWolff.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/17743/'
@@ -21951,11 +21959,7 @@ plugins:
       - crc: 0x41fce7b5
         <<: *dirtyPlugin
         itm: 10
-  - name: 'CM Emilia.esp'
-    dirty:
-      - crc: 0xdeb5d3c7
-        <<: *dirtyPlugin
-        itm: 3
+
   - name: 'CM Rigel.esp'
     dirty:
       - crc: 0xda4a2eb2
