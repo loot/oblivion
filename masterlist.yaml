@@ -4450,28 +4450,16 @@ plugins:
 
   - name: 'Cliff''s Shacks Basements(-Radiant AI)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/20779/' ]
-  - name: 'Cliff''s Shacks Basements.esp'
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Use ''Cliff''s Shacks Basements.esp'' or ''Cliff''s Shacks Basements-Radiant AI.esp'' but not both at the same time.'
-          - lang: de
-            text: 'Nutzen Sie entweder ''Cliff''s Shacks Basements.esp'' oder ''Cliff''s Shacks Basements-Radiant AI.esp'' aber nicht beide gleichzeitig.'
-        condition: 'file("Cliff''s Shacks Basements-Radiant AI.esp")'
+      - <<: *useOnlyOneX
+        subs: [ 'Cliff''s Shacks Basements ESP' ]
+        condition: 'many("Cliff''s Shacks Basements(-Radiant AI)?\.esp")'
+  - name: 'Cliff''s Shacks Basements.esp'
     dirty:
       - crc: 0x680bcbc2
         <<: *dirtyPlugin
         itm: 31
   - name: 'Cliff''s Shacks Basements-Radiant AI.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Use ''Cliff''s Shacks Basements.esp'' or ''Cliff''s Shacks Basements-Radiant AI.esp'' but not both at the same time.'
-          - lang: de
-            text: 'Nutzen Sie entweder ''Cliff''s Shacks Basements.esp'' oder ''Cliff''s Shacks Basements-Radiant AI.esp'' aber nicht beide gleichzeitig.'
-        condition: 'file("Cliff''s Shacks Basements.esp")'
     dirty:
       - crc: 0xc076fe76
         <<: *dirtyPlugin
