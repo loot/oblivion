@@ -2636,6 +2636,15 @@ plugins:
         itm: 17
         udr: 4
 
+###### AudioVisual - Interface ######
+  - name: 'Cliff_CountyNames.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/6775/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x5FC677BF
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 137
+
 ###### AudioVisual - Weather ######
   - name: '(AWS|NW|ANW|EW|OBSE)?(-)?Storms & Sound( SI)?\.esp'
     url:
@@ -18187,11 +18196,7 @@ plugins:
         <<: *dirtyPlugin
         itm: 57
         udr: 3
-  - name: 'Cliff_CountyNames.esp'
-    dirty:
-      - crc: 0x5fc677bf
-        <<: *dirtyPlugin
-        itm: 137
+
   - name: 'Cliff''s MWStyleEnchantingSpellmaking - With Guild Requirements.esp'
     inc: [ 'Cliff''s MWStyleEnchantingSpellmaking - No Guild Requirements.esp' ]
 
