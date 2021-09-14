@@ -4448,6 +4448,41 @@ plugins:
         itm: 42
         udr: 23
 
+  - name: 'Cliff''s Shacks Basements(-Radiant AI)?\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/20779/' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Cliff''s Shacks Basements ESP' ]
+        condition: 'many("Cliff''s Shacks Basements(-Radiant AI)?\.esp")'
+  - name: 'Cliff''s Shacks Basements.esp'
+    msg:
+      - <<: *wildEdits
+        subs: [ 'Remove **0002F7D4**, **0002F7D8**, **000338A2**, & **00094ECE** from **Cliff''s Shacks Basements.esp**.' ]
+        condition: 'checksum("Cliff''s Shacks Basements.esp", 680BCBC2) or checksum("Cliff''s Shacks Basements.esp", 415F8911)'
+    dirty:
+      - <<: *quickClean
+        crc: 0x680BCBC2
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 37
+      - <<: *quickClean
+        crc: 0xFB0DD148
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 37
+  - name: 'Cliff''s Shacks Basements-Radiant AI.esp'
+    msg:
+      - <<: *wildEdits
+        subs: [ 'Remove **0002F7D4**, **0002F7D8**, **000338A2**, **000479F7**, & **00094ECE** from **Cliff''s Shacks Basements-Radiant AI.esp**.' ]
+        condition: 'checksum("Cliff''s Shacks Basements-Radiant AI.esp", C076FE76) or checksum("Cliff''s Shacks Basements-Radiant AI.esp", E13194A7)'
+    dirty:
+      - <<: *quickClean
+        crc: 0xC076FE76
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 36
+      - <<: *quickClean
+        crc: 0x7E155109
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 36
+
   - name: 'Colourwheels Sexy Tavern HGEC.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/37959' ]
     after:
@@ -17914,32 +17949,7 @@ plugins:
         itm: 137
   - name: 'Cliff''s MWStyleEnchantingSpellmaking - With Guild Requirements.esp'
     inc: [ 'Cliff''s MWStyleEnchantingSpellmaking - No Guild Requirements.esp' ]
-  - name: 'Cliff''s Shacks Basements.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Use ''Cliff''s Shacks Basements.esp'' or ''Cliff''s Shacks Basements-Radiant AI.esp'' but not both at the same time.'
-          - lang: de
-            text: 'Nutzen Sie entweder ''Cliff''s Shacks Basements.esp'' oder ''Cliff''s Shacks Basements-Radiant AI.esp'' aber nicht beide gleichzeitig.'
-        condition: 'file("Cliff''s Shacks Basements-Radiant AI.esp")'
-    dirty:
-      - crc: 0x680bcbc2
-        <<: *dirtyPlugin
-        itm: 31
-  - name: 'Cliff''s Shacks Basements-Radiant AI.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Use ''Cliff''s Shacks Basements.esp'' or ''Cliff''s Shacks Basements-Radiant AI.esp'' but not both at the same time.'
-          - lang: de
-            text: 'Nutzen Sie entweder ''Cliff''s Shacks Basements.esp'' oder ''Cliff''s Shacks Basements-Radiant AI.esp'' aber nicht beide gleichzeitig.'
-        condition: 'file("Cliff''s Shacks Basements.esp")'
-    dirty:
-      - crc: 0xc076fe76
-        <<: *dirtyPlugin
-        itm: 31
+
   - name: 'Cliff''s Daggerfall Uriel Septim and Ocato.esp'
     tag:
       - NoMerge
