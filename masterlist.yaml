@@ -3640,6 +3640,14 @@ plugins:
         condition: 'many("MassA.I(-[345]0)?.esp")'
 
 ###### Gameplay - Economy & Item Balance ######
+  - name: 'cf_Improved_Barter_Gold.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/4367/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xA4F37E72
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 3
+
   - name: 'FG_Merchant Inventory Realism V 1_5.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/5561' ]
     tag: [ Invent.Add ]
@@ -18431,11 +18439,7 @@ plugins:
             text: 'ONLY Activate this if you want to remove the changes made by the Classic Travel mod components ct4 & ct1.'
           - lang: de
             text: 'NUR aktivieren wenn Sie möchten dass die Änderungen von Classic Travel mod components ct4 & ct1 rückgängig gemacht werden.'
-  - name: 'cf_Improved_Barter_Gold.esp'
-    dirty:
-      - crc: 0xa4f37e72
-        <<: *dirtyPlugin
-        itm: 3
+
   - name: 'Jhaerik''s Dungeon Fog Remover.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/40555' ]
     dirty:
