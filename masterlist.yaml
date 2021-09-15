@@ -5109,12 +5109,9 @@ plugins:
         udr: 1159
   - name: 'Castle_Almgard-V2.esp'
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Be sure to use the right version depending on Unique Landscapes Beachs of Cyrodiil being used.'
-          - lang: de
-            text: 'Stellen Sie sicher die richtige Version zu verwenden abhängig von dem Unique Landscapes Beachs of Cyrodiil das genutzt wird.'
+      - <<: *useVersion
+        subs: [ 'Unique Landscapes - Beaches of Cyrodiil - Lost Coast' ]
+        condition: '(active("xulBeachesOfCyrodiilLostCoast.esp") or (active("Unique Landscapes.esp") and version("Unique Landscapes.esp", "2.0.0", >=))) and version("Castle_Almgard-V2.esp", "2.4c", !=)'
     dirty:
       - <<: *quickClean
         crc: 0x9B5607F4
