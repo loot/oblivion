@@ -5096,6 +5096,13 @@ plugins:
 
   - name: 'Castle[ _]Almgard[ -]V25?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/14834/' ]
+  - name: 'Castle Almgard V25.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x50B2AB52
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 15
+        udr: 1159
   - name: 'Castle_Almgard-V2.esp'
     msg:
       - type: say
@@ -5105,8 +5112,19 @@ plugins:
           - lang: de
             text: 'Stellen Sie sicher die richtige Version zu verwenden abhängig von dem Unique Landscapes Beachs of Cyrodiil das genutzt wird.'
     dirty:
-      - crc: 0x40e0f4da
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x9B5607F4
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 12
+        udr: 1159
+      - <<: *quickClean
+        crc: 0x2D9BD069
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 12
+        udr: 1159
+      - <<: *quickClean
+        crc: 0xBAD9D20E
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 13
         udr: 1396
 
