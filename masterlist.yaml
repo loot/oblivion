@@ -2645,6 +2645,15 @@ plugins:
         util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 137
 
+  - name: 'First Person Messages.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/9606/' ]
+    msg: [ *alreadyInOOO ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xE97C0B93
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 3
+
 ###### AudioVisual - Weather ######
   - name: '(AWS|NW|ANW|EW|OBSE)?(-)?Storms & Sound( SI)?\.esp'
     url:
@@ -18377,12 +18386,6 @@ plugins:
       - Scripts
       - Stats
 
-  - name: 'First Person Messages.esp'
-    msg: [ *alreadyInOOO ]
-    dirty:
-      - crc: 0xe97c0b93
-        <<: *dirtyPlugin
-        itm: 3
   - name: '2nd to 1st person.esp'
     msg: [ *alreadyInOOO ]
   - name: 'FrbitPotionReplacer.esp'
