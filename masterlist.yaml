@@ -3882,6 +3882,14 @@ plugins:
     msg: [ *requiresBashedPatch ]
     tag: [ Relev ]
 
+  - name: 'FearsomeMagicka.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/30973/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x7E3FDCC1
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 17
+
   - name: 'MidasSpells.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/9562'
@@ -19531,11 +19539,7 @@ plugins:
     tag: [ Names ]
   - name: 'Levelled Spell Names.esp'
     tag: [ Names ]
-  - name: 'FearsomeMagicka.esp'
-    dirty:
-      - crc: 0x4105f024
-        <<: *dirtyPlugin
-        udr: 1
+
   - name: 'Disease Immunity (Oblivion).esp'
     inc: [ 'Disease Immunity (Oblivion + Shivering Isles).esp' ]
   - name: 'spellshields2.esp'
