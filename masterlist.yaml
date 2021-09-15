@@ -1926,14 +1926,12 @@ plugins:
       # version: 3.5.6a
       - crc: 0xA57A5DAC
         util: 'TES4Edit v4.0.2'
+
   - name: 'Unofficial Shivering Isles Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/10739' ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/10739/' ]
     group: *unofficialPatchesGroup
     req: [ 'DLCShiveringIsles.esp' ]
-    after:
-      - 'Hidden Treasures.esp'
-      - 'tes4SI-CHS-alpha.esp'
-      - 'tes4-CHS-book.esp'
+    after: [ 'Hidden Treasures.esp' ]
     inc:
       - 'FormIDReferenceBugFix.esp'
       - 'FormID_Reference_Bug_Fix.esp'
@@ -1951,9 +1949,9 @@ plugins:
       - SpellStats
       - Text
     clean:
-      # version: 1.5.9
-      - crc: 0x19ADA30F
-        util: 'TES4Edit v4.0.2'
+      - crc: 0x5D308FDC
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
+
   - name: '(DLC(BattlehornCastle|ThievesDen|MehrunesRazor|VileLair|HorseArmor|Orrery|SpellTomes|Frostcrag)|Knights) - Unofficial Patch( - SSSB)?\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/9969'
