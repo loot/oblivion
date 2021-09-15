@@ -4237,6 +4237,15 @@ plugins:
         util: '[TES4Edit v4.0.3g](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 19
 
+  - name: 'Enter The Shinobi - Coors916.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/8613/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xA32969BE
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 33
+        udr: 4
+
   - name: 'Fighters Guild Quests.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/41012/' ]
     req: [ 'DLCShiveringIsles.esp' ]
@@ -19751,12 +19760,7 @@ plugins:
     msg:
       - <<: *useBashTweakInstead
         subs: [ 'Tweak Settings -> Arrow: Recovery From Actor' ]
-  - name: 'Enter The Shinobi - Coors916.esp'
-    dirty:
-      - crc: 0xa32969be
-        <<: *dirtyPlugin
-        itm: 33
-        udr: 4
+
   - name: 'mighty_bows_arrows_recovery.esp'
     msg:
       - <<: *useBashTweakInstead
