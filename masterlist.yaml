@@ -2460,6 +2460,37 @@ plugins:
         itm: 171
 
 ###### AudioVisual ######
+  - name: '[BW]NewShock(Bolt|Funnel)Effects20\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/10239/' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Kal''s New Shock Lightning Spell Effects ESP' ]
+        condition: 'many("[BW]NewShock(Bolt|Funnel)Effects20\.esp")'
+  - name: 'BNewShockBoltEffects20.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x82B4BF9A
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
+  - name: 'BNewShockFunnelEffects20.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x8BD75254
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
+  - name: 'WNewShockBoltEffects20.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x9E684AC5
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
+  - name: 'WNewShockFunnelEffects20.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x3F990DED
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
+
   - name: 'PotionReplacer.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/49068' ]
     after:
@@ -22773,16 +22804,7 @@ plugins:
     req:
       - name: 'OBSE/Plugins/SwitchNightEyeShaders.dll'
         display: '[Night Eye Shader Switcher](https://www.nexusmods.com/oblivion/mods/19476)'
-  - name: 'BNewShockBoltEffects20.esp'
-    dirty:
-      - crc: 0x82b4bf9a
-        <<: *dirtyPlugin
-        itm: 2
-  - name: 'BNewShockFunnelEffects20.esp'
-    dirty:
-      - crc: 0x8bd75254
-        <<: *dirtyPlugin
-        itm: 2
+
   - name: 'Detect Life( Blue| Cyan| Green| Red| Yellow)? Shader( \[New\]| Green| Purple)?\.esp'
     url:
       - 'https://www.nexusmods.com/oblivion/mods/3529'
@@ -22890,16 +22912,7 @@ plugins:
       - <<: *useOnlyOneX
         subs: [ 'Visually Enchanted Weapons' ]
         condition: 'many("Visually Enchanted (1.0|2.0|2.1|2.1 No Shock Particles)\.esp")'
-  - name: 'WNewShockBoltEffects20.esp'
-    dirty:
-      - crc: 0x9e684ac5
-        <<: *dirtyPlugin
-        itm: 2
-  - name: 'WNewShockFunnelEffects20.esp'
-    dirty:
-      - crc: 0x3f990ded
-        <<: *dirtyPlugin
-        itm: 2
+
   - name: 'Shining Creatures(_Atronach(Flame|Frost)|_WillOWisp|_DLCFrostcrag)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/29735' ]
     tag: [ Invent ]
