@@ -7834,19 +7834,6 @@ plugins:
     inc:
       - name: 'Oscuro''s_Oblivion_Overhaul.esm'
         condition: 'not active("FCOM_Convergence.esm")'
-    tag:
-      - Actors.ACBS
-      - Actors.AIData
-      - Actors.AIPackages
-      - Actors.CombatStyle
-      - Actors.DeathItem
-      - Actors.Stats
-      - Delev
-      - Invent
-      - NpcFaces
-      - Relev
-      - Scripts
-      - Stats
     clean:
       # version: 5.0B1 No Extras
       - crc: 0x6E140E64
@@ -7873,9 +7860,6 @@ plugins:
       - crc: 0x4CC0CFD7
         util: 'TES4Edit v4.0.2'
   - name: 'Francesco''s Optional New Items Add-On.esm'
-    tag:
-      - Delev
-      - Relev
     clean:
       # version: 5.0B1
       - crc: 0x2F92934E
@@ -7897,14 +7881,6 @@ plugins:
       - <<: *alreadyInX
         subs: [ 'Mart''s Monster Mod for Frans' ]
         condition: 'active("Mart''s Monster Mod for Frans.esp")'
-    tag:
-      - Actors.AIPackages
-      - Delev
-      - Factions
-      - Invent
-      - Relations
-      - Relev
-      - Scripts
     dirty:
       # version: 5.0B1 No Extras
       - <<: *quickClean
@@ -8044,9 +8020,6 @@ plugins:
       - name: 'Mart''s Monster Mod.esm'
         condition: 'not active("FCOM_Convergence.esm")'
     msg: [ *alreadyInMMM ]
-    tag:
-      - Actors.ACBS
-      - Actors.Stats
     clean:
       # version: 5.0B1
       - crc: 0xF336E22D
