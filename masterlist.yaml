@@ -1931,6 +1931,7 @@ plugins:
     group: *unofficialPatchesGroup
     req: [ 'DLCShiveringIsles.esp' ]
     after:
+      - 'Hidden Treasures.esp'
       - 'tes4SI-CHS-alpha.esp'
       - 'tes4-CHS-book.esp'
     inc:
@@ -4378,6 +4379,16 @@ plugins:
         crc: 0xE17A73EA
         util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 6
+
+  - name: 'Hidden Treasures.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/45980/' ]
+    group: *veryEarlyGroup
+    req: [ 'DLCShiveringIsles.esp' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x921AA706
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1
 
   - name: 'TreasureChest.*\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/44066' ]
