@@ -5096,6 +5096,10 @@ plugins:
 
   - name: 'Castle[ _]Almgard[ -]V25?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/14834/' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Castle Almgard ESP' ]
+        condition: 'many("Castle[ _]Almgard[ -]V25?\.esp")'
   - name: 'Castle Almgard V25.esp'
     dirty:
       - <<: *quickClean
