@@ -5108,6 +5108,13 @@ plugins:
         itm: 15
         udr: 1159
   - name: 'Castle_Almgard-V2.esp'
+    after:
+      - name: 'Unique Landscapes.esp'
+        condition: 'version("Castle_Almgard-V2.esp", "2.4c", ==) and version("Unique Landscapes.esp", "2.0.0", >=)'
+    req:
+      - name: 'xulBeachesOfCyrodiilLostCoast.esp'
+        display: '[Unique Landscapes - Beaches of Cyrodiil - Lost Coast](https://www.nexusmods.com/oblivion/mods/19370/)'
+        condition: 'version("Castle_Almgard-V2.esp", "2.4c", ==) and not version("Unique Landscapes.esp", "2.0.0", >=)'
     msg:
       - <<: *useVersion
         subs: [ 'Unique Landscapes - Beaches of Cyrodiil - Lost Coast' ]
