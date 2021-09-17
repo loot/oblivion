@@ -3908,6 +3908,14 @@ plugins:
         util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 17
 
+  - name: 'Illusionary Summons.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/9014/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x8BC62AF5
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 4
+
   - name: 'MidasSpells.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/9562'
@@ -19337,11 +19345,7 @@ plugins:
             text: 'Benötigt: RefStuff'
   - name: 'elPatrixF_SummonWorkshop_ShiveringIsles.esp'
     req: [ 'DLCShiveringIsles.esp' ]
-  - name: 'Illusionary Summons.esp'
-    dirty:
-      - crc: 0x8bc62af5
-        <<: *dirtyPlugin
-        itm: 3
+
   - name: 'IshMountedCombatSpellsOnSelf.esp'
     req: [ *OBSE ]
 
