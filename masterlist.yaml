@@ -2497,6 +2497,7 @@ plugins:
         subs: [ 'GodStatues ESP' ]
         condition: 'many("GodStatues( KOTN Edition)?\.esp")'
   - name: 'GodStatues.esp'
+    msg: [ *useVersionKnights ]
     dirty:
       - <<: *quickClean
         crc: 0xB00847E1
@@ -2507,6 +2508,7 @@ plugins:
     req:
       - name: 'Knights.esp'
         display: 'DLC Knights of the Nine'
+    msg: [ *useVersionNonKnights ]
     dirty:
       - <<: *quickClean
         crc: 0x78810F96
