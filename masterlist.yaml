@@ -3200,6 +3200,13 @@ plugins:
       - Invent.Add
       - Scripts
 
+  - name: 'Grandmaster of Alchemy.esp'
+    tag: [ Factions ]
+    dirty:
+      - crc: 0xa5fbda05
+        <<: *dirtyPlugin
+        itm: 12
+
   - name: 'HTSCl.*\.es(m|p)'
     url:
       - link: 'https://www.loverslab.com/topic/171-htsclight-english/?ct=1568338462/'
@@ -19861,12 +19868,6 @@ plugins:
         subs: [ 'Leveling System Plugin' ]
         condition: 'many("seorin''s Leveling System( - light)?.esp")'
 
-  - name: 'Grandmaster of Alchemy.esp'
-    tag: [ Factions ]
-    dirty:
-      - crc: 0xa5fbda05
-        <<: *dirtyPlugin
-        itm: 12
   - name: 'SkillDecay.esp'
     req: [ *OBSEv20 ]
   - name: 'S.P.A.M(\. 100\+| option - (Restore (Fav|Spec)|Faste(r|st) (Maj|Mi)nor))?.esp'
