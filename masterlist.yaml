@@ -7836,14 +7836,15 @@ plugins:
         condition: 'not active("FCOM_Convergence.esm")'
     tag:
       - Actors.ACBS
-      - Actors.AIData
       - Actors.AIPackages
       - Actors.CombatStyle
-      - Actors.DeathItem
       - Actors.Stats
       - Delev
-      - Invent
-      - NpcFaces
+      - Invent.Add
+      - Invent.Change
+      - Invent.Remove
+      - NPC.Eyes
+      - NPC.FaceGen
       - Relev
       - Scripts
       - Stats
@@ -7898,11 +7899,14 @@ plugins:
         subs: [ 'Mart''s Monster Mod for Frans' ]
         condition: 'active("Mart''s Monster Mod for Frans.esp")'
     tag:
+      - Actors.ACBS
       - Actors.AIPackages
+      - Actors.Stats
       - Delev
       - Factions
-      - Invent
-      - Relations
+      - Invent.Add
+      - Invent.Remove
+      - Relations.Add
       - Relev
       - Scripts
     dirty:
@@ -7944,6 +7948,7 @@ plugins:
       - <<: *alreadyInX
         subs: [ 'Mart''s Monster Mod for Frans' ]
         condition: 'active("Mart''s Monster Mod for Frans.esp")'
+    tag: [ Relev ]
     dirty:
       # version: 5.0B1
       - <<: *quickClean
@@ -7967,6 +7972,9 @@ plugins:
       - name: 'Mart''s Monster Mod.esm'
         condition: 'not active("FCOM_Convergence.esm")'
     msg: [ *alreadyInMMM ]
+    tag:
+      - Delev
+      - Relev
     clean:
       # version: 5.0B1
       - crc: 0x834225AC
@@ -7987,6 +7995,9 @@ plugins:
       - crc: 0x2FF407FF
         util: 'TES4Edit v4.0.2'
   - name: 'Francesco''s Optional Chance of Stronger Bosses.esp'
+    tag:
+      - Delev
+      - Relev
     clean:
       # version: 5.0B1
       - crc: 0xC4F8B2FA
@@ -7995,6 +8006,9 @@ plugins:
       - crc: 0x19C52F4F
         util: 'TES4Edit v4.0.2'
   - name: 'Francesco''s Optional Chance of Stronger Enemies.esp'
+    tag:
+      - Delev
+      - Relev
     clean:
       # version: 5.0B1
       - crc: 0x08F1B16D
@@ -8018,6 +8032,10 @@ plugins:
         util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 2
   - name: 'Francesco''s Optional Dungeon Chest Loot.esp'
+    tag:
+      - Invent.Add
+      - Invent.Remove
+      - Scripts
     dirty:
       # version: 5.0B1
       - <<: *quickClean
@@ -8030,10 +8048,17 @@ plugins:
         util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 2
   - name: 'Francesco''s Optional House Chest Loot.esp'
+    tag: [ Delev ]
     clean:
       - crc: 0x968F569D
         util: 'TES4Edit v4.0.2'
   - name: 'Francesco''s Optional Leveled Arena.esp'
+    tag:
+      - Actors.ACBS
+      - Actors.Stats
+      - Invent.Add
+      - Invent.Remove
+      - NPC.Eyes
     clean:
       - crc: 0xB3A72219
         util: 'TES4Edit v4.0.2'
@@ -8046,7 +8071,11 @@ plugins:
     msg: [ *alreadyInMMM ]
     tag:
       - Actors.ACBS
+      - Actors.CombatStyle
       - Actors.Stats
+      - Delev
+      - Invent.Add
+      - Invent.Remove
     clean:
       # version: 5.0B1
       - crc: 0xF336E22D
@@ -8055,6 +8084,17 @@ plugins:
       - crc: 0x4B2B4B48
         util: 'TES4Edit v4.0.2'
   - name: 'Francesco''s Optional Leveled Quests.esp'
+    tag:
+      - Actors.ACBS
+      - Actors.CombatStyle
+      - Actors.RecordFlags
+      - Actors.Stats
+      - Delev
+      - Invent.Add
+      - Invent.Remove
+      - NPC.Eyes
+      - Relev
+      - Text
     dirty:
       # version: 5.0B1
       - <<: *quickClean
@@ -8076,11 +8116,16 @@ plugins:
       - <<: *alreadyInX
         subs: [ 'Mart''s Monster Mod for Frans' ]
         condition: 'active("Mart''s Monster Mod for Frans.esp")'
+    tag: [ Relev ]
     clean:
       - crc: 0xCBA1CE61
         util: 'TES4Edit v4.0.2'
   - name: 'Francesco''s Optional Vendor Tweaks.esp'
     inc: [ 'FCOM_Convergence.esm' ]
+    tag:
+      - Actors.AIData
+      - Delev
+      - Relev
     clean:
       - crc: 0x506AFA75
         util: 'TES4Edit v4.0.2'
