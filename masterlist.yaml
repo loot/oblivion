@@ -2490,6 +2490,32 @@ plugins:
         util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 2
 
+  - name: 'GodStatues( KOTN Edition)?\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/20001/' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'GodStatues ESP' ]
+        condition: 'many("GodStatues( KOTN Edition)?\.esp")'
+  - name: 'GodStatues.esp'
+    msg: [ *useVersionKnights ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xB00847E1
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 53
+        udr: 30
+  - name: 'GodStatues KOTN Edition.esp'
+    req:
+      - name: 'Knights.esp'
+        display: 'DLC Knights of the Nine'
+    msg: [ *useVersionNonKnights ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x78810F96
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 35
+        udr: 30
+
   - name: 'PotionReplacer.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/49068' ]
     after:
@@ -18248,18 +18274,7 @@ plugins:
       - crc: 0x84d18f3c
         <<: *dirtyPlugin
         itm: 4
-  - name: 'GodStatues.esp'
-    dirty:
-      - crc: 0xb00847e1
-        <<: *dirtyPlugin
-        itm: 53
-        udr: 30
-  - name: 'GodStatues KOTN Edition.esp'
-    dirty:
-      - crc: 0x78810f96
-        <<: *dirtyPlugin
-        itm: 35
-        udr: 30
+
   - name: 'Gold Change II.esp'
     tag: [ Names ]
   - name: 'GoldItems_1C.esp'
