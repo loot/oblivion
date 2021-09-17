@@ -2492,6 +2492,10 @@ plugins:
 
   - name: 'GodStatues( KOTN Edition)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/20001/' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'GodStatues ESP' ]
+        condition: 'many("GodStatues( KOTN Edition)?\.esp")'
   - name: 'GodStatues.esp'
     dirty:
       - <<: *quickClean
