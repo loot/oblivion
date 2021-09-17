@@ -3706,6 +3706,15 @@ plugins:
       - <<: *useBashTweakInstead
         subs: [ 'Tweak Settings -> Arrow: Recovery From Actor [100%]' ]
 
+  - name: 'Goblin Tribal Shields.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/11871/' ]
+    tag: [ Invent ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x84D18F3C
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 4
+
   - name: '(MOBS|MOBS SI|OMOBS|OMOBS_SI|(DLC|BattleHorn|Knights|Lair|Mehrunes|ThievesDen|VileLair)_MOBS)\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/28537/'
@@ -18428,12 +18437,6 @@ plugins:
       - NoMerge
   - name: 'GuilesScrollRenamer.esp'
     tag: [ Names ]
-  - name: 'Goblin Tribal Shields.esp'
-    tag: [ Invent ]
-    dirty:
-      - crc: 0x84d18f3c
-        <<: *dirtyPlugin
-        itm: 4
 
   - name: 'Gold Change II.esp'
     tag: [ Names ]
