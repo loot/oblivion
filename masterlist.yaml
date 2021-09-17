@@ -4601,6 +4601,20 @@ plugins:
         util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
 
+  - name: 'Kosai''s Welkynd Armor.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/25759/'
+        name: 'HGEC Agea Karan Armor'
+    dirty:
+      - <<: *quickClean
+        crc: 0xF5F05832
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        udr: 2
+      - <<: *quickClean
+        crc: 0x6A82AA3F
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        udr: 2
+
   - name: 'TreasureChest.*\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/44066' ]
   - name: 'TreasureChest.esp'
@@ -18546,14 +18560,7 @@ plugins:
           - lang: de
             text: 'Nicht mit Leviathan Soulgems nutzen (inkludiert).'
         condition: 'file("Leviathan Soul.*\.esp")'
-  - name: 'Kosai''s Welkynd Armor.esp'
-    dirty:
-      - crc: 0x6a82aa3f
-        <<: *dirtyPlugin
-        udr: 2
-      - crc: 0xF5F05832
-        <<: *dirtyPlugin
-        udr: 2
+
   - name: 'Leviathan Trophy Soulgems.esp'
     msg:
       - type: say
