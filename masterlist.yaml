@@ -3243,6 +3243,20 @@ plugins:
   - name: 'HTSCl_si.esp'
     req: [ 'DLCShiveringIsles.esp' ]
 
+  - name: 'Jail Break Escape Routes.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/39385' ]
+    dirty:
+      - crc: 0xfacd66b8
+        <<: *dirtyPlugin
+        itm: 1
+        udr: 7
+  - name: 'Jail Break Routes.esp'
+    dirty:
+      - crc: 0xa547b997
+        <<: *dirtyPlugin
+        itm: 40
+        udr: 4
+
   - name: 'Knights Infamy.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/50195/'
@@ -15061,13 +15075,7 @@ plugins:
         <<: *dirtyPlugin
         udr: 171
         itm: 41
-  - name: 'Jail Break Escape Routes.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/39385' ]
-    dirty:
-      - crc: 0xfacd66b8
-        <<: *dirtyPlugin
-        itm: 1
-        udr: 7
+
   - name: 'Jade_Manor V1.26.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17455' ]
     msg: [ *obsolete ]
@@ -19537,12 +19545,7 @@ plugins:
   - name: 'BookLooting.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/19111' ]
     req: [ *OBSEv15 ]
-  - name: 'Jail Break Routes.esp'
-    dirty:
-      - crc: 0xa547b997
-        <<: *dirtyPlugin
-        itm: 40
-        udr: 4
+
   - name: 'pmCrimeHandler.esp'
     req: [ 'pmRealTimeInteractions.esp' ]
   - name: 'pmLockpicking.esp'
