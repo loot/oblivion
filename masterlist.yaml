@@ -3260,18 +3260,21 @@ plugins:
         condition: 'many("Legendary Abilities-(Fortify Health|Reflect|Shield) MOJ\.esp")'
   - name: 'Legendary Abilities-Fortify Health MOJ.esp'
     dirty:
-      - crc: 0x8f8c843
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x08F8C843
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 5
   - name: 'Legendary Abilities-Reflect MOJ.esp'
     dirty:
-      - crc: 0x52ebc32e
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x52EBC32E
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 5
   - name: 'Legendary Abilities-Shield MOJ.esp'
     dirty:
-      - crc: 0x51d68248
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x51D68248
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 5
 
   - name: 'MigHorseArmor.esp'
