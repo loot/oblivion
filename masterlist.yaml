@@ -3202,6 +3202,10 @@ plugins:
 
   - name: 'Grandmaster of Alchemy.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/16441/' ]
+    req:
+      - *OBSEv12
+      - name: 'OBSE/Plugins/OBSE_Elys_Uncapper.dll'
+        display: '[Elys Uncapper](https://www.nexusmods.com/oblivion/mods/13841/)'
     tag: [ Factions ]
     dirty:
       - <<: *quickClean
