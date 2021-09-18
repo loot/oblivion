@@ -3254,6 +3254,10 @@ plugins:
 
   - name: 'Legendary Abilities-(Fortify Health|Reflect|Shield) MOJ\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/19245/' ]
+    req:
+      - *OBSEv14
+      - name: 'OBSE/Plugins/OBSE_Elys_Uncapper.dll'
+        display: '[Elys Uncapper](https://www.nexusmods.com/oblivion/mods/13841/)'
     msg:
       - <<: *useOnlyOneX
         subs: [ 'Legendary Abilities ESP' ]
