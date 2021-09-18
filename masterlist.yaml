@@ -3204,8 +3204,9 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/16441/' ]
     tag: [ Factions ]
     dirty:
-      - crc: 0xa5fbda05
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xA5FBDA05
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 12
 
   - name: 'HTSCl.*\.es(m|p)'
