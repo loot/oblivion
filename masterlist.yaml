@@ -3458,6 +3458,15 @@ plugins:
       - crc: 0x72C879EB
         util: 'TES4Edit v4.0.3'
 
+  - name: 'Secure Guild Chest.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/16033/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x9F1E1D7F
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 4
+        udr: 13
+
   - name: 'SigilStonesAlwaysTranscendent.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/32374' ]
     tag:
@@ -18981,13 +18990,6 @@ plugins:
             text: 'Don''t use with MMM or FCOM - unknown with other overhauls'
           - lang: de
             text: 'Nicht Benutzen mit MMM oder FCOM - unbekannt bezüglich anderen Überhol-Mods'
-
-  - name: 'Secure Guild Chest.esp'
-    dirty:
-      - crc: 0x9fe1ed7f
-        <<: *dirtyPlugin
-        itm: 9
-        udr: 13
 
   - name: 'Vtoy.esp'
     tag:
