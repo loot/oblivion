@@ -3252,6 +3252,27 @@ plugins:
       - crc: 0x0E98B45B
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
 
+  - name: 'Legendary Abilities-(Fortify Health|Shield|Reflect) MOJ\.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Legendary Abilities' ]
+        condition: 'many("Legendary Abilities-(Fortify Health|Shield|Reflect) MOJ\.esp")'
+  - name: 'Legendary Abilities-Fortify Health MOJ.esp'
+    dirty:
+      - crc: 0x8f8c843
+        <<: *dirtyPlugin
+        itm: 5
+  - name: 'Legendary Abilities-Reflect MOJ.esp'
+    dirty:
+      - crc: 0x52ebc32e
+        <<: *dirtyPlugin
+        itm: 5
+  - name: 'Legendary Abilities-Shield MOJ.esp'
+    dirty:
+      - crc: 0x51d68248
+        <<: *dirtyPlugin
+        itm: 5
+
   - name: 'MigHorseArmor.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/43037' ]
     req:
@@ -19831,26 +19852,7 @@ plugins:
       - <<: *useOnlyOneX
         subs: [ 'Leveling System Plugin' ]
         condition: 'many("seorin''s Leveling System( - light)?.esp")'
-  - name: 'Legendary Abilities-Shield MOJ.esp'
-    dirty:
-      - crc: 0x51d68248
-        <<: *dirtyPlugin
-        itm: 5
-  - name: 'Legendary Abilities-Fortify Health MOJ.esp'
-    dirty:
-      - crc: 0x8f8c843
-        <<: *dirtyPlugin
-        itm: 5
-  - name: 'Legendary Abilities-Reflect MOJ.esp'
-    dirty:
-      - crc: 0x52ebc32e
-        <<: *dirtyPlugin
-        itm: 5
-  - name: 'Legendary Abilities-(Fortify Health|Shield|Reflect) MOJ\.esp'
-    msg:
-      - <<: *useOnlyOneX
-        subs: [ 'Legendary Abilities' ]
-        condition: 'many("Legendary Abilities-(Fortify Health|Shield|Reflect) MOJ\.esp")'
+
   - name: 'Grandmaster of Alchemy.esp'
     tag: [ Factions ]
     dirty:
