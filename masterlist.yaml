@@ -3246,9 +3246,14 @@ plugins:
   - name: 'Jail Break (Escape )?Routes\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/39385/' ]
   - name: 'Jail Break Escape Routes.esp'
+    msg:
+      - <<: *wildEdits
+        subs: [ 'Remove **00035682** from **Jail Break Escape Routes.esp**.' ]
+        condition: 'checksum("Jail Break Escape Routes.esp", FACD66B8) or checksum("Jail Break Escape Routes.esp", 28BE25DE)'
     dirty:
-      - crc: 0xfacd66b8
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xFACD66B8
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
         udr: 7
   - name: 'Jail Break Routes.esp'
