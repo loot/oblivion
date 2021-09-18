@@ -2542,6 +2542,14 @@ plugins:
         itm: 35
         udr: 30
 
+  - name: 'Leviathan Soulgems.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/10403/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xDF3D1184
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1
+
   - name: 'PotionReplacer.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/49068' ]
     after:
@@ -18550,11 +18558,6 @@ plugins:
         <<: *dirtyPlugin
         udr: 464
 
-  - name: 'Leviathan Soulgems.esp'
-    dirty:
-      - crc: 0xdf3d1184
-        <<: *dirtyPlugin
-        itm: 1
   - name: 'Leviathan Soul Gems Abridged.esp'
     tag:
       - Graphics
