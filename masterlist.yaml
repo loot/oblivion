@@ -2576,6 +2576,22 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/47774' ]
     tag: [ Actors.Anims ]
 
+  - name: 'SeductiveIdles.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/11105/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xB8DE5B2F
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 3
+      - <<: *quickClean
+        crc: 0x32F0B1EE
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 3
+      - <<: *quickClean
+        crc: 0xF011E367
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
+
   - name: 'Sensual Walks( SI| SI DS + GS)?\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/28223'
@@ -20071,17 +20087,7 @@ plugins:
     tag:
       - Actors.Anims
       - NoMerge
-  - name: 'SeductiveIdles.esp'
-    dirty:
-      - crc: 0xb8de5b2f
-        <<: *dirtyPlugin
-        itm: 3
-      - crc: 0x32F0B1EE
-        <<: *dirtyPlugin
-        itm: 3
-      - crc: 0xf011e367
-        <<: *dirtyPlugin
-        itm: 2
+
   - name: 'DMC Stylish - Specialanims.esp'
     tag: [ Actors.Anims ]
   - name: 'jhul_animations_specialanims.esp'
