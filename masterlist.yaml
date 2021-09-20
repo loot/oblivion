@@ -3696,6 +3696,24 @@ plugins:
       - 'bgBalancingDVCore.esp'
       - 'bgBalancingEVCore.esp'
 
+  - name: 'Shadow Ranger.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/26723/' ]
+    msg:
+      - <<: *wildEdits
+        subs: [ '[Cleaning instructions](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide#Shadow_Ranger.esp_Special_Cleaning_Instructions)' ]
+        condition: 'checksum("Shadow Ranger.esp", 1F83FEE1) or checksum("Shadow Ranger.esp", D74382B7)'
+    dirty:
+      - <<: *quickClean
+        crc: 0x1F83FEE1
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 19
+        udr: 2
+      - <<: *quickClean
+        crc: 0x75820D94
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 19
+        udr: 2
+
 ###### Gameplay - Combat ######
   - name: 'Duke Patricks - Actors Can Miss Now.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17706' ]
@@ -19259,16 +19277,7 @@ plugins:
     msg:
       - <<: *useINITweakInstead
         subs: [ '[bBorderRegionsEnabled=0](http://wiki.tesnexus.com/index.php/Removing_In-Game_Borders)' ]
-  - name: 'Shadow Ranger.esp'
-    msg:
-      - <<: *wildEdits
-        subs: [ '[Cleaning instructions](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide#Shadow_Ranger.esp_Special_Cleaning_Instructions)' ]
-        condition: 'checksum("Shadow Ranger.esp", 1F83FEE1)'
-    dirty:
-      - crc: 0x1f83fee1
-        <<: *dirtyPlugin
-        udr: 2
-        itm: 19
+
   - name: 'Shadow Ranger Redux.esp'
     inc:
       - 'Shadow Ranger.esp'
