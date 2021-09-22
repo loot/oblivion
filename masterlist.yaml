@@ -9065,8 +9065,8 @@ plugins:
   - name: 'Mart''s Monster Mod - Safer Roads.esp'
     msg:
       - <<: *alreadyInX
-        subs: [ 'Mart''s Monster Mod Spawn Rates' ]
-        condition: 'file("Mart''s Monster Mod - Spawn Rates - Reduced( Reduced| Vanilla)\.esp")'
+        subs: [ 'MMM Spawn Rates Reduced' ]
+        condition: 'file("Mart''s Monster Mod - Spawn Rates - Reduced( Reduced| Vanilla)?\.esp")'
       - <<: *useInstead
         subs: [ 'FCOM Safer Roads' ]
         condition: 'active("FCOM_Convergence.esp")'
