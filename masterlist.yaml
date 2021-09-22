@@ -7965,7 +7965,7 @@ plugins:
         subs:
           - '**Mart''s Monster Mod BSA**'
           - '**FCOM_Convergence_Mart''s Monster Mod.bsa**'
-        condition: 'not file("FCOM_Convergence_Mart''s Monster Mod.bsa") and not many("(FCOM_Convergence|(Mart''s Monster Mod( for Fran| for OOO)?))\.esp")'
+        condition: 'not file("FCOM_Convergence_Mart''s Monster Mod.bsa") and file("Mart''s Monster Mod( for Fran| for OOO)?\.bsa") and not many("(FCOM_Convergence|Mart''s Monster Mod( for Fran| for OOO)?)\.esp")'
     req: [ 'FCOM_Convergence.esm' ]
     tag:
       - Actors.ACBS
@@ -8736,7 +8736,7 @@ plugins:
         subs:
           - '**Mart''s Monster Mod BSA**'
           - '**Mart''s Monster Mod.bsa**'
-        condition: 'not file("Mart''s Monster Mod.bsa") and not many("(FCOM_Convergence|(Mart''s Monster Mod( for Fran| for OOO)?))\.esp")'
+        condition: 'not file("Mart''s Monster Mod.bsa") and file("(FCOM_Convergence_)?Mart''s Monster Mod( for Fran| for OOO)?\.bsa") and not many("(FCOM_Convergence|Mart''s Monster Mod( for Fran| for OOO)?)\.esp")'
     dirty:
       - <<: *quickClean
         crc: 0x8528FB34
@@ -8748,7 +8748,7 @@ plugins:
         subs:
           - '**Mart''s Monster Mod BSA**'
           - '**Mart''s Monster Mod for Fran.bsa**'
-        condition: 'not file("Mart''s Monster Mod for Fran.bsa") and not many("(FCOM_Convergence|(Mart''s Monster Mod( for Fran| for OOO)?))\.esp")'
+        condition: 'not file("Mart''s Monster Mod for Fran.bsa") and file("(FCOM_Convergence_)?Mart''s Monster Mod( for OOO)?\.bsa") and not many("(FCOM_Convergence|Mart''s Monster Mod( for Fran| for OOO)?)\.esp")'
     dirty:
       - <<: *quickClean
         crc: 0x4D843B1C
@@ -8760,7 +8760,7 @@ plugins:
         subs:
           - '**Mart''s Monster Mod BSA**'
           - '**Mart''s Monster Mod for OOO.bsa**'
-        condition: 'not file("Mart''s Monster Mod for OOO.bsa") and not many("(FCOM_Convergence|(Mart''s Monster Mod( for Fran| for OOO)?))\.esp")'
+        condition: 'not file("Mart''s Monster Mod for OOO.bsa") and file("(FCOM_Convergence_)?Mart''s Monster Mod( for Fran)?\.bsa") and not many("(FCOM_Convergence|Mart''s Monster Mod( for Fran| for OOO)?)\.esp")'
     dirty:
       - <<: *quickClean
         crc: 0x33A4E76A
