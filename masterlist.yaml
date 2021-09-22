@@ -9080,13 +9080,9 @@ plugins:
         util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - Slof Horses Complete.esp'
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Requires a Bashed Patch to be compatible with Slof''s Horses or Slof''s Extra Horses'
-          - lang: de
-            text: 'Benötigt einen Bashed Patch um kompatibel zu sein mit Slof''s Horses oder Slof''s Extra Horses'
-        condition: 'file("Slof.*Horse.*\.esp")'
+      - <<: *includesX
+        subs: [ 'Slof''s Horses Base.esp' ]
+        condition: 'file("Slof''s Horses Base.esp")'
     tag:
       - Actors.AIPackages
       - Graphics
