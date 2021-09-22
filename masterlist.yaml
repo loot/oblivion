@@ -7955,7 +7955,7 @@ plugins:
         condition: 'not file("Francesco''s Creatures and Items Resources - Items.bsa") and not file("FCOM_Convergence_FraNewItems.bsa") and not file("FraNewItems.bsa")'
       - <<: *requiresX
         subs: [ 'Mart''s Monster Mod BSA' ]
-        condition: 'not file("Mart''s Monster Mod.bsa") and not file("Mart''s Monster Mod for Frans.bsa") and not file("Mart''s Monster Mod for OOO.bsa") and not file("FCOM_Convergence_Mart''s Monster Mod.bsa")'
+        condition: 'not file("Mart''s Monster Mod.bsa") and not file("Mart''s Monster Mod for Fran.bsa") and not file("Mart''s Monster Mod for OOO.bsa") and not file("FCOM_Convergence_Mart''s Monster Mod.bsa")'
       - <<: *renameXtoY
         subs:
           - '**Francesco''s Creatures and Items Resources - Items.bsa**'
@@ -8324,8 +8324,8 @@ plugins:
       - 'Mart''s Monster Mod.esm'
     msg:
       - <<: *alreadyInX
-        subs: [ 'Mart''s Monster Mod for Frans' ]
-        condition: 'active("Mart''s Monster Mod for Frans.esp")'
+        subs: [ 'Mart''s Monster Mod for Fran.esp' ]
+        condition: 'active("Mart''s Monster Mod for Fran.esp")'
     tag:
       - Actors.ACBS
       - Actors.AIPackages
@@ -8374,8 +8374,8 @@ plugins:
       - 'Mart''s Monster Mod.esm'
     msg:
       - <<: *alreadyInX
-        subs: [ 'Mart''s Monster Mod for Frans' ]
-        condition: 'active("Mart''s Monster Mod for Frans.esp")'
+        subs: [ 'Mart''s Monster Mod for Fran.esp' ]
+        condition: 'active("Mart''s Monster Mod for Fran.esp")'
     tag: [ Relev ]
     dirty:
       # version: 5.0B1
@@ -8542,8 +8542,8 @@ plugins:
       - 'Oscuro''s_Oblivion_Overhaul.esm'
     msg:
       - <<: *alreadyInX
-        subs: [ 'Mart''s Monster Mod for Frans' ]
-        condition: 'active("Mart''s Monster Mod for Frans.esp")'
+        subs: [ 'Mart''s Monster Mod for Fran' ]
+        condition: 'active("Mart''s Monster Mod for Fran.esp")'
     tag: [ Relev ]
     clean:
       - crc: 0xCBA1CE61
@@ -8710,7 +8710,7 @@ plugins:
         condition: 'active("FCOM_Convergence.esp")'
       - <<: *requiresX
         subs: [ 'Mart''s Monster Mod BSA' ]
-        condition: 'not file("Mart''s Monster Mod.bsa") and not file("Mart''s Monster Mod for Frans.bsa") and not file("Mart''s Monster Mod for OOO.bsa") and not file("FCOM_Convergence_Mart''s Monster Mod.bsa")'
+        condition: 'not file("Mart''s Monster Mod.bsa") and not file("Mart''s Monster Mod for Fran.bsa") and not file("Mart''s Monster Mod for OOO.bsa") and not file("FCOM_Convergence_Mart''s Monster Mod.bsa")'
       - <<: *useOnlyOneX
         subs: [ 'Mart''s Monster Mod esp' ]
         condition: 'many("Mart''s Monster Mod( for Fran| for OOO)?\.esp")'
@@ -8747,8 +8747,8 @@ plugins:
       - <<: *renameXtoY
         subs:
           - '**Mart''s Monster Mod BSA**'
-          - '**Mart''s Monster Mod for Frans.bsa**'
-        condition: 'not file("Mart''s Monster Mod for Frans.bsa") and not many("(FCOM_Convergence|(Mart''s Monster Mod( for Fran| for OOO)?))\.esp")'
+          - '**Mart''s Monster Mod for Fran.bsa**'
+        condition: 'not file("Mart''s Monster Mod for Fran.bsa") and not many("(FCOM_Convergence|(Mart''s Monster Mod( for Fran| for OOO)?))\.esp")'
     dirty:
       - <<: *quickClean
         crc: 0x4D843B1C
