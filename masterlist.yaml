@@ -9098,6 +9098,9 @@ plugins:
       - <<: *useInstead
         subs: [ 'FCOM Spawn Rates' ]
         condition: 'active("FCOM_Convergence.esp")'
+      - <<: *useOnlyOneX
+        subs: [ 'MMM Spawn Rates' ]
+        condition: 'many("Mart''s Monster Mod - Spawn Rates.*\.esp")'
   - name: 'Mart''s Monster Mod - Spawn Rates - Increased.esp'
     dirty:
       - <<: *quickClean
