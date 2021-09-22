@@ -8888,17 +8888,13 @@ plugins:
       - crc: 0x5327F263
         util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - Hemingwey Capes Addon.esp'
-    dirty:
-      - <<: *quickClean
-        crc: 0x497A32B5
-        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 106
+    msg:
+      - <<: *corrupt
+        condition: 'checksum("Mart''s Monster Mod - Hemingwey Capes Addon.esp", 497A32B5)'
   - name: 'Mart''s Monster Mod - Hemingweys NPC Capes Improved.esp'
-    dirty:
-      - <<: *quickClean
-        crc: 0x56442922
-        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 10
+    msg:
+      - <<: *corrupt
+        condition: 'checksum("Mart''s Monster Mod - Hemingweys NPC Capes Improved.esp", 56442922)'
   - name: 'Mart''s Monster Mod - Hunting & Crafting.esp'
     tag:
       - Invent
