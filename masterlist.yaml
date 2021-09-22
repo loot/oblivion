@@ -9124,11 +9124,8 @@ plugins:
       - crc: 0x3EE2CD43
         util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - Undead Rise Fix.esp'
-    dirty:
-      - <<: *quickClean
-        crc: 0xE037E256
-        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 12
+    # doNotClean, ITMs revert changes in MMM No Undead Rise
+    after: [ 'Mart''s Monster Mod - No Undead Rise.esp' ]
   - name: 'Mart''s Monster Mod - Zombies for Body Meshes.esp'
     clean:
       - crc: 0x6C98F68D
