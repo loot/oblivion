@@ -8830,9 +8830,10 @@ plugins:
       - 'Oscuro''s_Oblivion_Overhaul.esm'
     msg:
       - *alreadyInOOO
-      - <<: *useInstead
-        subs: [ 'FCOM Durability & Damage' ]
-        condition: 'active("FCOM_Convergence.esp")'
+      - <<: *useVersion
+        type: warn
+        subs: [ 'FCOM' ]
+        condition: 'active("FCOM_Convergence.esm")'
     clean:
       - crc: 0xA9481543
         util: 'TES4Edit v4.0.2'
@@ -8848,17 +8849,19 @@ plugins:
         util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - Friendlier Factions MMM+Fran.esp'
     msg:
-      - <<: *useInstead
-        subs: [ 'FCOM Friendlier Factions' ]
-        condition: 'active("FCOM_Convergence.esp")'
+      - <<: *useVersion
+        type: warn
+        subs: [ 'FCOM' ]
+        condition: 'active("FCOM_Convergence.esm")'
     clean:
       - crc: 0x5794FAE2
         util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - Friendlier Factions OOO.esp'
     msg:
-      - <<: *useInstead
-        subs: [ 'FCOM Friendlier Factions' ]
-        condition: 'active("FCOM_Convergence.esp")'
+      - <<: *useVersion
+        type: warn
+        subs: [ 'FCOM' ]
+        condition: 'active("FCOM_Convergence.esm")'
     dirty:
       - <<: *quickClean
         crc: 0x2E446319
@@ -8897,9 +8900,10 @@ plugins:
         util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - Less Rats.esp'
     msg:
-      - <<: *useInstead
-        subs: [ 'FCOM Less Rats' ]
-        condition: 'active("FCOM_Convergence.esp")'
+      - <<: *useVersion
+        type: warn
+        subs: [ 'FCOM' ]
+        condition: 'active("FCOM_Convergence.esm")'
     clean:
       - crc: 0xED551EA9
         util: 'TES4Edit v4.0.2'
@@ -8930,9 +8934,10 @@ plugins:
     # doNotClean
   - name: 'Mart''s Monster Mod - No Adventurers.esp'
     msg:
-      - <<: *useInstead
-        subs: [ 'FCOM No Adventurers' ]
-        condition: 'active("FCOM_Convergence.esp")'
+      - <<: *useVersion
+        type: warn
+        subs: [ 'FCOM' ]
+        condition: 'active("FCOM_Convergence.esm")'
     clean:
       - crc: 0x848043F2
         util: 'TES4Edit v4.0.2'
@@ -8990,9 +8995,10 @@ plugins:
         util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - No Spiders.esp'
     msg:
-      - <<: *useInstead
-        subs: [ 'FCOM No Spiders' ]
-        condition: 'active("FCOM_Convergence.esp")'
+      - <<: *useVersion
+        type: warn
+        subs: [ 'FCOM' ]
+        condition: 'active("FCOM_Convergence.esm")'
   - name: 'Mart''s Monster Mod - No Swarms.esp'
     clean:
       - crc: 0x31E5E710
@@ -9013,22 +9019,25 @@ plugins:
         util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - No Wyvern.esp'
     msg:
-      - <<: *useInstead
-        subs: [ 'FCOM No Wyvern' ]
-        condition: 'active("FCOM_Convergence.esp")'
+      - <<: *useVersion
+        type: warn
+        subs: [ 'FCOM' ]
+        condition: 'active("FCOM_Convergence.esm")'
   - name: 'Mart''s Monster Mod for OOO - LessReaversInGates.esp'
     msg:
-      - <<: *useInstead
-        subs: [ 'FCOM Less Reavers In Gates' ]
-        condition: 'active("FCOM_Convergence.esp")'
+      - <<: *useVersion
+        type: warn
+        subs: [ 'FCOM' ]
+        condition: 'active("FCOM_Convergence.esm")'
     clean:
       - crc: 0xFCA5FBC1
         util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod for OOO - NoReaversInGates.esp'
     msg:
-      - <<: *useInstead
-        subs: [ 'FCOM No Reavers In Gates' ]
-        condition: 'active("FCOM_Convergence.esp")'
+      - <<: *useVersion
+        type: warn
+        subs: [ 'FCOM' ]
+        condition: 'active("FCOM_Convergence.esm")'
     clean:
       - crc: 0xB18E484D
         util: 'TES4Edit v4.0.2'
@@ -9054,9 +9063,10 @@ plugins:
       - <<: *alreadyInX
         subs: [ 'MMM Spawn Rates Reduced' ]
         condition: 'file("Mart''s Monster Mod - Spawn Rates - Reduced( Reduced| Vanilla)?\.esp")'
-      - <<: *useInstead
-        subs: [ 'FCOM Safer Roads' ]
-        condition: 'active("FCOM_Convergence.esp")'
+      - <<: *useVersion
+        type: warn
+        subs: [ 'FCOM' ]
+        condition: 'active("FCOM_Convergence.esm")'
     clean:
       - crc: 0xC1316241
         util: 'TES4Edit v4.0.2'
@@ -9082,12 +9092,13 @@ plugins:
         util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - Spawn Rates.*\.esp'
     msg:
-      - <<: *useInstead
-        subs: [ 'FCOM Spawn Rates' ]
-        condition: 'active("FCOM_Convergence.esp")'
       - <<: *useOnlyOneX
         subs: [ 'MMM Spawn Rates' ]
         condition: 'many("Mart''s Monster Mod - Spawn Rates.*\.esp")'
+      - <<: *useVersion
+        type: warn
+        subs: [ 'FCOM' ]
+        condition: 'active("FCOM_Convergence.esm")'
   - name: 'Mart''s Monster Mod - Spawn Rates - Increased.esp'
     dirty:
       - <<: *quickClean
@@ -9133,10 +9144,6 @@ plugins:
   - name: 'Mart''s Monster Mod - Bats Addon.esp'
     msg: [ *obsolete ]
   - name: 'Mart''s_Monster Mod -No Wyvern.esp'
-    msg:
-      - <<: *useInstead
-        subs: [ 'FCOM No Wyverns' ]
-        condition: 'active("FCOM_Convergence.esp")'
   # v201
   - name: 'Mart''s Monster Mod for Francescos.esp'
     inc: [ 'FCOM_Convergence.esm' ]
