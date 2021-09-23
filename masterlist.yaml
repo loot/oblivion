@@ -1120,6 +1120,11 @@ prelude:
       <<: *useVersion
       subs: [ 'Nehrim' ]
       condition: *nehrimCond
+    - &useVersionFCOM
+      <<: *useVersion
+      type: warn
+      subs: [ 'FCOM' ]
+      condition: 'active("FCOM_Convergence.esm")'
     - &useVersionOOO_FCOM
       <<: *useVersion
       subs: [ 'FCOM/OOO' ]
@@ -8830,10 +8835,7 @@ plugins:
       - 'Oscuro''s_Oblivion_Overhaul.esm'
     msg:
       - *alreadyInOOO
-      - <<: *useVersion
-        type: warn
-        subs: [ 'FCOM' ]
-        condition: 'active("FCOM_Convergence.esm")'
+      - *useVersionFCOM
     clean:
       - crc: 0xA9481543
         util: 'TES4Edit v4.0.2'
@@ -8848,20 +8850,12 @@ plugins:
       - crc: 0x7AD3E3A9
         util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - Friendlier Factions MMM+Fran.esp'
-    msg:
-      - <<: *useVersion
-        type: warn
-        subs: [ 'FCOM' ]
-        condition: 'active("FCOM_Convergence.esm")'
+    msg: [ *useVersionFCOM ]
     clean:
       - crc: 0x5794FAE2
         util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - Friendlier Factions OOO.esp'
-    msg:
-      - <<: *useVersion
-        type: warn
-        subs: [ 'FCOM' ]
-        condition: 'active("FCOM_Convergence.esm")'
+    msg: [ *useVersionFCOM ]
     dirty:
       - <<: *quickClean
         crc: 0x2E446319
@@ -8899,11 +8893,7 @@ plugins:
       - crc: 0xA78B9CE3
         util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - Less Rats.esp'
-    msg:
-      - <<: *useVersion
-        type: warn
-        subs: [ 'FCOM' ]
-        condition: 'active("FCOM_Convergence.esm")'
+    msg: [ *useVersionFCOM ]
     clean:
       - crc: 0xED551EA9
         util: 'TES4Edit v4.0.2'
@@ -8933,11 +8923,7 @@ plugins:
   - name: 'Mart''s Monster Mod - More Wilderness Life No Gates.esp'
     # doNotClean
   - name: 'Mart''s Monster Mod - No Adventurers.esp'
-    msg:
-      - <<: *useVersion
-        type: warn
-        subs: [ 'FCOM' ]
-        condition: 'active("FCOM_Convergence.esm")'
+    msg: [ *useVersionFCOM ]
     clean:
       - crc: 0x848043F2
         util: 'TES4Edit v4.0.2'
@@ -8994,11 +8980,7 @@ plugins:
       - crc: 0xADAEDF08
         util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - No Spiders.esp'
-    msg:
-      - <<: *useVersion
-        type: warn
-        subs: [ 'FCOM' ]
-        condition: 'active("FCOM_Convergence.esm")'
+    msg: [ *useVersionFCOM ]
   - name: 'Mart''s Monster Mod - No Swarms.esp'
     clean:
       - crc: 0x31E5E710
@@ -9018,26 +9000,14 @@ plugins:
       - crc: 0xB069AB27
         util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - No Wyvern.esp'
-    msg:
-      - <<: *useVersion
-        type: warn
-        subs: [ 'FCOM' ]
-        condition: 'active("FCOM_Convergence.esm")'
+    msg: [ *useVersionFCOM ]
   - name: 'Mart''s Monster Mod for OOO - LessReaversInGates.esp'
-    msg:
-      - <<: *useVersion
-        type: warn
-        subs: [ 'FCOM' ]
-        condition: 'active("FCOM_Convergence.esm")'
+    msg: [ *useVersionFCOM ]
     clean:
       - crc: 0xFCA5FBC1
         util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod for OOO - NoReaversInGates.esp'
-    msg:
-      - <<: *useVersion
-        type: warn
-        subs: [ 'FCOM' ]
-        condition: 'active("FCOM_Convergence.esm")'
+    msg: [ *useVersionFCOM ]
     clean:
       - crc: 0xB18E484D
         util: 'TES4Edit v4.0.2'
@@ -9063,10 +9033,7 @@ plugins:
       - <<: *alreadyInX
         subs: [ 'MMM Spawn Rates Reduced' ]
         condition: 'file("Mart''s Monster Mod - Spawn Rates - Reduced( Reduced| Vanilla)?\.esp")'
-      - <<: *useVersion
-        type: warn
-        subs: [ 'FCOM' ]
-        condition: 'active("FCOM_Convergence.esm")'
+      - *useVersionFCOM
     clean:
       - crc: 0xC1316241
         util: 'TES4Edit v4.0.2'
@@ -9095,10 +9062,7 @@ plugins:
       - <<: *useOnlyOneX
         subs: [ 'MMM Spawn Rates' ]
         condition: 'many("Mart''s Monster Mod - Spawn Rates.*\.esp")'
-      - <<: *useVersion
-        type: warn
-        subs: [ 'FCOM' ]
-        condition: 'active("FCOM_Convergence.esm")'
+      - *useVersionFCOM
   - name: 'Mart''s Monster Mod - Spawn Rates - Increased.esp'
     dirty:
       - <<: *quickClean
