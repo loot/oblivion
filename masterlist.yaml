@@ -8765,14 +8765,7 @@ plugins:
   ### MMM Optionals ###
   - name: 'Mart''s Monster Mod - Additional Enemy NPC Vars.esp'
     inc: [ 'FCOM_Convergence.esp' ]
-    msg:
-      # doNotClean
-      - type: say
-        content:
-          - lang: en
-            text: 'Can increase the chances of a CTD in a heavily modded game due to increased processor load.'
-          - lang: de
-            text: 'Kann Chancen für einen CTD erhöhen in stark gemoddeten Spielen aufgrund erhöhter Prozessor-Last.'
+    # doNotClean
   - name: 'Mart''s Monster Mod - City Defences.esp'
     after: [ 'Mart''s Monster Mod - More Wilderness Life No Gates.esp' ]
     inc: [ *BetterCities ]
@@ -8919,13 +8912,6 @@ plugins:
       - crc: 0x0674FBEA
         util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - More Passive Wildlife.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Not recommended, has bugs.'
-          - lang: de
-            text: 'Nicht empfohlen, hat Fehler.'
     clean:
       - crc: 0xBDFC5F0E
         util: 'TES4Edit v4.0.2'
