@@ -8725,19 +8725,6 @@ plugins:
       - <<: *useOnlyOneX
         subs: [ 'Mart''s Monster Mod esp' ]
         condition: 'many("Mart''s Monster Mod( for Fran| for OOO)?\.esp")'
-    tag:
-      - Actors.AIData
-      - Actors.AIPackages
-      - Actors.Stats
-      - Delev
-      - Factions
-      - Graphics
-      - Invent
-      - Names
-      - Relations
-      - Relev
-      - Scripts
-      - Stats
   - name: 'Mart''s Monster Mod.esp'
     inc:
       - 'Francesco''s Leveled Creatures-Items Mod.esm'
@@ -8748,6 +8735,18 @@ plugins:
           - '**Mart''s Monster Mod BSA**'
           - '**Mart''s Monster Mod.bsa**'
         condition: 'not file("Mart''s Monster Mod.bsa") and file("(FCOM_Convergence_)?Mart''s Monster Mod( for Fran| for OOO)?\.bsa") and not many("(FCOM_Convergence|Mart''s Monster Mod( for Fran| for OOO)?)\.esp")'
+    tag:
+      - Actors.ACBS
+      - Actors.Stats
+      - Delev
+      - Factions
+      - Graphics
+      - Names
+      - NPC.Eyes
+      - NPC.FaceGen
+      - NPC.Hair
+      - Relev
+      - Scripts
     dirty:
       - <<: *quickClean
         crc: 0x8528FB34
