@@ -8681,12 +8681,9 @@ plugins:
         subs: [ 'Mart''s Monster Mod Knights' ]
         condition: 'many("Mart''s Monster Mod( - Knights| for OOO - Knights )\.esp")'
     tag:
-      - Actors.AIData
-      - Actors.AIPackages
-      - Actors.Stats
+      - Actors.ACBS
       - Delev
       - Factions
-      - Relations
       - Relev
       - Stats
   - name: 'Mart''s Monster Mod - Knights.esp'
@@ -8697,6 +8694,12 @@ plugins:
         util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 2
   - name: 'Mart''s Monster Mod for OOO - Knights .esp'
+    tag:
+      - Actors.Spells
+      - Actors.Stats
+      - Invent.Add
+      - Invent.Remove
+      - Scripts
     dirty:
       - <<: *quickClean
         crc: 0x436D9B8D
