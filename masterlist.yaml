@@ -8629,6 +8629,7 @@ plugins:
       - NPC.Eyes
       - NPC.FaceGen
       - NPC.Hair
+      - NPC.Race
       - Relations.Add
       - -Relations.Remove
       - Relations.Change
@@ -8743,6 +8744,7 @@ plugins:
       - Delev
       - Factions
       - Graphics
+      - Invent.Add
       - Names
       - NPC.Eyes
       - NPC.FaceGen
@@ -8848,6 +8850,7 @@ plugins:
       - name: 'Mart''s Monster Mod for OOO.esp'
         display: '[MMMforOOO](https://www.nexusmods.com/oblivion/mods/17784) or [FCOM Convergence](https://www.nexusmods.com/oblivion/mods/12249)'
         condition: 'not file("FCOM_Convergence.esm")'
+    tag: [ Relev ]
     clean:
       - crc: 0x932A57C9
         util: 'TES4Edit v4.0.2'
@@ -8890,6 +8893,9 @@ plugins:
         util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - Friendlier Factions OOO.esp'
     msg: [ *useVersionFCOM ]
+    tag:
+      - Relations.Change
+      - Relations.Remove
     dirty:
       - <<: *quickClean
         crc: 0x2E446319
