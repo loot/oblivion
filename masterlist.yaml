@@ -8838,15 +8838,20 @@ plugins:
       - <<: *useOnlyOneX
         subs: [ 'Mart''s Monster Mod - Diverse Runeskulls Loot' ]
         condition: 'many("Mart''s Monster Mod - Diverse Runeskulls Loot( G&GD| OOO)?\.esp")'
-    tag: [ Delev ]
   - name: 'Mart''s Monster Mod - Diverse Runeskulls Loot.esp'
     inc:
       - 'Mart''s Monster Mod for OOO.esp'
       - 'Mart''s Monster Mod - Gems & Gem Dust.esp'
+    tag:
+      - Delev
+      - Relev
     clean:
       - crc: 0xF8F36924
         util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - Diverse Runeskulls Loot G&GD.esp'
+    tag:
+      - Delev
+      - Relev
     clean:
       - crc: 0xBC851604
         util: 'TES4Edit v4.0.2'
@@ -8856,7 +8861,9 @@ plugins:
       - name: 'Mart''s Monster Mod for OOO.esp'
         display: '[MMMforOOO](https://www.nexusmods.com/oblivion/mods/17784) or [FCOM Convergence](https://www.nexusmods.com/oblivion/mods/12249)'
         condition: 'not file("FCOM_Convergence.esm")'
-    tag: [ Relev ]
+    tag:
+      - Delev
+      - Relev
     clean:
       - crc: 0x932A57C9
         util: 'TES4Edit v4.0.2'
@@ -8926,6 +8933,12 @@ plugins:
         util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - Gems & Gem Dust.esp'
     msg: [ *alreadyInOOOFull ]
+    tag:
+      - Delev
+      - Graphics
+      - Relev
+      - Scripts
+      - Stats
     clean:
       - crc: 0x5327F263
         util: 'TES4Edit v4.0.2'
