@@ -4053,6 +4053,14 @@ plugins:
         subs: [ 'Combat Speechcraft ESP' ]
         condition: 'many("PTCombatSpeechcraft(Easy|Medium|Hard).esp")'
 
+  - name: 'SPS.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/19697/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x530D9DE0
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2396
+
 ###### Gameplay - Quests ######
   - name: '7roads.esp'
     url:
@@ -19043,11 +19051,6 @@ plugins:
         itm: 314
         udr: 4
 
-  - name: 'SPS.esp'
-    dirty:
-      - crc: 0x530d9de0
-        <<: *dirtyPlugin
-        itm: 2396
   - name: 'ShinySeptims_Septimus.esp'
     tag: [ Graphics ]
   - name: 'ShinySeptims_Trajanus.esp'
