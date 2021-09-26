@@ -8722,16 +8722,6 @@ plugins:
       - <<: *useOnlyOneX
         subs: [ 'Mart''s Monster Mod esp' ]
         condition: 'many("Mart''s Monster Mod( for Fran| for OOO)?\.esp")'
-  - name: 'Mart''s Monster Mod.esp'
-    inc:
-      - 'Francesco''s Leveled Creatures-Items Mod.esm'
-      - 'Oscuro''s_Oblivion_Overhaul.esm'
-    msg:
-      - <<: *renameXtoY
-        subs:
-          - '**Mart''s Monster Mod BSA**'
-          - '**Mart''s Monster Mod.bsa**'
-        condition: 'not file("Mart''s Monster Mod.bsa") and file("(FCOM_Convergence_)?Mart''s Monster Mod( for Fran| for OOO)?\.bsa") and not many("(FCOM_Convergence|Mart''s Monster Mod( for Fran| for OOO)?)\.esp")'
     tag:
       - Actors.ACBS
       - Actors.Stats
@@ -8745,6 +8735,20 @@ plugins:
       - NPC.Hair
       - Relev
       - Scripts
+  - name: 'Mart''s Monster Mod.esp'
+    inc:
+      - 'Francesco''s Leveled Creatures-Items Mod.esm'
+      - 'Oscuro''s_Oblivion_Overhaul.esm'
+    msg:
+      - <<: *renameXtoY
+        subs:
+          - '**Mart''s Monster Mod BSA**'
+          - '**Mart''s Monster Mod.bsa**'
+        condition: 'not file("Mart''s Monster Mod.bsa") and file("(FCOM_Convergence_)?Mart''s Monster Mod( for Fran| for OOO)?\.bsa") and not many("(FCOM_Convergence|Mart''s Monster Mod( for Fran| for OOO)?)\.esp")'
+    tag:
+      - NPC.Eyes
+      - NPC.FaceGen
+      - NPC.Hair
     dirty:
       - <<: *quickClean
         crc: 0x8528FB34
@@ -8758,16 +8762,7 @@ plugins:
           - '**Mart''s Monster Mod for Fran.bsa**'
         condition: 'not file("Mart''s Monster Mod for Fran.bsa") and file("(FCOM_Convergence_)?Mart''s Monster Mod( for OOO)?\.bsa") and not many("(FCOM_Convergence|Mart''s Monster Mod( for Fran| for OOO)?)\.esp")'
     tag:
-      - Actors.ACBS
-      - Actors.Stats
-      - Delev
-      - Factions
-      - Graphics
-      - Invent.Add
       - Invent.Remove
-      - Names
-      - Relev
-      - Scripts
       - Stats
     dirty:
       - <<: *quickClean
@@ -8782,27 +8777,18 @@ plugins:
           - '**Mart''s Monster Mod for OOO.bsa**'
         condition: 'not file("Mart''s Monster Mod for OOO.bsa") and file("(FCOM_Convergence_)?Mart''s Monster Mod( for Fran)?\.bsa") and not many("(FCOM_Convergence|Mart''s Monster Mod( for Fran| for OOO)?)\.esp")'
     tag:
-      - Actors.ACBS
       - Actors.AIData
       - Actors.AIPackages
       - Actors.CombatStyle
       - Actors.DeathItem
       - Actors.Spells
-      - Actors.Stats
-      - Delev
-      - Factions
-      - Graphics
-      - Invent.Add
       - Invent.Change
       - Invent.Remove
-      - Names
       - NPC.Eyes
       - NPC.FaceGen
       - NPC.Hair
       - Relations.Add
       - Relations.Change
-      - Relev
-      - Scripts
       - Stats
     dirty:
       - <<: *quickClean
