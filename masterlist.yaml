@@ -8616,6 +8616,7 @@ plugins:
       - Actors.AIData
       - Actors.AIPackages
       - Actors.CombatStyle
+      - Actors.DeathItem
       - Actors.Spells
       - Actors.Stats
       - Creatures.Blood
@@ -8649,6 +8650,7 @@ plugins:
     tag:
       - Delev
       - Relations.Add
+      - -Relations.Remove
       - Relev
     dirty:
       - <<: *quickClean
@@ -8658,8 +8660,10 @@ plugins:
   - name: 'Mart''s Monster Mod - Shivering Isles.esp'
     req: [ 'DLCShiveringIsles.esp' ]
     tag:
+      - Delev
       - Factions
       - Names
+      - Relev
     dirty:
       - <<: *quickClean
         crc: 0xDF4B7C20
@@ -8673,6 +8677,7 @@ plugins:
         condition: 'many("Mart''s Monster Mod( - Knights| for OOO - Knights )\.esp")'
     tag:
       - Actors.ACBS
+      - Actors.Stats
       - Delev
       - Factions
       - Relev
@@ -8687,7 +8692,6 @@ plugins:
   - name: 'Mart''s Monster Mod for OOO - Knights .esp'
     tag:
       - Actors.Spells
-      - Actors.Stats
       - Invent.Add
       - Invent.Remove
       - Scripts
@@ -8753,6 +8757,18 @@ plugins:
           - '**Mart''s Monster Mod BSA**'
           - '**Mart''s Monster Mod for Fran.bsa**'
         condition: 'not file("Mart''s Monster Mod for Fran.bsa") and file("(FCOM_Convergence_)?Mart''s Monster Mod( for OOO)?\.bsa") and not many("(FCOM_Convergence|Mart''s Monster Mod( for Fran| for OOO)?)\.esp")'
+    tag:
+      - Actors.ACBS
+      - Actors.Stats
+      - Delev
+      - Factions
+      - Graphics
+      - Invent.Add
+      - Invent.Remove
+      - Names
+      - Relev
+      - Scripts
+      - Stats
     dirty:
       - <<: *quickClean
         crc: 0x4D843B1C
