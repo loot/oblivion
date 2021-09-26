@@ -2556,6 +2556,14 @@ plugins:
       - 'Av Latta Magicka - Potion Rebalance.esp'
       - 'Av Latta Magicka - Rebalance Complete.esp'
 
+  - name: 'Soolie''sBetterEnchantmentEffects.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/30489/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x850A32B5
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
+
   - name: '\[Natcalsar\] DontHideRings&Amulets.*\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22012/' ]
   - name: '\[Natcalsar\] DontHideRings&Amulets_(HA|LA) V1\.0\.esp'
@@ -19708,11 +19716,7 @@ plugins:
 
   - name: 'IshMultipleApparelEnchantments.esp'
     req: [ *OBSE ]
-  - name: 'Soolie''sBetterEnchantmentEffects.esp'
-    dirty:
-      - crc: 0x850a32b5
-        <<: *dirtyPlugin
-        itm: 2
+
   - name: 'BookLooting.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/19111' ]
     req: [ *OBSEv15 ]
