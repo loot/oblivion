@@ -4668,6 +4668,23 @@ plugins:
       - crc: 0xF036F8CF
         util: 'TES4Edit v4.0.3'
 
+  - name: 'VToy.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/33863/' ]
+    tag:
+      - Eyes
+      - Hair
+    dirty:
+      - <<: *quickClean
+        crc: 0x9D28ECE7
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 262
+        udr: 4
+      - <<: *quickClean
+        crc: 0xE80F82B8
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 249
+        udr: 4
+
 ###### Gameplay - User Interface ######
   - name: 'Cliff_BetterLetters.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/5392/' ]
@@ -19048,16 +19065,6 @@ plugins:
             text: 'Don''t use with MMM or FCOM - unknown with other overhauls'
           - lang: de
             text: 'Nicht Benutzen mit MMM oder FCOM - unbekannt bezüglich anderen Überhol-Mods'
-
-  - name: 'Vtoy.esp'
-    tag:
-      - Eyes
-      - Hair
-    dirty:
-      - crc: 0xe80f82b8
-        <<: *dirtyPlugin
-        itm: 314
-        udr: 4
 
   - name: 'ShinySeptims_Septimus.esp'
     tag: [ Graphics ]
