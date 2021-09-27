@@ -3879,6 +3879,14 @@ plugins:
       - Invent.Add
       - Relev
 
+  - name: 'Wolvmans_Hidden_Unique_Merchant_Items.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/11847/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x9D79B935
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 65
+
 ###### Gameplay - Magic & Abilities ######
   - name: 'Av Latta Magicka\.es(m|p)'
     url: [ 'https://www.nexusmods.com/oblivion/mods/49096' ]
@@ -19340,11 +19348,6 @@ plugins:
     inc:
       - 'Shadow Ranger.esp'
       - 'The Complete Ranger.esp'
-  - name: 'Wolvmans_Hidden_Unique_Merchant_Items.esp'
-    dirty:
-      - crc: 0x9d79b935
-        <<: *dirtyPlugin
-        itm: 65
 
   - name: 'AyleidMeteorIronWeaponsVANILLA.esp'
     tag:
