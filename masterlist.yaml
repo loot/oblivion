@@ -3738,6 +3738,18 @@ plugins:
         itm: 19
         udr: 2
 
+  - name: 'Wiedergaenger Race.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/39801/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xAD7D87E0
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 18
+        udr: 4
+    clean:
+      - crc: 0x13B9681F
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
+
 ###### Gameplay - Combat ######
   - name: 'Duke Patricks - Actors Can Miss Now.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17706' ]
@@ -21752,12 +21764,7 @@ plugins:
     tag:
       - Eyes
       - Hair
-  - name: 'Wiedergaenger Race.esp'
-    dirty:
-      - crc: 0x6f1b67d5
-        <<: *dirtyPlugin
-        itm: 30
-        udr: 4
+
   - name: 'KHStrangers.esp'
     tag:
       - Eyes
