@@ -8822,12 +8822,20 @@ plugins:
       - crc: 0xBD0F4261
         util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - Diverse Creatures Expansion.esp'
+    tag:
+      - Delev
+      - Graphics
+      - Invent.Remove
     clean:
       - crc: 0xE300B724
         util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - Diverse Imperial Armor.esp'
     inc: [ 'Oscuro''s_Oblivion_Overhaul.esm' ]
     msg: [ *alreadyInOOO ]
+    tag:
+      - Invent.Add
+      - Invent.Change
+      - Invent.Remove
     dirty:
       - <<: *quickClean
         crc: 0x2A650097
@@ -8868,6 +8876,9 @@ plugins:
       - crc: 0x932A57C9
         util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - Diverse WaterLife.esp'
+    tag:
+      - Invent.Add
+      - Scripts
     clean:
       - crc: 0x75A8F813
         util: 'TES4Edit v4.0.2'
