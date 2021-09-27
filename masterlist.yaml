@@ -8910,12 +8910,18 @@ plugins:
         util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - Friendlier Factions MMM+Fran.esp'
     msg: [ *useVersionFCOM ]
+    tag:
+      - -Factions
+      - -Relations.Add
+      - Relations.Change
     clean:
       - crc: 0x5794FAE2
         util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - Friendlier Factions OOO.esp'
     msg: [ *useVersionFCOM ]
     tag:
+      - -Factions
+      - Relations.Add
       - Relations.Change
       - Relations.Remove
     dirty:
