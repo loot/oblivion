@@ -4049,6 +4049,14 @@ plugins:
       - Deactivate
       - -Invent.Remove
 
+  - name: 'Wizard''sSpellBook.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/20977/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x1A8F35F2
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 4
+
 ###### Gameplay - NPC Behaviour & Dialogue ######
   - name: 'Consistent Beggar Voices.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/48336/' ]
@@ -19658,12 +19666,7 @@ plugins:
     inc: [ 'Disease Immunity (Oblivion + Shivering Isles).esp' ]
   - name: 'spellshields2.esp'
     req: [ *OBSEv18 ]
-  - name: 'Wizard''sSpellBook.esp'
-    dirty:
-      - crc: 0x1a8f35f2
-        <<: *dirtyPlugin
-        itm: 31
-        udr: 27
+
   - name: 'ArcaneVelocity150.esp'
     msg:
       - <<: *useBashTweakInstead
