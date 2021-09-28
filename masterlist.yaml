@@ -8996,23 +8996,20 @@ plugins:
         itm: 18
   - name: 'Mart''s Monster Mod - More Wilderness Life No Gates.esp'
     # doNotClean
+  - name: 'Mart''s Monster Mod - No (Adventurers|Balrogs|Beholdens|Bone Loot|Fiends|Giants|Lanterns|Pests|Reavers|Skeep|Slimes|Spiders|Uberhulks|Werewolves|Wyvern)\.esp'
+    tag: [ Delev ]
+  - name: 'Mart''s Monster Mod - No (Balrogs|Beholdens|Bone Loot|Fiends|Giants|Lanterns|Skeep|Slimes|Spiders|Uberhulks|Werewolves|Wyvern)\.esp'
+    tag: [ -Relev ]
   - name: 'Mart''s Monster Mod - No Adventurers.esp'
     msg: [ *useVersionFCOM ]
-    tag: [ Delev ]
     clean:
       - crc: 0x848043F2
         util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - No Balrogs.esp'
-    tag:
-      - Delev
-      - -Relev
     clean:
       - crc: 0x38D2B986
         util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - No Beholdens.esp'
-    tag:
-      - Delev
-      - -Relev
     clean:
       - crc: 0xC6C70215
         util: 'TES4Edit v4.0.2'
@@ -9022,9 +9019,6 @@ plugins:
       - crc: 0xB1108D5F
         util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - No Bone Loot.esp'
-    tag:
-      - Delev
-      - -Relev
     clean:
       - crc: 0x6EB28406
         util: 'TES4Edit v4.0.2'
@@ -9033,9 +9027,6 @@ plugins:
       - crc: 0xEEE80176
         util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - No Fiends.esp'
-    tag:
-      - Delev
-      - -Relev
     clean:
       - crc: 0x7CD34790
         util: 'TES4Edit v4.0.2'
@@ -9044,56 +9035,36 @@ plugins:
       - crc: 0x36D4B02D
         util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - No Giants.esp'
-    tag:
-      - Delev
-      - -Relev
     clean:
       - crc: 0xC3D39B1E
         util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - No Lanterns.esp'
-    tag:
-      - Delev
-      - -Relev
     clean:
       - crc: 0xB4AF9751
         util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - No Pests.esp'
-    tag: [ Delev ]
     clean:
       - crc: 0xFD5158B2
         util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - No Reavers.esp'
-    tag: [ Delev ]
     clean:
       - crc: 0x36A744E9
         util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - No Skeep.esp'
-    tag:
-      - Delev
-      - -Relev
     clean:
       - crc: 0x4EDBFE3F
         util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - No Slimes.esp'
-    tag:
-      - Delev
-      - -Relev
     clean:
       - crc: 0xADAEDF08
         util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - No Spiders.esp'
     msg: [ *useVersionFCOM ]
-    tag:
-      - Delev
-      - -Relev
   - name: 'Mart''s Monster Mod - No Swarms.esp'
     clean:
       - crc: 0x31E5E710
         util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - No Uberhulks.esp'
-    tag:
-      - Delev
-      - -Relev
     clean:
       - crc: 0xBF1E308C
         util: 'TES4Edit v4.0.2'
@@ -9104,18 +9075,12 @@ plugins:
         util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
   - name: 'Mart''s Monster Mod - No Werewolves.esp'
-    tag:
-      - Delev
-      - -Relev
     clean:
       - crc: 0xB069AB27
         util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - No Wyvern.esp'
     after: [ 'Mart''s Monster Mod - Diverse Creatures Expansion.esp' ]
     msg: [ *useVersionFCOM ]
-    tag:
-      - Delev
-      - -Relev
   - name: 'Mart''s Monster Mod for OOO - LessReaversInGates.esp'
     msg: [ *useVersionFCOM ]
     tag:
