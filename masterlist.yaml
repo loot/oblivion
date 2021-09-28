@@ -8966,7 +8966,11 @@ plugins:
         itm: 18
   - name: 'Mart''s Monster Mod - More Wilderness Life No Gates.esp'
     inc: [ 'Mart''s Monster Mod - More Wilderness Life.esp' ]
-    # doNotClean
+    dirty:
+      - <<: *quickClean
+        crc: 0xA6DAAFD5
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 22
   - name: 'Mart''s Monster Mod - No (Adventurers|Balrogs|Beholdens|Bone Loot|Fiends|Giants|Lanterns|Pests|Reavers|Skeep|Slimes|Spiders|Uberhulks|Werewolves|Wyvern)\.esp'
     tag: [ Delev ]
   - name: 'Mart''s Monster Mod - No (Balrogs|Beholdens|Bone Loot|Fiends|Giants|Lanterns|Skeep|Slimes|Spiders|Uberhulks|Werewolves|Wyvern)\.esp'
