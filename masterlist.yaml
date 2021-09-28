@@ -1625,11 +1625,27 @@ bash_tags:
   - 'Voice-M'
 
 globals:
-  # Placeholder
-  - type: say
-    content:
-      - lang: en
-        text: ''
+# Latest LOOT Thread
+  - &lootThread
+    <<: *latestLOOTThread
+    subs: [ 'https://loot.github.io/latest-thread/' ]
+
+# OBSE
+  # Missing
+  - &obseMissing
+    <<: *scriptExtenderMissing
+    subs:
+      - 'OBSE'
+      - '[OBSE](https://obse.silverlock.org)'
+    condition: 'file("OBSE/Plugins/([^\.]+\.dll)") and not file("../obse_1_2_416.dll")'
+
+  # NVAC
+  - &moveNVACtoOBSE
+    <<: *moveNVAC
+    subs:
+      - 'OBSE'
+      - 'Oblivion'
+    condition: 'file("NVSE/Plugins/nvac.dll")'
 
 groups:
   - name: &gameMasterGroup Main Game Master
