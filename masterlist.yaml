@@ -8707,9 +8707,6 @@ plugins:
       - <<: *requiresX
         subs: [ 'Mart''s Monster Mod BSA' ]
         condition: 'not file("Mart''s Monster Mod.bsa") and not file("Mart''s Monster Mod for Fran.bsa") and not file("Mart''s Monster Mod for OOO.bsa") and not file("FCOM_Convergence_Mart''s Monster Mod.bsa")'
-      - <<: *useOnlyOneX
-        subs: [ 'Mart''s Monster Mod esp' ]
-        condition: 'many("Mart''s Monster Mod( for Fran| for OOO)?\.esp")'
   - name: 'Mart''s Monster Mod.esp'
     inc:
       - 'Francesco''s Leveled Creatures-Items Mod.esm'
