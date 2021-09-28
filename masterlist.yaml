@@ -8667,11 +8667,8 @@ plugins:
         crc: 0xDF4B7C20
         util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 3
-  - name: 'Mart''s Monster Mod( - Knights| for OOO - Knights )\.esp'
-    msg:
-      - <<: *useOnlyOneX
-        subs: [ 'Mart''s Monster Mod Knights' ]
-        condition: 'many("Mart''s Monster Mod( - Knights| for OOO - Knights )\.esp")'
+  - name: 'Mart''s Monster Mod - Knights.esp'
+    inc: [ 'Oscuro''s_Oblivion_Overhaul.esm' ]
     tag:
       - Actors.ACBS
       - Actors.Stats
@@ -8679,8 +8676,6 @@ plugins:
       - Factions
       - Relev
       - Stats
-  - name: 'Mart''s Monster Mod - Knights.esp'
-    inc: [ 'Oscuro''s_Oblivion_Overhaul.esm' ]
     dirty:
       - <<: *quickClean
         crc: 0x51DBA3E6
@@ -8688,10 +8683,16 @@ plugins:
         itm: 2
   - name: 'Mart''s Monster Mod for OOO - Knights .esp'
     tag:
+      - Actors.ACBS
       - Actors.Spells
+      - Actors.Stats
+      - Delev
+      - Factions
       - Invent.Add
       - Invent.Remove
+      - Relev
       - Scripts
+      - Stats
     dirty:
       - <<: *quickClean
         crc: 0x436D9B8D
