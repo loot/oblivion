@@ -1307,6 +1307,118 @@ prelude:
         - lang: zh_CN
           text: '强烈建议不要使用包含已删除navmeshes的mod，因为它们会导致崩溃。**已删除navmeshes**必须手动修正(一个复杂的过程，应该由mod作者完成)。更多关于**已删除navmeshes**的信息已提供[这里](https://www.creationkit.com/index.php?title=Fixing_Navmesh_Deletion_Tutorial)。'
 
+  # Global Anchors
+    - &latestLOOTThread
+      type: say
+      content:
+        - lang: en
+          text: '[Latest LOOT thread](%1%).'
+        - lang: bg
+          text: '[Форумът на "LOOT"](%1%).'
+        - lang: da
+          text: '[Seneste LOOT-tråd](%1%).'
+        - lang: de
+          text: '[Aktueller LOOT-Thread](%1%).'
+        - lang: es
+          text: '[Forum de LOOT](%1%).'
+        - lang: fr
+          text: '[Récent post sur le forum LOOT](%1%).'
+        - lang: it
+          text: '[Ultimo thread di LOOT](%1%).'
+        - lang: ja
+          text: '[LOOTの最新スレッドを開く](%1%)（英語）。'
+        - lang: ko
+          text: '[최신 LOOT 스레드](%1%).'
+        - lang: pl
+          text: '[Ostatni wątek LOOT](%1%).'
+        - lang: pt_BR
+          text: '[Thread mais recento do LOOT](%1%).'
+        - lang: pt_PT
+          text: '[Postagem mais recente do LOOT](%1%).'
+        - lang: ru
+          text: '[Обсуждение LOOT "(Eng)"](%1%).'
+        - lang: sv
+          text: '[Senaste LOOT-tråd](%1%).'
+        - lang: uk_UA
+          text: '[Обговорення LOOT "(Eng)"](%1%).'
+        - lang: zh_CN
+          text: '[最新的LOOT版本](%1%)。'
+      subs: [ 'https://loot.github.io/latest-thread/' ]
+
+    - &moveNVAC
+      type: warn
+      content:
+        - lang: en
+          text: 'NVAC is installed under **NVSE/Plugins** but needs to be moved to **%1%/Plugins** for %1% to pick it up for %2%.'
+        - lang: bg
+          text: 'Приставката "NVAC" е инсталирана в **NVSE/Plugins**, но трябва да бъде преместена в **%1%/Plugins** за да може %1% да използва нейните функции в %2%.'
+        - lang: de
+          text: 'NVAC ist unter **NVSE/Plugins** installiert aber es muss nach **%1%/Plugins** verschoben werden um von %1% erkannt zu werden für %2%.'
+        - lang: es
+          text: 'NVAC se encuentra instalado bajo **NVSE/Plugins** pero debe ser trasladado a **%1%/Plugins** para que %1% pueda ser reconocido por %2%.'
+        - lang: fr
+          text: 'NVAC est installé dans **NVSE/Plugins** mais doit être déplace à **%1%/Plguins** afin que %1% puisse l''utiliser pour %2%.'
+        - lang: it
+          text: 'NVAC è installato in **NVSE/Plugins** ma deve essere spostato in **%1%/Plugins** per permettere a %1% di essere usato da %2%.'
+        - lang: ja
+          text: 'NVAC は **NVSE/Plugins** の下にインストールされていますが、%1% が %2% に引き上げるために **%1%/Plugins** に移動する必要があります。'
+        - lang: ko
+          text: 'NVAC는 **NVSE/플러그인** 아래에 설치되지만 %2%에 대해 선택하려면 %1%에 대해 **%1%/Plugins**로 이동해야합니다.'
+        - lang: pt_BR
+          text: 'O NVAC está instalado em **NVSE/Plugins** porém precisa ser movido para **%1%/Plugins** para que o %1% o reconheça para o %2%.'
+        - lang: pt_PT
+          text: 'O NVAC está instalado em **NVSE/Plugins** porém precisa ser movido para **%1%/Plugins** para que o %1% o reconheça para o %2%.'
+        - lang: ru
+          text: 'NVAC установлен в **NVSE/Plugins**, но его необходимо переместить в **%1%/Plugins**, чтобы %1% использовал его для %2%.'
+        - lang: uk_UA
+          text: 'NVAC встановлено у **NVSE/Plugins**, але його необхідно перемістити до **%1%/Plugins**, щоб %1% використовував його для %2%.'
+        - lang: zh_CN
+          text: 'NVAC安装在**NVSE/Plugins**下，但需要移动到**%1%/Plugins**来让%1%获取%2%。'
+      subs:
+        - 'OBSE'
+        - 'Oblivion'
+      condition: 'file("NVSE/Plugins/nvac.dll")'
+
+    - &scriptExtenderMissing
+      type: error
+      content:
+        - lang: en
+          text: 'You have installed an %1% plugin but %1% was not found! See %1% download page: %2%.'
+        - lang: bg
+          text: 'Инсталирали сте приставката %1%, но %1% липсва! Отворете Интернет страницата на %1%: %2%.'
+        - lang: da
+          text: 'Du har installeret an %1% plugin men %1% blev ikke fundet! Se %1%-downloadsiden: %2%.'
+        - lang: de
+          text: 'Sie haben ein %1% Plugin installiert, aber %1% wurde nicht gefunden! %1% kann hier heruntergeladen werden: %2%.'
+        - lang: es
+          text: '!Tiene un %1% plugin instalado pero %1% no se pudo encontrar! Véase %1% la página de descarga: %2%.'
+        - lang: fr
+          text: 'Vous avez installé un %1% plugin mais %1% ne fut pas détécté ! Veuillez consultez la page de téléchargement de %1% : %2%.'
+        - lang: it
+          text: 'Hai installato un plugin %1% ma %1% non è stato trovato! Consulta %1% nella pagina di download: %2%.'
+        - lang: ja
+          text: 'an %1% pluginはインストールされていますが、%1%が見つかりません！%1%のダウンロードページを確認してください。%2%。'
+        - lang: ko
+          text: '%1% 플러그인이 설치되었지만 %1%를 찾을 수 없습니다! %1% 다운로드 페이지를 참조하십시오: %2%.'
+        - lang: pl
+          text: 'Zainstalowałeś an %1% plugin ale nie odnaleziono %1%! Odwiedź stronę pobierania %1%: %2%.'
+        - lang: pt_BR
+          text: 'Você tem um plugin do %1% instalado mas o %1% não foi encontrado! Veja a página de download do %1%: %2%.'
+        - lang: pt_PT
+          text: 'Você instalou an %1% plugin mas o %1% não foi encontrado! Veja a página de download do %1%: %2%.'
+        - lang: ru
+          text: 'У вас установлен %1% плагин, но %1% не найден! Смотрите страницу загрузки: %2%.'
+        - lang: sv
+          text: 'Du har installerat an %1% plugin men %1% kunde inte hittas! Läs mer på %1%:s nedladdningssisda: %2%.'
+        - lang: uk_UA
+          text: 'У вас встановлено %1% плагін, але %1% не знайдено! Дивіться сторінку завантаження: %2%.'
+        - lang: zh_CN
+          text: '您已经安装了%1%插件，但是未发现%1%！请查看%1%的下载页面:%2%。'
+      subs:
+        - 'OBSE'
+        - '[OBSE](https://obse.silverlock.org)'
+      condition: 'file("OBSE/Plugins/([^\.]+\.dll)") and not file("../obse_1_2_416.dll")'
+
   # Deprecated Anchors
     - &dirtyPlugin
       util: '[TES4Edit](https://www.nexusmods.com/oblivion/mods/11536/)'
