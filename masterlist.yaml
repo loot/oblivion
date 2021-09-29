@@ -3017,6 +3017,20 @@ plugins:
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
 
 ###### Encounters - Allies ######
+  - name: 'Aliyah.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/12082/' ]
+    msg:
+      - type: say
+        content:
+          - lang: en
+            text: 'Consider updating to DACompilation_GO.esp/DACompilation_GO_APN.esp - this has some fixes and improvements and fixes game-destroying issues.'
+          - lang: de
+            text: 'Erwägen Sie zu DACompilation_GO.esp/DACompilation_GO_APN.esp upzudaten - Dies hat einige Fixes und Verbesserungen und behebt Spiel-zerstörende Probleme.'
+    dirty:
+      - crc: 0xc4c3d868
+        <<: *dirtyPlugin
+        itm: 3
+
   - name: 'CM Emilia.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/32760/' ]
     dirty:
@@ -22303,19 +22317,6 @@ plugins:
     clean:
       - crc: 0x9E89A294
         util: 'TES4Edit v4.0.3'
-  - name: 'Aliyah.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/12082' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Consider updating to DACompilation_GO.esp/DACompilation_GO_APN.esp - this has some fixes and improvements and fixes game-destroying issues.'
-          - lang: de
-            text: 'Erwägen Sie zu DACompilation_GO.esp/DACompilation_GO_APN.esp upzudaten - Dies hat einige Fixes und Verbesserungen und behebt Spiel-zerstörende Probleme.'
-    dirty:
-      - crc: 0xc4c3d868
-        <<: *dirtyPlugin
-        itm: 3
   - name: 'Arwen companion.esp'
     tag:
       - Eyes
