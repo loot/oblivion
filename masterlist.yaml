@@ -2187,6 +2187,11 @@ plugins:
       - link: 'https://www.nexusmods.com/oblivion/mods/7819/'
         name: 'CM Partners Mod Basic'
   - name: 'CM Partners.esm'
+    msg:
+      - <<: *obsolete
+        type: error
+        subs: [ '[CM Partners Mod Basic](https://www.nexusmods.com/oblivion/mods/7819/) v2.0' ]
+        condition: 'not checksum("CM Partners.esm", FE525BB3) or not checksum("CM Partners.esm", FC003718) or not checksum("CM Partners.esm", EAD5FEBE)'
     clean:
       - crc: 0xFE525BB3
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
