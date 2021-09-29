@@ -3020,12 +3020,9 @@ plugins:
   - name: 'Aliyah.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/12082/' ]
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Consider updating to DACompilation_GO.esp/DACompilation_GO_APN.esp - this has some fixes and improvements and fixes game-destroying issues.'
-          - lang: de
-            text: 'Erwägen Sie zu DACompilation_GO.esp/DACompilation_GO_APN.esp upzudaten - Dies hat einige Fixes und Verbesserungen und behebt Spiel-zerstörende Probleme.'
+      - <<: *useInstead
+        type: say
+        subs: [ '[Sclerocephalus CM Partner Compilation](https://www.nexusmods.com/oblivion/mods/33739/)' ]
     dirty:
       - crc: 0xc4c3d868
         <<: *dirtyPlugin
