@@ -4147,14 +4147,6 @@ plugins:
       - <<: *patchUpdateAvailable
         subs: [ '[Knights of the White Stallion Cleaned](https://www.nexusmods.com/oblivion/mods/51322/)' ]
         condition: 'not version("300_White Stallion 4.esp", "1.1", >=)'
-      - <<: *wildEdits
-        subs: [ '[Cleaning instructions](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide#300_White_Stallion_4.esp_Special_Cleaning_Instructions)' ]
-        condition: 'checksum("300_White Stallion 4.esp", 400BDFF6)'
-    dirty:
-      - crc: 0x400bdff6
-        <<: *dirtyPlugin
-        udr: 139
-        itm: 20
     clean:
       - crc: 0x4FF4CFDD
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
