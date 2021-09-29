@@ -4137,6 +4137,18 @@ plugins:
         itm: 2396
 
 ###### Gameplay - Quests ######
+  - name: '300_White Stallion 4.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/6623/' ]
+    msg:
+      - <<: *wildEdits
+        subs: [ '[Cleaning instructions](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide#300_White_Stallion_4.esp_Special_Cleaning_Instructions)' ]
+        condition: 'checksum("300_White Stallion 4.esp", 400BDFF6)'
+    dirty:
+      - crc: 0x400bdff6
+        <<: *dirtyPlugin
+        udr: 139
+        itm: 20
+
   - name: '7roads.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/48810'
@@ -15531,17 +15543,6 @@ plugins:
       - crc: 0xa93fe8b0
         <<: *dirtyPlugin
         itm: 2
-  - name: '300_White Stallion 4.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/6623' ]
-    msg:
-      - <<: *wildEdits
-        subs: [ '[Cleaning instructions](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide#300_White_Stallion_4.esp_Special_Cleaning_Instructions)' ]
-        condition: 'checksum("300_White Stallion 4.esp", 400BDFF6)'
-    dirty:
-      - crc: 0x400bdff6
-        <<: *dirtyPlugin
-        udr: 139
-        itm: 20
   - name: '300 Feudal Empire.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22678' ]
     inc: [ '300_White Stallion 4.esp' ]
