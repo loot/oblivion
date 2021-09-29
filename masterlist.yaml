@@ -1784,7 +1784,9 @@ plugins:
       - 'DLCOrrery.esp'
       - 'DLCVileLair.esp'
       - 'Unofficial Oblivion Patch.esp'
-    tag: [ Factions ]
+    tag:
+      - Actors.ACBS
+      - Factions
     dirty:
       - <<: *quickClean
         crc: 0xCB413740
@@ -1800,7 +1802,9 @@ plugins:
       - 'DLCVileLair.esp'
       - 'DLCMehrunesRazor.esp'
       - 'Unofficial Oblivion Patch.esp'
-    tag: [ Relev ]
+    tag:
+      - Actors.Stats
+      - Relev
     dirty:
       - <<: *quickClean
         crc: 0x312156F8
@@ -1822,11 +1826,11 @@ plugins:
       - Actors.Stats
       - C.Climate
       - C.Light
+      - C.MiscFlags
       - C.Music
       - C.Name
       - C.Owner
       - C.Water
-      - Invent
       - Names
     dirty:
       - <<: *quickClean
@@ -1897,7 +1901,8 @@ plugins:
       - Actors.Stats
       - Factions
       - Graphics
-      - Invent
+      - Invent.Add
+      - Invent.Remove
       - Names
     dirty:
       - <<: *quickClean
@@ -1935,8 +1940,9 @@ plugins:
       - Graphics
       - Invent.Change
       - NPC.Eyes
-      - NPC.Hair
       - NPC.FaceGen
+      - NPC.Hair
+      - NPC.Race
       - Sound
       - SpellStats
       - Text
@@ -1989,6 +1995,9 @@ plugins:
         name: 'Unofficial Oblivion DLC Patches'
     group: *unofficialPatchesGroup
   - name: 'DLCHorseArmor - Unofficial Patch.esp'
+    tag:
+      - Actors.ACBS
+      - Actors.AIPackages
     clean:
       # version: 24
       - crc: 0xC5A61F9E
@@ -2004,9 +2013,11 @@ plugins:
       - Actors.ACBS
       - Actors.AIData
       - Actors.AIPackages
+      - Actors.RecordFlags
       - C.Water
-      - Npc.EyesOnly
-      - Npc.HairOnly
+      - NPC.Eyes
+      - NPC.Hair
+      - SpellStats
       - Stats
       - Text
     clean:
@@ -2023,16 +2034,19 @@ plugins:
       - crc: 0xFDD28667
         util: 'TES4Edit v4.0.2'
   - name: 'DLCSpellTomes - Unofficial Patch.esp'
+    tag:
+      - SpellStats
+      - Text
     clean:
       # version: 24
       - crc: 0x3AE29795
         util: 'TES4Edit v4.0.2'
   - name: 'DLCThievesDen - Unofficial Patch.esp'
     tag:
-      - Invent
+      - Actors.RecordFlags
       - Invent.Change
       - NPC.Class
-      - Npc.EyesOnly
+      - NPC.Eyes
       - Scripts
       - Text
     clean:
@@ -2055,10 +2069,11 @@ plugins:
     tag:
       - Actors.ACBS
       - Actors.AIPackages
+      - Actors.RecordFlags
       - C.Light
       - Graphics
       - Names
-      - Npc.EyesOnly
+      - NPC.Eyes
       - Stats
       - Text
     clean:
@@ -2067,6 +2082,7 @@ plugins:
         util: 'TES4Edit v4.0.2'
   - name: 'DLCFrostcrag - Unofficial Patch.esp'
     tag:
+      - Actors.RecordFlags
       - Actors.Spells
       - C.Light
       - Scripts
@@ -2083,11 +2099,13 @@ plugins:
       - C.Music
       - C.Name
       - Graphics
-      - NpcFaces
       - NPC.Class
-      - Relev
+      - NPC.FaceGen
+      - -Relations.Add
+      - Relations.Change
       - Scripts
       - Sound
+      - SpellStats
       - Stats
       - Text
     clean:
