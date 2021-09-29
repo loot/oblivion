@@ -5292,6 +5292,10 @@ plugins:
 ###### Location - Overhauls ######
   - name: '24HrArenaAlive(V2|V2Towers|Low)\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/13099/' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Arena Alive ESP' ]
+        condition: 'many("24HrArenaAlive(V2|V2Towers|Low)\.esp")'
   - name: '24HrArenaAliveV2.esp'
     dirty:
       - <<: *quickClean
