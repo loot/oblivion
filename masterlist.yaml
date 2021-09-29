@@ -5294,20 +5294,23 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/13099/' ]
   - name: '24HrArenaAliveV2.esp'
     dirty:
-      - crc: 0xbb54d108
-        <<: *dirtyPlugin
-        itm: 6
-        udr: 5
+      - <<: *quickClean
+        crc: 0xBB54D108
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 5
+        udr: 6
   - name: '24HrArenaAliveV2Towers.esp'
     dirty:
-      - crc: 0x363cd1f4
-        <<: *dirtyPlugin
-        itm: 6
-        udr: 5
+      - <<: *quickClean
+        crc: 0x363CD1F4
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 5
+        udr: 6
   - name: '24HrArenaAliveLow.esp'
     dirty:
-      - crc: 0x7009adae
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x7009ADAE
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 4
         udr: 4
 
