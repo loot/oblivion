@@ -3028,11 +3028,13 @@ plugins:
   - name: 'CM Partners Eileen.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/20203/' ]
     dirty:
-      - crc: 0x1583d677
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xB28EC8A6
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 3
-      - crc: 0xb28ec8a6
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x1583D677
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 3
 
   - name: 'CM Rigel.esp'
