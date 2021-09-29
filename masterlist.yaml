@@ -9244,6 +9244,9 @@ plugins:
   - name: 'OOO-.*\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/46199/' ]
   - name: 'Oscuro''s_Oblivion_Overhaul.esm'
+    after:
+      - 'Francesco''s Leveled Creatures-Items Mod.esm'
+      - 'Francesco''s Optional New Items Add-On.esm'
     tag:
       - name: -Relations
         condition: 'file("Mart''s Monster Mod for OOO.esm") or file("FCOM_Convergence.esm")'
@@ -9251,8 +9254,15 @@ plugins:
       - crc: 0x82322ED1
         util: 'TES4Edit v4.0.2i'
   - name: 'Oscuro''s_Oblivion_Overhaul.esp'
-    after: [ 'Oblivion WarCry EV.esp' ]
     # doNotClean
+    after:
+      - 'Bob''s Armory Oblivion.esp'
+      - 'FCOM_BobsArmory.esp'
+      - 'FCOM_Francescos.esp'
+      - 'FCOM_FrancescosItemsAddOn.esp'
+      - 'FCOM_FrancescosNamedBosses.esp'
+      - 'FCOM_WarCry.esp'
+      - 'Oblivion WarCry EV.esp'
     tag:
       - name: -Factions
         condition: 'file("Mart''s Monster Mod for OOO.esm") or file("FCOM_Convergence.esm")'
