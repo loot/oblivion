@@ -1120,6 +1120,11 @@ prelude:
       <<: *useVersion
       subs: [ 'Nehrim' ]
       condition: *nehrimCond
+    - &useVersionFCOM
+      <<: *useVersion
+      type: warn
+      subs: [ 'FCOM' ]
+      condition: 'active("FCOM_Convergence.esm")'
     - &useVersionOOO_FCOM
       <<: *useVersion
       subs: [ 'FCOM/OOO' ]
@@ -7955,7 +7960,7 @@ plugins:
         condition: 'not file("Francesco''s Creatures and Items Resources - Items.bsa") and not file("FCOM_Convergence_FraNewItems.bsa") and not file("FraNewItems.bsa")'
       - <<: *requiresX
         subs: [ 'Mart''s Monster Mod BSA' ]
-        condition: 'not file("Mart''s Monster Mod.bsa") and not file("Mart''s Monster Mod for Frans.bsa") and not file("Mart''s Monster Mod for OOO.bsa") and not file("FCOM_Convergence_Mart''s Monster Mod.bsa")'
+        condition: 'not file("Mart''s Monster Mod.bsa") and not file("Mart''s Monster Mod for Fran.bsa") and not file("Mart''s Monster Mod for OOO.bsa") and not file("FCOM_Convergence_Mart''s Monster Mod.bsa")'
       - <<: *renameXtoY
         subs:
           - '**Francesco''s Creatures and Items Resources - Items.bsa**'
@@ -7965,7 +7970,7 @@ plugins:
         subs:
           - '**Mart''s Monster Mod BSA**'
           - '**FCOM_Convergence_Mart''s Monster Mod.bsa**'
-        condition: 'not file("FCOM_Convergence_Mart''s Monster Mod.bsa") and not many("(FCOM_Convergence|(Mart''s Monster Mod( for Fran| for OOO)?))\.esp")'
+        condition: 'not file("FCOM_Convergence_Mart''s Monster Mod.bsa") and file("Mart''s Monster Mod( for Fran| for OOO)?\.bsa") and not many("(FCOM_Convergence|Mart''s Monster Mod( for Fran| for OOO)?)\.esp")'
     req: [ 'FCOM_Convergence.esm' ]
     tag:
       - Actors.ACBS
@@ -8324,8 +8329,8 @@ plugins:
       - 'Mart''s Monster Mod.esm'
     msg:
       - <<: *alreadyInX
-        subs: [ 'Mart''s Monster Mod for Frans' ]
-        condition: 'active("Mart''s Monster Mod for Frans.esp")'
+        subs: [ 'Mart''s Monster Mod for Fran.esp' ]
+        condition: 'active("Mart''s Monster Mod for Fran.esp")'
     tag:
       - Actors.ACBS
       - Actors.AIPackages
@@ -8374,8 +8379,8 @@ plugins:
       - 'Mart''s Monster Mod.esm'
     msg:
       - <<: *alreadyInX
-        subs: [ 'Mart''s Monster Mod for Frans' ]
-        condition: 'active("Mart''s Monster Mod for Frans.esp")'
+        subs: [ 'Mart''s Monster Mod for Fran.esp' ]
+        condition: 'active("Mart''s Monster Mod for Fran.esp")'
     tag: [ Relev ]
     dirty:
       # version: 5.0B1
@@ -8542,8 +8547,8 @@ plugins:
       - 'Oscuro''s_Oblivion_Overhaul.esm'
     msg:
       - <<: *alreadyInX
-        subs: [ 'Mart''s Monster Mod for Frans' ]
-        condition: 'active("Mart''s Monster Mod for Frans.esp")'
+        subs: [ 'Mart''s Monster Mod for Fran' ]
+        condition: 'active("Mart''s Monster Mod for Fran.esp")'
     tag: [ Relev ]
     clean:
       - crc: 0xCBA1CE61
@@ -8598,27 +8603,36 @@ plugins:
 
 ###### Martigen’s Monster Mod (MMM) ######
   - name: 'Mart''s Monster Mod.*\.es(m|p)'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/17784/' ]
+    url:
+      - 'https://www.nexusmods.com/oblivion/mods/17784/'
+      - 'http://tesalliance.org/forums/index.php?/files/file/1965-martigens-monster-mod-38/'
   - name: 'Mart''s Monster Mod.esm'
     after:
       - 'Francesco''s Leveled Creatures-Items Mod.esm'
       - 'Francesco''s Optional New Items Add-On.esm'
       - 'Oscuro''s_Oblivion_Overhaul.esm'
-    msg:
-      - <<: *obsolete
-        subs: [ '[Martigen''s Monster Mod 3.8](https://www.nexusmods.com/oblivion/mods/17784)' ]
-        condition: 'version("Mart''s Monster Mod.esm", "3.8b1", <)'
     tag:
+      - Actors.ACBS
       - Actors.AIData
       - Actors.AIPackages
+      - Actors.CombatStyle
+      - Actors.DeathItem
       - Actors.Spells
       - Actors.Stats
+      - Creatures.Blood
       - Delev
       - Factions
       - Graphics
-      - Invent
+      - Invent.Add
+      - Invent.Change
+      - Invent.Remove
       - Names
-      - Relations
+      - NPC.Eyes
+      - NPC.FaceGen
+      - NPC.Hair
+      - NPC.Race
+      - Relations.Add
+      - Relations.Change
       - Relev
       - Scripts
       - Stats
@@ -8634,8 +8648,7 @@ plugins:
       - 'Oscuro''s_Oblivion_Overhaul.esm'
     tag:
       - Delev
-      - Factions
-      - Relations
+      - Relations.Add
       - Relev
     dirty:
       - <<: *quickClean
@@ -8644,47 +8657,45 @@ plugins:
         itm: 3
   - name: 'Mart''s Monster Mod - Shivering Isles.esp'
     req: [ 'DLCShiveringIsles.esp' ]
+    after:
+      - 'Francesco''s Optional Chance of Stronger Bosses.esp'
+      - 'Francesco''s Optional Chance of Stronger Enemies.esp'
     tag:
-      - Actors.AIData
-      - Actors.AIPackages
-      - Actors.Stats
       - Delev
       - Factions
-      - Graphics
-      - Invent
       - Names
-      - Relations
       - Relev
-      - Scripts
-      - Stats
     dirty:
       - <<: *quickClean
         crc: 0xDF4B7C20
         util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 3
-  - name: 'Mart''s Monster Mod( - Knights| for OOO - Knights )\.esp'
-    inc: [ 'FCOM_Convergence.esm' ]
-    msg:
-      - <<: *useOnlyOneX
-        subs: [ 'Mart''s Monster Mod Knights' ]
-        condition: 'many("Mart''s Monster Mod( - Knights| for OOO - Knights )\.esp")'
+  - name: 'Mart''s Monster Mod - Knights.esp'
+    inc: [ 'Oscuro''s_Oblivion_Overhaul.esm' ]
     tag:
-      - Actors.AIData
-      - Actors.AIPackages
+      - Actors.ACBS
       - Actors.Stats
       - Delev
       - Factions
-      - Relations
       - Relev
       - Stats
-  - name: 'Mart''s Monster Mod - Knights.esp'
-    inc: [ 'Oscuro''s_Oblivion_Overhaul.esm' ]
     dirty:
       - <<: *quickClean
         crc: 0x51DBA3E6
         util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 2
   - name: 'Mart''s Monster Mod for OOO - Knights .esp'
+    tag:
+      - Actors.ACBS
+      - Actors.Spells
+      - Actors.Stats
+      - Delev
+      - Factions
+      - Invent.Add
+      - Invent.Remove
+      - Relev
+      - Scripts
+      - Stats
     dirty:
       - <<: *quickClean
         crc: 0x436D9B8D
@@ -8692,39 +8703,23 @@ plugins:
         itm: 2
   ### MMM ESP Options ###
   - name: 'Mart''s Monster Mod( for Fran| for OOO)?\.esp'
-    after:
-      - 'Francesco''s Optional Chance of Stronger Bosses.esp'
-      - 'Francesco''s Optional Chance of Stronger Enemies.esp'
-      - 'Francesco''s Optional Dungeon Chest Locks.esp'
-      - 'Francesco''s Optional Dungeon Chest Loot.esp'
-      - 'Francesco''s Optional House Chest Loot.esp'
-      - 'Francesco''s Optional Leveled Arena.esp'
-      - 'Francesco''s Optional Leveled Quests.esp'
-      - 'Francesco''s Optional Vendor Tweaks.esp'
-      - 'Oscuro''s_Oblivion_Overhaul.esp'
     msg:
       - <<: *alreadyInX
         subs: [ 'FCOM_Convergence.esp' ]
         condition: 'active("FCOM_Convergence.esp")'
       - <<: *requiresX
         subs: [ 'Mart''s Monster Mod BSA' ]
-        condition: 'not file("Mart''s Monster Mod.bsa") and not file("Mart''s Monster Mod for Frans.bsa") and not file("Mart''s Monster Mod for OOO.bsa") and not file("FCOM_Convergence_Mart''s Monster Mod.bsa")'
-      - <<: *useOnlyOneX
-        subs: [ 'Mart''s Monster Mod esp' ]
-        condition: 'many("Mart''s Monster Mod( for Fran| for OOO)?\.esp")'
+        condition: 'not file("Mart''s Monster Mod.bsa") and not file("Mart''s Monster Mod for Fran.bsa") and not file("Mart''s Monster Mod for OOO.bsa") and not file("FCOM_Convergence_Mart''s Monster Mod.bsa")'
     tag:
-      - Actors.AIData
-      - Actors.AIPackages
+      - Actors.ACBS
       - Actors.Stats
       - Delev
       - Factions
       - Graphics
-      - Invent
+      - Invent.Add
       - Names
-      - Relations
       - Relev
       - Scripts
-      - Stats
   - name: 'Mart''s Monster Mod.esp'
     inc:
       - 'Francesco''s Leveled Creatures-Items Mod.esm'
@@ -8734,19 +8729,30 @@ plugins:
         subs:
           - '**Mart''s Monster Mod BSA**'
           - '**Mart''s Monster Mod.bsa**'
-        condition: 'not file("Mart''s Monster Mod.bsa") and not many("(FCOM_Convergence|(Mart''s Monster Mod( for Fran| for OOO)?))\.esp")'
+        condition: 'not file("Mart''s Monster Mod.bsa") and file("(FCOM_Convergence_)?Mart''s Monster Mod( for Fran| for OOO)?\.bsa") and not many("(FCOM_Convergence|Mart''s Monster Mod( for Fran| for OOO)?)\.esp")'
+    tag:
+      - NPC.Eyes
+      - NPC.FaceGen
+      - NPC.Hair
     dirty:
       - <<: *quickClean
         crc: 0x8528FB34
         util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 904
   - name: 'Mart''s Monster Mod for Fran.esp'
+    after:
+      - 'Francesco''s Optional Chance of Stronger Bosses.esp'
+      - 'Francesco''s Optional Chance of Stronger Enemies.esp'
+      - 'Francesco''s Optional Leveled Quests.esp'
     msg:
       - <<: *renameXtoY
         subs:
           - '**Mart''s Monster Mod BSA**'
-          - '**Mart''s Monster Mod for Frans.bsa**'
-        condition: 'not file("Mart''s Monster Mod for Frans.bsa") and not many("(FCOM_Convergence|(Mart''s Monster Mod( for Fran| for OOO)?))\.esp")'
+          - '**Mart''s Monster Mod for Fran.bsa**'
+        condition: 'not file("Mart''s Monster Mod for Fran.bsa") and file("(FCOM_Convergence_)?Mart''s Monster Mod( for OOO)?\.bsa") and not many("(FCOM_Convergence|Mart''s Monster Mod( for Fran| for OOO)?)\.esp")'
+    tag:
+      - Invent.Remove
+      - Stats
     dirty:
       - <<: *quickClean
         crc: 0x4D843B1C
@@ -8758,7 +8764,21 @@ plugins:
         subs:
           - '**Mart''s Monster Mod BSA**'
           - '**Mart''s Monster Mod for OOO.bsa**'
-        condition: 'not file("Mart''s Monster Mod for OOO.bsa") and not many("(FCOM_Convergence|(Mart''s Monster Mod( for Fran| for OOO)?))\.esp")'
+        condition: 'not file("Mart''s Monster Mod for OOO.bsa") and file("(FCOM_Convergence_)?Mart''s Monster Mod( for Fran)?\.bsa") and not many("(FCOM_Convergence|Mart''s Monster Mod( for Fran| for OOO)?)\.esp")'
+    tag:
+      - Actors.AIData
+      - Actors.AIPackages
+      - Actors.CombatStyle
+      - Actors.DeathItem
+      - Actors.Spells
+      - Invent.Change
+      - Invent.Remove
+      - NPC.Eyes
+      - NPC.FaceGen
+      - NPC.Hair
+      - Relations.Add
+      - Relations.Change
+      - Stats
     dirty:
       - <<: *quickClean
         crc: 0x33A4E76A
@@ -8767,16 +8787,8 @@ plugins:
   ### MMM Optionals ###
   - name: 'Mart''s Monster Mod - Additional Enemy NPC Vars.esp'
     inc: [ 'FCOM_Convergence.esp' ]
-    msg:
-      # doNotClean
-      - type: say
-        content:
-          - lang: en
-            text: 'Can increase the chances of a CTD in a heavily modded game due to increased processor load.'
-          - lang: de
-            text: 'Kann Chancen für einen CTD erhöhen in stark gemoddeten Spielen aufgrund erhöhter Prozessor-Last.'
+    # doNotClean
   - name: 'Mart''s Monster Mod - City Defences.esp'
-    after: [ 'Mart''s Monster Mod - More Wilderness Life No Gates.esp' ]
     inc: [ *BetterCities ]
     # doNotClean
   - name: 'Mart''s Monster Mod - Curse of Hircine.esp'
@@ -8784,44 +8796,50 @@ plugins:
       - crc: 0xBD0F4261
         util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - Diverse Creatures Expansion.esp'
+    tag:
+      - Delev
+      - Graphics
+      - Invent.Remove
     clean:
       - crc: 0xE300B724
         util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - Diverse Imperial Armor.esp'
-    inc: [ 'Oscuro''s_Oblivion_Overhaul.esm' ]
     msg: [ *alreadyInOOO ]
+    tag:
+      - Invent.Add
+      - Invent.Change
+      - Invent.Remove
     dirty:
       - <<: *quickClean
         crc: 0x2A650097
         util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 2
-  - name: 'Mart''s Monster Mod - Diverse Runeskulls Loot( G&GD| OOO)?\.esp'
-    msg:
-      - <<: *useOnlyOneX
-        subs: [ 'Mart''s Monster Mod - Diverse Runeskulls Loot' ]
-        condition: 'many("Mart''s Monster Mod - Diverse Runeskulls Loot( G&GD| OOO)?\.esp")'
-    tag: [ Delev ]
   - name: 'Mart''s Monster Mod - Diverse Runeskulls Loot.esp'
-    inc:
-      - 'Mart''s Monster Mod for OOO.esp'
-      - 'Mart''s Monster Mod - Gems & Gem Dust.esp'
+    inc: [ 'Mart''s Monster Mod for OOO.esp' ]
+    tag:
+      - Delev
+      - Relev
     clean:
       - crc: 0xF8F36924
         util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - Diverse Runeskulls Loot G&GD.esp'
+    tag:
+      - Delev
+      - Relev
     clean:
       - crc: 0xBC851604
         util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - Diverse Runeskulls Loot OOO.esp'
     inc: [ 'Mart''s Monster Mod - Gems & Gem Dust.esp' ]
-    req:
-      - name: 'Mart''s Monster Mod for OOO.esp'
-        display: '[MMMforOOO](https://www.nexusmods.com/oblivion/mods/17784) or [FCOM Convergence](https://www.nexusmods.com/oblivion/mods/12249)'
-        condition: 'not file("FCOM_Convergence.esm")'
+    req: [ 'Oscuro''s_Oblivion_Overhaul.esp' ]
+    tag:
+      - Delev
+      - Relev
     clean:
       - crc: 0x932A57C9
         util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - Diverse WaterLife.esp'
+    tag: [ Scripts ]
     clean:
       - crc: 0x75A8F813
         util: 'TES4Edit v4.0.2'
@@ -8829,24 +8847,13 @@ plugins:
     clean:
       - crc: 0xE79AC594
         util: 'TES4Edit v4.0.2'
-  - name: 'Mart''s Monster Mod - DLCHorseArmor+Slofs .esp'
-    tag: [ Graphics ]
-    clean:
-      - crc: 0xDEB6DE93
-        util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - Dungeons of MMM.esp'
     clean:
       - crc: 0x9208A5D0
         util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - Durability & Damage.esp'
-    inc:
-      - 'FCOM_Convergence.esm'
-      - 'Oscuro''s_Oblivion_Overhaul.esm'
-    msg:
-      - *alreadyInOOO
-      - <<: *useInstead
-        subs: [ 'FCOM Durability & Damage' ]
-        condition: 'active("FCOM_Convergence.esp")'
+    inc: [ 'Oscuro''s_Oblivion_Overhaul.esm' ]
+    msg: [ *useVersionFCOM ]
     clean:
       - crc: 0xA9481543
         util: 'TES4Edit v4.0.2'
@@ -8861,46 +8868,62 @@ plugins:
       - crc: 0x7AD3E3A9
         util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - Friendlier Factions MMM+Fran.esp'
-    msg:
-      - <<: *useInstead
-        subs: [ 'FCOM Friendlier Factions' ]
-        condition: 'active("FCOM_Convergence.esp")'
+    msg: [ *useVersionFCOM ]
+    tag:
+      - -Factions
+      - -Relations.Add
+      - Relations.Change
     clean:
       - crc: 0x5794FAE2
         util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - Friendlier Factions OOO.esp'
-    msg:
-      - <<: *useInstead
-        subs: [ 'FCOM Friendlier Factions' ]
-        condition: 'active("FCOM_Convergence.esp")'
+    msg: [ *useVersionFCOM ]
+    tag:
+      - -Factions
+      - Relations.Add
+      - Relations.Change
+      - Relations.Remove
     dirty:
       - <<: *quickClean
         crc: 0x2E446319
         util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 2
   - name: 'Mart''s Monster Mod - Fran''s Leveled Quests.esp'
-    msg: [ *alreadyInFCOM ]
     req: [ 'Francesco''s Optional Leveled Quests.esp' ]
+    tag:
+      - Actors.ACBS
+      - Actors.CombatStyle
+      - Actors.Stats
+      - Delev
+      - Factions
+      - Invent.Add
+      - Invent.Change
+      - Invent.Remove
+      - Relev
+      - Scripts
     clean:
       - crc: 0xDE377299
         util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - Gems & Gem Dust.esp'
+    inc: [ 'Mart''s Monster Mod - Diverse Runeskulls Loot.esp' ]
     msg: [ *alreadyInOOOFull ]
+    tag:
+      - Delev
+      - Graphics
+      - Relev
+      - Scripts
+      - Stats
     clean:
       - crc: 0x5327F263
         util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - Hemingwey Capes Addon.esp'
-    dirty:
-      - <<: *quickClean
-        crc: 0x497A32B5
-        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 106
+    msg:
+      - <<: *corrupt
+        condition: 'checksum("Mart''s Monster Mod - Hemingwey Capes Addon.esp", 497A32B5)'
   - name: 'Mart''s Monster Mod - Hemingweys NPC Capes Improved.esp'
-    dirty:
-      - <<: *quickClean
-        crc: 0x56442922
-        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 10
+    msg:
+      - <<: *corrupt
+        condition: 'checksum("Mart''s Monster Mod - Hemingweys NPC Capes Improved.esp", 56442922)'
   - name: 'Mart''s Monster Mod - Hunting & Crafting.esp'
     tag:
       - Invent
@@ -8910,18 +8933,26 @@ plugins:
       - crc: 0xD53A8A19
         util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - Less Bone Loot.esp'
+    inc: [ 'Mart''s Monster Mod - No Bone Loot.esp' ]
+    tag:
+      - Delev
+      - -Relev
     clean:
       - crc: 0xA78B9CE3
         util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - Less Rats.esp'
-    msg:
-      - <<: *useInstead
-        subs: [ 'FCOM Less Rats' ]
-        condition: 'active("FCOM_Convergence.esp")'
+    msg: [ *useVersionFCOM ]
+    tag:
+      - Delev
+      - Relev
     clean:
       - crc: 0xED551EA9
         util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - Less Reavers.esp'
+    inc: [ 'Mart''s Monster Mod - No Reavers.esp' ]
+    tag:
+      - -Delev
+      - Relev
     clean:
       - crc: 0xCC3F03C7
         util: 'TES4Edit v4.0.2'
@@ -8930,21 +8961,10 @@ plugins:
       - crc: 0x0674FBEA
         util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - More Passive Wildlife.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Not recommended, has bugs.'
-          - lang: de
-            text: 'Nicht empfohlen, hat Fehler.'
+    tag: [ Relev ]
     clean:
       - crc: 0xBDFC5F0E
         util: 'TES4Edit v4.0.2'
-  - name: 'Mart''s Monster Mod - More Wilderness Life( No Gates)?\.esp'
-    msg:
-      - <<: *useOnlyOneX
-        subs: [ 'Mart''s Monster Mod - More Wilderness Life' ]
-        condition: 'many("Mart''s Monster Mod - More Wilderness Life( No Gates)?\.esp")'
   - name: 'Mart''s Monster Mod - More Wilderness Life.esp'
     dirty:
       - <<: *quickClean
@@ -8952,12 +8972,18 @@ plugins:
         util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 18
   - name: 'Mart''s Monster Mod - More Wilderness Life No Gates.esp'
-    # doNotClean
+    inc: [ 'Mart''s Monster Mod - More Wilderness Life.esp' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xA6DAAFD5
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 22
+  - name: 'Mart''s Monster Mod - No (Adventurers|Balrogs|Beholdens|Bone Loot|Fiends|Giants|Lanterns|Pests|Reavers|Skeep|Slimes|Spiders|Uberhulks|Werewolves|Wyvern)\.esp'
+    tag: [ Delev ]
+  - name: 'Mart''s Monster Mod - No (Balrogs|Beholdens|Bone Loot|Fiends|Giants|Lanterns|Skeep|Slimes|Spiders|Uberhulks|Werewolves|Wyvern)\.esp'
+    tag: [ -Relev ]
   - name: 'Mart''s Monster Mod - No Adventurers.esp'
-    msg:
-      - <<: *useInstead
-        subs: [ 'FCOM No Adventurers' ]
-        condition: 'active("FCOM_Convergence.esp")'
+    msg: [ *useVersionFCOM ]
     clean:
       - crc: 0x848043F2
         util: 'TES4Edit v4.0.2'
@@ -8970,6 +8996,7 @@ plugins:
       - crc: 0xC6C70215
         util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - No Blood.esp'
+    tag: [ Graphics ]
     clean:
       - crc: 0xB1108D5F
         util: 'TES4Edit v4.0.2'
@@ -9014,10 +9041,7 @@ plugins:
       - crc: 0xADAEDF08
         util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - No Spiders.esp'
-    msg:
-      - <<: *useInstead
-        subs: [ 'FCOM No Spiders' ]
-        condition: 'active("FCOM_Convergence.esp")'
+    msg: [ *useVersionFCOM ]
   - name: 'Mart''s Monster Mod - No Swarms.esp'
     clean:
       - crc: 0x31E5E710
@@ -9037,23 +9061,21 @@ plugins:
       - crc: 0xB069AB27
         util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - No Wyvern.esp'
-    msg:
-      - <<: *useInstead
-        subs: [ 'FCOM No Wyvern' ]
-        condition: 'active("FCOM_Convergence.esp")'
+    after: [ 'Mart''s Monster Mod - Diverse Creatures Expansion.esp' ]
+    msg: [ *useVersionFCOM ]
   - name: 'Mart''s Monster Mod for OOO - LessReaversInGates.esp'
-    msg:
-      - <<: *useInstead
-        subs: [ 'FCOM Less Reavers In Gates' ]
-        condition: 'active("FCOM_Convergence.esp")'
+    msg: [ *useVersionFCOM ]
+    tag:
+      - Delev
+      - -Relev
     clean:
       - crc: 0xFCA5FBC1
         util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod for OOO - NoReaversInGates.esp'
-    msg:
-      - <<: *useInstead
-        subs: [ 'FCOM No Reavers In Gates' ]
-        condition: 'active("FCOM_Convergence.esp")'
+    msg: [ *useVersionFCOM ]
+    tag:
+      - Delev
+      - -Relev
     clean:
       - crc: 0xB18E484D
         util: 'TES4Edit v4.0.2'
@@ -9063,9 +9085,10 @@ plugins:
         util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - Resized Races.esp'
     tag:
-      - Body-Size-F
-      - Body-Size-M
-      - R.Relations
+      - R.Body-Size-F
+      - R.Body-Size-M
+      - R.Relations.Add
+      - R.Relations.Change
     clean:
       - crc: 0xE29818CA
         util: 'TES4Edit v4.0.2'
@@ -9076,36 +9099,44 @@ plugins:
   - name: 'Mart''s Monster Mod - Safer Roads.esp'
     msg:
       - <<: *alreadyInX
-        subs: [ 'Mart''s Monster Mod Spawn Rates' ]
-        condition: 'file("Mart''s Monster Mod - Spawn Rates - Reduced( Reduced| Vanilla)\.esp")'
-      - <<: *useInstead
-        subs: [ 'FCOM Safer Roads' ]
-        condition: 'active("FCOM_Convergence.esp")'
+        subs: [ 'MMM Spawn Rates Reduced' ]
+        condition: 'file("Mart''s Monster Mod - Spawn Rates - Reduced( Reduced| Vanilla)?\.esp")'
+      - *useVersionFCOM
+    tag:
+      - -Delev
+      - -Relev
     clean:
       - crc: 0xC1316241
         util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - Slof Horses Complete.esp'
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Requires a Bashed Patch to be compatible with Slof''s Horses or Slof''s Extra Horses'
-          - lang: de
-            text: 'Benötigt einen Bashed Patch um kompatibel zu sein mit Slof''s Horses oder Slof''s Extra Horses'
-        condition: 'file("Slof.*Horse.*\.esp")'
+      - <<: *includesX
+        subs: [ 'Slof''s Horses Base.esp' ]
+        condition: 'file("Slof''s Horses Base.esp")'
     tag:
+      - Actors.ACBS
       - Actors.AIPackages
       - Graphics
+      - Invent.Change
       - Names
       - Scripts
     clean:
       - crc: 0x4618F324
         util: 'TES4Edit v4.0.2'
+  - name: 'Mart''s Monster Mod - DLCHorseArmor+Slofs .esp'
+    tag: [ Graphics ]
+    clean:
+      - crc: 0xDEB6DE93
+        util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - Spawn Rates.*\.esp'
     msg:
-      - <<: *useInstead
-        subs: [ 'FCOM Spawn Rates' ]
-        condition: 'active("FCOM_Convergence.esp")'
+      - <<: *useOnlyOneX
+        subs: [ 'MMM Spawn Rates' ]
+        condition: 'many("Mart''s Monster Mod - Spawn Rates.*\.esp")'
+      - *useVersionFCOM
+    tag:
+      - Delev
+      - Relev
   - name: 'Mart''s Monster Mod - Spawn Rates - Increased.esp'
     dirty:
       - <<: *quickClean
@@ -9129,11 +9160,8 @@ plugins:
       - crc: 0x3EE2CD43
         util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - Undead Rise Fix.esp'
-    dirty:
-      - <<: *quickClean
-        crc: 0xE037E256
-        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 12
+    # doNotClean, ITMs revert changes in MMM No Undead Rise
+    after: [ 'Mart''s Monster Mod - No Undead Rise.esp' ]
   - name: 'Mart''s Monster Mod - Zombies for Body Meshes.esp'
     clean:
       - crc: 0x6C98F68D
@@ -9154,10 +9182,6 @@ plugins:
   - name: 'Mart''s Monster Mod - Bats Addon.esp'
     msg: [ *obsolete ]
   - name: 'Mart''s_Monster Mod -No Wyvern.esp'
-    msg:
-      - <<: *useInstead
-        subs: [ 'FCOM No Wyverns' ]
-        condition: 'active("FCOM_Convergence.esp")'
   # v201
   - name: 'Mart''s Monster Mod for Francescos.esp'
     inc: [ 'FCOM_Convergence.esm' ]
