@@ -7991,6 +7991,8 @@ plugins:
       - Relev
       - Scripts
       - Stats
+  - name: 'FCOM_Francescos.esp'
+    after: [ 'Francesco''s Optional Leveled Guards.esp' ]
 
   - name: 'FCOM_Knights.esp'
     tag:
@@ -7999,6 +8001,7 @@ plugins:
       - Relations
       - Relev
   - name: 'FCOM_RealSwords.esp'
+    after: [ 'Bob''s Armory Oblivion.esp' ]
     req: [ 'FCOM_Convergence.esm' ]
     tag:
       - Delev
@@ -8043,6 +8046,12 @@ plugins:
       - 'https://www.nexusmods.com/oblivion/mods/12249'
       - 'http://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/'
     # doNotClean
+    after:
+      - 'Bob''s Armory Oblivion.esp'
+      - 'FCOM_BobsArmory.esp'
+      - 'FCOM_Francescos.esp'
+      - 'FCOM_FrancescosNamedBosses.esp'
+      - 'Francesco''s Optional Chance of Stronger Bosses.esp'
     tag:
       - Actors.ACBS
       - Actors.AIData
@@ -9244,6 +9253,9 @@ plugins:
   - name: 'OOO-.*\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/46199/' ]
   - name: 'Oscuro''s_Oblivion_Overhaul.esm'
+    after:
+      - 'Francesco''s Leveled Creatures-Items Mod.esm'
+      - 'Francesco''s Optional New Items Add-On.esm'
     tag:
       - name: -Relations
         condition: 'file("Mart''s Monster Mod for OOO.esm") or file("FCOM_Convergence.esm")'
@@ -9251,8 +9263,15 @@ plugins:
       - crc: 0x82322ED1
         util: 'TES4Edit v4.0.2i'
   - name: 'Oscuro''s_Oblivion_Overhaul.esp'
-    after: [ 'Oblivion WarCry EV.esp' ]
     # doNotClean
+    after:
+      - 'Bob''s Armory Oblivion.esp'
+      - 'FCOM_BobsArmory.esp'
+      - 'FCOM_Francescos.esp'
+      - 'FCOM_FrancescosItemsAddOn.esp'
+      - 'FCOM_FrancescosNamedBosses.esp'
+      - 'FCOM_WarCry.esp'
+      - 'Oblivion WarCry EV.esp'
     tag:
       - name: -Factions
         condition: 'file("Mart''s Monster Mod for OOO.esm") or file("FCOM_Convergence.esm")'
