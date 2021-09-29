@@ -3020,6 +3020,9 @@ plugins:
   - name: 'Aliyah.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/12082/' ]
     msg:
+      - <<: *alreadyInX
+        subs: [ 'DACompilation_GO ESPs' ]
+        condition: 'active("DACompilation_GO(_SI)?(_APN)?\.esp")'
       - <<: *useInstead
         type: say
         subs: [ '[Sclerocephalus CM Partner Compilation](https://www.nexusmods.com/oblivion/mods/33739/)' ]
