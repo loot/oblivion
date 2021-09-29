@@ -2181,7 +2181,76 @@ plugins:
     group: *dynamicPatchesGroup
     tag: [ NoMerge ]
 
-###### Resources ######
+###### Resources & Frameworks ######
+  - name: 'CM Partners.*\.es(m|p)'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/7819/'
+        name: 'CM Partners Mod Basic'
+  - name: 'CM Partners.esm'
+    msg:
+      - <<: *obsolete
+        type: error
+        subs: [ '[CM Partners Mod Basic](https://www.nexusmods.com/oblivion/mods/7819/) v2.0' ]
+        condition: 'not checksum("CM Partners.esm", FE525BB3) and not checksum("CM Partners.esm", FC003718) and not checksum("CM Partners.esm", EAD5FEBE)'
+    clean:
+      - crc: 0xFE525BB3
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
+      - crc: 0xFC003718
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
+      - crc: 0xEAD5FEBE
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
+  - name: 'CM Partners.esp'
+    req:
+      - name: 'DLCShiveringIsles.esp'
+        condition: 'checksum("CM Partners.esp", ED17B93C) or checksum("CM Partners.esp", C85C4FB3)'
+    clean:
+      - crc: 0xED17B93C
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
+      - crc: 0xC85C4FB3
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
+      - crc: 0xF5449C45
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
+      - crc: 0x4598605F
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
+  - name: 'CM Partners Extra NPCs.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x9EBE1E58
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
+  - name: 'CM Partners Marker NPCs.esp'
+    clean:
+      - crc: 0xE7224ABB
+        util: 'TES4Edit v4.0.3'
+  - name: 'CM Partners More NPCs.esp'
+    inc: [ 'CM Partners More NPCs NE.esp' ]
+    clean:
+      - crc: 0x49C3BCE9
+        util: 'TES4Edit v4.0.3'
+  - name: 'CM Partners More NPCs NE.esp'
+    inc: [ 'CM Partners More NPCs.esp' ]
+    clean:
+      - crc: 0x7595FCF9
+        util: 'TES4Edit v4.0.3'
+  - name: 'CM Partners NPC.esp'
+    inc: [ 'CM Partners NPC NE.esp' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xACB522AC
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 7
+  - name: 'CM Partners NPC NE.esp'
+    inc: [ 'CM Partners NPC.esp' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x5A56E8A2
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 7
+  - name: 'CM Partners Special NPCs.esp'
+    clean:
+      - crc: 0xCFCE92CF
+        util: 'TES4Edit v4.0.3'
+
   - name: '.*(Cobl).*\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/21104/'
@@ -6496,69 +6565,6 @@ plugins:
     inc:
       - 'Unique Landscapes.esp'
       - 'xulImperialIsle.esp'
-
-###### CM Partners Basic ######
-  - name: 'CM Partners.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/7819' ]
-    req:
-      - name: 'DLCShiveringIsles.esp'
-        condition: 'checksum("CM Partners.esp", ED17B93C) or checksum("CM Partners.esp", C85C4FB3)'
-    clean:
-      # ShiveringIsles with Invisibility (Default)
-      - crc: 0xED17B93C
-        util: 'TES4Edit v4.0.3'
-      # ShiveringIsles without Invisibility
-      - crc: 0xC85C4FB3
-        util: 'TES4Edit v4.0.3'
-      # No SI with Invisibility
-      - crc: 0xF5449C45
-        util: 'TES4Edit v4.0.3'
-      # No SI without Invisibility
-      - crc: 0x4598605F
-        util: 'TES4Edit v4.0.3'
-  - name: 'CM Partners (NPC|NPC NE|Extra NPCs|Marker NPCs|More NPCs|More NPCs NE|Special NPCs)\.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/7819' ]
-    tag:
-      - Eyes
-      - Hair
-  - name: 'CM Partners Extra NPCs.esp'
-    dirty:
-      - <<: *quickClean
-        crc: 0x9EBE1E58
-        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 2
-  - name: 'CM Partners Marker NPCs.esp'
-    clean:
-      - crc: 0xE7224ABB
-        util: 'TES4Edit v4.0.3'
-  - name: 'CM Partners More NPCs.esp'
-    inc: [ 'CM Partners More NPCs NE.esp' ]
-    clean:
-      - crc: 0x49C3BCE9
-        util: 'TES4Edit v4.0.3'
-  - name: 'CM Partners More NPCs NE.esp'
-    inc: [ 'CM Partners More NPCs.esp' ]
-    clean:
-      - crc: 0x7595FCF9
-        util: 'TES4Edit v4.0.3'
-  - name: 'CM Partners NPC.esp'
-    inc: [ 'CM Partners NPC NE.esp' ]
-    dirty:
-      - <<: *quickClean
-        crc: 0xACB522AC
-        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 7
-  - name: 'CM Partners NPC NE.esp'
-    inc: [ 'CM Partners NPC.esp' ]
-    dirty:
-      - <<: *quickClean
-        crc: 0x5A56E8A2
-        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 7
-  - name: 'CM Partners Special NPCs.esp'
-    clean:
-      - crc: 0xCFCE92CF
-        util: 'TES4Edit v4.0.3'
 
 ###### Hemingway's Capes ######
   - name: 'Hemingweys.*\.esp'
