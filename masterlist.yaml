@@ -2182,6 +2182,10 @@ plugins:
     tag: [ NoMerge ]
 
 ###### Resources & Frameworks ######
+  - name: 'CM Partners.*\.es(m|p)'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/7819/'
+        name: 'CM Partners Mod Basic'
   - name: 'CM Partners.esm'
     clean:
       - crc: 0xFE525BB3
@@ -2191,7 +2195,6 @@ plugins:
       - crc: 0xEAD5FEBE
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
   - name: 'CM Partners.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/7819' ]
     req:
       - name: 'DLCShiveringIsles.esp'
         condition: 'checksum("CM Partners.esp", ED17B93C) or checksum("CM Partners.esp", C85C4FB3)'
@@ -2205,7 +2208,6 @@ plugins:
       - crc: 0x4598605F
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
   - name: 'CM Partners (NPC|NPC NE|Extra NPCs|Marker NPCs|More NPCs|More NPCs NE|Special NPCs)\.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/7819' ]
     tag:
       - Eyes
       - Hair
