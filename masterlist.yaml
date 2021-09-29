@@ -5290,6 +5290,34 @@ plugins:
         util: 'TES4Edit v4.0.3'
 
 ###### Location - Overhauls ######
+  - name: '24HrArenaAlive(V2|V2Towers|Low)\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/13099/' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Arena Alive ESP' ]
+        condition: 'many("24HrArenaAlive(V2|V2Towers|Low)\.esp")'
+  - name: '24HrArenaAliveV2.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0xBB54D108
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 5
+        udr: 6
+  - name: '24HrArenaAliveV2Towers.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x363CD1F4
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 5
+        udr: 6
+  - name: '24HrArenaAliveLow.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x7009ADAE
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 4
+        udr: 4
+
   - name: 'AFK_Weye.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22828' ]
     after:
@@ -16952,27 +16980,6 @@ plugins:
             text: 'Unlikely to work with other IC Arena mods'
           - lang: de
             text: 'Unwahrscheinlich zu funktionieren mit anderen IC Arena Mods'
-  - name: '24HrArenaAliveV2.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/13099' ]
-    dirty:
-      - crc: 0xbb54d108
-        <<: *dirtyPlugin
-        itm: 6
-        udr: 5
-  - name: '24HrArenaAliveV2Towers.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/13099' ]
-    dirty:
-      - crc: 0x363cd1f4
-        <<: *dirtyPlugin
-        itm: 6
-        udr: 5
-  - name: '24HrArenaAliveLow.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/13099' ]
-    dirty:
-      - crc: 0x7009adae
-        <<: *dirtyPlugin
-        itm: 4
-        udr: 4
   - name: 'Arena District Alive-JQ-FGU.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/33804' ]
     req:
