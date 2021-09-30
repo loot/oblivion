@@ -6936,12 +6936,18 @@ plugins:
     tag: [ Stats ]
 
 ###### Open Cities ######
-  - name: 'Open Cities (Resources|Bartholm|New Sheoth|Outer Districts)\.es(m|p)'
+  - name: 'Open Cities (Classic|Resources|Bartholm|New Sheoth|Outer Districts)\.es(m|p)'
     url:
-      - link: 'https://www.nexusmods.com/oblivion/mods/16360'
-        name: 'Open Cities Classic'
-      - link: 'https://www.nexusmods.com/oblivion/mods/33003'
-        name: 'Open Cities Reborn'
+      - link: 'https://www.afkmods.com/index.php?/files/file/253-open-cities-classic/'
+        name: 'Open Cities Classic (AFK Mods)'
+      - link: 'https://tesalliance.org/forums/index.php?/files/file/109-open-cities-classic/'
+        name: 'Open Cities Classic (TES Alliance)'
+  - name: 'Open Cities (Reborn|Resources|Bartholm|New Sheoth|Outer Districts)\.es(m|p)'
+    url:
+      - link: 'https://www.afkmods.com/index.php?/files/file/254-open-cities-reborn/'
+        name: 'Open Cities Reborn (AFK Mods)'
+      - link: 'https://tesalliance.org/forums/index.php?/files/file/540-open-cities-reborn/'
+        name: 'Open Cities Reborn (TES Alliance)'
   - name: 'Open Cities Resources.esm'
     clean:
       - crc: 0x1CD1BD9A
@@ -6994,9 +7000,6 @@ plugins:
       - C.Regions
       - Roads
   - name: 'Open Cities Classic.esp'
-    url:
-      - 'https://www.afkmods.com/index.php?/files/file/253-open-cities-classic/'
-      - 'https://tesalliance.org/forums/index.php?/files/file/109-open-cities-classic/'
     after:
       - 'OCC+COBL Luggage Patch.esp'
       - 'OCC-Lost Spires-Patch.esp'
@@ -7013,9 +7016,6 @@ plugins:
       - crc: 0x790047D5
         util: 'TES4Edit v4.0.3'
   - name: 'Open Cities Reborn.esp'
-    url:
-      - 'https://www.afkmods.com/index.php?/files/file/254-open-cities-reborn/'
-      - 'https://tesalliance.org/forums/index.php?/files/file/540-open-cities-reborn/'
     after:
       - 'Kvatch Rebuilt.esp'
       - 'OCR + Kvatch Rebuilt Patch.esp'
@@ -7075,10 +7075,14 @@ plugins:
         util: 'TES4Edit v4.0.3'
       - crc: 0x11EF2688
         util: 'TES4Edit v4.0.3'
+
   ### Open Cities Patches ###
-  # Bravil Docks by Greg Simmonds - OC Patch
+  - name: '(OC|OCBruma|OCC|OCLR|OCOD|OCR|OCR|COC)(\+|-| \+ ).*(-| )(Wells|Patch)\.esp'
+    url:
+      - link: 'https://www.afkmods.com/index.php?/files/file/2371-open-cities-patch-collection-for-oblivion/'
+        name: 'Open Cities Patch Collection'
+  # OCPC - Bravil Docks by Greg Simmonds #
   - name: 'OC+Bravil Docks Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/32925' ]
     inc:
       - 'Better Cities - Open Better Cities.esp'
       - 'Better Cities - Open Cities Reborn.esp'
@@ -7086,31 +7090,27 @@ plugins:
       - name: 'Bravil Docks.esp'
         display: '[Bravil Harbour v1.2+](https://www.nexusmods.com/oblivion/mods/22329)'
         condition: 'not checksum("Bravil Docks.esp", 85EAA223)'
-  # Clocks of Cyrodiil - OC Patch
+  # OCPC - Clocks of Cyrodiil #
   - name: 'COC + OCC-OCR Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/32925' ]
     group: *underridesGroup
     inc:
       - name: 'ClocksOfCyrodiil.esp'
         display: 'Better Cities - Clocks of Cyrodiil'
         condition: 'version("ClocksOfCyrodiil.esp", "6.0.0", >=)'
-  # DLC Frostcrag Spire (Wizard's Tower) - OC Patch
+  # OCPC - DLC Frostcrag Spire (Wizard's Tower) #
   - name: 'OCOD+FrostcragSpire Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/32925' ]
     group: *veryEarlyGroup
     after: [ 'DLCFrostcrag - Unofficial Patch.esp' ]
-  # DLC Knights of the Nine - OC Patch
+  # OCPC - DLC Knights of the Nine #
   - name: 'OCC-KOTN-Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/32925' ]
     group: *veryEarlyGroup
     after:
       - 'Knights - Unofficial Patch.esp'
       - 'SM Plugin Refurbish - Knights.esp'
       - 'SM Plugin Refurbish(Merged).esp'
     tag: [ Actors.AIPackages ]
-  # Midas Magic - OC Patch
+  # OCPC - Midas Magic #
   - name: 'OC+Midas Magic Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/32925' ]
     req: [ 'Open Cities Outer Districts.esp' ]
 
   - name: 'DBOO - Open(Cities| Cities)(Full| Outer Districts|Full + Outer Districts)\.esp'
@@ -7846,7 +7846,7 @@ plugins:
   - name: 'UL(E|M|S) OpenCitiesClassic-.*patch\.esp'
     req:
       - name: 'Open Cities Classic.esp'
-        display: '[Open Cities Classic](https://www.nexusmods.com/oblivion/mods/16360/)'
+        display: '[Open Cities Classic (AFK Mods)](https://www.afkmods.com/index.php?/files/file/253-open-cities-classic/) or [Open Cities Classic (TES Alliance)](https://tesalliance.org/forums/index.php?/files/file/109-open-cities-classic/)'
   # ULC Patches - Order of the Dragon (Orden des Drachen) #
   - name: 'UL(M|S) OrdenDesDrachen-JerallGlacier patch\.esp'
     req:
@@ -8061,7 +8061,6 @@ plugins:
     after: [ 'OrangeInnCOBL.esp' ]
     req:
       - name: 'OrangeInn.esp'
-        display: '[The Orange Maple Inn](https://www.nexusmods.com/oblivion/mods/16360/)'
         condition: 'not file("OrangeInnCOBL.esp")'
   # ULC Patches - The Temple of Five Lanterns #
   - name: 'ULE FiveLanterns-StendarrValley patch.esp'
