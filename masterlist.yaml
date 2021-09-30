@@ -7076,9 +7076,12 @@ plugins:
       - crc: 0x11EF2688
         util: 'TES4Edit v4.0.3'
   ### Open Cities Patches ###
+  - name: '(OC|OCBruma|OCC|OCLR|OCOD|OCR|OCR|COC)(\+|\-| \+ ).*(\-| )(Wells|Patch)\.esp'
+    url:
+      - link: 'https://www.afkmods.com/index.php?/files/file/2371-open-cities-patch-collection-for-oblivion/'
+        name: 'Open Cities Patch Collection'
   # Bravil Docks by Greg Simmonds - OC Patch
   - name: 'OC+Bravil Docks Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/32925' ]
     inc:
       - 'Better Cities - Open Better Cities.esp'
       - 'Better Cities - Open Cities Reborn.esp'
@@ -7088,7 +7091,6 @@ plugins:
         condition: 'not checksum("Bravil Docks.esp", 85EAA223)'
   # Clocks of Cyrodiil - OC Patch
   - name: 'COC + OCC-OCR Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/32925' ]
     group: *underridesGroup
     inc:
       - name: 'ClocksOfCyrodiil.esp'
@@ -7096,12 +7098,10 @@ plugins:
         condition: 'version("ClocksOfCyrodiil.esp", "6.0.0", >=)'
   # DLC Frostcrag Spire (Wizard's Tower) - OC Patch
   - name: 'OCOD+FrostcragSpire Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/32925' ]
     group: *veryEarlyGroup
     after: [ 'DLCFrostcrag - Unofficial Patch.esp' ]
   # DLC Knights of the Nine - OC Patch
   - name: 'OCC-KOTN-Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/32925' ]
     group: *veryEarlyGroup
     after:
       - 'Knights - Unofficial Patch.esp'
@@ -7110,7 +7110,6 @@ plugins:
     tag: [ Actors.AIPackages ]
   # Midas Magic - OC Patch
   - name: 'OC+Midas Magic Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/32925' ]
     req: [ 'Open Cities Outer Districts.esp' ]
 
   - name: 'DBOO - Open(Cities| Cities)(Full| Outer Districts|Full + Outer Districts)\.esp'
