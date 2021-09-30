@@ -2778,7 +2778,35 @@ plugins:
         util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 3
 
-###### AudioVisual - Weather ######
+###### AudioVisual - Weather & Lighting ######
+  - name: 'Jhaerik''s Dungeon Fog Remover( Lite)?\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/40555/' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Jhaerik''s Dungeon Fog Remover ESP' ]
+        condition: 'many("Jhaerik''s Dungeon Fog Remover( Lite)?\.esp")'
+    tag: [ C.Light ]
+  - name: 'Jhaerik''s Dungeon Fog Remover.esp'
+    msg:
+      - <<: *wildEdits
+        subs: [ 'Remove deleted base records **0004CB02**, **0004CB03**, **00091224**, **0009D5EC** and **0009ECCC** from **Jhaerik''s Dungeon Fog Remover.esp**.' ]
+        condition: 'checksum("Jhaerik''s Dungeon Fog Remover.esp", FA68A64E) or checksum("Jhaerik''s Dungeon Fog Remover.esp", 138EB28F)'
+    dirty:
+      - <<: *quickClean
+        crc: 0xFA68A64E
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        udr: 1523
+  - name: 'Jhaerik''s Dungeon Fog Remover Lite.esp'
+    msg:
+      - <<: *wildEdits
+        subs: [ 'Remove deleted base records **0004CB03** and **0009ECCC** from **Jhaerik''s Dungeon Fog Remover Lite.esp**.' ]
+        condition: 'checksum("Jhaerik''s Dungeon Fog Remover Lite.esp", 51999419) or checksum("Jhaerik''s Dungeon Fog Remover Lite.esp", 053C01D0)'
+    dirty:
+      - <<: *quickClean
+        crc: 0x51999419
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        udr: 464
+
   - name: '(AWS|NW|ANW|EW|OBSE)?(-)?Storms & Sound( SI)?\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/8711'
@@ -18825,19 +18853,6 @@ plugins:
             text: 'ONLY Activate this if you want to remove the changes made by the Classic Travel mod components ct4 & ct1.'
           - lang: de
             text: 'NUR aktivieren wenn Sie möchten dass die Änderungen von Classic Travel mod components ct4 & ct1 rückgängig gemacht werden.'
-
-  - name: 'Jhaerik''s Dungeon Fog Remover.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/40555' ]
-    dirty:
-      - crc: 0xfa68a64e
-        <<: *dirtyPlugin
-        udr: 1523
-  - name: 'Jhaerik''s Dungeon Fog Remover Lite.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/40555' ]
-    dirty:
-      - crc: 0x51999419
-        <<: *dirtyPlugin
-        udr: 464
 
   - name: 'Leviathan Soul Gems Abridged.esp'
     tag:
