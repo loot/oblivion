@@ -5137,11 +5137,9 @@ plugins:
           - lang: de
             text: 'Empfohlen dies erst zu aktivieren nachdem im IC Waterfront Abteil abgespeichert wurde'
     dirty:
-      - crc: 0x6633e61d
-        <<: *dirtyPlugin
-        udr: 3
-      - crc: 0x6644e61d
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x6633E61D
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         udr: 3
 
   - name: 'BXX_Mines.esp'
