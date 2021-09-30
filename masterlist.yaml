@@ -6936,12 +6936,18 @@ plugins:
     tag: [ Stats ]
 
 ###### Open Cities ######
-  - name: 'Open Cities (Resources|Bartholm|New Sheoth|Outer Districts)\.es(m|p)'
+  - name: 'Open Cities (Classic|Resources|Bartholm|New Sheoth|Outer Districts)\.es(m|p)'
     url:
-      - link: 'https://www.nexusmods.com/oblivion/mods/16360'
-        name: 'Open Cities Classic'
-      - link: 'https://www.nexusmods.com/oblivion/mods/33003'
-        name: 'Open Cities Reborn'
+      - link: 'https://www.afkmods.com/index.php?/files/file/253-open-cities-classic/'
+        name: 'Open Cities Classic (AFK Mods)'
+      - link: 'https://tesalliance.org/forums/index.php?/files/file/109-open-cities-classic/'
+        name: 'Open Cities Classic (TES Alliance)'
+  - name: 'Open Cities (Reborn|Resources|Bartholm|New Sheoth|Outer Districts)\.es(m|p)'
+    url:
+      - link: 'https://www.afkmods.com/index.php?/files/file/254-open-cities-reborn/'
+        name: 'Open Cities Reborn (AFK Mods)'
+      - link: 'https://tesalliance.org/forums/index.php?/files/file/540-open-cities-reborn/'
+        name: 'Open Cities Reborn (TES Alliance)'
   - name: 'Open Cities Resources.esm'
     clean:
       - crc: 0x1CD1BD9A
@@ -6994,9 +7000,6 @@ plugins:
       - C.Regions
       - Roads
   - name: 'Open Cities Classic.esp'
-    url:
-      - 'https://www.afkmods.com/index.php?/files/file/253-open-cities-classic/'
-      - 'https://tesalliance.org/forums/index.php?/files/file/109-open-cities-classic/'
     after:
       - 'OCC+COBL Luggage Patch.esp'
       - 'OCC-Lost Spires-Patch.esp'
@@ -7013,9 +7016,6 @@ plugins:
       - crc: 0x790047D5
         util: 'TES4Edit v4.0.3'
   - name: 'Open Cities Reborn.esp'
-    url:
-      - 'https://www.afkmods.com/index.php?/files/file/254-open-cities-reborn/'
-      - 'https://tesalliance.org/forums/index.php?/files/file/540-open-cities-reborn/'
     after:
       - 'Kvatch Rebuilt.esp'
       - 'OCR + Kvatch Rebuilt Patch.esp'
