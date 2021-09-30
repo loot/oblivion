@@ -3198,6 +3198,19 @@ plugins:
         subs: [ '**Grass Overhaul.esp** from [Oblivion Grass Overhaul Compatibility for Unique Landscapes and More](https://www.nexusmods.com/oblivion/mods/49488/)' ]
         condition: 'checksum("Grass Overhaul.esp", 8B9A2B23)'
 
+  - name: 'Jhaerik''s Dungeon Fog Remover.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/40555/' ]
+    dirty:
+      - crc: 0xfa68a64e
+        <<: *dirtyPlugin
+        udr: 1523
+  - name: 'Jhaerik''s Dungeon Fog Remover Lite.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/40555/' ]
+    dirty:
+      - crc: 0x51999419
+        <<: *dirtyPlugin
+        udr: 464
+
   - name: 'lLet there be Flowers.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/49616/' ]
     after:
@@ -18825,19 +18838,6 @@ plugins:
             text: 'ONLY Activate this if you want to remove the changes made by the Classic Travel mod components ct4 & ct1.'
           - lang: de
             text: 'NUR aktivieren wenn Sie möchten dass die Änderungen von Classic Travel mod components ct4 & ct1 rückgängig gemacht werden.'
-
-  - name: 'Jhaerik''s Dungeon Fog Remover.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/40555' ]
-    dirty:
-      - crc: 0xfa68a64e
-        <<: *dirtyPlugin
-        udr: 1523
-  - name: 'Jhaerik''s Dungeon Fog Remover Lite.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/40555' ]
-    dirty:
-      - crc: 0x51999419
-        <<: *dirtyPlugin
-        udr: 464
 
   - name: 'Leviathan Soul Gems Abridged.esp'
     tag:
