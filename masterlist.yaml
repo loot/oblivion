@@ -3200,6 +3200,10 @@ plugins:
 
   - name: 'Jhaerik''s Dungeon Fog Remover.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/40555/' ]
+    msg:
+      - <<: *wildEdits
+        subs: [ 'Remove deleted base records **0004CB02**, **0004CB03**, **00091224**, **0009D5EC** and **0009ECCC** from **Jhaerik''s Dungeon Fog Remover.esp**.' ]
+        condition: 'checksum("Jhaerik''s Dungeon Fog Remover.esp", FA68A64E) or checksum("Jhaerik''s Dungeon Fog Remover.esp", 138EB28F)'
     dirty:
       - <<: *quickClean
         crc: 0xFA68A64E
@@ -3207,6 +3211,10 @@ plugins:
         udr: 1523
   - name: 'Jhaerik''s Dungeon Fog Remover Lite.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/40555/' ]
+    msg:
+      - <<: *wildEdits
+        subs: [ 'Remove deleted base records **0004CB03** and **0009ECCC** from **Jhaerik''s Dungeon Fog Remover Lite.esp**.' ]
+        condition: 'checksum("Jhaerik''s Dungeon Fog Remover Lite.esp", 51999419) or checksum("Jhaerik''s Dungeon Fog Remover Lite.esp", 053C01D0)'
     dirty:
       - <<: *quickClean
         crc: 0x51999419
