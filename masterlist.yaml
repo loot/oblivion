@@ -3201,14 +3201,16 @@ plugins:
   - name: 'Jhaerik''s Dungeon Fog Remover.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/40555/' ]
     dirty:
-      - crc: 0xfa68a64e
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xFA68A64E
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         udr: 1523
   - name: 'Jhaerik''s Dungeon Fog Remover Lite.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/40555/' ]
     dirty:
-      - crc: 0x51999419
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x51999419
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         udr: 464
 
   - name: 'lLet there be Flowers.esp'
