@@ -5022,8 +5022,9 @@ plugins:
   - name: 'Automagic Bags.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22414/' ]
     dirty:
-      - crc: 0xec777db4
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xEC777DB4
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 3
 
   - name: 'Ayleid Arcane Archer.esp'
