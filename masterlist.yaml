@@ -5831,6 +5831,18 @@ plugins:
         util: '[TES4Edit v4.0.3g](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 3
 
+  - name: 'BattlehornCastleEnhanced.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/13853/' ]
+    msg:
+      - <<: *wildEdits
+        subs: [ '[Cleaning instructions](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide#BattlehornCastleEnhanced.esp_Special_Cleaning_Instructions)' ]
+        condition: 'checksum("BattlehornCastleEnhanced.esp", 9E3F8559)'
+    dirty:
+      - crc: 0x9e3f8559
+        <<: *dirtyPlugin
+        udr: 14
+        itm: 86
+
   - name: 'Cardac.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/40833/' ]
     dirty:
@@ -17130,17 +17142,6 @@ plugins:
       - crc: 0x81563088
         <<: *dirtyPlugin
         itm: 4
-  - name: 'BattlehornCastleEnhanced.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/13853' ]
-    msg:
-      - <<: *wildEdits
-        subs: [ '[Cleaning instructions](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide#BattlehornCastleEnhanced.esp_Special_Cleaning_Instructions)' ]
-        condition: 'checksum("BattlehornCastleEnhanced.esp", 9E3F8559)'
-    dirty:
-      - crc: 0x9e3f8559
-        <<: *dirtyPlugin
-        udr: 14
-        itm: 86
   - name: 'ORM-TamriellicGlassDLC6.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/40308' ]
     tag: [ Graphics ]
