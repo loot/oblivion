@@ -4989,8 +4989,9 @@ plugins:
   - name: 'Apachii_Wigs_MaleFemale.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/40774/' ]
     dirty:
-      - crc: 0x38ad5735
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x70A0DC44
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 4
 
   - name: 'Ayleid Arcane Archer.esp'
