@@ -5189,9 +5189,10 @@ plugins:
   - name: 'BeyondCyrodiil-Camps.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/21997/' ]
     dirty:
-      - crc: 0xb2c02b53
-        <<: *dirtyPlugin
-        itm: 224
+      - <<: *quickClean
+        crc: 0xB2C02B53
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 221
         udr: 3
 
   - name: 'BXX_Mines.esp'
