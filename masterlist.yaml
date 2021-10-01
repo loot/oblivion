@@ -3098,6 +3098,20 @@ plugins:
         util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 10
 
+  - name: 'DremoraCompanion\.es[mp]'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/6977/' ]
+  - name: 'DremoraCompanion.esm'
+    clean:
+      - crc: 0x0FCB16D3
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
+  - name: 'DremoraCompanion.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x4555873A
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 35
+        udr: 12
+
   - name: 'StokerWolff.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/17743/'
@@ -22388,22 +22402,7 @@ plugins:
     tag:
       - Eyes
       - Hair
-  - name: 'DremoraCompanion.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'May be incompatible with plugins affecting sleep.'
-          - lang: de
-            text: 'Möglicherweise inkompatibel mit Plugins die Schlaf beeinflussen.'
-    tag:
-      - Eyes
-      - Hair
-    dirty:
-      - crc: 0x4555873a
-        <<: *dirtyPlugin
-        itm: 34
-        udr: 12
+
   - name: 'Eluna.esp'
     tag:
       - Eyes
