@@ -6445,10 +6445,20 @@ plugins:
 
   - name: 'ImpIsle Walkabout (Jungle|noXUL| XUL)\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/41089/' ]
+  - name: 'ImpIsle Walkabout Jungle.esp'
+    msg:
+      - <<: *wildEdits
+        subs: [ 'Remove **0002F7D6** & **000338A2** from **ImpIsle Walkabout Jungle.esp**.' ]
+        condition: 'checksum("ImpIsle Walkabout Jungle.esp", 7B4DA346)'
+  - name: 'ImpIsle Walkabout noXUL.esp'
+    clean:
+      - crc: 0x653E09EF
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
   - name: 'ImpIsle Walkabout  XUL.esp'
     dirty:
-      - crc: 0x4062e31e
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x4062E31E
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 22
 
   - name: 'Productive Mines.esp'
