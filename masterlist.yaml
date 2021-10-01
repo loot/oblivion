@@ -5248,21 +5248,6 @@ plugins:
       - <<: *useINITweakInstead
         subs: [ '[bBorderRegionsEnabled=0](http://wiki.tesnexus.com/index.php/Removing_In-Game_Borders)' ]
 
-  - name: 'CDEP_FanaCeya.esp'
-    url:
-      - 'https://www.nexusmods.com/oblivion/mods/14036/'
-      - 'https://www.nexusmods.com/oblivion/mods/43005/'
-    tag: [ C.Light ]
-    dirty:
-      - <<: *quickClean
-        crc: 0x84B74D3F
-        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 21
-        udr: 122
-    clean:
-      - crc: 0x73A29D3A
-        util: 'TES4Edit v4.0.3h (Hotfix 1)'
-
   - name: 'Cliff''s Shacks Basements(-Radiant AI)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/20779/' ]
     msg:
@@ -5813,6 +5798,21 @@ plugins:
         crc: 0xFB464AAF
         util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 10
+
+  - name: 'CDEP_FanaCeya.esp'
+    url:
+      - 'https://www.nexusmods.com/oblivion/mods/14036/'
+      - 'https://www.nexusmods.com/oblivion/mods/43005/'
+    tag: [ C.Light ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x84B74D3F
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 21
+        udr: 122
+    clean:
+      - crc: 0x73A29D3A
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
 
   - name: 'CDEP-UnderpallCave.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/13939/' ]
