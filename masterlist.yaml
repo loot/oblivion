@@ -5746,14 +5746,16 @@ plugins:
   - name: 'BrumaMGRestored.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/12732/' ]
     dirty:
-      - crc: 0x2610b3ea
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x2610B3EA
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 4
   - name: 'BrumaMGRestored-Frostcrag.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/12732/' ]
     dirty:
-      - crc: 0xfb464aaf
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xFB464AAF
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 10
 
   - name: 'CDEP-UnderpallCave.esp'
