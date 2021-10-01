@@ -3940,6 +3940,16 @@ plugins:
         condition: 'many("MassA.I(-[345]0)?.esp")'
 
 ###### Gameplay - Crafting & Harvesting ######
+  - name: 'CLS-Craftybits.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/13085' ]
+    dirty:
+      - crc: 0x4c5bc5ec
+        <<: *dirtyPlugin
+        itm: 56
+        udr: 664
+  - name: 'CB-DepositsForges.esp'
+    # doNotClean
+
   - name: 'Pitcher Plant and Lily Ingredients.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/15609/' ]
     dirty:
@@ -19510,15 +19520,6 @@ plugins:
         udr: 1
   - name: 'LCE-addon.esp'
     msg: [ *corrupt ]
-  - name: 'CLS-Craftybits.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/13085' ]
-    dirty:
-      - crc: 0x4c5bc5ec
-        <<: *dirtyPlugin
-        itm: 56
-        udr: 664
-  - name: 'CB-DepositsForges.esp'
-    # doNotClean
 
   - name: 'Merchant_Tim.esp'
     msg:
