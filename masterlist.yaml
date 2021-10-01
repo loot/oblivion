@@ -5839,10 +5839,11 @@ plugins:
         subs: [ '[Cleaning instructions](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide#BattlehornCastleEnhanced.esp_Special_Cleaning_Instructions)' ]
         condition: 'checksum("BattlehornCastleEnhanced.esp", 9E3F8559)'
     dirty:
-      - crc: 0x9e3f8559
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x13A57318
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 50
         udr: 14
-        itm: 86
 
   - name: 'Cardac.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/40833/' ]
