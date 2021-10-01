@@ -3946,12 +3946,16 @@ plugins:
         name: 'CLS CraftyBits OBSE'
       - link: 'https://www.nexusmods.com/oblivion/mods/41774/'
         name: 'CLS CraftyBits V08 BETA'
+  - name: 'CLS-Craftybits.esm'
+    clean:
+      - crc: 0x73B04A4E
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
   - name: 'CLS-Craftybits.esp'
     dirty:
-      - crc: 0x4c5bc5ec
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xBA2F5CFE
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 56
-        udr: 664
 
   - name: 'Pitcher Plant and Lily Ingredients.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/15609/' ]
