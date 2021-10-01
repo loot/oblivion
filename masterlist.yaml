@@ -3100,6 +3100,10 @@ plugins:
 
   - name: 'DremoraCompanion\.es[mp]'
     url: [ 'https://www.nexusmods.com/oblivion/mods/6977/' ]
+  - name: 'DremoraCompanion.esm'
+    clean:
+      - crc: 0x0FCB16D3
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
   - name: 'DremoraCompanion.esp'
     msg:
       - type: say
@@ -3112,9 +3116,10 @@ plugins:
       - Eyes
       - Hair
     dirty:
-      - crc: 0x4555873a
-        <<: *dirtyPlugin
-        itm: 34
+      - <<: *quickClean
+        crc: 0x4555873A
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 35
         udr: 12
 
   - name: 'StokerWolff.esp'
