@@ -5138,8 +5138,9 @@ plugins:
   - name: 'Apachii_Heroes_Store.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22962/' ]
     dirty:
-      - crc: 0xf3976680
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xF3976680
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 2
         udr: 11
 
