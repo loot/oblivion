@@ -4338,33 +4338,24 @@ plugins:
       - crc: 0xA08B7C20
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
 
-  - name: 'AspiriasCurse_ EV.esp'
+  - name: 'Aspirias(Curse_ EV| Fluch)\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/30312/' ]
     inc:
       - 'Aspiria.esp'
       - 'Aspiria_EV.esp'
-      - 'Aspirias Fluch.esp'
       - name: 'Unique Landscapes.esp'
         display: 'Unique Landscapes - Merged ESP'
         condition: 'version("Unique Landscapes.esp", "2.0.0", >=)'
       - 'xulBeachesOfCyrodiilLostCoast.esp'
       - 'xulBlackwoodForest.esp'
     tag: [ Invent.Add ]
+  - name: 'AspiriasCurse_ EV.esp'
+    inc: [ 'Aspirias Fluch.esp' ]
     clean:
       - crc: 0x93492E5D
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
   - name: 'Aspirias Fluch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/30312/' ]
-    inc:
-      - 'Aspiria.esp'
-      - 'Aspiria_EV.esp'
-      - 'AspiriasCurse_ EV.esp'
-      - name: 'Unique Landscapes.esp'
-        display: 'Unique Landscapes Merged ESP'
-        condition: 'version("Unique Landscapes.esp", "2.0.0", >=)'
-      - 'xulBeachesOfCyrodiilLostCoast.esp'
-      - 'xulBlackwoodForest.esp'
-    tag: [ Invent.Add ]
+    inc: [ 'AspiriasCurse_ EV.esp' ]
     dirty:
       - <<: *quickClean
         crc: 0x46503B81
