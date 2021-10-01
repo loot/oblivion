@@ -5799,6 +5799,21 @@ plugins:
         util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 10
 
+  - name: 'CDEP_FanaCeya.esp'
+    url:
+      - 'https://www.nexusmods.com/oblivion/mods/14036/'
+      - 'https://www.nexusmods.com/oblivion/mods/43005/'
+    tag: [ C.Light ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x84B74D3F
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 21
+        udr: 122
+    clean:
+      - crc: 0x73A29D3A
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
+
   - name: 'CDEP-UnderpallCave.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/13939/' ]
     tag:
@@ -16649,16 +16664,6 @@ plugins:
       - crc: 0xb0311481
         <<: *dirtyPlugin
         udr: 1
-  - name: 'CDEP_FanaCeya.esp'
-    url:
-      - 'https://www.nexusmods.com/oblivion/mods/14036'
-      - 'https://www.nexusmods.com/oblivion/mods/43005'
-    tag: [ C.Light ]
-    dirty:
-      - crc: 0x84b74d3f
-        <<: *dirtyPlugin
-        itm: 13
-        udr: 122
   - name: 'Ayleid Respawn v1.0 - For The Ayleid Steps.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/24416' ]
     msg:
