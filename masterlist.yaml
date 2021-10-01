@@ -4340,18 +4340,23 @@ plugins:
 
   - name: 'AspiriasCurse_ EV.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/30312/' ]
+    inc:
+      - name: 'Unique Landscapes.esp'
+        display: 'Unique Landscapes - Merged ESP'
+        condition: 'version("Unique Landscapes.esp", "2.0.0", >=)'
+      - 'xulBeachesOfCyrodiilLostCoast.esp'
+      - 'xulBlackwoodForest.esp'
     clean:
       - crc: 0x93492E5D
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
   - name: 'Aspirias Fluch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/30312/' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Incompatible with: The Unique Landscapes mods.'
-          - lang: de
-            text: 'Inkompatibel mit: The Unique Landscapes Mods.'
+    inc:
+      - name: 'Unique Landscapes.esp'
+        display: 'Unique Landscapes Merged ESP'
+        condition: 'version("Unique Landscapes.esp", "2.0.0", >=)'
+      - 'xulBeachesOfCyrodiilLostCoast.esp'
+      - 'xulBlackwoodForest.esp'
     dirty:
       - <<: *quickClean
         crc: 0x46503B81
