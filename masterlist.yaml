@@ -5127,6 +5127,14 @@ plugins:
       - crc: 0x612E581F
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
 
+  - name: 'Apachii_Goddess_Store.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/13437/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x6633E61D
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        udr: 3
+
   - name: 'BXX_Mines.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/8284/'
@@ -16908,22 +16916,6 @@ plugins:
             text: 'Sensual Walks for Arthmoor''s Verona House Bloodines SI Fixed contains bash tags to merge the animations, which work correctly on his version'
           - lang: de
             text: 'Sensual Walks for Arthmoor''s Verona House Bloodines SI Fixed enthält Bash Tags zum Zusammenführen der Animation, welche korrekt funktionieren mit dieser Version'
-  - name: 'Apachii_Goddess_Store.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/13437' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Recommended to enable only after you save game in IC Waterfront District'
-          - lang: de
-            text: 'Empfohlen dies erst zu aktivieren nachdem im IC Waterfront Abteil abgespeichert wurde'
-    dirty:
-      - crc: 0x6633e61d
-        <<: *dirtyPlugin
-        udr: 3
-      - crc: 0x6644e61d
-        <<: *dirtyPlugin
-        udr: 3
   - name: 'Apachii_Heroes_Store.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22962' ]
     dirty:
