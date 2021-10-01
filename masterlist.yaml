@@ -5248,6 +5248,14 @@ plugins:
       - <<: *useINITweakInstead
         subs: [ '[bBorderRegionsEnabled=0](http://wiki.tesnexus.com/index.php/Removing_In-Game_Borders)' ]
 
+  - name: 'Chichester Village.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/29823/' ]
+    dirty:
+      - crc: 0xa5a89a38
+        <<: *dirtyPlugin
+        itm: 72
+        udr: 161
+
   - name: 'Cliff''s Shacks Basements(-Radiant AI)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/20779/' ]
     msg:
@@ -17881,13 +17889,6 @@ plugins:
             text: 'Requires: Tamriel Heightmaps'
           - lang: de
             text: 'Benötigt: Tamriel Heightmaps'
-  - name: 'Chichester Village.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29823' ]
-    dirty:
-      - crc: 0xa5a89a38
-        <<: *dirtyPlugin
-        itm: 72
-        udr: 161
 
   - name: 'Elsweyr(Riverhold|FaregylRoad)\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/19026/' ]
