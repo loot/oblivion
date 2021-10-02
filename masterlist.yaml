@@ -3948,15 +3948,40 @@ plugins:
         name: 'CLS CraftyBits V08 BETA'
   - name: 'CLS-Craftybits.esm'
     req: [ *OBSE ]
+    tag:
+      - Delev
+      - Graphics
+      - Invent.Add
+      - Invent.Remove
+      - Names
+      - Relev
+      - Scripts
+      - Stats
     clean:
       - crc: 0x73B04A4E
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
   - name: 'CLS-Craftybits.esp'
+    tag:
+      - C.Regions
+      - Invent.Add
+      - Invent.Change
+      - Scripts
     dirty:
       - <<: *quickClean
         crc: 0xBA2F5CFE
         util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 56
+  - name: 'CB-FFRT_Glue.esp'
+    tag: [ Scripts ]
+  - name: 'CB-OOO_BuckGlue.esp'
+    tag:
+      - Invent.Add
+      - Invent.Remove
+  - name: 'CB-Weights_Hard.esp'
+    tag:
+      - Graphics
+      - Names
+      - Stats
 
   - name: 'Pitcher Plant and Lily Ingredients.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/15609/' ]
