@@ -3946,6 +3946,10 @@ plugins:
         name: 'CLS CraftyBits OBSE'
       - link: 'https://www.nexusmods.com/oblivion/mods/41774/'
         name: 'CLS CraftyBits V08 BETA'
+    msg:
+      - <<: *obsolete
+        subs: [ '[CLS CraftyBits V08 BETA](https://www.nexusmods.com/oblivion/mods/41774/)' ]
+        condition: 'version("CLS-Craftybits.esp", "0.813.8", <) or version("CLS-Craftybits.esm", "0.813.8", <)'
   - name: 'CLS-Craftybits.esm'
     req: [ *OBSE ]
     inc:
