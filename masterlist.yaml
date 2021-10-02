@@ -3940,6 +3940,63 @@ plugins:
         condition: 'many("MassA.I(-[345]0)?.esp")'
 
 ###### Gameplay - Crafting & Harvesting ######
+  - name: 'CLS-Craftybits\.es(m|p)'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/13085/'
+        name: 'CLS CraftyBits OBSE'
+      - link: 'https://www.nexusmods.com/oblivion/mods/41774/'
+        name: 'CLS CraftyBits V08 BETA'
+    msg:
+      - <<: *obsolete
+        subs: [ '[CLS CraftyBits V08 BETA](https://www.nexusmods.com/oblivion/mods/41774/)' ]
+        condition: 'version("CLS-Craftybits.esp", "0.813.8", <) or version("CLS-Craftybits.esm", "0.813.8", <)'
+  - name: 'CLS-Craftybits.esm'
+    req: [ *OBSE ]
+    inc:
+      - 'DeadlyReflex 5 - Combat Moves.esp'
+      - 'Enhanced Grabbing.esp'
+    tag:
+      - Delev
+      - Graphics
+      - Invent.Add
+      - Invent.Remove
+      - Names
+      - Relev
+      - Scripts
+      - Stats
+    clean:
+      - crc: 0x73B04A4E
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
+  - name: 'CLS-Craftybits.esp'
+    tag:
+      - C.Regions
+      - Invent.Add
+      - Invent.Change
+      - Scripts
+    dirty:
+      - <<: *quickClean
+        crc: 0xBA2F5CFE
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 56
+  - name: 'CB-FFRT_Glue.esp'
+    tag: [ Scripts ]
+  - name: 'CB-OOO_BuckGlue.esp'
+    tag:
+      - Invent.Add
+      - Invent.Remove
+  - name: 'CB-Weights_Hard.esp'
+    tag:
+      - Graphics
+      - Names
+      - Stats
+  - name: 'CLS-CB-GuildAltStart.esp'
+    inc:
+      - 'Alternative Beginnings.esp'
+      - 'Alternative Start by Robert Evrae.esp'
+      - 'AltStart.esp'
+      - 'AltStartwChangedMessages.esp'
+      - 'ShiveringIslesStart.esp'
+
   - name: 'Pitcher Plant and Lily Ingredients.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/15609/' ]
     dirty:
@@ -19510,15 +19567,6 @@ plugins:
         udr: 1
   - name: 'LCE-addon.esp'
     msg: [ *corrupt ]
-  - name: 'CLS-Craftybits.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/13085' ]
-    dirty:
-      - crc: 0x4c5bc5ec
-        <<: *dirtyPlugin
-        itm: 56
-        udr: 664
-  - name: 'CB-DepositsForges.esp'
-    # doNotClean
 
   - name: 'Merchant_Tim.esp'
     msg:
