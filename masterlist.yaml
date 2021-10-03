@@ -2783,6 +2783,10 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/18305/'
         name: 'Weather - All Natural'
+  - name: 'All Natural Base.esm'
+    clean:
+      - crc: 0x3A0B767A
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
   - name: 'All Natural.esp'
     after:
       - 'The Throne Of The Emperor.esp'
@@ -2791,14 +2795,23 @@ plugins:
       - <<: *patchIncluded
         subs: [ 'DLC Shivering Isles' ]
         condition: 'active("DLCShiveringIsles.esp") and not active("All Natural - SI.esp")'
+    clean:
+      - crc: 0xD73B9606
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
   - name: 'All Natural - SI.esp'
     after: [ 'All Natural.esp' ]
     req: [ 'DLCShiveringIsles.esp' ]
+    clean:
+      - crc: 0xA8549441
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
   - name: 'All Natural - Real Lights.esp'
     after:
       - 'The Throne Of The Emperor.esp'
       - 'Throne room.esp'
     inc: [ '_Real_Lights.esp' ]
+    clean:
+      - crc: 0x5219390A
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
   - name: 'All Natural - Indoor Weather Filter For Mods.esp'
     group: *latePatchesGroup
     msg: [ *requiresBashedPatch ]
