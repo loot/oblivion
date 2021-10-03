@@ -2787,9 +2787,6 @@ plugins:
     after:
       - 'The Throne Of The Emperor.esp'
       - 'Throne room.esp'
-    tag:
-      - C.Climate
-      - MustBeActiveIfImported
     msg:
       - <<: *patchIncluded
         subs: [ 'DLC Shivering Isles' ]
@@ -2797,28 +2794,14 @@ plugins:
   - name: 'All Natural - SI.esp'
     after: [ 'All Natural.esp' ]
     req: [ 'DLCShiveringIsles.esp' ]
-    tag:
-      - C.Climate
-      - MustBeActiveIfImported
   - name: 'All Natural - Real Lights.esp'
     after:
       - 'The Throne Of The Emperor.esp'
       - 'Throne room.esp'
     inc: [ '_Real_Lights.esp' ]
-    tag:
-      - Graphics
-      - MustBeActiveIfImported
-      - Scripts
   - name: 'All Natural - Indoor Weather Filter For Mods.esp'
     group: *latePatchesGroup
     msg: [ *requiresBashedPatch ]
-    tag:
-      - C.Climate
-      - Deactivate
-      - Filter
-      - NoMerge
-  - name: 'All Natural - MMM Patch.esp'
-    tag: [ Scripts ]
 
   - name: 'Jhaerik''s Dungeon Fog Remover( Lite)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/40555/' ]
