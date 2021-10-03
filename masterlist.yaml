@@ -2779,6 +2779,42 @@ plugins:
         itm: 3
 
 ###### AudioVisual - Weather & Lighting ######
+  - name: 'All Natural.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/18305' ]
+    tag:
+      - C.Climate
+      - MustBeActiveIfImported
+    msg:
+      - <<: *patchIncluded
+        subs: [ 'DLC Shivering Isles' ]
+        condition: 'active("DLCShiveringIsles.esp") and not active("All Natural - SI.esp")'
+  - name: 'All Natural - SI.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/18305' ]
+    after: [ 'All Natural.esp' ]
+    req: [ 'DLCShiveringIsles.esp' ]
+    tag:
+      - C.Climate
+      - MustBeActiveIfImported
+  - name: 'All Natural - Real Lights.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/18305' ]
+    inc: [ '_Real_Lights.esp' ]
+    tag:
+      - Graphics
+      - MustBeActiveIfImported
+      - Scripts
+  - name: 'All Natural - Indoor Weather Filter For Mods.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/18305' ]
+    group: *latePatchesGroup
+    msg: [ *requiresBashedPatch ]
+    tag:
+      - C.Climate
+      - Deactivate
+      - Filter
+      - NoMerge
+  - name: 'All Natural - MMM Patch.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/18305' ]
+    tag: [ Scripts ]
+
   - name: 'Jhaerik''s Dungeon Fog Remover( Lite)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/40555/' ]
     msg:
@@ -10763,25 +10799,6 @@ plugins:
   - name: 'Enhanced Weather - Across-The-Borders Mods Patch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/16544' ]
     req: [ *OBSE ]
-  - name: 'All Natural.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/18305' ]
-    tag:
-      - C.Climate
-      - MustBeActiveIfImported
-    msg:
-      - <<: *patchIncluded
-        subs: [ 'DLC Shivering Isles' ]
-        condition: 'active("DLCShiveringIsles.esp") and not active("All Natural - SI.esp")'
-  - name: 'All Natural - SI.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/18305' ]
-    after: [ 'All Natural.esp' ]
-    req: [ 'DLCShiveringIsles.esp' ]
-    tag:
-      - C.Climate
-      - MustBeActiveIfImported
-  - name: 'All Natural - MMM Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/18305' ]
-    tag: [ Scripts ]
   - name: 'Immersive Interiors.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/34199' ]
     req:
@@ -10949,13 +10966,6 @@ plugins:
       - <<: *obsolete
         subs: [ '[**All Natural - Real Lights.esp**](https://www.nexusmods.com/oblivion/mods/18305/)' ]
 
-  - name: 'All Natural - Real Lights.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/18305' ]
-    inc: [ '_Real_Lights.esp' ]
-    tag:
-      - Graphics
-      - MustBeActiveIfImported
-      - Scripts
   - name: 'CampfireBehavior.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/13101' ]
     inc: [ 'All Natural - Real Lights.esp' ]
@@ -23569,15 +23579,6 @@ plugins:
     tag:
       - Deactivate
       - Filter
-  - name: 'All Natural - Indoor Weather Filter For Mods.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/18305' ]
-    group: *latePatchesGroup
-    msg: [ *requiresBashedPatch ]
-    tag:
-      - C.Climate
-      - Deactivate
-      - Filter
-      - NoMerge
   - name: 'Storms & Sound - Filter Patch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/38379' ]
     group: *latePatchesGroup
