@@ -3460,6 +3460,13 @@ plugins:
       - 'DLCShiveringIsles.esp'
       - *OBSEv20
     after: [ 'Weapons Of Morrowind.esp' ]
+    msg:
+      - <<: *patchProvided
+        subs: [ 'Creature Diversity' ]
+        condition: 'active("Creature Diversity.esp") and not file("Ascension - Creature Diversity Patch.esp")'
+      - <<: *patchProvided
+        subs: [ 'Weapons Of Morrowind' ]
+        condition: 'active("Weapons Of Morrowind.esp") and not file("Ascension - Weapons of Morrowind Patch.esp")'
     tag:
       - Actors.ACBS
       - Actors.Stats
