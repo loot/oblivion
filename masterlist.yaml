@@ -3716,6 +3716,51 @@ plugins:
       - Delev
       - Relev
 
+  - name: 'TIE(\+Frans NPC Inventory| Weapon \+ Armor Filter)?\.esp'
+    url:
+      - link: 'https://www.afkmods.com/index.php?/files/file/555-tie-tamriel-immersion-experience/'
+        name: 'TIE - Tamriel Immersion Experience (AFK Mods)'
+      - link: 'https://tesalliance.org/forums/index.php?/files/file/931-tie-tamriel-immersion-experience/'
+        name: 'TIE - Tamriel Immersion Experience (TES Alliance)'
+  - name: 'TIE.esp'
+    inc:
+      - 'T.I.E4MODS.esp'
+      - 'TIE In.esp'
+    tag:
+      - Actors.AIPackages
+      - Actors.CombatStyle
+      - Actors.RecordFlags
+      - EnchantmentStats
+      - Invent.Change
+      - Names
+      - NPC.Class
+      - NPC.Eyes
+      - NPC.FaceGen
+      - NPC.Hair
+      - Relations.Add
+      - Relations.Change
+      - Sound
+      - SpellStats
+      - Text
+    msg:
+      - type: say
+        content:
+          - lang: en
+            text: 'This plugin has compatibility issues with %1%. For more information, read this mod''s compatibility notes.'
+        subs: [ 'OOO, MMM, Fran''s or other large overhaul mods' ]
+    clean:
+      - crc: 0x7954F63C
+        util: 'TES4Edit v4.0.3'
+      - crc: 0xF16C3309
+        util: 'TES4Edit v4.0.3'
+  - name: 'TIE+Frans NPC Inventory.esp'
+    tag:
+      - Invent.Add
+      - Invent.Remove
+  - name: 'TIE Weapon + Armor Filter.esp'
+    group: *latePatchesGroup
+    msg: [ *requiresBashedPatch ]
+
   - name: 'unleveled-rewards.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/48049' ]
     tag:
@@ -3762,40 +3807,6 @@ plugins:
         crc: 0x0A200A48
         util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 13
-
-  - name: 'TIE.*\.esp'
-    url:
-      - link: 'https://www.nexusmods.com/oblivion/mods/35265'
-        name: 'TIE - Tamriel Immersion Experience'
-  - name: 'TIE.esp'
-    url:
-      - 'https://www.afkmods.com/index.php?/files/file/555-tie-tamriel-immersion-experience/'
-      - 'https://tesalliance.org/forums/index.php?/files/file/931-tie-tamriel-immersion-experience/'
-    inc: [ 'T.I.E4MODS.esp' ]
-    tag:
-      - Invent.Change
-      - NPC.Class
-      - Sound
-      - SpellStats
-      - Text
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Requires: compatibility mods to work with OOO, MMM, Fran''s or other large overhaul mods.'
-          - lang: de
-            text: 'Benötigt: Kompatibilitäts-Mods um zu funktionieren mit OOO, MMM, Fran''s oder anderen großen Überhol-Mods.'
-    clean:
-      - crc: 0x7954F63C
-        util: 'TES4Edit v4.0.3'
-      - crc: 0xF16C3309
-        util: 'TES4Edit v4.0.3'
-  - name: 'TIE Weapon + Armor Filter.esp'
-    url:
-      - 'https://www.afkmods.com/index.php?/files/file/555-tie-tamriel-immersion-experience/'
-      - 'https://tesalliance.org/forums/index.php?/files/file/931-tie-tamriel-immersion-experience/'
-    group: *latePatchesGroup
-    msg: [ *requiresBashedPatch ]
 
   - name: 'Zensalins Oblivion Overhaul.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/48681' ]
