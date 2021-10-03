@@ -3716,14 +3716,13 @@ plugins:
       - Delev
       - Relev
 
-  - name: 'TIE.*\.esp'
+  - name: 'TIE(\+Frans NPC Inventory| Weapon \+ Armor Filter)?\.esp'
     url:
-      - link: 'https://www.nexusmods.com/oblivion/mods/35265'
-        name: 'TIE - Tamriel Immersion Experience'
+      - link: 'https://www.afkmods.com/index.php?/files/file/555-tie-tamriel-immersion-experience/'
+        name: 'TIE - Tamriel Immersion Experience (AFK Mods)'
+      - link: 'https://tesalliance.org/forums/index.php?/files/file/931-tie-tamriel-immersion-experience/'
+        name: 'TIE - Tamriel Immersion Experience (TES Alliance)'
   - name: 'TIE.esp'
-    url:
-      - 'https://www.afkmods.com/index.php?/files/file/555-tie-tamriel-immersion-experience/'
-      - 'https://tesalliance.org/forums/index.php?/files/file/931-tie-tamriel-immersion-experience/'
     inc: [ 'T.I.E4MODS.esp' ]
     tag:
       - Invent.Change
@@ -3744,9 +3743,6 @@ plugins:
       - crc: 0xF16C3309
         util: 'TES4Edit v4.0.3'
   - name: 'TIE Weapon + Armor Filter.esp'
-    url:
-      - 'https://www.afkmods.com/index.php?/files/file/555-tie-tamriel-immersion-experience/'
-      - 'https://tesalliance.org/forums/index.php?/files/file/931-tie-tamriel-immersion-experience/'
     group: *latePatchesGroup
     msg: [ *requiresBashedPatch ]
 
