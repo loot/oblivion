@@ -3454,6 +3454,46 @@ plugins:
         itm: 16
         udr: 48
 
+  - name: 'Ascension.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/50237/' ]
+    # DoNotClean - ITMs included to retain vanilla settings for other changes made by this file.
+    req:
+      - 'DLCShiveringIsles.esp'
+      - *OBSEv20
+    after: [ 'Weapons Of Morrowind.esp' ]
+    inc:
+      - 'Oscuro''s_Oblivion_Overhaul.esp'
+      - 'TIE.esp'
+    msg:
+      - <<: *patchProvided
+        subs: [ 'Creature Diversity' ]
+        condition: 'active("Creature Diversity.esp") and not file("Ascension - Creature Diversity Patch.esp")'
+      - <<: *patchProvided
+        subs: [ 'Weapons Of Morrowind' ]
+        condition: 'active("Weapons Of Morrowind.esp") and not file("Ascension - Weapons of Morrowind Patch.esp")'
+    tag:
+      - Actors.ACBS
+      - Actors.Stats
+      - EffectStats
+      - EnchantmentStats
+      - Invent.Add
+      - Invent.Change
+      - Invent.Remove
+      - Graphics
+      - SpellStats
+      - Text
+  - name: 'Ascension - (Creature Diversity|Weapons of Morrowind) Patch\.esp'
+    tag:
+      - Delev
+      - Relev
+  - name: '(Ascension - UOP Patch|Combat Groans and Taunts Disabled|Level Requires 15 Skill Increases|No Starting Map Markers)\.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'Ascension - Push''s Tweaks.esp' ]
+        condition: 'active("Ascension - Push''s Tweaks.esp")'
+  - name: 'Level Requires 20 Skill Increases.esp'
+    after: [ 'Ascension - Push''s Tweaks.esp' ]
+
   - name: 'Duke Patricks - (Combat Magic II|Fortress of Fear).esp'
     url: [ 'http://tesalliance.org/forums/index.php?/files/file/780-duke-patricks-combat-magic-ii-duke-patricks-incursion-into-fortress-of-fear/' ]
     req:
