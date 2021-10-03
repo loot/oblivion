@@ -2779,8 +2779,11 @@ plugins:
         itm: 3
 
 ###### AudioVisual - Weather & Lighting ######
+  - name: 'All Natural.*\.es(m|p)'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/18305/'
+        name: 'Weather - All Natural'
   - name: 'All Natural.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/18305' ]
     tag:
       - C.Climate
       - MustBeActiveIfImported
@@ -2789,21 +2792,18 @@ plugins:
         subs: [ 'DLC Shivering Isles' ]
         condition: 'active("DLCShiveringIsles.esp") and not active("All Natural - SI.esp")'
   - name: 'All Natural - SI.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/18305' ]
     after: [ 'All Natural.esp' ]
     req: [ 'DLCShiveringIsles.esp' ]
     tag:
       - C.Climate
       - MustBeActiveIfImported
   - name: 'All Natural - Real Lights.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/18305' ]
     inc: [ '_Real_Lights.esp' ]
     tag:
       - Graphics
       - MustBeActiveIfImported
       - Scripts
   - name: 'All Natural - Indoor Weather Filter For Mods.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/18305' ]
     group: *latePatchesGroup
     msg: [ *requiresBashedPatch ]
     tag:
@@ -2812,7 +2812,6 @@ plugins:
       - Filter
       - NoMerge
   - name: 'All Natural - MMM Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/18305' ]
     tag: [ Scripts ]
 
   - name: 'Jhaerik''s Dungeon Fog Remover( Lite)?\.esp'
