@@ -5470,8 +5470,9 @@ plugins:
   - name: 'Colourwheels Sexy Ayelid Shrine.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/37087/' ]
     dirty:
-      - crc: 0x68f17734
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x68F17734
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 28
         udr: 2
 
