@@ -5080,9 +5080,13 @@ plugins:
   - name: 'TheElderCouncil.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22595/' ]
     dirty:
-      - crc: 0x763fc748
-        <<: *dirtyPlugin
-        itm: 274
+      - <<: *quickClean
+        crc: 0xB1E9DDF0
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        udr: 192
+      - <<: *quickClean
+        crc: 0x684144E2
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         udr: 192
 
   - name: 'The Mystery of the Dulan cult.esp'
