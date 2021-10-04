@@ -3559,14 +3559,18 @@ plugins:
   - name: 'Colourwheels Sexy Oblivion OverHaul.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/36387/' ]
     tag:
-      - name: Actors.ACBS
-        condition: 'file("Banes Guilds United.esp")'
+      - Actors.ACBS
+      - Actors.AIPackages
       - Actors.Anims
+      - Actors.Spells
+      - Delev
       - Graphics
-      - name: Invent
-        condition: 'not file("Banes Guilds United.esp")'
+      - Invent.Add
+      - Invent.Remove
+      - NPC.Eyes
+      - NPC.FaceGen
+      - NPC.Hair
       - NPC.Race
-      - NpcFaces
     dirty:
       - crc: 0x344cc9fe
         <<: *dirtyPlugin
