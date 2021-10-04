@@ -5077,6 +5077,14 @@ plugins:
         subs: [ 'SM Plugin Refurbish(Merged).esp' ]
         condition: 'file("SM Plugin Refurbish(Merged).esp")'
 
+  - name: 'TheElderCouncil.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/22595/' ]
+    dirty:
+      - crc: 0x763fc748
+        <<: *dirtyPlugin
+        itm: 274
+        udr: 192
+
   - name: 'The Mystery of the Dulan cult.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/7663/'
@@ -16858,13 +16866,6 @@ plugins:
         <<: *dirtyPlugin
         itm: 113
         udr: 5
-  - name: 'TheElderCouncil.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/22595' ]
-    dirty:
-      - crc: 0x763fc748
-        <<: *dirtyPlugin
-        itm: 274
-        udr: 192
   - name: 'TheForgottenShields.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/13707' ]
     dirty:
