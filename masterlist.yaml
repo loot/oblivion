@@ -3556,6 +3556,23 @@ plugins:
   - name: 'Level Requires 20 Skill Increases.esp'
     after: [ 'Ascension - Push''s Tweaks.esp' ]
 
+  - name: 'Colourwheels Sexy Oblivion OverHaul.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/36387/' ]
+    tag:
+      - name: Actors.ACBS
+        condition: 'file("Banes Guilds United.esp")'
+      - Actors.Anims
+      - Graphics
+      - name: Invent
+        condition: 'not file("Banes Guilds United.esp")'
+      - NPC.Race
+      - NpcFaces
+    dirty:
+      - crc: 0x344cc9fe
+        <<: *dirtyPlugin
+        itm: 112
+        udr: 11
+
   - name: 'Duke Patricks - (Combat Magic II|Fortress of Fear).esp'
     url: [ 'http://tesalliance.org/forums/index.php?/files/file/780-duke-patricks-combat-magic-ii-duke-patricks-incursion-into-fortress-of-fear/' ]
     req:
@@ -23020,22 +23037,6 @@ plugins:
           - lang: de
             text: 'Beinhaltet ''KW-AlliesPlayNicer.esp'' also nutzen Sie das nicht mit diesem.'
         condition: 'file("KW-AlliesPlayNicer.esp")'
-  - name: 'Colourwheels Sexy Oblivion OverHaul.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/36387/' ]
-    tag:
-      - name: Actors.ACBS
-        condition: 'file("Banes Guilds United.esp")'
-      - Actors.Anims
-      - Graphics
-      - name: Invent
-        condition: 'not file("Banes Guilds United.esp")'
-      - NPC.Race
-      - NpcFaces
-    dirty:
-      - crc: 0x344cc9fe
-        <<: *dirtyPlugin
-        itm: 112
-        udr: 11
   - name: 'Nephs Stock Shoes Real High Heels.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/42212/' ]
     tag:
