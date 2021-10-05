@@ -6445,6 +6445,10 @@ plugins:
 
   - name: 'ImpIsle Walkabout (Jungle|noXUL| XUL)\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/41089/' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'ImpIsle Walkabout ESP' ]
+        condition: 'many("ImpIsle Walkabout (Jungle|noXUL| XUL)\.esp")'
   - name: 'ImpIsle Walkabout Jungle.esp'
     msg:
       - <<: *wildEdits
