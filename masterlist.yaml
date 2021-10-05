@@ -54,27 +54,6 @@ prelude:
           text: 'Видаліть. Уже додано у %1%.'
         - lang: zh_CN
           text: '删除。已包含在%1%中。'
-    - &alreadyInMMM
-      <<: *alreadyInX
-      subs: [ 'Mart''s Monster Mod' ]
-      condition: 'active("Mart''s Monster Mod.esm") and not active("FCOM_Convergence.esm")'
-    - &alreadyInOOO
-      <<: *alreadyInX
-      subs: [ 'Oscuro''s Oblivion Overhaul' ]
-      condition: *OOOCond
-    - &alreadyInOOOFull
-      <<: *alreadyInX
-      type: say
-      subs: [ 'Oscuro''s Oblivion Overhaul FULL' ]
-      condition: *OOOCond
-    - &alreadyInFCOM
-      <<: *alreadyInX
-      subs: [ 'FCOM Convergence' ]
-      condition: 'active("FCOM_Convergence.esm")'
-    - &alreadyInWEPON
-      <<: *alreadyInX
-      subs: [ 'Weapon Expansion Pack for Oblivion Nthusiasts' ]
-      condition: file("Weapon Expansion Pack for Oblivion Nthusiasts.esp")
 
     - &alreadyInOrFixedByX
       type: error
@@ -109,14 +88,6 @@ prelude:
           text: 'Видаліть. Уже включено або іншим чином виправлено у %1%.'
         - lang: zh_CN
           text: '删除。在%1%中已包含或修复。'
-    - &alreadyInOrFixedByUOP
-      <<: *alreadyInOrFixedByX
-      subs: [ 'Unofficial Oblivion Patch' ]
-      condition: 'active("Unofficial Oblivion Patch.esp")'
-    - &alreadyInOrFixedByUSIP
-      <<: *alreadyInOrFixedByX
-      subs: [ 'Unofficial Shivering Isles Patch' ]
-      condition: 'active("Unofficial Shivering Isles Patch.esp")'
 
     - &alsoUseX
       type: say
@@ -151,14 +122,6 @@ prelude:
           text: 'Наполегливо рекомендуємо також використати %1%.'
         - lang: zh_CN
           text: '强烈建议您使用%1%。'
-    - &alsoUseEngineBugFixes
-      <<: *alsoUseX
-      subs: [ '[**EngineBugFixes**](https://www.nexusmods.com/oblivion/mods/47085/)' ]
-      condition: 'not file("OBSE/Plugins/EngineBugFixes.dll")'
-    - &alsoUseSilentVoice
-      <<: *alsoUseX
-      subs: [ '[**Elys Universal Silent Voice**](https://www.nexusmods.com/oblivion/mods/16622/) or [**VoiceFile Redirector**](https://github.com/ponyrider0/voicefile-redirector/releases/)' ]
-      condition: 'not file("OBSE/Plugins/Elys_USV.dll") and not file("OBSE/Plugins/voicefile_redirector.dll")'
 
     - &corrupt
       type: warn
@@ -230,11 +193,6 @@ prelude:
         - lang: zh_CN
           text: '删除或禁用。%1%'
       subs: [ '' ]
-    - &deleteUseFransSeparateOptions
-      <<: *deleteOrDeactivateX
-      type: error
-      subs: [ 'This plugin should not be used. Reinstall Fran''s and select "Separate Files" when the option is presented.' ]
-      condition: *FCOMCond
 
     - &deletePlugin
       type: warn
@@ -335,60 +293,6 @@ prelude:
           text: 'Мова: %1%'
         - lang: zh_CN
           text: '语言: %1%'
-    - &languageEnglish
-      <<: *languageX
-      subs: [ '**en**' ]
-    - &languageBulgarian
-      <<: *languageX
-      subs: [ '**bg**' ]
-    - &languageChineseSimplified
-      <<: *languageX
-      subs: [ '**zh_CN**' ]
-    - &languageCzech
-      <<: *languageX
-      subs: [ '**cs**' ]
-    - &languageDanish
-      <<: *languageX
-      subs: [ '**da**' ]
-    - &languageFinnish
-      <<: *languageX
-      subs: [ '**fi**' ]
-    - &languageFrench
-      <<: *languageX
-      subs: [ '**fr**' ]
-    - &languageGerman
-      <<: *languageX
-      subs: [ '**de**' ]
-    - &languageItalian
-      <<: *languageX
-      subs: [ '**it**' ]
-    - &languageJapanese
-      <<: *languageX
-      subs: [ '**ja**' ]
-    - &languageKorean
-      <<: *languageX
-      subs: [ '**ko**' ]
-    - &languagePolish
-      <<: *languageX
-      subs: [ '**pl**' ]
-    - &languagePortuguese
-      <<: *languageX
-      subs: [ '**pt_PT**' ]
-    - &languagePortugueseBrazil
-      <<: *languageX
-      subs: [ '**pt_BR**' ]
-    - &languageRussian
-      <<: *languageX
-      subs: [ '**ru**' ]
-    - &languageSpanish
-      <<: *languageX
-      subs: [ '**es**' ]
-    - &languageSwedish
-      <<: *languageX
-      subs: [ '**sv**' ]
-    - &languageUkrainian
-      <<: *languageX
-      subs: [ '**uk_UA**' ]
 
     - &mainQuestCompleted
       type: say
@@ -447,12 +351,6 @@ prelude:
           text: '**%1%** необхідно переназначити як **%2%**.'
         - lang: zh_CN
           text: '**%1%**必须重新分配给**%2%**。'
-    - &masterReassignNehrim
-      <<: *masterReassign
-      subs:
-        - 'Oblivion.esm'
-        - 'Nehrim.esm'
-      condition: *nehrimCond
 
     - &moddingPlugin
       type: error
@@ -552,9 +450,6 @@ prelude:
         - lang: zh_CN
           text: '已过时。请升级到最新版本。 %1%'
       subs: [ '' ]
-    - &obsoleteUseFCOM
-      <<: *obsolete
-      subs: [ '[FCOM Convergence](https://www.nexusmods.com/oblivion/mods/12249)' ]
 
     - &patch3rdParty
       type: say
@@ -855,11 +750,6 @@ prelude:
           text: 'Потрібно: %1%'
         - lang: zh_CN
           text: '需要:%1%'
-    - &requiresBashedPatch
-      <<: *requiresX
-      type: error
-      subs: [ '[Wrye Bash](https://www.nexusmods.com/oblivion/mods/22368) Bashed Patch' ]
-      condition: 'not file("Bashed Patch.*\.esp")'
 
     - &sortMasters
       type: say
@@ -996,14 +886,6 @@ prelude:
           text: 'Замість цього використовуйте: %1%.'
         - lang: zh_CN
           text: '使用%1%代替。'
-    - &useInsteadUOP
-      <<: *useInstead
-      subs: [ '[Unofficial Oblivion Patch](https://www.nexusmods.com/oblivion/mods/5296)' ]
-      condition: 'not file("Unofficial Oblivion Patch.esp")'
-    - &useInsteadFCOMRealSwords
-      <<: *useInstead
-      subs: [ '**FCOM_RealSwords.esp**' ]
-      condition: *FCOMCond
 
     - &useOnlyOneX
       type: error
@@ -1076,59 +958,6 @@ prelude:
           text: 'Використовуйте версію %1%.'
         - lang: zh_CN
           text: '使用%1%版本。'
-    - &useVersionHorseArmor
-      <<: *useVersion
-      subs: [ 'HorseArmor' ]
-      condition: 'active("DLCHorseArmor.esp")'
-    - &useVersionOrrery
-      <<: *useVersion
-      subs: [ 'Orrery' ]
-      condition: 'active("DLCOrrery.esp")'
-    - &useVersionFrostcrag
-      <<: *useVersion
-      subs: [ 'Frostcrag' ]
-      condition: 'active("DLCFrostcrag.esp")'
-    - &useVersionThievesDen
-      <<: *useVersion
-      subs: [ 'ThievesDen' ]
-      condition: 'active("DLCThievesDen.esp")'
-    - &useVersionMehrunesRazor
-      <<: *useVersion
-      subs: [ 'MehrunesRazor' ]
-      condition: 'active("DLCMehrunesRazor.esp")'
-    - &useVersionVileLair
-      <<: *useVersion
-      subs: [ 'VileLair' ]
-      condition: 'active("DLCVileLair.esp")'
-    - &useVersionSpellTomes
-      <<: *useVersion
-      subs: [ 'SpellTomes' ]
-      condition: 'active("DLCSpellTomes.esp")'
-    - &useVersionKnights
-      <<: *useVersion
-      subs: [ 'Knights' ]
-      condition: 'active("Knights.esp")'
-    - &useVersionShiveringIsles
-      <<: *useVersion
-      subs: [ 'ShiveringIsles' ]
-      condition: 'active("DLCShiveringIsles.esp")'
-    - &useVersionBattlehornCastle
-      <<: *useVersion
-      subs: [ 'BattlehornCastle' ]
-      condition: 'active("DLCBattlehornCastle.esp")'
-    - &useVersionNehrim
-      <<: *useVersion
-      subs: [ 'Nehrim' ]
-      condition: *nehrimCond
-    - &useVersionFCOM
-      <<: *useVersion
-      type: warn
-      subs: [ 'FCOM' ]
-      condition: 'active("FCOM_Convergence.esm")'
-    - &useVersionOOO_FCOM
-      <<: *useVersion
-      subs: [ 'FCOM/OOO' ]
-      condition: 'active("FCOM_Convergence.esm") or active("Oscuro''s_Oblivion_Overhaul.esm")'
 
     - &useVersionNon
       type: error
@@ -1163,46 +992,6 @@ prelude:
           text: 'Використовуйте не-%1% версію.'
         - lang: zh_CN
           text: '使用%1%以外的版本。'
-    - &useVersionNonHorseArmor
-      <<: *useVersionNon
-      subs: [ 'HorseArmor' ]
-      condition: 'not active("DLCHorseArmor.esp")'
-    - &useVersionNonOrrery
-      <<: *useVersionNon
-      subs: [ 'Orrery' ]
-      condition: 'not active("DLCOrrery.esp")'
-    - &useVersionNonFrostcrag
-      <<: *useVersionNon
-      subs: [ 'Frostcrag' ]
-      condition: 'not active("DLCFrostcrag.esp")'
-    - &useVersionNonThievesDen
-      <<: *useVersionNon
-      subs: [ 'ThievesDen' ]
-      condition: 'not active("DLCThievesDen.esp")'
-    - &useVersionNonMehrunesRazor
-      <<: *useVersionNon
-      subs: [ 'MehrunesRazor' ]
-      condition: 'not active("DLCMehrunesRazor.esp")'
-    - &useVersionNonVileLair
-      <<: *useVersionNon
-      subs: [ 'VileLair' ]
-      condition: 'not active("DLCVileLair.esp")'
-    - &useVersionNonSpellTomes
-      <<: *useVersionNon
-      subs: [ 'SpellTomes' ]
-      condition: 'not active("DLCSpellTomes.esp")'
-    - &useVersionNonKnights
-      <<: *useVersionNon
-      subs: [ 'Knights' ]
-      condition: 'not active("Knights.esp")'
-    - &useVersionNonShiveringIsles
-      <<: *useVersionNon
-      subs: [ 'ShiveringIsles' ]
-      condition: 'not active("DLCShiveringIsles.esp")'
-    - &useVersionNonBattlehornCastle
-      <<: *useVersionNon
-      subs: [ 'BattlehornCastle' ]
-      condition: 'not active("DLCBattlehornCastle.esp")'
 
     - &wildEdits
       type: warn
@@ -1533,6 +1322,240 @@ common:
   - &BetterCities
     name: 'Better Cities Resources.esm'
     display: '[Better Cities](https://www.nexusmods.com/oblivion/mods/16513)'
+
+# Sub-Anchors
+  # &alreadyInX
+  - &alreadyInMMM
+    <<: *alreadyInX
+    subs: [ 'Mart''s Monster Mod' ]
+    condition: 'active("Mart''s Monster Mod.esm") and not active("FCOM_Convergence.esm")'
+  - &alreadyInOOO
+    <<: *alreadyInX
+    subs: [ 'Oscuro''s Oblivion Overhaul' ]
+    condition: *OOOCond
+  - &alreadyInOOOFull
+    <<: *alreadyInX
+    type: say
+    subs: [ 'Oscuro''s Oblivion Overhaul FULL' ]
+    condition: *OOOCond
+  - &alreadyInFCOM
+    <<: *alreadyInX
+    subs: [ 'FCOM Convergence' ]
+    condition: 'active("FCOM_Convergence.esm")'
+  - &alreadyInWEPON
+    <<: *alreadyInX
+    subs: [ 'Weapon Expansion Pack for Oblivion Nthusiasts' ]
+    condition: file("Weapon Expansion Pack for Oblivion Nthusiasts.esp")
+
+  # &alreadyInOrFixedByX
+  - &alreadyInOrFixedByUOP
+    <<: *alreadyInOrFixedByX
+    subs: [ 'Unofficial Oblivion Patch' ]
+    condition: 'active("Unofficial Oblivion Patch.esp")'
+  - &alreadyInOrFixedByUSIP
+    <<: *alreadyInOrFixedByX
+    subs: [ 'Unofficial Shivering Isles Patch' ]
+    condition: 'active("Unofficial Shivering Isles Patch.esp")'
+
+  # &alsoUseX
+  - &alsoUseEngineBugFixes
+    <<: *alsoUseX
+    subs: [ '[**EngineBugFixes**](https://www.nexusmods.com/oblivion/mods/47085/)' ]
+    condition: 'not file("OBSE/Plugins/EngineBugFixes.dll")'
+  - &alsoUseSilentVoice
+    <<: *alsoUseX
+    subs: [ '[**Elys Universal Silent Voice**](https://www.nexusmods.com/oblivion/mods/16622/) or [**VoiceFile Redirector**](https://github.com/ponyrider0/voicefile-redirector/releases/)' ]
+    condition: 'not file("OBSE/Plugins/Elys_USV.dll") and not file("OBSE/Plugins/voicefile_redirector.dll")'
+
+  # &deleteOrDeactivateX
+  - &deleteUseFransSeparateOptions
+    <<: *deleteOrDeactivateX
+    type: error
+    subs: [ 'This plugin should not be used. Reinstall Fran''s and select "Separate Files" when the option is presented.' ]
+    condition: *FCOMCond
+
+  # &languageX
+  - &languageEnglish
+    <<: *languageX
+    subs: [ '**en**' ]
+  - &languageBulgarian
+    <<: *languageX
+    subs: [ '**bg**' ]
+  - &languageChineseSimplified
+    <<: *languageX
+    subs: [ '**zh_CN**' ]
+  - &languageCzech
+    <<: *languageX
+    subs: [ '**cs**' ]
+  - &languageDanish
+    <<: *languageX
+    subs: [ '**da**' ]
+  - &languageFinnish
+    <<: *languageX
+    subs: [ '**fi**' ]
+  - &languageFrench
+    <<: *languageX
+    subs: [ '**fr**' ]
+  - &languageGerman
+    <<: *languageX
+    subs: [ '**de**' ]
+  - &languageItalian
+    <<: *languageX
+    subs: [ '**it**' ]
+  - &languageJapanese
+    <<: *languageX
+    subs: [ '**ja**' ]
+  - &languageKorean
+    <<: *languageX
+    subs: [ '**ko**' ]
+  - &languagePolish
+    <<: *languageX
+    subs: [ '**pl**' ]
+  - &languagePortuguese
+    <<: *languageX
+    subs: [ '**pt_PT**' ]
+  - &languagePortugueseBrazil
+    <<: *languageX
+    subs: [ '**pt_BR**' ]
+  - &languageRussian
+    <<: *languageX
+    subs: [ '**ru**' ]
+  - &languageSpanish
+    <<: *languageX
+    subs: [ '**es**' ]
+  - &languageSwedish
+    <<: *languageX
+    subs: [ '**sv**' ]
+  - &languageUkrainian
+    <<: *languageX
+    subs: [ '**uk_UA**' ]
+
+  # &masterReassign
+  - &masterReassignNehrim
+    <<: *masterReassign
+    subs:
+      - 'Oblivion.esm'
+      - 'Nehrim.esm'
+    condition: *nehrimCond
+
+  # &obsolete
+  - &obsoleteUseFCOM
+    <<: *obsolete
+    subs: [ '[FCOM Convergence](https://www.nexusmods.com/oblivion/mods/12249)' ]
+
+  # &requiresX
+  - &requiresBashedPatch
+    <<: *requiresX
+    type: error
+    subs: [ '[Wrye Bash](https://www.nexusmods.com/oblivion/mods/22368) Bashed Patch' ]
+    condition: 'not file("Bashed Patch.*\.esp")'
+
+  # &useInstead
+  - &useInsteadUOP
+    <<: *useInstead
+    subs: [ '[Unofficial Oblivion Patch](https://www.nexusmods.com/oblivion/mods/5296)' ]
+    condition: 'not file("Unofficial Oblivion Patch.esp")'
+  - &useInsteadFCOMRealSwords
+    <<: *useInstead
+    subs: [ '**FCOM_RealSwords.esp**' ]
+    condition: *FCOMCond
+
+  # &useVersion
+  - &useVersionHorseArmor
+    <<: *useVersion
+    subs: [ 'HorseArmor' ]
+    condition: 'active("DLCHorseArmor.esp")'
+  - &useVersionOrrery
+    <<: *useVersion
+    subs: [ 'Orrery' ]
+    condition: 'active("DLCOrrery.esp")'
+  - &useVersionFrostcrag
+    <<: *useVersion
+    subs: [ 'Frostcrag' ]
+    condition: 'active("DLCFrostcrag.esp")'
+  - &useVersionThievesDen
+    <<: *useVersion
+    subs: [ 'ThievesDen' ]
+    condition: 'active("DLCThievesDen.esp")'
+  - &useVersionMehrunesRazor
+    <<: *useVersion
+    subs: [ 'MehrunesRazor' ]
+    condition: 'active("DLCMehrunesRazor.esp")'
+  - &useVersionVileLair
+    <<: *useVersion
+    subs: [ 'VileLair' ]
+    condition: 'active("DLCVileLair.esp")'
+  - &useVersionSpellTomes
+    <<: *useVersion
+    subs: [ 'SpellTomes' ]
+    condition: 'active("DLCSpellTomes.esp")'
+  - &useVersionKnights
+    <<: *useVersion
+    subs: [ 'Knights' ]
+    condition: 'active("Knights.esp")'
+  - &useVersionShiveringIsles
+    <<: *useVersion
+    subs: [ 'ShiveringIsles' ]
+    condition: 'active("DLCShiveringIsles.esp")'
+  - &useVersionBattlehornCastle
+    <<: *useVersion
+    subs: [ 'BattlehornCastle' ]
+    condition: 'active("DLCBattlehornCastle.esp")'
+  - &useVersionNehrim
+    <<: *useVersion
+    subs: [ 'Nehrim' ]
+    condition: *nehrimCond
+  - &useVersionFCOM
+    <<: *useVersion
+    type: warn
+    subs: [ 'FCOM' ]
+    condition: 'active("FCOM_Convergence.esm")'
+  - &useVersionOOO_FCOM
+    <<: *useVersion
+    subs: [ 'FCOM/OOO' ]
+    condition: 'active("FCOM_Convergence.esm") or active("Oscuro''s_Oblivion_Overhaul.esm")'
+
+  # &useVersionNon
+  - &useVersionNonHorseArmor
+    <<: *useVersionNon
+    subs: [ 'HorseArmor' ]
+    condition: 'not active("DLCHorseArmor.esp")'
+  - &useVersionNonOrrery
+    <<: *useVersionNon
+    subs: [ 'Orrery' ]
+    condition: 'not active("DLCOrrery.esp")'
+  - &useVersionNonFrostcrag
+    <<: *useVersionNon
+    subs: [ 'Frostcrag' ]
+    condition: 'not active("DLCFrostcrag.esp")'
+  - &useVersionNonThievesDen
+    <<: *useVersionNon
+    subs: [ 'ThievesDen' ]
+    condition: 'not active("DLCThievesDen.esp")'
+  - &useVersionNonMehrunesRazor
+    <<: *useVersionNon
+    subs: [ 'MehrunesRazor' ]
+    condition: 'not active("DLCMehrunesRazor.esp")'
+  - &useVersionNonVileLair
+    <<: *useVersionNon
+    subs: [ 'VileLair' ]
+    condition: 'not active("DLCVileLair.esp")'
+  - &useVersionNonSpellTomes
+    <<: *useVersionNon
+    subs: [ 'SpellTomes' ]
+    condition: 'not active("DLCSpellTomes.esp")'
+  - &useVersionNonKnights
+    <<: *useVersionNon
+    subs: [ 'Knights' ]
+    condition: 'not active("Knights.esp")'
+  - &useVersionNonShiveringIsles
+    <<: *useVersionNon
+    subs: [ 'ShiveringIsles' ]
+    condition: 'not active("DLCShiveringIsles.esp")'
+  - &useVersionNonBattlehornCastle
+    <<: *useVersionNon
+    subs: [ 'BattlehornCastle' ]
+    condition: 'not active("DLCBattlehornCastle.esp")'
 
 bash_tags:
   - 'Actors.ACBS'
