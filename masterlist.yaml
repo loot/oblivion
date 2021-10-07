@@ -5429,6 +5429,23 @@ plugins:
         itm: 178
         udr: 50
 
+  - name: 'Cybiades.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/11755/' ]
+    msg:
+      - type: say
+        content:
+          - lang: en
+            text: 'Do not use the (same name) compatible esp for UL:Lost; Update to the latest UL:Lost Coast.'
+          - lang: de
+            text: 'Nutzen Sie nicht den (selben Namen) kompatible esp für UL:Lost; Updaten Sie zur neuesten UL:Lost Coast.'
+    dirty:
+      - crc: 0xa8970d81
+        <<: *dirtyPlugin
+        itm: 2
+      - crc: 0xb3592b2f
+        <<: *dirtyPlugin
+        itm: 4
+
   - name: 'Deepwood Adventures.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/38017/' ]
     msg:
@@ -17677,22 +17694,6 @@ plugins:
   - name: 'ROM Patch - Bobs Armory.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/33114' ]
     tag: [ Stats ]
-  - name: 'Cybiades.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/11755' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Do not use the (same name) compatible esp for UL:Lost; Update to the latest UL:Lost Coast.'
-          - lang: de
-            text: 'Nutzen Sie nicht den (selben Namen) kompatible esp für UL:Lost; Updaten Sie zur neuesten UL:Lost Coast.'
-    dirty:
-      - crc: 0xa8970d81
-        <<: *dirtyPlugin
-        itm: 2
-      - crc: 0xb3592b2f
-        <<: *dirtyPlugin
-        itm: 4
   - name: 'TOTF.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/11598' ]
     dirty:
