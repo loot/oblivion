@@ -5657,10 +5657,13 @@ plugins:
         subs: [ 'Better Cities' ]
         condition: 'active("Better Cities Resources.esm") and version("Better Cities Resources.esm", "6.0.0", >=)'
     tag:
-      - Actors.ACBS
+      - -Actors.ACBS
       - Actors.AIPackages
-      - Invent
-      - Relations
+      - Invent.Add
+      - Invent.Remove
+      - Relations.Add
+      - -Relations.Change
+      - Relations.Remove
     dirty:
       - crc: 0xa3178eea
         <<: *dirtyPlugin
