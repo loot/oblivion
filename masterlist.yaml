@@ -5665,10 +5665,14 @@ plugins:
       - -Relations.Change
       - Relations.Remove
     dirty:
-      - crc: 0xa3178eea
-        <<: *dirtyPlugin
-        itm: 128
-        udr: 257
+      - <<: *quickClean
+        crc: 0x3C80670C
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 60
+        udr: 4812
+    clean:
+      - crc: 0x4BB91C1C
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
   - name: 'CRpatchFor(XULskingradOutskirts|BCskingrad)\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/42085/' ]
     msg:
