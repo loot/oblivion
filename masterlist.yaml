@@ -5653,6 +5653,9 @@ plugins:
       - 'mrSiikas_ImperialCathedral.esp'
       - 'xulChorrolHinterland.esp'
     msg:
+      - <<: *alreadyInX
+        subs: [ 'Better Cities' ]
+        condition: 'active("Better Cities Resources.esm") and version("Better Cities Resources.esm", "6.0.0", >=)'
       - type: say
         content:
           - lang: en
