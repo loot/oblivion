@@ -5429,6 +5429,10 @@ plugins:
         itm: 178
         udr: 50
 
+  - name: 'Cybiades.esm'
+    clean:
+      - crc: 0xC3AA2A28
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
   - name: 'Cybiades.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/11755/' ]
     msg:
@@ -5439,12 +5443,17 @@ plugins:
           - lang: de
             text: 'Nutzen Sie nicht den (selben Namen) kompatible esp für UL:Lost; Updaten Sie zur neuesten UL:Lost Coast.'
     dirty:
-      - crc: 0xa8970d81
-        <<: *dirtyPlugin
-        itm: 2
-      - crc: 0xb3592b2f
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xB3592B2F
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 4
+      - <<: *quickClean
+        crc: 0xA8970D81
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
+    clean:
+      - crc: 0x82D202C9
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
 
   - name: 'Deepwood Adventures.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/38017/' ]
