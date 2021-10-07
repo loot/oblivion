@@ -5637,6 +5637,45 @@ plugins:
         util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 5
 
+  - name: 'Cyrodiil Rebuild.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/42654/' ]
+    inc:
+      - 'AnvilBayExpansion.esp'
+      - 'Better Cities CHORROL.esp'
+      - 'Better Cities Full.esp'
+      - 'Bravil Docks.esp'
+      - 'Extended Cyrodiil - Apfelwacht.esp'
+      - 'ImpeREAL Empire - Unique Castles - Bruma.esp'
+      - 'mrSiikas_ImperialCathedral.esp'
+      - 'xulChorrolHinterland.esp'
+    msg:
+      - type: say
+        content:
+          - lang: en
+            text: 'For Better Cities and Unique Landscapes use esp included in Cyrodiil Rebuild archive.'
+          - lang: de
+            text: 'Für Better Cities and Unique Landscapes, nutzen Sie die ESPs die im Cyrodiil Rebuild Archiv enthalten sind.'
+    tag:
+      - Actors.ACBS
+      - Actors.AIPackages
+      - Invent
+      - Relations
+    dirty:
+      - crc: 0xa3178eea
+        <<: *dirtyPlugin
+        itm: 128
+        udr: 257
+  - name: 'CRpatchFor(XULskingradOutskirts|BCskingrad)\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/42085/' ]
+    msg:
+      - <<: *useInstead
+        subs: [ 'CRpatchForBSandULskingrad.esp' ]
+        condition: 'active("Better Cities Resources.esm") and active("Unique Landscapes.esp")'
+  - name: 'CRpatchForXULskingradOutskirts.esp'
+    inc: [ *BetterCities ]
+  - name: 'CRpatchForBCskingrad.esp'
+    inc: [ 'Unique Landscapes.esp' ]
+
   - name: 'DaggerfallResources02.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/38734/' ]
     msg:
@@ -23320,34 +23359,6 @@ plugins:
   - name: 'BICDist_OotD_Patch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/45611' ]
     req: [ 'Better Cities IC Green Emperor Way.esp' ]
-  - name: 'Cyrodiil Rebuild.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/42654' ]
-    inc:
-      - 'AnvilBayExpansion.esp'
-      - 'Better Cities CHORROL.esp'
-      - 'Better Cities Full.esp'
-      - 'Bravil Docks.esp'
-      - 'Extended Cyrodiil - Apfelwacht.esp'
-      - 'ImpeREAL Empire - Unique Castles - Bruma.esp'
-      - 'mrSiikas_ImperialCathedral.esp'
-      - 'xulChorrolHinterland.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'For Better Cities and Unique Landscapes use esp included in Cyrodiil Rebuild archive.'
-          - lang: de
-            text: 'Für Better Cities and Unique Landscapes, nutzen Sie die ESPs die im Cyrodiil Rebuild Archiv enthalten sind.'
-    tag:
-      - Actors.ACBS
-      - Actors.AIPackages
-      - Invent
-      - Relations
-    dirty:
-      - crc: 0xa3178eea
-        <<: *dirtyPlugin
-        itm: 128
-        udr: 257
   - name: 'Cyrodiil Rebuild II.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/43743' ]
     tag:
@@ -23355,17 +23366,6 @@ plugins:
       - Actors.AIPackages
       - Invent
       - Relations
-
-  - name: 'CRpatchFor(XULskingradOutskirts|BCskingrad)\.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/42085/' ]
-    msg:
-      - <<: *useInstead
-        subs: [ 'CRpatchForBSandULskingrad.esp' ]
-        condition: 'active("Better Cities Resources.esm") and active("Unique Landscapes.esp")'
-  - name: 'CRpatchForXULskingradOutskirts.esp'
-    inc: [ *BetterCities ]
-  - name: 'CRpatchForBCskingrad.esp'
-    inc: [ 'Unique Landscapes.esp' ]
 
   - name: 'ROM Patch - Better Cities.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/33114' ]
