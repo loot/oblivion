@@ -5715,6 +5715,17 @@ plugins:
           - lang: de
             text: 'Dieser Patch ist veraltet und ist möglicherweise nicht kompatibel mit der aktuellen Version der gepatchten Mod.'
 
+  - name: 'Daedric Shrine Ruins.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/31636/' ]
+    inc:
+      - 'Asharnakibibi.esp'
+      - 'MehrunesFel.esp'
+      - 'Zergonipilamat.esp'
+    dirty:
+      - crc: 0x99bd9cb0
+        <<: *dirtyPlugin
+        udr: 753
+
   - name: 'DaggerfallResources02.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/38734/' ]
     msg:
@@ -18024,16 +18035,6 @@ plugins:
             text: 'Use v1.5 or later to avoid extensive compatibility issues.'
           - lang: de
             text: 'Nutzen Sie v1.5 oder neuer um fortgeschrittene Kompatibilitäts-Probleme zu vermeiden.'
-  - name: 'Daedric Shrine Ruins.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/31636' ]
-    inc:
-      - 'Asharnakibibi.esp'
-      - 'MehrunesFel.esp'
-      - 'Zergonipilamat.esp'
-    dirty:
-      - crc: 0x99bd9cb0
-        <<: *dirtyPlugin
-        udr: 753
   - name: 'DarkBrotherhoodChronicles.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/41090' ]
     tag:
