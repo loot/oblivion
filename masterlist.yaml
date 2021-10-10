@@ -5776,6 +5776,30 @@ plugins:
         itm: 26
         udr: 712
 
+  - name: 'House of Healing at Weye.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/30964/' ]
+    after:
+      - 'AFK_Weye.esp'
+      - 'Akaviri Imports.esp'
+      - 'Fort Weye.esp'
+      - 'RTT.esp'
+    inc:
+      - 'Asharnakibibi.esp'
+      - 'Asharnakibibi 1_1.esp'
+      - 'Asharnakibibi 1_2.esp'
+      - 'Olga.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x3102BB64
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
+  - name: 'Daedric Ruins House of Healing Patch.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/30964/' ]
+    req: [ 'House of Healing at Weye.esp' ]
+    clean:
+      - crc: 0xBEAB64EE
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
+
   - name: 'ICEXPAND.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/13692/'
@@ -17978,13 +18002,6 @@ plugins:
       - crc: 0x99bd9cb0
         <<: *dirtyPlugin
         udr: 753
-  - name: 'Daedric Ruins House of Healing Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/30964' ]
-    dirty:
-      - crc: 0x9617da75
-        <<: *dirtyPlugin
-        itm: 14
-        udr: 6
   - name: 'DarkBrotherhoodChronicles.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/41090' ]
     tag:
