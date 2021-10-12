@@ -5715,6 +5715,30 @@ plugins:
           - lang: de
             text: 'Dieser Patch ist veraltet und ist möglicherweise nicht kompatibel mit der aktuellen Version der gepatchten Mod.'
 
+  - name: 'Daedric Shrine Ruins.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/31636/' ]
+    after: [ 'House of Healing at Weye.esp' ]
+    inc:
+      - 'Asharnakibibi.esp'
+      - 'Asharnakibibi 1_1.esp'
+      - 'Asharnakibibi 1_2.esp'
+      - 'MehrunesFel.esp'
+      - 'Zergonipilamat 1_1.esp'
+      - 'Zergonipilamat 1_2.esp'
+    tag: [ C.Regions ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x99BD9CB0
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1
+        udr: 753
+  - name: 'Brena River Ravine Daedric Shrine Ruins Patch.esp'
+    tag: [ C.Regions ]
+  - name: 'Gaelendryll - UL Brena River - Daedric Shrine Patch.esp'
+    req: [ 'xulBrenaRiverRavine.esp' ]
+    after: [ 'Gaelendryll-BrenaRiver patch.esp' ]
+    tag: [ C.Regions ]
+
   - name: 'DaggerfallResources02.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/38734/' ]
     msg:
@@ -18024,16 +18048,6 @@ plugins:
             text: 'Use v1.5 or later to avoid extensive compatibility issues.'
           - lang: de
             text: 'Nutzen Sie v1.5 oder neuer um fortgeschrittene Kompatibilitäts-Probleme zu vermeiden.'
-  - name: 'Daedric Shrine Ruins.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/31636' ]
-    inc:
-      - 'Asharnakibibi.esp'
-      - 'MehrunesFel.esp'
-      - 'Zergonipilamat.esp'
-    dirty:
-      - crc: 0x99bd9cb0
-        <<: *dirtyPlugin
-        udr: 753
   - name: 'DarkBrotherhoodChronicles.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/41090' ]
     tag:
