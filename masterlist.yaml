@@ -3808,6 +3808,38 @@ plugins:
       - crc: 0x72C879EB
         util: 'TES4Edit v4.0.3'
 
+  - name: 'Oblivion Uncut.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/47191/' ]
+    after:
+      - 'Oaksdale.esp'
+      - 'OLDArchfiend.esp'
+    tag:
+      - Actors.Anims
+      - Actors.Spells
+      - C.Music
+      - C.RecordFlags
+      - Graphics
+      - Invent.Change
+      - NPC.Class
+      - NPC.Eyes
+      - NPC.FaceGen
+      - NPC.Hair
+      - NPC.Race
+      - Relations.Add
+      - Scripts
+      - Sound
+      - SpellStats
+      - Text
+    dirty:
+      - <<: *quickClean
+        crc: 0xFD791DFE
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 54
+      - <<: *quickClean
+        crc: 0x7F574A69
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 58
+
   - name: 'Secure Guild Chest.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/16033/' ]
     dirty:
