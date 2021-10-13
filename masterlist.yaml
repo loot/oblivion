@@ -4500,6 +4500,18 @@ plugins:
         itm: 36
         udr: 20
 
+  - name: 'No psychic guards( harder)? v1\.2\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/11911/' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'No Psychic Guards ESP' ]
+        condition: 'many("No psychic guards( harder)? v1\.2\.esp")'
+    dirty:
+      - <<: *quickClean
+        crc: 0xA43BE46F
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1
+
   - name: 'Passive Mudcrabs 1.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/16409/' ]
     dirty:
@@ -20447,11 +20459,6 @@ plugins:
       - <<: *useOnlyOneX
         subs: [ 'Bounty Reduction Over Time' ]
         condition: 'many("BountyReductionOverTime(_standard|_unforgiving|_mostwanted)?.esp")'
-  - name: 'No psychic guards v1.2.esp'
-    dirty:
-      - crc: 0xa43be46f
-        <<: *dirtyPlugin
-        itm: 1
 
   - name: 'TRN One of the Gang.esp'
     msg:
