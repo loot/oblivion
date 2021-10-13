@@ -4112,6 +4112,38 @@ plugins:
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
 
 ###### Gameplay - Combat ######
+  - name: '((DeadlyReflex|Deadly Reflex)( [\d])? - (Combat Moves|Timed Block)|DRSplatter|Mounted_Spellcasting_Deadly_Reflex_Compatible|HorseCombatMaster).*\.es(m|p)'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/8273/'
+        name: 'Deadly Reflex'
+  - name: 'DeadlyReflex 6 - Combat Moves.esp'
+    req: [ *NifSE ]
+    msg:
+      - <<: *alsoUseX
+        subs: [ '[Drop Lit Torches](http://www.nexusmods.com/oblivion/mods/16282/)' ]
+        condition: 'not file("DropLitTorchOBSE.esp")'
+      - <<: *patch3rdParty
+        type: warn
+        subs:
+          - 'NifSE v1.0+'
+          - '[Deadly Reflex 6 - NiFSE Compatibility Fix](http://www.nexusmods.com/oblivion/mods/40336/)'
+        condition: 'file("obse/plugins/NifSE.dll") and not file("Deadly Reflex 6 - HeX NifSE Patch.esp")'
+    tag: [ Graphics ]
+  - name: 'Deadly Reflex [\d] - Timed Block.*\.esp'
+    msg:
+      - *masterReassignNehrim
+      - <<: *useOnlyOneX
+        subs: [ 'Deadly Reflex Timed Block plugin' ]
+        condition: 'many("Deadly Reflex [\d] - Timed Block.*\.esp")'
+  - name: 'DRSplatter.esp'
+    req:
+      - name: 'OBSE/Plugins/OBGEv2.dll'
+        display: '[Oblivion Graphics Extender](https://www.nexusmods.com/oblivion/mods/30054/)'
+    msg:
+      - <<: *deleteOrDeactivateX
+        type: warn
+        subs: [ 'Known to cause crashes and save game corruption.' ]
+
   - name: 'Duke Patricks - Actors Can Miss Now.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17706' ]
     msg:
@@ -9577,9 +9609,6 @@ plugins:
       - 'https://www.nexusmods.com/oblivion/mods/3130'
       - 'https://www.nexusmods.com/oblivion/mods/5008'
     inc: [ 'Retros Fletching and Imbueing 1.7.1_rus.esp' ]
-  - name: 'HorseCombatMaster.esm'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/8273' ]
-    msg: [ *masterReassignNehrim ]
 
   - name: 'Tamrielic Ingredients.esm'
     url: [ 'https://www.nexusmods.com/oblivion/mods/11084' ]
@@ -20587,50 +20616,6 @@ plugins:
     msg:
       - <<: *useBashTweakInstead
         subs: [ 'Tweak Settings -> Actor: Unconsciousness Duration' ]
-
-  - name: 'DeadlyReflex 6 - Combat Moves.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/8273' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'To use both DR6b101 and NifSE 1.0+ you need the [fix file](http://www.nexusmods.com/oblivion/mods/40336).'
-          - lang: de
-            text: 'Um beides, DR6b101 und NifSE 1.0+ zu nutzen, setzt dies die [Fix-Datei](http://www.nexusmods.com/oblivion/mods/40336) voraus.'
-        condition: 'not file("Deadly Reflex 6 - HeX NifSE Patch.esp")'
-    req:
-      - *NifSE
-      - name: 'DropLitTorchOBSE.esp'
-        display: '[Drop Lit Torches](http://www.nexusmods.com/oblivion/mods/16282)'
-    tag: [ Graphics ]
-  - name: 'DeadlyReflex 5 - Combat Moves.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/8273' ]
-    dirty:
-      - <<: *dirtyPlugin
-        crc: 0xf63d656d
-        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 1
-      - <<: *dirtyPlugin
-        crc: 0x5726D76C
-        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 1
-  - name: 'Deadly Reflex [56] - Timed Block( and [12]50% damage| with no damage or durability changes)?\.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/8273' ]
-    msg:
-      - <<: *useOnlyOneX
-        subs: [ 'Deadly Reflex Timed Block plugin' ]
-        condition: 'many("Deadly Reflex [56] - Timed Block( and [12]50% damage| with no damage or durability changes)?\.esp")'
-  - name: 'Deadly Reflex 5 - Timed Block and [12]50% damage\.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/8273' ]
-    msg: [ *masterReassignNehrim ]
-  - name: '(Mounted_Spellcasting )?Deadly( )?Reflex( 3)?( Compatible| - Combat Moves| - Timed Block (\+ (Very High|Higher) Damage|no other changes))\.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/8273' ]
-    msg: [ *obsolete ]
-  - name: 'DRSplatter.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/8273' ]
-    msg:
-      - <<: *corrupt
-        condition: 'checksum("DRSplatter.esp", 74B7D119)'
 
   - name: 'kuerteeAttributeAndSkillBasedDamageModifiers.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/23062' ]
