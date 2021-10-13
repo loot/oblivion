@@ -4138,12 +4138,12 @@ plugins:
         crc: 0x5726D76C
         util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
-  - name: 'Deadly Reflex [56] - Timed Block( and [12]50% damage| with no damage or durability changes)?\.esp'
+  - name: 'Deadly Reflex [\d] - Timed Block.*\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/8273/' ]
     msg:
       - <<: *useOnlyOneX
         subs: [ 'Deadly Reflex Timed Block plugin' ]
-        condition: 'many("Deadly Reflex [56] - Timed Block( and [12]50% damage| with no damage or durability changes)?\.esp")'
+        condition: 'many("Deadly Reflex [\d] - Timed Block.*\.esp")'
   - name: 'Deadly Reflex 5 - Timed Block and [12]50% damage\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/8273/' ]
     msg: [ *masterReassignNehrim ]
