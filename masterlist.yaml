@@ -4502,10 +4502,10 @@ plugins:
 
   - name: 'No psychic guards( harder)? v1\.2\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/11911/' ]
-  - name: 'No psychic guards v1.2.esp'
     dirty:
-      - crc: 0xa43be46f
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xA43BE46F
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
 
   - name: 'Passive Mudcrabs 1.esp'
