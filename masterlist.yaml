@@ -4112,8 +4112,11 @@ plugins:
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
 
 ###### Gameplay - Combat ######
+  - name: '((DeadlyReflex|Deadly Reflex)( [\d])? - (Combat Moves|Timed Block)|DRSplatter|Mounted_Spellcasting_Deadly_Reflex_Compatible|HorseCombatMaster).*\.es(m|p)'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/8273/'
+        name: 'Deadly Reflex'
   - name: 'DeadlyReflex 6 - Combat Moves.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/8273' ]
     req: [ *NifSE ]
     msg:
       - <<: *alsoUseX
@@ -4127,14 +4130,12 @@ plugins:
         condition: 'file("obse/plugins/NifSE.dll") and not file("Deadly Reflex 6 - HeX NifSE Patch.esp")'
     tag: [ Graphics ]
   - name: 'Deadly Reflex [\d] - Timed Block.*\.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/8273/' ]
     msg:
       - *masterReassignNehrim
       - <<: *useOnlyOneX
         subs: [ 'Deadly Reflex Timed Block plugin' ]
         condition: 'many("Deadly Reflex [\d] - Timed Block.*\.esp")'
   - name: 'DRSplatter.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/8273/' ]
     msg:
       - <<: *corrupt
         condition: 'checksum("DRSplatter.esp", 74B7D119)'
