@@ -4137,8 +4137,8 @@ plugins:
         condition: 'many("Deadly Reflex [\d] - Timed Block.*\.esp")'
   - name: 'DRSplatter.esp'
     msg:
-      - <<: *corrupt
-        condition: 'checksum("DRSplatter.esp", 74B7D119)'
+      - <<: *deleteOrDeactivateX
+        subs: [ 'Known to cause crashes and save game corruption.' ]
 
   - name: 'Duke Patricks - Actors Can Miss Now.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17706' ]
