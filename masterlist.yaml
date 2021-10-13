@@ -4127,29 +4127,13 @@ plugins:
       - name: 'DropLitTorchOBSE.esp'
         display: '[Drop Lit Torches](http://www.nexusmods.com/oblivion/mods/16282)'
     tag: [ Graphics ]
-  - name: 'DeadlyReflex 5 - Combat Moves.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/8273/' ]
-    dirty:
-      - <<: *dirtyPlugin
-        crc: 0xf63d656d
-        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 1
-      - <<: *dirtyPlugin
-        crc: 0x5726D76C
-        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 1
   - name: 'Deadly Reflex [\d] - Timed Block.*\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/8273/' ]
     msg:
+      - *masterReassignNehrim
       - <<: *useOnlyOneX
         subs: [ 'Deadly Reflex Timed Block plugin' ]
         condition: 'many("Deadly Reflex [\d] - Timed Block.*\.esp")'
-  - name: 'Deadly Reflex 5 - Timed Block and [12]50% damage\.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/8273/' ]
-    msg: [ *masterReassignNehrim ]
-  - name: '(Mounted_Spellcasting )?Deadly( )?Reflex( 3)?( Compatible| - Combat Moves| - Timed Block (\+ (Very High|Higher) Damage|no other changes))\.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/8273/' ]
-    msg: [ *obsolete ]
   - name: 'DRSplatter.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/8273/' ]
     msg:
