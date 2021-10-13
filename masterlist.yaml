@@ -6402,13 +6402,18 @@ plugins:
 
   - name: '(DaedraShrinesProdded|KOTNPoked)WithAStick\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/46930/' ]
+    tag: [ Actors.AIPackages ]
   - name: 'DaedraShrinesProddedWithAStick.esp'
+    tag:
+      - Actors.Spells
+      - Invent.Add
     dirty:
       - <<: *quickClean
         crc: 0x417B6DEB
         util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 8
   - name: 'KOTNPokedWithAStick.esp'
+    tag: [ Factions ]
     clean:
       - crc: 0x7F19A6E5
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
