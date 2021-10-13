@@ -5783,6 +5783,21 @@ plugins:
         util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 12
 
+  - name: '(DC) County Sutch - New Haven.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/32298/'
+        name: '(Dragon Captions) County Sutch - New Haven City'
+    inc: [ '(DC) Sutch Reborn.esp' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xE022C34E
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 3
+      - <<: *quickClean
+        crc: 0x8BA9D0C2
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 3
+
   - name: '(DC) Sutch Reborn.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/38921/'
@@ -15758,16 +15773,6 @@ plugins:
   - name: 'Dark Brotherhood Outpost v3.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/13277' ]
     msg: [ *obsolete ]
-
-  - name: '(DC) County Sutch - New Haven.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/32298' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'it replaces (DC) Sutch Reborn.esp'
-          - lang: de
-            text: 'Es ersetzt (DC) Sutch Reborn.esp'
 
   - name: 'DibellaTempleWillowLakeVillagev1.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/13285' ]
