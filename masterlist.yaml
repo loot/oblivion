@@ -4136,6 +4136,9 @@ plugins:
         subs: [ 'Deadly Reflex Timed Block plugin' ]
         condition: 'many("Deadly Reflex [\d] - Timed Block.*\.esp")'
   - name: 'DRSplatter.esp'
+    req:
+      - name: 'OBSE/Plugins/OBGEv2.dll'
+        display: '[Oblivion Graphics Extender](https://www.nexusmods.com/oblivion/mods/30054/)'
     msg:
       - <<: *deleteOrDeactivateX
         subs: [ 'Known to cause crashes and save game corruption.' ]
