@@ -6449,7 +6449,19 @@ plugins:
       - <<: *useOnlyOneX
         subs: [ 'ImpIsle Walkabout ESP' ]
         condition: 'many("ImpIsle Walkabout (Jungle|noXUL| XUL)\.esp")'
+  - name: 'ImpIsle Walkabout (Jungle| XUL)\.esp'
+    after:
+      - name: 'Unique Landscapes.esp'
+        condition: 'version("Unique Landscapes.esp", "2.0.0", >=)'
+    req:
+      - name: 'xulImperialIsle.esp'
+        display: '[Unique Landscapes - Imperial Isle](https://www.nexusmods.com/oblivion/mods/19370/)'
+        condition: 'not version("Unique Landscapes.esp", "2.0.0", >=)'
   - name: 'ImpIsle Walkabout Jungle.esp'
+    req:
+      - 'DLCShiveringIsles.esp'
+      - 'Region Revive - Lake Rumare.esp'
+      - 'Roads of Cyrodiil.esp'
     msg:
       - <<: *wildEdits
         subs: [ 'Remove **0002F7D6** & **000338A2** from **ImpIsle Walkabout Jungle.esp**.' ]
