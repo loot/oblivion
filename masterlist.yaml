@@ -4502,6 +4502,10 @@ plugins:
 
   - name: 'No psychic guards( harder)? v1\.2\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/11911/' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'No Psychic Guards ESP' ]
+        condition: 'many("No psychic guards( harder)? v1\.2\.esp")'
     dirty:
       - <<: *quickClean
         crc: 0xA43BE46F
