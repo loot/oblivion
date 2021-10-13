@@ -4114,11 +4114,11 @@ plugins:
 ###### Gameplay - Combat ######
   - name: 'DeadlyReflex 6 - Combat Moves.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/8273' ]
-    req:
-      - *NifSE
-      - name: 'DropLitTorchOBSE.esp'
-        display: '[Drop Lit Torches](http://www.nexusmods.com/oblivion/mods/16282)'
+    req: [ *NifSE ]
     msg:
+      - <<: *alsoUseX
+        subs: [ '[Drop Lit Torches](http://www.nexusmods.com/oblivion/mods/16282/)' ]
+        condition: 'not file("DropLitTorchOBSE.esp")'
       - <<: *patch3rdParty
         type: warn
         subs:
