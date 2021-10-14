@@ -5918,6 +5918,20 @@ plugins:
         itm: 440
         udr: 934
 
+  - name: 'Dirtier Waterfront.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/12183/' ]
+    tag:
+      - Invent.Change
+      - Invent.Remove
+      - NPC.FaceGen
+      - NPC.Hair
+    dirty:
+      - <<: *quickClean
+        crc: 0xCB542F9D
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 15
+        udr: 18
+
   - name: 'Faregyl.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/21562' ]
     after:
@@ -16347,13 +16361,6 @@ plugins:
       - 'Better Cities SKINGRAD.esp'
       - 'Better Cities Full.esp'
 
-  - name: 'Dirtier Waterfront.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/12183' ]
-    dirty:
-      - crc: 0xcb542f9d
-        <<: *dirtyPlugin
-        itm: 9
-        udr: 18
   - name: 'Imperial City Miniature Model.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/4212' ]
     msg:
