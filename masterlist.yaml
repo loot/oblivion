@@ -3201,6 +3201,10 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/3027/'
         name: 'Ruined-Tail''s Tale'
+    msg:
+      - <<: *obsolete
+        subs: [ '[Ruined-Tail''s Tale](https://www.nexusmods.com/oblivion/mods/3027/) v3.01+' ]
+        condition: 'not file("RTT.esp") or version("RTT.esp", "3.01", <)'
   - name: 'RTT.esp'
     dirty:
       - <<: *quickClean
@@ -3208,8 +3212,6 @@ plugins:
         util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 32
         udr: 3
-  - name: 'Ruin.esp'
-    msg: [ *obsolete ]
 
   - name: 'StokerWolff.esp'
     url:
