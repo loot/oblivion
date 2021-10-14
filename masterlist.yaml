@@ -3206,6 +3206,7 @@ plugins:
         subs: [ '[Ruined-Tail''s Tale](https://www.nexusmods.com/oblivion/mods/3027/) v3.01+' ]
         condition: 'not file("RTT.esp") or version("RTT.esp", "3.01", <)'
   - name: 'RTT.esp'
+    after: [ 'Akaviri Imports.esp' ]
     dirty:
       - <<: *quickClean
         crc: 0x65F14171
