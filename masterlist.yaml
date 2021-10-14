@@ -3840,6 +3840,12 @@ plugins:
         util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 58
 
+  - name: 'Respawning Varla & Welkynd Stones.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/29007/' ]
+    clean:
+      - crc: 0x8D021DE2
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
+
   - name: 'Secure Guild Chest.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/16033/' ]
     dirty:
@@ -19789,12 +19795,6 @@ plugins:
     inc:
       - 'kuerteeGoldIsAnInventoryItem.esp'
       - 'ReneersGoldMod.esp'
-  - name: 'Respawning Varla & Welkynd Stones.esp'
-    tag: [ Scripts ]
-    dirty:
-      - crc: 0x49328ae8
-        <<: *dirtyPlugin
-        udr: 727
   - name: 'Retros Fletching and Imbueing.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/2530' ]
     msg:
