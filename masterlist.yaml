@@ -3753,6 +3753,28 @@ plugins:
         util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 5
 
+  - name: 'Mage_Guild_Teleport.esp'
+    url:
+      - 'https://www.nexusmods.com/oblivion/mods/2494/'
+      - 'https://www.nexusmods.com/oblivion/mods/14712/'
+      - 'https://www.nexusmods.com/oblivion/mods/38583/'
+    dirty:
+      - <<: *quickClean
+        crc: 0x207CFC5F
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 5
+      - <<: *quickClean
+        crc: 0xE5DFD452
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1
+      - <<: *quickClean
+        crc: 0xE11D62E1
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1
+    clean:
+      - crc: 0xFFA02D0D
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
+
   - name: 'MigHorseArmor.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/43037' ]
     req:
@@ -19536,15 +19558,6 @@ plugins:
     tag:
       - Deactivate
       - Stats
-  - name: 'Mage_Guild_Teleport.esp'
-    url:
-      - 'https://www.nexusmods.com/oblivion/mods/2494'
-      - 'https://www.nexusmods.com/oblivion/mods/14712'
-      - 'https://www.nexusmods.com/oblivion/mods/38583'
-    dirty:
-      - crc: 0xe5dfd452
-        <<: *dirtyPlugin
-        itm: 1
   - name: 'Magic Spell Perks Balanced.esp'
     req: [ *OBSE ]
   - name: 'Mg_Global Item Mod.esp'
