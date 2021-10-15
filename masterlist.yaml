@@ -3204,11 +3204,11 @@ plugins:
       - crc: 0x508e738b
         <<: *dirtyPlugin
         itm: 12
-  - name: 'PersonalPackGuars (White|Black|Striped)\.esp'
+  - name: 'PersonalPackGuars (Black|Striped|White)\.esp'
     msg:
       - <<: *useOnlyOneX
-        subs: [ 'PersonalPackGuars colour' ]
-        condition: 'many("PersonalPackGuars (White|Black|Striped)\.esp")'
+        subs: [ 'Personal Pack Guars color ESP' ]
+        condition: 'many("PersonalPackGuars (Black|Striped|White)\.esp")'
 
   - name: '(RTT|Ruin)\.esp'
     url:
