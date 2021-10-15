@@ -2142,18 +2142,21 @@ plugins:
   - name: 'Nehrim.esm'
     group: *gameMasterGroup
   - name: 'NehrimData.esp'
+    group: *dlcGroup
     tag:
       - Actors.ACBS
       - Actors.Stats
       - Invent.Add
       - SpellStats
   - name: '(Nehrim(English|EJ|FR|Korean)|russian)\.esp'
+    group: *dlcGroup
     after: [ 'NehrimData.esp' ]
     tag:
       - C.Name
       - Names
       - Text
   - name: 'Translation.esp'
+    group: *dlcGroup
     tag:
       - C.Name
       - Names
