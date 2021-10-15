@@ -3197,6 +3197,17 @@ plugins:
         itm: 35
         udr: 12
 
+  - name: 'PersonalPackGuars.esp'
+    dirty:
+      - crc: 0x508e738b
+        <<: *dirtyPlugin
+        itm: 12
+  - name: 'PersonalPackGuars (White|Black|Striped)\.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'PersonalPackGuars colour' ]
+        condition: 'many("PersonalPackGuars (White|Black|Striped)\.esp")'
+
   - name: '(RTT|Ruin)\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/3027/'
@@ -18776,16 +18787,6 @@ plugins:
             text: 'Wahrscheinlich nicht kompatibel mit Better Cities.'
         condition: 'file("Better Cities Resources.esm")'
 
-  - name: 'PersonalPackGuars.esp'
-    dirty:
-      - crc: 0x508e738b
-        <<: *dirtyPlugin
-        itm: 12
-  - name: 'PersonalPackGuars (White|Black|Striped)\.esp'
-    msg:
-      - <<: *useOnlyOneX
-        subs: [ 'PersonalPackGuars colour' ]
-        condition: 'many("PersonalPackGuars (White|Black|Striped)\.esp")'
   - name: 'Duke Patrick''s Health Alarm RED DEATH and Heartbeat.esp'
     url: [ 'http://tesalliance.org/forums/index.php?/files/file/1014-duke-patricks-health-alarm-and-red-death-screen/' ]
     msg:
