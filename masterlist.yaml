@@ -2150,16 +2150,16 @@ plugins:
       - Names
       - Text
   # Nehrim - Old Version Files #
-  - name: 'NehrimData.esp'
+  - name: '(Nehrim(Data|English|EJ|FR|Korean)|russian)\.esp'
+    url: [ 'https://sureai.net/games/nehrim/' ]
     group: *dlcGroup
+  - name: 'NehrimData.esp'
     tag:
       - Actors.ACBS
       - Actors.Stats
       - Invent.Add
       - SpellStats
   - name: '(Nehrim(English|EJ|FR|Korean)|russian)\.esp'
-    url: [ 'https://sureai.net/games/nehrim/' ]
-    group: *dlcGroup
     after: [ 'NehrimData.esp' ]
     tag:
       - C.Name
