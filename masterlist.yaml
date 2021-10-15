@@ -2137,9 +2137,10 @@ plugins:
         util: 'TES4Edit v4.0.2'
 
 ###### Nehrim ######
-  - name: 'Nehrim(Data|English)\.es(m|p)'
-    url: [ 'https://sureai.net/games/nehrim/' ]
   - name: 'Nehrim.esm'
+    url:
+      - link: 'https://store.steampowered.com/app/1014940/Nehrim_At_Fates_Edge/'
+        name: 'Nehrim: At Fate''s Edge'
     group: *gameMasterGroup
   - name: 'NehrimData.esp'
     group: *dlcGroup
@@ -2149,6 +2150,7 @@ plugins:
       - Invent.Add
       - SpellStats
   - name: '(Nehrim(English|EJ|FR|Korean)|russian)\.esp'
+    url: [ 'https://sureai.net/games/nehrim/' ]
     group: *dlcGroup
     after: [ 'NehrimData.esp' ]
     tag:
@@ -2156,6 +2158,7 @@ plugins:
       - Names
       - Text
   - name: 'Translation.esp'
+    url: [ 'https://store.steampowered.com/app/1014940/Nehrim_At_Fates_Edge/' ]
     group: *dlcGroup
     tag:
       - C.Name
