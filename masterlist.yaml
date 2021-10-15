@@ -2220,6 +2220,9 @@ plugins:
 
   - name: 'Nehrim Fast Travel.esp'
     url: [ 'https://www.nexusmods.com/nehrim/mods/3/' ]
+    msg:
+      - <<: *wildEdits
+        condition: 'checksum("Nehrim Fast Travel.esp", 4360FE9B) or checksum("Nehrim Fast Travel.esp", 5422CBE5)'
     dirty:
       - <<: *quickClean
         crc: 0x4360FE9B
