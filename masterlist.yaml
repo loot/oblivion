@@ -4552,10 +4552,23 @@ plugins:
       - <<: *useOnlyOneX
         subs: [ 'PJ''s Spell Compendium ESP' ]
         condition: 'many("PJs Spell(s - Cheap Spells| Compendium - (No|Spell) Requirements)\.esp")'
+  - name: 'PJs Spells - Cheap Spells.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0xD313E203
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 9
+  - name: 'PJs Spell Compendium - No Requirements.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x1B973829
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 9
   - name: 'PJs Spell Compendium - Spell Requirements.esp'
     dirty:
-      - crc: 0x38eef54d
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x38EEF54D
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 9
 
   - name: 'PMSneakySummon.*\.esp'
