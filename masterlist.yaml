@@ -4546,6 +4546,34 @@ plugins:
         itm: 49
         udr: 11
 
+  - name: 'PJs Spell(s - Cheap Spells| Compendium - (No|Spell) Requirements)\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/3892/' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'PJ''s Spell Compendium ESP' ]
+        condition: 'many("PJs Spell(s - Cheap Spells| Compendium - (No|Spell) Requirements)\.esp")'
+    tag:
+      - EffectStats
+      - Graphics
+  - name: 'PJs Spells - Cheap Spells.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0xD313E203
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 9
+  - name: 'PJs Spell Compendium - No Requirements.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x1B973829
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 9
+  - name: 'PJs Spell Compendium - Spell Requirements.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x38EEF54D
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 9
+
   - name: 'PMSneakySummon.*\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/25335/'
@@ -20252,16 +20280,7 @@ plugins:
       - <<: *useOnlyOneX
         subs: [ 'Pants Be Gone' ]
         condition: 'many("Pants Be Gone 1.3 With(out)? Demoralize\.esp")'
-  - name: 'PJs Spell(s - Cheap Spells| Compendium - (No|Spell) Requirements)\.esp'
-    msg:
-      - <<: *useOnlyOneX
-        subs: [ 'PJs Spells' ]
-        condition: 'many("PJs Spell(s - Cheap Spells| Compendium - (No|Spell) Requirements)\.esp")'
-  - name: 'PJs Spell Compendium - Spell Requirements.esp'
-    dirty:
-      - crc: 0x38eef54d
-        <<: *dirtyPlugin
-        itm: 9
+
   - name: 'Portal - SI.esp'
     req: [ 'DLCShiveringIsles.esp' ]
 
