@@ -4726,6 +4726,12 @@ plugins:
       - Deactivate
       - -Invent.Remove
 
+  - name: 'Recastable Summons.esp'
+    dirty:
+      - crc: 0x970cacd1
+        <<: *dirtyPlugin
+        itm: 1
+
   - name: 'Wizard''sSpellBook.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/20977/' ]
     dirty:
@@ -23629,11 +23635,6 @@ plugins:
         condition: 'file("Mighty Magick - (Core|Races|Settings|Skills|Spells and Creatures).esp")'
     tag: [ Sound ]
 
-  - name: 'Recastable Summons.esp'
-    dirty:
-      - crc: 0x970cacd1
-        <<: *dirtyPlugin
-        itm: 1
   - name: 'k_HOD_RBP_patch.esp'
     tag:
       - Body-F
