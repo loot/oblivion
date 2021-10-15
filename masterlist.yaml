@@ -2141,7 +2141,16 @@ plugins:
     url: [ 'https://sureai.net/games/nehrim/' ]
   - name: 'Nehrim.esm'
     group: *gameMasterGroup
-  - name: 'NehrimEnglish.esp'
+  - name: '(Nehrim(English|EJ|FR|Korean)|russian)\.esp'
+    tag:
+      - C.Name
+      - Names
+      - Text
+  - name: 'Translation.esp'
+    tag:
+      - C.Name
+      - Names
+      - Text
 
   - name: 'Unofficial Nehrim Fixes.esp'
     url: [ 'https://www.nexusmods.com/nehrim/mods/38' ]
