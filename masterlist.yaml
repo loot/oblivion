@@ -2137,12 +2137,35 @@ plugins:
         util: 'TES4Edit v4.0.2'
 
 ###### Nehrim ######
-  - name: 'Nehrim(Data|English)\.es(m|p)'
-    url: [ 'https://sureai.net/games/nehrim/' ]
   - name: 'Nehrim.esm'
+    url:
+      - link: 'https://store.steampowered.com/app/1014940/Nehrim_At_Fates_Edge/'
+        name: 'Nehrim: At Fate''s Edge'
     group: *gameMasterGroup
-  - name: 'NehrimEnglish.esp'
-    after: [ All Natural Nehrim.esp ]
+  - name: 'Translation.esp'
+    url: [ 'https://store.steampowered.com/app/1014940/Nehrim_At_Fates_Edge/' ]
+    group: *dlcGroup
+    tag:
+      - C.Name
+      - Names
+      - Text
+  # Nehrim - Old Version Files #
+  - name: '(Nehrim(Data|English|EJ|FR|Korean)|russian)\.esp'
+    url: [ 'https://sureai.net/games/nehrim/' ]
+    group: *dlcGroup
+  - name: 'NehrimData.esp'
+    tag:
+      - Actors.ACBS
+      - Actors.Stats
+      - Invent.Add
+      - SpellStats
+  - name: '(Nehrim(English|EJ|FR|Korean)|russian)\.esp'
+    after: [ 'NehrimData.esp' ]
+    tag:
+      - C.Name
+      - Names
+      - Text
+
   - name: 'Unofficial Nehrim Fixes.esp'
     url: [ 'https://www.nexusmods.com/nehrim/mods/38' ]
     tag:
