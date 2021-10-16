@@ -5479,6 +5479,10 @@ plugins:
       - 'Oblivion XP.esp'
       - 'OBSE/Plugins/AVUncapper.dll'
       - 'OBSE/Plugins/OBSE_Elys_Uncapper.dll'
+    msg:
+      - <<: *compatIssuesWithX
+        subs: [ '[Real Time Lockpicking](https://www.nexusmods.com/oblivion/mods/38801/) **MigLockpicking.esp**' ]
+        condition: 'active("MigLockpicking.esp") and checksum("MigLockpicking.esp", 734BB0A2)'
     clean:
       - crc: 0xE6FF01E8
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
