@@ -3889,6 +3889,18 @@ plugins:
       - crc: 0x1C8F1C26
         util: 'TES4Edit v4.0.3'
 
+  - name: 'Mysterious Bear''s Epic Necromancy + EM.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/40964/' ]
+    dirty:
+      - crc: 0xa8e08203
+        <<: *dirtyPlugin
+        itm: 15
+        udr: 2
+      - crc: 0x0AB56ABA
+        <<: *dirtyPlugin
+        itm: 15
+        udr: 2
+
   - name: 'Oblivifall .*\.es(m|p)'
     url: [ 'https://www.nexusmods.com/oblivion/mods/31668/' ]
   - name: 'Oblivifall - Losing My Religion.esp'
@@ -20406,17 +20418,6 @@ plugins:
     req: [ *OBSE ]
   - name: 'SNxMarkers.esp'
     req: [ *OBSE ]
-  - name: 'Mysterious Bear''s Epic Necromancy + EM.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/40964' ]
-    dirty:
-      - crc: 0xa8e08203
-        <<: *dirtyPlugin
-        itm: 15
-        udr: 2
-      - crc: 0x0AB56ABA
-        <<: *dirtyPlugin
-        itm: 15
-        udr: 2
   - name: 'Mysterious Bear''s Power Animals- Transparent.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/40125' ]
     dirty:
