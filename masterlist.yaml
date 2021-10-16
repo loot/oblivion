@@ -4631,6 +4631,10 @@ plugins:
 
   - name: 'Friendlier Summons.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/2926/' ]
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'Recastable Summons' ]
+        condition: 'active("Recastable Summons( - Mighty Magicka Version)?\.esp")'
     clean:
       - crc: 0x3BE5B720
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
