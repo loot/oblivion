@@ -4734,6 +4734,10 @@ plugins:
         condition: 'many("Recastable Summons( - Mighty Magicka Version)?\.esp")'
   - name: 'Recastable Summons.esp'
     after: [ 'AdrenalineOblivion-SupportElements.esp' ]
+    msg:
+      - <<: *compatIssuesWithX
+        subs: [ 'Oscuro''s Oblivion Overhaul v1.2+' ]
+        condition: 'active("Oscuro''s_Oblivion_Overhaul.esm") and version("Oscuro''s_Oblivion_Overhaul.esm", "1.2", >=)'
     dirty:
       - <<: *quickClean
         crc: 0x970CACD1
