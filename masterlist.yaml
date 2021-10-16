@@ -4654,6 +4654,19 @@ plugins:
         itm: 49
         udr: 11
 
+  - name: 'MultiSummons-\d+\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/2930/' ]
+    inc: [ 'Level Based Summon Cap.esp' ]
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'Recastable Summons (**Recastable Summons.esp**)' ]
+        condition: 'active("Recastable Summons.esp")'
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings -> Magic: Max Player Summons' ]
+      - <<: *useOnlyOneX
+        subs: [ 'MultiSummons ESP' ]
+        condition: 'many("MultiSummons-\d+\.esp")'
+
   - name: 'PJs Spell(s - Cheap Spells| Compendium - (No|Spell) Requirements)\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/3892/' ]
     msg:
