@@ -4728,6 +4728,10 @@ plugins:
 
   - name: 'Recastable Summons( - Mighty Magicka Version)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/3085/' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Recastable Summons ESP' ]
+        condition: 'many("Recastable Summons( - Mighty Magicka Version)?\.esp")'
   - name: 'Recastable Summons.esp'
     dirty:
       - crc: 0x970cacd1
