@@ -6942,9 +6942,10 @@ plugins:
   - name: 'DJ Markov Manor.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/5313/' ]
     dirty:
-      - crc: 0x6cb134c6
-        <<: *dirtyPlugin
-        itm: 245
+      - <<: *quickClean
+        crc: 0x6CB134C6
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 247
         udr: 1
 
   - name: 'Greenview Manor.esp'
