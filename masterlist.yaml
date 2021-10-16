@@ -4359,38 +4359,28 @@ plugins:
       - 'AltStartwChangedMessages.esp'
       - 'ShiveringIslesStart.esp'
 
-  - name: 'Harvest [Flora].esp'
+  - name: 'Harvest \[Flora\]( - )?(Shivering Isles|DLCFrostcrag|DLCVileLair)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/2037/' ]
     tag:
       - Graphics
       - Scripts
+  - name: 'Harvest [Flora].esp'
     clean:
       - crc: 0xFA700811
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
   - name: 'Harvest [Flora] - Shivering Isles.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/2037/' ]
-    tag:
-      - Graphics
-      - Scripts
     dirty:
       - <<: *quickClean
         crc: 0x05003A29
         util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 2
   - name: 'Harvest [Flora] - DLCFrostcrag.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/2037/' ]
-    tag:
-      - Graphics
-      - Scripts
     dirty:
       - <<: *quickClean
         crc: 0xADFEEDB5
         util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 2
   - name: 'Harvest [Flora] - DLCVileLair.esp'
-    tag:
-      - Graphics
-      - Scripts
     clean:
       - crc: 0x4C040612
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
