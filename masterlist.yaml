@@ -3891,18 +3891,12 @@ plugins:
 
   - name: 'Myserious Bear''s Epic Necromancy.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/40964/' ]
+    clean:
+      - crc: 0xC05E2FC0
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
   - name: 'Mysterious Bear''s Epic Necromancy + EM.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/40964/' ]
     msg: [ *obsolete ]
-    dirty:
-      - crc: 0xa8e08203
-        <<: *dirtyPlugin
-        itm: 15
-        udr: 2
-      - crc: 0x0AB56ABA
-        <<: *dirtyPlugin
-        itm: 15
-        udr: 2
 
   - name: 'Oblivifall .*\.es(m|p)'
     url: [ 'https://www.nexusmods.com/oblivion/mods/31668/' ]
