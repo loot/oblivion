@@ -4629,6 +4629,17 @@ plugins:
         util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 17
 
+  - name: 'Friendlier Summons.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/2926/' ]
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'Recastable Summons' ]
+        condition: 'active("Recastable Summons( - Mighty Magicka Version)?\.esp")'
+    tag: [ Scripts ]
+    clean:
+      - crc: 0x3BE5B720
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
+
   - name: 'Illusionary Summons.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/9014/' ]
     dirty:
