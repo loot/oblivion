@@ -4733,6 +4733,7 @@ plugins:
         subs: [ 'Recastable Summons ESP' ]
         condition: 'many("Recastable Summons( - Mighty Magicka Version)?\.esp")'
   - name: 'Recastable Summons.esp'
+    after: [ 'AdrenalineOblivion-SupportElements.esp' ]
     dirty:
       - <<: *quickClean
         crc: 0x970CACD1
