@@ -4359,6 +4359,33 @@ plugins:
       - 'AltStartwChangedMessages.esp'
       - 'ShiveringIslesStart.esp'
 
+  - name: 'Harvest \[Flora\]( - )?(Shivering Isles|DLCFrostcrag|DLCVileLair)?\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/2037/' ]
+    tag:
+      - Graphics
+      - Scripts
+  - name: 'Harvest [Flora].esp'
+    msg: [ *alsoUseEngineBugFixes ]
+    clean:
+      - crc: 0xFA700811
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
+  - name: 'Harvest [Flora] - Shivering Isles.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x05003A29
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
+  - name: 'Harvest [Flora] - DLCFrostcrag.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0xADFEEDB5
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
+  - name: 'Harvest [Flora] - DLCVileLair.esp'
+    clean:
+      - crc: 0x4C040612
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
+
   - name: 'Pitcher Plant and Lily Ingredients.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/15609/' ]
     dirty:
@@ -19100,29 +19127,6 @@ plugins:
             text: 'Put before Unique Landscape mods to return tree sizes there to normal.'
           - lang: de
             text: 'Vor Unique Landscape Mods platzieren um Bäume zur normalen Größe zurück zu verändern.'
-  - name: 'Harvest [Flora].esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/2037' ]
-    tag:
-      - Graphics
-      - Scripts
-  - name: 'Harvest [Flora] - Shivering Isles.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/2037' ]
-    tag:
-      - Graphics
-      - Scripts
-    dirty:
-      - crc: 0x5003a29
-        <<: *dirtyPlugin
-        itm: 2
-  - name: 'Harvest [Flora] - DLCFrostcrag.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/2037' ]
-    dirty:
-      - crc: 0xadfeedb5
-        <<: *dirtyPlugin
-        itm: 2
-      - crc: 0x67EB4689
-        <<: *dirtyPlugin
-        itm: 2
 
   - name: 'DEJ Harvest - Flora.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/3699' ]
