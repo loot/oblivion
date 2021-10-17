@@ -4696,6 +4696,25 @@ plugins:
         subs: [ 'MultiSummons ESP' ]
         condition: 'many("MultiSummons-\d+\.esp")'
 
+  - name: 'Mysterious Bear''s Power Animals - Opaque.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/40125/' ]
+    dirty:
+      - crc: 0x26a014e9
+        <<: *dirtyPlugin
+        udr: 2
+  - name: 'Mysterious Bear''s Power Animals - Translucent.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/40125/' ]
+    dirty:
+      - crc: 0x3813b26c
+        <<: *dirtyPlugin
+        udr: 2
+  - name: 'Mysterious Bear''s Power Animals- Transparent.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/40125/' ]
+    dirty:
+      - crc: 0x6386ddcf
+        <<: *dirtyPlugin
+        udr: 2
+
   - name: 'PJs Spell(s - Cheap Spells| Compendium - (No|Spell) Requirements)\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/3892/' ]
     msg:
@@ -20424,24 +20443,6 @@ plugins:
     req: [ *OBSE ]
   - name: 'SNxMarkers.esp'
     req: [ *OBSE ]
-  - name: 'Mysterious Bear''s Power Animals- Transparent.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/40125' ]
-    dirty:
-      - crc: 0x6386ddcf
-        <<: *dirtyPlugin
-        udr: 2
-  - name: 'Mysterious Bear''s Power Animals - Translucent.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/40125' ]
-    dirty:
-      - crc: 0x3813b26c
-        <<: *dirtyPlugin
-        udr: 2
-  - name: 'Mysterious Bear''s Power Animals - Opaque.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/40125' ]
-    dirty:
-      - crc: 0x26a014e9
-        <<: *dirtyPlugin
-        udr: 2
   - name: 'Pants Be Gone 1.3 With(out)? Demoralize\.esp'
     msg:
       - <<: *useOnlyOneX
