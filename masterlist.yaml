@@ -4696,6 +4696,50 @@ plugins:
         subs: [ 'MultiSummons ESP' ]
         condition: 'many("MultiSummons-\d+\.esp")'
 
+  - name: 'Mysterious Bear''s Power Animals.*\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/40125/' ]
+    tag: [ Relations.Add ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Mysterious Bear''s Power Animals ESP' ]
+        condition: 'many("Mysterious Bear''s Power Animals.*\.esp")'
+  - name: 'Mysterious Bear''s Power Animals - Opaque.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x28BAF3CC
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1
+        udr: 2
+  - name: 'Mysterious Bear''s Power Animals - Translucent.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x36665E36
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1
+        udr: 2
+  - name: 'Mysterious Bear''s Power Animals- Transparent.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x0A362E96
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1
+        udr: 2
+  - name: 'Mysterious Bear''s Power Animals - Opaque E.esp'
+    msg:
+      - <<: *renameFile
+        type: warn
+        subs: [ 'Mysterious Bear''s Power Animals - Opaque.esp' ]
+  - name: 'Mysterious Bear''s Power Animals - Translucent E.esp'
+    msg:
+      - <<: *renameFile
+        type: warn
+        subs: [ 'Mysterious Bear''s Power Animals - Translucent.esp' ]
+  - name: 'Mysterious Bear''s Power Animals- Transparent E.esp'
+    msg:
+      - <<: *renameFile
+        type: warn
+        subs: [ 'Mysterious Bear''s Power Animals- Transparent.esp' ]
+
   - name: 'PJs Spell(s - Cheap Spells| Compendium - (No|Spell) Requirements)\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/3892/' ]
     msg:
@@ -20424,24 +20468,6 @@ plugins:
     req: [ *OBSE ]
   - name: 'SNxMarkers.esp'
     req: [ *OBSE ]
-  - name: 'Mysterious Bear''s Power Animals- Transparent.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/40125' ]
-    dirty:
-      - crc: 0x6386ddcf
-        <<: *dirtyPlugin
-        udr: 2
-  - name: 'Mysterious Bear''s Power Animals - Translucent.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/40125' ]
-    dirty:
-      - crc: 0x3813b26c
-        <<: *dirtyPlugin
-        udr: 2
-  - name: 'Mysterious Bear''s Power Animals - Opaque.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/40125' ]
-    dirty:
-      - crc: 0x26a014e9
-        <<: *dirtyPlugin
-        udr: 2
   - name: 'Pants Be Gone 1.3 With(out)? Demoralize\.esp'
     msg:
       - <<: *useOnlyOneX
