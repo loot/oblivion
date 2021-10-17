@@ -4699,6 +4699,10 @@ plugins:
   - name: 'Mysterious Bear''s Power Animals.*\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/40125/' ]
     tag: [ Relations.Add ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Mysterious Bear''s Power Animals ESP' ]
+        condition: 'many("Mysterious Bear''s Power Animals.*\.esp")'
   - name: 'Mysterious Bear''s Power Animals - Opaque.esp'
     dirty:
       - <<: *quickClean
