@@ -4696,9 +4696,10 @@ plugins:
         subs: [ 'MultiSummons ESP' ]
         condition: 'many("MultiSummons-\d+\.esp")'
 
-  - name: 'Mysterious Bear''s Power Animals - Opaque.esp'
+  - name: 'Mysterious Bear''s Power Animals.*\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/40125/' ]
     tag: [ Relations.Add ]
+  - name: 'Mysterious Bear''s Power Animals - Opaque.esp'
     dirty:
       - <<: *quickClean
         crc: 0x28BAF3CC
@@ -4706,8 +4707,6 @@ plugins:
         itm: 1
         udr: 2
   - name: 'Mysterious Bear''s Power Animals - Translucent.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/40125/' ]
-    tag: [ Relations.Add ]
     dirty:
       - <<: *quickClean
         crc: 0x36665E36
@@ -4715,8 +4714,6 @@ plugins:
         itm: 1
         udr: 2
   - name: 'Mysterious Bear''s Power Animals- Transparent.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/40125/' ]
-    tag: [ Relations.Add ]
     dirty:
       - <<: *quickClean
         crc: 0x0A362E96
