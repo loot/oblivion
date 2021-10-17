@@ -5605,6 +5605,12 @@ plugins:
         udr: 4
 
 ###### Gameplay - Skills & Leveling ######
+  - name: 'SetsunaDummyTraining.esp'
+    dirty:
+      - crc: 0x7718c0ce
+        <<: *dirtyPlugin
+        itm: 4
+
   - name: 'Ultimate Leveling.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/49134/' ]
     req:
@@ -20088,11 +20094,7 @@ plugins:
     tag: [ Stats ]
   - name: 'sgLighterQuiversOOO.esp'
     tag: [ Stats ]
-  - name: 'SetsunaDummyTraining.esp'
-    dirty:
-      - crc: 0x7718c0ce
-        <<: *dirtyPlugin
-        itm: 4
+
   - name: 'Enhanced Vegetation \[1[0125]...\.esp'
     msg:
       - <<: *useOnlyOneX
