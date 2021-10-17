@@ -551,6 +551,14 @@ prelude:
         - lang: zh_CN
           text: '您似乎使用了**%1%**，但没有启用这个mod的兼容性补丁。这个插件的安装程序中包含了该补丁。'
 
+    - &patchOutdated
+      type: warn
+      content:
+        - lang: en
+          text: 'This patch is outdated and may not be compatible with the latest version of the patched mod.'
+        - lang: de
+          text: 'Dieser Patch ist veraltet und ist möglicherweise nicht kompatibel mit der aktuellen Version der gepatchten Mod.'
+
     - &patchProvided
       type: say
       content:
@@ -2533,18 +2541,13 @@ plugins:
         name: 'LOD Togglers for Mods'
     group: *lodGroup
     msg:
+      - *patchOutdated
       - type: error
         content:
           - lang: en
             text: 'Remove this plugin from your load order after DistantLOD has been generated with [TES4LODGen](https://www.nexusmods.com/oblivion/mods/15781).'
           - lang: de
             text: 'Entfernen Sie dieses Plugin von Ihrer Ladereihenfolge nachdem DistantLOD generiert wurde mit [TES4LODGen](https://www.nexusmods.com/oblivion/mods/15781).'
-      - type: warn
-        content:
-          - lang: en
-            text: 'This plugin is outdated and may not be compatible with the latest version of the patched mod.'
-          - lang: de
-            text: 'Dieses Plugin ist veraltet und ist möglicherweise nicht kompatibel mit der aktuellen Version der gepatchten Mod.'
   - name: 'FRLODToggle(Basic|Full).esp'
     req:
       - name: 'DLCFrostcragReborn.esp'
@@ -4811,13 +4814,7 @@ plugins:
         util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
   - name: 'Recastable Summons - Mighty Magicka Version.esp'
-    msg:
-      - type: warn
-        content:
-          - lang: en
-            text: 'This patch is outdated and may not be compatible with the latest version of the patched mod.'
-          - lang: de
-            text: 'Dieser Patch ist veraltet und ist möglicherweise nicht kompatibel mit der aktuellen Version der gepatchten Mod.'
+    msg: [ *patchOutdated ]
 
   - name: 'Wizard''sSpellBook.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/20977/' ]
@@ -5124,13 +5121,7 @@ plugins:
       - Deactivate
       - Roads
   - name: '(CSV_Farms_(Better_Cities|Open_Cities|Open_Better_Cities)|CSVF_Road_Record_(BBC|OC|RB)(\+OC)?(\+RB)?)\.esp'
-    msg:
-      - type: warn
-        content:
-          - lang: en
-            text: 'This patch is outdated and may not be compatible with the latest version of the patched mod.'
-          - lang: de
-            text: 'Dieser Patch ist veraltet und ist möglicherweise nicht kompatibel mit der aktuellen Version der gepatchten Mod.'
+    msg: [ *patchOutdated ]
   - name: 'CSV_Farms_(Better_Cities|Open_Cities|Open_Better_Cities)\.esp'
     msg:
       - <<: *useOnlyOneX
@@ -6087,13 +6078,7 @@ plugins:
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
   - name: 'CRpatchFor(XUL|BC|BS).*\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/42085/' ]
-    msg:
-      - type: warn
-        content:
-          - lang: en
-            text: 'This patch is outdated and may not be compatible with the latest version of the patched mod.'
-          - lang: de
-            text: 'Dieser Patch ist veraltet und ist möglicherweise nicht kompatibel mit der aktuellen Version der gepatchten Mod.'
+    msg: [ *patchOutdated ]
 
   - name: 'Daedric Shrine Ruins.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/31636/' ]
@@ -7189,12 +7174,7 @@ plugins:
       - link: 'https://www.nexusmods.com/oblivion/mods/46249/'
         name: 'Compatibility Patches for nuska''s Oblivion Character Overhaul (v2)'
     msg:
-      - type: warn
-        content:
-          - lang: en
-            text: 'This patch is outdated and may not be compatible with the latest version of the patched mod.'
-          - lang: de
-            text: 'Dieser Patch ist veraltet und ist möglicherweise nicht kompatibel mit der aktuellen Version der gepatchten Mod.'
+      - <<: *patchOutdated
         condition: 'version("Oblivion_Character_Overhaul.esp", "2.03", >=) or checksum("Oblivion_Character_Overhaul.esp", EBF6CC01)'
       - type: say
         content:
