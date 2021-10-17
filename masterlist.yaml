@@ -3165,13 +3165,13 @@ plugins:
       - <<: *patch3rdParty
         subs:
           - 'Fighters Guild Quests'
-          - '[OCOv2 - Mages Guild Quests and Fighters Guild Quests Patch](https://www.nexusmods.com/oblivion/mods/51379/)'
-        condition: 'file("Bashed Patch.*\.esp") and active("Fighters Guild Quests.esp") and not file("MGQ_FGQ_OCOv2_Patch.esp")'
+          - '[OCOv2 - Filter Patch for Mods](https://www.nexusmods.com/oblivion/mods/51379/)'
+        condition: 'file("Bashed Patch.*\.esp") and active("Fighters Guild Quests.esp") and not file("MGQ_FGQ_OCOv2_Patch.esp") and not file("OCOv2 - Filter Patch for Mods.esp")'
       - <<: *patch3rdParty
         subs:
           - 'Mages Guild Quests'
-          - '[OCOv2 - Mages Guild Quests and Fighters Guild Quests Patch](https://www.nexusmods.com/oblivion/mods/51379/)'
-        condition: 'file("Bashed Patch.*\.esp") and active("Mages Guild Quests.esp") and not file("MGQ_FGQ_OCOv2_Patch.esp")'
+          - '[OCOv2 - Filter Patch for Mods](https://www.nexusmods.com/oblivion/mods/51379/)'
+        condition: 'file("Bashed Patch.*\.esp") and active("Mages Guild Quests.esp") and not file("MGQ_FGQ_OCOv2_Patch.esp") and not file("OCOv2 - Filter Patch for Mods.esp")'
       - <<: *patch3rdParty
         type: warn
         subs:
