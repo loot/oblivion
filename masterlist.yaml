@@ -5612,6 +5612,10 @@ plugins:
       - link: 'https://www.nexusmods.com/oblivion/mods/46161/'
         name: 'Setsuna Dummy Training Modified'
     req: [ *OBSEv16 ]
+    msg:
+      - <<: *patchUpdateAvailable
+        subs: [ '[Setsuna Dummy Training Modified](https://www.nexusmods.com/oblivion/mods/46161/)' ]
+        condition: 'not file("Ini/SetsunaDummyTraining.ini")'
     dirty:
       - <<: *quickClean
         crc: 0x7718C0CE
