@@ -5612,8 +5612,13 @@ plugins:
       - link: 'https://www.nexusmods.com/oblivion/mods/46161/'
         name: 'Setsuna Dummy Training Modified'
     dirty:
-      - crc: 0x7718c0ce
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x7718C0CE
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 4
+      - <<: *quickClean
+        crc: 0x6BBDA06D
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 4
 
   - name: 'Ultimate Leveling.esp'
