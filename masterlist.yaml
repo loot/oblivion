@@ -3654,12 +3654,19 @@ plugins:
 
   - name: 'Trails of Cyrodiil -  Colovian Highland Vanilla.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/31624/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x902CC79C
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 126
+        udr: 48
   - name: 'Trails of Cyrodiil - Colovian Highlands UL.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/31624/' ]
     dirty:
-      - crc: 0xc5ebde40
-        <<: *dirtyPlugin
-        itm: 109
+      - <<: *quickClean
+        crc: 0xC5EBDE40
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 110
         udr: 64
 
   - name: 'Trails Of Cyrodiil Merged (Vanilla|UL Colovian Highlands)\.esp'
