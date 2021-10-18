@@ -3717,6 +3717,10 @@ plugins:
 
   - name: 'Trails of Cyrodiil North Short Cut.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/35297/' ]
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'Trails Of Cyrodiil Merged ESP' ]
+        condition: 'active("Trails Of Cyrodiil Merged (Vanilla|UL Colovian Highlands)\.esp")'
     dirty:
       - <<: *quickClean
         crc: 0x11603FD8
