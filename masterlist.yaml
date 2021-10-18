@@ -3718,12 +3718,9 @@ plugins:
   - name: 'Trails of Cyrodiil North Short Cut.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/35297/' ]
     dirty:
-      - crc: 0x11603fd8
-        <<: *dirtyPlugin
-        itm: 7
-        udr: 36
-      - crc: 0xb1da95e5
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x11603FD8
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 9
         udr: 36
 
