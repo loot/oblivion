@@ -3662,6 +3662,14 @@ plugins:
       - <<: *renameFile
         type: warn
         subs: [ 'Trails of Cyrodiil   Bleakersway.esp' ]
+  - name: '(TOCBleaker-Revamp|ROC-TOCBleaker)Patch\.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'ROC-TOCBleaker-RevampPatch.esp' ]
+        condition: 'active("ROC-TOCBleaker-RevampPatch.esp")'
+      - <<: *useInstead
+        subs: [ 'ROC-TOCBleaker-RevampPatch.esp' ]
+        condition: 'active("Reaper''s Bleaker''s Way Village Revamp.esp") and active("Roads of Cyrodiil.esp")'
 
   - name: 'Trails of Cyrodiil - ( Colovian Highland Vanilla|Colovian Highlands UL)\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/31624/' ]
