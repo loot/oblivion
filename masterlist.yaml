@@ -3619,6 +3619,10 @@ plugins:
 
   - name: 'Trail  (Central|EAST|South East|WEST)\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/25839/' ]
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'Trails Of Cyrodiil Merged ESP' ]
+        condition: 'active("Trails Of Cyrodiil Merged (Vanilla|UL Colovian Highlands)\.esp")'
   - name: 'Trail  Central.esp'
     dirty:
       - <<: *quickClean
