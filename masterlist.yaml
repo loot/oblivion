@@ -3617,9 +3617,10 @@ plugins:
       - name: 'Wellspring Vale.esp'
         display: '[Wellspring Vale](http://tesalliance.org/forums/index.php?/files/file/594-wellspring-vale/)'
 
-  - name: 'Trails Of Cyrodiil Merged Vanilla.esp'
+  - name: 'Trails Of Cyrodiil Merged (Vanilla|UL Colovian Highlands)\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/44766/' ]
     inc: [ 'xulColovianHighlands_EV.esp' ]
+  - name: 'Trails Of Cyrodiil Merged Vanilla.esp'
     dirty:
       - <<: *quickClean
         crc: 0xCE5C4FF8
@@ -3627,8 +3628,6 @@ plugins:
         itm: 552
         udr: 189
   - name: 'Trails Of Cyrodiil Merged UL Colovian Highlands.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/44766/' ]
-    inc: [ 'xulColovianHighlands_EV.esp' ]
     msg:
       - <<: *requiresResources
         subs: [ '[Unique Landscapes - Colovian Highlands](https://www.nexusmods.com/oblivion/mods/15511/)' ]
