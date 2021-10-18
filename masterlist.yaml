@@ -3,19 +3,6 @@
 # data that gets re-used.
 prelude:
   common:
-  # Condition Anchors
-    - &OOOCond
-      active("Oscuro's_Oblivion_Overhaul.esm")
-
-    - &FCOMCond
-      active("FCOM_Convergence.esm")
-
-    - &nehrimCond
-      active("Nehrim.esm")
-
-    - &tes4Cond
-      active("Oblivion.esm")
-
   # Message Anchors
     - &alreadyInX
       type: error
@@ -1273,6 +1260,19 @@ prelude:
           text: 'Объяснение по грязным правкам доступно [здесь](https://tes5edit.github.io/docs/6-mod-cleaning-and-error-checking.html#AppendixA).'
 
 common:
+# Condition Anchors
+  - &OOOCond
+    active("Oscuro's_Oblivion_Overhaul.esm")
+
+  - &FCOMCond
+    active("FCOM_Convergence.esm")
+
+  - &nehrimCond
+    active("Nehrim.esm")
+
+  - &tes4Cond
+    active("Oblivion.esm")
+
 # File Anchors
   - &OBSE
     name: '../obse_1_2_416.dll'
