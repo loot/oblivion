@@ -3617,6 +3617,41 @@ plugins:
       - name: 'Wellspring Vale.esp'
         display: '[Wellspring Vale](http://tesalliance.org/forums/index.php?/files/file/594-wellspring-vale/)'
 
+  - name: 'Trails Of Cyrodiil Merged Vanilla.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/44766/' ]
+    inc: [ 'xulColovianHighlands_EV.esp' ]
+    msg:
+      - type: say
+        content:
+          - lang: en
+            text: 'Instead use ''Trails of Cyrodiil Merged UL Colovian Highlands.esp''.'
+          - lang: de
+            text: 'Benutzen Sie ''Trails of Cyrodiil Merged UL Colovian Highlands.esp'' stattdessen.'
+    dirty:
+      # version: 1
+      - <<: *quickClean
+        crc: 0xCE5C4FF8
+        util: '[TES4Edit v4.0.1](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 552
+        udr: 189
+  - name: 'Trails Of Cyrodiil Merged UL Colovian Highlands.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/44766/' ]
+    msg:
+      - type: warn
+        content:
+          - lang: en
+            text: 'Contains xulColovianHighlands.esp. ONLY load Meshes and Textures from UL Colovian Highlands when using this plugin.'
+          - lang: de
+            text: 'Beinhaltet xulColovianHighlands.esp. Laden Sie NUR Meshes und Texturen von UL Colovian Highlands wenn Sie dieses Plugin nutzen.'
+        condition: 'file("xulColovianHighlands.esp")'
+    dirty:
+      # version: 1
+      - <<: *quickClean
+        crc: 0xCB94C87A
+        util: '[TES4Edit v4.0.1](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 576
+        udr: 217
+
   - name: 'West Roads.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/29523' ]
     after: [ 'Villages1.1.esp' ]
@@ -17782,23 +17817,6 @@ plugins:
         <<: *dirtyPlugin
         itm: 9
         udr: 36
-  - name: 'Trails Of Cyrodiil Merged Vanilla.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/44766' ]
-    inc: [ 'xulColovianHighlands_EV.esp' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Instead use ''Trails of Cyrodiil Merged UL Colovian Highlands.esp''.'
-          - lang: de
-            text: 'Benutzen Sie ''Trails of Cyrodiil Merged UL Colovian Highlands.esp'' stattdessen.'
-    dirty:
-      # version: 1
-      - <<: *quickClean
-        crc: 0xCE5C4FF8
-        util: '[TES4Edit v4.0.1](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 552
-        udr: 189
   - name: 'TR_Stirk.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22401' ]
     tag: [ Graphics ]
@@ -18916,23 +18934,6 @@ plugins:
         <<: *dirtyPlugin
         itm: 109
         udr: 64
-  - name: 'Trails Of Cyrodiil Merged UL Colovian Highlands.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/44766' ]
-    msg:
-      - type: warn
-        content:
-          - lang: en
-            text: 'Contains xulColovianHighlands.esp. ONLY load Meshes and Textures from UL Colovian Highlands when using this plugin.'
-          - lang: de
-            text: 'Beinhaltet xulColovianHighlands.esp. Laden Sie NUR Meshes und Texturen von UL Colovian Highlands wenn Sie dieses Plugin nutzen.'
-        condition: 'file("xulColovianHighlands.esp")'
-    dirty:
-      # version: 1
-      - <<: *quickClean
-        crc: 0xCB94C87A
-        util: '[TES4Edit v4.0.1](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 576
-        udr: 217
   - name: 'VeronaHouseBloodlines-ChorrolHinterland fix.esp'
     msg: [ *obsolete ]
   - name: 'MOEVampireClanRaelu-ChorrolHinterland patch.esp'
