@@ -3672,6 +3672,10 @@ plugins:
         display: 'Unique Landscapes - Merged ESP'
         condition: 'version("Unique Landscapes.esp", "2.0.0", >=)'
       - 'xulColovianHighlands_EV.esp'
+    msg:
+      - <<: *requiresResources
+        subs: [ '[Unique Landscapes - Colovian Highlands](https://www.nexusmods.com/oblivion/mods/15511/)' ]
+        condition: 'not file("textures/landscape/xulcvhBodenSand.dds")'
     dirty:
       - <<: *quickClean
         crc: 0xC5EBDE40
