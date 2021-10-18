@@ -3635,14 +3635,11 @@ plugins:
         udr: 189
   - name: 'Trails Of Cyrodiil Merged UL Colovian Highlands.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/44766/' ]
+    inc: [ 'xulColovianHighlands_EV.esp' ]
     msg:
-      - type: warn
-        content:
-          - lang: en
-            text: 'Contains xulColovianHighlands.esp. ONLY load Meshes and Textures from UL Colovian Highlands when using this plugin.'
-          - lang: de
-            text: 'Beinhaltet xulColovianHighlands.esp. Laden Sie NUR Meshes und Texturen von UL Colovian Highlands wenn Sie dieses Plugin nutzen.'
-        condition: 'file("xulColovianHighlands.esp")'
+      - <<: *requiresResources
+        subs: [ '[Unique Landscapes - Colovian Highlands](https://www.nexusmods.com/oblivion/mods/15511/)' ]
+        condition: 'not file("textures/landscape/xulcvhBodenSand.dds")'
     dirty:
       - <<: *quickClean
         crc: 0xCB94C87A
