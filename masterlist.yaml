@@ -3619,7 +3619,11 @@ plugins:
 
   - name: 'Trails Of Cyrodiil Merged (Vanilla|UL Colovian Highlands)\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/44766/' ]
-    inc: [ 'xulColovianHighlands_EV.esp' ]
+    inc:
+      - name: 'Unique Landscapes.esp'
+        display: 'Unique Landscapes - Merged ESP'
+        condition: 'version("Unique Landscapes.esp", "2.0.0", >=)'
+      - 'xulColovianHighlands_EV.esp'
     msg:
       - <<: *useOnlyOneX
         subs: [ 'Trails Of Cyrodiil Merged ESP' ]
