@@ -3652,13 +3652,14 @@ plugins:
         itm: 160
         udr: 22
 
-  - name: 'Trails of Cyrodiil -  Colovian Highland Vanilla.esp'
+  - name: 'Trails of Cyrodiil - ( Colovian Highland Vanilla|Colovian Highlands UL)\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/31624/' ]
     inc:
       - name: 'Unique Landscapes.esp'
         display: 'Unique Landscapes - Merged ESP'
         condition: 'version("Unique Landscapes.esp", "2.0.0", >=)'
       - 'xulColovianHighlands_EV.esp'
+  - name: 'Trails of Cyrodiil -  Colovian Highland Vanilla.esp'
     msg:
       - <<: *alreadyInX
         subs: [ 'Trails Of Cyrodiil Merged Vanilla.esp' ]
@@ -3670,12 +3671,6 @@ plugins:
         itm: 126
         udr: 48
   - name: 'Trails of Cyrodiil - Colovian Highlands UL.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/31624/' ]
-    inc:
-      - name: 'Unique Landscapes.esp'
-        display: 'Unique Landscapes - Merged ESP'
-        condition: 'version("Unique Landscapes.esp", "2.0.0", >=)'
-      - 'xulColovianHighlands_EV.esp'
     msg:
       - <<: *alreadyInX
         subs: [ 'Trails Of Cyrodiil Merged UL Colovian Highlands.esp' ]
