@@ -3659,6 +3659,10 @@ plugins:
         display: 'Unique Landscapes - Merged ESP'
         condition: 'version("Unique Landscapes.esp", "2.0.0", >=)'
       - 'xulColovianHighlands_EV.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'Trails Of Cyrodiil Merged Vanilla.esp' ]
+        condition: 'active("Trails Of Cyrodiil Merged Vanilla.esp")'
     dirty:
       - <<: *quickClean
         crc: 0x902CC79C
@@ -3673,6 +3677,9 @@ plugins:
         condition: 'version("Unique Landscapes.esp", "2.0.0", >=)'
       - 'xulColovianHighlands_EV.esp'
     msg:
+      - <<: *alreadyInX
+        subs: [ 'Trails Of Cyrodiil Merged UL Colovian Highlands.esp' ]
+        condition: 'active("Trails Of Cyrodiil Merged UL Colovian Highlands.esp")'
       - <<: *requiresResources
         subs: [ '[Unique Landscapes - Colovian Highlands](https://www.nexusmods.com/oblivion/mods/15511/)' ]
         condition: 'not file("textures/landscape/xulcvhBodenSand.dds")'
