@@ -3652,6 +3652,39 @@ plugins:
         itm: 160
         udr: 22
 
+  - name: 'Trails of Cyrodiil - ( Colovian Highland Vanilla|Colovian Highlands UL)\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/31624/' ]
+    inc:
+      - name: 'Unique Landscapes.esp'
+        display: 'Unique Landscapes - Merged ESP'
+        condition: 'version("Unique Landscapes.esp", "2.0.0", >=)'
+      - 'xulColovianHighlands_EV.esp'
+  - name: 'Trails of Cyrodiil -  Colovian Highland Vanilla.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'Trails Of Cyrodiil Merged Vanilla.esp' ]
+        condition: 'active("Trails Of Cyrodiil Merged Vanilla.esp")'
+    dirty:
+      - <<: *quickClean
+        crc: 0x902CC79C
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 126
+        udr: 48
+  - name: 'Trails of Cyrodiil - Colovian Highlands UL.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'Trails Of Cyrodiil Merged UL Colovian Highlands.esp' ]
+        condition: 'active("Trails Of Cyrodiil Merged UL Colovian Highlands.esp")'
+      - <<: *requiresResources
+        subs: [ '[Unique Landscapes - Colovian Highlands](https://www.nexusmods.com/oblivion/mods/15511/)' ]
+        condition: 'not file("textures/landscape/xulcvhBodenSand.dds")'
+    dirty:
+      - <<: *quickClean
+        crc: 0xC5EBDE40
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 110
+        udr: 64
+
   - name: 'Trails Of Cyrodiil Merged (Vanilla|UL Colovian Highlands)\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/44766/' ]
     inc:
@@ -18929,13 +18962,6 @@ plugins:
       - crc: 0x8056a33c
         <<: *dirtyPlugin
         itm: 5
-  - name: 'Trails of Cyrodiil - Colovian Highlands UL.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/44766' ]
-    dirty:
-      - crc: 0xc5ebde40
-        <<: *dirtyPlugin
-        itm: 109
-        udr: 64
   - name: 'VeronaHouseBloodlines-ChorrolHinterland fix.esp'
     msg: [ *obsolete ]
   - name: 'MOEVampireClanRaelu-ChorrolHinterland patch.esp'
