@@ -3620,6 +3620,10 @@ plugins:
   - name: 'Trails Of Cyrodiil Merged (Vanilla|UL Colovian Highlands)\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/44766/' ]
     inc: [ 'xulColovianHighlands_EV.esp' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Trails Of Cyrodiil Merged ESP' ]
+        condition: 'many("Trails Of Cyrodiil Merged (Vanilla|UL Colovian Highlands)\.esp")'
   - name: 'Trails Of Cyrodiil Merged Vanilla.esp'
     dirty:
       - <<: *quickClean
