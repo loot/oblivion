@@ -2603,87 +2603,6 @@ plugins:
         util: 'TES4Edit v4.0.3'
 
 ###### User Interface ######
-  - name: 'Ak- Morroblivion Maps HD.esp'
-    url: [ 'https://morroblivion.com/forums/morroblivion/mods/2610' ]
-    group: *mapGroup
-
-  - name: 'Archery and Lockpicking.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/47829' ]
-    msg:
-      - <<: *useBashTweakInstead
-        subs: [ 'Tweak Names -> Skyrim-style Text: Marksman -> Archery' ]
-      - <<: *useBashTweakInstead
-        subs: [ 'Tweak Names -> Skyrim-style Text: Security -> Lockpicking' ]
-
-  - name: 'Colored Map for Elsweyr 1.1.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/25150/' ]
-    group: *mapGroup
-
-  - name: 'Different Script Effect Icon - (Darkness|Fortify|Lock|Reflect Spell|Resist|Silence|Stunted Magicka|Sun Damage|Vampirism)\.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/18843' ]
-    tag: [ Graphics ]
-    msg:
-      - <<: *useOnlyOneX
-        subs: [ 'Different Script Effect Icon ESP' ]
-        condition: 'many("Different Script Effect Icon - (Darkness|Fortify|Lock|Reflect Spell|Resist|Silence|Stunted Magicka|Sun Damage|Vampirism)\.esp")'
-
-  - name: 'Dwemer_Rename.esp'
-    url:
-      - link: 'https://www.nexusmods.com/oblivion/mods/4894/'
-        name: 'Dwarven to Dwemer'
-    msg:
-      - <<: *useBashTweakInstead
-        subs: [ 'Tweak Names -> Lore Friendly Text: Dwarven -> Dwemer' ]
-
-  - name: 'Dynamic Map.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/35969' ]
-    req: [ *MenuQue ]
-
-  - name: 'Elsweyr Color Map.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/28432/' ]
-    group: *mapGroup
-
-  - name: 'Hiboriamap.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/26570' ]
-    group: *mapGroup
-
-  - name: 'Kobu''s Stamina Mod.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/1862' ]
-    msg:
-      - <<: *useBashTweakInstead
-        subs: [ 'Tweak Names -> Skyrim-style Text: Fatigue -> Stamina' ]
-      - <<: *deletePlugin
-        type: say
-        subs: [ 'Skyrim-style Text: Fatigue -> Stamina' ]
-        condition: 'file("Bashed Patch.*\.esp")'
-
-  - name: 'LootMenu.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/48027' ]
-    req:
-      - *MenuQue
-      - *OBSEv21
-    msg: [ *alsoUseEngineBugFixes ]
-
-  - name: 'MergedMaps.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/26329' ]
-    group: *mapGroup
-
-  - name: 'TamrielWorldspaceCompleteWorldMap.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/24044/' ]
-    group: *mapGroup
-
-  - name: 'TWMP_Tamriel_Ingame_ Map.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/27235/' ]
-    group: *mapGroup
-
-  - name: 'WorldMapsForAllWorldspaces.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/48914' ]
-    group: *mapGroup
-    dirty:
-      - <<: *quickClean
-        crc: 0x91E8C9C9
-        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 171
 
 ###### AudioVisual ######
   - name: '[BW]NewShock(Bolt|Funnel)Effects20\.esp'
@@ -5758,6 +5677,18 @@ plugins:
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
 
 ###### Gameplay - User Interface ######
+  - name: 'Ak- Morroblivion Maps HD.esp'
+    url: [ 'https://morroblivion.com/forums/morroblivion/mods/2610/' ]
+    group: *mapGroup
+
+  - name: 'Archery and Lockpicking.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/47829/' ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Names -> Skyrim-style Text: Marksman -> Archery' ]
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Names -> Skyrim-style Text: Security -> Lockpicking' ]
+
   - name: 'Cliff_BetterLetters.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/5392/' ]
     tag:
@@ -5779,6 +5710,34 @@ plugins:
         util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 137
 
+  - name: 'Colored Map for Elsweyr 1.1.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/25150/' ]
+    group: *mapGroup
+
+  - name: 'Different Script Effect Icon - (Darkness|Fortify|Lock|Reflect Spell|Resist|Silence|Stunted Magicka|Sun Damage|Vampirism)\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/18843' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Different Script Effect Icon ESP' ]
+        condition: 'many("Different Script Effect Icon - (Darkness|Fortify|Lock|Reflect Spell|Resist|Silence|Stunted Magicka|Sun Damage|Vampirism)\.esp")'
+    tag: [ Graphics ]
+
+  - name: 'Dwemer_Rename.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/4894/'
+        name: 'Dwarven to Dwemer'
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Names -> Lore Friendly Text: Dwarven -> Dwemer' ]
+
+  - name: 'Dynamic Map.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/35969/' ]
+    req: [ *MenuQue ]
+
+  - name: 'Elsweyr Color Map.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/28432/' ]
+    group: *mapGroup
+
   - name: 'First Person Messages.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/9606/' ]
     msg: [ *alreadyInOOO ]
@@ -5788,12 +5747,54 @@ plugins:
         util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 3
 
+  - name: 'Hiboriamap.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/26570/' ]
+    group: *mapGroup
+
+  - name: 'Kobu''s Stamina Mod.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/1862/' ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Names -> Skyrim-style Text: Fatigue -> Stamina' ]
+      - <<: *deletePlugin
+        type: say
+        subs: [ 'Skyrim-style Text: Fatigue -> Stamina' ]
+        condition: 'file("Bashed Patch.*\.esp")'
+
+  - name: 'LootMenu.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/48027/' ]
+    req:
+      - *MenuQue
+      - *OBSEv21
+    msg: [ *alsoUseEngineBugFixes ]
+
+  - name: 'MergedMaps.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/26329/' ]
+    group: *mapGroup
+
+  - name: 'TamrielWorldspaceCompleteWorldMap.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/24044/' ]
+    group: *mapGroup
+
   - name: 'toothman''s funny loadscreens.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/19544/' ]
     tag:
       - Deactivate
       - NoMerge
       - Text
+
+  - name: 'TWMP_Tamriel_Ingame_ Map.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/27235/' ]
+    group: *mapGroup
+
+  - name: 'WorldMapsForAllWorldspaces.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/48914/' ]
+    group: *mapGroup
+    dirty:
+      - <<: *quickClean
+        crc: 0x91E8C9C9
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 171
 
 ###### Items ######
   - name: '300_Artifacts.esp'
