@@ -1383,7 +1383,7 @@ common:
   - &alreadyInFCOM
     <<: *alreadyInX
     subs: [ 'FCOM Convergence' ]
-    condition: 'active("FCOM_Convergence.esm")'
+    condition: *FCOMCond
   - &alreadyInWEPON
     <<: *alreadyInX
     subs: [ 'Weapon Expansion Pack for Oblivion Nthusiasts' ]
@@ -1551,7 +1551,7 @@ common:
     <<: *useVersion
     type: warn
     subs: [ 'FCOM' ]
-    condition: 'active("FCOM_Convergence.esm")'
+    condition: *FCOMCond
   - &useVersionOOO_FCOM
     <<: *useVersion
     subs: [ 'FCOM/OOO' ]
@@ -14893,7 +14893,7 @@ plugins:
     msg:
       - <<: *useInstead
         subs: [ '"Loth''s Blunt Weapons for Npcs.esp" & "FCOM_LothsBluntWeapons.esp"' ]
-        condition: 'active("FCOM_Convergence.esm")'
+        condition: *FCOMCond
 
   - name: 'OOO-Ayleid Coin Add-on.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/10671' ]
