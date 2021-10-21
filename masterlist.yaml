@@ -2580,9 +2580,8 @@ plugins:
 
   - name: 'LINK.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/50144/' ]
-    req:
-      - *MenuQue
-      - *OBSEv21
+    req: [ *MenuQue ]
+    msg: [ *requiresOBSEv21 ]
     clean:
       - crc: 0x5223A305
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
@@ -4602,7 +4601,6 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/49096' ]
   - name: 'Av Latta Magicka.esm'
     req:
-      - *OBSEv21
       - name: 'OBSE/Plugins/AddActorValues.dll'
         display: '[AddActorValues](https://www.nexusmods.com/oblivion/mods/33248)'
       - *MagicExtender
@@ -4624,6 +4622,7 @@ plugins:
       - <<: *patchProvided
         subs: [ 'Paladin Mod: The Hand of Arkay' ]
         condition: 'active("Paladin.esp") and not file("Paladin - OBME Patch.esp")'
+      - *requiresOBSEv21
       - <<: *useInstead
         subs: [ '[Custom Spell Icons Updated](https://www.nexusmods.com/oblivion/mods/43709/)' ]
         condition: 'active("CustomSpellIcons.esm")'
@@ -5446,7 +5445,6 @@ plugins:
 
   - name: 'Kvatch Rebuilt.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/15412/' ]
-    req: [ *OBSEv21 ]
     msg:
       - <<: *alsoUseEngineBugFixes
         type: warn
@@ -5470,6 +5468,7 @@ plugins:
           - 'Unique Landscapes - Merged ESP'
           - '[Unique Landscapes Compatibility Patches](https://www.nexusmods.com/oblivion/mods/13834/)'
         condition: 'version("Unique Landscapes.esp", "2.0.0", >=) and active("Unique Landscapes.esp") and not file("ULE KvatchRebuilt-CheydinhalFalls patch.esp")'
+      - *requiresOBSEv21
     tag:
       - Actors.AIPackages
       - Factions
@@ -5709,9 +5708,7 @@ plugins:
 
   - name: 'Ultimate Leveling.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/49134/' ]
-    req:
-      - *MenuQue
-      - *OBSEv21
+    req: [ *MenuQue ]
     inc:
       - 'Oblivion XP.esp'
       - 'OBSE/Plugins/AVUncapper.dll'
@@ -5720,6 +5717,7 @@ plugins:
       - <<: *compatIssuesWithX
         subs: [ '[Real Time Lockpicking](https://www.nexusmods.com/oblivion/mods/38801/) **MigLockpicking.esp**' ]
         condition: 'active("MigLockpicking.esp") and checksum("MigLockpicking.esp", 734BB0A2)'
+      - *requiresOBSEv21
     clean:
       - crc: 0xE6FF01E8
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
@@ -5791,10 +5789,10 @@ plugins:
 
   - name: 'LootMenu.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/48027/' ]
-    req:
-      - *MenuQue
-      - *OBSEv21
-    msg: [ *alsoUseEngineBugFixes ]
+    req: [ *MenuQue ]
+    msg:
+      - *alsoUseEngineBugFixes
+      - *requiresOBSEv21
 
   - name: 'toothman''s funny loadscreens.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/19544/' ]
@@ -14801,7 +14799,7 @@ plugins:
         condition: 'not file("MD Saddlebags v3.0 Alternative Trader Script.esp")'
   - name: 'Horse Management.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/46021' ]
-    req: [ *OBSEv21 ]
+    msg: [ *requiresOBSEv21 ]
   - name: 'qazHorseCommand -horsearmor.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/7481' ]
     tag: [ Scripts ]
@@ -24200,7 +24198,7 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/42780' ]
     group: *lateChangesGroup
     after: [ 'Bashed Patch, 0.esp' ]  # The default filename for a Bashed Patch.
-    req: [ *OBSEv21 ]
+    msg: [ *requiresOBSEv21 ]
 
   - name: 'Vanilla Weapon Stat Override( - SI)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/39914' ]
