@@ -5066,8 +5066,9 @@ plugins:
       - link: 'https://www.nexusmods.com/oblivion/mods/25946/'
         name: 'Bash-able Quest Delayers'
     group: *latePatchesGroup
-    req: [ *OBSEv18 ]
-    msg: [ *requiresBashedPatch ]
+    msg:
+      - *requiresBashedPatch
+      - *requiresOBSEv18
     tag:
       - Deactivate
       - Filter
@@ -12492,8 +12493,8 @@ plugins:
     req:
       - name: 'OBSE/Plugins/AddActorValues.dll'
         display: '[AddActorValues](https://www.nexusmods.com/oblivion/mods/33248)'
-      - *OBSEv18
       - *MenuQue
+    msg: [ *requiresOBSEv18 ]
   - name: 'M.O.E. - Undermined Leveled Gameplay - Creature Edition.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/7902' ]
     inc:
@@ -12823,7 +12824,7 @@ plugins:
 
   - name: 'Wasabi the Mouse.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/35999' ]
-    req: [ *OBSEv18 ]
+    msg: [ *requiresOBSEv18 ]
   - name: 'wd purse of wonders.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/4744' ]
     tag: [ Scripts ]
@@ -14689,7 +14690,7 @@ plugins:
       - Scripts
   - name: 'Athletics While Riding.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/37432' ]
-    req: [ *OBSEv18 ]
+    msg: [ *requiresOBSEv18 ]
   - name: 'Slof''s Horses Base.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/48925/' ]
     tag: [ Graphics ]
@@ -16280,8 +16281,8 @@ plugins:
     tag: [ Factions ]
   - name: 'BladeSong.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/49657' ]
-    req: [ *OBSEv18 ]
     msg:
+      - *requiresOBSEv18
       - type: warn
         content:
           - lang: en
@@ -17009,8 +17010,8 @@ plugins:
         udr: 11
   - name: 'Legends - Zefaro Cottage.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/35627' ]
-    req: [ *OBSEv18 ]
     msg:
+      - *requiresOBSEv18
       - type: say
         content:
           - lang: en
@@ -17611,7 +17612,7 @@ plugins:
         itm: 47
   - name: 'CMWaterskin.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/32361' ]
-    req: [ *OBSEv18 ]
+    msg: [ *requiresOBSEv18 ]
   - name: 'ShadowfangKeep.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/31994' ]
     dirty:
@@ -19598,9 +19599,9 @@ plugins:
   - name: 'Coffinbag''s Better Potions.esp'
     tag: [ Graphics ]
   - name: 'CompanionHorseSupport.esp'
-    req: [ *OBSEv18 ]
+    msg: [ *requiresOBSEv18 ]
   - name: 'CompanionHorseSupportFIX forCMPartners.esp'
-    req: [ *OBSEv18 ]
+    msg: [ *requiresOBSEv18 ]
   - name: 'Compass-Disable_POIs.esp'
     msg:
       - <<: *useBashTweakInstead
@@ -20693,9 +20694,8 @@ plugins:
     req: [ *OBSE ]
     inc: [ 'Midas BeastFortify Fix NONOBSE.esp' ]
   - name: 'CALSUDG.esp'
-    req:
-      - *OBSEv18
-      - *MagicExtender
+    req: [ *MagicExtender ]
+    msg: [ *requiresOBSEv18 ]
   - name: 'ES4_Spell Names by Effect.esp'
     tag: [ Names ]
   - name: 'Levelled Spell Names.esp'
@@ -20704,7 +20704,7 @@ plugins:
   - name: 'Disease Immunity (Oblivion).esp'
     inc: [ 'Disease Immunity (Oblivion + Shivering Isles).esp' ]
   - name: 'spellshields2.esp'
-    req: [ *OBSEv18 ]
+    msg: [ *requiresOBSEv18 ]
 
   - name: 'ArcaneVelocity150.esp'
     msg:
@@ -22047,7 +22047,7 @@ plugins:
       - NpcFaces
       - R.Relations
   - name: 'Playable Goblin.esp'
-    req: [ *OBSEv18 ]
+    msg: [ *requiresOBSEv18 ]
   - name: 'Riflers Races.esp'
     tag:
       - Eyes
