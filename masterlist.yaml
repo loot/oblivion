@@ -3738,9 +3738,7 @@ plugins:
   - name: 'Ascension.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/50237/' ]
     # DoNotClean - ITMs included to retain vanilla settings for other changes made by this file.
-    req:
-      - 'DLCShiveringIsles.esp'
-      - *OBSEv20
+    req: [ 'DLCShiveringIsles.esp' ]
     after: [ 'Weapons Of Morrowind.esp' ]
     inc:
       - 'Oscuro''s_Oblivion_Overhaul.esp'
@@ -3752,6 +3750,7 @@ plugins:
       - <<: *patchProvided
         subs: [ 'Weapons Of Morrowind' ]
         condition: 'active("Weapons Of Morrowind.esp") and not file("Ascension - Weapons of Morrowind Patch.esp")'
+      - *requiresOBSEv20
     tag:
       - Actors.ACBS
       - Actors.Stats
@@ -3840,11 +3839,11 @@ plugins:
       - link: 'https://www.loverslab.com/topic/171-htsclight-english/?ct=1568338462/'
         name: '(HTSCL) Hunger Thirst Sleep with Cooking Light'
   - name: 'HTSClight.esm'
-    req: [ *OBSEv20 ]
     inc:
       - 'HTS.esp'
       - 'HTS with Cooking.esp'
     msg:
+      - *requiresOBSEv20
       - <<: *requiresResources
         subs: [ '[HTS with Cooking v2.044 (Requires Account)](https://www.4shared.com/zip/zIEoabnh/HTS_with_Cooking_v2044.html)' ]
         condition: 'not file("Meshes/Drink/Gyuunyuu/gyuunyuubin01.nif")'
@@ -5022,7 +5021,6 @@ plugins:
     url:
       - 'https://www.afkmods.com/index.php?/files/file/261-alternative-beginnings/'
       - 'https://tesalliance.org/forums/index.php?/files/file/785-alternative-beginnings/'
-    req: [ *OBSEv20 ]
     after:
       - 'Ascension - Push''s Tweaks.esp'
       - 'No Starting Map Markers.esp'
@@ -5032,6 +5030,7 @@ plugins:
       - 'AltStart.esp'
       - 'AltStartwChangedMessages.esp'
       - 'ShiveringIslesStart.esp'
+    msg: [ *requiresOBSEv20 ]
     clean:
       - crc: 0xA08B7C20
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
@@ -5135,7 +5134,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/39191/'
         name: 'Boss Fight - The Dismal Thicket'
-    req: [ *OBSEv20 ]
+    msg: [ *requiresOBSEv20 ]
     dirty:
       - <<: *quickClean
         crc: 0x6D467EB0
@@ -5439,7 +5438,7 @@ plugins:
         util: 'TES4Edit v4.0.3'
   - name: 'Knights - Revelation.esp'
     after: [ 'Greenview Manor.esp' ]
-    req: [ *OBSEv20 ]
+    msg: [ *requiresOBSEv20 ]
     tag: [ C.Regions ]
     clean:
       - crc: 0xA0C60505
@@ -6738,11 +6737,12 @@ plugins:
     inc:
       - name: 'Midland.esp'
         condition: 'not file("(ROC-)?Midland-Vergayun(-FAR)? patch.esp")'
-    req: [ *OBSEv20 ]
     tag:
       - C.Regions
       - Relations
-    msg: [ *alsoUseSilentVoice ]
+    msg:
+      - *alsoUseSilentVoice
+      - *requiresOBSEv20
     clean:
       - crc: 0x9FC729A3
         util: 'TES4Edit v4.0.3'
@@ -12161,7 +12161,7 @@ plugins:
     tag: [ Invent ]
   - name: 'BAKAdventurerTorch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/37863' ]
-    req: [ *OBSEv20 ]
+    msg: [ *requiresOBSEv20 ]
   - name: 'bnmDLTIC-1-6.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/3429' ]
     inc: [ 'Oscuro''s_Oblivion_Overhaul.esm' ]
@@ -12813,8 +12813,8 @@ plugins:
     tag: [ Invent ]
   - name: 'VipCxj_AirSystem.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/36903/' ]
-    req: [ *OBSEv20 ]
     msg:
+      - *requiresOBSEv20
       - type: say
         content:
           - lang: en
@@ -14630,11 +14630,11 @@ plugins:
   - name: 'TGNDNessaStore.esp'
     url: [ 'https://www.loverslab.com/files/file/351-nessas-tgnd-stores' ]
     req:
-      - *OBSEv20
       - *SilentVoice
       - name: 'TGND.esp'
         display: '[TGND Body Replacer](https://www.loverslab.com/files/file/253-tgnd-body-replacer/)'
     msg:
+      - *requiresOBSEv20
       - type: say
         content:
           - lang: en
@@ -15773,8 +15773,9 @@ plugins:
     url:
       - 'https://www.nexusmods.com/oblivion/mods/41246/'
       - 'https://tesall.ru/files/modi-dlya-oblivion/kvesti/3644-efirnii-klinok'
-    req: [ *OBSEv20 ]
-    msg: [ *alsoUseSilentVoice ]
+    msg:
+      - *alsoUseSilentVoice
+      - *requiresOBSEv20
     dirty:
       - <<: *quickClean
         crc: 0xC17B383E
@@ -16304,7 +16305,7 @@ plugins:
     msg: [ *corrupt ]
   - name: 'BossPhaitCrab.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/38965' ]
-    req: [ *OBSEv20 ]
+    msg: [ *requiresOBSEv20 ]
     dirty:
       - <<: *quickClean
         crc: 0x26F8ED36
@@ -16349,7 +16350,7 @@ plugins:
             text: 'Benötigt: Oblivion XP'
   - name: 'BuryCorpse.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/43134' ]
-    req: [ *OBSEv20 ]
+    msg: [ *requiresOBSEv20 ]
 
   - name: 'BXX Tamriel Resource Exchange.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/13320' ]
@@ -17002,7 +17003,7 @@ plugins:
         udr: 31
   - name: 'Legends - Baleful Eye.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/16203' ]
-    req: [ *OBSEv20 ]
+    msg: [ *requiresOBSEv20 ]
     dirty:
       - crc: 0x4a2e7217
         <<: *dirtyPlugin
@@ -20247,7 +20248,7 @@ plugins:
 
   - name: 'Soulgem Magic.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/35393' ]
-    req: [ *OBSEv20 ]
+    msg: [ *requiresOBSEv20 ]
     tag: [ Scripts ]
   - name: 'SPTDiverseGuards.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/24614' ]
@@ -20914,9 +20915,8 @@ plugins:
       - <<: *useBashTweakInstead
         subs: [ 'Tweak Settings -> Arrow: Speed' ]
   - name: 'Simple Dual Wielding.esp'
-    req:
-      - *NifSE
-      - *OBSEv20
+    req: [ *NifSE ]
+    msg: [ *requiresOBSEv20 ]
   - name: 'More_Arrows_Recovered.esp'
     msg:
       - <<: *useBashTweakInstead
@@ -21075,7 +21075,7 @@ plugins:
         condition: 'many("seorin''s Leveling System( - light)?.esp")'
 
   - name: 'SkillDecay.esp'
-    req: [ *OBSEv20 ]
+    msg: [ *requiresOBSEv20 ]
   - name: 'S.P.A.M(\. 100\+| option - (Restore (Fav|Spec)|Faste(r|st) (Maj|Mi)nor))?.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/9914' ]
   - name: 'S.P.A.M(\. 100\+)?\.esp'
