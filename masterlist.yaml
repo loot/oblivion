@@ -5692,11 +5692,11 @@ plugins:
         name: 'Setsuna Dummy Training'
       - link: 'https://www.nexusmods.com/oblivion/mods/46161/'
         name: 'Setsuna Dummy Training Modified'
-    req: [ *OBSEv16 ]
     msg:
       - <<: *patchUpdateAvailable
         subs: [ '[Setsuna Dummy Training Modified](https://www.nexusmods.com/oblivion/mods/46161/)' ]
         condition: 'not file("Ini/SetsunaDummyTraining.ini")'
+      - *requiresOBSEv16
     dirty:
       - <<: *quickClean
         crc: 0x7718C0CE
@@ -12718,7 +12718,7 @@ plugins:
         itm: 3
   - name: 'Rings of Infiltration.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/15222' ]
-    req: [ *OBSEv16 ]
+    msg: [ *requiresOBSEv16 ]
   - name: 'OSM-All Genders.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/32838' ]
     tag:
@@ -20883,7 +20883,7 @@ plugins:
           - lang: de
             text: 'Nutzen Sie nur eine Erics * for archers.esp.'
   - name: 'Fast Arrow Collection.esp'
-    req: [ *OBSEv16 ]
+    msg: [ *requiresOBSEv16 ]
   - name: 'More_Arrows_Recovered-2169.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/2169' ]
     msg:
@@ -21012,7 +21012,7 @@ plugins:
     inc: [ 'Progress.esm' ]
 
   - name: 'ExperienceBasedTraining.esp'
-    req: [ *OBSEv16 ]
+    msg: [ *requiresOBSEv16 ]
   - name: 'Mercantile Leveling-Fixed.esp'
     msg: [ *requiresOBSEv15 ]
   - name: 'Jhaerik''s Anti Power-Gaming Leveling System [1234] ((Very Easy )|(Easy)|(Balanced)|(Hard))?\.esp'
