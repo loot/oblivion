@@ -12566,7 +12566,7 @@ plugins:
         itm: 16
   - name: 'NR500.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/35978' ]
-    req: [ *OBSEv15 ]
+    msg: [ *requiresOBSEv15 ]
   - name: 'New Potions by Tealpanda.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/33946' ]
     dirty:
@@ -20739,7 +20739,7 @@ plugins:
   - name: 'MagickOverlap.esp'
     msg: [ *requiresOBSEv14 ]
   - name: 'Poison Arrows.esp'
-    req: [ *OBSEv15 ]
+    msg: [ *requiresOBSEv15 ]
   - name: 'Spell Failure Chance.esp'
     req: [ *OBSE ]
   - name: 'Miniature Necromancy Revised.esp'
@@ -20795,7 +20795,7 @@ plugins:
 
   - name: 'BookLooting.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/19111' ]
-    req: [ *OBSEv15 ]
+    msg: [ *requiresOBSEv15 ]
 
   - name: 'pmCrimeHandler.esp'
     req: [ 'pmRealTimeInteractions.esp' ]
@@ -21014,7 +21014,7 @@ plugins:
   - name: 'ExperienceBasedTraining.esp'
     req: [ *OBSEv16 ]
   - name: 'Mercantile Leveling-Fixed.esp'
-    req: [ *OBSEv15 ]
+    msg: [ *requiresOBSEv15 ]
   - name: 'Jhaerik''s Anti Power-Gaming Leveling System [1234] ((Very Easy )|(Easy)|(Balanced)|(Hard))?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/40554' ]
     msg:
@@ -21157,7 +21157,7 @@ plugins:
       - Actors.Anims
       - NoMerge
   - name: '1st Person Legs.esp'
-    req: [ *OBSEv15 ]
+    msg: [ *requiresOBSEv15 ]
 
   - name: 'immersive_caves_manual.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/4666' ]
@@ -23909,9 +23909,9 @@ plugins:
         subs: [ 'Tweak Settings -> World: Timescale' ]
   - name: 'Dynamic TimeScale.esp'
     req:
-      - *OBSEv15
       - name: 'You Are Here.esm'
         display: 'You Are Here v1.1-'
+    msg: [ *requiresOBSEv15 ]
   - name: 'Syc_LongerDaysShorterNights.esp'
     msg:
       - type: say
