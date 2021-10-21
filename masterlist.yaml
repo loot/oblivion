@@ -1280,56 +1280,6 @@ common:
     name: '../obse_1_2_416.dll'
     display: '[OBSE](https://obse.silverlock.org)'
 
-  - &OBSEv11
-    name: '../obse_1_2_416.dll'
-    display: '[OBSE](https://obse.silverlock.org) v11+'
-    condition: 'version("../obse_1_2_416.dll", "0.11.0.0", <)'
-
-  - &OBSEv12
-    name: '../obse_1_2_416.dll'
-    display: '[OBSE](https://obse.silverlock.org) v12+'
-    condition: 'version("../obse_1_2_416.dll", "0.12.0.0", <)'
-
-  - &OBSEv14
-    name: '../obse_1_2_416.dll'
-    display: '[OBSE](https://obse.silverlock.org) v14+'
-    condition: 'version("../obse_1_2_416.dll", "0.14.0.0", <)'
-
-  - &OBSEv15
-    name: '../obse_1_2_416.dll'
-    display: '[OBSE](https://obse.silverlock.org) v15+'
-    condition: 'version("../obse_1_2_416.dll", "0.15.0.0", <)'
-
-  - &OBSEv16
-    name: '../obse_1_2_416.dll'
-    display: '[OBSE](https://obse.silverlock.org) v16+'
-    condition: 'version("../obse_1_2_416.dll", "0.16.0.0", <)'
-
-  - &OBSEv17
-    name: '../obse_1_2_416.dll'
-    display: '[OBSE](https://obse.silverlock.org) v17+'
-    condition: 'version("../obse_1_2_416.dll", "0.17.0.0", <)'
-
-  - &OBSEv18
-    name: '../obse_1_2_416.dll'
-    display: '[OBSE](https://obse.silverlock.org) v18+'
-    condition: 'version("../obse_1_2_416.dll", "0.18.0.0", <)'
-
-  - &OBSEv19
-    name: '../obse_1_2_416.dll'
-    display: '[OBSE](https://obse.silverlock.org) v19+'
-    condition: 'version("../obse_1_2_416.dll", "0.19.0.0", <)'
-
-  - &OBSEv20
-    name: '../obse_1_2_416.dll'
-    display: '[OBSE](https://obse.silverlock.org) v20+'
-    condition: 'version("../obse_1_2_416.dll", "0.20.0.0", <)'
-
-  - &OBSEv21
-    name: '../obse_1_2_416.dll'
-    display: '[OBSE](https://obse.silverlock.org) v21+'
-    condition: 'version("../obse_1_2_416.dll", "0.21.0.0", <)'
-
   # OBSE Plugins
   - &EnhancedMusicControl
     name: 'OBSE/Plugins/EnhancedMusicControl.dll'
@@ -1491,6 +1441,56 @@ common:
     type: error
     subs: [ '[Wrye Bash](https://www.nexusmods.com/oblivion/mods/22368) Bashed Patch' ]
     condition: 'not file("Bashed Patch.*\.esp")'
+  - &requiresOBSEv11
+    <<: *requiresX
+    type: error
+    subs: [ '[OBSE](https://obse.silverlock.org) v11+' ]
+    condition: 'not file("../obse_1_2_416.dll") or version("../obse_1_2_416.dll", "0.11.0.0", <)'
+  - &requiresOBSEv12
+    <<: *requiresX
+    type: error
+    subs: [ '[OBSE](https://obse.silverlock.org) v12+' ]
+    condition: 'not file("../obse_1_2_416.dll") or version("../obse_1_2_416.dll", "0.12.0.0", <)'
+  - &requiresOBSEv14
+    <<: *requiresX
+    type: error
+    subs: [ '[OBSE](https://obse.silverlock.org) v14+' ]
+    condition: 'not file("../obse_1_2_416.dll") or version("../obse_1_2_416.dll", "0.14.0.0", <)'
+  - &requiresOBSEv15
+    <<: *requiresX
+    type: error
+    subs: [ '[OBSE](https://obse.silverlock.org) v15+' ]
+    condition: 'not file("../obse_1_2_416.dll") or version("../obse_1_2_416.dll", "0.15.0.0", <)'
+  - &requiresOBSEv16
+    <<: *requiresX
+    type: error
+    subs: [ '[OBSE](https://obse.silverlock.org) v16+' ]
+    condition: 'not file("../obse_1_2_416.dll") or version("../obse_1_2_416.dll", "0.16.0.0", <)'
+  - &requiresOBSEv17
+    <<: *requiresX
+    type: error
+    subs: [ '[OBSE](https://obse.silverlock.org) v17+' ]
+    condition: 'not file("../obse_1_2_416.dll") or version("../obse_1_2_416.dll", "0.17.0.0", <)'
+  - &requiresOBSEv18
+    <<: *requiresX
+    type: error
+    subs: [ '[OBSE](https://obse.silverlock.org) v18+' ]
+    condition: 'not file("../obse_1_2_416.dll") or version("../obse_1_2_416.dll", "0.18.0.0", <)'
+  - &requiresOBSEv19
+    <<: *requiresX
+    type: error
+    subs: [ '[OBSE](https://obse.silverlock.org) v19+' ]
+    condition: 'not file("../obse_1_2_416.dll") or version("../obse_1_2_416.dll", "0.19.0.0", <)'
+  - &requiresOBSEv20
+    <<: *requiresX
+    type: error
+    subs: [ '[OBSE](https://obse.silverlock.org) v20+' ]
+    condition: 'not file("../obse_1_2_416.dll") or version("../obse_1_2_416.dll", "0.20.0.0", <)'
+  - &requiresOBSEv21
+    <<: *requiresX
+    type: error
+    subs: [ '[OBSE](https://obse.silverlock.org) v21+' ]
+    condition: 'not file("../obse_1_2_416.dll") or version("../obse_1_2_416.dll", "0.21.0.0", <)'
 
   # &useInstead
   - &useInsteadUOP
@@ -2530,9 +2530,8 @@ plugins:
 
   - name: 'LINK.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/50144/' ]
-    req:
-      - *MenuQue
-      - *OBSEv21
+    req: [ *MenuQue ]
+    msg: [ *requiresOBSEv21 ]
     clean:
       - crc: 0x5223A305
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
@@ -3688,9 +3687,7 @@ plugins:
   - name: 'Ascension.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/50237/' ]
     # DoNotClean - ITMs included to retain vanilla settings for other changes made by this file.
-    req:
-      - 'DLCShiveringIsles.esp'
-      - *OBSEv20
+    req: [ 'DLCShiveringIsles.esp' ]
     after: [ 'Weapons Of Morrowind.esp' ]
     inc:
       - 'Oscuro''s_Oblivion_Overhaul.esp'
@@ -3702,6 +3699,7 @@ plugins:
       - <<: *patchProvided
         subs: [ 'Weapons Of Morrowind' ]
         condition: 'active("Weapons Of Morrowind.esp") and not file("Ascension - Weapons of Morrowind Patch.esp")'
+      - *requiresOBSEv20
     tag:
       - Actors.ACBS
       - Actors.Stats
@@ -3775,9 +3773,9 @@ plugins:
   - name: 'Grandmaster of Alchemy.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/16441/' ]
     req:
-      - *OBSEv12
       - name: 'OBSE/Plugins/OBSE_Elys_Uncapper.dll'
         display: '[Elys Uncapper](https://www.nexusmods.com/oblivion/mods/13841/)'
+    msg: [ *requiresOBSEv12 ]
     tag: [ Factions ]
     dirty:
       - <<: *quickClean
@@ -3790,11 +3788,11 @@ plugins:
       - link: 'https://www.loverslab.com/topic/171-htsclight-english/?ct=1568338462/'
         name: '(HTSCL) Hunger Thirst Sleep with Cooking Light'
   - name: 'HTSClight.esm'
-    req: [ *OBSEv20 ]
     inc:
       - 'HTS.esp'
       - 'HTS with Cooking.esp'
     msg:
+      - *requiresOBSEv20
       - <<: *requiresResources
         subs: [ '[HTS with Cooking v2.044 (Requires Account)](https://www.4shared.com/zip/zIEoabnh/HTS_with_Cooking_v2044.html)' ]
         condition: 'not file("Meshes/Drink/Gyuunyuu/gyuunyuubin01.nif")'
@@ -3856,10 +3854,10 @@ plugins:
   - name: 'Legendary Abilities-(Fortify Health|Reflect|Shield) MOJ\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/19245/' ]
     req:
-      - *OBSEv14
       - name: 'OBSE/Plugins/OBSE_Elys_Uncapper.dll'
         display: '[Elys Uncapper](https://www.nexusmods.com/oblivion/mods/13841/)'
     msg:
+      - *requiresOBSEv14
       - <<: *useOnlyOneX
         subs: [ 'Legendary Abilities ESP' ]
         condition: 'many("Legendary Abilities-(Fortify Health|Reflect|Shield) MOJ\.esp")'
@@ -4553,7 +4551,6 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/49096' ]
   - name: 'Av Latta Magicka.esm'
     req:
-      - *OBSEv21
       - name: 'OBSE/Plugins/AddActorValues.dll'
         display: '[AddActorValues](https://www.nexusmods.com/oblivion/mods/33248)'
       - *MagicExtender
@@ -4575,6 +4572,7 @@ plugins:
       - <<: *patchProvided
         subs: [ 'Paladin Mod: The Hand of Arkay' ]
         condition: 'active("Paladin.esp") and not file("Paladin - OBME Patch.esp")'
+      - *requiresOBSEv21
       - <<: *useInstead
         subs: [ '[Custom Spell Icons Updated](https://www.nexusmods.com/oblivion/mods/43709/)' ]
         condition: 'active("CustomSpellIcons.esm")'
@@ -4972,7 +4970,6 @@ plugins:
     url:
       - 'https://www.afkmods.com/index.php?/files/file/261-alternative-beginnings/'
       - 'https://tesalliance.org/forums/index.php?/files/file/785-alternative-beginnings/'
-    req: [ *OBSEv20 ]
     after:
       - 'Ascension - Push''s Tweaks.esp'
       - 'No Starting Map Markers.esp'
@@ -4982,6 +4979,7 @@ plugins:
       - 'AltStart.esp'
       - 'AltStartwChangedMessages.esp'
       - 'ShiveringIslesStart.esp'
+    msg: [ *requiresOBSEv20 ]
     clean:
       - crc: 0xA08B7C20
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
@@ -5016,8 +5014,9 @@ plugins:
       - link: 'https://www.nexusmods.com/oblivion/mods/25946/'
         name: 'Bash-able Quest Delayers'
     group: *latePatchesGroup
-    req: [ *OBSEv18 ]
-    msg: [ *requiresBashedPatch ]
+    msg:
+      - *requiresBashedPatch
+      - *requiresOBSEv18
     tag:
       - Deactivate
       - Filter
@@ -5084,7 +5083,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/39191/'
         name: 'Boss Fight - The Dismal Thicket'
-    req: [ *OBSEv20 ]
+    msg: [ *requiresOBSEv20 ]
     dirty:
       - <<: *quickClean
         crc: 0x6D467EB0
@@ -5388,7 +5387,7 @@ plugins:
         util: 'TES4Edit v4.0.3'
   - name: 'Knights - Revelation.esp'
     after: [ 'Greenview Manor.esp' ]
-    req: [ *OBSEv20 ]
+    msg: [ *requiresOBSEv20 ]
     tag: [ C.Regions ]
     clean:
       - crc: 0xA0C60505
@@ -5396,7 +5395,6 @@ plugins:
 
   - name: 'Kvatch Rebuilt.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/15412/' ]
-    req: [ *OBSEv21 ]
     msg:
       - <<: *alsoUseEngineBugFixes
         type: warn
@@ -5420,6 +5418,7 @@ plugins:
           - 'Unique Landscapes - Merged ESP'
           - '[Unique Landscapes Compatibility Patches](https://www.nexusmods.com/oblivion/mods/13834/)'
         condition: 'version("Unique Landscapes.esp", "2.0.0", >=) and active("Unique Landscapes.esp") and not file("ULE KvatchRebuilt-CheydinhalFalls patch.esp")'
+      - *requiresOBSEv21
     tag:
       - Actors.AIPackages
       - Factions
@@ -5642,11 +5641,11 @@ plugins:
         name: 'Setsuna Dummy Training'
       - link: 'https://www.nexusmods.com/oblivion/mods/46161/'
         name: 'Setsuna Dummy Training Modified'
-    req: [ *OBSEv16 ]
     msg:
       - <<: *patchUpdateAvailable
         subs: [ '[Setsuna Dummy Training Modified](https://www.nexusmods.com/oblivion/mods/46161/)' ]
         condition: 'not file("Ini/SetsunaDummyTraining.ini")'
+      - *requiresOBSEv16
     dirty:
       - <<: *quickClean
         crc: 0x7718C0CE
@@ -5659,9 +5658,7 @@ plugins:
 
   - name: 'Ultimate Leveling.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/49134/' ]
-    req:
-      - *MenuQue
-      - *OBSEv21
+    req: [ *MenuQue ]
     inc:
       - 'Oblivion XP.esp'
       - 'OBSE/Plugins/AVUncapper.dll'
@@ -5670,6 +5667,7 @@ plugins:
       - <<: *compatIssuesWithX
         subs: [ '[Real Time Lockpicking](https://www.nexusmods.com/oblivion/mods/38801/) **MigLockpicking.esp**' ]
         condition: 'active("MigLockpicking.esp") and checksum("MigLockpicking.esp", 734BB0A2)'
+      - *requiresOBSEv21
     clean:
       - crc: 0xE6FF01E8
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
@@ -5741,10 +5739,10 @@ plugins:
 
   - name: 'LootMenu.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/48027/' ]
-    req:
-      - *MenuQue
-      - *OBSEv21
-    msg: [ *alsoUseEngineBugFixes ]
+    req: [ *MenuQue ]
+    msg:
+      - *alsoUseEngineBugFixes
+      - *requiresOBSEv21
 
   - name: 'toothman''s funny loadscreens.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/19544/' ]
@@ -5923,7 +5921,7 @@ plugins:
   - name: 'TreasureChest.*\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/44066' ]
   - name: 'TreasureChest.esp'
-    req: [ *OBSEv14 ]
+    msg: [ *requiresOBSEv14 ]
   - name: 'TreasureChest - (FCOM|MMM|OOO).esp'
     msg:
       - <<: *useOnlyOneX
@@ -6687,11 +6685,12 @@ plugins:
     inc:
       - name: 'Midland.esp'
         condition: 'not file("(ROC-)?Midland-Vergayun(-FAR)? patch.esp")'
-    req: [ *OBSEv20 ]
     tag:
       - C.Regions
       - Relations
-    msg: [ *alsoUseSilentVoice ]
+    msg:
+      - *alsoUseSilentVoice
+      - *requiresOBSEv20
     clean:
       - crc: 0x9FC729A3
         util: 'TES4Edit v4.0.3'
@@ -12110,7 +12109,7 @@ plugins:
     tag: [ Invent ]
   - name: 'BAKAdventurerTorch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/37863' ]
-    req: [ *OBSEv20 ]
+    msg: [ *requiresOBSEv20 ]
   - name: 'bnmDLTIC-1-6.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/3429' ]
     inc: [ 'Oscuro''s_Oblivion_Overhaul.esm' ]
@@ -12442,8 +12441,8 @@ plugins:
     req:
       - name: 'OBSE/Plugins/AddActorValues.dll'
         display: '[AddActorValues](https://www.nexusmods.com/oblivion/mods/33248)'
-      - *OBSEv18
       - *MenuQue
+    msg: [ *requiresOBSEv18 ]
   - name: 'M.O.E. - Undermined Leveled Gameplay - Creature Edition.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/7902' ]
     inc:
@@ -12516,7 +12515,7 @@ plugins:
         itm: 16
   - name: 'NR500.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/35978' ]
-    req: [ *OBSEv15 ]
+    msg: [ *requiresOBSEv15 ]
   - name: 'New Potions by Tealpanda.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/33946' ]
     dirty:
@@ -12668,7 +12667,7 @@ plugins:
         itm: 3
   - name: 'Rings of Infiltration.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/15222' ]
-    req: [ *OBSEv16 ]
+    msg: [ *requiresOBSEv16 ]
   - name: 'OSM-All Genders.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/32838' ]
     tag:
@@ -12762,8 +12761,8 @@ plugins:
     tag: [ Invent ]
   - name: 'VipCxj_AirSystem.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/36903/' ]
-    req: [ *OBSEv20 ]
     msg:
+      - *requiresOBSEv20
       - type: say
         content:
           - lang: en
@@ -12773,7 +12772,7 @@ plugins:
 
   - name: 'Wasabi the Mouse.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/35999' ]
-    req: [ *OBSEv18 ]
+    msg: [ *requiresOBSEv18 ]
   - name: 'wd purse of wonders.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/4744' ]
     tag: [ Scripts ]
@@ -14000,7 +13999,7 @@ plugins:
     tag: [ Invent ]
   - name: 'Rune of Independence.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/36694' ]
-    req: [ *OBSEv19 ]
+    msg: [ *requiresOBSEv19 ]
 
   - name: 'RustyItems.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/7190' ]
@@ -14160,7 +14159,7 @@ plugins:
     tag: [ Invent ]
   - name: 'Tail_Amulet_Converter.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/13007' ]
-    req: [ *OBSEv11 ]
+    msg: [ *requiresOBSEv11 ]
   - name: 'tda_Armoury.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/25332' ]
     dirty:
@@ -14579,11 +14578,11 @@ plugins:
   - name: 'TGNDNessaStore.esp'
     url: [ 'https://www.loverslab.com/files/file/351-nessas-tgnd-stores' ]
     req:
-      - *OBSEv20
       - *SilentVoice
       - name: 'TGND.esp'
         display: '[TGND Body Replacer](https://www.loverslab.com/files/file/253-tgnd-body-replacer/)'
     msg:
+      - *requiresOBSEv20
       - type: say
         content:
           - lang: en
@@ -14639,7 +14638,7 @@ plugins:
       - Scripts
   - name: 'Athletics While Riding.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/37432' ]
-    req: [ *OBSEv18 ]
+    msg: [ *requiresOBSEv18 ]
   - name: 'Slof''s Horses Base.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/48925/' ]
     tag: [ Graphics ]
@@ -14750,7 +14749,7 @@ plugins:
         condition: 'not file("MD Saddlebags v3.0 Alternative Trader Script.esp")'
   - name: 'Horse Management.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/46021' ]
-    req: [ *OBSEv21 ]
+    msg: [ *requiresOBSEv21 ]
   - name: 'qazHorseCommand -horsearmor.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/7481' ]
     tag: [ Scripts ]
@@ -15722,8 +15721,9 @@ plugins:
     url:
       - 'https://www.nexusmods.com/oblivion/mods/41246/'
       - 'https://tesall.ru/files/modi-dlya-oblivion/kvesti/3644-efirnii-klinok'
-    req: [ *OBSEv20 ]
-    msg: [ *alsoUseSilentVoice ]
+    msg:
+      - *alsoUseSilentVoice
+      - *requiresOBSEv20
     dirty:
       - <<: *quickClean
         crc: 0xC17B383E
@@ -16230,8 +16230,8 @@ plugins:
     tag: [ Factions ]
   - name: 'BladeSong.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/49657' ]
-    req: [ *OBSEv18 ]
     msg:
+      - *requiresOBSEv18
       - type: warn
         content:
           - lang: en
@@ -16253,7 +16253,7 @@ plugins:
     msg: [ *corrupt ]
   - name: 'BossPhaitCrab.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/38965' ]
-    req: [ *OBSEv20 ]
+    msg: [ *requiresOBSEv20 ]
     dirty:
       - <<: *quickClean
         crc: 0x26F8ED36
@@ -16298,7 +16298,7 @@ plugins:
             text: 'Benötigt: Oblivion XP'
   - name: 'BuryCorpse.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/43134' ]
-    req: [ *OBSEv20 ]
+    msg: [ *requiresOBSEv20 ]
 
   - name: 'BXX Tamriel Resource Exchange.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/13320' ]
@@ -16951,7 +16951,7 @@ plugins:
         udr: 31
   - name: 'Legends - Baleful Eye.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/16203' ]
-    req: [ *OBSEv20 ]
+    msg: [ *requiresOBSEv20 ]
     dirty:
       - crc: 0x4a2e7217
         <<: *dirtyPlugin
@@ -16959,8 +16959,8 @@ plugins:
         udr: 11
   - name: 'Legends - Zefaro Cottage.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/35627' ]
-    req: [ *OBSEv18 ]
     msg:
+      - *requiresOBSEv18
       - type: say
         content:
           - lang: en
@@ -17409,7 +17409,7 @@ plugins:
         udr: 1
   - name: 'Qaja''kar.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/30241' ]
-    req: [ *OBSEv12 ]
+    msg: [ *requiresOBSEv12 ]
     dirty:
       - crc: 0xfadeaa7
         <<: *dirtyPlugin
@@ -17561,7 +17561,7 @@ plugins:
         itm: 47
   - name: 'CMWaterskin.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/32361' ]
-    req: [ *OBSEv18 ]
+    msg: [ *requiresOBSEv18 ]
   - name: 'ShadowfangKeep.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/31994' ]
     dirty:
@@ -19548,9 +19548,9 @@ plugins:
   - name: 'Coffinbag''s Better Potions.esp'
     tag: [ Graphics ]
   - name: 'CompanionHorseSupport.esp'
-    req: [ *OBSEv18 ]
+    msg: [ *requiresOBSEv18 ]
   - name: 'CompanionHorseSupportFIX forCMPartners.esp'
-    req: [ *OBSEv18 ]
+    msg: [ *requiresOBSEv18 ]
   - name: 'Compass-Disable_POIs.esp'
     msg:
       - <<: *useBashTweakInstead
@@ -20186,7 +20186,7 @@ plugins:
       - Graphics
       - NoMerge
   - name: 'Sleep to Save.esp'
-    req: [ *OBSEv11 ]
+    msg: [ *requiresOBSEv11 ]
 
   - name: 'Slof''s Dogs.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/48920/' ]
@@ -20196,7 +20196,7 @@ plugins:
 
   - name: 'Soulgem Magic.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/35393' ]
-    req: [ *OBSEv20 ]
+    msg: [ *requiresOBSEv20 ]
     tag: [ Scripts ]
   - name: 'SPTDiverseGuards.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/24614' ]
@@ -20502,7 +20502,7 @@ plugins:
           - lang: de
             text: 'Nicht mit anderen Pferd-Beschwörungs-Mods gleichzeitig nutzen. Nutzen Sie nur eine .esp.'
   - name: 'MadCompanionshipSpells.esp'
-    req: [ *OBSEv19 ]
+    msg: [ *requiresOBSEv19 ]
   - name: 'MarkRecall.esp'
     msg:
       - type: say
@@ -20643,9 +20643,8 @@ plugins:
     req: [ *OBSE ]
     inc: [ 'Midas BeastFortify Fix NONOBSE.esp' ]
   - name: 'CALSUDG.esp'
-    req:
-      - *OBSEv18
-      - *MagicExtender
+    req: [ *MagicExtender ]
+    msg: [ *requiresOBSEv18 ]
   - name: 'ES4_Spell Names by Effect.esp'
     tag: [ Names ]
   - name: 'Levelled Spell Names.esp'
@@ -20654,7 +20653,7 @@ plugins:
   - name: 'Disease Immunity (Oblivion).esp'
     inc: [ 'Disease Immunity (Oblivion + Shivering Isles).esp' ]
   - name: 'spellshields2.esp'
-    req: [ *OBSEv18 ]
+    msg: [ *requiresOBSEv18 ]
 
   - name: 'ArcaneVelocity150.esp'
     msg:
@@ -20687,9 +20686,9 @@ plugins:
         subs: [ 'Bashed Patch: Import Names -> Rational_Names.csv' ]
         condition: 'file("Bashed Patch.*\.esp")'
   - name: 'MagickOverlap.esp'
-    req: [ *OBSEv14 ]
+    msg: [ *requiresOBSEv14 ]
   - name: 'Poison Arrows.esp'
-    req: [ *OBSEv15 ]
+    msg: [ *requiresOBSEv15 ]
   - name: 'Spell Failure Chance.esp'
     req: [ *OBSE ]
   - name: 'Miniature Necromancy Revised.esp'
@@ -20745,7 +20744,7 @@ plugins:
 
   - name: 'BookLooting.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/19111' ]
-    req: [ *OBSEv15 ]
+    msg: [ *requiresOBSEv15 ]
 
   - name: 'pmCrimeHandler.esp'
     req: [ 'pmRealTimeInteractions.esp' ]
@@ -20833,7 +20832,7 @@ plugins:
           - lang: de
             text: 'Nutzen Sie nur eine Erics * for archers.esp.'
   - name: 'Fast Arrow Collection.esp'
-    req: [ *OBSEv16 ]
+    msg: [ *requiresOBSEv16 ]
   - name: 'More_Arrows_Recovered-2169.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/2169' ]
     msg:
@@ -20864,9 +20863,8 @@ plugins:
       - <<: *useBashTweakInstead
         subs: [ 'Tweak Settings -> Arrow: Speed' ]
   - name: 'Simple Dual Wielding.esp'
-    req:
-      - *NifSE
-      - *OBSEv20
+    req: [ *NifSE ]
+    msg: [ *requiresOBSEv20 ]
   - name: 'More_Arrows_Recovered.esp'
     msg:
       - <<: *useBashTweakInstead
@@ -20921,7 +20919,7 @@ plugins:
           - lang: de
             text: 'Stellen Sie sicher calculateFromVanilla in der mitgelieferten ini Datei auf 0 zu setzen wenn es gleichzeitig mit anderen Kampf-Mods genutzt wird.'
   - name: 'Double-tap dodge.esp'
-    req: [ *OBSEv19 ]
+    msg: [ *requiresOBSEv19 ]
 
   - name: 'Duke Patricks - Fresh Kills Now Alert The NPCs.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/18065' ]
@@ -20935,8 +20933,8 @@ plugins:
         subs: [ 'Tweak Settings -> Combat: Alchemy' ]
   - name: 'Phitt''s Phighting Phixes.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/32651' ]
-    req: [ *OBSEv17 ]
     msg:
+      - *requiresOBSEv17
       - type: say
         content:
           - lang: en
@@ -20950,7 +20948,7 @@ plugins:
       - 'Enhanced Hotkeys.esp'
       - 'Unequip Broken Armor.esp'
   - name: 'humantouchNPC.esp'
-    req: [ *OBSEv19 ]
+    msg: [ *requiresOBSEv19 ]
   - name: 'Duke Patricks - Melee Combat NO RECOIL.esp'
     url: [ 'http://tesalliance.org/forums/index.php?/files/file/914-duke-patricks-melee-combat-no-recoil/' ]
     tag:
@@ -20962,9 +20960,9 @@ plugins:
     inc: [ 'Progress.esm' ]
 
   - name: 'ExperienceBasedTraining.esp'
-    req: [ *OBSEv16 ]
+    msg: [ *requiresOBSEv16 ]
   - name: 'Mercantile Leveling-Fixed.esp'
-    req: [ *OBSEv15 ]
+    msg: [ *requiresOBSEv15 ]
   - name: 'Jhaerik''s Anti Power-Gaming Leveling System [1234] ((Very Easy )|(Easy)|(Balanced)|(Hard))?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/40554' ]
     msg:
@@ -20981,7 +20979,7 @@ plugins:
             text: 'Nutzen Sie stattdessen ''OOO-Intelligence Overhaul BJ''.'
         condition: *OOOCond
   - name: 'Intelligence Overhaul-RR.esp'
-    req: [ *OBSEv11 ]
+    msg: [ *requiresOBSEv11 ]
   - name: 'Sneaking Detection Recalibrated.esp'
     req:
       - name: 'OBSE/Plugins/AddActorValues.dll'
@@ -21025,7 +21023,7 @@ plugins:
         condition: 'many("seorin''s Leveling System( - light)?.esp")'
 
   - name: 'SkillDecay.esp'
-    req: [ *OBSEv20 ]
+    msg: [ *requiresOBSEv20 ]
   - name: 'S.P.A.M(\. 100\+| option - (Restore (Fav|Spec)|Faste(r|st) (Maj|Mi)nor))?.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/9914' ]
   - name: 'S.P.A.M(\. 100\+)?\.esp'
@@ -21107,7 +21105,7 @@ plugins:
       - Actors.Anims
       - NoMerge
   - name: '1st Person Legs.esp'
-    req: [ *OBSEv15 ]
+    msg: [ *requiresOBSEv15 ]
 
   - name: 'immersive_caves_manual.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/4666' ]
@@ -21997,7 +21995,7 @@ plugins:
       - NpcFaces
       - R.Relations
   - name: 'Playable Goblin.esp'
-    req: [ *OBSEv18 ]
+    msg: [ *requiresOBSEv18 ]
   - name: 'Riflers Races.esp'
     tag:
       - Eyes
@@ -23184,9 +23182,9 @@ plugins:
       - Eyes
       - Hair
   - name: 'GGIlli.esp'
-    req: [ *OBSEv17 ]
     inc: [ 'Duke Patricks - Basic Combat Geometry.esp' ]
     msg:
+      - *requiresOBSEv17
       - type: say
         content:
           - lang: en
@@ -23859,9 +23857,9 @@ plugins:
         subs: [ 'Tweak Settings -> World: Timescale' ]
   - name: 'Dynamic TimeScale.esp'
     req:
-      - *OBSEv15
       - name: 'You Are Here.esm'
         display: 'You Are Here v1.1-'
+    msg: [ *requiresOBSEv15 ]
   - name: 'Syc_LongerDaysShorterNights.esp'
     msg:
       - type: say
@@ -24150,7 +24148,7 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/42780' ]
     group: *lateChangesGroup
     after: [ 'Bashed Patch, 0.esp' ]  # The default filename for a Bashed Patch.
-    req: [ *OBSEv21 ]
+    msg: [ *requiresOBSEv21 ]
 
   - name: 'Vanilla Weapon Stat Override( - SI)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/39914' ]
