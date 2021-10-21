@@ -3906,10 +3906,10 @@ plugins:
   - name: 'Legendary Abilities-(Fortify Health|Reflect|Shield) MOJ\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/19245/' ]
     req:
-      - *OBSEv14
       - name: 'OBSE/Plugins/OBSE_Elys_Uncapper.dll'
         display: '[Elys Uncapper](https://www.nexusmods.com/oblivion/mods/13841/)'
     msg:
+      - *requiresOBSEv14
       - <<: *useOnlyOneX
         subs: [ 'Legendary Abilities ESP' ]
         condition: 'many("Legendary Abilities-(Fortify Health|Reflect|Shield) MOJ\.esp")'
@@ -5973,7 +5973,7 @@ plugins:
   - name: 'TreasureChest.*\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/44066' ]
   - name: 'TreasureChest.esp'
-    req: [ *OBSEv14 ]
+    msg: [ *requiresOBSEv14 ]
   - name: 'TreasureChest - (FCOM|MMM|OOO).esp'
     msg:
       - <<: *useOnlyOneX
@@ -20737,7 +20737,7 @@ plugins:
         subs: [ 'Bashed Patch: Import Names -> Rational_Names.csv' ]
         condition: 'file("Bashed Patch.*\.esp")'
   - name: 'MagickOverlap.esp'
-    req: [ *OBSEv14 ]
+    msg: [ *requiresOBSEv14 ]
   - name: 'Poison Arrows.esp'
     req: [ *OBSEv15 ]
   - name: 'Spell Failure Chance.esp'
