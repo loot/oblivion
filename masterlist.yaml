@@ -20985,8 +20985,8 @@ plugins:
         subs: [ 'Tweak Settings -> Combat: Alchemy' ]
   - name: 'Phitt''s Phighting Phixes.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/32651' ]
-    req: [ *OBSEv17 ]
     msg:
+      - *requiresOBSEv17
       - type: say
         content:
           - lang: en
@@ -23234,9 +23234,9 @@ plugins:
       - Eyes
       - Hair
   - name: 'GGIlli.esp'
-    req: [ *OBSEv17 ]
     inc: [ 'Duke Patricks - Basic Combat Geometry.esp' ]
     msg:
+      - *requiresOBSEv17
       - type: say
         content:
           - lang: en
