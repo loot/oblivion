@@ -4305,6 +4305,42 @@ plugins:
         itm: 19
         udr: 2
 
+  - name: 'TheTangMo.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/5158/' ]
+    msg:
+      - <<: *wildEdits
+        subs: [ 'Unnecessarily renames records, use the TES4Edit script **Restore record names from master** to fix them.' ]
+        condition: 'checksum("TheTangMo.esp", 6C6F4616) or checksum("TheTangMo.esp", 5EE7EC8B) or checksum("TheTangMo.esp", C65C13F1) or checksum("TheTangMo.esp", D8386869)'
+    dirty:
+      - <<: *quickClean
+        crc: 0x6C6F4616
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 10
+      - <<: *quickClean
+        crc: 0x197B64D6
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 4
+      - <<: *quickClean
+        crc: 0x4DA31E14
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 14
+      - <<: *quickClean
+        crc: 0xC65C13F1
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 10
+      - <<: *quickClean
+        crc: 0xE7965CCB
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 4
+      - <<: *quickClean
+        crc: 0x384CDCA2
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 14
+  - name: 'TheTangMo-Normal.esp'
+    msg:
+      - <<: *renameFile
+        subs: [ '**TheTangMo.esp**' ]
+
   - name: 'Wiedergaenger Race.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/39801/' ]
     dirty:
@@ -22181,11 +22217,7 @@ plugins:
       - Hair
       - NpcFaces
       - R.Relations
-  - name: 'TheTangMo.esp'
-    dirty:
-      - crc: 0x6c6f4616
-        <<: *dirtyPlugin
-        itm: 10
+
   - name: 'Tabaxi_Race_Default.esp'
     tag:
       - Eyes
