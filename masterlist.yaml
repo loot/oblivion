@@ -4106,6 +4106,12 @@ plugins:
     group: *latePatchesGroup
     msg: [ *requiresBashedPatch ]
 
+  - name: 'undercover.esp'
+    dirty:
+      - crc: 0x757f1f42
+        <<: *dirtyPlugin
+        itm: 1
+
   - name: 'unleveled-rewards.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/48049' ]
     tag:
@@ -20330,11 +20336,7 @@ plugins:
     msg:
       - <<: *useBashTweakInstead
         subs: [ 'Tweak Clothes -> Unlimited Amulets' ]
-  - name: 'undercover.esp'
-    dirty:
-      - crc: 0x757f1f42
-        <<: *dirtyPlugin
-        itm: 1
+
   - name: 'UnleveledQuestRewards.esp'
     tag:
       - Delev
