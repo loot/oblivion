@@ -4111,6 +4111,10 @@ plugins:
       - 'https://www.nexusmods.com/oblivion/mods/12077/'
       - link: 'https://www.nexusmods.com/oblivion/mods/19913/'
         name: 'Ranokoa''s Undercover Overhaul'
+    msg:
+      - <<: *obsolete
+        subs: [ '[Ranokoa''s Undercover Overhaul](https://www.nexusmods.com/oblivion/mods/19913/)' ]
+        condition: 'version("undercover.esp", "2.0", <)'
     dirty:
       - <<: *quickClean
         crc: 0x757F1F42
