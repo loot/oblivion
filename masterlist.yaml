@@ -7349,6 +7349,12 @@ plugins:
             text: 'This file is not required when using Wrye Bash''s Bashed Patch v309+.'
         condition: 'file("Bashed Patch.*\.esp")'
 
+  - name: 'Sutch reborn Lighthouse Fix UL.esp'
+    dirty:
+      - crc: 0xc591afc5
+        <<: *dirtyPlugin
+        itm: 2
+
 ###### Better Cities ######
   - name: 'Better (Cities |Imperial City).*\.es(m|p)'
     url: [ 'https://www.nexusmods.com/oblivion/mods/16513' ]
@@ -19005,11 +19011,6 @@ plugins:
   - name: 'MOEVampireClanRaelu-ChorrolHinterland patch.esp'
     msg: [ *obsolete ]
 
-  - name: 'Sutch reborn Lighthouse Fix UL.esp'
-    dirty:
-      - crc: 0xc591afc5
-        <<: *dirtyPlugin
-        itm: 2
   - name: 'LostSpires-BravilBarrowfields patch.esp'
     msg:
       - type: say
