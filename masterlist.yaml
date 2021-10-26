@@ -5578,11 +5578,14 @@ plugins:
       - *alsoUseSilentVoice
       - <<: *sortMasters
         condition: 'checksum("SM Plugin Refurbish Lite.esp", 0466DC3B)'
+    tag: [ Actors.RecordFlags ]
     clean:
       - crc: 0x0466DC3B
         util: 'TES4Edit v4.0.3'
       - crc: 0xAEBBCD33
         util: 'TES4Edit v4.0.3'
+      - crc: 0x4A9070B1
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
   - name: 'SM Plugin Refurbish Lite Levels.esp'
     msg:
       - <<: *sortMasters
