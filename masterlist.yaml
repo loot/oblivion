@@ -2671,6 +2671,10 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/2536/'
         name: 'Natural Environments'
+  - name: 'Natural_Habitat_by_Max_Tael.esp'
+    clean:
+      - crc: 0x48A6FB2A
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
   - name: 'Natural_Vegetation_by_Max_Tael.esp'
     msg:
       - type: say
@@ -2680,8 +2684,9 @@ plugins:
           - lang: de
             text: 'Vor Unique Landscape Mods platzieren um Bäume zur normalen Größe zurück zu verändern.'
     dirty:
-      - crc: 0xb02b5753
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xB02B5753
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
   - name: 'Natural_Vegetation_200%_by_Max_Tael.esp'
     msg:
@@ -2691,6 +2696,39 @@ plugins:
             text: 'Put before Unique Landscape mods to return tree sizes there to normal.'
           - lang: de
             text: 'Vor Unique Landscape Mods platzieren um Bäume zur normalen Größe zurück zu verändern.'
+    dirty:
+      - <<: *quickClean
+        crc: 0x64ADA1E8
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1
+  - name: 'Natural_Water_by_Max_Tael.esp'
+    clean:
+      - crc: 0x0642836E
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
+  - name: 'Natural_Weather_by_Max_Tael.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x0B58010B
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 7
+  - name: 'Natural_Weather_HDR_by_Max_Tael.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x6B332824
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 8
+  - name: 'Natural_Weather_with_darker_Nights_by_Max_Tael.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x57A3BF67
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 7
+  - name: 'Natural_Weather_HDR_with_darker_Nights_by_Max_Tael.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x5546A9E3
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 7
 
   - name: 'PotionReplacer.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/49068' ]
