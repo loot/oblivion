@@ -2921,7 +2921,7 @@ plugins:
         subs: [ 'RD Natural Weather ESP' ]
         condition: 'many("Natural_Weather.*RD\.esp")'
 
-  - name: 'Natural_Weather_(non-HDR|HDR|non-HDR\+Darker_Nights|HDR\+Darker_Nights)?_2.1.2_(bugfree|coloroverride)?.*\.esp'
+  - name: 'Natural_Weather_(non-)?HDR(\+Darker_Nights)?_2\.1\.2_bugfree\.esp'
     msg:
       - <<: *obsolete
         subs: [ '[Ryu Doppler''s fixed Natural Weather](https://www.nexusmods.com/oblivion/mods/14918)' ]
