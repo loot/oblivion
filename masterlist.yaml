@@ -2921,6 +2921,14 @@ plugins:
         subs: [ 'RD Natural Weather ESP' ]
         condition: 'many("Natural_Weather.*RD\.esp")'
 
+  - name: 'Natural_Weather_(non-)?HDR(\+Darker_Nights)?_2\.1\.2_bugfree\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/5383/'
+        name: 'Natural Weather Unofficial Patch'
+    msg:
+      - <<: *obsolete
+        subs: [ '[RD Natural Weather Unoffical Test Fix](https://www.nexusmods.com/oblivion/mods/14918/)' ]
+
   - name: '(AWS|NW|ANW|EW|OBSE)?(-)?Storms & Sound( SI)?\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/8711'
@@ -11907,11 +11915,6 @@ plugins:
       - <<: *useOnlyOneX
         subs: [ 'sdn LOD Fog ESP' ]
         condition: 'many("sdn LOD Fog (Full|Lite)\.esp")'
-
-  - name: 'Natural_Weather_(non-HDR|HDR|non-HDR\+Darker_Nights|HDR\+Darker_Nights)?_2.1.2_(bugfree|coloroverride)?.*\.esp'
-    msg:
-      - <<: *obsolete
-        subs: [ '[Ryu Doppler''s fixed Natural Weather](https://www.nexusmods.com/oblivion/mods/14918)' ]
 
   - name: 'Ls More Butterflies and ( )?Fireflies( Not In Interiors)?( 4\.0)?( Halved| Quarter)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/26218' ]
