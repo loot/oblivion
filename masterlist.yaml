@@ -2916,6 +2916,10 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/14918/'
         name: 'RD Natural Weather Unoffical Test Fix'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'RD Natural Weather ESP' ]
+        condition: 'many("Natural_Weather.*RD\.esp")'
   - name: 'Natural_Weather_HDR_by_Max_Tael_RD.esp'
     dirty:
       - <<: *quickClean
