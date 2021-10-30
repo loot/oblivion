@@ -2912,6 +2912,15 @@ plugins:
         util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         udr: 464
 
+  - name: 'Natural_Weather.*RD\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/14918/'
+        name: 'RD Natural Weather Unoffical Test Fix'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'RD Natural Weather ESP' ]
+        condition: 'many("Natural_Weather.*RD\.esp")'
+
   - name: '(AWS|NW|ANW|EW|OBSE)?(-)?Storms & Sound( SI)?\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/8711'
@@ -11899,18 +11908,6 @@ plugins:
         subs: [ 'sdn LOD Fog ESP' ]
         condition: 'many("sdn LOD Fog (Full|Lite)\.esp")'
 
-  - name: 'Natural_Weather_(HDR_)?(with_darker_Nights_)?by_Max_Tael?.*\.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/14918' ]
-    msg:
-      - <<: *requiresX
-        subs: [ '[Ryu Doppler''s fixed Natural Weather](https://www.nexusmods.com/oblivion/mods/14918)' ]
-        condition: 'not active("Natural_Weather_HDR_2.1.3_coloroverride.esp.esp") and not active("Natural_Weather_HDR_by_Max_Tae_CO_RD.esp")'
-  - name: 'Natural_Weather_HDR_by_Max_Tael_RD.esp'
-    dirty:
-      - <<: *quickClean
-        crc: 0x9233FD80
-        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 2
   - name: 'Natural_Weather_(non-HDR|HDR|non-HDR\+Darker_Nights|HDR\+Darker_Nights)?_2.1.2_(bugfree|coloroverride)?.*\.esp'
     msg:
       - <<: *obsolete
