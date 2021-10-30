@@ -2920,12 +2920,6 @@ plugins:
       - <<: *useOnlyOneX
         subs: [ 'RD Natural Weather ESP' ]
         condition: 'many("Natural_Weather.*RD\.esp")'
-  - name: 'Natural_Weather_HDR_by_Max_Tael_RD.esp'
-    dirty:
-      - <<: *quickClean
-        crc: 0x9233FD80
-        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 2
 
   - name: '(AWS|NW|ANW|EW|OBSE)?(-)?Storms & Sound( SI)?\.esp'
     url:
