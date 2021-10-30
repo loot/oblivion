@@ -6768,6 +6768,17 @@ plugins:
       - crc: 0x9FC729A3
         util: 'TES4Edit v4.0.3'
 
+  - name: 'Verwen Brewery (UL_AY_AC|UL Ancient Yews) Compatable\.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Verwen Brewery Unique Landscapes Ancient Yews/Arrius Creek patch' ]
+        condition: 'many("Verwen Brewery (UL_AY_AC|UL Ancient Yews) Compatable\.esp")'
+  - name: 'Verwen Brewery UL_AY_AC Compatable.esp'
+    dirty:
+      - crc: 0xe45679c7
+        <<: *dirtyPlugin
+        udr: 1
+
 ###### Locations - Overhauls ######
   - name: '24HrArenaAlive(V2|V2Towers|Low)\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/13099/' ]
@@ -19083,16 +19094,6 @@ plugins:
       - <<: *obsolete
         condition: 'file("xulLushWoodlands.esp")'
 
-  - name: 'Verwen Brewery (UL_AY_AC|UL Ancient Yews) Compatable\.esp'
-    msg:
-      - <<: *useOnlyOneX
-        subs: [ 'Verwen Brewery Unique Landscapes Ancient Yews/Arrius Creek patch' ]
-        condition: 'many("Verwen Brewery (UL_AY_AC|UL Ancient Yews) Compatable\.esp")'
-  - name: 'Verwen Brewery UL_AY_AC Compatable.esp'
-    dirty:
-      - crc: 0xe45679c7
-        <<: *dirtyPlugin
-        udr: 1
   - name: 'ColdstoneTown-ArriusCreek patch.esp'
     msg:
       - type: say
