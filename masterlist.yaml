@@ -6771,15 +6771,7 @@ plugins:
   - name: 'Verwen Brewery( UL( Ancient Yews|_AY_AC) Compatable)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/19892/' ]
   - name: 'Verwen Brewery (UL_AY_AC|UL Ancient Yews) Compatable\.esp'
-    msg:
-      - <<: *useOnlyOneX
-        subs: [ 'Verwen Brewery Unique Landscapes Ancient Yews/Arrius Creek patch' ]
-        condition: 'many("Verwen Brewery (UL_AY_AC|UL Ancient Yews) Compatable\.esp")'
-  - name: 'Verwen Brewery UL_AY_AC Compatable.esp'
-    dirty:
-      - crc: 0xe45679c7
-        <<: *dirtyPlugin
-        udr: 1
+    msg: [ *corrupt ]
 
 ###### Locations - Overhauls ######
   - name: '24HrArenaAlive(V2|V2Towers|Low)\.esp'
