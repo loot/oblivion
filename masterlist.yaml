@@ -2667,6 +2667,27 @@ plugins:
         util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
 
+  - name: 'Natural_Vegetation_by_Max_Tael.esp'
+    msg:
+      - type: say
+        content:
+          - lang: en
+            text: 'Put before Unique Landscape mods to return tree sizes there to normal.'
+          - lang: de
+            text: 'Vor Unique Landscape Mods platzieren um Bäume zur normalen Größe zurück zu verändern.'
+    dirty:
+      - crc: 0xb02b5753
+        <<: *dirtyPlugin
+        itm: 1
+  - name: 'Natural_Vegetation_200%_by_Max_Tael.esp'
+    msg:
+      - type: say
+        content:
+          - lang: en
+            text: 'Put before Unique Landscape mods to return tree sizes there to normal.'
+          - lang: de
+            text: 'Vor Unique Landscape Mods platzieren um Bäume zur normalen Größe zurück zu verändern.'
+
   - name: 'PotionReplacer.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/49068' ]
     after:
@@ -19354,26 +19375,6 @@ plugins:
     clean:
       - crc: 0x06D10790
         util: 'TES4Edit v4.0.2i'
-  - name: 'Natural_Vegetation_by_Max_Tael.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Put before Unique Landscape mods to return tree sizes there to normal.'
-          - lang: de
-            text: 'Vor Unique Landscape Mods platzieren um Bäume zur normalen Größe zurück zu verändern.'
-    dirty:
-      - crc: 0xb02b5753
-        <<: *dirtyPlugin
-        itm: 1
-  - name: 'Natural_Vegetation_200%_by_Max_Tael.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Put before Unique Landscape mods to return tree sizes there to normal.'
-          - lang: de
-            text: 'Vor Unique Landscape Mods platzieren um Bäume zur normalen Größe zurück zu verändern.'
 
   - name: 'DEJ Harvest - Flora.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/3699' ]
