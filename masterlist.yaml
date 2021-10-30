@@ -2675,6 +2675,11 @@ plugins:
     clean:
       - crc: 0x48A6FB2A
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
+  - name: 'Natural_Vegetation(_200%)?_by_Max_Tael\.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Natural Vegetation ESP' ]
+        condition: 'many("Natural_Vegetation(_200%)?_by_Max_Tael\.esp")'
   - name: 'Natural_Vegetation_by_Max_Tael.esp'
     dirty:
       - <<: *quickClean
@@ -2691,6 +2696,11 @@ plugins:
     clean:
       - crc: 0x0642836E
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
+  - name: 'Natural_Weather(_HDR)?(_with_darker_Nights)?_by_Max_Tael\.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Natural Weather ESP' ]
+        condition: 'many("Natural_Weather(_HDR)?(_with_darker_Nights)?_by_Max_Tael\.esp")'
   - name: 'Natural_Weather_by_Max_Tael.esp'
     dirty:
       - <<: *quickClean
