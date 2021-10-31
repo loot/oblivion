@@ -7470,6 +7470,10 @@ plugins:
 
   - name: 'DSoSFrostCragRebornExteriorStairsFix.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/38278/' ]
+    msg:
+      - <<: *alreadyInOrFixedByX
+        subs: [ 'Frostcrag Reborn De-Isolated' ]
+        condition: 'active("DLCFrostcragReborn.esp")'
     dirty:
       - <<: *quickClean
         crc: 0xD2621E65
