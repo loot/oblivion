@@ -6547,6 +6547,14 @@ plugins:
         itm: 15
         udr: 18
 
+  - name: 'DoTheUnderdark.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/36101' ]
+    dirty:
+      - crc: 0x61246d9a
+        <<: *dirtyPlugin
+        itm: 22
+        udr: 1
+
   - name: 'Faregyl.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/21562' ]
     after:
@@ -16578,13 +16586,7 @@ plugins:
       - <<: *alreadyInX
         subs: [ 'Better Cities' ]
         condition: 'active("Better Cities Resources.esm") and version("Better Cities Resources.esm","4.6.0",>=)'
-  - name: 'DoTheUnderdark.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/36101' ]
-    dirty:
-      - crc: 0x61246d9a
-        <<: *dirtyPlugin
-        itm: 22
-        udr: 1
+
   - name: 'DragonInvasion.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/13453' ]
     tag:
