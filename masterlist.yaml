@@ -1922,7 +1922,9 @@ plugins:
         itm: 10
         udr: 72
   - name: 'DLCFrostcrag.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/9769' ]
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/9769/'
+        name: 'Frostcrag Reborn'
     group: *dlcGroup
     after:
       - 'DLCShiveringIsles.esp'
@@ -1934,6 +1936,10 @@ plugins:
       - 'DLCThievesDen.esp'
       - 'DLCBattlehornCastle.esp'
       - 'Unofficial Oblivion Patch.esp'
+    msg:
+      - <<: *useInstead
+        subs: [ '[Frostcrag Reborn De-Isolated](https://www.nexusmods.com/oblivion/mods/40752/)' ]
+        condition: 'version("DLCfrostcrag.esp", "3.0", >=)'
     tag:
       - C.Light
       - C.Name
