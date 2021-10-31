@@ -7148,6 +7148,12 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/40752/'
         name: 'Frostcrag Reborn De-Isolated'
+  - name: 'FrostcragRebornCobl.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/9769' ]
+    dirty:
+      - crc: 0xc9702e32
+        <<: *dirtyPlugin
+        udr: 156
 
   - name: 'IC Atmospheric Shops Mod.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/27973/' ]
@@ -18458,12 +18464,6 @@ plugins:
             text: 'Entfernen Sie ''Lynges Thieves Highway.esp und nutzen Sie dies stattdessen.'
         condition: '( file("Lynges Thieves Highway.esp") ) and active("Oscuro''s_Oblivion_Overhaul.esm")'
 
-  - name: 'FrostcragRebornCobl.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/9769' ]
-    dirty:
-      - crc: 0xc9702e32
-        <<: *dirtyPlugin
-        udr: 156
   - name: 'ORM-TamriellicGlassDLC3.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/40308' ]
     tag: [ Graphics ]
