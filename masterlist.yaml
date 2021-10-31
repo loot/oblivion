@@ -7468,6 +7468,13 @@ plugins:
         itm: 1
         udr: 2
 
+  - name: 'DSoSFrostCragRebornExteriorStairsFix.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/38278' ]
+    dirty:
+      - crc: 0xd2621e65
+        <<: *dirtyPlugin
+        itm: 1
+
   - name: '(DLCFrostcrag-|MTC-|OOTD-)?SnowyRoad(-BetterCities|-Feldscar|-FrostcragVillage|-OpenCities)? Patch\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/45336/'
@@ -18440,12 +18447,6 @@ plugins:
           - lang: de
             text: 'Entfernen Sie ''Lynges Thieves Highway.esp und nutzen Sie dies stattdessen.'
         condition: '( file("Lynges Thieves Highway.esp") ) and active("Oscuro''s_Oblivion_Overhaul.esm")'
-  - name: 'DSoSFrostCragRebornExteriorStairsFix.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/38278' ]
-    dirty:
-      - crc: 0xd2621e65
-        <<: *dirtyPlugin
-        itm: 1
 
   - name: 'FrostcragRebornCobl.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/9769' ]
