@@ -7148,14 +7148,18 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/40752/'
         name: 'Frostcrag Reborn De-Isolated'
+  - name: 'DLCFrostcragReborn.esp'
+    msg:
+      - <<: *wildEdits
+        subs: [ 'Delete **0002C163** & **0004B953** in **DLCFrostcragReborn.esp**.' ]
+        condition: 'checksum("DLCFrostcragReborn.esp", 18F90CF6)'
   - name: 'FrostcragRebornCobl.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/9769/'
         name: 'Frostcrag Reborn'
-    dirty:
-      - crc: 0xc9702e32
-        <<: *dirtyPlugin
-        udr: 156
+    clean:
+      - crc: 0x201921B6
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
 
   - name: 'IC Atmospheric Shops Mod.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/27973/' ]
