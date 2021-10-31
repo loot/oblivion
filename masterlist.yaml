@@ -7471,8 +7471,9 @@ plugins:
   - name: 'DSoSFrostCragRebornExteriorStairsFix.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/38278/' ]
     dirty:
-      - crc: 0xd2621e65
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xD2621E65
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
 
   - name: '(DLCFrostcrag-|MTC-|OOTD-)?SnowyRoad(-BetterCities|-Feldscar|-FrostcragVillage|-OpenCities)? Patch\.esp'
