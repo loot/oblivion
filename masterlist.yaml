@@ -7144,6 +7144,23 @@ plugins:
         itm: 1
         udr: 293
 
+  - name: '(DLC|Kvatch Rebuilt \+ )?Frostcrag ?Reborn(Cobl| - Frostcrag Village Patch| De-Isolated Teleport Patch)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/40752/'
+        name: 'Frostcrag Reborn De-Isolated'
+  - name: 'DLCFrostcragReborn.esp'
+    msg:
+      - <<: *wildEdits
+        subs: [ 'Delete **0002C163** & **0004B953** in **DLCFrostcragReborn.esp**.' ]
+        condition: 'checksum("DLCFrostcragReborn.esp", 18F90CF6)'
+  - name: 'FrostcragRebornCobl.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/9769/'
+        name: 'Frostcrag Reborn'
+    clean:
+      - crc: 0x201921B6
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
+
   - name: 'IC Atmospheric Shops Mod.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/27973/' ]
     tag:
@@ -18453,12 +18470,6 @@ plugins:
             text: 'Entfernen Sie ''Lynges Thieves Highway.esp und nutzen Sie dies stattdessen.'
         condition: '( file("Lynges Thieves Highway.esp") ) and active("Oscuro''s_Oblivion_Overhaul.esm")'
 
-  - name: 'FrostcragRebornCobl.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/9769' ]
-    dirty:
-      - crc: 0xc9702e32
-        <<: *dirtyPlugin
-        udr: 156
   - name: 'ORM-TamriellicGlassDLC3.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/40308' ]
     tag: [ Graphics ]
