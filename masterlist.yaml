@@ -5016,8 +5016,9 @@ plugins:
   - name: 'Duke Patricks - Fresh Kills Now Alert The NPCs.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/18065/' ]
     dirty:
-      - crc: 0xfb7500c0
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xFB7500C0
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 3
 
   - name: 'eyja.esp'
