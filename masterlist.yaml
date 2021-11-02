@@ -6605,9 +6605,10 @@ plugins:
   - name: 'Edhildils Underdark.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/37671/' ]
     dirty:
-      - crc: 0x1bca0f29
-        <<: *dirtyPlugin
-        itm: 8
+      - <<: *quickClean
+        crc: 0x1BCA0F29
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 9
 
   - name: 'Faregyl.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/21562' ]
