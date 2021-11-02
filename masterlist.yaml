@@ -5438,8 +5438,9 @@ plugins:
       - link: 'https://www.nexusmods.com/oblivion/mods/22268/'
         name: 'Chapter 1 - The Dwarves Of The Mountain'
     dirty:
-      - crc: 0x16e9e81e
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x16E9E81E
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 141
 
   - name: 'Enhanced Quest Roleplaying.esp'
