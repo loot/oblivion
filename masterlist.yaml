@@ -5433,6 +5433,13 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/37120/' ]
     group: *mapGroup
 
+  - name: 'Dwarven Mines.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/22268' ]
+    dirty:
+      - crc: 0x16e9e81e
+        <<: *dirtyPlugin
+        itm: 141
+
   - name: 'Enhanced Quest Roleplaying.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/6488' ]
     tag:
@@ -16679,12 +16686,7 @@ plugins:
   - name: 'DSPirateIsleBeta.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/6886' ]
     msg: [ *obsolete ]
-  - name: 'Dwarven Mines.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/22268' ]
-    dirty:
-      - crc: 0x16e9e81e
-        <<: *dirtyPlugin
-        itm: 141
+
   - name: 'Duke Patricks Dragon and the Sword of Might.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/23541' ]
     inc: [ 'Duke Patricks Dragon and the Sword of Might Light Version.esp' ]
