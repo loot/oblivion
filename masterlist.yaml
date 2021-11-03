@@ -8433,6 +8433,15 @@ plugins:
         util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 61
 
+  - name: 'ElsweyrCityExtension.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/42349/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x13E13C6B
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 13
+        udr: 1
+
 ###### Hemingway's Capes ######
   - name: 'Hemingweys.*\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/29012/' ]
@@ -19093,17 +19102,7 @@ plugins:
     tag:
       - R.Mouth
       - R.Teeth
-  - name: 'ElsweyrCityExtension.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/42349' ]
-    dirty:
-      - crc: 0x13e13c6b
-        <<: *dirtyPlugin
-        itm: 19
-        udr: 1
-      - crc: 0x49534f53
-        <<: *dirtyPlugin
-        itm: 1
-        udr: 19
+
   - name: 'Reaper''s Esmeralda''s Desert Manor.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/25023' ]
     dirty:
