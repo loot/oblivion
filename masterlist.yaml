@@ -8265,6 +8265,11 @@ plugins:
     msg:
       - <<: *alsoUseX
         subs: [ 'INI setting [`bBorderRegionsEnabled=0`](http://wiki.tesnexus.com/index.php/Removing_In-Game_Borders)' ]
+      - <<: *patch3rdParty
+        subs:
+          - 'Valenwood Improved'
+          - '[Elsweyr Anequina - Valenwood Improved Patch](https://www.afkmods.com/index.php?/files/file/2172-elsweyr-anequina-valenwood-improved-patch/)'
+        condition: 'active("Valenwood Improved.esp") and not active("ElsweyrValenwoodImprovedPatch.esp")'
     dirty:
       - <<: *quickClean
         crc: 0xDD0F1E01
