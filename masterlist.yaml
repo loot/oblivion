@@ -8255,6 +8255,18 @@ plugins:
       - 'xulImperialIsle.esp'
 
 ###### Elsweyr Anequina ######
+  - name: 'ElsweyrAnequina.esp'
+    url:
+      - 'https://www.nexusmods.com/oblivion/mods/25023'
+      - 'https://www.afkmods.com/index.php?/files/file/2170-elsweyr-anequina/'
+    msg:
+      - <<: *alsoUseX
+        subs: [ 'INI tweak [bBorderRegionsEnabled=0](http://wiki.tesnexus.com/index.php/Removing_In-Game_Borders)' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xDD0F1E01
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 79
 
 ###### Hemingway's Capes ######
   - name: 'Hemingweys.*\.esp'
@@ -18850,19 +18862,6 @@ plugins:
       - crc: 0xd34d61bc
         <<: *dirtyPlugin
         itm: 126
-
-  - name: 'ElsweyrAnequina.esp'
-    url:
-      - 'https://www.nexusmods.com/oblivion/mods/25023'
-      - 'https://www.afkmods.com/index.php?/files/file/2170-elsweyr-anequina/'
-    msg:
-      - <<: *alsoUseX
-        subs: [ 'INI tweak [bBorderRegionsEnabled=0](http://wiki.tesnexus.com/index.php/Removing_In-Game_Borders)' ]
-    dirty:
-      - <<: *quickClean
-        crc: 0xDD0F1E01
-        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 79
 
   - name: 'Unofficial Elsweyr Anequina Patch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/39642' ]
