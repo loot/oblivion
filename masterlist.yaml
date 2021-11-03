@@ -8254,6 +8254,32 @@ plugins:
       - 'Unique Landscapes.esp'
       - 'xulImperialIsle.esp'
 
+###### Elsweyr Anequina ######
+  - name: 'ElsweyrAnequina.*\.esp'
+    url: [ 'https://www.afkmods.com/index.php?/files/file/2170-elsweyr-anequina/' ]
+  - name: 'ElsweyrAnequina.esp'
+    url:
+      - 'https://www.nexusmods.com/oblivion/mods/25023/'
+      - 'https://www.afkmods.com/index.php?/files/file/2172-elsweyr-anequina-valenwood-improved-patch/'
+    after: [ 'Valenwood Improved.esp' ]
+    msg:
+      - <<: *alsoUseX
+        subs: [ 'INI setting [`bBorderRegionsEnabled=0`](http://wiki.tesnexus.com/index.php/Removing_In-Game_Borders)' ]
+      - <<: *patch3rdParty
+        subs:
+          - 'Valenwood Improved'
+          - '[Elsweyr Anequina - Valenwood Improved Patch](https://www.afkmods.com/index.php?/files/file/2172-elsweyr-anequina-valenwood-improved-patch/)'
+        condition: 'active("Valenwood Improved.esp") and not active("ElsweyrValenwoodImprovedPatch.esp")'
+    dirty:
+      - <<: *quickClean
+        crc: 0xDD0F1E01
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 79
+      - <<: *quickClean
+        crc: 0x31A92EF6
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 61
+
 ###### Hemingway's Capes ######
   - name: 'Hemingweys.*\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/29012/' ]
@@ -18848,19 +18874,6 @@ plugins:
       - crc: 0xd34d61bc
         <<: *dirtyPlugin
         itm: 126
-
-  - name: 'ElsweyrAnequina.esp'
-    url:
-      - 'https://www.nexusmods.com/oblivion/mods/25023'
-      - 'https://www.afkmods.com/index.php?/files/file/2170-elsweyr-anequina/'
-    msg:
-      - <<: *alsoUseX
-        subs: [ 'INI tweak [bBorderRegionsEnabled=0](http://wiki.tesnexus.com/index.php/Removing_In-Game_Borders)' ]
-    dirty:
-      - <<: *quickClean
-        crc: 0xDD0F1E01
-        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 79
 
   - name: 'Unofficial Elsweyr Anequina Patch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/39642' ]
