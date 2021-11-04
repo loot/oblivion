@@ -4351,14 +4351,8 @@ plugins:
   ### Race Balancing Project ###
   - name: 'bgBalancing.*\.esp'
     url:
-      - link: 'http://theelderscrolls.info/?go=dlfile&fileid=215'
-        name: 'Race Balancing Project (English)'
-      - link: 'http://theelderscrolls.info/?go=dlfile&fileid=222'
-        name: 'Race Balancing Project (German)'
-      - link: 'http://theelderscrolls.info/?go=dlfile&fileid=318'
-        name: 'Race Balancing Project LIGHT (English)'
-      - link: 'http://theelderscrolls.info/?go=dlfile&fileid=317'
-        name: 'Race Balancing Project LIGHT (German)'
+      - link: 'https://www.nexusmods.com/oblivion/mods/22124/'
+        name: 'Race Balancing Project'
   - name: 'bgBalancing(D|E)VCore.esp'
     after: [ 'Blood&Mud.esp' ]
     inc: [ 'Cobl Races.esp' ]
@@ -4369,7 +4363,7 @@ plugins:
     msg:
       # doNotClean
       - <<: *requiresX
-        subs: [ '[Race Balancing Project (Installation files)](http://theelderscrolls.info/?go=dlfile&fileid=293/)' ]
+        subs: [ '[Race Balancing Project (Installation files)](https://www.nexusmods.com/oblivion/mods/22124/)' ]
         condition: 'not file("meshes/soya/soyastyle01.nif") and not version("bgBalancingEVCore.esp", "10.0EV-L", ==) and not version("bgBalancingDVCore.esp", "10.0DV-L", ==)'
     tag:
       - Body-Size-F
@@ -4847,10 +4841,8 @@ plugins:
   ### (L.A.M.E) Less Annoying Magic Experience ###
   - name: 'bgMagic.*\.esp'
     url:
-      - link: 'http://www.theelderscrolls.info/?go=dlfile&fileid=219'
+      - link: 'https://www.nexusmods.com/oblivion/mods/20371/'
         name: 'Less Annoying Magic Experience'
-      - link: 'http://www.theelderscrolls.info/?go=dlfile&fileid=220'
-        name: 'Less Annoying Magic Experience [Deutsche Version 1.7]'
   - name: 'bgMagic(D|E)V.esp'
     after: [ 'Tiefling Races.esp' ]
     inc: [ 'Tiefling Races.esp' ]
@@ -4878,6 +4870,15 @@ plugins:
   - name: 'bgMagic(DV)?SpellTomes_for_WryeBash.esp'
     msg: [ *requiresBashedPatch ]
     tag: [ Relev ]
+
+  - name: 'bgShaderStandAloneEV.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/22147/'
+        name: 'Enchantment and Hit Shaders'
+    tag: [ EffectStats ]
+    clean:
+      - crc: 0x645C4580
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
 
   - name: 'FearsomeMagicka.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/30973/' ]
@@ -5242,7 +5243,7 @@ plugins:
 
   - name: 'bgIntegrationEV.esp'
     url:
-      - link: 'https://theelderscrolls.info/?go=dlfile&fileid=349'
+      - link: 'https://www.nexusmods.com/oblivion/mods/22320/'
         name: 'Integration - The Stranded Light'
     after:
       - 'Open Cities Classic.esp'
@@ -5268,7 +5269,7 @@ plugins:
 
   - name: 'bgIntegrationIntegratedEV.esp'
     url:
-      - link: 'https://theelderscrolls.info/?go=dlfile&fileid=441'
+      - link: 'https://www.nexusmods.com/oblivion/mods/22320/'
         name: 'Integration - The Stranded Light - Integrated!'
     after:
       - 'Unique Landscapes.esp'
@@ -9492,7 +9493,7 @@ plugins:
     inc: [ 'SilverfishFalls.esp' ]
     req:
       - name: 'bgIntegrationEV.esp'
-        display: '[Integration: The Stranded Light](http://theelderscrolls.info/?go=dlfile&fileid=349) or [Integration - The Stranded Light - Integrated!](http://theelderscrolls.info/?go=dlfile&fileid=441)'
+        display: '[Integration: The Stranded Light](https://www.nexusmods.com/oblivion/mods/22320/) or [Integration - The Stranded Light - Integrated!](https://www.nexusmods.com/oblivion/mods/22320/)'
         condition: 'not file("bgIntegrationIntegratedEV.esp") and not file("bgIntegrationDV.esp")'
   # ULC Patches - Kragenir's Death Quest #
   - name: 'ULE KragenirsDeathQuest.*patch\.esp'
