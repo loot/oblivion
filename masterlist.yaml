@@ -2600,6 +2600,38 @@ plugins:
         subs: [ '[Clean Up Cleaned Up](https://www.nexusmods.com/oblivion/mods/49874)' ]
         condition: 'version("kuerteeCleanUp.esp", "0.61", <)'
 
+  - name: 'mini fixes-all fixes.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/13492/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x97D1DBE7
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 4
+  - name: 'mini fixes-altars.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/13492/' ]
+    clean:
+      - crc: 0x938FCFC2
+        util: 'TES4Edit v4.0.3'
+  - name: 'mini fixes-armored imperial horses.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/13492/' ]
+    clean:
+      - crc: 0x6564525A
+        util: 'TES4Edit v4.0.3'
+  - name: 'mini fixes-all fixes-horse armour.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/13492/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xF8C8065C
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 4
+  - name: 'mini fixes-more animal skins, meat etc..esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/13492/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x05321A04
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 4
+
   - name: 'WaterFPS.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/49347' ]
     tag: [ C.Water ]
