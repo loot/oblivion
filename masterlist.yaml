@@ -3402,6 +3402,16 @@ plugins:
         util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 126
 
+  - name: 'Fairies.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/15391/'
+        name: 'Fairies of Cyrodiil'
+    dirty:
+      - <<: *quickClean
+        crc: 0xAE11C546
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 62
+
   - name: 'moDem''s City Life.esp'
     url:
       - 'https://www.nexusmods.com/oblivion/mods/9450/'
@@ -18574,13 +18584,7 @@ plugins:
   - name: 'Cyrodill Travel Services.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/21999' ]
     msg: [ *obsolete ]
-  - name: 'Fairies.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/15391' ]
-    dirty:
-      - crc: 0xce62618b
-        <<: *dirtyPlugin
-        itm: 62
-        udr: 10
+
   - name: 'YakumoIsle.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/37004' ]
     req: [ 'DLCShiveringIsles.esp' ]
