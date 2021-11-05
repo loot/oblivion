@@ -8450,6 +8450,14 @@ plugins:
         util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         udr: 137
 
+  - name: 'ElsweyrValenwoodImprovedPatch.esp'
+    url: [ 'https://www.afkmods.com/index.php?/files/file/2172-elsweyr-anequina-valenwood-improved-patch/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xCF9AE70A
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 68
+
 ###### Hemingway's Capes ######
   - name: 'Hemingweys.*\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/29012/' ]
@@ -19130,12 +19138,6 @@ plugins:
       - Body-F
       - Body-Size-F
 
-  - name: 'ElsweyrValenwoodImprovedPatch.esp'
-    url: [ 'https://www.afkmods.com/index.php?/files/file/2172-elsweyr-anequina-valenwood-improved-patch/' ]
-    dirty:
-      - crc: 0xf2ea526b
-        <<: *dirtyPlugin
-        itm: 104
   - name: 'Walkabout.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/30816' ]
     clean:
