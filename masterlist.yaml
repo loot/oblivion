@@ -18786,7 +18786,7 @@ plugins:
           - lang: de
             text: 'Wenn es auch mit Region Revive Lake Rumare genutzt wird, nutzen Sie auch ''GuardsofaCyrodiilRedux - RRLRpatch.esp''.'
   - name: 'Mighty Umbra.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/13398' ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/13398/' ]
     msg:
       - type: say
         content:
@@ -18799,14 +18799,16 @@ plugins:
       - Graphics
       - Stats
     dirty:
-      - crc: 0x6d7692cd
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x6D7692CD
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
   - name: 'Mighty Umbra - Vanilla OB.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/13398' ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/13398/' ]
     dirty:
-      - crc: 0x5edc8746
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x5EDC8746
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
   - name: 'Ungarion1TheWelkyndSword.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/4969' ]
