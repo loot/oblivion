@@ -3297,6 +3297,22 @@ plugins:
         itm: 35
         udr: 12
 
+  - name: 'Nec-Character_Clair.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/15581/' ]
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**DACompilation_GO ESPs**' ]
+        condition: 'active("DACompilation_GO(_SI)?(_APN)?\.esp")'
+      - <<: *useInstead
+        type: say
+        subs: [ '[Sclerocephalus CM Partner Compilation](https://www.nexusmods.com/oblivion/mods/33739/)' ]
+        condition: 'not active("DACompilation_GO(_SI)?(_APN)?\.esp")'
+    tag:
+      - Eyes
+      - Hair
+      - NpcFaces
+      - R.Relations
+
   - name: 'PersonalPackGuars( Black| Striped| White)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/20358/' ]
   - name: 'PersonalPackGuars.esp'
@@ -22047,21 +22063,6 @@ plugins:
       - Hair
       - NpcFaces
   - name: 'Nec - Extra Mystic Elf Face.esp'
-    tag:
-      - Eyes
-      - Hair
-      - NpcFaces
-      - R.Relations
-  - name: 'Nec-Character_Clair.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/15581/' ]
-    msg:
-      - <<: *alreadyInX
-        subs: [ '**DACompilation_GO ESPs**' ]
-        condition: 'active("DACompilation_GO(_SI)?(_APN)?\.esp")'
-      - <<: *useInstead
-        type: say
-        subs: [ '[Sclerocephalus CM Partner Compilation](https://www.nexusmods.com/oblivion/mods/33739/)' ]
-        condition: 'not active("DACompilation_GO(_SI)?(_APN)?\.esp")'
     tag:
       - Eyes
       - Hair
