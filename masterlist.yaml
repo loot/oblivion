@@ -6823,6 +6823,15 @@ plugins:
       - crc: 0xAF477DE5
         util: 'TES4Edit v4.0.3'
 
+  - name: 'Gaelendryl.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/6371/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x795872CA
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 49
+        udr: 6
+
   - name: 'GlenvarCastle.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/8235/' ]
     group: *earlyLoadersGroup
@@ -19077,13 +19086,6 @@ plugins:
   - name: 'DBC-ImpeREAL City Unique Districts-Merged Patch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/41090' ]
     inc: [ 'DBC-ImpeREAL City Unique Districts Waterfront Patch.esp' ]
-  - name: 'Gaelendryl.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/6371' ]
-    dirty:
-      - crc: 0x795872ca
-        <<: *dirtyPlugin
-        itm: 49
-        udr: 6
 
   - name: 'Unofficial Elsweyr Anequina Patch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/39642' ]
