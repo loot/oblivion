@@ -3301,12 +3301,8 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/15569/' ]
     msg:
       - <<: *alreadyInX
-        subs: [ '**DACompilation_GO ESPs**' ]
-        condition: 'active("DACompilation_GO(_SI)?(_APN)?\.esp")'
-      - <<: *useInstead
-        type: say
-        subs: [ '[Sclerocephalus CM Partner Compilation](https://www.nexusmods.com/oblivion/mods/33739/)' ]
-        condition: 'not active("DACompilation_GO(_SI)?(_APN)?\.esp")'
+        subs: [ 'DAClair.esp' ]
+        condition: 'active("DAClair.esp")'
     clean:
       - crc: 0x8EB21D65
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
