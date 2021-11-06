@@ -11295,13 +11295,32 @@ plugins:
   - name: 'OOOShiveringIsles.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/46508/' ]
     tag:
+      - Actors.RecordFlags
+      - C.Name
+      - C.Owner
+      - EffectStats
+      - EnchantmentStats
+      - Invent.Change
+      - NPC.Eyes
+      - NPC.FaceGen
+      - NPC.Hair
+      - -R.Body-M
+      - R.Eyes
       - name: -R.Head
         condition: 'file("Oblivion_Character_Overhaul.esp")'
+      - R.Relations.Add
+      - Relations.Add
+      - -Relations.Change
+      - Sound
+      - Text
     dirty:
       - <<: *quickClean
-        crc: 0xB82FC0B0
-        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 55
+        crc: 0x252B8019
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 53
+    clean:
+      - crc: 0xC5ED29BA
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
   - name: 'OOOSIArcheryPatch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/46508/' ]
     clean:
