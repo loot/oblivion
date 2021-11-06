@@ -3297,6 +3297,16 @@ plugins:
         itm: 35
         udr: 12
 
+  - name: 'Nec-Character_Clair.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/15569/' ]
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'DAClair.esp' ]
+        condition: 'active("DAClair.esp")'
+    clean:
+      - crc: 0x8EB21D65
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
+
   - name: 'PersonalPackGuars( Black| Striped| White)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/20358/' ]
   - name: 'PersonalPackGuars.esp'
@@ -22047,19 +22057,6 @@ plugins:
       - Hair
       - NpcFaces
   - name: 'Nec - Extra Mystic Elf Face.esp'
-    tag:
-      - Eyes
-      - Hair
-      - NpcFaces
-      - R.Relations
-  - name: 'Nec-Character_Clair.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Consider updating to DACompilation_GO.esp/DACompilation_GO_APN.esp - this has some fixes and improvements and fixes game-destroying issues.'
-          - lang: de
-            text: 'Erwägen Sie zu DACompilation_GO.esp/DACompilation_GO_APN.esp upzudaten - Dies hat einige Fixes und Verbesserungen und behebt Spiel-zerstörende Probleme.'
     tag:
       - Eyes
       - Hair
