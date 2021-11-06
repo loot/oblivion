@@ -17534,8 +17534,8 @@ plugins:
         udr: 5
   - name: 'MTCExpandedVillages.esp'
     url:
-      - 'https://www.nexusmods.com/oblivion/mods/27125'
-      - 'https://www.nexusmods.com/oblivion/mods/48312'
+      - 'https://www.nexusmods.com/oblivion/mods/27125/'
+      - 'https://www.nexusmods.com/oblivion/mods/48312/'
     inc:
       - name: 'RTT.esp'
         display: 'Ruined Tail''s Tale'
@@ -17563,10 +17563,14 @@ plugins:
           - '[MTC Expanded Villages - Weye Patch](https://www.nexusmods.com/oblivion/mods/42170) or [Arthmoors Mod Patches](http://www.nexusmods.com/oblivion/mods/34010)'
         condition: 'active("RTT.esp") and not file("RTT-Weye Relocation Patch.esp") and not file("MTC-WeyePatch.esp")'
     dirty:
-      - crc: 0x795046ef
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x795046EF
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 12
         udr: 290
+    clean:
+      - crc: 0x33089CDE
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
   - name: 'MTC-WeyePatch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/42170' ]
     msg:
