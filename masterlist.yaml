@@ -3408,6 +3408,21 @@ plugins:
       - crc: 0x5CF42F9A
         util: 'TES4Edit v4.0.3i (RC1 for 4.0.4)'
 
+  - name: 'DAIsrithr.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/13894/' ]
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**DACompilation_GO ESPs**' ]
+        condition: 'active("DACompilation_GO(_SI)?(_APN)?\.esp")'
+      - <<: *useInstead
+        type: say
+        subs: [ '[Sclerocephalus CM Partner Compilation](https://www.nexusmods.com/oblivion/mods/33739/)' ]
+        condition: 'not active("DACompilation_GO(_SI)?(_APN)?\.esp")'
+    tag: [ R.Hair ]
+    clean:
+      - crc: 0x4829B060
+        util: 'TES4Edit v4.0.3i (RC1 for 4.0.4)'
+
   - name: 'Nec-Character_Clair.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/15569/' ]
     msg:
@@ -23853,18 +23868,6 @@ plugins:
       - Hair
   - name: 'DADemons.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/15351' ]
-    tag:
-      - Eyes
-      - Hair
-  - name: 'DAIsrithr.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/13894' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Consider updating to DACompilation_GO.esp/DACompilation_GO_APN.esp - this has some fixes and improvements and fixes game-destroying issues.'
-          - lang: de
-            text: 'Erwägen Sie zu DACompilation_GO.esp/DACompilation_GO_APN.esp upzudaten - Dies hat einige Fixes und Verbesserungen und behebt Spiel-zerstörende Probleme.'
     tag:
       - Eyes
       - Hair
