@@ -6264,6 +6264,19 @@ plugins:
       - <<: *corrupt
         condition: 'checksum("Deepwood Adventures.esp", A3896464)'
 
+  - name: 'GatewayRealm.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/33984' ]
+    dirty:
+      - crc: 0xf6580162
+        <<: *dirtyPlugin
+        itm: 63
+  - name: 'GatewayRealmUL.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/33984' ]
+    dirty:
+      - crc: 0xbca56e
+        <<: *dirtyPlugin
+        itm: 66
+
   - name: 'Hammerfell.esm'
     url: [ 'https://www.nexusmods.com/oblivion/mods/34484' ]
     clean:
@@ -16915,18 +16928,6 @@ plugins:
           - lang: de
             text: 'Nicht nutzen. Diese Mod bricht nachgewiesenermaßen eine gewisse Anzahl von Original-Quests zu brechen. Unverzüglich entfernen.'
 
-  - name: 'GatewayRealm.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/33984' ]
-    dirty:
-      - crc: 0xf6580162
-        <<: *dirtyPlugin
-        itm: 63
-  - name: 'GatewayRealmUL.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/33984' ]
-    dirty:
-      - crc: 0xbca56e
-        <<: *dirtyPlugin
-        itm: 66
   - name: 'Gift of Kynareth.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/7825' ]
     dirty:
