@@ -6279,13 +6279,15 @@ plugins:
         subs: [ 'Unique Landscapes' ]
         condition: 'active("xulCloudtopMountains.esp") or (active("Unique Landscapes.esp") and version("Unique Landscapes.esp", "2.0.0", >=))'
     dirty:
-      - crc: 0xf6580162
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xF6580162
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 63
   - name: 'GatewayRealmUL.esp'
     dirty:
-      - crc: 0xbca56e
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x00BCA56E
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 66
 
   - name: 'Hammerfell.esm'
