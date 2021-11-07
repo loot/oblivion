@@ -3358,6 +3358,36 @@ plugins:
         util: '[TES4Edit v4.0.3i (RC1 for 4.0.4)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 3
 
+  - name: 'DAEva.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/16807/' ]
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**DACompilation_GO ESPs**' ]
+        condition: 'active("DACompilation_GO(_SI)?(_APN)?\.esp")'
+      - <<: *requiresResources
+        subs: [ '[Nec Character Eva-Remake](https://www.nexusmods.com/oblivion/mods/16803/)' ]
+        condition: 'not file("textures/characters/Nec Character Eva-Remake/Nec Eva Body.dds")'
+      - <<: *requiresResources
+        subs: [ '[Rens Beauty Pack](https://www.nexusmods.com/oblivion/mods/4431/)' ]
+        condition: 'not file("textures/characters/Ren/Eyes/RenEye02.dds")'
+      - <<: *useInstead
+        type: say
+        subs: [ '[Sclerocephalus CM Partner Compilation](https://www.nexusmods.com/oblivion/mods/33739/)' ]
+        condition: 'not active("DACompilation_GO(_SI)?(_APN)?\.esp")'
+    dirty:
+      - <<: *quickClean
+        crc: 0x90275BCA
+        util: '[TES4Edit v4.0.3i (RC1 for 4.0.4)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 3
+      - <<: *quickClean
+        crc: 0x416EF9C5
+        util: '[TES4Edit v4.0.3i (RC1 for 4.0.4)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 3
+      - <<: *quickClean
+        crc: 0x7867BA43
+        util: '[TES4Edit v4.0.3i (RC1 for 4.0.4)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 3
+
   - name: 'Nec-Character_Clair.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/15569/' ]
     msg:
@@ -23766,18 +23796,6 @@ plugins:
       - Hair
   - name: 'DAConan.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/15866' ]
-    tag:
-      - Eyes
-      - Hair
-  - name: 'DAEva.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/16807' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Consider updating to DACompilation_GO.esp/DACompilation_GO_APN.esp - this has some fixes and improvements and fixes game-destroying issues.'
-          - lang: de
-            text: 'Erwägen Sie zu DACompilation_GO.esp/DACompilation_GO_APN.esp upzudaten - Dies hat einige Fixes und Verbesserungen und behebt Spiel-zerstörende Probleme.'
     tag:
       - Eyes
       - Hair
