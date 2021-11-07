@@ -5587,6 +5587,14 @@ plugins:
       - crc: 0x7BBB46E5
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
 
+  - name: 'Gift of Kynareth.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/7825/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xE370F100
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        udr: 3
+
   - name: 'GTAesgaard.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/13814/' ]
     clean:
@@ -17067,12 +17075,6 @@ plugins:
           - lang: de
             text: 'Nicht nutzen. Diese Mod bricht nachgewiesenermaßen eine gewisse Anzahl von Original-Quests zu brechen. Unverzüglich entfernen.'
 
-  - name: 'Gift of Kynareth.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/7825' ]
-    dirty:
-      - crc: 0xe370f100
-        <<: *dirtyPlugin
-        udr: 3
   - name: 'Gift of Kynareth_delayer.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/25859/' ]
     msg: [ *obsolete ]
