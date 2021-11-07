@@ -6274,6 +6274,10 @@ plugins:
         subs: [ 'The Gateway Realm ESP' ]
         condition: 'many("GatewayRealm(UL)?\.esp")'
   - name: 'GatewayRealm.esp'
+    msg:
+      - <<: *useVersion
+        subs: [ 'Unique Landscapes' ]
+        condition: 'active("xulCloudtopMountains.esp") or (active("Unique Landscapes.esp") and version("Unique Landscapes.esp", "2.0.0", >=))'
     dirty:
       - crc: 0xf6580162
         <<: *dirtyPlugin
