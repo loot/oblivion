@@ -5832,6 +5832,24 @@ plugins:
       - crc: 0x5BA91DED
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
 
+  - name: 'Ungarion1TheWelkyndSword.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/4969/'
+        name: 'Ungarions Memoirs 1 The Welkynd Sword'
+    tag:
+      - Actors.ACBS
+      - Actors.AIData
+      - Actors.Stats
+      - Invent.Add
+      - NPC.Class
+      - Scripts
+    dirty:
+      - <<: *quickClean
+        crc: 0xE8E6D2AC
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 5
+        udr: 3
+
   - name: 'VHBloodlines 1.2.esp'
     url:
       - 'https://www.nexusmods.com/oblivion/mods/14601'
@@ -18841,19 +18859,6 @@ plugins:
         crc: 0x5EDC8746
         util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
-
-  - name: 'Ungarion1TheWelkyndSword.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/4969' ]
-    tag:
-      - Actors.Spells
-      - Actors.Stats
-      - Invent
-      - Scripts
-    dirty:
-      - crc: 0xe8e6d2ac
-        <<: *dirtyPlugin
-        itm: 5
-        udr: 3
 
   - name: 'Blood&Mud.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/12016' ]
