@@ -6765,6 +6765,21 @@ plugins:
         itm: 26
         udr: 712
 
+  - name: 'Golden Perch Inn.esp'
+    url:
+      - 'https://www.nexusmods.com/oblivion/mods/38101/'
+      - 'https://www.nexusmods.com/oblivion/mods/45701/'
+    inc: [ '(DC) Sutch Reborn.esp' ]
+    msg:
+      - <<: *patchUpdateAvailable
+        subs: [ '[Golden Perch Inn Modified](https://www.nexusmods.com/oblivion/mods/45701/)' ]
+        condition: 'checksum("Golden Perch Inn.esp", 74B9C012) or checksum("Golden Perch Inn.esp", 0DFDBAAE) or checksum("Golden Perch Inn.esp", 3431F644) or checksum("Golden Perch Inn.esp", E3EBF42B) or checksum("Golden Perch Inn.esp", 4F0086B1) or checksum("Golden Perch Inn.esp", B5127AC0)'
+    clean:
+      - crc: 0x25C3C7F8
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
+      - crc: 0xA25E5967
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
+
   - name: 'House of Healing at Weye.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/30964/' ]
     after:
@@ -20041,27 +20056,6 @@ plugins:
     tag: [ Names ]
   - name: 'GoldItems_1C.esp'
     tag: [ Stats ]
-  - name: 'Golden Perch Inn.esp'
-    url:
-      - 'https://www.nexusmods.com/oblivion/mods/38101'
-      - 'https://www.nexusmods.com/oblivion/mods/45701'
-    inc: [ '(DC) Sutch Reborn.esp' ]
-    msg:
-      - <<: *wildEdits
-        subs: [ 'Makes wild edits to merchant greetings, water height levels and a vanilla script.' ]
-        condition: 'checksum("Golden Perch Inn.esp", 4F0086B1)'
-    dirty:
-      - crc: 0x444f0e35
-        <<: *dirtyPlugin
-        udr: 2
-        itm: 25
-      - crc: 0x4f0086b1
-        <<: *dirtyPlugin
-        udr: 2
-        itm: 37
-  - name: 'Golden Perch Inn - AN Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/38101' ]
-    tag: [ C.Climate ]
   - name: 'GP_Lockpicks.esp'
     inc: [ 'Mart''s Monster Mod - Hunting & Crafting.esp' ]
   - name: 'gq Chapel Altars become Wayshrines.esp'
