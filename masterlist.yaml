@@ -6264,6 +6264,32 @@ plugins:
       - <<: *corrupt
         condition: 'checksum("Deepwood Adventures.esp", A3896464)'
 
+  - name: 'GatewayRealm(UL)?\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/33984/' ]
+    req: [ 'DLCShiveringIsles.esp' ]
+    msg:
+      - <<: *alsoUseSilentVoice
+        condition: 'not file("OBSE/Plugins/Elys_USV.dll") and not file("OBSE/Plugins/voicefile_redirector.dll") and not file("Sound/Voice/GatewayRealm.esp")'
+      - <<: *useOnlyOneX
+        subs: [ 'The Gateway Realm ESP' ]
+        condition: 'many("GatewayRealm(UL)?\.esp")'
+  - name: 'GatewayRealm.esp'
+    msg:
+      - <<: *useVersion
+        subs: [ 'Unique Landscapes' ]
+        condition: 'active("xulCloudtopMountains.esp") or (active("Unique Landscapes.esp") and version("Unique Landscapes.esp", "2.0.0", >=))'
+    dirty:
+      - <<: *quickClean
+        crc: 0xF6580162
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 63
+  - name: 'GatewayRealmUL.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x00BCA56E
+        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 66
+
   - name: 'Hammerfell.esm'
     url: [ 'https://www.nexusmods.com/oblivion/mods/34484' ]
     clean:
@@ -16915,18 +16941,6 @@ plugins:
           - lang: de
             text: 'Nicht nutzen. Diese Mod bricht nachgewiesenermaßen eine gewisse Anzahl von Original-Quests zu brechen. Unverzüglich entfernen.'
 
-  - name: 'GatewayRealm.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/33984' ]
-    dirty:
-      - crc: 0xf6580162
-        <<: *dirtyPlugin
-        itm: 63
-  - name: 'GatewayRealmUL.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/33984' ]
-    dirty:
-      - crc: 0xbca56e
-        <<: *dirtyPlugin
-        itm: 66
   - name: 'Gift of Kynareth.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/7825' ]
     dirty:
