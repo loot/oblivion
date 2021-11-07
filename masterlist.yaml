@@ -18799,8 +18799,29 @@ plugins:
             text: 'If using with Region Revive Lake Rumare, use ''GuardsofaCyrodiilRedux - RRLRpatch.esp'' as well.'
           - lang: de
             text: 'Wenn es auch mit Region Revive Lake Rumare genutzt wird, nutzen Sie auch ''GuardsofaCyrodiilRedux - RRLRpatch.esp''.'
-  - name: 'Mighty Umbra.esp'
+
+  - name: 'Mighty Umbra( - Vanilla OB)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/13398/' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Mighty Umbra ESP' ]
+        condition: 'many("Mighty Umbra( - Vanilla OB)?\.esp")'
+    tag:
+      - Actors.ACBS
+      - Actors.CombatStyle
+      - Actors.Spells
+      - Actors.Stats
+      - Graphics
+      - Invent.Add
+      - Invent.Remove
+      - NPC.Class
+      - name: NPC.FaceGen
+        condition: 'not file("Oblivion_Character_Overhaul.esp")'
+      - NPC.Hair
+      - Scripts
+      - SpellStats
+      - Stats
+  - name: 'Mighty Umbra.esp'
     msg:
       - type: say
         content:
@@ -18809,21 +18830,18 @@ plugins:
           - lang: de
             text: 'FCOM Nutzer sollten auch ''FCOM_MightyUmbra.esp'' erwägen.'
         condition: *FCOMCond
-    tag:
-      - Graphics
-      - Stats
     dirty:
       - <<: *quickClean
         crc: 0x6D7692CD
         util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
   - name: 'Mighty Umbra - Vanilla OB.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/13398/' ]
     dirty:
       - <<: *quickClean
         crc: 0x5EDC8746
         util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
+
   - name: 'Ungarion1TheWelkyndSword.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/4969' ]
     tag:
