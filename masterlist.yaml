@@ -6270,6 +6270,9 @@ plugins:
     msg:
       - <<: *alsoUseSilentVoice
         condition: 'not file("OBSE/Plugins/Elys_USV.dll") and not file("OBSE/Plugins/voicefile_redirector.dll") and not file("Sound/Voice/GatewayRealm.esp")'
+      - <<: *useOnlyOneX
+        subs: [ 'The Gateway Realm ESP' ]
+        condition: 'many("GatewayRealm(UL)?\.esp")'
   - name: 'GatewayRealm.esp'
     dirty:
       - crc: 0xf6580162
