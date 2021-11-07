@@ -6267,6 +6267,9 @@ plugins:
   - name: 'GatewayRealm(UL)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/33984/' ]
     req: [ 'DLCShiveringIsles.esp' ]
+    msg:
+      - <<: *alsoUseSilentVoice
+        condition: 'not file("OBSE/Plugins/Elys_USV.dll") and not file("OBSE/Plugins/voicefile_redirector.dll") and not file("Sound/Voice/GatewayRealm.esp")'
   - name: 'GatewayRealm.esp'
     dirty:
       - crc: 0xf6580162
