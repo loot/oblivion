@@ -6264,14 +6264,14 @@ plugins:
       - <<: *corrupt
         condition: 'checksum("Deepwood Adventures.esp", A3896464)'
 
+  - name: 'GatewayRealm(UL)?\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/33984/' ]
   - name: 'GatewayRealm.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/33984' ]
     dirty:
       - crc: 0xf6580162
         <<: *dirtyPlugin
         itm: 63
   - name: 'GatewayRealmUL.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/33984' ]
     dirty:
       - crc: 0xbca56e
         <<: *dirtyPlugin
