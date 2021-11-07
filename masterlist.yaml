@@ -19095,8 +19095,12 @@ plugins:
         itm: 15
   - name: 'MannimarcoRevisited.esp'
     url:
-      - 'https://www.nexusmods.com/oblivion/mods/14200'
-      - 'https://www.nexusmods.com/oblivion/mods/42261'
+      - 'https://www.nexusmods.com/oblivion/mods/14200/'
+      - 'https://www.nexusmods.com/oblivion/mods/42261/'
+    msg:
+      - <<: *obsolete
+        subs: [ '[MannimarcoRevisitedv11](https://www.nexusmods.com/oblivion/mods/14200/)' ]
+        condition: 'checksum("MannimarcoRevisited.esp", E8F62FC0) or checksum("MannimarcoRevisited.esp", A43B9E7B) or checksum("MannimarcoRevisited.esp", E2BE41DA) or checksum("MannimarcoRevisited.esp", 3FDE5B96)'
     tag:
       - Actors.ACBS
       - Actors.AIData
@@ -19105,29 +19109,42 @@ plugins:
       - Actors.CombatStyle
       - Actors.Spells
       - Actors.Stats
+      - C.Name
+      - C.Water
+      - EnchantmentStats
       - Factions
-      - Invent
+      - Invent.Add
+      - Invent.Remove
       - NPC.Race
-    dirty:
-      - crc: 0xe2be41da
-        <<: *dirtyPlugin
-        udr: 261
+      - NpcFacesForceFullImport
+      - SpellStats
+      - Stats
+      - Text
+    clean:
+      - crc: 0xCF7B5D7F
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
   - name: 'MannimarcoRevisitedOOO.esp'
     url:
-      - 'https://www.nexusmods.com/oblivion/mods/14200'
-      - 'https://www.nexusmods.com/oblivion/mods/42261'
+      - 'https://www.nexusmods.com/oblivion/mods/14200/'
+      - 'https://www.nexusmods.com/oblivion/mods/42261/'
     tag:
-      - Actors.ACBS
-      - Actors.AIData
-      - Actors.AIPackages
-      - Actors.Anims
-      - Actors.CombatStyle
       - Actors.Spells
-      - Actors.Stats
-      - Factions
-      - Invent
-      - NPC.Race
-      - NpcFaces
+      - Graphics
+      - Invent.Add
+      - Names
+      - Scripts
+      - Sound
+      - Stats
+    clean:
+      - crc: 0x5057FEA6
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
+  - name: 'MannimarcoWardrobeChest.esp'
+    url:
+      - 'https://www.nexusmods.com/oblivion/mods/14200/'
+      - 'https://www.nexusmods.com/oblivion/mods/42261/'
+    clean:
+      - crc: 0x7FCC00E4
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
   - name: 'Shadowcrest_Vineyard.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22810' ]
     dirty:
