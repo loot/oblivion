@@ -6775,16 +6775,6 @@ plugins:
     url:
       - 'https://www.nexusmods.com/oblivion/mods/27125/'
       - 'https://www.nexusmods.com/oblivion/mods/48312/'
-    inc:
-      - name: 'RTT.esp'
-        display: 'Ruined Tail''s Tale'
-        condition: 'not file("RTT-Weye Relocation Patch.esp") and not file("MTC-WeyePatch.esp")'
-      - name: 'Faregyl.esp'
-        display: 'Faregyl Village'
-        condition: 'not file("MTCVillages-FaregylPatch.esp")'
-      - name: 'The Lost Spires.esp'
-        display: 'The Lost Spires'
-        condition: 'not file("MTCVillages-LostSpiresPatch.esp")'
     msg:
       - <<: *patch3rdParty
         subs:
