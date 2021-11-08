@@ -6793,6 +6793,10 @@ plugins:
           - 'Ruined Tail''s Tale'
           - '[MTC Expanded Villages - Weye Patch](https://www.nexusmods.com/oblivion/mods/42170/)'
         condition: 'active("RTT.esp") and not file("MTC-WeyePatch.esp")'
+      - <<: *patchUpdateAvailable
+        type: warn
+        subs: [ '[MTC-Expanded Villages Updated](https://www.nexusmods.com/oblivion/mods/48312/)' ]
+        condition: 'not version("MTCExpandedVillages.esp", "1.5", >=)'
     dirty:
       - <<: *quickClean
         crc: 0x795046EF
