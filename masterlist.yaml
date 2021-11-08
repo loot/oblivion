@@ -4087,6 +4087,16 @@ plugins:
   - name: 'Level Requires 20 Skill Increases.esp'
     after: [ 'Ascension - Push''s Tweaks.esp' ]
 
+  - name: 'BuryCorpse.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/43134/' ]
+    msg: [ *requiresOBSEv20 ]
+    tag: [ Actors.ACBS ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x9175B6A0
+        util: '[TES4Edit v4.0.3i (RC1 for 4.0.4)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1
+
   - name: 'Colourwheels Sexy Oblivion OverHaul.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/36387/' ]
     tag:
@@ -17271,9 +17281,6 @@ plugins:
             text: 'Requires: Oblivion XP'
           - lang: de
             text: 'Benötigt: Oblivion XP'
-  - name: 'BuryCorpse.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/43134' ]
-    msg: [ *requiresOBSEv20 ]
 
   - name: 'BXX Tamriel Resource Exchange.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/13320' ]
