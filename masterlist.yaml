@@ -3425,6 +3425,13 @@ plugins:
 
   - name: 'DAKaleah.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/13350/' ]
+    msg:
+      - <<: *requiresResources
+        subs: [ '[Nec Elf-Kaleah](https://www.nexusmods.com/oblivion/mods/13344/)' ]
+        condition: 'not file("textures/characters/Nec Elf (Kaleah)/NecFemaleFace.dds")'
+      - <<: *requiresResources
+        subs: [ '[Rens Beauty Pack](https://www.nexusmods.com/oblivion/mods/4431/)' ]
+        condition: 'not file("textures/characters/Ren/Eyes/RenEye02.dds")'
     clean:
       - crc: 0x2B45E3A6
         util: 'TES4Edit v4.0.3i (RC1 for 4.0.4)'
@@ -3433,12 +3440,19 @@ plugins:
   - name: 'DAKaleahSuccubus.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/13350/' ]
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Consider updating to DACompilation_GO.esp/DACompilation_GO_APN.esp - this has some fixes and improvements and fixes game-destroying issues.'
-          - lang: de
-            text: 'Erwägen Sie zu DACompilation_GO.esp/DACompilation_GO_APN.esp upzudaten - Dies hat einige Fixes und Verbesserungen und behebt Spiel-zerstörende Probleme.'
+      - <<: *alreadyInX
+        subs: [ '**DACompilation_GO ESPs**' ]
+        condition: 'active("DACompilation_GO(_SI)?(_APN)?\.esp")'
+      - <<: *requiresResources
+        subs: [ '[Nec Elf-Kaleah](https://www.nexusmods.com/oblivion/mods/13344/)' ]
+        condition: 'not file("textures/characters/Nec Elf (Kaleah)/NecFemaleFace.dds")'
+      - <<: *requiresResources
+        subs: [ '[Rens Beauty Pack](https://www.nexusmods.com/oblivion/mods/4431/)' ]
+        condition: 'not file("textures/characters/Ren/Eyes/RenEye02.dds")'
+      - <<: *useInstead
+        type: say
+        subs: [ '[Sclerocephalus CM Partner Compilation](https://www.nexusmods.com/oblivion/mods/33739/)' ]
+        condition: 'not active("DACompilation_GO(_SI)?(_APN)?\.esp")'
     clean:
       - crc: 0xAF0A18F7
         util: 'TES4Edit v4.0.3i (RC1 for 4.0.4)'
