@@ -3423,6 +3423,38 @@ plugins:
       - crc: 0x4829B060
         util: 'TES4Edit v4.0.3i (RC1 for 4.0.4)'
 
+  - name: 'DAKaleah(Succubus)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/13350/'
+        name: 'CM Partner Companion Kaleah'
+    msg:
+      - <<: *requiresResources
+        subs: [ '[Nec Elf-Kaleah](https://www.nexusmods.com/oblivion/mods/13344/)' ]
+        condition: 'not file("textures/characters/Nec Elf (Kaleah)/NecFemaleFace.dds")'
+      - <<: *requiresResources
+        subs: [ '[Rens Beauty Pack](https://www.nexusmods.com/oblivion/mods/4431/)' ]
+        condition: 'not file("textures/characters/Ren/Eyes/RenEye02.dds")'
+  - name: 'DAKaleah.esp'
+    clean:
+      - crc: 0x2B45E3A6
+        util: 'TES4Edit v4.0.3i (RC1 for 4.0.4)'
+      - crc: 0xF44660D5
+        util: 'TES4Edit v4.0.3i (RC1 for 4.0.4)'
+  - name: 'DAKaleahSuccubus.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**DACompilation_GO ESPs**' ]
+        condition: 'active("DACompilation_GO(_SI)?(_APN)?\.esp")'
+      - <<: *useInstead
+        type: say
+        subs: [ '[Sclerocephalus CM Partner Compilation](https://www.nexusmods.com/oblivion/mods/33739/)' ]
+        condition: 'not active("DACompilation_GO(_SI)?(_APN)?\.esp")'
+    clean:
+      - crc: 0xAF0A18F7
+        util: 'TES4Edit v4.0.3i (RC1 for 4.0.4)'
+      - crc: 0x0432466A
+        util: 'TES4Edit v4.0.3i (RC1 for 4.0.4)'
+
   - name: 'Nec-Character_Clair.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/15569/' ]
     msg:
@@ -23878,23 +23910,6 @@ plugins:
       - Hair
   - name: 'DAJadeAmberSheevaTabaxi.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/13786' ]
-    tag:
-      - Eyes
-      - Hair
-  - name: 'DAKaleahSuccubus.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/13350' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Consider updating to DACompilation_GO.esp/DACompilation_GO_APN.esp - this has some fixes and improvements and fixes game-destroying issues.'
-          - lang: de
-            text: 'Erwägen Sie zu DACompilation_GO.esp/DACompilation_GO_APN.esp upzudaten - Dies hat einige Fixes und Verbesserungen und behebt Spiel-zerstörende Probleme.'
-    tag:
-      - Eyes
-      - Hair
-  - name: 'DAKaleah.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/13350' ]
     tag:
       - Eyes
       - Hair
