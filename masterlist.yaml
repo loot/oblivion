@@ -3423,7 +3423,7 @@ plugins:
       - crc: 0x4829B060
         util: 'TES4Edit v4.0.3i (RC1 for 4.0.4)'
 
-  - name: 'DAKaleah.esp'
+  - name: 'DAKaleah(Succubus)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/13350/' ]
     msg:
       - <<: *requiresResources
@@ -3432,23 +3432,17 @@ plugins:
       - <<: *requiresResources
         subs: [ '[Rens Beauty Pack](https://www.nexusmods.com/oblivion/mods/4431/)' ]
         condition: 'not file("textures/characters/Ren/Eyes/RenEye02.dds")'
+  - name: 'DAKaleah.esp'
     clean:
       - crc: 0x2B45E3A6
         util: 'TES4Edit v4.0.3i (RC1 for 4.0.4)'
       - crc: 0xF44660D5
         util: 'TES4Edit v4.0.3i (RC1 for 4.0.4)'
   - name: 'DAKaleahSuccubus.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/13350/' ]
     msg:
       - <<: *alreadyInX
         subs: [ '**DACompilation_GO ESPs**' ]
         condition: 'active("DACompilation_GO(_SI)?(_APN)?\.esp")'
-      - <<: *requiresResources
-        subs: [ '[Nec Elf-Kaleah](https://www.nexusmods.com/oblivion/mods/13344/)' ]
-        condition: 'not file("textures/characters/Nec Elf (Kaleah)/NecFemaleFace.dds")'
-      - <<: *requiresResources
-        subs: [ '[Rens Beauty Pack](https://www.nexusmods.com/oblivion/mods/4431/)' ]
-        condition: 'not file("textures/characters/Ren/Eyes/RenEye02.dds")'
       - <<: *useInstead
         type: say
         subs: [ '[Sclerocephalus CM Partner Compilation](https://www.nexusmods.com/oblivion/mods/33739/)' ]
