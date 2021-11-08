@@ -6770,6 +6770,51 @@ plugins:
     req: [ 'Oscuro''s_Oblivion_Overhaul.esp' ]
     inc: [ 'TreasureChest - ALEX.esp' ]
 
+###### Locations ######
+  - name: 'MTCExpandedVillages.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/27125/'
+        name: 'MTC-Expanded Villages'
+      - link: 'https://www.nexusmods.com/oblivion/mods/48312/'
+        name: 'MTC-Expanded Villages Updated'
+    msg:
+      - <<: *patch3rdParty
+        subs:
+          - 'Faregyl Village'
+          - '[MTC Expanded Villages - Faregyl Patch](https://www.nexusmods.com/oblivion/mods/42123/)'
+        condition: 'active("Faregyl.esp") and not file("MTCVillages-FaregylPatch.esp")'
+      - <<: *patch3rdParty
+        subs:
+          - 'The Lost Spires'
+          - '[MTC Expanded Villages - Lost Spires Patch](http://www.nexusmods.com/oblivion/mods/42430/)'
+        condition: 'active("The Lost Spires.esp") and not file("MTCVillages-LostSpiresPatch.esp")'
+      - <<: *patch3rdParty
+        subs:
+          - 'Ruined Tail''s Tale'
+          - '[MTC Expanded Villages - Weye Patch](https://www.nexusmods.com/oblivion/mods/42170/)'
+        condition: 'active("RTT.esp") and not file("MTC-WeyePatch.esp")'
+      - <<: *patchUpdateAvailable
+        type: warn
+        subs: [ '[MTC-Expanded Villages Updated](https://www.nexusmods.com/oblivion/mods/48312/)' ]
+        condition: 'not version("MTCExpandedVillages.esp", "1.5", >=)'
+    tag:
+      - Actors.AIData
+      - Actors.AIPackages
+      - C.Owner
+      - Factions
+      - Invent.Add
+      - Invent.Change
+      - Invent.Remove
+    dirty:
+      - <<: *quickClean
+        crc: 0x795046EF
+        util: '[TES4Edit v4.0.3j (RC2 for 4.0.4)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 12
+        udr: 290
+    clean:
+      - crc: 0x33089CDE
+        util: 'TES4Edit v4.0.3j (RC2 for 4.0.4)'
+
 ###### Locations - New Lands ######
   - name: 'bartholm.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/5022' ]
@@ -18136,45 +18181,6 @@ plugins:
         <<: *dirtyPlugin
         itm: 94
         udr: 5
-  - name: 'MTCExpandedVillages.esp'
-    url:
-      - 'https://www.nexusmods.com/oblivion/mods/27125/'
-      - 'https://www.nexusmods.com/oblivion/mods/48312/'
-    inc:
-      - name: 'RTT.esp'
-        display: 'Ruined Tail''s Tale'
-        condition: 'not file("RTT-Weye Relocation Patch.esp") and not file("MTC-WeyePatch.esp")'
-      - name: 'Faregyl.esp'
-        display: 'Faregyl Village'
-        condition: 'not file("MTCVillages-FaregylPatch.esp")'
-      - name: 'The Lost Spires.esp'
-        display: 'The Lost Spires'
-        condition: 'not file("MTCVillages-LostSpiresPatch.esp")'
-    msg:
-      - <<: *patch3rdParty
-        subs:
-          - 'Faregyl Village'
-          - '[MTC Expanded Villages - Faregyl Patch](https://www.nexusmods.com/oblivion/mods/42123)'
-        condition: 'active("Faregyl.esp") and not file("MTCVillages-FaregylPatch.esp")'
-      - <<: *patch3rdParty
-        subs:
-          - 'The Lost Spires'
-          - '[MTC Expanded Villages - Lost Spires Patch](http://www.nexusmods.com/oblivion/mods/42430)'
-        condition: 'active("The Lost Spires.esp") and not file("MTCVillages-LostSpiresPatch.esp")'
-      - <<: *patch3rdParty
-        subs:
-          - 'Ruined Tail''s Tale'
-          - '[MTC Expanded Villages - Weye Patch](https://www.nexusmods.com/oblivion/mods/42170) or [Arthmoors Mod Patches](http://www.nexusmods.com/oblivion/mods/34010)'
-        condition: 'active("RTT.esp") and not file("RTT-Weye Relocation Patch.esp") and not file("MTC-WeyePatch.esp")'
-    dirty:
-      - <<: *quickClean
-        crc: 0x795046EF
-        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 12
-        udr: 290
-    clean:
-      - crc: 0x33089CDE
-        util: 'TES4Edit v4.0.3h (Hotfix 1)'
   - name: 'MTC-WeyePatch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/42170' ]
     msg:
