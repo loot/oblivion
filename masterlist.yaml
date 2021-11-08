@@ -6682,6 +6682,10 @@ plugins:
       - link: 'https://www.nexusmods.com/oblivion/mods/29378/'
         name: 'The lost treasures of Cyrodiil'
   - name: 'LostTreasures1.1.esp'
+    msg:
+      - <<: *wildEdits
+        subs: [ 'Remove Worldspace **0001C31B**, Region **000CA547** and NPC **00071716** from **LostTreasures1.1.esp**.' ]
+        condition: 'checksum("LostTreasures1.1.esp", 150CFEB5) or checksum("LostTreasures1.1.esp", 723AA105)'
     dirty:
       - <<: *quickClean
         crc: 0x150CFEB5
