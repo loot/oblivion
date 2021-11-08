@@ -19838,16 +19838,6 @@ plugins:
       - <<: *obsolete
         condition: 'file("xulLushWoodlands.esp")'
 
-  - name: 'ColdstoneTown-ArriusCreek patch.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Do not use with ''ColdstoneTown-BravilBarrowfields patch.esp''; ColdstoneTown-BravilBarrowfields patch.esp includes the changes from this patch.'
-          - lang: de
-            text: 'Nicht nutzen mit ''ColdstoneTown-BravilBarrowfields patch.esp''; ColdstoneTown-BravilBarrowfields patch.esp enthält die Änderungen von diesem Patch.'
-        condition: 'file("ColdstoneTown-BravilBarrowfields patch.esp")'
-
   - name: 'NakedNord.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/6406' ]
     dirty:
