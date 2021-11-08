@@ -6587,6 +6587,26 @@ plugins:
         util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
 
+  - name: 'KnightsOfTheThornArmor(SI)?\.esp'
+    url: [ 'https://www.afkmods.com/index.php?/files/file/2310-knights-of-the-thorn-armor/' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Knights of the Thorn Armor ESP' ]
+        condition: 'many("KnightsOfTheThornArmor(SI)?\.esp")'
+    tag:
+      - Graphics
+      - Invent.Add
+      - Invent.Remove
+  - name: 'KnightsOfTheThornArmor.esp'
+    clean:
+      - crc: 0xD4B61DA1
+        util: 'TES4Edit v4.0.3i (RC1 for 4.0.4)'
+  - name: 'KnightsOfTheThornArmorSI.esp'
+    req: [ 'DLCShiveringIsles.esp' ]
+    clean:
+      - crc: 0x9A12461F
+        util: 'TES4Edit v4.0.3i (RC1 for 4.0.4)'
+
   - name: 'Kosai''s Welkynd Armor.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/25759/'
