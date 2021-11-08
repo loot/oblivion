@@ -6779,18 +6779,18 @@ plugins:
       - <<: *patch3rdParty
         subs:
           - 'Faregyl Village'
-          - '[MTC Expanded Villages - Faregyl Patch](https://www.nexusmods.com/oblivion/mods/42123)'
+          - '[MTC Expanded Villages - Faregyl Patch](https://www.nexusmods.com/oblivion/mods/42123/)'
         condition: 'active("Faregyl.esp") and not file("MTCVillages-FaregylPatch.esp")'
       - <<: *patch3rdParty
         subs:
           - 'The Lost Spires'
-          - '[MTC Expanded Villages - Lost Spires Patch](http://www.nexusmods.com/oblivion/mods/42430)'
+          - '[MTC Expanded Villages - Lost Spires Patch](http://www.nexusmods.com/oblivion/mods/42430/)'
         condition: 'active("The Lost Spires.esp") and not file("MTCVillages-LostSpiresPatch.esp")'
       - <<: *patch3rdParty
         subs:
           - 'Ruined Tail''s Tale'
-          - '[MTC Expanded Villages - Weye Patch](https://www.nexusmods.com/oblivion/mods/42170) or [Arthmoors Mod Patches](http://www.nexusmods.com/oblivion/mods/34010)'
-        condition: 'active("RTT.esp") and not file("RTT-Weye Relocation Patch.esp") and not file("MTC-WeyePatch.esp")'
+          - '[MTC Expanded Villages - Weye Patch](https://www.nexusmods.com/oblivion/mods/42170/)'
+        condition: 'active("RTT.esp") and not file("MTC-WeyePatch.esp")'
     dirty:
       - <<: *quickClean
         crc: 0x795046EF
