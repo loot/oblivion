@@ -19827,34 +19827,12 @@ plugins:
       - crc: 0x8056a33c
         <<: *dirtyPlugin
         itm: 5
-  - name: 'VeronaHouseBloodlines-ChorrolHinterland fix.esp'
-    msg: [ *obsolete ]
-  - name: 'MOEVampireClanRaelu-ChorrolHinterland patch.esp'
-    msg: [ *obsolete ]
 
-  - name: 'LostSpires-BravilBarrowfields patch.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Update to Bravil Barrowfields 1.3. Then deactivate this patch.'
-          - lang: de
-            text: 'Updaten Sie zu Bravil Barrowfields 1.3. Deaktivieren Sie dann diesen Patch.'
   - name: 'VeronaHouseBloodlines-LushWoodlands fix.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/14601' ]
     msg:
       - <<: *obsolete
         condition: 'file("xulLushWoodlands.esp")'
-
-  - name: 'ColdstoneTown-ArriusCreek patch.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Do not use with ''ColdstoneTown-BravilBarrowfields patch.esp''; ColdstoneTown-BravilBarrowfields patch.esp includes the changes from this patch.'
-          - lang: de
-            text: 'Nicht nutzen mit ''ColdstoneTown-BravilBarrowfields patch.esp''; ColdstoneTown-BravilBarrowfields patch.esp enthält die Änderungen von diesem Patch.'
-        condition: 'file("ColdstoneTown-BravilBarrowfields patch.esp")'
 
   - name: 'NakedNord.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/6406' ]
@@ -19888,9 +19866,6 @@ plugins:
             text: 'Requires: Better/Open Cities IC Market District Components.'
           - lang: de
             text: 'Benötigt: Better/Open Cities IC Market District Components.'
-
-  - name: 'CastleSeaview+LostCoast Patch.esp'
-    inc: [ 'EaglesRest+LostCoast+CastleSeaview Patch.esp' ]
 
   - name: 'The Ruins of Miscarcand.esp'
     url:
@@ -20026,26 +20001,6 @@ plugins:
           - lang: de
             text: 'Nutzen Sie die UL Jerall Glacier Version dieses Patches!'
         condition: 'file("xulJerallGlacier.esp")'
-  - name: 'OBCBravil-Barrowfields patch.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Use OBCBravil or OBCBravilB&M but not both at the same time.'
-          - lang: de
-            text: 'Nutzen Sie OBCBravil oder OBCBravilB&M aber nicht beide zur gleichen Zeit.'
-        condition: 'file("OBCBravilB&M-Barrowfields patch.esp")'
-  - name: 'OBCBravilB&M-Barrowfields patch.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Use OBCBravil or OBCBravilB&M but not both at the same time.'
-          - lang: de
-            text: 'Nutzen Sie OBCBravil oder OBCBravilB&M aber nicht beide zur gleichen Zeit.'
-        condition: 'file("OBCBravil-Barrowfields patch.esp")'
-  - name: 'BC+Vvardenfell Imports Patch.esp'
-    inc: [ 'xulCheydinhalFalls.esp' ]
 
   - name: 'Dollparts'' Cherry Brooke Grove - AN Patch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/37753' ]
@@ -20781,10 +20736,6 @@ plugins:
   - name: 'PWRunSpeed.esp'
     tag:
       - Actors.Stats
-      - NoMerge
-  - name: 'PyFFI-Optimized Vanilla Meshes Patch.esp'
-    tag:
-      - Graphics
       - NoMerge
   - name: 'Q - Gem Value Modifier - Realistic v1.1.esp'
     tag: [ Stats ]
@@ -21708,14 +21659,6 @@ plugins:
       - name: 'OBSE/Plugins/AddActorValues.dll'
         display: '[AddActorValues](https://www.nexusmods.com/oblivion/mods/33248)'
         condition: 'version("Sneaking Detection Recalibrated.esp","4.0",==)'
-  - name: 'Oblivion XP - Journal Mod Patch.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Edits "ObXPMiscScript" from version 4.1.5. Important: use this patch with that version only!'
-          - lang: de
-            text: 'Bearbeitet "ObXPMiscScript" von Version 4.1.5. Wichtig: Nutzen Sie diesen Patch nur mit dieser Version!'
   - name: 'DMRequirements.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/23005' ]
     msg: [ *obsolete ]
@@ -24279,10 +24222,6 @@ plugins:
         condition: 'file("Mighty Magick - (Core|Races|Settings|Skills|Spells and Creatures).esp")'
     tag: [ Sound ]
 
-  - name: 'k_HOD_RBP_patch.esp'
-    tag:
-      - Body-F
-      - Body-Size-F
   - name: 'Trap.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/26216' ]
     tag:
