@@ -3506,6 +3506,25 @@ plugins:
         util: '[TES4Edit v4.0.3i (RC1 for 4.0.4)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 2
 
+  - name: 'DANECSSONNET.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/16329/'
+        name: 'CM Partners Sonnet, Rhapsody and Allegra'
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**DACompilation_GO ESPs**' ]
+        condition: 'active("DACompilation_GO(_SI)?(_APN)?\.esp")'
+      - <<: *requiresResources
+        subs: [ '[Nec Character Sonnet](https://www.nexusmods.com/oblivion/mods/16329/)' ]
+        condition: 'not file("textures/characters/Nec Character (Sonnet)/Nec Sonnet Body.dds")'
+      - <<: *useInstead
+        type: say
+        subs: [ '[Sclerocephalus CM Partner Compilation](https://www.nexusmods.com/oblivion/mods/33739/)' ]
+        condition: 'not active("DACompilation_GO(_SI)?(_APN)?\.esp")'
+    clean:
+      - crc: 0xF6CDB139
+        util: 'TES4Edit v4.0.3i (RC1 for 4.0.4)'
+
   - name: 'Nec-Character_Clair.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/15569/' ]
     msg:
@@ -24030,17 +24049,6 @@ plugins:
       - Eyes
       - Hair
   - name: 'DALeonidas.esp'
-    tag:
-      - Eyes
-      - Hair
-  - name: 'DANECSSONNET.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Consider updating to DACompilation_GO.esp/DACompilation_GO_APN.esp - this has some fixes and improvements and fixes game-destroying issues.'
-          - lang: de
-            text: 'Erwägen Sie zu DACompilation_GO.esp/DACompilation_GO_APN.esp upzudaten - Dies hat einige Fixes und Verbesserungen und behebt Spiel-zerstörende Probleme.'
     tag:
       - Eyes
       - Hair
