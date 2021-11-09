@@ -7551,9 +7551,10 @@ plugins:
   - name: 'HauntedHouse.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/13699/' ]
     dirty:
-      - crc: 0x2f2f9619
-        <<: *dirtyPlugin
-        itm: 38
+      - <<: *quickClean
+        crc: 0x2F2F9619
+        util: '[TES4Edit v4.0.3j (RC2 for 4.0.4)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 6
         udr: 5
 
   - name: 'House of Healing at Weye.esp'
