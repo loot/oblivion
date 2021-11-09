@@ -6233,6 +6233,17 @@ plugins:
         itm: 5
         udr: 3
 
+  - name: 'Quest For The Elements.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/6974/' ]
+    inc: [ 'Fighters Guild Quests.esp' ]
+    tag: [ Scripts ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xD2E0B570
+        util: '[TES4Edit v4.0.3j (RC2 for 4.0.4)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 246
+        udr: 461
+
   - name: 'ReclaimSancreTor.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/40757' ]
     tag:
@@ -18507,14 +18518,6 @@ plugins:
       - crc: 0xe2d9635d
         <<: *dirtyPlugin
         itm: 132
-  - name: 'Quest For The Elements.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/6974' ]
-    inc: [ 'Fighters Guild Quests.esp' ]
-    dirty:
-      - crc: 0xd2e0b570
-        <<: *dirtyPlugin
-        itm: 254
-        udr: 461
   - name: 'Ranokoas City Stealth Exits.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/24894' ]
     dirty:
