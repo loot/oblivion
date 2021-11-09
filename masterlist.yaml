@@ -1552,10 +1552,11 @@ common:
     type: warn
     subs: [ 'FCOM' ]
     condition: *FCOMCond
-  - &useVersionOOO_FCOM
+  - &useVersionOOO
     <<: *useVersion
-    subs: [ 'FCOM/OOO' ]
-    condition: 'active("FCOM_Convergence.esm") or active("Oscuro''s_Oblivion_Overhaul.esm")'
+    type: warn
+    subs: [ 'Oscuro''s Oblivion Overhaul' ]
+    condition: 'active("Oscuro''s_Oblivion_Overhaul.esm")'
 
   # &useVersionNon
   - &useVersionNonHorseArmor
@@ -16675,13 +16676,13 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/21388' ]
     tag: [ Graphics ]
   - name: 'CNRP Brumav02.esp'
-    msg: [ *useVersionOOO_FCOM ]
+    msg: [ *useVersionOOO ]
 
   - name: 'CNRP Chorrol(4OOO)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/21628' ]
     tag: [ Graphics ]
   - name: 'CNRP Chorrol.esp'
-    msg: [ *useVersionOOO_FCOM ]
+    msg: [ *useVersionOOO ]
 
   - name: 'CNRP DB.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/28027' ]
@@ -16694,12 +16695,12 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/24509' ]
     tag: [ Graphics ]
   - name: 'CNRP Cheydinhal.esp'
-    msg: [ *useVersionOOO_FCOM ]
+    msg: [ *useVersionOOO ]
 
   - name: 'CNRP FightersGuild(4OOO)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22884' ]
   - name: 'CNRP FightersGuild.esp'
-    msg: [ *useVersionOOO_FCOM ]
+    msg: [ *useVersionOOO ]
 
   - name: 'DrI_Poisons.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/18667' ]
