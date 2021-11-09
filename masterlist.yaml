@@ -6901,14 +6901,37 @@ plugins:
         name: 'Physics Enabled Immersive Prison Sewer Exit'
   - name: 'Immersive Prison sewer exit.esp'
     dirty:
-      - crc: 0xd607a66
-        <<: *dirtyPlugin
-        itm: 19
+      - <<: *quickClean
+        crc: 0x0D607A66
+        util: '[TES4Edit v4.0.3j (RC2 for 4.0.4)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 14
+      - <<: *quickClean
+        crc: 0xC35BBF36
+        util: '[TES4Edit v4.0.3j (RC2 for 4.0.4)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1
+  - name: 'NRBsewer exit.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0xCB5F9253
+        util: '[TES4Edit v4.0.3j (RC2 for 4.0.4)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 11
+        udr: 10
+      - <<: *quickClean
+        crc: 0x51A34199
+        util: '[TES4Edit v4.0.3j (RC2 for 4.0.4)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1
   - name: 'UL II Immersive Prison Sewer exit.esp'
     dirty:
-      - crc: 0x26b755f4
-        <<: *dirtyPlugin
-        itm: 11
+      - <<: *quickClean
+        crc: 0x26B755F4
+        util: '[TES4Edit v4.0.3j (RC2 for 4.0.4)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 12
+  - name: 'UL Imperial Isle Prison Sewer Exit.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x6E237965
+        util: '[TES4Edit v4.0.3j (RC2 for 4.0.4)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1
 
   - name: 'HeartOftheDead.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/21176/' ]
