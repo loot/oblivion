@@ -8506,6 +8506,18 @@ plugins:
         itm: 30
         udr: 56
 
+  - name: 'HilltopLodge.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/42119/' ]
+    msg:
+      - <<: *wildEdits
+        condition: 'checksum("HilltopLodge.esp", 4566B727) or checksum("HilltopLodge.esp", 239A6D50)'
+    dirty:
+      - <<: *quickClean
+        crc: 0x4566B727
+        util: '[TES4Edit v4.0.3j (RC2 for 4.0.4)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 7
+        udr: 40
+
   - name: 'Millstone_Farm(_COBL)?.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/29126' ]
     after:
@@ -17887,13 +17899,6 @@ plugins:
       - Scripts
       - Stats
 
-  - name: 'HilltopLodge.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/42119' ]
-    dirty:
-      - crc: 0xb5cd397e
-        <<: *dirtyPlugin
-        itm: 7
-        udr: 37
   - name: 'Holy Cathedral.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/25312' ]
     dirty:
