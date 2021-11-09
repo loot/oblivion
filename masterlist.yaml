@@ -7015,6 +7015,11 @@ plugins:
         name: 'The Hole'
       - link: 'https://www.nexusmods.com/oblivion/mods/45911/'
         name: 'The Hole Fixed'
+    msg:
+      - <<: *patchUpdateAvailable
+        type: warn
+        subs: [ '[The Hole Fixed](https://www.nexusmods.com/oblivion/mods/45911/)' ]
+        condition: 'checksum("TheHole.esp", D8CE5984) or checksum("TheHolePt2.esp", F880F95E)'
   - name: 'TheHole.esp'
     dirty:
       - crc: 0xd8ce5984
