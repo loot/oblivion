@@ -3347,6 +3347,38 @@ plugins:
       - crc: 0x8AD45B75
         util: 'TES4Edit v4.0.3i (RC1 for 4.0.4)'
 
+  - name: 'DACompilation_GO(_SI)?(_APN)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/33739/'
+        name: 'Sclerocephalus'' CM Partner Compilation'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'DACompilation_GO ESP' ]
+        condition: 'many("DACompilation_GO(_SI)?(_APN)?\.esp")'
+  - name: 'DACompilation_GO(_SI)?_APN\.esp'
+    msg:
+      - <<: *includesX
+        subs: [ '[Knightwalker - Allies and Companions Play Nicer](https://www.nexusmods.com/oblivion/mods/29737/) **KW-AlliesPlayNicer.esp**' ]
+        condition: 'file("KW-AlliesPlayNicer.esp")'
+  - name: 'DACompilation_GO.esp'
+    clean:
+      - crc: 0x3C16A600
+        util: 'TES4Edit v4.0.3j (RC2 for 4.0.4)'
+  - name: 'DACompilation_GO_APN.esp'
+    clean:
+      - crc: 0x2B0C0D5D
+        util: 'TES4Edit v4.0.3j (RC2 for 4.0.4)'
+  - name: 'DACompilation_GO_SI.esp'
+    req: [ 'DLCShiveringIsles.esp' ]
+    clean:
+      - crc: 0xFD84A9FE
+        util: 'TES4Edit v4.0.3j (RC2 for 4.0.4)'
+  - name: 'DACompilation_GO_SI_APN.esp'
+    req: [ 'DLCShiveringIsles.esp' ]
+    clean:
+      - crc: 0x1EA77168
+        util: 'TES4Edit v4.0.3j (RC2 for 4.0.4)'
+
   - name: 'DAEluna.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/13429/' ]
     msg:
@@ -24144,15 +24176,6 @@ plugins:
     tag:
       - Eyes
       - Hair
-  - name: 'DACompilation_GO_APN.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Includes ''KW-AlliesPlayNicer.esp'' so don''t use that with this.'
-          - lang: de
-            text: 'Beinhaltet ''KW-AlliesPlayNicer.esp'' also nutzen Sie das nicht mit diesem.'
-        condition: 'file("KW-AlliesPlayNicer.esp")'
   - name: 'Nephs Stock Shoes Real High Heels.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/42212/' ]
     tag:
