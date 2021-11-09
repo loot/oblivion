@@ -7550,6 +7550,9 @@ plugins:
 
   - name: 'HauntedHouse.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/13699/' ]
+    msg:
+      - <<: *wildEdits
+        condition: 'checksum("HauntedHouse.esp", 2F2F9619) or checksum("HauntedHouse.esp", B25C24C6)'
     dirty:
       - <<: *quickClean
         crc: 0x2F2F9619
