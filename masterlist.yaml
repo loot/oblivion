@@ -3351,6 +3351,10 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/33739/'
         name: 'Sclerocephalus'' CM Partner Compilation'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'DACompilation_GO ESP' ]
+        condition: 'many("DACompilation_GO(_SI)?(_APN)?\.esp")'
   - name: 'DACompilation_GO(_SI)?_APN\.esp'
     msg:
       - <<: *includesX
