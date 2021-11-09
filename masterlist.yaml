@@ -7009,6 +7009,38 @@ plugins:
       - crc: 0x33089CDE
         util: 'TES4Edit v4.0.3j (RC2 for 4.0.4)'
 
+  - name: 'TheHole(Pt2)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/40950/'
+        name: 'The Hole'
+      - link: 'https://www.nexusmods.com/oblivion/mods/45911/'
+        name: 'The Hole Fixed'
+    msg:
+      - <<: *patchUpdateAvailable
+        type: warn
+        subs: [ '[The Hole Fixed](https://www.nexusmods.com/oblivion/mods/45911/)' ]
+        condition: 'checksum("TheHole.esp", D8CE5984) or checksum("TheHolePt2.esp", F880F95E)'
+  - name: 'TheHole.esp'
+    tag:
+      - Actors.AIPackages
+      - Scripts
+    clean:
+      - crc: 0xA0C589E4
+        util: 'TES4Edit v4.0.3j (RC2 for 4.0.4)'
+  - name: 'TheHolePt2.esp'
+    tag:
+      - name: Actors.AIPackages
+        condition: 'active("TheHolePt2.esp")'
+      - name: Factions
+        condition: 'active("TheHolePt2.esp")'
+      - name: Scripts
+        condition: 'active("TheHolePt2.esp")'
+      - name: Text
+        condition: 'active("TheHolePt2.esp")'
+    clean:
+      - crc: 0x2DAC475A
+        util: 'TES4Edit v4.0.3j (RC2 for 4.0.4)'
+
   - name: 'Unholy Cathedral.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/24565/' ]
     dirty:
@@ -18875,24 +18907,6 @@ plugins:
   - name: 'Temple District Rebuild.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/14570' ]
     msg: [ *mainQuestCompleted ]
-  - name: 'TheHole.esp'
-    url:
-      - 'https://www.nexusmods.com/oblivion/mods/40950'
-      - 'https://www.nexusmods.com/oblivion/mods/45911'
-    dirty:
-      - crc: 0xd8ce5984
-        <<: *dirtyPlugin
-        itm: 57
-        udr: 165
-  - name: 'TheHolePt2.esp'
-    url:
-      - 'https://www.nexusmods.com/oblivion/mods/40950'
-      - 'https://www.nexusmods.com/oblivion/mods/45911'
-    dirty:
-      - crc: 0xf880f95e
-        <<: *dirtyPlugin
-        itm: 4
-        udr: 141
   - name: 'The Hoser Hut Bar Fights.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/39399' ]
     tag:
