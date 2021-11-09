@@ -6885,9 +6885,10 @@ plugins:
   - name: 'Holy Cathedral.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/25312/' ]
     dirty:
-      - crc: 0xb294e4f
-        <<: *dirtyPlugin
-        itm: 104
+      - <<: *quickClean
+        crc: 0x0B294E4F
+        util: '[TES4Edit v4.0.3j (RC2 for 4.0.4)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 111
         udr: 1
 
   - name: 'MTCExpandedVillages.esp'
