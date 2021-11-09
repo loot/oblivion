@@ -6761,8 +6761,9 @@ plugins:
   - name: 'HazadirsArms.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/12004/' ]
     dirty:
-      - crc: 0x7ce87ae7
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x7CE87AE7
+        util: '[TES4Edit v4.0.3j (RC2 for 4.0.4)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 13
 
   - name: 'Hidden Treasures.esp'
