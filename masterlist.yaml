@@ -7021,10 +7021,22 @@ plugins:
         subs: [ '[The Hole Fixed](https://www.nexusmods.com/oblivion/mods/45911/)' ]
         condition: 'checksum("TheHole.esp", D8CE5984) or checksum("TheHolePt2.esp", F880F95E)'
   - name: 'TheHole.esp'
+    tag:
+      - Actors.AIPackages
+      - Scripts
     clean:
       - crc: 0xA0C589E4
         util: 'TES4Edit v4.0.3j (RC2 for 4.0.4)'
   - name: 'TheHolePt2.esp'
+    tag:
+      - name: Actors.AIPackages
+        condition: 'active("TheHolePt2.esp")'
+      - name: Factions
+        condition: 'active("TheHolePt2.esp")'
+      - name: Scripts
+        condition: 'active("TheHolePt2.esp")'
+      - name: Text
+        condition: 'active("TheHolePt2.esp")'
     clean:
       - crc: 0x2DAC475A
         util: 'TES4Edit v4.0.3j (RC2 for 4.0.4)'
