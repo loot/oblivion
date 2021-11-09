@@ -8508,6 +8508,9 @@ plugins:
 
   - name: 'HilltopLodge.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/42119/' ]
+    msg:
+      - <<: *wildEdits
+        condition: 'checksum("HilltopLodge.esp", 4566B727) or checksum("HilltopLodge.esp", 239A6D50)'
     dirty:
       - <<: *quickClean
         crc: 0x4566B727
