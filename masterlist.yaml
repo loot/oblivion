@@ -3351,6 +3351,10 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/33739/'
         name: 'Sclerocephalus'' CM Partner Compilation'
+  - name: 'DACompilation_GO.esp'
+    clean:
+      - crc: 0x3C16A600
+        util: 'TES4Edit v4.0.3j (RC2 for 4.0.4)'
   - name: 'DACompilation_GO_APN.esp'
     msg:
       - type: say
@@ -3360,6 +3364,17 @@ plugins:
           - lang: de
             text: 'Beinhaltet ''KW-AlliesPlayNicer.esp'' also nutzen Sie das nicht mit diesem.'
         condition: 'file("KW-AlliesPlayNicer.esp")'
+    clean:
+      - crc: 0x2B0C0D5D
+        util: 'TES4Edit v4.0.3j (RC2 for 4.0.4)'
+  - name: 'DACompilation_GO_SI.esp'
+    clean:
+      - crc: 0xFD84A9FE
+        util: 'TES4Edit v4.0.3j (RC2 for 4.0.4)'
+  - name: 'DACompilation_GO_SI_APN.esp'
+    clean:
+      - crc: 0x1EA77168
+        util: 'TES4Edit v4.0.3j (RC2 for 4.0.4)'
 
   - name: 'DAEluna.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/13429/' ]
