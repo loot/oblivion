@@ -7576,10 +7576,11 @@ plugins:
   - name: 'HauntedLairMod.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/24521/' ]
     dirty:
-      - crc: 0x4b7fb9b4
-        <<: *dirtyPlugin
-        itm: 1690
-        udr: 7
+      - <<: *quickClean
+        crc: 0xC61B8314
+        util: '[TES4Edit v4.0.3j (RC2 for 4.0.4)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 14
+        udr: 5
 
   - name: 'House of Healing at Weye.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/30964/' ]
