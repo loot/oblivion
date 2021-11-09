@@ -8061,6 +8061,25 @@ plugins:
       - name: 'xulArriusCreek.esp'
         condition: 'not version("Unique Landscapes.esp", "2.0.0", >=)'
 
+  - name: '(Better Abandoned House.*|Cheydinhal Land Texture Fix.*)?\.esp'
+    url:
+      - 'https://www.nexusmods.com/oblivion/mods/25319/'
+      - 'http://tesalliance.org/forums/index.php?/files/file/521-better-abandoned-house/'
+  - name: 'Better Abandoned House.esp'
+    tag:
+      - C.MiscFlags
+      - Names
+      - Text
+    clean:
+      - crc: 0xCDE4BD40
+        util: 'TES4Edit v4.0.3j (RC2 for 4.0.4)'
+  - name: 'Cheydinhal Land Texture Fix.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x3B382F95
+        util: '[TES4Edit v4.0.3j (RC2 for 4.0.4)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 6
+
   - name: 'BetterInns .*\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/29333/' ]
   - name: 'BetterInns + NewHomeOwners.esp'
@@ -17593,14 +17612,6 @@ plugins:
         util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 40
         udr: 30
-
-  - name: 'Better Abandoned House.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/25319' ]
-    tag:
-      - C.Name
-      - C.Owner
-      - Graphics
-      - Names
 
   - name: 'Better Camps.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/37883/' ]
