@@ -3347,6 +3347,16 @@ plugins:
       - crc: 0x8AD45B75
         util: 'TES4Edit v4.0.3i (RC1 for 4.0.4)'
 
+  - name: 'DACompilation_GO_APN.esp'
+    msg:
+      - type: say
+        content:
+          - lang: en
+            text: 'Includes ''KW-AlliesPlayNicer.esp'' so don''t use that with this.'
+          - lang: de
+            text: 'Beinhaltet ''KW-AlliesPlayNicer.esp'' also nutzen Sie das nicht mit diesem.'
+        condition: 'file("KW-AlliesPlayNicer.esp")'
+
   - name: 'DAEluna.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/13429/' ]
     msg:
@@ -24144,15 +24154,6 @@ plugins:
     tag:
       - Eyes
       - Hair
-  - name: 'DACompilation_GO_APN.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Includes ''KW-AlliesPlayNicer.esp'' so don''t use that with this.'
-          - lang: de
-            text: 'Beinhaltet ''KW-AlliesPlayNicer.esp'' also nutzen Sie das nicht mit diesem.'
-        condition: 'file("KW-AlliesPlayNicer.esp")'
   - name: 'Nephs Stock Shoes Real High Heels.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/42212/' ]
     tag:
