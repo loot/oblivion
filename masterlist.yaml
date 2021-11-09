@@ -6899,6 +6899,10 @@ plugins:
         name: 'Immersive Prison Sewer Exit'
       - link: 'https://www.nexusmods.com/oblivion/mods/39928/'
         name: 'Physics Enabled Immersive Prison Sewer Exit'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Immersive Prison Sewer Exit ESP' ]
+        condition: 'many("(Immersive Prison |NRB|UL II Immersive Prison |UL Imperial Isle Prison )sewer exit\.esp")'
   - name: 'Immersive Prison sewer exit.esp'
     dirty:
       - <<: *quickClean
