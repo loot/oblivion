@@ -7949,6 +7949,28 @@ plugins:
         itm: 117
         udr: 8
 
+  - name: 'Better Dungeons.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/40392/' ]
+    tag:
+      - Actors.Skeleton
+      - Actors.Spells
+      - C.Light
+      - C.Water
+      - Graphics
+      - Invent.Add
+      - Invent.Remove
+      - Sound
+    dirty:
+      - <<: *quickClean
+        crc: 0xF6E3D7C4
+        util: '[TES4Edit v4.0.3j (RC2 for 4.0.4)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 5
+      - <<: *quickClean
+        crc: 0xD450807B
+        util: '[TES4Edit v4.0.3j (RC2 for 4.0.4)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 68
+        udr: 4164
+
   - name: 'BrumaMGRestored.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/12732/' ]
     dirty:
@@ -20298,17 +20320,6 @@ plugins:
       # OOO Misc Files version
       - crc: 0x066E0C4B
         util: 'TES4Edit v4.0.3'
-
-  - name: 'Better dungeons.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/40392' ]
-    tag:
-      - C.Light
-      - C.Water
-    dirty:
-      - <<: *quickClean
-        crc: 0xF6E3D7C4
-        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 5
   - name: 'Better Loot v1.0.esp'
     msg:
       - type: say
