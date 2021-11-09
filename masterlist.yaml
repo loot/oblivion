@@ -6864,6 +6864,16 @@ plugins:
         util: 'TES4Edit v4.0.3j (RC2 for 4.0.4)'
 
 ###### Locations ######
+  - name: 'HeartoftheDead.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/21176/' ]
+    tag:
+      - Actors.AIPackages
+      - Hair
+    dirty:
+      - crc: 0x36834efa
+        <<: *dirtyPlugin
+        itm: 140
+
   - name: 'MTCExpandedVillages.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/27125/'
@@ -19790,15 +19800,6 @@ plugins:
         <<: *dirtyPlugin
         itm: 38
         udr: 61
-  - name: 'HeartoftheDead.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/21176' ]
-    tag:
-      - Actors.AIPackages
-      - Hair
-    dirty:
-      - crc: 0x36834efa
-        <<: *dirtyPlugin
-        itm: 140
   - name: 'HOD_delayer.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/25859/' ]
     msg:
