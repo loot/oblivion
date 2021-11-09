@@ -3351,19 +3351,16 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/33739/'
         name: 'Sclerocephalus'' CM Partner Compilation'
+  - name: 'DACompilation_GO(_SI)?_APN\.esp'
+    msg:
+      - <<: *includesX
+        subs: [ '[Knightwalker - Allies and Companions Play Nicer](https://www.nexusmods.com/oblivion/mods/29737/) **KW-AlliesPlayNicer.esp**' ]
+        condition: 'file("KW-AlliesPlayNicer.esp")'
   - name: 'DACompilation_GO.esp'
     clean:
       - crc: 0x3C16A600
         util: 'TES4Edit v4.0.3j (RC2 for 4.0.4)'
   - name: 'DACompilation_GO_APN.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Includes ''KW-AlliesPlayNicer.esp'' so don''t use that with this.'
-          - lang: de
-            text: 'Beinhaltet ''KW-AlliesPlayNicer.esp'' also nutzen Sie das nicht mit diesem.'
-        condition: 'file("KW-AlliesPlayNicer.esp")'
     clean:
       - crc: 0x2B0C0D5D
         util: 'TES4Edit v4.0.3j (RC2 for 4.0.4)'
