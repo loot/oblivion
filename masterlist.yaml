@@ -6877,18 +6877,10 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/14714/' ]
     tag: [ Hair ]
     dirty:
-      - crc: 0x8512b421
-        <<: *dirtyPlugin
-        itm: 71
-        udr: 734
-      - crc: 0xa93fe299
-        <<: *dirtyPlugin
-        itm: 4
+      - <<: *quickClean
+        crc: 0xA93FE299
+        util: '[TES4Edit v4.0.3j (RC2 for 4.0.4)](https://www.nexusmods.com/oblivion/mods/11536)'
         udr: 730
-      - crc: 0xf0ac781e
-        <<: *dirtyPlugin
-        itm: 12
-        udr: 738
 
   - name: 'MTCExpandedVillages.esp'
     url:
