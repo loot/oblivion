@@ -7548,6 +7548,18 @@ plugins:
       - crc: 0xA25E5967
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
 
+  - name: 'HauntedHouse.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/13699/' ]
+    msg:
+      - <<: *wildEdits
+        condition: 'checksum("HauntedHouse.esp", 2F2F9619) or checksum("HauntedHouse.esp", B25C24C6)'
+    dirty:
+      - <<: *quickClean
+        crc: 0x2F2F9619
+        util: '[TES4Edit v4.0.3j (RC2 for 4.0.4)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 6
+        udr: 5
+
   - name: 'House of Healing at Weye.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/30964/' ]
     after:
@@ -17827,13 +17839,6 @@ plugins:
       - crc: 0x7ce87ae7
         <<: *dirtyPlugin
         itm: 13
-  - name: 'HauntedHouse.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/13699' ]
-    dirty:
-      - crc: 0x2f2f9619
-        <<: *dirtyPlugin
-        itm: 38
-        udr: 5
   - name: 'OOO_Hentai Mania.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/33339' ]
     tag:
