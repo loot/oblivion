@@ -6893,6 +6893,19 @@ plugins:
         util: 'TES4Edit v4.0.3j (RC2 for 4.0.4)'
 
 ###### Locations ######
+  - name: 'Immersive Prison sewer exit.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/38705/' ]
+    dirty:
+      - crc: 0xd607a66
+        <<: *dirtyPlugin
+        itm: 19
+  - name: 'UL II Immersive Prison Sewer exit.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/38705' ]
+    dirty:
+      - crc: 0x26b755f4
+        <<: *dirtyPlugin
+        itm: 11
+
   - name: 'HeartOftheDead.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/21176/' ]
     tag:
@@ -19790,12 +19803,6 @@ plugins:
     clean:
       - crc: 0x8C269500
         util: 'TES4Edit v4.0.3'
-  - name: 'Immersive Prison sewer exit.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/38705' ]
-    dirty:
-      - crc: 0xd607a66
-        <<: *dirtyPlugin
-        itm: 19
   - name: 'MTCThievesGrotto.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22197' ]
     msg:
@@ -20043,12 +20050,6 @@ plugins:
             text: 'Sie brauchen nicht beide Patches! Deaktivieren Sie OotD_UL_Jerall_Patch.esp.'
         condition: 'file("OrdenDesDrachen-JerallGlacier patch.esp")'
 
-  - name: 'UL II Immersive Prison Sewer exit.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/38705' ]
-    dirty:
-      - crc: 0x26b755f4
-        <<: *dirtyPlugin
-        itm: 11
   - name: 'exhICMO.esp'
     msg:
       - type: say
