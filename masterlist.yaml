@@ -7021,17 +7021,13 @@ plugins:
         subs: [ '[The Hole Fixed](https://www.nexusmods.com/oblivion/mods/45911/)' ]
         condition: 'checksum("TheHole.esp", D8CE5984) or checksum("TheHolePt2.esp", F880F95E)'
   - name: 'TheHole.esp'
-    dirty:
-      - crc: 0xd8ce5984
-        <<: *dirtyPlugin
-        itm: 57
-        udr: 165
+    clean:
+      - crc: 0xA0C589E4
+        util: 'TES4Edit v4.0.3j (RC2 for 4.0.4)'
   - name: 'TheHolePt2.esp'
-    dirty:
-      - crc: 0xf880f95e
-        <<: *dirtyPlugin
-        itm: 4
-        udr: 141
+    clean:
+      - crc: 0x2DAC475A
+        util: 'TES4Edit v4.0.3j (RC2 for 4.0.4)'
 
   - name: 'Unholy Cathedral.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/24565/' ]
