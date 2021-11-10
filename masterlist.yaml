@@ -6778,14 +6778,22 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/35034/'
         name: 'Lost Relics of Tamriel'
+    msg:
+      - <<: *wildEdits
+        subs: [ 'Remove **Cell Block 0 and Sub-Block 3 of Cell Block 1** from **Eggs of History.esp**.' ]
+        condition: 'checksum("Eggs of History.esp", 2E865B93) or checksum("Eggs of History.esp", A251EDE5)'
     tag:
       - Invent.Add
       - Stats
     dirty:
       - <<: *quickClean
         crc: 0x2E865B93
-        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        util: '[TES4Edit v4.0.3j (RC2 for 4.0.4)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 10
+      - <<: *quickClean
+        crc: 0xF9BC1411
+        util: '[TES4Edit v4.0.3j (RC2 for 4.0.4)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 8
 
   - name: 'HazadirsArms.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/12004/' ]
