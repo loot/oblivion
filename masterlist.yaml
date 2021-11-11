@@ -7982,6 +7982,26 @@ plugins:
         itm: 27
         udr: 312
 
+  - name: 'Secrets(-UL edition)?\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/32118/' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Secrets ESP' ]
+        condition: 'many("Secrets(-UL edition)?\.esp")'
+    tag: [ Invent.Add ]
+  - name: 'Secrets.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x16DFAB8C
+        util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
+  - name: 'Secrets-UL edition.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x7FDC6530
+        util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2251
+
   - name: 'SunderedKeep.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/37587/' ]
     after: [ 'Better Dungeons.esp' ]
@@ -18853,18 +18873,6 @@ plugins:
   - name: 'SecludedGladeCottage.esp'
     url: [ 'https://tesalliance.org/forums/index.php?/files/file/438-secluded-glade/' ]
     tag: [ Invent ]
-  - name: 'Secrets.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/32118' ]
-    dirty:
-      - crc: 0x16dfab8c
-        <<: *dirtyPlugin
-        itm: 12
-  - name: 'Secrets-UL edition.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/32118' ]
-    dirty:
-      - crc: 0x7fdc6530
-        <<: *dirtyPlugin
-        itm: 1432
   - name: 'ShadowRose Manor.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/42923' ]
     dirty:
