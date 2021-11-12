@@ -2923,6 +2923,32 @@ plugins:
         itm: 17
         udr: 4
 
+  - name: 'StarX Vampire Deaths\.es(m|p)'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/25613/'
+        name: 'StarXs Vampire Deaths'
+      - link: 'https://www.nexusmods.com/oblivion/mods/50480/'
+        name: 'StarX Vampire death Improved Extended Edition'
+  - name: 'StarX Vampire Deaths.esm'
+    msg:
+      - <<: *patchUpdateAvailable
+        subs: [ '[StarX Vampire death Improved Extended Edition](https://www.nexusmods.com/oblivion/mods/50480/)' ]
+    clean:
+      - crc: 0x9CE01B22
+        util: 'TES4Edit v4.0.4'
+  - name: 'StarX Vampire Deaths.esp'
+    req:
+      - <<: *OBSE
+        condition: 'not file("StarX Vampire Deaths.esm")'
+    tag:
+      - name: Scripts
+        condition: 'file("StarX Vampire Deaths.esm")'
+    clean:
+      - crc: 0x073BEB2C
+        util: 'TES4Edit v4.0.4'
+      - crc: 0xB6BF191A
+        util: 'TES4Edit v4.0.4'
+
 ###### AudioVisual - Weather & Lighting ######
   - name: 'All Natural.*\.es(m|p)'
     url:
@@ -21267,8 +21293,7 @@ plugins:
     tag:
       - Actors.AIData
       - NoMerge
-  - name: 'StarX Vampire Deaths.esp'
-    tag: [ Scripts ]
+
   - name: 'StrongerAllies.esp'
     tag: [ Invent ]
   - name: 'SOC-Wildlife Variety.esp'
