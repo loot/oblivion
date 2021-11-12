@@ -3269,6 +3269,33 @@ plugins:
       - crc: 0xCF743DF7
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
 
+  - name: 'StarX Vampire Deaths\.es(m|p)'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/25613/'
+        name: 'StarXs Vampire Deaths'
+      - link: 'https://www.nexusmods.com/oblivion/mods/50480/'
+        name: 'StarX Vampire death Improved Extended Edition'
+    msg:
+      - <<: *patchUpdateAvailable
+        subs: [ '[StarX Vampire death Improved Extended Edition](https://www.nexusmods.com/oblivion/mods/50480/)' ]
+        condition: 'file("StarX Vampire Deaths.esm")'
+  - name: 'StarX Vampire Deaths.esm'
+    clean:
+      - crc: 0x9CE01B22
+        util: 'TES4Edit v4.0.4'
+  - name: 'StarX Vampire Deaths.esp'
+    req:
+      - <<: *OBSE
+        condition: 'not file("StarX Vampire Deaths.esm")'
+    tag:
+      - name: Scripts
+        condition: 'file("StarX Vampire Deaths.esm")'
+    clean:
+      - crc: 0x073BEB2C
+        util: 'TES4Edit v4.0.4'
+      - crc: 0xB6BF191A
+        util: 'TES4Edit v4.0.4'
+
 ###### Encounters - Allies ######
   - name: 'Aliyah.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/12082/' ]
@@ -21267,8 +21294,7 @@ plugins:
     tag:
       - Actors.AIData
       - NoMerge
-  - name: 'StarX Vampire Deaths.esp'
-    tag: [ Scripts ]
+
   - name: 'StrongerAllies.esp'
     tag: [ Invent ]
   - name: 'SOC-Wildlife Variety.esp'
