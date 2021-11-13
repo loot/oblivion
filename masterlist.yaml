@@ -2954,6 +2954,36 @@ plugins:
       - crc: 0xB6BF191A
         util: 'TES4Edit v4.0.4'
 
+###### AudioVisual - Sounds & Music ######
+  - name: 'GOSH( Region Ambiance)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/45214/'
+        name: 'GOSH - Gecko''s Oblivion Sound overHaul'
+    tag: [ Sound ]
+  - name: 'GOSH.esp'
+    msg:
+      - <<: *patch3rdParty
+        subs:
+          - 'All Natural Weather'
+          - '[GOSH - All Natural Patch](https://www.nexusmods.com/oblivion/mods/50002/)'
+        condition: 'active("All Natural.esp") and not file("GOSH - All Natural Patch.esp")'
+    clean:
+      - crc: 0x98C6F03A
+        util: 'TES4Edit v4.0.4'
+  - name: 'GOSH Region Ambiance.esp'
+    inc:
+      - 'All Natural.esp'
+      - 'Natural_Weather_by_Max_Tael.esp'
+      - 'Natural_Weather_HDR_by_Max_Tael.esp'
+      - 'Natural_Weather_with_darker_Nights_by_Max_Tael.esp'
+      - 'Natural_Weather_HDR_with_darker_Nights_by_Max_Tael.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0xEE864273
+        util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 17
+        udr: 84
+
 ###### AudioVisual - Weather & Lighting ######
   - name: 'All Natural.*\.es(m|p)'
     url:
