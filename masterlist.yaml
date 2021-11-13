@@ -8057,6 +8057,38 @@ plugins:
       - crc: 0xA082C1A4
         util: 'TES4Edit v4.0.3'
 
+  - name: 'Rathunas(01|-MidasMagic|-BetterMusicSystem)\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/45880/'
+        name: 'Rathunas'
+  - name: 'Rathunas01.esp'
+    after:
+      - 'MidasSpells.esp'
+      - 'Rathunas-MidasMagic.esp'
+    msg: [ *requiresOBSEv21 ]
+    tag:
+      - C.Water
+      - Sound
+    dirty:
+      - <<: *quickClean
+        crc: 0x4EE82BB3
+        util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 6
+      - <<: *quickClean
+        crc: 0x54C1A0A5
+        util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 6
+  - name: 'Rathunas-MidasMagic.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x327BCE1A
+        util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 11
+  - name: 'Rathunas-BetterMusicSystem.esp'
+    clean:
+      - crc: 0xA541ABB6
+        util: 'TES4Edit v4.0.4'
+
   - name: 'Region Revive - Lake Rumare.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/22751/'
@@ -21668,18 +21700,6 @@ plugins:
   - name: 'cidnothumpMMversion.esp'
     tag: [ Sound ]
 
-  - name: 'Rathunas01.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/45880' ]
-    req:
-      - *OBSE
-      - 'Cobl Main.esm'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Requires: Unique Landscapes-Brena River Ravine'
-          - lang: de
-            text: 'Benötigt: Unique Landscapes-Brena River Ravine'
   - name: 'MidasSpellTomes.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/18398' ]
     tag: [ Relev ]
