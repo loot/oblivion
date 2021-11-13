@@ -8641,19 +8641,10 @@ plugins:
 
   - name: 'ImpeREAL City Unique Districts - .*\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/19589/' ]
-    inc:
-      - 'Better Cities Full.esp'
-      - 'Better Imperial City.esp'
-      - 'Better Cities IC Arboretum.esp'
-      - 'Better Cities IC Arcane University.esp'
-      - 'Better Cities IC Arena.esp'
-      - 'Better Cities IC Elven Gardens.esp'
-      - 'Better Cities IC Green Emperor Way.esp'
-      - 'Better Cities IC Market.esp'
-      - 'Better Cities IC Prison.esp'
-      - 'Better Cities IC Talos Plaza.esp'
-      - 'Better Cities IC Temple.esp'
-      - 'Better Cities IC Waterfront.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'Better Cities' ]
+        condition: 'active("Better Cities Resources.esm") and version("Better Cities Resources.esm", "4.0.0", >=)'
   - name: 'ImpeREAL City Unique Districts - All the Districts - Merged.esp'
     dirty:
       - <<: *quickClean
