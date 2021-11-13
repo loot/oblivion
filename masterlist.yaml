@@ -8065,14 +8065,7 @@ plugins:
     req:
       - 'Cobl Main.esm'
       - 'DLCShiveringIsles.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Requires: Unique Landscapes-Brena River Ravine'
-          - lang: de
-            text: 'Benötigt: Unique Landscapes-Brena River Ravine'
-      - *requiresOBSEv21
+    msg: [ *requiresOBSEv21 ]
     tag:
       - C.Water
       - Sound
