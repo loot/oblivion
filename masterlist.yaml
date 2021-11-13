@@ -8656,12 +8656,14 @@ plugins:
       - 'Better Cities IC Waterfront.esp'
   - name: 'ImpeREAL City Unique Districts - All the Districts - Merged.esp'
     dirty:
-      - crc: 0xdf183339
-        <<: *dirtyPlugin
-        itm: 2
-      - crc: 0x906EBFCC
-        <<: *dirtyPlugin
-        itm: 2
+      - <<: *quickClean
+        crc: 0x906EBFCC
+        util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 4
+      - <<: *quickClean
+        crc: 0x07BF7DDA
+        util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 4
 
   - name: 'WatersEdgeImproved.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/36896/' ]
