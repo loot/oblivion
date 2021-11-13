@@ -8655,6 +8655,11 @@ plugins:
         crc: 0x07BF7DDA
         util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 4
+  - name: 'ImpeREAL City Unique Districts - (Arboretum|Arena|Elven Gardens|Green Emperor Way|Market|Prison|Talos Plaza|Temple|The Arcane University|Waterfront)\.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'ImpeREAL City Unique Districts Merged' ]
+        condition: 'active("ImpeREAL City Unique Districts - All the Districts - Merged.esp")'
   - name: 'ImpeREAL City Unique Districts - Arboretum.esp'
     clean:
       - crc: 0xE65CBCF4
