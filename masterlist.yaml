@@ -1491,6 +1491,11 @@ common:
     type: error
     subs: [ '[OBSE](https://obse.silverlock.org) v21+' ]
     condition: 'not file("../obse_1_2_416.dll") or version("../obse_1_2_416.dll", "0.0.21.0", <)'
+  - &requiresxOBSEv22_1
+    <<: *requiresX
+    type: error
+    subs: [ '[xOBSE](https://github.com/llde/xOBSE) v22.1+' ]
+    condition: 'not file("../obse_1_2_416.dll") or version("../obse_1_2_416.dll", "0.0.21.5", <)'
 
   # &useInstead
   - &useInsteadUOP
@@ -5584,6 +5589,51 @@ plugins:
         itm: 1
   - name: 'Recastable Summons - Mighty Magicka Version.esp'
     msg: [ *patchOutdated ]
+
+  - name: 'SupremeMagicka.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/10791/'
+        name: 'Supreme Magicka'
+      - link: 'https://www.nexusmods.com/oblivion/mods/12466/'
+        name: 'Supreme Magicka Update'
+    after:
+      - name: 'bgMagicEV.esp'
+        display: 'Less Annoying Magic Experience (L.A.M.E)'
+        condition: 'file("bgMagicEV_Conjuration_for_Supreme_Magicka.esp")'
+      - 'lumi_enchantments.esp'
+      - 'lumi_enchantments_subtle.esp'
+    # doNotClean
+    msg:
+      - <<: *obsolete
+        subs: [ '[Supreme Magicka Update](https://www.nexusmods.com/oblivion/mods/12466/)' ]
+    tag:
+      - Graphics
+      - Names
+  - name: 'SM_ShiveringIsles.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/12466/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xFA560808
+        util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1
+  - name: 'SM_NoPoisonLevitationEffects.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/12466/' ]
+    msg: [ *obsolete ]
+
+  - name: 'SupremeMagickaLite.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/12466/'
+        name: 'Supreme Magicka Update'
+    req: [ 'DLCShiveringIsles.esp' ]
+    msg: [ *requiresxOBSEv22_1 ]
+    tag:
+      - EffectStats
+      - Graphics
+      - Invent.Add
+      - -Invent.Remove
+    clean:
+      - crc: 0x61244449
+        util: 'TES4Edit v4.0.4'
 
   - name: 'Wizard''sSpellBook.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/20977/' ]
@@ -21617,31 +21667,7 @@ plugins:
 
   - name: 'cidnothumpMMversion.esp'
     tag: [ Sound ]
-  - name: 'SupremeMagicka.esp'
-    url:
-      - link: 'https://www.nexusmods.com/oblivion/mods/10791'
-        name: 'Supreme Magicka'
-      - link: 'https://www.nexusmods.com/oblivion/mods/12466'
-        name: 'Supreme Magicka Update'
-    after:
-      - name: 'bgMagicEV.esp'
-        display: 'Less Annoying Magic Experience (L.A.M.E)'
-        condition: 'file("bgMagicEV_Conjuration_for_Supreme_Magicka.esp")'
-      - 'lumi_enchantments.esp'
-      - 'lumi_enchantments_subtle.esp'
-    # doNotClean
-    tag:
-      - Graphics
-      - Names
-  - name: 'SM_ShiveringIsles.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/12466' ]
-    dirty:
-      - crc: 0xfa560808
-        <<: *dirtyPlugin
-        itm: 1
-  - name: 'SM_NoPoisonLevitationEffects.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/12466' ]
-    msg: [ *obsolete ]
+
   - name: 'Rathunas01.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/45880' ]
     req:
