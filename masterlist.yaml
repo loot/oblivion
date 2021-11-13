@@ -2731,6 +2731,28 @@ plugins:
         itm: 35
         udr: 30
 
+  - name: 'GOSH( Region Ambiance)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/45214/'
+        name: 'GOSH - Gecko''s Oblivion Sound overHaul'
+    tag: [ Sound ]
+  - name: 'GOSH.esp'
+    clean:
+      - crc: 0x98C6F03A
+        util: 'TES4Edit v4.0.4'
+  - name: 'GOSH Region Ambiance.esp'
+    msg:
+      - type: say
+        content:
+          - lang: en
+            text: 'Incompatible with: Natural Environments and Weather - All Natural.'
+    dirty:
+      - <<: *quickClean
+        crc: 0xEE864273
+        util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 17
+        udr: 84
+
   - name: 'Leviathan Soulgems.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/10403/' ]
     dirty:
