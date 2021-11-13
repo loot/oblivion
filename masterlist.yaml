@@ -2965,11 +2965,12 @@ plugins:
       - crc: 0x98C6F03A
         util: 'TES4Edit v4.0.4'
   - name: 'GOSH Region Ambiance.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Incompatible with: Natural Environments and Weather - All Natural.'
+    inc:
+      - 'All Natural.esp'
+      - 'Natural_Weather_by_Max_Tael.esp'
+      - 'Natural_Weather_HDR_by_Max_Tael.esp'
+      - 'Natural_Weather_with_darker_Nights_by_Max_Tael.esp'
+      - 'Natural_Weather_HDR_with_darker_Nights_by_Max_Tael.esp'
     dirty:
       - <<: *quickClean
         crc: 0xEE864273
