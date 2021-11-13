@@ -8639,6 +8639,72 @@ plugins:
         itm: 4
         udr: 121
 
+  - name: 'ImpeREAL City Unique Districts - .*\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/19589/' ]
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'Better Cities' ]
+        condition: 'active("Better Cities Resources.esm") and version("Better Cities Resources.esm", "4.0.0", >=)'
+  - name: 'ImpeREAL City Unique Districts - All the Districts - Merged.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x906EBFCC
+        util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 4
+      - <<: *quickClean
+        crc: 0x07BF7DDA
+        util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 4
+  - name: 'ImpeREAL City Unique Districts - (Arboretum|Arena|Elven Gardens|Green Emperor Way|Market|Prison|Talos Plaza|Temple|The Arcane University|Waterfront)\.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'ImpeREAL City Unique Districts Merged' ]
+        condition: 'active("ImpeREAL City Unique Districts - All the Districts - Merged.esp")'
+  - name: 'ImpeREAL City Unique Districts - Arboretum.esp'
+    clean:
+      - crc: 0xE65CBCF4
+        util: 'TES4Edit v4.0.4'
+  - name: 'ImpeREAL City Unique Districts - Arena.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0xBD7F0E87
+        util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1
+  - name: 'ImpeREAL City Unique Districts - Elven Gardens.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x53575813
+        util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1
+  - name: 'ImpeREAL City Unique Districts - Green Emperor Way.esp'
+    clean:
+      - crc: 0x216021E8
+        util: 'TES4Edit v4.0.4'
+  - name: 'ImpeREAL City Unique Districts - Market.esp'
+    clean:
+      - crc: 0x32B6B5DD
+        util: 'TES4Edit v4.0.4'
+  - name: 'ImpeREAL City Unique Districts - Prison.esp'
+    clean:
+      - crc: 0x7D5B7EA7
+        util: 'TES4Edit v4.0.4'
+  - name: 'ImpeREAL City Unique Districts - Talos Plaza.esp'
+    clean:
+      - crc: 0x82A59E46
+        util: 'TES4Edit v4.0.4'
+  - name: 'ImpeREAL City Unique Districts - Temple.esp'
+    clean:
+      - crc: 0xE4704BC1
+        util: 'TES4Edit v4.0.4'
+  - name: 'ImpeREAL City Unique Districts - The Arcane University.esp'
+    clean:
+      - crc: 0xF808BF61
+        util: 'TES4Edit v4.0.4'
+  - name: 'ImpeREAL City Unique Districts - Waterfront.esp'
+    clean:
+      - crc: 0x7E676D2D
+        util: 'TES4Edit v4.0.4'
+
   - name: 'WatersEdgeImproved.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/36896/' ]
     dirty:
@@ -18301,31 +18367,7 @@ plugins:
       - 'Better Cities IC Talos Plaza.esp'
       - 'Better Cities IC Temple.esp'
       - 'Better Cities IC Waterfront.esp'
-  - name: 'ImpeREAL City Unique Districts - .*\.esp'  # Over 40 plugin variations, so favouring brevity over specificity.
-    url: [ 'https://www.nexusmods.com/oblivion/mods/19589' ]
-    inc:
-      - 'Better Cities Full.esp'
-      - 'Better Imperial City.esp'
-      - 'Better Cities IC Arboretum.esp'
-      - 'Better Cities IC Arcane University.esp'
-      - 'Better Cities IC Arena.esp'
-      - 'Better Cities IC Elven Gardens.esp'
-      - 'Better Cities IC Green Emperor Way.esp'
-      - 'Better Cities IC Market.esp'
-      - 'Better Cities IC Prison.esp'
-      - 'Better Cities IC Talos Plaza.esp'
-      - 'Better Cities IC Temple.esp'
-      - 'Better Cities IC Waterfront.esp'
 
-  - name: 'ImpeREAL City Unique Districts - All the Districts - Merged.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/19589' ]
-    dirty:
-      - crc: 0xdf183339
-        <<: *dirtyPlugin
-        itm: 2
-      - crc: 0x906EBFCC
-        <<: *dirtyPlugin
-        itm: 2
   - name: 'ImpeREAL Empire - Unique Castles - All The Castles - Merged.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22446' ]
     inc:
