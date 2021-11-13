@@ -3894,15 +3894,10 @@ plugins:
       - 'Enhanced Vegetation [150%].esp'
     tag: [ Graphics ]
 
-  ### New Roads and Bridges ###
-  - name: '(road\+bridges|NRB4).*\.esp'
-    url:
-      - link: 'https://www.nexusmods.com/oblivion/mods/9181'
-        name: 'New Roads and Bridges'
-      - link: 'https://www.nexusmods.com/oblivion/mods/20218'
-        name: 'Roads of Cyrodiil'
-    inc: [ 'Roads of Cyrodiil.esp' ]
   - name: 'road+bridges.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/9181/'
+        name: 'New Roads and Bridges'
     after:
       - 'AranMathi.esp'
       - 'CastleWestWeald.esp'
@@ -3922,63 +3917,14 @@ plugins:
     clean:
       - crc: 0xCCECE4CC
         util: 'TES4Edit v4.0.3'
-  - name: 'NRB4 (Standard|OCReborn) Road Record.esp'
-    req: [ 'road+bridges.esp' ]
-    tag:
-      - Deactivate
-      - Roads
-    msg:
-      - <<: *useOnlyOneX
-        subs: [ 'NRB4 Road Record' ]
-        condition: 'many("NRB4 (Standard|OCReborn) Road Record.esp")'
-  - name: 'NRB4 Standard Road Record.esp'
-    after: [ 'Open Cities Classic.esp' ]
-    inc: [ 'Open Cities Reborn.esp' ]
-    clean:
-      - crc: 0x7366D355
-        util: 'TES4Edit v4.0.3'
-  - name: 'NRB4 OCReborn Road Record.esp'
-    req: [ 'Open Cities Reborn.esp' ]
-    clean:
-      - crc: 0x63EA1E4B
-        util: 'TES4Edit v4.0.3'
-  # NRB4 Patches #
-  - name: 'NRB4(\+| \+ )(CastleWestWeald|Highwood|QFE|Romancing Ahnassi|RR|TchosTower|Vineyard)(-| )Patch.esp'
-    req: [ 'road+bridges.esp' ]
-  - name: 'NRB4+AranMathi Patch.esp'
-    req:
-      - name: 'AranMathi.esp'
-        display: '[Aranmathi Ayleid Home](https://www.nexusmods.com/oblivion/mods/10424)'
-  - name: 'NRB4 + Highwood Patch.esp'
-    req:
-      - name: 'Highwood.esp'
-        display: '[Highwood](https://www.nexusmods.com/oblivion/mods/40037/)'
-  - name: 'NRB4+QFE Patch.esp'
-    req:
-      - name: 'Quest For The Elements.esp'
-        display: '[Quest for the Elements](https://www.nexusmods.com/oblivion/mods/6974)'
-  - name: 'NRB4+RR Patch.esp'
-    req:
-      - name: 'Region Revive - Lake Rumare.esp'
-        display: '[Region Revive - Lake Rumare](https://www.nexusmods.com/oblivion/mods/22751)'
-  - name: 'NRB4+TchosTower-Patch.esp'
-    req:
-      - name: 'Tchos Alchemy Tower.esp'
-        display: '[Lavish Mage Tower of Alchemy Power](https://www.nexusmods.com/oblivion/mods/20630/)'
-  - name: 'NRB4+Vineyard Patch.esp'
-    req:
-      - name: 'Shadowcrest_Vineyard.esp'
-        display: '[Shadowcrest Vineyard](https://www.nexusmods.com/oblivion/mods/22810/)'
-        condition: 'not active("Shadowcrest_Vineyard_COBL.esp")'
-  ### Roads of Cyrodiil ###
+
   - name: '(Roads of Cyrodiil|ROC).*\.esp'
     url:
-      - link: 'https://www.nexusmods.com/oblivion/mods/20218'
-        name: 'Roads of Cyrodiil'
+      - link: 'https://www.afkmods.com/index.php?/files/file/259-roads-of-cyrodiil/'
+        name: 'Roads of Cyrodiil (AFK Mods)'
+      - link: 'https://tesalliance.org/forums/index.php?/files/file/52-roads-of-cyrodiil/'
+        name: 'Roads of Cyrodiil (TES Alliance)'
   - name: 'Roads of Cyrodiil.esp'
-    url:
-      - 'https://www.afkmods.com/index.php?/files/file/259-roads-of-cyrodiil/'
-      - 'https://tesalliance.org/forums/index.php?/files/file/52-roads-of-cyrodiil/'
     after:
       - 'AranMathi.esp'
       - 'CastleWestWeald.esp'
@@ -4000,7 +3946,7 @@ plugins:
       - 'TheForgottenShields.esp'
     clean:
       - crc: 0x71F7DC2A
-        util: 'TES4Edit v4.0.3'
+        util: 'TES4Edit v4.0.4'
   - name: 'ROC (Standard|- OCReborn) Road Record.esp'
     req: [ 'Roads of Cyrodiil.esp' ]
     tag:
@@ -4015,14 +3961,14 @@ plugins:
     inc: [ 'Open Cities Reborn.esp' ]
     clean:
       - crc: 0xE300E526
-        util: 'TES4Edit v4.0.3'
+        util: 'TES4Edit v4.0.4'
   - name: 'ROC - OCReborn Road Record.esp'
     req: [ 'Open Cities Reborn.esp' ]
     clean:
       - crc: 0x8E0B055C
-        util: 'TES4Edit v4.0.3'
+        util: 'TES4Edit v4.0.4'
   # RoC Patches #
-  - name: 'ROC\+(ClassBeginning|Highwood|QFE|Romancing Ahnassi|RR|Shadowcrest Vineyard|Tchos Alchemy Tower|TRN One of the Gang|WellspringVale) Patch.esp'
+  - name: 'ROC\+(AranMathi|ClassBeginning|Highwood|QFE|Romancing Ahnassi|RR|Shadowcrest Vineyard|Tchos Alchemy Tower|TRN One of the Gang|WellspringVale) Patch.esp'
     req: [ 'Roads of Cyrodiil.esp' ]
   - name: 'ROC+AranMathi Patch.esp'
     req:
