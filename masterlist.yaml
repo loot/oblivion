@@ -8639,6 +8639,30 @@ plugins:
         itm: 4
         udr: 121
 
+  - name: 'ImpeREAL City Unique Districts - .*\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/19589/' ]
+    inc:
+      - 'Better Cities Full.esp'
+      - 'Better Imperial City.esp'
+      - 'Better Cities IC Arboretum.esp'
+      - 'Better Cities IC Arcane University.esp'
+      - 'Better Cities IC Arena.esp'
+      - 'Better Cities IC Elven Gardens.esp'
+      - 'Better Cities IC Green Emperor Way.esp'
+      - 'Better Cities IC Market.esp'
+      - 'Better Cities IC Prison.esp'
+      - 'Better Cities IC Talos Plaza.esp'
+      - 'Better Cities IC Temple.esp'
+      - 'Better Cities IC Waterfront.esp'
+  - name: 'ImpeREAL City Unique Districts - All the Districts - Merged.esp'
+    dirty:
+      - crc: 0xdf183339
+        <<: *dirtyPlugin
+        itm: 2
+      - crc: 0x906EBFCC
+        <<: *dirtyPlugin
+        itm: 2
+
   - name: 'WatersEdgeImproved.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/36896/' ]
     dirty:
@@ -18301,31 +18325,7 @@ plugins:
       - 'Better Cities IC Talos Plaza.esp'
       - 'Better Cities IC Temple.esp'
       - 'Better Cities IC Waterfront.esp'
-  - name: 'ImpeREAL City Unique Districts - .*\.esp'  # Over 40 plugin variations, so favouring brevity over specificity.
-    url: [ 'https://www.nexusmods.com/oblivion/mods/19589' ]
-    inc:
-      - 'Better Cities Full.esp'
-      - 'Better Imperial City.esp'
-      - 'Better Cities IC Arboretum.esp'
-      - 'Better Cities IC Arcane University.esp'
-      - 'Better Cities IC Arena.esp'
-      - 'Better Cities IC Elven Gardens.esp'
-      - 'Better Cities IC Green Emperor Way.esp'
-      - 'Better Cities IC Market.esp'
-      - 'Better Cities IC Prison.esp'
-      - 'Better Cities IC Talos Plaza.esp'
-      - 'Better Cities IC Temple.esp'
-      - 'Better Cities IC Waterfront.esp'
 
-  - name: 'ImpeREAL City Unique Districts - All the Districts - Merged.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/19589' ]
-    dirty:
-      - crc: 0xdf183339
-        <<: *dirtyPlugin
-        itm: 2
-      - crc: 0x906EBFCC
-        <<: *dirtyPlugin
-        itm: 2
   - name: 'ImpeREAL Empire - Unique Castles - All The Castles - Merged.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22446' ]
     inc:
