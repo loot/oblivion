@@ -2961,6 +2961,12 @@ plugins:
         name: 'GOSH - Gecko''s Oblivion Sound overHaul'
     tag: [ Sound ]
   - name: 'GOSH.esp'
+    msg:
+      - <<: *patch3rdParty
+        subs:
+          - 'All Natural Weather'
+          - '[GOSH - All Natural Patch](https://www.nexusmods.com/oblivion/mods/50002/)'
+        condition: 'active("All Natural.esp") and not file("GOSH - All Natural Patch.esp")'
     clean:
       - crc: 0x98C6F03A
         util: 'TES4Edit v4.0.4'
