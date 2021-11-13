@@ -5603,7 +5603,9 @@ plugins:
       - 'lumi_enchantments.esp'
       - 'lumi_enchantments_subtle.esp'
     # doNotClean
-    msg: [ *obsolete ]
+    msg:
+      - <<: *obsolete
+        subs: [ '[Supreme Magicka Update](https://www.nexusmods.com/oblivion/mods/12466/)' ]
     tag:
       - Graphics
       - Names
