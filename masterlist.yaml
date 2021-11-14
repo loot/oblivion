@@ -2803,11 +2803,10 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/47749/' ]
     tag: [ Graphics ]
   - name: 'One of a Kind Weapons.esp'
-    clean:
-      - crc: 0x3CFE1D45
-        util: 'TES4Edit v4.0.4'
-      - crc: 0xBF48B2BE
-        util: 'TES4Edit v4.0.4'
+    msg:
+      - <<: *wildEdits
+        subs: [ 'Remove Creature **000855A4** from **One of a Kind Weapons.esp**.' ]
+        condition: 'checksum("One of a Kind Weapons.esp", 3CFE1D45) or checksum("One of a Kind Weapons.esp", BF48B2BE)'
   - name: 'OoaKW - Staff of Worms.esp'
     tag:
       - Deactivate
