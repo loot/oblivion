@@ -2816,10 +2816,16 @@ plugins:
         util: 'TES4Edit v4.0.4'
 
   - name: 'PotionReplacer.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/49068' ]
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/49068/'
+        name: 'Retextured Potions'
+    tag: [ Filter ]
     after:
       - 'Av Latta Magicka - Potion Rebalance.esp'
       - 'Av Latta Magicka - Rebalance Complete.esp'
+    clean:
+      - crc: 0x92D9C086
+        util: 'TES4Edit v4.0.4'
 
   - name: 'Soolie''sBetterEnchantmentEffects.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/30489/' ]
