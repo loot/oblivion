@@ -6295,6 +6295,28 @@ plugins:
       - crc: 0xA0C60505
         util: 'TES4Edit v4.0.3'
 
+  - name: 'Kragenir''s Death Quest.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/26219/' ]
+    tag: [ Invent.Add ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x028F29D6
+        util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1
+  - name: 'KDQ - Rural Line Additions.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/26219/' ]
+    clean:
+      - crc: 0x86EC5DE6
+        util: 'TES4Edit v4.0.4'
+  - name: 'KragenirsDeathQuest-LostCoast patch.esp'
+    clean:
+      - crc: 0xD92DDDE2
+        util: 'TES4Edit v4.0.4'
+  - name: 'KragenirsDeathQuest-LetThePeopleDrink patch.esp'
+    clean:
+      - crc: 0x3D1BB247
+        util: 'TES4Edit v4.0.4'
+
   - name: 'Kvatch Rebuilt.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/15412/' ]
     msg:
@@ -18499,18 +18521,7 @@ plugins:
     inc:
       - name: 'road+bridges.esp'
         display: 'New Roads and Bridges'
-  - name: 'Kragenir''s Death Quest.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/26219' ]
-    dirty:
-      - crc: 0x3cc0b31f
-        <<: *dirtyPlugin
-        itm: 1
-  - name: 'KDQ - Rural Line Additions.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/26219' ]
-    dirty:
-      - crc: 0xa93fe8b0
-        <<: *dirtyPlugin
-        itm: 2
+
   - name: '300 Feudal Empire.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22678' ]
     inc: [ '300_White Stallion 4.esp' ]
