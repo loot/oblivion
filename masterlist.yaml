@@ -6641,6 +6641,19 @@ plugins:
         subs: [ 'SM Plugin Refurbish(Merged).esp' ]
         condition: 'file("SM Plugin Refurbish(Merged).esp")'
 
+  - name: 'Tales of Cyrodiil.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/48792/' ]
+    req:
+      - 'DLCShiveringIsles.esp'
+    msg:
+      - *alsoUseSilentVoice
+      - *requiresOBSEv21
+    dirty:
+      - <<: *quickClean
+        crc: 0x8F73C2EE
+        util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 3
+
   - name: 'TheElderCouncil.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22595/' ]
     dirty:
