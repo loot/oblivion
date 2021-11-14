@@ -7018,13 +7018,13 @@ plugins:
 
   - name: 'Immersive Weapons.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/43879/' ]
+    req:
+      - *OBSE
+      - 'DLCShiveringIsles.esp'
     msg:
       - <<: *obsolete
         subs: [ '[Use the Immersive Weapons ESP instead, the bash fix ESP is not needed with Wrye Bash 307+](https://www.nexusmods.com/oblivion/mods/43879/)' ]
         condition: 'checksum("Immersive Weapons.esp", 5E2B0E37)'
-    req:
-      - *OBSE
-      - 'DLCShiveringIsles.esp'
     tag:
       - Delev
       - Graphics
