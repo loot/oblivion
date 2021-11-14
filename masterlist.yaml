@@ -8970,6 +8970,17 @@ plugins:
         itm: 7
         udr: 40
 
+  - name: 'Lady Stone Villa( - OOO Patch| - UL LostCoast Patch)?\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/39113/' ]
+  - name: 'Lady Stone Villa.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x89058B60
+        util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 9
+  - name: 'Lady Stone Villa - UL LostCoast Patch.esp'
+    msg: [ *patchOutdated ]
+
   - name: 'Millstone_Farm(_COBL)?.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/29126' ]
     after:
@@ -18517,20 +18528,6 @@ plugins:
         itm: 1
         udr: 57
 
-  - name: 'Lady Stone Villa.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/39113' ]
-    inc:
-      - 'Lady Stone Villa ULCompatable.esp'
-      - 'Oscuro''s_Oblivion_Overhaul.esm'
-    dirty:
-      - crc: 0x3f125733
-        <<: *dirtyPlugin
-        itm: 6
-        udr: 1830
-      - crc: 0xc5b26abe
-        <<: *dirtyPlugin
-        itm: 22
-        udr: 1830
   - name: 'Legacy of Faran.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/42883' ]
     dirty:
