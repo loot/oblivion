@@ -10980,20 +10980,29 @@ plugins:
 
   - name: 'HackdirtAlive.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/42948/' ]
+    msg:
+      - <<: *wildEdits
+        subs: [ 'Remove Non-Player Character **000A369F** & Race **00000907** from **HackdirtAlive.esp**.' ]
+        condition: 'checksum("HackdirtAlive.esp", 3F9F8645) or checksum("HackdirtAlive.esp", 2745FA47)'
     dirty:
       - <<: *quickClean
         crc: 0xBA4902D9
-        util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 12
         udr: 4
       - <<: *quickClean
         crc: 0x3F9F8645
-        util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 12
+        udr: 4
+      - <<: *quickClean
+        crc: 0xCA459C86
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 12
         udr: 4
       - <<: *quickClean
         crc: 0xD7481198
-        util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 6
         udr: 4
 
