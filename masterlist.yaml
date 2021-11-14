@@ -2675,6 +2675,25 @@ plugins:
       - crc: 0x4A0CD3B8
         util: 'TES4Edit v4.0.4'
 
+  - name: 'SB_WeaponDropFix(_OOOFilterPatch)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/50223/'
+        name: 'SB Weapon Drop Fix'
+    req: [ *OBSE ]
+    tag: [ -Scripts ]
+  - name: 'SB_WeaponDropFix.esp'
+    clean:
+      - crc: 0x66933DD6
+        util: 'TES4Edit v4.0.4'
+  - name: 'SB_WeaponDropFix_OOOFilterPatch.esp'
+    tag:
+      - -Deactivate
+      - -Filter
+      - -NoMerge
+    clean:
+      - crc: 0xC2000FF4
+        util: 'TES4Edit v4.0.4'
+
   - name: 'WaterFPS.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/49347' ]
     tag: [ C.Water ]
