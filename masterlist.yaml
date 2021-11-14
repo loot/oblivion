@@ -4890,6 +4890,38 @@ plugins:
         util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 135
 
+  - name: '_zz_BanditCollection.*\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/50694/'
+        name: 'Bandit Bounties - A basic bounty collection system.'
+      - link: 'https://www.nexusmods.com/oblivion/mods/50790/'
+        name: 'Bandit Bounties DE - Banditenkopfgeld'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Bandit Bounties ESP' ]
+        condition: 'many("_zz_BanditCollection.*\.esp")'
+    tag: [ Invent.Add ]
+  - name: '_zz_BanditCollection(10gp).esp'
+    clean:
+      - crc: 0x4A0DC3D5
+        util: 'TES4Edit v4.0.4'
+  - name: '_zz_BanditCollection(25gp).esp'
+    clean:
+      - crc: 0x27C3795F
+        util: 'TES4Edit v4.0.4'
+  - name: '_zz_BanditCollection(50gp).esp'
+    clean:
+      - crc: 0xC6779DE3
+        util: 'TES4Edit v4.0.4'
+  - name: '_zz_BanditCollection(75gp).esp'
+    clean:
+      - crc: 0x651F33C4
+        util: 'TES4Edit v4.0.4'
+  - name: '_zz_BanditCollection(100gp).esp'
+    clean:
+      - crc: 0x3B62913B
+        util: 'TES4Edit v4.0.4'
+
 ###### Gameplay - Character Classes & Races ######
   ### Race Balancing Project ###
   - name: 'bgBalancing.*\.esp'
