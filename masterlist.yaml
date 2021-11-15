@@ -7480,6 +7480,17 @@ plugins:
             text: 'Stummer Charakter Fix für The Contented Prisoner V 2.'
 
 ###### Locations - New Structures & Landmarks ######
+  - name: 'aaRedHall.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/44943/'
+        name: 'Red Mead Hall'
+    req: [ 'DLCShiveringIsles.esp' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x089133CF
+        util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
+
   - name: 'ACharmingTown.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/42680/' ]
     clean:
