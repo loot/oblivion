@@ -8766,9 +8766,10 @@ plugins:
   - name: 'hackdirtabyss.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/13952/' ]
     dirty:
-      - crc: 0xe8ca2f00
-        <<: *dirtyPlugin
-        itm: 3
+      - <<: *quickClean
+        crc: 0xE8CA2F00
+        util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
         udr: 8
 
   - name: 'IC Atmospheric Shops Mod.esp'
