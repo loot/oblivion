@@ -2016,8 +2016,15 @@ plugins:
         util: 'TES4Edit v4.0.4'
 
 ###### Unofficial Patches ######
+  - name: '(Unofficial Oblivion Patch|Oblivion Citadel Door Fix|UOP Vampire Aging & Face Fix)\.esp'
+    url:
+      - link: 'https://www.afkmods.com/index.php?/files/file/1022-unofficial-oblivion-patch/'
+        name: 'Unofficial Oblivion Patch (AFK Mods)'
+      - link: 'https://www.nexusmods.com/oblivion/mods/5296/'
+        name: 'Unofficial Oblivion Patch (Nexus Mods)'
+      - link: 'https://tesalliance.org/forums/index.php?/files/file/1308-unofficial-oblivion-patch/'
+        name: 'Unofficial Oblivion Patch (TES Alliance)'
   - name: 'Unofficial Oblivion Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/5296' ]
     group: *dlcGroup
     # doNotClean
     inc:
@@ -2051,27 +2058,29 @@ plugins:
       - SpellStats
       - Text
   - name: 'Oblivion Citadel Door Fix.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/5296' ]
     group: *unofficialPatchesGroup
+    tag: [ Graphics ]
     clean:
-      # version: 3.5.6a
       - crc: 0xE1CC0647
-        util: 'TES4Edit v4.0.2'
+        util: 'TES4Edit v4.0.4'
   - name: 'UOP Vampire Aging & Face Fix.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/5296' ]
     group: *unofficialPatchesGroup
     msg:
       - <<: *useBashTweakInstead
         subs: [ 'Tweak Settings -> UOP Vampire Aging And Face Fix' ]
     clean:
-      # version: 3.5.6a
       - crc: 0xA57A5DAC
-        util: 'TES4Edit v4.0.2'
+        util: 'TES4Edit v4.0.4'
 
   - name: 'Unofficial Shivering Isles Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/10739/' ]
+    url:
+      - link: 'https://www.afkmods.com/index.php?/files/file/1023-unofficial-shivering-isles-patch/'
+        name: 'Unofficial Shivering Isles Patch (AFK Mods)'
+      - link: 'https://www.nexusmods.com/oblivion/mods/10739/'
+        name: 'Unofficial Shivering Isles Patch (Nexus Mods)'
+      - link: 'https://tesalliance.org/forums/index.php?/files/file/1296-unofficial-shivering-isles-patch/'
+        name: 'Unofficial Shivering Isles Patch (TES Alliance)'
     group: *unofficialPatchesGroup
-    req: [ 'DLCShiveringIsles.esp' ]
     after: [ 'Hidden Treasures.esp' ]
     inc:
       - 'FormIDReferenceBugFix.esp'
@@ -2090,28 +2099,30 @@ plugins:
       - SpellStats
       - Text
     clean:
-      - crc: 0x5D308FDC
-        util: 'TES4Edit v4.0.3h (Hotfix 1)'
+      - crc: 0x5FCCF9D3
+        util: 'TES4Edit v4.0.4'
 
   - name: '(DLC(BattlehornCastle|ThievesDen|MehrunesRazor|VileLair|HorseArmor|Orrery|SpellTomes|Frostcrag)|Knights) - Unofficial Patch( - SSSB)?\.esp'
     url:
-      - link: 'https://www.nexusmods.com/oblivion/mods/9969'
-        name: 'Unofficial Oblivion DLC Patches'
+      - link: 'https://www.afkmods.com/index.php?/files/file/1024-unofficial-oblivion-dlc-patches/'
+        name: 'Unofficial Oblivion DLC Patches (AFK Mods)'
+      - link: 'https://www.nexusmods.com/oblivion/mods/9969/'
+        name: 'Unofficial Oblivion DLC Patches (Nexus Mods)'
+      - link: 'http://tesalliance.org/forums/index.php?/files/file/1297-unofficial-oblivion-dlc-patches/'
+        name: 'Unofficial Oblivion DLC Patches (TES Alliance)'
     group: *unofficialPatchesGroup
   - name: 'DLCHorseArmor - Unofficial Patch.esp'
     tag:
       - Actors.ACBS
       - Actors.AIPackages
     clean:
-      # version: 24
       - crc: 0xC5A61F9E
-        util: 'TES4Edit v4.0.2'
+        util: 'TES4Edit v4.0.4'
   - name: 'DLCOrrery - Unofficial Patch.esp'
     tag: [ Graphics ]
     clean:
-      # version: 24
       - crc: 0xFCF99B11
-        util: 'TES4Edit v4.0.2'
+        util: 'TES4Edit v4.0.4'
   - name: 'DLCVileLair - Unofficial Patch.esp'
     tag:
       - Actors.ACBS
@@ -2125,26 +2136,23 @@ plugins:
       - Stats
       - Text
     clean:
-      # version: 24
       - crc: 0x84ABAB20
-        util: 'TES4Edit v4.0.2'
+        util: 'TES4Edit v4.0.4'
   - name: 'DLCMehrunesRazor - Unofficial Patch.esp'
     tag:
       - C.Light
       - Graphics
       - Text
     clean:
-      # version: 24
-      - crc: 0xFDD28667
-        util: 'TES4Edit v4.0.2'
+      - crc: 0x75E5A036
+        util: 'TES4Edit v4.0.4'
   - name: 'DLCSpellTomes - Unofficial Patch.esp'
     tag:
       - SpellStats
       - Text
     clean:
-      # version: 24
       - crc: 0x3AE29795
-        util: 'TES4Edit v4.0.2'
+        util: 'TES4Edit v4.0.4'
   - name: 'DLCThievesDen - Unofficial Patch.esp'
     tag:
       - Actors.RecordFlags
@@ -2154,9 +2162,8 @@ plugins:
       - Scripts
       - Text
     clean:
-      # version: 24
       - crc: 0xF7685DB5
-        util: 'TES4Edit v4.0.2'
+        util: 'TES4Edit v4.0.4'
   - name: 'DLCThievesDen - Unofficial Patch - SSSB.esp'
     msg:
       - type: say
@@ -2166,9 +2173,8 @@ plugins:
           - lang: de
             text: 'Nur für einen neuen Spielstand. Nicht nutzen für bereits bestehende Spielstände.'
     clean:
-      # version: 24
       - crc: 0xF8731FE7
-        util: 'TES4Edit v4.0.2'
+        util: 'TES4Edit v4.0.4'
   - name: 'DLCBattlehornCastle - Unofficial Patch.esp'
     tag:
       - Actors.ACBS
@@ -2181,9 +2187,8 @@ plugins:
       - Stats
       - Text
     clean:
-      # version: 24
       - crc: 0x1F6B40D8
-        util: 'TES4Edit v4.0.2'
+        util: 'TES4Edit v4.0.4'
   - name: 'DLCFrostcrag - Unofficial Patch.esp'
     tag:
       - Actors.RecordFlags
@@ -2192,9 +2197,8 @@ plugins:
       - Scripts
       - Sound
     clean:
-      # version: 24
       - crc: 0x7835C46D
-        util: 'TES4Edit v4.0.2'
+        util: 'TES4Edit v4.0.4'
   - name: 'Knights - Unofficial Patch.esp'
     tag:
       - Actors.AIData
@@ -2213,9 +2217,8 @@ plugins:
       - Stats
       - Text
     clean:
-      # version: 24
       - crc: 0xCCDA5239
-        util: 'TES4Edit v4.0.2'
+        util: 'TES4Edit v4.0.4'
 
 ###### Nehrim ######
   - name: 'Nehrim.esm'
