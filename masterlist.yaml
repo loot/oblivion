@@ -8772,6 +8772,25 @@ plugins:
         itm: 2
         udr: 8
 
+  - name: 'HackdirtAlive.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/42948/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xBA4902D9
+        util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 12
+        udr: 4
+      - <<: *quickClean
+        crc: 0x3F9F8645
+        util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 12
+        udr: 4
+      - <<: *quickClean
+        crc: 0xD7481198
+        util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 6
+        udr: 4
+
   - name: 'IC Atmospheric Shops Mod.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/27973/' ]
     tag:
@@ -20415,13 +20434,6 @@ plugins:
         itm: 33
         udr: 46
 
-  - name: 'HackdirtAlive.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/42948' ]
-    dirty:
-      - crc: 0xba4902d9
-        <<: *dirtyPlugin
-        itm: 12
-        udr: 4
   - name: 'Lakeview.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/19984' ]
     inc: [ 'ShezriesTownsMaster.esp' ]
