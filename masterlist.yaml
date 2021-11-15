@@ -8775,9 +8775,20 @@ plugins:
   - name: 'HackdirtAlive.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/42948/' ]
     dirty:
-      - crc: 0xba4902d9
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xBA4902D9
+        util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 12
+        udr: 4
+      - <<: *quickClean
+        crc: 0x3F9F8645
+        util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 12
+        udr: 4
+      - <<: *quickClean
+        crc: 0xD7481198
+        util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 6
         udr: 4
 
   - name: 'IC Atmospheric Shops Mod.esp'
