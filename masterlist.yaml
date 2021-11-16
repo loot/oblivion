@@ -6745,6 +6745,16 @@ plugins:
       - crc: 0x5BA91DED
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
 
+  - name: 'ThePaleAdventurer.esp'
+    url:
+      - 'https://www.nexusmods.com/oblivion/mods/27480/'
+      - 'http://tesalliance.org/forums/index.php?/files/file/105-the-pale-adventurer/'
+    dirty:
+      - <<: *quickClean
+        crc: 0x29220AEF
+        util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1
+
   - name: 'Ungarion1TheWelkyndSword.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/4969/'
@@ -19223,12 +19233,6 @@ plugins:
       - crc: 0xe1ce7eed
         <<: *dirtyPlugin
         itm: 3
-  - name: 'ThePaleAdventurer.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/27480' ]
-    dirty:
-      - crc: 0x29220aef
-        <<: *dirtyPlugin
-        itm: 1
   - name: 'Passwall Adventurers Club.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/34103' ]
     dirty:
