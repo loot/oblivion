@@ -9393,6 +9393,20 @@ plugins:
   - name: 'Rustle House - AN Patch.esp'
     tag: [ -Graphics ]
 
+  - name: 'Sunburn.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/29296/'
+        name: 'Sunburn Ranch'
+    req: [ 'DLCShiveringIsles.esp' ]
+    tag:
+      - C.Music
+      - C.Water
+    dirty:
+      - <<: *quickClean
+        crc: 0x5F34286C
+        util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
+
 ###### Translations ######
   - name: 'ITA - FoT & Hexaae R3.esp'
     url:
