@@ -7120,6 +7120,25 @@ plugins:
         util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 6
 
+  - name: 'Daedric Lord(-Classic Bound)? Armor\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/16442/'
+        name: 'Daedric Lord Armor'
+  - name: 'Daedric Lord Armor.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x0CB6A1E6
+        util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 3
+        udr: 1
+  - name: 'Daedric Lord-Classic Bound Armor.esp'
+    tag:
+      - Deactivate
+      - NoMerge
+    clean:
+      - crc: 0xA5F538D4
+        util: 'TES4Edit v4.0.4'
+
   - name: 'Eggs of History.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/35034/'
