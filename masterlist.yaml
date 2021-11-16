@@ -8706,6 +8706,24 @@ plugins:
         itm: 68
         udr: 4164
 
+  - name: 'BrumaGuildReconstructed.esp'
+    url:
+      - link: 'https://www.afkmods.com/index.php?/files/file/264-bruma-guild-reconstructed/'
+        name: 'Bruma Guild Reconstructed (AFK Mods)'
+      - link: 'https://tesalliance.org/forums/index.php?/files/file/934-bruma-guild-reconstructed/'
+        name: 'Bruma Guild Reconstructed (TES Alliance)'
+    inc: [ 'BrumaMGRestored.esp' ]
+    msg:
+      - <<: *patch3rdParty
+        subs:
+          - 'Immersive Interiors'
+          - '[Immersive Interiors Patches](https://www.nexusmods.com/oblivion/mods/47157/)'
+        condition: 'active("Immersive Interiors.esp") and not file("Immersive Interiors - Bruma Guild Reconstructed.esp")'
+      - *requiresOBSEv20
+    clean:
+      - crc: 0x822A814A
+        util: 'TES4Edit v4.0.4'
+
   - name: 'BrumaMGRestored.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/12732/' ]
     dirty:
