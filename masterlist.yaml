@@ -7161,6 +7161,19 @@ plugins:
   - name: 'Improved dungeons.esp'
     msg: [ *obsolete ]
 
+  - name: 'Oblivion Collectible Cards.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/19140/' ]
+    tag: [ Invent.Add ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xEDF9B36F
+        util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 3
+      - <<: *quickClean
+        crc: 0x7B0E0BA2
+        util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1
+
   - name: 'TreasureChest.*\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/44066' ]
   - name: 'TreasureChest.esp'
@@ -14589,14 +14602,6 @@ plugins:
         crc: 0x1CE8A9DD
         util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 17
-  - name: 'Oblivion Collectible Cards.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/19140' ]
-    tag: [ Invent ]
-    dirty:
-      - <<: *quickClean
-        crc: 0xEDF9B36F
-        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 3
   - name: 'Passion Fruit.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/14620' ]
     tag: [ Graphics ]
