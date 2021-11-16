@@ -8380,6 +8380,20 @@ plugins:
         util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 2251
 
+  - name: 'StalhrimVillage( - AN Patch)?\.esp'
+    url: [ 'http://tesalliance.org/forums/index.php?/files/file/730-stalhrim-village/' ]
+  - name: 'StalhrimVillage.esp'
+    tag: [ C.Water ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x846BDBAA
+        util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
+        udr: 89
+  - name: 'StalhrimVillage - AN Patch.esp'
+    clean:
+      - crc: 0xA18C2D9E
+        util: 'TES4Edit v4.0.4'
+
   - name: 'SunderedKeep.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/37587/' ]
     after: [ 'Better Dungeons.esp' ]
@@ -20505,15 +20519,6 @@ plugins:
         <<: *dirtyPlugin
         itm: 29
         udr: 24
-  - name: 'StalhrimVillage.esp'
-    url: [ 'https://tesalliance.org/forums/index.php?/files/file/730-stalhrim-village' ]
-    dirty:
-      - crc: 0x1d11672d
-        <<: *dirtyPlugin
-        udr: 89
-      - crc: 0x846BDBAA
-        <<: *dirtyPlugin
-        udr: 89
   - name: 'WaterfrontMarket.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22834' ]
     msg:
