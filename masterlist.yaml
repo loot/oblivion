@@ -3339,6 +3339,7 @@ plugins:
       - 'MaleBodyReplacerV3.esp'
       - 'MaleBodyReplacerV4.esp'
       - 'MaleBodyReplacerV5.esp'
+      - 'Reworked Race Relations.esp'
     req:
       - <<: *OBSE
         condition: 'version("Oblivion_Character_Overhaul.esp", "2.0", >=)'
@@ -5865,6 +5866,18 @@ plugins:
       - <<: *useOnlyOneX
         subs: [ 'Combat Speechcraft ESP' ]
         condition: 'many("PTCombatSpeechcraft(Easy|Medium|Hard).esp")'
+
+  - name: 'Reworked Race Relations.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/50006/' ]
+    tag:
+      - R.Relations.Add
+      - R.Relations.Change
+      - R.Relations.Remove
+    clean:
+      - crc: 0xCA32CE30
+        util: 'TES4Edit v4.0.4'
+      - crc: 0x5AC759C2
+        util: 'TES4Edit v4.0.4'
 
   - name: 'SPS.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/19697/' ]
