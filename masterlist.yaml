@@ -3339,6 +3339,7 @@ plugins:
       - 'MaleBodyReplacerV3.esp'
       - 'MaleBodyReplacerV4.esp'
       - 'MaleBodyReplacerV5.esp'
+      - 'Reworked Race Relations.esp'
     req:
       - <<: *OBSE
         condition: 'version("Oblivion_Character_Overhaul.esp", "2.0", >=)'
@@ -5866,6 +5867,22 @@ plugins:
         subs: [ 'Combat Speechcraft ESP' ]
         condition: 'many("PTCombatSpeechcraft(Easy|Medium|Hard).esp")'
 
+  - name: 'Reworked Race Relations.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/50006/' ]
+    msg:
+      - <<: *patchUnavailable
+        subs: [ 'Oblivion Character Overhaul' ]
+        condition: 'active("Oblivion_Character_Overhaul.esp") and not active("Bashed Patch.*\.esp")'
+    tag:
+      - R.Relations.Add
+      - R.Relations.Change
+      - R.Relations.Remove
+    clean:
+      - crc: 0xCA32CE30
+        util: 'TES4Edit v4.0.4'
+      - crc: 0x5AC759C2
+        util: 'TES4Edit v4.0.4'
+
   - name: 'SPS.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/19697/' ]
     dirty:
@@ -6617,6 +6634,16 @@ plugins:
         itm: 1710
         udr: 36
 
+  - name: 'SC-TrialsofTheNine.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/42699/'
+        name: 'Trials of The Nine Quest'
+    dirty:
+      - <<: *quickClean
+        crc: 0xE45EA21A
+        util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 7
+
   - name: 'SecretsoftheAyleidsClosure.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22918/' ]
     tag:
@@ -7298,6 +7325,15 @@ plugins:
     clean:
       - crc: 0x577E748D
         util: 'TES4Edit v4.0.3j (RC2 for 4.0.4)'
+
+  - name: 'WeaponsOfTheNine.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/7013/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xDA0EE588
+        util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 24
+        udr: 21
 
 ###### Locations ######
   - name: '(Immersive Prison |NRB|UL II Immersive Prison |UL Imperial Isle Prison )sewer exit\.esp'
@@ -19443,12 +19479,6 @@ plugins:
         <<: *dirtyPlugin
         itm: 41
         udr: 10
-  - name: 'SC-TrialsofTheNine.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/42699' ]
-    dirty:
-      - crc: 0x955f7718
-        <<: *dirtyPlugin
-        itm: 6
   - name: 'Seawatch Abode.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/23301' ]
     msg:
@@ -19936,13 +19966,6 @@ plugins:
             text: 'Sensual Walks for Arthmoor''s Verona House Bloodines SI Fixed contains bash tags to merge the animations, which work correctly on his version'
           - lang: de
             text: 'Sensual Walks for Arthmoor''s Verona House Bloodines SI Fixed enthält Bash Tags zum Zusammenführen der Animation, welche korrekt funktionieren mit dieser Version'
-  - name: 'WeaponsOfTheNine.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/7013' ]
-    dirty:
-      - crc: 0xda0ee588
-        <<: *dirtyPlugin
-        itm: 24
-        udr: 21
   - name: 'WellspringGrove.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/10407' ]
     dirty:
