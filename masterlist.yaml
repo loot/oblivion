@@ -5869,6 +5869,10 @@ plugins:
 
   - name: 'Reworked Race Relations.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/50006/' ]
+    msg:
+      - <<: *patchUnavailable
+        subs: [ 'Oblivion Character Overhaul' ]
+        condition: 'active("Oblivion_Character_Overhaul.esp") and not active("Bashed Patch.*\.esp")'
     tag:
       - R.Relations.Add
       - R.Relations.Change
