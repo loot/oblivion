@@ -6847,6 +6847,33 @@ plugins:
         itm: 249
         udr: 4
 
+  - name: 'WellspringGrove(ZahrashaBook)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/10407/'
+        name: 'A Mystery at Wellspring Grove'
+    tag: [ Invent.Add ]
+  - name: 'WellspringGrove.esp'
+    msg:
+      - <<: *wildEdits
+        subs: [ 'Remove NPC **00093C66** from **WellspringGrove.esp**.' ]
+        condition: 'checksum("WellspringGrove.esp", C08ABBFE) or checksum("WellspringGrove.esp", AC766286)'
+    tag:
+      - EffectStats
+      - Scripts
+    dirty:
+      - <<: *quickClean
+        crc: 0xC08ABBFE
+        util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 15
+      - <<: *quickClean
+        crc: 0x7566D592
+        util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 15
+  - name: 'WellspringGroveZahrashaBook.esp'
+    clean:
+      - crc: 0x67F009AB
+        util: 'TES4Edit v4.0.4'
+
 ###### Gameplay - Skills & Leveling ######
   - name: 'SetsunaDummyTraining.esp'
     url:
@@ -19966,12 +19993,6 @@ plugins:
             text: 'Sensual Walks for Arthmoor''s Verona House Bloodines SI Fixed contains bash tags to merge the animations, which work correctly on his version'
           - lang: de
             text: 'Sensual Walks for Arthmoor''s Verona House Bloodines SI Fixed enthält Bash Tags zum Zusammenführen der Animation, welche korrekt funktionieren mit dieser Version'
-  - name: 'WellspringGrove.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/10407' ]
-    dirty:
-      - crc: 0xc08abbfe
-        <<: *dirtyPlugin
-        itm: 15
   - name: 'Witch''s Throne.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/25617' ]
     dirty:
