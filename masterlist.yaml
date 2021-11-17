@@ -7299,6 +7299,15 @@ plugins:
       - crc: 0x577E748D
         util: 'TES4Edit v4.0.3j (RC2 for 4.0.4)'
 
+  - name: 'WeaponsOfTheNine.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/7013/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xDA0EE588
+        util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 24
+        udr: 21
+
 ###### Locations ######
   - name: '(Immersive Prison |NRB|UL II Immersive Prison |UL Imperial Isle Prison )sewer exit\.esp'
     url:
@@ -19934,13 +19943,6 @@ plugins:
         <<: *dirtyPlugin
         itm: 8
         udr: 16
-  - name: 'WeaponsOfTheNine.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/7013' ]
-    dirty:
-      - crc: 0xda0ee588
-        <<: *dirtyPlugin
-        itm: 24
-        udr: 21
   - name: 'WellspringGrove.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/10407' ]
     dirty:
