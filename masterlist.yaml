@@ -3100,14 +3100,14 @@ plugins:
       - <<: *patchIncluded
         subs: [ 'DLC Shivering Isles' ]
         condition: 'active("DLCShiveringIsles.esp") and not active("All Natural - SI.esp")'
-    tag : [ Graphics ]
+    tag: [ Graphics ]
     clean:
       - crc: 0xD73B9606
         util: 'TES4Edit v4.0.4'
   - name: 'All Natural - SI.esp'
     after: [ 'All Natural.esp' ]
     req: [ 'DLCShiveringIsles.esp' ]
-    tag : [ Graphics ]
+    tag: [ Graphics ]
     clean:
       - crc: 0xA8549441
         util: 'TES4Edit v4.0.4'
@@ -3118,10 +3118,9 @@ plugins:
     inc: [ '_Real_Lights.esp' ]
     msg:
       - <<: *patchUpdateAvailable
-        type: say
         subs: [ '[Weather - All Natural Real Lights - Candelabra pathgrid fix](https://www.nexusmods.com/oblivion/mods/46854/)' ]
         condition: 'active("All Natural - Real Lights.esp") and not file("All Natural - Real Lights - candelabra pathgrid fix.esp")'
-    tag : [ Sound ]
+    tag: [ Sound ]
     dirty:
       - <<: *quickClean
         crc: 0x5219390A
