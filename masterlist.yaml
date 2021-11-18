@@ -3008,6 +3008,68 @@ plugins:
         util: 'TES4Edit v4.0.4'
 
 ###### AudioVisual - Models & Textures ######
+  - name: '(Book Jackets DLC|GrimbotsSpellTomes)\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/16247/'
+        name: 'Grimbots DLC Book Jackets'
+    tag:
+      - Deactivate
+      - Graphics
+      - NoMerge
+  - name: 'Book Jackets DLC.esp'
+    clean:
+      - crc: 0x615C603B
+        util: 'TES4Edit v4.0.4'
+  - name: 'GrimbotsSpellTomes.esp'
+    inc: [ 'Av Latta Magicka.esm' ]
+    clean:
+      - crc: 0x2C3A6F22
+        util: 'TES4Edit v4.0.4'
+
+  - name: 'EVE_KnightsoftheNine.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/24078/'
+        name: 'EVE HGEC Eyecandy Variants Expansion'
+      - link: 'https://www.nexusmods.com/oblivion/mods/45859/'
+        name: 'Seamless - OCOv2'
+    tag:
+      - Deactivate
+      - Graphics
+      - NoMerge
+    clean:
+      - crc: 0xA28C2C54
+        util: 'TES4Edit v4.0.4'
+
+  - name: 'EVE_StockEquipmentReplacer.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/24078/'
+        name: 'EVE HGEC Eyecandy Variants Expansion'
+      - link: 'https://www.nexusmods.com/oblivion/mods/45859/'
+        name: 'Seamless - OCOv2'
+    inc:
+      - 'Mart''s Monster Mod.esm'
+      - 'Oscuro''s_Oblivion_Overhaul.esm'
+    tag:
+      - Deactivate
+      - Graphics
+      - NoMerge
+      - Stats
+    clean:
+      - crc: 0x02EC9CA3
+        util: 'TES4Edit v4.0.4'
+
+  - name: 'Knights - Book Jackets.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/27521/'
+        name: 'Book Jackets KOTN'
+    tag:
+      - Deactivate
+      - Graphics
+      - NoMerge
+    clean:
+      - crc: 0xE5BCCA66
+        util: 'TES4Edit v4.0.4'
+
   - name: 'MankarMythic.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/50137/'
@@ -15444,16 +15506,6 @@ plugins:
         type: error
         subs: [ '**DLCHorseArmor.esp**' ]
 
-  - name: 'Book Jackets DLC.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/16247' ]
-    tag:
-      - Graphics
-      - NoMerge
-  - name: 'GrimbotsSpellTomes.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/16247' ]
-    tag:
-      - Graphics
-      - NoMerge
   - name: 'Bab.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/12536' ]
     tag:
@@ -15461,14 +15513,6 @@ plugins:
       - Body-M
       - Body-Size-F
       - Body-Size-M
-  - name: 'EVE_StockEquipmentReplacer.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/24078/' ]
-    inc:
-      - 'Mart''s Monster Mod.esm'
-      - 'Oscuro''s_Oblivion_Overhaul.esm'
-    tag:
-      - Graphics
-      - NoMerge
   - name: 'EyeCandy Compilation.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/26704' ]
     tag:
@@ -20283,16 +20327,6 @@ plugins:
   - name: 'Ulrim''s Horses - Vanilla.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/16688' ]
     tag: [ Graphics ]
-  - name: 'Knights - Book Jackets.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/27521' ]
-    tag:
-      - Graphics
-      - NoMerge
-  - name: 'EVE_KnightsoftheNine.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/24078/' ]
-    tag:
-      - Graphics
-      - NoMerge
   - name: 'QuietFeet.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/12331' ]
     msg:
