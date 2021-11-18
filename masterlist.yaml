@@ -3091,7 +3091,7 @@ plugins:
     req: [ *OBSE ]
     clean:
       - crc: 0x3A0B767A
-        util: 'TES4Edit v4.0.3h (Hotfix 1)'
+        util: 'TES4Edit v4.0.4'
   - name: 'All Natural.esp'
     after:
       - 'The Throne Of The Emperor.esp'
@@ -3100,23 +3100,33 @@ plugins:
       - <<: *patchIncluded
         subs: [ 'DLC Shivering Isles' ]
         condition: 'active("DLCShiveringIsles.esp") and not active("All Natural - SI.esp")'
+    tag : [ Graphics ]
     clean:
       - crc: 0xD73B9606
-        util: 'TES4Edit v4.0.3h (Hotfix 1)'
+        util: 'TES4Edit v4.0.4'
   - name: 'All Natural - SI.esp'
     after: [ 'All Natural.esp' ]
     req: [ 'DLCShiveringIsles.esp' ]
+    tag : [ Graphics ]
     clean:
       - crc: 0xA8549441
-        util: 'TES4Edit v4.0.3h (Hotfix 1)'
+        util: 'TES4Edit v4.0.4'
   - name: 'All Natural - Real Lights.esp'
     after:
       - 'The Throne Of The Emperor.esp'
       - 'Throne room.esp'
     inc: [ '_Real_Lights.esp' ]
-    clean:
-      - crc: 0x5219390A
-        util: 'TES4Edit v4.0.3h (Hotfix 1)'
+    msg:
+      - <<: *patchUpdateAvailable
+        type: say
+        subs: [ '[Weather - All Natural Real Lights - Candelabra pathgrid fix](https://www.nexusmods.com/oblivion/mods/46854/)' ]
+        condition: 'active("All Natural - Real Lights.esp") and not file("All Natural - Real Lights - candelabra pathgrid fix.esp")'
+    tag : [ Sound ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x5219390A
+        util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1
   - name: 'All Natural - Indoor Weather Filter For Mods.esp'
     group: *latePatchesGroup
     msg: [ *requiresBashedPatch ]
