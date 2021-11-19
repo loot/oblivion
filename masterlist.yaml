@@ -3026,29 +3026,6 @@ plugins:
       - crc: 0x2C3A6F22
         util: 'TES4Edit v4.0.4'
 
-  - name: 'Enhanced Vegetation \[1[0125]...\.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/23783/' ]
-    msg:
-      - <<: *useOnlyOneX
-        subs: [ 'Enhanced Vegetation' ]
-        condition: 'many("Enhanced Vegetation \[1[0125]...\.esp")'
-  - name: 'Enhanced Vegetation [100%].esp'
-    clean:
-      - crc: 0x012E2F95
-        util: 'TES4Edit v4.0.4'
-  - name: 'Enhanced Vegetation [110%].esp'
-    clean:
-      - crc: 0x2C29959C
-        util: 'TES4Edit v4.0.4'
-  - name: 'Enhanced Vegetation [125%].esp'
-    clean:
-      - crc: 0x5192FEA1
-        util: 'TES4Edit v4.0.4'
-  - name: 'Enhanced Vegetation [150%].esp'
-    clean:
-      - crc: 0xCA480A0F
-        util: 'TES4Edit v4.0.4'
-
   - name: 'EVE_KnightsoftheNine.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/24078/'
@@ -4111,6 +4088,29 @@ plugins:
         crc: 0x8D32DB7D
         util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 103
+
+  - name: 'Enhanced Vegetation \[1[0125]...\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/23783/' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Enhanced Vegetation' ]
+        condition: 'many("Enhanced Vegetation \[1[0125]...\.esp")'
+  - name: 'Enhanced Vegetation [100%].esp'
+    clean:
+      - crc: 0x012E2F95
+        util: 'TES4Edit v4.0.4'
+  - name: 'Enhanced Vegetation [110%].esp'
+    clean:
+      - crc: 0x2C29959C
+        util: 'TES4Edit v4.0.4'
+  - name: 'Enhanced Vegetation [125%].esp'
+    clean:
+      - crc: 0x5192FEA1
+        util: 'TES4Edit v4.0.4'
+  - name: 'Enhanced Vegetation [150%].esp'
+    clean:
+      - crc: 0xCA480A0F
+        util: 'TES4Edit v4.0.4'
 
   - name: 'Grass Overhaul.esp'
     url:
