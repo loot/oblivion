@@ -3082,6 +3082,24 @@ plugins:
       - crc: 0xE5BCCA66
         util: 'TES4Edit v4.0.4'
 
+  - name: 'Magic Visuals Overhaul.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/49300/' ]
+    req: [ *OBSE ]
+    msg:
+      - <<: *obsolete
+        subs: [ '[Lightning Crash Fix](https://www.nexusmods.com/oblivion/mods/49300/)' ]
+        condition: 'checksum("Magic Visuals Overhaul.esp", EC596124)'
+      - <<: *patch3rdParty
+        type: warn
+        subs:
+          - 'Oblivion Magic Extender'
+          - '[Magic Visuals Overhaul - OBME Patch](https://www.nexusmods.com/oblivion/mods/49096/)'
+        condition: 'file("OBSE/Plugins/OBME.dll") and not file("Magic Visuals Overhaul - OBME Patch.esp")'
+    tag: [ Graphics ]
+    clean:
+      - crc: 0x1C7923F6
+        util: 'TES4Edit v4.0.4'
+
   - name: 'MankarMythic.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/50137/'
