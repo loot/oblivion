@@ -3094,6 +3094,40 @@ plugins:
       - crc: 0x0D88EAA5
         util: 'TES4Edit v4.0.4'
 
+  - name: 'MinimalMagicEffects(LAME)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/48128/'
+        name: 'Magic and Enchantment Effects Overhaul'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Magic and Enchantment Effects Overhaul ESP' ]
+        condition: 'many("MinimalMagicEffects(LAME)?\.esp")'
+    tag:
+      - EffectStats
+      - Graphics
+  - name: 'MinimalMagicEffects.esp'
+    msg:
+      - <<: *useInstead
+        subs: [ '[Magic and Enchantment Effects Overhaul for LAME compatibility](https://www.nexusmods.com/oblivion/mods/48128/)' ]
+        condition: 'file("bgMagicDV.esp") and not file("MinimalMagicEffectsLAME.esp") or file("bgMagicEV.esp") and not file("MinimalMagicEffectsLAME.esp")'
+    dirty:
+      - <<: *quickClean
+        crc: 0xCCE47D97
+        util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1
+  - name: 'MinimalMagicEffectsLAME.esp'
+    after:
+      - 'bgMagicDVShader.esp'
+      - 'bgMagicEVShader.esp'
+    req:
+      - name: 'bgMagicEV.esp'
+        condition: 'not file("bgMagicDV.esp")'
+    dirty:
+      - <<: *quickClean
+        crc: 0x7E3C3E3B
+        util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1
+
   - name: 'Unique Heretic Robes.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/50689/' ]
     req: [ 'DLCShiveringIsles.esp' ]
