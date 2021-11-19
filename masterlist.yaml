@@ -3017,6 +3017,7 @@ plugins:
       - Graphics
       - NoMerge
   - name: 'Book Jackets DLC.esp'
+    req: [ 'DLCShiveringIsles.esp' ]
     clean:
       - crc: 0x615C603B
         util: 'TES4Edit v4.0.4'
@@ -3056,6 +3057,17 @@ plugins:
       - Stats
     clean:
       - crc: 0x02EC9CA3
+        util: 'TES4Edit v4.0.4'
+
+  - name: 'Heretic Robe Replacer.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/30331/' ]
+    req: [ 'DLCShiveringIsles.esp' ]
+    tag:
+      - Deactivate
+      - Graphics
+      - NoMerge
+    clean:
+      - crc: 0xE69585AB
         util: 'TES4Edit v4.0.4'
 
   - name: 'Knights - Book Jackets.esp'
@@ -16080,9 +16092,6 @@ plugins:
         util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 8
         udr: 4
-  - name: 'Heretic Robe Replacer.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/30331' ]
-    tag: [ Graphics ]
   - name: 'HTBUnholyChapelShop.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/41755' ]
     dirty:
