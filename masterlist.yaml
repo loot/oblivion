@@ -3480,6 +3480,19 @@ plugins:
         subs: [ 'Optional file [Cobl Cosmetics Res 01](https://www.nexusmods.com/oblivion/mods/21104/)' ]
         condition: 'not file("Sound/Voice/Cobl Races.esp/xivilai/f/genericxiv_seen_00010baf_1.mp3")'
 
+  - name: 'GreyPrince.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/49318/'
+        name: 'Give Me Back My Gray Prince Dammit'
+    tag:
+      - Deactivate
+      - NoMerge
+      - -NPC.Eyes
+      - -NPC.Hair
+    clean:
+      - crc: 0x89640571
+        util: 'TES4Edit v4.0.4'
+
   - name: 'Oblivion_Character_Overhaul.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/44676/'
