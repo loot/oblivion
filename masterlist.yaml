@@ -2637,6 +2637,19 @@ plugins:
         subs: [ '[Clean Up Cleaned Up](https://www.nexusmods.com/oblivion/mods/49874)' ]
         condition: 'version("kuerteeCleanUp.esp", "0.61", <)'
 
+  - name: 'Market District Landscape Fix.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/50770/' ]
+    tag:
+      - name: MustBeActiveIfImported
+        condition: 'file("IC Circular Canal.esp")'
+      - name: NoMerge
+        condition: 'file("IC Circular Canal.esp")'
+    dirty:
+      - <<: *quickClean
+        crc: 0x5F31D92C
+        util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 3
+
   - name: 'mini fixes-all fixes.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/13492/' ]
     dirty:
@@ -9363,6 +9376,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/49868/'
         name: 'Imperial City Canal Overhaul'
+    after: [ 'Market District Landscape Fix.esp' ]
     inc:
       - 'Better Cities IC Arboretum.esp'
       - 'Better Cities IC Arena.esp'
