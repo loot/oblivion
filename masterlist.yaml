@@ -9515,6 +9515,36 @@ plugins:
       - crc: 0x7E676D2D
         util: 'TES4Edit v4.0.4'
 
+  - name: 'The Imperial Water( - BETTER CITIES)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/25804/'
+        name: 'The Imperial Waters'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'The Imperial Waters ESP' ]
+        condition: 'many("The Imperial Water( - BETTER CITIES)?\.esp")'
+  - name: 'The Imperial Water.esp'
+    msg:
+      - <<: *useInstead
+        subs: [ '[The Imperial Water - BETTER CITIES](https://www.nexusmods.com/oblivion/mods/25804/)' ]
+        condition: 'file("Better Cities Resources.esm") and not file("The Imperial Water - BETTER CITIES.esp")'
+    dirty:
+      - <<: *quickClean
+        crc: 0xDFCE7F93
+        util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 19
+  - name: 'The Imperial Water - BETTER CITIES.esp'
+    msg:
+      - <<: *patchUpdateAvailable
+        type: warn
+        subs: [ '[Better Cities- The Imperial Waters Patch](https://www.nexusmods.com/oblivion/mods/48607/)' ]
+        condition: 'file("The Imperial Water - BETTER CITIES.esp") and file("Better Imperial City.esp") and not file("BC_IW_PATCH.esp")'
+    dirty:
+      - <<: *quickClean
+        crc: 0x73F25199
+        util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 21
+
   - name: 'WatersEdgeImproved.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/36896/' ]
     dirty:
@@ -19428,23 +19458,6 @@ plugins:
   - name: 'Mag1cWind0w_The_Imperial_Water.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/25804' ]
     msg: [ *obsolete ]
-  - name: 'The Imperial Water.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/25804' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Use ''The Imperial Water - BETTER CITIES.esp'' instead.'
-          - lang: de
-            text: 'Nutzen Sie stattdessen ''The Imperial Water - BETTER CITIES.esp''.'
-        condition: 'file("Better Cities Resources.esm")'
-  - name: 'The Imperial Water - BETTER CITIES.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/25804' ]
-    req: [ *BetterCities ]
-    dirty:
-      - crc: 0x73f25199
-        <<: *dirtyPlugin
-        itm: 21
   - name: 'MapleoakRetreat.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/35741' ]
     inc: [ 'xulLushWoodlands.esp' ]
