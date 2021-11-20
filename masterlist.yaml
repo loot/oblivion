@@ -9538,7 +9538,7 @@ plugins:
       - type: warn
         <<: *patchUpdateAvailable
         subs: [ '[Better Cities- The Imperial Waters Patch](https://www.nexusmods.com/oblivion/mods/48607/)' ]
-        condition: 'file("The Imperial Water - BETTER CITIES.esp") and not file("BC_IW_PATCH.esp")'
+        condition: 'file("The Imperial Water - BETTER CITIES.esp") and file("Better Imperial City.esp") and not file("BC_IW_PATCH.esp")'
     dirty:
       - <<: *quickClean
         crc: 0x73F25199
