@@ -9535,8 +9535,8 @@ plugins:
         itm: 19
   - name: 'The Imperial Water - BETTER CITIES.esp'
     msg:
-      - type: warn
-        <<: *patchUpdateAvailable
+      - <<: *patchUpdateAvailable
+        type: warn
         subs: [ '[Better Cities- The Imperial Waters Patch](https://www.nexusmods.com/oblivion/mods/48607/)' ]
         condition: 'file("The Imperial Water - BETTER CITIES.esp") and file("Better Imperial City.esp") and not file("BC_IW_PATCH.esp")'
     dirty:
