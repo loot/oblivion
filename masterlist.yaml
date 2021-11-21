@@ -5481,7 +5481,7 @@ plugins:
       - 'AltStartwChangedMessages.esp'
       - 'ShiveringIslesStart.esp'
 
-  - name: 'Harvest \[Flora\]( - )?(Shivering Isles|DLCFrostcrag|DLCVileLair)?\.esp'
+  - name: 'Harvest \[Flora\]( - )?(Shivering Isles|DLCVileLair|DLCFrostcrag)?\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/2037/'
         name: 'Harvest Flora'
@@ -5493,35 +5493,30 @@ plugins:
     clean:
       - crc: 0xFA700811
         util: 'TES4Edit v4.0.4'
-  - name: 'Harvest [Flora] - Shivering Isles.esp'
+  - name: 'Harvest \[Flora\] - (Shivering Isles|DLCVileLair|DLCFrostcrag)\.esp'
     tag:
       - Deactivate
       - NoMerge
+  - name: 'Harvest [Flora] - Shivering Isles.esp'
     dirty:
       - <<: *quickClean
         crc: 0x05003A29
         util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 2
+  - name: 'Harvest [Flora] - DLCVileLair.esp'
+    clean:
+      - crc: 0x4C040612
+        util: 'TES4Edit v4.0.4'
   - name: 'Harvest [Flora] - DLCFrostcrag.esp'
     msg:
       - <<: *wildEdits
         subs: [ 'Remove the **Worldspace group** from **Harvest [Flora] - DLCFrostcrag.esp**.' ]
         condition: 'checksum("Harvest [Flora] - DLCFrostcrag.esp", ADFEEDB5) or checksum("Harvest [Flora] - DLCFrostcrag.esp", 6B5C5083)'
-    tag:
-      - Deactivate
-      - NoMerge
     dirty:
       - <<: *quickClean
         crc: 0xADFEEDB5
         util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 2
-  - name: 'Harvest [Flora] - DLCVileLair.esp'
-    tag:
-      - Deactivate
-      - NoMerge
-    clean:
-      - crc: 0x4C040612
-        util: 'TES4Edit v4.0.4'
 
   - name: 'Pitcher Plant and Lily Ingredients.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/15609/' ]
