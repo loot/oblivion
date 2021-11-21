@@ -6101,6 +6101,27 @@ plugins:
         util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 30
 
+  - name: 'Niben Bay Camp.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/50087/' ]
+    req: [ 'DLCShiveringIsles.esp' ]
+    msg:
+      - type: say
+        content:
+          - lang: en
+            text: 'This mod must be activated before you speak to Haskill for the first time.'
+    tag:
+      - Actors.AIPackages
+      - Actors.Stats
+      - Factions
+      - Invent.Add
+      - NPC.Class
+      - Scripts
+    clean:
+      - crc: 0x07B556E2
+        util: 'TES4Edit v4.0.4'
+      - crc: 0x01616A07
+        util: 'TES4Edit v4.0.4'
+
   - name: 'No psychic guards( harder)? v1\.2\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/11911/' ]
     msg:
