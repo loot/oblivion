@@ -4240,10 +4240,9 @@ plugins:
       - 'Enhanced Vegetation [125%].esp'
       - 'Enhanced Vegetation [150%].esp'
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'For this to work as intended, it''s necessary to raise the grass limit per texture (iMaxGrassTypesPerTexure) in the Oblivion ini - 5 should be more than enough.'
+      - <<: *requiresX
+        type: say
+        subs: [ 'INI setting `iMaxGrassTypesPerTexure=5`' ]
     tag: [ Graphics ]
     clean:
       - crc: 0xD967CD1E
