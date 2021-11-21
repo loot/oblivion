@@ -4239,7 +4239,16 @@ plugins:
       - 'Enhanced Vegetation [110%].esp'
       - 'Enhanced Vegetation [125%].esp'
       - 'Enhanced Vegetation [150%].esp'
+    msg:
+      - <<: *requiresX
+        type: say
+        subs: [ 'INI setting `iMaxGrassTypesPerTexure=5`' ]
     tag: [ Graphics ]
+    clean:
+      - crc: 0xD967CD1E
+        util: 'TES4Edit v4.0.4'
+      - crc: 0x4399F7C6
+        util: 'TES4Edit v4.0.4'
 
   - name: 'road+bridges.esp'
     url:
