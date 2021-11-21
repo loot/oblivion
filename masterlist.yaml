@@ -8032,6 +8032,32 @@ plugins:
         itm: 221
         udr: 3
 
+  - name: 'Bravil Waterfront.esp'
+    url:
+      - link: 'https://www.afkmods.com/index.php?/files/file/2387-bravil-waterfront/'
+        name: 'Bravil Waterfront (AFK Mods)'
+      - link: 'https://www.nexusmods.com/oblivion/mods/51357/'
+        name: 'Bravil Waterfront (Nexus Mods)'
+    req:
+      - *SilentVoice
+      - name: 'Vergayun.esp'
+        display: '[Vergayun (AFK Mods)](https://www.afkmods.com/index.php?/files/file/258-vergayun/) or [Vergayun (TES Alliance)](https://tesalliance.org/forums/index.php?/files/file/112-vergayun/)'
+        condition: 'checksum("Bravil Waterfront.esp", 58E9C0BF) and not file("Vergayun.esp")'
+    msg:
+      - <<: *useInstead
+        subs: [ '[Bravil Waterfront Vergayun Compatible ESP](https://www.nexusmods.com/oblivion/mods/51357/)' ]
+        condition: 'checksum("Bravil Waterfront.esp", 94F82363) and file("Vergayun.esp")'
+    tag:
+      - Actors.AIPackages
+      - Graphics
+      - Invent.Add
+      - Text
+    clean:
+      - crc: 0x94F82363
+        util: 'TES4Edit v4.0.4'
+      - crc: 0x58E9C0BF
+        util: 'TES4Edit v4.0.4'
+
   - name: 'BXX_Mines.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/8284/'
