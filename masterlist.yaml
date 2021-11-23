@@ -7766,7 +7766,12 @@ plugins:
         subs: [ 'Uncapped Skeleton Key ESP' ]
         condition: 'many("Uncapped Skeleton Key (N)?OBSE\.esp")'
   - name: 'Uncapped Skeleton Key OBSE.esp'
-    msg: [ *requiresOBSEv21 ]
+    msg:
+      - <<: *versionXofYorGreaterRequired
+        subs:
+          - '0.0.21.0'
+          - '[OBSE](https://obse.silverlock.org) v21+'
+        condition: 'not file("../obse_1_2_416.dll") or version("../obse_1_2_416.dll", "0.0.21.0", <)'
     clean:
       - crc: 0x69F819A6
         util: 'TES4Edit v4.0.4'
