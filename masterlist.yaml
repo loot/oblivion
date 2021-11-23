@@ -7759,6 +7759,31 @@ plugins:
     req: [ 'Oscuro''s_Oblivion_Overhaul.esp' ]
     inc: [ 'TreasureChest - ALEX.esp' ]
 
+  - name: 'Uncapped Skeleton Key (N)?OBSE\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/49131/' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Uncapped Skeleton Key ESP' ]
+        condition: 'many("Uncapped Skeleton Key (N)?OBSE\.esp")'
+  - name: 'Uncapped Skeleton Key OBSE.esp'
+    msg:
+      - <<: *versionXofYorGreaterRequired
+        subs:
+          - '0.0.21.0'
+          - '[OBSE](https://obse.silverlock.org) v21+'
+        condition: 'not file("../obse_1_2_416.dll") or version("../obse_1_2_416.dll", "0.0.21.0", <)'
+    clean:
+      - crc: 0x69F819A6
+        util: 'TES4Edit v4.0.4'
+  - name: 'Uncapped Skeleton Key NOBSE.esp'
+    msg:
+      - <<: *useInstead
+        subs: [ '[Uncapped Skeleton Key OBSE](https://www.nexusmods.com/oblivion/mods/49131/)' ]
+        condition: 'file("../obse_1_2_416.dll")'
+    clean:
+      - crc: 0x77BDA142
+        util: 'TES4Edit v4.0.4'
+
   - name: 'Weapons Of Morrowind( - Daedric Crescent)?\.esp'
     url:
       - 'https://www.nexusmods.com/oblivion/mods/45440/'
