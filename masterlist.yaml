@@ -7445,6 +7445,29 @@ plugins:
         util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 9
 
+  - name: 'Cloud Ruler Armory( - Spear Compatible)?\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/50334/' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Cloud Ruler Armory ESP' ]
+        condition: 'many("Cloud Ruler Armory( - Spear Compatible)?\.esp")'
+    tag:
+      - Invent.Add
+      - Invent.Change
+  - name: 'Cloud Ruler Armory.esp'
+    msg:
+      - <<: *useInstead
+        subs: [ '[Cloud Ruler Armory - Spear Compatible](https://www.nexusmods.com/oblivion/mods/50334/)' ]
+        condition: 'file("Spears!.esp") and not file("Cloud Ruler Armory - Spear Compatible.esp")'
+    clean:
+      - crc: 0xF1C703C7
+        util: 'TES4Edit v4.0.4'
+  - name: 'Cloud Ruler Armory - Spear Compatible.esp'
+    req: [ 'Spears!.esp' ]
+    clean:
+      - crc: 0x0EBDC088
+        util: 'TES4Edit v4.0.4'
+
   - name: 'ColourWheels Sexy Milk Maid HGEC.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/42339/' ]
     dirty:
