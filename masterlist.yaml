@@ -3187,10 +3187,12 @@ plugins:
         itm: 1
   - name: 'MinimalMagicEffectsLAME.esp'
     after:
+      - 'bgMagicDV.esp'
       - 'bgMagicEVShader.esp'
       - 'bgMagicDVShader.esp'
     req:
       - name: 'bgMagicEV.esp'
+        display: '[Less Annoying Magic Experience](https://www.nexusmods.com/oblivion/mods/20371/)'
         condition: 'not file("bgMagicDV.esp")'
     dirty:
       - <<: *quickClean
