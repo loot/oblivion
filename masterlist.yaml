@@ -3179,7 +3179,7 @@ plugins:
     msg:
       - <<: *useInstead
         subs: [ '[Magic and Enchantment Effects Overhaul for LAME compatibility](https://www.nexusmods.com/oblivion/mods/48128/)' ]
-        condition: 'file("bgMagicDV.esp") and not file("MinimalMagicEffectsLAME.esp") or file("bgMagicEV.esp") and not file("MinimalMagicEffectsLAME.esp")'
+        condition: 'file("bgMagic[ED]V\.esp") and not file("MinimalMagicEffectsLAME.esp")'
     dirty:
       - <<: *quickClean
         crc: 0xCCE47D97
@@ -3187,10 +3187,12 @@ plugins:
         itm: 1
   - name: 'MinimalMagicEffectsLAME.esp'
     after:
-      - 'bgMagicDVShader.esp'
+      - 'bgMagicDV.esp'
       - 'bgMagicEVShader.esp'
+      - 'bgMagicDVShader.esp'
     req:
       - name: 'bgMagicEV.esp'
+        display: '[Less Annoying Magic Experience](https://www.nexusmods.com/oblivion/mods/20371/)'
         condition: 'not file("bgMagicDV.esp")'
     dirty:
       - <<: *quickClean
