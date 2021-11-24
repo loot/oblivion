@@ -3179,7 +3179,7 @@ plugins:
     msg:
       - <<: *useInstead
         subs: [ '[Magic and Enchantment Effects Overhaul for LAME compatibility](https://www.nexusmods.com/oblivion/mods/48128/)' ]
-        condition: 'file("bgMagicDV.esp") and not file("MinimalMagicEffectsLAME.esp") or file("bgMagicEV.esp") and not file("MinimalMagicEffectsLAME.esp")'
+        condition: 'file("bgMagic[ED]V\.esp") and not file("MinimalMagicEffectsLAME.esp")'
     dirty:
       - <<: *quickClean
         crc: 0xCCE47D97
