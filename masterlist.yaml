@@ -7111,6 +7111,21 @@ plugins:
         util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 3
 
+  - name: 'The Ayleid Steps.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/16316/' ]
+    req: [ *SilentVoice ]
+    msg:
+      - <<: *versionXofYorGreaterRequired
+        subs:
+          - '0.0.21.0'
+          - '[OBSE](https://obse.silverlock.org) v21+'
+        condition: 'not file("../obse_1_2_416.dll") or version("../obse_1_2_416.dll", "0.0.21.0", <)'
+    dirty:
+      - <<: *quickClean
+        crc: 0xA4DE731C
+        util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 3
+
   - name: 'TheElderCouncil.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22595/' ]
     dirty:
@@ -20264,15 +20279,6 @@ plugins:
         <<: *dirtyPlugin
         itm: 12
         udr: 6
-  - name: 'The Ayleid Steps.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/16316' ]
-    dirty:
-      - crc: 0x6669b5b6
-        <<: *dirtyPlugin
-        udr: 1
-      - crc: 0xb0311481
-        <<: *dirtyPlugin
-        udr: 1
   - name: 'Ayleid Respawn v1.0 - For The Ayleid Steps.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/24416' ]
     msg:
