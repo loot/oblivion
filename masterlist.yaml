@@ -5699,11 +5699,11 @@ plugins:
 
 ###### Gameplay - Magic & Abilities ######
   - name: 'Av Latta Magicka\.es(m|p)'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/49096' ]
+    url: [ 'https://www.nexusmods.com/oblivion/mods/49096/' ]
   - name: 'Av Latta Magicka.esm'
     req:
       - name: 'OBSE/Plugins/AddActorValues.dll'
-        display: '[AddActorValues](https://www.nexusmods.com/oblivion/mods/33248)'
+        display: '[AddActorValues](https://www.nexusmods.com/oblivion/mods/33248/)'
       - *MagicExtender
       - *MenuQue
     inc:
@@ -5727,22 +5727,20 @@ plugins:
       - <<: *useInstead
         subs: [ '[Custom Spell Icons Updated](https://www.nexusmods.com/oblivion/mods/43709/)' ]
         condition: 'active("CustomSpellIcons.esm")'
+    tag: [ EffectStats ]
     clean:
       - crc: 0x42E9568D
-        util: 'TES4Edit v4.0.3h (Hotfix 1)'
+        util: 'TES4Edit v4.0.4'
   - name: 'Av Latta Magicka.esp'
+    tag: [ EffectStats ]
     clean:
       - crc: 0xBFAB0C50
-        util: 'TES4Edit v4.0.3h (Hotfix 1)'
+        util: 'TES4Edit v4.0.4'
   - name: 'Av Latta Magicka - Rebalance Complete.esp'
     after: [ 'Oblivion Content Restoration Project.esp' ]
-    tag:
-      - Graphics
-      - Names
-      - Stats
     clean:
       - crc: 0x828CCB47
-        util: 'TES4Edit v4.0.3h (Hotfix 1)'
+        util: 'TES4Edit v4.0.4'
   - name: 'Av Latta Magicka - (Enchantments|Potion|Vanilla Spell) Rebalance\.esp'
     msg:
       - <<: *alreadyInX
@@ -5751,7 +5749,7 @@ plugins:
   - name: 'Av Latta Magicka - Enchantments Rebalance.esp'
     clean:
       - crc: 0x4E032BA8
-        util: 'TES4Edit v4.0.3h (Hotfix 1)'
+        util: 'TES4Edit v4.0.4'
   - name: 'Av Latta Magicka - Potion Rebalance.esp'
     tag:
       - Graphics
@@ -5759,22 +5757,27 @@ plugins:
       - Stats
     clean:
       - crc: 0x6625D64C
-        util: 'TES4Edit v4.0.3h (Hotfix 1)'
+        util: 'TES4Edit v4.0.4'
   - name: 'Av Latta Magicka - Vanilla Spell Rebalance.esp'
     clean:
       - crc: 0x3C5AD45E
-        util: 'TES4Edit v4.0.3h (Hotfix 1)'
+        util: 'TES4Edit v4.0.4'
   - name: 'Av Latta Magicka - Birthsigns.esp'
     tag:
+      - Names
       - SpellStats
       - Text
     clean:
       - crc: 0x9E4A7F21
-        util: 'TES4Edit v4.0.3h (Hotfix 1)'
+        util: 'TES4Edit v4.0.4'
   - name: 'Av Latta Magicka - MigNoDeath Patch.esp'
     req: [ 'Av Latta Magicka.esm' ]
   - name: 'Druid Mod - OBME Patch.esp'
     inc: [ 'OBSE/Plugins/DruidModCustomSpellIcons.dll' ]
+  - name: 'Magic Visuals Overhaul - OBME Patch.esp'
+    clean:
+      - crc: 0x0A01D469
+        util: 'TES4Edit v4.0.4'
   - name: 'Paladin - OBME Patch.esp'
     inc: [ 'OBSE/Plugins/PaladinModCustomSpellIcons.dll' ]
 
