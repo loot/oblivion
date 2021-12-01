@@ -3049,6 +3049,26 @@ plugins:
         util: 'TES4Edit v4.0.4'
 
 ###### AudioVisual - Models & Textures ######
+  - name: 'Alluring Wine Bottles.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/34111/'
+        name: 'Alluring Wine Bottles'
+      - link: 'https://www.nexusmods.com/oblivion/mods/46789/'
+        name: 'Alluring Wine Bottles with Real Glass'
+    req:
+      - name: 'DLCShiveringIsles.esp'
+        condition: 'version("Alluring Wine Bottles.esp", "1.0", >=)'
+    tag:
+      - name: Graphics
+        condition: 'version("Alluring Wine Bottles.esp", "1.0", <)'
+      - name: MustBeActiveIfImported
+        condition: 'version("Alluring Wine Bottles.esp", "1.0", <)'
+    clean:
+      - crc: 0x22975E58
+        util: 'TES4Edit v4.0.4'
+      - crc: 0x4C055518
+        util: 'TES4Edit v4.0.4'
+
   - name: '(Book Jackets DLC|GrimbotsSpellTomes)\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/16247/'
@@ -17847,11 +17867,6 @@ plugins:
 
   - name: 'Alluring Potion Bottles v3.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/33531' ]
-    tag:
-      - Graphics
-      - MustBeActiveIfImported
-  - name: 'Alluring Wine Bottles.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/34111' ]
     tag:
       - Graphics
       - MustBeActiveIfImported
