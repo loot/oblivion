@@ -4639,6 +4639,18 @@ plugins:
   - name: 'Level Requires 20 Skill Increases.esp'
     after: [ 'Ascension - Push''s Tweaks.esp' ]
 
+  - name: 'Auto Update Leveled Items And Spells.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/39635/' ]
+    msg:
+      - <<: *versionXofYorGreaterRequired
+        subs:
+          - '0.0.20.0'
+          - '[OBSE](https://obse.silverlock.org) v20+'
+        condition: 'not file("../obse_1_2_416.dll") or version("../obse_1_2_416.dll", "0.0.20.0", <)'
+    clean:
+      - crc: 0x04967F21
+        util: 'TES4Edit v4.0.4'
+
   - name: 'BuryCorpse.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/43134/' ]
     msg: [ *requiresOBSEv20 ]
