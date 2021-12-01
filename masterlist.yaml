@@ -3111,6 +3111,20 @@ plugins:
       - crc: 0x2CEC0DB3
         util: 'TES4Edit v4.0.4'
 
+  - name: 'Goblin Totem Staff Icon.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/41058/' ]
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'Fighters Guild Quests' ]
+        condition: 'active("Fighters Guild Quests.esp")'
+    tag:
+      - Deactivate
+      - Graphics
+      - NoMerge
+    clean:
+      - crc: 0xC8558868
+        util: 'TES4Edit v4.0.4'
+
   - name: 'Heretic Robe Replacer.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/30331/' ]
     req: [ 'DLCShiveringIsles.esp' ]
