@@ -6707,7 +6707,10 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/41012/' ]
     req: [ 'DLCShiveringIsles.esp' ]
     inc: [ 'Quest For The Elements.esp' ]
-    tag: [ C.Regions ]
+    tag:
+      - C.Light
+      - C.Regions
+      - Graphics
     msg:
       - <<: *includesX
         type: error
@@ -6715,7 +6718,7 @@ plugins:
         condition: 'file("Tortuous Cavern.esp")'
     clean:
       - crc: 0x7BBB46E5
-        util: 'TES4Edit v4.0.3h (Hotfix 1)'
+        util: 'TES4Edit v4.0.4'
 
   - name: 'Gift of Kynareth.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/7825/' ]
