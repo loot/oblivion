@@ -2886,22 +2886,6 @@ plugins:
         util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 7
 
-  - name: '(One of a Kind Weapons|OoaKW - Staff of Worms)\.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/47749/' ]
-    tag: [ Graphics ]
-  - name: 'One of a Kind Weapons.esp'
-    msg:
-      - <<: *wildEdits
-        subs: [ 'Remove Creature **000855A4** from **One of a Kind Weapons.esp**.' ]
-        condition: 'checksum("One of a Kind Weapons.esp", 3CFE1D45) or checksum("One of a Kind Weapons.esp", BF48B2BE)'
-  - name: 'OoaKW - Staff of Worms.esp'
-    tag:
-      - Deactivate
-      - NoMerge
-    clean:
-      - crc: 0x66743350
-        util: 'TES4Edit v4.0.4'
-
   - name: 'Soolie''sBetterEnchantmentEffects.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/30489/' ]
     dirty:
@@ -3236,6 +3220,23 @@ plugins:
         crc: 0x7E3C3E3B
         util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
+
+  - name: '(One of a Kind Weapons|OoaKW - Staff of Worms)\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/47749/' ]
+    tag: [ Graphics ]
+  - name: 'One of a Kind Weapons.esp'
+    msg:
+      - <<: *wildEdits
+        subs: [ 'Remove Creature **000855A4** from **One of a Kind Weapons.esp**.' ]
+        condition: 'checksum("One of a Kind Weapons.esp", 3CFE1D45) or checksum("One of a Kind Weapons.esp", BF48B2BE)'
+    tag: [ MustBeActiveIfImported ]
+  - name: 'OoaKW - Staff of Worms.esp'
+    tag:
+      - Deactivate
+      - NoMerge
+    clean:
+      - crc: 0x66743350
+        util: 'TES4Edit v4.0.4b'
 
   - name: 'PotionReplacer.esp'
     url:
