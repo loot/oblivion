@@ -8961,6 +8961,11 @@ plugins:
       - <<: *obsolete
         subs: [ '[Let the People Drink](https://www.nexusmods.com/oblivion/mods/10223/)' ]
         condition: 'version("LetThePeopleDrink.esp", "2.7.0", <)'
+      - <<: *patch3rdParty
+        subs:
+          - 'Oblivion Character Overhaul'
+          - '[OCOv2 - Filter Patch for Mods](https://www.nexusmods.com/oblivion/mods/51379/)'
+        condition: 'active("Bashed Patch.*\.esp") and checksum("LetThePeopleDrink.esp", 3E6FB8E9) or checksum("LetThePeopleDrink.esp", 5F3AE31E) and active("Oblivion_Character_Overhaul.esp") and not file("OCOv2 - Filter Patch for Mods.esp")'
       - <<: *useVersion
         type: warn
         subs: [ 'Common Oblivion (Cobl)' ]
