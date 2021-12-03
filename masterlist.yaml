@@ -3143,6 +3143,17 @@ plugins:
       - crc: 0xE69585AB
         util: 'TES4Edit v4.0.4'
 
+  - name: 'Imperial Horse Armor.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/3352/' ]
+    msg:
+      - <<: *wildEdits
+        subs: [ 'Remove the **Dialog Topic group** from **Imperial Horse Armor.esp**.' ]
+        condition: 'checksum("Imperial Horse Armor.esp", 9A736B77)'
+    tag:
+      - Deactivate
+      - Graphics
+      - NoMerge
+
   - name: 'Knights - Book Jackets.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/27521/'
@@ -17720,9 +17731,6 @@ plugins:
   - name: 'TJ_HorseNames.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/1831' ]
     tag: [ Names ]
-  - name: 'Imperial Horse Armor.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/3352' ]
-    tag: [ Graphics ]
   - name: 'Mounted_Spellcasting.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/8962/' ]
     dirty:
