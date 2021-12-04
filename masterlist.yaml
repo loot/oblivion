@@ -3281,6 +3281,7 @@ plugins:
         name: 'GOSH - Gecko''s Oblivion Sound overHaul'
     tag: [ Sound ]
   - name: 'GOSH.esp'
+    after: [ 'Improved Fires and Flames - Increased Sound.esp' ]
     msg:
       - <<: *patch3rdParty
         subs:
@@ -3308,10 +3309,13 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/38061/'
         name: 'Improved Fires and Flames'
-    tag: [ Sound ]
+    tag:
+      - Deactivate
+      - NoMerge
+      - Sound
     clean:
       - crc: 0x054E19B7
-        util: 'TES4Edit v4.0.4'
+        util: 'TES4Edit v4.0.4b'
 
   - name: 'Symphony of Violence.esp'
     url:
