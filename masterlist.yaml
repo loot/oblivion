@@ -3056,6 +3056,29 @@ plugins:
       - crc: 0x4C055518
         util: 'TES4Edit v4.0.4'
 
+  - name: '(Better Wine SI|CM_Better Wine_SI)\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/14596/'
+        name: 'CM Better Wine - Shivering Isles'
+    req: [ 'DLCShiveringIsles.esp' ]
+    inc: [ 'Oscuro''s_Oblivion_Overhaul.esm' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'CM Better Wine - Shivering Isles ESP' ]
+        condition: 'many("(Better Wine SI|CM_Better Wine_SI)\.esp")'
+    tag:
+      - Deactivate
+      - Graphics
+      - NoMerge
+  - name: 'Better Wine SI.esp'
+    clean:
+      - crc: 0xFCF5459B
+        util: 'TES4Edit v4.0.4b'
+  - name: 'CM_Better Wine_SI.esp'
+    clean:
+      - crc: 0x1DC92B96
+        util: 'TES4Edit v4.0.4b'
+
   - name: '(Book Jackets DLC|GrimbotsSpellTomes)\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/16247/'
@@ -15174,9 +15197,6 @@ plugins:
           - lang: de
             text: 'Wahrscheinlich nicht kompatibel mit OOO. Ungetestet.'
         condition: *OOOCond
-  - name: '(CM_Better Wine_SI|Better Wine SI)\.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/14596' ]
-    inc: [ 'Oscuro''s_Oblivion_Overhaul.esm' ]
 
   - name: 'Bosmer Meat Mandate.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/7697' ]
