@@ -8050,8 +8050,8 @@ plugins:
     msg:
       - <<: *versionXofYorGreaterRequired
         subs:
-          - '0.0.10.0'
-          - '[OBSE](https://obse.silverlock.org) v10+'
+          - '10'
+          - '[OBSE](https://obse.silverlock.org)'
         condition: 'not file("../obse_1_2_416.dll") or version("../obse_1_2_416.dll", "0.0.10.0", <)'
     clean:
       - crc: 0x67510F53
