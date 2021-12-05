@@ -4841,12 +4841,7 @@ plugins:
 
   - name: 'Auto Update Leveled Items And Spells.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/39635/' ]
-    msg:
-      - <<: *versionXofYorGreaterRequired
-        subs:
-          - '0.0.20.0'
-          - '[OBSE](https://obse.silverlock.org) v20+'
-        condition: 'not file("../obse_1_2_416.dll") or version("../obse_1_2_416.dll", "0.0.20.0", <)'
+    msg: [ *versionXofYorGreaterRequiredOBSEv20 ]
     clean:
       - crc: 0x04967F21
         util: 'TES4Edit v4.0.4'
@@ -7353,12 +7348,7 @@ plugins:
   - name: 'The Ayleid Steps.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/16316/' ]
     req: [ *SilentVoice ]
-    msg:
-      - <<: *versionXofYorGreaterRequired
-        subs:
-          - '0.0.21.0'
-          - '[OBSE](https://obse.silverlock.org) v21+'
-        condition: 'not file("../obse_1_2_416.dll") or version("../obse_1_2_416.dll", "0.0.21.0", <)'
+    msg: [ *versionXofYorGreaterRequiredOBSEv21 ]
     dirty:
       - <<: *quickClean
         crc: 0xA4DE731C
@@ -8085,12 +8075,7 @@ plugins:
         subs: [ 'Uncapped Skeleton Key ESP' ]
         condition: 'many("Uncapped Skeleton Key (N)?OBSE\.esp")'
   - name: 'Uncapped Skeleton Key OBSE.esp'
-    msg:
-      - <<: *versionXofYorGreaterRequired
-        subs:
-          - '0.0.21.0'
-          - '[OBSE](https://obse.silverlock.org) v21+'
-        condition: 'not file("../obse_1_2_416.dll") or version("../obse_1_2_416.dll", "0.0.21.0", <)'
+    msg: [ *versionXofYorGreaterRequiredOBSEv21 ]
     clean:
       - crc: 0x69F819A6
         util: 'TES4Edit v4.0.4'
@@ -8130,12 +8115,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/11892/'
         name: 'Smokeable Pipe Mod'
-    msg:
-      - <<: *versionXofYorGreaterRequired
-        subs:
-          - '10'
-          - '[OBSE](https://obse.silverlock.org)'
-        condition: 'not file("../obse_1_2_416.dll") or version("../obse_1_2_416.dll", "0.0.10.0", <)'
+    msg: [ *versionXofYorGreaterRequiredOBSEv10 ]
     clean:
       - crc: 0x67510F53
         util: 'TES4Edit v4.0.4b'
