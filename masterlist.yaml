@@ -1309,6 +1309,10 @@ common:
     display: '[OBSE](https://obse.silverlock.org)'
 
   # OBSE Plugins
+  - &AddActorValues
+    name: 'OBSE/Plugins/AddActorValues.dll'
+    display: '[AddActorValues](https://www.nexusmods.com/oblivion/mods/33248/)'
+
   - &EnhancedMusicControl
     name: 'OBSE/Plugins/EnhancedMusicControl.dll'
     display: '[Enhanced Music & Control](https://www.nexusmods.com/oblivion/mods/19772)'
@@ -5878,8 +5882,7 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/49096/' ]
   - name: 'Av Latta Magicka.esm'
     req:
-      - name: 'OBSE/Plugins/AddActorValues.dll'
-        display: '[AddActorValues](https://www.nexusmods.com/oblivion/mods/33248/)'
+      - *AddActorValues
       - *MagicExtender
       - *MenuQue
     inc:
@@ -15640,8 +15643,7 @@ plugins:
   - name: 'MigStatsCheck.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/44844' ]
     req:
-      - name: 'OBSE/Plugins/AddActorValues.dll'
-        display: '[AddActorValues](https://www.nexusmods.com/oblivion/mods/33248)'
+      - *AddActorValues
       - *MenuQue
     msg: [ *versionXofYorGreaterRequiredOBSEv18 ]
   - name: 'More_Animals.esp'
@@ -23304,8 +23306,7 @@ plugins:
     msg: [ *versionXofYorGreaterRequiredOBSEv11 ]
   - name: 'Sneaking Detection Recalibrated.esp'
     req:
-      - name: 'OBSE/Plugins/AddActorValues.dll'
-        display: '[AddActorValues](https://www.nexusmods.com/oblivion/mods/33248)'
+      - <<: *AddActorValues
         condition: 'version("Sneaking Detection Recalibrated.esp","4.0",==)'
   - name: 'DMRequirements.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/23005' ]
