@@ -8045,10 +8045,9 @@ plugins:
   - name: 'Skyrimesque Counts and Countesses.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/43420/' ]
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Requires the meshes and textures from [Slof''s Victorian Clothes](https://www.nexusmods.com/oblivion/mods/49002/).'
+      - <<: *requiresResources
+        subs: [ '[Slof''s Victorian Clothes](https://www.nexusmods.com/oblivion/mods/49002/)' ]
+        condition: 'not file("meshes/asvictorian") or not file("textures/asvictorian") or not file("textures/menus/icons/asvictorian")'
     tag:
       - Invent.Add
       - Invent.Remove
