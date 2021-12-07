@@ -5741,7 +5741,18 @@ plugins:
       - Graphics
       - Scripts
   - name: 'Harvest [Flora].esp'
-    msg: [ *alsoUseEngineBugFixes ]
+    msg:
+      - <<: *patchProvided
+        subs: [ 'Shivering Isles' ]
+        condition: 'active("DLCShiveringIsles.esp") and not file("Harvest [Flora] - Shivering Isles.esp")'
+      - <<: *patchProvided
+        subs: [ 'Vile Lair' ]
+        condition: 'active("DLCVileLair.esp") and not file("Harvest [Flora] - DLCVileLair.esp")'
+      - <<: *patchProvided
+        subs: [ 'Wizard''s Tower' ]
+        condition: 'active("DLCFrostcrag.esp") and not file("Harvest [Flora] - DLCFrostcrag.esp")'
+      - *alsoUseEngineBugFixes
+    tag: [ MustBeActiveIfImported ]
     clean:
       - crc: 0xFA700811
         util: 'TES4Edit v4.0.4'
@@ -5750,6 +5761,7 @@ plugins:
       - Deactivate
       - NoMerge
   - name: 'Harvest [Flora] - Shivering Isles.esp'
+    req: [ 'DLCShiveringIsles.esp' ]
     dirty:
       - <<: *quickClean
         crc: 0x05003A29
