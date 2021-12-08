@@ -7149,6 +7149,14 @@ plugins:
       - <<: *obsolete
         subs: [ '[MannimarcoRevisitedv11](https://www.nexusmods.com/oblivion/mods/14200/)' ]
         condition: 'checksum("MannimarcoRevisited.esp", E8F62FC0) or checksum("MannimarcoRevisited.esp", A43B9E7B) or checksum("MannimarcoRevisited.esp", E2BE41DA) or checksum("MannimarcoRevisited.esp", 3FDE5B96)'
+      - <<: *patch3rdParty
+        subs:
+          - 'Unofficial Oblivion Patch'
+          - '[Mannimarco Revisited UOP Patch](https://www.nexusmods.com/oblivion/mods/49272/)'
+        condition: 'active("Unofficial Oblivion Patch.esp") and not file("MannimarcoRevisited UOP Patch.esp")'
+      - <<: *requiresX
+        type: say
+        subs: [ 'INI setting `bBorderRegionsEnabled=0`' ]
     tag:
       - Actors.ACBS
       - Actors.AIData
