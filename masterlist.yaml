@@ -5248,15 +5248,20 @@ plugins:
         util: 'TES4Edit v4.0.3'
 
   - name: 'Oblivion Uncut.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/47191/' ]
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/47191/'
+        name: 'Oblivion Nouveau Uncut'
     after:
       - 'Oaksdale.esp'
       - 'OLDArchfiend.esp'
     tag:
       - Actors.Anims
+      - Actors.RecordFlags
       - Actors.Spells
+      - C.Light
       - C.Music
       - C.RecordFlags
+      - EffectStats
       - Graphics
       - Invent.Change
       - NPC.Class
@@ -5271,13 +5276,9 @@ plugins:
       - Text
     dirty:
       - <<: *quickClean
-        crc: 0xFD791DFE
-        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 54
-      - <<: *quickClean
-        crc: 0x7F574A69
-        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 58
+        crc: 0x57575A29
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 52
 
   - name: 'Respawning Varla & Welkynd Stones.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/29007/' ]
