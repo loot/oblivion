@@ -5742,6 +5742,7 @@ plugins:
       - Scripts
   - name: 'Harvest [Flora].esp'
     msg:
+      - *alsoUseEngineBugFixes
       - <<: *patchProvided
         subs: [ 'Shivering Isles' ]
         condition: 'active("DLCShiveringIsles.esp") and not file("Harvest [Flora] - Shivering Isles.esp")'
@@ -5751,7 +5752,6 @@ plugins:
       - <<: *patchProvided
         subs: [ 'Wizard''s Tower' ]
         condition: 'active("DLCFrostcrag.esp") and not file("Harvest [Flora] - DLCFrostcrag.esp")'
-      - *alsoUseEngineBugFixes
     tag: [ MustBeActiveIfImported ]
     clean:
       - crc: 0xFA700811
