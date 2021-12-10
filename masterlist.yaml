@@ -9327,6 +9327,35 @@ plugins:
       - crc: 0x7BB722C0
         util: 'TES4Edit v4.0.3'
 
+  - name: '(Imperial Nobility|Legacy of Faran)\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/42883/'
+        name: 'Imperial Nobility'
+  - name: 'Imperial Nobility.esp'
+    req: [ 'DLCShiveringIsles.esp' ]
+    inc: [ 'MTCExpandedVillages.esp' ]
+    msg:
+      - <<: *wildEdits
+        subs: [ 'Unnecessarily renames records, use the TES4Edit script **Restore record names from master** to fix them.' ]
+        condition: 'checksum("Imperial Nobility.esp", 1569B1E5) or checksum("Imperial Nobility.esp", 9C5A0881)'
+    dirty:
+      - <<: *quickClean
+        crc: 0x1569B1E5
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 75
+        udr: 801
+      - <<: *quickClean
+        crc: 0x44E3CBEC
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 13
+      - <<: *quickClean
+        crc: 0x0C1CA1BF
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 88
+        udr: 801
+  - name: 'Legacy of Faran.esp'
+    msg: [ *obsolete ]
+
   - name: 'LetThePeopleDrink.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/10223/' ]
     group: *earlyLoadersGroup
@@ -20051,13 +20080,6 @@ plugins:
       - Graphics
       - Invent
 
-  - name: 'Legacy of Faran.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/42883' ]
-    dirty:
-      - crc: 0xe2d1db87
-        <<: *dirtyPlugin
-        itm: 522
-        udr: 31
   - name: 'Legends - Baleful Eye.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/16203' ]
     msg: [ *versionXofYorGreaterRequiredOBSEv20 ]
