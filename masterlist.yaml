@@ -5088,8 +5088,9 @@ plugins:
         name: 'LTD Vampire Overhaul'
   - name: 'LTDVampireOverhaul.esp'
     dirty:
-      - crc: 0xbc307c34
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xDFF0ADFE
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 53
         udr: 10
   - name: 'ScriptEffectSubduer.esp'
