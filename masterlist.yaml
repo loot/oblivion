@@ -7669,6 +7669,27 @@ plugins:
       - crc: 0x67F009AB
         util: 'TES4Edit v4.0.4'
 
+  - name: 'Werewolf-Legends.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/24453/'
+        name: 'Werewolf - Legends of the North - Version 2'
+    msg:
+      - <<: *wildEdits
+        subs: [ 'Remove the Public SNAM - Music subrecord from Tamriel in 0000003C.' ]
+        condition: 'checksum("Werewolf-Legends.esp", 505B486D) or checksum("Werewolf-Legends.esp", 9F89DB0E)'
+    tag: [ C.Music ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x505B486D
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 4
+        udr: 1
+      - <<: *quickClean
+        crc: 0x865E7E43
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 4
+        udr: 1
+
 ###### Gameplay - Skills & Leveling ######
   - name: 'MigFEA.esp'
     url:
@@ -23005,13 +23026,6 @@ plugins:
   - name: 'Vincente Valtieri Imperial.esp'
     tag: [ Voice-M ]
 
-  - name: 'Werewolf-Legends.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/24453' ]
-    dirty:
-      - crc: 0x505b486d
-        <<: *dirtyPlugin
-        itm: 4
-        udr: 1
   - name: 'kuerteeDeathHasPenalties.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22121' ]
     msg:
