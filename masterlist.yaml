@@ -5082,6 +5082,32 @@ plugins:
         util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 5
 
+  - name: '(LTDVampireOverhaul|ScriptEffectSubduer)\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/27329/'
+        name: 'LTD Vampire Overhaul'
+  - name: 'LTDVampireOverhaul.esp'
+    msg:
+      - <<: *alsoUseSilentVoice
+        condition: 'not file("OBSE/Plugins/Elys_USV.dll") and not file("OBSE/Plugins/voicefile_redirector.dll") and not file("Sound/Voice/LTDVampireOverhaul.esp")'
+      - *versionXofYorGreaterRequiredOBSEv14
+    tag: [ Relations.Add ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xDFF0ADFE
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 53
+        udr: 10
+  - name: 'ScriptEffectSubduer.esp'
+    inc:
+      - 'Duke Patricks - BASIC Script Effect Silencer.esp'
+      - 'Duke Patricks - BASIC Script Effect Silencer NIF REMOVED.esp'
+      - 'Script effect - Bash icon.esp'
+    msg: [ *optional ]
+    tag:
+      - Graphics
+      - Sound
+
   - name: 'Mage_Guild_Teleport.esp'
     url:
       - 'https://www.nexusmods.com/oblivion/mods/2494/'
@@ -23124,13 +23150,6 @@ plugins:
       - Actors.Stats
       - Relations.Change
 
-  - name: 'LTDVampireOverhaul.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/27329' ]
-    dirty:
-      - crc: 0xbc307c34
-        <<: *dirtyPlugin
-        itm: 53
-        udr: 10
   - name: 'MIVs Vampire Overhaul RUS.esp'
     inc: [ 'Unholy Darkness.esp' ]
   - name: 'MIVs Vampire Overhaul ENG.esp'
@@ -23814,9 +23833,7 @@ plugins:
     tag: [ Graphics ]
   - name: 'Script effect - Bash icon.esp'
     tag: [ Graphics ]
-  - name: 'ScriptEffectSubduer.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/27329' ]
-    tag: [ Graphics ]
+
   - name: 'Useful Houses.esp'
     req: [ *MenuQue ]
   - name: 'Vanilla_Race_Overhaul.esp'
