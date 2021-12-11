@@ -5091,6 +5091,7 @@ plugins:
       - <<: *alsoUseSilentVoice
         condition: 'not file("OBSE/Plugins/Elys_USV.dll") and not file("OBSE/Plugins/voicefile_redirector.dll") and not file("Sound/Voice/LTDVampireOverhaul.esp")'
       - *versionXofYorGreaterRequiredOBSEv14
+    tag: [ Relations.Add ]
     dirty:
       - <<: *quickClean
         crc: 0xDFF0ADFE
