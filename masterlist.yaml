@@ -5088,6 +5088,8 @@ plugins:
         name: 'LTD Vampire Overhaul'
   - name: 'LTDVampireOverhaul.esp'
     msg:
+      - <<: *alsoUseSilentVoice
+        condition: 'not file("OBSE/Plugins/Elys_USV.dll") and not file("OBSE/Plugins/voicefile_redirector.dll") and not file("Sound/Voice/LTDVampireOverhaul.esp")'
       - *versionXofYorGreaterRequiredOBSEv14
     dirty:
       - <<: *quickClean
