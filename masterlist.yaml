@@ -6039,6 +6039,20 @@ plugins:
         util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 65
 
+  - name: 'za_bankmod.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/3172/'
+        name: 'Bank of Cyrodiil'
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'Better Cities' ]
+        condition: 'active("Better Cities Resources.esm")'
+    dirty:
+      - <<: *quickClean
+        crc: 0x26D83890
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
+
 ###### Gameplay - Magic & Abilities ######
   - name: 'Av Latta Magicka\.es(m|p)'
     url: [ 'https://www.nexusmods.com/oblivion/mods/49096/' ]
@@ -21290,19 +21304,6 @@ plugins:
       - crc: 0x7534a8f1
         <<: *dirtyPlugin
         itm: 6
-  - name: 'za_bankmod.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/3172' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'For use with Better Cities use replacing fix for BBC.'
-          - lang: de
-            text: 'Für die Nutzung von Better Cities, nutzen Sie replacing fix for BBC.'
-    dirty:
-      - crc: 0x831eb9fa
-        <<: *dirtyPlugin
-        itm: 5
   - name: 'zDangerSense.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/6369' ]
     dirty:
