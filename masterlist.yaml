@@ -10954,6 +10954,14 @@ plugins:
             text: 'This file is not required when using Wrye Bash''s Bashed Patch v309+.'
         condition: 'file("Bashed Patch.*\.esp")'
 
+  - name: 'Servant of the Dawn DLC Compatibility Patch.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/38223/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xD2A98D49
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 32
+
   - name: 'Sutch Reborn Lighthouse Fix( UL)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/27097/' ]
     msg:
