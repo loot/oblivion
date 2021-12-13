@@ -7501,6 +7501,37 @@ plugins:
         util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 3
 
+  - name: 'Servant of the Dawn.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/6855/' ]
+    inc: [ 'HeartOftheDead.esp' ]
+    msg:
+      - <<: *patch3rdParty
+        subs:
+          - 'Fighter''s Stronghold and Knights of the Nine'
+          - '[Servant of the Dawn DLC Compatibility Patch](https://www.nexusmods.com/oblivion/mods/38223/)'
+        condition: 'active("DLCBattlehornCastle.esp") and active("Knights.esp") and not file("Servant of the Dawn DLC Compatibility Patch.esp")'
+      - <<: *patch3rdParty
+        subs:
+          - 'HESU Dive Rock'
+          - '[The Hesu Mod Collection](https://www.afkmods.com/index.php?/files/file/2344-the-hesu-mod-collection/)'
+        condition: 'active("HESU DiveRock.esp") and not file("SOTD-DiveRock Patch.esp")'
+    tag:
+      - Actors.AIData
+      - Actors.AIPackages
+      - Relations.Add
+      - Scripts
+    dirty:
+      - <<: *quickClean
+        crc: 0xC1F525FD
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 42
+        udr: 50
+      - <<: *quickClean
+        crc: 0x10560774
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 42
+        udr: 50
+
   - name: 'SM Plugin Refurbish.*\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/11474/'
