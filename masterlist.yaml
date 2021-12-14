@@ -3191,21 +3191,28 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/45859/'
         name: 'Seamless - OCOv2'
-  - name: 'EVE_StockEquipmentReplacer.esp'
+  - name: 'EVE_StockEquipmentReplacer(4FCOM|4MMM| for OOO)?\.esp'
     msg:
       - <<: *useOnlyOneX
         subs: [ 'EVE_StockEquipmentReplacer ESP' ]
         condition: 'many("EVE_StockEquipmentReplacer(4FCOM|4MMM| for OOO)?\.esp")'
       - <<: *useVersion
         type: warn
-        subs: [ 'Martigen''s Monster Mod' ]
-        condition: 'active("Mart''s Monster Mod.esm") and not file("EVE_StockEquipmentReplacer4MMM.esp")'
-      - <<: *useVersionOOO
-        condition: 'active("Oscuro''s_Oblivion_Overhaul.esm") and not file("EVE_StockEquipmentReplacer for OOO.esp")'
+        subs: [ '[FCOM Convergence](https://www.nexusmods.com/oblivion/mods/24078/)' ]
+        condition: 'active("FCOM_Convergence.esm") and not file("EVE_StockEquipmentReplacer4FCOM.esp")'
+      - <<: *useVersion
+        type: warn
+        subs: [ '[Martigen''s Monster Mod](https://www.nexusmods.com/oblivion/mods/24078/)' ]
+        condition: 'active("Mart''s Monster Mod.esm") and not active("Oscuro''s_Oblivion_Overhaul.esm") and not file("EVE_StockEquipmentReplacer4MMM.esp")'
+      - <<: *useVersion
+        type: warn
+        subs: [ '[Oscuro''s Oblivion Overhaul](https://www.nexusmods.com/oblivion/mods/24078/)' ]
+        condition: 'active("Oscuro''s_Oblivion_Overhaul.esm") and not active("Mart''s Monster Mod.esm") and not file("EVE_StockEquipmentReplacer for OOO.esp")'
     tag:
       - Deactivate
       - NoMerge
-      - Stats
+  - name: 'EVE_StockEquipmentReplacer.esp'
+    tag: [ Stats ]
     clean:
       - crc: 0x02EC9CA3
         util: 'TES4Edit v4.0.4b'
@@ -3231,13 +3238,6 @@ plugins:
       - crc: 0x2FA07B05
         util: 'TES4Edit v4.0.4b'
   - name: 'EVE_StockEquipmentReplacer4FCOM.esp'
-    msg:
-      - <<: *useOnlyOneX
-        subs: [ 'EVE_StockEquipmentReplacer ESP' ]
-        condition: 'many("EVE_StockEquipmentReplacer(4FCOM|4MMM| for OOO)?\.esp")'
-    tag:
-      - Deactivate
-      - NoMerge
     dirty:
       - <<: *quickClean
         crc: 0x761D67A5
@@ -3245,24 +3245,10 @@ plugins:
         itm: 1
   - name: 'EVE_StockEquipmentReplacer4MMM.esp'
     req: [ 'Mart''s Monster Mod.esm' ]
-    msg:
-      - <<: *useOnlyOneX
-        subs: [ 'EVE_StockEquipmentReplacer ESP' ]
-        condition: 'many("EVE_StockEquipmentReplacer(4FCOM|4MMM| for OOO)?\.esp")'
-    tag:
-      - Deactivate
-      - NoMerge
     clean:
       - crc: 0x9F65E062
         util: 'TES4Edit v4.0.4b'
   - name: 'EVE_StockEquipmentReplacer for OOO.esp'
-    msg:
-      - <<: *useOnlyOneX
-        subs: [ 'EVE_StockEquipmentReplacer ESP' ]
-        condition: 'many("EVE_StockEquipmentReplacer(4FCOM|4MMM| for OOO)?\.esp")'
-    tag:
-      - Deactivate
-      - NoMerge
     dirty:
       - <<: *quickClean
         crc: 0xD71907D9
