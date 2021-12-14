@@ -3200,9 +3200,7 @@ plugins:
         type: warn
         subs: [ 'Martigen''s Monster Mod' ]
         condition: 'active("Mart''s Monster Mod.esm") and not file("EVE_StockEquipmentReplacer4MMM.esp")'
-      - <<: *useVersion
-        type: warn
-        subs: [Oscuro''s Oblivion Overhaul]
+      - <<: *useVersionOOO
         condition: 'active("Oscuro''s_Oblivion_Overhaul.esm") and not file("EVE_StockEquipmentReplacer for OOO.esp")'
     tag:
       - Deactivate
