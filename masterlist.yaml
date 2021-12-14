@@ -3335,14 +3335,14 @@ plugins:
       - crc: 0xE5BCCA66
         util: 'TES4Edit v4.0.4'
 
-  - name: '(Knights-OpenCrusaderHelm|EVE_Knights-OpenCrusaderHelm)\.esp'
+  - name: '(EVE_)?Knights-OpenCrusaderHelm\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/49319/'
         name: 'Knights of the Nine Open Crusader Helm'
     msg:
       - <<: *useOnlyOneX
         subs: [ 'Knights of the Nine Open Crusader Helm ESP' ]
-        condition: 'many("(Knights-OpenCrusaderHelm|EVE_Knights-OpenCrusaderHelm)\.esp")'
+        condition: 'many("(EVE_)?Knights-OpenCrusaderHelm\.esp")'
     tag:
       - Deactivate
       - Graphics
