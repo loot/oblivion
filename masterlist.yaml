@@ -3183,42 +3183,91 @@ plugins:
       - crc: 0x3D0FE375
         util: 'TES4Edit v4.0.4b'
 
-  - name: 'EVE_KnightsoftheNine.esp'
+  - name: '(EVE_.*|Armamentium female|ArtifactsFemaleArmor|Fransfemale)\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/24078/'
         name: 'EVE HGEC Eyecandy Variants Expansion'
+  - name: 'EVE_(StockEquipmentReplacer|ShiveringIslesEasterEggs|KnightsoftheNine)\.esp'
+    url:
       - link: 'https://www.nexusmods.com/oblivion/mods/45859/'
         name: 'Seamless - OCOv2'
+  - name: 'EVE_StockEquipmentReplacer(4FCOM|4MMM| for OOO)?\.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'EVE_StockEquipmentReplacer ESP' ]
+        condition: 'many("EVE_StockEquipmentReplacer(4FCOM|4MMM| for OOO)?\.esp")'
+      - <<: *useVersion
+        type: warn
+        subs: [ '[FCOM Convergence](https://www.nexusmods.com/oblivion/mods/24078/)' ]
+        condition: 'active("FCOM_Convergence.esm") and not file("EVE_StockEquipmentReplacer4FCOM.esp")'
+      - <<: *useVersion
+        type: warn
+        subs: [ '[Martigen''s Monster Mod](https://www.nexusmods.com/oblivion/mods/24078/)' ]
+        condition: 'active("Mart''s Monster Mod.esm") and not active("Oscuro''s_Oblivion_Overhaul.esm") and not file("EVE_StockEquipmentReplacer4MMM.esp")'
+      - <<: *useVersion
+        type: warn
+        subs: [ '[Oscuro''s Oblivion Overhaul](https://www.nexusmods.com/oblivion/mods/24078/)' ]
+        condition: 'active("Oscuro''s_Oblivion_Overhaul.esm") and not active("Mart''s Monster Mod.esm") and not file("EVE_StockEquipmentReplacer for OOO.esp")'
+    tag:
+      - Deactivate
+      - NoMerge
+  - name: 'EVE_StockEquipmentReplacer.esp'
+    tag: [ Stats ]
+    clean:
+      - crc: 0x02EC9CA3
+        util: 'TES4Edit v4.0.4b'
+  - name: 'EVE_ShiveringIslesEasterEggs.esp'
+    req: [ 'DLCShiveringIsles.esp' ]
+    clean:
+      - crc: 0x9409DABA
+        util: 'TES4Edit v4.0.4b'
+  - name: 'EVE_KnightsoftheNine.esp'
     tag:
       - Deactivate
       - Graphics
       - NoMerge
     clean:
       - crc: 0xA28C2C54
-        util: 'TES4Edit v4.0.4'
-
-  - name: 'EVE_StockEquipmentReplacer.esp'
-    url:
-      - link: 'https://www.nexusmods.com/oblivion/mods/24078/'
-        name: 'EVE HGEC Eyecandy Variants Expansion'
-      - link: 'https://www.nexusmods.com/oblivion/mods/45859/'
-        name: 'Seamless - OCOv2'
-    inc:
-      - 'Mart''s Monster Mod.esm'
-      - 'Oscuro''s_Oblivion_Overhaul.esm'
+        util: 'TES4Edit v4.0.4b'
+  - name: 'EVE_KhajiitFix.esp'
+    inc: [ 'Oblivion_Character_Overhaul.esp' ]
+    tag:
+      - Deactivate
+      - NoMerge
+    clean:
+      - crc: 0x2FA07B05
+        util: 'TES4Edit v4.0.4b'
+  - name: 'EVE_StockEquipmentReplacer4FCOM.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x761D67A5
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1
+  - name: 'EVE_StockEquipmentReplacer4MMM.esp'
+    req: [ 'Mart''s Monster Mod.esm' ]
+    clean:
+      - crc: 0x9F65E062
+        util: 'TES4Edit v4.0.4b'
+  - name: 'EVE_StockEquipmentReplacer for OOO.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0xD71907D9
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1
+  - name: 'Armamentium female.esp'
+    tag: [ Deactivate ]
+    clean:
+      - crc: 0x13C12334
+        util: 'TES4Edit v4.0.4b'
+  - name: 'ArtifactsFemaleArmor.esp'
     tag:
       - Deactivate
       - Graphics
       - NoMerge
-      - Stats
     clean:
-      - crc: 0x02EC9CA3
-        util: 'TES4Edit v4.0.4'
-
+      - crc: 0xABCCD7AE
+        util: 'TES4Edit v4.0.4b'
   - name: 'Fransfemale.esp'
-    url:
-      - link: 'https://www.nexusmods.com/oblivion/mods/24078/'
-        name: 'EVE HGEC Eyecandy Variants Expansion'
     tag:
       - Deactivate
       - Graphics
@@ -8239,17 +8288,6 @@ plugins:
         crc: 0xF9BC1411
         util: '[TES4Edit v4.0.3j (RC2 for 4.0.4)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 8
-
-  - name: 'EVE_ShiveringIslesEasterEggs.esp'
-    url:
-      - link: 'https://www.nexusmods.com/oblivion/mods/24078/'
-        name: 'EVE HGEC Eyecandy Variants Expansion'
-      - link: 'https://www.nexusmods.com/oblivion/mods/45859/'
-        name: 'Seamless - OCOv2'
-    req: [ 'DLCShiveringIsles.esp' ]
-    clean:
-      - crc: 0x9409DABA
-        util: 'TES4Edit v4.0.4b'
 
   - name: 'GrayFoxOutfit( DV)?\.esp'
     url:
@@ -18076,11 +18114,6 @@ plugins:
     tag:
       - Graphics
       - NoMerge
-  - name: 'Armamentium female.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/24078/' ]
-    tag:
-      - Graphics
-      - NoMerge
   - name: 'Bloodrayne Armor.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/20623' ]
     dirty:
@@ -18998,42 +19031,6 @@ plugins:
       - C.Owner
       - Names
       - Relations
-  - name: 'EVE_StockEquipmentReplacer4FCOM.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/24078/' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'For FCOM only, do not use with OOO/MMM or Eve_Stockequipmentreplacer.esp.'
-          - lang: de
-            text: 'Nur Für FCOM, Nit mit OOO/MMM oder Eve_Stockequipmentreplacer.esp nutzen.'
-    tag:
-      - Graphics
-      - NoMerge
-  - name: 'EVE_StockEquipmentReplacer for OOO.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/24078/' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'For OOO, do not use with MMM/FCOM or EVE_stockequipmentreplacer.esp.'
-          - lang: de
-            text: 'Nur Für OOO, Nicht mit MMM/FCOM oder Eve_Stockequipmentreplacer.esp nutzen.'
-    tag:
-      - Graphics
-      - NoMerge
-  - name: 'EVE_StockEquipmentReplacer4MMM.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/24078/' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'For MMM, do not use with OOO/FCOM or EVE_stockequipmentreplacer.esp'
-          - lang: de
-            text: 'Nur Für MMM, Nicht mit OOO/FCOM oder Eve_Stockequipmentreplacer.esp nutzen.'
-    tag:
-      - Graphics
-      - NoMerge
   - name: 'Diverse Imperial Armor v1.1.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/6452' ]
     inc:
@@ -19620,11 +19617,6 @@ plugins:
         util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         udr: 1
 
-  - name: 'ArtifactsFemaleArmor.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/24078/' ]
-    tag:
-      - Graphics
-      - NoMerge
   - name: 'DMRA BBB Artifacts Complete.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/42417' ]
     inc: [ 'dmra_bbb_artifacts.esp' ]
@@ -26180,11 +26172,6 @@ plugins:
     tag:
       - Body-Size-F
       - Body-Size-M
-  - name: 'EVE_KhajiitFix.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/24078/' ]
-    tag:
-      - Body-F
-      - Body-Size-F
   - name: 'khajiittextfix.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/40048/' ]
     tag:
