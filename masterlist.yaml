@@ -9952,6 +9952,31 @@ plugins:
         util: '[TES4Edit v4.0.3j (RC2 for 4.0.4)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 9
 
+  - name: 'sunk ships.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/13467/'
+        name: 'Ship Wrecks'
+    msg:
+      - <<: *wildEdits
+        subs: [ 'Remove **00033569**, **000CA158**, **00015C3D**, & **00006622** from **sunk ships.esp**.' ]
+        condition: 'checksum("sunk ships.esp", E238F1EC) or checksum("sunk ships.esp", 3D7DA867)'
+    tag:
+      - Actors.RecordFlags
+      - C.Music
+      - C.Name
+      - C.Water
+    dirty:
+      - <<: *quickClean
+        crc: 0xE238F1EC
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 131
+        udr: 34
+      - <<: *quickClean
+        crc: 0x9C91D9B1
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 131
+        udr: 34
+
   - name: 'Sutch Village.esp'
     url:
       - 'https://www.afkmods.com/index.php?/files/file/256-sutch-village/'
@@ -20983,13 +21008,6 @@ plugins:
         <<: *dirtyPlugin
         itm: 97
         udr: 4
-  - name: 'sunk ships.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/13467' ]
-    dirty:
-      - crc: 0xe238f1ec
-        <<: *dirtyPlugin
-        itm: 126
-        udr: 34
   - name: 'Sins_of_the_Dream.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/28251' ]
     dirty:
