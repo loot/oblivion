@@ -4350,6 +4350,16 @@ plugins:
         subs: [ 'Personal Pack Guars color ESP' ]
         condition: 'many("PersonalPackGuars (Black|Striped|White)\.esp")'
 
+  - name: 'PTRoamingNPCs.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/32747/'
+        name: 'Roaming NPCs'
+    req: [ *SilentVoice ]
+    msg:
+      - <<: *wildEdits
+        subs: [ 'Remove **Worldspace Block -1, 1** from **PTRoamingNPCs.esp**.' ]
+        condition: 'checksum("PTRoamingNPCs.esp", A3878A6E)'
+
   - name: '(RTT|Ruin)\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/3027/'
