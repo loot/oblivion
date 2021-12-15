@@ -10964,6 +10964,44 @@ plugins:
   - name: 'Lady Stone Villa - UL LostCoast Patch.esp'
     msg: [ *patchOutdated ]
 
+  - name: 'MadMagesTower(BASIC)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/20993/'
+        name: 'Mad Mages Tower'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Mad Mages Tower ESP' ]
+        condition: 'many("MadMagesTower(BASIC)?\.esp")'
+  - name: 'MadMagesTower.esp'
+    msg:
+      - <<: *patch3rdParty
+        subs:
+          - 'Unique Landscapes - Cloudtop Mountains'
+          - '[Unique Landscapes Compatibility Patches](https://www.nexusmods.com/oblivion/mods/13834/)'
+        condition: 'active("(Unique Landscapes|xulCloudtopMountains)\.esp") and not active("ULE MadMagesTower-CloudtopMountains patch.esp")'
+    dirty:
+      - <<: *quickClean
+        crc: 0xABF343F2
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 5234
+        udr: 13
+  - name: 'MadMagesTowerBASIC.esp'
+    msg:
+      - <<: *patch3rdParty
+        subs:
+          - 'Unique Landscapes - Cloudtop Mountains'
+          - '[Unique Landscapes Compatibility Patches](https://www.nexusmods.com/oblivion/mods/13834/)'
+        condition: 'active("(Unique Landscapes|xulCloudtopMountains)\.esp") and not active("ULE MadMagesTowerBASIC-CloudtopMountains patch.esp")'
+      - <<: *requiresX
+        type: say
+        subs: [ 'INI setting `bBorderRegionsEnabled=0`' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xF324FB55
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 9
+        udr: 12
+
   - name: 'Millstone_Farm(_COBL)?.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/29126' ]
     after:
@@ -20520,26 +20558,6 @@ plugins:
       - crc: 0x36f586c7
         <<: *dirtyPlugin
         itm: 57
-  - name: 'MadMagesTower.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/20993' ]
-    inc: [ 'MadMagesTowerBASIC.esp' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Use ''MadMagesTower-CloudtopMountains patch.esp'' compatibility patch when using Unique Landscapes Cloudtop Mountain.'
-          - lang: de
-            text: 'Nutzen Sie ''MadMagesTower-CloudtopMountains patch.esp'' Kompatibilitäts-Patch wenn Unique Landscapes Cloudtop Mountain genutzt wird.'
-  - name: 'MadMagesTowerBASIC.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/20993' ]
-    inc: [ 'MadMagesTower.esp' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Use ''MadMagesTowerBASIC-CloudtopMountains patch.esp'' compatibility patch when using Unique Landscapes Cloudtop Mountain.'
-          - lang: de
-            text: 'Nutzen Sie ''MadMagesTowerBASIC-CloudtopMountains patch.esp'' Kompatibilitäts-Patch wenn Unique Landscapes Cloudtop Mountain genutzt wird.'
   - name: 'Mad Mike''s Crypts of Cyrodiil.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/15060' ]
     dirty:
