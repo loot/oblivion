@@ -8043,6 +8043,13 @@ plugins:
         subs: [ 'Skyrim-style Text: Fatigue -> Stamina' ]
         condition: 'file("Bashed Patch.*\.esp")'
 
+  - name: 'lDisplay Skill Perk Effects.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/50127/' ]
+    req: [ *OBSE ]
+    clean:
+      - crc: 0xF8FAB255
+        util: 'TES4Edit v4.0.4b'
+
   - name: 'LootMenu.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/48027/' ]
     req: [ *MenuQue ]
