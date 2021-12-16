@@ -6645,6 +6645,10 @@ plugins:
     req:
       - *OBSE
       - 'DLCShiveringIsles.esp'
+    msg:
+      - <<: *patchUpdateAvailable
+        subs: [ '[Miguick''s Dialogue Tweaks Trespassing Tweaked](https://www.nexusmods.com/oblivion/mods/50891/)' ]
+        condition: 'not file("DialogTweaksTweakedTrespassing.esp")'
     tag: [ Scripts ]
     clean:
       - crc: 0xF4CBC651
