@@ -3473,6 +3473,27 @@ plugins:
       - crc: 0x92D9C086
         util: 'TES4Edit v4.0.4b'
 
+  - name: 'ShinySeptims_(Septimus|Trajanus)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/23733/'
+        name: 'Shiny Septims - Oblivion'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Shiny Septims - Oblivion ESP' ]
+        condition: 'many("ShinySeptims_(Septimus|Trajanus)?\.esp")'
+    tag:
+      - Deactivate
+      - Graphics
+      - NoMerge
+  - name: 'ShinySeptims_Septimus.esp'
+    clean:
+      - crc: 0xCFE7C5CE
+        util: 'TES4Edit v4.0.4b'
+  - name: 'ShinySeptims_Trajanus.esp'
+    clean:
+      - crc: 0x847DC729
+        util: 'TES4Edit v4.0.4b'
+
   - name: 'Unique Heretic Robes.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/50689/' ]
     req: [ 'DLCShiveringIsles.esp' ]
@@ -23258,10 +23279,6 @@ plugins:
           - lang: de
             text: 'Nicht Benutzen mit MMM oder FCOM - unbekannt bezüglich anderen Überhol-Mods'
 
-  - name: 'ShinySeptims_Septimus.esp'
-    tag: [ Graphics ]
-  - name: 'ShinySeptims_Trajanus.esp'
-    tag: [ Graphics ]
   - name: 'sgLighterQuivers.esp'
     tag: [ Stats ]
   - name: 'sgLighterQuiversOOO.esp'
