@@ -8179,11 +8179,6 @@ plugins:
       - 'Landmarks, w Wells.esp'
       - 'Oblivion Gate Map Marker Remover.esp'
     msg:
-      - <<: *patch3rdParty
-        subs:
-          - 'Thieves Arsenal'
-          - '[Thieves Arsenal](https://www.nexusmods.com/oblivion/mods/9655/)'
-        condition: 'active("Thieves Arsenal.esp") and not file("Thieves_Arsenal_Patch_033010.esp")'
       - <<: *patchProvided
         subs: [ 'Shivering Isles' ]
         condition: 'active("DLCShiveringIsles.esp") and not active("Map Marker Overhaul - SI additions.esp")'
