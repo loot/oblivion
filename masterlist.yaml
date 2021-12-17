@@ -2941,6 +2941,15 @@ plugins:
         util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 7
 
+  - name: 'QQuix - Rock, rock, rock your ship - V3.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/29649/' ]
+    msg: [ *versionXofYorGreaterRequiredOBSEv18 ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x2E1085A5
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 12
+
   - name: 'Soolie''sBetterEnchantmentEffects.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/30489/' ]
     dirty:
@@ -16650,14 +16659,6 @@ plugins:
       - <<: *useInstead
         subs: [ 'Qarls_Harvest addon_MMM/OOO' ]
         condition: 'active("Mart''s Monster Mod.esm")'
-  - name: 'QQuix - Rock, rock, rock your ship.*\.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29649' ]
-  - name: 'QQuix - Rock, rock, rock your ship - V3.esp'
-    dirty:
-      - <<: *quickClean
-        crc: 0x2E1085A5
-        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 12
   - name: 'QuickEquipSwap.esp'
     req: [ *OBSE ]
   - name: 'RAEVWD Cities.esp'
