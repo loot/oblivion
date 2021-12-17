@@ -8253,10 +8253,7 @@ plugins:
       - crc: 0xB2EF0FCD
         util: 'TES4Edit v4.0.4b'
   - name: 'Ayleid Loot EXtension - OOO Dungeons.esp'
-    msg:
-      - <<: *alsoUseX
-        subs: [ 'Ayleid Loot EXtension.esp' ]
-        condition: 'not active("Ayleid Loot EXtension.esp")'
+    req: [ 'Ayleid Loot EXtension.esp' ]
     clean:
       - crc: 0xF1E0710B
         util: 'TES4Edit v4.0.4b'
