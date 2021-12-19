@@ -3468,6 +3468,40 @@ plugins:
       - crc: 0x66743350
         util: 'TES4Edit v4.0.4b'
 
+  - name: 'ORM-TamriellicGlass(CORE|DLC(3|6|7))\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/40308/'
+        name: 'Tamriellic Glassworks'
+    tag: [ Graphics ]
+  - name: 'ORM-TamriellicGlass(CORE|DLC(3|7))\.esp'
+    tag:
+      - Deactivate
+      - NoMerge
+  - name: 'ORM-TamriellicGlassCORE.esp'
+    after: [ 'Av Latta Magicka - Potion Rebalance.esp' ]
+    clean:
+      - crc: 0xA4E525DF
+        util: 'TES4Edit v4.0.4b'
+  - name: 'ORM-TamriellicGlassDLC3.esp'
+    clean:
+      - crc: 0x63924BD2
+        util: 'TES4Edit v4.0.4b'
+  - name: 'ORM-TamriellicGlassDLC6.esp'
+    tag: [ Names ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x0631088B
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 5
+      - <<: *quickClean
+        crc: 0xD09E3981
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 5
+  - name: 'ORM-TamriellicGlassDLC7.esp'
+    clean:
+      - crc: 0xFB5A9AAF
+        util: 'TES4Edit v4.0.4b'
+
   - name: 'PotionReplacer.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/49068/'
@@ -18825,9 +18859,6 @@ plugins:
   - name: 'Potion Sorter-2081.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/2081' ]
     tag: [ Names ]
-  - name: 'ORM-TamriellicGlassDLC7.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/40308' ]
-    tag: [ Graphics ]
   - name: 'Fran_Lv30Item_Maltz.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/15411' ]
     req: [ 'Francesco''s Leveled Creatures-Items Mod.esm' ]
@@ -21706,13 +21737,6 @@ plugins:
   - name: 'Arena_BattlesV1.2DV.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/18113' ]
     tag: [ Relations ]
-  - name: 'ORM-TamriellicGlassDLC6.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/40308' ]
-    tag: [ Graphics ]
-    dirty:
-      - crc: 0x631088b
-        <<: *dirtyPlugin
-        itm: 5
   - name: 'Falkreath.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/42765' ]
     inc: [ 'GwedenBrothel.esp' ]
@@ -21756,9 +21780,6 @@ plugins:
             text: 'Entfernen Sie ''Lynges Thieves Highway.esp und nutzen Sie dies stattdessen.'
         condition: '( file("Lynges Thieves Highway.esp") ) and active("Oscuro''s_Oblivion_Overhaul.esm")'
 
-  - name: 'ORM-TamriellicGlassDLC3.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/40308' ]
-    tag: [ Graphics ]
   - name: 'Ulrim''s Horses - DLCHorseArmor+OOO.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/16688' ]
     tag: [ Graphics ]
@@ -23162,11 +23183,6 @@ plugins:
     tag: [ Names ]
   - name: 'OriginalLeatherSI.esp'
     tag: [ Names ]
-  - name: 'ORM-TamriellicGlassCORE.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/40308' ]
-    tag:
-      - Graphics
-      - NoMerge
 
   - name: 'PersuasionOverhaul.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/12367' ]
