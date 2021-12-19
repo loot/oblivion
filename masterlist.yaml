@@ -6091,6 +6091,24 @@ plugins:
       - crc: 0x98C75304
         util: 'TES4Edit v4.0.4'
 
+  - name: 'Fran''s Ore Refiner( - SI only)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/28511/'
+        name: 'Francesco Ore Refiner'
+    req: [ 'DLCShiveringIsles.esp' ]
+  - name: 'Fran''s Ore Refiner.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0xABE6443D
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1
+  - name: 'Fran''s Ore Refiner - SI only.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x56C2E7DA
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1
+
   - name: 'Gather Ye Rosebuds.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/14259/' ]
     msg: [ *versionXofYorGreaterRequiredOBSEv14 ]
@@ -19513,23 +19531,6 @@ plugins:
             text: 'If using SM Plugin Refurbish VL, use DBSQR - Vile Lair SMPR.esp or DBSQR - Vile Lair SMPR Full.esp as well.'
           - lang: de
             text: 'Wenn SM Plugin Refurbish VL genutzt wird, nutzen Sie auch DBSQR - Vile Lair SMPR.esp oder DBSQR - Vile Lair SMPR Full.esp.'
-  - name: 'Fran''s Ore Refiner - SI only.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/28511' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Use only if you have SI.'
-          - lang: de
-            text: 'Nur nutzen wenn Sie SI haben.'
-  - name: 'Fran''s Ore Refiner.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/28511' ]
-    req: [ 'Francesco''s Optional Leveled Quests.esp' ]
-    dirty:
-      - <<: *quickClean
-        crc: 0xABE6443D
-        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 1
   - name: 'Daggerfall NPCs.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/29161' ]
     tag: [ Delev ]
