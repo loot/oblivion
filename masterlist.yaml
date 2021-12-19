@@ -74,37 +74,70 @@ prelude:
       content: 'Obsolete. Update to the latest version. %1%'
       subs: [ '' ]
 
+    - &onlyUseSmashOrBash
+      type: say
+      content: 'Can be used with a %1% but would require additional work. A Smashed Patch or Bash Patch should be used independently of one another.'
+
     - &optional
       type: say
-      content:
-        - lang: en
-          text: 'This plugin is optional.'
-        - lang: bg
-          text: 'Тази приставка не е задължителна.'
-        - lang: de
-          text: 'Dieses Plugin ist optional.'
-        - lang: es
-          text: 'Este plugin es opcional.'
-        - lang: fr
-          text: 'Ce plugin est optionnel.'
-        - lang: it
-          text: 'Questo plugin è opzionale.'
-        - lang: ja
-          text: 'このプラグインはオプションです。'
-        - lang: ko
-          text: '이 플러그인은 선택 사항입니다.'
-        - lang: pt_BR
-          text: 'Este plugin é opcional.'
-        - lang: pt_PT
-          text: 'Este plugin é opcional.'
-        - lang: ru
-          text: 'Этот плагин не обязателен.'
-        - lang: sv
-          text: 'Det här pluginet är valfritt.'
-        - lang: uk_UA
-          text: 'Цей плагін не обов’язковий.'
-        - lang: zh_CN
-          text: '这个插件是可选的。'
+      content: 'This plugin is optional.'
+
+    - &patch3rdParty
+      type: say
+      content: 'You seem to be using **%1%**, but you have not enabled a compatibility patch for this mod. A third party patch is available here: %2%'
+
+    - &patcherScriptAvailable
+      type: say
+      content: '%1% patcher script available here: %2%'
+
+    - &patchIncluded
+      type: say
+      content: 'You seem to be using **%1%**, but you have not enabled a compatibility patch for this mod. A compatibility patch is included with this plugin''s installer.'
+
+    - &patchOutdated
+      type: warn
+      content: 'This patch is outdated and may not be compatible with the latest version of the patched mod.'
+
+    - &patchProvided
+      type: say
+      content: 'You seem to be using **%1%**, but you have not enabled a compatibility patch for this mod. A compatibility patch is provided on this plugin''s mod page.'
+
+    - &patchUnavailable
+      type: warn
+      content: 'A patch is required to make this mod fully compatible with %1%. None is currently available for download.'
+
+    - &patchUpdateAvailable
+      type: say
+      content: 'Update Patch available: %1%'
+
+    - &renameFile
+      type: say
+      content: 'Rename this file to %1%.'
+
+    - &renameXtoY
+      type: warn
+      content: 'You need to rename %1% to %2% or this mod won''t work.'
+
+    - &requiresResources
+      type: warn
+      content: 'Requires resources (e.g. meshes, textures; not plugins) from %1%.'
+
+    - &requiresX
+      type: warn
+      content: 'Requires: %1%'
+
+    - &runAnimFramework
+      type: say
+      content: 'It appears you have **%1%** installed. Remember to run **%2%** every time you have installed or uninstalled %3%, or a %3%-based mod.'
+
+    - &obsolete
+      type: warn
+      content: 'Obsolete. Update to the latest version. %1%'
+      subs: [ '' ]
+
+    - &optional
+      type: say
+      content:'This plugin is optional.'
 
     - &onlyUseSmashOrBash
       type: say
