@@ -8331,6 +8331,71 @@ plugins:
         util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 4
 
+  - name: 'Artifacts.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/25309/'
+        name: 'Artifacts'
+      - link: 'https://www.nexusmods.com/oblivion/mods/40923/'
+        name: 'Tamrielic Lore'
+    req:
+      - <<: *OBSE
+        condition: 'version("Artifacts.esp", "1.0", <)'
+    tag:
+      - name: Actors.Stats
+        condition: 'version("Artifacts.esp", "1.0", <)'
+      - name: Graphics
+        condition: 'version("Artifacts.esp", "1.0", <)'
+      - name: Invent.Add
+        condition: 'version("Artifacts.esp", "1.0", <)'
+      - name: Sound
+        condition: 'version("Artifacts.esp", "1.0", <)'
+      - name: Stats
+        condition: 'version("Artifacts.esp", "1.0", <)'
+    dirty:
+      - <<: *quickClean
+        crc: 0x3D5A25D1
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        udr: 1
+      - <<: *quickClean
+        crc: 0x472B4912
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 82
+        udr: 7
+  - name: '(Artifacts MOBS|Fang Haynek no MR|Fang of Haynekhtnamet|Mehrune''s Razor|Pirate_seasplitter)\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/40923/'
+        name: 'Tamrielic Lore'
+  - name: 'Artifacts MOBS.esp'
+    tag:
+      - Deactivate
+      - NoMerge
+      - Stats
+    clean:
+      - crc: 0xBA5FC02D
+        util: 'TES4Edit v4.0.4b'
+  - name: 'Fang Haynek no MR.esp'
+    clean:
+      - crc: 0x53A95E7D
+        util: 'TES4Edit v4.0.4b'
+  - name: 'Fang of Haynekhtnamet.esp'
+    clean:
+      - crc: 0xA66E8B31
+        util: 'TES4Edit v4.0.4b'
+  - name: 'Mehrune''s Razor.esp'
+    tag:
+      - Enchantments
+      - Names
+      - Stats
+    dirty:
+      - <<: *quickClean
+        crc: 0xAECC152D
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        udr: 1
+  - name: 'Pirate_seasplitter.esp'
+    clean:
+      - crc: 0x5469EEA9
+        util: 'TES4Edit v4.0.4b'
+
   - name: 'Automagic Bags.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22414/' ]
     req: [ *OBSE ]
@@ -19934,14 +19999,6 @@ plugins:
         util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 16
         udr: 2
-
-  - name: 'Artifacts.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/25309/' ]
-    dirty:
-      - <<: *quickClean
-        crc: 0x3D5A25D1
-        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
-        udr: 1
 
   - name: 'DMRA BBB Artifacts Complete.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/42417' ]
