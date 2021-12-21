@@ -698,22 +698,19 @@ bash_tags:
 
 globals:
 # Latest LOOT Thread
-  - &lootThread
-    <<: *latestLOOTThread
+  - <<: *latestLOOTThread
     subs: [ 'https://loot.github.io/latest-thread/' ]
 
 # OBSE
   # Missing
-  - &obseMissing
-    <<: *scriptExtenderMissing
+  - <<: *scriptExtenderMissing
     subs:
       - 'OBSE'
       - '[OBSE](https://obse.silverlock.org)'
     condition: 'file("OBSE/Plugins/([^\.]+\.dll)") and not file("../obse_1_2_416.dll")'
 
   # NVAC
-  - &moveNVACtoOBSE
-    <<: *moveNVAC
+  - <<: *moveNVAC
     subs:
       - 'OBSE'
       - 'Oblivion'
