@@ -2063,6 +2063,18 @@ plugins:
       - crc: 0xFCB80CF8
         util: 'TES4Edit v4.0.4b'
 
+  - name: 'Bearclaw_Helm_Replacer.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/35522/'
+        name: 'Helm of Oreyn Bearclaw Replacer'
+    tag:
+      - Deactivate
+      - Graphics
+      - NoMerge
+    clean:
+      - crc: 0x2CB22091
+        util: 'TES4Edit v4.0.4b'
+
   - name: '(Better Wine SI|CM_Better Wine_SI)\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/14596/'
@@ -2105,6 +2117,23 @@ plugins:
       - crc: 0x2C3A6F22
         util: 'TES4Edit v4.0.4'
 
+  - name: 'CM_Better Wine.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/4429/' ]
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'CM_Better Wine_SI.esp' ]
+        condition: 'file("CM_Better Wine_SI.esp")'
+      - <<: *patchUpdateAvailable
+        subs: [ '[CM Better Wine - Shivering Isles](https://www.nexusmods.com/oblivion/mods/14596/)' ]
+        condition: 'active("DLCShiveringIsles.esp") and not file("Better Wine SI.esp")'
+    tag:
+      - Deactivate
+      - Graphics
+      - NoMerge
+    clean:
+      - crc: 0x7EA43418
+        util: 'TES4Edit v4.0.4b'
+
   - name: 'Cobl Bookjackets.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/24890/' ]
     tag:
@@ -2114,6 +2143,20 @@ plugins:
     clean:
       - crc: 0x3D0FE375
         util: 'TES4Edit v4.0.4b'
+
+  - name: 'cowlredux.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/27376/'
+        name: 'Grey Fox Cowl Redux'
+    tag:
+      - Deactivate
+      - Graphics
+      - NoMerge
+    dirty:
+      - <<: *quickClean
+        crc: 0x83BA6EF7
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 6
 
   - name: '(EVE_.*|Armamentium female|ArtifactsFemaleArmor|Fransfemale)\.esp'
     url:
@@ -5608,6 +5651,17 @@ plugins:
         itm: 4
 
 ###### Gameplay - NPC Balance & Distribution ######
+  - name: 'Conjurer Wardrobe.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/50681/'
+        name: 'Randomised Conjurer Wardrobe'
+    tag:
+      - Invent.Add
+      - Invent.Remove
+    clean:
+      - crc: 0xCE3E1E7B
+        util: 'TES4Edit v4.0.4b'
+
   - name: 'StrongerHindaril.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/49944/' ]
     tag:
@@ -5648,12 +5702,86 @@ plugins:
       - crc: 0xC3DD2174
         util: 'TES4Edit v4.0.4'
 
+  - name: 'ZUSwordFlameAtro.*\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/37239/'
+        name: 'Sword-Wielding Flame Atronachs'
+  - name: 'ZUSwordFlameAtro_(OOO|UOP|Vanilla)\.esp'
+    tag:
+      - Actors.ACBS
+      - Actors.CombatStyle
+      - Actors.Skeleton
+      - Actors.Spells
+      - Actors.Stats
+      - Invent.Add
+      - Invent.Remove
+      - Scripts
+  - name: 'ZUSwordFlameAtro.esp'
+    msg:
+      - <<: *patchIncluded
+        subs: [ 'Oscuro''s Oblivion Overhaul' ]
+        condition: 'active("Oscuro''s_Oblivion_Overhaul.esm") and not active("ZUSwordFlameAtro_OOO.esp")'
+      - <<: *patchIncluded
+        subs: [ 'Unofficial Oblivion Patch' ]
+        condition: 'active("Unofficial Oblivion Patch.esp") and not active("ZUSwordFlameAtro_UOP.esp")'
+      - <<: *patchIncluded
+        subs: [ 'Wizard''s Tower' ]
+        condition: 'active("DLCFrostcrag.esp") and not file("ZUSwordFlameAtro_Frostcrag.esp")'
+    clean:
+      - crc: 0xDBC0F3C7
+        util: 'TES4Edit v4.0.4b'
+  - name: 'ZUSwordFlameAtro_FlamingWeap.esp'
+    tag:
+      - Enchantments
+      - Graphics
+      - Stats
+    clean:
+      - crc: 0xE1B86449
+        util: 'TES4Edit v4.0.4b'
+  - name: 'ZUSwordFlameAtro_Frostcrag.esp'
+    tag:
+      - Actors.ACBS
+      - Actors.CombatStyle
+      - Actors.Skeleton
+      - Actors.Spells
+      - Actors.Stats
+      - Invent.Add
+    clean:
+      - crc: 0xA709C1D6
+        util: 'TES4Edit v4.0.4b'
+  - name: 'ZUSwordFlameAtro_OOO.esp'
+    tag: [ Sound ]
+    clean:
+      - crc: 0xBB9FA95B
+        util: 'TES4Edit v4.0.4b'
+  - name: 'ZUSwordFlameAtro_UOP.esp'
+    clean:
+      - crc: 0x6BE3B93E
+        util: 'TES4Edit v4.0.4b'
+  - name: 'ZUSwordFlameAtro_Vanilla.esp'
+    clean:
+      - crc: 0x9896CE97
+        util: 'TES4Edit v4.0.4b'
+
 ###### Gameplay - NPC Behaviour & Dialogue ######
   - name: 'Consistent Beggar Voices.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/48336/' ]
     clean:
       - crc: 0x3DDADDF8
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
+
+  - name: 'DD_NPCArrest.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/15406/'
+        name: 'NPC Arrest - Beta'
+    req: [ *OBSE ]
+    tag: [ C.Light ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xC36F5208
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 16
+        udr: 132
 
   - name: 'DialogTweaks.esp'
     url:
@@ -5732,6 +5860,21 @@ plugins:
         util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 36
         udr: 20
+
+  - name: 'GentlemanBurzGroKhash.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/49207/' ]
+    req: [ 'DLCShiveringIsles.esp' ]
+    tag:
+      - Actors.AIPackages
+      - C.Light
+      - Invent.Add
+      - Invent.Remove
+      - NPC.FaceGen
+      - NPC.Hair
+      - Scripts
+    clean:
+      - crc: 0xB4E435DB
+        util: 'TES4Edit v4.0.4b'
 
   - name: 'ImprovedMraajDar.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/50000/' ]
@@ -7403,6 +7546,15 @@ plugins:
         crc: 0x64DC88D6
         util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 9
+
+  - name: 'ClothGloves.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/3722/' ]
+    tag: [ Invent.Add ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xEF66D509
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 3
 
   - name: 'Cloud Ruler Armory( - Spear Compatible)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/50334/' ]
@@ -16402,9 +16554,6 @@ plugins:
     tag:
       - Delev
       - Relev
-  - name: 'Bearclaw_Helm_Replacer.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/35522' ]
-    tag: [ Graphics ]
   - name: 'Bamboo Armor.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/3933' ]
     tag: [ Invent ]
@@ -16504,19 +16653,11 @@ plugins:
     tag:
       - Actors.AIData
       - Invent
-  - name: 'ClothGloves.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/3722' ]
-    tag: [ Invent ]
   - name: 'Cloud Armor Compilation.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/36125' ]
     tag:
       - Invent
       - Stats
-  - name: 'CM_Better Wine.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/4429' ]
-    tag:
-      - Deactivate
-      - Graphics
   - name: 'ConjurationTome.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/33522' ]
     inc:
@@ -16541,9 +16682,6 @@ plugins:
       - 'ConjurationTome.esp'
       - 'ConjurationTomeOBSE.esp'
       - 'ConjurationTomeOOO.esp'
-  - name: 'cowlredux.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/27376' ]
-    tag: [ Graphics ]
   - name: 'CSR - Golden Saint.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/11451' ]
     tag:
@@ -26277,20 +26415,6 @@ plugins:
   - name: '000lute.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/4660' ]
     msg: [ *corrupt ]
-
-  - name: 'ZUSwordFlameAtro.*\.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/37239' ]
-  - name: 'ZUSwordFlameAtro_.*\.esp'
-    tag:
-      - Actors.ACBS
-      - Actors.CombatStyle
-      - Actors.Spells
-      - Actors.Stats
-      - Graphics
-      - Invent.Add
-      - Invent.Remove
-      - Scripts
-      - Sound
 
   - name: 'FuseSnailRacing.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/4596/' ]
