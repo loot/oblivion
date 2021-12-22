@@ -8204,6 +8204,17 @@ plugins:
         udr: 149
 
 ###### Locations - New Dungeons ######
+  - name: 'Mad Mike''s Crypts of Cyrodiil.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/15060/'
+        name: 'Crypts of Cyrodiil'
+    req: [ 'DLCShiveringIsles.esp' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x560DE988
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 19
+
   - name: 'TheOubliette.esp'
     url: [ 'http://tesalliance.org/forums/index.php?/files/file/1883-the-oubliette/' ]
     clean:
@@ -19881,12 +19892,6 @@ plugins:
       - crc: 0x36f586c7
         <<: *dirtyPlugin
         itm: 57
-  - name: 'Mad Mike''s Crypts of Cyrodiil.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/15060' ]
-    dirty:
-      - crc: 0x560de988
-        <<: *dirtyPlugin
-        itm: 16
   - name: 'Mafreseli.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/40378' ]
     dirty:
