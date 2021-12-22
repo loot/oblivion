@@ -2095,6 +2095,23 @@ plugins:
       - crc: 0x2C3A6F22
         util: 'TES4Edit v4.0.4'
 
+  - name: 'CM_Better Wine.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/4429/' ]
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'CM_Better Wine_SI.esp' ]
+        condition: 'file("CM_Better Wine_SI.esp")'
+      - <<: *patchUpdateAvailable
+        subs: [ '[CM Better Wine - Shivering Isles](https://www.nexusmods.com/oblivion/mods/14596/)' ]
+        condition: 'active("DLCShiveringIsles.esp") and not file("Better Wine SI.esp")'
+    tag:
+      - Deactivate
+      - Graphics
+      - NoMerge
+    clean:
+      - crc: 0x7EA43418
+        util: 'TES4Edit v4.0.4b'
+
   - name: 'Cobl Bookjackets.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/24890/' ]
     tag:
@@ -16520,11 +16537,6 @@ plugins:
     tag:
       - Invent
       - Stats
-  - name: 'CM_Better Wine.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/4429' ]
-    tag:
-      - Deactivate
-      - Graphics
   - name: 'ConjurationTome.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/33522' ]
     inc:
