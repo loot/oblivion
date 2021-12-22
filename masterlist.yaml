@@ -7112,6 +7112,17 @@ plugins:
         util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 3
 
+  - name: 'FormID Finder4.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/16704/' ]
+    msg:
+      - <<: *patchUpdateAvailable
+        subs: [ '[EditorID Location Found for FormID Finder](https://www.nexusmods.com/oblivion/mods/50892/)' ]
+        condition: 'not file("ELFforFormIDFinder.esp")'
+      - *versionXofYorGreaterRequiredOBSEv18
+    clean:
+      - crc: 0x99D3B0B2
+        util: 'TES4Edit v4.0.4b'
+
   - name: 'Generic Name Overhaul.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/47703/'
@@ -16063,12 +16074,6 @@ plugins:
             text: 'Required if using any of Duke Patricks'' mods with companion mods.'
           - lang: de
             text: 'Benötigt wenn Sie irgendwelche von Duke Patricks'' Mods mit Begleiter Mods nutzen.'
-  - name: 'FormID Finder.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/16704' ]
-    msg: [ *obsolete ]
-  - name: 'FormID Finder without Pluggy.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/16704' ]
-    msg: [ *obsolete ]
   - name: 'kuerteeAutoSaveAndTime.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22136' ]
     inc:
