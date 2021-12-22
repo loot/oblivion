@@ -5645,6 +5645,19 @@ plugins:
       - crc: 0x3DDADDF8
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
 
+  - name: 'DD_NPCArrest.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/15406/'
+        name: 'NPC Arrest - Beta'
+    req: [ *OBSE ]
+    tag: [ C.Light ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xC36F5208
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 16
+        udr: 132
+
   - name: 'DialogTweaks.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/44862/'
