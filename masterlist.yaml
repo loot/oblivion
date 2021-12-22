@@ -2098,6 +2098,22 @@ plugins:
       - crc: 0x1DC92B96
         util: 'TES4Edit v4.0.4b'
 
+  - name: 'Bloodworm_Helm_(Hornless|Replacer)\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/35544/'
+        name: 'Bloodworm Helm Replacer'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Bloodworm Helm Replacer ESP' ]
+        condition: 'many("Bloodworm_Helm_(Hornless|Replacer)\.esp")'
+    tag:
+      - Deactivate
+      - Graphics
+      - NoMerge
+    clean:
+      - crc: 0xC29EA8C9
+        util: 'TES4Edit v4.0.4b'
+
   - name: '(Book Jackets DLC|GrimbotsSpellTomes)\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/16247/'
@@ -16614,12 +16630,6 @@ plugins:
     tag: [ Graphics ]
   - name: 'Blood Glass Weapons.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/35479' ]
-    tag: [ Graphics ]
-  - name: 'Bloodworm_Helm_Hornless.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/35544' ]
-    tag: [ Graphics ]
-  - name: 'Bloodworm_Helm_Replacer.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/35544' ]
     tag: [ Graphics ]
   - name: 'BisPainBringer.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/16838' ]
