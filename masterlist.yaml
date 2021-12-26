@@ -8259,6 +8259,27 @@ plugins:
         util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 19
 
+  - name: 'Mafreseli.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/40378/'
+        name: 'Mafreseli - Dungeon and Player Home'
+    req:
+      - *OBSE
+      - 'DLCShiveringIsles.esp'
+    msg:
+      - <<: *obsolete
+        subs: [ '[V2 Update](https://www.nexusmods.com/oblivion/mods/40378/)' ]
+        condition: 'checksum("Mafreseli.esp", E7712B99) or checksum("Mafreseli.esp", 6CD2562A)'
+      - <<: *requiresX
+        type: say
+        subs: [ 'INI setting `bBorderRegionsEnabled=0`' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x731E6D11
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 12
+        udr: 172
+
   - name: 'TheOubliette.esp'
     url: [ 'http://tesalliance.org/forums/index.php?/files/file/1883-the-oubliette/' ]
     clean:
@@ -19918,17 +19939,6 @@ plugins:
       - crc: 0x36f586c7
         <<: *dirtyPlugin
         itm: 57
-  - name: 'Mafreseli.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/40378' ]
-    dirty:
-      - crc: 0xd235e598
-        <<: *dirtyPlugin
-        itm: 12
-        udr: 172
-      - crc: 0x731E6D11
-        <<: *dirtyPlugin
-        itm: 12
-        udr: 172
   - name: 'Mage''sSkyHouse.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/35097' ]
     dirty:
