@@ -5734,9 +5734,10 @@ plugins:
       - Graphics
       - Invent.Add
       - Invent.Remove
+      - NPC.Class
     clean:
-      - crc: 0xC3DD2174
-        util: 'TES4Edit v4.0.4'
+      - crc: 0xC47B1F93
+        util: 'TES4Edit v4.0.4b'
 
   - name: 'ZUSwordFlameAtro.*\.esp'
     url:
@@ -8248,6 +8249,17 @@ plugins:
         udr: 149
 
 ###### Locations - New Dungeons ######
+  - name: 'ArcturusFinal.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/44440/'
+        name: 'Master Quest Arcturus'
+    req: [ 'DLCShiveringIsles.esp' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x89367DB8
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 66
+
   - name: 'Mad Mike''s Crypts of Cyrodiil.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/15060/'
@@ -13160,8 +13172,11 @@ plugins:
 
 ###### Francescos Creatures and Items V5 ######
   - name: 'Francesco''s (Creatures|Leveled|More|Optional).*\.es(m|p)'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/40190' ]
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/40190/'
+        name: 'Francescos Creatures and Items - V5'
   - name: 'Francesco''s Leveled Creatures-Items Mod.esm'
+    req: [ *OBSE ]
     inc:
       - name: 'Oscuro''s_Oblivion_Overhaul.esm'
         condition: 'not active("FCOM_Convergence.esm")'
@@ -13231,6 +13246,7 @@ plugins:
         condition: 'active("Mart''s Monster Mod for Fran.esp")'
     tag:
       - Actors.ACBS
+      - Actors.AIData
       - Actors.AIPackages
       - Actors.Stats
       - Delev
@@ -13279,7 +13295,9 @@ plugins:
       - <<: *alreadyInX
         subs: [ 'Mart''s Monster Mod for Fran.esp' ]
         condition: 'active("Mart''s Monster Mod for Fran.esp")'
-    tag: [ Relev ]
+    tag:
+      - Delev
+      - Relev
     dirty:
       # version: 5.0B1
       - <<: *quickClean
@@ -13365,6 +13383,7 @@ plugins:
   - name: 'Francesco''s Optional Dungeon Chest Loot.esp'
     tag:
       - Invent.Add
+      - Invent.Change
       - Invent.Remove
       - Scripts
     dirty:
@@ -13379,7 +13398,11 @@ plugins:
         util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 2
   - name: 'Francesco''s Optional House Chest Loot.esp'
-    tag: [ Delev ]
+    tag:
+      - Delev
+      - Invent.Add
+      - Scripts
+      - Stats
     clean:
       - crc: 0x968F569D
         util: 'TES4Edit v4.0.2'
@@ -13389,7 +13412,9 @@ plugins:
       - Actors.Stats
       - Invent.Add
       - Invent.Remove
+      - Names
       - NPC.Eyes
+      - Stats
     clean:
       - crc: 0xB3A72219
         util: 'TES4Edit v4.0.2'
@@ -13423,6 +13448,7 @@ plugins:
       - Delev
       - Invent.Add
       - Invent.Remove
+      - Names
       - NPC.Eyes
       - Relev
       - Text
@@ -13456,6 +13482,7 @@ plugins:
     tag:
       - Actors.AIData
       - Delev
+      - Invent.Add
       - Relev
     clean:
       - crc: 0x506AFA75
@@ -19933,13 +19960,27 @@ plugins:
             text: 'Consider upgrading to Werewolf - Legends of the North.'
           - lang: de
             text: 'Erwägen Sie zu Werewolf - Legends of the North upzugraden.'
-  - name: 'MasterQuestUltimateDungeon.esp'
+
+- name: 'MasterQuestUltimateDungeon.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/44440' ]
     dirty:
       - crc: 0x36f586c7
         <<: *dirtyPlugin
         itm: 57
-  - name: 'Mage''sSkyHouse.esp'
+
+- name: 'Mafreseli.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/40378' ]
+    dirty:
+      - crc: 0xd235e598
+        <<: *dirtyPlugin
+        itm: 12
+        udr: 172
+      - crc: 0x731E6D11
+        <<: *dirtyPlugin
+        itm: 12
+        udr: 172
+
+- name: 'Mage''sSkyHouse.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/35097' ]
     dirty:
       - crc: 0xcec8800f
