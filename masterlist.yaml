@@ -13140,8 +13140,11 @@ plugins:
 
 ###### Francescos Creatures and Items V5 ######
   - name: 'Francesco''s (Creatures|Leveled|More|Optional).*\.es(m|p)'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/40190' ]
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/40190/'
+        name: 'Francescos Creatures and Items - V5'
   - name: 'Francesco''s Leveled Creatures-Items Mod.esm'
+    req: [ *OBSE ]
     inc:
       - name: 'Oscuro''s_Oblivion_Overhaul.esm'
         condition: 'not active("FCOM_Convergence.esm")'
@@ -13211,6 +13214,7 @@ plugins:
         condition: 'active("Mart''s Monster Mod for Fran.esp")'
     tag:
       - Actors.ACBS
+      - Actors.AIData
       - Actors.AIPackages
       - Actors.Stats
       - Delev
@@ -13259,7 +13263,9 @@ plugins:
       - <<: *alreadyInX
         subs: [ 'Mart''s Monster Mod for Fran.esp' ]
         condition: 'active("Mart''s Monster Mod for Fran.esp")'
-    tag: [ Relev ]
+    tag:
+      - Delev
+      - Relev
     dirty:
       # version: 5.0B1
       - <<: *quickClean
@@ -13345,6 +13351,7 @@ plugins:
   - name: 'Francesco''s Optional Dungeon Chest Loot.esp'
     tag:
       - Invent.Add
+      - Invent.Change
       - Invent.Remove
       - Scripts
     dirty:
@@ -13359,7 +13366,11 @@ plugins:
         util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 2
   - name: 'Francesco''s Optional House Chest Loot.esp'
-    tag: [ Delev ]
+    tag:
+      - Delev
+      - Invent.Add
+      - Scripts
+      - Stats
     clean:
       - crc: 0x968F569D
         util: 'TES4Edit v4.0.2'
@@ -13369,7 +13380,9 @@ plugins:
       - Actors.Stats
       - Invent.Add
       - Invent.Remove
+      - Names
       - NPC.Eyes
+      - Stats
     clean:
       - crc: 0xB3A72219
         util: 'TES4Edit v4.0.2'
@@ -13403,6 +13416,7 @@ plugins:
       - Delev
       - Invent.Add
       - Invent.Remove
+      - Names
       - NPC.Eyes
       - Relev
       - Text
@@ -13436,6 +13450,7 @@ plugins:
     tag:
       - Actors.AIData
       - Delev
+      - Invent.Add
       - Relev
     clean:
       - crc: 0x506AFA75
