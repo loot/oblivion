@@ -8249,6 +8249,17 @@ plugins:
         udr: 149
 
 ###### Locations - New Dungeons ######
+  - name: 'ArcturusFinal.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/44440/'
+        name: 'Master Quest Arcturus'
+    req: [ 'DLCShiveringIsles.esp' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x89367DB8
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 66
+
   - name: 'Mad Mike''s Crypts of Cyrodiil.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/15060/'
@@ -19928,12 +19939,6 @@ plugins:
             text: 'Consider upgrading to Werewolf - Legends of the North.'
           - lang: de
             text: 'Erwägen Sie zu Werewolf - Legends of the North upzugraden.'
-  - name: 'MasterQuestUltimateDungeon.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/44440' ]
-    dirty:
-      - crc: 0x36f586c7
-        <<: *dirtyPlugin
-        itm: 57
   - name: 'Mafreseli.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/40378' ]
     dirty:
