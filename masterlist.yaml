@@ -9660,12 +9660,69 @@ plugins:
         itm: 6
 
   - name: 'BetterInns .*\.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29333/' ]
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/29333/'
+        name: 'BetterInns_and_NewHomeOwners'
   - name: 'BetterInns + NewHomeOwners.esp'
+    msg:
+      - <<: *patch3rdParty
+        subs:
+          - 'Oblivion Character Overhaul'
+          - '[OCOv2 - Filter Patch for Mods](https://www.nexusmods.com/oblivion/mods/51379/)'
+        condition: 'active("Bashed Patch.*\.esp") and active("Oblivion_Character_Overhaul.esp") and not file("OCOv2 - Filter Patch for Mods.esp")'
+      - <<: *patchProvided
+        subs: [ 'Black Horse Courier Expanded' ]
+        condition: 'active("BHC_Expanded.esp") and not active("BetterInns - BHCExpanded PATCH.esp")'
+      - <<: *patchProvided
+        subs: [ 'Clocks of Cyrodiil' ]
+        condition: 'active("ClocksOfCyrodiil.esp") and not active("BetterInns - ClocksOfCyrodiil PATCH.esp")'
+      - <<: *patchProvided
+        subs: [ 'Cobl' ]
+        condition: 'active("Cobl Glue.esp") and not active("BetterInns - COBL PATCH.esp")'
+      - <<: *patchProvided
+        subs: [ 'Harvest Containers' ]
+        condition: 'active("Harvest[Containers].esp") and not file("BetterInns - Harvest Containers PATCH.esp")'
+      - <<: *patchProvided
+        subs: [ 'Salmo the Baker' ]
+        condition: 'active("Salmo the Baker, Cobl.esp") and not file("BetterInns - Salmo the Baker, Cobl PATCH.esp")'
+      - <<: *patchProvided
+        subs: [ 'Salmo the Baker' ]
+        condition: 'active("Salmo The Baker v2.0.esp") and not file("BetterInns - Salmo The Baker v2.0 PATCH.esp")'
     tag:
       - Actors.AIPackages
+      - Actors.Anims
+      - C.Light
       - C.Name
-      - Scripts
+      - C.Owner
+      - NPC.Eyes
+      - NPC.FaceGen
+      - NPC.Hair
+    clean:
+      - crc: 0x0424B118
+        util: 'TES4Edit v4.0.4b'
+  - name: 'BetterInns - BardSound.esp'
+    tag: [ Scripts ]
+    clean:
+      - crc: 0x31F53387
+        util: 'TES4Edit v4.0.4b'
+      - crc: 0x0653EAD4
+        util: 'TES4Edit v4.0.4b'
+      - crc: 0x4B395229
+        util: 'TES4Edit v4.0.4b'
+      - crc: 0x58A3C178
+        util: 'TES4Edit v4.0.4b'
+  - name: 'BetterInns - BHCExpanded PATCH.esp'
+    clean:
+      - crc: 0x9B86BDC2
+        util: 'TES4Edit v4.0.4b'
+  - name: 'BetterInns - COBL PATCH.esp'
+    clean:
+      - crc: 0x5BD4B6C0
+        util: 'TES4Edit v4.0.4b'
+  - name: 'BetterInns - ClocksOfCyrodiil PATCH.esp'
+    clean:
+      - crc: 0xA93F849A
+        util: 'TES4Edit v4.0.4b'
   - name: 'BetterInns - Harvest Containers PATCH.esp'
     msg:
       - <<: *masterReassign
@@ -9673,6 +9730,23 @@ plugins:
           - 'Harvest[Containers].esp'
           - 'Harvest[Containers].esm'
         condition: 'file("Harvest[Containers].esm") and checksum("BetterInns - Harvest Containers PATCH.esp", 6CD0A481)'
+    tag:
+      - Deactivate
+      - Graphics
+      - NoMerge
+      - Scripts
+      - Sound
+    clean:
+      - crc: 0x6CD0A481
+        util: 'TES4Edit v4.0.4b'
+  - name: 'BetterInns - Salmo the Baker, Cobl PATCH.esp'
+    clean:
+      - crc: 0xEEA8383C
+        util: 'TES4Edit v4.0.4b'
+  - name: 'BetterInns - Salmo The Baker v2.0 PATCH.esp'
+    clean:
+      - crc: 0xF2BC3796
+        util: 'TES4Edit v4.0.4b'
 
   - name: 'Better daedric shrine(s)? (full|Azura|Clavicus|Hircine|malacath|Meridia|molag bal|Namira|Nocturnal|Pyriate|sanguine|Sheogorath|Vaermina)\.esp'
     url:
