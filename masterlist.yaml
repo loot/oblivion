@@ -8307,6 +8307,10 @@ plugins:
       - link: 'https://www.nexusmods.com/oblivion/mods/44440/'
         name: 'Master Quest Arcturus'
     req: [ 'DLCShiveringIsles.esp' ]
+    msg:
+      - <<: *compatIssuesWithX
+        subs: [ '[Unofficial Oblivion Patch](https://www.nexusmods.com/oblivion/mods/5296/) **Oblivion Citadel Door Fix.esp**' ]
+        condition: 'file("Oblivion Citadel Door Fix.esp")'
     dirty:
       - <<: *quickClean
         crc: 0x89367DB8
