@@ -5128,13 +5128,13 @@ plugins:
   - name: 'Harvest [Flora].esp'
     msg:
       - *alsoUseEngineBugFixes
-      - <<: *patchProvided
+      - <<: *patchIncluded
         subs: [ 'Shivering Isles' ]
         condition: 'active("DLCShiveringIsles.esp") and not file("Harvest [Flora] - Shivering Isles.esp")'
-      - <<: *patchProvided
+      - <<: *patchIncluded
         subs: [ 'Vile Lair' ]
         condition: 'active("DLCVileLair.esp") and not file("Harvest [Flora] - DLCVileLair.esp")'
-      - <<: *patchProvided
+      - <<: *patchIncluded
         subs: [ 'Wizard''s Tower' ]
         condition: 'active("DLCFrostcrag.esp") and not file("Harvest [Flora] - DLCFrostcrag.esp")'
     tag: [ MustBeActiveIfImported ]
