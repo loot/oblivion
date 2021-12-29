@@ -6644,27 +6644,37 @@ plugins:
       - crc: 0xA0C60505
         util: 'TES4Edit v4.0.3'
 
+  - name: '(Kragenir''s Death Quest|KDQ - Rural Line Additions|KragenirsDeathQuest-LetThePeopleDrink patch)\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/26219/'
+        name: 'Kragenirs Death Quest'
   - name: 'Kragenir''s Death Quest.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/26219/' ]
+    req: [ *SilentVoice ]
+    inc:
+      - 'Servant of the Dawn.esp'
+      - '300_White Stallion 4.esp'
+    msg:
+      - <<: *patchIncluded
+        subs: [ 'Let the People Drink' ]
+        condition: 'active("(LetThePeopleDrink.esp|Better Cities Resources.esm)") and not active("KragenirsDeathQuest-LetThePeopleDrink patch.esp")'
     tag: [ Invent.Add ]
     dirty:
       - <<: *quickClean
-        crc: 0x028F29D6
-        util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
+        crc: 0xF427CF43
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
   - name: 'KDQ - Rural Line Additions.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/26219/' ]
+    msg: [ *optional ]
     clean:
       - crc: 0x86EC5DE6
-        util: 'TES4Edit v4.0.4'
-  - name: 'KragenirsDeathQuest-LostCoast patch.esp'
-    clean:
-      - crc: 0xD92DDDE2
-        util: 'TES4Edit v4.0.4'
+        util: 'TES4Edit v4.0.4b'
   - name: 'KragenirsDeathQuest-LetThePeopleDrink patch.esp'
+    req:
+      - name: 'LetThePeopleDrink.esp'
+        condition: 'not active("Better Cities Resources.esm")'
     clean:
       - crc: 0x3D1BB247
-        util: 'TES4Edit v4.0.4'
+        util: 'TES4Edit v4.0.4b'
 
   - name: 'Kvatch Rebuilt.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/15412/' ]
