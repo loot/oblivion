@@ -8335,10 +8335,17 @@ plugins:
     req:
       - *OBSE
       - 'DLCShiveringIsles.esp'
+    inc:
+      - 'HeartOftheDead.esp'
+      - 'HESU DiveRock.esp'
+      - 'Servant of the Dawn.esp'
     msg:
       - <<: *obsolete
         subs: [ '[V2 Update](https://www.nexusmods.com/oblivion/mods/40378/)' ]
         condition: 'checksum("Mafreseli.esp", E7712B99) or checksum("Mafreseli.esp", 6CD2562A)'
+      - <<: *patchUnavailable
+        subs: [ 'The Ayleid Steps' ]
+        condition: 'active("The Ayleid Steps.esp")'
       - <<: *requiresX
         type: say
         subs: [ 'INI setting `bBorderRegionsEnabled=0`' ]
