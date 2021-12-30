@@ -10075,6 +10075,25 @@ plugins:
         itm: 6
         udr: 4
 
+  - name: 'HESU DiveRock.esp'
+    url:
+      - link: 'https://www.afkmods.com/index.php?/files/file/2344-the-hesu-mod-collection/'
+        name: 'The Hesu Mod Collection'
+    after:
+      - 'HeartOftheDead.esp'
+      - 'Secrets.esp'
+      - 'Servant of the Dawn.esp'
+    msg:
+      - <<: *patchProvided
+        subs: [ 'Secrets' ]
+        condition: 'active("Secrets.esp") and not file("Secrets-DiveRock Patch.esp")'
+      - <<: *patchProvided
+        subs: [ 'The Heart of the Dead' ]
+        condition: 'active("HeartOftheDead.esp") and not file("HOTD-DiveRock Patch.esp")'
+    clean:
+      - crc: 0x59E4C67C
+        util: 'TES4Edit v4.0.4b'
+
   - name: 'IC Atmospheric Shops Mod.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/27973/' ]
     tag:
