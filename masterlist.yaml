@@ -6979,11 +6979,6 @@ plugins:
           - 'Fighter''s Stronghold and Knights of the Nine'
           - '[Servant of the Dawn DLC Compatibility Patch](https://www.nexusmods.com/oblivion/mods/38223/)'
         condition: 'active("DLCBattlehornCastle.esp") and active("Knights.esp") and not file("Servant of the Dawn DLC Compatibility Patch.esp")'
-      - <<: *patch3rdParty
-        subs:
-          - 'HESU Dive Rock'
-          - '[The Hesu Mod Collection](https://www.afkmods.com/index.php?/files/file/2344-the-hesu-mod-collection/)'
-        condition: 'active("HESU DiveRock.esp") and not file("SOTD-DiveRock Patch.esp")'
     tag:
       - Actors.AIData
       - Actors.AIPackages
@@ -10133,6 +10128,28 @@ plugins:
         util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 6
         udr: 4
+
+  - name: 'HESU DiveRock.esp'
+    url:
+      - link: 'https://www.afkmods.com/index.php?/files/file/2344-the-hesu-mod-collection/'
+        name: 'The Hesu Mod Collection'
+    after:
+      - 'HeartOftheDead.esp'
+      - 'Secrets.esp'
+      - 'Servant of the Dawn.esp'
+    msg:
+      - <<: *patchProvided
+        subs: [ 'Secrets' ]
+        condition: 'active("Secrets.esp") and not file("Secrets-DiveRock Patch.esp")'
+      - <<: *patchProvided
+        subs: [ 'Servant of the Dawn' ]
+        condition: 'active("Servant of the Dawn.esp") and not file("SOTD-DiveRock Patch.esp")'
+      - <<: *patchProvided
+        subs: [ 'The Heart of the Dead' ]
+        condition: 'active("HeartOftheDead.esp") and not file("HOTD-DiveRock Patch.esp")'
+    clean:
+      - crc: 0x59E4C67C
+        util: 'TES4Edit v4.0.4b'
 
   - name: 'IC Atmospheric Shops Mod.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/27973/' ]
