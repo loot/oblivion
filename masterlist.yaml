@@ -6651,7 +6651,8 @@ plugins:
   - name: 'Kragenir''s Death Quest.esp'
     req: [ *SilentVoice ]
     inc:
-      - '300_White Stallion 4.esp'
+      - name: '300_White Stallion 4.esp'
+        condition: 'not file("Kragenirs_WhiteStallion_Compat.esp")'
       - 'Servant of the Dawn.esp'
     msg:
       - <<: *patch3rdParty
