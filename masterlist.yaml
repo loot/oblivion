@@ -7915,6 +7915,48 @@ plugins:
   - name: 'Improved dungeons.esp'
     msg: [ *obsolete ]
 
+  - name: '(Mage Equipment|Francesco''s Mage Equipment)\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/18875/'
+        name: 'Mage Equipment 21'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Mage Equipment 21 ESP' ]
+        condition: 'many("(Mage Equipment|Francesco''s Mage Equipment)\.esp")'
+    tag:
+      - Actors.DeathItem
+      - Delev
+      - Enchantments
+      - Graphics
+      - Invent.Add
+      - Invent.Remove
+      - Scripts
+      - Stats
+      - Text
+  - name: 'Mage Equipment.esp'
+    msg:
+      - <<: *obsolete
+        subs: [ '[Mage Equipment 21](https://www.nexusmods.com/oblivion/mods/18875/)' ]
+        condition: 'checksum("Mage Equipment.esp", 27FA1E0F) or checksum("Mage Equipment.esp", 6693E84F)'
+      - <<: *useVersion
+        subs: [ 'Francesco''s Mage Equipment.esp' ]
+        condition: 'active("Francesco''s Leveled Creatures-Items Mod.esm")'
+    dirty:
+      - <<: *quickClean
+        crc: 0x60C24030
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        udr: 23
+  - name: 'Francesco''s Mage Equipment.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0xE8279E92
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        udr: 23
+  - name: 'Mage Equipment - No Manni.esp'
+    msg:
+      - <<: *obsolete
+        subs: [ '[Mage Equipment 21](https://www.nexusmods.com/oblivion/mods/18875/)' ]
+
   - name: 'More_Vegetables.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/11459/' ]
     dirty:
@@ -17807,54 +17849,6 @@ plugins:
       - Invent.Add
       - Invent.Remove
 
-  - name: 'Mage Equipment.esp'
-    url:
-      - 'https://www.nexusmods.com/oblivion/mods/13695'
-      - 'https://www.nexusmods.com/oblivion/mods/18875'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Item sale prices will be excessive and unpredictable with OOO, FCOM and/or Living Economy'
-          - lang: de
-            text: 'Item Verkaufspreise werden überzogen und unvorhersehbar sein mit OOO, FCOM und/oder Living Economy'
-      - type: say
-        content:
-          - lang: en
-            text: 'If using Mage Equipment Lite, load after SRT.'
-          - lang: de
-            text: 'Wenn Mage Equipment Lite benutzt wird, dann nach SRT erst laden.'
-    tag:
-      - Delev
-      - Graphics
-      - Invent
-      - Relev
-      - Stats
-    dirty:
-      - <<: *quickClean
-        crc: 0x60C24030
-        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
-        udr: 23
-  - name: 'Mage Equipment - No Manni.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/13695' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Item sale prices will be excessive and unpredictable with OOO, FCOM and/or Living Economy'
-          - lang: de
-            text: 'Item Verkaufspreise werden überzogen und unvorhersehbar sein mit OOO, FCOM und/oder Living Economy'
-      - type: say
-        content:
-          - lang: en
-            text: 'If using Mage Equipment Lite, load after SRT.'
-          - lang: de
-            text: 'Wenn Mage Equipment Lite benutzt wird, dann nach SRT erst laden.'
-  - name: 'Francesco''s Mage Equipment.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/18875' ]
-    inc:
-      - 'Mage Equipment - No Manni.esp'
-      - 'Mage Equipment.esp'
   - name: 'MEQ_NakakitaPatch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/45748' ]
     tag:
