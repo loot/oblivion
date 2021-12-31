@@ -6644,27 +6644,65 @@ plugins:
       - crc: 0xA0C60505
         util: 'TES4Edit v4.0.3'
 
+  - name: '(Kragenir''s Death Quest|KDQ - Rural Line Additions|KragenirsDeathQuest-LetThePeopleDrink patch)\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/26219/'
+        name: 'Kragenirs Death Quest'
   - name: 'Kragenir''s Death Quest.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/26219/' ]
+    req: [ *SilentVoice ]
+    inc:
+      - name: '300_White Stallion 4.esp'
+        condition: 'not file("Kragenirs_WhiteStallion_Compat.esp")'
+      - 'Servant of the Dawn.esp'
+    msg:
+      - <<: *patch3rdParty
+        subs:
+          - 'Unique Landscapes - Beaches of Cyrodiil - Lost Coast'
+          - '[Unique Landscapes Compatibility Patches](https://www.nexusmods.com/oblivion/mods/13834/)'
+        condition: 'active("xulBeachesOfCyrodiilLostCoast.esp") and not active("ULE KragenirsDeathQuest-(LostCoast|UniqueLandscapes merged) patch\.esp")'
+      - <<: *patch3rdParty
+        subs:
+          - 'Unique Landscapes - Cliffs of Anvil'
+          - '[Unique Landscapes Compatibility Patches](https://www.nexusmods.com/oblivion/mods/13834/)'
+        condition: 'active("xulCliffsOfAnvil.esp") and not active("ULE KragenirsDeathQuest-(CliffsOfAnvil|UniqueLandscapes merged) patch\.esp")'
+      - <<: *patch3rdParty
+        subs:
+          - 'Unique Landscapes - Cloudtop Mountains'
+          - '[Unique Landscapes Compatibility Patches](https://www.nexusmods.com/oblivion/mods/13834/)'
+        condition: 'active("xulCloudtopMountains.esp") and not (file("ULE KragenirsDeathQuest-CloudtopMountains patch.esp") or active("ULE KragenirsDeathQuest-UniqueLandscapes merged patch.esp"))'
+      - <<: *patch3rdParty
+        subs:
+          - 'Unique Landscapes - Merged ESP'
+          - '[Unique Landscapes Compatibility Patches](https://www.nexusmods.com/oblivion/mods/13834/)'
+        condition: 'active("Unique Landscapes.esp") and version("Unique Landscapes.esp", "2.0.0", >=) and not active("ULE KragenirsDeathQuest-UniqueLandscapes merged patch.esp")'
+      - <<: *patch3rdParty
+        subs:
+          - 'Unique Landscapes - Rolling Hills'
+          - '[Unique Landscapes Compatibility Patches](https://www.nexusmods.com/oblivion/mods/13834/)'
+        condition: 'active("xulRollingHills_EV.esp") and not active("ULE KragenirsDeathQuest-(RollingHills|UniqueLandscapes merged) patch\.esp")'
+      - <<: *patch3rdParty
+        subs:
+          - 'Unique Landscapes - The Eastern Peaks'
+          - '[Unique Landscapes Compatibility Patches](https://www.nexusmods.com/oblivion/mods/13834/)'
+        condition: 'active("xulTheEasternPeaks.esp") and not (file("ULE KragenirsDeathQuest-EasternPeaks patch.esp") or active("ULE KragenirsDeathQuest-UniqueLandscapes merged patch.esp"))'
     tag: [ Invent.Add ]
     dirty:
       - <<: *quickClean
-        crc: 0x028F29D6
-        util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
+        crc: 0xF427CF43
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
   - name: 'KDQ - Rural Line Additions.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/26219/' ]
+    msg: [ *optional ]
     clean:
       - crc: 0x86EC5DE6
-        util: 'TES4Edit v4.0.4'
-  - name: 'KragenirsDeathQuest-LostCoast patch.esp'
-    clean:
-      - crc: 0xD92DDDE2
-        util: 'TES4Edit v4.0.4'
+        util: 'TES4Edit v4.0.4b'
   - name: 'KragenirsDeathQuest-LetThePeopleDrink patch.esp'
+    req:
+      - name: 'LetThePeopleDrink.esp'
+        condition: 'not active("Better (Cities IC Arboretum|Imperial City)\.esp")'
     clean:
       - crc: 0x3D1BB247
-        util: 'TES4Edit v4.0.4'
+        util: 'TES4Edit v4.0.4b'
 
   - name: 'Kvatch Rebuilt.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/15412/' ]
