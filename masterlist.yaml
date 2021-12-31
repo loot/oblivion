@@ -6684,9 +6684,6 @@ plugins:
           - 'Unique Landscapes - The Eastern Peaks'
           - '[Unique Landscapes Compatibility Patches](https://www.nexusmods.com/oblivion/mods/13834/)'
         condition: 'active("xulTheEasternPeaks.esp") and not (file("ULE KragenirsDeathQuest-EasternPeaks patch.esp") or active("ULE KragenirsDeathQuest-UniqueLandscapes merged patch.esp"))'
-      - <<: *patchIncluded
-        subs: [ 'Let the People Drink' ]
-        condition: 'active("(LetThePeopleDrink.esp|Better Cities Resources.esm)") and not active("KragenirsDeathQuest-LetThePeopleDrink patch.esp")'
     tag: [ Invent.Add ]
     dirty:
       - <<: *quickClean
