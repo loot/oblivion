@@ -3406,6 +3406,22 @@ plugins:
       - crc: 0x8EB21D65
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
 
+  - name: 'NPCsTravel.*\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/44076/' ]
+  - name: 'NPCsTravel.esp'
+    req: [ 'DLCShiveringIsles.esp' ]
+    msg:
+      - <<: *patch3rdParty
+        subs:
+          - 'Oblivion Character Overhaul'
+          - '[OCOv2 - Filter Patch for Mods](https://www.nexusmods.com/oblivion/mods/51379/)'
+        condition: 'active("Bashed Patch.*\.esp") and active("Oblivion_Character_Overhaul.esp") and not file("OCOv2 - Filter Patch for Mods.esp")'
+    clean:
+      - crc: 0x7FFA76A7
+        util: 'TES4Edit v4.0.4b'
+      - crc: 0x08B97517
+        util: 'TES4Edit v4.0.4b'
+
   - name: 'PersonalPackGuars( Black| Striped| White)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/20358/' ]
   - name: 'PersonalPackGuars.esp'
