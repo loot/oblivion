@@ -7915,14 +7915,14 @@ plugins:
   - name: 'Improved dungeons.esp'
     msg: [ *obsolete ]
 
-  - name: '(Mage Equipment|Francesco''s Mage Equipment)\.esp'
+  - name: '(Francesco''s )?Mage Equipment\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/18875/'
         name: 'Mage Equipment 21'
     msg:
       - <<: *useOnlyOneX
         subs: [ 'Mage Equipment 21 ESP' ]
-        condition: 'many("(Mage Equipment|Francesco''s Mage Equipment)\.esp")'
+        condition: 'many("(Francesco''s )?Mage Equipment\.esp")'
     tag:
       - Actors.DeathItem
       - Delev
