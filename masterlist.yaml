@@ -5274,6 +5274,22 @@ plugins:
         util: 'TES4Edit v4.0.4b'
 
 ###### Gameplay - Economy & Item Balance ######
+  - name: 'Actually Valuable Valuables( - RC patch)?\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/49223/' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Actually Valuable Valuables ESP' ]
+        condition: 'many("Actually Valuable Valuables( - RC patch)?\.esp")'
+    tag: [ Stats ]
+  - name: 'Actually Valuable Valuables.esp'
+    clean:
+      - crc: 0xE089154F
+        util: 'TES4Edit v4.0.4b'
+  - name: 'Actually Valuable Valuables - RC patch.esp'
+    clean:
+      - crc: 0xFEB49590
+        util: 'TES4Edit v4.0.4b'
+
   - name: 'cf_Improved_Barter_Gold.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/4367/' ]
     dirty:
