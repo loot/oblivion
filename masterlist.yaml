@@ -2258,6 +2258,9 @@ plugins:
         name: 'Seamless - OCOv2'
   - name: 'EVE_StockEquipmentReplacer(4FCOM|4MMM| for OOO)?\.esp'
     msg:
+      - <<: *patchIncluded
+        subs: [ 'Knights of the Nine' ]
+        condition: 'active("Knights.esp") and not file("EVE_KnightsoftheNine.esp")'
       - <<: *useOnlyOneX
         subs: [ 'EVE_StockEquipmentReplacer ESP' ]
         condition: 'many("EVE_StockEquipmentReplacer(4FCOM|4MMM| for OOO)?\.esp")'
@@ -2283,10 +2286,12 @@ plugins:
         util: 'TES4Edit v4.0.4b'
   - name: 'EVE_ShiveringIslesEasterEggs.esp'
     req: [ 'DLCShiveringIsles.esp' ]
+    msg: [ *optional ]
     clean:
       - crc: 0x9409DABA
         util: 'TES4Edit v4.0.4b'
   - name: 'EVE_KnightsoftheNine.esp'
+    msg: [ *optional ]
     tag:
       - Deactivate
       - Graphics
@@ -2296,6 +2301,7 @@ plugins:
         util: 'TES4Edit v4.0.4b'
   - name: 'EVE_KhajiitFix.esp'
     inc: [ 'Oblivion_Character_Overhaul.esp' ]
+    msg: [ *optional ]
     tag:
       - Deactivate
       - NoMerge
