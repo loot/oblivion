@@ -7511,6 +7511,10 @@ plugins:
   - name: 'Dynamic Map.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/35969/' ]
     req: [ *MenuQue ]
+    msg: [ *versionXofYorGreaterRequiredOBSEv19 ]
+    clean:
+      - crc: 0xD538B7E2
+        util: 'TES4Edit v4.0.4b'
 
   - name: 'Elsweyr Color Map.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/28432/' ]
