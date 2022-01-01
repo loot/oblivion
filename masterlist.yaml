@@ -1741,6 +1741,18 @@ plugins:
         util: 'TES4Edit v4.0.3'
 
 ###### AudioVisual ######
+  - name: 'BrumasNorthernLights.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/46917/'
+        name: 'Realistic Aurora in motion'
+    msg:
+      - <<: *patchUnavailable
+        subs: [ 'Falling Stars' ]
+        condition: 'active("PTFallingStars.esp")'
+    clean:
+      - crc: 0xF53F08B2
+        util: 'TES4Edit v4.0.4b'
+
   - name: '[BW]NewShock(Bolt|Funnel)Effects20\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/10239/' ]
     msg:
