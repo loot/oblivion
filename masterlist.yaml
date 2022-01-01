@@ -3780,6 +3780,27 @@ plugins:
       - crc: 0xF1FCBB4A
         util: 'TES4Edit v4.0.4'
 
+  - name: 'Falling Leaves( - UL LushWoodlands Patch)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/44257/'
+        name: 'Falling Leaves (Nexus Mods)'
+      - link: 'http://tesalliance.org/forums/index.php?/files/file/1600-falling-leaves/'
+        name: 'Falling Leaves (TES Alliance)'
+  - name: 'Falling Leaves.esp'
+    msg:
+      - <<: *patchIncluded
+        subs: [ 'Unique Landscapes - The Great Forest - Lush Woodland' ]
+        condition: 'active("xulLushWoodlands.esp") and not file("Falling Leaves - UL LushWoodlands Patch.esp")'
+    clean:
+      - crc: 0xF87D017A
+        util: 'TES4Edit v4.0.4b'
+  - name: 'Falling Leaves - UL LushWoodlands Patch.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x166133E5
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        udr: 99
+
   - name: 'Grass Overhaul.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/42400/'
