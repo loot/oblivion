@@ -2578,6 +2578,16 @@ plugins:
       - crc: 0x92D9C086
         util: 'TES4Edit v4.0.4b'
 
+  - name: 'QuiltsAndWoolBlankets.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/35387/' ]
+    tag:
+      - Deactivate
+      - Graphics
+      - NoMerge
+    clean:
+      - crc: 0xCBF448A3
+        util: 'TES4Edit v4.0.4b'
+
   - name: 'ReteroX_ClosedEbonyHelmet_v1.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/40829/'
@@ -2633,6 +2643,33 @@ plugins:
     clean:
       - crc: 0x57E7D6B2
         util: 'TES4Edit v4.0.4'
+
+  - name: '(Vanilla Gear Redux|SkimpyHGECArmor)\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/45241/'
+        name: 'Vanilla Gear Redux'
+  - name: 'Vanilla Gear Redux.esp'
+    after:
+      - 'EVE_KnightsoftheNine.esp'
+      - 'EVE_StockEquipmentReplacer.esp'
+      - 'EVE_StockEquipmentReplacer4FCOM.esp'
+      - 'EVE_StockEquipmentReplacer4MMM.esp'
+      - 'EVE_StockEquipmentReplacer for OOO.esp'
+    tag:
+      - Graphics
+      - Invent.Add
+      - Stats
+    dirty:
+      - <<: *quickClean
+        crc: 0x1E9A2B46
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
+  - name: 'SkimpyHGECArmor.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x291637DF
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1
 
   - name: 'Wrist_Iron_Replacer.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/49189/' ]
