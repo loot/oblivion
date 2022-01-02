@@ -5956,6 +5956,35 @@ plugins:
       - crc: 0x9B6F3549
         util: 'TES4Edit v4.0.4b'
 
+  - name: 'tbskGuardsFeatures( OOO Patch)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/45517/'
+        name: 'Local Guards Features'
+    tag:
+      - Factions
+      - Invent.Add
+      - Invent.Remove
+      - NPC.Class
+  - name: 'tbskGuardsFeatures.esp'
+    msg:
+      - <<: *patch3rdParty
+        subs:
+          - 'Unofficial Oblivion Patch'
+          - '[Local Guards Features Unofficial Patch](https://www.nexusmods.com/oblivion/mods/49896/)'
+        condition: 'active("Unofficial Oblivion Patch.esp") and not file("tbskGuardsFeatures_UOP_Patch.esp")'
+      - <<: *patchIncluded
+        subs: [ 'Oscuro''s Oblivion Overhaul' ]
+        condition: 'active("Oscuro''s_Oblivion_Overhaul.esm") and not file("tbskGuardsFeatures OOO Patch.esp")'
+    dirty:
+      - <<: *quickClean
+        crc: 0x70B406E6
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1
+  - name: 'tbskGuardsFeatures OOO Patch.esp'
+    clean:
+      - crc: 0xC47CE596
+        util: 'TES4Edit v4.0.4b'
+
   - name: 'Very Horny Knights.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/50903/'
