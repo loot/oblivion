@@ -4760,7 +4760,7 @@ plugins:
     msg:
       - <<: *patchProvided
         subs: [ 'Knights of the Nine' ]
-        condition: 'active("Knights - Unofficial Patch.esp") and not file("Oblivion Content Restoration Project -- Knights.esp")'
+        condition: 'active("Knights.esp") and active("Knights - Unofficial Patch.esp") and not file("Oblivion Content Restoration Project -- Knights.esp")'
     tag:
       - Actors.ACBS
       - Actors.AIData
