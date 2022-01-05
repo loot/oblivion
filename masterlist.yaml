@@ -2144,6 +2144,35 @@ plugins:
       - crc: 0x2CB22091
         util: 'TES4Edit v4.0.4b'
 
+  - name: 'BetterLorgrenBenirus(_NoStaffEdit)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/51263/'
+        name: 'Better Lorgren Benirus'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Better Lorgren Benirus ESP' ]
+        condition: 'many("BetterLorgrenBenirus(_NoStaffEdit)?\.esp")'
+    tag:
+      - Actors.ACBS
+      - Factions
+      - Graphics
+      - Sound
+  - name: 'BetterLorgrenBenirus.esp'
+    tag:
+      - Enchantments
+      - Names
+      - Stats
+    clean:
+      - crc: 0xFCE733B9
+        util: 'TES4Edit v4.0.4b'
+  - name: 'BetterLorgrenBenirus_NoStaffEdit.esp'
+    tag:
+      - Deactivate
+      - NoMerge
+    clean:
+      - crc: 0x374FC72F
+        util: 'TES4Edit v4.0.4b'
+
   - name: 'Better minotaurs.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/49425/' ]
     tag:
