@@ -2262,11 +2262,11 @@ plugins:
         subs: [ 'Knights of the Nine' ]
         condition: 'active("Knights.esp") and not file("EVE_KnightsoftheNine.esp")'
       - <<: *patchProvided
-        subs: [ 'Artifacts' ]
-        condition: 'active("Artifacts.esm") and not file("ArtifactsFemaleArmor.esp")'
-      - <<: *patchProvided
         subs: [ 'Armamentarium' ]
         condition: 'active("Armamentarium.esm") and not file("Armamentium female.esp")'
+      - <<: *patchProvided
+        subs: [ 'Artifacts' ]
+        condition: 'active("Artifacts.esm") and not file("ArtifactsFemaleArmor.esp")'
       - <<: *patchProvided
         subs: [ 'Francesco''s Optional New Items Add-On' ]
         condition: 'active("Francesco''s Optional New Items Add-On.esm") and not file("Fransfemale.esp")'
