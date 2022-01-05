@@ -1930,6 +1930,20 @@ plugins:
         util: 'TES4Edit v4.0.3j (RC2 for 4.0.4)'
 
 ###### AudioVisual - Animations & Physics ######
+  - name: 'Better Atronachs.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/50740/' ]
+    tag:
+      - Actors.ACBS
+      - Actors.Spells
+      - Graphics
+      - Invent.Remove
+      - Scripts
+    clean:
+      - crc: 0xFCC3166F
+        util: 'TES4Edit v4.0.4b'
+      - crc: 0x227A006E
+        util: 'TES4Edit v4.0.4b'
+
   - name: 'Feminized_Animations_.*\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/47774' ]
     tag: [ Actors.Anims ]
@@ -2130,6 +2144,35 @@ plugins:
       - crc: 0x2CB22091
         util: 'TES4Edit v4.0.4b'
 
+  - name: 'BetterLorgrenBenirus(_NoStaffEdit)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/51263/'
+        name: 'Better Lorgren Benirus'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Better Lorgren Benirus ESP' ]
+        condition: 'many("BetterLorgrenBenirus(_NoStaffEdit)?\.esp")'
+    tag:
+      - Actors.ACBS
+      - Factions
+      - Graphics
+      - Sound
+  - name: 'BetterLorgrenBenirus.esp'
+    tag:
+      - Enchantments
+      - Names
+      - Stats
+    clean:
+      - crc: 0xFCE733B9
+        util: 'TES4Edit v4.0.4b'
+  - name: 'BetterLorgrenBenirus_NoStaffEdit.esp'
+    tag:
+      - Deactivate
+      - NoMerge
+    clean:
+      - crc: 0x374FC72F
+        util: 'TES4Edit v4.0.4b'
+
   - name: 'Better minotaurs.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/49425/' ]
     tag:
@@ -2239,6 +2282,18 @@ plugins:
         util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 6
 
+  - name: 'Diablo II Skeletons.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/45063/' ]
+    tag:
+      - Actors.Spells
+      - Graphics
+      - Names
+    dirty:
+      - <<: *quickClean
+        crc: 0xE4E16494
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 10
+
   - name: 'DistinctAyleidBossChests.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/49483/' ]
     tag:
@@ -2261,6 +2316,15 @@ plugins:
       - <<: *patchIncluded
         subs: [ 'Knights of the Nine' ]
         condition: 'active("Knights.esp") and not file("EVE_KnightsoftheNine.esp")'
+      - <<: *patchProvided
+        subs: [ 'Armamentarium' ]
+        condition: 'active("Armamentarium.esm") and not file("Armamentium female.esp")'
+      - <<: *patchProvided
+        subs: [ 'Artifacts' ]
+        condition: 'active("Artifacts.esm") and not file("ArtifactsFemaleArmor.esp")'
+      - <<: *patchProvided
+        subs: [ 'Francesco''s Optional New Items Add-On' ]
+        condition: 'active("Francesco''s Optional New Items Add-On.esm") and not file("Fransfemale.esp")'
       - <<: *useOnlyOneX
         subs: [ 'EVE_StockEquipmentReplacer ESP' ]
         condition: 'many("EVE_StockEquipmentReplacer(4FCOM|4MMM| for OOO)?\.esp")'
@@ -2383,6 +2447,21 @@ plugins:
       - crc: 0xE69585AB
         util: 'TES4Edit v4.0.4'
 
+  - name: 'HGEC (B|D)-cup DBA\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/40471/'
+        name: 'HGEC B and D-Cup DarkBrotherhood Armor Replacer'
+  - name: 'HGEC B-cup DBA.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0xC290583C
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 3
+  - name: 'HGEC D-cup DBA.esp'
+    clean:
+      - crc: 0x8C8B9E59
+        util: 'TES4Edit v4.0.4b'
+
   - name: 'Imperial Horse Armor.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/3352/' ]
     msg:
@@ -2429,6 +2508,29 @@ plugins:
   - name: 'EVE_Knights-OpenCrusaderHelm.esp'
     clean:
       - crc: 0x2A1AE079
+        util: 'TES4Edit v4.0.4b'
+
+  - name: 'Legion Armor Revised (Balanced|Classic)\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/48724/'
+        name: 'Legion Armor Revised'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Legion Armor Revised ESP' ]
+        condition: 'many("Legion Armor Revised (Balanced|Classic)\.esp")'
+    tag:
+      - Deactivate
+      - Graphics
+      - Names
+      - NoMerge
+  - name: 'Legion Armor Revised Balanced.esp'
+    tag: [ Stats ]
+    clean:
+      - crc: 0xBDE4F7B8
+        util: 'TES4Edit v4.0.4b'
+  - name: 'Legion Armor Revised Classic.esp'
+    clean:
+      - crc: 0x660212CF
         util: 'TES4Edit v4.0.4b'
 
   - name: 'Magic Visuals Overhaul.esp'
@@ -2759,6 +2861,18 @@ plugins:
       - Sound
     clean:
       - crc: 0x054E19B7
+        util: 'TES4Edit v4.0.4b'
+
+  - name: 'Playful FlmAtrnch Sound Attenuator.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/50320/'
+        name: 'Playful Flame Atronach Sound Replacer'
+    tag:
+      - Deactivate
+      - NoMerge
+      - Sound
+    clean:
+      - crc: 0xFAD8CA7A
         util: 'TES4Edit v4.0.4b'
 
   - name: 'Symphony of Violence.esp'
@@ -3961,6 +4075,16 @@ plugins:
         util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
         udr: 99
 
+  - name: 'flora of cyrodiil.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/51612/' ]
+    req: [ 'DLCShiveringIsles.esp' ]
+    tag: [ Graphics ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x531E2F01
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
+
   - name: 'Grass Overhaul.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/42400/'
@@ -4750,9 +4874,17 @@ plugins:
         util: '[TES4Edit v4.0.3g](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 16
 
+  - name: 'Oblivion Content Restoration Project( -- Knights)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/45909/'
+        name: 'Oblivion Content Restoration Project'
   - name: 'Oblivion Content Restoration Project.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/45909' ]
     req: [ *OBSE ]
+    inc: [ 'Oblivion Uncut.esp' ]
+    msg:
+      - <<: *patchProvided
+        subs: [ 'Knights of the Nine' ]
+        condition: 'active("Knights.esp") and active("Knights - Unofficial Patch.esp") and not file("Oblivion Content Restoration Project -- Knights.esp")'
     tag:
       - Actors.ACBS
       - Actors.AIData
@@ -4767,13 +4899,18 @@ plugins:
       - Invent.Remove
       - Names
       - NPC.Class
-      - Npc.EyesOnly
+      - NPC.Eyes
+      - NPC.FaceGen
       - NPC.Race
       - Scripts
       - Stats
     clean:
       - crc: 0x72C879EB
-        util: 'TES4Edit v4.0.3'
+        util: 'TES4Edit v4.0.4b'
+  - name: 'Oblivion Content Restoration Project -- Knights.esp'
+    clean:
+      - crc: 0x0DFADC22
+        util: 'TES4Edit v4.0.4b'
 
   - name: 'Oblivion Uncut.esp'
     url:
@@ -5929,6 +6066,19 @@ plugins:
       - crc: 0xCE3E1E7B
         util: 'TES4Edit v4.0.4b'
 
+  - name: 'LorgrenBenirusRevisited.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/21363/' ]
+    tag:
+      - Invent.Add
+      - Invent.Remove
+      - Scripts
+      - Text
+    dirty:
+      - <<: *quickClean
+        crc: 0x3CE0FBD8
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        udr: 8
+
   - name: 'StirkGuardFeaturesAddon.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/49649/'
@@ -5968,6 +6118,41 @@ plugins:
       - Invent.Remove
     clean:
       - crc: 0x9B6F3549
+        util: 'TES4Edit v4.0.4b'
+
+  - name: 'tbskGuardsFeaturesKvatchAddon.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/48779/'
+        name: 'Local Guards Features - Kvatch Addon'
+    tag:
+      - Graphics
+      - Invent.Add
+      - Invent.Remove
+    clean:
+      - crc: 0x26E93CF9
+        util: 'TES4Edit v4.0.4b'
+
+  - name: 'tbskGuardsFeaturesThornAddon.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/49043/'
+        name: 'Local Guards Features - Thorn Addon'
+    tag:
+      - Graphics
+      - Invent.Add
+      - Invent.Remove
+    clean:
+      - crc: 0x6F200CA7
+        util: 'TES4Edit v4.0.4b'
+
+  - name: 'tbskGuardsFeaturesWhiteStallionAddon.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/50482/'
+        name: 'Local Guards Features - White Stallion Addon'
+    tag:
+      - Invent.Add
+      - Invent.Remove
+    clean:
+      - crc: 0xE895C052
         util: 'TES4Edit v4.0.4b'
 
   - name: 'Very Horny Knights.esp'
@@ -8431,6 +8616,18 @@ plugins:
         util: 'TES4Edit v4.0.4'
       - crc: 0x54853106
         util: 'TES4Edit v4.0.4'
+
+  - name: 'Stav_ImperialDragon.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/46835/'
+        name: 'Imperial Dragon Armor Reforged'
+    tag:
+      - Enchantments
+      - Graphics
+      - Stats
+    clean:
+      - crc: 0x52F71D95
+        util: 'TES4Edit v4.0.4b'
 
   - name: 'TamrielSnacks11-(D|E)V\.esp'
     url:
