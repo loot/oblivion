@@ -7546,6 +7546,9 @@ plugins:
           - 'Fighter''s Stronghold and Knights of the Nine'
           - '[Servant of the Dawn DLC Compatibility Patch](https://www.nexusmods.com/oblivion/mods/38223/)'
         condition: 'active("DLCBattlehornCastle.esp") and active("Knights.esp") and not file("Servant of the Dawn DLC Compatibility Patch.esp")'
+      - <<: *patchUnavailable
+        subs: [ '[Unofficial Oblivion Patch](https://www.nexusmods.com/oblivion/mods/5296/) **Oblivion Citadel Door Fix.esp**' ]
+        condition: 'file("Oblivion Citadel Door Fix.esp")'
     tag:
       - Actors.AIData
       - Actors.AIPackages
