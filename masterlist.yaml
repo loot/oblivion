@@ -5822,6 +5822,32 @@ plugins:
       - crc: 0x3E9D1FEC
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
 
+  - name: '(BalancedMagic|BMEnchantmentRebalance)\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/45249/'
+        name: 'Balanced Magic'
+  - name: 'BalancedMagic.esp'
+    req:
+      - *OBSE
+      - 'DLCShiveringIsles.esp'
+    tag:
+      - Actors.RecordFlags
+      - EffectStats
+      - Factions
+      - -Invent.Add
+      - Scripts
+    # doNotClean
+  - name: 'BMEnchantmentRebalance.esp'
+    msg:
+      - *optional
+      - <<: *wildEdits
+        subs: [ 'Unnecessarily renames records, use the TES4Edit script **Restore record names from master** to fix them.' ]
+        condition: 'checksum("BMEnchantmentRebalance.esp", 41713073) or checksum("BMEnchantmentRebalance.esp", 6E7CF5A8)'
+    tag:
+      - EnchantmentStats
+      - Stats
+    # doNotClean
+
   ### (L.A.M.E) Less Annoying Magic Experience ###
   - name: 'bgMagic.*\.esp'
     url:
@@ -27302,19 +27328,6 @@ plugins:
   - name: 'OWC - Players Home.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/36260' ]
     tag: [ C.Light ]
-
-  - name: 'BalancedMagic.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/45249' ]
-    # doNotClean
-
-  - name: 'BMEnchantmentRebalance.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/45249' ]
-    dirty:
-      # version: 2.5
-      - <<: *quickClean
-        crc: 0x41713073
-        util: '[TES4Edit v4.0.1](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 22
 
   - name: 'Fair x2 Spawns v1.0.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/14376' ]
