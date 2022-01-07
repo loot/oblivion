@@ -5413,6 +5413,25 @@ plugins:
       - crc: 0x272CD416
         util: 'TES4Edit v4.0.4b'
 
+  - name: '(VanillaCombatEnhanced|VCEClassOverhaul)\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/45314/'
+        name: 'Vanilla Combat Enhanced'
+  - name: 'VanillaCombatEnhanced.esp'
+    req: [ *OBSE ]
+    clean:
+      - crc: 0x34BD9B34
+        util: 'TES4Edit v4.0.4b'
+      - crc: 0xA4001724
+        util: 'TES4Edit v4.0.4b'
+  - name: 'VCEClassOverhaul.esp'
+    msg:
+      - *optional
+      - <<: *wildEdits
+        subs: [ 'Unnecessarily renames records, use the TES4Edit script **Restore record names from master** to fix them.' ]
+        condition: 'checksum("VCEClassOverhaul.esp", 6F06451D)'
+    tag: [ Delev ]
+
 ###### Gameplay - Crafting & Harvesting ######
   - name: 'CLS-Craftybits\.es(m|p)'
     url:
