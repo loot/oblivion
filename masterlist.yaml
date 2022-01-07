@@ -5731,8 +5731,10 @@ plugins:
         itm: 2
 
 ###### Gameplay - Magic & Abilities ######
-  - name: 'Av Latta Magicka\.es(m|p)'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/49096/' ]
+  - name: '(Av Latta Magicka.*|.* - OBME Patch|OBME Savegame Fixer)\.es(m|p)'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/49096/'
+        name: 'Av Latta Magicka - Oblivion Magic Overhaul'
   - name: 'Av Latta Magicka.esm'
     req:
       - *AddActorValues
@@ -5761,18 +5763,18 @@ plugins:
         condition: 'active("CustomSpellIcons.esm")'
     tag: [ EffectStats ]
     clean:
-      - crc: 0x42E9568D
-        util: 'TES4Edit v4.0.4'
+      - crc: 0x6BF40BDD
+        util: 'TES4Edit v4.0.4b'
   - name: 'Av Latta Magicka.esp'
     tag: [ EffectStats ]
     clean:
-      - crc: 0xBFAB0C50
-        util: 'TES4Edit v4.0.4'
+      - crc: 0x555BEAE0
+        util: 'TES4Edit v4.0.4b'
   - name: 'Av Latta Magicka - Rebalance Complete.esp'
     after: [ 'Oblivion Content Restoration Project.esp' ]
     clean:
-      - crc: 0x828CCB47
-        util: 'TES4Edit v4.0.4'
+      - crc: 0x2651A85B
+        util: 'TES4Edit v4.0.4b'
   - name: 'Av Latta Magicka - (Enchantments|Potion|Vanilla Spell) Rebalance\.esp'
     msg:
       - <<: *alreadyInX
@@ -5781,7 +5783,7 @@ plugins:
   - name: 'Av Latta Magicka - Enchantments Rebalance.esp'
     clean:
       - crc: 0x4E032BA8
-        util: 'TES4Edit v4.0.4'
+        util: 'TES4Edit v4.0.4b'
   - name: 'Av Latta Magicka - Potion Rebalance.esp'
     tag:
       - Graphics
@@ -5789,11 +5791,11 @@ plugins:
       - Stats
     clean:
       - crc: 0x6625D64C
-        util: 'TES4Edit v4.0.4'
+        util: 'TES4Edit v4.0.4b'
   - name: 'Av Latta Magicka - Vanilla Spell Rebalance.esp'
     clean:
       - crc: 0x3C5AD45E
-        util: 'TES4Edit v4.0.4'
+        util: 'TES4Edit v4.0.4b'
   - name: 'Av Latta Magicka - Birthsigns.esp'
     tag:
       - Names
@@ -5801,17 +5803,34 @@ plugins:
       - Text
     clean:
       - crc: 0x9E4A7F21
-        util: 'TES4Edit v4.0.4'
+        util: 'TES4Edit v4.0.4b'
   - name: 'Av Latta Magicka - MigNoDeath Patch.esp'
     req: [ 'Av Latta Magicka.esm' ]
+    clean:
+      - crc: 0x87F87703
+        util: 'TES4Edit v4.0.4b'
+  - name: 'BIE - OBME Patch.esp'
+    clean:
+      - crc: 0x60B22D54
+        util: 'TES4Edit v4.0.4b'
   - name: 'Druid Mod - OBME Patch.esp'
     inc: [ 'OBSE/Plugins/DruidModCustomSpellIcons.dll' ]
+    clean:
+      - crc: 0x0D959A9D
+        util: 'TES4Edit v4.0.4b'
   - name: 'Magic Visuals Overhaul - OBME Patch.esp'
     clean:
       - crc: 0x0A01D469
-        util: 'TES4Edit v4.0.4'
+        util: 'TES4Edit v4.0.4b'
   - name: 'Paladin - OBME Patch.esp'
     inc: [ 'OBSE/Plugins/PaladinModCustomSpellIcons.dll' ]
+    clean:
+      - crc: 0x6783F478
+        util: 'TES4Edit v4.0.4b'
+  - name: 'OBME Savegame Fixer.esp'
+    clean:
+      - crc: 0x4072C665
+        util: 'TES4Edit v4.0.4b'
 
   - name: 'Ayleid Wells.esp'
     url:
