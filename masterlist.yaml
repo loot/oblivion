@@ -2237,6 +2237,41 @@ plugins:
       - crc: 0x2C3A6F22
         util: 'TES4Edit v4.0.4'
 
+  - name: 'Book Jackets Oblivion( - BP)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/5570/'
+        name: 'Book Jackets: Oblivion Standard Res'
+      - link: 'https://www.nexusmods.com/oblivion/mods/22170/'
+        name: 'Bain Mods'
+      - link: 'https://www.nexusmods.com/oblivion/mods/50033/'
+        name: 'Book Jackets Oblivion High Res BAIN'
+    inc: [ 'Skillbookssave.esp' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Book Jackets Oblivion ESP' ]
+        condition: 'many("Book Jackets Oblivion( - BP)?\.esp")'
+    tag: [ Graphics ]
+  - name: 'Book Jackets Oblivion.esp'
+    msg:
+      - <<: *useVersion
+        subs: [ 'Book Jackets Oblivion - Book Placement' ]
+        condition: 'active("bookplacing.esm")'
+    dirty:
+      - <<: *quickClean
+        crc: 0x88936850
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 8
+        udr: 233
+  - name: 'Book Jackets Oblivion - BP.esp'
+    after: [ 'Book Placement v2.esp' ]
+    tag: [ Scripts ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x8C50B45D
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 8
+        udr: 233
+
   - name: 'CM_Better Wine.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/4429/' ]
     msg:
@@ -15837,32 +15872,6 @@ plugins:
     tag: [ Scripts ]
   - name: 'Book Jackets Oblivion - SSBFL.esp'
     tag: [ Graphics ]
-
-  - name: 'Book Jackets Oblivion( - BP)?\.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/5570' ]
-    inc: [ 'Skillbookssave.esp' ]
-    tag: [ Graphics ]
-    msg:
-      - <<: *useOnlyOneX
-        subs: [ 'Book Jackets Oblivion' ]
-        condition: 'many("Book Jackets Oblivion( - BP)?\.esp")'
-  - name: 'Book Jackets Oblivion.esp'
-    inc: [ bookplacing.esm ]
-    dirty:
-      - <<: *quickClean
-        crc: 0x88936850
-        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 8
-        udr: 233
-  - name: 'Book Jackets Oblivion - BP.esp'
-    after: [ 'Book Placement v2.esp' ]
-    tag: [ Scripts ]
-    dirty:
-      - <<: *quickClean
-        crc: 0x8C50B45D
-        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 8
-        udr: 233
 
 # These should all be tagged with Deactivate, NoMerge, and NPCFaces, and should have priority -2.
   - name: 'Better Looking NPC.esp'
