@@ -10226,6 +10226,31 @@ plugins:
         itm: 56
         udr: 5
 
+  - name: 'MTCThievesGrotto(V4(\.1)?)?\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/22197/' ]
+  - name: 'MTCThievesGrottoV4.1.esp'
+    msg:
+      - <<: *patch3rdParty
+        subs:
+          - 'Unique Landscapes - Colovian Highlands'
+          - '[Unique Landscapes Compatibility Patches](https://www.nexusmods.com/oblivion/mods/13834/)'
+        condition: 'active("xulColovianHighlands_EV.esp") and not active("UL[ES] MTCThievesGrotto-(ColovianHighlands|UniqueLandscapes merged) patch.esp")'
+      - <<: *patch3rdParty
+        subs:
+          - 'Unique Landscapes - Merged ESP'
+          - '[Unique Landscapes Compatibility Patches](https://www.nexusmods.com/oblivion/mods/13834/)'
+        condition: 'active("Unique Landscapes.esp") and version("Unique Landscapes.esp", "2.0.0", >=) and not active("UL[EM] MTCThievesGrotto-(ColovianHighlands|UniqueLandscapes) patch.esp")'
+    dirty:
+      - <<: *quickClean
+        crc: 0x941BAFD5
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 40
+        udr: 60
+  - name: 'MTCThievesGrotto(V4)?\.esp'
+    msg:
+      - <<: *obsolete
+        subs: [ '[ThievesGrottoV4_1](https://www.nexusmods.com/oblivion/mods/22197/)' ]
+
   - name: 'nordinkarst_1.0.1_en.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/13735/'
@@ -22262,40 +22287,7 @@ plugins:
     clean:
       - crc: 0x8C269500
         util: 'TES4Edit v4.0.3'
-  - name: 'MTCThievesGrotto.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/22197' ]
-    msg:
-      - *obsolete
-      - type: say
-        content:
-          - lang: en
-            text: 'Use ''ThievesGrotto-ColovianHighlands patch.esp'' if using UL Colovian Highlands.'
-          - lang: de
-            text: 'Nutzen Sie ''ThievesGrotto-ColovianHighlands patch.esp'' wenn UL Colovian Highlands genutzt wird.'
-  - name: 'MTCThievesGrottoV4.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/22197' ]
-    msg:
-      - *obsolete
-      - type: say
-        content:
-          - lang: en
-            text: 'Use ''ThievesGrotto-ColovianHighlands patch.esp'' if using UL Colovian Highlands.'
-          - lang: de
-            text: 'Nutzen Sie ''ThievesGrotto-ColovianHighlands patch.esp'' wenn UL Colovian Highlands genutzt wird.'
-  - name: 'MTCThievesGrottoV4.1.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/22197' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Use ''ThievesGrotto-ColovianHighlands patch.esp'' if using UL Colovian Highlands.'
-          - lang: de
-            text: 'Nutzen Sie ''ThievesGrotto-ColovianHighlands patch.esp'' wenn UL Colovian Highlands genutzt wird.'
-    dirty:
-      - crc: 0x941bafd5
-        <<: *dirtyPlugin
-        itm: 38
-        udr: 61
+
   - name: 'HOD_delayer.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/25859/' ]
     msg:
