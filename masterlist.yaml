@@ -10230,12 +10230,16 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/22197/' ]
   - name: 'MTCThievesGrottoV4.1.esp'
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Use ''ThievesGrotto-ColovianHighlands patch.esp'' if using UL Colovian Highlands.'
-          - lang: de
-            text: 'Nutzen Sie ''ThievesGrotto-ColovianHighlands patch.esp'' wenn UL Colovian Highlands genutzt wird.'
+      - <<: *patch3rdParty
+        subs:
+          - 'Unique Landscapes - Colovian Highlands'
+          - '[Unique Landscapes Compatibility Patches](https://www.nexusmods.com/oblivion/mods/13834/)'
+        condition: 'active("xulColovianHighlands_EV.esp") and not active("UL[ES] MTCThievesGrotto-(ColovianHighlands|UniqueLandscapes merged) patch.esp")'
+      - <<: *patch3rdParty
+        subs:
+          - 'Unique Landscapes - Merged ESP'
+          - '[Unique Landscapes Compatibility Patches](https://www.nexusmods.com/oblivion/mods/13834/)'
+        condition: 'active("Unique Landscapes.esp") and version("Unique Landscapes.esp", "2.0.0", >=) and not active("UL[EM] MTCThievesGrotto-(ColovianHighlands|UniqueLandscapes) patch.esp")'
     dirty:
       - crc: 0x941bafd5
         <<: *dirtyPlugin
