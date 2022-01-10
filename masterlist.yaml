@@ -4769,6 +4769,18 @@ plugins:
       - Graphics
       - Sound
 
+  - name: 'Lynges[ _]Thieves[ _]Highway-10256\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/10256/' ]
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'Better Cities Imperial City plugins' ]
+        condition: 'active("Better Imperial City.esp") or active("Better Cities IC (Arboretum|Arcane University|Arena|Elven Gardens|Green Emperor Way|Market|Prison|Temple|Waterfront)\.esp")'
+    dirty:
+      - <<: *quickClean
+        crc: 0x24FE4781
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
+
   - name: 'Mage_Guild_Teleport.esp'
     url:
       - 'https://www.nexusmods.com/oblivion/mods/2494/'
@@ -21950,16 +21962,7 @@ plugins:
       - crc: 0x607e10be
         <<: *dirtyPlugin
         itm: 233
-  - name: 'Lynges_Thieves_Highway-10256.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/10256' ]
-    msg:
-      - <<: *alreadyInX
-        subs: [ 'Better Cities Imperial City plugins' ]
-        condition: 'active("Better Imperial City.esp") or active("Better Cities IC (Arboretum|Arcane University|Arena|Elven Gardens|Green Emperor Way|Market|Prison|Temple|Waterfront)\.esp")'
-    dirty:
-      - crc: 0x24fe4781
-        <<: *dirtyPlugin
-        itm: 2
+
   - name: 'Thieves Highway.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/42385' ]
     msg:
