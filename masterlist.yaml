@@ -10200,12 +10200,16 @@ plugins:
       - <<: *alreadyInX
         subs: [ 'Better Cities - Full' ]
         condition: 'active("Better Cities Full.esp")'
-      - type: say
-        content:
-          - lang: en
-            text: 'Needs compatibility patch when used with Unique Landscapes Bravil Barrowfields.'
-          - lang: de
-            text: 'Brauch Kompatibilitäts-Patch wenn es mit Unique Landscapes Bravil Barrowfields genutzt wird.'
+      - <<: *patch3rdParty
+        subs:
+          - 'Unique Landscapes - Bravil Barrowfields'
+          - '[Unique Landscapes Compatibility Patches](https://www.nexusmods.com/oblivion/mods/13834/)'
+        condition: 'active("xulBravilBarrowfields.esp") and not active("ULS MTCRiverShack-BravilBarrowfields patch.esp")'
+      - <<: *patch3rdParty
+        subs:
+          - 'Unique Landscapes - Merged ESP'
+          - '[Unique Landscapes Compatibility Patches](https://www.nexusmods.com/oblivion/mods/13834/)'
+        condition: 'active("Unique Landscapes.esp") and version("Unique Landscapes.esp", "2.0.0", >=) and not active("ULM MTCRiverShack-BravilBarrowfields patch.esp")'
       - <<: *wildEdits
         subs: [ 'Requires manual [TES4Edit cleaning](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide) of a deleted static record for 0008060C and one wild edit in CELL 0002FF46 (Bravil Skooma Den)' ]
     dirty:
