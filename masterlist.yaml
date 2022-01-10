@@ -10211,12 +10211,19 @@ plugins:
           - '[Unique Landscapes Compatibility Patches](https://www.nexusmods.com/oblivion/mods/13834/)'
         condition: 'active("Unique Landscapes.esp") and version("Unique Landscapes.esp", "2.0.0", >=) and not active("ULM MTCRiverShack-BravilBarrowfields patch.esp")'
       - <<: *wildEdits
-        subs: [ 'Requires manual [TES4Edit cleaning](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide) of a deleted static record for 0008060C and one wild edit in CELL 0002FF46 (Bravil Skooma Den)' ]
+        subs: [ 'Remove CELL **0002FF46** & STAT **0008060C** from **MTCRiverShackv1.2.esp**.' ]
+        condition: 'checksum("MTCRiverShackv1.2.esp", 47777B7D) or checksum("MTCRiverShackv1.2.esp", 88775906)'
     tag: [ Invent.Add ]
     dirty:
-      - crc: 0x47777b7d
-        <<: *dirtyPlugin
-        itm: 94
+      - <<: *quickClean
+        crc: 0x47777B7D
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 56
+        udr: 5
+      - <<: *quickClean
+        crc: 0xF005E400
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 56
         udr: 5
 
   - name: 'nordinkarst_1.0.1_en.esp'
