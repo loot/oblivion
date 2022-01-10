@@ -1686,6 +1686,15 @@ plugins:
         util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 4
 
+  - name: 'New[ _]Sheoth[ _]Palace[ _]LOD[ _]fix-10076\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/10076/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x3FB0EBDD
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1
+        udr: 20
+
   - name: 'Oghma Infinium Crash Fix.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/49983/'
@@ -2919,6 +2928,12 @@ plugins:
       - crc: 0x054E19B7
         util: 'TES4Edit v4.0.4b'
 
+  - name: 'Oblivifall - Ambiant Dungeon SFX.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/29676/' ]
+    clean:
+      - crc: 0xA965B766
+        util: 'TES4Edit v4.0.4b'
+
   - name: 'Playful FlmAtrnch Sound Attenuator.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/50320/'
@@ -3936,6 +3951,14 @@ plugins:
         util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 16
 
+  - name: 'Mimics!.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/17254/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x7F582015
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        udr: 8
+
   - name: 'Nerastarel''s Return.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/20334/' ]
     tag: [ C.Owner ]
@@ -4768,6 +4791,18 @@ plugins:
     tag:
       - Graphics
       - Sound
+
+  - name: 'Lynges[ _]Thieves[ _]Highway-10256\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/10256/' ]
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'Better Cities Imperial City plugins' ]
+        condition: 'active("Better Imperial City.esp") or active("Better Cities IC (Arboretum|Arcane University|Arena|Elven Gardens|Green Emperor Way|Market|Prison|Temple|Waterfront)\.esp")'
+    dirty:
+      - <<: *quickClean
+        crc: 0x24FE4781
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
 
   - name: 'Mage_Guild_Teleport.esp'
     url:
@@ -7282,6 +7317,17 @@ plugins:
       - crc: 0x4F69EAF0
         util: 'TES4Edit v4.0.4b'
 
+  - name: 'Insomonias Ruins.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/38426/'
+        name: 'Horror Unleashed - Halls Of Insomnia Beta'
+    dirty:
+      - <<: *quickClean
+        crc: 0x554DE8AB
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1862
+        udr: 2
+
   - name: 'JolardHome.esp'
     url:
       - link: 'https://www.moddb.com/downloads/zealots-of-the-nine'
@@ -7430,6 +7476,15 @@ plugins:
         itm: 1
         udr: 3
 
+  - name: 'Legends - Baleful Eye.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/16203/' ]
+    msg: [ *versionXofYorGreaterRequiredOBSEv20 ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x7662DAE3
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        udr: 9
+
   - name: 'Legion Faction Mod.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/19591/' ]
     tag: [ Relations ]
@@ -7545,6 +7600,15 @@ plugins:
         itm: 5
         udr: 3
 
+  - name: 'mystery of mausoleum.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/31610/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x2A42B949
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 34
+        udr: 64
+
   - name: 'NakedNord.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/6406/'
@@ -7566,6 +7630,23 @@ plugins:
         crc: 0xAE5FD950
         util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
+
+  - name: 'Nanaelas Heartbreak.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/13687/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x3677ABB7
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1
+
+  - name: 'NecromancerHunting.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/29562/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xFA2DF994
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 13
+        udr: 2
 
   - name: 'No More Wild Goose Chases.esp'
     url:
@@ -8645,6 +8726,20 @@ plugins:
         util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         udr: 2
 
+  - name: 'Lost Paladins of the Divines.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/10505/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x7D20E14F
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 5
+        udr: 3
+      - <<: *quickClean
+        crc: 0x5F7F025C
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 5
+        udr: 3
+
   - name: '(LostTreasures1\.1|Improved dungeons)\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/29378/'
@@ -8719,6 +8814,15 @@ plugins:
         crc: 0x2EAEE466
         util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 3
+
+  - name: 'Mysterious Bear''s Ramshackle Armory.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/38136/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x9708EC51
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 17
+        udr: 5
 
   - name: 'Oblivion Collectible Cards.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/19140/' ]
@@ -9344,6 +9448,14 @@ plugins:
     clean:
       - crc: 0xE84E8476
         util: 'TES4Edit v4.0.2'
+
+  - name: 'Nascosto Isles 3.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/9321/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xD6D26C08
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 156
 
   - name: 'The Contented Prisoner V 2.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17498/' ]
@@ -10094,6 +10206,20 @@ plugins:
   - name: 'Legacy of Faran.esp'
     msg: [ *obsolete ]
 
+  - name: 'Jagnot- Imperial City Library V1.3.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/3868/' ]
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'Better Cities Imperial City Merged/Talos Plaza District' ]
+        condition: 'active("Better Imperial City.esp") or active("Better Cities IC Talos Plaza.esp")'
+      - *wildEdits
+    dirty:
+      - <<: *quickClean
+        crc: 0xFC58ACB0
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 43
+        udr: 171
+
   - name: 'LetThePeopleDrink.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/10223/' ]
     group: *earlyLoadersGroup
@@ -10137,6 +10263,14 @@ plugins:
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
       - crc: 0xB97526F2
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
+
+  - name: 'marodan_osdakal.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/45272/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x80AB3EBB
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 6
 
   - name: '(MerryBellInn|PinePeakLodge|SingingStablehandInn|SleepyCatInn)\.esp'
     url:
@@ -10188,6 +10322,14 @@ plugins:
     clean:
       - crc: 0x0584E391
         util: 'TES4Edit v4.0.4'
+
+  - name: 'mrSiikasBetterPorts_CorvetteExpansion.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/15648/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xA7EEA5FC
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1
 
   - name: 'MTCRiverShackv1.2.esp'
     url:
@@ -10251,6 +10393,16 @@ plugins:
       - <<: *obsolete
         subs: [ '[ThievesGrottoV4_1](https://www.nexusmods.com/oblivion/mods/22197/)' ]
 
+  - name: 'Museum.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/7593/'
+        name: 'Natural History Museum'
+    dirty:
+      - <<: *quickClean
+        crc: 0xE3CC13A8
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 4
+
   - name: 'nordinkarst_1.0.1_en.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/13735/'
@@ -10261,6 +10413,22 @@ plugins:
         util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 18
         udr: 49
+
+  - name: 'Nordruins.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/40621/'
+        name: 'Skyrim ruins, tombs and creatures in Bruma'
+    dirty:
+      - <<: *quickClean
+        crc: 0xD56D4152
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 251
+        udr: 7
+      - <<: *quickClean
+        crc: 0xD93FC5EB
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 251
+        udr: 7
 
   - name: 'Oaksdale.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/42915/' ]
@@ -10980,20 +11148,29 @@ plugins:
 
   - name: 'HackdirtAlive.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/42948/' ]
+    msg:
+      - <<: *wildEdits
+        subs: [ 'Remove Non-Player Character **000A369F** & Race **00000907** from **HackdirtAlive.esp**.' ]
+        condition: 'checksum("HackdirtAlive.esp", 3F9F8645) or checksum("HackdirtAlive.esp", 2745FA47)'
     dirty:
       - <<: *quickClean
         crc: 0xBA4902D9
-        util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 12
         udr: 4
       - <<: *quickClean
         crc: 0x3F9F8645
-        util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 12
+        udr: 4
+      - <<: *quickClean
+        crc: 0xCA459C86
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 12
         udr: 4
       - <<: *quickClean
         crc: 0xD7481198
-        util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 6
         udr: 4
 
@@ -11530,6 +11707,14 @@ plugins:
         itm: 7
         udr: 40
 
+  - name: 'Imperial[ _]City[ _]Cave[ _]House-9473\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/9473/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xD7B74C37
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        udr: 2
+
   - name: 'Jagnot-SI-Summitpoint House.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/10156/'
@@ -11589,6 +11774,15 @@ plugins:
         util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 9
         udr: 12
+
+  - name: 'Mage''sSkyHouse.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/35097/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xCEC8800F
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 111
+        udr: 3
 
   - name: 'Millstone_Farm(_COBL)?.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/29126' ]
@@ -20766,13 +20960,6 @@ plugins:
       - Scripts
       - Stats
 
-  - name: 'Imperial_City_Cave_House-9473.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/9473' ]
-    dirty:
-      - crc: 0xfe41e7a8
-        <<: *dirtyPlugin
-        itm: 1
-        udr: 2
   - name: 'Imperial City Manor.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/27818' ]
     inc: [ 'Region Revive - Lake Rumare.esp' ]
@@ -20860,13 +21047,7 @@ plugins:
             text: 'May conflict with many mods that alter the IC palace.'
           - lang: de
             text: 'Kann im Konflikt stehen mit vielen Mods die den IC Palast abändern.'
-  - name: 'Insomonias Ruins.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/38426' ]
-    dirty:
-      - crc: 0x554de8ab
-        <<: *dirtyPlugin
-        itm: 1862
-        udr: 2
+
   - name: 'JADICMothPriests.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/3771' ]
     inc:
@@ -20888,20 +21069,6 @@ plugins:
       - <<: *alreadyInX
         subs: [ 'Better Cities Imperial City/Temple District' ]
         condition: 'active("Better Imperial City.esp") or active("Better Cities IC Temple.esp")'
-  - name: 'Jagnot- Imperial City Library V1.3.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/3868' ]
-    msg:
-      - <<: *alreadyInX
-        subs: [ 'Better Cities Imperial City Merged/Talos Plaza District' ]
-        condition: 'active("Better Imperial City.esp") or active("Better Cities IC Talos Plaza.esp")'
-      - <<: *wildEdits
-        subs: [ 'Makes a few wild edits, deleting the entirety of "Abandoned Mine Caverns" and modifies the door in "Abandoned Mine" not to point anywhere.' ]
-        condition: 'checksum("Jagnot- Imperial City Library V1.3.esp", FC58ACB0)'
-    dirty:
-      - crc: 0xfc58acb0
-        <<: *dirtyPlugin
-        udr: 171
-        itm: 41
 
   - name: 'Jade_Manor V1.26.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17455' ]
@@ -20922,14 +21089,6 @@ plugins:
       - Graphics
       - Invent
 
-  - name: 'Legends - Baleful Eye.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/16203' ]
-    msg: [ *versionXofYorGreaterRequiredOBSEv20 ]
-    dirty:
-      - crc: 0x4a2e7217
-        <<: *dirtyPlugin
-        itm: 15
-        udr: 11
   - name: 'Legends - Zefaro Cottage.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/35627' ]
     msg:
@@ -20983,13 +21142,6 @@ plugins:
           - lang: de
             text: 'Erwägen Sie zu Werewolf - Legends of the North upzugraden.'
 
-  - name: 'Mage''sSkyHouse.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/35097' ]
-    dirty:
-      - crc: 0xcec8800f
-        <<: *dirtyPlugin
-        itm: 79
-        udr: 3
   - name: 'Mages Guild Quests.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/39591' ]
     req: [ 'DLCShiveringIsles.esp' ]
@@ -20999,18 +21151,7 @@ plugins:
   - name: 'MapleoakRetreat.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/35741' ]
     inc: [ 'xulLushWoodlands.esp' ]
-  - name: 'marodan_osdakal.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/45272' ]
-    dirty:
-      - crc: 0x5028bb9e
-        <<: *dirtyPlugin
-        itm: 3
-  - name: 'Mimics!.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/17254' ]
-    dirty:
-      - crc: 0x7f582015
-        <<: *dirtyPlugin
-        udr: 8
+
   - name: 'MountainShackR12.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22846' ]
     msg: [ *obsolete ]
@@ -21041,12 +21182,6 @@ plugins:
         util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 79
         udr: 65
-  - name: 'mrSiikasBetterPorts_CorvetteExpansion.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/15648' ]
-    dirty:
-      - crc: 0xa7eea5fc
-        <<: *dirtyPlugin
-        itm: 1
 
   - name: 'MTC-WeyePatch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/42170' ]
@@ -21058,32 +21193,14 @@ plugins:
           - lang: de
             text: 'Nutzen Sie diesen Patch oder "MTCVillages-LakeRumarePatch.esp", aber nicht beides gleichzeitig.'
         condition: 'file("MTCVillages-LakeRumarePatch.esp")'
-  - name: 'Museum.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/7593' ]
-    dirty:
-      - crc: 0xe3cc13a8
-        <<: *dirtyPlugin
-        itm: 4
+
   - name: 'Your_Personal_Museum_Updated-9300.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/9300' ]
     dirty:
       - crc: 0xaa358578
         <<: *dirtyPlugin
         itm: 3
-  - name: 'mystery of mausoleum.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/31610' ]
-    dirty:
-      - crc: 0x2a42b949
-        <<: *dirtyPlugin
-        itm: 32
-        udr: 64
-  - name: 'Mysterious Bear''s Ramshackle Armory.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/38136' ]
-    dirty:
-      - crc: 0x9708ec51
-        <<: *dirtyPlugin
-        itm: 49
-        udr: 5
+
   - name: 'mythsandlegends.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/5902' ]
     msg:
@@ -21093,42 +21210,11 @@ plugins:
             text: 'May cause NPCs to generate the message "The ghosts mouth moves but you cannot hear what he says."'
           - lang: de
             text: 'Kann verursachen das NPCs die Nachricht generieren "The ghosts mouth moves but you cannot hear what he says."'
-  - name: 'Nanaelas Heartbreak.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/13687' ]
-    dirty:
-      - crc: 0x3677abb7
-        <<: *dirtyPlugin
-        itm: 1
-  - name: 'NecromancerHunting.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29562' ]
-    dirty:
-      - crc: 0xce2408af
-        <<: *dirtyPlugin
-        itm: 13
-        udr: 2
-  - name: 'Nascosto Isles 3.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/9321' ]
-    dirty:
-      - crc: 0xd6d26c08
-        <<: *dirtyPlugin
-        itm: 156
-  - name: 'New_Sheoth_Palace_LOD_fix-10076.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/10076' ]
-    dirty:
-      - crc: 0x3fb0ebdd
-        <<: *dirtyPlugin
-        itm: 1
-        udr: 20
+
   - name: 'Nine Divines Robes.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/24656' ]
     req: [ *OBSE ]
-  - name: 'NordRuins.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/40621' ]
-    dirty:
-      - crc: 0xd56d4152
-        <<: *dirtyPlugin
-        itm: 25
-        udr: 7
+
   - name: 'Northern Front.esp'
     url:
       - 'https://www.nexusmods.com/oblivion/mods/33127'
@@ -21920,16 +22006,7 @@ plugins:
       - crc: 0x607e10be
         <<: *dirtyPlugin
         itm: 233
-  - name: 'Lynges_Thieves_Highway-10256.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/10256' ]
-    msg:
-      - <<: *alreadyInX
-        subs: [ 'Better Cities Imperial City plugins' ]
-        condition: 'active("Better Imperial City.esp") or active("Better Cities IC (Arboretum|Arcane University|Arena|Elven Gardens|Green Emperor Way|Market|Prison|Temple|Waterfront)\.esp")'
-    dirty:
-      - crc: 0x24fe4781
-        <<: *dirtyPlugin
-        itm: 2
+
   - name: 'Thieves Highway.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/42385' ]
     msg:
@@ -22169,17 +22246,7 @@ plugins:
         util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 159
         udr: 433
-  - name: 'Lost Paladins of the Divines.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/10505' ]
-    dirty:
-      - crc: 0x7d20e14f
-        <<: *dirtyPlugin
-        itm: 6
-        udr: 3
-      - crc: 0xe3bd8e62
-        <<: *dirtyPlugin
-        itm: 6
-        udr: 3
+
   - name: 'Shadowcrest_Vineyard.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22810' ]
     dirty:
@@ -23294,12 +23361,7 @@ plugins:
           - lang: de
             text: 'NUTZEN SIE NUR EINE ''nude * Spriggan.esp'''
         condition: 'file("Nude Humanlike Spriggan.esp") or file("Nude Humanlike Spriggan Tweaked.esp") or file("Nude Humanlike Spriggan HGEC B.esp")'
-  - name: 'Oblivifall - Ambiant Dungeon SFX.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29676' ]
-    dirty:
-      - crc: 0xcbb991e4
-        <<: *dirtyPlugin
-        itm: 1
+
   - name: 'Oblivifall - Closing Time.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/27147' ]
     tag: [ Actors.AIPackages ]
