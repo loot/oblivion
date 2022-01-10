@@ -2928,6 +2928,12 @@ plugins:
       - crc: 0x054E19B7
         util: 'TES4Edit v4.0.4b'
 
+  - name: 'Oblivifall - Ambiant Dungeon SFX.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/29676/' ]
+    clean:
+      - crc: 0xA965B766
+        util: 'TES4Edit v4.0.4b'
+
   - name: 'Playful FlmAtrnch Sound Attenuator.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/50320/'
@@ -23355,12 +23361,7 @@ plugins:
           - lang: de
             text: 'NUTZEN SIE NUR EINE ''nude * Spriggan.esp'''
         condition: 'file("Nude Humanlike Spriggan.esp") or file("Nude Humanlike Spriggan Tweaked.esp") or file("Nude Humanlike Spriggan HGEC B.esp")'
-  - name: 'Oblivifall - Ambiant Dungeon SFX.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29676' ]
-    dirty:
-      - crc: 0xcbb991e4
-        <<: *dirtyPlugin
-        itm: 1
+
   - name: 'Oblivifall - Closing Time.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/27147' ]
     tag: [ Actors.AIPackages ]
