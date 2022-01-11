@@ -11577,6 +11577,22 @@ plugins:
         itm: 7
         udr: 3
 
+  - name: 'PearlFarm.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/38032/' ]
+    msg:
+      - <<: *wildEdits
+        subs: [ 'Remove CELL **0002F7D6** & PACKs **0014C47A** & **0018D1F9** from **PearlFarm.esp**.' ]
+        condition: 'checksum("PearlFarm.esp", 590DE30D) or checksum("PearlFarm.esp", E044335B)'
+    dirty:
+      - <<: *quickClean
+        crc: 0x590DE30D
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 9
+      - <<: *quickClean
+        crc: 0x3415DC9D
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 9
+
   - name: 'Pinevale.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/23804/' ]
     msg: [ *requiresDisabledBorderRegions ]
@@ -22454,12 +22470,7 @@ plugins:
           - lang: de
             text: 'Nutzen Sie stattdessen die Better Cities Version.'
         condition: 'file("Better Cities Resources.esm")'
-  - name: 'PearlFarm.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/38032' ]
-    dirty:
-      - crc: 0x590de30d
-        <<: *dirtyPlugin
-        itm: 12
+
   - name: 'Punk Stevo - Brutal Underground.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/39877' ]
     dirty:
