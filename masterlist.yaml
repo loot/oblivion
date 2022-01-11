@@ -7675,6 +7675,10 @@ plugins:
         name: 'The Northern Front'
       - link: 'https://www.nexusmods.com/oblivion/mods/41461/'
         name: 'The Northern Front FIXED'
+    msg:
+      - <<: *patchUpdateAvailable
+        subs: [ '[The Northern Front FIXED](https://www.nexusmods.com/oblivion/mods/41461/)' ]
+        condition: 'version("Northern Front.esp", "1.0", <)'
     dirty:
       - crc: 0x58bdbd48
         <<: *dirtyPlugin
