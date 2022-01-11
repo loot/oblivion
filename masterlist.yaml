@@ -7669,6 +7669,41 @@ plugins:
       - crc: 0x1443B975
         util: 'TES4Edit v4.0.4b'
 
+  - name: 'Northern Front.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/33127/'
+        name: 'The Northern Front'
+      - link: 'https://www.nexusmods.com/oblivion/mods/41461/'
+        name: 'The Northern Front FIXED'
+    msg:
+      - <<: *patchUpdateAvailable
+        subs: [ '[The Northern Front FIXED](https://www.nexusmods.com/oblivion/mods/41461/)' ]
+        condition: 'version("Northern Front.esp", "1.0", <)'
+      - <<: *versionXofYorGreaterRequiredOBSEv18
+        condition: '(not file("../obse_1_2_416.dll") or version("../obse_1_2_416.dll", "0.0.18.0", <)) and version("Northern Front.esp", "1.0", <)'
+      - <<: *versionXofYorGreaterRequiredOBSEv20
+        condition: '(not file("../obse_1_2_416.dll") or version("../obse_1_2_416.dll", "0.0.20.0", <)) and version("Northern Front.esp", "1.0", >=)'
+    dirty:
+      - <<: *quickClean
+        crc: 0xE1E5FD88
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 83
+        udr: 27
+      - <<: *quickClean
+        crc: 0x58BDBD48
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 83
+        udr: 27
+      - <<: *quickClean
+        crc: 0x87B8FF17
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 83
+        udr: 27
+      - <<: *quickClean
+        crc: 0x9507EDD3
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 3
+
   - name: 'Quest For The Elements.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/6974/' ]
     inc: [ 'Fighters Guild Quests.esp' ]
@@ -21215,23 +21250,6 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/24656' ]
     req: [ *OBSE ]
 
-  - name: 'Northern Front.esp'
-    url:
-      - 'https://www.nexusmods.com/oblivion/mods/33127'
-      - 'https://www.nexusmods.com/oblivion/mods/41461'
-    dirty:
-      - crc: 0x58bdbd48
-        <<: *dirtyPlugin
-        itm: 116
-        udr: 27
-      - crc: 0x87b8ff17
-        <<: *dirtyPlugin
-        itm: 98
-        udr: 27
-      - crc: 0xe1e5fd88
-        <<: *dirtyPlugin
-        itm: 116
-        udr: 27
   - name: 'OgramiradsUnmarkedPlaces.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/21359' ]
     req: [ 'DLCShiveringIsles.esp' ]
