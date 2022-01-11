@@ -7679,6 +7679,10 @@ plugins:
       - <<: *patchUpdateAvailable
         subs: [ '[The Northern Front FIXED](https://www.nexusmods.com/oblivion/mods/41461/)' ]
         condition: 'version("Northern Front.esp", "1.0", <)'
+      - <<: *versionXofYorGreaterRequiredOBSEv18
+        condition: '(not file("../obse_1_2_416.dll") or version("../obse_1_2_416.dll", "0.0.18.0", <)) and version("Northern Front.esp", "1.0", <)'
+      - <<: *versionXofYorGreaterRequiredOBSEv20
+        condition: '(not file("../obse_1_2_416.dll") or version("../obse_1_2_416.dll", "0.0.20.0", <)) and version("Northern Front.esp", "1.0", >=)'
     dirty:
       - crc: 0x58bdbd48
         <<: *dirtyPlugin
