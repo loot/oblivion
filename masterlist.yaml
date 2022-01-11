@@ -11568,6 +11568,15 @@ plugins:
       - crc: 0xA082C1A4
         util: 'TES4Edit v4.0.3'
 
+  - name: 'Passwall Adventurers Club.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/34103/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x6D99B617
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 7
+        udr: 3
+
   - name: 'Pinevale.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/23804/' ]
     msg: [ *requiresDisabledBorderRegions ]
@@ -22435,13 +22444,6 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/24656' ]
     req: [ *OBSE ]
 
-  - name: 'Passwall Adventurers Club.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/34103' ]
-    dirty:
-      - crc: 0x11e6d7fe
-        <<: *dirtyPlugin
-        itm: 13
-        udr: 4
   - name: 'Pats Business Mod.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/9310' ]
     msg:
