@@ -7669,6 +7669,24 @@ plugins:
       - crc: 0x1443B975
         util: 'TES4Edit v4.0.4b'
 
+  - name: 'Northern Front.esp'
+    url:
+      - 'https://www.nexusmods.com/oblivion/mods/33127'
+      - 'https://www.nexusmods.com/oblivion/mods/41461'
+    dirty:
+      - crc: 0x58bdbd48
+        <<: *dirtyPlugin
+        itm: 116
+        udr: 27
+      - crc: 0x87b8ff17
+        <<: *dirtyPlugin
+        itm: 98
+        udr: 27
+      - crc: 0xe1e5fd88
+        <<: *dirtyPlugin
+        itm: 116
+        udr: 27
+
   - name: 'Quest For The Elements.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/6974/' ]
     inc: [ 'Fighters Guild Quests.esp' ]
@@ -21215,23 +21233,6 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/24656' ]
     req: [ *OBSE ]
 
-  - name: 'Northern Front.esp'
-    url:
-      - 'https://www.nexusmods.com/oblivion/mods/33127'
-      - 'https://www.nexusmods.com/oblivion/mods/41461'
-    dirty:
-      - crc: 0x58bdbd48
-        <<: *dirtyPlugin
-        itm: 116
-        udr: 27
-      - crc: 0x87b8ff17
-        <<: *dirtyPlugin
-        itm: 98
-        udr: 27
-      - crc: 0xe1e5fd88
-        <<: *dirtyPlugin
-        itm: 116
-        udr: 27
   - name: 'OgramiradsUnmarkedPlaces.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/21359' ]
     req: [ 'DLCShiveringIsles.esp' ]
