@@ -7596,9 +7596,7 @@ plugins:
           - 'Unofficial Oblivion Patch'
           - '[Mannimarco Revisited UOP Patch](https://www.nexusmods.com/oblivion/mods/49272/)'
         condition: 'active("Unofficial Oblivion Patch.esp") and not file("MannimarcoRevisited UOP Patch.esp")'
-      - <<: *requiresX
-        type: say
-        subs: [ 'INI setting [bBorderRegionsEnabled=0](http://wiki.tesnexus.com/index.php/Removing_In-Game_Borders)' ]
+      - <<: *requiresDisabledBorderRegions
     tag:
       - Actors.ACBS
       - Actors.AIData
@@ -9403,9 +9401,7 @@ plugins:
       - <<: *patchUnavailable
         subs: [ 'The Ayleid Steps' ]
         condition: 'active("The Ayleid Steps.esp")'
-      - <<: *requiresX
-        type: say
-        subs: [ 'INI setting [bBorderRegionsEnabled=0](http://wiki.tesnexus.com/index.php/Removing_In-Game_Borders)' ]
+      - *requiresDisabledBorderRegions
     dirty:
       - <<: *quickClean
         crc: 0x731E6D11
@@ -10556,10 +10552,7 @@ plugins:
 
   - name: 'Pinevale.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/23804/' ]
-    msg:
-      - <<: *requiresX
-        type: say
-        subs: [ 'INI setting [bBorderRegionsEnabled=0](http://wiki.tesnexus.com/index.php/Removing_In-Game_Borders)' ]
+    msg: [ *requiresDisabledBorderRegions ]
     dirty:
       - <<: *quickClean
         crc: 0xEA7FCADE
@@ -11878,9 +11871,7 @@ plugins:
           - 'Unique Landscapes - Cloudtop Mountains'
           - '[Unique Landscapes Compatibility Patches](https://www.nexusmods.com/oblivion/mods/13834/)'
         condition: 'active("(Unique Landscapes|xulCloudtopMountains)\.esp") and not active("ULE MadMagesTowerBASIC-CloudtopMountains patch.esp")'
-      - <<: *requiresX
-        type: say
-        subs: [ 'INI setting [bBorderRegionsEnabled=0](http://wiki.tesnexus.com/index.php/Removing_In-Game_Borders)' ]
+      - *requiresDisabledBorderRegions
     dirty:
       - <<: *quickClean
         crc: 0xF324FB55
@@ -22499,10 +22490,7 @@ plugins:
         subs: [ 'Elsweyr: The Deserts of Anequina' ]
         condition: 'active("ElsweyrAnequina.esp")'
   - name: 'ElsweyrRiverhold.esp'
-    msg:
-      - <<: *requiresX
-        type: say
-        subs: [ 'INI setting [bBorderRegionsEnabled=0](http://wiki.tesnexus.com/index.php/Removing_In-Game_Borders)' ]
+    msg: [ *requiresDisabledBorderRegions ]
     dirty:
       - <<: *quickClean
         crc: 0x8E7B6735
@@ -22524,10 +22512,7 @@ plugins:
 
   - name: 'New Valen.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/36550' ]
-    msg:
-      - <<: *requiresX
-        type: say
-        subs: [ 'INI setting [bBorderRegionsEnabled=0](http://wiki.tesnexus.com/index.php/Removing_In-Game_Borders)' ]
+    msg: [ *requiresDisabledBorderRegions ]
 
   - name: 'PTMudwater.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/35434' ]
