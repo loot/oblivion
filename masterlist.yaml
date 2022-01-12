@@ -10552,6 +10552,10 @@ plugins:
 
   - name: 'Pinevale.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/23804/' ]
+    msg:
+      - <<: *requiresX
+        type: say
+        subs: [ 'INI setting [bBorderRegionsEnabled=0](http://wiki.tesnexus.com/index.php/Removing_In-Game_Borders)' ]
     dirty:
       - <<: *quickClean
         crc: 0xEA7FCADE
