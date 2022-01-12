@@ -5082,6 +5082,9 @@ plugins:
   - name: 'PersuasionOverhaul(_LITE)?\.esp'
     req: [ *OBSE ]
     msg:
+      - <<: *alreadyInX
+        subs: [ 'SupreMe Overhaul' ]
+        condition: 'active("SMO.esp")'
       - <<: *useOnlyOneX
         subs: [ 'Persuasion Overhaul Main ESP' ]
         conition: 'many("PersuasionOverhaul(_LITE)?\.esp")'
