@@ -5076,6 +5076,19 @@ plugins:
         util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 52
 
+  - name: 'PersuasionOverhaul.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/12367/' ]
+    dirty:
+      - crc: 0x8948eef4
+        <<: *dirtyPlugin
+        itm: 1
+  - name: 'PersuasionOverhaul_MMM.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/12367/' ]
+    tag: [ Relations ]
+  - name: 'PersuasionOverhaul_OOO.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/12367/' ]
+    tag: [ Relations ]
+
   - name: 'Respawning Varla & Welkynd Stones.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/29007/' ]
     clean:
@@ -23415,18 +23428,6 @@ plugins:
   - name: 'OriginalLeatherSI.esp'
     tag: [ Names ]
 
-  - name: 'PersuasionOverhaul.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/12367' ]
-    dirty:
-      - crc: 0x8948eef4
-        <<: *dirtyPlugin
-        itm: 1
-  - name: 'PersuasionOverhaul_OOO.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/12367' ]
-    tag: [ Relations ]
-  - name: 'PersuasionOverhaul_MMM.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/12367' ]
-    tag: [ Relations ]
   - name: 'pmNPCServices.esp'
     req: [ 'pmRealTimeInteractions.esp' ]
   - name: 'pmPersuasionOverhaul.esp'
