@@ -7594,7 +7594,7 @@ plugins:
         condition: 'active("Unofficial Oblivion Patch.esp") and not file("MannimarcoRevisited UOP Patch.esp")'
       - <<: *requiresX
         type: say
-        subs: [ 'INI setting `bBorderRegionsEnabled=0`' ]
+        subs: [ 'INI setting [bBorderRegionsEnabled=0](http://wiki.tesnexus.com/index.php/Removing_In-Game_Borders)' ]
     tag:
       - Actors.ACBS
       - Actors.AIData
@@ -9401,7 +9401,7 @@ plugins:
         condition: 'active("The Ayleid Steps.esp")'
       - <<: *requiresX
         type: say
-        subs: [ 'INI setting `bBorderRegionsEnabled=0`' ]
+        subs: [ 'INI setting [bBorderRegionsEnabled=0](http://wiki.tesnexus.com/index.php/Removing_In-Game_Borders)' ]
     dirty:
       - <<: *quickClean
         crc: 0x731E6D11
@@ -11876,7 +11876,7 @@ plugins:
         condition: 'active("(Unique Landscapes|xulCloudtopMountains)\.esp") and not active("ULE MadMagesTowerBASIC-CloudtopMountains patch.esp")'
       - <<: *requiresX
         type: say
-        subs: [ 'INI setting `bBorderRegionsEnabled=0`' ]
+        subs: [ 'INI setting [bBorderRegionsEnabled=0](http://wiki.tesnexus.com/index.php/Removing_In-Game_Borders)' ]
     dirty:
       - <<: *quickClean
         crc: 0xF324FB55
