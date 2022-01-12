@@ -9383,8 +9383,9 @@ plugins:
         subs: [ 'Makes wild edits to the FGC010 script.' ]
         condition: 'checksum("Pek_Halls_of_The_Phoenix_Order.esp", D96DB828)'
     dirty:
-      - crc: 0xd96db828
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xD96DB828
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 2
 
   - name: 'TheOubliette.esp'
