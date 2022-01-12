@@ -9376,6 +9376,17 @@ plugins:
         itm: 12
         udr: 172
 
+  - name: 'Pek_Halls_of_The_Phoenix_Order.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/6846/' ]
+    msg:
+      - <<: *wildEdits
+        subs: [ 'Makes wild edits to the FGC010 script.' ]
+        condition: 'checksum("Pek_Halls_of_The_Phoenix_Order.esp", D96DB828)'
+    dirty:
+      - crc: 0xd96db828
+        <<: *dirtyPlugin
+        itm: 2
+
   - name: 'TheOubliette.esp'
     url: [ 'http://tesalliance.org/forums/index.php?/files/file/1883-the-oubliette/' ]
     clean:
@@ -21318,16 +21329,6 @@ plugins:
       - crc: 0x590de30d
         <<: *dirtyPlugin
         itm: 12
-  - name: 'Pek_Halls_of_The_Phoenix_Order.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/6846' ]
-    msg:
-      - <<: *wildEdits
-        subs: [ 'Makes wild edits to the FGC010 script.' ]
-        condition: 'checksum("Pek_Halls_of_The_Phoenix_Order.esp", D96DB828)'
-    dirty:
-      - crc: 0xd96db828
-        <<: *dirtyPlugin
-        itm: 2
   - name: 'Potion Of the Gods.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/23941/' ]
     msg:
