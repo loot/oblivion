@@ -418,6 +418,10 @@ common:
     type: error
     subs: [ '[Wrye Bash](https://www.nexusmods.com/oblivion/mods/22368) Bashed Patch' ]
     condition: 'not file("Bashed Patch.*\.esp")'
+  - &requiresDisabledBorderRegions
+    <<: *requiresX
+    type: say
+    subs: [ 'INI setting [bBorderRegionsEnabled=0](http://wiki.tesnexus.com/index.php/Removing_In-Game_Borders)' ]
 
   # &useInstead
   - &useInsteadUOP
