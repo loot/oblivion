@@ -5081,6 +5081,10 @@ plugins:
     tag: [ Relations.Change ]
   - name: 'PersuasionOverhaul(_LITE)?\.esp'
     req: [ *OBSE ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Persuasion Overhaul Main ESP' ]
+        conition: 'many("PersuasionOverhaul(_LITE)?\.esp")'
   - name: 'PersuasionOverhaul.esp'
     dirty:
       - <<: *quickClean
