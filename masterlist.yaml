@@ -2451,6 +2451,17 @@ plugins:
       - crc: 0x1302B5B2
         util: 'TES4Edit v4.0.4b'
 
+  - name: 'Give Me My Shader Effects.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/12530/' ]
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'Oblivion Content Restoration Project' ]
+        condition: 'active("Oblivion Content Restoration Project.esp")'
+    tag: [ Actors.Spells ]
+    clean:
+      - crc: 0xE3BA0AAD
+        util: 'TES4Edit v4.0.4b'
+
   - name: 'Glowing Fractured Soulgems.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/49962/' ]
     tag:
