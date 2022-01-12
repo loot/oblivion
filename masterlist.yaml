@@ -10550,6 +10550,24 @@ plugins:
       - crc: 0xA082C1A4
         util: 'TES4Edit v4.0.3'
 
+  - name: 'Pinevale.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/23804/' ]
+    msg:
+      - <<: *requiresX
+        type: say
+        subs: [ 'INI setting [bBorderRegionsEnabled=0](http://wiki.tesnexus.com/index.php/Removing_In-Game_Borders)' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xEA7FCADE
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 54
+        udr: 376
+      - <<: *quickClean
+        crc: 0xA2B61120
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 54
+        udr: 347
+
   - name: 'Rathunas(01|-MidasMagic|-BetterMusicSystem)\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/45880/'
@@ -22505,13 +22523,6 @@ plugins:
       - <<: *alsoUseX
         subs: [ 'INI tweak [bBorderRegionsEnabled=0](http://wiki.tesnexus.com/index.php/Removing_In-Game_Borders)' ]
 
-  - name: 'Pinevale.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/23804' ]
-    dirty:
-      - crc: 0xa2b61120
-        <<: *dirtyPlugin
-        itm: 55
-        udr: 347
   - name: 'PTMudwater.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/35434' ]
     dirty:
