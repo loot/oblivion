@@ -22496,8 +22496,9 @@ plugins:
         condition: 'active("ElsweyrAnequina.esp")'
   - name: 'ElsweyrRiverhold.esp'
     msg:
-      - <<: *alsoUseX
-        subs: [ 'INI tweak [bBorderRegionsEnabled=0](http://wiki.tesnexus.com/index.php/Removing_In-Game_Borders)' ]
+      - <<: *requiresX
+        type: say
+        subs: [ 'INI setting [bBorderRegionsEnabled=0](http://wiki.tesnexus.com/index.php/Removing_In-Game_Borders)' ]
     dirty:
       - <<: *quickClean
         crc: 0x8E7B6735
@@ -22520,8 +22521,9 @@ plugins:
   - name: 'New Valen.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/36550' ]
     msg:
-      - <<: *alsoUseX
-        subs: [ 'INI tweak [bBorderRegionsEnabled=0](http://wiki.tesnexus.com/index.php/Removing_In-Game_Borders)' ]
+      - <<: *requiresX
+        type: say
+        subs: [ 'INI setting [bBorderRegionsEnabled=0](http://wiki.tesnexus.com/index.php/Removing_In-Game_Borders)' ]
 
   - name: 'PTMudwater.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/35434' ]
