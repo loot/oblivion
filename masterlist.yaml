@@ -10632,6 +10632,15 @@ plugins:
         itm: 47
         udr: 5
 
+  - name: 'PTMudwater.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/35434/' ]
+    msg: [ *alsoUseSilentVoice ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x822438DC
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        udr: 5
+
   - name: 'Rathunas(01|-MidasMagic|-BetterMusicSystem)\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/45880/'
@@ -22547,12 +22556,6 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/36550' ]
     msg: [ *requiresDisabledBorderRegions ]
 
-  - name: 'PTMudwater.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/35434' ]
-    dirty:
-      - crc: 0x822438dc
-        <<: *dirtyPlugin
-        udr: 5
   - name: 'Reaper''s Coldstone Town.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/28340' ]
     inc: [ 'HeartOftheDead.esp' ]
