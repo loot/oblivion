@@ -9321,6 +9321,31 @@ plugins:
         itm: 300
         udr: 7
 
+  - name: 'POTSB\.es(m|p)'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/42395/'
+        name: 'Path of the Skull Bearer: The Truth of Corruption'
+    req:
+      - *SilentVoice
+      - *SoundCommands
+      - 'DLCShiveringIsles.esp'
+    msg:
+      - <<: *requiresResources
+        subs: [ '[Path of the Skull Bearer](https://www.nexusmods.com/oblivion/mods/39923/)' ]
+        condition: 'not file("meshes/Architecture/ARK/ARKHiddenStairs.nif")'
+  - name: 'POTSB.esm'
+    clean:
+      - crc: 0x7156DEC3
+        util: 'TES4Edit v4.0.4b'
+  - name: 'POTSB.esp'
+    tag:
+      - C.Music
+      - C.Name
+      - Invent.Add
+    clean:
+      - crc: 0xED92FC41
+        util: 'TES4Edit v4.0.4b'
+
   - name: 'Temple District Rebuild.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/14570/' ]
     msg: [ *mainQuestCompleted ]
@@ -21382,20 +21407,6 @@ plugins:
         <<: *dirtyPlugin
         itm: 13
         udr: 4
-  - name: 'POTSB.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/42395' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Requires: The original Path of the Skull Bearer mod''s files and requirements.'
-          - lang: de
-            text: 'Benötigt: Die original Path of the Skull Bearer mod''s Dateien und dessen Abhängigkeiten.'
-    dirty:
-      - crc: 0x376285c0
-        <<: *dirtyPlugin
-        itm: 26
-        udr: 7
   - name: 'Pats Business Mod.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/9310' ]
     msg:
