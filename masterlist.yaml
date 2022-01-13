@@ -9301,6 +9301,10 @@ plugins:
       - *SilentVoice
       - *SoundCommands
       - 'DLCShiveringIsles.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'POTSB.esm' ]
+        condition: 'active("POTSB.esm")'
     tag:
       - C.Music
       - C.Name
