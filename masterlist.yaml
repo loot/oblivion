@@ -9321,6 +9321,21 @@ plugins:
         itm: 300
         udr: 7
 
+  - name: 'POTSB.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/42395/' ]
+    msg:
+      - type: say
+        content:
+          - lang: en
+            text: 'Requires: The original Path of the Skull Bearer mod''s files and requirements.'
+          - lang: de
+            text: 'Benötigt: Die original Path of the Skull Bearer mod''s Dateien und dessen Abhängigkeiten.'
+    dirty:
+      - crc: 0x376285c0
+        <<: *dirtyPlugin
+        itm: 26
+        udr: 7
+
   - name: 'Temple District Rebuild.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/14570/' ]
     msg: [ *mainQuestCompleted ]
@@ -21382,20 +21397,6 @@ plugins:
         <<: *dirtyPlugin
         itm: 13
         udr: 4
-  - name: 'POTSB.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/42395' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Requires: The original Path of the Skull Bearer mod''s files and requirements.'
-          - lang: de
-            text: 'Benötigt: Die original Path of the Skull Bearer mod''s Dateien und dessen Abhängigkeiten.'
-    dirty:
-      - crc: 0x376285c0
-        <<: *dirtyPlugin
-        itm: 26
-        udr: 7
   - name: 'Pats Business Mod.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/9310' ]
     msg:
