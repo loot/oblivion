@@ -10568,12 +10568,9 @@ plugins:
   - name: 'Potion Of the Gods.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/23941/' ]
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Requires: Jojjo''s Lich King''s armour, shield, and Frostmourne sword. (<http://www.nexusmods.com/oblivion/mods/17032>)'
-          - lang: de
-            text: 'Benötigt: Jojjo''s Lich King''s armour, shield, und Frostmourne sword. (<http://www.nexusmods.com/oblivion/mods/17032>)'
+      - <<: *requiresResources
+        subs: [ '[Frostmourne and Lich Kings Armor](https://www.nexusmods.com/oblivion/mods/17032/)' ]
+        condition: 'not file("Meshes/weapons/jojjo/Frostmournenew/FrostmournenewBlueFlame.nif")'
     tag:
       - C.Music
       - Invent.Add
