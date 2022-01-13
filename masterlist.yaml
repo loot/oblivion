@@ -9295,6 +9295,32 @@ plugins:
       - crc: 0x33089CDE
         util: 'TES4Edit v4.0.3j (RC2 for 4.0.4)'
 
+  - name: 'PathoftheSkullBearer.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/39923/' ]
+    req:
+      - *SilentVoice
+      - *SoundCommands
+      - 'DLCShiveringIsles.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'POTSB.esm' ]
+        condition: 'active("POTSB.esm")'
+    tag:
+      - C.Music
+      - C.Name
+      - Invent.Add
+    dirty:
+      - <<: *quickClean
+        crc: 0xC9904E25
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 300
+        udr: 7
+      - <<: *quickClean
+        crc: 0xE62C1E95
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 300
+        udr: 7
+
   - name: 'Temple District Rebuild.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/14570/' ]
     msg: [ *mainQuestCompleted ]
@@ -21356,12 +21382,6 @@ plugins:
         <<: *dirtyPlugin
         itm: 13
         udr: 4
-  - name: 'PathoftheSkullBearer.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/39923' ]
-    req:
-      - *SilentVoice
-      - *SoundCommands
-      - 'DLCShiveringIsles.esp'
   - name: 'POTSB.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/42395' ]
     msg:
