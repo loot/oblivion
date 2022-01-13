@@ -9323,6 +9323,10 @@ plugins:
 
   - name: 'POTSB.esm'
     url: [ 'https://www.nexusmods.com/oblivion/mods/42395/' ]
+    req:
+      - *SilentVoice
+      - *SoundCommands
+      - 'DLCShiveringIsles.esp'
     msg:
       - <<: *requiresResources
         subs: [ '[Path of the Skull Bearer](https://www.nexusmods.com/oblivion/mods/39923/)' ]
