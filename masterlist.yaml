@@ -7753,7 +7753,9 @@ plugins:
   - name: 'Qaja''kar( Essential Bartenders)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/30241/' ]
   - name: 'Qaja''kar.esp'
-    msg: [ *versionXofYorGreaterRequiredOBSEv12 ]
+    msg:
+      - *alsoUseSilentVoice
+      - *versionXofYorGreaterRequiredOBSEv12
     dirty:
       - crc: 0xfadeaa7
         <<: *dirtyPlugin
