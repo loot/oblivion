@@ -11478,10 +11478,35 @@ plugins:
         itm: 6
         udr: 4
 
-  - name: 'HESU DiveRock.esp'
+  - name: 'HESU .*\.esp'
     url:
       - link: 'https://www.afkmods.com/index.php?/files/file/2344-the-hesu-mod-collection/'
         name: 'The Hesu Mod Collection'
+  - name: 'HESU AppleHotSprings.esp'
+    after: [ 'Reaper''s Bleaker''s Way Village Revamp.esp' ]
+    msg:
+      - <<: *patchProvided
+        subs: [ 'Alternative Beginnings' ]
+        condition: 'active("Alternative Beginnings.esp") and not file("AppleHotSprings-AltBeginnings Patch.esp")'
+      - <<: *patchProvided
+        subs: [ 'Reapers BleakerWay Revamp and Quest' ]
+        condition: 'active("Reaper''s Bleaker''s Way Village Revamp.esp") and not file("BleakerWayRevamp-AppleHotSprings Patch.esp")'
+      - <<: *patchProvided
+        subs: [ 'Roads of Cyrodiil' ]
+        condition: 'active("Roads of Cyrodiil.esp") and not active("Trails Of Cyrodiil Complete.esp") and not file("ROC-AppleHotSprings Patch.esp")'
+      - <<: *patchProvided
+        subs: [ 'Roads of Cyrodiil and Trails Of Cyrodiil Complete' ]
+        condition: 'active("Roads of Cyrodiil.esp") and active("Trails Of Cyrodiil Complete.esp") and not file("ROC-TOCC-AppleHotSprings Patch.esp")'
+      - <<: *patchProvided
+        subs: [ 'Trails Of Cyrodiil Complete' ]
+        condition: 'active("Trails Of Cyrodiil Complete.esp") and not active("Roads of Cyrodiil.esp") and not file("TOCC-AppleHotSprings Patch.esp")'
+      - <<: *useInstead
+        subs: [ 'ROC-TOCC-AppleHotSprings Patch.esp' ]
+        condition: 'active("Roads of Cyrodiil.esp") and active("Trails Of Cyrodiil Complete.esp") and file("(ROC-AppleHotSprings Patch|TOCC-AppleHotSprings Patch)\.esp")'
+    clean:
+      - crc: 0x9E1B43C7
+        util: 'TES4Edit v4.0.4b'
+  - name: 'HESU DiveRock.esp'
     after:
       - 'HeartOftheDead.esp'
       - 'Secrets.esp'
