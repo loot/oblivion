@@ -7806,23 +7806,35 @@ plugins:
         subs: [ '**QOTW Season Four.esp**' ]
         condition: 'active("QOTW Season Four.esp")'
   - name: 'QOTW Season One.esp'
+    tag: [ Actors.ACBS ]
     dirty:
       - crc: 0x315470cb
         <<: *dirtyPlugin
         itm: 231
         udr: 2
   - name: 'QOTW Season Two.esp'
+    tag:
+      - Actors.AIPackages
+      - C.Owner
+      - Factions
     dirty:
       - crc: 0xe2d9635d
         <<: *dirtyPlugin
         itm: 132
   - name: 'QOTW Season Three.esp'
+    tag:
+      - Actors.AIPackages
+      - Factions
     dirty:
       - <<: *quickClean
         crc: 0x671B0844
         util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 99
         udr: 1
+  - name: 'QOTW Season Four.esp'
+    tag:
+      - Actors.ACBS
+      - Actors.AIPackages
   - name: 'QOTW021.esp'
     dirty:
       - crc: 0x25b73907
