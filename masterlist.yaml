@@ -422,6 +422,7 @@ common:
     <<: *requiresX
     type: say
     subs: [ 'INI setting [bBorderRegionsEnabled=0](http://wiki.tesnexus.com/index.php/Removing_In-Game_Borders)' ]
+    condition: 'not file("Borderless Cyrodiil-3578.esp")'
 
   # &useInstead
   - &useInsteadUOP
