@@ -7785,6 +7785,26 @@ plugins:
     msg: [ *alsoUseSilentVoice ]
   - name: 'QOTW Season (One|Two|Three|Four)\.esp'
     req: [ 'DLCShiveringIsles.esp' ]
+  - name: 'QOTW0(0[1-9]|1\d|20)\.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**QOTW Season One.esp**' ]
+        condition: 'active("QOTW Season One.esp")'
+  - name: 'QOTW0(2[1-9]|3\d|40)\.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**QOTW Season Two.esp**' ]
+        condition: 'active("QOTW Season Two.esp")'
+  - name: 'QOTW0(4[1-9]|5\d|60)\.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**QOTW Season Three.esp**' ]
+        condition: 'active("QOTW Season Three.esp")'
+  - name: 'QOTW0(6[1-9]|7\d|80)\.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**QOTW Season Four.esp**' ]
+        condition: 'active("QOTW Season Four.esp")'
   - name: 'QOTW Season One.esp'
     dirty:
       - crc: 0x315470cb
