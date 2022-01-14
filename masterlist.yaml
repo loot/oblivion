@@ -4138,6 +4138,17 @@ plugins:
         util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 3
 
+  - name: 'rebornaylieds.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/20121/'
+        name: 'Return of the Ayleids'
+    dirty:
+      - <<: *quickClean
+        crc: 0xF58D55F6
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 6
+        udr: 2
+
   - name: 'ShinyCreaturesOblivion( - Creature Diversity Patch)?\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/48590/'
@@ -22500,17 +22511,6 @@ plugins:
             text: 'Nutzen Sie stattdessen die Better Cities Version.'
         condition: 'file("Better Cities Resources.esm")'
 
-  - name: 'rebornaylieds.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/20121' ]
-    dirty:
-      - crc: 0x555d27a5
-        <<: *dirtyPlugin
-        itm: 73
-        udr: 83
-      - crc: 0xf58d55f6
-        <<: *dirtyPlugin
-        itm: 6
-        udr: 2
   - name: 'MTCVillages-LakeRumarePatch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/42098' ]
     inc: [ 'MTC-WeyePatch.esp' ]
