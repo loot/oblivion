@@ -13004,6 +13004,10 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/29808/'
         name: 'Reapers_Anequina_Manor V_3'
+    req:
+      - <<: *OBSE
+        condition: 'file("sound/voice/Reaper''s Esmeralda''s Desert Manor.esp")'
+      - 'DLCShiveringIsles.esp'
     dirty:
       - crc: 0xdb57b73
         <<: *dirtyPlugin
