@@ -7778,6 +7778,78 @@ plugins:
         util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 13
 
+  - name: 'QOTW( Season (One|Two|Three|Four)|0\d{2})\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/36336/'
+        name: 'Oblivion Quest Of The Week'
+    msg: [ *alsoUseSilentVoice ]
+  - name: 'QOTW Season (One|Two|Three|Four)\.esp'
+    req: [ 'DLCShiveringIsles.esp' ]
+  - name: 'QOTW0(0[1-9]|1\d|20)\.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**QOTW Season One.esp**' ]
+        condition: 'active("QOTW Season One.esp")'
+  - name: 'QOTW0(2[1-9]|3\d|40)\.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**QOTW Season Two.esp**' ]
+        condition: 'active("QOTW Season Two.esp")'
+  - name: 'QOTW0(4[1-9]|5\d|60)\.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**QOTW Season Three.esp**' ]
+        condition: 'active("QOTW Season Three.esp")'
+  - name: 'QOTW0(6[1-9]|7\d|80)\.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**QOTW Season Four.esp**' ]
+        condition: 'active("QOTW Season Four.esp")'
+  - name: 'QOTW Season One.esp'
+    tag: [ Actors.ACBS ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x2926088F
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 228
+        udr: 2
+  - name: 'QOTW Season Two.esp'
+    tag:
+      - Actors.AIPackages
+      - C.Owner
+      - Factions
+    dirty:
+      - <<: *quickClean
+        crc: 0x112DCCE8
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 133
+  - name: 'QOTW Season Three.esp'
+    tag:
+      - Actors.AIPackages
+      - Factions
+    dirty:
+      - <<: *quickClean
+        crc: 0xF5D62DCC
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 140
+        udr: 1
+  - name: 'QOTW Season Four.esp'
+    tag:
+      - Actors.ACBS
+      - Actors.AIPackages
+    dirty:
+      - <<: *quickClean
+        crc: 0xDDE504A7
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 108
+        udr: 5
+  - name: 'QOTW021.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0xD62553F4
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 4
+
   - name: 'Quest For The Elements.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/6974/' ]
     inc: [ 'Fighters Guild Quests.esp' ]
@@ -21468,25 +21540,6 @@ plugins:
         itm: 9
         udr: 1
 
-  - name: 'QOTW021.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/36336' ]
-    dirty:
-      - crc: 0x25b73907
-        <<: *dirtyPlugin
-        itm: 4
-  - name: 'QOTW Season One.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/36336' ]
-    dirty:
-      - crc: 0x315470cb
-        <<: *dirtyPlugin
-        itm: 231
-        udr: 2
-  - name: 'QOTW Season Two.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/36336' ]
-    dirty:
-      - crc: 0xe2d9635d
-        <<: *dirtyPlugin
-        itm: 132
   - name: 'Ranokoas City Stealth Exits.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/24894' ]
     dirty:
@@ -27436,14 +27489,6 @@ plugins:
         util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
 
-  - name: 'QOTW Season Three.esp'
-    url: [ 'http://www.nexusmods.com/oblivion/mods/36336' ]
-    dirty:
-      - <<: *quickClean
-        crc: 0x671B0844
-        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 99
-        udr: 1
   - name: 'Blue-Glass Armor.esp'
     url: [ 'http://www.nexusmods.com/oblivion/mods/9291' ]
     dirty:
