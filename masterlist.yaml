@@ -3949,6 +3949,14 @@ plugins:
         subs: [ 'Remove **Worldspace Block -1, 1** from **PTRoamingNPCs.esp**.' ]
         condition: 'checksum("PTRoamingNPCs.esp", A3878A6E)'
 
+  - name: 'RomancingAhnassi.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/7636/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x91D702AB
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 66
+
   - name: '(RTT|Ruin)\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/3027/'
@@ -22535,13 +22543,6 @@ plugins:
   - name: 'Ricks CIP ICTalosPlaza.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/43067' ]
     tag: [ C.Climate ]
-
-  - name: 'RomancingAhnassi.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/7636' ]
-    dirty:
-      - crc: 0x91d702ab
-        <<: *dirtyPlugin
-        itm: 66
 
   - name: 'Seawatch Abode.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/23301' ]
