@@ -8396,6 +8396,22 @@ plugins:
       - <<: *useBashTweakInstead
         subs: [ 'Tweak Names -> Lore Friendly Text: Dwarven -> Dwemer' ]
 
+  - name: '(Even )?More Sensible Grammar\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/49852/' ]
+    tag:
+      - Deactivate
+      - NoMerge
+      - Text
+  - name: 'More Sensible Grammar.esp'
+    clean:
+      - crc: 0x007A6411
+        util: 'TES4Edit v4.0.4b'
+  - name: 'Even More Sensible Grammar.esp'
+    req: [ 'DLCShiveringIsles.esp' ]
+    clean:
+      - crc: 0x90AD97C9
+        util: 'TES4Edit v4.0.4b'
+
   - name: 'Extended UI.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/50135/' ]
     req:
