@@ -5203,6 +5203,33 @@ plugins:
       - Delev
       - Relev
 
+  - name: 'Vampire Power( - (Hindaril|Light of Day))?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/36189/'
+        name: 'Vampire Power'
+    req: [ *OBSE ]
+  - name: 'Vampire Power.esp'
+    tag:
+      - Graphics
+      - SpellStats
+    clean:
+      - crc: 0x364A8E52
+        util: 'TES4Edit v4.0.4b'
+  - name: 'Vampire Power - (Hindaril|Light of Day)\.esp'
+    msg: [ *optional ]
+    tag:
+      - Actors.Spells
+      - Invent.Add
+  - name: 'Vampire Power - Hindaril.esp'
+    msg: [ *alsoUseSilentVoice ]
+    clean:
+      - crc: 0x491AD6D2
+        util: 'TES4Edit v4.0.4b'
+  - name: 'Vampire Power - Light of Day.esp'
+    clean:
+      - crc: 0x4AC663A0
+        util: 'TES4Edit v4.0.4b'
+
   - name: 'Walk to Oblivion( - OBSE| - OGMMR)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/23690/' ]
     msg:
