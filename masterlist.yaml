@@ -6975,7 +6975,7 @@ plugins:
     msg:
       - <<: *obsolete
         subs: [ '[An Unexpected Company v1-2-2 PATCH (with increased follow distance)](https://www.nexusmods.com/oblivion/mods/41801/)' ]
-        condition: 'checksum("An Unexpected Company.esp", 9E6F5833)'
+        condition: 'version("An Unexpected Company.esp", "1.2.2", <)'
       - <<: *patchIncluded
         subs: [ 'Better Cities' ]
         condition: 'active("Better Cities Resources.esm") and not file("An Unexpected Company - Better Cities.esp")'
