@@ -6985,6 +6985,11 @@ plugins:
       - crc: 0xD5C1D187
         util: 'TES4Edit v4.0.4b'
   - name: 'An Unexpected Company - Better Cities.esp'
+    after: [ 'Better Cities Full.esp' ]
+    req:
+      - name: 'Better Cities SKINGRAD.esp'
+        display: 'Better Cities Full.esp or Better Cities SKINGRAD.esp'
+        condition: 'not file("Better Cities Full.esp")'
     tag: [ C.Water ]
     clean:
       - crc: 0x1C284354
