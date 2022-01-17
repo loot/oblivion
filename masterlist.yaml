@@ -4264,6 +4264,34 @@ plugins:
       - crc: 0x4399F7C6
         util: 'TES4Edit v4.0.4'
 
+  - name: 'Qarls_Harvest\.es(m|p)'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/8113/'
+        name: 'Qarls Harvest'
+  - name: 'Qarls_Harvest.esm'
+    msg:
+      - *alsoUseEngineBugFixes
+      - <<: *patchUpdateAvailable
+        subs: [ '[More Harvestable Fruits](https://www.nexusmods.com/oblivion/mods/45705/)' ]
+        condition: 'not active("MoreHarvestableFruits.esp")'
+      - <<: *patchUpdateAvailable
+        subs: [ '[Qarls Harvest Addon](https://www.nexusmods.com/oblivion/mods/8285/)' ]
+        condition: 'not active("Qarls_Harvest addon(_MMM)?\.esp")'
+    tag:
+      - Invent.Add
+      - Scripts
+      - Stats
+    clean:
+      - crc: 0xC4565BF3
+        util: 'TES4Edit v4.0.4b'
+  - name: 'Qarls_Harvest.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x31844E23
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 8
+        udr: 105
+
   - name: 'road+bridges.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/9181/'
@@ -13313,9 +13341,6 @@ plugins:
         subs: [ 'Item interchange Ingredients in Bulk' ]
         condition: 'many("Item interchange - Option, Ingredients in Bulk(, reduced)?\.esp")'
 
-  - name: 'Qarls_Harvest.esm'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/8113' ]
-    tag: [ Scripts ]
   - name: 'DEJ Harvest - Flora.esm'
     url:
       # Original modpage, File no longer available here
@@ -17716,14 +17741,6 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/5065' ]
     tag: [ Relev ]
 
-  - name: 'Qarls_Harvest.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/8113' ]
-    dirty:
-      - <<: *quickClean
-        crc: 0x31844E23
-        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 8
-        udr: 105
   - name: 'Qarls_Harvest addon.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/8285' ]
     inc: [ 'Qarls_Harvest addon_OOO.esp' ]
