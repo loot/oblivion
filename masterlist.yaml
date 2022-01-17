@@ -9265,6 +9265,14 @@ plugins:
       - crc: 0x52F71D95
         util: 'TES4Edit v4.0.4b'
 
+  - name: 'strotisNewFood.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/41324/' ]
+    msg:
+      - <<: *wildEdits
+        subs: [ 'Unnecessarily renames records, use the TES4Edit script **Restore record names from master** to fix them.' ]
+        condition: 'checksum("strotisNewFood.esp", CEABE2F2)'
+    tag: [ Invent.Add ]
+
   - name: 'TamrielSnacks11-(D|E)V\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/20105/'
@@ -19169,11 +19177,6 @@ plugins:
   - name: 'Shaun''s Weapon Replacers.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/34589' ]
     tag: [ Graphics ]
-  - name: 'strotisNewFood.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/41324' ]
-    clean:
-      - crc: 0xCEABE2F2
-        util: 'TES4Edit v4.0.3'
   - name: 'Silverlight Armor by Jojjo.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/28723' ]
     dirty:
