@@ -9416,6 +9416,23 @@ plugins:
     req: [ 'Oscuro''s_Oblivion_Overhaul.esp' ]
     inc: [ 'TreasureChest - ALEX.esp' ]
 
+  - name: 'Treasure_Maps_The_Legend_Of_Jauffres_Gold.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/11630/' ]
+    msg:
+      - <<: *wildEdits
+        subs: [ 'Remove **00090AC1**, **00015C3D**, **0005A75B**, & **000CAD1A** from **Treasure_Maps_The_Legend_Of_Jauffres_Gold.esp**.' ]
+        condition: 'checksum("Treasure_Maps_The_Legend_Of_Jauffres_Gold.esp", 9BEABF59) or checksum("Treasure_Maps_The_Legend_Of_Jauffres_Gold.esp", 1521F998)'
+    dirty:
+      - <<: *quickClean
+        crc: 0x9BEABF59
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 14
+        udr: 1
+      - <<: *quickClean
+        crc: 0xA636C295
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 15
+
   - name: 'Uncapped Skeleton Key (N)?OBSE\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/49131/' ]
     msg:
@@ -22264,23 +22281,6 @@ plugins:
   - name: 'Treasure Maps-Meridias Womb-UL edition.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/41987' ]
     tag: [ Invent ]
-  - name: 'Treasure_Maps_The_Legend_Of_Jauffres_Gold.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/11630' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Incompatible with: UL mod(s).'
-          - lang: de
-            text: 'Inkompatibel mit: UL Mod(s).'
-      - <<: *wildEdits
-        subs: [ '[Cleaning instructions](http://cs.elderscrolls.com/index.php?title=TES4Edit_Cleaning_Guide#Treasure_Maps_The_Legend_Of_Jauffres_Gold.esp_Special_Cleaning_Instructions)' ]
-        condition: 'checksum("Treasure_Maps_The_Legend_Of_Jauffres_Gold.esp", 9BEABF59)'
-    dirty:
-      - crc: 0x9beabf59
-        <<: *dirtyPlugin
-        udr: 1
-        itm: 11
   - name: 'Treasure Maps Revenge Of The Nords.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/11460' ]
     msg:
