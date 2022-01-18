@@ -9850,6 +9850,15 @@ plugins:
         util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 8
 
+  - name: 'Unique Dungeons - Lost Glory.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/21603/' ]
+    req: [ 'DLCShiveringIsles.esp' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x166EFDC3
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
+
 ###### Locations - New Lands ######
   - name: 'bartholm.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/5022' ]
@@ -22305,15 +22314,6 @@ plugins:
   - name: 'Treasuresofthedeep.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/35044' ]
     req: [ 'Oscuro''s_Oblivion_Overhaul.esm' ]
-  - name: 'Unique Dungeons - Lost Glory.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/21603' ]
-    dirty:
-      - crc: 0x166efdc3
-        <<: *dirtyPlugin
-        itm: 2
-      - crc: 0x1cd53035
-        <<: *dirtyPlugin
-        itm: 2
   - name: 'Valley_View_Estate.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/9324' ]
     dirty:
