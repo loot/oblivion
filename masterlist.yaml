@@ -10699,6 +10699,37 @@ plugins:
         itm: 43
         udr: 171
 
+  - name: 'Knightly Orders for Cities( - KR Patch)?\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/49934/' ]
+    inc:
+      - '[Calsar] BetterWhiteStallionLodge.esp'
+      - 'Open Cities Resources.esm'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Knightly Orders for Cities ESP' ]
+        condition: 'many("Knightly Orders for Cities( - KR Patch)?\.esp")'
+    tag:
+      - Graphics
+      - Invent.Add
+      - Invent.Remove
+  - name: 'Knightly Orders for Cities.esp'
+    msg:
+      - <<: *useVersion
+        subs: [ 'Knightly Orders for Cities - KR Patch.esp' ]
+        condition: 'active("Kvatch Rebuilt.esp")'
+    clean:
+      - crc: 0x0AB211A4
+        util: 'TES4Edit v4.0.4b'
+      - crc: 0x969B9D04
+        util: 'TES4Edit v4.0.4b'
+  - name: 'Knightly Orders for Cities - KR Patch.esp'
+    req: [ 'Kvatch Rebuilt.esp' ]
+    clean:
+      - crc: 0x0E6EF6B1
+        util: 'TES4Edit v4.0.4b'
+      - crc: 0x29DB4A2F
+        util: 'TES4Edit v4.0.4b'
+
   - name: 'LetThePeopleDrink.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/10223/' ]
     group: *earlyLoadersGroup
