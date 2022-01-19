@@ -8265,14 +8265,16 @@ plugins:
 
   - name: 'VHBloodlines 1.2.esp'
     url:
-      - 'https://www.nexusmods.com/oblivion/mods/14601'
-      - 'https://www.nexusmods.com/oblivion/mods/36389'
+      - link: 'https://www.nexusmods.com/oblivion/mods/14601/'
+        name: 'Verona House Bloodlines'
+      - link: 'https://www.afkmods.com/index.php?/files/file/2366-verona-house-bloodlines-si-version-fixes/'
+        name: 'Verona House: Bloodlines - SI Version + Fixes'
     req:
       - name: 'DLCShiveringIsles.esp'
         condition: 'version("VHBloodlines 1.2.esp", "1.5.6", >=)'
     msg:
       - <<: *useInstead
-        subs: [ '[Verona House Bloodlines SI Fixed](http://www.nexusmods.com/oblivion/mods/36389)' ]
+        subs: [ '[Verona House: Bloodlines - SI Version + Fixes](https://www.afkmods.com/index.php?/files/file/2366-verona-house-bloodlines-si-version-fixes/)' ]
         condition: 'file("DLCShiveringIsles.esp") and not version("VHBloodlines 1.2.esp", "1.5.6", >=)'
     tag:
       - Actors.AIData
