@@ -8275,6 +8275,7 @@ plugins:
       - name: 'DLCShiveringIsles.esp'
         condition: 'version("VHBloodlines 1.2.esp", "1.5.6", >=)'
     msg:
+      - *alsoUseSilentVoice
       - <<: *useInstead
         subs: [ '[Verona House: Bloodlines - SI Version + Fixes](https://www.afkmods.com/index.php?/files/file/2366-verona-house-bloodlines-si-version-fixes/)' ]
         condition: 'file("DLCShiveringIsles.esp") and not version("VHBloodlines 1.2.esp", "1.5.6", >=)'
