@@ -7004,6 +7004,7 @@ plugins:
       - link: 'https://www.nexusmods.com/oblivion/mods/41801/'
         name: 'An Unexpected Company'
   - name: 'An Unexpected Company.esp'
+    after: [ 'VHBloodlines 1.2.esp' ]
     req: [ *SilentVoice ]
     inc:
       - 'A Family Problem.esp'
@@ -8269,6 +8270,7 @@ plugins:
         name: 'Verona House Bloodlines'
       - link: 'https://www.afkmods.com/index.php?/files/file/2366-verona-house-bloodlines-si-version-fixes/'
         name: 'Verona House: Bloodlines - SI Version + Fixes'
+    after: [ 'Region Revive - Lake Rumare.esp' ]
     req:
       - name: 'DLCShiveringIsles.esp'
         condition: 'version("VHBloodlines 1.2.esp", "1.5.6", >=)'
@@ -11339,6 +11341,7 @@ plugins:
     after:
       - 'Region Revive - Lake Rumare.esp'
       - 'RTT.esp'
+      - 'VHBloodlines 1.2.esp'
     req: [ *SilentVoice ]
     tag:
       - Actors.AIPackages
