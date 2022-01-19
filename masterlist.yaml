@@ -8280,9 +8280,12 @@ plugins:
         subs: [ '[Verona House: Bloodlines - SI Version + Fixes](https://www.afkmods.com/index.php?/files/file/2366-verona-house-bloodlines-si-version-fixes/)' ]
         condition: 'file("DLCShiveringIsles.esp") and version("VHBloodlines 1.2.esp", "1.4", <=)'
     tag:
-      - Actors.AIData
-      - Actors.AIPackages
-      - C.Regions
+      - name: -Actors.AIData
+        condition: 'version("VHBloodlines 1.2.esp", "1.5.6", >=)'
+      - name: Actors.AIPackages
+        condition: 'version("VHBloodlines 1.2.esp", "1.4", <=)'
+      - name: C.Regions
+        condition: 'version("VHBloodlines 1.2.esp", "1.5.6", >=)'
     dirty:
       - <<: *quickClean
         crc: 0x4FBE3DC0
