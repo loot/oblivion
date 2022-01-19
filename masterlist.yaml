@@ -7004,6 +7004,7 @@ plugins:
       - link: 'https://www.nexusmods.com/oblivion/mods/41801/'
         name: 'An Unexpected Company'
   - name: 'An Unexpected Company.esp'
+    after: [ 'VHBloodlines 1.2.esp' ]
     req: [ *SilentVoice ]
     inc:
       - 'A Family Problem.esp'
@@ -8265,33 +8266,40 @@ plugins:
 
   - name: 'VHBloodlines 1.2.esp'
     url:
-      - 'https://www.nexusmods.com/oblivion/mods/14601'
-      - 'https://www.nexusmods.com/oblivion/mods/36389'
+      - link: 'https://www.nexusmods.com/oblivion/mods/14601/'
+        name: 'Verona House Bloodlines'
+      - link: 'https://www.afkmods.com/index.php?/files/file/2366-verona-house-bloodlines-si-version-fixes/'
+        name: 'Verona House: Bloodlines - SI Version + Fixes'
+    after: [ 'Region Revive - Lake Rumare.esp' ]
     req:
       - name: 'DLCShiveringIsles.esp'
         condition: 'version("VHBloodlines 1.2.esp", "1.5.6", >=)'
     msg:
-      - <<: *useInstead
-        subs: [ '[Verona House Bloodlines SI Fixed](http://www.nexusmods.com/oblivion/mods/36389)' ]
-        condition: 'file("DLCShiveringIsles.esp") and not version("VHBloodlines 1.2.esp", "1.5.6", >=)'
+      - *alsoUseSilentVoice
+      - <<: *patchUpdateAvailable
+        subs: [ '[Verona House: Bloodlines - SI Version + Fixes](https://www.afkmods.com/index.php?/files/file/2366-verona-house-bloodlines-si-version-fixes/)' ]
+        condition: 'file("DLCShiveringIsles.esp") and version("VHBloodlines 1.2.esp", "1.4", <=)'
     tag:
-      - Actors.AIData
-      - Actors.AIPackages
-      - C.Regions
+      - name: -Actors.AIData
+        condition: 'version("VHBloodlines 1.2.esp", "1.5.6", >=)'
+      - name: Actors.AIPackages
+        condition: 'version("VHBloodlines 1.2.esp", "1.4", <=)'
+      - name: C.Regions
+        condition: 'version("VHBloodlines 1.2.esp", "1.5.6", >=)'
     dirty:
       - <<: *quickClean
         crc: 0x4FBE3DC0
-        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 45
         udr: 756
       - <<: *quickClean
         crc: 0x8187F096
-        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 45
         udr: 756
     clean:
-      - crc: 0xF036F8CF
-        util: 'TES4Edit v4.0.3'
+      - crc: 0x241CBF39
+        util: 'TES4Edit v4.0.4b'
 
   - name: 'VToy.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/33863/' ]
@@ -11337,6 +11345,7 @@ plugins:
     after:
       - 'Region Revive - Lake Rumare.esp'
       - 'RTT.esp'
+      - 'VHBloodlines 1.2.esp'
     req: [ *SilentVoice ]
     tag:
       - Actors.AIPackages
