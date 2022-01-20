@@ -4063,6 +4063,43 @@ plugins:
         subs: [ 'Remove **00032650**, **00069AEE**, & **00069AEF** from **Variant Vagabonds.esp**.' ]
         condition: 'checksum("Variant Vagabonds.esp", E5228022)'
 
+  - name: 'VASE - .*\.es(m|p)'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/28186/'
+        name: 'VAcuitys Spirits and Ephemerals'
+  - name: 'VASE - core.esm'
+    msg:
+      - <<: *patchIncluded
+        subs: [ 'Shivering Isles' ]
+        condition: 'active("DLCShiveringIsles.esp") and not active("Mart''s Monster Mod.esm") and not file("VASE - Vanilla SI.esp")'
+    clean:
+      - crc: 0xD9CAA9EF
+        util: 'TES4Edit v4.0.4b'
+  - name: 'VASE - Vanilla Cyrodiil.esp'
+    msg:
+      - <<: *useInstead
+        subs: [ '[Unofficial MMM patch](https://www.nexusmods.com/oblivion/mods/28186/)' ]
+        condition: 'active("Mart''s Monster Mod.esm")'
+    tag: [ Delev ]
+    clean:
+      - crc: 0xEB4C00E8
+        util: 'TES4Edit v4.0.4b'
+  - name: 'VASE - Vanilla SI.esp'
+    req: [ 'DLCShiveringIsles.esp' ]
+    inc: [ 'Mart''s Monster Mod.esm' ]
+    clean:
+      - crc: 0x812C811A
+        util: 'TES4Edit v4.0.4b'
+  - name: 'VASE - Cyrodiil for MMM.esp'
+    tag:
+      - Actors.Spells
+      - Delev
+      - Invent.Add
+      - Invent.Remove
+    clean:
+      - crc: 0xAF6B305D
+        util: 'TES4Edit v4.0.4b'
+
 ###### Encounters - Neutral ######
   - name: 'Enhanced Daedric Invasion.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/9858/' ]
@@ -20115,15 +20152,6 @@ plugins:
             text: 'MMM users should use ''Mart''s Monster Mod - Diverse Wisps.esp'' instead.'
           - lang: de
             text: 'MMM Nutzer sollten stattdessen ''Mart''s Monster Mod - Diverse Wisps.esp'' nutzen.'
-  - name: 'VASE - Vanilla Cyrodiil.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/28186' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'MMM users should use ''VASE - Cyrodiil for MMM.esp'' instead.'
-          - lang: de
-            text: 'MMM Nutzer sollten stattdessen ''VASE - Cyrodiil for MMM.esp'' nutzen.'
   - name: 'Arachnophobia-2343.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/2343' ]
     tag: [ Delev ]
