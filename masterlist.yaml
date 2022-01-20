@@ -5190,6 +5190,29 @@ plugins:
     group: *latePatchesGroup
     msg: [ *requiresBashedPatch ]
 
+  - name: 'TRN One of the Gang.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/23526/' ]
+    msg:
+      - *alsoUseSilentVoice
+      - <<: *patchProvided
+        subs: [ 'West Roads' ]
+        condition: 'active("West Roads.esp") and not active("WR OotG Addon.esp")'
+      - <<: *requiresX
+        type: say
+        subs: [ 'kuerteeClothingMatters INI settings `kCMQuest.guardArmourCrimeGold to 0` and `kCMQuest.guardArmourIsADisguise to 0`' ]
+        condition: 'active("kuerteeClothingMatters.esp")'
+      - *versionXofYorGreaterRequiredOBSEv16
+    tag:
+      - C.Owner
+      - C.Regions
+      - Graphics
+    dirty:
+      - <<: *quickClean
+        crc: 0xA3C5ADAC
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 71
+        udr: 28
+
   - name: 'undercover.esp'
     url:
       - 'https://www.nexusmods.com/oblivion/mods/12077/'
@@ -24503,25 +24526,6 @@ plugins:
         subs: [ 'Bounty Reduction Over Time' ]
         condition: 'many("BountyReductionOverTime(_standard|_unforgiving|_mostwanted)?.esp")'
 
-  - name: 'TRN One of the Gang.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'If using The Elder Council use the [patch](http://www.nexusmods.com/oblivion/mods/23526).'
-          - lang: de
-            text: 'Wenn Sie The Elder Council benutzen, nutzen Sie den [Patch](http://www.nexusmods.com/oblivion/mods/23526).'
-      - type: say
-        content:
-          - lang: en
-            text: 'If using Kuertee''s Clothing Matters, edit Clothing Matters.ini and change kCMQuest.guardArmourCrimeGold and kCMQuest.guardArmourIsADisguise to 0'
-          - lang: de
-            text: 'Wenn Sie Kuertee''s Clothing Matters benutzen, editieren Sie Clothing Matters.ini und ändern Sie kCMQuest.guardArmourCrimeGold und kCMQuest.guardArmourIsADisguise zu 0 ab'
-    dirty:
-      - crc: 0xa3c5adac
-        <<: *dirtyPlugin
-        itm: 89
-        udr: 28
   - name: 'Push_Spin_Fly.esp'
     req: [ *OBSE ]
   - name: 'Push_Shove_Die.esp'
