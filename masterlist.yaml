@@ -11227,6 +11227,28 @@ plugins:
       - crc: 0x5A9287EC
         util: 'TES4Edit v4.0.4b'
 
+  - name: 'SkyrimObservatory.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/36128/' ]
+    req:
+      - 'DLCShiveringIsles.esp'
+      - 'Knights.esp'
+    msg:
+      - *requiresDisabledBorderRegions
+      - <<: *wildEdits
+        subs: [ 'Remove **0002D156**, **0002EEDC**, **0002430C**, & **00024B66** from **SkyrimObservatory.esp**.' ]
+        condition: 'checksum("SkyrimObservatory.esp", 5ADC0013) or checksum("SkyrimObservatory.esp", 4928D1AC)'
+    dirty:
+      - <<: *quickClean
+        crc: 0x5ADC0013
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 11
+        udr: 7
+      - <<: *quickClean
+        crc: 0x9F9F1EE3
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 11
+        udr: 7
+
   - name: 'StalhrimVillage( - AN Patch)?\.esp'
     url: [ 'http://tesalliance.org/forums/index.php?/files/file/730-stalhrim-village/' ]
   - name: 'StalhrimVillage.esp'
@@ -22048,13 +22070,6 @@ plugins:
       - *SilentVoice
       - 'DLCShiveringIsles.esp'
       - 'Cobl Main.esm'
-  - name: 'SkyrimObservatory.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/36128' ]
-    dirty:
-      - crc: 0x5adc0013
-        <<: *dirtyPlugin
-        itm: 14
-        udr: 7
   - name: 'Slappy''s Wigs v1.0.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/10155' ]
     dirty:
