@@ -4067,6 +4067,12 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/28186/'
         name: 'VAcuitys Spirits and Ephemerals'
+    msg:
+      - <<: *alreadyInMMM
+        condition: 'active("Mart''s Monster Mod.esm") and not active("FCOM_Convergence.esm") and file("Mart''s Monster Mod - Divserse Wisp and VASE Addon.esp")'
+      - <<: *useInstead
+        subs: [ '[**Mart''s Monster Mod - Divserse Wisp and VASE Addon.esp**](https://www.nexusmods.com/oblivion/mods/17784/)' ]
+        condition: 'active("Mart''s Monster Mod.esm") and not active("FCOM_Convergence.esm") and not file("Mart''s Monster Mod - Divserse Wisp and VASE Addon.esp")'
   - name: 'VASE - core.esm'
     msg:
       - <<: *patchIncluded
