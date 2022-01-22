@@ -8168,6 +8168,17 @@ plugins:
         itm: 42
         udr: 50
 
+  - name: 'Silvercliff.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/29420/'
+        name: 'Silvercliff - Treasure of Balemero'
+    msg:
+      - *alsoUseSilentVoice
+      - *versionXofYorGreaterRequiredOBSEv18
+    clean:
+      - crc: 0xB6D06CD5
+        util: 'TES4Edit v4.0.4b'
+
   - name: 'SM Plugin Refurbish.*\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/11474/'
@@ -22061,12 +22072,7 @@ plugins:
   - name: 'CMWaterskin.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/32361' ]
     msg: [ *versionXofYorGreaterRequiredOBSEv18 ]
-  - name: 'Silvercliff.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29420' ]
-    dirty:
-      - crc: 0xb6d06cd5
-        <<: *dirtyPlugin
-        itm: 3
+
   - name: 'Skingrad Market 1.0.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/20684' ]
     req:
