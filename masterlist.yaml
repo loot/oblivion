@@ -9903,6 +9903,16 @@ plugins:
         util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 2
 
+  - name: 'ShadowfangKeep.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/31994/' ]
+    req: [ *SilentVoice ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xA970802F
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 317
+        udr: 2
+
   - name: 'TheOubliette.esp'
     url: [ 'http://tesalliance.org/forums/index.php?/files/file/1883-the-oubliette/' ]
     clean:
@@ -22051,13 +22061,6 @@ plugins:
   - name: 'CMWaterskin.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/32361' ]
     msg: [ *versionXofYorGreaterRequiredOBSEv18 ]
-  - name: 'ShadowfangKeep.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/31994' ]
-    dirty:
-      - crc: 0xa970802f
-        <<: *dirtyPlugin
-        itm: 313
-        udr: 2
   - name: 'Silvercliff.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/29420' ]
     dirty:
