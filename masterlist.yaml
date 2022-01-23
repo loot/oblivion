@@ -9537,6 +9537,14 @@ plugins:
         util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 3
 
+  - name: 'Treasure Maps Meridias Womb.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/12251/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x100F394C
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1
+
   - name: 'Treasure Maps Revenge Of The Nords.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/11460/' ]
     tag: [ Invent.Add ]
@@ -22395,19 +22403,6 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/41987' ]
     tag: [ Invent ]
 
-  - name: 'Treasure Maps Meridias Womb.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/12251' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Incompatible with: UL mod(s).'
-          - lang: de
-            text: 'Inkompatibel mit: UL Mod(s).'
-    dirty:
-      - crc: 0x100f394c
-        <<: *dirtyPlugin
-        itm: 1
   - name: 'Treasure Maps-Meridias Womb-UL edition.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/41987' ]
     tag: [ Invent ]
