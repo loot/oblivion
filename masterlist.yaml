@@ -9114,14 +9114,14 @@ plugins:
       - crc: 0x2144CF82
         util: 'TES4Edit v4.0.4'
 
-  - name: '(Dragon Templar(_Heavy)?|Light Dragon Templar)\.esp'
+  - name: '(Light )?Dragon Templar(_Heavy)?\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/31961/'
         name: 'Dragon Templar Armor'
     msg:
       - <<: *useOnlyOneX
         subs: [ 'Dragon Templar Armor ESP' ]
-        condition: 'many("(Dragon Templar(_Heavy)?|Light Dragon Templar)\.esp")'
+        condition: 'many("(Light )?Dragon Templar(_Heavy)?\.esp")'
   - name: 'Dragon Templar.esp'
     req: [ 'Knights.esp' ]
     dirty:
