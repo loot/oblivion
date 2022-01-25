@@ -8044,6 +8044,30 @@ plugins:
         util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 3
 
+  - name: 'Orden des Drachen.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/45258/'
+        name: 'Order of the Dragon EV'
+      - link: 'https://www.nexusmods.com/oblivion/mods/46786/'
+        name: 'Orden des Drachen'
+    msg:
+      - <<: *patch3rdParty
+        subs:
+          - 'Wizard''s Tower'
+          - '[Patch Orden des Drachen - Frostcrag Spire](https://www.nexusmods.com/oblivion/mods/38760/)'
+        condition: 'active("DLCFrostcrag.esp") and not active("Patch - Orden des Drachen - Frostcrag.esp")'
+      - <<: *wildEdits
+        subs: [ 'Unnecessarily renames records, use the TES4Edit script **Restore record names from master** to fix them.' ]
+        condition: 'checksum("Orden des Drachen.esp", 2778E1FB)'
+    tag:
+      - -NPC.Eyes
+      - NPC.Race
+      - -R.Eyes
+      - -R.Hair
+    clean:
+      - crc: 0xB3CD831A
+        util: 'TES4Edit v4.0.4b'
+
   - name: 'Qaja''kar( Essential Bartenders)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/30241/' ]
   - name: 'Qaja''kar.esp'
