@@ -3819,6 +3819,22 @@ plugins:
       - crc: 0x08B97517
         util: 'TES4Edit v4.0.4b'
 
+  - name: 'Order of the Lamp.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/45820/'
+        name: 'Order of the Lamp'
+      - link: 'https://www.nexusmods.com/oblivion/mods/48733/'
+        name: 'Order of the Lamp - Redux'
+    msg:
+      - <<: *patchUpdateAvailable
+        subs: [ '[Order of the Lamp - Redux](https://www.nexusmods.com/oblivion/mods/48733/)' ]
+        condition: 'checksum("Order of the Lamp.esp", 1B643F6B)'
+    clean:
+      - crc: 0x1B643F6B
+        util: 'TES4Edit v4.0.4b'
+      - crc: 0x8F008B5B
+        util: 'TES4Edit v4.0.4b'
+
   - name: 'PersonalPackGuars( Black| Striped| White)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/20358/' ]
   - name: 'PersonalPackGuars.esp'
