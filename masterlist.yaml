@@ -8039,7 +8039,7 @@ plugins:
         subs:
           - 'Wizard''s Tower'
           - '[Patch Orden des Drachen - Frostcrag Spire](https://www.nexusmods.com/oblivion/mods/38760/)'
-        condition: 'not active("Patch - Orden des Drachen - Frostcrag.esp")'
+        condition: 'active("DLCFrostcrag.esp") and not active("Patch - Orden des Drachen - Frostcrag.esp")'
       - <<: *wildEdits
         subs: [ 'Unnecessarily renames records, use the TES4Edit script **Restore record names from master** to fix them.' ]
         condition: 'checksum("Orden des Drachen.esp", 2778E1FB)'
