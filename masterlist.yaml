@@ -14347,7 +14347,7 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/14720/' ]
     msg:
       - <<: *obsolete
-        condition: 'not checksum("xulBeachesOfCyrodiilLostCoast.esp", C66FED9E)'
+        condition: 'version("xulBeachesOfCyrodiilLostCoast.esp", "2", <)'
     clean:
       - crc: 0xC66FED9E
         util: 'TES4Edit v4.0.3'
