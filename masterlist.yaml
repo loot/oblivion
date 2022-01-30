@@ -12708,6 +12708,22 @@ plugins:
         util: '[TES4Edit v4.0.3g](https://www.nexusmods.com/oblivion/mods/11536)'
         udr: 15
 
+  - name: 'CloudTopManor.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/46148/'
+        name: 'Beneath Cloud Top Manor'
+    req: [ 'DLCShiveringIsles.esp' ]
+    msg:
+      - <<: *wildEdits
+        subs: [ 'Remove **00037331** from **CloudTopManor.esp**.' ]
+        condition: 'checksum("CloudTopManor.esp", 4E83861A)'
+    tag:
+      - C.Water
+      - Graphics
+      - Relations.Add
+      - Relations.Remove
+      - Scripts
+
   - name: 'CV - Castle Dracula.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22384/' ]
     req: [ 'DLCShiveringIsles.esp' ]
