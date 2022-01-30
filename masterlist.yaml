@@ -12712,8 +12712,14 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/46148/'
         name: 'Beneath Cloud Top Manor'
-    req: [ 'DLCShiveringIsles.esp' ]
+    req:
+      - *OBSE
+      - 'DLCShiveringIsles.esp'
+    inc:
+      - 'xulCloudtopMountains.esp'
+      - 'xulColovianHighlands_EV.esp'
     msg:
+      - *requiresDisabledBorderRegions
       - <<: *wildEdits
         subs: [ 'Remove **00037331** from **CloudTopManor.esp**.' ]
         condition: 'checksum("CloudTopManor.esp", 4E83861A)'
