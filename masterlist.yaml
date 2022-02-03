@@ -3267,18 +3267,32 @@ plugins:
       - link: 'https://www.nexusmods.com/oblivion/mods/48588/'
         name: 'Lore-Friendly Replacer for Default Hair for OCO v2'
   - name: 'Kart Hair (Replace v01|A Less Rude Mohawk)\.esp'
-    tag:
-      - Deactivate
-      - Graphics
-      - NoMerge
+    inc:
+      - 'karthairdump.esp'
+      - 'karthairdumpvanilla.esp'
+    tag: [ Graphics ]
   - name: 'Kart Hair Replace v01.esp'
     clean:
       - crc: 0x35CD9F85
         util: 'TES4Edit v4.0.4b'
+  - name: 'Kart ?Hair( A Less Rude Mohawk|dump(vanilla)?)\.esp'
+    msg:
+      - <<: *requiresResources
+        subs: [ 'Lore-Friendly Replacer for Default Hair' ]
+        condition: 'not file("meshes/characters/kart/hair") or not file("textures/characters/kart")'
   - name: 'Kart Hair A Less Rude Mohawk.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**Kart Hair Replace v01.esp**' ]
+        condition: 'file("Kart Hair Replace v01.esp")'
     clean:
       - crc: 0x75B1E596
         util: 'TES4Edit v4.0.4b'
+  - name: 'karthairdump(vanilla)?\.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'karthairdump ESP' ]
+        condition: 'many("karthairdump(vanilla)?\.esp")'
   - name: 'karthairdump.esp'
     clean:
       - crc: 0xD90F3645
