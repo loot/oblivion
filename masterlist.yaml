@@ -10299,12 +10299,6 @@ plugins:
   - name: 'Ruins of Tarnesia.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/6372/' ]
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Has a small landscape conflict with Unique Landcapes: Chorrol Hinterland.'
-          - lang: de
-            text: 'Hat einen kleinen Konflikt bezüglich Landschaften mit Unique Landcapes: Chorrol Hinterland.'
       - <<: *wildEdits
         condition: 'checksum("Ruins of Tarnesia.esp", 9654B520) or checksum("Ruins of Tarnesia.esp", CB7492CC)'
     dirty:
