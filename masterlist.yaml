@@ -10291,6 +10291,17 @@ plugins:
       - crc: 0xB12E7757
         util: 'TES4Edit v4.0.4b'
 
+  - name: 'ShadowRose Manor.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/42923/' ]
+    req:
+      - *OBSE
+      - 'DLCShiveringIsles.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0xA7EB4436
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 92
+
   - name: 'Temple District Rebuild.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/14570/' ]
     msg: [ *mainQuestCompleted ]
@@ -22614,12 +22625,6 @@ plugins:
   - name: 'SecludedGladeCottage.esp'
     url: [ 'https://tesalliance.org/forums/index.php?/files/file/438-secluded-glade/' ]
     tag: [ Invent ]
-  - name: 'ShadowRose Manor.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/42923' ]
-    dirty:
-      - crc: 0xa7eb4436
-        <<: *dirtyPlugin
-        itm: 47
 
   - name: 'Skingrad Market 1.0.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/20684' ]
