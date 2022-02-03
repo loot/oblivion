@@ -10265,6 +10265,10 @@ plugins:
       - link: 'https://www.nexusmods.com/oblivion/mods/22810/'
         name: 'Shadowcrest Vineyard and Shadowcrest Vineyard COBL'
   - name: 'Shadowcrest_Vineyard(_COBL)?\.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Shadowcrest Vineyard Main ESP' ]
+        condition: 'many("Shadowcrest_Vineyard(_COBL)?\.esp")'
     tag: [ C.Music ]
   - name: 'Shadowcrest_Vineyard.esp'
     dirty:
