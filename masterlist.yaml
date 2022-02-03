@@ -10296,6 +10296,28 @@ plugins:
         util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 2
 
+  - name: 'Ruins of Tarnesia.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/6372/' ]
+    msg:
+      - type: say
+        content:
+          - lang: en
+            text: 'Has a small landscape conflict with Unique Landcapes: Chorrol Hinterland.'
+          - lang: de
+            text: 'Hat einen kleinen Konflikt bezüglich Landschaften mit Unique Landcapes: Chorrol Hinterland.'
+      - type: warn
+        content:
+          - lang: en
+            text: 'Requires manual cleaning.'
+          - lang: de
+            text: 'Benötigt manuelle Säuberung.'
+    tag: [ NpcFaces ]
+    dirty:
+      - crc: 0x9654b520
+        <<: *dirtyPlugin
+        itm: 4440
+        udr: 1
+
   - name: 'ShadowfangKeep.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/31994/' ]
     req: [ *SilentVoice ]
@@ -22470,27 +22492,6 @@ plugins:
       - crc: 0x91d702ab
         <<: *dirtyPlugin
         itm: 66
-  - name: 'Ruins of Tarnesia.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/6372' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Has a small landscape conflict with Unique Landcapes: Chorrol Hinterland.'
-          - lang: de
-            text: 'Hat einen kleinen Konflikt bezüglich Landschaften mit Unique Landcapes: Chorrol Hinterland.'
-      - type: warn
-        content:
-          - lang: en
-            text: 'Requires manual cleaning.'
-          - lang: de
-            text: 'Benötigt manuelle Säuberung.'
-    tag: [ NpcFaces ]
-    dirty:
-      - crc: 0x9654b520
-        <<: *dirtyPlugin
-        itm: 4440
-        udr: 1
 
   - name: 'Sacred Duty.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/38287' ]
