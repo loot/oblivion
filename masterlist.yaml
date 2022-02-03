@@ -1620,6 +1620,14 @@ plugins:
     group: *latePatchesGroup
     msg: [ *requiresBashedPatch ]
 
+  - name: 'OMPexample.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/5246/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xE1CE7EED
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 3
+
   - name: 'TamRes(_LandscapeResource)?\.es(m|p)'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/24822/'
@@ -3941,6 +3949,14 @@ plugins:
         subs: [ 'Remove **Worldspace Block -1, 1** from **PTRoamingNPCs.esp**.' ]
         condition: 'checksum("PTRoamingNPCs.esp", A3878A6E)'
 
+  - name: 'RomancingAhnassi.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/7636/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x91D702AB
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 66
+
   - name: '(RTT|Ruin)\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/3027/'
@@ -4109,6 +4125,15 @@ plugins:
         util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
 
+  - name: 'Oblivion - ZOMBIE.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/13190/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x13C5E710
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 71
+        udr: 1
+
   - name: 'OgramiradTiger.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/20144/' ]
     req: [ 'DLCShiveringIsles.esp' ]
@@ -4120,6 +4145,17 @@ plugins:
         crc: 0x25B417F9
         util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 3
+
+  - name: 'rebornaylieds.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/20121/'
+        name: 'Return of the Ayleids'
+    dirty:
+      - <<: *quickClean
+        crc: 0xF58D55F6
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 6
+        udr: 2
 
   - name: 'ShinyCreaturesOblivion( - Creature Diversity Patch)?\.esp'
     url:
@@ -5313,6 +5349,15 @@ plugins:
     clean:
       - crc: 0x8D021DE2
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
+
+  - name: 'Rowboats.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/6690/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x4CFABD99
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 3
+        udr: 11
 
   - name: 'Secure Guild Chest.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/16033/' ]
@@ -8227,6 +8272,17 @@ plugins:
       - crc: 0xB3CD831A
         util: 'TES4Edit v4.0.4b'
 
+  - name: 'Punk Stevo - Brutal Underground.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/39877/'
+        name: 'Arena - Brutal Underground'
+    dirty:
+      - <<: *quickClean
+        crc: 0xDFB2260B
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 24
+        udr: 1
+
   - name: 'Qaja''kar( Essential Bartenders)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/30241/' ]
   - name: 'Qaja''kar.esp'
@@ -8347,6 +8403,23 @@ plugins:
     clean:
       - crc: 0xBBE3D1F1
         util: 'TES4Edit v4.0.3'
+
+  - name: 'Return Of Shadows.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/29087/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xE29749D7
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 5
+        udr: 2
+
+  - name: 'RipsInTime I TheTimeRippers.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/21679/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xC659C61A
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 58
 
   - name: 'RuinsofEvendallMod.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/25562/' ]
@@ -11524,6 +11597,16 @@ plugins:
         util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 6
 
+  - name: 'OgramiradsUnmarkedPlaces.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/21359/' ]
+    req: [ 'DLCShiveringIsles.esp' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xA738D15F
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 16
+        udr: 3
+
   - name: 'OLDArchfiend.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/48256/' ]
     dirty:
@@ -11540,6 +11623,31 @@ plugins:
     clean:
       - crc: 0xA082C1A4
         util: 'TES4Edit v4.0.3'
+
+  - name: 'Passwall Adventurers Club.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/34103/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x6D99B617
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 7
+        udr: 3
+
+  - name: 'PearlFarm.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/38032/' ]
+    msg:
+      - <<: *wildEdits
+        subs: [ 'Remove CELL **0002F7D6** & PACKs **0014C47A** & **0018D1F9** from **PearlFarm.esp**.' ]
+        condition: 'checksum("PearlFarm.esp", 590DE30D) or checksum("PearlFarm.esp", E044335B)'
+    dirty:
+      - <<: *quickClean
+        crc: 0x590DE30D
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 9
+      - <<: *quickClean
+        crc: 0x3415DC9D
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 9
 
   - name: 'Pinevale.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/23804/' ]
@@ -11580,6 +11688,15 @@ plugins:
         crc: 0x822438DC
         util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
         udr: 5
+
+  - name: 'Ranokoas City Stealth Exits.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/24894/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xB6E7250E
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 78
+        udr: 9
 
   - name: 'Rathunas(01|-MidasMagic|-BetterMusicSystem)\.esp'
     url:
@@ -12495,6 +12612,15 @@ plugins:
         util: '[TES4Edit v4.0.3b](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 4
         udr: 121
+
+  - name: 'Reaper''s Waterfront.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/28274/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x704A02EE
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 14
+        udr: 60
 
   - name: 'ImpeREAL City Unique Districts - .*\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/19589/' ]
@@ -22408,27 +22534,6 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/24656' ]
     req: [ *OBSE ]
 
-  - name: 'OgramiradsUnmarkedPlaces.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/21359' ]
-    req: [ 'DLCShiveringIsles.esp' ]
-    dirty:
-      - crc: 0xa738d15f
-        <<: *dirtyPlugin
-        itm: 16
-        udr: 3
-  - name: 'OMPexample.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/5246' ]
-    dirty:
-      - crc: 0xe1ce7eed
-        <<: *dirtyPlugin
-        itm: 3
-  - name: 'Passwall Adventurers Club.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/34103' ]
-    dirty:
-      - crc: 0x11e6d7fe
-        <<: *dirtyPlugin
-        itm: 13
-        udr: 4
   - name: 'Pats Business Mod.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/9310' ]
     msg:
@@ -22439,66 +22544,14 @@ plugins:
           - lang: de
             text: 'Nutzen Sie stattdessen die Better Cities Version.'
         condition: 'file("Better Cities Resources.esm")'
-  - name: 'PearlFarm.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/38032' ]
-    dirty:
-      - crc: 0x590de30d
-        <<: *dirtyPlugin
-        itm: 12
-  - name: 'Punk Stevo - Brutal Underground.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/39877' ]
-    dirty:
-      - crc: 0xdfb2260b
-        <<: *dirtyPlugin
-        itm: 9
-        udr: 1
 
-  - name: 'Ranokoas City Stealth Exits.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/24894' ]
-    dirty:
-      - crc: 0xb6e7250e
-        <<: *dirtyPlugin
-        itm: 78
-        udr: 9
-  - name: 'rebornaylieds.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/20121' ]
-    dirty:
-      - crc: 0x555d27a5
-        <<: *dirtyPlugin
-        itm: 73
-        udr: 83
-      - crc: 0xf58d55f6
-        <<: *dirtyPlugin
-        itm: 6
-        udr: 2
   - name: 'MTCVillages-LakeRumarePatch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/42098' ]
     inc: [ 'MTC-WeyePatch.esp' ]
-  - name: 'Return Of Shadows.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29087' ]
-    dirty:
-      - crc: 0x6d97b636
-        <<: *dirtyPlugin
-        udr: 2
-      - crc: 0xe29749d7
-        <<: *dirtyPlugin
-        itm: 5
-        udr: 2
+
   - name: 'Ricks CIP ICTalosPlaza.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/43067' ]
     tag: [ C.Climate ]
-  - name: 'RipsInTime I TheTimeRippers.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/21679' ]
-    dirty:
-      - crc: 0xc659c61a
-        <<: *dirtyPlugin
-        itm: 48
-  - name: 'RomancingAhnassi.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/7636' ]
-    dirty:
-      - crc: 0x91d702ab
-        <<: *dirtyPlugin
-        itm: 66
 
   - name: 'Seawatch Abode.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/23301' ]
@@ -22881,13 +22934,7 @@ plugins:
         <<: *dirtyPlugin
         itm: 15
         udr: 1
-  - name: 'Oblivion - ZOMBIE.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/13190' ]
-    dirty:
-      - crc: 0x13c5e710
-        <<: *dirtyPlugin
-        itm: 68
-        udr: 1
+
   - name: 'Angel''s Arena Loot en.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/14163' ]
     msg:
@@ -23345,13 +23392,7 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/28340' ]
     inc: [ 'HeartOftheDead.esp' ]
     msg: [ *obsolete ]
-  - name: 'Reaper''s Waterfront.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/28274' ]
-    dirty:
-      - crc: 0x704a02ee
-        <<: *dirtyPlugin
-        itm: 14
-        udr: 60
+
   - name: 'SacredOak_Settlement.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/21140' ]
     dirty:
@@ -24355,14 +24396,6 @@ plugins:
     inc:
       - 'kuerteeGoldIsAnInventoryItem.esp'
       - 'ReneersGoldMod.esp'
-
-  - name: 'Rowboats.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/6690/' ]
-    dirty:
-      - crc: 0x4cfabd99
-        <<: *dirtyPlugin
-        itm: 3
-        udr: 11
 
   - name: 'Safer Roads v1.0.esp'
     msg:
