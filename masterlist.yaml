@@ -10260,6 +10260,37 @@ plugins:
         itm: 41
         udr: 10
 
+  - name: 'Shadowcrest_Vineyard(_COBL|_Guard|_GuardCOBL)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/22810/'
+        name: 'Shadowcrest Vineyard and Shadowcrest Vineyard COBL'
+  - name: 'Shadowcrest_Vineyard(_COBL)?\.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Shadowcrest Vineyard Main ESP' ]
+        condition: 'many("Shadowcrest_Vineyard(_COBL)?\.esp")'
+    tag: [ C.Music ]
+  - name: 'Shadowcrest_Vineyard.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x2A49E720
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 34
+  - name: 'Shadowcrest_Vineyard_COBL.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x9FD89158
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 34
+  - name: 'Shadowcrest_Vineyard_Guard.esp'
+    clean:
+      - crc: 0x705EFD63
+        util: 'TES4Edit v4.0.4b'
+  - name: 'Shadowcrest_Vineyard_GuardCOBL.esp'
+    clean:
+      - crc: 0xB12E7757
+        util: 'TES4Edit v4.0.4b'
+
   - name: 'Temple District Rebuild.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/14570/' ]
     msg: [ *mainQuestCompleted ]
@@ -23223,20 +23254,6 @@ plugins:
         itm: 159
         udr: 433
 
-  - name: 'Shadowcrest_Vineyard.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/22810' ]
-    dirty:
-      - crc: 0x497edba5
-        <<: *dirtyPlugin
-        itm: 34
-        udr: 57
-  - name: 'Shadowcrest_Vineyard_COBL.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/22810' ]
-    dirty:
-      - crc: 0x9fd89158
-        <<: *dirtyPlugin
-        itm: 34
-        udr: 57
   - name: 'FCOM_SlofsHorses.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/36679' ]
     tag: [ Graphics ]
