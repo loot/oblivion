@@ -11753,6 +11753,14 @@ plugins:
         condition: 'version("Unique Landscapes.esp", "2.0.0", >=)'
       - 'xulImperialIsle.esp'
 
+  - name: 'SacredOak_Settlement.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/21140/' ]
+    dirty:
+      - crc: 0x1957892f
+        <<: *dirtyPlugin
+        itm: 16
+        udr: 24
+
   - name: 'ScarletMonastery(Patch)?\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/30028/'
@@ -23393,13 +23401,6 @@ plugins:
     inc: [ 'HeartOftheDead.esp' ]
     msg: [ *obsolete ]
 
-  - name: 'SacredOak_Settlement.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/21140' ]
-    dirty:
-      - crc: 0x1957892f
-        <<: *dirtyPlugin
-        itm: 16
-        udr: 24
   - name: 'Solace.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/9962' ]
     dirty:
