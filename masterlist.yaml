@@ -10309,9 +10309,10 @@ plugins:
         condition: 'checksum("Ruins of Tarnesia.esp", 9654B520) or checksum("Ruins of Tarnesia.esp", CB7492CC)'
     tag: [ NpcFaces ]
     dirty:
-      - crc: 0x9654b520
-        <<: *dirtyPlugin
-        itm: 4440
+      - <<: *quickClean
+        crc: 0x9654B520
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 819
         udr: 1
 
   - name: 'ShadowfangKeep.esp'
