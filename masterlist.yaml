@@ -10305,12 +10305,8 @@ plugins:
             text: 'Has a small landscape conflict with Unique Landcapes: Chorrol Hinterland.'
           - lang: de
             text: 'Hat einen kleinen Konflikt bezüglich Landschaften mit Unique Landcapes: Chorrol Hinterland.'
-      - type: warn
-        content:
-          - lang: en
-            text: 'Requires manual cleaning.'
-          - lang: de
-            text: 'Benötigt manuelle Säuberung.'
+      - <<: *wildEdits
+        condition: 'checksum("Ruins of Tarnesia.esp", 9654B520) or checksum("Ruins of Tarnesia.esp", CB7492CC)'
     tag: [ NpcFaces ]
     dirty:
       - crc: 0x9654b520
