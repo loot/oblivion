@@ -5857,6 +5857,26 @@ plugins:
       - 'AltStartwChangedMessages.esp'
       - 'ShiveringIslesStart.esp'
 
+  - name: 'Crafting Skill Engine.esm'
+    url:
+      - 'https://www.nexusmods.com/oblivion/mods/2530/'
+      - 'https://www.nexusmods.com/oblivion/mods/3130/'
+      - 'https://www.nexusmods.com/oblivion/mods/5008/'
+    inc: [ 'Retros Fletching and Imbueing 1.7.1_rus.esp' ]
+  - name: 'Retros Fletching and Imbueing.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/2530' ]
+    msg:
+      - type: say
+        content:
+          - lang: en
+            text: 'May not be compatible with MMM crafting - untested.'
+          - lang: de
+            text: 'Möglicherweise nicht kompatibel mit MMM Crafting - Ungetestet.'
+    dirty:
+      - crc: 0x4aa8ee9a
+        <<: *dirtyPlugin
+        itm: 1
+
   - name: 'DaxPitcherPlant.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/50463/'
@@ -16017,13 +16037,6 @@ plugins:
         subs: [ 'Francescos Creatures and Items' ]
         condition: 'active("Francesco''s Leveled Creatures-Items Mod.esm")'
 
-  - name: 'Crafting Skill Engine.esm'
-    url:
-      - 'https://www.nexusmods.com/oblivion/mods/2530'
-      - 'https://www.nexusmods.com/oblivion/mods/3130'
-      - 'https://www.nexusmods.com/oblivion/mods/5008'
-    inc: [ 'Retros Fletching and Imbueing 1.7.1_rus.esp' ]
-
   - name: 'Tamrielic Ingredients.esm'
     url: [ 'https://www.nexusmods.com/oblivion/mods/11084' ]
     inc: [ 'Cobl Main.esm' ]
@@ -24348,19 +24361,6 @@ plugins:
     inc:
       - 'kuerteeGoldIsAnInventoryItem.esp'
       - 'ReneersGoldMod.esp'
-  - name: 'Retros Fletching and Imbueing.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/2530' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'May not be compatible with MMM crafting - untested.'
-          - lang: de
-            text: 'Möglicherweise nicht kompatibel mit MMM Crafting - Ungetestet.'
-    dirty:
-      - crc: 0x4aa8ee9a
-        <<: *dirtyPlugin
-        itm: 1
 
   - name: 'Rowboats.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/6690/' ]
