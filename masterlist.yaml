@@ -10425,6 +10425,13 @@ plugins:
       - crc: 0xA7337725
         util: 'TES4Edit v4.0.4'
 
+  - name: 'TheForgottenShields.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/13707/' ]
+    dirty:
+      - crc: 0x33817d08
+        <<: *dirtyPlugin
+        itm: 6
+
   - name: 'TheHole(Pt2)?\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/40950/'
@@ -22818,12 +22825,6 @@ plugins:
         <<: *dirtyPlugin
         itm: 113
         udr: 5
-  - name: 'TheForgottenShields.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/13707' ]
-    dirty:
-      - crc: 0x33817d08
-        <<: *dirtyPlugin
-        itm: 6
   - name: '__thermae_CustomVisitor.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/42709' ]
     msg: [ *obsolete ]
