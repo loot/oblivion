@@ -10505,6 +10505,29 @@ plugins:
         itm: 450
         udr: 149
 
+  - name: 'VaultsofCyrodiil.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/9357/'
+        name: 'Vaults of Cyrodiil'
+      - link: 'https://www.nexusmods.com/oblivion/mods/16513/'
+        name: 'Better Cities'
+    msg:
+      - <<: *useVersion
+        subs: [ 'Better Cities' ]
+        condition: 'not version("VaultsofCyrodiil.esp", "3.3.0", >=) and (active("Better Cities Full.esp") or active("Better Cities Leyawiin.esp") or active("Better Cities - Open Cities Reborn.esp"))'
+      - <<: *useVersionNon
+        subs: [ 'Better Cities' ]
+        condition: 'version("VaultsofCyrodiil.esp", "3.3.0", >=) and (not active("Better Cities Full.esp") and not active("Better Cities Leyawiin.esp") and not active("Better Cities - Open Cities Reborn.esp"))'
+    dirty:
+      - <<: *quickClean
+        crc: 0x3D9375C6
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 15
+        udr: 58
+    clean:
+      - crc: 0x599F4234
+        util: 'TES4Edit v4.0.4b'
+
   - name: '(ZOMBIES! -  28 days and a bit V\d|Zombie Island)\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/33037/'
@@ -23008,13 +23031,6 @@ plugins:
         util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 28
         udr: 15
-  - name: 'VaultsofCyrodiil.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/9357' ]
-    dirty:
-      - crc: 0x3d9375c6
-        <<: *dirtyPlugin
-        itm: 15
-        udr: 58
   - name: 'Veldin.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/30670' ]
     dirty:
