@@ -10363,7 +10363,7 @@ plugins:
     msg:
       - <<: *wildEdits
         subs: [ 'Makes wild edits to path grids.' ]
-        condition: 'checksum("SoT_TheOrderofNibenay.esp", CA79063C)'
+        condition: 'checksum("SoT_TheOrderofNibenay.esp", CA79063C) or checksum("SoT_TheOrderofNibenay.esp", 08CBE4DF)'
     dirty:
       - <<: *quickClean
         crc: 0xCA79063C
