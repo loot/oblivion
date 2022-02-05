@@ -10511,6 +10511,13 @@ plugins:
         name: 'Vaults of Cyrodiil'
       - link: 'https://www.nexusmods.com/oblivion/mods/16513/'
         name: 'Better Cities'
+    msg:
+      - <<: *useVersion
+        subs: [ 'Better Cities' ]
+        condition: 'not version("VaultsofCyrodiil.esp", "3.3.0", >=) and (active("Better Cities Full.esp") or active("Better Cities Leyawiin.esp") or active("Better Cities - Open Cities Reborn.esp"))'
+      - <<: *useVersionNon
+        subs: [ 'Better Cities' ]
+        condition: 'version("VaultsofCyrodiil.esp", "3.3.0", >=) and (not active("Better Cities Full.esp") and not active("Better Cities Leyawiin.esp") and not active("Better Cities - Open Cities Reborn.esp"))'
     dirty:
       - <<: *quickClean
         crc: 0x3D9375C6
