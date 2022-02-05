@@ -10484,6 +10484,26 @@ plugins:
         itm: 450
         udr: 149
 
+  - name: '(ZOMBIES! -  28 days and a bit V\d|Zombie Island)\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/33037/'
+        name: '28 Days and a Bit 4 - ZOMBIES'
+  - name: 'ZOMBIES! -  28 days and a bit V2.esp'
+    msg: [ *obsolete ]
+  - name: 'ZOMBIES! -  28 days and a bit V3.esp'
+    msg: [ *versionXofYorGreaterRequiredOBSEv21 ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xA5EF3248
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 32
+  - name: 'Zombie Island.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x7534A8F1
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 6
+
 ###### Locations - New Dungeons ######
   - name: 'ArcturusFinal.esp'
     url:
@@ -23019,26 +23039,6 @@ plugins:
       - crc: 0x15472fde
         <<: *dirtyPlugin
         itm: 1
-  - name: 'ZOMBIES! - 28 days and a bit V2.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/33037' ]
-    dirty:
-      - crc: 0xcfc0e317
-        <<: *dirtyPlugin
-        itm: 53
-        udr: 2
-  - name: 'ZOMBIES! - 28 days and a bit V3.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/33037' ]
-    dirty:
-      - crc: 0xf8a0a417
-        <<: *dirtyPlugin
-        itm: 5
-        udr: 6
-  - name: 'Zombie Island.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/33037' ]
-    dirty:
-      - crc: 0x7534a8f1
-        <<: *dirtyPlugin
-        itm: 6
   - name: 'zDangerSense.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/6369' ]
     dirty:
