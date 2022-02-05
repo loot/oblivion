@@ -14366,6 +14366,10 @@ plugins:
 
   - name: 'Unofficial Elsweyr Anequina Patch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/39642/' ]
+    msg:
+      - <<: *alreadyInOrFixedByX
+        type: warn
+        subs: [ 'Elsweyr Anequina Version March 2014' ]
     dirty:
       - crc: 0xad4131f8
         <<: *dirtyPlugin
