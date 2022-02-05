@@ -10365,10 +10365,11 @@ plugins:
         subs: [ 'Makes wild edits to path grids.' ]
         condition: 'checksum("SoT_TheOrderofNibenay.esp", CA79063C)'
     dirty:
-      - crc: 0xca79063c
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0xCA79063C
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 35
         udr: 19
-        itm: 129
 
   - name: 'Temple District Rebuild.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/14570/' ]
