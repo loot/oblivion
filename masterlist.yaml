@@ -10317,6 +10317,13 @@ plugins:
         itm: 61
         udr: 159
 
+  - name: 'sir_balin_mod.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/9140/' ]
+    dirty:
+      - crc: 0x607e10be
+        <<: *dirtyPlugin
+        itm: 233
+
   - name: 'Temple District Rebuild.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/14570/' ]
     msg: [ *mainQuestCompleted ]
@@ -23033,12 +23040,6 @@ plugins:
       - <<: *alreadyInX
         subs: [ 'Gweden Brothel' ]
         condition: '(active("GwedenBrothel.esp"))'
-  - name: 'sir_balin_mod.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/9140' ]
-    dirty:
-      - crc: 0x607e10be
-        <<: *dirtyPlugin
-        itm: 233
 
   - name: 'Thieves Highway.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/42385' ]
