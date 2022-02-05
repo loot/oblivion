@@ -10338,8 +10338,9 @@ plugins:
   - name: 'SocietyOfTheAtronach.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/32677/' ]
     dirty:
-      - crc: 0x14410193
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x14410193
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 7
 
   - name: 'Temple District Rebuild.esp'
