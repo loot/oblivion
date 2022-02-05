@@ -10396,9 +10396,10 @@ plugins:
   - name: 'Tantrivaylia.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/29081/' ]
     dirty:
-      - crc: 0xd4dbcec8
-        <<: *dirtyPlugin
-        itm: 49
+      - <<: *quickClean
+        crc: 0x3D901342
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 28
         udr: 322
 
   - name: 'Temple District Rebuild.esp'
