@@ -10358,6 +10358,18 @@ plugins:
         itm: 29
         udr: 24
 
+  - name: 'SoT_TheOrderofNibenay.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/8798/' ]
+    msg:
+      - <<: *wildEdits
+        subs: [ 'Makes wild edits to path grids.' ]
+        condition: 'checksum("SoT_TheOrderofNibenay.esp", CA79063C)'
+    dirty:
+      - crc: 0xca79063c
+        <<: *dirtyPlugin
+        udr: 19
+        itm: 129
+
   - name: 'Temple District Rebuild.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/14570/' ]
     msg: [ *mainQuestCompleted ]
@@ -23189,17 +23201,6 @@ plugins:
       - crc: 0xfb2ec779
         <<: *dirtyPlugin
         udr: 6
-  - name: 'SoT_TheOrderofNibenay.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/8798' ]
-    msg:
-      - <<: *wildEdits
-        subs: [ 'Makes wild edits to path grids.' ]
-        condition: 'checksum("SoT_TheOrderofNibenay.esp", CA79063C)'
-    dirty:
-      - crc: 0xca79063c
-        <<: *dirtyPlugin
-        udr: 19
-        itm: 129
 
   - name: 'GuardsofCyrodiilRedux.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/28586' ]
