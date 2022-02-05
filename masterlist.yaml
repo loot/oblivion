@@ -12935,6 +12935,25 @@ plugins:
         util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 21
 
+  - name: 'Unique Forts (Fort Strand|Gold Coast)\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/40758/'
+        name: 'Forts of Cyrodiil - Reimagined'
+  - name: 'Unique Forts Fort Strand.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x5AAF40DC
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 4
+        udr: 35
+  - name: 'Unique Forts Gold Coast.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x99C57EC6
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 39
+        udr: 217
+
   - name: 'Visually Enhanced Arena.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/12141/' ]
     dirty:
@@ -23414,20 +23433,6 @@ plugins:
           - lang: de
             text: 'Nutzen Sie den Patch für UL Arrius Creek und The Heart of the Dead Version 6.3 um Kompatibilitäts-Probleme zu beheben.'
 
-  - name: 'Unique Forts Fort Strand.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/40758' ]
-    dirty:
-      - crc: 0x5aaf40dc
-        <<: *dirtyPlugin
-        itm: 4
-        udr: 35
-  - name: 'Unique Forts Gold Coast.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/40758' ]
-    dirty:
-      - crc: 0x99c57ec6
-        <<: *dirtyPlugin
-        itm: 39
-        udr: 217
   - name: 'TWMP_Azure_Palace.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/36996' ]
     msg:
