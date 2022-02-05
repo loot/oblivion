@@ -12212,6 +12212,24 @@ plugins:
         itm: 8
         udr: 16
 
+  - name: 'Wellspring Vale.esp'
+    url: [ 'https://tesalliance.org/forums/index.php?/files/file/594-wellspring-vale' ]
+    msg:
+      - <<: *wildEdits
+        subs: [ 'Makes wild edits to path grids.' ]
+        condition: 'checksum("Wellspring Vale.esp", 0AFCCFE8) or checksum("Wellspring Vale.esp", EDE23B42) or checksum("Wellspring Vale.esp", 3E90D614) or checksum("Wellspring Vale.esp", 83034DB5)'
+    dirty:
+      - <<: *quickClean
+        crc: 0x0AFCCFE8
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
+        udr: 134
+      - <<: *quickClean
+        crc: 0x3E90D614
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
+        udr: 134
+
   - name: 'Witch''s Throne.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/25617/'
@@ -23514,22 +23532,6 @@ plugins:
           - lang: de
             text: 'Wahrscheinlich inkompatibel mit Better Cities.'
         condition: 'file("Better Cities Resources.esm")'
-
-  - name: 'Wellspring Vale.esp'
-    url: [ 'https://tesalliance.org/forums/index.php?/files/file/594-wellspring-vale' ]
-    dirty:
-      - crc: 0x3e9d0614
-        <<: *dirtyPlugin
-        itm: 2
-        udr: 134
-      - crc: 0x0AFCCFE8
-        <<: *dirtyPlugin
-        itm: 2
-        udr: 134
-      - crc: 0x3E90D614
-        <<: *dirtyPlugin
-        itm: 2
-        udr: 134
 
   - name: 'Valenwood Improved - Fallenleaf Everglade EV - Patch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22555' ]
