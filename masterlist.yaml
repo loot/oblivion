@@ -10335,6 +10335,20 @@ plugins:
         itm: 12
         udr: 2
 
+  - name: 'SocietyOfTheAtronach.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/32677/'
+        name: 'Chapter 2 - The Society Of The Atronach'
+    req:
+      - 'DLCOrrery.esp'
+      - 'DLCShiveringIsles.esp'
+    msg: [ *alsoUseSilentVoice ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x14410193
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 7
+
   - name: 'Temple District Rebuild.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/14570/' ]
     msg: [ *mainQuestCompleted ]
@@ -22665,12 +22679,6 @@ plugins:
       - *SilentVoice
       - 'DLCShiveringIsles.esp'
       - 'Cobl Main.esm'
-  - name: 'SocietyoftheAtronach.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/32677' ]
-    dirty:
-      - crc: 0x14410193
-        <<: *dirtyPlugin
-        itm: 7
   - name: 'Spirit''s Edge.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17718' ]
     inc: [ 'Ayleid Wells.esp' ]
