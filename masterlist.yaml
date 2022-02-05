@@ -10384,9 +10384,10 @@ plugins:
   - name: 'Steve - Hitman.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/25989/' ]
     dirty:
-      - crc: 0x60af4a1f
-        <<: *dirtyPlugin
-        itm: 31
+      - <<: *quickClean
+        crc: 0x60AF4A1F
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 39
         udr: 1
 
   - name: 'Temple District Rebuild.esp'
