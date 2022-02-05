@@ -12215,16 +12215,14 @@ plugins:
   - name: 'Wellspring Vale.esp'
     url: [ 'https://tesalliance.org/forums/index.php?/files/file/594-wellspring-vale' ]
     dirty:
-      - crc: 0x3e9d0614
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x0AFCCFE8
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 2
         udr: 134
-      - crc: 0x0AFCCFE8
-        <<: *dirtyPlugin
-        itm: 2
-        udr: 134
-      - crc: 0x3E90D614
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x3E90D614
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 2
         udr: 134
 
