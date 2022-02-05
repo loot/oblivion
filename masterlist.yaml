@@ -12214,6 +12214,10 @@ plugins:
 
   - name: 'Wellspring Vale.esp'
     url: [ 'https://tesalliance.org/forums/index.php?/files/file/594-wellspring-vale' ]
+    msg:
+      - <<: *wildEdits
+        subs: [ 'Makes wild edits to path grids.' ]
+        condition: 'checksum("Wellspring Vale.esp", 0AFCCFE8) or checksum("Wellspring Vale.esp", EDE23B42) or checksum("Wellspring Vale.esp", 3E90D614) or checksum("Wellspring Vale.esp", 83034DB5)'
     dirty:
       - <<: *quickClean
         crc: 0x0AFCCFE8
