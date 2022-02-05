@@ -10468,17 +10468,10 @@ plugins:
   - name: 'The Kingdom of Shadow test1.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/39238/' ]
     dirty:
-      - crc: 0x94c3c6b
-        <<: *dirtyPlugin
-        itm: 1292
-        udr: 62
-      - crc: 0x4c73c319
-        <<: *dirtyPlugin
-        itm: 1292
-        udr: 62
-      - crc: 0x6e718d35
-        <<: *dirtyPlugin
-        itm: 1292
+      - <<: *quickClean
+        crc: 0x094C3C6B
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1357
         udr: 62
 
   - name: 'Unholy Cathedral.esp'
