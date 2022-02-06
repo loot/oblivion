@@ -10555,9 +10555,10 @@ plugins:
   - name: 'WeynonRetreat.esp'
     url: [ 'https://tesalliance.org/forums/index.php?/files/file/2019-weynon-retreat/' ]
     dirty:
-      - crc: 0xc5361d05
-        <<: *dirtyPlugin
-        itm: 91
+      - <<: *quickClean
+        crc: 0xC5361D05
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 85
         udr: 10
 
   - name: '(ZOMBIES! -  28 days and a bit V\d|Zombie Island)\.esp'
