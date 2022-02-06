@@ -10561,6 +10561,24 @@ plugins:
         itm: 85
         udr: 10
 
+  - name: 'Woodland Rangers.esp'
+    url:
+      - 'https://www.nexusmods.com/oblivion/mods/16653/'
+      - 'https://www.nexusmods.com/oblivion/mods/29386/'
+    msg:
+      - <<: *alsoUseSilentVoice
+        condition: 'not file("OBSE/Plugins/Elys_USV.dll") and not file("OBSE/Plugins/voicefile_redirector.dll") and not file("Woodland Rangers - SilentVoices.bsa")'
+    dirty:
+      - <<: *quickClean
+        crc: 0xDC888E55
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 67
+        udr: 3
+      - <<: *quickClean
+        crc: 0x491B530A
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 182
+
   - name: '(ZOMBIES! -  28 days and a bit V\d|Zombie Island)\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/33037/'
@@ -23105,15 +23123,6 @@ plugins:
             text: 'Sensual Walks for Arthmoor''s Verona House Bloodines SI Fixed contains bash tags to merge the animations, which work correctly on his version'
           - lang: de
             text: 'Sensual Walks for Arthmoor''s Verona House Bloodines SI Fixed enthält Bash Tags zum Zusammenführen der Animation, welche korrekt funktionieren mit dieser Version'
-  - name: 'Woodland Rangers.esp'
-    url:
-      - 'https://www.nexusmods.com/oblivion/mods/16653'
-      - 'https://www.nexusmods.com/oblivion/mods/29386'
-    dirty:
-      - crc: 0x491b530a
-        <<: *dirtyPlugin
-        itm: 180
-        udr: 3
   - name: 'WOTFH_1.3.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/7633' ]
     dirty:
