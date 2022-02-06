@@ -10528,6 +10528,32 @@ plugins:
       - crc: 0x599F4234
         util: 'TES4Edit v4.0.4b'
 
+  - name: 'WaterfrontMarket.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/22834/' ]
+    msg:
+      - type: say
+        content:
+          - lang: en
+            text: 'Probably incompatible with Better Cities.'
+          - lang: de
+            text: 'Wahrscheinlich inkompatibel mit Better Cities.'
+        condition: 'file("Better Cities Resources.esm")'
+    dirty:
+      - crc: 0x72eb5289
+        <<: *dirtyPlugin
+        itm: 17
+        udr: 8
+  - name: 'WaterfrontMarketNoShack.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/22834/' ]
+    msg:
+      - type: say
+        content:
+          - lang: en
+            text: 'Probably incompatible with Better Cities.'
+          - lang: de
+            text: 'Wahrscheinlich inkompatibel mit Better Cities.'
+        condition: 'file("Better Cities Resources.esm")'
+
   - name: '(ZOMBIES! -  28 days and a bit V\d|Zombie Island)\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/33037/'
@@ -23523,32 +23549,6 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/28340' ]
     inc: [ 'HeartOftheDead.esp' ]
     msg: [ *obsolete ]
-
-  - name: 'WaterfrontMarket.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/22834' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Probably incompatible with Better Cities.'
-          - lang: de
-            text: 'Wahrscheinlich inkompatibel mit Better Cities.'
-        condition: 'file("Better Cities Resources.esm")'
-    dirty:
-      - crc: 0x72eb5289
-        <<: *dirtyPlugin
-        itm: 17
-        udr: 8
-  - name: 'WaterfrontMarketNoShack.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/22834' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Probably incompatible with Better Cities.'
-          - lang: de
-            text: 'Wahrscheinlich inkompatibel mit Better Cities.'
-        condition: 'file("Better Cities Resources.esm")'
 
   - name: 'Valenwood Improved - Fallenleaf Everglade EV - Patch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22555' ]
