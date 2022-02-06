@@ -9941,6 +9941,9 @@ plugins:
 
   - name: 'ToiletMod.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/42472/' ]
+    msg:
+      - <<: *wildEdits
+        condition: 'checksum("ToiletMod.esp", 83840533) or checksum("ToiletMod.esp", 52D19D38)'
     dirty:
       - <<: *quickClean
         crc: 0x83840533
