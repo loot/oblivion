@@ -10674,6 +10674,28 @@ plugins:
         util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
         udr: 5
 
+  - name: 'TownOfWeye(-NoCOBL)?\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/43980/' ]
+    req: [ 'DLCShiveringIsles.esp' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Town Of Weye ESP' ]
+        condition: 'many("TownOfWeye(-NoCOBL)?\.esp")'
+  - name: 'TownOfWeye.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x99BB3BE0
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 14
+        udr: 3
+  - name: 'TownOfWeye-NoCOBL.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x811308B8
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 14
+        udr: 3
+
   - name: '(TR_OoT_Main|TR_Stirk|Stirk_Compatibility_Patch)\.es(m|p)'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/22401/'
