@@ -3336,6 +3336,25 @@ plugins:
       - crc: 0xF79C7F49
         util: 'TES4Edit v4.0.4b'
 
+  - name: 'Vanilla_Race_Overhaul.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/39823/'
+        name: 'Vanilla Race Deluxe'
+    tag:
+      - Graphics
+      - R.Body-F
+      - R.Body-M
+      - R.Eyes
+      - R.Hair
+      - R.Head
+      - R.Mouth
+      - R.Teeth
+    dirty:
+      - <<: *quickClean
+        crc: 0x91D19C88
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1
+
 ###### Character Appearance - NPCs ######
   - name: 'Alternate ghost shader.esp'
     url:
@@ -25496,17 +25515,6 @@ plugins:
 
   - name: 'Useful Houses.esp'
     req: [ *MenuQue ]
-  - name: 'Vanilla_Race_Overhaul.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/39823' ]
-    tag:
-      - Body-F
-      - Body-M
-      - R.Mouth
-      - R.Teeth
-    dirty:
-      - crc: 0x91d19c88
-        <<: *dirtyPlugin
-        itm: 1
   - name: 'Cazy Hairs.esp'
     tag: [ Hair ]
   - name: 'Fiok Vanilla Hairs Fixed.esp'
