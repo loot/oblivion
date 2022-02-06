@@ -10533,6 +10533,10 @@ plugins:
     inc:
       - 'Better Cities IC Waterfront.esp'
       - 'Better Imperial City.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Waterfront Market ESP' ]
+        condition: 'many("WaterfrontMarket(NoShack)?\.esp")'
   - name: 'WaterfrontMarket.esp'
     dirty:
       - <<: *quickClean
