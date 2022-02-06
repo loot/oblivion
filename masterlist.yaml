@@ -10067,12 +10067,21 @@ plugins:
         util: 'TES4Edit v4.0.4b'
 
 ###### Locations ######
+  - name: '(DC)A Saints Tale Master.esm'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/39375/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x42FB8723
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1
   - name: 'The Power of the North.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/39375/' ]
     dirty:
-      - crc: 0x2eb9a944
-        <<: *dirtyPlugin
-        udr: 20
+      - <<: *quickClean
+        crc: 0x2EB9A944
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 5
+        udr: 21
 
   - name: '(Immersive Prison |NRB|UL II Immersive Prison |UL Imperial Isle Prison )sewer exit\.esp'
     url:
