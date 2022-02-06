@@ -10677,6 +10677,10 @@ plugins:
   - name: 'TownOfWeye(-NoCOBL)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/43980/' ]
     req: [ 'DLCShiveringIsles.esp' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Town Of Weye ESP' ]
+        condition: 'many("TownOfWeye(-NoCOBL)?\.esp")'
   - name: 'TownOfWeye.esp'
     dirty:
       - <<: *quickClean
