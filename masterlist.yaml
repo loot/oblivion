@@ -10597,6 +10597,13 @@ plugins:
       - <<: *useINITweakInstead
         subs: [ '[bBorderRegionsEnabled=0](http://wiki.tesnexus.com/index.php/Removing_In-Game_Borders)' ]
 
+  - name: 'TOS - Prelude.esp'
+    url: [ 'http://www.planetoblivion.de/index.php?option=com_content&task=view&id=1341&Itemid=73' ]
+    dirty:
+      - crc: 0xfb2ec779
+        <<: *dirtyPlugin
+        udr: 6
+
   - name: '(TR_OoT_Main|TR_Stirk|Stirk_Compatibility_Patch)\.es(m|p)'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/22401/'
@@ -23412,12 +23419,6 @@ plugins:
             text: 'If using RTT, use MoreSuburbLife_RTT_patch.esp to prevent issues with the Wawnet Inn.'
           - lang: de
             text: 'Wenn RTT genutzt wird, nutzen Sie MoreSuburbLife_RTT_patch.esp um Problemen mit Wawnet Inn vorzubeugen.'
-  - name: 'TOS - Prelude.esp'
-    url: [ 'http://www.planetoblivion.de/index.php?option=com_content&task=view&id=1341&Itemid=73' ]
-    dirty:
-      - crc: 0xfb2ec779
-        <<: *dirtyPlugin
-        udr: 6
 
   - name: 'GuardsofCyrodiilRedux.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/28586' ]
