@@ -8633,12 +8633,9 @@ plugins:
       - 'https://www.nexusmods.com/oblivion/mods/3415/'
       - 'https://www.nexusmods.com/oblivion/mods/7809/'
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'A fixed version can be found [here](http://www.nexusmods.com/oblivion/mods/7809).'
-          - lang: de
-            text: 'Eine fehlerfreie Version kann [hier](http://www.nexusmods.com/oblivion/mods/7809) abgerufen werden.'
+      - <<: *patchUpdateAvailable
+        subs: [ '[The Storytellers brother Quest Fix](https://www.nexusmods.com/oblivion/mods/7809/)' ]
+        condition: 'checksum("TheStorytellersBrotherQuest.esp", 2414A8EF) or checksum("TheStorytellersBrotherQuest.esp", EF168D19)'
     dirty:
       - <<: *quickClean
         crc: 0x2414A8EF
