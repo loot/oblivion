@@ -10104,8 +10104,10 @@ plugins:
       - link: 'https://www.nexusmods.com/oblivion/mods/7633/'
         name: 'Weapons Of The Fallen Heroes'
     dirty:
-      - crc: 0x76708a3d
-        <<: *dirtyPlugin
+      - <<: *quickClean
+        crc: 0x76708A3D
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1
         udr: 15
 
   - name: 'Wooden Bow Names.esp'
