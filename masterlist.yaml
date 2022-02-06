@@ -10565,6 +10565,9 @@ plugins:
     url:
       - 'https://www.nexusmods.com/oblivion/mods/16653/'
       - 'https://www.nexusmods.com/oblivion/mods/29386/'
+    msg:
+      - <<: *alsoUseSilentVoice
+        condition: 'not file("OBSE/Plugins/Elys_USV.dll") and not file("OBSE/Plugins/voicefile_redirector.dll") and not file("Woodland Rangers - SilentVoices.bsa")'
     dirty:
       - <<: *quickClean
         crc: 0xDC888E55
