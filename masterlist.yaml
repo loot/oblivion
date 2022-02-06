@@ -8636,6 +8636,9 @@ plugins:
       - <<: *patchUpdateAvailable
         subs: [ '[The Storytellers brother Quest Fix](https://www.nexusmods.com/oblivion/mods/7809/)' ]
         condition: 'checksum("TheStorytellersBrotherQuest.esp", 2414A8EF) or checksum("TheStorytellersBrotherQuest.esp", EF168D19)'
+      - <<: *requiresResources
+        subs: [ '[The Storytellers Brother](https://www.nexusmods.com/oblivion/mods/3415/)' ]
+        condition: 'not file("sound/voice/TheStorytellersBrotherQuest.esp")'
     dirty:
       - <<: *quickClean
         crc: 0x2414A8EF
