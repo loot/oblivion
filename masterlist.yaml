@@ -13560,6 +13560,30 @@ plugins:
         util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 2
 
+  - name: 'The Retreat(-AN compatible)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/23970/'
+        name: 'Arfiens The Retreat - A Shivering Isles House'
+    req: [ 'DLCShiveringIsles.esp' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'The Retreat ESP' ]
+        condition: 'many("The Retreat(-AN compatible)?\.esp")'
+  - name: 'The Retreat.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x257A4AD2
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 17
+        udr: 31
+  - name: 'The Retreat-AN compatible.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x4D401743
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 17
+        udr: 31
+
   - name: 'VileLairRedux.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/47502/'
@@ -23002,14 +23026,6 @@ plugins:
   - name: 'The Reluctant Ranger REVAMPED.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/4418' ]
     inc: [ *BetterCities ]
-  - name: 'The Retreat-AN compatible.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/23970' ]
-    tag: [ C.Climate ]
-    dirty:
-      - crc: 0x4d401743
-        <<: *dirtyPlugin
-        itm: 17
-        udr: 31
   - name: 'TLC2.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/31957' ]
     dirty:
