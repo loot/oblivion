@@ -10534,15 +10534,22 @@ plugins:
       - 'Better Cities IC Waterfront.esp'
       - 'Better Imperial City.esp'
     dirty:
-      - crc: 0x72eb5289
-        <<: *dirtyPlugin
-        itm: 17
+      - <<: *quickClean
+        crc: 0x72EB5289
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 7
         udr: 8
   - name: 'WaterfrontMarketNoShack.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22834/' ]
     inc:
       - 'Better Cities IC Waterfront.esp'
       - 'Better Imperial City.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x1793E7DC
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 8
+        udr: 8
 
   - name: '(ZOMBIES! -  28 days and a bit V\d|Zombie Island)\.esp'
     url:
