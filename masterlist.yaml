@@ -12407,13 +12407,10 @@ plugins:
   - name: 'Trashdog''s SPB Heavy AB Shop.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/36546/' ]
     dirty:
-      - crc: 0x93a04a94
-        <<: *dirtyPlugin
-        itm: 14
-        udr: 5
-      - crc: 0xfc0ad4a3
-        <<: *dirtyPlugin
-        itm: 14
+      - <<: *quickClean
+        crc: 0x93A04A94
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 16
         udr: 5
 
   - name: 'Urasek.esp'
