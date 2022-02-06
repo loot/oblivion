@@ -10713,6 +10713,9 @@ plugins:
 
   - name: 'Veldin.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/30670/' ]
+    msg:
+      - <<: *wildEdits
+        condition: 'checksum("Veldin.esp", BC65CD25) or checksum("Veldin.esp", 389737BA)'
     dirty:
       - <<: *quickClean
         crc: 0xBC65CD25
