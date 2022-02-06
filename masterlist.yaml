@@ -10261,20 +10261,6 @@ plugins:
       - crc: 0xED92FC41
         util: 'TES4Edit v4.0.4b'
 
-  - name: 'TheReturnOfTheDarkBrotherhood.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/40761/' ]
-    req:
-      - 'DLCShiveringIsles.esp'
-      - 'DLCVileLair.esp'
-      - 'Knights.esp'
-    tag: [ C.MiscFlags ]
-    dirty:
-      - <<: *quickClean
-        crc: 0x08450046
-        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 24
-        udr: 92
-
   - name: 'Sacred Duty( PL)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/38287/' ]
   - name: 'Sacred Duty.esp'
@@ -10506,6 +10492,20 @@ plugins:
         util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1357
         udr: 62
+
+  - name: 'TheReturnOfTheDarkBrotherhood.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/40761/' ]
+    req:
+      - 'DLCShiveringIsles.esp'
+      - 'DLCVileLair.esp'
+      - 'Knights.esp'
+    tag: [ C.MiscFlags ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x08450046
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 24
+        udr: 92
 
   - name: '(TR_OoT_Main|TR_Stirk|Stirk_Compatibility_Patch)\.es(m|p)'
     url:
