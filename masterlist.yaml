@@ -10530,14 +10530,9 @@ plugins:
 
   - name: 'WaterfrontMarket.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22834/' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Probably incompatible with Better Cities.'
-          - lang: de
-            text: 'Wahrscheinlich inkompatibel mit Better Cities.'
-        condition: 'file("Better Cities Resources.esm")'
+    inc:
+      - 'Better Cities IC Waterfront.esp'
+      - 'Better Imperial City.esp'
     dirty:
       - crc: 0x72eb5289
         <<: *dirtyPlugin
@@ -10545,14 +10540,9 @@ plugins:
         udr: 8
   - name: 'WaterfrontMarketNoShack.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22834/' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Probably incompatible with Better Cities.'
-          - lang: de
-            text: 'Wahrscheinlich inkompatibel mit Better Cities.'
-        condition: 'file("Better Cities Resources.esm")'
+    inc:
+      - 'Better Cities IC Waterfront.esp'
+      - 'Better Imperial City.esp'
 
   - name: '(ZOMBIES! -  28 days and a bit V\d|Zombie Island)\.esp'
     url:
