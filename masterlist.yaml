@@ -10304,6 +10304,10 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/23314/'
         name: 'Oblivion Farmer''s Market'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Oblivion Farmer''s Market ESP' ]
+        condition: 'many("OblivionFarmer''sMarket3(NoHungry)?\.esp")'
     tag:
       - Actors.AIPackages
       - Invent.Add
