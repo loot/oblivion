@@ -4104,9 +4104,24 @@ plugins:
   - name: 'YokudaBattleCat.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/45029/' ]
     dirty:
-      - crc: 0x15472fde
-        <<: *dirtyPlugin
-        itm: 1
+      - <<: *quickClean
+        crc: 0x15472FDE
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 3
+  - name: 'YokudaBattleCatV1_1.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/45029/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x36EC9DB9
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 3
+  - name: 'YokudaBattleCatV2.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/45029/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x0CC8317D
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 3
 
 ###### Encounters - Enemies ######
   - name: 'Creature Diversity( Arachnophobia Patch)?\.esp'
