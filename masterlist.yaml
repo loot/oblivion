@@ -10587,6 +10587,10 @@ plugins:
           - 'Unique Landscapes - Merged ESP'
           - '[Unique Landscapes Compatibility Patches](https://www.nexusmods.com/oblivion/mods/13834/)'
         condition: 'active("Unique Landscapes.esp") and version("Unique Landscapes.esp", "2.0.0", >=) and not active("ULM TalosGatehouse-ImperialIsle patch.esp")'
+      - <<: *patchUpdateAvailable
+        type: warn
+        subs: [ '[Talos Bridge Gatehouse Revisited](https://www.nexusmods.com/oblivion/mods/51320/)' ]
+        condition: 'not version("TalosBridgeGateHouse.esp", "1.1", >=)'
     dirty:
       - <<: *quickClean
         crc: 0xDF00178C
