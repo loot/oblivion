@@ -10300,7 +10300,8 @@ plugins:
     tag:
       - Actors.AIData
       - Actors.AIPackages
-      - C.Owner
+      - name: C.Owner
+        condition: 'not file("AFK_Weye.esp")'
       - Factions
       - Invent.Add
       - Invent.Change
