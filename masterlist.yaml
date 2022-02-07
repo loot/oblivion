@@ -3965,7 +3965,9 @@ plugins:
         subs: [ '[Ruined-Tail''s Tale](https://www.nexusmods.com/oblivion/mods/3027/) v3.01+' ]
         condition: 'not file("RTT.esp") or version("RTT.esp", "3.01", <)'
   - name: 'RTT.esp'
-    after: [ 'Akaviri Imports.esp' ]
+    after:
+      - 'Akaviri Imports.esp'
+      - 'ClocksOfCyrodiil.esp'
     dirty:
       - <<: *quickClean
         crc: 0x65F14171
@@ -4877,6 +4879,15 @@ plugins:
 
   - name: 'Colourwheels Sexy Oblivion OverHaul.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/36387/' ]
+    after:
+      - 'AFK_Weye.esp'
+      - 'AFKWeye_MTC_RRLRumarePatch.esp'
+      - 'Akaviri Imports.esp'
+      - 'ClocksOfCyrodiil.esp'
+      - 'MTCExpandedVillages.esp'
+      - 'Region Revive - Lake Rumare.esp'
+      - 'RTT.esp'
+      - 'RTT-Weye Relocation Patch.esp'
     tag:
       - Actors.ACBS
       - Actors.AIPackages
@@ -10262,6 +10273,10 @@ plugins:
         name: 'MTC-Expanded Villages'
       - link: 'https://www.nexusmods.com/oblivion/mods/48312/'
         name: 'MTC-Expanded Villages Updated'
+    after:
+      - 'Akaviri Imports.esp'
+      - 'ClocksOfCyrodiil.esp'
+      - 'OblivionFarmer''sMarket3NoHungry.esp'
     msg:
       - <<: *patch3rdParty
         subs:
@@ -10304,6 +10319,9 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/23314/'
         name: 'Oblivion Farmer''s Market'
+    after:
+      - 'Akaviri Imports.esp'
+      - 'ClocksOfCyrodiil.esp'
     req: [ 'DLCShiveringIsles.esp' ]
     msg:
       - <<: *useOnlyOneX
@@ -11783,6 +11801,7 @@ plugins:
       - 'Akaviri Imports.esp'
       - 'Fort Weye.esp'
       - 'RTT.esp'
+      - 'RTT-Weye Relocation Patch.esp'
     inc:
       - 'Asharnakibibi.esp'
       - 'Asharnakibibi 1_1.esp'
@@ -12299,6 +12318,8 @@ plugins:
       - link: 'https://www.nexusmods.com/oblivion/mods/48347/'
         name: 'Region Revive - Lake Rumare Updated'
     after:
+      - 'Akaviri Imports.esp'
+      - 'ClocksOfCyrodiil.esp'
       - 'FuseSnailRacing.esp'
       - 'TalosBridgeGateHouse.esp'
     dirty:
@@ -12626,8 +12647,10 @@ plugins:
   - name: 'AFK_Weye.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22828' ]
     after:
+      - 'Akaviri Imports.esp'
       - 'Region Revive - Lake Rumare.esp'
       - 'RTT.esp'
+      - 'RTT-Weye Relocation Patch.esp'
       - 'VHBloodlines 1.2.esp'
     req: [ *SilentVoice ]
     tag:
