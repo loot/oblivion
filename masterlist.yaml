@@ -5016,7 +5016,7 @@ plugins:
       - *alsoUseSilentVoice
       - <<: *patchIncluded
         subs: [ 'Slof''s Oblivion Horses' ]
-        condition: 'active("Slof''s Horses Base.esp") and not file("HRMHorseArmorSlofsHorsesPatch.*\.esp")'
+        condition: 'active("Slof''s Horses Base.esp") and not file("HRMHorseArmorSlofsHorsesPatch\d\d\.esp")'
     tag:
       - Actors.ACBS
       - Actors.AIData
