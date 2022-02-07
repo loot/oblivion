@@ -10570,6 +10570,39 @@ plugins:
         itm: 39
         udr: 1
 
+  - name: 'TalosBridgeGateHouse.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/37366/'
+        name: 'Talos Bridge Gatehouse'
+      - link: 'https://www.nexusmods.com/oblivion/mods/51320/'
+        name: 'Talos Bridge Gatehouse Revisited'
+    msg:
+      - <<: *patch3rdParty
+        subs:
+          - 'Unique Landscapes - Imperial Isle'
+          - '[Unique Landscapes Compatibility Patches](https://www.nexusmods.com/oblivion/mods/13834/)'
+        condition: 'active("xulImperialIsle.esp") and version("xulImperialIsle.esp", "2.0.0", >=) and not active("ULS TalosGatehouse-ImperialIsle patch.esp")'
+      - <<: *patch3rdParty
+        subs:
+          - 'Unique Landscapes - Merged ESP'
+          - '[Unique Landscapes Compatibility Patches](https://www.nexusmods.com/oblivion/mods/13834/)'
+        condition: 'active("Unique Landscapes.esp") and version("Unique Landscapes.esp", "2.0.0", >=) and not active("ULM TalosGatehouse-ImperialIsle patch.esp")'
+      - <<: *patchUpdateAvailable
+        type: warn
+        subs: [ '[Talos Bridge Gatehouse Revisited](https://www.nexusmods.com/oblivion/mods/51320/)' ]
+        condition: 'not version("TalosBridgeGateHouse.esp", "1.1", >=)'
+    dirty:
+      - <<: *quickClean
+        crc: 0xDF00178C
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 15
+        udr: 31
+    clean:
+      - crc: 0xAD91FA70
+        util: 'TES4Edit v4.0.4b'
+      - crc: 0xA2EFAA13
+        util: 'TES4Edit v4.0.4b'
+
   - name: 'Tantrivaylia.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/29081/' ]
     req:
@@ -22082,21 +22115,6 @@ plugins:
         crc: 0x1BDBE6E9
         util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 5172
-  - name: 'TalosBridgeGateHouse.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/37366' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Requires a patch if used with UL Imperial Isle.'
-          - lang: de
-            text: 'Benötigt einen Patch wenn es mit UL Imperial Isle genutzt wird.'
-    dirty:
-      - <<: *quickClean
-        crc: 0xDF00178C
-        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 15
-        udr: 31
   - name: 'Trade and Commerce.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/39255' ]
     dirty:
