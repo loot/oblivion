@@ -10274,6 +10274,12 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/27500/' ]
     after: [ 'TalosBridgeGateHouse.esp' ]
     req: [ 'DLCShiveringIsles.esp' ]
+    msg:
+      - <<: *patch3rdParty
+        subs:
+          - 'Talos Bridge Gatehouse'
+          - '[Imperial City Suburbs - Talos Bridge Gatehouse Patch](https://www.nexusmods.com/oblivion/mods/51233/)'
+        condition: 'active("TalosBridgeGateHouse.esp") and not file("ICSuburbsGatehousePatch.esp")'
     dirty:
       - <<: *quickClean
         crc: 0x2887A66B
