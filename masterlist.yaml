@@ -5005,7 +5005,7 @@ plugins:
         util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 12
 
-  - name: 'HRMHorseArmor(SlofsHorsesPatch\d\d)?\.esp'
+  - name: 'HRMHorseArmor(SlofsHorsesPatch(\d\d)?)?\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/46657/'
         name: 'Horse Armor Revamped'
@@ -5016,7 +5016,7 @@ plugins:
       - *alsoUseSilentVoice
       - <<: *patchIncluded
         subs: [ 'Slof''s Oblivion Horses' ]
-        condition: 'active("Slof''s Horses Base.esp") and not file("HRMHorseArmorSlofsHorsesPatch\d\d\.esp")'
+        condition: 'active("Slof''s Horses Base.esp") and not file("HRMHorseArmorSlofsHorsesPatch(\d\d)?\.esp")'
     tag:
       - Actors.ACBS
       - Actors.AIData
@@ -5030,14 +5030,16 @@ plugins:
         crc: 0x452EB6FF
         util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 4
-  - name: 'HRMHorseArmorSlofsHorsesPatch\d\d\.esp'
+  - name: 'HRMHorseArmorSlofsHorsesPatch(\d\d)?\.esp'
     msg:
       - <<: *useOnlyOneX
         subs: [ 'Horse Armor Revamped compatibility patch for Slof''s Horses ESP' ]
-        condition: 'many("HRMHorseArmorSlofsHorsesPatch\d\d\.esp")'
+        condition: 'many("HRMHorseArmorSlofsHorsesPatch(\d\d)?\.esp")'
     tag:
       - Deactivate
       - NoMerge
+  - name: 'HRMHorseArmorSlofsHorsesPatch14.esp'
+    msg: [ *obsolete ]
 
   - name: 'HTSCl.*\.es(m|p)'
     url:
