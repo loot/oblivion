@@ -3965,7 +3965,9 @@ plugins:
         subs: [ '[Ruined-Tail''s Tale](https://www.nexusmods.com/oblivion/mods/3027/) v3.01+' ]
         condition: 'not file("RTT.esp") or version("RTT.esp", "3.01", <)'
   - name: 'RTT.esp'
-    after: [ 'Akaviri Imports.esp' ]
+    after:
+      - 'Akaviri Imports.esp'
+      - 'ClocksOfCyrodiil.esp'
     dirty:
       - <<: *quickClean
         crc: 0x65F14171
@@ -4877,6 +4879,15 @@ plugins:
 
   - name: 'Colourwheels Sexy Oblivion OverHaul.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/36387/' ]
+    after:
+      - 'AFK_Weye.esp'
+      - 'AFKWeye_MTC_RRLRumarePatch.esp'
+      - 'Akaviri Imports.esp'
+      - 'ClocksOfCyrodiil.esp'
+      - 'MTCExpandedVillages.esp'
+      - 'Region Revive - Lake Rumare.esp'
+      - 'RTT.esp'
+      - 'RTT-Weye Relocation Patch.esp'
     tag:
       - Actors.ACBS
       - Actors.AIPackages
@@ -9142,7 +9153,7 @@ plugins:
         udr: 13
     clean:
       - crc: 0xB4DFC281
-        util: 'TES4Edit v4.0.3j (RC2 for 4.0.4)'
+        util: 'TES4Edit v4.0.4b'
 
   - name: 'altlegionarmourjchest.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/51716/' ]
@@ -10262,6 +10273,10 @@ plugins:
         name: 'MTC-Expanded Villages'
       - link: 'https://www.nexusmods.com/oblivion/mods/48312/'
         name: 'MTC-Expanded Villages Updated'
+    after:
+      - 'Akaviri Imports.esp'
+      - 'ClocksOfCyrodiil.esp'
+      - 'OblivionFarmer''sMarket3NoHungry.esp'
     msg:
       - <<: *patch3rdParty
         subs:
@@ -10277,7 +10292,7 @@ plugins:
         subs:
           - 'Ruined Tail''s Tale'
           - '[MTC Expanded Villages - Weye Patch](https://www.nexusmods.com/oblivion/mods/42170/)'
-        condition: 'active("RTT.esp") and not file("MTC-WeyePatch.esp")'
+        condition: 'active("RTT.esp") and not file("MTC-WeyePatch.esp") and not file("RTT-Weye Relocation Patch.esp")'
       - <<: *patchUpdateAvailable
         type: warn
         subs: [ '[MTC-Expanded Villages Updated](https://www.nexusmods.com/oblivion/mods/48312/)' ]
@@ -10285,7 +10300,8 @@ plugins:
     tag:
       - Actors.AIData
       - Actors.AIPackages
-      - C.Owner
+      - name: C.Owner
+        condition: 'not file("AFK_Weye.esp")'
       - Factions
       - Invent.Add
       - Invent.Change
@@ -10304,6 +10320,9 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/23314/'
         name: 'Oblivion Farmer''s Market'
+    after:
+      - 'Akaviri Imports.esp'
+      - 'ClocksOfCyrodiil.esp'
     req: [ 'DLCShiveringIsles.esp' ]
     msg:
       - <<: *useOnlyOneX
@@ -11783,6 +11802,7 @@ plugins:
       - 'Akaviri Imports.esp'
       - 'Fort Weye.esp'
       - 'RTT.esp'
+      - 'RTT-Weye Relocation Patch.esp'
     inc:
       - 'Asharnakibibi.esp'
       - 'Asharnakibibi 1_1.esp'
@@ -12299,6 +12319,8 @@ plugins:
       - link: 'https://www.nexusmods.com/oblivion/mods/48347/'
         name: 'Region Revive - Lake Rumare Updated'
     after:
+      - 'Akaviri Imports.esp'
+      - 'ClocksOfCyrodiil.esp'
       - 'FuseSnailRacing.esp'
       - 'TalosBridgeGateHouse.esp'
     dirty:
@@ -12626,8 +12648,10 @@ plugins:
   - name: 'AFK_Weye.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22828' ]
     after:
+      - 'Akaviri Imports.esp'
       - 'Region Revive - Lake Rumare.esp'
       - 'RTT.esp'
+      - 'RTT-Weye Relocation Patch.esp'
       - 'VHBloodlines 1.2.esp'
     req: [ *SilentVoice ]
     tag:
@@ -13875,6 +13899,36 @@ plugins:
         util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
         udr: 2
+
+  - name: '(AFKWeye_MTC_RRLRumarePatch|AFKWeye_MTC_RRLRumare_HOH Patch|WeyeOverhaulModsPatch|AFK_Weye-MTC-RRLR-CSO Patch)\.esp'
+    url:
+      - link: 'https://www.afkmods.com/index.php?/files/file/2353-afk-weye-mtc-region-revive-patches/'
+        name: 'AFK Weye - MTC - Region Revive Patches'
+  - name: '(AFKWeye_MTC_RRLRumarePatch|AFKWeye_MTC_RRLRumare_HOH Patch|WeyeOverhaulModsPatch)\.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'AFK Weye - MTC - Region Revive Patches Main file' ]
+        condition: 'many("(AFKWeye_MTC_RRLRumarePatch|AFKWeye_MTC_RRLRumare_HOH Patch|WeyeOverhaulModsPatch)\.esp")'
+  # Main - AFK_Weye, MTC Expanded Villages, and Region Revive: Lake Rumare #
+  - name: 'AFKWeye_MTC_RRLRumarePatch.esp'
+    clean:
+      - crc: 0x717FC507
+        util: 'TES4Edit v4.0.4b'
+  # Main - AFK_Weye, MTC Expanded Villages, Region Revive: Lake Rumare and House of Healing at Weye #
+  - name: 'AFKWeye_MTC_RRLRumare_HOH Patch.esp'
+    clean:
+      - crc: 0x5BB76FEB
+        util: 'TES4Edit v4.0.4b'
+  # Main - AFK_Weye, MTC Expanded Villages, Region Revive: Lake Rumare, House of Healing at Weye and Oblivion Farmer's Market #
+  - name: 'WeyeOverhaulModsPatch.esp'
+    clean:
+      - crc: 0xD5A9ADA0
+        util: 'TES4Edit v4.0.4b'
+  # Optional - AFKWeye_MTC_RRLRumarePatch.esp and Colourwheels Sexy Oblivion Overhaul #
+  - name: 'AFK_Weye-MTC-RRLR-CSO Patch.esp'
+    clean:
+      - crc: 0x00FE38A2
+        util: 'TES4Edit v4.0.4b'
 
   - name: 'BC_IW_PATCH.esp'
     url:
