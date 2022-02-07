@@ -7373,6 +7373,12 @@ plugins:
 
   - name: 'Alternative Start by Robert Evrae.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/11495/' ]
+    msg:
+      - <<: *patch3rdParty
+        subs:
+          - 'Unofficial DLC Patch - Knights of the Nine'
+          - '[Alternative Start Arrive by Ship Unofficial Patch](https://www.nexusmods.com/oblivion/mods/49897/)'
+        condition: 'active("Knights - Unofficial Patch.esp") and not file("Alternative Start Unofficial Patch.esp")'
     tag:
       - Invent.Add
       - Invent.Remove
