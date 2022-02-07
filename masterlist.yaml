@@ -7371,6 +7371,23 @@ plugins:
       - crc: 0xA08B7C20
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
 
+  - name: 'Alternative Start by Robert Evrae.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/11495/' ]
+    msg:
+      - <<: *patch3rdParty
+        subs:
+          - 'Unofficial DLC Patch - Knights of the Nine'
+          - '[Alternative Start Arrive by Ship Unofficial Patch](https://www.nexusmods.com/oblivion/mods/49897/)'
+        condition: 'active("Knights - Unofficial Patch.esp") and not file("Alternative Start Unofficial Patch.esp")'
+    tag:
+      - Invent.Add
+      - Invent.Remove
+      - Relations.Add
+      - SpellStats
+    clean:
+      - crc: 0xDC2B0A47
+        util: 'TES4Edit v4.0.4b'
+
   - name: 'An Unexpected Company( - Better Cities)?\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/41801/'
@@ -24977,14 +24994,6 @@ plugins:
     tag:
       - Invent
       - Relev
-
-  - name: 'Alternative Start by Robert Evrae.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/49897' ]
-    tag:
-      - Invent.Add
-      - Invent.Remove
-      - Relations.Add
-      - SpellStats
 
   - name: 'ROM Patch - Alternative Start.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/33114' ]
