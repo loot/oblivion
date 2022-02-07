@@ -10570,6 +10570,22 @@ plugins:
         itm: 39
         udr: 1
 
+  - name: 'TalosBridgeGateHouse.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/37366' ]
+    msg:
+      - type: say
+        content:
+          - lang: en
+            text: 'Requires a patch if used with UL Imperial Isle.'
+          - lang: de
+            text: 'Benötigt einen Patch wenn es mit UL Imperial Isle genutzt wird.'
+    dirty:
+      - <<: *quickClean
+        crc: 0xDF00178C
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 15
+        udr: 31
+
   - name: 'Tantrivaylia.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/29081/' ]
     req:
@@ -22082,21 +22098,6 @@ plugins:
         crc: 0x1BDBE6E9
         util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 5172
-  - name: 'TalosBridgeGateHouse.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/37366' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Requires a patch if used with UL Imperial Isle.'
-          - lang: de
-            text: 'Benötigt einen Patch wenn es mit UL Imperial Isle genutzt wird.'
-    dirty:
-      - <<: *quickClean
-        crc: 0xDF00178C
-        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 15
-        udr: 31
   - name: 'Trade and Commerce.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/39255' ]
     dirty:
