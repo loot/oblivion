@@ -10272,7 +10272,14 @@ plugins:
 
   - name: 'Imperial City Suburbs.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/27500/' ]
+    after: [ 'TalosBridgeGateHouse.esp' ]
     req: [ 'DLCShiveringIsles.esp' ]
+    msg:
+      - <<: *patch3rdParty
+        subs:
+          - 'Talos Bridge Gatehouse'
+          - '[Imperial City Suburbs - Talos Bridge Gatehouse Patch](https://www.nexusmods.com/oblivion/mods/51233/)'
+        condition: 'active("TalosBridgeGateHouse.esp") and not file("ICSuburbsGatehousePatch.esp")'
     dirty:
       - <<: *quickClean
         crc: 0x2887A66B
@@ -14056,6 +14063,14 @@ plugins:
     after: [ 'DLCFrostcrag-SnowyRoad Patch.esp' ]
   - name: 'SnowyRoad-OpenCities Patch.esp'
     after: [ 'Better Cities - Open Cities Reborn.esp' ]
+
+  - name: 'ICSuburbsGatehousePatch.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/51233/'
+        name: 'Imperial City Suburbs - Talos Bridge Gatehouse Patch'
+    clean:
+      - crc: 0xB96D9E26
+        util: 'TES4Edit v4.0.4b'
 
   - name: 'LostSpires_TheOrderofNibenay_patch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/23657/' ]
