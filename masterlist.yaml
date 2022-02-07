@@ -13904,6 +13904,11 @@ plugins:
     url:
       - link: 'https://www.afkmods.com/index.php?/files/file/2353-afk-weye-mtc-region-revive-patches/'
         name: 'AFK Weye - MTC - Region Revive Patches'
+  - name: '(AFKWeye_MTC_RRLRumarePatch|AFKWeye_MTC_RRLRumare_HOH Patch|WeyeOverhaulModsPatch)\.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'AFK Weye - MTC - Region Revive Patches Main file' ]
+        condition: 'many("(AFKWeye_MTC_RRLRumarePatch|AFKWeye_MTC_RRLRumare_HOH Patch|WeyeOverhaulModsPatch)\.esp")'
   # Main - AFK_Weye, MTC Expanded Villages, and Region Revive: Lake Rumare #
   - name: 'AFKWeye_MTC_RRLRumarePatch.esp'
     clean:
