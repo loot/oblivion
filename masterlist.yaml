@@ -5484,6 +5484,34 @@ plugins:
       - Delev
       - Relev
 
+  - name: 'Slof''s (Horses Base|Extra Horses( 2)?)\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/48925/'
+        name: 'Slof''s Oblivion Horses'
+  - name: 'Slof''s Horses Base.esp'
+    tag:
+      - Actors.ACBS
+      - Actors.Spells
+      - Graphics
+      - Names
+    dirty:
+      - <<: *quickClean
+        crc: 0x66C78539
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 18
+  - name: 'Slof''s Extra Horses.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x8BA333FA
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 30
+  - name: 'Slof''s Extra Horses 2.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0xC807F902
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 3
+
   - name: 'TIE(\+Frans NPC Inventory| Weapon \+ Armor Filter)?\.esp'
     url:
       - link: 'https://www.afkmods.com/index.php?/files/file/555-tie-tamriel-immersion-experience/'
@@ -21377,29 +21405,6 @@ plugins:
   - name: 'Athletics While Riding.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/37432' ]
     msg: [ *versionXofYorGreaterRequiredOBSEv18 ]
-  - name: 'Slof''s Horses Base.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/48925/' ]
-    tag: [ Graphics ]
-    dirty:
-      - <<: *quickClean
-        crc: 0x66C78539
-        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536/)'
-        itm: 18
-  - name: 'Slof''s Extra Horses.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/48925/' ]
-    tag: [ Graphics ]
-    dirty:
-      - <<: *quickClean
-        crc: 0x8BA333FA
-        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536/)'
-        itm: 30
-  - name: 'Slof''s Extra Horses 2.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/48925/' ]
-    dirty:
-      - <<: *quickClean
-        crc: 0xC807F902
-        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536/)'
-        itm: 3
   - name: 'Slof''s Black Unicorn.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/48112' ]
     tag: [ Graphics ]
