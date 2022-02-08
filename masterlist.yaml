@@ -16557,14 +16557,6 @@ plugins:
     tag:
       - Delev
       - Relev
-  - name: 'FCOM_SpawnRatesStronger.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: '''Stronger'' is the same as ''Reduced'' but spawns will be more powerful.'
-          - lang: de
-            text: '''Stronger'' ist das gleiche wie ''Reduced'' aber Spawns werden mächtiger sein .'
 
   - name: 'FCOM_EntropicOrderHardcore.esp'
     req: [ 'FCOM_Convergence.esm' ]
@@ -19873,15 +19865,6 @@ plugins:
   - name: 'Demolish Plugin - HUD Display.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/40046' ]
     req: [ *Pluggy ]
-  - name: 'Duke Patricks - Friendship Ring For Companion Detection.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/21594' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Required if using any of Duke Patricks'' mods with companion mods.'
-          - lang: de
-            text: 'Benötigt wenn Sie irgendwelche von Duke Patricks'' Mods mit Begleiter Mods nutzen.'
   - name: 'kuerteeAutoSaveAndTime.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22136' ]
     inc:
@@ -20332,21 +20315,6 @@ plugins:
     tag:
       - Graphics
       - Stats
-  - name: 'crimson dagger.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/17043' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Due to a poorly written script the player will never recieve this weapon unless the mod is loaded second (right after Oblivion.esm)'
-          - lang: de
-            text: 'Durch ein dürftig geschriebenes Skript wird der Spieler niemals diese Waffe erhalten außer die Mod wird als zweites geladen (direkt nach Oblivion.esm)'
-      - type: say
-        content:
-          - lang: en
-            text: 'To aquire the weapon you must open the console and enter ''player.additem xx000ED3'' where xx is the hexadecimal mod index (LO number)'
-          - lang: de
-            text: 'Um diese Waffe zu erhalten müssen Sie die Konsole öffnen und ''player.additem xx000ED3'' eingeben wobei xx der hexadezimale Mod-Index ist (LO Nummer)'
   - name: 'CV - Kilij.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/36457' ]
     dirty:
@@ -23479,21 +23447,6 @@ plugins:
     clean:
       - crc: 0x202AA330
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
-  - name: 'VHBloodlines 1.2 Vwalk.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/28223' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Mark Mergeable and deactivate - Merge animations does not seem to work properly for the original version of VH Bloodlines.'
-          - lang: de
-            text: 'Mit Mergeable(Zusammenführbar) markieren und deaktivieren - Animationen zusammenführen scheint nicht ordentlich zu funktionieren für die originale Version von VH Bloodlines.'
-      - type: say
-        content:
-          - lang: en
-            text: 'Sensual Walks for Arthmoor''s Verona House Bloodines SI Fixed contains bash tags to merge the animations, which work correctly on his version'
-          - lang: de
-            text: 'Sensual Walks for Arthmoor''s Verona House Bloodines SI Fixed enthält Bash Tags zum Zusammenführen der Animation, welche korrekt funktionieren mit dieser Version'
   - name: 'Cyrodill Travel Services.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/21999' ]
     msg: [ *obsolete ]
@@ -24135,29 +24088,11 @@ plugins:
     msg:
       - <<: *useBashTweakInstead
         subs: [ 'Tweak Assorted -> Harvest Chance' ]
-  - name: '1229-Priced Clutter-TESSource.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'May not work with Living Economy as LE scripts tend to overwrite pricing mods.'
-          - lang: de
-            text: 'Funktioniert womöglich nicht mit Living Economy da LE Skripte dazu tendieren Preisgestaltungs-Mods zu überschreiben.'
-        condition: 'file("Living Economy.*\.esp")'
   - name: '(354|355)_Improved_(Maborel|Marobel)_horse(immortal)?\.esp'
     msg:
       - <<: *useOnlyOneX
         subs: [ 'Improved Marobels Horse' ]
         condition: 'many("(354|355)_Improved_(Maborel|Marobel)_horse(immortal)?\.esp")'
-  - name: 'AC''s realistic priced clutter.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'May not work with Living Economy as LE scripts tend to overwrite pricing mods.'
-          - lang: de
-            text: 'Funktioniert womöglich nicht mit Living Economy da LE Skripte dazu tendieren Preisgestaltungs-Mods zu überschreiben.'
-        condition: 'file("Living Economy.*\.esp")'
 
   - name: 'Amulets and Rings for everybody.esp'
     tag:
@@ -24385,14 +24320,6 @@ plugins:
   - name: 'HUD Status Bars.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/34905' ]
     req: [ *MenuQue ]
-  - name: 'Decorator Assistant.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Check if the version is 1.1 or later.'
-          - lang: de
-            text: 'Überprüfen Sie ob die Version 1.1 oder neuer ist.'
   - name: 'dhsRTentwithSorter.esp'
     req: [ 'Cobl Main.esm' ]
   - name: 'DoB10mins.esp'
@@ -24496,8 +24423,6 @@ plugins:
           - lang: de
             text: 'Nutzen Sie stattdessen "GuildAdvancement.esp".'
         condition: '( not file("Banes Guilds United.esp") ) and not file("Banes Guilds UnitedOOO.esp")'
-  - name: 'GuilesNameReplace-Scrolls.esp'
-    tag: [ Names ]
   - name: 'haz_ct_REMOVE.esp'
     msg:
       - type: say
@@ -25236,24 +25161,6 @@ plugins:
     msg: [ *versionXofYorGreaterRequiredOBSEv15 ]
   - name: 'Spell Failure Chance.esp'
     req: [ *OBSE ]
-  - name: 'Miniature Necromancy Revised.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/47903' ]
-    msg:
-      - type: warn
-        content:
-          - lang: en
-            text: 'Do not have Jpm''s original active at the same time as this.'
-          - lang: de
-            text: 'Haben Sie nicht Jpm''s original aktiv zur selben Zeit wie dies.'
-        condition: 'file("Jpm''s Miniature Necromancy.esp") or file("Jpm''s Miniature Necromancy RUS.esp")'
-  - name: 'TFE - Restore Cost.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Not needed if using LAME.'
-          - lang: de
-            text: 'Nicht nötig wenn LAME genutzt wird.'
 
   - name: 'Poisoned Apple Fix.esp'
     msg:
