@@ -14221,14 +14221,7 @@ plugins:
 
   - name: 'MTC-WeyePatch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/42170/' ]
-    msg:
-      - type: warn
-        content:
-          - lang: en
-            text: 'Use this patch or "MTCVillages-LakeRumarePatch.esp", but not both.'
-          - lang: de
-            text: 'Nutzen Sie diesen Patch oder "MTCVillages-LakeRumarePatch.esp", aber nicht beides gleichzeitig.'
-        condition: 'file("MTCVillages-LakeRumarePatch.esp")'
+    inc: [ 'MTCVillages-LakeRumarePatch.esp' ]
 
   - name: 'OCO_(DLCHorseArmor|DLCMehrunesRazor|DLCOrrery|DLCThievesDen|KnightsOTN|KvatchRebuilt|UOP_USIP)_Patch\.esp'
     url:
