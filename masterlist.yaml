@@ -10335,6 +10335,33 @@ plugins:
         itm: 5
         udr: 21
 
+  - name: 'HeartOftheDead.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/21176/' ]
+    tag:
+      - Actors.AIPackages
+      - R.Hair
+    clean:
+      - crc: 0x79087454
+        util: 'TES4Edit v4.0.3j (RC2 for 4.0.4)'
+
+  - name: 'HoarfrostCastle.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/14714/' ]
+    tag: [ R.Hair ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xA93FE299
+        util: '[TES4Edit v4.0.3j (RC2 for 4.0.4)](https://www.nexusmods.com/oblivion/mods/11536)'
+        udr: 730
+
+  - name: 'Holy Cathedral.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/25312/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x0B294E4F
+        util: '[TES4Edit v4.0.3j (RC2 for 4.0.4)](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 111
+        udr: 1
+
   - name: '(Immersive Prison |NRB|UL II Immersive Prison |UL Imperial Isle Prison )sewer exit\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/38705/'
@@ -10379,33 +10406,6 @@ plugins:
         crc: 0x6E237965
         util: '[TES4Edit v4.0.3j (RC2 for 4.0.4)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
-
-  - name: 'HeartOftheDead.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/21176/' ]
-    tag:
-      - Actors.AIPackages
-      - R.Hair
-    clean:
-      - crc: 0x79087454
-        util: 'TES4Edit v4.0.3j (RC2 for 4.0.4)'
-
-  - name: 'HoarfrostCastle.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/14714/' ]
-    tag: [ R.Hair ]
-    dirty:
-      - <<: *quickClean
-        crc: 0xA93FE299
-        util: '[TES4Edit v4.0.3j (RC2 for 4.0.4)](https://www.nexusmods.com/oblivion/mods/11536)'
-        udr: 730
-
-  - name: 'Holy Cathedral.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/25312/' ]
-    dirty:
-      - <<: *quickClean
-        crc: 0x0B294E4F
-        util: '[TES4Edit v4.0.3j (RC2 for 4.0.4)](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 111
-        udr: 1
 
   - name: 'Imperial City Suburbs.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/27500/' ]
