@@ -11654,13 +11654,6 @@ plugins:
 
   - name: 'DaggerfallResources02.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/38734/' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Requires: Tamriel Heightmaps, Tamriel Landscape Pack, Tamriel Resource Pack, Mr_Siikas Highrock Resources'
-          - lang: de
-            text: 'Benötigt: Tamriel Heightmaps, Tamriel Landscape Pack, Tamriel Resource Pack, Mr_Siikas Highrock Resources'
     dirty:
       - <<: *quickClean
         crc: 0x410594DC
@@ -11669,13 +11662,6 @@ plugins:
         udr: 6
   - name: 'HighrockVillage.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/38734/' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Requires: Tamriel Heightmaps, Tamriel Landscape Pack, Tamriel Resource Pack, Mr_Siikas Highrock Resources'
-          - lang: de
-            text: 'Benötigt: Tamriel Heightmaps, Tamriel Landscape Pack, Tamriel Resource Pack, Mr_Siikas Highrock Resources'
     dirty:
       - <<: *quickClean
         crc: 0xF7B82CE2
@@ -23474,15 +23460,6 @@ plugins:
   - name: '__thermae_CustomVisitor.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/42709' ]
     msg: [ *obsolete ]
-  - name: 'ToaruMajutsunoOblivion.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/40264' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Requires: Modular Beautiful People 2ch Edition Plus Plus'
-          - lang: de
-            text: 'Benötigt: Modular Beautiful People 2ch Edition Plus Plus'
 
   - name: 'Treasuresofthedeep.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/35044' ]
@@ -23887,16 +23864,6 @@ plugins:
           - lang: de
             text: 'Nutzen Sie den Patch für UL Arrius Creek und The Heart of the Dead Version 6.3 um Kompatibilitäts-Probleme zu beheben.'
 
-  - name: 'TWMP_Azure_Palace.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/36996' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Requires: Tamriel Heightmaps'
-          - lang: de
-            text: 'Benötigt: Tamriel Heightmaps'
-
   - name: 'Elsweyr(Riverhold|FaregylRoad)\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/19026/' ]
     msg:
@@ -23949,15 +23916,6 @@ plugins:
           - lang: de
             text: 'Sie brauchen nicht beide Patches! Deaktivieren Sie OotD_UL_Jerall_Patch.esp.'
         condition: 'file("OrdenDesDrachen-JerallGlacier patch.esp")'
-
-  - name: 'exhICMO.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Requires: Better/Open Cities IC Market District Components.'
-          - lang: de
-            text: 'Benötigt: Better/Open Cities IC Market District Components.'
 
   - name: 'The Ruins of Miscarcand.esp'
     url:
@@ -24103,15 +24061,6 @@ plugins:
       - <<: *renameFile
         subs: [ 'NPC new clothes V2.6.esp' ]
         condition: *FCOMCond
-  - name: 'FCOM_NewNPCClothes.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/15165' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Requires: ''New NPC Clothes 2.6''.'
-          - lang: de
-            text: 'Benötigt: ''New NPC Clothes 2.6''.'
   - name: 'KS - Cities FPS Boost.esp'
     msg:
       - type: say
@@ -24448,14 +24397,6 @@ plugins:
     req: [ 'Cobl Main.esm' ]
   - name: 'DoB10mins.esp'
     inc: [ 'DoB20mins.esp' ]
-  - name: 'Dremora Sigil Lords.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Requires: Mod Daedric Lord Armor'
-          - lang: de
-            text: 'Benötigt: Mod Daedric Lord Armor'
 
   - name: 'Dwarven-S.esp'
     tag:
@@ -24639,15 +24580,6 @@ plugins:
   - name: 'MIEO-ae.esp'
     tag: [ Stats ]
 
-  - name: 'TI-MM v04d.esp'
-    req: [ 'DLCShiveringIsles.esp' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Requires: Qarl''s Harvest, Tamrielic Ingredients.'
-          - lang: de
-            text: 'Benötigt: Qarl''s Harvest, Tamrielic Ingredients.'
   - name: 'NameReplacer-Clothing.esp'
     tag: [ Names ]
 
@@ -25131,16 +25063,6 @@ plugins:
     url: [ 'http://tesalliance.org/forums/index.php?/files/file/668-duke-patricks-nosferatu-class-vampires/' ]
     tag: [ Sound ]
 
-  - name: 'CompanionRepair.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29263' ]
-    req: [ *OBSE ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Requires: RefStuff'
-          - lang: de
-            text: 'Benötigt: RefStuff'
   - name: 'elPatrixF_SummonWorkshop_ShiveringIsles.esp'
     req: [ 'DLCShiveringIsles.esp' ]
 
@@ -26233,22 +26155,6 @@ plugins:
             text: 'Requires: Robert''s Male v4 or v5'
           - lang: de
             text: 'Benötigt: Robert''s Male v4 oder v5'
-    tag:
-      - Eyes
-      - Graphics
-      - Hair
-      - NpcFaces
-      - R.Head
-      - R.Mouth
-      - R.Teeth
-  - name: 'Lucha''s Blood Witch.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Requires: HG EyeCandy Body OR TeamFF Fantasy Figures OR Robert''s Female v12'
-          - lang: de
-            text: 'Benötigt: HG EyeCandy Body ODER TeamFF Fantasy Figures ODER Robert''s Female v12'
     tag:
       - Eyes
       - Graphics
@@ -27448,21 +27354,6 @@ plugins:
       - Eyes
       - Hair
       - NpcFaces
-  - name: 'Diverse NPCs.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/14800' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Requires: TNR, Ren''s Hair, Elaborate Eyes.'
-          - lang: de
-            text: 'Benötigt: TNR, Ren''s Hair, Elaborate Eyes.'
-    tag:
-      - Eyes
-      - Graphics
-      - Hair
-      - NoMerge
-      - NpcFaces
   - name: 'Corean Hairs and Elaborate Eyes Merged.esp'
     tag:
       - Eyes
@@ -27478,17 +27369,6 @@ plugins:
     tag: [ Hair ]
   - name: 'Xena Warrior Princess.esp'
     tag: [ Invent ]
-  - name: 'CM Alexander.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Requires: Xenius'' Deus Obscura race'
-          - lang: de
-            text: 'Benötigt: Xenius'' Deus Obscura race'
-    tag:
-      - Hair
-      - NpcFaces
   - name: 'CM Boromir.esp'
     tag:
       - Graphics
@@ -27519,15 +27399,6 @@ plugins:
       - Hair
       - NpcFaces
       - R.Relations
-  - name: 'CMIsabell.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/39206' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Requires: CM Partners Basic'
-          - lang: de
-            text: 'Benötigt: CM Partners Basic'
   - name: 'CMpartnerTifa.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22980' ]
     tag:
@@ -27702,16 +27573,6 @@ plugins:
     tag:
       - Eyes
       - Hair
-  - name: 'GGIlli.esp'
-    inc: [ 'Duke Patricks - Basic Combat Geometry.esp' ]
-    msg:
-      - *versionXofYorGreaterRequiredOBSEv17
-      - type: say
-        content:
-          - lang: en
-            text: 'Requires: Underdark: The Realm of Northdark.'
-          - lang: de
-            text: 'Benötigt: Underdark: The Realm of Northdark.'
   - name: 'GG_Valeria_Revived.esp'
     tag:
       - Eyes
