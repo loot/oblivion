@@ -238,6 +238,10 @@ common:
     name: 'OBSE/Plugins/AddActorValues.dll'
     display: '[AddActorValues](https://www.nexusmods.com/oblivion/mods/33248/)'
 
+  - &Blockhead
+    name: 'OBSE/Plugins/Blockhead.dll'
+    display: '[Blockhead](https://www.nexusmods.com/oblivion/mods/43752/)'
+
   - &EnhancedMusicControl
     name: 'OBSE/Plugins/EnhancedMusicControl.dll'
     display: '[Enhanced Music & Control](https://www.nexusmods.com/oblivion/mods/19772)'
@@ -3321,9 +3325,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/46578/'
         name: 'Seamless - Khats and Args'
-    req:
-      - name: 'OBSE/Plugins/Blockhead.dll'
-        display: '[Blockhead](https://www.nexusmods.com/oblivion/mods/43752/)'
+    req: [ *Blockhead ]
     msg:
       - <<: *requiresX
         type: say
@@ -3363,9 +3365,7 @@ plugins:
 
   - name: 'VKVII Skin_Argonian.esp'
     url: [ 'https://www.moddb.com/mods/vkvii-oblivion-skin-argonian/' ]
-    req:
-      - name: 'OBSE/Plugins/Blockhead.dll'
-        display: '[Blockhead](https://www.nexusmods.com/oblivion/mods/43752/)'
+    req: [ *Blockhead ]
     tag:
       - Graphics
       - Names
@@ -3381,9 +3381,7 @@ plugins:
 
   - name: 'VKVII Skin_Khajiit.esp'
     url: [ 'https://www.moddb.com/mods/vkvii-oblivion-skin-khajiit/' ]
-    req:
-      - name: 'OBSE/Plugins/Blockhead.dll'
-        display: '[Blockhead](https://www.nexusmods.com/oblivion/mods/43752/)'
+    req: [ *Blockhead ]
     tag:
       - Graphics
       - Names
@@ -3511,10 +3509,9 @@ plugins:
       - 'MaleBodyReplacerV5.esp'
       - 'Reworked Race Relations.esp'
     req:
-      - <<: *OBSE
+      - <<: *Blockhead
         condition: 'version("Oblivion_Character_Overhaul.esp", "2.0", >=)'
-      - name: 'OBSE/Plugins/Blockhead.dll'
-        display: '[Blockhead](https://www.nexusmods.com/oblivion/mods/43752/)'
+      - <<: *OBSE
         condition: 'version("Oblivion_Character_Overhaul.esp", "2.0", >=)'
     tag:
       - Actors.ACBS
@@ -18335,9 +18332,7 @@ plugins:
       - 'WAC - TCOS.esp'
       - 'WAC - TCOS Shops.esp'
     # doNotClean
-    req:
-      - name: 'OBSE/Plugins/Blockhead.dll'
-        display: '[Blockhead](https://www.nexusmods.com/oblivion/mods/43752)'
+    req: [ *Blockhead ]
     tag: [ NPC.Race ]
 
   - name: 'FranOOOMMM_.*\.esp'
