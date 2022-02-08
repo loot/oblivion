@@ -24125,15 +24125,6 @@ plugins:
       - <<: *useOnlyOneX
         subs: [ 'Improved Marobels Horse' ]
         condition: 'many("(354|355)_Improved_(Maborel|Marobel)_horse(immortal)?\.esp")'
-  - name: 'AC''s realistic priced clutter.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'May not work with Living Economy as LE scripts tend to overwrite pricing mods.'
-          - lang: de
-            text: 'Funktioniert womöglich nicht mit Living Economy da LE Skripte dazu tendieren Preisgestaltungs-Mods zu überschreiben.'
-        condition: 'file("Living Economy.*\.esp")'
 
   - name: 'Amulets and Rings for everybody.esp'
     tag:
