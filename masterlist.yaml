@@ -4028,6 +4028,7 @@ plugins:
     after:
       - 'Akaviri Imports.esp'
       - 'ClocksOfCyrodiil.esp'
+      - 'MTC-WeyePatch.esp'
     dirty:
       - <<: *quickClean
         crc: 0x65F14171
@@ -4945,6 +4946,7 @@ plugins:
       - 'Akaviri Imports.esp'
       - 'ClocksOfCyrodiil.esp'
       - 'MTCExpandedVillages.esp'
+      - 'MTC-WeyePatch.esp'
       - 'Region Revive - Lake Rumare.esp'
       - 'RTT.esp'
       - 'RTT-Weye Relocation Patch.esp'
@@ -11888,6 +11890,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/18148/'
         name: 'The Imperial Fortress of Weye'
+    after: [ 'MTC-WeyePatch.esp' ]
     dirty:
       - <<: *quickClean
         crc: 0x68747F19
@@ -11997,6 +12000,7 @@ plugins:
       - 'AFK_Weye.esp'
       - 'Akaviri Imports.esp'
       - 'Fort Weye.esp'
+      - 'MTC-WeyePatch.esp'
       - 'RTT.esp'
       - 'RTT-Weye Relocation Patch.esp'
     inc:
@@ -12518,6 +12522,7 @@ plugins:
       - 'Akaviri Imports.esp'
       - 'ClocksOfCyrodiil.esp'
       - 'FuseSnailRacing.esp'
+      - 'MTC-WeyePatch.esp'
       - 'TalosBridgeGateHouse.esp'
     dirty:
       - <<: *quickClean
@@ -12845,6 +12850,7 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/22828' ]
     after:
       - 'Akaviri Imports.esp'
+      - 'MTC-WeyePatch.esp'
       - 'Region Revive - Lake Rumare.esp'
       - 'RTT.esp'
       - 'RTT-Weye Relocation Patch.esp'
@@ -14218,6 +14224,13 @@ plugins:
         crc: 0x8637CA07
         util: '[TES4Edit v4.0.3g](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 15
+
+  - name: 'MTC-WeyePatch.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/42170/' ]
+    inc: [ 'MTCVillages-LakeRumarePatch.esp' ]
+    clean:
+      - crc: 0xDA3D9843
+        util: 'TES4Edit v4.0.4b'
 
   - name: 'OCO_(DLCHorseArmor|DLCMehrunesRazor|DLCOrrery|DLCThievesDen|KnightsOTN|KvatchRebuilt|UOP_USIP)_Patch\.esp'
     url:
@@ -23393,17 +23406,6 @@ plugins:
         util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 79
         udr: 65
-
-  - name: 'MTC-WeyePatch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/42170' ]
-    msg:
-      - type: warn
-        content:
-          - lang: en
-            text: 'Use this patch or "MTCVillages-LakeRumarePatch.esp", but not both.'
-          - lang: de
-            text: 'Nutzen Sie diesen Patch oder "MTCVillages-LakeRumarePatch.esp", aber nicht beides gleichzeitig.'
-        condition: 'file("MTCVillages-LakeRumarePatch.esp")'
 
   - name: 'mythsandlegends.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/5902' ]
