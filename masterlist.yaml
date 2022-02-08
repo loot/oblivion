@@ -25161,16 +25161,6 @@ plugins:
     msg: [ *versionXofYorGreaterRequiredOBSEv15 ]
   - name: 'Spell Failure Chance.esp'
     req: [ *OBSE ]
-  - name: 'Miniature Necromancy Revised.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/47903' ]
-    msg:
-      - type: warn
-        content:
-          - lang: en
-            text: 'Do not have Jpm''s original active at the same time as this.'
-          - lang: de
-            text: 'Haben Sie nicht Jpm''s original aktiv zur selben Zeit wie dies.'
-        condition: 'file("Jpm''s Miniature Necromancy.esp") or file("Jpm''s Miniature Necromancy RUS.esp")'
   - name: 'TFE - Restore Cost.esp'
     msg:
       - type: say
