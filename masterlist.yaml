@@ -10317,6 +10317,16 @@ plugins:
         util: 'TES4Edit v4.0.4b'
 
 ###### Locations ######
+  - name: 'BladeSong.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/49657/' ]
+    msg: [ *versionXofYorGreaterRequiredOBSEv18 ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x1BA05EFA
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 25
+        udr: 11
+
   - name: '(\(DC\)A Saints Tale Master|The Power of the North)\.es(m|p)'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/39375/'
@@ -22860,16 +22870,6 @@ plugins:
   - name: 'BladeOfTheHaunted.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/33089' ]
     tag: [ Factions ]
-  - name: 'BladeSong.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/49657' ]
-    msg:
-      - *versionXofYorGreaterRequiredOBSEv18
-      - type: warn
-        content:
-          - lang: en
-            text: 'Requires: Screen Effects.'
-          - lang: de
-            text: 'Benötigt: Screen Effects.'
   - name: 'BHC_Expanded.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/27029/' ]
     group: *earlyLoadersGroup
