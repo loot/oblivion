@@ -4337,10 +4337,7 @@ plugins:
 ###### Encounters - Neutral ######
   - name: '(Open Cities + )?Cats & Rats( for Francescos| for MMM)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/5276' ]
-    msg:
-      - <<: *obsolete
-        subs: [ '[Cats and Rats 2.5b](http://theelderscrolls.info/?go=dlfile&fileid=255)' ]
-  - name: '(z)?Cats & Rats( for Francescos| for MMM)?\.esp'
+  - name: 'Cats & Rats( for Francescos| for MMM)?\.esp'
     msg:
       - type: say
         content:
@@ -4350,13 +4347,6 @@ plugins:
             text: 'Steht leicht im Konflikt mit Harvest Containers; Einige innerstädtische Behälter werden keine HC Animation abspielen während diese Mod aktiv ist.'
   - name: 'Cats & Rats.esp'
     tag: [ Scripts ]
-  - name: 'zCats & Rats.esp'
-    url: [ 'http://theelderscrolls.info/?go=dlfile&fileid=255' ]
-    dirty:
-      - <<: *quickClean
-        crc: 0x99F45386
-        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 14
 
   - name: 'CHILDREN ANNUAD.esp'
     url: [ 'https://www.loverslab.com/files/file/9474-childrens-annuad/' ]
@@ -15404,7 +15394,6 @@ plugins:
       - 'The Lost Spires.esp'
       - 'TOTF.esp'
       - 'xulImperialIsle.esp'
-      - 'zCats & Rats.esp'
     tag:
       - C.Owner
       - C.Regions
