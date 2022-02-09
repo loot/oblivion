@@ -4389,9 +4389,15 @@ plugins:
 ###### Encounters - Neutral ######
   - name: '(Cats & Rats|Cats & Rats( for Francescos| for MMM)|Open Cities \+ Cats & Rats( for Francescos| for MMM)?)\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/5276/' ]
+    inc: [ 'zCats & Rats.esp' ]
     tag: [ Scripts ]
   - name: '(Cats & Rats( for Francescos| for MMM)|Open Cities \+ Cats & Rats( for Francescos| for MMM)?)\.esp'
     msg: [ *patchOutdated ]
+  - name: 'Cats & Rats( for Francescos| for MMM)?\.esp'
+    msg:
+      - <<: *useInstead
+        subs: [ '[Cats and Rats Compatibility Update](https://www.nexusmods.com/oblivion/mods/51752/)' ]
+        condition: 'active("Francesco''s Leveled Creatures-Items Mod.esm") or active("Mart''s Monster Mod.esm") or active("Oscuro''s_Oblivion_Overhaul.esm") and not active("Open Cities Resources.esm")'
 
   - name: 'CHILDREN ANNUAD.esp'
     url: [ 'https://www.loverslab.com/files/file/9474-childrens-annuad/' ]
@@ -4518,6 +4524,15 @@ plugins:
         crc: 0xCAA03CA8
         util: '[TES4Edit v4.0.3g](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
+
+  - name: 'zCats & Rats.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/51752/' ]
+    tag: [ Scripts ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x99F45386
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 14
 
 ###### Environment, Landscape & Flora ######
   - name: '00SnowyRoadToBruma.esp'
