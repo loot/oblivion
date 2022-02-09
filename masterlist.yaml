@@ -7337,6 +7337,34 @@ plugins:
         subs: [ 'Combat Speechcraft ESP' ]
         condition: 'many("PTCombatSpeechcraft(Easy|Medium|Hard).esp")'
 
+  - name: 'RescueMenien.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/48385/'
+        name: 'Rescue Menien From the Kvatch Oblivion Gate (Fully Voiced)'
+    req: [ *OBSE ]
+    msg:
+      - <<: *wildEdits
+        subs: [ 'Remove **0009812F** from **RescueMenien.esp**.' ]
+        condition: 'checksum("RescueMenien.esp", 072FF243) or checksum("RescueMenien.esp", B228FBAB)'
+    tag:
+      - Actors.ACBS
+      - Actors.AIPackages
+      - Actors.RecordFlags
+      - Actors.Stats
+      - Delev
+      - NPC.Class
+    dirty:
+      - <<: *quickClean
+        crc: 0x072FF243
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 22
+        udr: 2
+      - <<: *quickClean
+        crc: 0x054F953B
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 22
+        udr: 2
+
   - name: 'Reworked Race Relations.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/50006/' ]
     msg:
