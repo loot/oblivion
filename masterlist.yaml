@@ -9295,6 +9295,17 @@ plugins:
       - *alsoUseEngineBugFixes
       - *versionXofYorGreaterRequiredOBSEv21
 
+  - name: 'lVanilla Style Loading Screens Addon.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/50014/' ]
+    req:
+      - name: 'DLCShiveringIsles.esp'
+        condition: 'checksum("lVanilla Style Loading Screens Addon.esp", 1EB83801)'
+    clean:
+      - crc: 0x1EB83801
+        util: 'TES4Edit v4.0.4b'
+      - crc: 0x4DC1E551
+        util: 'TES4Edit v4.0.4b'
+
   - name: 'toothman''s funny loadscreens.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/19544/' ]
     tag:
