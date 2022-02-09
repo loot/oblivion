@@ -14367,6 +14367,81 @@ plugins:
             text: 'This file is not required when using Wrye Bash''s Bashed Patch v309+.'
         condition: 'file("Bashed Patch.*\.esp")'
 
+  - name: 'OotD_FAR_Necromancer_Patch.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/45611' ]
+    msg:
+      - type: warn
+        content:
+          - lang: en
+            text: 'Use the UL Jerall Glacier version of this patch!'
+          - lang: de
+            text: 'Nutzen Sie die UL Jerall Glacier Version dieses Patches!'
+        condition: 'file("xulJerallGlacier.esp")'
+  - name: 'OotDPS-FAR-FotA-Patch.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/45611' ]
+    msg:
+      - type: warn
+        content:
+          - lang: en
+            text: 'Use the UL Jerall Glacier version of this patch!'
+          - lang: de
+            text: 'Nutzen Sie die UL Jerall Glacier Version dieses Patches!'
+        condition: 'file("xulJerallGlacier.esp")'
+  - name: 'OotDPS-FotA.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/45611' ]
+    msg:
+      - type: warn
+        content:
+          - lang: en
+            text: 'Use the UL Jerall Glacier version of this patch!'
+          - lang: de
+            text: 'Nutzen Sie die UL Jerall Glacier Version dieses Patches!'
+        condition: 'file("xulJerallGlacier.esp")'
+  - name: 'OotDPS-Necro-FAR-FotA-Patch.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/45611' ]
+    msg:
+      - type: warn
+        content:
+          - lang: en
+            text: 'Use the UL Jerall Glacier version of this patch!'
+          - lang: de
+            text: 'Nutzen Sie die UL Jerall Glacier Version dieses Patches!'
+        condition: 'file("xulJerallGlacier.esp")'
+  - name: 'OotDPS_Necro_FotA_Patch.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/45611' ]
+    msg:
+      - type: warn
+        content:
+          - lang: en
+            text: 'Use the UL Jerall Glacier version of this patch!'
+          - lang: de
+            text: 'Nutzen Sie die UL Jerall Glacier Version dieses Patches!'
+        condition: 'file("xulJerallGlacier.esp")'
+  - name: 'BICDist_OotD_Patch.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/45611' ]
+    req: [ 'Better Cities IC Green Emperor Way.esp' ]
+  # OotPS Old Version Files #
+  - name: 'OotD_FAR_Patch.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/45611' ]
+    msg:
+      - type: warn
+        content:
+          - lang: en
+            text: 'Use the UL Jerall Glacier version of this patch!'
+          - lang: de
+            text: 'Nutzen Sie die UL Jerall Glacier Version dieses Patches!'
+        condition: 'file("xulJerallGlacier.esp")'
+  - name: 'OotD_UL_Jerall_Patch.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/45611' ]
+    msg:
+      - type: warn
+        content:
+          - lang: en
+            text: 'You do not need both of these patches! Disable OotD_UL_Jerall_Patch.esp.'
+          - lang: de
+            text: 'Sie brauchen nicht beide Patches! Deaktivieren Sie OotD_UL_Jerall_Patch.esp.'
+        condition: 'file("OrdenDesDrachen-JerallGlacier patch.esp")'
+
   - name: 'Servant of the Dawn DLC Compatibility Patch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/38223/' ]
     dirty:
@@ -23961,17 +24036,6 @@ plugins:
       - <<: *obsolete
         condition: 'file("xulLushWoodlands.esp")'
 
-  - name: 'OotD_UL_Jerall_Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/45611' ]
-    msg:
-      - type: warn
-        content:
-          - lang: en
-            text: 'You do not need both of these patches! Disable OotD_UL_Jerall_Patch.esp.'
-          - lang: de
-            text: 'Sie brauchen nicht beide Patches! Deaktivieren Sie OotD_UL_Jerall_Patch.esp.'
-        condition: 'file("OrdenDesDrachen-JerallGlacier patch.esp")'
-
   - name: 'The Ruins of Miscarcand.esp'
     url:
       - 'https://www.nexusmods.com/oblivion/mods/24471'
@@ -24046,66 +24110,6 @@ plugins:
             text: 'Most likely incompatible with some ULs'
           - lang: de
             text: 'Sehr wahrscheinlich inkompatibel mit einigen ULs'
-  - name: 'OotDPS-Necro-FAR-FotA-Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/45611' ]
-    msg:
-      - type: warn
-        content:
-          - lang: en
-            text: 'Use the UL Jerall Glacier version of this patch!'
-          - lang: de
-            text: 'Nutzen Sie die UL Jerall Glacier Version dieses Patches!'
-        condition: 'file("xulJerallGlacier.esp")'
-  - name: 'OotDPS-FAR-FotA-Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/45611' ]
-    msg:
-      - type: warn
-        content:
-          - lang: en
-            text: 'Use the UL Jerall Glacier version of this patch!'
-          - lang: de
-            text: 'Nutzen Sie die UL Jerall Glacier Version dieses Patches!'
-        condition: 'file("xulJerallGlacier.esp")'
-  - name: 'OotDPS-FotA.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/45611' ]
-    msg:
-      - type: warn
-        content:
-          - lang: en
-            text: 'Use the UL Jerall Glacier version of this patch!'
-          - lang: de
-            text: 'Nutzen Sie die UL Jerall Glacier Version dieses Patches!'
-        condition: 'file("xulJerallGlacier.esp")'
-  - name: 'OotDPS_Necro_FotA_Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/45611' ]
-    msg:
-      - type: warn
-        content:
-          - lang: en
-            text: 'Use the UL Jerall Glacier version of this patch!'
-          - lang: de
-            text: 'Nutzen Sie die UL Jerall Glacier Version dieses Patches!'
-        condition: 'file("xulJerallGlacier.esp")'
-  - name: 'OotD_FAR_Necromancer_Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/45611' ]
-    msg:
-      - type: warn
-        content:
-          - lang: en
-            text: 'Use the UL Jerall Glacier version of this patch!'
-          - lang: de
-            text: 'Nutzen Sie die UL Jerall Glacier Version dieses Patches!'
-        condition: 'file("xulJerallGlacier.esp")'
-  - name: 'OotD_FAR_Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/45611' ]
-    msg:
-      - type: warn
-        content:
-          - lang: en
-            text: 'Use the UL Jerall Glacier version of this patch!'
-          - lang: de
-            text: 'Nutzen Sie die UL Jerall Glacier Version dieses Patches!'
-        condition: 'file("xulJerallGlacier.esp")'
 
   - name: 'Dollparts'' Cherry Brooke Grove - AN Patch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/37753' ]
@@ -27983,9 +27987,6 @@ plugins:
           - lang: de
             text: 'Nutzen Sie dieses Plugin nicht mit Better Cities Full.esp'
         condition: 'file("Better Cities Full.esp")'
-  - name: 'BICDist_OotD_Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/45611' ]
-    req: [ 'Better Cities IC Green Emperor Way.esp' ]
   - name: 'Cyrodiil Rebuild II.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/43743' ]
     tag:
