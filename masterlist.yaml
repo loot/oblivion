@@ -14427,14 +14427,7 @@ plugins:
         condition: 'file("xulJerallGlacier.esp")'
   # OotPS Old Version Files #
   - name: 'OotD_UL_Jerall_Patch.esp'
-    msg:
-      - type: warn
-        content:
-          - lang: en
-            text: 'You do not need both of these patches! Disable OotD_UL_Jerall_Patch.esp.'
-          - lang: de
-            text: 'Sie brauchen nicht beide Patches! Deaktivieren Sie OotD_UL_Jerall_Patch.esp.'
-        condition: 'file("OrdenDesDrachen-JerallGlacier patch.esp")'
+    inc: [ 'OrdenDesDrachen-JerallGlacier patch.esp' ]
 
   - name: 'Servant of the Dawn DLC Compatibility Patch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/38223/' ]
