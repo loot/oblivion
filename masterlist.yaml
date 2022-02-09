@@ -14367,8 +14367,11 @@ plugins:
             text: 'This file is not required when using Wrye Bash''s Bashed Patch v309+.'
         condition: 'file("Bashed Patch.*\.esp")'
 
+  - name: '.*(OotD|OotDPS)(_|-).*\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/45611/'
+        name: 'The Order of the Dragon Patch Series'
   - name: 'OotD_FAR_Necromancer_Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/45611' ]
     msg:
       - type: warn
         content:
@@ -14378,7 +14381,6 @@ plugins:
             text: 'Nutzen Sie die UL Jerall Glacier Version dieses Patches!'
         condition: 'file("xulJerallGlacier.esp")'
   - name: 'OotDPS-FAR-FotA-Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/45611' ]
     msg:
       - type: warn
         content:
@@ -14388,7 +14390,6 @@ plugins:
             text: 'Nutzen Sie die UL Jerall Glacier Version dieses Patches!'
         condition: 'file("xulJerallGlacier.esp")'
   - name: 'OotDPS-FotA.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/45611' ]
     msg:
       - type: warn
         content:
@@ -14398,7 +14399,6 @@ plugins:
             text: 'Nutzen Sie die UL Jerall Glacier Version dieses Patches!'
         condition: 'file("xulJerallGlacier.esp")'
   - name: 'OotDPS-Necro-FAR-FotA-Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/45611' ]
     msg:
       - type: warn
         content:
@@ -14408,7 +14408,6 @@ plugins:
             text: 'Nutzen Sie die UL Jerall Glacier Version dieses Patches!'
         condition: 'file("xulJerallGlacier.esp")'
   - name: 'OotDPS_Necro_FotA_Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/45611' ]
     msg:
       - type: warn
         content:
@@ -14418,11 +14417,9 @@ plugins:
             text: 'Nutzen Sie die UL Jerall Glacier Version dieses Patches!'
         condition: 'file("xulJerallGlacier.esp")'
   - name: 'BICDist_OotD_Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/45611' ]
     req: [ 'Better Cities IC Green Emperor Way.esp' ]
   # OotPS Old Version Files #
   - name: 'OotD_FAR_Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/45611' ]
     msg:
       - type: warn
         content:
@@ -14432,7 +14429,6 @@ plugins:
             text: 'Nutzen Sie die UL Jerall Glacier Version dieses Patches!'
         condition: 'file("xulJerallGlacier.esp")'
   - name: 'OotD_UL_Jerall_Patch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/45611' ]
     msg:
       - type: warn
         content:
