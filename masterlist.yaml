@@ -14373,58 +14373,34 @@ plugins:
         name: 'The Order of the Dragon Patch Series'
   - name: 'OotD_FAR_Patch.esp'
     msg:
-      - type: warn
-        content:
-          - lang: en
-            text: 'Use the UL Jerall Glacier version of this patch!'
-          - lang: de
-            text: 'Nutzen Sie die UL Jerall Glacier Version dieses Patches!'
-        condition: 'file("xulJerallGlacier.esp")'
+      - <<: *useVersion
+        subs: [ 'Unique Landscapes' ]
+        condition: '(active("xulJerallGlacier.esp") or (active("Unique Landscapes.esp") and version("Unique Landscapes.esp", "2.0.0", >=)))'
   - name: 'OotD_FAR_Necromancer_Patch.esp'
     msg:
-      - type: warn
-        content:
-          - lang: en
-            text: 'Use the UL Jerall Glacier version of this patch!'
-          - lang: de
-            text: 'Nutzen Sie die UL Jerall Glacier Version dieses Patches!'
-        condition: 'file("xulJerallGlacier.esp")'
+      - <<: *useVersion
+        subs: [ 'Unique Landscapes' ]
+        condition: '(active("xulJerallGlacier.esp") or (active("Unique Landscapes.esp") and version("Unique Landscapes.esp", "2.0.0", >=)))'
   - name: 'OotDPS-FAR-FotA-Patch.esp'
     msg:
-      - type: warn
-        content:
-          - lang: en
-            text: 'Use the UL Jerall Glacier version of this patch!'
-          - lang: de
-            text: 'Nutzen Sie die UL Jerall Glacier Version dieses Patches!'
-        condition: 'file("xulJerallGlacier.esp")'
+      - <<: *useVersion
+        subs: [ 'Unique Landscapes' ]
+        condition: '(active("xulJerallGlacier.esp") or (active("Unique Landscapes.esp") and version("Unique Landscapes.esp", "2.0.0", >=)))'
   - name: 'OotDPS-FotA.esp'
     msg:
-      - type: warn
-        content:
-          - lang: en
-            text: 'Use the UL Jerall Glacier version of this patch!'
-          - lang: de
-            text: 'Nutzen Sie die UL Jerall Glacier Version dieses Patches!'
-        condition: 'file("xulJerallGlacier.esp")'
+      - <<: *useVersion
+        subs: [ 'Unique Landscapes' ]
+        condition: '(active("xulJerallGlacier.esp") or (active("Unique Landscapes.esp") and version("Unique Landscapes.esp", "2.0.0", >=)))'
   - name: 'OotDPS-Necro-FAR-FotA-Patch.esp'
     msg:
-      - type: warn
-        content:
-          - lang: en
-            text: 'Use the UL Jerall Glacier version of this patch!'
-          - lang: de
-            text: 'Nutzen Sie die UL Jerall Glacier Version dieses Patches!'
-        condition: 'file("xulJerallGlacier.esp")'
+      - <<: *useVersion
+        subs: [ 'Unique Landscapes' ]
+        condition: '(active("xulJerallGlacier.esp") or (active("Unique Landscapes.esp") and version("Unique Landscapes.esp", "2.0.0", >=)))'
   - name: 'OotDPS_Necro_FotA_Patch.esp'
     msg:
-      - type: warn
-        content:
-          - lang: en
-            text: 'Use the UL Jerall Glacier version of this patch!'
-          - lang: de
-            text: 'Nutzen Sie die UL Jerall Glacier Version dieses Patches!'
-        condition: 'file("xulJerallGlacier.esp")'
+      - <<: *useVersion
+        subs: [ 'Unique Landscapes' ]
+        condition: '(active("xulJerallGlacier.esp") or (active("Unique Landscapes.esp") and version("Unique Landscapes.esp", "2.0.0", >=)))'
   # OotPS Old Version Files #
   - name: 'OotD_UL_Jerall_Patch.esp'
     inc: [ 'OrdenDesDrachen-JerallGlacier patch.esp' ]
