@@ -8402,7 +8402,7 @@ plugins:
       - Text
     clean:
       - crc: 0xCF7B5D7F
-        util: 'TES4Edit v4.0.3h (Hotfix 1)'
+        util: 'TES4Edit v4.0.4b'
   - name: 'MannimarcoRevisitedOOO.esp'
     tag:
       - Actors.Spells
@@ -8414,7 +8414,7 @@ plugins:
       - Stats
     clean:
       - crc: 0x5057FEA6
-        util: 'TES4Edit v4.0.3h (Hotfix 1)'
+        util: 'TES4Edit v4.0.4b'
   - name: 'MannimarcoWardrobeChest.esp'
     clean:
       - crc: 0x7FCC00E4
@@ -9514,6 +9514,26 @@ plugins:
     req: [ 'Ayleid Loot EXtension.esp' ]
     clean:
       - crc: 0xF1E0710B
+        util: 'TES4Edit v4.0.4b'
+
+  - name: 'Banes Guilds United(OOO)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/42261/'
+        name: 'Banes Guilds United - Updated'
+      - link: 'https://www.nexusmods.com/oblivion/mods/46199/'
+        name: 'OOO - Oscuro''s Oblivion Overhaul - Updated'
+    msg:
+      - <<: *useVersionOOO
+        condition: 'active("Oscuro''s_Oblivion_Overhaul.esm") and checksum("Banes Guilds United.esp", 54932F7A)'
+    tag:
+      - Invent.Add
+      - Invent.Remove
+    clean:
+      - crc: 0x54932F7A
+        util: 'TES4Edit v4.0.4b'
+      - crc: 0xAB803B0E
+        util: 'TES4Edit v4.0.4b'
+      - crc: 0x066E0C4B
         util: 'TES4Edit v4.0.4b'
 
   - name: 'Buried_Treasure.esp'
@@ -24209,46 +24229,6 @@ plugins:
           - lang: de
             text: 'Bricht vielleicht MMM Hunting and Crafting. Nicht vollständig getestet.'
         condition: 'file("Mart''s Monster Mod - Hunting & Crafting.esp")'
-  - name: 'Banes Guilds United.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/42261' ]
-    msg:
-      - type: error
-        content:
-          - lang: en
-            text: 'OOO users should be using "Banes Guilds UnitedOOO.esp" instead.'
-          - lang: de
-            text: 'OOO Nutzer sollten "Banes Guilds UnitedOOO.esp" stattdessen nutzen.'
-        condition: *OOOCond
-      - type: warn
-        content:
-          - lang: en
-            text: 'Users are very strongly recommended to upgrade to v2+ of this mod to avoid serious issues. It can be found [here](http://www.nexusmods.com/oblivion/mods/42261).'
-          - lang: de
-            text: 'Nutzern wird stark empfohlen zu v2+ dieser Mod zu upgraden um verheerende Probleme zu vermeiden. Es kann [hier](http://www.nexusmods.com/oblivion/mods/42261) abgerufen werden.'
-        condition: 'checksum("Banes Guilds United.esp",CFA556BC)'
-    tag: [ Invent ]
-    clean:
-      - crc: 0x54932F7A
-        util: 'TES4Edit v4.0.3'
-  - name: 'Banes Guilds UnitedOOO.esp'
-    url:
-      - 'https://www.nexusmods.com/oblivion/mods/42261'
-      - 'https://www.nexusmods.com/oblivion/mods/46199/'
-    msg:
-      - type: error
-        content:
-          - lang: en
-            text: 'Use "Banes Guilds United.esp" instead.'
-          - lang: de
-            text: 'Nutzen Sie stattdessen "Banes Guilds United.esp".'
-        condition: 'not file("Oscuro''s_Oblivion_Overhaul.esm")'
-    tag: [ Invent ]
-    clean:
-      - crc: 0xAB803B0E
-        util: 'TES4Edit v4.0.3'
-      # OOO Misc Files version
-      - crc: 0x066E0C4B
-        util: 'TES4Edit v4.0.3'
   - name: 'Better Loot v1.0.esp'
     msg:
       - type: say
