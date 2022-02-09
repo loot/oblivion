@@ -9518,14 +9518,7 @@ plugins:
 
   - name: 'Banes Guilds United.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/42261/' ]
-    msg:
-      - type: error
-        content:
-          - lang: en
-            text: 'OOO users should be using "Banes Guilds UnitedOOO.esp" instead.'
-          - lang: de
-            text: 'OOO Nutzer sollten "Banes Guilds UnitedOOO.esp" stattdessen nutzen.'
-        condition: *OOOCond
+    msg: [ *useVersionOOO ]
     tag:
       - Invent.Add
       - Invent.Remove
@@ -9536,14 +9529,6 @@ plugins:
     url:
       - 'https://www.nexusmods.com/oblivion/mods/42261/'
       - 'https://www.nexusmods.com/oblivion/mods/46199/'
-    msg:
-      - type: error
-        content:
-          - lang: en
-            text: 'Use "Banes Guilds United.esp" instead.'
-          - lang: de
-            text: 'Nutzen Sie stattdessen "Banes Guilds United.esp".'
-        condition: 'not file("Oscuro''s_Oblivion_Overhaul.esm")'
     tag:
       - Invent.Add
       - Invent.Remove
