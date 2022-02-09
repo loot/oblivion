@@ -4393,6 +4393,11 @@ plugins:
     tag: [ Scripts ]
   - name: '(Cats & Rats( for Francescos| for MMM)|Open Cities \+ Cats & Rats( for Francescos| for MMM)?)\.esp'
     msg: [ *patchOutdated ]
+  - name: 'Cats & Rats( for Francescos| for MMM)?\.esp'
+    msg:
+      - <<: *useInstead
+        subs: [ '[Cats and Rats Compatibility Update](https://www.nexusmods.com/oblivion/mods/51752/)' ]
+        condition: 'active("Francesco''s Leveled Creatures-Items Mod.esm") or active("Mart''s Monster Mod.esm") or active("Oscuro''s_Oblivion_Overhaul.esm") and not active("Open Cities Resources.esm")'
 
   - name: 'CHILDREN ANNUAD.esp'
     url: [ 'https://www.loverslab.com/files/file/9474-childrens-annuad/' ]
