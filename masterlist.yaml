@@ -14371,6 +14371,15 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/45611/'
         name: 'The Order of the Dragon Patch Series'
+  - name: 'OotD_FAR_Patch.esp'
+    msg:
+      - type: warn
+        content:
+          - lang: en
+            text: 'Use the UL Jerall Glacier version of this patch!'
+          - lang: de
+            text: 'Nutzen Sie die UL Jerall Glacier Version dieses Patches!'
+        condition: 'file("xulJerallGlacier.esp")'
   - name: 'OotD_FAR_Necromancer_Patch.esp'
     msg:
       - type: warn
@@ -14417,15 +14426,6 @@ plugins:
             text: 'Nutzen Sie die UL Jerall Glacier Version dieses Patches!'
         condition: 'file("xulJerallGlacier.esp")'
   # OotPS Old Version Files #
-  - name: 'OotD_FAR_Patch.esp'
-    msg:
-      - type: warn
-        content:
-          - lang: en
-            text: 'Use the UL Jerall Glacier version of this patch!'
-          - lang: de
-            text: 'Nutzen Sie die UL Jerall Glacier Version dieses Patches!'
-        condition: 'file("xulJerallGlacier.esp")'
   - name: 'OotD_UL_Jerall_Patch.esp'
     msg:
       - type: warn
