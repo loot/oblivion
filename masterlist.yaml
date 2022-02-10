@@ -10160,15 +10160,46 @@ plugins:
       - Delev
       - Invent.Add
       - Invent.Remove
+    clean:
+      - crc: 0x66B13D10
+        util: 'TES4Edit v4.0.4b'
   - name: 'Tamrielic_Ingredients_cOMbo.esp'
     tag:
       - Delev
       - Invent.Add
       - Invent.Remove
+    dirty:
+      - <<: *quickClean
+        crc: 0x0563A6D0
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 5
+  - name: 'Tamrielic_Ingredients_FraM.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x31D8DE74
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 5
+  - name: 'Tamrielic_Ingredients_Fran.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x5FA929F3
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 5
+  - name: 'Tamrielic_Ingredients_MMM.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x1C669C62
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 5
   - name: 'Tamrielic_Ingredients_OOO.esp'
     tag:
       - Delev
       - Invent.Add
+    dirty:
+      - <<: *quickClean
+        crc: 0x47E3F7AD
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 5
   - name: 'Tamrielic_Ingredients(_cOMbo|_FraM|_Fran|_MMM|_OOO)?\.esp'
     msg:
       - <<: *useOnlyOneX
