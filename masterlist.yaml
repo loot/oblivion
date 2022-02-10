@@ -10195,6 +10195,38 @@ plugins:
       - crc: 0x0F7B864D
         util: 'TES4Edit v4.0.4b'
 
+  - name: 'Salmo The Baker v2.0.esp'
+    url:
+      - link: 'http://www.nexusmods.com/oblivion/mods/8435/'
+        name: 'Salmo the Baker'
+      - link: 'https://www.nexusmods.com/oblivion/mods/11084/'
+        name: 'Tamrielic Ingredients'
+    inc:
+      - 'Axebane_RealHunger25.esp'
+      - 'FF_VV_Overhauled.esp'
+      - 'Salmo the Baker, Cobl.esp'
+    tag:
+      - Actors.ACBS
+      - Actors.AIData
+      - Actors.AIPackages
+      - Actors.Stats
+      - Graphics
+      - Invent.Add
+      - Invent.Remove
+      - Names
+      - NPC.Class
+    dirty:
+      - <<: *quickClean
+        crc: 0x2C782FA2
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 63
+        udr: 31
+      - <<: *quickClean
+        crc: 0xA5999148
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 63
+        udr: 31
+
   - name: 'SeptimNotGold.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/48571/' ]
     tag:
@@ -28476,18 +28508,6 @@ plugins:
         crc: 0x5DFF0867
         util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 2
-  - name: 'Salmo The Baker v2.0.esp'
-    url:
-      - 'http://www.nexusmods.com/oblivion/mods/8435'
-      # Tamrielic Ingredients version
-      - 'https://www.nexusmods.com/oblivion/mods/11084'
-    inc: [ 'Salmo the Baker, Cobl.esp' ]
-    dirty:
-      - <<: *quickClean
-        crc: 0x2C782FA2
-        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 63
-        udr: 31
   - name: 'Advanced Mark & Recall.esp'
     url: [ 'http://www.nexusmods.com/oblivion/mods/10985' ]
     req: [ *OBSE ]
