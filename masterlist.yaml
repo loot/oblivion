@@ -16841,6 +16841,9 @@ plugins:
       - Relations
       - Relev
   - name: 'FCOM_Convergence.esp'
+    after:
+      - 'FCOM_TamrielicIngredients.esp'
+      - 'Tamrielic_Ingredients_cOMbo.esp'
     msg:
       # doNotClean
       - <<: *requiresX
@@ -16932,6 +16935,7 @@ plugins:
       - 'FCOM_Francescos.esp'
       - 'FCOM_FrancescosNamedBosses.esp'
       - 'Francesco''s Optional Chance of Stronger Bosses.esp'
+      - 'Tamrielic_Ingredients_cOMbo.esp'
     tag:
       - Actors.ACBS
       - Actors.AIData
@@ -17498,6 +17502,7 @@ plugins:
       - 'Francesco''s Leveled Creatures-Items Mod.esm'
       - 'Francesco''s Optional New Items Add-On.esm'
       - 'Oscuro''s_Oblivion_Overhaul.esm'
+      - 'Tamrielic Ingredients.esm'
     tag:
       - Actors.ACBS
       - Actors.AIData
@@ -18148,8 +18153,10 @@ plugins:
       - 'FCOM_Francescos.esp'
       - 'FCOM_FrancescosItemsAddOn.esp'
       - 'FCOM_FrancescosNamedBosses.esp'
+      - 'FCOM_TamrielicIngredients.esp'
       - 'FCOM_WarCry.esp'
       - 'Oblivion WarCry EV.esp'
+      - 'Tamrielic_Ingredients_cOMbo.esp'
     tag:
       - name: -Factions
         condition: 'file("Mart''s Monster Mod for OOO.esm") or file("FCOM_Convergence.esm")'
