@@ -10155,6 +10155,20 @@ plugins:
         condition: 'many("Morrowind Ingredients(_Combo|_Fran|_MMM|_OOO)?\.esp")'
   - name: 'Tamrielic Ingredients.esm'
     inc: [ 'Cobl Main.esm' ]
+    tag:
+      - Actors.AIData
+      - Delev
+      - Invent.Add
+      - Invent.Remove
+  - name: 'Tamrielic_Ingredients_cOMbo.esp'
+    tag:
+      - Delev
+      - Invent.Add
+      - Invent.Remove
+  - name: 'Tamrielic_Ingredients_OOO.esp'
+    tag:
+      - Delev
+      - Invent.Add
   - name: 'Tamrielic_Ingredients(_cOMbo|_FraM|_Fran|_MMM|_OOO)?\.esp'
     msg:
       - <<: *useOnlyOneX
