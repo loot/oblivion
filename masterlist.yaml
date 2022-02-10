@@ -24769,14 +24769,6 @@ plugins:
             text: 'Almost certainly not compatible with Fran''s, MMM, OOO or FCOM.'
           - lang: de
             text: 'Großer Wahrscheinlichkeit nicht kompatibel mit Fran''s, MMM, OOO oder FCOM.'
-  - name: 'RareItemsv1.18 for RCR.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Almost certainly not compatible with Fran''s, MMM, OOO or FCOM.'
-          - lang: de
-            text: 'Großer Wahrscheinlichkeit nicht kompatibel mit Fran''s, MMM, OOO oder FCOM.'
   - name: 'realistic_weapon_reach_mod_ks_d.esp'
     tag: [ Stats ]
   - name: 'realistic_weapon_reach_mod_ks.esp'
@@ -24804,15 +24796,6 @@ plugins:
     inc:
       - 'kuerteeGoldIsAnInventoryItem.esp'
       - 'ReneersGoldMod.esp'
-
-  - name: 'Safer Roads v1.0.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Don''t use with MMM or FCOM - unknown with other overhauls'
-          - lang: de
-            text: 'Nicht Benutzen mit MMM oder FCOM - unbekannt bezüglich anderen Überhol-Mods'
 
   - name: 'sgLighterQuivers.esp'
     tag: [ Stats ]
@@ -25096,15 +25079,6 @@ plugins:
             text: 'Nicht mit anderen Pferd-Beschwörungs-Mods gleichzeitig nutzen. Nutzen Sie nur eine .esp.'
   - name: 'MadCompanionshipSpells.esp'
     msg: [ *versionXofYorGreaterRequiredOBSEv19 ]
-  - name: 'MarkRecall.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Consider using Mark Recall 3 if using OBSE.'
-          - lang: de
-            text: 'Erwägen Sie Mark Recall 3 zu benutzen bei der Nutzung von OBSE.'
-        condition: 'file("../obse_1_2_416.dll")'
   - name: 'Mark3.esp'
     req: [ *OBSE ]
   - name: 'SNxMarkers.esp'
@@ -25260,14 +25234,6 @@ plugins:
   - name: 'Potion_Sorter-2081.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/2081' ]
     tag: [ Names ]
-  - name: 'varlatest.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Incompatible with: mods that alter Welkynd or Varla stones or the AyleidWell script.'
-          - lang: de
-            text: 'Inkompatibel mit: Mods die Welkynd oder Varla stones oder die AyleidWell Skripte abändern.'
   - name: 'pmAlchemyOverhaul.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/41283' ]
     msg:
@@ -25397,15 +25363,6 @@ plugins:
     tag: [ Stats ]
   - name: 'SilverBonus.esp'
     req: [ *OBSE ]
-  - name: 'Oblivion Global Mod.esp'
-    msg:
-      - type: warn
-        content:
-          - lang: en
-            text: 'Incompatible with: Deadly Reflex'
-          - lang: de
-            text: 'Inkompatibel mit: Deadly Reflex'
-        condition: 'file("Deadly Reflex.*\.esp")'
   - name: 'HTHAdvanced - Normal.esp'
     inc: [ 'HTHAdvanced - Sinkpoint.esp' ]
     msg:
@@ -27531,14 +27488,6 @@ plugins:
     tag:
       - Eyes
       - Hair
-  - name: 'Baddy.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'If you use Entius Gorge you need the compatibility patch found [here](http://www.nexusmods.com/oblivion/mods/13834).'
-          - lang: de
-            text: 'Wenn Sie Entius Gorge nutzen, brauchen Sie den Kompatibilitäts-Patch der [hier](http://www.nexusmods.com/oblivion/mods/13834) abgerufen werden kann.'
   - name: 'Companion-Hilda.esp'
     inc: [ 'Companion Neeshka.esp' ]
   - name: 'Companion Neeshka.esp'
