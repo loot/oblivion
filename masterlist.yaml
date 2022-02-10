@@ -6212,6 +6212,16 @@ plugins:
       - crc: 0x98C75304
         util: 'TES4Edit v4.0.4'
 
+  - name: 'DEJ Harvest - Flora.*\.es(m|p)'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/3699/'
+        name: 'Harvest Flora LEGACY'
+      - link: 'https://www.nexusmods.com/oblivion/mods/4991/'
+        name: 'Auto Harvest FLORA'
+    msg:
+      - <<: *obsolete
+        subs: [ '[Harvest Flora](https://www.nexusmods.com/oblivion/mods/2037/)' ]
+
   - name: 'Fran''s Ore Refiner( - SI only)?\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/28511/'
@@ -15440,13 +15450,6 @@ plugins:
         subs: [ 'Item interchange Ingredients in Bulk' ]
         condition: 'many("Item interchange - Option, Ingredients in Bulk(, reduced)?\.esp")'
 
-  - name: 'DEJ Harvest - Flora.esm'
-    url:
-      # Original modpage, File no longer available here
-      - 'https://www.nexusmods.com/oblivion/mods/2037'
-      # Auto Harvest FLORA, has old version of Harvest flora
-      - 'https://www.nexusmods.com/oblivion/mods/4991'
-    msg: [ *obsolete ]
   - name: 'Tamriel''s Glittering Geology.esm'
     url: [ 'https://www.nexusmods.com/oblivion/mods/5075/' ]
     inc: [ 'Oscuro''s_Oblivion_Overhaul.esm' ]
@@ -24180,9 +24183,6 @@ plugins:
       - crc: 0x06D10790
         util: 'TES4Edit v4.0.2i'
 
-  - name: 'DEJ Harvest - Flora.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/3699' ]
-    msg: [ *obsolete ]
   - name: 'Diseased Corpses.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/9758' ]
     msg:
