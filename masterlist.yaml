@@ -10155,6 +10155,11 @@ plugins:
         condition: 'many("Morrowind Ingredients(_Combo|_Fran|_MMM|_OOO)?\.esp")'
   - name: 'Tamrielic Ingredients.esm'
     inc: [ 'Cobl Main.esm' ]
+  - name: 'Tamrielic_Ingredients(_cOMbo|_FraM|_Fran|_MMM|_OOO)?\.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Tamrielic Ingredients ESP' ]
+        condition: 'many("Tamrielic_Ingredients(_cOMbo|_FraM|_Fran|_MMM|_OOO)?\.esp")'
   - name: 'Tamrielic_Ingredients_(Fran|FraM|OOO|MMM)\.esp'
     inc: [ 'FCOM_Convergence.esm' ]
 
