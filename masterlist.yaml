@@ -6335,13 +6335,9 @@ plugins:
 
   - name: 'RealisticFlora.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/8478/' ]
-    msg: [ *obsolete ]
-  - name: 'RealisticFlora - DLCFrostcrag.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/8478/' ]
-    msg: [ *obsolete ]
-  - name: 'RealisticFlora - DLCVileLair.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/8478/' ]
-    msg: [ *obsolete ]
+    msg:
+      - <<: *obsolete
+        subs: [ '[Harvest Flora](https://www.nexusmods.com/oblivion/mods/2037/)' ]
 
   - name: 'Screaming Mandrakes.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/39209/' ]
