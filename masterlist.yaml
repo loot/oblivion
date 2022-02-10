@@ -2141,6 +2141,26 @@ plugins:
       - crc: 0xDE76A03A
         util: 'TES4Edit v4.0.4b'
 
+  - name: 'archrobe.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/16941/' ]
+    msg:
+      - <<: *wildEdits
+        subs: [ 'Remove **00028FA1** from **archrobe.esp**.' ]
+        condition: 'checksum("archrobe.esp", E6F667FB) or checksum("archrobe.esp", E2566286)'
+    tag:
+      - Deactivate
+      - Graphics
+      - NoMerge
+    dirty:
+      - <<: *quickClean
+        crc: 0xE6F667FB
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 4
+      - <<: *quickClean
+        crc: 0x9B4232D1
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 4
+
   - name: 'Badass Female Madness Boots.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/48279/' ]
     req: [ 'DLCShiveringIsles.esp' ]
@@ -19267,9 +19287,6 @@ plugins:
       - *useInsteadUOP
   - name: 'Anvil beach retexture.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/32790' ]
-    tag: [ Graphics ]
-  - name: 'archrobe.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/16941' ]
     tag: [ Graphics ]
   - name: 'Ayleid Coin Add-on.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/10671' ]
