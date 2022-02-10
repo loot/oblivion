@@ -10384,12 +10384,8 @@ plugins:
   - name: 'Morrowind Ingredients(_Combo|_Fran|_MMM|_OOO)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/8394/' ]
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Consider Upgrading to Tamrielic Ingredients.'
-          - lang: de
-            text: 'Erwägen Sie zu Tamrielic Ingredients upzugraden.'
+      - <<: *obsolete
+        subs: [ '[Tamrielic Ingredients](https://www.nexusmods.com/oblivion/mods/11084/)' ]
 
   - name: 'TamrielSnacks11-(D|E)V\.esp'
     url:
