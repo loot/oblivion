@@ -3249,6 +3249,31 @@ plugins:
       - <<: *requiresResources
         subs: [ '[Illumination Within Revived 0.9.2](https://www.moddb.com/downloads/illumination-within-revived-0-9-2)' ]
         condition: 'not file("textures/architecture/WindowLights") or not file("textures/architecture/WindowLights")'
+  - name: 'IWR-Lights.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x3A745374
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
+    clean:
+      - crc: 0x46CAFC57
+        util: 'TES4Edit v4.0.4b'
+  - name: 'IWR-Shutters.esp'
+    clean:
+      - crc: 0x301B422F
+        util: 'TES4Edit v4.0.4b'
+      - crc: 0x23C2418D
+        util: 'TES4Edit v4.0.4b'
+  - name: 'IWR-Windows.esp'
+    clean:
+      - crc: 0x26A1E6A4
+        util: 'TES4Edit v4.0.4b'
+      - crc: 0x4450BDCE
+        util: 'TES4Edit v4.0.4b'
+  - name: 'IWR - Windows Lights Shutters - Optimised.esp'
+    clean:
+      - crc: 0x3B43DAFA
+        util: 'TES4Edit v4.0.4b'
 
   - name: 'Jhaerik''s Dungeon Fog Remover( Lite)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/40555/' ]
