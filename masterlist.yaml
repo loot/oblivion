@@ -3232,6 +3232,49 @@ plugins:
         itm: 97
         udr: 120
 
+  - name: 'IWR-(Lights|Shutters|Windows)\.esp'
+    url:
+      - link: 'https://www.moddb.com/downloads/illumination-within-revived-0-9-2'
+        name: 'Illumination Within Revived 0.9.2'
+    msg:
+      - <<: *patchUpdateAvailable
+        subs: [ '[Illumination Within Revived Optimised](https://www.nexusmods.com/oblivion/mods/6244/) or [Illumination Within Revived Retrofitted](https://www.nexusmods.com/oblivion/mods/11027/)' ]
+        condition: 'checksum("IWR-Lights.esp", 10089D58) or checksum("IWR-Shutters.esp", B3E8A521) or checksum("IWR-Windows.esp", 2AB56EFC)'
+  - name: 'IWR(-Lights|-Shutters|-Windows| - Windows Lights Shutters - Optimised)\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/6244/'
+        name: 'Illumination Within Revived Optimised'
+    inc: [ 'IWRRetrofittedMaster.esm' ]
+    msg:
+      - <<: *requiresResources
+        subs: [ '[Illumination Within Revived 0.9.2](https://www.moddb.com/downloads/illumination-within-revived-0-9-2)' ]
+        condition: 'not file("textures/architecture/WindowLights") or not file("textures/architecture/WindowLights")'
+  - name: 'IWR-Lights.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x3A745374
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
+    clean:
+      - crc: 0x46CAFC57
+        util: 'TES4Edit v4.0.4b'
+  - name: 'IWR-Shutters.esp'
+    clean:
+      - crc: 0x301B422F
+        util: 'TES4Edit v4.0.4b'
+      - crc: 0x23C2418D
+        util: 'TES4Edit v4.0.4b'
+  - name: 'IWR-Windows.esp'
+    clean:
+      - crc: 0x26A1E6A4
+        util: 'TES4Edit v4.0.4b'
+      - crc: 0x4450BDCE
+        util: 'TES4Edit v4.0.4b'
+  - name: 'IWR - Windows Lights Shutters - Optimised.esp'
+    clean:
+      - crc: 0x3B43DAFA
+        util: 'TES4Edit v4.0.4b'
+
   - name: 'Jhaerik''s Dungeon Fog Remover( Lite)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/40555/' ]
     msg:
@@ -19447,42 +19490,6 @@ plugins:
     after:
       - 'IlluminationWithin.esp'
       - 'IlluminationWithout.esp'
-  - name: 'IWR-Windows.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/6244' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Remember there are also the Retrofitted and Optimised IWR mods.'
-          - lang: de
-            text: 'Erinnerung das es auch die Retrogefitteten und optimierten IWR Mods gibt.'
-  - name: 'IWR-Lights.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/6244' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Remember there are also the Retrofitted and Optimised IWR mods.'
-          - lang: de
-            text: 'Erinnerung das es auch die Retrogefitteten und optimierten IWR Mods gibt.'
-  - name: 'IWR-Shutters.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/6244' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Remember there are also the Retrofitted and Optimised IWR mods.'
-          - lang: de
-            text: 'Erinnerung das es auch die Retrogefitteten und optimierten IWR Mods gibt.'
-  - name: 'IWR - Windows Lights Shutters - Optimised.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/6244' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Needs original IWR files.'
-          - lang: de
-            text: 'Braucht originale IWR Dateien.'
   - name: 'AmbientDungeons.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/18385' ]
     req:
