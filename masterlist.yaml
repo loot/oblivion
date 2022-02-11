@@ -535,6 +535,12 @@ common:
       - '0012'
       - '[OBSE](https://obse.silverlock.org)'
     condition: 'not file("../obse_1_2_416.dll") or version("../obse_1_2_416.dll", "0.0.12.0", <)'
+  - &versionXofYorGreaterRequiredOBSEv13
+    <<: *versionXofYorGreaterRequired
+    subs:
+      - '0013'
+      - '[OBSE](https://obse.silverlock.org)'
+    condition: 'not file("../obse_1_2_416.dll") or version("../obse_1_2_416.dll", "0.0.13.0", <)'
   - &versionXofYorGreaterRequiredOBSEv14
     <<: *versionXofYorGreaterRequired
     subs:
