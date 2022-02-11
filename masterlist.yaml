@@ -3211,6 +3211,20 @@ plugins:
       - <<: *useOnlyOneX
         subs: [ 'Illumination' ]
         condition: 'many("Illumination(Within|Without)\.esp")'
+  - name: 'IlluminationWithin.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0xF3BFEC5B
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 96
+        udr: 120
+  - name: 'IlluminationWithout.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x451931B5
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 97
+        udr: 120
 
   - name: 'Jhaerik''s Dungeon Fog Remover( Lite)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/40555/' ]
