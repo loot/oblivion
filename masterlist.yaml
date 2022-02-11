@@ -3236,35 +3236,14 @@ plugins:
     url:
       - link: 'https://www.moddb.com/downloads/illumination-within-revived-0-9-2'
         name: 'Illumination Within Revived 0.9.2'
+    msg:
+      - <<: *patchUpdateAvailable
+        subs: [ '[Illumination Within Revived Optimised](https://www.nexusmods.com/oblivion/mods/6244/) or [Illumination Within Revived Retrofitted](https://www.nexusmods.com/oblivion/mods/11027/)' ]
+        condition: 'checksum("IWR-Lights.esp", 10089D58) or checksum("IWR-Shutters.esp", B3E8A521) or checksum("IWR-Windows.esp", 2AB56EFC)'
   - name: 'IWR(-Lights|-Shutters|-Windows| - Windows Lights Shutters - Optimised)\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/6244/'
         name: 'Illumination Within Revived Optimised'
-  - name: 'IWR-Lights.esp'
-    msg:
-      - <<: *patchUpdateAvailable
-        subs: [ '[Illumination Within Revived Optimised](https://www.nexusmods.com/oblivion/mods/6244/) or [Illumination Within Revived Retrofitted](https://www.nexusmods.com/oblivion/mods/11027/)' ]
-        condition: 'checksum("IWR-Lights.esp", 10089D58)'
-      - <<: *requiresResources
-        subs: [ '[Illumination Within Revived 0.9.2](https://www.moddb.com/downloads/illumination-within-revived-0-9-2)' ]
-        condition: 'not file("textures/architecture/WindowLights") or not file("textures/architecture/WindowLights")'
-  - name: 'IWR-Shutters.esp'
-    msg:
-      - <<: *patchUpdateAvailable
-        subs: [ '[Illumination Within Revived Optimised](https://www.nexusmods.com/oblivion/mods/6244/) or [Illumination Within Revived Retrofitted](https://www.nexusmods.com/oblivion/mods/11027/)' ]
-        condition: 'checksum("IWR-Shutters.esp", B3E8A521)'
-      - <<: *requiresResources
-        subs: [ '[Illumination Within Revived 0.9.2](https://www.moddb.com/downloads/illumination-within-revived-0-9-2)' ]
-        condition: 'not file("textures/architecture/WindowLights") or not file("textures/architecture/WindowLights")'
-  - name: 'IWR-Windows.esp'
-    msg:
-      - <<: *patchUpdateAvailable
-        subs: [ '[Illumination Within Revived Optimised](https://www.nexusmods.com/oblivion/mods/6244/) or [Illumination Within Revived Retrofitted](https://www.nexusmods.com/oblivion/mods/11027/)' ]
-        condition: 'checksum("IWR-Windows.esp", 2AB56EFC)'
-      - <<: *requiresResources
-        subs: [ '[Illumination Within Revived 0.9.2](https://www.moddb.com/downloads/illumination-within-revived-0-9-2)' ]
-        condition: 'not file("textures/architecture/WindowLights") or not file("textures/architecture/WindowLights")'
-  - name: 'IWR - Windows Lights Shutters - Optimised.esp'
     msg:
       - <<: *requiresResources
         subs: [ '[Illumination Within Revived 0.9.2](https://www.moddb.com/downloads/illumination-within-revived-0-9-2)' ]
