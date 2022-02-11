@@ -3242,36 +3242,33 @@ plugins:
         name: 'Illumination Within Revived Optimised'
   - name: 'IWR-Lights.esp'
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Remember there are also the Retrofitted and Optimised IWR mods.'
-          - lang: de
-            text: 'Erinnerung das es auch die Retrogefitteten und optimierten IWR Mods gibt.'
+      - <<: *patchUpdateAvailable
+        subs: [ '[Illumination Within Revived Optimised](https://www.nexusmods.com/oblivion/mods/6244/) or [Illumination Within Revived Retrofitted](https://www.nexusmods.com/oblivion/mods/11027/)' ]
+        condition: 'checksum("IWR-Lights.esp", 10089D58)'
+      - <<: *requiresResources
+        subs: [ '[Illumination Within Revived 0.9.2](https://www.moddb.com/downloads/illumination-within-revived-0-9-2)' ]
+        condition: 'not file("textures/architecture/WindowLights") or not file("textures/architecture/WindowLights")'
   - name: 'IWR-Shutters.esp'
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Remember there are also the Retrofitted and Optimised IWR mods.'
-          - lang: de
-            text: 'Erinnerung das es auch die Retrogefitteten und optimierten IWR Mods gibt.'
+      - <<: *patchUpdateAvailable
+        subs: [ '[Illumination Within Revived Optimised](https://www.nexusmods.com/oblivion/mods/6244/) or [Illumination Within Revived Retrofitted](https://www.nexusmods.com/oblivion/mods/11027/)' ]
+        condition: 'checksum("IWR-Shutters.esp", B3E8A521)'
+      - <<: *requiresResources
+        subs: [ '[Illumination Within Revived 0.9.2](https://www.moddb.com/downloads/illumination-within-revived-0-9-2)' ]
+        condition: 'not file("textures/architecture/WindowLights") or not file("textures/architecture/WindowLights")'
   - name: 'IWR-Windows.esp'
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Remember there are also the Retrofitted and Optimised IWR mods.'
-          - lang: de
-            text: 'Erinnerung das es auch die Retrogefitteten und optimierten IWR Mods gibt.'
+      - <<: *patchUpdateAvailable
+        subs: [ '[Illumination Within Revived Optimised](https://www.nexusmods.com/oblivion/mods/6244/) or [Illumination Within Revived Retrofitted](https://www.nexusmods.com/oblivion/mods/11027/)' ]
+        condition: 'checksum("IWR-Windows.esp", 2AB56EFC)'
+      - <<: *requiresResources
+        subs: [ '[Illumination Within Revived 0.9.2](https://www.moddb.com/downloads/illumination-within-revived-0-9-2)' ]
+        condition: 'not file("textures/architecture/WindowLights") or not file("textures/architecture/WindowLights")'
   - name: 'IWR - Windows Lights Shutters - Optimised.esp'
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Needs original IWR files.'
-          - lang: de
-            text: 'Braucht originale IWR Dateien.'
+      - <<: *requiresResources
+        subs: [ '[Illumination Within Revived 0.9.2](https://www.moddb.com/downloads/illumination-within-revived-0-9-2)' ]
+        condition: 'not file("textures/architecture/WindowLights") or not file("textures/architecture/WindowLights")'
 
   - name: 'Jhaerik''s Dungeon Fog Remover( Lite)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/40555/' ]
