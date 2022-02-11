@@ -11408,12 +11408,9 @@ plugins:
       - 'https://www.nexusmods.com/oblivion/mods/23170/'
       - 'https://www.nexusmods.com/oblivion/mods/27520/'
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Newest version has the same name as the original. Check that you''re using at least v1.5.2.'
-          - lang: de
-            text: 'Neueste Version hat den selben Namen wie das Original. Überprüfen Sie das sie mindestens v1.5.2 nutzen.'
+      - <<: *obsolete
+        subs: [ '[Adense Epic Dungeon Update](https://www.nexusmods.com/oblivion/mods/27520/)' ]
+        condition: 'checksum("AdenseEpicDungeon.esp", 31EB898A)'
 
   - name: 'ArcturusFinal.esp'
     url:
