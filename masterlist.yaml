@@ -6383,6 +6383,31 @@ plugins:
         itm: 8
         udr: 105
 
+  - name: 'Qarls_Harvest addon(_MMM)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/8285/'
+        name: 'Qarls Harvest Addon'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Qarls Harvest Addon ESP' ]
+        condition: 'many("Qarls_Harvest addon(_MMM)?\.esp")'
+  - name: 'Qarls_Harvest addon.esp'
+    msg:
+      - <<: *useVersion
+        subs: [ 'Qarls_Harvest addon_MMM.esp' ]
+        condition: 'active("Mart''s Monster Mod.esm")'
+    dirty:
+      - <<: *quickClean
+        crc: 0x5A5E9BFE
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1
+  - name: 'Qarls_Harvest addon_MMM.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x0E0F924E
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1
+
   - name: 'RealisticFlora.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/8478/' ]
     msg:
@@ -19954,13 +19979,6 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/5065' ]
     tag: [ Relev ]
 
-  - name: 'Qarls_Harvest addon.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/8285' ]
-    inc: [ 'Qarls_Harvest addon_OOO.esp' ]
-    msg:
-      - <<: *useInstead
-        subs: [ 'Qarls_Harvest addon_MMM/OOO' ]
-        condition: 'active("Mart''s Monster Mod.esm")'
   - name: 'QuickEquipSwap.esp'
     req: [ *OBSE ]
   - name: 'RAEVWD Cities.esp'
@@ -22327,9 +22345,6 @@ plugins:
   - name: 'Legion Shield Replacer - OOO.esp'
     url: [ 'http://tesalliance.org/forums/index.php?/files/file/748-legion-shield-replacer' ]
     tag: [ Graphics ]
-  - name: 'Qarls_Harvest addon_MMM.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/8285' ]
-    inc: [ 'Qarls_Harvest addon.esp' ]
   - name: 'LoadingScreens-OOO.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/15057/' ]
     tag:
