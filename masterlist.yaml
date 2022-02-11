@@ -10140,6 +10140,74 @@ plugins:
         util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 3
 
+  - name: '(Morrowind|Tamrielic) Ingredients.*\.es(m|p)'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/8394/'
+        name: 'Morrowind Ingredients'
+      - link: 'https://www.nexusmods.com/oblivion/mods/11084/'
+        name: 'Tamrielic Ingredients'
+  - name: 'Morrowind Ingredients(_Combo|_Fran|_MMM|_OOO)?\.esp'
+    msg:
+      - <<: *obsolete
+        subs: [ '[Tamrielic Ingredients](https://www.nexusmods.com/oblivion/mods/11084/)' ]
+      - <<: *useOnlyOneX
+        subs: [ 'Morrowind Ingredients ESP' ]
+        condition: 'many("Morrowind Ingredients(_Combo|_Fran|_MMM|_OOO)?\.esp")'
+  - name: 'Tamrielic Ingredients.esm'
+    inc: [ 'Cobl Main.esm' ]
+    tag:
+      - Actors.AIData
+      - Delev
+      - Invent.Add
+      - Invent.Remove
+    clean:
+      - crc: 0x66B13D10
+        util: 'TES4Edit v4.0.4b'
+  - name: 'Tamrielic_Ingredients_cOMbo.esp'
+    tag:
+      - Delev
+      - Invent.Add
+      - Invent.Remove
+    dirty:
+      - <<: *quickClean
+        crc: 0x0563A6D0
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 5
+  - name: 'Tamrielic_Ingredients_FraM.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x31D8DE74
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 5
+  - name: 'Tamrielic_Ingredients_Fran.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x5FA929F3
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 5
+  - name: 'Tamrielic_Ingredients_MMM.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x1C669C62
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 5
+  - name: 'Tamrielic_Ingredients_OOO.esp'
+    tag:
+      - Delev
+      - Invent.Add
+    dirty:
+      - <<: *quickClean
+        crc: 0x47E3F7AD
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 5
+  - name: 'Tamrielic_Ingredients(_cOMbo|_FraM|_Fran|_MMM|_OOO)?\.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Tamrielic Ingredients ESP' ]
+        condition: 'many("Tamrielic_Ingredients(_cOMbo|_FraM|_Fran|_MMM|_OOO)?\.esp")'
+  - name: 'Tamrielic_Ingredients(_FraM|_Fran|_MMM|_OOO)?\.esp'
+    inc: [ 'FCOM_Convergence.esm' ]
+
   - name: 'Mysterious Bear''s Ramshackle Armory.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/38136/' ]
     dirty:
@@ -16818,6 +16886,9 @@ plugins:
       - Relations
       - Relev
   - name: 'FCOM_Convergence.esp'
+    after:
+      - 'FCOM_TamrielicIngredients.esp'
+      - 'Tamrielic_Ingredients_cOMbo.esp'
     msg:
       # doNotClean
       - <<: *requiresX
@@ -16909,6 +16980,7 @@ plugins:
       - 'FCOM_Francescos.esp'
       - 'FCOM_FrancescosNamedBosses.esp'
       - 'Francesco''s Optional Chance of Stronger Bosses.esp'
+      - 'Tamrielic_Ingredients_cOMbo.esp'
     tag:
       - Actors.ACBS
       - Actors.AIData
@@ -17465,13 +17537,6 @@ plugins:
         subs: [ 'Francescos Creatures and Items' ]
         condition: 'active("Francesco''s Leveled Creatures-Items Mod.esm")'
 
-  - name: 'Tamrielic Ingredients.esm'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/11084' ]
-    inc: [ 'Cobl Main.esm' ]
-  - name: 'Tamrielic_Ingredients_(Fran|FraM|OOO|MMM)\.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/11084' ]
-    inc: [ 'FCOM_Convergence.esm' ]
-
 ###### Martigen’s Monster Mod (MMM) ######
   - name: 'Mart''s Monster Mod.*\.es(m|p)'
     url:
@@ -17482,6 +17547,7 @@ plugins:
       - 'Francesco''s Leveled Creatures-Items Mod.esm'
       - 'Francesco''s Optional New Items Add-On.esm'
       - 'Oscuro''s_Oblivion_Overhaul.esm'
+      - 'Tamrielic Ingredients.esm'
     tag:
       - Actors.ACBS
       - Actors.AIData
@@ -17592,6 +17658,7 @@ plugins:
       - Relev
       - Scripts
   - name: 'Mart''s Monster Mod.esp'
+    after: [ 'Tamrielic_Ingredients_MMM.esp' ]
     inc:
       - 'Francesco''s Leveled Creatures-Items Mod.esm'
       - 'Oscuro''s_Oblivion_Overhaul.esm'
@@ -17615,6 +17682,7 @@ plugins:
       - 'Francesco''s Optional Chance of Stronger Bosses.esp'
       - 'Francesco''s Optional Chance of Stronger Enemies.esp'
       - 'Francesco''s Optional Leveled Quests.esp'
+      - 'Tamrielic_Ingredients_Fran.esp'
     msg:
       - <<: *renameXtoY
         subs:
@@ -18132,8 +18200,11 @@ plugins:
       - 'FCOM_Francescos.esp'
       - 'FCOM_FrancescosItemsAddOn.esp'
       - 'FCOM_FrancescosNamedBosses.esp'
+      - 'FCOM_TamrielicIngredients.esp'
       - 'FCOM_WarCry.esp'
       - 'Oblivion WarCry EV.esp'
+      - 'Tamrielic_Ingredients_cOMbo.esp'
+      - 'Tamrielic_Ingredients_OOO.esp'
     tag:
       - name: -Factions
         condition: 'file("Mart''s Monster Mod for OOO.esm") or file("FCOM_Convergence.esm")'
@@ -22276,15 +22347,6 @@ plugins:
     tag:
       - Graphics
       - NoMerge
-  - name: 'Morrowind Ingredients_MMM.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/8394' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Consider Upgrading to Tamrielic Ingredients.'
-          - lang: de
-            text: 'Erwägen Sie zu Tamrielic Ingredients upzugraden.'
   - name: 'C&C - The Blackwood Company - OOO.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17448' ]
     tag:
