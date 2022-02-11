@@ -3205,6 +3205,14 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/35099/' ]
     group: *latePatchesGroup
 
+  - name: 'Illumination(Within|Without)\.esp'
+    url: [ 'http://www.nexusmods.com/oblivion/mods/3700/' ]
+    after: [ 'Finishing Touches -Bravil-.esp' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Illumination' ]
+        condition: 'many("Illumination(Within|Without)\.esp")'
+
   - name: 'Jhaerik''s Dungeon Fog Remover( Lite)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/40555/' ]
     msg:
@@ -19396,13 +19404,6 @@ plugins:
   - name: 'CampfireBehavior.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/13101' ]
     inc: [ 'All Natural - Real Lights.esp' ]
-  - name: 'Illumination(Within|Without)\.esp'
-    url: [ 'http://www.nexusmods.com/oblivion/mods/3700' ]
-    after: [ 'Finishing Touches -Bravil-.esp' ]
-    msg:
-      - <<: *useOnlyOneX
-        subs: [ 'Illumination' ]
-        condition: 'many("Illumination(Within|Without)\.esp")'
   - name: 'FT-Bravil-IW.esp'
     url: [ 'http://www.nexusmods.com/oblivion/mods/13664' ]
     after:
