@@ -3020,6 +3020,37 @@ plugins:
       - Graphics
       - NoMerge
 
+  - name: 'WAC - Female Armor Refine( -No Low Body)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/40324/'
+        name: 'WAC - Female Armor Refine'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'WAC - Female Armor Refine ESP' ]
+        condition: 'many("WAC - Female Armor Refine( -No Low Body)?\.esp")'
+    tag:
+      - Deactivate
+      - Graphics
+      - NoMerge
+  - name: 'WAC - Female Armor Refine.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/49216/'
+        name: 'WAC armors and robes for DMRA-GUTS'
+    clean:
+      - crc: 0xA7BBC43E
+        util: 'TES4Edit v4.0.4b'
+    dirty:
+      - <<: *quickClean
+        crc: 0x87D74399
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 40
+  - name: 'WAC - Female Armor Refine -No Low Body.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x24FF137B
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 42
+
   - name: 'Wrist_Iron_Replacer.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/49189/' ]
     tag:
@@ -18852,21 +18883,6 @@ plugins:
     clean:
       - crc: 0x772D76B2
         util: 'TES4Edit v4.0.2i'
-  - name: 'WAC - Female Armor Refine( -No Low Body)?\.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/40324' ]
-    tag: [ Graphics ]
-  - name: 'WAC - Female Armor Refine.esp'
-    dirty:
-      - <<: *quickClean
-        crc: 0x87D74399
-        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 40
-  - name: 'WAC - Female Armor Refine -No Low Body.esp'
-    dirty:
-      - <<: *quickClean
-        crc: 0x24FF137B
-        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 42
   - name: 'WAC - (HGEC Equipment Replacer|Legion_FemaleFix)\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/37594' ]
     tag: [ Graphics ]
