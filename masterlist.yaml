@@ -2523,6 +2523,27 @@ plugins:
       - crc: 0xE441F6AD
         util: 'TES4Edit v4.0.4b'
 
+  - name: '(FineWeapons|RustyItems) for OOO\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/13302/'
+        name: 'FineWeapons and RustyItems for OOO OMOD'
+    req:
+      - 'Oscuro''s_Oblivion_Overhaul.esm'
+      - 'Oscuro''s_Oblivion_Overhaul.esp'
+    tag:
+      - Deactivate
+      - Graphics
+      - NoMerge
+      - Stats
+  - name: 'FineWeapons for OOO.esp'
+    clean:
+      - crc: 0xE1C33F17
+        util: 'TES4Edit v4.0.4b'
+  - name: 'RustyItems for OOO.esp'
+    clean:
+      - crc: 0x1B1B0D5A
+        util: 'TES4Edit v4.0.4b'
+
   - name: 'Give Me My Shader Effects.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/12530/' ]
     msg:
@@ -22419,11 +22440,6 @@ plugins:
   - name: 'KDCircletsOOOOptimized - Loot Only.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/10670' ]
     inc: [ 'Potion Belt.esp' ]
-
-  - name: '(RustyItems|FineWeapons) for OOO.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/13302' ]
-    req: [ 'Oscuro''s_Oblivion_Overhaul.esm' ]
-    tag: [ Graphics ]
 
   - name: 'BladesSmithySTANDARD.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/8950' ]
