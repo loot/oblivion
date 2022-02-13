@@ -2869,6 +2869,20 @@ plugins:
       - crc: 0x99D325DF
         util: 'TES4Edit v4.0.4b'
 
+  - name: 'ReteroX_(.*)EvilSkeletons\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/20120/'
+        name: 'EvilSkeletons'
+    req: [ 'DLCShiveringIsles.esp' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'EvilSkeletons ESP' ]
+        condition: 'many("ReteroX_(.*)EvilSkeletons\.esp")'
+    tag:
+      - Deactivate
+      - Graphics
+      - NoMerge
+
   - name: 'Shibas.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/51094/'
