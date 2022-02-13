@@ -11507,6 +11507,9 @@ plugins:
     msg:
       - <<: *alsoUseSilentVoice
         condition: 'not file("OBSE/Plugins/Elys_USV.dll") and not file("OBSE/Plugins/voicefile_redirector.dll") and not file("Woodland Rangers - SilentVoices.bsa")'
+      - <<: *wildEdits
+        subs: [ 'Remove **Sub-Block 3, 3** in **Block 0, 0** of **0000003C** from **Woodland Rangers.esp**.' ]
+        condition: 'checksum("Woodland Rangers.esp", 491B530A) or checksum("Woodland Rangers.esp", 511B5A87)'
     dirty:
       - <<: *quickClean
         crc: 0xDC888E55
@@ -11517,6 +11520,10 @@ plugins:
         crc: 0x491B530A
         util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 182
+      - <<: *quickClean
+        crc: 0xA7F87FCB
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 176
 
   - name: 'Your Personal Museum Updated-9300.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/9300/' ]
