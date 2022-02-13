@@ -11477,7 +11477,7 @@ plugins:
       - <<: *alsoUseSilentVoice
         condition: 'not file("OBSE/Plugins/Elys_USV.dll") and not file("OBSE/Plugins/voicefile_redirector.dll") and not file("Woodland Rangers - SilentVoices.bsa")'
       - <<: *wildEdits
-        subs: [ 'Remove the **Worldspace Sub-Block 3, 3 in Block 0, 0** from **Woodland Rangers.esp**.' ]
+        subs: [ 'Remove **Sub-Block 3, 3** in **Block 0, 0** of **0000003C** from **Woodland Rangers.esp**.' ]
         condition: 'checksum("Woodland Rangers.esp", 491B530A) or checksum("Woodland Rangers.esp", 511B5A87)'
     dirty:
       - <<: *quickClean
