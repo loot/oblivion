@@ -595,6 +595,12 @@ common:
       - '22.1'
       - '[xOBSE](https://github.com/llde/xOBSE/)'
     condition: 'not file("../obse_1_2_416.dll") or version("../obse_1_2_416.dll", "0.0.21.5", <)'
+  - &versionXofYorGreaterRequired_xOBSEv22_6
+    <<: *versionXofYorGreaterRequired
+    subs:
+      - '22.6'
+      - '[xOBSE](https://github.com/llde/xOBSE/)'
+    condition: 'not file("../obse_1_2_416.dll") or version("../obse_1_2_416.dll", "0.0.22.6", <)'
 
 bash_tags:
   - 'Actors.ACBS'
