@@ -3758,6 +3758,26 @@ plugins:
         util: 'TES4Edit v4.0.4b'
 
 ###### Character Appearance - NPCs ######
+  - name: 'Alt\. Dancer .*\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/47863/'
+        name: 'Alternative Dancer Races'
+    req: [ 'DLCShiveringIsles.esp' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Alternative Dancer Races ESP' ]
+        condition: 'many("Alt\. Dancer .*\.esp")'
+    tag:
+      - Actors.ACBS
+      - Actors.Stats
+      - Invent.Add
+      - Invent.Remove
+      - NPC.Class
+      - NPC.Eyes
+      - NPC.FaceGen
+      - NPC.Hair
+      - NPC.Race
+
   - name: 'Alternate ghost shader.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/47401/'
