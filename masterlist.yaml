@@ -595,6 +595,12 @@ common:
       - '22.1'
       - '[xOBSE](https://github.com/llde/xOBSE/)'
     condition: 'not file("../obse_1_2_416.dll") or version("../obse_1_2_416.dll", "0.0.21.5", <)'
+  - &versionXofYorGreaterRequired_xOBSEv22_6
+    <<: *versionXofYorGreaterRequired
+    subs:
+      - '22.6'
+      - '[xOBSE](https://github.com/llde/xOBSE/)'
+    condition: 'not file("../obse_1_2_416.dll") or version("../obse_1_2_416.dll", "0.0.22.6", <)'
 
 bash_tags:
   - 'Actors.ACBS'
@@ -3752,6 +3758,26 @@ plugins:
         util: 'TES4Edit v4.0.4b'
 
 ###### Character Appearance - NPCs ######
+  - name: 'Alt\. Dancer .*\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/47863/'
+        name: 'Alternative Dancer Races'
+    req: [ 'DLCShiveringIsles.esp' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Alternative Dancer Races ESP' ]
+        condition: 'many("Alt\. Dancer .*\.esp")'
+    tag:
+      - Actors.ACBS
+      - Actors.Stats
+      - Invent.Add
+      - Invent.Remove
+      - NPC.Class
+      - NPC.Eyes
+      - NPC.FaceGen
+      - NPC.Hair
+      - NPC.Race
+
   - name: 'Alternate ghost shader.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/47401/'
@@ -4611,14 +4637,14 @@ plugins:
         condition: 'active("Creature Diversity.esp") and not active("ShinyCreaturesOblivion - Creature Diversity Patch.esp")'
       - <<: *wildEdits
         subs: [ 'Remove the **Worldspace group** from **ShinyCreaturesOblivion.esp**.' ]
-        condition: 'checksum("ShinyCreaturesOblivion.esp", 711BD8E2) or checksum("ShinyCreaturesOblivion.esp", F6B9CB1B)'
+        condition: 'checksum("ShinyCreaturesOblivion.esp", 40CA95A9) or checksum("ShinyCreaturesOblivion.esp", 9C5D8D70)'
     dirty:
       - <<: *quickClean
-        crc: 0x711BD8E2
+        crc: 0x40CA95A9
         util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 12
       - <<: *quickClean
-        crc: 0x5662392A
+        crc: 0x09DBCD4A
         util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 8
   - name: 'ShinyCreaturesOblivion - Creature Diversity Patch.esp'
@@ -5742,6 +5768,15 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/40964/' ]
     msg: [ *obsolete ]
 
+  - name: 'NoStealFromYourFactions.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/51767/'
+        name: 'No Stealing Everything From Joined Factions'
+    msg: [ *versionXofYorGreaterRequired_xOBSEv22_6 ]
+    clean:
+      - crc: 0xEBC44325
+        util: 'TES4Edit v4.0.4b'
+
   - name: 'Oblivifall .*\.es(m|p)'
     url: [ 'https://www.nexusmods.com/oblivion/mods/31668/' ]
   - name: 'Oblivifall - Losing My Religion.esp'
@@ -6103,6 +6138,31 @@ plugins:
         crc: 0x0A200A48
         util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 13
+
+  - name: 'Wrye Shivering.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/45586/'
+        name: 'Wrye Shivering'
+      - link: 'https://www.nexusmods.com/oblivion/mods/51436/'
+        name: 'Wrye Mods Collection and Wrye Shivering USIP Compatible'
+    req: [ 'DLCShiveringIsles.esp' ]
+    tag:
+      - Actors.ACBS
+      - Actors.AIData
+      - Actors.AIPackages
+      - Actors.RecordFlags
+      - Factions
+      - Graphics
+      - Invent.Add
+      - Scripts
+    dirty:
+      - <<: *quickClean
+        crc: 0xE3CCA9F5
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 26
+    clean:
+      - crc: 0x6550B11C
+        util: 'TES4Edit v4.0.4b'
 
   - name: 'Wrye Shivering Death.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/28561/' ]
@@ -12794,6 +12854,17 @@ plugins:
         udr: 801
   - name: 'Legacy of Faran.esp'
     msg: [ *obsolete ]
+
+  - name: 'Imperial Shipyard.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/51763/' ]
+    req: [ 'DLCShiveringIsles.esp' ]
+    inc: [ 'LetThePeopleDrink.esp' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x33EE0585
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 5245
+        udr: 13
 
   - name: 'Jagnot- Imperial City Library V1.3.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/3868/' ]
