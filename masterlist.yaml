@@ -6130,6 +6130,31 @@ plugins:
         util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 13
 
+  - name: 'Wrye Shivering.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/45586/'
+        name: 'Wrye Shivering'
+      - link: 'https://www.nexusmods.com/oblivion/mods/51436/'
+        name: 'Wrye Mods Collection and Wrye Shivering USIP Compatible'
+    req: [ 'DLCShiveringIsles.esp' ]
+    tag:
+      - Actors.ACBS
+      - Actors.AIData
+      - Actors.AIPackages
+      - Actors.RecordFlags
+      - Factions
+      - Graphics
+      - Invent.Add
+      - Scripts
+    dirty:
+      - <<: *quickClean
+        crc: 0xE3CCA9F5
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 26
+    clean:
+      - crc: 0x6550B11C
+        util: 'TES4Edit v4.0.4b'
+
   - name: 'Zensalins Oblivion Overhaul.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/48681' ]
     req: [ *OBSE ]
