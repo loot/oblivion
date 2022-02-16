@@ -12858,12 +12858,11 @@ plugins:
   - name: 'Imperial Shipyard.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/51763/' ]
     req: [ 'DLCShiveringIsles.esp' ]
-    dirty:
-      - <<: *quickClean
-        crc: 0x35FD4202
-        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 5222
-        udr: 52
+    inc: [ 'MNMSTR New Rumare.esp' ]
+    msg:
+      - <<: *wildEdits
+        subs: [ 'Remove NPC **0018B118** from **Imperial Shipyard.esp**.' ]
+        condition: 'checksum("Imperial Shipyard.esp", 09D58350)'
 
   - name: 'Jagnot- Imperial City Library V1.3.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/3868/' ]
