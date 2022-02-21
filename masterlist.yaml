@@ -1832,14 +1832,6 @@ plugins:
         itm: 35
         udr: 30
 
-  - name: 'Leviathan Soulgems.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/10403/' ]
-    dirty:
-      - <<: *quickClean
-        crc: 0xDF3D1184
-        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 1
-
   - name: 'Natural_.*_by_Max_Tael\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/2536/'
@@ -2732,6 +2724,17 @@ plugins:
     clean:
       - crc: 0x660212CF
         util: 'TES4Edit v4.0.4b'
+
+  - name: 'Leviathan Soulgems.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/10403/'
+        name: 'Leviathan Soulgems'
+    tag: [ Graphics ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xDF3D1184
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1
 
   - name: 'Magic Visuals Overhaul.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/49300/' ]
