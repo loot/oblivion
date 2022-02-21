@@ -9682,12 +9682,13 @@ plugins:
         util: 'TES4Edit v4.0.4b'
 
   - name: 'Extended UI.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/50135/' ]
-    req:
-      - *MenuQue
-      - *OBSE
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/50135/'
+        name: 'Extended UI'
+    req: [ *MenuQue ]
+    msg: [ *versionXofYorGreaterRequired_xOBSEv22_6 ]
     clean:
-      - crc: 0x8B99FADD
+      - crc: 0x4FD4C5D9
         util: 'TES4Edit v4.0.4b'
 
   - name: 'First Person Messages.esp'
