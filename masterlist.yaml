@@ -14820,6 +14820,36 @@ plugins:
   - name: 'Lady Stone Villa - UL LostCoast Patch.esp'
     msg: [ *patchOutdated ]
 
+  - name: 'lTraveler.*\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/49654/'
+        name: 'Traveler''s Tent - portable customizable player home'
+  - name: 'lTraveler''s Tent.esp'
+    req:
+      - *OBSE
+      - 'DLCShiveringIsles.esp'
+    msg:
+      - *alsoUseSilentVoice
+      - <<: *patchProvided
+        subs: [ 'Cobl' ]
+        condition: 'active("Cobl Main.esm") and not file("lTraveler''s Tent COBL Patch.esp")'
+    clean:
+      - crc: 0x443804E2
+        util: 'TES4Edit v4.0.4b'
+  - name: 'lTravelers Tent - Magic Fire.esp'
+    tag: [ Graphics ]
+    clean:
+      - crc: 0x16F5B91E
+        util: 'TES4Edit v4.0.4b'
+  - name: 'lTraveler''s Tent COBL Patch.esp'
+    tag:
+      - C.Light
+      - Graphics
+      - Scripts
+    clean:
+      - crc: 0x641F40BA
+        util: 'TES4Edit v4.0.4b'
+
   - name: 'MadMagesTower(BASIC)?\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/20993/'
