@@ -2493,11 +2493,18 @@ plugins:
       - crc: 0x9F65E062
         util: 'TES4Edit v4.0.4b'
   - name: 'EVE_StockEquipmentReplacer for OOO.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/45858/'
+        name: 'Seamless - HGEC Female'
+    req: [ 'Oscuro''s_Oblivion_Overhaul.esp' ]
     dirty:
       - <<: *quickClean
         crc: 0xD71907D9
         util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
+    clean:
+      - crc: 0xE35796B1
+        util: 'TES4Edit v4.0.4b'
   - name: 'Armamentium female.esp'
     tag: [ Deactivate ]
     clean:
