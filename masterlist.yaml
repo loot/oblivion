@@ -23552,8 +23552,11 @@ plugins:
         util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 2
 
+  - name: '(Better Dark Brotherhood Sanctuary|BDBS - .*)\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/22135/'
+        name: 'Better Dark Brotherhood Sanctuary'
   - name: 'Better Dark Brotherhood Sanctuary.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/22135/' ]
     tag:
       - Actors.ACBS
       - Actors.AIPackages
@@ -23565,9 +23568,21 @@ plugins:
       - Invent.Remove
     clean:
       - crc: 0xBB886C9B
-        util: 'TES4Edit v4.0.3f'
+        util: 'TES4Edit v4.0.4b'
       - crc: 0xE56FED21
-        util: 'TES4Edit v4.0.3f'
+        util: 'TES4Edit v4.0.4b'
+  - name: 'BDBS - Bright(er|est) Interiors\.esp'
+    tag:
+      - Deactivate
+      - NoMerge
+  - name: 'BDBS - Brighter Interiors.esp'
+    clean:
+      - crc: 0xD03A8783
+        util: 'TES4Edit v4.0.4b'
+  - name: 'BDBS - Brightest Interiors.esp'
+    clean:
+      - crc: 0x503850B9
+        util: 'TES4Edit v4.0.4b'
 
   - name: 'BeyondTheRealmsOfDeath.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/40837/' ]
