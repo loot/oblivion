@@ -13727,8 +13727,13 @@ plugins:
         itm: 4
         udr: 4
 
+  - name: '(AFK_Weye.*|RTT-Weye Relocation Patch|Rumare-AFK_Weye Patch)\.esp'
+    url:
+      - link: 'https://www.afkmods.com/index.php?/files/file/561-afk_weye/'
+        name: 'AFK_Weye (AFK Mods)'
+      - link: 'https://www.nexusmods.com/oblivion/mods/22828/'
+        name: 'AFK_Weye (Nexus Mods)'
   - name: 'AFK_Weye.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/22828' ]
     after:
       - 'Akaviri Imports.esp'
       - 'MTC-WeyePatch.esp'
@@ -13737,12 +13742,21 @@ plugins:
       - 'RTT-Weye Relocation Patch.esp'
       - 'VHBloodlines 1.2.esp'
     req: [ *SilentVoice ]
+    msg:
+      - <<: *useVersion
+        subs: [ 'Cobl' ]
+        condition: 'active("Cobl Main.esm") and checksum("AFK_Weye.esp", 5A1114F9)'
     tag:
       - Actors.AIPackages
       - C.Regions
+    dirty:
+      - <<: *quickClean
+        crc: 0xC9016BFE
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 35
     clean:
       - crc: 0x5A1114F9
-        util: 'TES4Edit v4.0.3'
+        util: 'TES4Edit v4.0.4b'
   - name: 'AFK_Weye Arrius_Creek Patch.esp'
     after:
       - name: 'Unique Landscapes.esp'
@@ -13751,6 +13765,9 @@ plugins:
       - 'AFK_Weye.esp'
       - name: 'xulArriusCreek.esp'
         condition: 'not version("Unique Landscapes.esp", "2.0.0", >=)'
+    clean:
+      - crc: 0x71BB35CC
+        util: 'TES4Edit v4.0.4b'
 
   - name: '(Better Abandoned House|Cheydinhal Land Texture Fix).*\.esp'
     url:
