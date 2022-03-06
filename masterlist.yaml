@@ -13727,7 +13727,7 @@ plugins:
         itm: 4
         udr: 4
 
-  - name: '(AFK_Weye.*|RTT-Weye Relocation Patch|Rumare-AFK_Weye Patch)\.esp'
+  - name: '(.*AFK_Weye.*|RTT-Weye Relocation Patch)\.esp'
     url:
       - link: 'https://www.afkmods.com/index.php?/files/file/561-afk_weye/'
         name: 'AFK_Weye (AFK Mods)'
@@ -13745,7 +13745,7 @@ plugins:
     msg:
       - <<: *useVersion
         subs: [ 'Cobl' ]
-        condition: 'active("Cobl Main.esm") and checksum("AFK_Weye.esp", 5A1114F9)'
+        condition: 'active("Cobl Main.esm") and version("AFK_Weye.esp", "2.32.Non-COBL", ==)'
     tag:
       - Actors.AIPackages
       - C.Regions
