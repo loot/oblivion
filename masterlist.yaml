@@ -10169,6 +10169,21 @@ plugins:
       - crc: 0x066E0C4B
         util: 'TES4Edit v4.0.4b'
 
+  - name: 'BHC_Expanded.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/27029/'
+        name: 'Black Horse Courier Expanded'
+    msg: [ *alsoUseSilentVoice ]
+    tag:
+      - Graphics
+      - Text
+    dirty:
+      - <<: *quickClean
+        crc: 0xC73A3567
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
+        udr: 12
+
   - name: 'Buried_Treasure.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/16129/' ]
     msg:
@@ -23735,16 +23750,6 @@ plugins:
   - name: 'BladeOfTheHaunted.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/33089' ]
     tag: [ Factions ]
-  - name: 'BHC_Expanded.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/27029/' ]
-    group: *earlyLoadersGroup
-    dirty:
-      # Version: 1.2
-      - <<: *quickClean
-        crc: 0xC73A3567
-        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 2
-        udr: 12
   - name: 'Bjornheim.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/6480' ]
     msg: [ *corrupt ]
