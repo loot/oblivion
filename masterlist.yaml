@@ -9680,6 +9680,43 @@ plugins:
       - crc: 0xF2F3F707
         util: 'TES4Edit v4.0.4b'
 
+  - name: 'Oblivion XP.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/15619/'
+        name: 'Oblivion XP'
+      - link: 'https://www.nexusmods.com/oblivion/mods/51817/'
+        name: 'Oblivion XP Update'
+    req: [ *MenuQue ]
+    msg:
+      - <<: *obsolete
+        subs: [ '[Oblivion XP Update](https://www.nexusmods.com/oblivion/mods/51817/)' ]
+        condition: 'version("Oblivion XP.esp", "4.5", <)'
+      - <<: *patchProvided
+        subs: [ 'A Brotherhood Renewed' ]
+        condition: 'active("BrotherhoodRenewed.esp") and not active("BrotherhoodRenewed - Oblivion XP Patch.esp")'
+      - <<: *patchProvided
+        subs: [ 'AFK_Weye' ]
+        condition: 'active("AFK_Weye.esp") and not active("AFK_Weye - Oblivion XP Patch.esp")'
+      - *versionXofYorGreaterRequiredOBSEv21
+    clean:
+      - crc: 0x7EFA313A
+        util: 'TES4Edit v4.0.4b'
+  - name: '(AFK_Weye|BrotherhoodRenewed) - Oblivion XP Patch\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/51817/'
+        name: 'Oblivion XP Update'
+    req: [ 'Oblivion XP.esp' ]
+  - name: 'AFK_Weye - Oblivion XP Patch.esp'
+    req: [ 'AFK_Weye.esp' ]
+    clean:
+      - crc: 0x5BF3D66B
+        util: 'TES4Edit v4.0.4b'
+  - name: 'BrotherhoodRenewed - Oblivion XP Patch.esp'
+    req: [ 'BrotherhoodRenewed.esp' ]
+    clean:
+      - crc: 0x2D29777B
+        util: 'TES4Edit v4.0.4b'
+
   - name: 'SetsunaDummyTraining.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/27259/'
