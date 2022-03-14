@@ -2960,28 +2960,24 @@ plugins:
       - crc: 0x634AD119
         util: 'TES4Edit v4.0.4b'
 
-  - name: 'RealTeaFor(BPN|Cobl|HotCoffeeAndTeaBase)\.esp'
+  - name: 'RealTeaFor(Cobl|HotCoffeeAndTea(Base|Cobl))\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/51830/'
         name: 'Real tea'
     msg:
-      - <<: *patchIncluded
-        subs: [ 'Basic Primary Needs' ]
-        condition: 'active("Basic Primary Needs.esp") and not file("RealTeaForBPN.esp")'
       - <<: *patchIncluded
         subs: [ 'Cobl' ]
         condition: 'active("Cobl Main.esm") and not file("RealTeaForCobl.esp")'
       - <<: *patchIncluded
         subs: [ 'Hot Coffee and Tea' ]
         condition: 'active("Hot Coffee and Tea-Base.esp") and not file("RealTeaForHotCoffeeAndTeaBase.esp")'
+      - <<: *patchIncluded
+        subs: [ 'Hot Coffee and Tea (Cobl)' ]
+        condition: 'active("Hot Coffee and Tea-Cobl.esp") and not file("RealTeaForHotCoffeeAndTeaCobl.esp")'
     tag:
       - Deactivate
       - Graphics
       - NoMerge
-  - name: 'RealTeaForBPN.esp'
-    clean:
-      - crc: 0x7BA6013A
-        util: 'TES4Edit v4.0.4b'
   - name: 'RealTeaForCobl.esp'
     clean:
       - crc: 0x38092E10
@@ -2989,6 +2985,10 @@ plugins:
   - name: 'RealTeaForHotCoffeeAndTeaBase.esp'
     clean:
       - crc: 0xCF35EAD8
+        util: 'TES4Edit v4.0.4b'
+  - name: 'RealTeaForHotCoffeeAndTeaCobl.esp'
+    clean:
+      - crc: 0xBFF593EA
         util: 'TES4Edit v4.0.4b'
 
   - name: 'ReteroX_ClosedEbonyHelmet_v1.esp'
