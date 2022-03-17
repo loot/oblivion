@@ -8409,9 +8409,9 @@ plugins:
       - *OBSE
       - 'DLCShiveringIsles.esp'
     msg:
-      - <<: *patchProvided
+      - <<: *patchIncluded
         subs: [ 'Oscuro''s Oblivion Overhaul' ]
-        condition: 'active("Oscuro''s_Oblivion_Overhaul.esm") and not active("Bounty Quests OOO Patch.esp") and file("ini/Bounty Quests (Vanilla|OOO)\.ini")'
+        condition: 'active("Oscuro''s_Oblivion_Overhaul.esp") and not active("Bounty Quests OOO Patch.esp") and file("ini/Bounty Quests (Vanilla|OOO)\.ini")'
       - <<: *patchUpdateAvailable
         subs: [ '[Bounty Quests Fixed and Polished](https://www.nexusmods.com/oblivion/mods/48330/)' ]
         condition: 'not file("ini/Bounty Quests (Vanilla|OOO)\.ini")'
