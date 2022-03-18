@@ -10893,6 +10893,20 @@ plugins:
   - name: 'Tamrielic_Ingredients(_FraM|_Fran|_MMM|_OOO)?\.esp'
     inc: [ 'FCOM_Convergence.esm' ]
 
+  - name: 'MTCDirtierBandits.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/30144/'
+        name: 'MTC Dirtier Bandits'
+    tag:
+      - Graphics
+      - Invent.Add
+      - Invent.Remove
+    dirty:
+      - <<: *quickClean
+        crc: 0x2AB190D0
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        udr: 10
+
   - name: 'Mysterious Bear''s Ramshackle Armory.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/38136/' ]
     dirty:
@@ -22755,14 +22769,6 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/3979/' ]
     msg: [ *alreadyInOOO ]
 
-  - name: 'MTCDirtierBandits.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/30144' ]
-    tag: [ Invent ]
-    dirty:
-      - <<: *quickClean
-        crc: 0x2AB190D0
-        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
-        udr: 10
   - name: '(FarmAnimalsofCyrodiil|MrSiika''sFarmAnimals)\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/14265' ]
     msg:
