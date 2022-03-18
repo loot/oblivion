@@ -1832,6 +1832,20 @@ plugins:
         itm: 35
         udr: 30
 
+  - name: 'Immersive Interiors.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/34199/'
+        name: 'Immersive Interiors'
+    req: [ *OBSE ]
+    msg:
+      - <<: *patchUpdateAvailable
+        subs: [ '[Immersive Interiors Fixes](https://www.nexusmods.com/oblivion/mods/51589/)' ]
+        condition: 'not file("Immersive Interiors Fixes.esp")'
+    tag: [ C.Water ]
+    clean:
+      - crc: 0x1464E3CC
+        util: 'TES4Edit v4.0.4b'
+
   - name: 'Natural_.*_by_Max_Tael\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/2536/'
@@ -20061,12 +20075,6 @@ plugins:
   - name: 'Enhanced Weather - Across-The-Borders Mods Patch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/16544' ]
     req: [ *OBSE ]
-  - name: 'Immersive Interiors.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/34199' ]
-    req:
-      - name: 'All Natural.esp'
-        display: '[All Natural](http://www.nexusmods.com/oblivion/mods/18305)'
-    tag: [ C.Water ]
   - name: 'Natural Interiors - Cities.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/6249' ]
     msg:
