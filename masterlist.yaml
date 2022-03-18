@@ -2402,6 +2402,27 @@ plugins:
         util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 6
 
+  - name: 'CSR - (Fine Iron|Golden Saint)\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/11451/'
+        name: 'Classic Sword Replacers'
+  - name: 'CSR - Fine Iron.esp'
+    tag:
+      - Deactivate
+      - Graphics
+      - NoMerge
+    clean:
+      - crc: 0x96F21342
+        util: 'TES4Edit v4.0.4b'
+  - name: 'CSR - Golden Saint.esp'
+    req: [ 'DLCShiveringIsles.esp' ]
+    tag:
+      - Names
+      - Stats
+    clean:
+      - crc: 0x374D5656
+        util: 'TES4Edit v4.0.4b'
+
   - name: 'Diablo II Skeletons.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/45063/' ]
     tag:
@@ -21442,11 +21463,6 @@ plugins:
       - 'ConjurationTome.esp'
       - 'ConjurationTomeOBSE.esp'
       - 'ConjurationTomeOOO.esp'
-  - name: 'CSR - Golden Saint.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/11451' ]
-    tag:
-      - Graphics
-      - Stats
   - name: 'CV - Kilij.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/36457' ]
     dirty:
@@ -22725,9 +22741,6 @@ plugins:
   - name: 'Gold Smelting.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/28935' ]
     tag: [ Scripts ]
-  - name: 'CSR - Fine Iron.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/11451' ]
-    tag: [ Graphics ]
 
   - name: 'Harvest\[Containers\]( - Vanilla| - Player Home Add-on| - Flat-Top Barrels Add-on| - Havok Crates Add-on)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/3979/' ]
