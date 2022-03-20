@@ -9523,30 +9523,50 @@ plugins:
         name: 'SM DLC Plugin Refurbish'
     group: *veryEarlyGroup
   - name: 'SM Plugin Refurbish Lite.esp'
-    after:
-      - 'Knights - Unofficial Patch.esp'
-      - 'Knights Infamy.esp'
+    req: [ 'DLCShiveringIsles.esp' ]
     msg:
       - *alsoUseSilentVoice
+      - <<: *patchIncluded
+        subs: [ 'Knights of the Nine - Improved Infamy System' ]
+        condition: 'active("Knights Infamy.esp") and not file("SM Plugin Refurbish Lite Knights Infamy.esp")'
       - <<: *sortMasters
-        condition: 'checksum("SM Plugin Refurbish Lite.esp", 0466DC3B)'
+        condition: 'checksum("SM Plugin Refurbish Lite.esp", F05C7945)'
     tag: [ Actors.RecordFlags ]
     clean:
-      - crc: 0x0466DC3B
-        util: 'TES4Edit v4.0.3'
-      - crc: 0xAEBBCD33
-        util: 'TES4Edit v4.0.3'
-      - crc: 0x4A9070B1
-        util: 'TES4Edit v4.0.3h (Hotfix 1)'
+      - crc: 0xF05C7945
+        util: 'TES4Edit v4.0.4b'
+      - crc: 0x47909D32
+        util: 'TES4Edit v4.0.4b'
+  - name: 'SM Plugin Refurbish Lite Knights Infamy.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0xC02BA42D
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
+  - name: 'SM Plugin Refurbish Lite (Levels|OBSE)\.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'SM Plugin Refurbish Lite Level ESP' ]
+        condition: 'many("SM Plugin Refurbish Lite (Levels|OBSE)\.esp")'
   - name: 'SM Plugin Refurbish Lite Levels.esp'
     msg:
       - <<: *sortMasters
-        condition: 'checksum("SM Plugin Refurbish Lite Levels.esp", 4165CF51)'
+        condition: 'checksum("SM Plugin Refurbish Lite Levels.esp", EACD3F91)'
     clean:
-      - crc: 0x4165CF51
-        util: 'TES4Edit v4.0.3'
-      - crc: 0x7935FF26
-        util: 'TES4Edit v4.0.3'
+      - crc: 0xEACD3F91
+        util: 'TES4Edit v4.0.4b'
+      - crc: 0x4FFF3455
+        util: 'TES4Edit v4.0.4b'
+  - name: 'SM Plugin Refurbish Lite OBSE.esp'
+    req: [ *OBSE ]
+    msg:
+      - <<: *sortMasters
+        condition: 'checksum("SM Plugin Refurbish Lite OBSE.esp", 8E025A00)'
+    clean:
+      - crc: 0x8E025A00
+        util: 'TES4Edit v4.0.4b'
+      - crc: 0xF1A3296B
+        util: 'TES4Edit v4.0.4b'
   # Legacy Files #
   - name: 'SM Plugin Refurbish(Merged).esp'
     after: [ 'Knights - Unofficial Patch.esp' ]
