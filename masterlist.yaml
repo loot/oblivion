@@ -8470,6 +8470,9 @@ plugins:
     inc:
       - 'T.I.E4MODS.esp'
       - 'TIE In.esp'
+    msg:
+      - <<: *compatNotes
+        subs: [ 'https://www.afkmods.com/index.php?/topic/4240-relz-tie-tamriel-immersion-experience/' ]
     tag:
       - Actors.AIPackages
       - Actors.CombatStyle
@@ -8486,12 +8489,6 @@ plugins:
       - Sound
       - SpellStats
       - Text
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'This plugin has compatibility issues with %1%. For more information, read this mod''s compatibility notes.'
-        subs: [ 'OOO, MMM, Fran''s or other large overhaul mods' ]
     clean:
       - crc: 0x7954F63C
         util: 'TES4Edit v4.0.3'
