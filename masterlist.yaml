@@ -9552,11 +9552,6 @@ plugins:
     msg:
       - <<: *sortMasters
         condition: 'checksum("SM Plugin Refurbish Lite OBSE.esp", 8E025A00)'
-    clean:
-      - crc: 0x8E025A00
-        util: 'TES4Edit v4.0.4b'
-      - crc: 0xF1A3296B
-        util: 'TES4Edit v4.0.4b'
   # Legacy Files #
   - name: 'SM Plugin Refurbish(Merged).esp'
     after: [ 'Knights - Unofficial Patch.esp' ]
