@@ -1989,6 +1989,105 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/47774' ]
     tag: [ Actors.Anims ]
 
+  - name: 'Harvest\[Containers\].*\.es[mp]'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/3979/'
+        name: 'Harvest Containers'
+    msg: [ *alreadyInOOO ]
+  - name: 'Harvest[Containers].esm'
+    msg:
+      - <<: *compatPatch
+        subs: [ '[Harvest Containers Filter patch for mods - non-OOO version](https://www.nexusmods.com/oblivion/mods/35155/)' ]
+        condition: 'file("Bashed Patch.*\.esp") and not file("Harvest Containers Filter patch for mods.esp")'
+      - <<: *patchIncluded
+        subs: [ 'Shivering Isles' ]
+        condition: 'active("DLCShiveringIsles.esp") and not file("Harvest\[Containers\] - SI( - Ore Respawn)?\.esp")'
+      - *versionXofYorGreaterRequiredOBSEv15
+    clean:
+      - crc: 0x566BAFC0
+        util: 'TES4Edit v4.0.4b'
+  - name: 'Harvest[Containers] - Flat-Top Barrels Add-on.esm'
+    clean:
+      - crc: 0x940C467E
+        util: 'TES4Edit v4.0.4b'
+  - name: 'Harvest[Containers] - Havok Crates Add-on.esm'
+    clean:
+      - crc: 0x9D3C1D5B
+        util: 'TES4Edit v4.0.4b'
+  - name: 'Harvest[Containers] - Player Home Add-on.esm'
+    clean:
+      - crc: 0xB538D0D7
+        util: 'TES4Edit v4.0.4b'
+  - name: 'Harvest\[Containers\]( - )?(Flat-Top Barrels|Player Home|SI|Vanilla)?( Add-on| - Ore Respawn)?\.esp'
+    tag:
+      - Graphics
+      - Scripts
+      - Sound
+  - name: 'Harvest[Containers].esp'
+    msg: [ *useVersionShiveringIsles ]
+    clean:
+      - crc: 0xE4CC4835
+        util: 'TES4Edit v4.0.4b'
+  - name: 'Harvest\[Containers\] - (Flat-Top Barrels|Havok Crates|Player Home) Add-on\.esp'
+    tag:
+      - name: Deactivate
+        condition: 'file("Harvest[Containers].esm")'
+      - name: NoMerge
+        condition: 'file("Harvest[Containers].esm")'
+  - name: 'Harvest[Containers] - Flat-Top Barrels Add-on.esp'
+    clean:
+      - crc: 0x95A95148
+        util: 'TES4Edit v4.0.4b'
+      - crc: 0x677E8901
+        util: 'TES4Edit v4.0.4b'
+  - name: 'Harvest[Containers] - Havok Crates Add-on.esp'
+    tag:
+      - Graphics
+      - Scripts
+    clean:
+      - crc: 0x4EF284E2
+        util: 'TES4Edit v4.0.4b'
+      - crc: 0xAFD7E9B1
+        util: 'TES4Edit v4.0.4b'
+  - name: 'Harvest[Containers] - Player Home Add-on.esp'
+    clean:
+      - crc: 0x00F87905
+        util: 'TES4Edit v4.0.4b'
+      - crc: 0x62F3A8CC
+        util: 'TES4Edit v4.0.4b'
+  - name: 'Harvest\[Containers\] - SI( - Ore Respawn)?\.esp'
+    req: [ 'DLCShiveringIsles.esp' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Harvest Containers - SI ESP' ]
+        condition: 'many("Harvest\[Containers\] - SI( - Ore Respawn)?\.esp")'
+  - name: 'Harvest[Containers] - SI.esp'
+    tag:
+      - Deactivate
+      - NoMerge
+    clean:
+      - crc: 0x76A11A43
+        util: 'TES4Edit v4.0.4b'
+  - name: 'Harvest[Containers] - SI - Ore Respawn.esp'
+    tag: [ Invent.Add ]
+    clean:
+      - crc: 0xB4C6DB00
+        util: 'TES4Edit v4.0.4b'
+  - name: 'Harvest\[Containers\] - Vanilla( - Ore ReSpawn)?\.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Harvest Containers - Vanilla ESP' ]
+        condition: 'many("Harvest\[Containers\] - Vanilla( - Ore ReSpawn)?\.esp")'
+  - name: 'Harvest[Containers] - Vanilla.esp'
+    clean:
+      - crc: 0xD7E2759E
+        util: 'TES4Edit v4.0.4b'
+  - name: 'Harvest[Containers] - Vanilla - Ore ReSpawn.esp'
+    tag: [ Invent.Add ]
+    clean:
+      - crc: 0x38F7F1DB
+        util: 'TES4Edit v4.0.4b'
+
   - name: 'SeductiveIdles.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/11105/' ]
     dirty:
@@ -22795,10 +22894,6 @@ plugins:
   - name: 'Gold Smelting.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/28935' ]
     tag: [ Scripts ]
-
-  - name: 'Harvest\[Containers\]( - Vanilla| - Player Home Add-on| - Flat-Top Barrels Add-on| - Havok Crates Add-on)?\.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/3979/' ]
-    msg: [ *alreadyInOOO ]
 
   - name: '(FarmAnimalsofCyrodiil|MrSiika''sFarmAnimals)\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/14265' ]
