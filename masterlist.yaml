@@ -3494,6 +3494,18 @@ plugins:
         util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 42
 
+  - name: 'WindowLightingSystem.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/19628/'
+        name: 'Animated Window Lighting System and Chimneys - AWLS'
+    msg:
+      - <<: *alreadyInOrFixedByX
+        subs: [ 'Nehrim' ]
+        condition: *nehrimCond
+    clean:
+      - crc: 0xE7050887
+        util: 'TES4Edit v4.0.4b'
+
   - name: 'Wrist_Iron_Replacer.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/49189/' ]
     tag:
@@ -29329,13 +29341,6 @@ plugins:
   - name: 'Vanilla Weapon Stat Override( - SI)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/39914' ]
     # doNotClean
-
-  - name: 'WindowLightingSystem.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/19628/' ]
-    msg:
-      - <<: *alreadyInOrFixedByX
-        subs: [ 'Nehrim' ]
-        condition: *nehrimCond
 
   - name: 'BookTrackerOBSE.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/18434' ]
