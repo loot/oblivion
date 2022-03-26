@@ -14809,6 +14809,21 @@ plugins:
         itm: 10
         udr: 345
 
+  - name: '(OblivionDeadLands|OBLOD)\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/50437/'
+        name: 'Deadlands'
+  - name: 'OblivionDeadLands.esp'
+    clean:
+      - crc: 0xEC6125E4
+        util: 'TES4Edit v4.0.4b'
+  - name: 'OBLOD.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x51D3B6B1
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 303
+
   - name: 'Productive Mines.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/47722' ]
     tag: [ C.Name ]
