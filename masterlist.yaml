@@ -12314,11 +12314,16 @@ plugins:
 
   - name: 'Woodland Rangers.esp'
     url:
-      - 'https://www.nexusmods.com/oblivion/mods/16653/'
-      - 'https://www.nexusmods.com/oblivion/mods/29386/'
+      - link: 'https://www.nexusmods.com/oblivion/mods/16653/'
+        name: 'Woodland Rangers'
+      - link: 'https://www.nexusmods.com/oblivion/mods/29386/'
+        name: 'Woodland Rangers Revised'
     msg:
       - <<: *alsoUseSilentVoice
         condition: 'not file("OBSE/Plugins/Elys_USV.dll") and not file("OBSE/Plugins/voicefile_redirector.dll") and not file("Woodland Rangers - SilentVoices.bsa")'
+      - <<: *obsolete
+        subs: [ '[Woodland Rangers Revised](https://www.nexusmods.com/oblivion/mods/29386/)' ]
+        condition: 'version("Woodland Rangers.esp", "1.5.3", <)'
       - <<: *wildEdits
         subs: [ 'Remove **Sub-Block 3, 3** in **Block 0, 0** of **0000003C** from **Woodland Rangers.esp**.' ]
         condition: 'checksum("Woodland Rangers.esp", 491B530A) or checksum("Woodland Rangers.esp", 511B5A87)'
