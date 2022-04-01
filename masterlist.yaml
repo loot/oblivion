@@ -1078,7 +1078,9 @@ plugins:
       - link: 'https://tesalliance.org/forums/index.php?/files/file/1296-unofficial-shivering-isles-patch/'
         name: 'Unofficial Shivering Isles Patch (TES Alliance)'
     group: *unofficialPatchesGroup
-    after: [ 'Hidden Treasures.esp' ]
+    after:
+      - 'Hidden Treasures.esp'
+      - 'Rooftop Rewards cleaned.esp'
     inc:
       - 'FormIDReferenceBugFix.esp'
       - 'FormID_Reference_Bug_Fix.esp'
@@ -6275,6 +6277,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/28164/'
         name: 'Rooftop Rewards - A Treasure Hunting Mod for Acrobats'
+    group: *veryEarlyGroup
     req: [ 'DLCShiveringIsles.esp' ]
     dirty:
       - <<: *quickClean
