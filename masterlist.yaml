@@ -13604,6 +13604,28 @@ plugins:
         itm: 4
         udr: 4
 
+  - name: 'Minotaur Encampments( \+ Unique Landscapes)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/47226/'
+        name: 'Minotaur Encampments'
+  - name: 'Minotaur Encampments.esp'
+    inc: [ 'AncientTowers.esp' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x0A4F6FA2
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 13
+      - <<: *quickClean
+        crc: 0x9CA93108
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 13
+  - name: 'Minotaur Encampments + Unique Landscapes.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x7BF31152
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 17
+
   - name: 'MNMSTR New Rumare.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/51189/'
