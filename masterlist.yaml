@@ -5117,6 +5117,24 @@ plugins:
         util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 10
 
+  - name: 'Mentioned and Unused NPCs.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/51869/'
+        name: 'Mentioned and Unused NPCS - A Kvatchcount Classic'
+    req: [ 'DLCShiveringIsles.esp' ]
+    tag:
+      - Actors.ACBS
+      - Actors.AIData
+      - Actors.AIPackages
+      - Actors.Spells
+      - Factions
+      - Invent.Add
+      - Names
+      - Scripts
+    clean:
+      - crc: 0x7A06C373
+        util: 'TES4Edit v4.0.4b'
+
   - name: 'moDem''s City Life.esp'
     url:
       - 'https://www.nexusmods.com/oblivion/mods/9450/'
@@ -8196,27 +8214,6 @@ plugins:
         crc: 0x1EEFDA76
         util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 7
-
-  - name: 'Mentioned and Unused NPCs.esp'
-    url:
-      - link: 'https://www.nexusmods.com/oblivion/mods/51869/'
-        name: 'Mentioned and Unused NPCS - A Kvatchcount Classic'
-    req: [ 'DLCShiveringIsles.esp' ]
-    tag:
-      - Actors.ACBS
-      - Actors.AIData
-      - Actors.AIPackages
-      - Actors.Spells
-      - Factions
-      - Invent.Add
-      - Names
-      - Scripts
-    dirty:
-      - <<: *quickClean
-        crc: 0x06BB5AC6
-        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 25
-        udr: 17
 
   - name: 'NBB.esp'
     url:
