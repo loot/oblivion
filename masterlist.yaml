@@ -14092,18 +14092,25 @@ plugins:
         udr: 7
 
   - name: 'StalhrimVillage( - AN Patch)?\.esp'
-    url: [ 'http://tesalliance.org/forums/index.php?/files/file/730-stalhrim-village/' ]
+    url:
+      - link: 'http://tesalliance.org/forums/index.php?/files/file/730-stalhrim-village/'
+        name: 'Stalhrim Village'
   - name: 'StalhrimVillage.esp'
+    msg:
+      - <<: *patchProvided
+        subs: [ 'Weather - All Natural' ]
+        condition: 'active("All Natural Base.esm") and not active("StalhrimVillage - AN Patch.esp")'
+      - *requiresDisabledBorderRegions
     tag: [ C.Water ]
     dirty:
       - <<: *quickClean
         crc: 0x846BDBAA
-        util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
         udr: 89
   - name: 'StalhrimVillage - AN Patch.esp'
     clean:
       - crc: 0xA18C2D9E
-        util: 'TES4Edit v4.0.4'
+        util: 'TES4Edit v4.0.4b'
 
   - name: 'Static Weapon Modders Resource.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/31710/' ]
