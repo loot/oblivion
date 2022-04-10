@@ -14106,7 +14106,13 @@ plugins:
       - link: 'http://tesalliance.org/forums/index.php?/files/file/730-stalhrim-village/'
         name: 'Stalhrim Village'
   - name: 'StalhrimVillage.esp'
+    after: [ 'MannimarcoRevisited.esp' ]
     msg:
+      - <<: *patch3rdParty
+        subs:
+          - 'Mannimarco Revisited'
+          - '[StalhrimVillage-MannimarcoRevisited patch](https://www.nexusmods.com/oblivion/mods/48286/)'
+        condition: 'active("MannimarcoRevisited.esp") and not file("StalhrimVillage-MannimarcoRevisitedpatch.esp")'
       - <<: *patchProvided
         subs: [ 'Weather - All Natural' ]
         condition: 'active("All Natural Base.esm") and not active("StalhrimVillage - AN Patch.esp")'
