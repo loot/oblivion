@@ -14439,6 +14439,23 @@ plugins:
         itm: 5
         udr: 19
 
+  - name: 'Better Forts.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/51897/'
+        name: 'Better Forts'
+    req: [ *OBSE ]
+    msg: [ *alsoUseSilentVoice ]
+    tag:
+      - C.Light
+      - C.Music
+      - C.Name
+      - C.Owner
+    dirty:
+      - <<: *quickClean
+        crc: 0x0B8F83BB
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 5
+
   - name: 'BetterInns .*\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/29333/'
