@@ -6091,6 +6091,60 @@ plugins:
       - crc: 0xFFA02D0D
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
 
+  - name: '(MercerIngredients.*|(Alive Waters|SoC) Ingredient(s)? Patch)\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/27610/'
+        name: 'Mercers Ingredient Effect Overhaul'
+  - name: 'Alive Waters Ingredients Patch.esp'
+    clean:
+      - crc: 0xCDDE42D2
+        util: 'TES4Edit v4.0.4b'
+  - name: 'MercerIngredientsBC.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x54FE0B06
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 50
+  - name: 'MercerIngredientsCore.esp'
+    req: [ 'DLCShiveringIsles.esp' ]
+    clean:
+      - crc: 0x971EFEB4
+        util: 'TES4Edit v4.0.4b'
+  - name: 'MercerIngredientsCreatureDiversity.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x67D75C63
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 3
+  - name: 'MercerIngredientsMaskarsOO.esp'
+    clean:
+      - crc: 0xB6AFBED0
+        util: 'TES4Edit v4.0.4b'
+  - name: 'MercerIngredientsMidasSpells.esp'
+    clean:
+      - crc: 0x1FBB1AD7
+        util: 'TES4Edit v4.0.4b'
+  - name: 'MercerIngredientsMMM.esp'
+    clean:
+      - crc: 0x5462F4A0
+        util: 'TES4Edit v4.0.4b'
+  - name: 'MercerIngredientsOOO.esp'
+    clean:
+      - crc: 0xAAB593C8
+        util: 'TES4Edit v4.0.4b'
+  - name: 'MercerIngredientsQarlsHarvestAddon.esp'
+    clean:
+      - crc: 0x52C72BFA
+        util: 'TES4Edit v4.0.4b'
+  - name: 'MercerIngredientsWAC.esp'
+    clean:
+      - crc: 0xC62D2038
+        util: 'TES4Edit v4.0.4b'
+  - name: 'SoC Ingredient Patch.esp'
+    clean:
+      - crc: 0x7EA18DAA
+        util: 'TES4Edit v4.0.4b'
+
   - name: 'MigHorseArmor.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/43037' ]
     req:
