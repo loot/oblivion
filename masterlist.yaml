@@ -14581,6 +14581,36 @@ plugins:
       - crc: 0x71BB35CC
         util: 'TES4Edit v4.0.4b'
 
+  - name: 'Arena District Alive(-JQ-FGU)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/33804/'
+        name: 'Arena District Alive'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Arena District Alive ESP' ]
+        condition: 'many("Arena District Alive(-JQ-FGU)?\.esp")'
+    tag:
+      - Actors.AIPackages
+      - Invent.Add
+  - name: 'Arena District Alive.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x31FC6AB9
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 111
+        udr: 29
+  - name: 'Arena District Alive-JQ-FGU.esp'
+    msg:
+      - <<: *requiresResources
+        subs: [ '[Banes Guilds United - Updated](https://www.nexusmods.com/oblivion/mods/42261/)' ]
+        condition: 'not file("meshes/custom/fightersguild") or not file("meshes/custom/ryucapes") or not file("textures/custom/figthersguild") or not file("textures/custom/ryucapes")'
+    dirty:
+      - <<: *quickClean
+        crc: 0xC768616E
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 111
+        udr: 29
+
   - name: '(Better Abandoned House|Cheydinhal Land Texture Fix).*\.esp'
     url:
       - 'https://www.nexusmods.com/oblivion/mods/25319/'
@@ -25282,11 +25312,6 @@ plugins:
             text: 'Unlikely to work with other IC Arena mods'
           - lang: de
             text: 'Unwahrscheinlich zu funktionieren mit anderen IC Arena Mods'
-  - name: 'Arena District Alive-JQ-FGU.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/33804' ]
-    req:
-      - name: 'Fighter''s Guild Unified.esp'
-        display: '[The United Fighter''s Guilds of Cyrodiil](https://www.nexusmods.com/oblivion/mods/45475)'
   - name: 'Arena_BattlesV1.2EV.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/18113' ]
     tag: [ Relations ]
