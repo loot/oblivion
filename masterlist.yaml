@@ -6442,6 +6442,51 @@ plugins:
         util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 52
 
+  - name: 'P1DseeYouSleep.*\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/16005/'
+        name: 'See You Sleep'
+  - name: 'P1DseeYouSleep.esp'
+    inc:
+      - 'OBSE/Plugins/SeeYouSleep.dll'
+      - 'See You Sleep DLL.esp'
+      - 'See You Sleep DLL - DLCVileLair.esp'
+      - 'See You Sleep DLL - Vampire Bedroll Anims.esp'
+    msg:
+      - <<: *patchUpdateAvailable
+        subs: [ '[See You Sleep DLL](https://www.nexusmods.com/oblivion/mods/42649/)' ]
+        condition: 'not file("OBSE/Plugins/SeeYouSleep.dll")'
+      - *versionXofYorGreaterRequiredOBSEv16
+    tag: [ Scripts ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x41C990C4
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 7
+  - name: 'P1DseeYouSleep - DLCVileLair.esp'
+    tag: [ Scripts ]
+    clean:
+      - crc: 0x21C3C1D9
+        util: 'TES4Edit v4.0.4b'
+  - name: 'P1DseeYouSleep - Portable Campsite.esp'
+    clean:
+      - crc: 0x690599AD
+        util: 'TES4Edit v4.0.4b'
+  - name: 'P1DseeYouSleep - Portable Campsite - Quickstart.esp'
+    clean:
+      - crc: 0x41ED9143
+        util: 'TES4Edit v4.0.4b'
+  - name: 'P1DseeYouSleep - Vampire Bedroll Anims.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0xCD942E01
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
+  - name: 'P1DseeYouSleep - VVAdvanced.esp'
+    clean:
+      - crc: 0x19DC66AF
+        util: 'TES4Edit v4.0.4b'
+
   - name: 'PersuasionOverhaul(_LITE|_MMM|_OOO)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/12367/' ]
     tag: [ Relations.Change ]
@@ -21470,18 +21515,6 @@ plugins:
   - name: 'personality_idles4_nopc.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/14280' ]
     # doNotClean
-
-  - name: 'P1DseeYouSleep.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/16005/' ]
-    inc:
-      - 'See You Sleep DLL.esp'
-      - 'See You Sleep DLL - DLCVileLair.esp'
-      - 'See You Sleep DLL - Vampire Bedroll Anims.esp'
-    dirty:
-      - <<: *quickClean
-        crc: 0x41C990C4
-        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 7
 
   - name: 'P-Froggys Corpse Carry( EV)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/28987' ]
