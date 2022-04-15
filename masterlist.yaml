@@ -4296,6 +4296,21 @@ plugins:
       - crc: 0x89640571
         util: 'TES4Edit v4.0.4'
 
+  - name: 'ImmersivePorters.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/48704/'
+        name: 'Immersive Porters'
+    msg:
+      - <<: *wildEdits
+        subs: [ 'Re-add the **Repair** service in the **AI Data** of **000947AA** in **ImmersivePorters.esp**.' ]
+        condition: 'checksum("ImmersivePorters.esp", 4D65966C)'
+    tag:
+      - Actors.Skeleton
+      - Invent.Add
+      - Invent.Remove
+      - NpcFacesForceFullImport
+      - NPC.Race
+
   - name: 'Oblivion_Character_Overhaul.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/44676/'
@@ -4735,21 +4750,6 @@ plugins:
     clean:
       - crc: 0x3AD82805
         util: 'TES4Edit v4.0.3i (RC1 for 4.0.4)'
-
-  - name: 'ImmersivePorters.esp'
-    url:
-      - link: 'https://www.nexusmods.com/oblivion/mods/48704/'
-        name: 'Immersive Porters'
-    msg:
-      - <<: *wildEdits
-        subs: [ 'Re-add the **Repair** service in the **AI Data** of **000947AA** in **ImmersivePorters.esp**.' ]
-        condition: 'checksum("ImmersivePorters.esp", 4D65966C)'
-    tag:
-      - Actors.Skeleton
-      - Invent.Add
-      - Invent.Remove
-      - NpcFacesForceFullImport
-      - NPC.Race
 
   - name: 'MoreAdoringFans.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/46267/' ]
