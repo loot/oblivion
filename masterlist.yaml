@@ -9588,6 +9588,17 @@ plugins:
   - name: 'LostSwordOfTheAylied - OBSE Add-On.esp'
     msg: [ *versionXofYorGreaterRequiredOBSEv15 ]
 
+  - name: 'Malevolent.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/17781/'
+        name: 'MALEVOLENT'
+    dirty:
+      - <<: *quickClean
+        crc: 0x969EEDB3
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 79
+        udr: 65
+
   - name: 'MannimarcoComplete.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/15251/'
@@ -25209,21 +25220,6 @@ plugins:
             text: 'Incompatible with: Anything that modifies the Chorrol cathedral interior or exterior.'
           - lang: de
             text: 'Inkompatibel mit: Jeglichem das die das Äußere oder Innere der Chorrol Kathedrale modifiziert.'
-  - name: 'Malevolent.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/17781' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Recommended to use after you complete the main quest of Oblivion'
-          - lang: de
-            text: 'Nutzung erst empfohlen nachdem Sie die Oblivion Hauptquest abgeschlossen haben.'
-    dirty:
-      - <<: *quickClean
-        crc: 0x969EEDB3
-        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 79
-        udr: 65
 
   - name: 'mythsandlegends.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/5902' ]
