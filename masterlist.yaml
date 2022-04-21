@@ -6662,6 +6662,58 @@ plugins:
         util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 3
 
+  - name: 'Thievery_(Easy|Normal|Hard)(_Thrill)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/4318/'
+        name: 'Phitts Worthwhile Thievery'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Phitts Worthwhile Thievery ESP' ]
+        condition: 'many("Thievery_(Easy|Normal|Hard)(_Thrill)?\.esp")'
+    tag: [ Invent.Add ]
+  - name: 'Thievery_Easy.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x7707E007
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 6
+        udr: 27
+  - name: 'Thievery_Easy_Thrill.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x5E03D042
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 6
+        udr: 27
+  - name: 'Thievery_Hard.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x6455F1A3
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 6
+        udr: 27
+  - name: 'Thievery_Hard_Thrill.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x90004919
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 6
+        udr: 27
+  - name: 'Thievery_Normal.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0xA6CA2EA1
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 6
+        udr: 27
+  - name: 'Thievery_Normal_Thrill.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x925752D2
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 6
+        udr: 27
+
   - name: 'TIE(\+Frans NPC Inventory| Weapon \+ Armor Filter)?\.esp'
     url:
       - link: 'https://www.afkmods.com/index.php?/files/file/555-tie-tamriel-immersion-experience/'
@@ -26990,14 +27042,6 @@ plugins:
           - lang: de
             text: 'Teilweise beinhaltet von OOO. Möglicherweise nicht kompatibel mit OOO.'
         condition: *OOOCond
-  - name: 'Thievery_(Easy|Normal|Hard)(_Thrill)?\.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Only use one of the ''Worthwhile Thievery'' ESPs.'
-          - lang: de
-            text: 'Nutzen Sie nur eine der ''Worthwhile Thievery'' ESPs.'
   - name: 'Morrowind Lockpicking.esp'
     inc: [ 'ZumbsLockpickingMod.esp' ]
     tag: [ Relev ]
