@@ -4431,6 +4431,10 @@ plugins:
         type: warn
         subs: [ '[Oblivion Character Overhaul V2 - DLC Faces](https://www.nexusmods.com/oblivion/mods/48557/)' ]
         condition: 'not file("OCO DLC Faces.esp") and active("DLC(MehrunesRazor|VileLair)\.esp")'
+      - <<: *alsoUseX
+        type: warn
+        subs: [ '[OCOv2 - Elven NPCs Eyes Fix Filter Patch](https://www.nexusmods.com/oblivion/mods/51972/)' ]
+        condition: 'file("Bashed Patch.*\.esp") and active("(DLC(BattlehornCastle|Frostcrag|MehrunesRazor|ThievesDen)|Knights)\.esp") and not file("OCO Elf Eyes Fix.esp")'
       - <<: *patch3rdParty
         subs:
           - 'Fighters Guild Quests'
