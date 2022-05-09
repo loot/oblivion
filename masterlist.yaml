@@ -8428,6 +8428,22 @@ plugins:
       - crc: 0xE895C052
         util: 'TES4Edit v4.0.4b'
 
+  - name: 'TrulyHornyKnights.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/50112/'
+        name: 'Truly Horny Knights'
+    inc: [ 'Very Horny Knights.esp' ]
+    msg:
+      - <<: *patchUpdateAvailable
+        subs: [ '[Vanilla Remastered 1K](https://www.nexusmods.com/oblivion/mods/50903/) (Very Horny Knights)' ]
+        condition: 'active("DLCBattlehornCastle - Unofficial Patch.esp")'
+    tag:
+      - Invent.Add
+      - Invent.Remove
+    clean:
+      - crc: 0xCB03333E
+        util: 'TES4Edit v4.0.4b'
+
   - name: 'Vampire Cuirass NPC.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/22043/'
