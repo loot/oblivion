@@ -4504,6 +4504,31 @@ plugins:
         util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 6
 
+  - name: 'Children\.es[mp]'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/44083/'
+        name: 'Oblivion Children'
+  - name: 'Children.esm'
+    tag:
+      - Graphics
+      - Text
+    clean:
+      - crc: 0x69A8F2F0
+        util: 'TES4Edit v4.0.4b'
+  - name: 'Children.esp'
+    req: [ 'DLCShiveringIsles.esp' ]
+    msg:
+      - *alsoUseSilentVoice
+      - <<: *compatPatch
+        subs: [ '[Oblivion LegoManIAm94s Patches And Master Mod Addons](https://www.nexusmods.com/oblivion/mods/44093/)' ]
+        condition: 'active("Adventurers Guild.esp") and not file("Children Adventurers Guild Patch.esp")'
+    tag: [ C.Owner ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xC150F447
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        udr: 23
+
   - name: 'CM Emilia.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/32760/' ]
     dirty:
