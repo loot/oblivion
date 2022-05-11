@@ -4439,14 +4439,54 @@ plugins:
         condition: 'file("Bashed Patch.*\.esp") and not file("OCO Elf Eyes Fix.esp")'
       - <<: *patch3rdParty
         subs:
+          - 'Artifacts of Tamriel 300'
+          - '[OCOv2 - Filter Patch for Mods](https://www.nexusmods.com/oblivion/mods/51379/)'
+        condition: 'file("Bashed Patch.*\.esp") and active("300_Artifacts.esp") and not file("OCOv2 - Filter Patch for Mods.esp")'
+      - <<: *patch3rdParty
+        subs:
+          - 'BetterInns_and_NewHomeOwners'
+          - '[OCOv2 - Filter Patch for Mods](https://www.nexusmods.com/oblivion/mods/51379/)'
+        condition: 'file("Bashed Patch.*\.esp") and active("BetterInns + NewHomeOwners.esp") and not file("OCOv2 - Filter Patch for Mods.esp")'
+      - <<: *patch3rdParty
+        subs:
           - 'Fighters Guild Quests'
           - '[OCOv2 - Filter Patch for Mods](https://www.nexusmods.com/oblivion/mods/51379/)'
         condition: 'file("Bashed Patch.*\.esp") and active("Fighters Guild Quests.esp") and not file("OCOv2 - Filter Patch for Mods.esp")'
       - <<: *patch3rdParty
         subs:
+          - 'Less Annoying Magic Experience'
+          - '[OCOv2 - Filter Patch for Mods](https://www.nexusmods.com/oblivion/mods/51379/)'
+        condition: 'file("Bashed Patch.*\.esp") and active("bgMagic[DE]V\.esp") and not file("OCOv2 - Filter Patch for Mods.esp")'
+      - <<: *patch3rdParty
+        subs:
+          - 'Let the People Drink'
+          - '[OCOv2 - Filter Patch for Mods](https://www.nexusmods.com/oblivion/mods/51379/)'
+        condition: 'file("Bashed Patch.*\.esp") and checksum("LetThePeopleDrink.esp", 3E6FB8E9) or checksum("LetThePeopleDrink.esp", 5F3AE31E) and not file("OCOv2 - Filter Patch for Mods.esp")'
+      - <<: *patch3rdParty
+        subs:
           - 'Mages Guild Quests'
           - '[OCOv2 - Filter Patch for Mods](https://www.nexusmods.com/oblivion/mods/51379/)'
         condition: 'file("Bashed Patch.*\.esp") and active("Mages Guild Quests.esp") and not file("OCOv2 - Filter Patch for Mods.esp")'
+      - <<: *patch3rdParty
+        subs:
+          - 'New Rumare Village'
+          - '[OCOv2 - Filter Patch for Mods](https://www.nexusmods.com/oblivion/mods/51379/)'
+        condition: 'file("Bashed Patch.*\.esp") and active("MNMSTR New Rumare.esp") and not file("OCOv2 - Filter Patch for Mods.esp")'
+      - <<: *patch3rdParty
+        subs:
+          - 'NPCs Travel'
+          - '[OCOv2 - Filter Patch for Mods](https://www.nexusmods.com/oblivion/mods/51379/)'
+        condition: 'file("Bashed Patch.*\.esp") and active("NPCsTravel.esp") and not file("OCOv2 - Filter Patch for Mods.esp")'
+      - <<: *patch3rdParty
+        subs:
+          - 'TinyQuest - The Inventrix'
+          - '[OCOv2 - Filter Patch for Mods](https://www.nexusmods.com/oblivion/mods/51379/)'
+        condition: 'file("Bashed Patch.*\.esp") and active("qNS3-inventrix.esp") and not file("OCOv2 - Filter Patch for Mods.esp")'
+      - <<: *patch3rdParty
+        subs:
+          - 'Vampire Hunting - Order of the Virtuous Blood'
+          - '[OCOv2 - Filter Patch for Mods](https://www.nexusmods.com/oblivion/mods/51379/)'
+        condition: 'file("Bashed Patch.*\.esp") and active("Vampire Hunting - Order of the Virtuous Blood.esp") and not file("OCOv2 - Filter Patch for Mods.esp")'
       - <<: *patch3rdParty
         type: warn
         subs:
@@ -4866,12 +4906,6 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/44076/' ]
   - name: 'NPCsTravel.esp'
     req: [ 'DLCShiveringIsles.esp' ]
-    msg:
-      - <<: *patch3rdParty
-        subs:
-          - 'Oblivion Character Overhaul'
-          - '[OCOv2 - Filter Patch for Mods](https://www.nexusmods.com/oblivion/mods/51379/)'
-        condition: 'active("Bashed Patch.*\.esp") and active("Oblivion_Character_Overhaul.esp") and not file("OCOv2 - Filter Patch for Mods.esp")'
     clean:
       - crc: 0x7FFA76A7
         util: 'TES4Edit v4.0.4b'
@@ -14141,11 +14175,6 @@ plugins:
       - <<: *obsolete
         subs: [ '[Let the People Drink](https://www.nexusmods.com/oblivion/mods/10223/)' ]
         condition: 'version("LetThePeopleDrink.esp", "2.7.0", <)'
-      - <<: *patch3rdParty
-        subs:
-          - 'Oblivion Character Overhaul'
-          - '[OCOv2 - Filter Patch for Mods](https://www.nexusmods.com/oblivion/mods/51379/)'
-        condition: 'active("Bashed Patch.*\.esp") and checksum("LetThePeopleDrink.esp", 3E6FB8E9) or checksum("LetThePeopleDrink.esp", 5F3AE31E) and active("Oblivion_Character_Overhaul.esp") and not file("OCOv2 - Filter Patch for Mods.esp")'
       - <<: *useVersion
         type: warn
         subs: [ 'Common Oblivion (Cobl)' ]
@@ -15015,11 +15044,6 @@ plugins:
         name: 'BetterInns_and_NewHomeOwners'
   - name: 'BetterInns + NewHomeOwners.esp'
     msg:
-      - <<: *patch3rdParty
-        subs:
-          - 'Oblivion Character Overhaul'
-          - '[OCOv2 - Filter Patch for Mods](https://www.nexusmods.com/oblivion/mods/51379/)'
-        condition: 'active("Bashed Patch.*\.esp") and active("Oblivion_Character_Overhaul.esp") and not file("OCOv2 - Filter Patch for Mods.esp")'
       - <<: *patchProvided
         subs: [ 'Black Horse Courier Expanded' ]
         condition: 'active("BHC_Expanded.esp") and not active("BetterInns - BHCExpanded PATCH.esp")'
