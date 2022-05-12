@@ -7170,6 +7170,45 @@ plugins:
       - crc: 0x9A55EA6E
         util: 'TES4Edit v4.0.4b'
 
+  - name: 'OCO v2 Balanced( - (Bonus Races Only|Cobl|No Bonus Races))?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/45382/'
+        name: 'OCO v2 Balanced'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'OCO v2 Balanced ESP' ]
+        condition: 'many("OCO v2 Balanced( - (Bonus Races Only|Cobl|No Bonus Races))?\.esp")'
+  - name: 'OCO v2 Balanced.esp'
+    clean:
+      - crc: 0xE4C4863A
+        util: 'TES4Edit v4.0.4b'
+  - name: 'OCO v2 Balanced - Bonus Races Only.esp'
+    clean:
+      - crc: 0xF7DED000
+        util: 'TES4Edit v4.0.4b'
+  - name: 'OCO v2 Balanced - Cobl.esp'
+    tag:
+      - Graphics
+      - Names
+      - R.Attributes-F
+      - R.Attributes-M
+      - R.ChangeSpells
+      - R.Description
+      - R.Eyes
+      - R.Hair
+      - R.Head
+      - R.Relations.Add
+      - R.Relations.Change
+      - R.Skills
+      - Text
+    clean:
+      - crc: 0x8DA7BDAC
+        util: 'TES4Edit v4.0.4b'
+  - name: 'OCO v2 Balanced - No Bonus Races.esp'
+    clean:
+      - crc: 0xDCAE5992
+        util: 'TES4Edit v4.0.4b'
+
   - name: 'Shadow Ranger.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/26723/' ]
     msg:
