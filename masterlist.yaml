@@ -7187,6 +7187,10 @@ plugins:
       - crc: 0xF7DED000
         util: 'TES4Edit v4.0.4b'
   - name: 'OCO v2 Balanced - Cobl.esp'
+    msg:
+      - <<: *requiresResources
+        subs: [ '[Cobl Cosmetics Res 01](https://www.nexusmods.com/oblivion/mods/21104/)' ]
+        condition: 'not file("meshes/characters/asxivilai") or not file("textures/characters/eyes/tabaxi") or not file("textures/menus/icons/asxivilai")'
     tag:
       - Graphics
       - Names
