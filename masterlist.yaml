@@ -2051,8 +2051,29 @@ plugins:
         util: 'TES4Edit v4.0.4b'
 
   - name: 'Feminized_Animations_.*\.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/47774' ]
-    tag: [ Actors.Anims ]
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/47774/'
+        name: 'Feminized Idle Walk Run Animations for NPCs'
+    tag:
+      - Actors.Anims
+      - Deactivate
+      - NoMerge
+  - name: 'Feminized_Animations_OCO.esp'
+    clean:
+      - crc: 0x78D1A07D
+        util: 'TES4Edit v4.0.4b'
+  - name: 'Feminized_Animations_OCO_UOP.esp'
+    clean:
+      - crc: 0xB6A404CD
+        util: 'TES4Edit v4.0.4b'
+  - name: 'Feminized_Animations_Vanilla.esp'
+    clean:
+      - crc: 0x6D1453DE
+        util: 'TES4Edit v4.0.4b'
+  - name: 'Feminized_Animations_Vanilla_UOP.esp'
+    clean:
+      - crc: 0x36B13C70
+        util: 'TES4Edit v4.0.4b'
 
   - name: 'Harvest\[Containers\].*\.es[mp]'
     url:
