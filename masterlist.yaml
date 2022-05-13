@@ -4399,6 +4399,8 @@ plugins:
         name: 'Oblivion Character Overhaul v2'
       - link: 'https://www.nexusmods.com/oblivion/mods/48136/'
         name: 'Oblivion Character Overhaul v2 - Unofficial Patch'
+      - link: 'https://www.nexusmods.com/oblivion/mods/51121/'
+        name: 'Oblivion Character Overhaul Compatibility Edition - OCO CE'
       - link: 'https://www.nexusmods.com/oblivion/mods/51324/'
         name: 'Oblivion Character Overhaul Cleaned - OCO Cleaned'
     after:
@@ -4415,6 +4417,7 @@ plugins:
     tag:
       - Actors.ACBS
       - Graphics
+      - Names
       - NPC.Eyes
       - NPC.FaceGen
       - NPC.Hair
@@ -4434,17 +4437,57 @@ plugins:
       - <<: *alsoUseX
         type: warn
         subs: [ '[OCOv2 - Elven NPCs Eyes Fix Filter Patch](https://www.nexusmods.com/oblivion/mods/51972/)' ]
-        condition: 'file("Bashed Patch.*\.esp") and active("(DLC(BattlehornCastle|Frostcrag|MehrunesRazor|ThievesDen)|Knights)\.esp") and not file("OCO Elf Eyes Fix.esp")'
+        condition: 'file("Bashed Patch.*\.esp") and not file("OCO Elf Eyes Fix.esp")'
+      - <<: *patch3rdParty
+        subs:
+          - 'Artifacts of Tamriel 300'
+          - '[OCOv2 - Filter Patch for Mods](https://www.nexusmods.com/oblivion/mods/51379/)'
+        condition: 'file("Bashed Patch.*\.esp") and active("300_Artifacts.esp") and not file("OCOv2 - Filter Patch for Mods.esp")'
+      - <<: *patch3rdParty
+        subs:
+          - 'BetterInns_and_NewHomeOwners'
+          - '[OCOv2 - Filter Patch for Mods](https://www.nexusmods.com/oblivion/mods/51379/)'
+        condition: 'file("Bashed Patch.*\.esp") and active("BetterInns + NewHomeOwners.esp") and not file("OCOv2 - Filter Patch for Mods.esp")'
       - <<: *patch3rdParty
         subs:
           - 'Fighters Guild Quests'
           - '[OCOv2 - Filter Patch for Mods](https://www.nexusmods.com/oblivion/mods/51379/)'
-        condition: 'file("Bashed Patch.*\.esp") and active("Fighters Guild Quests.esp") and not file("MGQ_FGQ_OCOv2_Patch.esp") and not file("OCOv2 - Filter Patch for Mods.esp")'
+        condition: 'file("Bashed Patch.*\.esp") and active("Fighters Guild Quests.esp") and not file("OCOv2 - Filter Patch for Mods.esp")'
+      - <<: *patch3rdParty
+        subs:
+          - 'Less Annoying Magic Experience'
+          - '[OCOv2 - Filter Patch for Mods](https://www.nexusmods.com/oblivion/mods/51379/)'
+        condition: 'file("Bashed Patch.*\.esp") and active("bgMagic[DE]V\.esp") and not file("OCOv2 - Filter Patch for Mods.esp")'
+      - <<: *patch3rdParty
+        subs:
+          - 'Let the People Drink'
+          - '[OCOv2 - Filter Patch for Mods](https://www.nexusmods.com/oblivion/mods/51379/)'
+        condition: 'file("Bashed Patch.*\.esp") and checksum("LetThePeopleDrink.esp", 3E6FB8E9) or checksum("LetThePeopleDrink.esp", 5F3AE31E) and not file("OCOv2 - Filter Patch for Mods.esp")'
       - <<: *patch3rdParty
         subs:
           - 'Mages Guild Quests'
           - '[OCOv2 - Filter Patch for Mods](https://www.nexusmods.com/oblivion/mods/51379/)'
-        condition: 'file("Bashed Patch.*\.esp") and active("Mages Guild Quests.esp") and not file("MGQ_FGQ_OCOv2_Patch.esp") and not file("OCOv2 - Filter Patch for Mods.esp")'
+        condition: 'file("Bashed Patch.*\.esp") and active("Mages Guild Quests.esp") and not file("OCOv2 - Filter Patch for Mods.esp")'
+      - <<: *patch3rdParty
+        subs:
+          - 'New Rumare Village'
+          - '[OCOv2 - Filter Patch for Mods](https://www.nexusmods.com/oblivion/mods/51379/)'
+        condition: 'file("Bashed Patch.*\.esp") and active("MNMSTR New Rumare.esp") and not file("OCOv2 - Filter Patch for Mods.esp")'
+      - <<: *patch3rdParty
+        subs:
+          - 'NPCs Travel'
+          - '[OCOv2 - Filter Patch for Mods](https://www.nexusmods.com/oblivion/mods/51379/)'
+        condition: 'file("Bashed Patch.*\.esp") and active("NPCsTravel.esp") and not file("OCOv2 - Filter Patch for Mods.esp")'
+      - <<: *patch3rdParty
+        subs:
+          - 'TinyQuest - The Inventrix'
+          - '[OCOv2 - Filter Patch for Mods](https://www.nexusmods.com/oblivion/mods/51379/)'
+        condition: 'file("Bashed Patch.*\.esp") and active("qNS3-inventrix.esp") and not file("OCOv2 - Filter Patch for Mods.esp")'
+      - <<: *patch3rdParty
+        subs:
+          - 'Vampire Hunting - Order of the Virtuous Blood'
+          - '[OCOv2 - Filter Patch for Mods](https://www.nexusmods.com/oblivion/mods/51379/)'
+        condition: 'file("Bashed Patch.*\.esp") and active("Vampire Hunting - Order of the Virtuous Blood.esp") and not file("OCOv2 - Filter Patch for Mods.esp")'
       - <<: *patch3rdParty
         type: warn
         subs:
@@ -4457,23 +4500,32 @@ plugins:
       - <<: *requiresResources
         subs: [ '[Oblivion Character Overhaul v2](https://www.nexusmods.com/oblivion/mods/44676/)' ]
         condition: 'not file("Meshes/characters/nuska/nuArgonianEyeLeft.nif")'
+      - <<: *wildEdits
+        subs: [ 'Remove **0001D9D8**, **000234B7**, & **00034E7E** from **Oblivion_Character_Overhaul.esp**.' ]
+        condition: 'checksum("Oblivion_Character_Overhaul.esp", AE4A35D7) or checksum("Oblivion_Character_Overhaul.esp", EBF6CC01) or checksum("Oblivion_Character_Overhaul.esp", 5B7D8F89) or checksum("Oblivion_Character_Overhaul.esp", 4AC090F3)'
     dirty:
       - <<: *quickClean
         crc: 0x5B7D8F89
-        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
+      - <<: *quickClean
+        crc: 0x27A36447
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 2
     clean:
-      - crc: 0xAE4A35D7
-        util: 'TES4Edit v4.0.3h (Hotfix 1)'
-      - crc: 0xEBF6CC01
-        util: 'TES4Edit v4.0.3h (Hotfix 1)'
+      - crc: 0x6DD624F3
+        util: 'TES4Edit v4.0.4b'
   - name: 'OCO Cleaned - Vanilla Hair.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/51324/'
         name: 'Oblivion Character Overhaul Cleaned - OCO Cleaned'
-    clean:
-      - crc: 0xCF743DF7
-        util: 'TES4Edit v4.0.3h (Hotfix 1)'
+    msg:
+      - <<: *wildEdits
+        subs: [ 'Remove **0001D9D8**, **000234B7**, & **00034E7E** from **OCO Cleaned - Vanilla Hair.esp**.' ]
+        condition: 'checksum("OCO Cleaned - Vanilla Hair.esp", CF743DF7)'
+    tag:
+      - -Deactivate
+      - Names
 
   - name: 'OCO uses merged teeth.esp'
     url:
@@ -4884,12 +4936,6 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/44076/' ]
   - name: 'NPCsTravel.esp'
     req: [ 'DLCShiveringIsles.esp' ]
-    msg:
-      - <<: *patch3rdParty
-        subs:
-          - 'Oblivion Character Overhaul'
-          - '[OCOv2 - Filter Patch for Mods](https://www.nexusmods.com/oblivion/mods/51379/)'
-        condition: 'active("Bashed Patch.*\.esp") and active("Oblivion_Character_Overhaul.esp") and not file("OCOv2 - Filter Patch for Mods.esp")'
     clean:
       - crc: 0x7FFA76A7
         util: 'TES4Edit v4.0.4b'
@@ -14292,11 +14338,6 @@ plugins:
       - <<: *obsolete
         subs: [ '[Let the People Drink](https://www.nexusmods.com/oblivion/mods/10223/)' ]
         condition: 'version("LetThePeopleDrink.esp", "2.7.0", <)'
-      - <<: *patch3rdParty
-        subs:
-          - 'Oblivion Character Overhaul'
-          - '[OCOv2 - Filter Patch for Mods](https://www.nexusmods.com/oblivion/mods/51379/)'
-        condition: 'active("Bashed Patch.*\.esp") and checksum("LetThePeopleDrink.esp", 3E6FB8E9) or checksum("LetThePeopleDrink.esp", 5F3AE31E) and active("Oblivion_Character_Overhaul.esp") and not file("OCOv2 - Filter Patch for Mods.esp")'
       - <<: *useVersion
         type: warn
         subs: [ 'Common Oblivion (Cobl)' ]
@@ -15166,11 +15207,6 @@ plugins:
         name: 'BetterInns_and_NewHomeOwners'
   - name: 'BetterInns + NewHomeOwners.esp'
     msg:
-      - <<: *patch3rdParty
-        subs:
-          - 'Oblivion Character Overhaul'
-          - '[OCOv2 - Filter Patch for Mods](https://www.nexusmods.com/oblivion/mods/51379/)'
-        condition: 'active("Bashed Patch.*\.esp") and active("Oblivion_Character_Overhaul.esp") and not file("OCOv2 - Filter Patch for Mods.esp")'
       - <<: *patchProvided
         subs: [ 'Black Horse Courier Expanded' ]
         condition: 'active("BHC_Expanded.esp") and not active("BetterInns - BHCExpanded PATCH.esp")'
