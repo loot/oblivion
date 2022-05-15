@@ -8332,6 +8332,27 @@ plugins:
   - name: 'Recastable Summons - Mighty Magicka Version.esp'
     msg: [ *patchOutdated ]
 
+  - name: 'skillfulNecromancy.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/52003/'
+        name: 'Skillful Necromancy'
+    req:
+      - *AddActorValues
+      - *MagicExtender
+      - *OBSE
+      - 'DLCShiveringIsles.esp'
+    tag:
+      - EffectStats
+      - Names
+      - Scripts
+      - SpellStats
+      - Stats
+    dirty:
+      - <<: *quickClean
+        crc: 0xEF066566
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 6
+
   - name: 'SummonDarkGuardian.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/14097/' ]
     tag:
