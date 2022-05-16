@@ -16465,6 +16465,11 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/48292/'
         name: 'The Imperial Real Estate'
+    msg:
+      - *alsoUseSilentVoice
+      - <<: *wildEdits
+        subs: [ 'Remove **0001A365**, **0001ECC9**, & **0001ECD2** from **15LamRealEstate.esp**.' ]
+        condition: 'checksum("15LamRealEstate.esp", 04CBDD30) or checksum("15LamRealEstate.esp", ADA103B3)'
     tag:
       - Actors.ACBS
       - Actors.AIPackages
@@ -16477,6 +16482,10 @@ plugins:
     dirty:
       - <<: *quickClean
         crc: 0x04CBDD30
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
+      - <<: *quickClean
+        crc: 0xF0CDE842
         util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 2
 
