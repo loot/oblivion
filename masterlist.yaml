@@ -4209,15 +4209,23 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/46578/'
         name: 'Seamless - Khats and Args'
-    req: [ *Blockhead ]
+    req:
+      - *Blockhead
+      - *OBSE
+    inc:
+      - 'VKVII Skin_Argonian.esp'
+      - 'VKVII Skin_Khajiit.esp'
     msg:
       - <<: *requiresX
         type: say
         subs: [ 'INI setting `bFaceGenTexturing=1`' ]
     tag:
-      - Graphics
+      - name: Graphics
+        condition: 'checksum("[SR] Khats & Args.esp", F79C7F49)'
       - R.Body-F
       - R.Body-M
+      - name: R.Eyes
+        condition: 'checksum("[SR] Khats & Args.esp", F79C7F49)'
       - R.Mouth
     dirty:
       - <<: *quickClean
