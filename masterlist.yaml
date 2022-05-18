@@ -4581,20 +4581,18 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/48131/'
         name: 'Extra NPCS'
-      - link: 'https://www.nexusmods.com/oblivion/mods/50596/'
-        name: 'Extra NPCs - OCOv2 Consistency Patch'
-    req:
-      - 'DLCShiveringIsles.esp'
-      - name: 'Oblivion_Character_Overhaul.esp'
-        condition: 'checksum("aaaaExtraNpcs.esp", C0F26DA7)'
+    req: [ 'DLCShiveringIsles.esp' ]
+    msg:
+      - <<: *patch3rdParty
+        subs:
+          - 'Oblivion Character Overhaul'
+          - '[Extra NPCs - OCOv2 Patch](https://www.nexusmods.com/oblivion/mods/52012/)'
+        condition: 'active("Oblivion_Character_Overhaul.esp") and not file("Extra NPCs OCOv2 Patch.esp")'
     dirty:
       - <<: *quickClean
         crc: 0x811B025D
         util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 2
-    clean:
-      - crc: 0xC0F26DA7
-        util: 'TES4Edit v4.0.4b'
 
   - name: 'Aliyah.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/12082/' ]
