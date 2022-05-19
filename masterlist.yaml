@@ -4441,6 +4441,8 @@ plugins:
         name: 'Oblivion Character Overhaul Compatibility Edition - OCO CE'
       - link: 'https://www.nexusmods.com/oblivion/mods/51324/'
         name: 'Oblivion Character Overhaul Cleaned - OCO Cleaned'
+      - link: 'https://www.nexusmods.com/oblivion/mods/52010/'
+        name: 'Oblivion Character Overhaul - Advanced Edition'
     after:
       - 'MaleBodyReplacerV3.esp'
       - 'MaleBodyReplacerV4.esp'
@@ -4471,11 +4473,15 @@ plugins:
       - <<: *alsoUseX
         type: warn
         subs: [ '[Oblivion Character Overhaul V2 - DLC Faces](https://www.nexusmods.com/oblivion/mods/48557/)' ]
-        condition: 'not file("OCO DLC Faces.esp") and active("DLC(MehrunesRazor|VileLair)\.esp")'
+        condition: 'not file("OCO DLC Faces.esp") and active("DLC(MehrunesRazor|VileLair)\.esp") and not file("Oblivion_Character_Overhaul_Faces.esp")'
       - <<: *alsoUseX
         type: warn
         subs: [ '[OCOv2 - Elven NPCs Eyes Fix Filter Patch](https://www.nexusmods.com/oblivion/mods/51972/)' ]
-        condition: 'file("Bashed Patch.*\.esp") and not file("OCO Elf Eyes Fix.esp")'
+        condition: 'file("Bashed Patch.*\.esp") and not file("OCO Elf Eyes Fix.esp") and not file("Oblivion_Character_Overhaul_Faces.esp")'
+      - <<: *includesX
+        type: error
+        subs: [ '[Properly Named Eyes for OCOv2](https://www.nexusmods.com/oblivion/mods/51976/)' ]
+        condition: 'version("Oblivion_Character_Overhaul.esp", "2.10", >=) and file("Properly Named OCO Eyes.esp")'
       - <<: *patch3rdParty
         subs:
           - 'Artifacts of Tamriel 300'
@@ -4533,6 +4539,9 @@ plugins:
           - '[OCOv2 - Bashed Patch Eyes Fix](https://www.nexusmods.com/oblivion/mods/49988/)'
         condition: 'version("Oblivion_Character_Overhaul.esp", "2.0", >=) and file("Bashed Patch.*\.esp") and not file("OCO_Eyes_Fix.esp")'
       - <<: *patchUpdateAvailable
+        subs: [ '[Improved NPC Faces for OCOv2](https://www.nexusmods.com/oblivion/mods/51971/)' ]
+        condition: 'not file("((Better(.*)|Improved NPC Faces|Vanilla Kalthar Face) for OCOv2(.*))\.esp")'
+      - <<: *patchUpdateAvailable
         subs: [ '[Oblivion Character Overhaul Cleaned - OCO Cleaned](https://www.nexusmods.com/oblivion/mods/51324/)' ]
         condition: 'not version("Oblivion_Character_Overhaul.esp", "2.03", >=) and not checksum("Oblivion_Character_Overhaul.esp", EBF6CC01)'
       - <<: *requiresResources
@@ -4553,6 +4562,10 @@ plugins:
     clean:
       - crc: 0x6DD624F3
         util: 'TES4Edit v4.0.4b'
+      - crc: 0x9518BD2C
+        util: 'TES4Edit v4.0.4b'
+      - crc: 0x51060CFE
+        util: 'TES4Edit v4.0.4b'
   - name: 'OCO Cleaned - Vanilla Hair.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/51324/'
@@ -4564,6 +4577,24 @@ plugins:
     tag:
       - -Deactivate
       - Names
+  - name: 'Oblivion_Character_Overhaul_Faces.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/52010/'
+        name: 'Oblivion Character Overhaul - Advanced Edition'
+    msg:
+      - <<: *includesX
+        type: error
+        subs: [ '[Oblivion Character Overhaul V2 - DLC Faces](https://www.nexusmods.com/oblivion/mods/48557/)' ]
+        condition: 'file("OCO DLC Faces.esp")'
+      - <<: *includesX
+        type: error
+        subs: [ '[OCOv2 - Elven NPCs Eyes Fix Filter Patch](https://www.nexusmods.com/oblivion/mods/51972/)' ]
+        condition: 'file("OCO Elf Eyes Fix.esp")'
+    clean:
+      - crc: 0x802CB3AE
+        util: 'TES4Edit v4.0.4b'
+      - crc: 0x5B19DC40
+        util: 'TES4Edit v4.0.4b'
 
   - name: 'OCO uses merged teeth.esp'
     url:
