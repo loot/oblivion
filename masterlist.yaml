@@ -8945,6 +8945,27 @@ plugins:
         itm: 36
         udr: 20
 
+  - name: 'Faction Relations.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/50868/'
+        name: 'Faction Relations'
+    msg:
+      - <<: *patch3rdParty
+        subs:
+          - 'Knights of the Nine - Improved Infamy System'
+          - '[Faction Relations - Knights of the Nine Improved Infamy System Patch](https://www.nexusmods.com/oblivion/mods/52023/)'
+        condition: 'active("Knights Infamy.esp") and not file("Faction Relations - Improved Knights Infamy Patch.esp")'
+      - <<: *sortMasters
+        condition: 'checksum("Faction Relations.esp", EB0174A4)'
+    tag:
+      - Actors.Anims
+      - Actors.Factions
+      - Delev
+      - Invent.Add
+      - Invent.Remove
+      - Relations.Add
+      - Relations.Remove
+
   - name: 'GentlemanBurzGroKhash.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/49207/' ]
     req: [ 'DLCShiveringIsles.esp' ]
