@@ -4158,6 +4158,28 @@ plugins:
       - crc: 0x5C8F79D1
         util: 'TES4Edit v4.0.4b'
 
+  - name: 'kart-free-khajiit-hair(-oco2)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/49656/'
+        name: 'Khajiit Hair Colors'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Khajiit Hair Colors ESP' ]
+        condition: 'many("kart-free-khajiit-hair(-oco2)?\.esp")'
+    tag: [ R.Hair ]
+  - name: 'kart-free-khajiit-hair.esp'
+    msg:
+      - <<: *useVersion
+        subs: [ 'Oblivion Character Overhaul' ]
+        condition: 'active("Oblivion_Character_Overhaul.esp")'
+    clean:
+      - crc: 0x96FD3108
+        util: 'TES4Edit v4.0.4b'
+  - name: 'kart-free-khajiit-hair-oco2.esp'
+    clean:
+      - crc: 0x398D436C
+        util: 'TES4Edit v4.0.4b'
+
   - name: 'Kart ?Hair.*\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/48588/'
@@ -4282,6 +4304,7 @@ plugins:
 
   - name: 'VKVII Skin_Khajiit.esp'
     url: [ 'https://www.moddb.com/mods/vkvii-oblivion-skin-khajiit/' ]
+    after: [ 'kart-free-khajiit-hair-oco2.esp' ]
     req: [ *Blockhead ]
     tag:
       - Graphics
