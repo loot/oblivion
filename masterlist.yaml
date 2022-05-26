@@ -8284,6 +8284,31 @@ plugins:
       - crc: 0x3BE5B720
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
 
+  - name: 'illusion.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/52033/'
+        name: 'Tricking illsuion'
+    req:
+      - *AddActorValues
+      - *MagicExtender
+      - *OBSE
+      - 'DLCMehrunesRazor.esp'
+      - 'DLCShiveringIsles.esp'
+    tag:
+      - EffectStats
+      - EnchantmentStats
+      - Graphics
+      - Invent.Add
+      - Names
+      - Scripts
+      - Stats
+    dirty:
+      - <<: *quickClean
+        crc: 0xF5583F7B
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 19
+        udr: 3
+
   - name: 'Illusionary Summons.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/9014/' ]
     dirty:
