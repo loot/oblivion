@@ -10924,6 +10924,37 @@ plugins:
         itm: 5
         udr: 3
 
+  - name: '(Vampire Hunting (Bloodlines Patch|- Order of the Virtuous Blood)|Valenwood Improved Vampire Hunting Patch)\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/30568/'
+        name: 'Vampire Hunting - Order of the Virtuous Blood'
+  - name: 'Vampire Hunting - Order Of The Virtuous Blood.esp'
+    msg:
+      - <<: *patchProvided
+        subs: [ 'Valenwood Improved' ]
+        condition: 'active("Valenwood Improved.esp") and not active("Valenwood Improved Vampire Hunting Patch.esp")'
+      - <<: *patchProvided
+        subs: [ 'Verona House: Bloodlines' ]
+        condition: 'active("VHBloodlines 1.2.esp") and not file("Vampire Hunting Bloodlines Patch.esp")'
+    tag: [ C.Owner ]
+    clean:
+      - crc: 0x202AA330
+        util: 'TES4Edit v4.0.4b'
+  - name: 'Valenwood Improved Vampire Hunting Patch.esp'
+    req:
+      - 'Valenwood Improved.esp'
+      - 'Vampire Hunting - Order of the Virtuous Blood.esp'
+    clean:
+      - crc: 0x156E63C2
+        util: 'TES4Edit v4.0.4b'
+  - name: 'Vampire Hunting Bloodlines Patch.esp'
+    req:
+      - 'Vampire Hunting - Order of the Virtuous Blood.esp'
+      - 'VHBloodlines 1.2.esp'
+    clean:
+      - crc: 0xC343204C
+        util: 'TES4Edit v4.0.4b'
+
   - name: 'VHBloodlines 1.2.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/14601/'
@@ -26071,13 +26102,6 @@ plugins:
         util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 28
         udr: 15
-  - name: 'Vampire Hunting - Order Of The Virtuous Blood.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/30568/' ]
-    tag:
-      - C.Owner
-    clean:
-      - crc: 0x202AA330
-        util: 'TES4Edit v4.0.3h (Hotfix 1)'
   - name: 'Cyrodill Travel Services.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/21999' ]
     msg: [ *obsolete ]
