@@ -10848,6 +10848,27 @@ plugins:
         itm: 6
         udr: 164
 
+  - name: 'The Lost Spires.esp'
+    url:
+      - link: 'http://www.lostspires.com/pages/downloads.htm'
+        name: 'The Lost Spires'
+      - link: 'https://www.nexusmods.com/oblivion/mods/12997/'
+        name: 'The Lost Spires (Nexus Mods)'
+    after:
+      - 'Aundae.esp'
+      - 'Aundae_OBSE_addon.esp'
+      - 'Blood&Mud.esp'
+    msg:
+      - <<: *patchUpdateAvailable
+        subs: [ '[The Lost Spires - Tweaks and Enhancements](https://www.nexusmods.com/oblivion/mods/51037/)' ]
+        condition: 'not file("The Lost Spires - (Assorted Fixes|Optional Diary Narration|Rodon Dakkon Dialogue Tweak)\.esp")'
+    dirty:
+      - <<: *quickClean
+        crc: 0x5B6ADFB3
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 159
+        udr: 433
+
   - name: 'The Mystery of the Dulan cult.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/7663/'
@@ -26399,21 +26420,6 @@ plugins:
         util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 37
         udr: 401
-
-  - name: 'The Lost Spires.esp'
-    url:
-      - 'https://www.nexusmods.com/oblivion/mods/12997'
-      - 'http://www.lostspires.com/pages/downloads.htm'
-    after:
-      - 'Aundae.esp'
-      - 'Aundae_OBSE_addon.esp'
-      - 'Blood&Mud.esp'
-    dirty:
-      - <<: *quickClean
-        crc: 0x5B6ADFB3
-        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 159
-        udr: 433
 
   - name: 'FCOM_SlofsHorses.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/36679' ]
