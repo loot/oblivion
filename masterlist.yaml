@@ -16288,11 +16288,12 @@ plugins:
       - link: 'https://www.nexusmods.com/oblivion/mods/51414/'
         name: 'The Lost Spires - Enhanced Tomb'
     msg:
-      - <<: *renameXtoY
+      - <<: *moveXFromYToZ
         subs:
+          - '**skelet01.nif**'
           - '**meshes\skeleton**'
-          - '**meshes\stroti\skeleton**'
-        condition: 'file("meshes/skeleton") and not file("meshes/stroti/skeleton")'
+          - '**meshes\Stroti\skeleton**'
+        condition: 'file("meshes/skeleton/skelet01.nif") and not file("meshes/Stroti/skeleton/skelet01.nif")'
       - <<: *requiresResources
         subs: [ '[Strotis Ayleid Clutter](https://www.nexusmods.com/oblivion/mods/41558/)' ]
         condition: 'not file("meshes/stroti/clutter/ayleid") or not file("textures/stroti/clutter/ayleid") or not file("textures/menus/icons/stroti/ayleidClutter")'
