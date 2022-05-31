@@ -4535,7 +4535,6 @@ plugins:
       - 'MaleBodyReplacerV3.esp'
       - 'MaleBodyReplacerV4.esp'
       - 'MaleBodyReplacerV5.esp'
-      - 'Reworked Race Relations.esp'
     req:
       - <<: *Blockhead
         condition: 'version("Oblivion_Character_Overhaul.esp", "2.0", >=)'
@@ -9298,20 +9297,24 @@ plugins:
         udr: 2
 
   - name: 'Reworked Race Relations.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/50006/' ]
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/50006/'
+        name: 'Reworked Race Relations'
     msg:
       - <<: *patchUnavailable
         subs: [ 'Oblivion Character Overhaul' ]
         condition: 'active("Oblivion_Character_Overhaul.esp") and not active("Bashed Patch.*\.esp")'
     tag:
+      - Deactivate
+      - NoMerge
       - R.Relations.Add
       - R.Relations.Change
       - R.Relations.Remove
     clean:
       - crc: 0xCA32CE30
-        util: 'TES4Edit v4.0.4'
+        util: 'TES4Edit v4.0.4b'
       - crc: 0x5AC759C2
-        util: 'TES4Edit v4.0.4'
+        util: 'TES4Edit v4.0.4b'
 
   - name: 'Safe Traveling NPC.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/45401/' ]
