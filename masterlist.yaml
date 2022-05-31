@@ -4403,7 +4403,7 @@ plugins:
       - crc: 0x06D951BD
         util: 'TES4Edit v4.0.4b'
   - name: 'Improved NPC Faces for OCOv2.esp'
-    after: [ 'OCO Cleaned - Vanilla Hair.esp' ]
+    after: [ '(OCO Cleaned - Vanilla Hair|OCO Vanilla Hair)\.esp' ]
     inc: [ 'GreyPrince.esp' ]
     clean:
       - crc: 0x76E1B1BF
@@ -4662,14 +4662,21 @@ plugins:
         util: 'TES4Edit v4.0.4b'
       - crc: 0x07E94F26
         util: 'TES4Edit v4.0.4b'
-  - name: 'OCO Cleaned - Vanilla Hair.esp'
+  - name: '(OCO Cleaned - Vanilla Hair|OCO Vanilla Hair)\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/51324/'
         name: 'Oblivion Character Overhaul Cleaned - OCO Cleaned'
+      - link: 'https://www.nexusmods.com/oblivion/mods/51998/'
+        name: 'OCO Vanilla Hair - Version FR'
     msg:
       - <<: *wildEdits
         subs: [ 'Remove **0001D9D8**, **000234B7**, & **00034E7E** from **OCO Cleaned - Vanilla Hair.esp**.' ]
         condition: 'checksum("OCO Cleaned - Vanilla Hair.esp", CF743DF7)'
+    clean:
+      - crc: 0xB1E49BA0
+        util: 'TES4Edit v4.0.4b'
+      - crc: 0x3291418D
+        util: 'TES4Edit v4.0.4b'
     tag:
       - -Deactivate
       - Names
