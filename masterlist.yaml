@@ -20870,10 +20870,10 @@ plugins:
     tag: [ Invent ]
 
 ###### Oscuro's Oblivion Overhaul (OOO) ######
-  - name: 'Oscuro''s_Oblivion_Overhaul( - Knights of Nine)?\.es(m|p)'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/46199/' ]
-  - name: 'OOO-.*\.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/46199/' ]
+  - name: '(OOO-.*|Oscuro''s_Oblivion_Overhaul( - Knights of Nine)?)\.es[mp]'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/46199/'
+        name: 'OOO - Oscuro''s Oblivion Overhaul - Updated'
   - name: 'Oscuro''s_Oblivion_Overhaul.esm'
     after:
       - 'Francesco''s Leveled Creatures-Items Mod.esm'
@@ -20882,10 +20882,9 @@ plugins:
       - name: -Relations
         condition: 'file("Mart''s Monster Mod for OOO.esm") or file("FCOM_Convergence.esm")'
     clean:
-      - crc: 0x82322ED1
-        util: 'TES4Edit v4.0.2i'
+      - crc: 0x92E50D08
+        util: 'TES4Edit v4.0.4b'
   - name: 'Oscuro''s_Oblivion_Overhaul.esp'
-    # doNotClean
     after:
       - 'Bob''s Armory Oblivion.esp'
       - 'FCOM_BobsArmory.esp'
@@ -20898,17 +20897,35 @@ plugins:
       - 'Tamrielic_Ingredients_cOMbo.esp'
       - 'Tamrielic_Ingredients_OOO.esp'
     tag:
+      - EffectStats
+      - Enchantments
+      - EnchantmentStats
       - name: -Factions
         condition: 'file("Mart''s Monster Mod for OOO.esm") or file("FCOM_Convergence.esm")'
       - name: -Relations
         condition: 'file("Mart''s Monster Mod for OOO.esm") or file("FCOM_Convergence.esm")'
-  - name: 'Oscuro''s_Oblivion_Overhaul - Knights of Nine.esp'
-    inc: [ 'FCOM_Convergence.esm' ]
+      - Sound
+      - Text
     dirty:
       - <<: *quickClean
-        crc: 0x2D3B8E8F
-        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 2
+        crc: 0x2903FC90
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 8
+  - name: 'Oscuro''s_Oblivion_Overhaul - Knights of Nine.esp'
+    inc: [ 'FCOM_Convergence.esm' ]
+    tag:
+      - Actors.AIData
+      - Actors.AIPackages
+      - Actors.CombatStyle
+      - Actors.Factions
+      - Actors.Spells
+      - Actors.Stats
+      - Invent.Add
+      - Invent.Remove
+      - Scripts
+    clean:
+      - crc: 0xC82A5A8F
+        util: 'TES4Edit v4.0.4b'
   ### OOO Level Rate Options ###
   - name: 'OOO-Level_(Normal|Slow|Stock)\.esp'
     msg:
