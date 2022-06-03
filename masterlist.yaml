@@ -10054,6 +10054,27 @@ plugins:
         util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 51
 
+  - name: 'Fall of the Ayleids( - Non-OCO Patch)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/44474/'
+        name: 'This Mortal Coil (Fall of the Ayleids)'
+  - name: 'Fall of the Ayleids.esp'
+    req:
+      - *OBSE
+      - name: 'Oblivion_Character_Overhaul.esp'
+        condition: 'not active("Fall of the Ayleids - Non-OCO Patch.esp")'
+    dirty:
+      - <<: *quickClean
+        crc: 0x26C74385
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 10
+        udr: 1
+  - name: 'Fall of the Ayleids - Non-OCO Patch.esp'
+    inc: [ 'Oblivion_Character_Overhaul.esp' ]
+    clean:
+      - crc: 0x13DA7251
+        util: 'TES4Edit v4.0.4b'
+
   - name: 'Fighters Guild Quests.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/41012/' ]
     req: [ 'DLCShiveringIsles.esp' ]
