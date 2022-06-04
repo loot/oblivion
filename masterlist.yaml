@@ -11550,6 +11550,57 @@ plugins:
       - crc: 0x4DC1E551
         util: 'TES4Edit v4.0.4b'
 
+  - name: '(Un)?Tidy Arrows \((Buffed|Vanilla) Stats\)( \(SI\))?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/45547/'
+        name: 'TIBs Tidy Arrows - Archery Organized and Updated'
+    msg:
+      - <<: *patchIncluded
+        subs: [ 'Shivering Isles' ]
+        condition: 'active("DLCShiveringIsles.esp") and not file("(Un)?Tidy Arrows \((Buffed|Vanilla) Stats\) \(SI\)\.esp")'
+    tag:
+      - Deactivate
+      - NoMerge
+  - name: '(Un)?Tidy Arrows \((Buffed|Vanilla) Stats\)\.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'base game ESP' ]
+        condition: 'many("(Un)?Tidy Arrows \((Buffed|Vanilla) Stats\)\.esp")'
+  - name: 'Tidy Arrows \((Buffed|Vanilla) Stats\)( \(SI\))?\.esp'
+    tag: [ Names ]
+  - name: '(Un)?Tidy Arrows \(Buffed Stats\)( \(SI\))?\.esp'
+    tag: [ Stats ]
+  - name: '(Un)?Tidy Arrows \((Buffed|Vanilla) Stats\) \(SI\)\.esp'
+    req: [ 'DLCShiveringIsles.esp' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Shivering Isles ESP' ]
+        condition: 'many("(Un)?Tidy Arrows \((Buffed|Vanilla) Stats\) \(SI\)\.esp")'
+  - name: 'Tidy Arrows (Buffed Stats).esp'
+    clean:
+      - crc: 0x0EC6B0F1
+        util: 'TES4Edit v4.0.4b'
+  - name: 'Tidy Arrows (Buffed Stats) (SI).esp'
+    clean:
+      - crc: 0x07D7C947
+        util: 'TES4Edit v4.0.4b'
+  - name: 'Tidy Arrows (Vanilla Stats).esp'
+    clean:
+      - crc: 0xD51345D2
+        util: 'TES4Edit v4.0.4b'
+  - name: 'Tidy Arrows (Vanilla Stats) (SI).esp'
+    clean:
+      - crc: 0xD7A63D0D
+        util: 'TES4Edit v4.0.4b'
+  - name: 'Untidy Arrows (Buffed Stats).esp'
+    clean:
+      - crc: 0xE1ECA6BC
+        util: 'TES4Edit v4.0.4b'
+  - name: 'Untidy Arrows (Buffed Stats) (SI).esp'
+    clean:
+      - crc: 0xE22AF787
+        util: 'TES4Edit v4.0.4b'
+
   - name: 'toothman''s funny loadscreens.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/19544/' ]
     tag:
@@ -12757,57 +12808,6 @@ plugins:
         crc: 0x8707A205
         util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 8
-
-  - name: '(Un)?Tidy Arrows \(.* Stats\).*\.esp'
-    url:
-      - link: 'https://www.nexusmods.com/oblivion/mods/45547/'
-        name: 'TIBs Tidy Arrows - Archery Organized and Updated'
-    msg:
-      - <<: *patchIncluded
-        subs: [ 'Shivering Isles' ]
-        condition: 'active("DLCShiveringIsles.esp") and not file("(Un)?Tidy Arrows \(.* Stats\) \(SI\)\.esp")'
-    tag:
-      - Deactivate
-      - NoMerge
-  - name: '(Un)?Tidy Arrows \(.* Stats\)\.esp'
-    msg:
-      - <<: *useOnlyOneX
-        subs: [ 'base game ESP' ]
-        condition: 'many("(Un)?Tidy Arrows \(.* Stats\)\.esp")'
-  - name: 'Tidy Arrows \(.* Stats\).*\.esp'
-    tag: [ Names ]
-  - name: '(Un)?Tidy Arrows \(Buffed Stats\).*\.esp'
-    tag: [ Stats ]
-  - name: '(Un)?Tidy Arrows \(.* Stats\) \(SI\)\.esp'
-    req: [ 'DLCShiveringIsles.esp' ]
-    msg:
-      - <<: *useOnlyOneX
-        subs: [ 'Shivering Isles ESP' ]
-        condition: 'many("(Un)?Tidy Arrows \(.* Stats\) \(SI\)\.esp")'
-  - name: 'Tidy Arrows (Buffed Stats).esp'
-    clean:
-      - crc: 0x0EC6B0F1
-        util: 'TES4Edit v4.0.4b'
-  - name: 'Tidy Arrows (Buffed Stats) (SI).esp'
-    clean:
-      - crc: 0x07D7C947
-        util: 'TES4Edit v4.0.4b'
-  - name: 'Tidy Arrows (Vanilla Stats).esp'
-    clean:
-      - crc: 0xD51345D2
-        util: 'TES4Edit v4.0.4b'
-  - name: 'Tidy Arrows (Vanilla Stats) (SI).esp'
-    clean:
-      - crc: 0xD7A63D0D
-        util: 'TES4Edit v4.0.4b'
-  - name: 'Untidy Arrows (Buffed Stats).esp'
-    clean:
-      - crc: 0xE1ECA6BC
-        util: 'TES4Edit v4.0.4b'
-  - name: 'Untidy Arrows (Buffed Stats) (SI).esp'
-    clean:
-      - crc: 0xE22AF787
-        util: 'TES4Edit v4.0.4b'
 
   - name: 'ToiletMod.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/42472/' ]
