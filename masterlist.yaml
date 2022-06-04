@@ -9584,10 +9584,13 @@ plugins:
       - crc: 0x7118824A
         util: 'TES4Edit v4.0.4'
 
-  - name: 'Alternative Beginnings.esp'
+  - name: 'Alternative Beginnings( - Kvatch Intact)?\.esp'
     url:
-      - 'https://www.afkmods.com/index.php?/files/file/261-alternative-beginnings/'
-      - 'https://tesalliance.org/forums/index.php?/files/file/785-alternative-beginnings/'
+      - link: 'https://www.afkmods.com/index.php?/files/file/261-alternative-beginnings/'
+        name: 'Alternative Beginnings (AFK Mods)'
+      - link: 'https://tesalliance.org/forums/index.php?/files/file/785-alternative-beginnings/'
+        name: 'Alternative Beginnings (TES Alliance)'
+  - name: 'Alternative Beginnings.esp'
     after:
       - 'Ascension - Push''s Tweaks.esp'
       - 'No Starting Map Markers.esp'
@@ -9597,10 +9600,19 @@ plugins:
       - 'AltStart.esp'
       - 'AltStartwChangedMessages.esp'
       - 'ShiveringIslesStart.esp'
-    msg: [ *versionXofYorGreaterRequiredOBSEv20 ]
+    msg:
+      - <<: *patchIncluded
+        subs: [ 'Kvatch Rebuilt' ]
+        condition: 'active("Kvatch Rebuilt.esp") and not active("Alternative Beginnings - Kvatch Intact.esp")'
+      - *versionXofYorGreaterRequiredOBSEv20
     clean:
       - crc: 0xA08B7C20
-        util: 'TES4Edit v4.0.3h (Hotfix 1)'
+        util: 'TES4Edit v4.0.4b'
+  - name: 'Alternative Beginnings - Kvatch Intact.esp'
+    tag: [ C.Name ]
+    clean:
+      - crc: 0x4E27733F
+        util: 'TES4Edit v4.0.4b'
 
   - name: 'Alternative Start by Robert Evrae.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/11495/' ]
