@@ -1892,6 +1892,18 @@ plugins:
         util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 7
 
+  - name: '\[GFX\]_Initial_Glow-(all|creatures|self)\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/5138/'
+        name: 'Initial Glow'
+    msg:
+      - <<: *obsolete
+        subs: [ '[Initial Glow Redux](https://www.nexusmods.com/oblivion/mods/46961/)' ]
+    tag:
+      - Deactivate
+      - Graphics
+      - NoMerge
+
   - name: 'GodStatues( KOTN Edition)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/20001/' ]
     msg:
@@ -30737,11 +30749,6 @@ plugins:
             text: 'Possible to use with ''Syc_LongerDaysShorterNights.esp'''
           - lang: de
             text: 'Möglich dies mit ''Syc_LongerDaysShorterNights.esp'' zu nutzen'
-  - name: '[GFX]_Initial_Glow-(all|creatures|self)\.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/5138/' ]
-    tag:
-      - Graphics
-      - NoMerge
   - name: 'Chameleon-NoRefraction.esp'
     msg:
       - <<: *useBashTweakInstead
