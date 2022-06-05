@@ -12666,7 +12666,12 @@ plugins:
         udr: 2
 
   - name: 'SeptimNotGold.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/48571/' ]
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/48571/'
+        name: 'Septims not Gold'
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Names -> Rename Gold' ]
     tag:
       - Deactivate
       - Names
