@@ -4530,6 +4530,22 @@ plugins:
         subs: [ 'Better Looking Wood Elves ESP' ]
         condition: 'many("Better Looking Wood Elves (Vanilla|Vanilla Black Eyes|Beautiful People 2ch|COBL)\.esp")'
 
+  - name: 'Cliff''s Daggerfall Uriel Septim and Ocato.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/20651/'
+        name: 'Daggerfallesque Uriel Septim and Ocato'
+    tag:
+      - Invent.Add
+      - NPC.Eyes
+      - NPC.FaceGen
+      - NPC.Hair
+      - R.Hair
+    dirty:
+      - <<: *quickClean
+        crc: 0x18F877C5
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 4
+
   - name: 'Colourwheels Sexy Imperial Legion.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/24436/' ]
     tag:
@@ -27136,10 +27152,6 @@ plugins:
   - name: 'Cliff''s MWStyleEnchantingSpellmaking - With Guild Requirements.esp'
     inc: [ 'Cliff''s MWStyleEnchantingSpellmaking - No Guild Requirements.esp' ]
 
-  - name: 'Cliff''s Daggerfall Uriel Septim and Ocato.esp'
-    tag:
-      - NoMerge
-      - NpcFaces
   - name: 'Coffinbag''s Better Potions.esp'
     tag: [ Graphics ]
   - name: 'CompanionHorseSupport.esp'
