@@ -6690,6 +6690,15 @@ plugins:
       - crc: 0xFFA02D0D
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
 
+  - name: 'Maskar''s Oblivion Overhaul.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/42780/'
+        name: 'Maskar''s Oblivion Overhaul'
+    group: *lateChangesGroup
+    req: [ 'DLCShiveringIsles.esp' ]
+    msg: [ *versionXofYorGreaterRequiredOBSEv21 ]
+    # doNotClean
+
   - name: '(MercerIngredients.*|(Alive Waters|SoC) Ingredient(s)? Patch)\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/27610/'
@@ -31030,12 +31039,6 @@ plugins:
   - name: 'Ahtata Arquamer spike4hair.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/20338' ]
     after: [ 'Bashed Patch, 0.esp' ]  # The default filename for a Bashed Patch.
-
-  - name: 'Maskar''s Oblivion Overhaul.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/42780' ]
-    group: *lateChangesGroup
-    after: [ 'Bashed Patch, 0.esp' ]  # The default filename for a Bashed Patch.
-    msg: [ *versionXofYorGreaterRequiredOBSEv21 ]
 
   - name: 'Vanilla Weapon Stat Override( - SI)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/39914' ]
