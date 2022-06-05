@@ -14732,12 +14732,13 @@ plugins:
         itm: 26
         udr: 712
 
-  - name: 'Golden Perch Inn.esp'
+  - name: 'Golden Perch Inn( - AN Patch)?\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/38101/'
         name: 'Golden Perch Inn'
       - link: 'https://www.nexusmods.com/oblivion/mods/45701/'
         name: 'Golden Perch Inn Modified'
+  - name: 'Golden Perch Inn.esp'
     req:
       - name: 'DLCShiveringIsles.esp'
         condition: 'not version("Golden Perch Inn.esp", "1.0-LessProfit", >=)'
@@ -14756,6 +14757,17 @@ plugins:
       - crc: 0x94AF6755
         util: 'TES4Edit v4.0.4b'
       - crc: 0x24921B33
+        util: 'TES4Edit v4.0.4b'
+  - name: 'Golden Perch Inn - AN Patch.esp'
+    clean:
+      - crc: 0x7A151FFF
+        util: 'TES4Edit v4.0.4b'
+  - name: 'Harvest [Flora] - Golden Perch Inn.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/45701/'
+        name: 'Golden Perch Inn Modified'
+    clean:
+      - crc: 0x54EBB372
         util: 'TES4Edit v4.0.4b'
 
   - name: 'HauntedHouse.esp'
