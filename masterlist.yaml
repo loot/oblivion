@@ -2520,6 +2520,21 @@ plugins:
         util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 4
 
+  - name: 'Artifacts Redone.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/49277/'
+        name: 'Artifacts Redone'
+    after:
+      - 'EVE_StockEquipmentReplacer.esp'
+      - 'EVE_StockEquipmentReplacer4FCOM.esp'
+      - 'EVE_StockEquipmentReplacer4MMM.esp'
+      - 'EVE_StockEquipmentReplacer for OOO.esp'
+    req: [ 'DLCShiveringIsles.esp' ]
+    tag: [ NoMerge ]
+    clean:
+      - crc: 0x1060FAFE
+        util: 'TES4Edit v4.0.4b'
+
   - name: 'Badass Female Madness Boots.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/48279/' ]
     req: [ 'DLCShiveringIsles.esp' ]
