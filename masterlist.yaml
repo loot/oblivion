@@ -5626,6 +5626,22 @@ plugins:
         util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 3
 
+  - name: 'RandomRoadEncounters(ShiveringIsles)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/49942/'
+        name: 'Random Road Encounters'
+  - name: 'RandomRoadEncounters.esp'
+    msg:
+      - <<: *wildEdits
+        subs: [ 'Remove **0001FCB2**, **0001FCB3**, & **0000AB92** from **RandomRoadEncounters.esp**.' ]
+        condition: 'checksum("RandomRoadEncounters.esp", E9367F25)'
+    tag: [ Relations.Add ]
+  - name: 'RandomRoadEncountersShiveringIsles.esp'
+    req: [ 'DLCShiveringIsles.esp' ]
+    clean:
+      - crc: 0x1EE769F8
+        util: 'TES4Edit v4.0.4b'
+
   - name: 'rebornaylieds.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/20121/'
