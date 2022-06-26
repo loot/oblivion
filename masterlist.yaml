@@ -3804,6 +3804,34 @@ plugins:
       - crc: 0xC3347DD4
         util: 'TES4Edit v4.0.4b'
 
+  - name: 'ZUPotionsOverhaul(_MultipleUsePills|OOO|Vanilla)\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/49086/'
+        name: 'Potion Overhaul'
+    req: [ 'DLCShiveringIsles.esp' ]
+    tag:
+      - Graphics
+      - Names
+      - Stats
+  - name: 'ZUPotionsOverhaul_MultipleUsePills.esp'
+    clean:
+      - crc: 0xF78F554B
+        util: 'TES4Edit v4.0.4b'
+  - name: 'ZUPotionsOverhaul(OOO|Vanilla)\.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Potion Overhaul OOO or Vanilla ESP' ]
+        condition: 'many("ZUPotionsOverhaul(OOO|Vanilla)\.esp")'
+  - name: 'ZUPotionsOverhaulOOO.esp'
+    clean:
+      - crc: 0x945FA551
+        util: 'TES4Edit v4.0.4b'
+  - name: 'ZUPotionsOverhaulVanilla.esp'
+    msg: [ *useVersionOOO ]
+    clean:
+      - crc: 0xA3E59A21
+        util: 'TES4Edit v4.0.4b'
+
 ###### AudioVisual - Sounds & Music ######
   - name: 'Agar(More)?VariedSpell(Effects|Sounds_SupremeMagicka)\.esp'
     url:
