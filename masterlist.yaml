@@ -2846,6 +2846,9 @@ plugins:
         subs: [ 'Artifacts' ]
         condition: 'active("Artifacts.esm") and not file("ArtifactsFemaleArmor.esp")'
       - <<: *patchProvided
+        subs: [ 'Artifacts Remastered' ]
+        condition: 'active("Artifacts_Remastered.esm") and not file("ArtifactsFemaleArmor.esp")'
+      - <<: *patchProvided
         subs: [ 'Francesco''s Optional New Items Add-On' ]
         condition: 'active("Francesco''s Optional New Items Add-On.esm") and not file("Fransfemale.esp")'
       - <<: *useOnlyOneX
@@ -2937,6 +2940,12 @@ plugins:
       - crc: 0x13C12334
         util: 'TES4Edit v4.0.4b'
   - name: 'ArtifactsFemaleArmor.esp'
+    msg:
+      - <<: *masterReassign
+        subs:
+          - 'Artifacts.esm'
+          - 'Artifacts_Remastered.esm'
+        condition: 'active("Artifacts_Remastered.esm") and checksum("ArtifactsFemaleArmor.esp", ABCCD7AE)'
     tag:
       - Deactivate
       - Graphics
