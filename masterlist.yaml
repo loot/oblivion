@@ -11977,6 +11977,28 @@ plugins:
       - crc: 0x5469EEA9
         util: 'TES4Edit v4.0.4b'
 
+  - name: 'Artifacts_Remastered\.es[mp]'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/52084/'
+        name: 'Artifacts Remastered'
+  - name: 'Artifacts_Remastered.esm'
+    inc: [ 'Artifacts.esm' ]
+    clean:
+      - crc: 0xF9ED03B1
+        util: 'TES4Edit v4.0.4b'
+  - name: 'Artifacts_Remastered.esp'
+    tag:
+      - Actors.ACBS
+      - C.Light
+      - Invent.Add
+      - Invent.Remove
+      - Names
+      - NPC.Hair
+      - Relations.Add
+    clean:
+      - crc: 0x63EBDC37
+        util: 'TES4Edit v4.0.4b'
+
   - name: 'Automagic Bags.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22414/' ]
     req: [ *OBSE ]
