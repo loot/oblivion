@@ -16474,6 +16474,24 @@ plugins:
       - crc: 0x201921B6
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
 
+  - name: 'GhettoWaterfront(Light)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/49946/'
+        name: 'Ghetto Waterfront'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Ghetto Waterfront ESP' ]
+        condition: 'many("GhettoWaterfront(Light)?\.esp")'
+    tag: [ Relations.Add ]
+  - name: 'GhettoWaterfront.esp'
+    clean:
+      - crc: 0x02576AFC
+        util: 'TES4Edit v4.0.4b'
+  - name: 'GhettoWaterfrontLight.esp'
+    clean:
+      - crc: 0xA373CC78
+        util: 'TES4Edit v4.0.4b'
+
   - name: 'hackdirtabyss.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/13952/' ]
     dirty:
