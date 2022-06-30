@@ -4717,6 +4717,8 @@ plugins:
       - 'MaleBodyReplacerV3.esp'
       - 'MaleBodyReplacerV4.esp'
       - 'MaleBodyReplacerV5.esp'
+      - name: 'Trap.esp'
+        condition: 'active("Bashed Patch.*\.esp")'
     req:
       - <<: *Blockhead
         condition: 'version("Oblivion_Character_Overhaul.esp", "2.0", >=)'
@@ -7877,6 +7879,21 @@ plugins:
     msg:
       - <<: *renameFile
         subs: [ '**TheTangMo.esp**' ]
+
+  - name: 'Trap.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/26216/'
+        name: 'TRAP'
+    msg: [ *versionXofYorGreaterRequiredOBSEv20 ]
+    tag:
+      - Actors.ACBS
+      - Actors.Spells
+      - Actors.Stats
+      - Names
+      - SpellStats
+    clean:
+      - crc: 0x29FCD775
+        util: 'TES4Edit v4.0.4b'
 
   - name: 'Wiedergaenger Race.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/39801/' ]
@@ -30948,15 +30965,6 @@ plugins:
         condition: 'file("Mighty Magick - (Core|Races|Settings|Skills|Spells and Creatures).esp")'
     tag: [ Sound ]
 
-  - name: 'Trap.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/26216' ]
-    tag:
-      - R.Attributes-F
-      - R.Attributes-M
-      - R.ChangeSpells
-      - R.Description
-      - R.Relations
-      - R.Skills
   - name: 'Birthsigns Expanded.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/12149' ]
     after:
