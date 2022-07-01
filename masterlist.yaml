@@ -13031,6 +13031,10 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/7341/'
         name: 'Sigil Stones Expanded and Extended'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Sigil Stones Expanded and Extended ESP' ]
+        condition: 'many("SSEE(-MM|-OOO)?\.esp")'
 
   - name: 'Stav_ImperialDragon.esp'
     url:
