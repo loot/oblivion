@@ -13027,6 +13027,15 @@ plugins:
       - crc: 0x54853106
         util: 'TES4Edit v4.0.4'
 
+  - name: 'SSEE(-MM|-OOO)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/7341/'
+        name: 'Sigil Stones Expanded and Extended'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Sigil Stones Expanded and Extended ESP' ]
+        condition: 'many("SSEE(-MM|-OOO)?\.esp")'
+
   - name: 'Stav_ImperialDragon.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/46835/'
