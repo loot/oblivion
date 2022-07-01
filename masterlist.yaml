@@ -8409,6 +8409,15 @@ plugins:
       - crc: 0x4A86FB0D
         util: 'TES4Edit v4.0.4b'
 
+  - name: 'SigilStoneSelector(-SSEE(-MM|-OOO)?)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/17413/'
+        name: 'Sigil Stone Selector'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Sigil Stone Selector ESP' ]
+        condition: 'many("SigilStoneSelector(-SSEE(-MM|-OOO)?)?\.esp")'
+
   - name: 'VanillaMerchantsChestsRevealed.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/51550/'
