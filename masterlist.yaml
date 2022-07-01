@@ -8413,6 +8413,10 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/17413/'
         name: 'Sigil Stone Selector'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Sigil Stone Selector ESP' ]
+        condition: 'many("SigilStoneSelector(-SSEE(-MM|-OOO)?)?\.esp")'
 
   - name: 'VanillaMerchantsChestsRevealed.esp'
     url:
