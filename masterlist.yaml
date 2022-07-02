@@ -11239,6 +11239,15 @@ plugins:
     msg:
       - <<: *sortMasters
         condition: 'checksum("SM Plugin Refurbish Merged.esp", 0DE2D83B) or checksum("SM Plugin Refurbish Merged.esp", 80603180)'
+    dirty:
+      - <<: *quickClean
+        crc: 0x0DE2D83B
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 7
+      - <<: *quickClean
+        crc: 0x0DE42256
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 7
   - name: 'SM Plugin Refurbish - (Battlehorn|Frostcrag|HorseArmor|Knights|MehrunesRazor|Orrery|SI|ThievesDen|VileLair)\.esp'
     inc: [ 'SM Plugin Refurbish Lite.esp' ]
     msg:
