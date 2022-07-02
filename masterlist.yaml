@@ -4305,6 +4305,10 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/49886/'
         name: 'Torch More Brighter'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Torch More Brighter ESP' ]
+        condition: 'many("TorchMoreBrighter(_Bright)?(_Wide)?(_White)?\.esp")'
 
 ###### Character Appearance - Body, face & hair ######
   - name: 'BAF - Beast Argonians Froever.*\.esp'
