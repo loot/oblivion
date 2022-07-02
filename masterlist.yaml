@@ -5059,6 +5059,10 @@ plugins:
       - NoMerge
   - name: '1em_Vilja_OCOV2(_By_jet4571)?\.esp'
     req: [ 'Oblivion_Character_Overhaul.esp' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'OCO Vilja by Jet4571 ESP' ]
+        condition: 'many("1em_Vilja_OCOV2(_By_jet4571)?\.esp")'
   - name: '1em_Vilja (OOO|MMM) FCOM Fix\.esp'
     msg:
       - <<: *useOnlyOneX
