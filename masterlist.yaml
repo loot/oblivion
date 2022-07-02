@@ -11231,14 +11231,29 @@ plugins:
     msg:
       - <<: *sortMasters
         condition: 'checksum("SM Plugin Refurbish Lite OBSE.esp", 8E025A00)'
-  # Legacy Files #
-  - name: 'SM Plugin Refurbish(Merged).esp'
+  # SM DLC Plugin Refurbish - Legacy Files #
+  - name: 'SM Plugin Refurbish Merged.esp'
     after: [ 'Knights - Unofficial Patch.esp' ]
-    inc: [ 'SM Plugin Refurbish Lite.esp' ]
     req: [ 'DLCShiveringIsles.esp' ]
+    inc: [ 'SM Plugin Refurbish Lite.esp' ]
     msg:
       - <<: *sortMasters
-        condition: 'checksum("SM Plugin Refurbish(Merged).esp", 0DE2D83B)'
+        condition: 'checksum("SM Plugin Refurbish Merged.esp", 0DE2D83B) or checksum("SM Plugin Refurbish Merged.esp", 80603180)'
+    dirty:
+      - <<: *quickClean
+        crc: 0x0DE2D83B
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 7
+      - <<: *quickClean
+        crc: 0x0DE42256
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 7
+  - name: 'SM Plugin Refurbish - (Battlehorn|Frostcrag|HorseArmor|Knights|MehrunesRazor|Orrery|SI|ThievesDen|VileLair)\.esp'
+    inc: [ 'SM Plugin Refurbish Lite.esp' ]
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**SM Plugin Refurbish Merged.esp**' ]
+        condition: 'file("SM Plugin Refurbish Merged.esp")'
   - name: 'SM Plugin Refurbish - SI.esp'
     after: [ 'Unofficial Shivering Isles Patch.esp' ]
     req: [ 'DLCShiveringIsles.esp' ]
@@ -11259,13 +11274,10 @@ plugins:
       - 'DLCThievesDen - Unofficial Patch.esp'
       - 'DLCThievesDen - Unofficial Patch - SSSB.esp'
   - name: 'SM Plugin Refurbish - VileLair.esp'
-    after: [ 'DLCOrrery - Unofficial Patch.esp' ]
-  - name: 'SM Plugin Refurbish - (Battlehorn|Frostcrag|HorseArmor|Knights|MehrunesRazor|Orrery|SI|ThievesDen|VileLair)\.esp'
-    inc: [ 'SM Plugin Refurbish Lite.esp' ]
-    msg:
-      - <<: *alreadyInX
-        subs: [ 'SM Plugin Refurbish(Merged).esp' ]
-        condition: 'file("SM Plugin Refurbish(Merged).esp")'
+    after: [ 'DLCVileLair - Unofficial Patch.esp' ]
+  # SM DLC Plugin Refurbish - Obsolete Files #
+  - name: 'SM Plugin Refurbish(Merged).esp'
+    msg: [ *obsolete ]
 
   - name: 'Tales of Cyrodiil.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/48792/' ]
