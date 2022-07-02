@@ -11243,8 +11243,8 @@ plugins:
     inc: [ 'SM Plugin Refurbish Lite.esp' ]
     msg:
       - <<: *alreadyInX
-        subs: [ 'SM Plugin Refurbish(Merged).esp' ]
-        condition: 'file("SM Plugin Refurbish(Merged).esp")'
+        subs: [ '**SM Plugin Refurbish Merged.esp**' ]
+        condition: 'file("SM Plugin Refurbish Merged.esp")'
   - name: 'SM Plugin Refurbish - SI.esp'
     after: [ 'Unofficial Shivering Isles Patch.esp' ]
     req: [ 'DLCShiveringIsles.esp' ]
