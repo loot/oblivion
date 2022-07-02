@@ -5018,16 +5018,6 @@ plugins:
     clean:
       - crc: 0x7D9D9B53
         util: 'TES4Edit v4.0.3'
-  - name: '1em_Vilja MMM Fix.esp'
-    tag:
-      - Factions
-      - NoMerge
-  - name: '1em_Vilja (OOO|MMM) FCOM Fix\.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/28977/' ]
-    msg:
-      - <<: *useOnlyOneX
-        subs: [ 'FCOM Fix ESP' ]
-        condition: 'many("1em_Vilja (OOO|MMM) FCOM Fix\.esp")'
   - name: '1em_Vilja_as_(Argonian|(Blood|Chocolate|Moonshadow|Nec_Mystic_High)_Elf(_MU|_Stranger|-Remake)?|High_Imperial|Tabaxi|Vampire(_Reloaded)?|Custom| Synx)(_by_(Xtudo|4GVN|Gonzoguns))?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/28977' ]
     msg:
@@ -5044,12 +5034,12 @@ plugins:
       - <<: *requiresResources
         subs: [ '[DK High Imperials](http://www.nexusmods.com/oblivion/mods/33044/)' ]
         condition: 'not file("Meshes/Characters/DKImperial/Eyes/Ren_Eye01L.nif") or not file("Meshes/Characters/DKImperial/Coolhairs/Coolfhair41/coolfhair41.nif") or checksum("Meshes/Characters/DKImperial/Head/H06_Fem3.tri", 580CE1F5)'
-  - name: '1em_Vilja_?(cool|Ren)(hair)?\d\d?g?\.esp'
+  - name: '1em_Vilja_babehair02.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/28977' ]
-    msg:
-      - <<: *useOnlyOneX
-        subs: [ 'Companion Vilja Hairstyle' ]
-        condition: 'many("1em_Vilja_?(cool|Ren)(hair)?\d\d?g?\.esp")'
+    tag: [ Hair ]
+  - name: '1em_Vilja_babehair03.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/28977' ]
+    tag: [ Hair ]
   - name: '1em_Vilja_Bruse_as_Clydesdale_horse_by_Xtudo.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/28977' ]
     tag: [ Graphics ]
@@ -5059,15 +5049,25 @@ plugins:
   - name: '1em_Vilja_Bruse_Pony.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/28977' ]
     tag: [ Graphics ]
+  - name: '1em_Vilja_?(cool|Ren)(hair)?\d\d?g?\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/28977' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Companion Vilja Hairstyle' ]
+        condition: 'many("1em_Vilja_?(cool|Ren)(hair)?\d\d?g?\.esp")'
   - name: '1em_Vilja_corean14.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/28977' ]
     tag: [ Hair ]
-  - name: '1em_Vilja_babehair02.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/28977' ]
-    tag: [ Hair ]
-  - name: '1em_Vilja_babehair03.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/28977' ]
-    tag: [ Hair ]
+  - name: '1em_Vilja MMM Fix.esp'
+    tag:
+      - Factions
+      - NoMerge
+  - name: '1em_Vilja (OOO|MMM) FCOM Fix\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/28977/' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'FCOM Fix ESP' ]
+        condition: 'many("1em_Vilja (OOO|MMM) FCOM Fix\.esp")'
   - name: 'ViljainLakeside.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/28977' ]
     clean:
