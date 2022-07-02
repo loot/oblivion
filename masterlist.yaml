@@ -15830,6 +15830,10 @@ plugins:
       - link: 'https://www.nexusmods.com/oblivion/mods/51169/'
         name: 'SI Unmarked Locations'
     req: [ 'DLCShiveringIsles.esp' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'SI Unmarked Locations ESP' ]
+        condition: 'many("SI Unmarked Locations with(out)? markers\.esp")'
   - name: 'SI Unmarked Locations with markers.esp'
   - name: 'SI Unmarked Locations without markers.esp'
 
