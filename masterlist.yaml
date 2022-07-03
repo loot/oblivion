@@ -9091,6 +9091,26 @@ plugins:
         udr: 1
 
 ###### Gameplay - NPC Balance & Distribution ######
+  - name: 'Battlemages Revised.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/48755/'
+        name: 'Battlemages Revised'
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'NPC Overhaul' ]
+        condition: 'active("NPC Overhaul.esp")'
+    tag:
+      - Actors.CombatStyle
+      - Actors.Spells
+      - Delev
+      - Invent.Add
+      - Invent.Remove
+      - NPC.Class
+      - Text
+    clean:
+      - crc: 0x23959D0C
+        util: 'TES4Edit v4.0.4b'
+
   - name: 'Casual Conjurers.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/45061/' ]
     tag:
