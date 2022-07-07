@@ -16596,11 +16596,19 @@ plugins:
       - link: 'https://www.nexusmods.com/oblivion/mods/30771/'
         name: 'Clintmichs Beautiful Market District MakeOver'
   - name: 'Clintmichs Beautiful Market District MakeOver v1.4.esp'
+    msg:
+      - <<: *wildEdits
+        subs: [ 'Remove **0002C10D**, **0005A758**, & **000CBD2F** from **Clintmichs Beautiful Market District MakeOver v1.4.esp**.' ]
+        condition: 'checksum("Clintmichs Beautiful Market District MakeOver v1.4.esp", E18A6360) or checksum("Clintmichs Beautiful Market District MakeOver v1.4.esp", E95F5950)'
   - name: 'Clintmichs Beautiful Market District MakeOver Natural Enviornments Version.esp' # sic
     req:
       - name: 'Natural_Vegetation_by_Max_Tael.esp'
         display: '[Natural Environments **Natural Vegetation**](https://www.nexusmods.com/oblivion/mods/2536/)'
         condition: 'not active("Natural_Vegetation_200%_by_Max_Tael.esp")'
+    msg:
+      - <<: *wildEdits
+        subs: [ 'Remove **0002C10D**, **0005A758**, & **000CBD2F** from **Clintmichs Beautiful Market District MakeOver Natural Enviornments Version.esp**.' ]
+        condition: 'checksum("Clintmichs Beautiful Market District MakeOver Natural Enviornments Version.esp", 4DC1F861) or checksum("Clintmichs Beautiful Market District MakeOver Natural Enviornments Version.esp", 378FD562)'
 
   - name: 'Colourwheels Sexy Arena Revised HGEC.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/41609/' ]
