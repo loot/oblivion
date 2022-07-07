@@ -5639,6 +5639,10 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/35833/'
         name: 'CM Valtierro - male romance companion'
+    msg:
+      - <<: *requiresX
+        subs: [ 'CM Valtierro resources' ]
+        condition: 'not file("Meshes/Characters/Valtierro") or not file("Textures/Characters/Valtierro") or not file("Textures/Menus/Icons/Valtierro")'
   - name: 'Valtierro_B1.esp'
     msg:
       - <<: *alsoUseSilentVoice
