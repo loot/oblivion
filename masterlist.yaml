@@ -16600,6 +16600,10 @@ plugins:
       - <<: *wildEdits
         subs: [ 'Remove **0002C10D**, **0005A758**, & **000CBD2F** from **Clintmichs Beautiful Market District MakeOver v1.4.esp**.' ]
         condition: 'checksum("Clintmichs Beautiful Market District MakeOver v1.4.esp", E18A6360) or checksum("Clintmichs Beautiful Market District MakeOver v1.4.esp", E95F5950)'
+      - <<: *useVersion
+        type: warn
+        subs: [ 'Natural Environments' ]
+        condition: 'active("Natural_Vegetation(_200%)?_by_Max_Tael\.esp")'
   - name: 'Clintmichs Beautiful Market District MakeOver Natural Enviornments Version.esp' # sic
     req:
       - name: 'Natural_Vegetation_by_Max_Tael.esp'
