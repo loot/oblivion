@@ -5650,14 +5650,29 @@ plugins:
     msg:
       - <<: *alsoUseSilentVoice
         condition: 'not file("OBSE/Plugins/Elys_USV.dll") and not file("OBSE/Plugins/voicefile_redirector.dll") and not file("Sound/Voice/Valtierro_B1.esp")'
+    dirty:
+      - <<: *quickClean
+        crc: 0xE668AC07
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 18
   - name: 'Valtierro_B1-NoCC.esp'
     msg:
       - <<: *alsoUseSilentVoice
         condition: 'not file("OBSE/Plugins/Elys_USV.dll") and not file("OBSE/Plugins/voicefile_redirector.dll") and not file("Sound/Voice/Valtierro_B1-NoCC.esp")'
+    dirty:
+      - <<: *quickClean
+        crc: 0xE08D810E
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 18
   - name: 'Valtierro_B1-NoCCRL.esp'
     msg:
       - <<: *alsoUseSilentVoice
         condition: 'not file("OBSE/Plugins/Elys_USV.dll") and not file("OBSE/Plugins/voicefile_redirector.dll") and not file("Sound/Voice/Valtierro_B1-NoCCRL.esp")'
+    dirty:
+      - <<: *quickClean
+        crc: 0x9AD92010
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 18
 
   - name: 'Viconia.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/15200' ]
