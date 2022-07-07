@@ -16591,6 +16591,49 @@ plugins:
         itm: 3
         udr: 246
 
+  - name: 'Clintmichs Beautiful Market District MakeOver (v1\.4|Natural Enviornments Version)\.esp' # sic
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/30771/'
+        name: 'Clintmichs Beautiful Market District MakeOver'
+  - name: 'Clintmichs Beautiful Market District MakeOver v1.4.esp'
+    msg:
+      - <<: *wildEdits
+        subs: [ 'Remove **0002C10D**, **0005A758**, & **000CBD2F** from **Clintmichs Beautiful Market District MakeOver v1.4.esp**.' ]
+        condition: 'checksum("Clintmichs Beautiful Market District MakeOver v1.4.esp", E18A6360) or checksum("Clintmichs Beautiful Market District MakeOver v1.4.esp", E95F5950)'
+      - <<: *useVersion
+        type: warn
+        subs: [ 'Natural Environments' ]
+        condition: 'active("Natural_Vegetation(_200%)?_by_Max_Tael\.esp")'
+    dirty:
+      - <<: *quickClean
+        crc: 0xE18A6360
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 35
+      - <<: *quickClean
+        crc: 0x0E3F0E44
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 35
+  - name: 'Clintmichs Beautiful Market District MakeOver Natural Enviornments Version.esp' # sic
+    req:
+      - name: 'Natural_Vegetation_by_Max_Tael.esp'
+        display: '[Natural Environments **Natural Vegetation**](https://www.nexusmods.com/oblivion/mods/2536/)'
+        condition: 'not active("Natural_Vegetation_200%_by_Max_Tael.esp")'
+    msg:
+      - <<: *wildEdits
+        subs: [ 'Remove **0002C10D**, **0005A758**, & **000CBD2F** from **Clintmichs Beautiful Market District MakeOver Natural Enviornments Version.esp**.' ]
+        condition: 'checksum("Clintmichs Beautiful Market District MakeOver Natural Enviornments Version.esp", 4DC1F861) or checksum("Clintmichs Beautiful Market District MakeOver Natural Enviornments Version.esp", 378FD562)'
+    dirty:
+      - <<: *quickClean
+        crc: 0x4DC1F861
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 38
+        udr: 1
+      - <<: *quickClean
+        crc: 0x4FFBFA0B
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 38
+        udr: 1
+
   - name: 'Colourwheels Sexy Arena Revised HGEC.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/41609/' ]
     tag:
