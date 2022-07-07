@@ -5640,8 +5640,17 @@ plugins:
       - link: 'https://www.nexusmods.com/oblivion/mods/35833/'
         name: 'CM Valtierro - male romance companion'
   - name: 'Valtierro_B1.esp'
+    msg:
+      - <<: *alsoUseSilentVoice
+        condition: 'not file("OBSE/Plugins/Elys_USV.dll") and not file("OBSE/Plugins/voicefile_redirector.dll") and not file("Sound/Voice/Valtierro_B1.esp")'
   - name: 'Valtierro_B1-NoCC.esp'
+    msg:
+      - <<: *alsoUseSilentVoice
+        condition: 'not file("OBSE/Plugins/Elys_USV.dll") and not file("OBSE/Plugins/voicefile_redirector.dll") and not file("Sound/Voice/Valtierro_B1-NoCC.esp")'
   - name: 'Valtierro_B1-NoCCRL.esp'
+    msg:
+      - <<: *alsoUseSilentVoice
+        condition: 'not file("OBSE/Plugins/Elys_USV.dll") and not file("OBSE/Plugins/voicefile_redirector.dll") and not file("Sound/Voice/Valtierro_B1-NoCCRL.esp")'
 
   - name: 'Viconia.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/15200' ]
