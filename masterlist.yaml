@@ -5643,6 +5643,9 @@ plugins:
       - <<: *requiresX
         subs: [ 'CM Valtierro resources' ]
         condition: 'not file("Meshes/Characters/Valtierro") or not file("Textures/Characters/Valtierro") or not file("Textures/Menus/Icons/Valtierro")'
+      - <<: *useOnlyOneX
+        subs: [ 'CM Valtierro ESP' ]
+        condition: 'many("Valtierro_B1(-NoCC(RL)?)?\.esp")'
   - name: 'Valtierro_B1.esp'
     msg:
       - <<: *alsoUseSilentVoice
