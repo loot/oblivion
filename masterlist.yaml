@@ -17042,6 +17042,10 @@ plugins:
       - link: 'https://www.nexusmods.com/oblivion/mods/50001/'
         name: 'More Magical Arcane University'
     req: [ 'DLCShiveringIsles.esp' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'More Magical Arcane University ESP' ]
+        condition: 'many("More Magical Arcane University( -)?( No Tomes)?( Less)?\.esp")'
   - name: 'More Magical Arcane University.esp'
     msg:
       - <<: *corrupt
