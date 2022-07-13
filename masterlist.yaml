@@ -17037,6 +17037,35 @@ plugins:
         itm: 12
         udr: 1499
 
+  - name: 'More Magical Arcane University( -)?( No Tomes)?( Less)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/50001/'
+        name: 'More Magical Arcane University'
+    req: [ 'DLCShiveringIsles.esp' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'More Magical Arcane University ESP' ]
+        condition: 'many("More Magical Arcane University( -)?( No Tomes)?( Less)?\.esp")'
+  - name: 'More Magical Arcane University.esp'
+    msg:
+      - <<: *corrupt
+        condition: 'checksum("More Magical Arcane University.esp", 4073C9FE)'
+    clean:
+      - crc: 0x5633AC43
+        util: 'TES4Edit v4.0.4b'
+  - name: 'More Magical Arcane University - Less.esp'
+    clean:
+      - crc: 0xF425AF1A
+        util: 'TES4Edit v4.0.4b'
+  - name: 'More Magical Arcane University - No Tomes.esp'
+    msg:
+      - <<: *corrupt
+        condition: 'checksum("More Magical Arcane University - No Tomes.esp", 454A5ED9)'
+  - name: 'More Magical Arcane University - No Tomes Less.esp'
+    msg:
+      - <<: *corrupt
+        condition: 'checksum("More Magical Arcane University - No Tomes Less.esp", 3F597B0C)'
+
   - name: 'More Magical Mages Guilds Clean.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/49989/'
