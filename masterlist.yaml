@@ -12136,6 +12136,10 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/50379/'
         name: 'Paladinesque Gear'
+    msg:
+      - <<: *requiresResources
+        subs: [ 'Akito Paladinesque Gear v1.0' ]
+        condition: 'not file("meshes/Armor/Akito/Paladin Armor/cuirass.nif")'
 
   - name: 'altlegionarmourjchest.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/51716/' ]
