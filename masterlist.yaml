@@ -17043,9 +17043,18 @@ plugins:
         name: 'More Magical Arcane University'
     req: [ 'DLCShiveringIsles.esp' ]
   - name: 'More Magical Arcane University.esp'
+    msg:
+      - <<: *corrupt
+        condition: 'checksum("More Magical Arcane University.esp", 4073C9FE)'
   - name: 'More Magical Arcane University - Less.esp'
   - name: 'More Magical Arcane University - No Tomes.esp'
+    msg:
+      - <<: *corrupt
+        condition: 'checksum("More Magical Arcane University - No Tomes.esp", 454A5ED9)'
   - name: 'More Magical Arcane University - No Tomes Less.esp'
+    msg:
+      - <<: *corrupt
+        condition: 'checksum("More Magical Arcane University - No Tomes Less.esp", 3F597B0C)'
 
   - name: 'More Magical Mages Guilds Clean.esp'
     url:
