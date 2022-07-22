@@ -12907,6 +12907,16 @@ plugins:
         util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 2
 
+  - name: 'Mixxa77-Archmage-Armor.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/48499/'
+        name: 'Archmage Armor'
+    msg:
+      - <<: *wildEdits
+        subs: [ 'Remove **0005AFD5** from **Mixxa77-Archmage-Armor.esp**.' ]
+        condition: 'checksum("Mixxa77-Archmage-Armor.esp", 3DAE795F) or checksum("Mixxa77-Archmage-Armor.esp", 84DA006F)'
+    tag: [ Invent.Add ]
+
   - name: 'More_Vegetables.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/11459/' ]
     dirty:
