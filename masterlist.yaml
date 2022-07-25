@@ -18203,6 +18203,22 @@ plugins:
             text: 'This file is not required when using Wrye Bash''s Bashed Patch v309+.'
         condition: 'file("Bashed Patch.*\.esp")'
 
+  - name: 'OCOv2 - (Filter|MOO) Patch( for Mods)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/51379/'
+        name: 'OCOv2 - Filter Patch for Mods'
+  - name: 'OCOv2 - Filter Patch for Mods.esp'
+    group: *latePatchesGroup
+    msg:
+      - <<: *patchProvided
+        subs: [ 'Maskar''s Oblivion Overhaul' ]
+        condition: 'active("Maskar''s Oblivion Overhaul.esp") and not file("OCOv2 - MOO Patch.esp")'
+      - *requiresBashedPatch
+  - name: 'OCOv2 - MOO Patch.esp'
+    clean:
+      - crc: 0xDF15FFE7
+        util: 'TES4Edit v4.0.4b'
+
   - name: '.*(OotD|OotDPS)(_|-).*\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/45611/'
