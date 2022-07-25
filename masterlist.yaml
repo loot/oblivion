@@ -4988,6 +4988,10 @@ plugins:
         name: 'OCOv2 - Filter Patch for Mods'
   - name: 'OCOv2 - Filter Patch for Mods.esp'
     group: *latePatchesGroup
+    msg:
+      - <<: *patchProvided
+        subs: [ 'Maskar''s Oblivion Overhaul' ]
+        condition: 'active("Maskar''s Oblivion Overhaul.esp") and not file("OCOv2 - MOO Patch.esp")'
   - name: 'OCOv2 - MOO Patch.esp'
     clean:
       - crc: 0xDF15FFE7
