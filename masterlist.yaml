@@ -4641,7 +4641,7 @@ plugins:
       - crc: 0x7287565E
         util: 'TES4Edit v4.0.4'
 
-  - name: 'Beautiful_Women(_SI|_NiceOnly|_NotSoNice_Bonus|_DB_Addon|_Vampires(_50)?)\.esp'
+  - name: '(Beautiful_Women|Handsome_Gents)_((DB_)?Addon|NiceOnly|(NotSoNice_)?Bonus|SI|Vampires(_50)?)\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17189/' ]
     group: *underridesGroup
     tag:
@@ -4658,12 +4658,6 @@ plugins:
       - <<: *useOnlyOneX
         subs: [ 'Beautiful Women Vampires Addon' ]
         condition: 'many("Beautiful_Women_Vampires(_50)?\.esp(\.ghost)?")'
-  - name: 'Handsome_Gents(_Bonus|_SI|(_DB)?_Addon|_Vampires(_50)?)\.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/17189/' ]
-    tag:
-      - NPC.FaceGen
-      - NPC.Hair
-    group: *underridesGroup
   - name: 'Handsome_Gents_Vampires(_50)?\.esp'
     msg:
       - <<: *useOnlyOneX
