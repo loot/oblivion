@@ -6595,7 +6595,6 @@ plugins:
 
   - name: 'Ascension.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/50237/' ]
-    # DoNotClean - ITMs included to retain vanilla settings for other changes made by this file.
     req: [ 'DLCShiveringIsles.esp' ]
     after: [ 'Weapons Of Morrowind.esp' ]
     inc:
@@ -6620,6 +6619,7 @@ plugins:
       - Graphics
       - SpellStats
       - Text
+    # Do not clean - ITMs included to retain vanilla settings for other changes made by this file.
   - name: 'Ascension - (Creature Diversity|Weapons of Morrowind) Patch\.esp'
     tag:
       - Delev
