@@ -4647,17 +4647,17 @@ plugins:
     tag:
       - NPC.FaceGen
       - NPC.Hair
-  - name: 'Beautiful_Women_Vampires(_50)?\.esp'
-    msg:
-      - <<: *useOnlyOneX
-        subs: [ 'Beautiful Women Vampires Addon' ]
-        condition: 'many("Beautiful_Women_Vampires(_50)?\.esp(\.ghost)?")'
   - name: 'Beautiful_Women_NiceOnly.esp'
     dirty:
       - <<: *quickClean
         crc: 0x2C6E9200
         util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 10
+  - name: 'Beautiful_Women_Vampires(_50)?\.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Beautiful Women Vampires Addon' ]
+        condition: 'many("Beautiful_Women_Vampires(_50)?\.esp(\.ghost)?")'
   - name: 'Handsome_Gents(_Bonus|_SI|(_DB)?_Addon|_Vampires(_50)?)\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17189/' ]
     tag:
