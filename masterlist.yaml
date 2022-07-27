@@ -6594,8 +6594,9 @@ plugins:
         udr: 1
 
   - name: 'Ascension.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/50237/' ]
-    # DoNotClean - ITMs included to retain vanilla settings for other changes made by this file.
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/50237/'
+        name: 'Ascension - Immersive Vanilla ''Overhaul'''
     req: [ 'DLCShiveringIsles.esp' ]
     after: [ 'Weapons Of Morrowind.esp' ]
     inc:
@@ -6620,17 +6621,30 @@ plugins:
       - Graphics
       - SpellStats
       - Text
+    # Do not clean - ITMs included to retain vanilla settings for other changes made by this file.
   - name: 'Ascension - (Creature Diversity|Weapons of Morrowind) Patch\.esp'
     tag:
       - Delev
       - Relev
-  - name: '(Ascension - UOP Patch|Combat Groans and Taunts Disabled|Level Requires 15 Skill Increases|No Starting Map Markers)\.esp'
+  - name: 'Combat Groans and Taunts Disabled.esp'
     msg:
-      - <<: *alreadyInX
-        subs: [ 'Ascension - Push''s Tweaks.esp' ]
-        condition: 'active("Ascension - Push''s Tweaks.esp")'
+      - <<: *useBashTweakInstead
+        subs:
+          - |
+
+            - Tweak Settings -> Combat: Random Taunt Chance [0%],
+            - Tweak Settings -> Combat: Speak on Attack Chance [0%],
+            - Tweak Settings -> Combat: Speak on Hit Chance [0%],
+            - Tweak Settings -> Combat: Speak on Hit Threshold [100%], &
+            - Tweak Settings -> Combat: Speak on Power Attack Chance [0%]
+  - name: 'Level Requires 15 Skill Increases.esp'
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings -> Level Up: Skill Count [15]' ]
   - name: 'Level Requires 20 Skill Increases.esp'
-    after: [ 'Ascension - Push''s Tweaks.esp' ]
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings -> Level Up: Skill Count [20]' ]
 
   - name: 'Assassin Tripwires.esp'
     url:
