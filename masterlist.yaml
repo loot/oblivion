@@ -4191,6 +4191,43 @@ plugins:
         util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         udr: 464
 
+  - name: 'LightSpell(Blue|EvilRed|LiteBlue|Torch|White(Dimmer)?)\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/8497/'
+        name: 'Light Spell Recolor'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Light Spell Recolor ESP' ]
+        condition: 'many("LightSpell(Blue|EvilRed|LiteBlue|Torch|White(Dimmer)?)\.esp")'
+    tag:
+      - Deactivate
+      - Graphics
+      - NoMerge
+  - name: 'LightSpellBlue.esp'
+    clean:
+      - crc: 0x8B171A79
+        util: 'TES4Edit v4.0.4b'
+  - name: 'LightSpellEvilRed.esp'
+    clean:
+      - crc: 0xB470328D
+        util: 'TES4Edit v4.0.4b'
+  - name: 'LightSpellLiteBlue.esp'
+    clean:
+      - crc: 0x7E06522F
+        util: 'TES4Edit v4.0.4b'
+  - name: 'LightSpellTorch.esp'
+    clean:
+      - crc: 0xC4C70199
+        util: 'TES4Edit v4.0.4b'
+  - name: 'LightSpellWhite.esp'
+    clean:
+      - crc: 0x18466CBC
+        util: 'TES4Edit v4.0.4b'
+  - name: 'LightSpellWhiteDimmer.esp'
+    clean:
+      - crc: 0x4F1C1CA9
+        util: 'TES4Edit v4.0.4b'
+
   - name: 'NAO(-Brighter Nights)?\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/50923/'
