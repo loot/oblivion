@@ -6627,8 +6627,24 @@ plugins:
       - Delev
       - Relev
   - name: 'Combat Groans and Taunts Disabled.esp'
+    msg:
+      - <<: *useBashTweakInstead
+        subs:
+          - |
+
+            - Tweak Settings -> Combat: Random Taunt Chance [0%],
+            - Tweak Settings -> Combat: Speak on Attack Chance [0%],
+            - Tweak Settings -> Combat: Speak on Hit Chance [0%],
+            - Tweak Settings -> Combat: Speak on Hit Threshold [100%], &
+            - Tweak Settings -> Combat: Speak on Power Attack Chance [0%]
   - name: 'Level Requires 15 Skill Increases.esp'
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings -> Level Up: Skill Count [15]' ]
   - name: 'Level Requires 20 Skill Increases.esp'
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings -> Level Up: Skill Count [20]' ]
 
   - name: 'Assassin Tripwires.esp'
     url:
