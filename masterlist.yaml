@@ -4641,6 +4641,35 @@ plugins:
       - crc: 0x7287565E
         util: 'TES4Edit v4.0.4'
 
+  - name: 'Beautiful_Women(_SI|_NiceOnly|_NotSoNice_Bonus|_DB_Addon|_Vampires(_50)?)\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/17189/' ]
+    group: *underridesGroup
+    tag:
+      - NPC.FaceGen
+      - NPC.Hair
+  - name: 'Beautiful_Women_Vampires(_50)?\.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Beautiful Women Vampires Addon' ]
+        condition: 'many("Beautiful_Women_Vampires(_50)?\.esp(\.ghost)?")'
+  - name: 'Beautiful_Women_NiceOnly.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x2C6E9200
+        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 10
+  - name: 'Handsome_Gents(_Bonus|_SI|(_DB)?_Addon|_Vampires(_50)?)\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/17189/' ]
+    tag:
+      - NPC.FaceGen
+      - NPC.Hair
+    group: *underridesGroup
+  - name: 'Handsome_Gents_Vampires(_50)?\.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Handsome Gents Vampires Addon' ]
+        condition: 'many("Handsome_Gents_Vampires(_50)?\.esp(\.ghost)?")'
+
   - name: '((Better (Baurus|Martin|Uriel Septim)|Improved NPC Faces) For OCOv2.*|More Bosmer-Esque Mankar Camoran)\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/51971/'
@@ -22558,35 +22587,6 @@ plugins:
       - NoMerge
       - NpcFaces
     group: *underridesGroup
-
-  - name: 'Beautiful_Women(_SI|_NiceOnly|_NotSoNice_Bonus|_DB_Addon|_Vampires(_50)?)\.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/17189/' ]
-    group: *underridesGroup
-    tag:
-      - NPC.FaceGen
-      - NPC.Hair
-  - name: 'Beautiful_Women_Vampires(_50)?\.esp'
-    msg:
-      - <<: *useOnlyOneX
-        subs: [ 'Beautiful Women Vampires Addon' ]
-        condition: 'many("Beautiful_Women_Vampires(_50)?\.esp(\.ghost)?")'
-  - name: 'Beautiful_Women_NiceOnly.esp'
-    dirty:
-      - <<: *quickClean
-        crc: 0x2C6E9200
-        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 10
-  - name: 'Handsome_Gents(_Bonus|_SI|(_DB)?_Addon|_Vampires(_50)?)\.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/17189/' ]
-    tag:
-      - NPC.FaceGen
-      - NPC.Hair
-    group: *underridesGroup
-  - name: 'Handsome_Gents_Vampires(_50)?\.esp'
-    msg:
-      - <<: *useOnlyOneX
-        subs: [ 'Handsome Gents Vampires Addon' ]
-        condition: 'many("Handsome_Gents_Vampires(_50)?\.esp(\.ghost)?")'
 
   - name: '(Handsome_Gents|Beautiful_Women)_Revised(_DB|_NotSoNice|_SI)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/24003/' ]
