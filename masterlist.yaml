@@ -4650,6 +4650,10 @@ plugins:
       - NPC.FaceGen
       - NPC.Hair
   - name: 'Beautiful_Women_NiceOnly.esp'
+    msg:
+      - <<: *wildEdits
+        subs: [ 'Remove **xx00C093** from **Beautiful_Women_NiceOnly.esp**.' ]
+        condition: 'active("Beautiful_Women_NiceOnly.esp") and (checksum("Beautiful_Women_NiceOnly.esp", 2C6E9200) or checksum("Beautiful_Women_NiceOnly.esp", 951EDF4A))'
     dirty:
       - <<: *quickClean
         crc: 0x2C6E9200
