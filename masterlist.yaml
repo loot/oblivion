@@ -4191,14 +4191,14 @@ plugins:
         util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         udr: 464
 
-  - name: 'LightSpell(Blue|EvilRed|LiteBlue|Torch|White(Dimmer)?)\.esp'
+  - name: 'LightSpell(EvilRed|(Lite)?Blue|Torch|White(Dimmer)?)\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/8497/'
         name: 'Light Spell Recolor'
     msg:
       - <<: *useOnlyOneX
         subs: [ 'Light Spell Recolor ESP' ]
-        condition: 'many("LightSpell(Blue|EvilRed|LiteBlue|Torch|White(Dimmer)?)\.esp")'
+        condition: 'many("LightSpell(EvilRed|(Lite)?Blue|Torch|White(Dimmer)?)\.esp")'
     tag:
       - Deactivate
       - Graphics
