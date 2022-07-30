@@ -8476,19 +8476,12 @@ plugins:
         util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
 
-  - name: 'Qarls_Harvest\.es(m|p)'
+  - name: 'Qarls_Harvest\.es[mp]'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/8113/'
         name: 'Qarls Harvest'
   - name: 'Qarls_Harvest.esm'
-    msg:
-      - *alsoUseEngineBugFixes
-      - <<: *patchUpdateAvailable
-        subs: [ '[More Harvestable Fruits](https://www.nexusmods.com/oblivion/mods/45705/)' ]
-        condition: 'not active("MoreHarvestableFruits.esp")'
-      - <<: *patchUpdateAvailable
-        subs: [ '[Qarls Harvest Addon](https://www.nexusmods.com/oblivion/mods/8285/)' ]
-        condition: 'not active("Qarls_Harvest addon(_MMM)?\.esp")'
+    msg: [ *alsoUseEngineBugFixes ]
     tag:
       - Invent.Add
       - Scripts
