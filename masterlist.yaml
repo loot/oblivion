@@ -6955,6 +6955,22 @@ plugins:
         util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 12
 
+  - name: 'HorseTurnFixed.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/48212/'
+        name: 'Horse Turning Fixed'
+    msg:
+      - <<: *useBashTweakInstead
+        subs:
+          - |
+
+            Tweak Settings -> Player: Horse Turning Speed [Custom]
+            - `iHorseTurnDegreesPerSecond` [80]
+            - `iHorseTurnDegreesRampUpPerSecond` [360]
+    clean:
+      - crc: 0xA7222F4B
+        util: 'TES4Edit v4.0.4b'
+
   - name: 'Hot Coffee and Tea-(Base|Cobl)\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/42131/'
