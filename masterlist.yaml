@@ -9812,6 +9812,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/44862/'
         name: 'Dialogue Tweaks Fixes and Restorations'
+    after: [ 'Imperial Bounty Hunter Quest EV.esp' ]
     req:
       - *OBSE
       - 'DLCShiveringIsles.esp'
@@ -9819,10 +9820,12 @@ plugins:
       - <<: *patchUpdateAvailable
         subs: [ '[Miguick''s Dialogue Tweaks Trespassing Tweaked](https://www.nexusmods.com/oblivion/mods/50891/)' ]
         condition: 'not file("DialogTweaksTweakedTrespassing.esp")'
-    tag: [ Scripts ]
+    tag:
+      - Names
+      - Scripts
     clean:
       - crc: 0xF4CBC651
-        util: 'TES4Edit v4.0.4'
+        util: 'TES4Edit v4.0.4b'
 
   - name: 'DLCSpellTomes-No Attack.esp'
     url:
