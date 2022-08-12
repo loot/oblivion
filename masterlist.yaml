@@ -6961,7 +6961,12 @@ plugins:
         name: 'Horse Turning Fixed'
     msg:
       - <<: *useBashTweakInstead
-        subs: [ 'Tweak Settings -> Player: Horse Turning Speed' ]
+        subs:
+          - |
+
+            Tweak Settings -> Player: Horse Turning Speed [Custom]
+            - `iHorseTurnDegreesPerSecond` [80]
+            - `iHorseTurnDegreesRampUpPerSecond` [360]
     clean:
       - crc: 0xA7222F4B
         util: 'TES4Edit v4.0.4b'
