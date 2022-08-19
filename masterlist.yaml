@@ -7617,6 +7617,11 @@ plugins:
     req:
       - name: 'pmRealTimeInteractions.esp'
         display: '[Real-Time Interactions](https://www.nexusmods.com/oblivion/mods/39679/)'
+    msg:
+      - <<: *requiresX
+        type: say
+        subs: [ 'INI setting change when using DarNified UI. Change `set pmao.UseDarn to 0` to `set pmao.UseDarn to 1` in `data\ini\RTIplugins\pmAlchemyOverhaul.ini`.' ]
+        condition: 'file("textures/menus/darn/omg.dds")'
 
   - name: 'RespawningPearlsGemsGoldSilver.esp'
     url:
