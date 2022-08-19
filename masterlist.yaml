@@ -8215,6 +8215,10 @@ plugins:
 
   - name: 'Lucha''s Blood Witcher.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/39106/' ]
+    req:
+      - name: 'KT_CustomRaceFix.esp'
+        display: '[Custom Race Fix](https://www.nexusmods.com/oblivion/mods/1815/) or [Unofficial Oblivion Patch](https://www.nexusmods.com/oblivion/mods/5296/)'
+        condition: 'not file("Unofficial Oblivion Patch.esp")'
     msg:
       - <<: *requiresX
         type: say
