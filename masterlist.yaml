@@ -4890,29 +4890,19 @@ plugins:
       - 'Oblivion Sexualized Monsters.esm'
       - 'Oblivion Sexualized Monsters-exclu TRM.esm'
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'USE ONE ''nude * Spriggan.esp'' ONLY'
-          - lang: de
-            text: 'NUTZEN SIE NUR EINE ''nude * Spriggan.esp'''
+      - <<: *useOnlyOneX
+        subs: [ 'A Nearly Human Spriggan ESP' ]
         condition: 'file("Nude (Humanlike|Male) Spriggan( HGEC B| Tweaked)?\.esp")'
   - name: 'Nude Humanlike Spriggan HGEC B.esp'
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Requires: HGEC Body replacer'
-          - lang: de
-            text: 'Benötigt: HGEC Body replacer'
+      - <<: *requiresX
+        type: say
+        subs: [ '[HG EyeCandy Body](https://www.nexusmods.com/oblivion/mods/15802/)' ]
   - name: 'Nude Male Spriggan.esp'
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Requires: Robert Male Body v5'
-          - lang: de
-            text: 'Benötigt: Robert Male Body v5'
+      - <<: *requiresX
+        type: say
+        subs: [ '[Robert Male Body Replacer V5](https://www.nexusmods.com/oblivion/mods/40532/)' ]
 
   - name: 'Oblivion_Character_Overhaul.esp'
     url:
