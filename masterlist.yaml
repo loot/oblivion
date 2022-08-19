@@ -8215,12 +8215,9 @@ plugins:
 
   - name: 'Lucha''s Blood Witcher.esp'
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Requires: Robert''s Male v4 or v5'
-          - lang: de
-            text: 'Benötigt: Robert''s Male v4 oder v5'
+      - <<: *requiresX
+        type: say
+        subs: [ '[Robert Male Body Replacer V5](https://www.nexusmods.com/oblivion/mods/40532/)' ]
     tag:
       - Eyes
       - Graphics
