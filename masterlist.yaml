@@ -7612,6 +7612,17 @@ plugins:
       - crc: 0xDF343283
         util: 'TES4Edit v4.0.4b'
 
+  - name: 'pmAlchemyOverhaul.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/41283/' ]
+    req:
+      - name: 'pmRealTimeInteractions.esp'
+        display: '[Real-Time Interactions](https://www.nexusmods.com/oblivion/mods/39679/)'
+    msg:
+      - <<: *requiresX
+        type: say
+        subs: [ 'INI setting change when using DarNified UI. Change `set pmao.UseDarn to 0` to `set pmao.UseDarn to 1` in `data\ini\RTIplugins\pmAlchemyOverhaul.ini`.' ]
+        condition: 'file("textures/menus/darn/omg.dds")'
+
   - name: 'RespawningPearlsGemsGoldSilver.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/50040/'
@@ -29056,15 +29067,6 @@ plugins:
   - name: 'Potion_Sorter-2081.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/2081/' ]
     tag: [ Names ]
-  - name: 'pmAlchemyOverhaul.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/41283/' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Requires: Real-time Interactions'
-          - lang: de
-            text: 'Benötigt: Real-time Interactions'
 
   - name: 'IshMultipleApparelEnchantments.esp'
     req: [ *OBSE ]
