@@ -4885,7 +4885,6 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/26251/'
         name: 'A Nearly Human Spriggan'
-  - name: 'Nude Humanlike Spriggan.esp'
     after: [ 'Knights - Unofficial Patch.esp' ]
     inc:
       - 'Oblivion Sexualized Monsters.esm'
@@ -4897,12 +4896,8 @@ plugins:
             text: 'USE ONE ''nude * Spriggan.esp'' ONLY'
           - lang: de
             text: 'NUTZEN SIE NUR EINE ''nude * Spriggan.esp'''
-        condition: 'file("Nude Humanlike Spriggan Tweaked.esp") or file("Nude Humanlike Spriggan HGEC B.esp") or file("Nude Male Spriggan.esp")'
+        condition: 'file("Nude (Humanlike|Male) Spriggan( HGEC B| Tweaked)?\.esp")'
   - name: 'Nude Humanlike Spriggan HGEC B.esp'
-    after: [ 'Knights - Unofficial Patch.esp' ]
-    inc:
-      - 'Oblivion Sexualized Monsters.esm'
-      - 'Oblivion Sexualized Monsters-exclu TRM.esm'
     msg:
       - type: say
         content:
@@ -4910,31 +4905,7 @@ plugins:
             text: 'Requires: HGEC Body replacer'
           - lang: de
             text: 'Benötigt: HGEC Body replacer'
-      - type: say
-        content:
-          - lang: en
-            text: 'USE ONE ''nude * Spriggan.esp'' ONLY'
-          - lang: de
-            text: 'NUTZEN SIE NUR EINE ''nude * Spriggan.esp'''
-        condition: 'file("Nude Humanlike Spriggan.esp") or file("Nude Humanlike Spriggan Tweaked.esp") or file("Nude Male Spriggan.esp")'
-  - name: 'Nude Humanlike Spriggan Tweaked.esp'
-    after: [ 'Knights - Unofficial Patch.esp' ]
-    inc:
-      - 'Oblivion Sexualized Monsters.esm'
-      - 'Oblivion Sexualized Monsters-exclu TRM.esm'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'USE ONE ''nude * Spriggan.esp'' ONLY'
-          - lang: de
-            text: 'NUTZEN SIE NUR EINE ''nude * Spriggan.esp'''
-        condition: 'file("Nude Humanlike Spriggan.esp") or file("Nude Humanlike Spriggan HGEC B.esp") or file("Nude Male Spriggan.esp")'
   - name: 'Nude Male Spriggan.esp'
-    after: [ 'Knights - Unofficial Patch.esp' ]
-    inc:
-      - 'Oblivion Sexualized Monsters.esm'
-      - 'Oblivion Sexualized Monsters-exclu TRM.esm'
     msg:
       - type: say
         content:
@@ -4942,13 +4913,6 @@ plugins:
             text: 'Requires: Robert Male Body v5'
           - lang: de
             text: 'Benötigt: Robert Male Body v5'
-      - type: say
-        content:
-          - lang: en
-            text: 'USE ONE ''nude * Spriggan.esp'' ONLY'
-          - lang: de
-            text: 'NUTZEN SIE NUR EINE ''nude * Spriggan.esp'''
-        condition: 'file("Nude Humanlike Spriggan.esp") or file("Nude Humanlike Spriggan Tweaked.esp") or file("Nude Humanlike Spriggan HGEC B.esp")'
 
   - name: 'Oblivion_Character_Overhaul.esp'
     url:
