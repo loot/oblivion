@@ -16415,13 +16415,10 @@ plugins:
       - name: 'TGND.esp'
         display: '[TGND Body Replacer](https://www.loverslab.com/files/file/253-tgnd-body-replacer/)'
     msg:
+      - <<: *requiresX
+        type: say
+        subs: [ '[Universal Skeleton Nif](https://www.nexusmods.com/oblivion/mods/37596/)`' ]
       - *versionXofYorGreaterRequiredOBSEv20
-      - type: say
-        content:
-          - lang: en
-            text: 'Requires: Skeleton nif replacer.'
-          - lang: de
-            text: 'Benötigt: Skeleton nif Ersetzer.'
 
   - name: 'The Black Mirror - A Necromancer Shop.esp'
     url:
