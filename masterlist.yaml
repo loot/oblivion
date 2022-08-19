@@ -16408,6 +16408,21 @@ plugins:
       - crc: 0x6F4B21A9
         util: 'TES4Edit v4.0.3'
 
+  - name: 'TGNDNessaStore.esp'
+    url: [ 'https://www.loverslab.com/files/file/351-nessas-tgnd-stores' ]
+    req:
+      - *SilentVoice
+      - name: 'TGND.esp'
+        display: '[TGND Body Replacer](https://www.loverslab.com/files/file/253-tgnd-body-replacer/)'
+    msg:
+      - *versionXofYorGreaterRequiredOBSEv20
+      - type: say
+        content:
+          - lang: en
+            text: 'Requires: Skeleton nif replacer.'
+          - lang: de
+            text: 'Benötigt: Skeleton nif Ersetzer.'
+
   - name: 'The Black Mirror - A Necromancer Shop.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/51499/'
@@ -25511,20 +25526,6 @@ plugins:
   - name: 'TGND_EY_Vampirehunter.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/31344/' ]
     inc: [ 'EY_Vampirehunter.esp' ]
-  - name: 'TGNDNessaStore.esp'
-    url: [ 'https://www.loverslab.com/files/file/351-nessas-tgnd-stores' ]
-    req:
-      - *SilentVoice
-      - name: 'TGND.esp'
-        display: '[TGND Body Replacer](https://www.loverslab.com/files/file/253-tgnd-body-replacer/)'
-    msg:
-      - *versionXofYorGreaterRequiredOBSEv20
-      - type: say
-        content:
-          - lang: en
-            text: 'Requires: Skeleton nif replacer.'
-          - lang: de
-            text: 'Benötigt: Skeleton nif Ersetzer.'
   - name: 'UFF Amazon Armor.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/13339/' ]
     tag: [ Graphics ]
