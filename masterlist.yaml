@@ -16408,6 +16408,56 @@ plugins:
       - crc: 0x6F4B21A9
         util: 'TES4Edit v4.0.3'
 
+  - name: '(TGNDNessaStore|TGND - Nessa Store).*\.esp'
+    url:
+      - link: 'https://www.loverslab.com/files/file/351-nessas-tgnd-stores'
+        name: 'Nessa''s TGND Stores'
+  - name: 'TGNDNessaStore.esp'
+    after: [ 'TGND_SI.esp' ]
+    req:
+      - *SilentVoice
+      - name: 'TGND.esp'
+        display: '[TGND Body Replacer](https://www.loverslab.com/files/file/253-tgnd-body-replacer/)'
+    msg:
+      - <<: *requiresX
+        type: say
+        subs: [ '[Universal Skeleton Nif](https://www.nexusmods.com/oblivion/mods/37596/)`' ]
+      - *versionXofYorGreaterRequiredOBSEv20
+    tag:
+      - Actors.Stats
+      - Invent.Add
+      - Invent.Remove
+    dirty:
+      - <<: *quickClean
+        crc: 0xDB70C6F1
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        udr: 77
+  - name: 'TGND - Nessa Store NPC Clothing.esp'
+    tag:
+      - Invent.Add
+      - Invent.Remove
+      - NPC.Eyes
+      - NPC.FaceGen
+      - NPC.Hair
+  - name: 'TGND - Nessa Store Athol Patch.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x39B42328
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        udr: 5
+  - name: 'TGND - Nessa Store Lingerie Patch.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x12956BE8
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        udr: 1
+  - name: 'TGND - Nessa Stores OOO Patch.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x78BACD50
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        udr: 21
+
   - name: 'The Black Mirror - A Necromancer Shop.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/51499/'
@@ -25511,20 +25561,6 @@ plugins:
   - name: 'TGND_EY_Vampirehunter.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/31344/' ]
     inc: [ 'EY_Vampirehunter.esp' ]
-  - name: 'TGNDNessaStore.esp'
-    url: [ 'https://www.loverslab.com/files/file/351-nessas-tgnd-stores' ]
-    req:
-      - *SilentVoice
-      - name: 'TGND.esp'
-        display: '[TGND Body Replacer](https://www.loverslab.com/files/file/253-tgnd-body-replacer/)'
-    msg:
-      - *versionXofYorGreaterRequiredOBSEv20
-      - type: say
-        content:
-          - lang: en
-            text: 'Requires: Skeleton nif replacer.'
-          - lang: de
-            text: 'Benötigt: Skeleton nif Ersetzer.'
   - name: 'UFF Amazon Armor.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/13339/' ]
     tag: [ Graphics ]
