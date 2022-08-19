@@ -18301,6 +18301,43 @@ plugins:
       - crc: 0xC9386191
         util: 'TES4Edit v4.0.4b'
 
+  - name: '(YakumoIsle|YIsle_(Spring|Winter)Skin)\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/37004/'
+        name: 'Yakumo Isle - HotSpring and LittleHome'
+  - name: 'YakumoIsle.esp'
+    req: [ 'DLCShiveringIsles.esp' ]
+    msg:
+      - <<: *requiresX
+        subs: [ '[HG EyeCandy Body](https://www.nexusmods.com/oblivion/mods/15802/)' ]
+        condition: 'not checksum("Textures\characters\argonian\female\footfemale.dds", B5EB803E)'
+    dirty:
+      - <<: *quickClean
+        crc: 0x1B0889AD
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 10
+      - <<: *quickClean
+        crc: 0x786E0FD7
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 10
+  - name: 'YIsle_(Spring|Winter)Skin\.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Yakumo Isle Skin' ]
+        condition: 'many("YIsle_(Spring|Winter)Skin\.esp")'
+  - name: 'YIsle_SpringSkin.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x228BE4A4
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 36
+  - name: 'YIsle_WinterSkin.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0xDEBD9C04
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 43
+
 ###### Translations ######
   - name: 'ITA - FoT & Hexaae R3.esp'
     url:
@@ -27473,17 +27510,6 @@ plugins:
   - name: 'Cyrodill Travel Services.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/21999/' ]
     msg: [ *obsolete ]
-
-  - name: 'YakumoIsle.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/37004/' ]
-    req: [ 'DLCShiveringIsles.esp' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Requires: HGEC'
-          - lang: de
-            text: 'Benötigt: HGEC'
 
   - name: 'Angel''s Arena Loot en.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/14163/' ]
