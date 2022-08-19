@@ -2384,14 +2384,17 @@ plugins:
 
   - name: 'VipCxj_AirSystem.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/36903/' ]
+    req:
+      - name: 'OBSE/Plugins/vipcxj_plugin_collection.dll'
+        display: '[VipCxj''s Plugin Collection](https://www.nexusmods.com/oblivion/mods/37075/)'
     msg:
       - *versionXofYorGreaterRequiredOBSEv20
       - type: say
         content:
           - lang: en
-            text: 'Requires: Coronerras Maximum Compatibility Skeletons, VipCxj''s Plugin Collection v3'
+            text: 'Requires: Coronerras Maximum Compatibility Skeletons'
           - lang: de
-            text: 'Benötigt: Coronerras Maximum Compatibility Skeletons, VipCxj''s Plugin Collection v3'
+            text: 'Benötigt: Coronerras Maximum Compatibility Skeletons'
 
 ###### AudioVisual - Models & Textures ######
   - name: 'AC_Gold_Coins.esp'
