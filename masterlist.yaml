@@ -7614,13 +7614,9 @@ plugins:
 
   - name: 'pmAlchemyOverhaul.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/41283/' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Requires: Real-time Interactions'
-          - lang: de
-            text: 'Benötigt: Real-time Interactions'
+    req:
+      - name: 'pmRealTimeInteractions.esp'
+        display: '[Real-Time Interactions](https://www.nexusmods.com/oblivion/mods/39679/)'
 
   - name: 'RespawningPearlsGemsGoldSilver.esp'
     url:
