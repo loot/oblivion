@@ -2388,13 +2388,10 @@ plugins:
       - name: 'OBSE/Plugins/vipcxj_plugin_collection.dll'
         display: '[VipCxj''s Plugin Collection](https://www.nexusmods.com/oblivion/mods/37075/)'
     msg:
+      - <<: *requiresX
+        type: say
+        subs: [ '[Coronerras Maximum Compatibility Skeletons](https://www.nexusmods.com/oblivion/mods/27945/)`' ]
       - *versionXofYorGreaterRequiredOBSEv20
-      - type: say
-        content:
-          - lang: en
-            text: 'Requires: Coronerras Maximum Compatibility Skeletons'
-          - lang: de
-            text: 'Benötigt: Coronerras Maximum Compatibility Skeletons'
 
 ###### AudioVisual - Models & Textures ######
   - name: 'AC_Gold_Coins.esp'
