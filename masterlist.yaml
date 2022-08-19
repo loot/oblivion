@@ -18305,12 +18305,9 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/37004/' ]
     req: [ 'DLCShiveringIsles.esp' ]
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Requires: HGEC'
-          - lang: de
-            text: 'Benötigt: HGEC'
+      - <<: *requiresX
+        subs: [ '[HG EyeCandy Body](https://www.nexusmods.com/oblivion/mods/15802/)' ]
+        condition: 'not checksum("Textures\characters\argonian\female\footfemale.dds", B5EB803E)'
 
 ###### Translations ######
   - name: 'ITA - FoT & Hexaae R3.esp'
