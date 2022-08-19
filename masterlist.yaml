@@ -9154,13 +9154,10 @@ plugins:
 
   - name: 'Leviathan Trophy Soulgems.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/19862/' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Requires: Tibixe''s String Function Collection and Leviathan Soulgems.'
-          - lang: de
-            text: 'Benötigt: Tibixe''s String Function Collection und Leviathan Soulgems.'
+    req:
+      - 'Leviathan Soulgems.esp'
+      - name: 'OBSE/Plugins/TSFC_1_1_0_511.dll'
+        display: '[Tibixe''s String Function Collection](https://www.nexusmods.com/oblivion/mods/11666/)'
 
   - name: '(Lost Sorceries of the Ayleids|Finger of the Mountain Rebalanced)\.esp'
     url:
