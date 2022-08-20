@@ -6746,12 +6746,9 @@ plugins:
   - name: 'Alchemy_Economy_Fix.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/3413/' ]
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Not needed if using option in Enhanced Economy.'
-          - lang: de
-            text: 'Nicht benötigt wenn Option in Enhanced Economy genutzt wird.'
+      - <<: *useInstead
+        subs: [ 'Enhanced Economy INI Setting `tnoEE.potionValueMult`' ]
+        condition: 'active("Enhanced Economy.esp")'
 
   - name: 'AoG - Greed Arena.esp'
     url:
