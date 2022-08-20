@@ -12670,12 +12670,9 @@ plugins:
       - 'https://www.nexusmods.com/oblivion/mods/34611/'
       - 'https://www.nexusmods.com/oblivion/mods/43444/'
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Requires a Maximum Compatability Skeleton such as Coronnera''s.'
-          - lang: de
-            text: 'Benötigt ein Maximal Kompatibilität-Skelett wie zB Coronnera''s.'
+      - <<: *requiresX
+        type: say
+        subs: [ '[Coronerras Maximum Compatibility Skeletons](https://www.nexusmods.com/oblivion/mods/27945/)`' ]
 
   - name: 'BHC_Expanded.esp'
     url:
