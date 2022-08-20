@@ -8203,12 +8203,9 @@ plugins:
       - 'https://www.nexusmods.com/oblivion/mods/18247/'
       - 'https://www.nexusmods.com/oblivion/mods/24897/'
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Requires: Hairs from Corean mod FULL 1.8'
-          - lang: de
-            text: 'Benötigt: Hairs from Corean mod FULL 1.8'
+      - <<: *requiresResources
+        subs: [ '[Corean mod](https://www.nexusmods.com/oblivion/mods/15568/)' ]
+        condition: 'not file("meshes/characters/Corean/Eyes/coreanEye02L.nif")'
 
   - name: 'Dahyka''s Vanilla Racial and Birthsign Tweaksv2.2.esp'
     url:
