@@ -15158,12 +15158,9 @@ plugins:
       - 'https://www.nexusmods.com/oblivion/mods/6454/'
       - 'https://www.nexusmods.com/oblivion/mods/22155/'
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Use v1.5 or later to avoid extensive compatibility issues.'
-          - lang: de
-            text: 'Nutzen Sie v1.5 oder neuer um fortgeschrittene Kompatibilitäts-Probleme zu vermeiden.'
+      - <<: *obsolete
+        subs: [ '[Brew House v1.5](https://www.nexusmods.com/oblivion/mods/22155/)' ]
+        condition: 'version("BrewHouse.esp", "1.5.2", <)'
 
   - name: 'BXX_Mines.esp'
     url:
