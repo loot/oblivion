@@ -10353,6 +10353,29 @@ plugins:
       - crc: 0x7118824A
         util: 'TES4Edit v4.0.4'
 
+  - name: 'AHP.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/45513/' ]
+    msg:
+      - type: say
+        content:
+          - lang: en
+            text: 'Incompatible with: TOTF.esp Disable on time of game. Enable only after AHP.esp quests have been completed'
+          - lang: de
+            text: 'Inkompatibel mit: TOTF.esp Deaktivieren Sie time of game. Nur Aktivieren nachdem AHP.esp Quests abgeschlossen wurden'
+        condition: 'file("TOTF.esp")'
+      - type: say
+        content:
+          - lang: en
+            text: 'Incompatible with: See You Sleep. Disable on time of game. Enable only after AHP.esp quests have been completed'
+          - lang: de
+            text: 'Inkompatibel mit: See You Sleep. Deaktivieren Sie time of game. Nur Aktivieren nachdem AHP.esp Quests abgeschlossen wurden'
+    tag: [ Invent ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x1C60D3A4
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 232
+
   - name: 'Alternative Beginnings( - Kvatch Intact)?\.esp'
     url:
       - link: 'https://www.afkmods.com/index.php?/files/file/261-alternative-beginnings/'
@@ -26639,28 +26662,7 @@ plugins:
         util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 35
         udr: 39
-  - name: 'AHP.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/45513/' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Incompatible with: TOTF.esp Disable on time of game. Enable only after AHP.esp quests have been completed'
-          - lang: de
-            text: 'Inkompatibel mit: TOTF.esp Deaktivieren Sie time of game. Nur Aktivieren nachdem AHP.esp Quests abgeschlossen wurden'
-        condition: 'file("TOTF.esp")'
-      - type: say
-        content:
-          - lang: en
-            text: 'Incompatible with: See You Sleep. Disable on time of game. Enable only after AHP.esp quests have been completed'
-          - lang: de
-            text: 'Inkompatibel mit: See You Sleep. Deaktivieren Sie time of game. Nur Aktivieren nachdem AHP.esp Quests abgeschlossen wurden'
-    tag: [ Invent ]
-    dirty:
-      - <<: *quickClean
-        crc: 0x1C60D3A4
-        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 232
+
   - name: 'Akiviri Imports MOBS.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/13924/' ]
     msg:
