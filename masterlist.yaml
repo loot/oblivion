@@ -10496,6 +10496,21 @@ plugins:
         name: 'Bash-able Quest Delayers'
     msg: [ *obsolete ]
 
+  - name: 'Battle4Morrowind.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/45467/' ]
+    msg:
+      - type: say
+        content:
+          - lang: en
+            text: 'Incompatible with: anything that changes Legion Armor.'
+          - lang: de
+            text: 'Inkompatibel mit: jeglichem das Legion Armor abändert.'
+    dirty:
+      - <<: *quickClean
+        crc: 0x03223B93
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 22
+
   - name: 'bgIntegrationEV.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/22320/'
@@ -26963,21 +26978,6 @@ plugins:
   - name: 'Basement for Cobl - Sheep Wool addition.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/21139/' ]
     req: [ 'Mart''s Monster Mod.esm' ]
-
-  - name: 'Battle4Morrowind.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/45467/' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Incompatible with: anything that changes Legion Armor.'
-          - lang: de
-            text: 'Inkompatibel mit: jeglichem das Legion Armor abändert.'
-    dirty:
-      - <<: *quickClean
-        crc: 0x03223B93
-        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 22
 
   - name: 'BeastHeadInn.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/40990/' ]
