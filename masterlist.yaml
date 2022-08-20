@@ -3994,6 +3994,19 @@ plugins:
       - crc: 0xFAD8CA7A
         util: 'TES4Edit v4.0.4b'
 
+  - name: 'QuietFeet.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/12331/' ]
+    msg:
+      - *requiresBashedPatch
+      - type: say
+        content:
+          - lang: en
+            text: 'Recommended to upgrade to Quiet Feet MAX 2.0, which does not require a plugin and is more compatible.'
+          - lang: de
+            text: 'Empfohlen zu Quiet Feet MAX 2.0 upzugraden, welches kein Plugin voraussetzt und ist besser kompatibel.'
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Actors -> Quiet Feet' ]
+
   - name: 'Symphony of Violence.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/13987/'
@@ -27708,18 +27721,6 @@ plugins:
   - name: 'Ulrim''s Horses - Vanilla.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/16688/' ]
     tag: [ Graphics ]
-  - name: 'QuietFeet.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/12331/' ]
-    msg:
-      - *requiresBashedPatch
-      - type: say
-        content:
-          - lang: en
-            text: 'Recommended to upgrade to Quiet Feet MAX 2.0, which does not require a plugin and is more compatible.'
-          - lang: de
-            text: 'Empfohlen zu Quiet Feet MAX 2.0 upzugraden, welches kein Plugin voraussetzt und ist besser kompatibel.'
-      - <<: *useBashTweakInstead
-        subs: [ 'Tweak Actors -> Quiet Feet' ]
 
   - name: 'ROM Revised Oblivion Mod.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/33114/' ]
