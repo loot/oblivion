@@ -10364,6 +10364,9 @@ plugins:
       - <<: *compatIssuesWithX
         subs: [ 'See You Sleep' ]
         condition: 'active("P1DseeYouSleep.esp") or file("OBSE/Plugins/SeeYouSleep.dll")'
+      - <<: *wildEdits
+        subs: [ 'Remove **00094930** from **AHP.esp**.' ]
+        condition: 'checksum("AHP.esp", 1C60D3A4) or checksum("AHP.esp", D185D524)'
     tag: [ Invent ]
     dirty:
       - <<: *quickClean
