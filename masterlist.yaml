@@ -10359,6 +10359,9 @@ plugins:
         name: 'Andoran Axis'
     msg:
       - <<: *compatIssuesWithX
+        subs: [ 'Basic Primary Needs' ]
+        condition: 'active("Basic Primary Needs.esp")'
+      - <<: *compatIssuesWithX
         subs: [ 'See You Sleep' ]
         condition: 'active("P1DseeYouSleep.esp") or file("OBSE/Plugins/SeeYouSleep.dll")'
     tag: [ Invent ]
