@@ -8752,13 +8752,10 @@ plugins:
 
   - name: 'Angel''s Arena Loot (en|rus)\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/14163/' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Unlikely to work with other IC Arena mods'
-          - lang: de
-            text: 'Unwahrscheinlich zu funktionieren mit anderen IC Arena Mods'
+    inc:
+      - '24HrArenaAliveLow.esp'
+      - '24HrArenaAliveV2.esp'
+      - '24HrArenaAliveV2Towers.esp'
 
   - name: 'cf_Improved_Barter_Gold.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/4367/' ]
