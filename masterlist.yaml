@@ -15153,6 +15153,21 @@ plugins:
       - crc: 0x58E9C0BF
         util: 'TES4Edit v4.0.4'
 
+  - name: 'BrewHouse.esp'
+    url:
+      - 'https://www.nexusmods.com/oblivion/mods/6454/'
+      - 'https://www.nexusmods.com/oblivion/mods/22155/'
+    msg:
+      - <<: *obsolete
+        subs: [ '[Brew House v1.5](https://www.nexusmods.com/oblivion/mods/22155/)' ]
+        condition: 'version("BrewHouse.esp", "1.5.2", <)'
+      - <<: *requiresResources
+        subs: [ '[Brew House](https://www.nexusmods.com/oblivion/mods/6454/)' ]
+        condition: 'not file("Meshes/BrewHouse/Seeds/FishEgg.nif")'
+    clean:
+      - crc: 0x58EC1770
+        util: 'TES4Edit v4.0.4b'
+
   - name: 'BXX_Mines.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/8284/'
@@ -27873,15 +27888,6 @@ plugins:
   - name: 'FCOM_SlofsHorses.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/36679/' ]
     tag: [ Graphics ]
-  - name: 'BrewHouse.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/22155/' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Use v1.5 or later to avoid extensive compatibility issues.'
-          - lang: de
-            text: 'Nutzen Sie v1.5 oder neuer um fortgeschrittene Kompatibilitäts-Probleme zu vermeiden.'
 
   - name: 'ElsweyrAnequina - SevereDesert.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/38397/' ]
