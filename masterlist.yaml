@@ -13091,6 +13091,21 @@ plugins:
         util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         udr: 2
 
+  - name: 'KOTNBow.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/44986/'
+        name: 'Knights of the Nine Bow and Arrows'
+    msg:
+      - <<: *patchUnavailable
+        subs: [ 'Knights of the Nine Cobl addon' ]
+        condition: 'active("Knights - Cobl.esp")'
+    tag:
+      - Actors.AIData
+      - Actors.AIPackages
+    clean:
+      - crc: 0x22832D74
+        util: 'TES4Edit v4.0.4b'
+
   - name: 'LDPGC.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/45209/' ]
     msg:
