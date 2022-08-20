@@ -13076,12 +13076,12 @@ plugins:
   - name: 'LDPGC.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/45209/' ]
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Requires: HGEC Body, Coronera''s Maximum Compatibility Skeleton'
-          - lang: de
-            text: 'Benötigt: HGEC Body, Coronera''s Maximum Compatibility Skeleton'
+      - <<: *requiresX
+        type: say
+        subs: [ '[Coronerras Maximum Compatibility Skeletons](https://www.nexusmods.com/oblivion/mods/27945/)`' ]
+      - <<: *requiresX
+        type: say
+        subs: [ '[HG EyeCandy Body](https://www.nexusmods.com/oblivion/mods/15802/)' ]
 
   - name: '(LightYourWay|Medieval Torch|Morrowind Style Paper Lantern|Torches Have Value)\.esp'
     url:
