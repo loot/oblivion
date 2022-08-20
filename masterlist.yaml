@@ -18262,6 +18262,12 @@ plugins:
       - <<: *requiresX
         type: say
         subs: [ '[HG EyeCandy Body](https://www.nexusmods.com/oblivion/mods/15802/) or [Female EyeCandy Body Replacer NUDE by Exnem](https://www.nexusmods.com/oblivion/mods/10171/) or [Female EyeCandy Body Replacer Underwear by Exnem](https://www.nexusmods.com/oblivion/mods/10168/)' ]
+      - <<: *requiresResources
+        subs: [ '[Mid Lander For HGEC And Roberts Male Female](https://www.nexusmods.com/oblivion/mods/28973/)' ]
+        condition: 'not file("meshes/armor/NK/Midlands/NKMidlandsBrownGreen.nif")'
+      - <<: *requiresResources
+        subs: [ '[Westwind Rogue For HGEC](https://www.nexusmods.com/oblivion/mods/27319/)' ]
+        condition: 'not file("meshes/armor/NK/Rogue/NKRougeCapeBlonde.nif")'
 
   - name: 'lTraveler.*\.esp'
     url:
