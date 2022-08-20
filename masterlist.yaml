@@ -12500,8 +12500,10 @@ plugins:
 
   - name: 'Alir''sArmor.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/35421/' ]
-    inc: [ 'Better Imperial City.esp' ]
     msg:
+      - <<: *patchUnavailable
+        subs: [ 'Better Imperial City Market' ]
+        condition: 'active("Better Cities IC Market.esp") or active("Better Imperial City.esp")'
       - type: say
         content:
           - lang: en
