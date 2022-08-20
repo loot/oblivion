@@ -10358,12 +10358,9 @@ plugins:
       - link: 'https://www.nexusmods.com/oblivion/mods/45513/'
         name: 'Andoran Axis'
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Incompatible with: See You Sleep. Disable on time of game. Enable only after AHP.esp quests have been completed'
-          - lang: de
-            text: 'Inkompatibel mit: See You Sleep. Deaktivieren Sie time of game. Nur Aktivieren nachdem AHP.esp Quests abgeschlossen wurden'
+      - <<: *compatIssuesWithX
+        subs: [ 'See You Sleep' ]
+        condition: 'active("P1DseeYouSleep.esp") or file("OBSE/Plugins/SeeYouSleep.dll")'
     tag: [ Invent ]
     dirty:
       - <<: *quickClean
