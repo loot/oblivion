@@ -15161,6 +15161,9 @@ plugins:
       - <<: *obsolete
         subs: [ '[Brew House v1.5](https://www.nexusmods.com/oblivion/mods/22155/)' ]
         condition: 'version("BrewHouse.esp", "1.5.2", <)'
+      - <<: *requiresResources
+        subs: [ '[Brew House](https://www.nexusmods.com/oblivion/mods/6454/)' ]
+        condition: 'not file("Meshes/BrewHouse/Seeds/FishEgg.nif")'
 
   - name: 'BXX_Mines.esp'
     url:
