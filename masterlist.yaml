@@ -6902,8 +6902,8 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/6262/' ]
     msg:
       - <<: *obsolete
-        subs: [ '[Book Placement v2](https://www.nexusmods.com/oblivion/mods/6262). v1 has a severe bug with the Mystic Emporium disappearing.' ]
-        condition: 'not version("bookplacing.esm", "1.2", ==)'
+        subs: [ '[Book Placement v2](https://www.nexusmods.com/oblivion/mods/6262/). v1 has a severe bug with the Mystic Emporium disappearing.' ]
+        condition: 'version("bookplacing.esm", "1.2", <)'
   - name: 'Book Placement v2.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/6262/' ]
     tag:
