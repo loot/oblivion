@@ -12242,6 +12242,34 @@ plugins:
         util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 4
 
+  - name: 'S\.P\.A\.M.*\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/9914/'
+        name: 'Simbacca''s Player Advancement Method'
+  - name: 'S\.P\.A\.M(\. 100\+)?\.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ '"S.P.A.M.esp" or "S.P.A.M. 100+.esp"' ]
+        condition: 'many("S\.P\.A\.M(\. 100\+)?\.esp")'
+  - name: 'S.P.A.M.esp'
+    req:
+      - <<: *OBSE
+        condition: 'checksum("S.P.A.M.esp", 33B963F5)'
+  - name: 'S.P.A.M. 100+.esp'
+    req:
+      - name: 'OBSE/Plugins/OBSE_Elys_Uncapper.dll'
+        display: '[Oblivion -Elys- Uncapper](https://www.nexusmods.com/oblivion/mods/13841)'
+  - name: 'S\.P\.A\.M\. option - Faste(r|st) Major\.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'S.P.A.M. Faster or Fastest Major' ]
+        condition: 'many("S\.P\.A\.M\. option - Faste(r|st) Major\.esp")'
+  - name: 'S\.P\.A\.M\. option - Faste(r|st) Minor\.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'S.P.A.M. Faster or Fastest Minor' ]
+        condition: 'many("S\.P\.A\.M\. option - Faste(r|st) Minor\.esp")'
+
   - name: 'Ultimate Leveling.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/49134/' ]
     req: [ *MenuQue ]
@@ -29294,39 +29322,6 @@ plugins:
 
   - name: 'SkillDecay.esp'
     msg: [ *versionXofYorGreaterRequiredOBSEv20 ]
-  - name: 'S.P.A.M(\. 100\+| option - (Restore (Fav|Spec)|Faste(r|st) (Maj|Mi)nor))?.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/9914/' ]
-  - name: 'S.P.A.M(\. 100\+)?\.esp'
-    msg:
-      - <<: *useOnlyOneX
-        subs: [ '"S.P.A.M.esp" or "S.P.A.M. 100+.esp"' ]
-        condition: 'many("S.P.A.M(\. 100\+)?\.esp")'
-  - name: 'S.P.A.M.esp'
-    req:
-      - <<: *OBSE
-        condition: 'checksum("S.P.A.M.esp", 33B963F5)'
-  - name: 'S.P.A.M. 100+.esp'
-    req:
-      - name: 'OBSE/Plugins/OBSE_Elys_Uncapper.dll'
-        display: '[Oblivion -Elys- Uncapper](https://www.nexusmods.com/oblivion/mods/13841) or [Legendary Mastery](https://www.nexusmods.com/oblivion/mods/3664)'
-        condition: 'not file("Toaster''s Legendary Mastery.esp")'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'All character attributes MUST be below 95 if adding one of those uncapper mods and this SPAM plugin.'
-          - lang: de
-            text: 'Alle Charakter Attribute MÜSSEN unter 95 sein wenn Sie einer der Uncapper-Mods und dieses SPAM Plugin hinzufügen.'
-  - name: 'S.P.A.M. option - Faste(r|st) Major.esp'
-    msg:
-      - <<: *useOnlyOneX
-        subs: [ 'S.P.A.M Faster or Fastest Major' ]
-        condition: 'many("S.P.A.M. option - Faste(r|st) Major.esp")'
-  - name: 'S.P.A.M. option - Faste(r|st) Minor.esp'
-    msg:
-      - <<: *useOnlyOneX
-        subs: [ 'S.P.A.M Faster or Fastest Minor' ]
-        condition: 'many("S.P.A.M. option - Faste(r|st) Minor.esp")'
   - name: 'The Versatile Adventurer.esp'
     req: [ *OBSE ]
 
