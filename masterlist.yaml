@@ -7382,14 +7382,6 @@ plugins:
     tag: [ Graphics ]
   - name: 'M.O.E. - Better Icon for Script Effects.esp'
     tag: [ Graphics ]
-  - name: 'M.O.E. - Bone Names and Priced Skull.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'May not be compatible with MMM bone loot - untested.'
-          - lang: de
-            text: 'Womöglich nicht kompatibel mit MMM bone loot - Ungetestet.'
   - name: 'M.O.E. - Icons for Mythic Dawn Armour - Fix.esp'
     tag: [ Graphics ]
   - name: 'M.O.E. - Lycanthropy and Lichcraft.esp'
@@ -7405,19 +7397,7 @@ plugins:
         util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 20
   - name: 'M.O.E. - Realistic Prices, Realistic Weights, No Quest Items.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'May cause unexpected results with Living Economy, Fran''s, OOO, MMM and/or FCOM.'
-          - lang: de
-            text: 'Kann zu unerwarteten Folgen führen mit Living Economy, Fran''s, OOO, MMM und/oder FCOM.'
-      - type: say
-        content:
-          - lang: en
-            text: 'May cause some quest items to revert to vanilla stats when using overhaul mods. Will not remove quest status from non-vanilla quests.'
-          - lang: de
-            text: 'Kann dazu führen das einige Quest-Gegenstände zurück zu Ihren ursprünglichen Eigenschaften zurückkehren. Wird nicht den Quest-Status von nicht-originalen Quests entfernen.'
+    inc: [ 'Oscuro''s_Oblivion_Overhaul.esp' ]
     tag:
       - Deactivate
       - Stats
@@ -7453,14 +7433,6 @@ plugins:
           - lang: de
             text: 'Nutzen Sie ''FCOM_MOECaptainRenaultArmor'' um Kompatibilitäts-Probleme mit FCOM zu beheben.'
   - name: 'M.O.E. - Vampire Clan Raelu.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'May have problems with OOO.'
-          - lang: de
-            text: 'Kann Probleme mit OOO haben.'
-        condition: *OOOCond
     dirty:
       - <<: *quickClean
         crc: 0x277FF034
