@@ -8458,15 +8458,10 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/6918/'
         name: 'Axebane Hunters + Axebane RealHunger'
-  - name: 'Axebane_Hunters25.esp'
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'May break MMM Hunting and Crafting. Not fully tested.'
-          - lang: de
-            text: 'Bricht vielleicht MMM Hunting and Crafting. Nicht vollständig getestet.'
-        condition: 'file("Mart''s Monster Mod - Hunting & Crafting.esp")'
+      - <<: *patchUnavailable
+        subs: [ 'Mart''s Monster Mod - Hunting & Crafting' ]
+        condition: 'active("Mart''s Monster Mod - Hunting & Crafting.esp")'
 
   - name: 'BasicHarvest(Core|For.*)\.esp'
     url:
