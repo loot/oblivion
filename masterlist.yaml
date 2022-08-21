@@ -8454,6 +8454,16 @@ plugins:
     tag: [ Delev ]
 
 ###### Gameplay - Crafting & Harvesting ######
+  - name: 'Axebane_Hunters25.esp'
+    msg:
+      - type: say
+        content:
+          - lang: en
+            text: 'May break MMM Hunting and Crafting. Not fully tested.'
+          - lang: de
+            text: 'Bricht vielleicht MMM Hunting and Crafting. Nicht vollständig getestet.'
+        condition: 'file("Mart''s Monster Mod - Hunting & Crafting.esp")'
+
   - name: 'BasicHarvest(Core|For.*)\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/51833/'
@@ -28220,15 +28230,6 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/31297/' ]
     tag: [ Actors.Spells ]
 
-  - name: 'Axebane_Hunters25.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'May break MMM Hunting and Crafting. Not fully tested.'
-          - lang: de
-            text: 'Bricht vielleicht MMM Hunting and Crafting. Nicht vollständig getestet.'
-        condition: 'file("Mart''s Monster Mod - Hunting & Crafting.esp")'
   - name: 'Better Potions and Poisons.esp'
     tag: [ Graphics ]
   - name: 'BlackFineryWithAmulet.esp'
