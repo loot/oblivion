@@ -766,12 +766,7 @@ plugins:
   - name: 'Oblivion.esm'
     group: *gameMasterGroup
     msg:
-      - type: error
-        content:
-          - lang: en
-            text: 'This must not be activated. However, it can be useful when porting Oblivion mods to Nehrim.'
-          - lang: de
-            text: 'Dies darf nicht aktiviert werden. Dennoch, es kann nützlich sein beim Portieren von Oblivion Mods nach Nehrim.'
+      - <<: *moddingPlugin
         condition: 'active("Oblivion.esm") and active("Nehrim.esm")'
   - name: 'DLCShiveringIsles.esp'
     group: *dlcGroup
