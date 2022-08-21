@@ -21838,6 +21838,9 @@ plugins:
       - <<: *requiresResources
         subs: [ '[Ordinators from Morrowind - NPCs](https://www.nexusmods.com/oblivion/mods/15063/)' ]
         condition: 'not file("meshes/armor/Ordinator") or not file("textures/armor/Ordinator")'
+      - <<: *wildEdits
+        subs: [ 'Remove **00031BC5** from **Fran Armor Add-on.esp**.' ]
+        condition: 'checksum("Fran Armor Add-on.esp", 08F76946)'
     tag: [ Invent ]
 
 ###### Martigen’s Monster Mod (MMM) ######
