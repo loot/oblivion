@@ -6898,6 +6898,19 @@ plugins:
       - crc: 0x8DAB8D05
         util: 'TES4Edit v4.0.4b'
 
+  - name: 'bookplacing.esm'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/6262/' ]
+    msg:
+      - <<: *obsolete
+        subs: [ '[Book Placement v2](https://www.nexusmods.com/oblivion/mods/6262/). v1 has a severe bug with the Mystic Emporium disappearing.' ]
+        condition: 'version("bookplacing.esm", "1.2", <)'
+  - name: 'Book Placement v2.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/6262/' ]
+    tag:
+      - Deactivate
+      - NoMerge
+      - Scripts
+
   - name: 'BuryCorpse.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/43134/' ]
     msg: [ *versionXofYorGreaterRequiredOBSEv20 ]
@@ -23048,12 +23061,6 @@ plugins:
     msg: [ *obsoleteUseFCOM ]
 
 ###### Anything new can go after this (If you're not sure where to put it) ######
-  - name: 'bookplacing.esm'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/6262/' ]
-    msg:
-      - <<: *obsolete
-        subs: [ '[Book Placement v2](https://www.nexusmods.com/oblivion/mods/6262). v1 has a severe bug with the Mystic Emporium disappearing.' ]
-        condition: 'not version("bookplacing.esm", "1.2", ==)'
   - name: 'No Lights Flicker.esm'
     url: [ 'https://www.nexusmods.com/oblivion/mods/6150/' ]
     msg:
@@ -28208,15 +28215,6 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/31297/' ]
     tag: [ Actors.Spells ]
 
-  - name: 'Book Placement v2.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/6262/' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Try AutoBookPlacer v3 or later.'
-          - lang: de
-            text: 'Versuchen Sie AutoBookPlacer v3 oder neuer.'
   - name: 'Axebane_Hunters25.esp'
     msg:
       - type: say
