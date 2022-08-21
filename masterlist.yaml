@@ -12769,6 +12769,21 @@ plugins:
         itm: 2
         udr: 12
 
+  - name: 'Bonemold_helmet.esp'
+    url:
+      - link: 'http://www.nexusmods.com/oblivion/mods/6997/'
+        name: 'Bonemold Helmet'
+    msg:
+      - <<: *deletePlugin
+        subs: [ 'Unofficial Francesco''s Mod Armor Add-on' ]
+        condition: 'active("Fran Armor Add-on.esp")'
+    tag:
+      - Invent.Add
+      - Invent.Remove
+    clean:
+      - crc: 0x4E105042
+        util: 'TES4Edit v4.0.4b'
+
   - name: 'Buried_Treasure.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/16129/' ]
     msg:
@@ -24486,15 +24501,7 @@ plugins:
     tag:
       - Actors.Skeleton
       - NoMerge
-  - name: 'Bonemold_Helmet.esp'
-    url: [ 'http://www.nexusmods.com/oblivion/mods/6997/' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Deactivate or delete this ESP file when using ''Unofficial Fran''s Armor'' (mesh and texture files are still required).'
-          - lang: de
-            text: 'Deaktivieren oder Entfernen Sie diese ESP Datei beim Benutzen von ''Unofficial Fran''s Armor'' (Mesh und Textur Dateien sind weiterhin benötigt).'
+
   - name: '01_SenTinel''s Katanas.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/8291/' ]
     tag: [ Invent ]
