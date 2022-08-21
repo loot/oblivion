@@ -12242,15 +12242,15 @@ plugins:
         util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 4
 
-  - name: 'S\.P\.A\.M\..*\.esp'
+  - name: 'S\.P\.A\.M.*\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/9914/'
         name: 'Simbacca''s Player Advancement Method'
-  - name: 'S.P.A.M(\. 100\+)?\.esp'
+  - name: 'S\.P\.A\.M(\. 100\+)?\.esp'
     msg:
       - <<: *useOnlyOneX
         subs: [ '"S.P.A.M.esp" or "S.P.A.M. 100+.esp"' ]
-        condition: 'many("S.P.A.M(\. 100\+)?\.esp")'
+        condition: 'many("S\.P\.A\.M(\. 100\+)?\.esp")'
   - name: 'S.P.A.M.esp'
     req:
       - <<: *OBSE
@@ -12267,16 +12267,16 @@ plugins:
             text: 'All character attributes MUST be below 95 if adding one of those uncapper mods and this SPAM plugin.'
           - lang: de
             text: 'Alle Charakter Attribute MÜSSEN unter 95 sein wenn Sie einer der Uncapper-Mods und dieses SPAM Plugin hinzufügen.'
-  - name: 'S.P.A.M. option - Faste(r|st) Major.esp'
+  - name: 'S\.P\.A\.M\. option - Faste(r|st) Major\.esp'
     msg:
       - <<: *useOnlyOneX
-        subs: [ 'S.P.A.M Faster or Fastest Major' ]
-        condition: 'many("S.P.A.M. option - Faste(r|st) Major.esp")'
-  - name: 'S.P.A.M. option - Faste(r|st) Minor.esp'
+        subs: [ 'S.P.A.M. Faster or Fastest Major' ]
+        condition: 'many("S\.P\.A\.M\. option - Faste(r|st) Major\.esp")'
+  - name: 'S\.P\.A\.M\. option - Faste(r|st) Minor\.esp'
     msg:
       - <<: *useOnlyOneX
-        subs: [ 'S.P.A.M Faster or Fastest Minor' ]
-        condition: 'many("S.P.A.M. option - Faste(r|st) Minor.esp")'
+        subs: [ 'S.P.A.M. Faster or Fastest Minor' ]
+        condition: 'many("S\.P\.A\.M\. option - Faste(r|st) Minor\.esp")'
 
   - name: 'Ultimate Leveling.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/49134/' ]
