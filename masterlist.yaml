@@ -21841,7 +21841,9 @@ plugins:
       - <<: *wildEdits
         subs: [ 'Remove **00031BC5** from **Fran Armor Add-on.esp**.' ]
         condition: 'checksum("Fran Armor Add-on.esp", 08F76946)'
-    tag: [ Invent ]
+    tag:
+      - Invent.Add
+      - Invent.Remove
 
 ###### Martigen’s Monster Mod (MMM) ######
   - name: 'Mart''s Monster Mod.*\.es(m|p)'
