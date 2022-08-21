@@ -21826,6 +21826,25 @@ plugins:
         subs: [ 'Francescos Creatures and Items' ]
         condition: 'active("Francesco''s Leveled Creatures-Items Mod.esm")'
 
+  - name: 'Fran Armor Add-on.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/11483/'
+        name: 'Unofficial Francesco''s Mod Armor Add-on'
+    req: [ 'DLCShiveringIsles.esp' ]
+    msg:
+      - <<: *requiresResources
+        subs: [ '[Bonemold Helmet](https://www.nexusmods.com/oblivion/mods/6997/)' ]
+        condition: 'not file("meshes/armor/Bonemold") or not file("textures/armor/Bonemold")'
+      - <<: *requiresResources
+        subs: [ '[Ordinators from Morrowind - NPCs](https://www.nexusmods.com/oblivion/mods/15063/)' ]
+        condition: 'not file("meshes/armor/Ordinator") or not file("textures/armor/Ordinator")'
+      - <<: *wildEdits
+        subs: [ 'Remove **00031BC5** from **Fran Armor Add-on.esp**.' ]
+        condition: 'checksum("Fran Armor Add-on.esp", 08F76946)'
+    tag:
+      - Invent.Add
+      - Invent.Remove
+
 ###### Martigen’s Monster Mod (MMM) ######
   - name: 'Mart''s Monster Mod.*\.es(m|p)'
     url:
@@ -23308,12 +23327,6 @@ plugins:
     tag:
       - Delev
       - Relev
-  - name: 'Fran Armor Add-on.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/11483/' ]
-    req:
-      - name: 'meshes/armor/Bonemold/bone.nif'
-        display: 'Meshes from the "[Bonemold Helmet](http://www.nexusmods.com/oblivion/mods/6997)" and "Cryos Ordinator Indoril Armor" mods'
-    tag: [ Invent ]
 
   - name: 'Atmospheric Loading Screens - No Text.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/8958/' ]
