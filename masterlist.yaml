@@ -7425,13 +7425,11 @@ plugins:
       - 'Oscuro''s_Oblivion_Overhaul.esm'
     tag: [ Relev ]
   - name: 'M.O.E. - Unlocked Glenroy and Captain Renault Blades Armour.esp'
+    inc: [ 'FCOM_MOECaptainRenaultArmor.esp' ]
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Use ''FCOM_MOECaptainRenaultArmor'' to fix compatibility issues with FCOM.'
-          - lang: de
-            text: 'Nutzen Sie ''FCOM_MOECaptainRenaultArmor'' um Kompatibilitäts-Probleme mit FCOM zu beheben.'
+      - <<: *useInstead
+        subs: [ '[FCOM or OOO - MOE lootable Captain Renault Armor Alternative](https://www.nexusmods.com/oblivion/mods/15670/)' ]
+        condition: *OOOCond
   - name: 'M.O.E. - Vampire Clan Raelu.esp'
     dirty:
       - <<: *quickClean
