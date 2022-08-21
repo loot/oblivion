@@ -8780,6 +8780,10 @@ plugins:
       - '24HrArenaAliveV2.esp'
       - '24HrArenaAliveV2Towers.esp'
 
+  - name: 'Better_Gem_Pricing-7112.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/7112/' ]
+    tag: [ Stats ]
+
   - name: 'cf_Improved_Barter_Gold.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/4367/' ]
     dirty:
@@ -28229,16 +28233,6 @@ plugins:
     tag: [ Delev ]
   - name: 'Better Potions and Poisons.esp'
     tag: [ Graphics ]
-  - name: 'Better_Gem_Pricing-7112.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/7112/' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'May not work with Living Economy as LE scripts tend to overwrite pricing mods.'
-          - lang: de
-            text: 'Funktioniert womöglich nicht mit Living Economy da LE Skripte dazu tendieren Preisgestaltungs-Mods zu überschreiben.'
-        condition: 'file("Living Economy.*\.esp")'
   - name: 'BlackFineryWithAmulet.esp'
     msg:
       - <<: *useBashTweakInstead
