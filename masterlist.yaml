@@ -5084,6 +5084,22 @@ plugins:
       - crc: 0x3291418D
         util: 'TES4Edit v4.0.4b'
 
+  - name: 'SPTDiverseGuards-.*\.es[mp]'
+    url:
+      - link: 'https://www.afkmods.com/index.php?/files/file/2417-diverse-guards/'
+        name: 'Diverse Guards (AFK Mods)'
+      - link: 'https://www.nexusmods.com/oblivion/mods/24614/'
+        name: 'Diverse Guards (Nexus Mods)'
+  - name: 'SPTDiverseGuards-Resources.esm'
+    inc: [ 'Oscuro''s_Oblivion_Overhaul.esm' ]
+    msg: [ *alsoUseSilentVoice ]
+  - name: 'SPTDiverseGuards-(Anvil|Bravil|Bruma|Cheydinhal|Chorrol|Combined|ImpCity|InnsRoads|Leyawiin|Skingrad)(OCC|OCR)?-(AllRaces|Human|Imperial)\.esp'
+    after: [ 'SPTDiverseGuards-Core.esp' ]
+  - name: 'SPTDiverseGuards-(Anvil|Bravil|Bruma|Cheydinhal|Chorrol|Combined|Leyawiin|Skingrad)OCC-(AllRaces|Human|Imperial)\.esp'
+    req: [ 'Open Cities Classic.esp' ]
+  - name: 'SPTDiverseGuards-(Anvil|Bravil|Bruma|Cheydinhal|Chorrol|Combined|Leyawiin|Skingrad)OCR-(AllRaces|Human|Imperial)\.esp'
+    req: [ 'Open Cities Reborn.esp' ]
+
 ###### Encounters - Allies ######
   - name: 'aaaaExtraNpcs.esp'
     url:
@@ -23058,9 +23074,6 @@ plugins:
   - name: 'x117race.esm'
     url: [ 'https://www.nexusmods.com/oblivion/mods/37377/' ]
     tag: [ Hair ]
-  - name: 'SPTDiverseGuards-Resources.esm'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/24614/' ]
-    inc: [ 'Oscuro''s_Oblivion_Overhaul.esm' ]
   - name: 'Diverse Magic Effects Resource.esm'
     url: [ 'https://www.nexusmods.com/oblivion/mods/35264/' ]
     req: [ *MagicExtender ]
@@ -28692,19 +28705,6 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/35393/' ]
     msg: [ *versionXofYorGreaterRequiredOBSEv20 ]
     tag: [ Scripts ]
-  - name: 'SPTDiverseGuards.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/24614/' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Probably not compatible with OOO. Update to version 2.0+.'
-          - lang: de
-            text: 'Wahrscheinlich nicht kompatibel mit OOO. Updaten Sie zur Version 2.0+.'
-        condition: *OOOCond
-  - name: 'SPTDiverseGuardsMRAll.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/24614/' ]
-    inc: [ 'SPTDiverseGuardsMRHuman.esp' ]
   - name: 'SRJIrresponsibleHorses.esp'
     tag:
       - Actors.AIData
