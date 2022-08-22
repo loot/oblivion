@@ -13607,6 +13607,31 @@ plugins:
         itm: 17
         udr: 5
 
+  - name: 'mythsandlegends.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/4582/'
+        name: 'Myths and Legends Weapons'
+      - link: 'https://www.nexusmods.com/oblivion/mods/5902/'
+        name: 'Myths and Legends Weapons 2'
+      - link: 'https://www.nexusmods.com/oblivion/mods/6226/'
+        name: 'Myths and Legends Weapons 2 UPDATE'
+    dirty:
+      - <<: *quickClean
+        crc: 0x00448106
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 14
+        udr: 85
+      - <<: *quickClean
+        crc: 0x246E3DD3
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 34
+        udr: 201
+      - <<: *quickClean
+        crc: 0x86B0A727
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 34
+        udr: 201
+
   - name: 'Oblivion Collectible Cards.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/19140/' ]
     tag: [ Invent.Add ]
@@ -27679,16 +27704,6 @@ plugins:
             text: 'Incompatible with: Anything that modifies the Chorrol cathedral interior or exterior.'
           - lang: de
             text: 'Inkompatibel mit: Jeglichem das die das Äußere oder Innere der Chorrol Kathedrale modifiziert.'
-
-  - name: 'mythsandlegends.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/5902/' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'May cause NPCs to generate the message "The ghosts mouth moves but you cannot hear what he says."'
-          - lang: de
-            text: 'Kann verursachen das NPCs die Nachricht generieren "The ghosts mouth moves but you cannot hear what he says."'
 
   - name: 'Nine Divines Robes.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/24656/' ]
