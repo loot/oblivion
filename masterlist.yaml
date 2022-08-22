@@ -8460,6 +8460,9 @@ plugins:
         name: 'Axebane Hunters + Axebane RealHunger'
     msg:
       - <<: *patchUnavailable
+        subs: [ 'Lockpicks' ]
+        condition: 'active("GP_Lockpicks.esp")'
+      - <<: *patchUnavailable
         subs: [ 'Mart''s Monster Mod - Hunting & Crafting' ]
         condition: 'active("Mart''s Monster Mod - Hunting & Crafting.esp")'
     tag:
