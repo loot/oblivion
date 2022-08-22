@@ -4254,44 +4254,38 @@ plugins:
       - <<: *obsolete
         subs: [ '[RD Natural Weather Unoffical Test Fix](https://www.nexusmods.com/oblivion/mods/14918/)' ]
 
-  - name: '(AWS|NW|ANW|EW|OBSE)?(-)?Storms & Sound( SI)?\.esp'
+  - name: '.*Storms & Sound.*\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/8711/'
         name: 'Storms & Sound'
+  - name: '(ANW|AWS|EW|NW|OBSE)?-?Storms & Sound( SI)?\.esp'
     inc:
       - 'Weather Inside.esp'
       - 'weather inside [seasons] v1.2.esp'
       - 'weather inside [silent seasons] v1.2.esp'
     msg:
       - <<: *renameFile
-        subs: [ 'Storms & Sound.esp' ]
+        subs: [ '**Storms & Sound.esp**' ]
         condition: 'not file("Storms & Sound.esp")'
       - <<: *useOnlyOneX
         type: error
-        subs: [ 'Storms & Sound' ]
-        condition: 'many("(AWS|NW|ANW|EW|OBSE)?(-)?Storms & Sound( SI)?\.esp")'
-  - name: '(AWS|NW|ANW|EW|OBSE)?(-)Storms & Sound.esp'
+        subs: [ 'Storms & Sound ESP' ]
+        condition: 'many("(ANW|AWS|EW|NW|OBSE)?-?Storms & Sound( SI)?\.esp")'
+  - name: '(ANW|AWS|EW|NW|OBSE)?-Storms & Sound\.esp'
     inc: [ 'DLCShiveringIsles.esp' ]
-  - name: '(AWS|NW|ANW|EW|OBSE)?(-)?Storms & Sound SI.esp'
+  - name: '(ANW|AWS|EW|NW|OBSE)?-?Storms & Sound SI\.esp'
     req: [ 'DLCShiveringIsles.esp' ]
   - name: 'OBSE-Storms & Sound( SI)?\.esp'
     req: [ *OBSE ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'This one is compatible with all weather mods.'
-          - lang: de
-            text: 'Dieser ist kompatibel mit allen Wetter-Mods.'
   - name: 'Storms & Sound.esp'
     inc:
       - name: 'DLCShiveringIsles.esp'
         condition: 'checksum("Storms & Sound.esp", 2DBAAA1A) or checksum("Storms & Sound.esp", 082936DE)'
     msg:
       - <<: *wildEdits
-        subs: [ 'Remove record **00049BD5**, blocks Unofficial Patch change.' ]
-      # CRCs of renamed plugins(NO SI 2DBAAA1A, SI 9A124534, OBSE 5A07EB4E, OBSE SI AB61AA5A, NW AC2CE763, NW SI 6761AAF1, ANW C23EEEE9, ANW SI 30E0955F, AWS 6E7BFAB6, AWS SI 993A2165, EW C439BDBB, EW SI AACF47E6)
-        condition: 'checksum("Storms & Sound.esp", 2DBAAA1A) or checksum("Storms & Sound.esp", 9A124534) or checksum("Storms & Sound.esp", 5A07EB4E) or checksum("Storms & Sound.esp", AB61AA5A) or checksum("Storms & Sound.esp", AC2CE763)  or checksum("Storms & Sound.esp", 6761AAF1) or checksum("Storms & Sound.esp", C23EEEE9) or checksum("Storms & Sound.esp", 30E0955F) or checksum("Storms & Sound.esp", 6E7BFAB6) or checksum("Storms & Sound.esp", 993A2165) or checksum("Storms & Sound.esp", C439BDBB) or checksum("Storms & Sound.esp", AACF47E6)'
+        subs: [ 'Remove **00049BD5** from **Storms & Sound.esp**, blocks Unofficial Oblivion Patch change.' ]
+        # CRCs of renamed plugins(NO SI 2DBAAA1A, SI 9A124534, OBSE 5A07EB4E, OBSE SI AB61AA5A, NW AC2CE763, NW SI 6761AAF1, ANW C23EEEE9, ANW SI 30E0955F, AWS 6E7BFAB6, AWS SI 993A2165, EW C439BDBB, EW SI AACF47E6)
+        condition: 'checksum("Storms & Sound.esp", 2DBAAA1A) or checksum("Storms & Sound.esp", 9A124534) or checksum("Storms & Sound.esp", 5A07EB4E) or checksum("Storms & Sound.esp", AB61AA5A) or checksum("Storms & Sound.esp", AC2CE763) or checksum("Storms & Sound.esp", 6761AAF1) or checksum("Storms & Sound.esp", C23EEEE9) or checksum("Storms & Sound.esp", 30E0955F) or checksum("Storms & Sound.esp", 6E7BFAB6) or checksum("Storms & Sound.esp", 993A2165) or checksum("Storms & Sound.esp", C439BDBB) or checksum("Storms & Sound.esp", AACF47E6)'
     dirty:
       - <<: *quickClean
         crc: 0x082936DE
