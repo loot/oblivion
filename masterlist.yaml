@@ -14227,6 +14227,9 @@ plugins:
 
   - name: 'Imperial City Miniature Model.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/4212/' ]
+    msg:
+      - <<: *wildEdits
+        condition: 'checksum("Imperial City Miniature Model.esp", C1D3FAEA) or checksum("Imperial City Miniature Model.esp", C480675B)'
     dirty:
       - <<: *quickClean
         crc: 0xC1D3FAEA
