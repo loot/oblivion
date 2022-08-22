@@ -14225,6 +14225,18 @@ plugins:
         util: '[TES4Edit v4.0.3j (RC2 for 4.0.4)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
 
+  - name: 'Imperial City Miniature Model.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/4212/' ]
+    msg:
+      - <<: *wildEdits
+        condition: 'checksum("Imperial City Miniature Model.esp", C1D3FAEA) or checksum("Imperial City Miniature Model.esp", C480675B)'
+    dirty:
+      - <<: *quickClean
+        crc: 0xC1D3FAEA
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 25
+        udr: 411
+
   - name: 'Imperial City Suburbs.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/27500/' ]
     after: [ 'TalosBridgeGateHouse.esp' ]
@@ -27538,16 +27550,6 @@ plugins:
     inc:
       - 'Better Cities SKINGRAD.esp'
       - 'Better Cities Full.esp'
-
-  - name: 'Imperial City Miniature Model.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/4212/' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'May conflict with many mods that alter the IC palace.'
-          - lang: de
-            text: 'Kann im Konflikt stehen mit vielen Mods die den IC Palast abändern.'
 
   - name: 'JADICMothPriests.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/3771/' ]
