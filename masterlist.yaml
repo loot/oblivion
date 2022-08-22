@@ -2022,6 +2022,14 @@ plugins:
         util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 7
 
+  - name: 'Oblivion Graphics Extender Support.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/30054/' ]
+    msg:
+      - *masterReassignNehrim
+      - <<: *useInstead
+        subs: [ 'shaderlist.txt' ]
+        condition: *nehrimCond
+
   - name: 'Project Ambience.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/46520/'
@@ -31960,17 +31968,6 @@ plugins:
   - name: 'Side''s EAX Control.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/32128/' ]
     msg: [ *masterReassignNehrim ]
-  - name: 'Oblivion Graphics Extender Support.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/30054/' ]
-    msg:
-      - *masterReassignNehrim
-      - type: warn
-        content:
-          - lang: en
-            text: 'The support plugin does not work. Shaders must be loaded using the shaderlist.'
-          - lang: de
-            text: 'Das Support Plugin funktioniert nicht. Shader müssen mit der Shaderlist geladen werden.'
-        condition: *nehrimCond
   - name: 'Enhanced Hotkeys.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/34735/' ]
     msg: [ *masterReassignNehrim ]
