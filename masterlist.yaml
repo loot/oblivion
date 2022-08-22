@@ -9948,6 +9948,17 @@ plugins:
         util: 'TES4Edit v4.0.4b'
 
 ###### Gameplay - NPC Behaviour & Dialogue ######
+  - name: 'CompanionMaster.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/29652/' ]
+    msg:
+      - type: say
+        content:
+          - lang: en
+            text: 'Some menu functions may not work.'
+          - lang: de
+            text: 'Einige Menü Funktionen könnten nicht funktionieren.'
+        condition: *nehrimCond
+
   - name: 'Consistent Beggar Voices.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/48336/' ]
     clean:
@@ -32031,16 +32042,6 @@ plugins:
       - <<: *useOnlyOneX
         subs: [ 'Exponential Leveling' ]
         condition: 'many("Exponential(lvl|Lev)(Easy|Moderate|Hard|Extreme)\.esp")'
-  - name: 'CompanionMaster.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/29652/' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Some menu functions may not work.'
-          - lang: de
-            text: 'Einige Menü Funktionen könnten nicht funktionieren.'
-        condition: *nehrimCond
   - name: 'ScreenControls.esp'
     url:
       - 'https://www.nexusmods.com/oblivion/mods/16323/'
