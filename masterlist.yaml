@@ -12240,6 +12240,13 @@ plugins:
         util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 4
 
+  - name: 'Skill Perk Descriptions Enhancement.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/4061/' ]
+    msg:
+      - <<: *patchUnavailable
+        subs: [ 'Oscuro''s Oblivion Overhaul' ]
+        condition: 'active("Oscuro''s_Oblivion_Overhaul.esp")'
+
   - name: 'S\.P\.A\.M.*\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/9914/'
@@ -28690,15 +28697,6 @@ plugins:
   - name: 'Side''s Backpacks (COBL).esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/29120/' ]
     tag: [ Invent ]
-  - name: 'Skill Perk Descriptions Enhancement.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Conflicts with OOO''s changes to skill perks and their descriptions.'
-          - lang: de
-            text: 'Steht im Konflikt mit OOO''s Änderungen an den Fähigkeits-Perks und deren Beschreibungen.'
-        condition: *OOOCond
   - name: 'Steel Helm Replacer.esp'
     tag:
       - Graphics
