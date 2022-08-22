@@ -4265,7 +4265,7 @@ plugins:
       - 'weather inside [silent seasons] v1.2.esp'
     msg:
       - <<: *renameFile
-        subs: [ 'Storms & Sound.esp' ]
+        subs: [ '**Storms & Sound.esp**' ]
         condition: 'not file("Storms & Sound.esp")'
       - <<: *useOnlyOneX
         type: error
