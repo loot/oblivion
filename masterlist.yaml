@@ -8462,6 +8462,16 @@ plugins:
       - <<: *patchUnavailable
         subs: [ 'Mart''s Monster Mod - Hunting & Crafting' ]
         condition: 'active("Mart''s Monster Mod - Hunting & Crafting.esp")'
+  - name: 'Axebane_Hunters25.esp'
+    clean:
+      - crc: 0x4B095FFE
+        util: 'TES4Edit v4.0.4b'
+  - name: 'Axebane_RealHunger25.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0xC15E99E4
+        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1
 
   - name: 'BasicHarvest(Core|For.*)\.esp'
     url:
