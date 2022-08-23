@@ -17510,14 +17510,9 @@ plugins:
 
   - name: 'Clintmichs Beautiful Arcane University.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/30119/' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Probably incompatible with Better Cities.'
-          - lang: de
-            text: 'Wahrscheinlich inkompatibel mit Better Cities.'
-        condition: 'file("Better Cities Resources.esm")'
+    inc:
+      - 'Better Cities IC Arcane University.esp'
+      - 'Better Imperial City.esp'
 
   - name: 'Clintmichs Beautiful Imperial City Arboretum( v1\.1)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/30114/' ]
