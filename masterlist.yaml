@@ -1668,13 +1668,6 @@ plugins:
     msg:
       - <<: *alreadyInOrFixedByUOP
         condition: 'file("Unofficial Oblivion Patch.esp") and not file("Cosmetic Compilation.esp")'
-      - type: say
-        content:
-          - lang: en
-            text: 'It must be used if using Cosmetic Compilation.esp.'
-          - lang: de
-            text: 'Es muss genutzt werden wenn Cosmetic Compilation.esp genutzt wird.'
-        condition: 'file("Cosmetic Compilation.esp")'
 
   - name: 'kuerteeCleanUp.esp'
     url:
