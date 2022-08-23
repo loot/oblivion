@@ -6908,6 +6908,25 @@ plugins:
       - NoMerge
       - Scripts
 
+  - name: '!?BurningItems(MasterF| 0\.[24])\.es[mp]'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/20950/'
+        name: 'Burning Items'
+  - name: 'BurningItemsMasterF.esm'
+    clean:
+      - crc: 0x1E7A5CC4
+        util: 'TES4Edit v4.0.4c'
+  - name: '!?BurningItems 0\.[24]\.esp'
+    msg: [ *languageRussian ]
+    tag: [ Scripts ]
+  - name: '!BurningItems 0.4.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0xA01D088D
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
+        udr: 28
+
   - name: 'BuryCorpse.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/43134/' ]
     msg: [ *versionXofYorGreaterRequiredOBSEv20 ]
@@ -28341,17 +28360,7 @@ plugins:
     req:
       - <<: *OBSE
         condition: 'version("TimeWizard.esp","2.1",>=)'
-  - name: '!BurningItems 0.4.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Renames a lot of names to Russian so either use older (v0.2) English version or live with those changes'
-          - lang: de
-            text: 'Benennt viele Namen zu Russisch um, also nutzen Sie entweder die ältere (v0.2) Englische Version oder leben Sie mit diesen Änderungen'
-    tag: [ Scripts ]
-  - name: 'BurningItems 0.2.esp'
-    tag: [ Scripts ]
+
   - name: 'CaesarOneWithNature.esp'
     tag: [ Factions ]
 
