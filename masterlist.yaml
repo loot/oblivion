@@ -29620,11 +29620,16 @@ plugins:
       - Eyes
       - Hair
       - NpcFaces
-  - name: 'Cosmetic Compilation (XXL DV|- No (JPeepers|NPC Changes|JPeepers or NPC Changes))\.esp'
+  - name: 'Cosmetic Compilation - No (JPeepers|NPC Changes|JPeepers or NPC Changes)\.esp'
     msg:
       - <<: *useOnlyOneX
         subs: [ 'Cosmetic Compilation' ]
-        condition: 'many("Cosmetic Compilation (XXL DV|- No (JPeepers|NPC Changes|JPeepers or NPC Changes))\.esp")'
+        condition: 'many("Cosmetic Compilation - No (JPeepers|NPC Changes|JPeepers or NPC Changes)\.esp")'
+    tag:
+      - Eyes
+      - Hair
+      - NpcFaces
+  - name: 'Cosmetic Compilation XXL DV.esp'
     tag:
       - Eyes
       - Hair
