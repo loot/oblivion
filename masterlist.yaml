@@ -6913,10 +6913,19 @@ plugins:
       - link: 'https://www.nexusmods.com/oblivion/mods/20950/'
         name: 'Burning Items'
   - name: 'BurningItemsMasterF.esm'
+    clean:
+      - crc: 0x1E7A5CC4
+        util: 'TES4Edit v4.0.4c'
   - name: '!?BurningItems 0\.[24]\.esp'
     msg: [ *languageRussian ]
     tag: [ Scripts ]
   - name: '!BurningItems 0.4.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0xA01D088D
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
+        udr: 28
   - name: 'BurningItems 0.2.esp'
 
   - name: 'BuryCorpse.esp'
