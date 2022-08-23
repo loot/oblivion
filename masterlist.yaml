@@ -1665,9 +1665,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/3500/'
         name: 'Boethia Shrine Custom Race Fix'
-    msg:
-      - <<: *alreadyInOrFixedByUOP
-        condition: 'file("Unofficial Oblivion Patch.esp") and not file("Cosmetic Compilation.esp")'
+    msg: [ *alreadyInOrFixedByUOP ]
 
   - name: 'kuerteeCleanUp.esp'
     url:
