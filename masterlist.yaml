@@ -1661,6 +1661,18 @@ plugins:
     after: [ 'DLCShiveringIsles.esp' ]
 
 ###### Fixes ######
+  - name: 'boethia custom race.esp'
+    msg:
+      - <<: *alreadyInOrFixedByUOP
+        condition: 'file("Unofficial Oblivion Patch.esp") and not file("Cosmetic Compilation.esp")'
+      - type: say
+        content:
+          - lang: en
+            text: 'It must be used if using Cosmetic Compilation.esp.'
+          - lang: de
+            text: 'Es muss genutzt werden wenn Cosmetic Compilation.esp genutzt wird.'
+        condition: 'file("Cosmetic Compilation.esp")'
+
   - name: 'kuerteeCleanUp.esp'
     url:
       - 'https://www.nexusmods.com/oblivion/mods/24606/'
@@ -31666,17 +31678,7 @@ plugins:
     msg: [ *alreadyInOrFixedByUOP ]
   - name: 'Custom Race Fix.esp'
     msg: [ *alreadyInOrFixedByUOP ]
-  - name: 'boethia custom race.esp'
-    msg:
-      - <<: *alreadyInOrFixedByUOP
-        condition: 'file("Unofficial Oblivion Patch.esp") and not file("Cosmetic Compilation.esp")'
-      - type: say
-        content:
-          - lang: en
-            text: 'It must be used if using Cosmetic Compilation.esp.'
-          - lang: de
-            text: 'Es muss genutzt werden wenn Cosmetic Compilation.esp genutzt wird.'
-        condition: 'file("Cosmetic Compilation.esp")'
+
   - name: 'RaceFix_1C.esp'
     msg: [ *alreadyInOrFixedByUOP ]
   - name: 'BC Skingrad Reduced - EV.esp'
