@@ -17463,24 +17463,14 @@ plugins:
 
   - name: 'Clintmichs Beautiful Imperial City Arboretum.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/30114/' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Probably incompatible with Better Cities IC Arboretum and similar.'
-          - lang: de
-            text: 'Wahrscheinlich inkompatibel mit Better Cities IC Arboretum und ähnlichem.'
-        condition: 'file("Better Cities Resources.esm")'
+    inc:
+      - 'Better Cities IC Arboretum.esp'
+      - 'Better Imperial City.esp'
   - name: 'Clintmichs Beautiful Imperial City Arboretum v1.1.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/30114/' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Probably incompatible with Better Cities IC Arboretum and similar.'
-          - lang: de
-            text: 'Wahrscheinlich inkompatibel mit Better Cities IC Arboretum und ähnlichem.'
-        condition: 'file("Better Cities Resources.esm")'
+    inc:
+      - 'Better Cities IC Arboretum.esp'
+      - 'Better Imperial City.esp'
 
   - name: 'Clintmichs Beautiful Market District MakeOver (v1\.4|Natural Enviornments Version)\.esp' # sic
     url:
