@@ -332,60 +332,60 @@ common:
     condition: *FCOMCond
 
   # &languageX
-  - &languageEnglish
+  - &languageEN
     <<: *languageX
-    subs: [ '**en**' ]
-  - &languageBulgarian
+    subs: [ 'English (**en**)' ]
+  - &languageBG
     <<: *languageX
-    subs: [ '**bg**' ]
-  - &languageChineseSimplified
+    subs: [ 'Bulgarian (**bg**)' ]
+  - &languageCS
     <<: *languageX
-    subs: [ '**zh_CN**' ]
-  - &languageCzech
+    subs: [ 'Czech (**cs**)' ]
+  - &languageDA
     <<: *languageX
-    subs: [ '**cs**' ]
-  - &languageDanish
+    subs: [ 'Danish (**da**)' ]
+  - &languageDE
     <<: *languageX
-    subs: [ '**da**' ]
-  - &languageFinnish
+    subs: [ 'German (**de**)' ]
+  - &languageES
     <<: *languageX
-    subs: [ '**fi**' ]
-  - &languageFrench
+    subs: [ 'Spanish (**es**)' ]
+  - &languageFI
     <<: *languageX
-    subs: [ '**fr**' ]
-  - &languageGerman
+    subs: [ 'Finnish (**fi**)' ]
+  - &languageFR
     <<: *languageX
-    subs: [ '**de**' ]
-  - &languageItalian
+    subs: [ 'French (**fr**)' ]
+  - &languageIT
     <<: *languageX
-    subs: [ '**it**' ]
-  - &languageJapanese
+    subs: [ 'Italian (**it**)' ]
+  - &languageJA
     <<: *languageX
-    subs: [ '**ja**' ]
-  - &languageKorean
+    subs: [ 'Japanese (**ja**)' ]
+  - &languageKO
     <<: *languageX
-    subs: [ '**ko**' ]
-  - &languagePolish
+    subs: [ 'Korean (**ko**)' ]
+  - &languagePO
     <<: *languageX
-    subs: [ '**pl**' ]
-  - &languagePortuguese
+    subs: [ 'Polish (**pl**)' ]
+  - &languagePT_BR
     <<: *languageX
-    subs: [ '**pt_PT**' ]
-  - &languagePortugueseBrazil
+    subs: [ 'Brazilian Portuguese (**pt_BR**)' ]
+  - &languagePT_PT
     <<: *languageX
-    subs: [ '**pt_BR**' ]
-  - &languageRussian
+    subs: [ 'Portuguese (**pt_PT**)' ]
+  - &languageRU
     <<: *languageX
-    subs: [ '**ru**' ]
-  - &languageSpanish
+    subs: [ 'Russian (**ru**)' ]
+  - &languageSV
     <<: *languageX
-    subs: [ '**es**' ]
-  - &languageSwedish
+    subs: [ 'Swedish (**sv**)' ]
+  - &languageUK_UA
     <<: *languageX
-    subs: [ '**sv**' ]
-  - &languageUkrainian
+    subs: [ 'Ukrainian (**uk_UA**)' ]
+  - &languageZH_CN
     <<: *languageX
-    subs: [ '**uk_UA**' ]
+    subs: [ 'Simplified Chinese (**zh_CN**)' ]
 
   # &masterReassign
   - &masterReassignNehrim
@@ -6917,7 +6917,7 @@ plugins:
       - crc: 0x1E7A5CC4
         util: 'TES4Edit v4.0.4c'
   - name: '!?BurningItems 0\.[24]\.esp'
-    msg: [ *languageRussian ]
+    msg: [ *languageRU ]
     tag: [ Scripts ]
   - name: '!BurningItems 0.4.esp'
     dirty:
@@ -18207,7 +18207,7 @@ plugins:
         util: '[TES4Edit v4.0.3g](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 3
   - name: 'AzurasServices_de.esp'
-    msg: [ *languageGerman ]
+    msg: [ *languageDE ]
     dirty:
       - <<: *quickClean
         crc: 0x2036A473
@@ -21455,7 +21455,7 @@ plugins:
     inc: [ 'FCOM_Convergence.esm' ]
     msg:
       # doNotClean
-      - *languageGerman
+      - *languageDE
       - <<: *useInstead
         subs: [ '[Oblivion WarCry EV.esp](https://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/)' ]
         condition: *FCOMCond
