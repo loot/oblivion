@@ -4455,6 +4455,10 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/7531/'
         name: 'Cosmetic Compilation'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Cosmetic Compilation ESP' ]
+        condition: 'many("Cosmetic Compilation( - No (JPeepers( or NPC Changes)?|NPC Changes))?\.esp")'
   - name: 'Cosmetic Compilation( - No JPeepers)?.esp'
   - name: 'Cosmetic Compilation.esp'
     tag:
@@ -4462,10 +4466,6 @@ plugins:
       - Hair
       - NpcFaces
   - name: 'Cosmetic Compilation - No (JPeepers|NPC Changes|JPeepers or NPC Changes)\.esp'
-    msg:
-      - <<: *useOnlyOneX
-        subs: [ 'Cosmetic Compilation' ]
-        condition: 'many("Cosmetic Compilation - No (JPeepers|NPC Changes|JPeepers or NPC Changes)\.esp")'
     tag:
       - Eyes
       - Hair
