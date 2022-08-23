@@ -4451,6 +4451,21 @@ plugins:
       - crc: 0x5C8F79D1
         util: 'TES4Edit v4.0.4b'
 
+  - name: 'Cosmetic Compilation.esp'
+    tag:
+      - Eyes
+      - Hair
+      - NpcFaces
+  - name: 'Cosmetic Compilation - No (JPeepers|NPC Changes|JPeepers or NPC Changes)\.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Cosmetic Compilation' ]
+        condition: 'many("Cosmetic Compilation - No (JPeepers|NPC Changes|JPeepers or NPC Changes)\.esp")'
+    tag:
+      - Eyes
+      - Hair
+      - NpcFaces
+
   - name: 'Half Orc Replacer.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/52231/'
@@ -29615,20 +29630,7 @@ plugins:
       - Eyes
       - Hair
       - NpcFaces
-  - name: 'Cosmetic Compilation.esp'
-    tag:
-      - Eyes
-      - Hair
-      - NpcFaces
-  - name: 'Cosmetic Compilation - No (JPeepers|NPC Changes|JPeepers or NPC Changes)\.esp'
-    msg:
-      - <<: *useOnlyOneX
-        subs: [ 'Cosmetic Compilation' ]
-        condition: 'many("Cosmetic Compilation - No (JPeepers|NPC Changes|JPeepers or NPC Changes)\.esp")'
-    tag:
-      - Eyes
-      - Hair
-      - NpcFaces
+
   - name: 'Cosmetic Compilation XXL DV.esp'
     tag:
       - Eyes
