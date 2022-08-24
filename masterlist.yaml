@@ -17654,6 +17654,18 @@ plugins:
         itm: 38
         udr: 1
 
+  - name: 'Clintmichs Beautiful Talos Plaza District.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/30168/' ]
+    inc:
+      - 'Better Cities IC Talos Plaza.esp'
+      - 'Better Imperial City.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x8E51367E
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 18
+        udr: 6
+
   - name: 'Colourwheels Sexy Arena Revised HGEC.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/41609/' ]
     tag:
@@ -27450,16 +27462,6 @@ plugins:
 
   - name: 'Clintmichs Improved Prison District v1.1.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/30136/' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Probably incompatible with Better Cities.'
-          - lang: de
-            text: 'Wahrscheinlich inkompatibel mit Better Cities.'
-        condition: 'file("Better Cities Resources.esm")'
-  - name: 'Clintmichs Beautiful Talos Plaza District.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/30168/' ]
     msg:
       - type: say
         content:
