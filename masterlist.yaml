@@ -19935,6 +19935,28 @@ plugins:
     req: [ 'Better Cities - Open Better Cities.esp' ]
 
   ### Better Cities - 3RD Party Patches ###
+  - name: 'BC Skingrad Reduced - [DE]V\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/14460/'
+        name: 'Better Cities Skingrad REDUCED'
+    inc:
+      - 'Better Cities FULL.esp'
+      - 'Better Cities SKINGRAD.esp'
+  - name: 'BC Skingrad Reduced - DV.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x36269B4C
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 129
+        udr: 426
+  - name: 'BC Skingrad Reduced - EV.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0xFBB05BCC
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 139
+        udr: 426
+
   - name: '.*OSPS(-|_)BC_IC-II_.*\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/45817/'
@@ -31731,21 +31753,7 @@ plugins:
 
   - name: 'RaceFix_1C.esp'
     msg: [ *alreadyInOrFixedByUOP ]
-  - name: 'BC Skingrad Reduced - EV.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'For use with Better Cities uncheck Better Cities SKINGRAD.esp'
-          - lang: de
-            text: 'Für die Benutzung von Better Cities, deaktivieren Sie Better Cities SKINGRAD.esp'
-      - type: say
-        content:
-          - lang: en
-            text: 'Do not use this plugin with Better Cities Full.esp'
-          - lang: de
-            text: 'Nutzen Sie dieses Plugin nicht mit Better Cities Full.esp'
-        condition: 'file("Better Cities Full.esp")'
+
   - name: 'Cyrodiil Rebuild II.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/43743/' ]
     tag:
