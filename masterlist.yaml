@@ -8913,23 +8913,15 @@ plugins:
       - name: 'DLCShiveringIsles.esp'
         condition: 'checksum("COBL-FransCre.esp", BBFD55BB)'
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Remember to use the SI or no-SI versions as appropriate (same file names).'
-          - lang: de
-            text: 'Denken Sie daran die SI oder nicht-SI Versionen zu nutzen wie angebracht (selbe Dateinamen).'
+      - <<: *useVersionShiveringIsles
+        condition: 'active("DLCShiveringIsles.esp") and checksum("COBL-FransCre.esp", 0418928D)'
   - name: 'COBL-FransNewCre.esp'
     req:
       - name: 'DLCShiveringIsles.esp'
         condition: 'checksum("COBL-FransNewCre.esp", B7784F39)'
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Remember to use the SI or no-SI versions as appropriate (same file names).'
-          - lang: de
-            text: 'Denken Sie daran die SI oder nicht-SI Versionen zu nutzen wie angebracht (selbe Dateinamen).'
+      - <<: *useVersionShiveringIsles
+        condition: 'active("DLCShiveringIsles.esp") and checksum("COBL-FransNewCre.esp", 02206764)'
 
   - name: 'FG_Merchant Inventory Realism V 1_5.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/5561/' ]
