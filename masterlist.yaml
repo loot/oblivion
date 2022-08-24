@@ -17656,14 +17656,9 @@ plugins:
 
   - name: 'Clintmichs Beautiful Talos Plaza District.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/30168/' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Probably incompatible with Better Cities.'
-          - lang: de
-            text: 'Wahrscheinlich inkompatibel mit Better Cities.'
-        condition: 'file("Better Cities Resources.esm")'
+    inc:
+      - 'Better Cities IC Talos Plaza.esp'
+      - 'Better Imperial City.esp'
 
   - name: 'Colourwheels Sexy Arena Revised HGEC.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/41609/' ]
