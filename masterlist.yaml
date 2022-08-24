@@ -8903,6 +8903,34 @@ plugins:
         util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 3
 
+  - name: 'COBL-FransCre.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/17603/' ]
+    req:
+      - 'Francesco''s Leveled Creatures-Items Mod.esm'
+      - 'Cobl Main.esm'
+    inc: [ 'FCOM_Convergence.esm' ]
+    msg:
+      - type: say
+        content:
+          - lang: en
+            text: 'Remember to use the SI or no-SI versions as appropriate (same file names).'
+          - lang: de
+            text: 'Denken Sie daran die SI oder nicht-SI Versionen zu nutzen wie angebracht (selbe Dateinamen).'
+  - name: 'COBL-FransNewCre.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/17603/' ]
+    inc: [ 'FCOM_Convergence.esm' ]
+    req:
+      - 'Cobl Main.esm'
+      - 'Francesco''s Leveled Creatures-Items Mod.esm'
+      - 'Francesco''s Optional New Items Add-On.esm'
+    msg:
+      - type: say
+        content:
+          - lang: en
+            text: 'Remember to use the SI or no-SI versions as appropriate (same file names).'
+          - lang: de
+            text: 'Denken Sie daran die SI oder nicht-SI Versionen zu nutzen wie angebracht (selbe Dateinamen).'
+
   - name: 'FG_Merchant Inventory Realism V 1_5.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/5561/' ]
     tag: [ Invent.Add ]
@@ -26234,33 +26262,7 @@ plugins:
             text: 'Don''t use with vampire mods.'
           - lang: de
             text: 'Nicht mit Vampir Mods nutzen.'
-  - name: 'COBL-FransCre.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/17603/' ]
-    req:
-      - 'Francesco''s Leveled Creatures-Items Mod.esm'
-      - 'Cobl Main.esm'
-    inc: [ 'FCOM_Convergence.esm' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Remember to use the SI or no-SI versions as appropriate (same file names).'
-          - lang: de
-            text: 'Denken Sie daran die SI oder nicht-SI Versionen zu nutzen wie angebracht (selbe Dateinamen).'
-  - name: 'COBL-FransNewCre.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/17603/' ]
-    inc: [ 'FCOM_Convergence.esm' ]
-    req:
-      - 'Cobl Main.esm'
-      - 'Francesco''s Leveled Creatures-Items Mod.esm'
-      - 'Francesco''s Optional New Items Add-On.esm'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Remember to use the SI or no-SI versions as appropriate (same file names).'
-          - lang: de
-            text: 'Denken Sie daran die SI oder nicht-SI Versionen zu nutzen wie angebracht (selbe Dateinamen).'
+
   - name: 'Loth''s Blunt Weapons(- Mobs| for Npcs)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/12939/' ]
     msg:
