@@ -8920,6 +8920,13 @@ plugins:
     msg:
       - <<: *useVersionShiveringIsles
         condition: 'active("DLCShiveringIsles.esp") and checksum("COBL-FransCre.esp", 0418928D)'
+    clean:
+      # SI
+      - crc: 0xBBFD55BB
+        util: 'TES4Edit v4.0.4c'
+      # Non-SI
+      - crc: 0x0418928D
+        util: 'TES4Edit v4.0.4c'
   - name: 'COBL-FransNewCre.esp'
     req:
       - name: 'DLCShiveringIsles.esp'
@@ -8927,6 +8934,13 @@ plugins:
     msg:
       - <<: *useVersionShiveringIsles
         condition: 'active("DLCShiveringIsles.esp") and checksum("COBL-FransNewCre.esp", 02206764)'
+    clean:
+      # SI
+      - crc: 0xB7784F39
+        util: 'TES4Edit v4.0.4c'
+      # Non-SI
+      - crc: 0x02206764
+        util: 'TES4Edit v4.0.4c'
 
   - name: 'FG_Merchant Inventory Realism V 1_5.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/5561/' ]
