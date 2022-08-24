@@ -16305,13 +16305,9 @@ plugins:
   - name: 'JADDockTunnel.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/4590/' ]
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Probably not compatible with Better Cities.'
-          - lang: de
-            text: 'Wahrscheinlich nicht kompatibel mit Better Cities.'
-        condition: 'file("Better Cities Resources.esm")'
+      - <<: *alreadyInX
+        subs: [ 'Better Cities IC Temple' ]
+        condition: 'active("Better Imperial City.esp") or active("Better Cities IC Temple.esp")'
 
   - name: 'Jagnot- Imperial City Library V1.3.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/3868/' ]
