@@ -19939,21 +19939,9 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/14460/'
         name: 'Better Cities Skingrad REDUCED'
-  - name: 'BC Skingrad Reduced - EV.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'For use with Better Cities uncheck Better Cities SKINGRAD.esp'
-          - lang: de
-            text: 'Für die Benutzung von Better Cities, deaktivieren Sie Better Cities SKINGRAD.esp'
-      - type: say
-        content:
-          - lang: en
-            text: 'Do not use this plugin with Better Cities Full.esp'
-          - lang: de
-            text: 'Nutzen Sie dieses Plugin nicht mit Better Cities Full.esp'
-        condition: 'file("Better Cities Full.esp")'
+    inc:
+      - 'Better Cities FULL.esp'
+      - 'Better Cities SKINGRAD.esp'
 
   - name: '.*OSPS(-|_)BC_IC-II_.*\.esp'
     url:
