@@ -14431,6 +14431,34 @@ plugins:
         itm: 8
         udr: 26
 
+  - name: 'KS - Cities FPS Boost.esp'
+    msg:
+      - type: say
+        content:
+          - lang: en
+            text: 'Probably incompatible with Better Cities.'
+          - lang: de
+            text: 'Vermutlich inkompatibel mit Better Cities.'
+        condition: 'file("Better Cities Resources.esm")'
+  - name: 'KS - Imperial FPS Boost.esp'
+    msg:
+      - type: say
+        content:
+          - lang: en
+            text: 'Probably incompatible with Better Cities.'
+          - lang: de
+            text: 'Vermutlich inkompatibel mit Better Cities.'
+        condition: 'file("Better Cities Resources.esm")'
+  - name: 'KS - Kvatch FPS Boost.esp'
+    msg:
+      - type: say
+        content:
+          - lang: en
+            text: 'Probably incompatible with Better Cities.'
+          - lang: de
+            text: 'Vermutlich inkompatibel mit Better Cities.'
+        condition: 'file("Better Cities Resources.esm")'
+
   - name: 'MTCExpandedVillages.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/27125/'
@@ -28303,33 +28331,7 @@ plugins:
       - <<: *renameFile
         subs: [ 'NPC new clothes V2.6.esp' ]
         condition: *FCOMCond
-  - name: 'KS - Cities FPS Boost.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Probably incompatible with Better Cities.'
-          - lang: de
-            text: 'Vermutlich inkompatibel mit Better Cities.'
-        condition: 'file("Better Cities Resources.esm")'
-  - name: 'KS - Imperial FPS Boost.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Probably incompatible with Better Cities.'
-          - lang: de
-            text: 'Vermutlich inkompatibel mit Better Cities.'
-        condition: 'file("Better Cities Resources.esm")'
-  - name: 'KS - Kvatch FPS Boost.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Probably incompatible with Better Cities.'
-          - lang: de
-            text: 'Vermutlich inkompatibel mit Better Cities.'
-        condition: 'file("Better Cities Resources.esm")'
+
   - name: 'Imperial City Redux.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/25113/' ]
     clean:
