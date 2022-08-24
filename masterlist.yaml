@@ -7043,6 +7043,10 @@ plugins:
       - link: 'https://www.nexusmods.com/oblivion/mods/4520/'
         name: 'Cyrodiil Transportation Network'
   - name: 'Cyrodiil transportation network( wz)?( OC)?\.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Cyrodiil Transportation Network ESP' ]
+        condition: 'many("Cyrodiil transportation network( wz)?( OC)?\.esp")'
   - name: 'Cyrodiil transportation network.esp'
   - name: 'Cyrodiil transportation network( WZ)? OC\.esp'
     msg:
