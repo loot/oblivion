@@ -7038,6 +7038,38 @@ plugins:
         util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 8
 
+  - name: 'cyrodiil transportation network.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/4520/' ]
+    msg:
+      - type: say
+        content:
+          - lang: en
+            text: 'Check if you''re using v1.3 or later.'
+          - lang: de
+            text: 'Überprüfen Sie ob Sie v1.3 oder neuer nutzen.'
+  - name: 'cyrodiil transportation network wz.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/4520/' ]
+    msg:
+      - type: say
+        content:
+          - lang: en
+            text: 'Check if you''re using v1.3 or later.'
+          - lang: de
+            text: 'Überprüfen Sie ob Sie v1.3 oder neuer nutzen.'
+  - name: 'cyrodiil transportation network 1.3 wz.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/4520/' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xF7730CA5
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 66
+        udr: 20
+      - <<: *quickClean
+        crc: 0x675027D0
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 64
+        udr: 20
+
   - name: 'Diseased Corpses.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/9758/' ]
     tag: [ Scripts ]
@@ -26931,37 +26963,7 @@ plugins:
         util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536/)'
         itm: 67
         udr: 191
-  - name: 'cyrodiil transportation network.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/4520/' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Check if you''re using v1.3 or later.'
-          - lang: de
-            text: 'Überprüfen Sie ob Sie v1.3 oder neuer nutzen.'
-  - name: 'cyrodiil transportation network wz.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/4520/' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Check if you''re using v1.3 or later.'
-          - lang: de
-            text: 'Überprüfen Sie ob Sie v1.3 oder neuer nutzen.'
-  - name: 'cyrodiil transportation network 1.3 wz.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/4520/' ]
-    dirty:
-      - <<: *quickClean
-        crc: 0xF7730CA5
-        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 66
-        udr: 20
-      - <<: *quickClean
-        crc: 0x675027D0
-        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 64
-        udr: 20
+
   - name: 'Cyrodiil Border Regions 1.2.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/12246/' ]
     msg:
