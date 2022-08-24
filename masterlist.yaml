@@ -6432,14 +6432,13 @@ plugins:
 
   - name: 'Enhanced Vegetation( \[\d{3}%\])?\.esp'
     url:
-      - link: 'https://www.nexusmods.com/oblivion/mods/23783/'
-        name: 'Enhanced Vegetation'
       - link: 'https://www.nexusmods.com/oblivion/mods/52253/'
         name: 'Enhanced Vegetation repack'
     msg:
       - <<: *useOnlyOneX
         subs: [ 'Enhanced Vegetation ESP' ]
         condition: 'many("Enhanced Vegetation( \[\d{3}%\])?\.esp")'
+  - name: 'Enhanced Vegetation.esp'
     clean:
       - crc: 0x012E2F95
         util: 'TES4Edit v4.0.4c'
@@ -6449,15 +6448,19 @@ plugins:
         util: 'TES4Edit v4.0.4c'
       - crc: 0xCA480A0F
         util: 'TES4Edit v4.0.4c'
-
+  - name: 'Enhanced Vegetation \[\d{3}%\]\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/23783/'
+        name: 'Enhanced Vegetation'
   - name: 'Enhanced Vegetation SI( \d{3}%)?\.esp'
     url:
-      - link: 'https://www.nexusmods.com/oblivion/mods/47535/'
-        name: 'Enhanced Vegetation - Shivering Isles'
       - link: 'https://www.nexusmods.com/oblivion/mods/52253/'
         name: 'Enhanced Vegetation repack'
     req: [ 'DLCShiveringIsles.esp' ]
   - name: 'Enhanced Vegetation SI.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/47535/'
+        name: 'Enhanced Vegetation - Shivering Isles'
     clean:
       - crc: 0x610CDFA9
         util: 'TES4Edit v4.0.4c'
