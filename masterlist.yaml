@@ -10325,14 +10325,15 @@ plugins:
 
   - name: 'Locked Doors and Knocking v1.02.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/24218/' ]
-    inc: [ *BetterCities ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Incompatible with Better Cities, and probably other city altering mods.'
-          - lang: de
-            text: 'Inkompatibel mit Better Cities, und vermutlich anderen Städte-verändernden Mods.'
+    inc:
+      - 'Better Cities ANVIL.esp'
+      - 'Better Cities BRAVIL.esp'
+      - 'Better Cities BRUMA.esp'
+      - 'Better Cities CHEYDINHAL.esp'
+      - 'Better Cities CHORROL.esp'
+      - 'Better Cities FULL.esp'
+      - 'Better Cities LEYAWIIN.esp'
+      - 'Better Cities SKINGRAD.esp'
     dirty:
       - <<: *quickClean
         crc: 0xD57ADCCB
