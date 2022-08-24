@@ -17599,24 +17599,14 @@ plugins:
 
   - name: 'The Beautiful Market District.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/30012/' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Probably incompatible with Better Cities.'
-          - lang: de
-            text: 'Wahrscheinlich inkompatibel mit Better Cities.'
-        condition: 'file("Better Cities Resources.esm")'
+    inc:
+      - 'Better Cities IC Market.esp'
+      - 'Better Imperial City.esp'
   - name: 'Clintmichs Beautiful Market District v1.3.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/30012/' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Probably incompatible with Better Cities.'
-          - lang: de
-            text: 'Wahrscheinlich inkompatibel mit Better Cities.'
-        condition: 'file("Better Cities Resources.esm")'
+    inc:
+      - 'Better Cities IC Market.esp'
+      - 'Better Imperial City.esp'
 
   - name: 'Clintmichs Beautiful Market District MakeOver (v1\.4|Natural Enviornments Version)\.esp' # sic
     url:
