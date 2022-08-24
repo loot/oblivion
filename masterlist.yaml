@@ -7045,6 +7045,10 @@ plugins:
   - name: 'Cyrodiil transportation network( wz)?( OC)?\.esp'
   - name: 'Cyrodiil transportation network.esp'
   - name: 'Cyrodiil transportation network( WZ)? OC\.esp'
+    msg:
+      - <<: *requiresX
+        subs: [ '[Open Cities Classic](https://www.afkmods.com/index.php?/files/file/253-open-cities-classic/)' ]
+        condition: 'not active("Open Cities Classic.esp")'
   - name: 'Cyrodiil transportation network OC.esp'
   - name: 'cyrodiil transportation network wz( OC)?\.esp'
     req: [ 'DLCFrostcrag.esp' ]
