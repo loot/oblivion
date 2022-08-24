@@ -14436,32 +14436,10 @@ plugins:
       - link: 'https://www.nexusmods.com/oblivion/mods/27727/'
         name: 'City FPS Boost'
   - name: 'KS - Cities FPS Boost.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Probably incompatible with Better Cities.'
-          - lang: de
-            text: 'Vermutlich inkompatibel mit Better Cities.'
-        condition: 'file("Better Cities Resources.esm")'
+    inc: [ *BetterCities ]
   - name: 'KS - Imperial FPS Boost.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Probably incompatible with Better Cities.'
-          - lang: de
-            text: 'Vermutlich inkompatibel mit Better Cities.'
-        condition: 'file("Better Cities Resources.esm")'
+    inc: [ *BetterCities ]
   - name: 'KS - Kvatch FPS Boost.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Probably incompatible with Better Cities.'
-          - lang: de
-            text: 'Vermutlich inkompatibel mit Better Cities.'
-        condition: 'file("Better Cities Resources.esm")'
 
   - name: 'MTCExpandedVillages.esp'
     url:
