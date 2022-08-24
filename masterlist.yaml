@@ -17668,14 +17668,9 @@ plugins:
 
   - name: 'Clintmichs Improved Prison District v1.1.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/30136/' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Probably incompatible with Better Cities.'
-          - lang: de
-            text: 'Wahrscheinlich inkompatibel mit Better Cities.'
-        condition: 'file("Better Cities Resources.esm")'
+    inc:
+      - 'Better Cities IC Prison.esp'
+      - 'Better Imperial City.esp'
 
   - name: 'Colourwheels Sexy Arena Revised HGEC.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/41609/' ]
