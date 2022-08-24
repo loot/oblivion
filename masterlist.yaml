@@ -17666,6 +17666,18 @@ plugins:
         itm: 18
         udr: 6
 
+  - name: 'Clintmichs Improved Prison District( v\d.\d)?\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/30136/' ]
+    inc:
+      - 'Better Cities IC Prison.esp'
+      - 'Better Imperial City.esp'
+  - name: 'Clintmichs Improved Prison District v1.1.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x879D2282
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 3
+
   - name: 'Colourwheels Sexy Arena Revised HGEC.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/41609/' ]
     tag:
@@ -27459,17 +27471,6 @@ plugins:
     msg: [ *obsolete ]
   - name: 'CottageInColoviaV1.6.esp'
     inc: [ 'Waalx Animals & Creatures.esm' ]
-
-  - name: 'Clintmichs Improved Prison District v1.1.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/30136/' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Probably incompatible with Better Cities.'
-          - lang: de
-            text: 'Wahrscheinlich inkompatibel mit Better Cities.'
-        condition: 'file("Better Cities Resources.esm")'
 
   - name: 'DarelothFrontDoorFix.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/33119/' ]
