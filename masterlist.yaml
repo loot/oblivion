@@ -8908,6 +8908,9 @@ plugins:
       - link: 'https://www.nexusmods.com/oblivion/mods/17603/'
         name: 'COBL-Tweaks for Frans'
   - name: 'COBL-FransCre.esp'
+    req:
+      - name: 'DLCShiveringIsles.esp'
+        condition: 'checksum("COBL-FransCre.esp", BBFD55BB)'
     inc: [ 'FCOM_Convergence.esm' ]
     msg:
       - type: say
@@ -8917,6 +8920,9 @@ plugins:
           - lang: de
             text: 'Denken Sie daran die SI oder nicht-SI Versionen zu nutzen wie angebracht (selbe Dateinamen).'
   - name: 'COBL-FransNewCre.esp'
+    req:
+      - name: 'DLCShiveringIsles.esp'
+        condition: 'checksum("COBL-FransNewCre.esp", B7784F39)'
     inc: [ 'FCOM_Convergence.esm' ]
     msg:
       - type: say
