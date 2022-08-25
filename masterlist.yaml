@@ -7038,6 +7038,54 @@ plugins:
         util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 8
 
+  - name: 'Cyrodiil transportation network( 1\.3)?( wz)?( OC)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/4520/'
+        name: 'Cyrodiil Transportation Network'
+  - name: 'Cyrodiil transportation network( wz)?( OC)?\.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Cyrodiil Transportation Network ESP' ]
+        condition: 'many("Cyrodiil transportation network( wz)?( OC)?\.esp")'
+  - name: 'Cyrodiil transportation network.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0xAFCAC1D8
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 64
+        udr: 20
+  - name: 'Cyrodiil transportation network( WZ)? OC\.esp'
+    msg:
+      - <<: *requiresX
+        subs: [ '[Open Cities Classic](https://www.afkmods.com/index.php?/files/file/253-open-cities-classic/)' ]
+        condition: 'not active("Open Cities Classic.esp")'
+  - name: 'Cyrodiil transportation network OC.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x592C4F9E
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 64
+        udr: 20
+  - name: 'cyrodiil transportation network wz( OC)?\.esp'
+    req: [ 'DLCFrostcrag.esp' ]
+  - name: 'cyrodiil transportation network wz.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x76E602AE
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 66
+        udr: 20
+  - name: 'Cyrodiil Transportation Network WZ OC.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0xAA5671B5
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 66
+        udr: 20
+  # Obsolete plugins #
+  - name: 'Cyrodiil transportation network 1\.3( wz)?\.esp'
+    msg: [ *obsolete ]
+
   - name: 'Diseased Corpses.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/9758/' ]
     tag: [ Scripts ]
@@ -26931,37 +26979,7 @@ plugins:
         util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536/)'
         itm: 67
         udr: 191
-  - name: 'cyrodiil transportation network.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/4520/' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Check if you''re using v1.3 or later.'
-          - lang: de
-            text: 'Überprüfen Sie ob Sie v1.3 oder neuer nutzen.'
-  - name: 'cyrodiil transportation network wz.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/4520/' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Check if you''re using v1.3 or later.'
-          - lang: de
-            text: 'Überprüfen Sie ob Sie v1.3 oder neuer nutzen.'
-  - name: 'cyrodiil transportation network 1.3 wz.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/4520/' ]
-    dirty:
-      - <<: *quickClean
-        crc: 0xF7730CA5
-        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 66
-        udr: 20
-      - <<: *quickClean
-        crc: 0x675027D0
-        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 64
-        udr: 20
+
   - name: 'Cyrodiil Border Regions 1.2.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/12246/' ]
     msg:
