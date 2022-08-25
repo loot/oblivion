@@ -4977,6 +4977,8 @@ plugins:
       - 'MaleBodyReplacerV3.esp'
       - 'MaleBodyReplacerV4.esp'
       - 'MaleBodyReplacerV5.esp'
+      - name: 'RacesOfCyrodiil.esp'
+        condition: 'active("Bashed Patch.*\.esp")'
       - name: 'Trap.esp'
         condition: 'active("Bashed Patch.*\.esp")'
     req:
@@ -8440,6 +8442,19 @@ plugins:
     clean:
       - crc: 0xDCAE5992
         util: 'TES4Edit v4.0.4b'
+
+  - name: 'RacesOfCyrodiil.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/52263/'
+        name: 'Races of Cyrodiil'
+    tag:
+      - Names
+      - R.ChangeSpells
+      - R.Description
+      - R.Skills
+    clean:
+      - crc: 0xAEC72BFA
+        util: 'TES4Edit v4.0.4c'
 
   - name: 'Shadow Ranger.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/26723/' ]
