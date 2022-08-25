@@ -11104,6 +11104,66 @@ plugins:
         itm: 26
         udr: 10
 
+  - name: 'DBSQR.*\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/26638/'
+        name: 'DB''s Static Quest Rewards'
+  - name: 'DBSQR.esp'
+    msg: [ *versionXofYorGreaterRequiredOBSEv18 ]
+    tag:
+      - -Actors.AIPackages
+      - -C.Light
+    clean:
+      - crc: 0xFAD9A58D
+        util: 'TES4Edit v4.0.4c'
+  - name: 'DBSQR - Battlehorn Castle.esp'
+    tag:
+      - -Actors.ACBS
+      - -C.Light
+    clean:
+      - crc: 0x30299641
+        util: 'TES4Edit v4.0.4c'
+  - name: 'DBSQR - Knights of the Nine.esp'
+    msg:
+      - <<: *wildEdits
+        subs: [ 'Remove **0000003C** from **DBSQR - Knights of the Nine.esp**.' ]
+        condition: 'checksum("DBSQR - Knights of the Nine.esp", 6C100242)'
+    tag:
+      - -Invent.Add
+      - -Invent.Remove
+  - name: 'DBSQR - OOO.esp'
+    req: [ 'Oscuro''s_Oblivion_Overhaul.esp' ]
+  - name: 'DBSQR - Orrery.esp'
+    clean:
+      - crc: 0xBCA2C8E9
+        util: 'TES4Edit v4.0.4c'
+  - name: 'DBSQR - Shivering Isles.esp'
+    req: [ 'DLCShiveringIsles.esp' ]
+    tag: [ -C.Music ]
+    clean:
+      - crc: 0xF42F372C
+        util: 'TES4Edit v4.0.4c'
+  - name: 'DBSQR - Vile Lair.esp'
+    msg:
+      - <<: *patchIncluded
+        subs: [ 'Legacy SM DLC Plugin Refurbish Vile Lair' ]
+        condition: 'file("SM Plugin Refurbish - VileLair.esp") and not file("DBSQR - Vile Lair SMPR.esp")'
+      - <<: *patchIncluded
+        subs: [ 'Legacy SM DLC Plugin Refurbish Merged' ]
+        condition: 'active("SM Plugin Refurbish(Merged).esp") and not file("DBSQR - Vile Lair SMPR Full.esp")'
+    tag:
+      - -Actors.ACBS
+      - -Actors.Stats
+      - -Delev
+      - -Relev
+    clean:
+      - crc: 0xEB9A077B
+        util: 'TES4Edit v4.0.4c'
+  - name: 'DBSQR - Vile Lair SMPR( Full)?\.esp'
+    req:
+      - 'DBSQR.esp'
+      - 'DBSQR - Vile Lair.esp'
+
   - name: 'Demonhunter.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/22066/'
@@ -26992,15 +27052,7 @@ plugins:
     tag:
       - Delev
       - Relev
-  - name: 'DBSQR - Vile Lair.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/26638/' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'If using SM Plugin Refurbish VL, use DBSQR - Vile Lair SMPR.esp or DBSQR - Vile Lair SMPR Full.esp as well.'
-          - lang: de
-            text: 'Wenn SM Plugin Refurbish VL genutzt wird, nutzen Sie auch DBSQR - Vile Lair SMPR.esp oder DBSQR - Vile Lair SMPR Full.esp.'
+
   - name: 'Daggerfall NPCs.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/29161/' ]
     tag: [ Delev ]
