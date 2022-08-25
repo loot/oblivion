@@ -16302,6 +16302,18 @@ plugins:
         subs: [ 'Remove NPC **0018B118** from **Imperial Shipyard.esp**.' ]
         condition: 'checksum("Imperial Shipyard.esp", 09D58350)'
 
+  - name: 'JADDockTunnel.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/4590/' ]
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'Better Cities IC Temple' ]
+        condition: 'active("Better Imperial City.esp") or active("Better Cities IC Temple.esp")'
+    dirty:
+      - <<: *quickClean
+        crc: 0x45115E63
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 5
+
   - name: 'Jagnot- Imperial City Library V1.3.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/3868/' ]
     msg:
@@ -28339,16 +28351,6 @@ plugins:
   - name: 'Waterfront Passage - Control of Goods.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/15974/' ]
     inc: [ *BetterCities ]
-  - name: 'JADDockTunnel.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/4590/' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Probably not compatible with Better Cities.'
-          - lang: de
-            text: 'Wahrscheinlich nicht kompatibel mit Better Cities.'
-        condition: 'file("Better Cities Resources.esm")'
 
   - name: 'Duke Patrick''s Health Alarm RED DEATH and Heartbeat.esp'
     url: [ 'http://tesalliance.org/forums/index.php?/files/file/1014-duke-patricks-health-alarm-and-red-death-screen/' ]
