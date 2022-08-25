@@ -11112,6 +11112,10 @@ plugins:
     msg: [ *versionXofYorGreaterRequiredOBSEv18 ]
   - name: 'DBSQR - Battlehorn Castle.esp'
   - name: 'DBSQR - Knights of the Nine.esp'
+    msg:
+      - <<: *wildEdits
+        subs: [ 'Remove **0000003C** from **DBSQR - Knights of the Nine.esp**.' ]
+        condition: 'checksum("DBSQR - Knights of the Nine.esp", 6C100242)'
   - name: 'DBSQR - OOO.esp'
     req: [ 'Oscuro''s_Oblivion_Overhaul.esp' ]
   - name: 'DBSQR - Orrery.esp'
