@@ -12694,6 +12694,13 @@ plugins:
       - crc: 0x04EDFC87
         util: 'TES4Edit v4.0.4'
 
+  - name: 'HUDI.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/34713/' ]
+    req:
+      - name: 'textures/menus/darn/omg.dds'
+        display: '[DarNified UI](http://www.nexusmods.com/oblivion/mods/10763/) or [DarkUI''d DarN](http://www.nexusmods.com/oblivion/mods/11280/)'
+    msg: [ *versionXofYorGreaterRequiredOBSEv19 ]
+
   - name: 'Kobu''s Stamina Mod.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/1862/' ]
     msg:
@@ -24454,15 +24461,6 @@ plugins:
   - name: 'GW71_Soulgems.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17499/' ]
     tag: [ Graphics ]
-  - name: 'HUDI.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/34713/' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Incompatible with: UI systems other than DarNified UI/Dark''d DarN/other DarN variants.'
-          - lang: de
-            text: 'Inkompatibel mit: UI Systemen außer DarNified UI/Dark''d DarN/andere DarN Varianten.'
   - name: 'Inebriation.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/2495/' ]
     inc: [ 'Oscuro''s_Oblivion_Overhaul.esm' ]
