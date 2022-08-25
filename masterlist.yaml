@@ -12696,13 +12696,9 @@ plugins:
 
   - name: 'HUDI.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/34713/' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Incompatible with: UI systems other than DarNified UI/Dark''d DarN/other DarN variants.'
-          - lang: de
-            text: 'Inkompatibel mit: UI Systemen außer DarNified UI/Dark''d DarN/andere DarN Varianten.'
+    req:
+      - name: 'textures/menus/darn/omg.dds'
+        display: '[DarNified UI](http://www.nexusmods.com/oblivion/mods/10763) or [DarkUI''d DarN](http://www.nexusmods.com/oblivion/mods/11280)'
 
   - name: 'Kobu''s Stamina Mod.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/1862/' ]
