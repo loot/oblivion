@@ -10129,6 +10129,23 @@ plugins:
       - crc: 0x3DDADDF8
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
 
+  - name: 'CreaturesFactionalised.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/36960/' ]
+    inc:
+      - 'Mart''s Monster Mod.esm'
+      - 'Oscuro''s_Oblivion_Overhaul.esm'
+    msg:
+      - type: say
+        content:
+          - lang: en
+            text: 'Incompatible with: Probably most overhauls if they touch creatures at all.'
+          - lang: de
+            text: 'Inkompatibel mit: Vermutlich meisten Überhol-Mods die irgendwie Kreaturen modifizieren.'
+    tag:
+      - Actors.AIData
+      - Factions
+      - Relations
+
   - name: 'CRP - Vile Lair Fully Voiced Overhaul.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/52028/'
@@ -28524,22 +28541,6 @@ plugins:
       - Graphics
       - Names
       - Relev
-  - name: 'CreaturesFactionalised.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/36960/' ]
-    inc:
-      - 'Mart''s Monster Mod.esm'
-      - 'Oscuro''s_Oblivion_Overhaul.esm'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Incompatible with: Probably most overhauls if they touch creatures at all.'
-          - lang: de
-            text: 'Inkompatibel mit: Vermutlich meisten Überhol-Mods die irgendwie Kreaturen modifizieren.'
-    tag:
-      - Actors.AIData
-      - Factions
-      - Relations
   - name: 'Curseman''s Anti Extinction Mod.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/21041/' ]
     msg:
