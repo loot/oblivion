@@ -11118,12 +11118,12 @@ plugins:
     req: [ 'DLCShiveringIsles.esp' ]
   - name: 'DBSQR - Vile Lair.esp'
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'If using SM Plugin Refurbish VL, use DBSQR - Vile Lair SMPR.esp or DBSQR - Vile Lair SMPR Full.esp as well.'
-          - lang: de
-            text: 'Wenn SM Plugin Refurbish VL genutzt wird, nutzen Sie auch DBSQR - Vile Lair SMPR.esp oder DBSQR - Vile Lair SMPR Full.esp.'
+      - <<: *patchIncluded
+        subs: [ 'Legacy SM DLC Plugin Refurbish Vile Lair' ]
+        condition: 'file("SM Plugin Refurbish - VileLair.esp") and not file("DBSQR - Vile Lair SMPR.esp")'
+      - <<: *patchIncluded
+        subs: [ 'Legacy SM DLC Plugin Refurbish Merged' ]
+        condition: 'active("SM Plugin Refurbish(Merged).esp") and not file("DBSQR - Vile Lair SMPR Full.esp")'
   - name: 'DBSQR - Vile Lair SMPR( Full)?\.esp'
     req:
       - 'DBSQR.esp'
