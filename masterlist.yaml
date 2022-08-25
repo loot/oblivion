@@ -7122,6 +7122,41 @@ plugins:
       - crc: 0xE2A5D879
         util: 'TES4Edit v4.0.3'
 
+  - name: 'EnchantedGems(_GemDust|_Geomancy)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/9569/'
+        name: 'Enchanting Gems'
+    req: [ *OBSE ]
+    inc:
+      - 'geomancy.esp'
+      - 'Geomancy & Gem Dust OOO.esp'
+      - 'Geomancy & Gem Dust OOO (No Spell Change).esp'
+      - 'Mart''s Monster Mod - Diverse Runeskulls Loot.esp'
+      - 'Mart''s Monster Mod - Diverse Runeskulls Loot OOO.esp'
+      - 'Mart''s Monster Mod - Gems & Gem Dust.esp'
+      - 'TUR_GemDust.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Enchanting Gems ESP' ]
+        condition: 'many("EnchantedGems(_GemDust|_Geomancy)?\.esp")'
+    tag:
+      - Graphics
+      - Scripts
+  - name: 'EnchantedGems.esp'
+    clean:
+      - crc: 0xE80B3523
+        util: 'TES4Edit v4.0.4c'
+  - name: 'EnchantedGems_GemDust.esp'
+    tag: [ Stats ]
+    clean:
+      - crc: 0x2EDB4F8D
+        util: 'TES4Edit v4.0.4c'
+  - name: 'EnchantedGems_Geomancy.esp'
+    tag: [ Stats ]
+    clean:
+      - crc: 0x83359FB2
+        util: 'TES4Edit v4.0.4c'
+
   - name: 'Enhanced Grabbing.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/19847/'
@@ -29067,15 +29102,6 @@ plugins:
     msg:
       - <<: *obsolete
         subs: [ '[Alternatives to death and reload](https://www.nexusmods.com/oblivion/mods/23862)' ]
-  - name: 'EnchantedGems_Geomancy.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Similar to OOO and MMM Gems and Gem Dust - is almost certainly incompatible with those. Untested.'
-          - lang: de
-            text: 'Ähnlich zu OOO und MMM Gems und Gem Dust - ist sehr wahrscheinlich inkompatibel mit diesen. Ungetestet.'
-    tag: [ Scripts ]
   - name: 'geomancy.esp'
     msg:
       - type: say
