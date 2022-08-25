@@ -11112,8 +11112,10 @@ plugins:
   - name: 'DBSQR - Battlehorn Castle.esp'
   - name: 'DBSQR - Knights of the Nine.esp'
   - name: 'DBSQR - OOO.esp'
+    req: [ 'Oscuro''s_Oblivion_Overhaul.esp' ]
   - name: 'DBSQR - Orrery.esp'
   - name: 'DBSQR - Shivering Isles.esp'
+    req: [ 'DLCShiveringIsles.esp' ]
   - name: 'DBSQR - Vile Lair.esp'
     msg:
       - type: say
@@ -11123,6 +11125,9 @@ plugins:
           - lang: de
             text: 'Wenn SM Plugin Refurbish VL genutzt wird, nutzen Sie auch DBSQR - Vile Lair SMPR.esp oder DBSQR - Vile Lair SMPR Full.esp.'
   - name: 'DBSQR - Vile Lair SMPR( Full)?\.esp'
+    req:
+      - 'DBSQR.esp'
+      - 'DBSQR - Vile Lair.esp'
 
   - name: 'Demonhunter.esp'
     url:
