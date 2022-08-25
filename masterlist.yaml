@@ -6430,39 +6430,44 @@ plugins:
         util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 103
 
-  - name: 'Enhanced Vegetation \[\d{3}%\]\.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/23783/' ]
+  - name: 'Enhanced Vegetation( \[\d{3}%\])?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/52253/'
+        name: 'Enhanced Vegetation repack'
     msg:
       - <<: *useOnlyOneX
-        subs: [ 'Enhanced Vegetation' ]
-        condition: 'many("Enhanced Vegetation \[\d{3}%\]\.esp")'
-  - name: 'Enhanced Vegetation [100%].esp'
+        subs: [ 'Enhanced Vegetation ESP' ]
+        condition: 'many("Enhanced Vegetation( \[\d{3}%\])?\.esp")'
+  - name: 'Enhanced Vegetation.esp'
     clean:
       - crc: 0x012E2F95
-        util: 'TES4Edit v4.0.4'
-  - name: 'Enhanced Vegetation [110%].esp'
-    clean:
+        util: 'TES4Edit v4.0.4c'
       - crc: 0x2C29959C
-        util: 'TES4Edit v4.0.4'
-  - name: 'Enhanced Vegetation [125%].esp'
-    clean:
+        util: 'TES4Edit v4.0.4c'
       - crc: 0x5192FEA1
-        util: 'TES4Edit v4.0.4'
-  - name: 'Enhanced Vegetation [150%].esp'
-    clean:
+        util: 'TES4Edit v4.0.4c'
       - crc: 0xCA480A0F
-        util: 'TES4Edit v4.0.4'
-
+        util: 'TES4Edit v4.0.4c'
+  - name: 'Enhanced Vegetation \[\d{3}%\]\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/23783/'
+        name: 'Enhanced Vegetation'
+  - name: 'Enhanced Vegetation SI( \d{3}%)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/52253/'
+        name: 'Enhanced Vegetation repack'
+    req: [ 'DLCShiveringIsles.esp' ]
   - name: 'Enhanced Vegetation SI.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/47535/'
         name: 'Enhanced Vegetation - Shivering Isles'
-    req: [ 'DLCShiveringIsles.esp' ]
     clean:
+      - crc: 0x610CDFA9
+        util: 'TES4Edit v4.0.4c'
       - crc: 0xBD54BEE6
-        util: 'TES4Edit v4.0.4'
+        util: 'TES4Edit v4.0.4c'
       - crc: 0xF1FCBB4A
-        util: 'TES4Edit v4.0.4'
+        util: 'TES4Edit v4.0.4c'
 
   - name: 'Falling Leaves( - UL LushWoodlands Patch)?\.esp'
     url:
@@ -6517,6 +6522,7 @@ plugins:
   - name: 'lLet there be Flowers.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/49616/' ]
     after:
+      - 'Enhanced Vegetation.esp'
       - 'Enhanced Vegetation [100%].esp'
       - 'Enhanced Vegetation [110%].esp'
       - 'Enhanced Vegetation [125%].esp'
