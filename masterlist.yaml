@@ -9894,12 +9894,20 @@ plugins:
       - Actors.Stats
       - Delev
       - Relev
-  - name: 'RareItemsv1.18 for RCR'
+    dirty:
+      - <<: *quickClean
+        crc: 0x75BCA9DB
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1
+  - name: 'RareItemsv1.18 for RCR.esp'
     tag:
       - Delev
       - Invent.Add
       - Invent.Remove
       - Relev
+    clean:
+      - crc: 0x784150F0
+        util: 'TES4Edit v4.0.4c'
 
   - name: 'Robbers With Gold And Gems.esp'
     url:
