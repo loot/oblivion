@@ -7126,6 +7126,10 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/9569/'
         name: 'Enchanting Gems'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Enchanting Gems ESP' ]
+        condition: 'many("EnchantedGems(_GemDust|_Geomancy)?\.esp")'
     tag:
       - Graphics
       - Scripts
