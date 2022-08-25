@@ -11110,17 +11110,27 @@ plugins:
         name: 'DB''s Static Quest Rewards'
   - name: 'DBSQR.esp'
     msg: [ *versionXofYorGreaterRequiredOBSEv18 ]
+    tag:
+      - -Actors.AIPackages
+      - -C.Light
   - name: 'DBSQR - Battlehorn Castle.esp'
+    tag:
+      - -Actors.ACBS
+      - -C.Light
   - name: 'DBSQR - Knights of the Nine.esp'
     msg:
       - <<: *wildEdits
         subs: [ 'Remove **0000003C** from **DBSQR - Knights of the Nine.esp**.' ]
         condition: 'checksum("DBSQR - Knights of the Nine.esp", 6C100242)'
+    tag:
+      - -Invent.Add
+      - -Invent.Remove
   - name: 'DBSQR - OOO.esp'
     req: [ 'Oscuro''s_Oblivion_Overhaul.esp' ]
   - name: 'DBSQR - Orrery.esp'
   - name: 'DBSQR - Shivering Isles.esp'
     req: [ 'DLCShiveringIsles.esp' ]
+    tag: [ -C.Music ]
   - name: 'DBSQR - Vile Lair.esp'
     msg:
       - <<: *patchIncluded
@@ -11129,6 +11139,11 @@ plugins:
       - <<: *patchIncluded
         subs: [ 'Legacy SM DLC Plugin Refurbish Merged' ]
         condition: 'active("SM Plugin Refurbish(Merged).esp") and not file("DBSQR - Vile Lair SMPR Full.esp")'
+    tag:
+      - -Actors.ACBS
+      - -Actors.Stats
+      - -Delev
+      - -Relev
   - name: 'DBSQR - Vile Lair SMPR( Full)?\.esp'
     req:
       - 'DBSQR.esp'
