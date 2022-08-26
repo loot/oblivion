@@ -6489,13 +6489,16 @@ plugins:
         util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 18
 
+  - name: '(TamrielTravellers(4MMM|4OOO|FactionAll|Items(Cobl|NPC|Unscaled|Vendor))?|TamrielTravellerAdvScript|ShiveringIsleTravellers(FriendlyFactions|FriendlyFactions4MMM)?|Travellers4MMMHostileFactions)\.es[mp]'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/4387/'
+        name: 'Tamriel Travellers'
   - name: 'TamrielTravellers(4MMM|4OOO)?\.esp'
     msg:
       - <<: *useOnlyOneX
         subs: [ 'Tamriel Travellers Main ESP' ]
         condition: 'many("TamrielTravellers(4MMM|4OOO)?\.esp")'
   - name: 'TamrielTravellers.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/4387/' ]
     msg:
       - type: error
         content:
@@ -6510,7 +6513,6 @@ plugins:
         util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 38
   - name: 'TamrielTravellers4MMM.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/4387/' ]
     msg:
       - type: error
         content:
@@ -6525,7 +6527,6 @@ plugins:
         util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 38
   - name: 'TamrielTravellers4OOO.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/4387/' ]
     dirty:
       - <<: *quickClean
         crc: 0x2CB068DB
@@ -6533,7 +6534,6 @@ plugins:
         itm: 78
   # Tamriel Travellers - Optional Files #
   - name: 'ShiveringIsleTravellers.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/4387/' ]
     req: [ 'DLCShiveringIsles.esp' ]
     msg:
       - type: say
@@ -6549,13 +6549,10 @@ plugins:
         util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 7
   - name: 'TamrielTravellersFactionAll.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/4387/' ]
     inc: [ 'FCOM_Convergence.esm' ]
   - name: 'TamrielTravellersItemsCobl.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/4387/' ]
     req: [ 'Cobl Main.esm' ]
   - name: 'Travellers4MMMHostileFactions.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/4387/' ]
     inc: [ 'FCOM_Convergence.esm' ]
   # Tamriel Travellers - Optional Files - Leveling System #
   - name: 'TamrielTravellersItems(NPC|Unscaled|Vendor)\.esp'
@@ -6564,7 +6561,6 @@ plugins:
         subs: [ 'Tamriel Travellers Leveling System ESP' ]
         condition: 'many("TamrielTravellersItems(NPC|Unscaled|Vendor)\.esp")'
   - name: 'TamrielTravellersItemsNPC.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/4387/' ]
     group: *latePatchesGroup
     tag:
       - Deactivate
@@ -6573,7 +6569,6 @@ plugins:
       - Relev
       - -NoMerge
   - name: 'TamrielTravellersItemsUnscaled.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/4387/' ]
     inc: [ 'FCOM_Convergence.esm' ]
     msg:
       - type: say
@@ -6583,7 +6578,6 @@ plugins:
           - lang: de
             text: 'Nicht Überhol-Mod kompatibel.'
   - name: 'TamrielTravellersItemsVendor.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/4387/' ]
     group: *latePatchesGroup
     tag:
       - Deactivate
