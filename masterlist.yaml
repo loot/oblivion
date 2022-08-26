@@ -15244,6 +15244,21 @@ plugins:
         itm: 35
         udr: 19
 
+  - name: 'SPD-SailableRivers.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/31913/'
+        name: 'Speedy''s Sailable Rivers'
+    inc:
+      - 'Better Cities FULL.esp'
+      - 'Better Cities LEYAWIIN.esp'
+      - 'Open Cities Reborn.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x0047076D
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 19
+        udr: 35
+
   - name: 'Spirit''s Edge.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17718/' ]
     inc: [ 'Ayleid Wells.esp' ]
@@ -28698,15 +28713,6 @@ plugins:
   - name: 'Waterfront Passage - Control of Goods.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/15974/' ]
     inc: [ *BetterCities ]
-
-  - name: 'SPD-SailableRivers.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Most likely incompatible with some ULs'
-          - lang: de
-            text: 'Sehr wahrscheinlich inkompatibel mit einigen ULs'
 
   - name: 'Dollparts'' Cherry Brooke Grove - AN Patch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/37753/' ]
