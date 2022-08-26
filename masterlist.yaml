@@ -11267,14 +11267,9 @@ plugins:
       - link: 'https://www.nexusmods.com/oblivion/mods/25530/'
         name: 'Saphiria''s Romance And The Djinni''s Chamber EV'
     req: [ 'DLCShiveringIsles.esp' ]
+    inc:
+      - 'Servant of the Dawn.esp'
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Use the patch for Servant of the Dawn to resolve compatibility issues.'
-          - lang: de
-            text: 'Nutzen Sie den Patch für Servant of the Dawn um Kompatibilitäts-Probleme zu beheben.'
-        condition: '( file("Servant of the Dawn.esp") ) and not file("Dschinni - Servant of the Dawn Patch.esp")'
       - type: say
         content:
           - lang: en
