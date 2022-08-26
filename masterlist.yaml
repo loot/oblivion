@@ -6499,13 +6499,10 @@ plugins:
         subs: [ 'Tamriel Travellers Main ESP' ]
         condition: 'many("TamrielTravellers(4MMM|4OOO)?\.esp")'
   - name: 'TamrielTravellers.esp'
+    inc: [ 'FCOM_Convergence.esm' ]
     msg:
-      - type: error
-        content:
-          - lang: en
-            text: 'Delete. ''Use TamrielTravellers4OOO.esp'' and ''FCOM_TamrielTravelers.esp'' instead.'
-          - lang: de
-            text: 'Löschen. ''Nutzen Sie TamrielTravellers4OOO.esp'' und ''FCOM_TamrielTravelers.esp'' stattdessen.'
+      - <<: *useInstead
+        subs: [ 'TamrielTravellers4OOO and FCOM_TamrielTravelers.esp' ]
         condition: *FCOMCond
     dirty:
       - <<: *quickClean
@@ -6513,13 +6510,10 @@ plugins:
         util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 38
   - name: 'TamrielTravellers4MMM.esp'
+    inc: [ 'FCOM_Convergence.esm' ]
     msg:
-      - type: error
-        content:
-          - lang: en
-            text: 'Delete. ''Use TamrielTravellers4OOO.esp'' and ''FCOM_TamrielTravelers.esp'' instead.'
-          - lang: de
-            text: 'Löschen. ''Nutzen Sie TamrielTravellers4OOO.esp'' und ''FCOM_TamrielTravelers.esp'' stattdessen.'
+      - <<: *useInstead
+        subs: [ 'TamrielTravellers4OOO and FCOM_TamrielTravelers.esp' ]
         condition: *FCOMCond
     dirty:
       - <<: *quickClean
