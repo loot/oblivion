@@ -8703,6 +8703,15 @@ plugins:
       - <<: *alsoUseX
         subs: [ '[Duke Patricks - Friendship Ring For Companion Detection](https://www.nexusmods.com/oblivion/mods/21594)' ]
 
+  - name: 'erics_(double|triple|quad)_damage(_fast)?_for_archers\.esp'
+    msg:
+      - type: say
+        content:
+          - lang: en
+            text: 'Only use one Erics * for archers.esp.'
+          - lang: de
+            text: 'Nutzen Sie nur eine Erics * for archers.esp.'
+
   - name: 'MassA.I(-[345]0)?.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/8158/' ]
     msg:
@@ -29480,14 +29489,7 @@ plugins:
     inc: [ 'MOBS Optional Combat Settings.esp' ]
   - name: 'Bow_Damage_Equalizer.esp'
     tag: [ Stats ]
-  - name: 'erics_(double|triple|quad)_damage(_fast)?_for_archers\.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Only use one Erics * for archers.esp.'
-          - lang: de
-            text: 'Nutzen Sie nur eine Erics * for archers.esp.'
+
   - name: 'Fast Arrow Collection.esp'
     msg: [ *versionXofYorGreaterRequiredOBSEv16 ]
   - name: 'More_Arrows_Recovered-2169.esp'
