@@ -11597,11 +11597,19 @@ plugins:
       - <<: *useVersion
         subs: [ 'Banes Guilds United' ]
         condition: 'active("Banes Guilds United(OOO)?\.esp")'
+    clean:
+      - crc: 0x5973618E
+        util: 'TES4Edit v4.0.4c'
   - name: 'GuildAdvancementBGU.esp'
     msg:
       - <<: *useVersion
         subs: [ 'Oscuro''s Oblivion Overhaul' ]
         condition: 'active("Banes Guilds UnitedOOO.esp") and checksum("GuildAdvancementBGU.esp", 9B2DC6DE)'
+    clean:
+      - crc: 0x9B2DC6DE
+        util: 'TES4Edit v4.0.4c'
+      - crc: 0x9A59F213
+        util: 'TES4Edit v4.0.4c'
 
   - name: 'HackdirtTheDeepOnes.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/36224/' ]
