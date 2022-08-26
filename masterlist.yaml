@@ -1877,8 +1877,16 @@ plugins:
         subs: [ 'Duke Patrick''s Health Alarm and Red Death Screen ESP' ]
         condition: 'many("Duke Patrick''s Health Alarm RED DEATH (and|NO) Heartbeat\.esp")'
   - name: 'Duke Patrick''s Health Alarm RED DEATH and Heartbeat.esp'
+    msg:
+      - <<: *wildEdits
+        subs: [ 'Remove **00001885** from **Duke Patrick''s Health Alarm RED DEATH and Heartbeat.esp**.' ]
+        condition: 'checksum("Duke Patrick''s Health Alarm RED DEATH and Heartbeat.esp", 2C9FB34C)'
     tag: [ Sound ]
   - name: 'Duke Patrick''s Health Alarm RED DEATH NO Heartbeat.esp'
+    msg:
+      - <<: *wildEdits
+        subs: [ 'Remove **00001885** from **Duke Patrick''s Health Alarm RED DEATH NO Heartbeat.esp**.' ]
+        condition: 'checksum("Duke Patrick''s Health Alarm RED DEATH NO Heartbeat.esp", B842395A)'
     tag: [ Sound ]
 
   - name: 'Dunmerized Cheydinhal.esp'
