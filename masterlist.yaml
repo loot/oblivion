@@ -11268,14 +11268,14 @@ plugins:
         name: 'Saphiria''s Romance And The Djinni''s Chamber EV'
     req: [ 'DLCShiveringIsles.esp' ]
     inc:
+      - 'HeartOftheDead.esp'
       - 'Servant of the Dawn.esp'
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Use the patch for UL Arrius Creek and The Heart of the Dead version 6.3 to resolve compatibility issues.'
-          - lang: de
-            text: 'Nutzen Sie den Patch für UL Arrius Creek und The Heart of the Dead Version 6.3 um Kompatibilitäts-Probleme zu beheben.'
+      - <<: *patch3rdParty
+        subs:
+          - 'Unique Landscapes - Arrius Creek'
+          - '[Unique Landscapes Compatibility Patches](https://www.nexusmods.com/oblivion/mods/13834/)'
+        condition: '(active("xulArriusCreek.esp") or (active("Unique Landscapes.esp") and version("Unique Landscapes.esp", "2.0.0", >=))) and not file("ULE Dschinni-ArriusCreek patch.esp")'
 
   - name: 'Dwarven Mines.esp'
     url:
