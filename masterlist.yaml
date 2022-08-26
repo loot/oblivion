@@ -11276,6 +11276,9 @@ plugins:
           - 'Unique Landscapes - Arrius Creek'
           - '[Unique Landscapes Compatibility Patches](https://www.nexusmods.com/oblivion/mods/13834/)'
         condition: '(active("xulArriusCreek.esp") or (active("Unique Landscapes.esp") and version("Unique Landscapes.esp", "2.0.0", >=))) and not file("ULE Dschinni-ArriusCreek patch.esp")'
+      - <<: *requiresResources
+        subs: [ '[Saphirias Romance und Die Kammer der Dschinn DV](https://www.nexusmods.com/oblivion/mods/20762/)' ]
+        condition: 'not file("Dschinni - Meshes.bsa") or not file("Dschinni - Sound.bsa") or not file("Dschinni - Textures.bsa")'
 
   - name: 'Dwarven Mines.esp'
     url:
