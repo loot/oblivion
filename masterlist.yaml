@@ -6493,28 +6493,24 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/4387/'
         name: 'Tamriel Travellers'
+  - name: 'TamrielTravellers(4MMM)?\.esp'
+    inc: [ 'FCOM_Convergence.esm' ]
+    msg:
+      - <<: *useInstead
+        subs: [ 'TamrielTravellers4OOO and FCOM_TamrielTravelers.esp' ]
+        condition: *FCOMCond
   - name: 'TamrielTravellers(4MMM|4OOO)?\.esp'
     msg:
       - <<: *useOnlyOneX
         subs: [ 'Tamriel Travellers Main ESP' ]
         condition: 'many("TamrielTravellers(4MMM|4OOO)?\.esp")'
   - name: 'TamrielTravellers.esp'
-    inc: [ 'FCOM_Convergence.esm' ]
-    msg:
-      - <<: *useInstead
-        subs: [ 'TamrielTravellers4OOO and FCOM_TamrielTravelers.esp' ]
-        condition: *FCOMCond
     dirty:
       - <<: *quickClean
         crc: 0xEB4A4D83
         util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 38
   - name: 'TamrielTravellers4MMM.esp'
-    inc: [ 'FCOM_Convergence.esm' ]
-    msg:
-      - <<: *useInstead
-        subs: [ 'TamrielTravellers4OOO and FCOM_TamrielTravelers.esp' ]
-        condition: *FCOMCond
     dirty:
       - <<: *quickClean
         crc: 0xC0CECFEA
