@@ -7965,6 +7965,17 @@ plugins:
       - crc: 0x8D021DE2
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
 
+  - name: 'Robes Staves and Fists.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/26975/' ]
+    msg:
+      - type: say
+        content:
+          - lang: en
+            text: 'Not compatible with any mod that uses "ModPCSpellEffectiveness".'
+          - lang: de
+            text: 'Nicht kompatibel mit jeder Mod die "ModPCSpellEffectiveness" nutzt.'
+    req: [ *OBSE ]
+
   - name: 'Rooftop Rewards cleaned.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/28164/'
@@ -26413,16 +26424,6 @@ plugins:
         util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 366
         udr: 1216
-  - name: 'Robes Staves and Fists.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/26975/' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Not compatible with any mod that uses "ModPCSpellEffectiveness".'
-          - lang: de
-            text: 'Nicht kompatibel mit jeder Mod die "ModPCSpellEffectiveness" nutzt.'
-    req: [ *OBSE ]
 
   - name: 'RealSwords - Argonian (HI|LO)(-NPC)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/11208/' ]
