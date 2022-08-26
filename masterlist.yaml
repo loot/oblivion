@@ -7422,12 +7422,9 @@ plugins:
       - 'Streamline 3.0.esp'
       - 'Streamline 3.1.esp'
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Incompatible with Cobl''s clock.'
-          - lang: de
-            text: 'Inkompatibel mit Cobl''s clock.'
+      - <<: *compatIssuesWithX
+        subs: [ 'Cobl''s clock' ]
+        condition: 'active("Cobl Main.esm")'
 
   - name: 'kuerteeCrimeHasWitnesses.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22894/' ]
