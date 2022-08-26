@@ -11260,6 +11260,34 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/37120/' ]
     group: *mapGroup
 
+  - name: 'Dschinni.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/20762/'
+        name: 'Saphiria''s Romance und Die Kammer der Dschinn DV'
+      - link: 'https://www.nexusmods.com/oblivion/mods/25530/'
+        name: 'Saphiria''s Romance And The Djinni''s Chamber EV'
+    req: [ 'DLCShiveringIsles.esp' ]
+    inc:
+      - 'HeartOftheDead.esp'
+      - 'Servant of the Dawn.esp'
+    msg:
+      - <<: *patch3rdParty
+        subs:
+          - 'Unique Landscapes - Arrius Creek'
+          - '[Unique Landscapes Compatibility Patches](https://www.nexusmods.com/oblivion/mods/13834/)'
+        condition: '(active("xulArriusCreek.esp") or (active("Unique Landscapes.esp") and version("Unique Landscapes.esp", "2.0.0", >=))) and not file("ULE Dschinni-ArriusCreek patch.esp")'
+      - <<: *requiresResources
+        subs: [ '[Saphirias Romance und Die Kammer der Dschinn DV](https://www.nexusmods.com/oblivion/mods/20762/)' ]
+        condition: 'not file("Dschinni - Meshes.bsa") or not file("Dschinni - Sound.bsa") or not file("Dschinni - Textures.bsa")'
+    tag:
+      - C.Music
+      - Relations.Add
+    dirty:
+      - <<: *quickClean
+        crc: 0xEAC75617
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 9
+
   - name: 'Dwarven Mines.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/22268/'
@@ -28444,22 +28472,6 @@ plugins:
           - lang: de
             text: 'Nur ohne Open Cities nutzen'
         condition: 'file("Open Cities.*\.esp")'
-  - name: 'Dschinni.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/25530/' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Use the patch for Servant of the Dawn to resolve compatibility issues.'
-          - lang: de
-            text: 'Nutzen Sie den Patch für Servant of the Dawn um Kompatibilitäts-Probleme zu beheben.'
-        condition: '( file("Servant of the Dawn.esp") ) and not file("Dschinni - Servant of the Dawn Patch.esp")'
-      - type: say
-        content:
-          - lang: en
-            text: 'Use the patch for UL Arrius Creek and The Heart of the Dead version 6.3 to resolve compatibility issues.'
-          - lang: de
-            text: 'Nutzen Sie den Patch für UL Arrius Creek und The Heart of the Dead Version 6.3 um Kompatibilitäts-Probleme zu beheben.'
 
   - name: 'Elsweyr(Riverhold|FaregylRoad)\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/19026/' ]
