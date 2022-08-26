@@ -11260,6 +11260,23 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/37120/' ]
     group: *mapGroup
 
+  - name: 'Dschinni.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/25530/' ]
+    msg:
+      - type: say
+        content:
+          - lang: en
+            text: 'Use the patch for Servant of the Dawn to resolve compatibility issues.'
+          - lang: de
+            text: 'Nutzen Sie den Patch für Servant of the Dawn um Kompatibilitäts-Probleme zu beheben.'
+        condition: '( file("Servant of the Dawn.esp") ) and not file("Dschinni - Servant of the Dawn Patch.esp")'
+      - type: say
+        content:
+          - lang: en
+            text: 'Use the patch for UL Arrius Creek and The Heart of the Dead version 6.3 to resolve compatibility issues.'
+          - lang: de
+            text: 'Nutzen Sie den Patch für UL Arrius Creek und The Heart of the Dead Version 6.3 um Kompatibilitäts-Probleme zu beheben.'
+
   - name: 'Dwarven Mines.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/22268/'
@@ -28444,22 +28461,6 @@ plugins:
           - lang: de
             text: 'Nur ohne Open Cities nutzen'
         condition: 'file("Open Cities.*\.esp")'
-  - name: 'Dschinni.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/25530/' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Use the patch for Servant of the Dawn to resolve compatibility issues.'
-          - lang: de
-            text: 'Nutzen Sie den Patch für Servant of the Dawn um Kompatibilitäts-Probleme zu beheben.'
-        condition: '( file("Servant of the Dawn.esp") ) and not file("Dschinni - Servant of the Dawn Patch.esp")'
-      - type: say
-        content:
-          - lang: en
-            text: 'Use the patch for UL Arrius Creek and The Heart of the Dead version 6.3 to resolve compatibility issues.'
-          - lang: de
-            text: 'Nutzen Sie den Patch für UL Arrius Creek und The Heart of the Dead Version 6.3 um Kompatibilitäts-Probleme zu beheben.'
 
   - name: 'Elsweyr(Riverhold|FaregylRoad)\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/19026/' ]
