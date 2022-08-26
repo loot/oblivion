@@ -11590,13 +11590,9 @@ plugins:
     inc: [ 'Choices and Consequences.esp' ]
   - name: 'GuildAdvancement.esp'
     msg:
-      - type: error
-        content:
-          - lang: en
-            text: 'Use "GuildAdvancementBGU.esp" instead.'
-          - lang: de
-            text: 'Nutzen Sie stattdessen "GuildAdvancementBGU.esp".'
-        condition: '( file("Banes Guilds United.esp") ) or file("Banes Guilds UnitedOOO.esp")'
+      - <<: *useVersion
+        subs: [ 'Banes Guilds United' ]
+        condition: 'active("Banes Guilds United(OOO)?\.esp")'
   - name: 'GuildAdvancementBGU.esp'
 
   - name: 'HackdirtTheDeepOnes.esp'
