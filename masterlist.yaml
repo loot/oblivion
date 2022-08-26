@@ -11583,9 +11583,11 @@ plugins:
         udr: 20
 
   - name: 'GuildAdvancement.*\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/42870/'
+        name: 'Guild Advancement'
   - name: 'GuildAdvancement(BGU)?\.esp'
   - name: 'GuildAdvancement.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/42870/' ]
     msg:
       - type: error
         content:
@@ -11595,7 +11597,6 @@ plugins:
             text: 'Nutzen Sie stattdessen "GuildAdvancementBGU.esp".'
         condition: '( file("Banes Guilds United.esp") ) or file("Banes Guilds UnitedOOO.esp")'
   - name: 'GuildAdvancementBGU.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/42870/' ]
     msg:
       - type: error
         content:
