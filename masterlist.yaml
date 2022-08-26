@@ -7699,7 +7699,13 @@ plugins:
       - link: 'https://www.nexusmods.com/oblivion/mods/1952/'
         name: 'No Obsolete Loot and Enemies'
   - name: 'NoObsoleteEnemies.esp'
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings -> Level Difference: Creature Max [30]' ]
   - name: 'NoObsoleteLoot.esp'
+    msg:
+      - <<: *useBashTweakInstead
+        subs: [ 'Tweak Settings -> Level Difference: Item Max [30]' ]
 
   - name: 'NoStealFromYourFactions.esp'
     url:
