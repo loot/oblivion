@@ -1906,9 +1906,18 @@ plugins:
         subs: [ 'Enable Free Look ESP' ]
         condition: 'many("EnableFreeLook(NoWheel|OBSE)?\.esp")'
   - name: 'EnableFreeLook.esp'
+    clean:
+      - crc: 0xA721CD1D
+        util: 'TES4Edit v4.0.4c'
   - name: 'EnableFreeLookNoWheel.esp'
+    clean:
+      - crc: 0xDD211069
+        util: 'TES4Edit v4.0.4c'
   - name: 'EnableFreeLookOBSE.esp'
     req: [ *OBSE ]
+    clean:
+      - crc: 0xF2E03702
+        util: 'TES4Edit v4.0.4c'
 
   - name: '\[GFX\]_Initial_Glow-(all|creatures|self)\.esp'
     url:
