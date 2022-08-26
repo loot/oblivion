@@ -1872,25 +1872,13 @@ plugins:
     url:
       - link: 'http://tesalliance.org/forums/index.php?/files/file/1014-duke-patricks-health-alarm-and-red-death-screen/'
         name: 'Duke Patrick''s Health Alarm and Red Death Screen'
-  - name: 'Duke Patrick''s Health Alarm RED DEATH and Heartbeat.esp'
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Only use one ''Health Alarm'' mod. Choose.'
-          - lang: de
-            text: 'Nutzen Sie nur einen ''Health Alarm'' Mod. Wählen Sie aus.'
-        condition: 'file("Duke Patrick''?s Health Alar(m|m RED DEATH with heartbeat NO human yells|m with Fadeout|m with RED DEATH|m RED DEATH with heartbeat|m RED DEATH NO Heartbeat)\.esp")'
+      - <<: *useOnlyOneX
+        subs: [ 'Duke Patrick''s Health Alarm and Red Death Screen ESP' ]
+        condition: 'many("Duke Patrick''s Health Alarm RED DEATH (and|NO) Heartbeat\.esp")'
+  - name: 'Duke Patrick''s Health Alarm RED DEATH and Heartbeat.esp'
     tag: [ Sound ]
   - name: 'Duke Patrick''s Health Alarm RED DEATH NO Heartbeat.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Only use one ''Health Alarm'' mod. Choose.'
-          - lang: de
-            text: 'Nutzen Sie nur einen ''Health Alarm'' Mod. Wählen Sie aus.'
-        condition: 'file("Duke Patrick''?s Health Alar(m|m RED DEATH with heartbeat NO human yells|m with Fadeout|m with RED DEATH|m RED DEATH with heartbeat|m RED DEATH and Heartbeat)\.esp")'
     tag: [ Sound ]
 
   - name: 'Dunmerized Cheydinhal.esp'
