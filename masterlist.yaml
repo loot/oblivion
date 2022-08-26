@@ -11588,6 +11588,10 @@ plugins:
         name: 'Guild Advancement'
   - name: 'GuildAdvancement(BGU)?\.esp'
     inc: [ 'Choices and Consequences.esp' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Guild Advancement ESP' ]
+        condition: 'many("GuildAdvancement(BGU)?\.esp")'
   - name: 'GuildAdvancement.esp'
     msg:
       - <<: *useVersion
