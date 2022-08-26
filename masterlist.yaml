@@ -1901,6 +1901,10 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/9499/'
         name: 'Enable Free Look'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Enable Free Look ESP' ]
+        condition: 'many("EnableFreeLook(NoWheel|OBSE)?\.esp")'
   - name: 'EnableFreeLook.esp'
   - name: 'EnableFreeLookNoWheel.esp'
   - name: 'EnableFreeLookOBSE.esp'
