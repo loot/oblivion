@@ -11582,6 +11582,27 @@ plugins:
         itm: 77
         udr: 20
 
+  - name: 'GuildAdvancement.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/42870/' ]
+    msg:
+      - type: error
+        content:
+          - lang: en
+            text: 'Use "GuildAdvancementBGU.esp" instead.'
+          - lang: de
+            text: 'Nutzen Sie stattdessen "GuildAdvancementBGU.esp".'
+        condition: '( file("Banes Guilds United.esp") ) or file("Banes Guilds UnitedOOO.esp")'
+  - name: 'GuildAdvancementBGU.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/42870/' ]
+    msg:
+      - type: error
+        content:
+          - lang: en
+            text: 'Use "GuildAdvancement.esp" instead.'
+          - lang: de
+            text: 'Nutzen Sie stattdessen "GuildAdvancement.esp".'
+        condition: '( not file("Banes Guilds United.esp") ) and not file("Banes Guilds UnitedOOO.esp")'
+
   - name: 'HackdirtTheDeepOnes.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/36224/' ]
     inc: [ 'HackdirtCaverns.esp' ]
@@ -28878,26 +28899,7 @@ plugins:
     tag:
       - Actors.Stats
       - Invent
-  - name: 'GuildAdvancement.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/42870/' ]
-    msg:
-      - type: error
-        content:
-          - lang: en
-            text: 'Use "GuildAdvancementBGU.esp" instead.'
-          - lang: de
-            text: 'Nutzen Sie stattdessen "GuildAdvancementBGU.esp".'
-        condition: '( file("Banes Guilds United.esp") ) or file("Banes Guilds UnitedOOO.esp")'
-  - name: 'GuildAdvancementBGU.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/42870/' ]
-    msg:
-      - type: error
-        content:
-          - lang: en
-            text: 'Use "GuildAdvancement.esp" instead.'
-          - lang: de
-            text: 'Nutzen Sie stattdessen "GuildAdvancement.esp".'
-        condition: '( not file("Banes Guilds United.esp") ) and not file("Banes Guilds UnitedOOO.esp")'
+
   - name: 'haz_ct_REMOVE.esp'
     msg:
       - type: say
