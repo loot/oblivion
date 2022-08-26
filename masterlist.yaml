@@ -6535,14 +6535,6 @@ plugins:
   # Tamriel Travellers - Optional Files #
   - name: 'ShiveringIsleTravellers.esp'
     req: [ 'DLCShiveringIsles.esp' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Use of ''TamrielTravellersItemsNPC.esp'', ''TamrielTravellersItemsUnscaled.esp'', or ''TamrielTravellersItemsVendors.esp'' will remove SI items for sale.'
-          - lang: de
-            text: 'Das Nutzen von ''TamrielTravellersItemsNPC.esp'', ''TamrielTravellersItemsUnscaled.esp'', oder ''TamrielTravellersItemsVendors.esp'' wird SI Gegenstände vom Verkauf entfernen.'
-        condition: 'file("TamrielTravellersItemsNPC.esp") or file("TamrielTravellersItemsUnscaled.esp") or file("TamrielTravellersItemsVendors.esp")'
     dirty:
       - <<: *quickClean
         crc: 0x036DD18E
