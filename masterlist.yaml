@@ -8708,12 +8708,9 @@ plugins:
       - link: 'https://www.nexusmods.com/oblivion/mods/2092/'
         name: 'Quad Damage For Archers'
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Only use one Erics * for archers.esp.'
-          - lang: de
-            text: 'Nutzen Sie nur eine Erics * for archers.esp.'
+      - <<: *useOnlyOneX
+        subs: [ 'Quad Damage For Archers ESP' ]
+        condition: 'many("erics_(double|triple|quad)_damage(_fast)?_for_archers\.esp")'
   - name: 'erics_double_damage_fast_for_archers.esp'
   - name: 'erics_double_damage_for_archers.esp'
 
