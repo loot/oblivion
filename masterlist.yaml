@@ -7416,15 +7416,13 @@ plugins:
 
   - name: 'kuerteeAutoSaveAndTime.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22136/' ]
-    inc:
-      - 'Streamline 2.0.esp'
-      - 'Streamline 2.1.esp'
-      - 'Streamline 3.0.esp'
-      - 'Streamline 3.1.esp'
     msg:
       - <<: *compatIssuesWithX
         subs: [ 'Cobl''s clock' ]
         condition: 'active("Cobl Main.esm")'
+      - <<: *compatIssuesWithX
+        subs: [ 'Streamline' ]
+        condition: 'active("Streamline \d\.\d\.esp")'
 
   - name: 'kuerteeCrimeHasWitnesses.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22894/' ]
