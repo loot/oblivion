@@ -11582,6 +11582,35 @@ plugins:
         itm: 77
         udr: 20
 
+  - name: 'GuildAdvancement.*\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/42870/'
+        name: 'Guild Advancement'
+  - name: 'GuildAdvancement(BGU)?\.esp'
+    inc: [ 'Choices and Consequences.esp' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Guild Advancement ESP' ]
+        condition: 'many("GuildAdvancement(BGU)?\.esp")'
+  - name: 'GuildAdvancement.esp'
+    msg:
+      - <<: *useVersion
+        subs: [ 'Banes Guilds United' ]
+        condition: 'active("Banes Guilds United(OOO)?\.esp")'
+    clean:
+      - crc: 0x5973618E
+        util: 'TES4Edit v4.0.4c'
+  - name: 'GuildAdvancementBGU.esp'
+    msg:
+      - <<: *useVersion
+        subs: [ 'Oscuro''s Oblivion Overhaul' ]
+        condition: 'active("Banes Guilds UnitedOOO.esp") and checksum("GuildAdvancementBGU.esp", 9B2DC6DE)'
+    clean:
+      - crc: 0x9B2DC6DE
+        util: 'TES4Edit v4.0.4c'
+      - crc: 0x9A59F213
+        util: 'TES4Edit v4.0.4c'
+
   - name: 'HackdirtTheDeepOnes.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/36224/' ]
     inc: [ 'HackdirtCaverns.esp' ]
@@ -28878,26 +28907,7 @@ plugins:
     tag:
       - Actors.Stats
       - Invent
-  - name: 'GuildAdvancement.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/42870/' ]
-    msg:
-      - type: error
-        content:
-          - lang: en
-            text: 'Use "GuildAdvancementBGU.esp" instead.'
-          - lang: de
-            text: 'Nutzen Sie stattdessen "GuildAdvancementBGU.esp".'
-        condition: '( file("Banes Guilds United.esp") ) or file("Banes Guilds UnitedOOO.esp")'
-  - name: 'GuildAdvancementBGU.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/42870/' ]
-    msg:
-      - type: error
-        content:
-          - lang: en
-            text: 'Use "GuildAdvancement.esp" instead.'
-          - lang: de
-            text: 'Nutzen Sie stattdessen "GuildAdvancement.esp".'
-        condition: '( not file("Banes Guilds United.esp") ) and not file("Banes Guilds UnitedOOO.esp")'
+
   - name: 'haz_ct_REMOVE.esp'
     msg:
       - type: say
