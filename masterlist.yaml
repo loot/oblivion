@@ -13523,6 +13523,18 @@ plugins:
         util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 10
 
+  - name: 'Duke Patricks - HammerBlade.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/27949/'
+        name: 'Duke Patrick''s HammerBlade'
+    req: [ 'DLCShiveringIsles.esp' ]
+    msg: [ *versionXofYorGreaterRequiredOBSEv18 ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x2B6F0D32
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
+
   - name: 'Edible Slaughterfish.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/51975/'
@@ -28529,15 +28541,7 @@ plugins:
   - name: 'Miscarcand Expanded.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/14337/' ]
     inc: [ 'The Ruins of Miscarcand.esp' ]
-  - name: 'Duke Patricks - HammerBlade.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/27949/' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Small land tears if used with UL Lush Woodlands.'
-          - lang: de
-            text: 'Kleine Landschaftsrisse wenn es genutzt wird mit UL Lush Woodlands.'
+
   - name: 'Fort Akatosh Redux.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/21856/' ]
     tag: [ Relations ]
