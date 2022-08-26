@@ -12898,6 +12898,17 @@ plugins:
         subs: [ 'Oscuro''s Oblivion Overhaul' ]
         condition: 'active("Oscuro''s_Oblivion_Overhaul.esp")'
 
+  - name: 'SM Security.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/16136/' ]
+    req: [ *OBSE ]
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'SupreMe Overhaul' ]
+        condition: 'active("SMO.esp")'
+      - <<: *compatIssuesWithX
+        subs: [ 'Oscuro''s Oblivion Overhaul' ]
+        condition: *OOOCond
+
   - name: 'S\.P\.A\.M.*\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/9914/'
@@ -29510,16 +29521,6 @@ plugins:
   - name: 'Deadlier Traps.esp'
     inc: [ 'Oscuro''s_Oblivion_Overhaul.esm' ]
     msg: [ *alreadyInOOO ]
-  - name: 'SM Security.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/16136/' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Partly included with OOO. May not be OOO compatible.'
-          - lang: de
-            text: 'Teilweise beinhaltet von OOO. Möglicherweise nicht kompatibel mit OOO.'
-        condition: *OOOCond
   - name: 'Morrowind Lockpicking.esp'
     inc: [ 'ZumbsLockpickingMod.esp' ]
     tag: [ Relev ]
