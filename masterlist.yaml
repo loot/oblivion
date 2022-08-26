@@ -18597,6 +18597,19 @@ plugins:
       - crc: 0x8BD90995
         util: 'TES4Edit v4.0.4b'
 
+  - name: 'mrSiikas_ImperialCathedral.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/20555/' ]
+    inc:
+      - 'Better Cities CHORROL.esp'
+      - 'Better Cities FULL.esp'
+      - 'Knights.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x8076010A
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 17
+        udr: 83
+
   - name: 'Mystic Archives Expanded v1.1.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/7850/' ]
     tag:
@@ -28229,15 +28242,6 @@ plugins:
   - name: 'MountainShackR121.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22846/' ]
     msg: [ *obsolete ]
-  - name: 'mrSiikas_ImperialCathedral.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/20555/' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Incompatible with: Anything that modifies the Chorrol cathedral interior or exterior.'
-          - lang: de
-            text: 'Inkompatibel mit: Jeglichem das die das Äußere oder Innere der Chorrol Kathedrale modifiziert.'
 
   - name: 'Nine Divines Robes.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/24656/' ]
