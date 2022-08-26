@@ -14104,6 +14104,17 @@ plugins:
         condition: 'checksum("Mixxa77-Archmage-Armor.esp", 3DAE795F) or checksum("Mixxa77-Archmage-Armor.esp", 84DA006F)'
     tag: [ Invent.Add ]
 
+  - name: 'More Drinks.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/5763/' ]
+    msg:
+      - type: say
+        content:
+          - lang: en
+            text: 'Probably not compatible with OOO. Untested.'
+          - lang: de
+            text: 'Wahrscheinlich nicht kompatibel mit OOO. Ungetestet.'
+        condition: *OOOCond
+
   - name: 'More_Vegetables.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/11459/' ]
     dirty:
@@ -24848,16 +24859,6 @@ plugins:
       - 'https://www.nexusmods.com/oblivion/mods/18275/'
       - 'https://www.nexusmods.com/oblivion/mods/41777/'
     inc: [ 'Mart''s Monster Mod.esm' ] # Included in MMM
-  - name: 'More Drinks.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/5763/' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Probably not compatible with OOO. Untested.'
-          - lang: de
-            text: 'Wahrscheinlich nicht kompatibel mit OOO. Ungetestet.'
-        condition: *OOOCond
   - name: 'BetterMusicSystem.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/26892/' ]
     req:
