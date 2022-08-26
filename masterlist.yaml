@@ -7414,6 +7414,21 @@ plugins:
       - crc: 0xA3203129
         util: 'TES4Edit v4.0.3'
 
+  - name: 'kuerteeAutoSaveAndTime.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/22136/' ]
+    inc:
+      - 'Streamline 2.0.esp'
+      - 'Streamline 2.1.esp'
+      - 'Streamline 3.0.esp'
+      - 'Streamline 3.1.esp'
+    msg:
+      - type: say
+        content:
+          - lang: en
+            text: 'Incompatible with Cobl''s clock.'
+          - lang: de
+            text: 'Inkompatibel mit Cobl''s clock.'
+
   - name: 'kuerteeCrimeHasWitnesses.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22894/' ]
     clean:
@@ -25211,20 +25226,6 @@ plugins:
   - name: 'Demolish Plugin - HUD Display.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/40046/' ]
     req: [ *Pluggy ]
-  - name: 'kuerteeAutoSaveAndTime.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/22136/' ]
-    inc:
-      - 'Streamline 2.0.esp'
-      - 'Streamline 2.1.esp'
-      - 'Streamline 3.0.esp'
-      - 'Streamline 3.1.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Incompatible with Cobl''s clock.'
-          - lang: de
-            text: 'Inkompatibel mit Cobl''s clock.'
   - name: 'NameThatHorse.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/22269/' ]
     req: [ *Pluggy ]
