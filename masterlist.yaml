@@ -12901,6 +12901,9 @@ plugins:
   - name: 'SM Security.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/16136/' ]
     msg:
+      - <<: *alreadyInX
+        subs: [ 'SupreMe Overhaul' ]
+        condition: 'active("SMO.esp")'
       - <<: *compatIssuesWithX
         subs: [ 'Oscuro''s Oblivion Overhaul' ]
         condition: *OOOCond
