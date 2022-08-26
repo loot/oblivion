@@ -6489,6 +6489,77 @@ plugins:
         util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 18
 
+  - name: '(TamrielTravellers(4MMM|4OOO|FactionAll|Items(Cobl|NPC|Unscaled|Vendor))?|TamrielTravellerAdvScript|ShiveringIsleTravellers(FriendlyFactions|FriendlyFactions4MMM)?|Travellers4MMMHostileFactions)\.es[mp]'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/4387/'
+        name: 'Tamriel Travellers'
+  - name: 'TamrielTravellers(4MMM)?\.esp'
+    inc: [ 'FCOM_Convergence.esm' ]
+    msg:
+      - <<: *useInstead
+        subs: [ 'TamrielTravellers4OOO and FCOM_TamrielTravelers.esp' ]
+        condition: *FCOMCond
+  - name: 'TamrielTravellers(4MMM|4OOO)?\.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Tamriel Travellers Main ESP' ]
+        condition: 'many("TamrielTravellers(4MMM|4OOO)?\.esp")'
+  - name: 'TamrielTravellers.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0xEB4A4D83
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 38
+  - name: 'TamrielTravellers4MMM.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0xC0CECFEA
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 38
+  - name: 'TamrielTravellers4OOO.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x2CB068DB
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 78
+  # Tamriel Travellers - Optional Files #
+  - name: 'ShiveringIsleTravellers.esp'
+    req: [ 'DLCShiveringIsles.esp' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x036DD18E
+        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 7
+  - name: 'TamrielTravellersFactionAll.esp'
+    inc: [ 'FCOM_Convergence.esm' ]
+  - name: 'TamrielTravellersItemsCobl.esp'
+  - name: 'Travellers4MMMHostileFactions.esp'
+    inc: [ 'FCOM_Convergence.esm' ]
+  # Tamriel Travellers - Optional Files - Leveling System #
+  - name: 'TamrielTravellersItems(NPC|Unscaled|Vendor)\.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Tamriel Travellers Leveling System ESP' ]
+        condition: 'many("TamrielTravellersItems(NPC|Unscaled|Vendor)\.esp")'
+  - name: 'TamrielTravellersItemsNPC.esp'
+    group: *latePatchesGroup
+    tag:
+      - Deactivate
+      - Delev
+      - Filter
+      - Relev
+      - -NoMerge
+  - name: 'TamrielTravellersItemsUnscaled.esp'
+    inc: [ 'FCOM_Convergence.esm' ]
+  - name: 'TamrielTravellersItemsVendor.esp'
+    group: *latePatchesGroup
+    tag:
+      - Deactivate
+      - Delev
+      - Filter
+      - Relev
+      - -NoMerge
+
   - name: 'Travelers of Cyrodiil.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/47619/'
@@ -27054,96 +27125,6 @@ plugins:
     tag:
       - Graphics
       - NoMerge
-  - name: 'TamrielTravellers.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/4387/' ]
-    msg:
-      - type: error
-        content:
-          - lang: en
-            text: 'Delete. ''Use TamrielTravellers4OOO.esp'' and ''FCOM_TamrielTravelers.esp'' instead.'
-          - lang: de
-            text: 'Löschen. ''Nutzen Sie TamrielTravellers4OOO.esp'' und ''FCOM_TamrielTravelers.esp'' stattdessen.'
-        condition: *FCOMCond
-    dirty:
-      - <<: *quickClean
-        crc: 0xEB4A4D83
-        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 38
-  - name: 'TamrielTravellers4MMM.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/4387/' ]
-    msg:
-      - type: error
-        content:
-          - lang: en
-            text: 'Delete. ''Use TamrielTravellers4OOO.esp'' and ''FCOM_TamrielTravelers.esp'' instead.'
-          - lang: de
-            text: 'Löschen. ''Nutzen Sie TamrielTravellers4OOO.esp'' und ''FCOM_TamrielTravelers.esp'' stattdessen.'
-        condition: *FCOMCond
-    dirty:
-      - <<: *quickClean
-        crc: 0xC0CECFEA
-        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 38
-  - name: 'Travellers4MMMHostileFactions.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/4387/' ]
-    inc: [ 'FCOM_Convergence.esm' ]
-  - name: 'TamrielTravellersFactionAll.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/4387/' ]
-    inc: [ 'FCOM_Convergence.esm' ]
-  - name: 'TamrielTravellers4OOO.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/4387/' ]
-    dirty:
-      - <<: *quickClean
-        crc: 0x2CB068DB
-        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 78
-  - name: 'TamrielTravellersItemsNPC.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/4387/' ]
-    group: *latePatchesGroup
-    tag:
-      - Deactivate
-      - Delev
-      - Filter
-      - Relev
-      - -NoMerge
-  - name: 'TamrielTravellersItemsCobl.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/4387/' ]
-    req: [ 'Cobl Main.esm' ]
-  - name: 'TamrielTravellersItemsVendor.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/4387/' ]
-    group: *latePatchesGroup
-    tag:
-      - Deactivate
-      - Delev
-      - Filter
-      - Relev
-      - -NoMerge
-  - name: 'TamrielTravellersItemsUnscaled.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/4387/' ]
-    inc: [ 'FCOM_Convergence.esm' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Not overhaul mod compatible.'
-          - lang: de
-            text: 'Nicht Überhol-Mod kompatibel.'
-  - name: 'ShiveringIsleTravellers.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/4387/' ]
-    req: [ 'DLCShiveringIsles.esp' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Use of ''TamrielTravellersItemsNPC.esp'', ''TamrielTravellersItemsUnscaled.esp'', or ''TamrielTravellersItemsVendors.esp'' will remove SI items for sale.'
-          - lang: de
-            text: 'Das Nutzen von ''TamrielTravellersItemsNPC.esp'', ''TamrielTravellersItemsUnscaled.esp'', oder ''TamrielTravellersItemsVendors.esp'' wird SI Gegenstände vom Verkauf entfernen.'
-        condition: 'file("TamrielTravellersItemsNPC.esp") or file("TamrielTravellersItemsUnscaled.esp") or file("TamrielTravellersItemsVendors.esp")'
-    dirty:
-      - <<: *quickClean
-        crc: 0x036DD18E
-        util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 7
   - name: 'TamrielTravellersHorseTextures.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/4387/' ]
     tag:
