@@ -8904,6 +8904,16 @@ plugins:
       - <<: *obsolete
         subs: [ '[Harvest Flora](https://www.nexusmods.com/oblivion/mods/2037/)' ]
 
+  - name: 'FF_Real_Thirst.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/14214/' ]
+    tag: [ Scripts ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x24556911
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 71
+        udr: 63
+
   - name: 'Fran''s Ore Refiner( - SI only)?\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/28511/'
@@ -25151,15 +25161,6 @@ plugins:
         crc: 0xD9D40901
         util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 8
-  - name: 'FF_Real_Thirst.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/14214/' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Incompatible with: Vampire mods.'
-          - lang: de
-            text: 'Inkompatibel mit: Vampir Mods.'
   - name: 'C&C - The Blackwood Company.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/17448/' ]
     tag:
