@@ -4666,16 +4666,19 @@ plugins:
 
   - name: 'Slof''s Better Bodies.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/48904/' ]
-    req:
-      - name: 'MaleBodyReplacerV5.esp'
-        display: '[Robert''s Male Body Replacer(v3, v4 or v5)](https://www.nexusmods.com/oblivion/mods/40532)'
-      - name: 'RTFemaleReplacerV12.esp'
-        display: '[Robert''s Female Body Replacer](https://www.nexusmods.com/oblivion/mods/15624)'
+    req: [ 'DLCShiveringIsles.esp' ]
     inc:
       - 'Cobl Races.esp'
       - 'Cobl Races - Balanced.esp'
       - 'Cobl Races TNR.esp'
       - 'Cobl Races TNR SI.esp'
+    msg:
+      - <<: *requiresX
+        subs: [ '[Robert Male Body Replacer V3](https://www.nexusmods.com/oblivion/mods/8295/) or [Robert Male Body Replacer V4](https://www.nexusmods.com/oblivion/mods/14942/) or [Robert Male Body Replacer V5](https://www.nexusmods.com/oblivion/mods/40532/)' ]
+        condition: 'not file("MaleBodyReplacerV\d\.esp")'
+      - <<: *requiresX
+        subs: [ '[Robert''s Female Body Replacer](https://www.nexusmods.com/oblivion/mods/15624/)' ]
+        condition: 'not file("RTFemaleReplacerV12.esp")'
     tag:
       - R.Body-F
       - R.Body-M
