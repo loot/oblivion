@@ -1897,6 +1897,19 @@ plugins:
         util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 7
 
+  - name: 'EnableFreeLookNoWheel.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/9499/' ]
+    msg:
+      - type: say
+        content:
+          - lang: en
+            text: 'Only use if you do not have a mouse wheel.'
+          - lang: de
+            text: 'Nur Nutzen wenn Sie kein Mausrad haben.'
+  - name: 'EnableFreeLookOBSE.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/9499/' ]
+    req: [ *OBSE ]
+
   - name: '\[GFX\]_Initial_Glow-(all|creatures|self)\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/5138/'
@@ -24435,18 +24448,6 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/3429/' ]
     inc: [ 'Oscuro''s_Oblivion_Overhaul.esm' ]
 
-  - name: 'EnableFreeLookNoWheel.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/9499/' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Only use if you do not have a mouse wheel.'
-          - lang: de
-            text: 'Nur Nutzen wenn Sie kein Mausrad haben.'
-  - name: 'EnableFreeLookOBSE.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/9499/' ]
-    req: [ *OBSE ]
   - name: 'Complete Names.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/2326/' ]
     tag: [ Names ]
