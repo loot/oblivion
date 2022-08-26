@@ -1898,9 +1898,11 @@ plugins:
         itm: 7
 
   - name: 'EnableFreeLook(NoWheel|OBSE)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/9499/'
+        name: 'Enable Free Look'
   - name: 'EnableFreeLook.esp'
   - name: 'EnableFreeLookNoWheel.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/9499/' ]
     msg:
       - type: say
         content:
@@ -1909,7 +1911,6 @@ plugins:
           - lang: de
             text: 'Nur Nutzen wenn Sie kein Mausrad haben.'
   - name: 'EnableFreeLookOBSE.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/9499/' ]
     req: [ *OBSE ]
 
   - name: '\[GFX\]_Initial_Glow-(all|creatures|self)\.esp'
