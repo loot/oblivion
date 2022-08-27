@@ -19387,12 +19387,8 @@ plugins:
   - name: 'Halcyon Island.esp'
   - name: 'Halcyon Island_lowconflict.esp'
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Rename to Halcyon Island.esp if using the file ''Better Cities - Halcyon Island.esp''.'
-          - lang: de
-            text: 'Benennen Sie es zu Halcyon Island.esp um wenn Sie die Datei ''Better Cities - Halcyon Island.esp'' nutzen.'
+      - <<: *renameFile
+        subs: [ '**Halcyon Island.esp**' ]
         condition: 'file("Better Cities - Halcyon Island.esp")'
 
   - name: 'HEchasm00.esp'
