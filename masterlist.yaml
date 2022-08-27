@@ -19718,12 +19718,11 @@ plugins:
   - name: 'Seawatch Abode.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/23301/' ]
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Use ''SeawatchAbode-LostCoast patch.esp'' compatibility patch if using Unique Landscapes Lost Coast.'
-          - lang: de
-            text: 'Nutzen Sie ''SeawatchAbode-LostCoast patch.esp'' Kompatibilitäts-Patch wenn Sie Unique Landscapes Lost Coast nutzen.'
+      - <<: *patch3rdParty
+        subs:
+          - 'Unique Landscapes - Lost Coast'
+          - '[Unique Landscapes Compatibility Patches](https://www.nexusmods.com/oblivion/mods/13834/)'
+        condition: '(active("xulBeachesOfCyrodiilLostCoast.esp") or (active("Unique Landscapes.esp") and version("Unique Landscapes.esp", "2.0.0", >=))) and not file("ULE SeawatchAbode-LostCoast patch.esp")'
 
   - name: 'Sunburn.esp'
     url:
