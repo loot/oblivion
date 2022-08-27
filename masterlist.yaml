@@ -13437,6 +13437,16 @@ plugins:
       - crc: 0xB4DFC281
         util: 'TES4Edit v4.0.4b'
 
+  - name: 'Akiviri Imports MOBS.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/13924/' ]
+    inc: [ 'Akaviri Imports.esp' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xE40D909F
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 9
+        udr: 13
+
   - name: 'akitopaladinarmor.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/50379/'
@@ -27617,16 +27627,6 @@ plugins:
         itm: 35
         udr: 39
 
-  - name: 'Akiviri Imports MOBS.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/13924/' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Use this instead ''Akaviri Imports.esp'' for FCOM. Deactivate or delete ''Akaviri Imports.esp'''
-          - lang: de
-            text: 'Nutzen Sie stattdessen ''Akaviri Imports.esp'' für FCOM. Deaktivieren oder entfernen Sie ''Akaviri Imports.esp'''
-        condition: 'file("Akaviri Imports.esp")'
   - name: 'Alastus.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/42282/' ]
     dirty:
