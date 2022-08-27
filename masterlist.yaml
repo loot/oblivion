@@ -19384,6 +19384,10 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/14939/'
         name: 'Halcyon Island'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Halcyon Island ESP' ]
+        condition: 'many("Halcyon Island(_LowConflict)?\.esp")'
   - name: 'Halcyon Island.esp'
   - name: 'Halcyon Island_lowconflict.esp'
     msg:
