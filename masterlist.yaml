@@ -19927,6 +19927,16 @@ plugins:
   - name: 'SnowyRoad-OpenCities Patch.esp'
     after: [ 'Better Cities - Open Cities Reborn.esp' ]
 
+  - name: 'FF_Real_Thirst, Cobl.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/15168/' ]
+    msg:
+      - type: say
+        content:
+          - lang: en
+            text: 'Don''t use with vampire mods.'
+          - lang: de
+            text: 'Nicht mit Vampir Mods nutzen.'
+
   - name: 'ICSuburbsGatehousePatch.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/51233/'
@@ -27006,15 +27016,6 @@ plugins:
       - <<: *alreadyInX
         subs: [ 'Mart''s Monster Mod - Diverse Runeskulls' ]
         condition: 'active("Mart''s Monster Mod - Diverse Runeskulls.*\.esp")'
-  - name: 'FF_Real_Thirst, Cobl.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/15168/' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Don''t use with vampire mods.'
-          - lang: de
-            text: 'Nicht mit Vampir Mods nutzen.'
 
   - name: 'Loth''s Blunt Weapons(- Mobs| for Npcs)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/12939/' ]
