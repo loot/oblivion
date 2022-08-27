@@ -7154,6 +7154,31 @@ plugins:
       - crc: 0x8DAB8D05
         util: 'TES4Edit v4.0.4b'
 
+  - name: 'BladesSmithy(STANDARD|OOO)\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/8950/'
+        name: 'Blades Smithy'
+    tag:
+      - Actors.Stats
+      - Graphics
+      - Invent.Add
+      - Invent.Remove
+  - name: 'BladesSmithySTANDARD.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x4AE8BB6A
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 8
+        udr: 1
+  - name: 'BladesSmithyOOO.esp'
+    msg: [ *patchOutdated ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xC090E284
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 8
+        udr: 1
+
   - name: 'bookplacing.esm'
     url: [ 'https://www.nexusmods.com/oblivion/mods/6262/' ]
     msg:
@@ -27349,16 +27374,6 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/10670/' ]
     inc: [ 'Potion Belt.esp' ]
 
-  - name: 'BladesSmithySTANDARD.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/8950/' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Use ''BladesSmithyOOO.esp'' instead.'
-          - lang: de
-            text: 'Nutzen Sie stattdessen ''BladesSmithyOOO.esp''.'
-        condition: *OOOCond
   - name: 'TGND2 OOO Replacer.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/41928/' ]
     tag:
