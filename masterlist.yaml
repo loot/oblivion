@@ -19388,7 +19388,19 @@ plugins:
       - <<: *useOnlyOneX
         subs: [ 'Halcyon Island ESP' ]
         condition: 'many("Halcyon Island(_LowConflict)?\.esp")'
+    dirty:
+      - <<: *quickClean
+        crc: 0x59D004F0
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 11
+        udr: 40
   - name: 'Halcyon Island.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0xF38BFC14
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 10
+        udr: 40
   - name: 'Halcyon Island_lowconflict.esp'
     msg:
       - <<: *renameFile
