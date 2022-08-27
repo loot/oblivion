@@ -8689,12 +8689,9 @@ plugins:
       - 'Cobl Balanced Races - MMR Patch.esp'
       - 'Cobl Races Ren Names Fix.esp'
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'May be a bit imbalanced when used with Race Balancing Project.'
-          - lang: de
-            text: 'Kann ein bisschen unausgewogen sein wenn es mit Race Balancing Project genutzt wird.'
+      - <<: *compatIssuesWithX
+        subs: [ 'Race Balancing Project' ]
+        condition: 'active("bgBalancing(D|E)VCore\.esp")'
 
   - name: 'Chocolate Elves.esp'
     url:
