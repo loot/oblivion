@@ -19380,6 +19380,33 @@ plugins:
         itm: 30
         udr: 56
 
+  - name: 'Halcyon Island(_LowConflict)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/14939/'
+        name: 'Halcyon Island'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Halcyon Island ESP' ]
+        condition: 'many("Halcyon Island(_LowConflict)?\.esp")'
+    dirty:
+      - <<: *quickClean
+        crc: 0x59D004F0
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 11
+        udr: 40
+  - name: 'Halcyon Island.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0xF38BFC14
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 10
+        udr: 40
+  - name: 'Halcyon Island_lowconflict.esp'
+    msg:
+      - <<: *renameFile
+        subs: [ '**Halcyon Island.esp**' ]
+        condition: 'file("Better Cities - Halcyon Island.esp")'
+
   - name: 'HEchasm00.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/40550/'
@@ -27420,16 +27447,7 @@ plugins:
         util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 20
         udr: 49
-  - name: 'Halcyon Island_LowConflict.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/14939/' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Rename to Halcyon Island.esp if using the file ''Better Cities - Halcyon Island.esp''.'
-          - lang: de
-            text: 'Benennen Sie es zu Halcyon Island.esp um wenn Sie die Datei ''Better Cities - Halcyon Island.esp'' nutzen.'
-        condition: 'file("Better Cities - Halcyon Island.esp")'
+
   - name: 'KnightlyArmory.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/19228/' ]
     dirty:
