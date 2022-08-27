@@ -19723,6 +19723,9 @@ plugins:
           - 'Unique Landscapes - Lost Coast'
           - '[Unique Landscapes Compatibility Patches](https://www.nexusmods.com/oblivion/mods/13834/)'
         condition: '(active("xulBeachesOfCyrodiilLostCoast.esp") or (active("Unique Landscapes.esp") and version("Unique Landscapes.esp", "2.0.0", >=))) and not file("ULE SeawatchAbode-LostCoast patch.esp")'
+    clean:
+      - crc: 0xBB8F4E3F
+        util: 'TES4Edit v4.0.4c'
 
   - name: 'Sunburn.esp'
     url:
