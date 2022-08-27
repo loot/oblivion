@@ -3278,6 +3278,10 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/10403/'
         name: 'Leviathan Soulgems'
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'Soulgem Salvation' ]
+        condition: 'active("SoulgemSalvation.esp")'
     tag: [ Graphics ]
     dirty:
       - <<: *quickClean
@@ -9984,14 +9988,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/28504/'
         name: 'Soulgem Salvation'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Don''t use with Leviathan Soulgems (included).'
-          - lang: de
-            text: 'Nicht mit Leviathan Soulgems nutzen (inkludiert).'
-        condition: 'file("Leviathan Soul.*\.esp")'
+    inc: [ 'Leviathan Soul Gems Abridged.esp' ]
 
   - name: 'SummonDarkGuardian.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/14097/' ]
