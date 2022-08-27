@@ -1809,6 +1809,21 @@ plugins:
       - crc: 0x2A9288EA
         util: 'TES4Edit v4.0.4b'
 
+###### Fixes - Stability & Performance ######
+  - name: 'HrmnsOblivionScriptOptimizationv1.0.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/13092/'
+        name: 'Oblivion Script Optimization'
+      - link: 'https://www.nexusmods.com/oblivion/mods/31757/'
+        name: 'Oblivion Script Optimization - SI Fixed'
+    group: *gameMasterGroup
+    inc:
+      - name: 'DLCShiveringIsles.esp'
+        condition: 'checksum("HrmnsOblivionScriptOptimizationv1.0.esp", 82FC20B8)'
+    clean:
+      - crc: 0xFEED7422
+        util: 'TES4Edit v4.0.4c'
+
   - name: 'WaterFPS.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/49347/' ]
     tag: [ C.Water ]
@@ -24292,24 +24307,6 @@ plugins:
     tag:
       - Actors.ACBS
       - NoMerge
-    group: *underridesGroup
-  - name: 'HrmnsOblivionScriptOptimizationv1.0.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/13092/' ]
-    msg:
-      - type: warn
-        content:
-          - lang: en
-            text: 'Not recommended for use as there is no measurable performance improvement, and it breaks the Shivering Isles by changing some FormIDs, causing a script to be written into cell data.'
-          - lang: de
-            text: 'Nicht empfohlen zur Nutzung da es keine messbare Verbesserung der Performance gibt. Desweiteren macht es Shivering Isles unbrauchbar durch Änderungen an einigen FormIDs, wodurch ein Script in Cell-Daten geschrieben wird.'
-        condition: 'checksum("HrmnsOblivionScriptOptimizationv1.0.esp",82FC20B8)'
-      - type: warn
-        content:
-          - lang: en
-            text: 'Not recommended for use as there is no measurable performance improvement.'
-          - lang: de
-            text: 'Nicht empfohlen zur Nutzung da es keine messbare Verbesserung der Performance gibt.'
-        condition: 'checksum("HrmnsOblivionScriptOptimizationv1.0.esp",FEED7422)'
     group: *underridesGroup
 
   - name: '(Skillbookssave|Book Jackets Oblivion( - BP)? - SSBFL)\.esp'
