@@ -8679,6 +8679,20 @@ plugins:
       - 'bgBalancingDVCore.esp'
       - 'bgBalancingEVCore.esp'
 
+  - name: 'Birthsigns Expanded.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/12149/' ]
+    after:
+      - 'Cobl Races - Balanced.esp'
+      - 'Cobl Balanced Races - MMR Patch.esp'
+      - 'Cobl Races Ren Names Fix.esp'
+    msg:
+      - type: say
+        content:
+          - lang: en
+            text: 'May be a bit imbalanced when used with Race Balancing Project.'
+          - lang: de
+            text: 'Kann ein bisschen unausgewogen sein wenn es mit Race Balancing Project genutzt wird.'
+
   - name: 'Chocolate Elves.esp'
     url:
       - 'https://www.nexusmods.com/oblivion/mods/18247/'
@@ -31967,19 +31981,6 @@ plugins:
         condition: 'file("Mighty Magick - (Core|Races|Settings|Skills|Spells and Creatures).esp")'
     tag: [ Sound ]
 
-  - name: 'Birthsigns Expanded.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/12149/' ]
-    after:
-      - 'Cobl Races - Balanced.esp'
-      - 'Cobl Balanced Races - MMR Patch.esp'
-      - 'Cobl Races Ren Names Fix.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'May be a bit imbalanced when used with Race Balancing Project.'
-          - lang: de
-            text: 'Kann ein bisschen unausgewogen sein wenn es mit Race Balancing Project genutzt wird.'
   - name: 'Diverse Races.esp'
     tag:
       - Body-Size-F
