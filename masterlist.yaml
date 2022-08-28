@@ -606,6 +606,11 @@ common:
       - '[xOBSE](https://github.com/llde/xOBSE/)'
     condition: 'not file("../obse_1_2_416.dll") or version("../obse_1_2_416.dll", "0.0.22.6", <)'
 
+  # &wildEdits
+  - &wildEditsRestoreNames
+    <<: *wildEdits
+    subs: [ 'Unnecessarily renames records, use the TES4Edit script **Restore record names from master** to fix them.' ]
+
 bash_tags:
   - 'Actors.ACBS'
   - 'Actors.AIData'
@@ -4427,8 +4432,7 @@ plugins:
   - name: 'TD_Interiors.esp'
     url: [ 'http://tes-diesel.ru/oblivion/12597/' ]
     msg:
-      - <<: *wildEdits
-        subs: [ 'Unnecessarily renames records, use the TES4Edit script **Restore record names from master** to fix them.' ]
+      - <<: *wildEditsRestoreNames
         condition: 'checksum("TD_Interiors.esp", 7F2739CE) or checksum("TD_Interiors.esp", D5736E09)'
     tag:
       - C.Light
@@ -8839,8 +8843,7 @@ plugins:
   - name: 'TheTangMo.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/5158/' ]
     msg:
-      - <<: *wildEdits
-        subs: [ 'Unnecessarily renames records, use the TES4Edit script **Restore record names from master** to fix them.' ]
+      - <<: *wildEditsRestoreNames
         condition: 'checksum("TheTangMo.esp", 6C6F4616) or checksum("TheTangMo.esp", 5EE7EC8B) or checksum("TheTangMo.esp", C65C13F1) or checksum("TheTangMo.esp", D8386869)'
     dirty:
       - <<: *quickClean
@@ -9030,8 +9033,7 @@ plugins:
   - name: 'VCEClassOverhaul.esp'
     msg:
       - *optional
-      - <<: *wildEdits
-        subs: [ 'Unnecessarily renames records, use the TES4Edit script **Restore record names from master** to fix them.' ]
+      - <<: *wildEditsRestoreNames
         condition: 'checksum("VCEClassOverhaul.esp", 6F06451D)'
     tag: [ Delev ]
 
@@ -9744,8 +9746,7 @@ plugins:
   - name: 'BMEnchantmentRebalance.esp'
     msg:
       - *optional
-      - <<: *wildEdits
-        subs: [ 'Unnecessarily renames records, use the TES4Edit script **Restore record names from master** to fix them.' ]
+      - <<: *wildEditsRestoreNames
         condition: 'checksum("BMEnchantmentRebalance.esp", 41713073) or checksum("BMEnchantmentRebalance.esp", 6E7CF5A8)'
     tag:
       - EnchantmentStats
@@ -11536,8 +11537,7 @@ plugins:
   - name: 'DarkQuest.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/42830/' ]
     msg:
-      - <<: *wildEdits
-        subs: [ 'Unnecessarily renames records, use the TES4Edit script **Restore record names from master** to fix them.' ]
+      - <<: *wildEditsRestoreNames
         condition: 'checksum("DarkQuest.esp", E0BEBD1B) or checksum("DarkQuest.esp", 667C336E)'
     dirty:
       - <<: *quickClean
@@ -12296,8 +12296,7 @@ plugins:
       - link: 'https://www.nexusmods.com/oblivion/mods/6406/'
         name: 'The naked Nord'
     msg:
-      - <<: *wildEdits
-        subs: [ 'Unnecessarily renames records, use the TES4Edit script **Restore record names from master** to fix them.' ]
+      - <<: *wildEditsRestoreNames
         condition: 'checksum("NakedNord.esp", AB1B9D3C) or checksum("NakedNord.esp", 353BD3F7)'
     dirty:
       - <<: *quickClean
@@ -12398,8 +12397,7 @@ plugins:
           - 'Wizard''s Tower'
           - '[Patch Orden des Drachen - Frostcrag Spire](https://www.nexusmods.com/oblivion/mods/38760/)'
         condition: 'active("DLCFrostcrag.esp") and not active("Patch - Orden des Drachen - Frostcrag.esp")'
-      - <<: *wildEdits
-        subs: [ 'Unnecessarily renames records, use the TES4Edit script **Restore record names from master** to fix them.' ]
+      - <<: *wildEditsRestoreNames
         condition: 'checksum("Orden des Drachen.esp", 2778E1FB)'
     tag:
       - -NPC.Eyes
@@ -14226,8 +14224,7 @@ plugins:
       - link: 'https://www.nexusmods.com/oblivion/mods/23393/'
         name: '4 Khergit Scimitars from Mount and Blade'
     msg:
-      - <<: *wildEdits
-        subs: [ 'Unnecessarily renames records, use the TES4Edit script **Restore record names from master** to fix them.' ]
+      - <<: *wildEditsRestoreNames
         condition: 'checksum("KhergitScimitar.esp", 202EF28B) or checksum("KhergitScimitar.esp", E03DBF97)'
     dirty:
       - <<: *quickClean
@@ -14905,8 +14902,7 @@ plugins:
   - name: 'strotisNewFood.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/41324/' ]
     msg:
-      - <<: *wildEdits
-        subs: [ 'Unnecessarily renames records, use the TES4Edit script **Restore record names from master** to fix them.' ]
+      - <<: *wildEditsRestoreNames
         condition: 'checksum("strotisNewFood.esp", CEABE2F2)'
     tag: [ Invent.Add ]
 
@@ -17114,8 +17110,7 @@ plugins:
     req: [ 'DLCShiveringIsles.esp' ]
     inc: [ 'MTCExpandedVillages.esp' ]
     msg:
-      - <<: *wildEdits
-        subs: [ 'Unnecessarily renames records, use the TES4Edit script **Restore record names from master** to fix them.' ]
+      - <<: *wildEditsRestoreNames
         condition: 'checksum("Imperial Nobility.esp", 1569B1E5) or checksum("Imperial Nobility.esp", 9C5A0881)'
     dirty:
       - <<: *quickClean
@@ -28721,8 +28716,7 @@ plugins:
   - name: 'Blood&Mud.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/12016/' ]
     msg:
-      - <<: *wildEdits
-        subs: [ 'Incorrectly renames various records, use the **Restore record names from master** TES4Edit script to fix them.' ]
+      - <<: *wildEditsRestoreNames
         condition: 'checksum("Blood&Mud.esp", 23A62955) or checksum("Blood&Mud.esp", FAC5765D)'
     tag:
       - Graphics
