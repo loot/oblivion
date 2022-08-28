@@ -6625,6 +6625,24 @@ plugins:
       - Relev
       - -NoMerge
 
+  - name: 'Merchant_Tim.esp'
+    msg:
+      - type: say
+        content:
+          - lang: en
+            text: 'Needs Shivering Isles. Otherwise use ''Tim_No_SI''.'
+          - lang: de
+            text: 'Braucht Shivering Isles. Alternativ nutzen Sie ''Tim_No_SI''.'
+  - name: 'Tim_No_SI.esp'
+    inc: [ 'DLCShiveringIsles.esp' ]
+    msg:
+      - type: say
+        content:
+          - lang: en
+            text: 'Use this without Shivering Isles. Otherwise use ''Merchant_Tim''.'
+          - lang: de
+            text: 'Nutzen Sie diesen ohne Shivering Isles. Alternativ nutzen Sie ''Merchant_Tim''.'
+
   - name: 'Travelers of Cyrodiil.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/47619/'
@@ -29400,23 +29418,6 @@ plugins:
   - name: 'LCE-addon.esp'
     msg: [ *corrupt ]
 
-  - name: 'Merchant_Tim.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Needs Shivering Isles. Otherwise use ''Tim_No_SI''.'
-          - lang: de
-            text: 'Braucht Shivering Isles. Alternativ nutzen Sie ''Tim_No_SI''.'
-  - name: 'Tim_No_SI.esp'
-    inc: [ 'DLCShiveringIsles.esp' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Use this without Shivering Isles. Otherwise use ''Merchant_Tim''.'
-          - lang: de
-            text: 'Nutzen Sie diesen ohne Shivering Isles. Alternativ nutzen Sie ''Merchant_Tim''.'
   - name: 'Borderless Cyrodiil-3578.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/3578/' ]
     msg:
