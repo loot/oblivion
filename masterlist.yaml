@@ -7677,8 +7677,20 @@ plugins:
         util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 2
   - name: 'Lynges Thieves Highway.esp'
+    msg:
+      - <<: *wildEdits
+        subs: [ 'Remove **000A496C** from **Lynges Thieves Highway.esp**.' ]
+        condition: 'checksum("Lynges Thieves Highway.esp", 24FE4781) or checksum("Lynges Thieves Highway.esp", 2E17D4E2)'
   - name: 'Lynges Thieves Highway-10256.esp'
+    msg:
+      - <<: *wildEdits
+        subs: [ 'Remove **000A496C** from **Lynges Thieves Highway-10256.esp**.' ]
+        condition: 'checksum("Lynges Thieves Highway-10256.esp", 24FE4781) or checksum("Lynges Thieves Highway-10256.esp", 2E17D4E2)'
   - name: 'Lynges_Thieves_Highway-10256.esp'
+    msg:
+      - <<: *wildEdits
+        subs: [ 'Remove **000A496C** from **Lynges_Thieves_Highway-10256.esp**.' ]
+        condition: 'checksum("Lynges_Thieves_Highway-10256.esp", 24FE4781) or checksum("Lynges_Thieves_Highway-10256.esp", 2E17D4E2)'
 
   - name: 'Mage_Guild_Teleport.esp'
     url:
