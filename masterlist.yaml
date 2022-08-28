@@ -8967,8 +8967,11 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/19092/'
         name: 'Hand to Hand Advanced'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Hand to Hand Advanced ESP' ]
+        condition: 'many("HTHAdvanced - (Normal|Sinkpoint)\.esp")'
   - name: 'HTHAdvanced - Normal.esp'
-    inc: [ 'HTHAdvanced - Sinkpoint.esp' ]
     msg:
       - type: say
         content:
