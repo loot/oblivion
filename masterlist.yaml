@@ -6091,12 +6091,19 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/25001/'
         name: 'Diverse Will o'' the wisp'
+  - name: 'Diverse Wisps - Base.esm'
+    clean:
+      - crc: 0x3C3D0BBA
+        util: 'TES4Edit v4.0.4c'
   - name: 'Diverse Wisps - for Vanilla.esp'
     inc: [ 'Mart''s Monster Mod.esm' ]
     msg:
       - <<: *useInstead
         subs: [ 'Mart''s Monster Mod - Divserse Wisp and VASE Addon.esp' ]
         condition: 'active("Mart''s Monster Mod.esm")'
+    clean:
+      - crc: 0x78F282BA
+        util: 'TES4Edit v4.0.4c'
 
   - name: 'GrayPrinceFights(Upgraded)?\.esp'
     url:
