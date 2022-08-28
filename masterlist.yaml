@@ -13250,6 +13250,26 @@ plugins:
         subs: [ 'S.P.A.M. Faster or Fastest Minor' ]
         condition: 'many("S\.P\.A\.M\. option - Faste(r|st) Minor\.esp")'
 
+  - name: 'Toaster''s Legendary Mastery.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/3664/' ]
+    msg:
+      - type: say
+        content:
+          - lang: en
+            text: 'Included in ''Hentai Mania.esp'', delete or deactivate if you use Hentai Mania mod.'
+          - lang: de
+            text: 'Beinhaltet von ''Hentai Mania.esp'', löschen oder deaktivieren Sie diesen wenn Sie die Hentai Mania Mod nutzen.'
+        condition: 'file("Hentai *Mania.*\.esp")'
+  - name: 'Toaster''s Legendary Skills.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/3664/' ]
+    msg:
+      - type: say
+        content:
+          - lang: en
+            text: 'Use this plugin instead of ''Toaster''s Legendary Skills & Stats.esp'' if you have any problems with the stats.'
+          - lang: de
+            text: 'Nutzen Sie dieses Plugin stattdessen von ''Toaster''s Legendary Skills & Stats.esp'' wenn Sie Probleme mit den Statistiken haben.'
+
   - name: 'Ultimate Leveling.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/49134/' ]
     req: [ *MenuQue ]
@@ -29804,25 +29824,7 @@ plugins:
   - name: 'DMRequirements.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/23005/' ]
     msg: [ *obsolete ]
-  - name: 'Toaster''s Legendary Skills.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/3664/' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Use this plugin instead of ''Toaster''s Legendary Skills & Stats.esp'' if you have any problems with the stats.'
-          - lang: de
-            text: 'Nutzen Sie dieses Plugin stattdessen von ''Toaster''s Legendary Skills & Stats.esp'' wenn Sie Probleme mit den Statistiken haben.'
-  - name: 'Toaster''s Legendary Mastery.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/3664/' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Included in ''Hentai Mania.esp'', delete or deactivate if you use Hentai Mania mod.'
-          - lang: de
-            text: 'Beinhaltet von ''Hentai Mania.esp'', löschen oder deaktivieren Sie diesen wenn Sie die Hentai Mania Mod nutzen.'
-        condition: 'file("Hentai *Mania.*\.esp")'
+
   - name: 'seorin''s Leveling System( - light)?.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/3494/' ]
     msg:
