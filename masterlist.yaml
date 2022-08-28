@@ -14073,6 +14073,46 @@ plugins:
         util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
 
+  - name: 'IABaneOils (1000?|250|500|Wimpy)\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/21620/'
+        name: 'Bane Oils Revisited'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Bane Oils Revisited ESP' ]
+        condition: 'many("IABaneOils (1000?|250|500|Wimpy)\.esp")'
+    tag: [ Actors.Factions ]
+  - name: 'IABaneOils 100.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x26043B09
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 6
+  - name: 'IABaneOils 1000.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0xFBA15331
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 6
+  - name: 'IABaneOils 250.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x65F01DFE
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 6
+  - name: 'IABaneOils 500.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x849EDF70
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 6
+  - name: 'IABaneOils Wimpy.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x4B91D7FE
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 6
+
   - name: 'Immersive Weapons.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/43879/' ]
     req:
@@ -27477,23 +27517,6 @@ plugins:
   - name: 'Daggerfall NPCs.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/29161/' ]
     tag: [ Delev ]
-  - name: 'IABaneOils (Wimpy|1000|500|250|100)\.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/21620/' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Has minor incompatibility with OOO - changes Meridia quest & script back to level 10'
-          - lang: de
-            text: 'Hat geringfügige Inkompatibilitäten mit OOO - ändert Meridia Quest & Skript zurück zu Level 10'
-        condition: *OOOCond
-      - type: say
-        content:
-          - lang: en
-            text: 'Only use one IABane Oils X.esp'
-          - lang: de
-            text: 'Nur ein IABane Oils X.esp nutzen'
-    tag: [ Factions ]
 
   - name: 'Weapon Expansion Pack for Oblivion Nthusiasts.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/35560/' ]
