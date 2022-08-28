@@ -606,6 +606,11 @@ common:
       - '[xOBSE](https://github.com/llde/xOBSE/)'
     condition: 'not file("../obse_1_2_416.dll") or version("../obse_1_2_416.dll", "0.0.22.6", <)'
 
+  # &wildEdits
+  - &wildEditsRestoreNames
+    <<: *wildEdits
+    subs: [ 'Unnecessarily renames records, use the TES4Edit script **Restore record names from master** to fix them.' ]
+
 bash_tags:
   - 'Actors.ACBS'
   - 'Actors.AIData'
