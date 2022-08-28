@@ -8981,6 +8981,15 @@ plugins:
       - crc: 0xE2C09A13
         util: 'TES4Edit v4.0.4c'
 
+  - name: 'kuerteeAttributeAndSkillBasedDamageModifiers.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/23062/'
+        name: 'Attribute-based and skill-based damage modifiers'
+    msg: [ *versionXofYorGreaterRequiredOBSEv17 ]
+    clean:
+      - crc: 0x8DC1126B
+        util: 'TES4Edit v4.0.4c'
+
   - name: 'MassA.I(-[345]0)?.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/8158/' ]
     msg:
@@ -29729,15 +29738,6 @@ plugins:
       - <<: *useBashTweakInstead
         subs: [ 'Tweak Settings -> Actor: Unconsciousness Duration' ]
 
-  - name: 'kuerteeAttributeAndSkillBasedDamageModifiers.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/23062/' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Make sure to set calculateFromVanilla in the included ini file to 0 when used alongside other combat mods.'
-          - lang: de
-            text: 'Stellen Sie sicher calculateFromVanilla in der mitgelieferten ini Datei auf 0 zu setzen wenn es gleichzeitig mit anderen Kampf-Mods genutzt wird.'
   - name: 'Double-tap dodge.esp'
     msg: [ *versionXofYorGreaterRequiredOBSEv19 ]
 
