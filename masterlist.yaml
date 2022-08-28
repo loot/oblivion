@@ -14463,23 +14463,15 @@ plugins:
   - name: 'M&BAxes.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/23489/' ]
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Cell names are changed. To restore names, use TES4Edit script ''Restore record names from master''.'
-          - lang: de
-            text: 'Cell-Namen sind abgeändert. Um Namen wiederherzustellen, nutzen Sie TES4Edit Skript ''Restore record names from master''.'
+      - <<: *wildEditsRestoreNames
+        condition: 'checksum("M&BAxes.esp", 1CE4B25F) or checksum("M&BAxes.esp", 1B3F07EF)'
     tag: [ Invent ]
 
   - name: 'M&BClubs&Hammers.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/23518/' ]
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Cell names are changed. To restore names, use TES4Edit script ''Restore record names from master''.'
-          - lang: de
-            text: 'Cell-Namen sind abgeändert. Um Namen wiederherzustellen, nutzen Sie TES4Edit Skript ''Restore record names from master''.'
+      - <<: *wildEditsRestoreNames
+        condition: 'checksum("M&BClubs&Hammers.esp", FD4AB592) or checksum("M&BClubs&Hammers.esp", 04A8B0D7)'
     tag: [ Invent ]
 
   - name: 'M&BShields.esp'
@@ -14487,12 +14479,8 @@ plugins:
       - 'https://www.nexusmods.com/oblivion/mods/23273/'
       - 'https://www.nexusmods.com/oblivion/mods/23303/'
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Cell names are changed. To restore names, use TES4Edit script ''Restore record names from master''.'
-          - lang: de
-            text: 'Cell-Namen sind abgeändert. Um Namen wiederherzustellen, nutzen Sie TES4Edit Skript ''Restore record names from master''.'
+      - <<: *wildEditsRestoreNames
+        condition: 'checksum("M&BShields.esp", CC3B7F7E)'
     tag: [ Invent ]
 
   - name: '(Francesco''s )?Mage Equipment\.esp'
@@ -14576,12 +14564,8 @@ plugins:
   - name: 'MandBSwords.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/23371/' ]
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Cell names are changed. To restore names, use TES4Edit script ''Restore record names from master''.'
-          - lang: de
-            text: 'Cell-Namen sind abgeändert. Um Namen wiederherzustellen, nutzen Sie TES4Edit Skript ''Restore record names from master''.'
+      - <<: *wildEditsRestoreNames
+        condition: 'checksum("MandBSwords.esp", 90F2DFB3) or checksum("MandBSwords.esp", 4E9C8FAC)'
     tag: [ Invent ]
 
   - name: 'MDMM.esp'
