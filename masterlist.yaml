@@ -13930,13 +13930,12 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/6452/' ]
     inc: [ 'Mart''s Monster Mod.esm' ]
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Use Diverse Guard Armor.esp instead for MMM/MMMForFrans (merged in MMMforOOO) or use Diverse Guard Unity for FCOM.'
-          - lang: de
-            text: 'Nutze stattdessen Diverse Guard Armor.esp für MMM/MMMForFrans (in MMMforOOO fusioniert) oder nutzen Sie Diverse Guard Unity für FCOM.'
-        condition: 'file("Mart''s Monster Mod for Fran.esp") or file("Mart''s Monster Mod.esm") or file("Mart''s Monster Mod for OOO.esm") or file("FCOM_Convergence.esm")'
+      - <<: *useInstead
+        subs: [ 'FCOM_DiverseGuardUnity.esp' ]
+        condition: 'active("Mart''s Monster Mod.esm") and active("FCOM_Convergence.esm")'
+      - <<: *useInstead
+        subs: [ 'Mart''s Monster Mod - Diverse Imperial Armor.esp' ]
+        condition: 'active("Mart''s Monster Mod.esm") and not active("Mart''s Monster Mod for OOO.esm") and not active("FCOM_Convergence.esm")'
 
   - name: 'DLC(MergedBooks|OrreryLoreBook|VileLairLoreBook|MehrunesLoreBook|ThievesDenLoreBook)\.esp'
     url:
