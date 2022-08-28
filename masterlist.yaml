@@ -6483,6 +6483,16 @@ plugins:
         util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 2
 
+  - name: '(Merchant_Tim|Tim_No_SI)\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/15088/'
+        name: 'Tims Spells'
+    req: [ *OBSE ]
+  - name: 'Merchant_Tim.esp'
+    req: [ 'DLCShiveringIsles.esp' ]
+  - name: 'Tim_No_SI.esp'
+    inc: [ 'DLCShiveringIsles.esp' ]
+
   - name: 'moDem''s City Life.esp'
     url:
       - 'https://www.nexusmods.com/oblivion/mods/9450/'
@@ -29400,23 +29410,6 @@ plugins:
   - name: 'LCE-addon.esp'
     msg: [ *corrupt ]
 
-  - name: 'Merchant_Tim.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Needs Shivering Isles. Otherwise use ''Tim_No_SI''.'
-          - lang: de
-            text: 'Braucht Shivering Isles. Alternativ nutzen Sie ''Tim_No_SI''.'
-  - name: 'Tim_No_SI.esp'
-    inc: [ 'DLCShiveringIsles.esp' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Use this without Shivering Isles. Otherwise use ''Merchant_Tim''.'
-          - lang: de
-            text: 'Nutzen Sie diesen ohne Shivering Isles. Alternativ nutzen Sie ''Merchant_Tim''.'
   - name: 'Borderless Cyrodiil-3578.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/3578/' ]
     msg:
