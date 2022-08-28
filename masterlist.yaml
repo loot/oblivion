@@ -14200,6 +14200,19 @@ plugins:
       - <<: *wildEdits
         subs: [ 'Unnecessarily renames records, use the TES4Edit script **Restore record names from master** to fix them.' ]
         condition: 'checksum("KhergitScimitar.esp", 202EF28B) or checksum("KhergitScimitar.esp", E03DBF97)'
+    dirty:
+      - <<: *quickClean
+        crc: 0x202EF28B
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
+      - <<: *quickClean
+        crc: 0x0A280280
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 3
+      - <<: *quickClean
+        crc: 0xB2E1B9DB
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 5
 
   - name: 'KnightsOfTheThornArmor(SI)?\.esp'
     url: [ 'https://www.afkmods.com/index.php?/files/file/2310-knights-of-the-thorn-armor/' ]
