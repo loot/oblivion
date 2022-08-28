@@ -8973,7 +8973,13 @@ plugins:
         condition: 'many("HTHAdvanced - (Normal|Sinkpoint)\.esp")'
       - *versionXofYorGreaterRequiredOBSEv15
   - name: 'HTHAdvanced - Normal.esp'
+    clean:
+      - crc: 0x52324A9F
+        util: 'TES4Edit v4.0.4c'
   - name: 'HTHAdvanced - Sinkpoint.esp'
+    clean:
+      - crc: 0xE2C09A13
+        util: 'TES4Edit v4.0.4c'
 
   - name: 'MassA.I(-[345]0)?.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/8158/' ]
