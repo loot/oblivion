@@ -7663,8 +7663,10 @@ plugins:
       - Graphics
       - Sound
 
-  - name: 'Lynges[ _]Thieves[ _]Highway-10256\.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/10256/' ]
+  - name: 'Lynges[ _]Thieves[ _]Highway(-10256)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/10256/'
+        name: 'Lynges Thieves Highway'
     msg:
       - <<: *alreadyInX
         subs: [ 'Better Cities Imperial City plugins' ]
@@ -7672,8 +7674,27 @@ plugins:
     dirty:
       - <<: *quickClean
         crc: 0x24FE4781
-        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 2
+      - <<: *quickClean
+        crc: 0x3B8FB327
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
+  - name: 'Lynges Thieves Highway.esp'
+    msg:
+      - <<: *wildEdits
+        subs: [ 'Remove **000A496C** from **Lynges Thieves Highway.esp**.' ]
+        condition: 'checksum("Lynges Thieves Highway.esp", 24FE4781) or checksum("Lynges Thieves Highway.esp", 2E17D4E2)'
+  - name: 'Lynges Thieves Highway-10256.esp'
+    msg:
+      - <<: *wildEdits
+        subs: [ 'Remove **000A496C** from **Lynges Thieves Highway-10256.esp**.' ]
+        condition: 'checksum("Lynges Thieves Highway-10256.esp", 24FE4781) or checksum("Lynges Thieves Highway-10256.esp", 2E17D4E2)'
+  - name: 'Lynges_Thieves_Highway-10256.esp'
+    msg:
+      - <<: *wildEdits
+        subs: [ 'Remove **000A496C** from **Lynges_Thieves_Highway-10256.esp**.' ]
+        condition: 'checksum("Lynges_Thieves_Highway-10256.esp", 24FE4781) or checksum("Lynges_Thieves_Highway-10256.esp", 2E17D4E2)'
 
   - name: 'Mage_Guild_Teleport.esp'
     url:
