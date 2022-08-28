@@ -7667,6 +7667,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/10256/'
         name: 'Lynges Thieves Highway'
+    inc: [ 'Lynges Thieves Highway - OOO.esp' ]
     msg:
       - <<: *alreadyInX
         subs: [ 'Better Cities Imperial City plugins' ]
@@ -7704,13 +7705,6 @@ plugins:
       - <<: *alreadyInX
         subs: [ 'Better Cities Imperial City plugins' ]
         condition: 'active("Better Imperial City.esp") or active("Better Cities IC (Arboretum|Arcane University|Arena|Elven Gardens|Green Emperor Way|Market|Prison|Temple|Waterfront)\.esp")'
-      - type: say
-        content:
-          - lang: en
-            text: 'Delete ''Lynges Thieves Highway.esp and use this instead.'
-          - lang: de
-            text: 'Entfernen Sie ''Lynges Thieves Highway.esp und nutzen Sie dies stattdessen.'
-        condition: '( file("Lynges Thieves Highway.esp") ) and active("Oscuro''s_Oblivion_Overhaul.esm")'
 
   - name: 'Mage_Guild_Teleport.esp'
     url:
