@@ -13259,7 +13259,11 @@ plugins:
       - <<: *alreadyInX
         subs: [ 'Hentai Mania' ]
         condition: 'file("Hentai *Mania.*\.esp")'
-  - name: 'Toaster''s Legendary Skills.esp'
+  - name: 'Toaster''s Legendary Skills( & Stats)?\.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Legendary Skills ESP' ]
+        condition: 'many("Toaster''s Legendary Skills( & Stats)?\.esp")'
 
   - name: 'Ultimate Leveling.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/49134/' ]
