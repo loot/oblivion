@@ -6093,12 +6093,9 @@ plugins:
         name: 'Diverse Will o'' the wisp'
   - name: 'Diverse Wisps - for Vanilla.esp'
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'MMM users should use ''Mart''s Monster Mod - Diverse Wisps.esp'' instead.'
-          - lang: de
-            text: 'MMM Nutzer sollten stattdessen ''Mart''s Monster Mod - Diverse Wisps.esp'' nutzen.'
+      - <<: *useInstead
+        subs: [ 'Mart''s Monster Mod - Divserse Wisp and VASE Addon.esp' ]
+        condition: 'active("Mart''s Monster Mod.esm")'
 
   - name: 'GrayPrinceFights(Upgraded)?\.esp'
     url:
