@@ -14078,12 +14078,9 @@ plugins:
       - link: 'https://www.nexusmods.com/oblivion/mods/21620/'
         name: 'Bane Oils Revisited'
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Only use one IABane Oils X.esp'
-          - lang: de
-            text: 'Nur ein IABane Oils X.esp nutzen'
+      - <<: *useOnlyOneX
+        subs: [ 'Bane Oils Revisited ESP' ]
+        condition: 'many("IABaneOils (1000?|250|500|Wimpy)\.esp")'
     tag: [ Factions ]
   - name: 'IABaneOils 100.esp'
   - name: 'IABaneOils 1000.esp'
