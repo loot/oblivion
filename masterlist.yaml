@@ -8963,6 +8963,24 @@ plugins:
         util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
 
+  - name: 'HTHAdvanced - (Normal|Sinkpoint)\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/19092/'
+        name: 'Hand to Hand Advanced'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Hand to Hand Advanced ESP' ]
+        condition: 'many("HTHAdvanced - (Normal|Sinkpoint)\.esp")'
+      - *versionXofYorGreaterRequiredOBSEv15
+  - name: 'HTHAdvanced - Normal.esp'
+    clean:
+      - crc: 0x52324A9F
+        util: 'TES4Edit v4.0.4c'
+  - name: 'HTHAdvanced - Sinkpoint.esp'
+    clean:
+      - crc: 0xE2C09A13
+        util: 'TES4Edit v4.0.4c'
+
   - name: 'MassA.I(-[345]0)?.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/8158/' ]
     msg:
@@ -29662,15 +29680,7 @@ plugins:
     tag: [ Stats ]
   - name: 'SilverBonus.esp'
     req: [ *OBSE ]
-  - name: 'HTHAdvanced - Normal.esp'
-    inc: [ 'HTHAdvanced - Sinkpoint.esp' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Use ''Sinkpoint'' version if using Sinkpoints Martial Arts Animation Replacer.'
-          - lang: de
-            text: 'Nutzen Sie die ''Sinkpoint'' Version wenn Sie Sinkpoints Martial Arts Animation Replacer nutzen.'
+
   - name: 'JM''s Bar Fights mortal.esp'
     inc: [ 'JM''s Bar Fights.esp' ]
   - name: 'Longer_KnockOut-6523.esp'
