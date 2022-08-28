@@ -7667,6 +7667,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/10256/'
         name: 'Lynges Thieves Highway'
+    inc: [ 'Lynges Thieves Highway - OOO.esp' ]
     msg:
       - <<: *alreadyInX
         subs: [ 'Better Cities Imperial City plugins' ]
@@ -7695,6 +7696,16 @@ plugins:
       - <<: *wildEdits
         subs: [ 'Remove **000A496C** from **Lynges_Thieves_Highway-10256.esp**.' ]
         condition: 'checksum("Lynges_Thieves_Highway-10256.esp", 24FE4781) or checksum("Lynges_Thieves_Highway-10256.esp", 2E17D4E2)'
+
+  - name: 'Lynges Thieves Highway - OOO.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/25383/'
+        name: 'Lynges Thieves Highway - OOO'
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'Better Cities Imperial City plugins' ]
+        condition: 'active("Better Imperial City.esp") or active("Better Cities IC (Arboretum|Arcane University|Arena|Elven Gardens|Green Emperor Way|Market|Prison|Temple|Waterfront)\.esp")'
+      - *patchOutdated
 
   - name: 'Mage_Guild_Teleport.esp'
     url:
@@ -28588,19 +28599,6 @@ plugins:
       - <<: *alreadyInX
         subs: [ 'Better Cities Imperial City plugins' ]
         condition: 'active("Better Imperial City.esp") or active("Better Cities IC (Arboretum|Arcane University|Arena|Elven Gardens|Green Emperor Way|Market|Prison|Temple|Waterfront)\.esp")'
-  - name: 'Lynges Thieves Highway - OOO.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/25383/' ]
-    msg:
-      - <<: *alreadyInX
-        subs: [ 'Better Cities Imperial City plugins' ]
-        condition: 'active("Better Imperial City.esp") or active("Better Cities IC (Arboretum|Arcane University|Arena|Elven Gardens|Green Emperor Way|Market|Prison|Temple|Waterfront)\.esp")'
-      - type: say
-        content:
-          - lang: en
-            text: 'Delete ''Lynges Thieves Highway.esp and use this instead.'
-          - lang: de
-            text: 'Entfernen Sie ''Lynges Thieves Highway.esp und nutzen Sie dies stattdessen.'
-        condition: '( file("Lynges Thieves Highway.esp") ) and active("Oscuro''s_Oblivion_Overhaul.esm")'
 
   - name: 'Ulrim''s Horses - DLCHorseArmor+OOO.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/16688/' ]
