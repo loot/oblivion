@@ -13256,12 +13256,8 @@ plugins:
         name: 'Legendary Mastery'
   - name: 'Toaster''s Legendary Mastery.esp'
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Included in ''Hentai Mania.esp'', delete or deactivate if you use Hentai Mania mod.'
-          - lang: de
-            text: 'Beinhaltet von ''Hentai Mania.esp'', löschen oder deaktivieren Sie diesen wenn Sie die Hentai Mania Mod nutzen.'
+      - <<: *alreadyInX
+        subs: [ 'Hentai Mania' ]
         condition: 'file("Hentai *Mania.*\.esp")'
   - name: 'Toaster''s Legendary Skills.esp'
 
