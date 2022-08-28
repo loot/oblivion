@@ -14197,12 +14197,9 @@ plugins:
       - link: 'https://www.nexusmods.com/oblivion/mods/23393/'
         name: '4 Khergit Scimitars from Mount and Blade'
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Cell names are changed. To restore names, use TES4Edit script ''Restore record names from master''.'
-          - lang: de
-            text: 'Cell-Namen sind abgeändert. Um Namen wiederherzustellen, nutzen Sie TES4Edit Skript ''Restore record names from master''.'
+      - <<: *wildEdits
+        subs: [ 'Unnecessarily renames records, use the TES4Edit script **Restore record names from master** to fix them.' ]
+        condition: 'checksum("KhergitScimitar.esp", 202EF28B) or checksum("KhergitScimitar.esp", E03DBF97)'
 
   - name: 'KnightsOfTheThornArmor(SI)?\.esp'
     url: [ 'https://www.afkmods.com/index.php?/files/file/2310-knights-of-the-thorn-armor/' ]
