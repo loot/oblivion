@@ -1190,12 +1190,9 @@ plugins:
         util: 'TES4Edit v4.0.4'
   - name: 'DLCThievesDen - Unofficial Patch - SSSB.esp'
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Only for new game. Don''t use for existing game.'
-          - lang: de
-            text: 'Nur für einen neuen Spielstand. Nicht nutzen für bereits bestehende Spielstände.'
+      - <<: *requiresX
+        type: say
+        subs: [ 'New save game, don''t use with an existing save.' ]
     clean:
       - crc: 0xF8731FE7
         util: 'TES4Edit v4.0.4'
