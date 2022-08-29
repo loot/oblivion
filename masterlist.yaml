@@ -9114,6 +9114,19 @@ plugins:
       - crc: 0x272CD416
         util: 'TES4Edit v4.0.4b'
 
+  - name: 'Phitt''s Phighting Phixes.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/32651/' ]
+    inc:
+      - 'NoBackwardsRunning.esp'
+      - 'NoBackwardsRunning_fran.esp'
+      - 'PTActorsCare.esp'
+      - 'PTDamageFinal.esp'
+      - 'PTDoorExploitBegone.esp'
+      - 'PTLessKnockback.esp'
+    msg:
+      - *masterReassignNehrim
+      - *versionXofYorGreaterRequiredOBSEv17
+
   - name: '(VanillaCombatEnhanced|VCEClassOverhaul)\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/45314/'
@@ -29917,18 +29930,6 @@ plugins:
     msg:
       - <<: *useBashTweakInstead
         subs: [ 'Tweak Settings -> Combat: Alchemy' ]
-  - name: 'Phitt''s Phighting Phixes.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/32651/' ]
-    msg:
-      - *versionXofYorGreaterRequiredOBSEv17
-      - type: say
-        content:
-          - lang: en
-            text: 'Don''t need to use ''PTActorsCare.esp'', ''PTDamageFinal.esp'', ''PTDoorExploitBegone.esp'', ''PTLessKnockback.esp'' or NoRunningBackwards mod with this.'
-          - lang: de
-            text: 'Sie brauchen ''PTActorsCare.esp'', ''PTDamageFinal.esp'', ''PTDoorExploitBegone.esp'', ''PTLessKnockback.esp'' oder NoRunningBackwards Mod nicht mit diesem.'
-        condition: 'file("PTActorsCare.esp") or file("PTDamageFinal.esp") or file("PTDoorExploitBegone.esp") or file("PTLessKnockback.esp") or file("NoBackwardsRunning.esp") or file("NoBackwardsRunning_fran.esp")'
-      - *masterReassignNehrim
   - name: 'BFG''s Enhanced Armory.esp'
     inc:
       - 'Enhanced Hotkeys.esp'
