@@ -11834,14 +11834,9 @@ plugins:
   - name: 'Gift of Kynareth_delayer.esp'
     msg: [ *obsolete ]
   - name: 'HOD_delayer.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'only use without Open Cities'
-          - lang: de
-            text: 'Nur ohne Open Cities nutzen'
-        condition: 'file("Open Cities.*\.esp")'
+    inc:
+      - 'Open Cities Classic.esp'
+      - 'Open Cities Reborn.esp'
 
   - name: 'EiAmod.esp'
     url:
