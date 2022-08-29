@@ -22856,8 +22856,8 @@ plugins:
             text: 'Wenn Mage''s Guild und Slof''s Oblivion Robe trader beides benutzt wird, nutzen Sie auch ''FCOM_OMGSRT.esp''.'
         condition: 'not file("FCOM_OMGSRT.esp")'
     tag:
-      - Actors.AIPackages
-      - Relations
+      - Actors.AIPackagesForceAdd
+      - Relations.Add
   - name: 'FCOM_OscurosOverhaul.esp'
     inc: [ 'Mart''s Monster Mod.esm' ]
     req: [ 'FCOM_Convergence.esm' ]
