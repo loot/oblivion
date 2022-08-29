@@ -2518,6 +2518,10 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/33531/'
         name: 'Alluring Potion Bottles v3'
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'Relevant Scrolls and Potions (& Staves)' ]
+        condition: 'active("Relevant Scrolls & Potions & Staves.esp")'
     tag:
       - Graphics
       - MustBeActiveIfImported
@@ -10133,6 +10137,22 @@ plugins:
         itm: 1
   - name: 'Recastable Summons - Mighty Magicka Version.esp'
     msg: [ *patchOutdated ]
+
+  - name: 'Relevant Scrolls & Potions & Staves.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/45627/'
+        name: 'Relevant Scrolls and Potions (& Staves)'
+    tag:
+      - EnchantmentStats
+      - Graphics
+      - Names
+      - -SpellStats
+      - Stats
+    clean:
+      - crc: 0xE72D9A16
+        util: 'TES4Edit v4.0.4c'
+      - crc: 0x70519AC5
+        util: 'TES4Edit v4.0.4c'
 
   - name: 'skillfulNecromancy.esp'
     url:
@@ -29339,15 +29359,7 @@ plugins:
     tag: [ Stats ]
   - name: 'REDrinks.esp'
     tag: [ Graphics ]
-  - name: 'Relevant Scrolls & Potions & Staves.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/45627/' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'If used with another potion graphics replacer, remove the Graphics tag to ensure compatibility. I.e. only the mod you want to be dominant should have a Graphics tag.'
-          - lang: de
-            text: 'Wenn dies mit einer anderen Zaubertrank-Graphik Ersetzer genutzt wird, Entfernen Sie den Graphics Tag um Kompatibilität zu gewährleisten. Bedeutet, nur die Mod die Sie verwenden wollen sollte den Graphics Tag haben.'
+
   - name: 'Repair Anytime-9384.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/9384/' ]
     msg:
