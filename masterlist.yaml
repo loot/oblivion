@@ -9991,6 +9991,18 @@ plugins:
         util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 4
 
+  - name: 'JIM_Summon_Unicorn.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/7234/'
+        name: 'Summon Unicorn Summon Horse'
+    # TODO: Add other horse summoning mods to incompatible list.
+    tag: [ Invent.Add ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x25D04FBA
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
+
   - name: 'Leviathan Trophy Soulgems.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/19862/' ]
     req:
@@ -29683,14 +29695,6 @@ plugins:
       - <<: *useOnlyOneX
         subs: [ 'JIM Doppleganger' ]
         condition: 'many("JIM_(Summon|Balanced)_Doppleganger\.esp")'
-  - name: 'JIM_Summon_Unicorn.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Do not activate alongside other horse summoning mods. Use only one .esp.'
-          - lang: de
-            text: 'Nicht mit anderen Pferd-Beschwörungs-Mods gleichzeitig nutzen. Nutzen Sie nur eine .esp.'
   - name: 'MadCompanionshipSpells.esp'
     msg: [ *versionXofYorGreaterRequiredOBSEv19 ]
   - name: 'Mark3.esp'
