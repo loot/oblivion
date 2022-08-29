@@ -14901,12 +14901,8 @@ plugins:
       - link: 'https://www.nexusmods.com/oblivion/mods/11981/'
         name: 'pale_rider''s Armor of Dragon''s Nightmare'
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Changes some cell names to German. To restore names, use TES4Edit script ''Restore record names from master''.'
-          - lang: de
-            text: 'Ändert eine Cell-Namen zu Deutsch ab. Um Namen wiederherzustellen, nutzen Sie TES4Edit Skript ''Restore record names from master''.'
+      - <<: *wildEditsRestoreNames
+        condition: 'checksum("pale_rider''s Armor of Dragon''s Nightmare.esp", 4FA01F17)'
 
   - name: 'Properly Equipped Vampire Hunters.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/48130/' ]
