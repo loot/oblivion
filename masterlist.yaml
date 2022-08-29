@@ -22848,13 +22848,9 @@ plugins:
     req: [ 'FCOM_Convergence.esm' ]
   - name: 'FCOM_OMG.esp'
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'If using both Origin of the Mage''s Guild and Slof''s Oblivion Robe trader, use ''FCOM_OMGSRT.esp'' as well.'
-          - lang: de
-            text: 'Wenn Mage''s Guild und Slof''s Oblivion Robe trader beides benutzt wird, nutzen Sie auch ''FCOM_OMGSRT.esp''.'
-        condition: 'not file("FCOM_OMGSRT.esp")'
+      - <<: *patchIncluded
+        subs: [ 'Slof''s Oblivion Robe trader' ]
+        condition: 'active("Slof''s Oblivion Robe Trader.esp") and active("Origin of the Mages Guild.esp") and not file("FCOM_OMGSRT.esp") and not file("Bashed Patch.*\.esp")'
     tag:
       - Actors.AIPackagesForceAdd
       - Relations.Add
