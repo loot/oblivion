@@ -13112,6 +13112,12 @@ plugins:
         name: 'Intelligence Overhaul'
   - name: 'Intelligence Overhaul( BJ)?\.esp'
     tag: [ Scripts ]
+  - name: 'Intelligence Overhaul.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0xD1752E63
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 4
   - name: 'Intelligence Overhaul BJ.esp'
     msg:
       - type: say
@@ -13122,6 +13128,16 @@ plugins:
             text: 'Nutzen Sie stattdessen ''OOO-Intelligence Overhaul BJ''.'
         condition: *OOOCond
     tag: [ Graphics ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xF9565809
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 8
+        udr: 233
+  - name: 'Intelligence Overhaul (No Book Changes).esp'
+    clean:
+      - crc: 0xDDF4DD43
+        util: 'TES4Edit v4.0.4c'
 
   - name: 'Intelligence Overhaul(\-RR| BJ\-RR)\.esp'
     url:
@@ -13129,8 +13145,20 @@ plugins:
         name: 'Intelligence Overhaul - Rapid Reader''s'
     msg: [ *versionXofYorGreaterRequiredOBSEv11 ]
     tag: [ Scripts ]
+  - name: 'Intelligence Overhaul-RR.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0xEA20E2F5
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 4
   - name: 'Intelligence Overhaul BJ-RR.esp'
     tag: [ Graphics ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x4FD3E7AB
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 8
+        udr: 233
 
   - name: 'MigFEA.esp'
     url:
@@ -13227,6 +13255,12 @@ plugins:
     tag:
       - Graphics
       - Scripts
+    dirty:
+      - <<: *quickClean
+        crc: 0x7B447DAF
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 6
+        udr: 233
 
   - name: 'SetsunaDummyTraining.esp'
     url:
