@@ -8174,6 +8174,10 @@ plugins:
       - <<: *compatIssuesWithX
         subs: [ 'Personality Idles' ]
         condition: 'file("personality(_| )idle.*\.esp")'
+  - name: 'PowerAttack Voicemod.esp'
+    inc: [ 'DLCShiveringIsles.esp' ]
+  - name: 'PowerAttack Voicemod - The Shivering Isles.esp'
+    req: [ 'DLCShiveringIsles.esp' ]
 
   - name: 'Real Hunger, Cobl.esp'
     url:
