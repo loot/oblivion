@@ -13106,6 +13106,65 @@ plugins:
         udr: 1
 
 ###### Gameplay - Skills & Leveling ######
+  - name: 'Intelligence Overhaul( BJ| \(No Book Changes\))?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/11205/'
+        name: 'Intelligence Overhaul'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Intelligence Overhaul ESP' ]
+        condition: 'many("(OOO\-)?Intelligence Overhaul( BJ| \(No Book Changes\)|\-RR| BJ\-RR)?\.esp")'
+      - *versionXofYorGreaterRequiredOBSEv11
+  - name: 'Intelligence Overhaul( BJ)?\.esp'
+    tag: [ Scripts ]
+  - name: 'Intelligence Overhaul.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0xD1752E63
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 4
+  - name: 'Intelligence Overhaul BJ.esp'
+    msg:
+      - <<: *useInstead
+        subs: [ '[OOO Intelligence Overhaul - Book Jackets](https://www.nexusmods.com/oblivion/mods/17584/)' ]
+        condition: *OOOCond
+    tag: [ Graphics ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xF9565809
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 8
+        udr: 233
+  - name: 'Intelligence Overhaul (No Book Changes).esp'
+    clean:
+      - crc: 0xDDF4DD43
+        util: 'TES4Edit v4.0.4c'
+
+  - name: 'Intelligence Overhaul(\-RR| BJ\-RR)\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/31686/'
+        name: 'Intelligence Overhaul - Rapid Reader''s'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Intelligence Overhaul ESP' ]
+        condition: 'many("(OOO\-)?Intelligence Overhaul( BJ| \(No Book Changes\)|\-RR| BJ\-RR)?\.esp")'
+      - *versionXofYorGreaterRequiredOBSEv11
+    tag: [ Scripts ]
+  - name: 'Intelligence Overhaul-RR.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0xEA20E2F5
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 4
+  - name: 'Intelligence Overhaul BJ-RR.esp'
+    tag: [ Graphics ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x4FD3E7AB
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 8
+        udr: 233
+
   - name: 'MigFEA.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/41553/'
@@ -13193,6 +13252,28 @@ plugins:
     clean:
       - crc: 0x2D29777B
         util: 'TES4Edit v4.0.4b'
+
+  - name: 'OOO-Intelligence Overhaul BJ.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/17584/'
+        name: 'OOO Intelligence Overhaul - Book Jackets'
+    msg:
+      - <<: *requiresResources
+        subs: [ '[Book Jackets Oblivion Standard Res](https://www.nexusmods.com/oblivion/mods/5570/) or [Book Jackets Oblivion High Res BAIN](https://www.nexusmods.com/oblivion/mods/50033/)' ]
+        condition: 'not file("textures/menus/icons/pa/bjob") or not file("meshes/pa/bjob")'
+      - <<: *useOnlyOneX
+        subs: [ 'Intelligence Overhaul ESP' ]
+        condition: 'many("(OOO\-)?Intelligence Overhaul( BJ| \(No Book Changes\)|\-RR| BJ\-RR)?\.esp")'
+      - *versionXofYorGreaterRequiredOBSEv11
+    tag:
+      - Graphics
+      - Scripts
+    dirty:
+      - <<: *quickClean
+        crc: 0x7B447DAF
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 6
+        udr: 233
 
   - name: 'SetsunaDummyTraining.esp'
     url:
@@ -29793,17 +29874,6 @@ plugins:
       - <<: *useOnlyOneX
         subs: [ 'Jhaerik''s Anti Power-Gaming Leveling System' ]
         condition: 'many("Jhaerik''s Anti Power-Gaming Leveling System [1234] ((Very Easy )|(Easy)|(Balanced)|(Hard))?\.esp")'
-  - name: 'Intelligence Overhaul BJ.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Use ''OOO-Intelligence Overhaul BJ'' instead.'
-          - lang: de
-            text: 'Nutzen Sie stattdessen ''OOO-Intelligence Overhaul BJ''.'
-        condition: *OOOCond
-  - name: 'Intelligence Overhaul-RR.esp'
-    msg: [ *versionXofYorGreaterRequiredOBSEv11 ]
   - name: 'Sneaking Detection Recalibrated.esp'
     req:
       - <<: *AddActorValues
