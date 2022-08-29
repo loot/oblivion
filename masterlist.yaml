@@ -8851,12 +8851,9 @@ plugins:
         name: 'Luchaire''s Dryad Race'
   - name: 'Luchaire''s Dryad Race.esp'
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Use ''for MMM'' version if using MMM/FCOM.'
-          - lang: de
-            text: 'Nutzen Sie die ''for MMM'' Version wenn Sie MMM/FCOM nutzen.'
+      - <<: *useVersion
+        subs: [ 'Mart''s Monster Mod' ]
+        condition: 'active("Mart''s Monster Mod.esm")'
     tag:
       - Eyes
       - Hair
