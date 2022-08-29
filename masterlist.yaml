@@ -17604,6 +17604,9 @@ plugins:
       - link: 'https://www.nexusmods.com/oblivion/mods/16823/'
         name: 'More Suburban Life'
   - name: 'MoreSuburbLife.esp'
+    after:
+      - name: 'RTT.esp'
+        condition: 'file("MoreSuburbLife_RTT_patch.esp")'
     msg:
       - type: say
         content:
