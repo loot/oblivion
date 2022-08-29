@@ -22855,6 +22855,9 @@ plugins:
     msg:
       # doNotClean
       - <<: *patchProvided
+        subs: [ 'KD Circlets OOO Optimized - NPC Equip' ]
+        condition: 'active("KDCircletsOOOOptimized - NPC Equip.esp") and not file("FCOM_KDCircletsOOOOptimizedNPCEquip.esp")'
+      - <<: *patchProvided
         subs: [ 'Mighty Umbra' ]
         condition: 'active("Mighty Umbra.esp") and not file("FCOM_MightyUmbra.esp")'
       - <<: *requiresX
@@ -24481,12 +24484,9 @@ plugins:
         condition: 'many("KDCircletsOOOOptimized - (Loot Only|NPC Equip)\.esp")'
   - name: 'KDCircletsOOOOptimized - NPC Equip.esp'
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Has bugs. Use Loot version or a patch or ''FCOM_KDCircletsOOOOptimizedNPCEquip.esp'' if using FCOM.'
-          - lang: de
-            text: 'Hat Fehler. Nutzen Sie Loot Version oder einen Patch oder ''FCOM_KDCircletsOOOOptimizedNPCEquip.esp'' wenn FCOM benutzt wird.'
+      - <<: *useInstead
+        subs: [ 'KDCircletsOOOOptimized - Loot Only.esp' ]
+        condition: 'not active("FCOM_Convergence.esm")'
 
   - name: 'OOO-Lockfix.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/12847/' ]
