@@ -22854,6 +22854,9 @@ plugins:
       - 'Tamrielic_Ingredients_cOMbo.esp'
     msg:
       # doNotClean
+      - <<: *patchProvided
+        subs: [ 'Mighty Umbra' ]
+        condition: 'active("Mighty Umbra.esp") and not file("FCOM_MightyUmbra.esp")'
       - <<: *requiresX
         subs: [ 'Francesco''s Creatures and Items Resources - Items.bsa' ]
         condition: 'not file("Francesco''s Creatures and Items Resources - Items.bsa") and not file("FCOM_Convergence_FraNewItems.bsa") and not file("FraNewItems.bsa")'
@@ -23021,6 +23024,13 @@ plugins:
   - name: 'FCOM_LessReaversInGates.esp'
     inc: [ 'FCOM_NoReaversInGates.esp' ]
     req: [ 'FCOM_Convergence.esm' ]
+  - name: 'FCOM_MightyUmbra.esp'
+    tag:
+      - Actors.ACBS
+      - Actors.CombatStyle
+      - Actors.Spells
+      - Invent.Add
+      - Invent.Remove
   - name: 'FCOM_NoAdventurersInGates.esp'
     req: [ 'FCOM_Convergence.esm' ]
   - name: 'FCOM_NoReaversInGates.esp'
@@ -28877,14 +28887,6 @@ plugins:
       - SpellStats
       - Stats
   - name: 'Mighty Umbra.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'FCOM users should consider ''FCOM_MightyUmbra.esp''.'
-          - lang: de
-            text: 'FCOM Nutzer sollten auch ''FCOM_MightyUmbra.esp'' erwägen.'
-        condition: *FCOMCond
     dirty:
       - <<: *quickClean
         crc: 0x6D7692CD
