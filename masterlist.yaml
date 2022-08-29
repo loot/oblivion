@@ -13248,6 +13248,10 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/17584/'
         name: 'OOO Intelligence Overhaul - Book Jackets'
+    msg:
+      - <<: *requiresResources
+        subs: [ '[Book Jackets Oblivion Standard Res](https://www.nexusmods.com/oblivion/mods/5570/) or [Book Jackets Oblivion High Res BAIN](https://www.nexusmods.com/oblivion/mods/50033/)' ]
+        condition: 'not file("textures/menus/icons/pa/bjob") or not file("meshes/pa/bjob")'
     tag:
       - Graphics
       - Scripts
