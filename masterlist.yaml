@@ -8169,12 +8169,9 @@ plugins:
   - name: 'PowerAttack Voicemod.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/10980/' ]
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'May cause unfixable animation bugs if used with ''Personality Idles'' or similar.'
-          - lang: de
-            text: 'Kann unbehebbare Animations-Fehler verursachen wenn es zusammen mit ''Personality Idles'' oder vergleichbaren verwendet wird.'
+      - <<: *compatIssuesWithX
+        subs: [ 'Personality Idles' ]
+        condition: 'file("personality(_| )idle.*\.esp")'
 
   - name: 'Real Hunger, Cobl.esp'
     url:
