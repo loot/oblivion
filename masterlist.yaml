@@ -13120,12 +13120,8 @@ plugins:
         itm: 4
   - name: 'Intelligence Overhaul BJ.esp'
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Use ''OOO-Intelligence Overhaul BJ'' instead.'
-          - lang: de
-            text: 'Nutzen Sie stattdessen ''OOO-Intelligence Overhaul BJ''.'
+      - <<: *useInstead
+        subs: [ '[OOO Intelligence Overhaul - Book Jackets](https://www.nexusmods.com/oblivion/mods/17584/)' ]
         condition: *OOOCond
     tag: [ Graphics ]
     dirty:
