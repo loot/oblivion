@@ -17773,6 +17773,34 @@ plugins:
         itm: 7
         udr: 3
 
+  - name: 'Pats Business Mod( BC)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/9310/'
+        name: 'Pats Business Mod Shopkeeper'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Pats Business Mod Shopkeeper ESP' ]
+        condition: 'many("Pats Business Mod( BC)?\.esp")'
+    tag: [ Invent.Add ]
+  - name: 'Pats Business Mod.esp'
+    inc:
+      - 'Better Cities CHORROL.esp'
+      - 'Better Cities FULL.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x6F2BCD61
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
+        udr: 11
+  - name: 'Pats Business Mod BC.esp'
+    msg: [ *patchOutdated ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x3FF20603
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 3
+        udr: 25
+
   - name: 'PearlFarm.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/38032/' ]
     msg:
@@ -28625,17 +28653,6 @@ plugins:
   - name: 'Nine Divines Robes.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/24656/' ]
     req: [ *OBSE ]
-
-  - name: 'Pats Business Mod.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/9310/' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Use the Better Cities version instead.'
-          - lang: de
-            text: 'Nutzen Sie stattdessen die Better Cities Version.'
-        condition: 'file("Better Cities Resources.esm")'
 
   - name: 'MTCVillages-LakeRumarePatch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/42098/' ]
