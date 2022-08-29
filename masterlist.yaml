@@ -17777,6 +17777,10 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/9310/'
         name: 'Pats Business Mod Shopkeeper'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Pats Business Mod Shopkeeper ESP' ]
+        condition: 'many("Pats Business Mod( BC)?\.esp")'
   - name: 'Pats Business Mod.esp'
     inc:
       - 'Better Cities CHORROL.esp'
