@@ -11827,6 +11827,17 @@ plugins:
         itm: 215
         udr: 130
 
+  - name: '(EiA|Gift of Kynareth|GTAesgaard|HoarfrostCastle|HOD|LostSwordOfTheAylied|TheForgottenShields|ThePaleAdventurer|Viconia|WeaponsOfTheNine)_delayer\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/25859/'
+        name: 'Quest Delayers'
+  - name: 'Gift of Kynareth_delayer.esp'
+    msg: [ *obsolete ]
+  - name: 'HOD_delayer.esp'
+    inc:
+      - 'Open Cities Classic.esp'
+      - 'Open Cities Reborn.esp'
+
   - name: 'EiAmod.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/21816/'
@@ -28300,10 +28311,6 @@ plugins:
       - 'https://www.nexusmods.com/oblivion/mods/35248/'
     msg: [ *obsolete ]
 
-  - name: 'Gift of Kynareth_delayer.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/25859/' ]
-    msg: [ *obsolete ]
-
   - name: '(Gweden(Brothel|Expansion)|FalkreathGS_RM)\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/26346/' ]
   - name: 'GwedenBrothel.esp'
@@ -28836,17 +28843,6 @@ plugins:
     clean:
       - crc: 0x8C269500
         util: 'TES4Edit v4.0.3'
-
-  - name: 'HOD_delayer.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/25859/' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'only use without Open Cities'
-          - lang: de
-            text: 'Nur ohne Open Cities nutzen'
-        condition: 'file("Open Cities.*\.esp")'
 
   - name: 'Elsweyr(Riverhold|FaregylRoad)\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/19026/' ]
