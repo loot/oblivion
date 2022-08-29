@@ -17599,6 +17599,37 @@ plugins:
       - crc: 0x0584E391
         util: 'TES4Edit v4.0.4'
 
+  - name: 'MoreSuburbLife(_RTT_patch)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/16823/'
+        name: 'More Suburban Life'
+  - name: 'MoreSuburbLife.esp'
+    after:
+      - name: 'RTT.esp'
+        condition: 'file("MoreSuburbLife_RTT_patch.esp")'
+    msg:
+      - <<: *patchProvided
+        subs: [ 'Ruined-Tail''s Tale' ]
+        condition: 'active("RTT.esp") and not file("MoreSuburbLife_RTT_patch.esp")'
+    dirty:
+      - <<: *quickClean
+        crc: 0x74BD3560
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 4
+        udr: 52
+      - <<: *quickClean
+        crc: 0x78433430
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 7
+        udr: 52
+  - name: 'MoreSuburbLife_RTT_patch.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x12490409
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 17
+        udr: 18
+
   - name: 'mrSiikasBetterPorts_CorvetteExpansion.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/15648/' ]
     dirty:
@@ -28823,15 +28854,6 @@ plugins:
         util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 58
         udr: 2
-  - name: 'MoreSuburbLife.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/16823/' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'If using RTT, use MoreSuburbLife_RTT_patch.esp to prevent issues with the Wawnet Inn.'
-          - lang: de
-            text: 'Wenn RTT genutzt wird, nutzen Sie MoreSuburbLife_RTT_patch.esp um Problemen mit Wawnet Inn vorzubeugen.'
 
   - name: 'Mighty Umbra( - Vanilla OB)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/13398/' ]
