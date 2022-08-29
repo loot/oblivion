@@ -17773,6 +17773,17 @@ plugins:
         itm: 7
         udr: 3
 
+  - name: 'Pats Business Mod.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/9310/' ]
+    msg:
+      - type: say
+        content:
+          - lang: en
+            text: 'Use the Better Cities version instead.'
+          - lang: de
+            text: 'Nutzen Sie stattdessen die Better Cities Version.'
+        condition: 'file("Better Cities Resources.esm")'
+
   - name: 'PearlFarm.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/38032/' ]
     msg:
@@ -28625,17 +28636,6 @@ plugins:
   - name: 'Nine Divines Robes.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/24656/' ]
     req: [ *OBSE ]
-
-  - name: 'Pats Business Mod.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/9310/' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Use the Better Cities version instead.'
-          - lang: de
-            text: 'Nutzen Sie stattdessen die Better Cities Version.'
-        condition: 'file("Better Cities Resources.esm")'
 
   - name: 'MTCVillages-LakeRumarePatch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/42098/' ]
