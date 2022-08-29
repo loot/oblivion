@@ -13110,6 +13110,10 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/11205/'
         name: 'Intelligence Overhaul'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Intelligence Overhaul ESP' ]
+        condition: 'many("(OOO\-)?Intelligence Overhaul( BJ| \(No Book Changes\)|\-RR| BJ\-RR)?\.esp")'
   - name: 'Intelligence Overhaul( BJ)?\.esp'
     tag: [ Scripts ]
   - name: 'Intelligence Overhaul.esp'
@@ -13139,7 +13143,11 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/31686/'
         name: 'Intelligence Overhaul - Rapid Reader''s'
-    msg: [ *versionXofYorGreaterRequiredOBSEv11 ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Intelligence Overhaul ESP' ]
+        condition: 'many("(OOO\-)?Intelligence Overhaul( BJ| \(No Book Changes\)|\-RR| BJ\-RR)?\.esp")'
+      - *versionXofYorGreaterRequiredOBSEv11
     tag: [ Scripts ]
   - name: 'Intelligence Overhaul-RR.esp'
     dirty:
@@ -13252,6 +13260,9 @@ plugins:
       - <<: *requiresResources
         subs: [ '[Book Jackets Oblivion Standard Res](https://www.nexusmods.com/oblivion/mods/5570/) or [Book Jackets Oblivion High Res BAIN](https://www.nexusmods.com/oblivion/mods/50033/)' ]
         condition: 'not file("textures/menus/icons/pa/bjob") or not file("meshes/pa/bjob")'
+      - <<: *useOnlyOneX
+        subs: [ 'Intelligence Overhaul ESP' ]
+        condition: 'many("(OOO\-)?Intelligence Overhaul( BJ| \(No Book Changes\)|\-RR| BJ\-RR)?\.esp")'
     tag:
       - Graphics
       - Scripts
