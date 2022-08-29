@@ -8166,6 +8166,20 @@ plugins:
       - crc: 0x556AD221
         util: 'TES4Edit v4.0.4b'
 
+  - name: 'PowerAttack Voicemod( - The Shivering Isles)?\.esp'
+    url:
+      - link: 'https://www.afkmods.com/index.php?/files/file/2268-powerattack-voicemod/'
+        name: 'PowerAttack Voicemod'
+    msg:
+      - <<: *compatIssuesWithX
+        subs: [ 'Personality Idles' ]
+        condition: 'file("personality(_| )idle.*\.esp")'
+      - *versionXofYorGreaterRequiredOBSEv18
+  - name: 'PowerAttack Voicemod.esp'
+    inc: [ 'DLCShiveringIsles.esp' ]
+  - name: 'PowerAttack Voicemod - The Shivering Isles.esp'
+    req: [ 'DLCShiveringIsles.esp' ]
+
   - name: 'Real Hunger, Cobl.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/21106/'
@@ -24205,6 +24219,8 @@ plugins:
       - 'FCOM_TamrielicIngredients.esp'
       - 'FCOM_WarCry.esp'
       - 'Oblivion WarCry EV.esp'
+      - 'PowerAttack Voicemod.esp'
+      - 'PowerAttack Voicemod - The Shivering Isles.esp'
       - 'Tamrielic_Ingredients_cOMbo.esp'
       - 'Tamrielic_Ingredients_OOO.esp'
     tag:
@@ -25241,15 +25257,6 @@ plugins:
         crc: 0x9A266EC1
         util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
-  - name: 'PowerAttack Voicemod.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/10980/' ]
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'May cause unfixable animation bugs if used with ''Personality Idles'' or similar.'
-          - lang: de
-            text: 'Kann unbehebbare Animations-Fehler verursachen wenn es zusammen mit ''Personality Idles'' oder vergleichbaren verwendet wird.'
   - name: 'Footstep Sound Fix.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/10969/' ]
     msg:
