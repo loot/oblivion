@@ -17608,12 +17608,9 @@ plugins:
       - name: 'RTT.esp'
         condition: 'file("MoreSuburbLife_RTT_patch.esp")'
     msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'If using RTT, use MoreSuburbLife_RTT_patch.esp to prevent issues with the Wawnet Inn.'
-          - lang: de
-            text: 'Wenn RTT genutzt wird, nutzen Sie MoreSuburbLife_RTT_patch.esp um Problemen mit Wawnet Inn vorzubeugen.'
+      - <<: *patchProvided
+        subs: [ 'Ruined-Tail''s Tale' ]
+        condition: 'active("RTT.esp") and not file("MoreSuburbLife_RTT_patch.esp")'
   - name: 'MoreSuburbLife_RTT_patch.esp'
 
   - name: 'mrSiikasBetterPorts_CorvetteExpansion.esp'
