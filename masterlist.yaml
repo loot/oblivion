@@ -24474,14 +24474,12 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/10670/'
         name: 'Kafei''s Armored Circlets OOO Optimized'
+    inc: [ 'Potion Belt.esp' ]
     msg:
       - <<: *useOnlyOneX
         subs: [ 'KD Circlets OOO ESP' ]
         condition: 'many("KDCircletsOOOOptimized - (Loot Only|NPC Equip)\.esp")'
-  - name: 'KDCircletsOOOOptimized - Loot Only.esp'
-    inc: [ 'Potion Belt.esp' ]
   - name: 'KDCircletsOOOOptimized - NPC Equip.esp'
-    inc: [ 'Potion Belt.esp' ]
     msg:
       - type: say
         content:
