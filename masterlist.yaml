@@ -13114,6 +13114,7 @@ plugins:
       - <<: *useOnlyOneX
         subs: [ 'Intelligence Overhaul ESP' ]
         condition: 'many("(OOO\-)?Intelligence Overhaul( BJ| \(No Book Changes\)|\-RR| BJ\-RR)?\.esp")'
+      - *versionXofYorGreaterRequiredOBSEv11
   - name: 'Intelligence Overhaul( BJ)?\.esp'
     tag: [ Scripts ]
   - name: 'Intelligence Overhaul.esp'
@@ -13263,6 +13264,7 @@ plugins:
       - <<: *useOnlyOneX
         subs: [ 'Intelligence Overhaul ESP' ]
         condition: 'many("(OOO\-)?Intelligence Overhaul( BJ| \(No Book Changes\)|\-RR| BJ\-RR)?\.esp")'
+      - *versionXofYorGreaterRequiredOBSEv11
     tag:
       - Graphics
       - Scripts
