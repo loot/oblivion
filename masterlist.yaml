@@ -13106,6 +13106,19 @@ plugins:
         udr: 1
 
 ###### Gameplay - Skills & Leveling ######
+  - name: 'Intelligence Overhaul BJ.esp'
+    msg:
+      - type: say
+        content:
+          - lang: en
+            text: 'Use ''OOO-Intelligence Overhaul BJ'' instead.'
+          - lang: de
+            text: 'Nutzen Sie stattdessen ''OOO-Intelligence Overhaul BJ''.'
+        condition: *OOOCond
+
+  - name: 'Intelligence Overhaul-RR.esp'
+    msg: [ *versionXofYorGreaterRequiredOBSEv11 ]
+
   - name: 'MigFEA.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/41553/'
@@ -29793,17 +29806,6 @@ plugins:
       - <<: *useOnlyOneX
         subs: [ 'Jhaerik''s Anti Power-Gaming Leveling System' ]
         condition: 'many("Jhaerik''s Anti Power-Gaming Leveling System [1234] ((Very Easy )|(Easy)|(Balanced)|(Hard))?\.esp")'
-  - name: 'Intelligence Overhaul BJ.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'Use ''OOO-Intelligence Overhaul BJ'' instead.'
-          - lang: de
-            text: 'Nutzen Sie stattdessen ''OOO-Intelligence Overhaul BJ''.'
-        condition: *OOOCond
-  - name: 'Intelligence Overhaul-RR.esp'
-    msg: [ *versionXofYorGreaterRequiredOBSEv11 ]
   - name: 'Sneaking Detection Recalibrated.esp'
     req:
       - <<: *AddActorValues
