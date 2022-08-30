@@ -9861,7 +9861,6 @@ plugins:
       - Stats
     # doNotClean
 
-  ### (L.A.M.E) Less Annoying Magic Experience ###
   - name: 'bgMagic.*\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/20371/'
@@ -9887,7 +9886,6 @@ plugins:
         crc: 0x03BFDD76
         util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 3
-  # LAME - Optional modules #
   - name: 'bgMagicDV(Bonus|ItemSigil)\.esp'
     req: [ 'bgMagicDV.esp' ]
   - name: 'bgMagic(Bonus|ItemSigil)\.esp'
@@ -9896,6 +9894,7 @@ plugins:
     req:
       - name: 'bgMagicEV.esp'
         condition: 'not file("bgMagicDV.esp")'
+    after: [ 'bgMagicDV.esp' ]
   - name: 'bgMagic(DV)?SpellTomes_for_WryeBash.esp'
     msg: [ *requiresBashedPatch ]
     tag: [ Relev ]
