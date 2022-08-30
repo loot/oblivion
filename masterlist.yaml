@@ -24451,8 +24451,8 @@ plugins:
       - 'Francesco''s Leveled Creatures-Items Mod.esm'
       - 'Francesco''s Optional New Items Add-On.esm'
     tag:
-      - name: -Relations
-        condition: 'file("Mart''s Monster Mod for OOO.esm") or file("FCOM_Convergence.esm")'
+      - name: -Relations.Add
+        condition: 'file("Mart''s Monster Mod for OOO.esm") or file("FCOM_OscurosOverhaul.esp")'
     clean:
       - crc: 0x92E50D08
         util: 'TES4Edit v4.0.4b'
@@ -24471,13 +24471,13 @@ plugins:
       - 'Tamrielic_Ingredients_cOMbo.esp'
       - 'Tamrielic_Ingredients_OOO.esp'
     tag:
+      - name: -Actors.Factions
+        condition: 'file("Mart''s Monster Mod for OOO.esm")'
       - EffectStats
       - Enchantments
       - EnchantmentStats
-      - name: -Factions
-        condition: 'file("Mart''s Monster Mod for OOO.esm") or file("FCOM_Convergence.esm")'
-      - name: -Relations
-        condition: 'file("Mart''s Monster Mod for OOO.esm") or file("FCOM_Convergence.esm")'
+      - name: -Relations.Add
+        condition: 'file("Mart''s Monster Mod for OOO.esm") or file("FCOM_OscurosOverhaul.esp")'
       - Sound
       - Text
     dirty:
@@ -24490,7 +24490,6 @@ plugins:
     tag:
       - Actors.AIData
       - Actors.AIPackages
-      - Actors.CombatStyle
       - Actors.Factions
       - Actors.Spells
       - Actors.Stats
