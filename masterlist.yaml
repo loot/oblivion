@@ -9861,38 +9861,161 @@ plugins:
       - Stats
     # doNotClean
 
-  ### (L.A.M.E) Less Annoying Magic Experience ###
   - name: 'bgMagic.*\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/20371/'
         name: 'Less Annoying Magic Experience'
-  - name: 'bgMagic(D|E)V.esp'
+  - name: 'bgMagic[DE]V\.esp'
     after: [ 'Tiefling Races.esp' ]
-    inc: [ 'Tiefling Races.esp' ]
-    # doNotClean
-    tag: [ SpellStats ]
-  # LAME - Optional modules #
-  - name: 'bgMagic(D|E)VAddEnVar.esp'
     req: [ 'DLCShiveringIsles.esp' ]
-  - name: 'bgMagic(Alchemy|Lightningbolt|PotionNumberSoulGemValue|ShaderLifeDetect)\.esp'
-    after:
-      - 'bgMagicDV.esp'
-      - 'bgMagicEV.esp'
+    inc: [ 'Tiefling Races.esp' ]
+    tag:
+      - EffectStats
+      - Graphics
+      - Sound
+      - SpellStats
+  - name: 'bgMagicDV.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x6E266800
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 3
+  - name: 'bgMagicEV.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x03BFDD76
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 3
   - name: 'bgMagicDV(Bonus|ItemSigil)\.esp'
     req: [ 'bgMagicDV.esp' ]
   - name: 'bgMagic(Bonus|ItemSigil)\.esp'
     req: [ 'bgMagicEV.esp' ]
-  - name: 'bgMagic(DV)?ItemSigil.esp'
-    # doNotClean
-  - name: 'bgMagicEVPaperChase.esp'
-    dirty:
-      - <<: *quickClean
-        crc: 0x6DC9FA83
-        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 19
+  - name: 'bgMagic(Alchemy|Lightningbolt|PotionNumberSoulGemValue|ShaderLifeDetect)\.esp'
+    req:
+      - name: 'bgMagicEV.esp'
+        condition: 'not file("bgMagicDV.esp")'
+    after: [ 'bgMagicDV.esp' ]
   - name: 'bgMagic(DV)?SpellTomes_for_WryeBash.esp'
     msg: [ *requiresBashedPatch ]
     tag: [ Relev ]
+  - name: 'bgMagicEVAddEnVar(NoSI)?\.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'bgMagicEVAddEnVar ESP' ]
+        condition: 'many("bgMagicEVAddEnVar(NoSI)?\.esp")'
+  - name: 'bgMagicAlchemy.esp'
+    clean:
+      - crc: 0x10E8EA45
+        util: 'TES4Edit v4.0.4c'
+  - name: 'bgMagicBonus.esp'
+    tag:
+      - Names
+      - Scripts
+      - SpellStats
+    clean:
+      - crc: 0x6E21EBF9
+        util: 'TES4Edit v4.0.4c'
+  - name: 'bgMagicEVAddEnVar.esp'
+    tag: [ Delev ]
+    clean:
+      - crc: 0x3B46F6D6
+        util: 'TES4Edit v4.0.4c'
+  - name: 'bgMagicEVAddEnVarNoSI.esp'
+    tag: [ Delev ]
+    clean:
+      - crc: 0x53EB3704
+        util: 'TES4Edit v4.0.4c'
+  - name: 'bgMagicEV_Conjuration_for_Supreme_Magicka.esp'
+    tag:
+      - Actors.ACBS
+      - EffectStats
+      - Graphics
+      - Names
+      - Scripts
+      - SpellStats
+    dirty:
+      - <<: *quickClean
+        crc: 0x57859AE6
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 5
+  - name: 'bgMagicEVNoSorting.esp'
+    tag:
+      - Deactivate
+      - Names
+      - NoMerge
+    clean:
+      - crc: 0xE1102DC7
+        util: 'TES4Edit v4.0.4c'
+  - name: 'bgMagicEVNoSpellLight.esp'
+    tag:
+      - Deactivate
+      - EffectStats
+      - Graphics
+      - NoMerge
+    clean:
+      - crc: 0xDA85E1AC
+        util: 'TES4Edit v4.0.4c'
+  - name: 'bgMagicEVNoSummonGlow.esp'
+    clean:
+      - crc: 0xB0219FBB
+        util: 'TES4Edit v4.0.4c'
+  - name: 'bgMagicEVPaperChase.esp'
+    tag: [ Scripts ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x6DC9FA83
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 19
+  - name: 'bgMagicEVShader.esp'
+    tag: [ Deactivate ]
+    clean:
+      - crc: 0x4887705A
+        util: 'TES4Edit v4.0.4c'
+  - name: 'bgMagicEVStartspells.esp'
+    tag:
+      - Deactivate
+      - NoMerge
+      - SpellStats
+    clean:
+      - crc: 0x45372624
+        util: 'TES4Edit v4.0.4c'
+  - name: 'bgMagicEVStartspellsNoSorting.esp'
+    tag:
+      - Deactivate
+      - Names
+      - NoMerge
+    clean:
+      - crc: 0xDC57DFDE
+        util: 'TES4Edit v4.0.4c'
+  - name: 'bgMagicItemSigil.esp'
+    tag: [ EnchantmentStats ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x4B6D0435
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 10
+  - name: 'bgMagicLightningbolt.esp'
+    clean:
+      - crc: 0xB8B3BF6E
+        util: 'TES4Edit v4.0.4c'
+  - name: 'bgMagicPotionNumberSoulGemValue.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x52924214
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1
+  - name: 'bgMagicShaderLifeDetect.esp'
+    tag:
+      - Deactivate
+      - Graphics
+      - NoMerge
+    clean:
+      - crc: 0x5CF9A723
+        util: 'TES4Edit v4.0.4c'
+  - name: 'bgMagicSpellTomes_for_WryeBash.esp'
+    clean:
+      - crc: 0x574DE475
+        util: 'TES4Edit v4.0.4c'
 
   - name: 'bgShaderStandAloneEV.esp'
     url:
