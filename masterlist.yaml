@@ -14025,6 +14025,10 @@ plugins:
       - link: 'https://www.nexusmods.com/oblivion/mods/18417/'
         name: 'Armamentarium Complete'
   - name: 'ArmamentariumArtifacts.esp'
+    after:
+      - 'ArmamentariumLL.esp'
+      - 'ArmamentariumLLMagic.esp'
+      - 'ArmamentariumLLArmaVendor.esp'
     clean:
       - crc: 0x74D0F883
         util: 'TES4Edit v4.0.3'
@@ -14045,6 +14049,7 @@ plugins:
         util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 12
   - name: 'ArmamentariumLLMagic.esp'
+    after: [ 'ArmamentariumLL.esp' ]
     inc: [ 'Oscuro''s_Oblivion_Overhaul.esm' ]
     msg:
       - <<: *useInstead
@@ -14058,6 +14063,9 @@ plugins:
       - crc: 0x9330907E
         util: 'TES4Edit v4.0.3'
   - name: 'ArmamentariumLLArmaVendor.esp'
+    after:
+      - 'ArmamentariumLL.esp'
+      - 'ArmamentariumLLMagic.esp'
     inc: [ 'Oscuro''s_Oblivion_Overhaul.esm' ]
     msg:
       - <<: *useInstead
@@ -14072,6 +14080,7 @@ plugins:
       - crc: 0x0A8CB72D
         util: 'TES4Edit v4.0.3'
   - name: 'Artifacts - ArmaCompleteAddon.esp'
+    after: [ 'Artifacts.esp' ]
     clean:
       - crc: 0x1FD522A4
         util: 'TES4Edit v4.0.3'
@@ -14092,6 +14101,7 @@ plugins:
 
   - name: 'Artifacts.esm'
     url: [ 'https://www.nexusmods.com/oblivion/mods/25309/' ]
+    after: [ 'Armamentarium.esm' ]
     clean:
       - crc: 0x86C8B7A8
         util: 'TES4Edit v4.0.4b'
@@ -14104,6 +14114,11 @@ plugins:
     req:
       - <<: *OBSE
         condition: 'version("Artifacts.esp", "1.0", <)'
+    after:
+      - 'ArmamentariumLL.esp'
+      - 'ArmamentariumLLMagic.esp'
+      - 'ArmamentariumLLArmaVendor.esp'
+      - 'ArmamentariumArtifacts.esp'
     tag:
       - name: Actors.Stats
         condition: 'version("Artifacts.esp", "1.0", <)'
