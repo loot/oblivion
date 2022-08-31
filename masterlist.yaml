@@ -14012,6 +14012,7 @@ plugins:
         name: 'Armamentarium'
       - link: 'https://www.nexusmods.com/oblivion/mods/18417/'
         name: 'Armamentarium Complete'
+    after: [ 'Oscuro''s_Oblivion_Overhaul.esm' ]
     inc:
       - name: 'FCOM_ArcheryArmamentarium.esp'
         condition: 'version("Armamentarium.esm","1.35", <)'
@@ -14027,8 +14028,11 @@ plugins:
   - name: 'ArmamentariumArtifacts.esp'
     after:
       - 'ArmamentariumLL.esp'
+      - 'ArmamentariumLL4OOO.esp'
       - 'ArmamentariumLLMagic.esp'
+      - 'ArmamentariumLLMagicOOO.esp'
       - 'ArmamentariumLLArmaVendor.esp'
+      - 'ArmamentariumLLVendors.esp'
     clean:
       - crc: 0x74D0F883
         util: 'TES4Edit v4.0.3'
@@ -14059,6 +14063,7 @@ plugins:
       - crc: 0x0688A37D
         util: 'TES4Edit v4.0.3'
   - name: 'ArmamentariumLLMagicOOO.esp'
+    after: [ 'ArmamentariumLL4OOO.esp' ]
     clean:
       - crc: 0x9330907E
         util: 'TES4Edit v4.0.3'
@@ -14075,6 +14080,9 @@ plugins:
       - crc: 0x245638D6
         util: 'TES4Edit v4.0.3'
   - name: 'ArmamentariumLLVendors.esp'
+    after:
+      - 'ArmamentariumLL4OOO.esp'
+      - 'ArmamentariumLLMagicOOO.esp'
     inc: [ 'ArmamentariumLLArmaVendor.esp' ]
     clean:
       - crc: 0x0A8CB72D
