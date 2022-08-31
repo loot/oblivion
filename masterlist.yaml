@@ -14006,6 +14006,83 @@ plugins:
         util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 4
 
+  - name: 'Armamentarium.esm'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/13884/'
+        name: 'Armamentarium'
+      - link: 'https://www.nexusmods.com/oblivion/mods/18417/'
+        name: 'Armamentarium Complete'
+    inc:
+      - name: 'FCOM_ArcheryArmamentarium.esp'
+        condition: 'version("Armamentarium.esm","1.35", <)'
+    tag: [ Delev ]
+    clean:
+      - crc: 0xBCF36F0D
+        util: 'TES4Edit v4.0.3'
+  ### Armamentarium - Complete (Latest Version) ###
+  - name: '(Armamentarium(Artifacts|LL|LL4OOO|LLArmaVendor|LLMagic|LLMagicOOO|LLVendors)|Artifacts-ArmaCompleteAddon)\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/18417/' ]
+  - name: 'ArmamentariumArtifacts.esp'
+    clean:
+      - crc: 0x74D0F883
+        util: 'TES4Edit v4.0.3'
+  - name: 'ArmamentariumLL.esp'
+    inc: [ 'Oscuro''s_Oblivion_Overhaul.esm' ]
+    msg:
+      - <<: *useInstead
+        subs: [ 'ArmamentariumLL4OOO.esp' ]
+        condition: *OOOCond
+    clean:
+      - crc: 0xA3C52D14
+        util: 'TES4Edit v4.0.3'
+  - name: 'ArmamentariumLL4OOO.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x7FE9F55D
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 12
+  - name: 'ArmamentariumLLMagic.esp'
+    inc: [ 'Oscuro''s_Oblivion_Overhaul.esm' ]
+    msg:
+      - <<: *useInstead
+        subs: [ 'ArmamentariumLLMagicOOO.esp' ]
+        condition: *OOOCond
+    clean:
+      - crc: 0x0688A37D
+        util: 'TES4Edit v4.0.3'
+  - name: 'ArmamentariumLLMagicOOO.esp'
+    clean:
+      - crc: 0x9330907E
+        util: 'TES4Edit v4.0.3'
+  - name: 'ArmamentariumLLArmaVendor.esp'
+    inc: [ 'Oscuro''s_Oblivion_Overhaul.esm' ]
+    clean:
+      - crc: 0x245638D6
+        util: 'TES4Edit v4.0.3'
+  - name: 'ArmamentariumLLVendors.esp'
+    inc: [ 'ArmamentariumLLArmaVendor.esp' ]
+    clean:
+      - crc: 0x0A8CB72D
+        util: 'TES4Edit v4.0.3'
+  - name: 'Artifacts - ArmaCompleteAddon.esp'
+    clean:
+      - crc: 0x1FD522A4
+        util: 'TES4Edit v4.0.3'
+  ### Armamentarium - Old Version files ###
+  - name: 'Armamentarium(Armor|Katanas|_MOBS|Staffs|Test|Vendors)?\.es(m|p)'
+    msg:
+      - <<: *obsolete
+        subs: [ '[Armamentarium Complete](http://www.nexusmods.com/oblivion/mods/18417)' ]
+        condition: 'file("Armamentarium.esm") and version("Armamentarium.esm","1.35", <)'
+  - name: 'Armamentarium_MOBS.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/14206/' ]
+    inc: [ 'ArmamentariumWeapons4Npcs.esp' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x65265F23
+        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 10
+
   - name: 'Artifacts.esm'
     url: [ 'https://www.nexusmods.com/oblivion/mods/25309/' ]
     clean:
@@ -23308,84 +23385,6 @@ plugins:
         name: 'TIE Integration'
   - name: 'TIE In.esp'
     req: [ 'FCOM_Convergence.esp' ]
-
-###### Armamentarium ######
-  - name: 'Armamentarium.esm'
-    url:
-      - link: 'https://www.nexusmods.com/oblivion/mods/13884/'
-        name: 'Armamentarium'
-      - link: 'https://www.nexusmods.com/oblivion/mods/18417/'
-        name: 'Armamentarium Complete'
-    inc:
-      - name: 'FCOM_ArcheryArmamentarium.esp'
-        condition: 'version("Armamentarium.esm","1.35",<)'
-    tag: [ Delev ]
-    clean:
-      - crc: 0xBCF36F0D
-        util: 'TES4Edit v4.0.3'
-  ### Armamentarium Old Versions ###
-  - name: 'Armamentarium(Armor|Katanas|_MOBS|Staffs|Test|Vendors)?\.es(m|p)'
-    msg:
-      - <<: *obsolete
-        subs: [ '[Armamentarium Complete](http://www.nexusmods.com/oblivion/mods/18417)' ]
-        condition: 'file("Armamentarium.esm") and version("Armamentarium.esm","1.35",<)'
-  - name: 'Armamentarium_MOBS.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/14206/' ]
-    inc: [ 'ArmamentariumWeapons4Npcs.esp' ]
-    dirty:
-      - <<: *quickClean
-        crc: 0x65265F23
-        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 10
-  ### Armamentarium Complete (Latest Version) ###
-  - name: '(Armamentarium(Artifacts|LL|LL4OOO|LLArmaVendor|LLMagic|LLMagicOOO|LLVendors)|Artifacts-ArmaCompleteAddon)\.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/18417/' ]
-  - name: 'ArmamentariumArtifacts.esp'
-    clean:
-      - crc: 0x74D0F883
-        util: 'TES4Edit v4.0.3'
-  - name: 'ArmamentariumLL.esp'
-    inc: [ 'Oscuro''s_Oblivion_Overhaul.esm' ]
-    msg:
-      - <<: *useInstead
-        subs: [ 'ArmamentariumLL4OOO.esp' ]
-        condition: *OOOCond
-    clean:
-      - crc: 0xA3C52D14
-        util: 'TES4Edit v4.0.3'
-  - name: 'ArmamentariumLL4OOO.esp'
-    dirty:
-      - <<: *quickClean
-        crc: 0x7FE9F55D
-        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 12
-  - name: 'ArmamentariumLLMagic.esp'
-    inc: [ 'Oscuro''s_Oblivion_Overhaul.esm' ]
-    msg:
-      - <<: *useInstead
-        subs: [ 'ArmamentariumLLMagicOOO.esp' ]
-        condition: *OOOCond
-    clean:
-      - crc: 0x0688A37D
-        util: 'TES4Edit v4.0.3'
-  - name: 'ArmamentariumLLMagicOOO.esp'
-    clean:
-      - crc: 0x9330907E
-        util: 'TES4Edit v4.0.3'
-  - name: 'ArmamentariumLLArmaVendor.esp'
-    inc: [ 'Oscuro''s_Oblivion_Overhaul.esm' ]
-    clean:
-      - crc: 0x245638D6
-        util: 'TES4Edit v4.0.3'
-  - name: 'ArmamentariumLLVendors.esp'
-    inc: [ 'ArmamentariumLLArmaVendor.esp' ]
-    clean:
-      - crc: 0x0A8CB72D
-        util: 'TES4Edit v4.0.3'
-  - name: 'Artifacts - ArmaCompleteAddon.esp'
-    clean:
-      - crc: 0x1FD522A4
-        util: 'TES4Edit v4.0.3'
 
 ###### Francescos Creatures and Items V5 ######
   - name: 'Francesco''s (Creatures|Leveled|More|Optional).*\.es(m|p)'
