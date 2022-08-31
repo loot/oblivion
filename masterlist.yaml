@@ -8067,14 +8067,6 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/45570/'
         name: 'Oblivion WarCry 1.09'
-  - name: 'Oblivion WarCry.esp'
-    # doNotClean
-    inc: [ 'FCOM_Convergence.esm' ]
-    msg:
-      - *languageDE
-      - <<: *useInstead
-        subs: [ '[Oblivion WarCry EV.esp](https://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/)' ]
-        condition: *FCOMCond
     tag:
       - Actors.ACBS
       - Actors.AIData
@@ -8089,6 +8081,14 @@ plugins:
       - Invent.Add
       - Relev
       - Stats
+  - name: 'Oblivion WarCry.esp'
+    # doNotClean
+    inc: [ 'FCOM_Convergence.esm' ]
+    msg:
+      - *languageDE
+      - <<: *useInstead
+        subs: [ '[Oblivion WarCry EV.esp](https://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/)' ]
+        condition: *FCOMCond
   - name: 'Oblivion WarCry EV.esp'
     url:
       - link: 'http://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/'
@@ -8101,20 +8101,6 @@ plugins:
       - 'FCOM_FrancescosNamedBosses.esp'
       - 'Francesco''s Optional Chance of Stronger Bosses.esp'
       - 'Tamrielic_Ingredients_cOMbo.esp'
-    tag:
-      - Actors.ACBS
-      - Actors.AIData
-      - Actors.DeathItem
-      - Actors.RecordFlags
-      - Actors.Skeleton
-      - Actors.Spells
-      - Actors.Stats
-      - Delev
-      - Enchantments
-      - Graphics
-      - Invent.Add
-      - Relev
-      - Stats
 
   - name: 'P1DseeYouSleep.*\.esp'
     url:
