@@ -8082,18 +8082,21 @@ plugins:
       - Relev
       - Stats
   - name: 'Oblivion WarCry.esp'
-    # doNotClean
     inc: [ 'FCOM_Convergence.esm' ]
     msg:
       - *languageDE
       - <<: *useInstead
         subs: [ '[Oblivion WarCry EV.esp](https://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/)' ]
         condition: *FCOMCond
+    dirty:
+      - <<: *quickClean
+        crc: 0x97FD9F73
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 3
   - name: 'Oblivion WarCry EV.esp'
     url:
       - link: 'http://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/'
         name: 'FCOM: Convergence 1.0'
-    # doNotClean
     after:
       - 'Bob''s Armory Oblivion.esp'
       - 'FCOM_BobsArmory.esp'
@@ -8101,6 +8104,15 @@ plugins:
       - 'FCOM_FrancescosNamedBosses.esp'
       - 'Francesco''s Optional Chance of Stronger Bosses.esp'
       - 'Tamrielic_Ingredients_cOMbo.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x4F32343B
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 29
+      - <<: *quickClean
+        crc: 0x8F9765A5
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 29
 
   - name: 'P1DseeYouSleep.*\.esp'
     url:
