@@ -14145,6 +14145,25 @@ plugins:
         itm: 2
         udr: 12
 
+  - name: 'Bob''s Armory Oblivion.esp'
+    url:
+      - link: 'https://www.moddb.com/downloads/bob-s-armory-oblivion/'
+        name: 'Bob''s Armory: Oblivion'
+      - link: 'http://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/'
+        name: 'FCOM: Convergence 1.0'
+    tag:
+      - Delev
+      - Invent.Add
+      - Invent.Remove
+    dirty:
+      - <<: *quickClean
+        crc: 0xDE136AF6
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 6
+    clean:
+      - crc: 0x916B1A2C
+        util: 'TES4Edit v4.0.4c'
+
   - name: 'Bonemold_helmet.esp'
     url:
       - link: 'http://www.nexusmods.com/oblivion/mods/6997/'
@@ -23104,13 +23123,6 @@ plugins:
   - name: 'FCOM_EntropicOrderRebalance.esp'
     req: [ 'FCOM_Convergence.esm' ]
 
-  - name: 'Bob''s Armory Oblivion.esp'
-    url:
-      - 'https://www.nexusmods.com/oblivion/mods/12249/'
-      - 'http://tesalliance.org/forums/index.php?/files/file/1294-fcom-convergence/'
-    clean:
-      - crc: 0x916B1A2C
-        util: 'TES4Edit v4.0.3'
   - name: 'FCOM_BobsArmory.esp'
     tag:
       - Delev
