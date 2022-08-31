@@ -14058,6 +14058,10 @@ plugins:
         util: 'TES4Edit v4.0.3'
   - name: 'ArmamentariumLLArmaVendor.esp'
     inc: [ 'Oscuro''s_Oblivion_Overhaul.esm' ]
+    msg:
+      - <<: *useInstead
+        subs: [ 'ArmamentariumLLVendors.esp' ]
+        condition: *OOOCond
     clean:
       - crc: 0x245638D6
         util: 'TES4Edit v4.0.3'
