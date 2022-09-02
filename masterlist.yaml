@@ -23420,7 +23420,7 @@ plugins:
     req: [ 'FCOM_Convergence.esp' ]
 
 ###### Francescos Creatures and Items V5 ######
-  - name: 'Francesco''s (Creatures|Leveled|More|Optional).*\.es(m|p)'
+  - name: 'Francesco''s (Creatures|Leveled|More|Optional).*\.es[mp]'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/40190/'
         name: 'Francescos Creatures and Items - V5'
@@ -23435,56 +23435,56 @@ plugins:
       - Actors.CombatStyle
       - Actors.Stats
       - Delev
+      - EnchantmentStats
       - Invent.Add
       - Invent.Change
       - Invent.Remove
-      - NPC.Eyes
-      - NPC.FaceGen
+      - NPC.Class
       - Relev
       - Scripts
       - Stats
     clean:
-      # version: 5.0B1 No Extras
+      # No Extras
       - crc: 0x6E140E64
-        util: 'TES4Edit v4.0.2'
-      # version: 5.0B1 Combat Tweaks
+        util: 'TES4Edit v4.0.4c'
+      # Combat Tweaks
       - crc: 0xA202CFEE
-        util: 'TES4Edit v4.0.2'
-      # version: 5.0B1 MOBS
+        util: 'TES4Edit v4.0.4c'
+      # MOBS
       - crc: 0x86F701A8
-        util: 'TES4Edit v4.0.2'
-      # version: 5.0B1 MOBS + Combat Tweaks
+        util: 'TES4Edit v4.0.4c'
+      # MOBS + Combat Tweaks
       - crc: 0xA6E20DD9
-        util: 'TES4Edit v4.0.2'
-      # version: 5.0B1 SI
+        util: 'TES4Edit v4.0.4c'
+      # SI
       - crc: 0x40DB6674
-        util: 'TES4Edit v4.0.2'
-      # version: 5.0B1 SI + Combat Tweaks
+        util: 'TES4Edit v4.0.4c'
+      # SI + Combat Tweaks
       - crc: 0x1C4954F9
-        util: 'TES4Edit v4.0.2'
-      # version: 5.0B1 SI MOBS
+        util: 'TES4Edit v4.0.4c'
+      # SI MOBS
       - crc: 0xFC291261
-        util: 'TES4Edit v4.0.2'
-      # version: 5.0B1 SI MOBS + Combat Tweaks
+        util: 'TES4Edit v4.0.4c'
+      # SI MOBS + Combat Tweaks
       - crc: 0x4CC0CFD7
-        util: 'TES4Edit v4.0.2'
+        util: 'TES4Edit v4.0.4c'
   - name: 'Francesco''s Optional New Items Add-On.esm'
     tag:
       - Delev
+      - EnchantmentStats
       - Relev
     clean:
-      # version: 5.0B1
       - crc: 0x2F92934E
-        util: 'TES4Edit v4.0.2'
-      # version: 5.0B1 MOBS
+        util: 'TES4Edit v4.0.4c'
+      # MOBS
       - crc: 0x4EC479E6
-        util: 'TES4Edit v4.0.2'
-      # version: 5.0B1 SI
+        util: 'TES4Edit v4.0.4c'
+      # SI
       - crc: 0x36E8215E
-        util: 'TES4Edit v4.0.2'
-      # version: 5.0B1 SI + MOBS
+        util: 'TES4Edit v4.0.4c'
+      # SI + MOBS
       - crc: 0x754C4DFF
-        util: 'TES4Edit v4.0.2'
+        util: 'TES4Edit v4.0.4c'
   - name: 'Francesco''s Optional New Creatures Add-On.esm'
     inc:
       - 'FCOM_Convergence.esm'
@@ -23497,34 +23497,33 @@ plugins:
       - Actors.ACBS
       - Actors.AIData
       - Actors.AIPackages
+      - Actors.Factions
       - Actors.Stats
       - Delev
-      - Factions
       - Invent.Add
       - Invent.Remove
       - Relations.Add
       - Relev
       - Scripts
     dirty:
-      # version: 5.0B1 No Extras
       - <<: *quickClean
         crc: 0x05C1179C
-        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 2
-      # version: 5.0B1 Higher Spawn Chance
+      # Higher Spawn Chance
       - <<: *quickClean
         crc: 0x7E6C2002
-        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 2
-      # version: 5.0B1 SI
+      # SI
       - <<: *quickClean
         crc: 0xEC1ED965
-        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 2
-      # version: 5.0B1 SI + Higher Spawn Chance
+      # SI + Higher Spawn Chance
       - <<: *quickClean
         crc: 0x7954ED0D
-        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 2
   - name: 'Francesco''s Creatures and Items Resources.esp'
     group: *veryEarlyGroup
@@ -23661,12 +23660,10 @@ plugins:
       - Actors.Stats
       - Invent.Add
       - Invent.Remove
-      - Names
-      - NPC.Eyes
       - Stats
     clean:
       - crc: 0xB3A72219
-        util: 'TES4Edit v4.0.2'
+        util: 'TES4Edit v4.0.4c'
   - name: 'Francesco''s Optional Leveled Guards.esp'
     inc:
       - name: 'FCOM_Convergence.esm'
@@ -23698,20 +23695,18 @@ plugins:
       - Invent.Add
       - Invent.Remove
       - Names
-      - NPC.Eyes
       - Relev
       - Text
     dirty:
-      # version: 5.0B1
       - <<: *quickClean
         crc: 0x6876A2AA
-        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
         udr: 311
-      # version: 5.0B1 SI
+      # SI
       - <<: *quickClean
         crc: 0xAA79DA0D
-        util: '[TES4Edit v4.0.2](https://www.nexusmods.com/oblivion/mods/11536)'
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 3
         udr: 311
   - name: 'Francesco''s Optional New Adventurers.esp'
@@ -23737,7 +23732,7 @@ plugins:
       - crc: 0x506AFA75
         util: 'TES4Edit v4.0.2'
   ### Fran's Old version plugins ###
-  - name: 'Francesco''s Optional Files( [1234])?\.esp'
+  - name: 'Francesco''s Optional Files( [1-4])?\.esp'
     msg: [ *deleteUseFransSeparateOptions ]
     tag:
       - Delev
