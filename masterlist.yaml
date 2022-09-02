@@ -23246,7 +23246,6 @@ plugins:
           - '**Mart''s Monster Mod BSA**'
           - '**FCOM_Convergence_Mart''s Monster Mod.bsa**'
         condition: 'not file("FCOM_Convergence_Mart''s Monster Mod.bsa") and file("Mart''s Monster Mod( for Fran| for OOO)?\.bsa") and not many("(FCOM_Convergence|Mart''s Monster Mod( for Fran| for OOO)?)\.esp")'
-    req: [ 'FCOM_Convergence.esm' ]
     tag:
       - Actors.ACBS
       - Actors.AIData
@@ -23268,7 +23267,6 @@ plugins:
       - Stats
   - name: 'FCOM_OscurosOverhaul.esp'
     inc: [ 'Mart''s Monster Mod.esm' ]
-    req: [ 'FCOM_Convergence.esm' ]
   ### FCOM - Core Addons ###
   - name: 'FCOM_Francescos.esp'
     after: [ 'Francesco''s Optional Leveled Guards.esp' ]
@@ -23280,12 +23278,10 @@ plugins:
       - Relev
   - name: 'FCOM_RealSwords.esp'
     after: [ 'Bob''s Armory Oblivion.esp' ]
-    req: [ 'FCOM_Convergence.esm' ]
     tag:
       - Delev
       - Relev
   - name: 'FCOM_SpawnRates(Reduced|SlightlyReduced|Stronger)\.esp'
-    req: [ 'FCOM_Convergence.esm' ]
     msg:
       - <<: *useOnlyOneX
         subs: [ 'FCOM SpawnRates' ]
@@ -23295,19 +23291,12 @@ plugins:
       - Relev
   ### FCOM - Encounter Modifiers ###
   - name: 'FCOM_LessRats.esp'
-    req: [ 'FCOM_Convergence.esm' ]
   - name: 'FCOM_LessReaversInGates.esp'
-    inc: [ 'FCOM_NoReaversInGates.esp' ]
-    req: [ 'FCOM_Convergence.esm' ]
   - name: 'FCOM_NoAdventurersInGates.esp'
-    req: [ 'FCOM_Convergence.esm' ]
   - name: 'FCOM_NoReaversInGates.esp'
     inc: [ 'FCOM_LessReaversInGates.esp' ]
-    req: [ 'FCOM_Convergence.esm' ]
   - name: 'FCOM_NoSpiders.esp'
-    req: [ 'FCOM_Convergence.esm' ]
   - name: 'FCOM_NoWyverns.esp'
-    req: [ 'FCOM_Convergence.esm' ]
   - name: 'FCOM_SaferRoads.esp'
     req: [ 'FCOM_Convergence.esm' ]
     msg:
@@ -23331,9 +23320,7 @@ plugins:
   - name: 'FCOM_DurabilityAndDamage.esp'
     req: [ 'FCOM_Convergence.esm' ]
   - name: 'FCOM_EntropicOrderHardcore.esp'
-    req: [ 'FCOM_Convergence.esm' ]
   - name: 'FCOM_EntropicOrderRebalance.esp'
-    req: [ 'FCOM_Convergence.esm' ]
   - name: 'FCOM_FriendlierFactions.esp'
     tag:
       - NoMerge
