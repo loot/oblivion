@@ -8465,38 +8465,39 @@ plugins:
       - link: 'https://tesalliance.org/forums/index.php?/files/file/931-tie-tamriel-immersion-experience/'
         name: 'TIE - Tamriel Immersion Experience (TES Alliance)'
   - name: 'TIE.esp'
+    after: [ 'Francesco''s Optional New Adventurers.esp' ]
+    req: [ 'DLCShiveringIsles.esp' ]
     inc:
       - 'T.I.E4MODS.esp'
       - 'TIE In.esp'
+    msg:
+      - <<: *compatNotes
+        subs: [ 'https://www.afkmods.com/index.php?/topic/4240-relz-tie-tamriel-immersion-experience/' ]
     tag:
       - Actors.AIPackages
       - Actors.CombatStyle
       - Actors.RecordFlags
+      - C.MiscFlags
+      - C.Owner
+      - Enchantments
       - EnchantmentStats
       - Invent.Change
       - Names
       - NPC.Class
-      - NPC.Eyes
-      - NPC.FaceGen
-      - NPC.Hair
-      - Relations.Add
-      - Relations.Change
+      - -NPC.Eyes
+      - -NPC.FaceGen
+      - -NPC.Hair
       - Sound
       - SpellStats
       - Text
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'This plugin has compatibility issues with %1%. For more information, read this mod''s compatibility notes.'
-        subs: [ 'OOO, MMM, Fran''s or other large overhaul mods' ]
     clean:
       - crc: 0x7954F63C
-        util: 'TES4Edit v4.0.3'
+        util: 'TES4Edit v4.0.4c'
       - crc: 0xF16C3309
-        util: 'TES4Edit v4.0.3'
+        util: 'TES4Edit v4.0.4c'
   - name: 'TIE+Frans NPC Inventory.esp'
     tag:
+      - Deactivate
       - Invent.Add
       - Invent.Remove
   - name: 'TIE Weapon + Armor Filter.esp'
