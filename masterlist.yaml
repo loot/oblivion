@@ -23217,6 +23217,7 @@ plugins:
       - Factions
       - Relations
       - Relev
+  ### FCOM ESP Options ###
   - name: 'FCOM_Convergence.esp'
     after:
       - 'FCOM_TamrielicIngredients.esp'
@@ -23265,9 +23266,12 @@ plugins:
       - Relev
       - Scripts
       - Stats
+  - name: 'FCOM_OscurosOverhaul.esp'
+    inc: [ 'Mart''s Monster Mod.esm' ]
+    req: [ 'FCOM_Convergence.esm' ]
+  ### FCOM - Core Addons ###
   - name: 'FCOM_Francescos.esp'
     after: [ 'Francesco''s Optional Leveled Guards.esp' ]
-
   - name: 'FCOM_Knights.esp'
     tag:
       - Delev
@@ -23289,23 +23293,30 @@ plugins:
     tag:
       - Delev
       - Relev
-
-  - name: 'FCOM_EntropicOrderHardcore.esp'
+  ### FCOM - Encounter Modifiers ###
+  - name: 'FCOM_LessRats.esp'
     req: [ 'FCOM_Convergence.esm' ]
-  - name: 'FCOM_EntropicOrderRebalance.esp'
+  - name: 'FCOM_LessReaversInGates.esp'
+    inc: [ 'FCOM_NoReaversInGates.esp' ]
     req: [ 'FCOM_Convergence.esm' ]
-
-  - name: 'FCOM_BobsArmory.esp'
+  - name: 'FCOM_NoAdventurersInGates.esp'
+    req: [ 'FCOM_Convergence.esm' ]
+  - name: 'FCOM_NoReaversInGates.esp'
+    inc: [ 'FCOM_LessReaversInGates.esp' ]
+    req: [ 'FCOM_Convergence.esm' ]
+  - name: 'FCOM_NoSpiders.esp'
+    req: [ 'FCOM_Convergence.esm' ]
+  - name: 'FCOM_NoWyverns.esp'
+    req: [ 'FCOM_Convergence.esm' ]
+  - name: 'FCOM_SaferRoads.esp'
+    req: [ 'FCOM_Convergence.esm' ]
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'FCOM Spawn Rates' ]
+        condition: 'file("FCOM_SpawnRates(Reduced|SlightlyReduced|Stronger)\.esp")'
     tag:
       - Delev
       - Relev
-
-  - name: 'FCOM_WarCry.esp'
-    inc: [ 'FCOM_WarCryNoSpawn.esp' ]
-    tag:
-      - Delev
-      - Relev
-      - Stats
   ### FCOM - Optional Addons ###
   - name: 'FCOM_Archery.esp'
     tag:
@@ -23319,11 +23330,10 @@ plugins:
       - Scripts
   - name: 'FCOM_DurabilityAndDamage.esp'
     req: [ 'FCOM_Convergence.esm' ]
-  - name: 'FCOM_ExnemRuneskulls.esp'
-    msg:
-      - <<: *alreadyInX
-        subs: [ 'Mart''s Monster Mod - Diverse Runeskulls' ]
-        condition: 'active("Mart''s Monster Mod - Diverse Runeskulls.*\.esp")'
+  - name: 'FCOM_EntropicOrderHardcore.esp'
+    req: [ 'FCOM_Convergence.esm' ]
+  - name: 'FCOM_EntropicOrderRebalance.esp'
+    req: [ 'FCOM_Convergence.esm' ]
   - name: 'FCOM_FriendlierFactions.esp'
     tag:
       - NoMerge
@@ -23336,15 +23346,22 @@ plugins:
       - Graphics
       - Invent
       - Relev
+  - name: 'FCOM_VanillaItemReleveler.esp'
+    msg: [ *obsolete ]
+  ### FCOM - Patches ###
+  - name: 'FCOM_BobsArmory.esp'
+    tag:
+      - Delev
+      - Relev
+  - name: 'FCOM_ExnemRuneskulls.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'Mart''s Monster Mod - Diverse Runeskulls' ]
+        condition: 'active("Mart''s Monster Mod - Diverse Runeskulls.*\.esp")'
   - name: 'FCOM_KDCircletsOOOOptimizedNPCEquip.esp'
     req: [ 'KDCircletsOOOOptimized - NPC Equip.esp' ]
     inc: [ 'Potion Belt.esp' ]
     tag: [ -Relev ]
-  - name: 'FCOM_LessRats.esp'
-    req: [ 'FCOM_Convergence.esm' ]
-  - name: 'FCOM_LessReaversInGates.esp'
-    inc: [ 'FCOM_NoReaversInGates.esp' ]
-    req: [ 'FCOM_Convergence.esm' ]
   - name: 'FCOM_MightyUmbra.esp'
     tag:
       - Actors.ACBS
@@ -23352,15 +23369,6 @@ plugins:
       - Actors.Spells
       - Invent.Add
       - Invent.Remove
-  - name: 'FCOM_NoAdventurersInGates.esp'
-    req: [ 'FCOM_Convergence.esm' ]
-  - name: 'FCOM_NoReaversInGates.esp'
-    inc: [ 'FCOM_LessReaversInGates.esp' ]
-    req: [ 'FCOM_Convergence.esm' ]
-  - name: 'FCOM_NoSpiders.esp'
-    req: [ 'FCOM_Convergence.esm' ]
-  - name: 'FCOM_NoWyverns.esp'
-    req: [ 'FCOM_Convergence.esm' ]
   - name: 'FCOM_OMG.esp'
     msg:
       - <<: *patchIncluded
@@ -23369,18 +23377,6 @@ plugins:
     tag:
       - Actors.AIPackagesForceAdd
       - Relations.Add
-  - name: 'FCOM_OscurosOverhaul.esp'
-    inc: [ 'Mart''s Monster Mod.esm' ]
-    req: [ 'FCOM_Convergence.esm' ]
-  - name: 'FCOM_SaferRoads.esp'
-    req: [ 'FCOM_Convergence.esm' ]
-    tag:
-      - Delev
-      - Relev
-    msg:
-      - <<: *alreadyInX
-        subs: [ 'FCOM Spawn Rates' ]
-        condition: 'file("FCOM_SpawnRates(Reduced|SlightlyReduced|Stronger)\.esp")'
   - name: 'FCOM_SlofsRobeTrader.esp'
     tag:
       - Delev
@@ -23388,11 +23384,16 @@ plugins:
       - Invent
       - Names
       - Relev
+  - name: 'FCOM_WarCry.esp'
+    inc: [ 'FCOM_WarCryNoSpawn.esp' ]
+    tag:
+      - Delev
+      - Relev
+      - Stats
   - name: 'FCOM_WarCryNoSpawn.esp'
     inc: [ 'FCOM_WarCry.esp' ]
     tag: [ Stats ]
-  - name: 'FCOM_VanillaItemReleveler.esp'
-    msg: [ *obsolete ]
+
   ### FCOM - Old version files ###
   - name: 'FCOM_ConvergenceNoFran.esp'
     msg: [ *obsolete ]
@@ -23409,6 +23410,31 @@ plugins:
     msg:
       - <<: *useInstead
         subs: [ 'Mart''s Monster Mod - More Wilderness Life.esp or Mart''s Monster Mod - More Wilderness Life No Gates.esp' ]
+
+  - name: 'FranOOOMMM_.*\.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/8037/' ]
+  - name: 'FranOOOMMM_FranItemLists.esp'
+    msg: [ *obsoleteUseFCOM ]
+  - name: 'FranOOOMMM_GuardFix.esp'
+    msg: [ *obsoleteUseFCOM ]
+  - name: 'FranOOOMMM_OOOItemLists.esp'
+    msg: [ *obsoleteUseFCOM ]
+  - name: 'FranOOOMMM_SpawnMerge.esp'
+    msg: [ *obsoleteUseFCOM ]
+  - name: 'FranOOOMMM_WarCry_BobsArmory.esp'
+    msg: [ *obsoleteUseFCOM ]
+  - name: 'Mart''s Monster Mod - Diverse NPC faces nv.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/8037/' ]
+    msg: [ *obsoleteUseFCOM ]
+  - name: 'Mart''s Monster Mod for Fran''s nvNPC.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/8037/' ]
+    msg: [ *obsoleteUseFCOM ]
+  - name: 'Mart''s Monster Mod for Fran''s nvCNPC.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/8037/' ]
+    msg: [ *obsoleteUseFCOM ]
+  - name: 'Oscuro''s Combat Behavior.esp'
+    url: [ 'https://www.nexusmods.com/oblivion/mods/8037/' ]
+    msg: [ *obsoleteUseFCOM ]
 
   ### FCOM - 3rd Party Patches and Addons ###
   - name: 'TIE In( - )?(FCOM Convergence|Rebalance)?\.esp'
@@ -24999,31 +25025,6 @@ plugins:
     # doNotClean
     req: [ *Blockhead ]
     tag: [ NPC.Race ]
-
-  - name: 'FranOOOMMM_.*\.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/8037/' ]
-  - name: 'FranOOOMMM_FranItemLists.esp'
-    msg: [ *obsoleteUseFCOM ]
-  - name: 'FranOOOMMM_GuardFix.esp'
-    msg: [ *obsoleteUseFCOM ]
-  - name: 'FranOOOMMM_OOOItemLists.esp'
-    msg: [ *obsoleteUseFCOM ]
-  - name: 'FranOOOMMM_SpawnMerge.esp'
-    msg: [ *obsoleteUseFCOM ]
-  - name: 'FranOOOMMM_WarCry_BobsArmory.esp'
-    msg: [ *obsoleteUseFCOM ]
-  - name: 'Mart''s Monster Mod - Diverse NPC faces nv.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/8037/' ]
-    msg: [ *obsoleteUseFCOM ]
-  - name: 'Mart''s Monster Mod for Fran''s nvNPC.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/8037/' ]
-    msg: [ *obsoleteUseFCOM ]
-  - name: 'Mart''s Monster Mod for Fran''s nvCNPC.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/8037/' ]
-    msg: [ *obsoleteUseFCOM ]
-  - name: 'Oscuro''s Combat Behavior.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/8037/' ]
-    msg: [ *obsoleteUseFCOM ]
 
 ###### Anything new can go after this (If you're not sure where to put it) ######
   - name: 'No Lights Flicker.esm'
