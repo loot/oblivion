@@ -23348,7 +23348,11 @@ plugins:
       - Invent.Add
       - Invent.Remove
   - name: 'FCOM_VanillaItemReleveler.esp'
-    msg: [ *obsolete ]
+    msg:
+      - type: warn
+        content:
+          - lang: en
+            text: 'This file is deprecated and should no longer be used.'
   ### FCOM - Patches ###
   - name: 'FCOM_BobsArmory.esp'
     tag:
