@@ -23291,21 +23291,25 @@ plugins:
       - Relev
   ### FCOM - Encounter Modifiers ###
   - name: 'FCOM_LessRats.esp'
+    tag: [ -Delev ]
   - name: 'FCOM_LessReaversInGates.esp'
+    tag: [ -Delev ]
   - name: 'FCOM_NoAdventurersInGates.esp'
+    tag: [ -Relev ]
   - name: 'FCOM_NoReaversInGates.esp'
     inc: [ 'FCOM_LessReaversInGates.esp' ]
+    tag: [ -Relev ]
   - name: 'FCOM_NoSpiders.esp'
+    tag: [ -Relev ]
   - name: 'FCOM_NoWyverns.esp'
+    tag: [ -Relev ]
   - name: 'FCOM_SaferRoads.esp'
     req: [ 'FCOM_Convergence.esm' ]
     msg:
       - <<: *alreadyInX
         subs: [ 'FCOM Spawn Rates' ]
         condition: 'file("FCOM_SpawnRates(Reduced|SlightlyReduced|Stronger)\.esp")'
-    tag:
-      - Delev
-      - Relev
+    tag: [ -Delev ]
   ### FCOM - Optional Addons ###
   - name: 'FCOM_Archery.esp'
     tag:
