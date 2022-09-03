@@ -23246,7 +23246,6 @@ plugins:
           - '**Mart''s Monster Mod BSA**'
           - '**FCOM_Convergence_Mart''s Monster Mod.bsa**'
         condition: 'not file("FCOM_Convergence_Mart''s Monster Mod.bsa") and file("Mart''s Monster Mod( for Fran| for OOO)?\.bsa") and not many("(FCOM_Convergence|Mart''s Monster Mod( for Fran| for OOO)?)\.esp")'
-    req: [ 'FCOM_Convergence.esm' ]
     tag:
       - Actors.ACBS
       - Actors.AIData
@@ -23268,7 +23267,6 @@ plugins:
       - Stats
   - name: 'FCOM_OscurosOverhaul.esp'
     inc: [ 'Mart''s Monster Mod.esm' ]
-    req: [ 'FCOM_Convergence.esm' ]
   ### FCOM - Core Addons ###
   - name: 'FCOM_Francescos.esp'
     after: [ 'Francesco''s Optional Leveled Guards.esp' ]
@@ -23280,12 +23278,10 @@ plugins:
       - Relev
   - name: 'FCOM_RealSwords.esp'
     after: [ 'Bob''s Armory Oblivion.esp' ]
-    req: [ 'FCOM_Convergence.esm' ]
     tag:
       - Delev
       - Relev
   - name: 'FCOM_SpawnRates(Reduced|SlightlyReduced|Stronger)\.esp'
-    req: [ 'FCOM_Convergence.esm' ]
     msg:
       - <<: *useOnlyOneX
         subs: [ 'FCOM SpawnRates' ]
@@ -23295,64 +23291,77 @@ plugins:
       - Relev
   ### FCOM - Encounter Modifiers ###
   - name: 'FCOM_LessRats.esp'
-    req: [ 'FCOM_Convergence.esm' ]
+    tag: [ -Delev ]
   - name: 'FCOM_LessReaversInGates.esp'
-    inc: [ 'FCOM_NoReaversInGates.esp' ]
-    req: [ 'FCOM_Convergence.esm' ]
+    tag: [ -Delev ]
   - name: 'FCOM_NoAdventurersInGates.esp'
-    req: [ 'FCOM_Convergence.esm' ]
+    tag: [ -Relev ]
   - name: 'FCOM_NoReaversInGates.esp'
     inc: [ 'FCOM_LessReaversInGates.esp' ]
-    req: [ 'FCOM_Convergence.esm' ]
+    tag: [ -Relev ]
   - name: 'FCOM_NoSpiders.esp'
-    req: [ 'FCOM_Convergence.esm' ]
+    tag: [ -Relev ]
   - name: 'FCOM_NoWyverns.esp'
-    req: [ 'FCOM_Convergence.esm' ]
+    tag: [ -Relev ]
   - name: 'FCOM_SaferRoads.esp'
     req: [ 'FCOM_Convergence.esm' ]
-    msg:
-      - <<: *alreadyInX
-        subs: [ 'FCOM Spawn Rates' ]
-        condition: 'file("FCOM_SpawnRates(Reduced|SlightlyReduced|Stronger)\.esp")'
-    tag:
-      - Delev
-      - Relev
+    tag: [ -Delev ]
   ### FCOM - Optional Addons ###
   - name: 'FCOM_Archery.esp'
     tag:
+      - Deactivate
       - NoMerge
       - Stats
   - name: 'FCOM_DiverseGuardUnity.esp'
+    after: [ 'Bob''s Armory Oblivion.esp' ]
     tag:
+      - Actors.ACBS
+      - Actors.AIPackages
       - Actors.CombatStyle
       - Actors.Spells
-      - Invent
+      - Actors.Stats
+      - Invent.Add
+      - Invent.Change
+      - Invent.Remove
+      - Names
       - Scripts
   - name: 'FCOM_DurabilityAndDamage.esp'
     req: [ 'FCOM_Convergence.esm' ]
+  - name: 'FCOM_EntropicOrder(Hardcore|Rebalance)\.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'FCOM Entropic Order ESP' ]
+        condition: 'many("FCOM_EntropicOrder(Hardcore|Rebalance)\.esp")'
   - name: 'FCOM_EntropicOrderHardcore.esp'
-    req: [ 'FCOM_Convergence.esm' ]
   - name: 'FCOM_EntropicOrderRebalance.esp'
-    req: [ 'FCOM_Convergence.esm' ]
   - name: 'FCOM_FriendlierFactions.esp'
     tag:
-      - NoMerge
-      - Relations
+      - Relations.Add
+      - Relations.Change
   - name: 'FCOM_HungersUnitySI.esp'
     req: [ 'DLCShiveringIsles.esp' ]
     tag:
+      - Actors.Factions
       - Actors.Skeleton
-      - Factions
+      - Delev
       - Graphics
-      - Invent
-      - Relev
+      - Invent.Add
+      - Invent.Remove
+  - name: 'FCOM_NewItemsTemplate.esp'
+    msg: [ *moddingPlugin ]
   - name: 'FCOM_VanillaItemReleveler.esp'
-    msg: [ *obsolete ]
+    msg:
+      - type: warn
+        content:
+          - lang: en
+            text: 'This file is deprecated and should no longer be used.'
   ### FCOM - Patches ###
   - name: 'FCOM_BobsArmory.esp'
     tag:
       - Delev
       - Relev
+  - name: 'FCOM_BobsGuardUnity.esp'
+    req: [ 'FCOM_DiverseGuardUnity.esp' ]
   - name: 'FCOM_ExnemRuneskulls.esp'
     msg:
       - <<: *alreadyInX
