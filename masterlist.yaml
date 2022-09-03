@@ -23327,6 +23327,11 @@ plugins:
       - Scripts
   - name: 'FCOM_DurabilityAndDamage.esp'
     req: [ 'FCOM_Convergence.esm' ]
+  - name: 'FCOM_EntropicOrder(Hardcore|Rebalance)\.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'FCOM Entropic Order ESP' ]
+        condition: 'many("FCOM_EntropicOrder(Hardcore|Rebalance)\.esp")'
   - name: 'FCOM_EntropicOrderHardcore.esp'
   - name: 'FCOM_EntropicOrderRebalance.esp'
   - name: 'FCOM_FriendlierFactions.esp'
