@@ -8750,7 +8750,6 @@ plugins:
         util: 'TES4Edit v4.0.4'
 
 ###### Gameplay - Character Classes & Races ######
-  ### Race Balancing Project ###
   - name: 'bgBalancing.*\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/22124/'
@@ -8763,30 +8762,38 @@ plugins:
         display: 'DLCShiveringIsles.esp or NoSIVersion_Core_still_required.esp'
         condition: 'not file("bgBalancing(D|E)VNoSIVersion_Core_still_required.esp") and not version("bgBalancingEVCore.esp", "10.0EV-L", ==) and not version("bgBalancingDVCore.esp", "10.0DV-L", ==)'
     msg:
-      # doNotClean
       - <<: *requiresX
         subs: [ '[Race Balancing Project (Installation files)](https://www.nexusmods.com/oblivion/mods/22124/)' ]
         condition: 'not file("meshes/soya/soyastyle01.nif") and not version("bgBalancingEVCore.esp", "10.0EV-L", ==) and not version("bgBalancingDVCore.esp", "10.0DV-L", ==)'
     tag:
-      - Body-Size-F
-      - Body-Size-M
+      - Graphics
+      - Names
       - R.Attributes-F
       - R.Attributes-M
+      - R.Body-Size-F
+      - R.Body-Size-M
       - R.ChangeSpells
       - R.Description
-      - R.Relations
+      - R.Relations.Add
+      - R.Relations.Change
       - R.Skills
       - SpellStats
+      - Stats
+      - Text
+  - name: 'bgBalancingEVCore.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x1D271E40
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1
   - name: 'bgBalancing(D|E)VNoSIVersion_Core_still_required.esp'
     inc: [ 'DLCShiveringIsles.esp' ]
-  # RBP Optional Modules #
   - name: 'bgBalancingDVOptional.*\.esp'
     req: [ 'bgBalancingDVCore.esp' ]
   - name: 'bgBalancingEVOptional.*\.esp'
     req: [ 'bgBalancingEVCore.esp' ]
   - name: 'bgBalancing(D|E)VOptionalFangs.esp'
     tag: [ R.Teeth ]
-  # RBP Compatibility - Better Redguards #
   - name: 'bgBalancing(D|E)VOptionalBetterRedguards.esp'
     msg:
       - <<: *requiresX
@@ -8795,7 +8802,6 @@ plugins:
       - <<: *alsoUseX
         subs: [ 'Bashed Patch: Tweak Actors -> Redguard FGTS Patcher' ]
         condition: 'file("Bashed Patch.*\.esp")'
-  # RBP NPCDiversity #
   - name: 'bgBalancingDVOptionalNPCDiversity, (Beautification|TNR Merge|Vanilla).esp'
     inc: [ 'bgBalancingDVOptionalBetterRedguards.esp' ]
   - name: 'bgBalancingEVOptionalNPCDiversity, (Beautification|TNR Merge|Vanilla).esp'
@@ -8813,18 +8819,15 @@ plugins:
       - <<: *useOnlyOneX
         subs: [ 'Race Balancing Project - NPC Diversity Module' ]
         condition: 'many("bgBalancing(D|E)VOptionalNPCDiversity, (Beautification|TNR Merge|Vanilla).*\.esp")'
-  # RBP Additions - Less Annoying Magic Experience #
   - name: 'bgBalancing(D|E)V(OptionalNPCDiversity)?LAME(Addition|Glue)?\.esp'
     req: [ 'DLCShiveringIsles.esp' ]
     # doNotClean
   - name: 'bgBalancing(D|E)VLAMEAddition.esp'
     tag: [ Relev ]
-  # RBP Additions - OOO & MMM #
   - name: 'bgBalancing(D|E)VOptionalFCOMAdditions.esp'
     tag:
       - Actors.ACBS
       - Actors.Stats
-  # RBP Body Seam Reducer #
   - name: 'bgBalancing(D|E)VOptionalSeamReducerHighElfFix.esp'
     req: [ 'DLCShiveringIsles.esp' ]
     msg:
@@ -8833,7 +8836,6 @@ plugins:
         subs: [ '[Luchaire''s Body Seam Reducer](https://www.nexusmods.com/oblivion/mods/19738/)' ]
         condition: 'not file("meshes/characters/imperial/headhuman.egt") and not checksum("meshes/characters/imperial/headhuman.egt", 333FAB1A)'
     tag: [ Body-M ]
-  # RBP Gamesettings Resetters #
   - name: 'bgBalancing(Optional|VanillaGMST).*\.esp'
     after:
       - 'bgBalancingDVCore.esp'
