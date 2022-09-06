@@ -6408,6 +6408,11 @@ plugins:
 
   - name: 'Enhanced Daedric Invasion.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/9858/' ]
+    tag:
+      - name: Relations.Add
+        condition: 'not file("FCOM_EnhancedDaedricInvasion.esp")'
+      - name: Relations.Change
+        condition: 'not file("FCOM_EnhancedDaedricInvasion.esp")'
     dirty:
       - <<: *quickClean
         crc: 0xD34D61BC
@@ -23456,6 +23461,8 @@ plugins:
     tag:
       - Invent.Add
       - Invent.Remove
+  - name: 'FCOM_EnhancedDaedricInvasion.esp'
+    tag: [ Relations.Add ]
   - name: 'FCOM_ExnemRuneskulls.esp'
     msg:
       - <<: *alreadyInX
