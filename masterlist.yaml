@@ -15178,7 +15178,7 @@ plugins:
         subs: [ 'Tamrielic Ingredients ESP' ]
         condition: 'many("Tamrielic_Ingredients(_cOMbo|_FraM|_Fran|_MMM|_OOO)?\.esp")'
   - name: 'Tamrielic_Ingredients(_FraM|_Fran|_MMM|_OOO)?\.esp'
-    inc: [ 'FCOM_Convergence.esm' ]
+    inc: [ 'FCOM_Convergence.esp' ]
 
   - name: 'MTCDirtierBandits.esp'
     url:
@@ -15472,6 +15472,9 @@ plugins:
       - link: 'https://www.nexusmods.com/oblivion/mods/48973/'
         name: 'Slof''s Robe Trader'
     req: [ 'DLCShiveringIsles.esp' ]
+    after:
+      - name: 'Francesco''s Optional Leveled Guards.esp'
+        condition: 'active("FCOM_Convergence.esm")'
     tag:
       - Graphics
       - Invent.Add
@@ -23298,6 +23301,8 @@ plugins:
   ### FCOM ESP Options ###
   - name: 'FCOM_Convergence.esp'
     after:
+      - 'FCOM_ExnemRuneskulls.esp'
+      - 'FCOM_LothsBluntWeapons.esp'
       - 'FCOM_TamrielicIngredients.esp'
       - 'Tamrielic_Ingredients_cOMbo.esp'
     msg:
@@ -23434,6 +23439,13 @@ plugins:
           - lang: en
             text: 'This file is deprecated and should no longer be used.'
   ### FCOM - Patches ###
+  - name: 'FCOM_Blood&Mud.esp'
+    tag:
+      - Actors.ACBS
+      - Actors.Stats
+      - Invent.Add
+      - Invent.Remove
+      - Scripts
   - name: 'FCOM_BobsArmory.esp'
     tag:
       - Delev
@@ -23449,6 +23461,8 @@ plugins:
     req: [ 'KDCircletsOOOOptimized - NPC Equip.esp' ]
     inc: [ 'Potion Belt.esp' ]
     tag: [ -Relev ]
+  - name: 'FCOM_LothsBluntWeapons.esp'
+    tag: [ Delev ]
   - name: 'FCOM_MightyUmbra.esp'
     tag:
       - Actors.ACBS
@@ -23464,13 +23478,26 @@ plugins:
     tag:
       - Actors.AIPackagesForceAdd
       - Relations.Add
+  - name: 'FCOM_OMGSRT.esp'
+    req:
+      - 'FCOM_OMG.esp'
+      - 'FCOM_SlofsRobeTrader.esp'
+  - name: 'FCOM_Ruin.esp'
+    req:
+      - 'Oscuro''s_Oblivion_Overhaul.esp'
+      - 'Ruin.esp'
   - name: 'FCOM_SlofsRobeTrader.esp'
     tag:
       - Delev
-      - Graphics
-      - Invent
-      - Names
-      - Relev
+      - Invent.Add
+      - -Relev
+  - name: 'FCOM_TamrielicIngredients.esp'
+    after: [ 'Tamrielic_Ingredients_cOMbo.esp' ]
+  - name: 'FCOM_UnofficialFranArmorAddon.esp'
+    tag:
+      - Actors.Stats
+      - Invent.Add
+      - Invent.Remove
   - name: 'FCOM_WarCry.esp'
     inc: [ 'FCOM_WarCryNoSpawn.esp' ]
     tag:
@@ -24552,9 +24579,13 @@ plugins:
       - 'FCOM_FrancescosNamedBosses.esp'
       - 'FCOM_TamrielicIngredients.esp'
       - 'FCOM_WarCry.esp'
+      - 'FCOM_WarCryNoSpawn.esp'
+      - 'Fran Armor Add-on.esp'
       - 'Oblivion WarCry EV.esp'
       - 'PowerAttack Voicemod.esp'
       - 'PowerAttack Voicemod - The Shivering Isles.esp'
+      - name: 'Slof''s Oblivion Robe Trader.esp'
+        condition: 'active("FCOM_Convergence.esm")'
       - 'Tamrielic_Ingredients_cOMbo.esp'
       - 'Tamrielic_Ingredients_OOO.esp'
     tag:
