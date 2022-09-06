@@ -6408,6 +6408,11 @@ plugins:
 
   - name: 'Enhanced Daedric Invasion.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/9858/' ]
+    tag:
+      - name: Relations.Add
+        condition: 'not file("FCOM_EnhancedDaedricInvasion.esp")'
+      - name: Relations.Change
+        condition: 'not file("FCOM_EnhancedDaedricInvasion.esp")'
     dirty:
       - <<: *quickClean
         crc: 0xD34D61BC
@@ -23452,6 +23457,12 @@ plugins:
       - Relev
   - name: 'FCOM_BobsGuardUnity.esp'
     req: [ 'FCOM_DiverseGuardUnity.esp' ]
+  - name: 'FCOM_DulanCult.esp'
+    tag:
+      - Invent.Add
+      - Invent.Remove
+  - name: 'FCOM_EnhancedDaedricInvasion.esp'
+    tag: [ Relations.Add ]
   - name: 'FCOM_ExnemRuneskulls.esp'
     msg:
       - <<: *alreadyInX
@@ -23493,6 +23504,13 @@ plugins:
       - -Relev
   - name: 'FCOM_TamrielicIngredients.esp'
     after: [ 'Tamrielic_Ingredients_cOMbo.esp' ]
+  - name: 'FCOM_TamrielTravelers.esp'
+    req: [ 'TamrielTravellers4OOO.esp' ]
+    tag:
+      - Deactivate
+      - NoMerge
+      - Relations.Add
+      - Relations.Change
   - name: 'FCOM_UnofficialFranArmorAddon.esp'
     tag:
       - Actors.Stats
@@ -23947,6 +23965,8 @@ plugins:
       - NPC.Hair
       - NPC.Race
       - Relations.Add
+      - name: -Relations.Add
+        condition: 'file("FCOM_FriendlierFactions.esp")'
       - Relations.Change
       - Relev
       - Scripts
