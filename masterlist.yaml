@@ -13137,9 +13137,13 @@ plugins:
       - <<: *requiresResources
         subs: [ '[The Mysteries of the Dulan Cult](https://www.nexusmods.com/oblivion/mods/7663/)' ]
         condition: 'not file("meshes/pheaddoor/metatrondoor.nif")'
+    dirty:
+      - <<: *quickClean
+        crc: 0x06845A1E
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 173
+        udr: 16
     clean:
-      - crc: 0xE4450364
-        util: 'TES4Edit v4.0.3h (Hotfix 1)'
       - crc: 0x5BA91DED
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
 
