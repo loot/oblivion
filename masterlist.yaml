@@ -13132,14 +13132,26 @@ plugins:
         name: 'The Mysteries of the Dulan Cult'
       - link: 'https://www.nexusmods.com/oblivion/mods/16513/'
         name: 'Better Cities'
-    after: [ 'Knights - Revelation.esp' ]
+    after:
+      - 'FCOM_Convergence.esp'
+      - 'FCOM_OscurosOverhaul.esp'
+      - 'Knights - Revelation.esp'
     msg:
       - <<: *requiresResources
         subs: [ '[The Mysteries of the Dulan Cult](https://www.nexusmods.com/oblivion/mods/7663/)' ]
         condition: 'not file("meshes/pheaddoor/metatrondoor.nif")'
+      - <<: *useVersion
+        subs: [ 'Better Cities' ]
+        condition: 'active("Better Cities Resources.esm") and (checksum("The Mystery of the Dulan cult.esp", 06845A1E) or checksum("The Mystery of the Dulan cult.esp", E4450364))'
+      - <<: *wildEdits
+        condition: 'checksum("The Mystery of the Dulan cult.esp", 06845A1E) or checksum("The Mystery of the Dulan cult.esp", E4450364)'
+    dirty:
+      - <<: *quickClean
+        crc: 0x06845A1E
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 173
+        udr: 16
     clean:
-      - crc: 0xE4450364
-        util: 'TES4Edit v4.0.3h (Hotfix 1)'
       - crc: 0x5BA91DED
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
 
