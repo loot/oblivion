@@ -19475,9 +19475,23 @@ plugins:
       - link: 'https://www.nexusmods.com/oblivion/mods/45762/'
         name: 'Devastation of Kvatch'
   - name: 'Devastation of Kvatch.esp'
+    clean:
+      - crc: 0xBFE2189B
+        util: 'TES4Edit v4.0.4c'
   - name: 'Devastation of Kvatch - Kvatch only.esp'
+    clean:
+      - crc: 0x4F3081C6
+        util: 'TES4Edit v4.0.4c'
   - name: 'DoK - Kvatch only - Scattered Weapons.esp'
+    clean:
+      - crc: 0x88D16759
+        util: 'TES4Edit v4.0.4c'
   - name: 'DoK - Scattered Weapons.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x8B6D88A0
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 3
 
   - name: 'Devastation of Kvatch Redux.esp'
     url:
