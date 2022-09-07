@@ -19474,6 +19474,10 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/45762/'
         name: 'Devastation of Kvatch'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Devastation of Kvatch ESP' ]
+        condition: 'many("(Devastation of Kvatch|DoK)( - Kvatch only)?( - Scattered Weapons)?\.esp")'
     tag: [ Invent.Add ]
   - name: 'Devastation of Kvatch.esp'
     clean:
