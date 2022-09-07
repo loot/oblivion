@@ -13137,6 +13137,9 @@ plugins:
       - <<: *requiresResources
         subs: [ '[The Mysteries of the Dulan Cult](https://www.nexusmods.com/oblivion/mods/7663/)' ]
         condition: 'not file("meshes/pheaddoor/metatrondoor.nif")'
+      - <<: *useVersion
+        subs: [ 'Better Cities' ]
+        condition: 'active("Better Cities Resources.esm") and (checksum("The Mystery of the Dulan cult.esp", 06845A1E) or checksum("The Mystery of the Dulan cult.esp", E4450364))'
       - <<: *wildEdits
         condition: 'checksum("The Mystery of the Dulan cult.esp", 06845A1E) or checksum("The Mystery of the Dulan cult.esp", E4450364)'
     dirty:
