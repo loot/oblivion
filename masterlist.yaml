@@ -23477,6 +23477,10 @@ plugins:
   - name: 'FCOM_BobsGuardUnity.esp'
     req: [ 'FCOM_DiverseGuardUnity.esp' ]
   - name: 'FCOM_DulanCult.esp'
+    msg:
+      - <<: *alreadyInOrFixedByX
+        subs: [ 'Better Cities: The Mysteries of the Dulan Cult Replacer ESP' ]
+        condition: 'checksum("The Mystery of the Dulan cult.esp", 5BA91DED)'
     tag:
       - Invent.Add
       - Invent.Remove
