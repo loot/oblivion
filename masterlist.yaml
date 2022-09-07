@@ -13137,6 +13137,8 @@ plugins:
       - <<: *requiresResources
         subs: [ '[The Mysteries of the Dulan Cult](https://www.nexusmods.com/oblivion/mods/7663/)' ]
         condition: 'not file("meshes/pheaddoor/metatrondoor.nif")'
+      - <<: *wildEdits
+        condition: 'checksum("The Mystery of the Dulan cult.esp", 06845A1E) or checksum("The Mystery of the Dulan cult.esp", E4450364)'
     dirty:
       - <<: *quickClean
         crc: 0x06845A1E
