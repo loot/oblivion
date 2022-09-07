@@ -23311,9 +23311,10 @@ plugins:
   - name: 'FCOM_Convergence.esm'
     after: [ 'Armamentarium.esm' ]
     tag:
+      - Actors.Factions
       - Delev
-      - Factions
-      - Relations
+      - Relations.Add
+      - Relations.Change
       - Relev
   ### FCOM ESP Options ###
   - name: 'FCOM_Convergence.esp'
@@ -23351,18 +23352,20 @@ plugins:
       - Actors.AIPackagesForceAdd
       - Actors.CombatStyle
       - Actors.DeathItem
+      - Actors.Factions
       - Actors.Spells
       - Actors.SpellsForceAdd
       - Actors.Stats
       - Delev
-      - Factions
       - Graphics
-      - Invent
+      - Invent.Add
+      - Invent.Remove
       - Names
       - NPC.Eyes
       - NPC.FaceGen
       - NPC.Hair
-      - Relations
+      - Relations.Add
+      - Relations.Change
       - Relev
       - Scripts
       - Stats
@@ -23374,9 +23377,10 @@ plugins:
   - name: 'FCOM_Knights.esp'
     tag:
       - Actors.ACBS
+      - Actors.Factions
       - Delev
-      - Factions
-      - Relations
+      - Relations.Add
+      - Relations.Change
       - Relev
   - name: 'FCOM_RealSwords.esp'
     after: [ 'Bob''s Armory Oblivion.esp' ]
@@ -23965,11 +23969,11 @@ plugins:
       - Actors.AIPackages
       - Actors.CombatStyle
       - Actors.DeathItem
+      - Actors.Factions
       - Actors.Spells
       - Actors.Stats
       - Creatures.Blood
       - Delev
-      - Factions
       - Graphics
       - Invent.Add
       - Invent.Change
@@ -24011,8 +24015,8 @@ plugins:
       - 'Francesco''s Optional Chance of Stronger Bosses.esp'
       - 'Francesco''s Optional Chance of Stronger Enemies.esp'
     tag:
+      - Actors.Factions
       - Delev
-      - Factions
       - Names
       - Relev
     dirty:
@@ -24024,9 +24028,9 @@ plugins:
     inc: [ 'Oscuro''s_Oblivion_Overhaul.esm' ]
     tag:
       - Actors.ACBS
+      - Actors.Factions
       - Actors.Stats
       - Delev
-      - Factions
       - Relev
       - Stats
     dirty:
@@ -24037,10 +24041,10 @@ plugins:
   - name: 'Mart''s Monster Mod for OOO - Knights .esp'
     tag:
       - Actors.ACBS
+      - Actors.Factions
       - Actors.Spells
       - Actors.Stats
       - Delev
-      - Factions
       - Invent.Add
       - Invent.Remove
       - Relev
@@ -24062,9 +24066,9 @@ plugins:
         condition: 'not file("Mart''s Monster Mod.bsa") and not file("Mart''s Monster Mod for Fran.bsa") and not file("Mart''s Monster Mod for OOO.bsa") and not file("FCOM_Convergence_Mart''s Monster Mod.bsa")'
     tag:
       - Actors.ACBS
+      - Actors.Factions
       - Actors.Stats
       - Delev
-      - Factions
       - Graphics
       - Invent.Add
       - Names
@@ -24222,7 +24226,7 @@ plugins:
   - name: 'Mart''s Monster Mod - Friendlier Factions MMM+Fran.esp'
     msg: [ *useVersionFCOM ]
     tag:
-      - -Factions
+      - -Actors.Factions
       - -Relations.Add
       - Relations.Change
     clean:
@@ -24231,7 +24235,7 @@ plugins:
   - name: 'Mart''s Monster Mod - Friendlier Factions OOO.esp'
     msg: [ *useVersionFCOM ]
     tag:
-      - -Factions
+      - -Actors.Factions
       - Relations.Add
       - Relations.Change
       - Relations.Remove
@@ -24245,9 +24249,9 @@ plugins:
     tag:
       - Actors.ACBS
       - Actors.CombatStyle
+      - Actors.Factions
       - Actors.Stats
       - Delev
-      - Factions
       - Invent.Add
       - Invent.Change
       - Invent.Remove
@@ -24538,14 +24542,6 @@ plugins:
   - name: 'Mart''s Monster Mod for Francescos.esp'
     inc: [ 'FCOM_Convergence.esm' ]
     msg: [ *obsolete ]
-    tag:
-      - Delev
-      - Factions
-      - Graphics
-      - Invent
-      - Relations
-      - Relev
-      - Scripts
   - name: 'Mart''s Monster Mod - Diverse NPC faces.esp'
     msg: [ *obsolete ]
   - name: 'Mart''s Monster Mod - Diverse Creature Skins.esp'
