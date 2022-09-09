@@ -19583,6 +19583,24 @@ plugins:
       - crc: 0x201921B6
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
 
+  - name: 'Enhanced Wayshrines( German)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/44737/'
+        name: 'Enhanced Cyrodiil - Wayshrines'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Enhanced Cyrodiil - Wayshrines ESP' ]
+        condition: 'many("Enhanced Wayshrines( German)?\.esp")'
+    tag: [ Graphics ]
+  - name: 'Enhanced Wayshrines.esp'
+    clean:
+      - crc: 0x0254EE8A
+        util: 'TES4Edit v4.0.4c'
+  - name: 'Enhanced Wayshrines German.esp'
+    clean:
+      - crc: 0x3DC7A6FB
+        util: 'TES4Edit v4.0.4c'
+
   - name: 'GhettoWaterfront(Light)?\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/49946/'
