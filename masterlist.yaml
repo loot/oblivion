@@ -2219,6 +2219,11 @@ plugins:
       - link: 'https://www.nexusmods.com/oblivion/mods/3979/'
         name: 'Harvest Containers'
     msg: [ *alreadyInOOO ]
+  - name: 'Harvest\[Containers\]\.es[mp]'
+    msg:
+      - <<: *useInstead
+        subs: [ '[Harvest Containers xOBSE](https://www.nexusmods.com/oblivion/mods/52317/)' ]
+        condition: 'version("../obse_1_2_416.dll", "0.0.22.6", >=)'
   - name: 'Harvest[Containers].esm'
     msg:
       - <<: *compatPatch
