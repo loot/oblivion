@@ -17958,17 +17958,17 @@ plugins:
     msg:
       - <<: *patchIncluded
         subs: [ 'Local Guards Features' ]
-        condition: 'active("tbskGuardsFeatures.esp") and not file("LFO - Local Guards Features Patch.esp") and checksum("Meshes/Legion Forester Outposts/weaponrack_iron.nif", 8331CE6E)'
+        condition: 'active("tbskGuardsFeatures.esp") and not file("LFO - Local Guards Features Patch.esp") and version("Legion Forester Outposts.esp", "1.7", >=)'
       - <<: *patchUpdateAvailable
         subs: [ '[Legion Forester Outposts Revisited](https://www.nexusmods.com/oblivion/mods/51512/)' ]
-        condition: 'checksum("Meshes/Legion Forester Outposts/weaponrack_iron.nif", 68BA2AB7)'
+        condition: 'version("Legion Forester Outposts.esp", "1.7", <)'
     tag:
       - Actors.ACBS
       - -Invent.Change
     clean:
-      - crc: 0x362B395F
+      - crc: 0x1D92C5E2
         util: 'TES4Edit v4.0.4c'
-      - crc: 0x361BBD66
+      - crc: 0xEF919056
         util: 'TES4Edit v4.0.4c'
   - name: 'LFO - ((All Races|Females|Humans) Addon|Local Guards Features Patch)\.esp'
     tag:
