@@ -597,6 +597,12 @@ common:
       - '0021'
       - '[OBSE](https://obse.silverlock.org)'
     condition: 'not file("../obse_1_2_416.dll") or version("../obse_1_2_416.dll", "0.0.21.0", <)'
+  - &versionXofYorGreaterRequired_xOBSEv21_8
+    <<: *versionXofYorGreaterRequired
+    subs:
+      - '21.8'
+      - '[xOBSE](https://github.com/llde/xOBSE/)'
+    condition: 'version("../obse_1_2_416.dll", "0.0.21.8", <)'
   - &versionXofYorGreaterRequired_xOBSEv22_1
     <<: *versionXofYorGreaterRequired
     subs:
@@ -11197,6 +11203,15 @@ plugins:
         crc: 0xFB7500C0
         util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 3
+
+  - name: 'Extended Dialogue.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/51175/'
+        name: 'Extended Dialogue'
+    msg: [ *versionXofYorGreaterRequired_xOBSEv21_8 ]
+    clean:
+      - crc: 0xC2B84402
+        util: 'TES4Edit v4.0.4c'
 
   - name: 'ExpandedGreetings.esp'
     url:
