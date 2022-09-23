@@ -7534,16 +7534,12 @@ plugins:
       - link: 'https://www.nexusmods.com/oblivion/mods/20461/'
         name: 'HAZ Classic Travel'
   - name: 'haz_ct\d_.*\.esp'
+    inc:
+      - 'haz_ct_REMOVE.esp'
+      - 'haz_ctx_REMOVE.esp'
   - name: 'haz_ct2_magesguild_teleport.esp'
   - name: 'haz_ct3_horse_cart.esp'
   - name: 'haz_ct_REMOVE.esp'
-    msg:
-      - type: say
-        content:
-          - lang: en
-            text: 'ONLY Activate this if you want to remove the changes made by the Classic Travel mod components ct4 & ct1.'
-          - lang: de
-            text: 'NUR aktivieren wenn Sie möchten dass die Änderungen von Classic Travel mod components ct4 & ct1 rückgängig gemacht werden.'
 
   - name: 'HorseTurnFixed.esp'
     url:
