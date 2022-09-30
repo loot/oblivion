@@ -3226,14 +3226,19 @@ plugins:
       - Graphics
       - NoMerge
 
-  - name: 'Improved Chests( \(OOO Compatible\))?\.esp'
+  - name: 'Improved Chests( \((OOO Compatible|Harvest xOBSE edition)\))?\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/51815/'
         name: 'Improved Chests'
     msg:
       - <<: *useOnlyOneX
         subs: [ 'Improved Chests ESP' ]
-        condition: 'many("Improved Chests( \(OOO Compatible\))?\.esp")'
+        condition: 'many("Improved Chests( \((OOO Compatible|Harvest xOBSE edition)\))?\.esp")'
+  - name: 'Improved Chests( \(OOO Compatible\))?\.esp'
+    msg:
+      - <<: *useVersion
+        subs: [ 'Harvest Containers xOBSE' ]
+        condition: 'active("Harvest xOBSE.esp")'
     tag:
       - Graphics
       - Names
@@ -3241,18 +3246,29 @@ plugins:
     msg:
       - <<: *useVersion
         subs: [ 'Oscuro''s Oblivion Overhaul' ]
-        condition: 'active("Oscuro''s_Oblivion_Overhaul.esp")'
+        condition: 'active("Oscuro''s_Oblivion_Overhaul.esp") and not active("Harvest xOBSE.esp")'
     tag: [ Sound ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x48B697B5
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1
     clean:
-      - crc: 0x5535258F
-        util: 'TES4Edit v4.0.4b'
-      - crc: 0x0209E2D9
-        util: 'TES4Edit v4.0.4b'
+      - crc: 0xAF70F936
+        util: 'TES4Edit v4.0.4c'
   - name: 'Improved Chests (OOO Compatible).esp'
     req: [ 'Oscuro''s_Oblivion_Overhaul.esp' ]
     clean:
       - crc: 0xCA0C53BE
-        util: 'TES4Edit v4.0.4b'
+        util: 'TES4Edit v4.0.4c'
+      - crc: 0x387FB66E
+        util: 'TES4Edit v4.0.4c'
+  - name: 'Improved Chests (Harvest xOBSE edition).esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0xFF94EAF1
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        udr: 1
 
   - name: '(ImprovedWaterfrontShips|IWS-OCR patch)\.esp'
     url:
