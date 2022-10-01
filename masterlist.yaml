@@ -6824,6 +6824,16 @@ plugins:
         subs: [ '**Grass Overhaul.esp** from [Oblivion Grass Overhaul Compatibility for Unique Landscapes and More](https://www.nexusmods.com/oblivion/mods/49488/)' ]
         condition: 'checksum("Grass Overhaul.esp", 8B9A2B23)'
 
+  - name: 'HiddenTreasures.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/30756/'
+        name: 'Hidden Treasure Chests'
+    dirty:
+      - <<: *quickClean
+        crc: 0xEBD626EB
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 19
+
   - name: 'lLet there be Flowers.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/49616/' ]
     after:
