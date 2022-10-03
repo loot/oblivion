@@ -9738,6 +9738,9 @@ plugins:
     msg:
       - <<: *alsoUseSilentVoice
         condition: 'not file("OBSE/Plugins/Elys_USV.dll") and not file("OBSE/Plugins/voicefile_redirector.dll") and not file("Sound/Voice/Enhanced Economy.esp")'
+      - <<: *requiresX
+        subs: [ '[MenuQue](https://www.nexusmods.com/oblivion/mods/32200/)' ]
+        condition: 'not file("OBSE/Plugins/MenuQue.dll")'
 
   - name: 'FG_Merchant Inventory Realism V 1_5.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/5561/' ]
