@@ -9742,6 +9742,12 @@ plugins:
         subs: [ '[MenuQue](https://www.nexusmods.com/oblivion/mods/32200/)' ]
         condition: 'not file("OBSE/Plugins/MenuQue.dll")'
       - *versionXofYorGreaterRequiredOBSEv20
+      - <<: *versionXofYorGreaterRequired
+        type: warn
+        subs:
+          - '128'
+          - '[Pluggy](https://www.nexusmods.com/oblivion/mods/23979/)'
+        condition: 'not file("OBSE/Plugins/OBSE_Elys_Pluggy(_HUD)?\.dll")'
 
   - name: 'FG_Merchant Inventory Realism V 1_5.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/5561/' ]
