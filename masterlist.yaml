@@ -9735,6 +9735,9 @@ plugins:
         name: 'Enhanced Economy'
   - name: 'Enhanced Economy.esp'
     inc: [ 'Living Economy.esp' ]
+    msg:
+      - <<: *alsoUseSilentVoice
+        condition: 'not file("OBSE/Plugins/Elys_USV.dll") and not file("OBSE/Plugins/voicefile_redirector.dll") and not file("Sound/Voice/Enhanced Economy.esp")'
 
   - name: 'FG_Merchant Inventory Realism V 1_5.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/5561/' ]
