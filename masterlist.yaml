@@ -5146,6 +5146,8 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/44676/'
         name: 'Oblivion Character Overhaul v2'
+      - link: 'https://www.nexusmods.com/oblivion/mods/45288/'
+        name: 'Oblivion Character Overhaul v2 and Comprehensive Cosmetic Compilation Merge.'
       - link: 'https://www.nexusmods.com/oblivion/mods/48136/'
         name: 'Oblivion Character Overhaul v2 - Unofficial Patch'
       - link: 'https://www.nexusmods.com/oblivion/mods/51121/'
@@ -5167,8 +5169,6 @@ plugins:
         condition: 'active("Bashed Patch.*\.esp")'
     req:
       - <<: *Blockhead
-        condition: 'version("Oblivion_Character_Overhaul.esp", "2.0", >=)'
-      - <<: *OBSE
         condition: 'version("Oblivion_Character_Overhaul.esp", "2.0", >=)'
       - 'DLCShiveringIsles.esp'
     tag:
@@ -5192,10 +5192,6 @@ plugins:
     msg:
       - <<: *alsoUseX
         type: warn
-        subs: [ '[Oblivion Character Overhaul V2 - DLC Faces](https://www.nexusmods.com/oblivion/mods/48557/)' ]
-        condition: 'not file("OCO DLC Faces.esp") and active("DLC(MehrunesRazor|VileLair)\.esp") and not file("Oblivion_Character_Overhaul_Faces.esp")'
-      - <<: *alsoUseX
-        type: warn
         subs: [ '[OCOv2 - Elven NPCs Eyes Fix Filter Patch](https://www.nexusmods.com/oblivion/mods/51972/)' ]
         condition: 'file("Bashed Patch.*\.esp") and not file("OCO Elf Eyes Fix.esp") and not file("Oblivion_Character_Overhaul_Faces.esp")'
       - <<: *compatPatch
@@ -5208,7 +5204,7 @@ plugins:
       - <<: *includesX
         type: error
         subs: [ '[OCOv2 Nord and Redguard Eyes Fix](https://www.nexusmods.com/oblivion/mods/52041/)' ]
-        condition: 'version("Oblivion_Character_Overhaul.esp", "2.10", ==) and file("OCO Nord and Redguards Eyes Fix.esp") and not file("Improved NPC Faces for OCOv2.esp")'
+        condition: 'version("Oblivion_Character_Overhaul.esp", "2.10", ==) and file("OCO Nord and Redguards Eyes Fix.esp")'
       - <<: *includesX
         type: error
         subs: [ '[Properly Named Eyes for OCOv2](https://www.nexusmods.com/oblivion/mods/51976/)' ]
@@ -5280,6 +5276,7 @@ plugins:
         type: error
         subs: [ '[OCOv2 - Elven NPCs Eyes Fix Filter Patch](https://www.nexusmods.com/oblivion/mods/51972/)' ]
         condition: 'file("OCO Elf Eyes Fix.esp")'
+      - *optional
     clean:
       - crc: 0x3051185B
         util: 'TES4Edit v4.0.4b'
