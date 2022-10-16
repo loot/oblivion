@@ -21007,7 +21007,10 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/47502/'
         name: 'Vile Lair Redux - Deepscorn Awakened'
-    after: [ 'OCO DLC Faces.esp' ]
+    after:
+      - 'OCO DLC Faces.esp'
+      - 'OCOv2 - DLC Addon.esp'
+      - 'OCOv2 DLC Vile Lair Addon.esp'
     req: [ 'DLCShiveringIsles.esp' ]
     tag:
       - Actors.ACBS
@@ -21015,6 +21018,7 @@ plugins:
       - Actors.Stats
       - C.Light
       - C.Water
+      - Graphics
       - Invent.Add
       - Invent.Change
       - Invent.Remove
@@ -21027,7 +21031,7 @@ plugins:
       - Text
     clean:
       - crc: 0xC9386191
-        util: 'TES4Edit v4.0.4b'
+        util: 'TES4Edit v4.0.4c'
 
   - name: '(YakumoIsle|YIsle_(Spring|Winter)Skin)\.esp'
     url:
