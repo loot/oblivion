@@ -15131,7 +15131,7 @@ plugins:
         type: say
         subs: [ '[HG EyeCandy Body](https://www.nexusmods.com/oblivion/mods/15802/)' ]
 
-  - name: '(LightYourWay|Medieval Torch|Morrowind Style Paper Lantern|Torches Have Value)\.esp'
+  - name: '(LightYourWay(-All-In-One)?|Medieval Torch|Morrowind Style Paper Lantern|Torches Have Value)\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/50293/'
         name: 'Light Your Way - Lanterns Torches and Candles -'
@@ -15140,17 +15140,38 @@ plugins:
   - name: 'LightYourWay.esp'
     clean:
       - crc: 0x7C9C64D1
-        util: 'TES4Edit v4.0.4b'
+        util: 'TES4Edit v4.0.4c'
       - crc: 0xA443E2CF
-        util: 'TES4Edit v4.0.4b'
+        util: 'TES4Edit v4.0.4c'
+  - name: 'LightYourWay-All-In-One.esp'
+    msg:
+      - <<: *includesX
+        type: error
+        subs: [ '**LightYourWay.esp**' ]
+        condition: 'active("LightYourWay.esp")'
+      - <<: *includesX
+        type: error
+        subs: [ '**Medieval Torch.esp**' ]
+        condition: 'active("Medieval Torch.esp")'
+      - <<: *includesX
+        type: error
+        subs: [ '**Morrowind Style Paper Lantern.esp**' ]
+        condition: 'active("Morrowind Style Paper Lantern.esp")'
+      - <<: *requiresResources
+        subs: [ '[Light Your Way, Medieval Torch and Morrowind Style Paper Lanterns](https://www.nexusmods.com/oblivion/mods/50293/)' ]
+        condition: 'not file("Meshes/Lights/ElvenLantern01.nif") or not file("Textures/menus/icons/lights/iconIronLantern.dds") or not file("Textures/oaristys/the witcher/Lamps/lanternelven.dds") or not file("meshes/lights/ICIronTorch01.nif") or not file("textures/menus/icons/lights/ICIronTorch01.dds") or not file("textures/S3DMisc/torch/S3DMiscmedievaltorch.dds") or not file("meshes/lights/KorisClutter/PaperLantern01.nif") or not file("textures/menus/icons/lights/KorisClutter/PaperLanternBlu.dds") or not file("textures/KorisClutter/LampPaper01_Blu.dds")'
+    tag: [ -Relev ]
+    clean:
+      - crc: 0x039F5253
+        util: 'TES4Edit v4.0.4c'
   - name: 'Medieval Torch.esp'
     clean:
       - crc: 0x40AA4C2D
-        util: 'TES4Edit v4.0.4b'
+        util: 'TES4Edit v4.0.4c'
   - name: 'Morrowind Style Paper Lantern.esp'
     clean:
       - crc: 0x414226C8
-        util: 'TES4Edit v4.0.4b'
+        util: 'TES4Edit v4.0.4c'
   - name: 'Torches Have Value.esp'
     tag:
       - Deactivate
@@ -15158,7 +15179,7 @@ plugins:
       - Stats
     clean:
       - crc: 0xA59FD4D5
-        util: 'TES4Edit v4.0.4b'
+        util: 'TES4Edit v4.0.4c'
 
   - name: 'lNewGems.esp'
     url:
