@@ -15268,6 +15268,9 @@ plugins:
       - 'EVE_StockEquipmentReplacer for OOO.esp'
     req: [ 'DLCShiveringIsles.esp' ]
     msg:
+      - <<: *patchUpdateAvailable
+        subs: [ '[Patch for Mage Equipment 21](https://www.nexusmods.com/oblivion/mods/52290/)' ]
+        condition: 'not version("Mage Equipment.esp", "2.1.BlueSnake", >=)'
       - <<: *useOnlyOneX
         subs: [ 'Mage Equipment 21 ESP' ]
         condition: 'many("(Francesco''s )?Mage Equipment\.esp")'
@@ -15289,9 +15292,6 @@ plugins:
       - <<: *patchIncluded
         subs: [ 'Francesco''s Creatures and Items Mod' ]
         condition: 'active("Francesco''s Leveled Creatures-Items Mod.esm") and not file("Mage Equipment addon - alter Fran NPCs.esp") and version("Mage Equipment.esp", "2.1.BlueSnake", >=)'
-      - <<: *patchUpdateAvailable
-        subs: [ '[Patch for Mage Equipment 21](https://www.nexusmods.com/oblivion/mods/52290/)' ]
-        condition: 'not version("Mage Equipment.esp", "2.1.BlueSnake", >=)'
       - <<: *useVersion
         subs: [ 'Francesco''s Creatures and Items Mod' ]
         condition: 'active("Francesco''s Leveled Creatures-Items Mod.esm") and not version("Mage Equipment.esp", "2.1.BlueSnake", >=)'
