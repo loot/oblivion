@@ -3238,7 +3238,7 @@ plugins:
     msg:
       - <<: *useVersion
         subs: [ 'Harvest Containers xOBSE' ]
-        condition: 'active("Harvest xOBSE.esp")'
+        condition: 'active("Harvest xOBSE.esp") and active("Unofficial Oblivion Patch.esp")'
     tag:
       - Graphics
       - Names
@@ -3264,11 +3264,9 @@ plugins:
       - crc: 0x387FB66E
         util: 'TES4Edit v4.0.4c'
   - name: 'Improved Chests (Harvest xOBSE edition).esp'
-    dirty:
-      - <<: *quickClean
-        crc: 0xFF94EAF1
-        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
-        udr: 1
+    clean:
+      - crc: 0x0E764012
+        util: 'TES4Edit v4.0.4c'
 
   - name: '(ImprovedWaterfrontShips|IWS-OCR patch)\.esp'
     url:
