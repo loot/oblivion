@@ -17752,6 +17752,44 @@ plugins:
       - crc: 0xFBAF34B2
         util: 'TES4Edit v4.0.3i (RC1 for 4.0.4)'
 
+  - name: 'Eastbrink(Basic|CM)\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/36619/'
+        name: 'Eastbrink Town'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Eastbrink Town ESP' ]
+        condition: 'many("Eastbrink(Basic|CM)\.esp")'
+    tag:
+      - C.MiscFlags
+      - C.Water
+  - name: 'EastbrinkBasic.esp'
+    msg:
+      - <<: *patch3rdParty
+        subs:
+          - 'Bravil Sea Domes'
+          - '[Eastbrink Patches](https://www.nexusmods.com/oblivion/mods/45365/)'
+        condition: 'active("BravilSeaDomes.esp") and not file("Eastbrink-SeaDomes Patch.esp")'
+      - <<: *patch3rdParty
+        subs:
+          - 'ImpeREAL Empire - Unique Forts'
+          - '[Eastbrink Patches](https://www.nexusmods.com/oblivion/mods/45365/)'
+        condition: 'active("ImpeREAL Empire - Unique Forts.esp") and not active("Eastbrink-ImpeREALForts Patch.esp")'
+      - <<: *useVersion
+        subs: [ 'CM Partners' ]
+        condition: 'active("CM Partners.esm")'
+    dirty:
+      - <<: *quickClean
+        crc: 0xFA0A8510
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        udr: 220
+  - name: 'EastbrinkCM.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0xDE4B268E
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        udr: 220
+
   - name: 'Edhildils Underdark.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/37671/' ]
     dirty:
