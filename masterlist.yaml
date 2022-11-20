@@ -12058,6 +12058,41 @@ plugins:
   - name: 'CSVF_Road_Record_(RB|BBC\+RB|BBC\+OC\+RB|OC\+RB)\.esp'
     req: [ 'road+bridges.esp' ]
 
+  - name: 'C&C - The Blackwood Company( - OOO)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/17448/'
+        name: 'The Blackwood Company'
+  - name: 'C&C - The Blackwood Company.esp'
+    msg:
+      - <<: *includesX
+        type: error
+        subs: [ '[Lake Canulus Village](https://www.nexusmods.com/oblivion/mods/16118/)' ]
+        condition: 'active("Lake Canulus Village.esp")'
+      - <<: *patchIncluded
+        subs: [ 'Oscuro''s Oblivion Overhaul' ]
+        condition: 'active("Oscuro''s_Oblivion_Overhaul.esp") and not file("C&C - The Blackwood Company - OOO.esp")'
+    tag:
+      - Actors.AIData
+      - C.Name
+      - C.RecordFlags
+      - Scripts
+    dirty:
+      - <<: *quickClean
+        crc: 0x859845F5
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 21
+  - name: 'C&C - The Blackwood Company - OOO.esp'
+    tag:
+      - Actors.Factions
+      - Actors.RecordFlags
+      - C.Name
+      - Names
+      - Relations.Add
+      - Relations.Change
+    clean:
+      - crc: 0x03432872
+        util: 'TES4Edit v4.0.4c'
+
   - name: 'ChangeinManagement.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/5751/' ]
     dirty:
@@ -26793,18 +26828,6 @@ plugins:
         crc: 0xD9D40901
         util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 8
-  - name: 'C&C - The Blackwood Company.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/17448/' ]
-    tag:
-      - C.Owner
-      - Factions
-      - Invent
-      - Relations
-    dirty:
-      - <<: *quickClean
-        crc: 0x859845F5
-        util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 21
   - name: 'AutoEquip.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/34526/' ]
     req: [ *OBSE ]
@@ -28548,12 +28571,6 @@ plugins:
     tag:
       - Graphics
       - NoMerge
-  - name: 'C&C - The Blackwood Company - OOO.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/17448/' ]
-    tag:
-      - C.Owner
-      - Names
-      - Relations
 
   - name: 'un-leveled-shops.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/3507/' ]
