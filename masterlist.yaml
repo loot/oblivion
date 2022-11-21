@@ -11509,7 +11509,9 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/46676/'
         name: 'Reaction'
-    req: [ *SilentVoice ]
+    req:
+      - <<: *SilentVoice
+        condition: 'not file("OBSE/Plugins/voicefile_redirector.dll") and not file("sound/voice/Reaction( - Additions Only)?\.esp")'
     msg:
       - <<: *useOnlyOneX
         subs: [ 'Reaction ESP' ]
