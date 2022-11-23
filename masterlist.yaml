@@ -17412,6 +17412,30 @@ plugins:
       - crc: 0x612E581F
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
 
+  - name: 'AltVillageStart.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/48780/'
+        name: 'Lindum Overhaul'
+    msg:
+      - <<: *compatPatch
+        subs: [ '[Lindum Overhaul Compatibility Patches](https://www.nexusmods.com/oblivion/mods/48803/)' ]
+        condition: 'not file("(ULS )?LindumOverhaul-(BetterCities(-AltChorrolHinterland)?|BloodRaven|ChorrolHinterland|ColovianBarrowMounds|DarkBrotherhoodChronicles|LushWoodlands) Patch\.esp")'
+    tag:
+      - Actors.Factions
+      - C.Water
+      - Invent.Add
+      - R.Hair
+    dirty:
+      - <<: *quickClean
+        crc: 0xF7616940
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 23
+      - <<: *quickClean
+        crc: 0xF00F5B53
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 26
+        udr: 199
+
   - name: 'AnavirsPool.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/25618/'
