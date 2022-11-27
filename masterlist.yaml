@@ -17092,6 +17092,31 @@ plugins:
       - crc: 0x3ECF125F
         util: 'TES4Edit v4.0.4c'
 
+  - name: '(Sancre Tor - )?Dungeons of Blackwood( Patch)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/36152/'
+        name: 'Dungeons of Blackwood'
+  - name: 'Dungeons of Blackwood.esp'
+    req: [ 'DLCShiveringIsles.esp' ]
+    msg:
+      - <<: *patchProvided
+        subs: [ 'Reclaiming Sancre Tor' ]
+        condition: 'active("ReclaimSancreTor.esp") and not file("Sancre Tor - Dungeons of Blackwood Patch.esp")'
+      - <<: *patchUnavailable
+        subs: [ 'The Lost Spires' ]
+        condition: 'active("The Lost Spires.esp")'
+      - *requiresDisabledBorderRegions
+      - <<: *wildEdits
+        subs: [ 'Change the FormID of **000CA39E** to **Dungeons of Blackwood''s** mod index number (with plugin references built).' ]
+        condition: 'checksum("Dungeons of Blackwood.esp", C59C9772)'
+  - name: 'Sancre Tor - Dungeons of Blackwood Patch.esp'
+    req:
+      - 'Dungeons of Blackwood.esp'
+      - 'ReclaimSancreTor.esp'
+    clean:
+      - crc: 0x33BD9B60
+        util: 'TES4Edit v4.0.4c'
+
   - name: '(Eastern Peaks - )?Dwemer Ruins( Patch)?\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/38163/'
