@@ -17219,6 +17219,16 @@ plugins:
         itm: 317
         udr: 2
 
+  - name: 'Shivering Isles Root System.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/30279/'
+        name: 'Shivering Isles Root System'
+    req: [ 'DLCShiveringIsles.esp' ]
+    msg:
+      - <<: *wildEdits
+        subs: [ 'Remove **00015639** from **Shivering Isles Root System.esp**.' ]
+        condition: 'checksum("Shivering Isles Root System.esp", AF367043)'
+
   - name: 'Spire of Eternity.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/49763/' ]
     req: [ 'DLCShiveringIsles.esp' ]
