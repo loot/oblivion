@@ -20639,6 +20639,23 @@ plugins:
         itm: 8
         udr: 545
 
+  - name: 'Unique Chapels.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/37520/'
+        name: 'Unique Chapels'
+    msg:
+      - <<: *patchUpdateAvailable
+        subs: [ '[Unique Chapels Revisited](https://www.nexusmods.com/oblivion/mods/48806/)' ]
+        condition: 'checksum("Meshes/Architecture/Cathedral/New Chapels/Exterior/cathedraljulianos01.nif", 350CE70C)'
+    dirty:
+      - <<: *quickClean
+        crc: 0x122E539F
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        udr: 44
+    clean:
+      - crc: 0xD1178887
+        util: 'TES4Edit v4.0.4c'
+
   - name: 'Unique Forts Fort Dirich.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/51430/'
