@@ -21727,6 +21727,20 @@ plugins:
       - crc: 0x9C8F9A26
         util: 'TES4Edit v4.0.4b'
 
+  - name: 'Unique Chapels (OC[CR]|UOP|- Bravil Docks) patch\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/48806/'
+        name: 'Unique Chapels Revisited'
+  - name: 'Unique Chapels UOP patch.esp'
+    msg:
+      - <<: *wildEdits
+        subs: [ 'Remove the **Dialog Topic group** from **Unique Chapels UOP patch.esp**.' ]
+        condition: 'checksum("Unique Chapels UOP patch.esp", C7348917)'
+  - name: 'Unique Chapels - Bravil Docks patch.esp'
+    clean:
+      - crc: 0x731F2310
+        util: 'TES4Edit v4.0.4c'
+
 ###### Better Cities ######
   - name: 'Better (Cities |Imperial City).*\.es(m|p)'
     url: [ 'https://www.nexusmods.com/oblivion/mods/16513/' ]
