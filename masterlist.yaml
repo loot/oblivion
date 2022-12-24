@@ -11034,6 +11034,33 @@ plugins:
       - crc: 0xC47CE596
         util: 'TES4Edit v4.0.4b'
 
+  - name: 'tbskGuardsFeatures(GaiusPrentus|MergedVanilla)Addon(s)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/52015/'
+        name: 'Local Guards Features - Gaius Prentus Addon'
+  - name: 'tbskGuardsFeaturesGaiusPrentusAddon.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'Local Guards Features - Merged Vanilla Addons' ]
+        condition: 'file("tbskGuardsFeaturesMergedVanillaAddons.esp")'
+    clean:
+      - crc: 0xB64C415B
+        util: 'TES4Edit v4.0.4c'
+  - name: 'tbskGuardsFeaturesMergedVanillaAddons.esp'
+    msg:
+      - <<: *requiresResources
+        subs: [ '[Local Guards Features - Kvatch Addon](https://www.nexusmods.com/oblivion/mods/48779/)' ]
+        condition: 'not file("meshes/armor/tbskGuard/KvatchAddon/Kvatch01.nif") or not file("textures/armor/tbskGuard/KvatchAddon/cuirass01.dds")'
+      - <<: *requiresResources
+        subs: [ '[Local Guards Features - Thorn Addon](https://www.nexusmods.com/oblivion/mods/49043/)' ]
+        condition: 'not file("meshes/armor/tbskGuard/ThornAddon/DRhelm.nif") or not file("textures/Knights of The Thorn/armor/DRhelmleder.dds")'
+      - <<: *requiresResources
+        subs: [ '[Local Guards Features - White Stallion Addon](https://www.nexusmods.com/oblivion/mods/50482/)' ]
+        condition: 'not file("meshes/armor/tbskGuard/WhiteStallionAddon/Cuirass.nif") or not file("textures/armor/tbskGuard/WhiteStallionAddon/Cuirass.dds")'
+    clean:
+      - crc: 0xE754561D
+        util: 'TES4Edit v4.0.4c'
+
   - name: 'tbskGuardsFeaturesKvatchAddon.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/48779/'
