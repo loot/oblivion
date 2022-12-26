@@ -13220,6 +13220,42 @@ plugins:
       - crc: 0xB3CD831A
         util: 'TES4Edit v4.0.4b'
 
+  - name: 'PSMainQuestDelayer( -- Knights)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/45890/'
+        name: 'PrinceShroob Main Quest Delayer (Oblivion)'
+  - name: 'PSMainQuestDelayer.esp'
+    req: [ *OBSE ]
+    inc:
+      - 'Alternative Beginnings.esp'
+      - 'Alternative Start by Robert Evrae.esp'
+      - 'AltStart.esp'
+      - 'AltStartwChangedMessages.esp'
+      - 'ShiveringIslesStart.esp'
+    msg:
+      - <<: *patchProvided
+        subs: [ 'Knights of the Nine' ]
+        condition: 'active("Knights.esp") and not file("PSMainQuestDelayer -- Knights.esp")'
+    tag:
+      - Actors.ACBS
+      - Actors.CombatStyle
+      - Actors.Spells
+      - Actors.Stats
+      - Creatures.Type
+      - Delev
+      - Invent.Add
+      - Invent.Remove
+      - Relev
+      - Scripts
+      - Sound
+    clean:
+      - crc: 0xE8D77ACE
+        util: 'TES4Edit v4.0.4c'
+  - name: 'PSMainQuestDelayer -- Knights.esp'
+    clean:
+      - crc: 0x6FB08EAF
+        util: 'TES4Edit v4.0.4c'
+
   - name: 'Punk Stevo - Brutal Underground.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/39877/'
