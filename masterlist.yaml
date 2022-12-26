@@ -11602,6 +11602,34 @@ plugins:
       - crc: 0x606B1EC2
         util: 'TES4Edit v4.0.4b'
 
+  - name: 'Quest NPCs Run( - (Reduced|Emperor and Blades Run During Tutorial|The Forlorn Watchman))?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/49893/'
+        name: 'Quest NPCs Run'
+  - name: 'Quest NPCs Run.esp'
+    clean:
+      - crc: 0x5221DA7C
+        util: 'TES4Edit v4.0.4c'
+  - name: 'Quest NPCs Run - (Reduced|Emperor and Blades Run During Tutorial|The Forlorn Watchman)\.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**Quest NPCs Run.esp**' ]
+        condition: 'file("Quest NPCs Run.esp")'
+  - name: 'Quest NPCs Run - Reduced.esp'
+    clean:
+      - crc: 0x34EBC580
+        util: 'TES4Edit v4.0.4c'
+  - name: 'Quest NPCs Run - Emperor and Blades Run During Tutorial.esp'
+    msg: [ *optional ]
+    clean:
+      - crc: 0x47D872DB
+        util: 'TES4Edit v4.0.4c'
+  - name: 'Quest NPCs Run - The Forlorn Watchman.esp'
+    msg: [ *optional ]
+    clean:
+      - crc: 0x1F6B80DE
+        util: 'TES4Edit v4.0.4c'
+
   - name: 'Reaction( - Additions Only)?\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/46676/'
