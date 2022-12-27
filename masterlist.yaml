@@ -25999,6 +25999,17 @@ plugins:
   - name: 'WAC - (HGEC Equipment Replacer|Legion_FemaleFix)\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/37594/' ]
     tag: [ Graphics ]
+
+  - name: 'WACIntegration.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/51102/'
+        name: 'WAC - Integration'
+    req: [ 'DLCShiveringIsles.esp' ]
+    tag: [ Stats ]
+    clean:
+      - crc: 0xE4F0149C
+        util: 'TES4Edit v4.0.4c'
+
   - name: 'WAC - No Custom Races.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/48276/' ]
     after:
