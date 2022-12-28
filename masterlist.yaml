@@ -25821,72 +25821,109 @@ plugins:
     msg: [ *corrupt ]
 
 ###### Waalx Animals & Creatures (WAC) ######
+  - name: '(Waalx Animals & Creatures|WAC( - .*)?|Natural_Habitat_by_Max_Tael)\.es[mp]'
+    url:
+      - link: 'https://tesalliance.org/forums/index.php?/files/file/1318-wac-waalx-animals-creatures/'
+        name: 'WAC: Waalx Animals & Creatures v1.0 Additional Files'
   - name: 'Waalx Animals & Creatures.esm'
-    url: [ 'http://tesalliance.org/forums/index.php?/files/file/1318-wac-waalx-animals-creatures/' ]
     clean:
-      - crc: 0x8A731536
-        util: 'TES4Edit v4.0.2i'
+      - crc: 0x3220E267
+        util: 'TES4Edit v4.0.4c'
   - name: 'WAC.esp'
-    url: [ 'http://tesalliance.org/forums/index.php?/files/file/1318-wac-waalx-animals-creatures/' ]
-    tag: [ Graphics ]
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/51102/'
+        name: 'WAC - Integration'
+    tag:
+      - name: Actors.ACBS
+        condition: 'not file("WACIntegration.esp")'
+      - name: Actors.Skeleton
+        condition: 'not file("WACIntegration.esp")'
+      - name: Actors.Stats
+        condition: 'not file("WACIntegration.esp")'
+      - name: Graphics
+        condition: 'not file("WACIntegration.esp")'
+      - name: Scripts
+        condition: 'not file("WACIntegration.esp")'
+      - name: SpellStats
+        condition: 'not file("WACIntegration.esp")'
     dirty:
       - <<: *quickClean
-        crc: 0xC8D70EC3
-        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 20
-  ### WAC Optional files ###
-  - name: 'WAC - .*\.esp'
-    url: [ 'http://tesalliance.org/forums/index.php?/files/file/1318-wac-waalx-animals-creatures/' ]
+        crc: 0x695511F7
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 18
+    clean:
+      - crc: 0xE5B711F9
+        util: 'TES4Edit v4.0.4c'
+  ### WAC - Optional Files ###
   - name: 'WAC - 8th Gate.esp'
     dirty:
       - <<: *quickClean
         crc: 0x04482A34
-        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 175
   - name: 'WAC - Birds&Insects.esp'
     dirty:
       - <<: *quickClean
-        crc: 0x5F1400A3
-        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 15
+        crc: 0x34E5DAEC
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 11
   - name: 'WAC - BlackBootDungeon.esp'
-    dirty:
-      - <<: *quickClean
-        crc: 0x7C253683
-        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 4
+    clean:
+      - crc: 0x48CF842F
+        util: 'TES4Edit v4.0.4c'
   - name: 'WAC - Companions.esp'
-    tag: [ Factions ]
+    tag:
+      - Actors.ACBS
+      - Actors.AIData
+      - Actors.AIPackages
+      - Actors.Factions
+      - Actors.Stats
+      - NPC.Class
+      - NPC.FaceGen
     clean:
       - crc: 0xD90FF6A5
-        util: 'TES4Edit v4.0.2i'
+        util: 'TES4Edit v4.0.4c'
   - name: 'WAC - Crowded Roads Revisited.esp'
-    dirty:
-      - <<: *quickClean
-        crc: 0xE49CCD66
-        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 3
+    clean:
+      - crc: 0xEDBFE39A
+        util: 'TES4Edit v4.0.4c'
   - name: 'WAC - Dead Knights.esp'
     tag:
       - Actors.ACBS
       - Actors.AIData
       - Actors.AIPackages
+      - Actors.Factions
       - Actors.Stats
+      - C.Water
     clean:
       - crc: 0x4580162E
-        util: 'TES4Edit v4.0.2i'
+        util: 'TES4Edit v4.0.4c'
   - name: 'WAC - Gladiator.esp'
     tag:
+      - Actors.ACBS
+      - Actors.AIData
       - Actors.AIPackages
+      - Actors.Anims
+      - Actors.CombatStyle
+      - Actors.Stats
+      - C.Name
       - Delev
       - Graphics
-      - Invent
+      - Invent.Add
+      - Invent.Remove
+      - NPC.Class
+      - NPC.Eyes
+      - NPC.FaceGen
+      - NPC.Hair
+      - NPC.Race
+      - Relations.Add
       - Relev
+      - Scripts
       - Stats
     dirty:
       - <<: *quickClean
-        crc: 0xD1C31B3B
-        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        crc: 0xBF6B92EB
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 9
         udr: 159
   - name: 'WAC - Horses.esp'
@@ -25895,72 +25932,82 @@ plugins:
       - Graphics
       - Names
       - Relev
-    dirty:
-      - <<: *quickClean
-        crc: 0x1ABE5A11
-        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 3
+    clean:
+      - crc: 0x10792EEA
+        util: 'TES4Edit v4.0.4c'
   - name: 'WAC - Legion.esp'
     tag:
       - Graphics
-      - Invent
+      - Invent.Add
+      - Invent.Remove
     dirty:
       - <<: *quickClean
         crc: 0x062F45EE
-        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 3
   - name: 'WAC - Magic.esp'
+    tag: [ SpellStats ]
+    clean:
+      - crc: 0xD6F4D75A
+        util: 'TES4Edit v4.0.4c'
+  - name: 'WAC - OverSpawn.esp'
+    tag:
+      - Actors.ACBS
+      - Actors.Anims
+      - Actors.Skeleton
+      - Actors.Spells
+      - Actors.Stats
+      - Delev
+      - EffectStats
+      - Graphics
+      - Invent.Add
+      - Invent.Remove
+      - NPC.FaceGen
+      - NPC.Hair
+      - Relev
     dirty:
       - <<: *quickClean
-        crc: 0x290989F0
-        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        crc: 0x9C82C093
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 3
-  - name: 'WAC - OverSpawn.esp'
+  - name: 'WAC - Player Summons.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x77FF1D67
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 28
+  - name: 'WAC - TCOS.esp'
     tag:
       - Actors.ACBS
       - Actors.Spells
       - Actors.Stats
       - Delev
       - Graphics
-      - Invent
-      - Relations
-      - Relev
-    dirty:
-      - <<: *quickClean
-        crc: 0x030C2196
-        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 6
-  - name: 'WAC - Player Summons.esp'
-    dirty:
-      - <<: *quickClean
-        crc: 0xEA321AD6
-        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 30
-  - name: 'WAC - TCOS.esp'
-    tag:
-      - Actors.ACBS
-      - Actors.Stats
-      - Delev
-      - Eyes
-      - Graphics
-      - Invent
+      - Invent.Add
+      - Invent.Remove
+      - Names
+      - NPC.FaceGen
+      - NPC.Hair
       - NPC.Race
-      - R.Teeth
       - Relev
-    dirty:
-      - <<: *quickClean
-        crc: 0xFDBEF368
-        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 3
+      - R.Eyes
+      - R.Teeth
+      - Stats
+    clean:
+      - crc: 0x39FC05A7
+        util: 'TES4Edit v4.0.4c'
   - name: 'WAC - TCOS Shops.esp'
     tag:
-      - Graphics
-      - Invent
-    dirty:
-      - <<: *quickClean
-        crc: 0xBBC15780
-        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 3
+      - Actors.AIPackages
+      - Actors.Stats
+      - C.MiscFlags
+      - Invent.Add
+      - Invent.Remove
+      - NPC.Hair
+      - NPC.Race
+    clean:
+      - crc: 0x890E7801
+        util: 'TES4Edit v4.0.4c'
   ### WAC - Item & Loot Fix ###
   - name: 'WAC - Crowded Roads Revisited Fix4v1.0b.esp'
     tag:
@@ -26062,12 +26109,18 @@ plugins:
     clean:
       - crc: 0x03B30B71
         util: 'TES4Edit v4.0.2i'
-  ### WAC Patches or Fixes ###
+  ### WAC - Natural Habitat ###
+  - name: 'Natural_Habitat_by_Max_Tael.esm'
+    clean:
+      - crc: 0x33235164
+        util: 'TES4Edit v4.0.4c'
+
   - name: 'WAC Gargoyles Fix.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/47031/' ]
     clean:
       - crc: 0x772D76B2
         util: 'TES4Edit v4.0.2i'
+
   - name: 'WAC - (HGEC Equipment Replacer|Legion_FemaleFix)\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/37594/' ]
     tag: [ Graphics ]
