@@ -6891,6 +6891,26 @@ plugins:
       - crc: 0x4399F7C6
         util: 'TES4Edit v4.0.4'
 
+  - name: 'MikaBeautifulCity.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/52533/'
+        name: 'Cyrodiil Landscape Design'
+    req: [ 'DLCShiveringIsles.esp' ]
+    msg:
+      - <<: *wildEditsRestoreNames
+        condition: 'checksum("MikaBeautifulCity.esp", 822C3464) or checksum("MikaBeautifulCity.esp", F7B62256)'
+    dirty:
+      - <<: *quickClean
+        crc: 0x822C3464
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 17
+        udr: 207
+      - <<: *quickClean
+        crc: 0x014A0D93
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 17
+        udr: 207
+
   - name: 'road+bridges.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/9181/'
