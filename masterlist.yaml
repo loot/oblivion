@@ -13010,6 +13010,16 @@ plugins:
         itm: 124
         udr: 990
 
+  - name: 'LessMaddeningShiveringIsles.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/52621/'
+        name: 'Less Maddening Shivering Isles Fetch Quests -- Place Matrices and Oddities in World'
+    req: [ 'DLCShiveringIsles.esp' ]
+    tag: [ Invent.Add ]
+    clean:
+      - crc: 0xAEBA1610
+        util: 'TES4Edit v4.0.4c'
+
   - name: 'Listener Overhaul.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/36002/' ]
     dirty:
@@ -15478,16 +15488,6 @@ plugins:
       - <<: *requiresX
         type: say
         subs: [ '[HG EyeCandy Body](https://www.nexusmods.com/oblivion/mods/15802/)' ]
-
-  - name: 'LessMaddeningShiveringIsles.esp'
-    url:
-      - link: 'https://www.nexusmods.com/oblivion/mods/52621/'
-        name: 'Less Maddening Shivering Isles Fetch Quests -- Place Matrices and Oddities in World'
-    req: [ 'DLCShiveringIsles.esp' ]
-    tag: [ Invent.Add ]
-    clean:
-      - crc: 0xAEBA1610
-        util: 'TES4Edit v4.0.4c'
 
   - name: '(LightYourWay(-All-In-One)?|Medieval Torch|Morrowind Style Paper Lantern|Torches Have Value)\.esp'
     url:
