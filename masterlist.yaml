@@ -1624,6 +1624,28 @@ plugins:
   - name: 'MMM-Cobl.esp'
     msg: [ *obsolete ]
 
+  - name: '(CURP_Controller|CyrodiilUpgradeResourcePack)\.esm'
+    url:
+      - link: 'https://www.moddb.com/mods/giskards-oblivion-mods/'
+        name: 'Giskard''s Oblivion Mods'
+    req: [ 'DLCShiveringIsles.esp' ]
+  - name: 'CURP_Controller.esm'
+    tag: [ R.Hair ]
+    clean:
+      - crc: 0x842FAED0
+        util: 'TES4Edit v4.0.4c'
+  - name: 'CyrodiilUpgradeResourcePack.esm'
+    msg:
+      - <<: *obsolete
+        subs: [ '[Giskard''s Oblivion Mods (CURPPatch_All_to_v2.6.zip)](https://www.moddb.com/mods/giskards-oblivion-mods/)' ]
+        condition: 'version("CyrodiilUpgradeResourcePack.esm", "2.4", <)'
+      - <<: *requiresResources
+        subs: [ '[Giskard''s Oblivion Mods (CURPv1.4.9.zip)](https://www.moddb.com/mods/giskards-oblivion-mods/)' ]
+        condition: 'not file("meshes/architecture/CyrodiilUpgradeOverhaul") and not file("sound/fx/CyrodiilUpgradeOverhaul") and not file("textures/CyrodiilUpgradeOverhaul/Arenthia") and not file("textures/menus/icons/CyrodiilUpgradeOverhaul")'
+      - <<: *wildEdits
+        subs: [ 'Remove **00019204** from **CyrodiilUpgradeResourcePack.esm**.' ]
+        condition: 'checksum("CyrodiilUpgradeResourcePack.esm", B23E4DE1)'
+
   - name: 'LINK.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/50144/' ]
     req: [ *MenuQue ]
