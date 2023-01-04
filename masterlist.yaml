@@ -280,13 +280,13 @@ common:
     display: '[SoundCommands 4.0](https://www.nexusmods.com/oblivion/mods/16288)'
 
   # Mod Files
-  - &Cobl
-    name: 'Cobl Main.esm'
-    display: '[Common Oblivion (Cobl)](https://www.nexusmods.com/oblivion/mods/21104/)'
-
   - &BetterCities
     name: 'Better Cities Resources.esm'
     display: '[Better Cities](https://www.nexusmods.com/oblivion/mods/16513)'
+
+  - &Cobl
+    name: 'Cobl Main.esm'
+    display: '[Common Oblivion (Cobl)](https://www.nexusmods.com/oblivion/mods/21104/)'
 
 # Sub-Anchors
   # &alreadyInX
@@ -28857,8 +28857,8 @@ plugins:
   - name: 'Fran-Ayleid Coin Add-on.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/10671/' ]
     inc:
-      - 'Mart''s Monster Mod - Diverse Runeskulls Loot G&GD.esp'
       - *Cobl
+      - 'Mart''s Monster Mod - Diverse Runeskulls Loot G&GD.esp'
       - 'Oscuro''s_Oblivion_Overhaul.esm'
   - name: 'ExnemRuneskulls(_ru)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/9412/' ]
@@ -30055,9 +30055,9 @@ plugins:
   - name: 'Skingrad Market 1.0.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/20684/' ]
     req:
+      - *Cobl
       - *SilentVoice
       - 'DLCShiveringIsles.esp'
-      - *Cobl
   - name: 'The Hoser Hut Bar Fights.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/39399/' ]
     tag:
