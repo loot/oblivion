@@ -4236,6 +4236,9 @@ plugins:
       - <<: *patchIncluded
         subs: [ 'DLC Shivering Isles' ]
         condition: 'active("DLCShiveringIsles.esp") and not active("All Natural - SI.esp")'
+      - <<: *patchIncluded
+        subs: [ 'Kvatch Rebuilt' ]
+        condition: 'active("Kvatch Rebuilt.esp") and not active("Kvatch Rebuilt Weather Patch.esp")'
     tag: [ Graphics ]
     clean:
       - crc: 0xD73B9606
@@ -12935,7 +12938,9 @@ plugins:
         util: 'TES4Edit v4.0.4b'
 
   - name: 'Kvatch Rebuilt.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/15412/' ]
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/15412/'
+        name: 'Kvatch Rebuilt'
     msg:
       - <<: *alsoUseEngineBugFixes
         type: warn
@@ -12970,6 +12975,15 @@ plugins:
         crc: 0x50EEF62E
         util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 138
+  - name: 'Kvatch Rebuilt - No More Burned Ground.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/15412/'
+        name: 'Kvatch Rebuilt'
+    dirty:
+      - <<: *quickClean
+        crc: 0x89D71709
+        util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 31
 
   - name: 'LastUnicorn.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/7514/' ]
