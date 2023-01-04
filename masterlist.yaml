@@ -12975,16 +12975,15 @@ plugins:
         crc: 0x50EEF62E
         util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 138
-    clean:
-      - crc: 0x489D7BE6
-        util: 'TES4Edit v4.0.4c'
   - name: 'Kvatch Rebuilt - No More Burned Ground.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/15412/'
         name: 'Kvatch Rebuilt'
-    req: [ 'Kvatch Rebuilt.esp' ]
-    msg:
-      - <<: *optional
+    dirty:
+      - <<: *quickClean
+        crc: 0x89D71709
+        util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 31
 
   - name: 'LastUnicorn.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/7514/' ]
