@@ -280,6 +280,10 @@ common:
     display: '[SoundCommands 4.0](https://www.nexusmods.com/oblivion/mods/16288)'
 
   # Mod Files
+  - &Cobl
+    name: 'Cobl Main.esm'
+    display: '[Common Oblivion (Cobl)](https://www.nexusmods.com/oblivion/mods/21104/)'
+
   - &BetterCities
     name: 'Better Cities Resources.esm'
     display: '[Better Cities](https://www.nexusmods.com/oblivion/mods/16513)'
@@ -27008,7 +27012,7 @@ plugins:
         itm: 7
   - name: 'Mage Guild Sorters v3.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/35354/' ]
-    req: [ 'Cobl Main.esm' ]
+    req: [ *Cobl ]
   - name: 'MigStatsCheck.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/44844/' ]
     req:
@@ -28854,7 +28858,7 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/10671/' ]
     inc:
       - 'Mart''s Monster Mod - Diverse Runeskulls Loot G&GD.esp'
-      - 'Cobl Main.esm'
+      - *Cobl
       - 'Oscuro''s_Oblivion_Overhaul.esm'
   - name: 'ExnemRuneskulls(_ru)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/9412/' ]
@@ -29284,7 +29288,7 @@ plugins:
     inc: [ 'A Not So Simple Cave Retreat - Coblized.esp' ]
   - name: 'A Not So Simple Cave Retreat - Coblized.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/31609/' ]
-    req: [ 'Cobl Main.esm' ]
+    req: [ *Cobl ]
     inc: [ 'A Not So Simple Cave Retreat.esp' ]
   - name: 'A Sorceress Love 1_1.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/24968/' ]
@@ -29577,7 +29581,7 @@ plugins:
     inc: [ 'Automagicon_Cobl.esp' ]
   - name: 'Automagicon_Cobl.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/31543/' ]
-    req: [ 'Cobl Main.esm' ]
+    req: [ *Cobl ]
     inc: [ 'Automagicon.esp' ]
 
   - name: 'AWitchTale.esp'
@@ -30053,7 +30057,7 @@ plugins:
     req:
       - *SilentVoice
       - 'DLCShiveringIsles.esp'
-      - 'Cobl Main.esm'
+      - *Cobl
   - name: 'The Hoser Hut Bar Fights.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/39399/' ]
     tag:
@@ -30546,7 +30550,7 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/34905/' ]
     req: [ *MenuQue ]
   - name: 'dhsRTentwithSorter.esp'
-    req: [ 'Cobl Main.esm' ]
+    req: [ *Cobl ]
   - name: 'DoB10mins.esp'
     inc: [ 'DoB20mins.esp' ]
 
