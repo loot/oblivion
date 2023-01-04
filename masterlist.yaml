@@ -12935,7 +12935,9 @@ plugins:
         util: 'TES4Edit v4.0.4b'
 
   - name: 'Kvatch Rebuilt.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/15412/' ]
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/15412/'
+        name: 'Kvatch Rebuilt'
     msg:
       - <<: *alsoUseEngineBugFixes
         type: warn
@@ -12959,6 +12961,9 @@ plugins:
           - 'Unique Landscapes - Merged ESP'
           - '[Unique Landscapes Compatibility Patches](https://www.nexusmods.com/oblivion/mods/13834/)'
         condition: 'version("Unique Landscapes.esp", "2.0.0", >=) and active("Unique Landscapes.esp") and not file("ULE KvatchRebuilt-CheydinhalFalls patch.esp")'
+      - <<: *patchIncluded
+        subs: [ 'Weather - All Natural' ]
+        condition: 'active("All Natural Base.esm") and not active("Kvatch Rebuilt Weather Patch.esp")'
       - *versionXofYorGreaterRequiredOBSEv21
     tag:
       - Actors.AIPackages
@@ -12970,6 +12975,16 @@ plugins:
         crc: 0x50EEF62E
         util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 138
+    clean:
+      - crc: 0x489D7BE6
+        util: 'TES4Edit v4.0.4c'
+  - name: 'Kvatch Rebuilt - No More Burned Ground.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/15412/'
+        name: 'Kvatch Rebuilt'
+    req: [ 'Kvatch Rebuilt.esp' ]
+    msg:
+      - <<: *optional
 
   - name: 'LastUnicorn.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/7514/' ]
