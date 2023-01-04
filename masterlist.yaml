@@ -1628,7 +1628,11 @@ plugins:
     url:
       - link: 'https://www.moddb.com/mods/giskards-oblivion-mods/'
         name: 'Giskard''s Oblivion Mods'
-    req: [ 'DLCShiveringIsles.esp' ]
+    msg:
+      - <<: *requiresX
+        type: error
+        subs: [ 'Shivering Isles' ]
+        condition: 'not active("DLCShiveringIsles.esp")'
   - name: 'CURP_Controller.esm'
     tag: [ R.Hair ]
     clean:
