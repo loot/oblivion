@@ -284,6 +284,10 @@ common:
     name: 'Better Cities Resources.esm'
     display: '[Better Cities](https://www.nexusmods.com/oblivion/mods/16513)'
 
+  - &Cobl
+    name: 'Cobl Main.esm'
+    display: '[Common Oblivion (Cobl)](https://www.nexusmods.com/oblivion/mods/21104/)'
+
 # Sub-Anchors
   # &alreadyInX
   - &alreadyInMMM
@@ -1444,7 +1448,7 @@ plugins:
       - crc: 0xCFCE92CF
         util: 'TES4Edit v4.0.3'
 
-  - name: '.*(Cobl).*\.esp'
+  - name: '(Salmo the Baker, )?Cobl.*\.es[mp]'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/21104/'
         name: 'Common Oblivion (Cobl)'
@@ -27036,7 +27040,7 @@ plugins:
         itm: 7
   - name: 'Mage Guild Sorters v3.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/35354/' ]
-    req: [ 'Cobl Main.esm' ]
+    req: [ *Cobl ]
   - name: 'MigStatsCheck.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/44844/' ]
     req:
@@ -28881,8 +28885,8 @@ plugins:
   - name: 'Fran-Ayleid Coin Add-on.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/10671/' ]
     inc:
+      - *Cobl
       - 'Mart''s Monster Mod - Diverse Runeskulls Loot G&GD.esp'
-      - 'Cobl Main.esm'
       - 'Oscuro''s_Oblivion_Overhaul.esm'
   - name: 'ExnemRuneskulls(_ru)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/9412/' ]
@@ -29312,7 +29316,7 @@ plugins:
     inc: [ 'A Not So Simple Cave Retreat - Coblized.esp' ]
   - name: 'A Not So Simple Cave Retreat - Coblized.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/31609/' ]
-    req: [ 'Cobl Main.esm' ]
+    req: [ *Cobl ]
     inc: [ 'A Not So Simple Cave Retreat.esp' ]
   - name: 'A Sorceress Love 1_1.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/24968/' ]
@@ -29605,7 +29609,7 @@ plugins:
     inc: [ 'Automagicon_Cobl.esp' ]
   - name: 'Automagicon_Cobl.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/31543/' ]
-    req: [ 'Cobl Main.esm' ]
+    req: [ *Cobl ]
     inc: [ 'Automagicon.esp' ]
 
   - name: 'AWitchTale.esp'
@@ -30079,9 +30083,9 @@ plugins:
   - name: 'Skingrad Market 1.0.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/20684/' ]
     req:
+      - *Cobl
       - *SilentVoice
       - 'DLCShiveringIsles.esp'
-      - 'Cobl Main.esm'
   - name: 'The Hoser Hut Bar Fights.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/39399/' ]
     tag:
@@ -30574,7 +30578,7 @@ plugins:
     url: [ 'https://www.nexusmods.com/oblivion/mods/34905/' ]
     req: [ *MenuQue ]
   - name: 'dhsRTentwithSorter.esp'
-    req: [ 'Cobl Main.esm' ]
+    req: [ *Cobl ]
   - name: 'DoB10mins.esp'
     inc: [ 'DoB20mins.esp' ]
 
