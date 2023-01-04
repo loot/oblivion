@@ -4236,6 +4236,9 @@ plugins:
       - <<: *patchIncluded
         subs: [ 'DLC Shivering Isles' ]
         condition: 'active("DLCShiveringIsles.esp") and not active("All Natural - SI.esp")'
+      - <<: *patchIncluded
+        subs: [ 'Kvatch Rebuilt' ]
+        condition: 'active("Kvatch Rebuilt.esp") and not active("Kvatch Rebuilt Weather Patch.esp"'
     tag: [ Graphics ]
     clean:
       - crc: 0xD73B9606
@@ -12961,9 +12964,6 @@ plugins:
           - 'Unique Landscapes - Merged ESP'
           - '[Unique Landscapes Compatibility Patches](https://www.nexusmods.com/oblivion/mods/13834/)'
         condition: 'version("Unique Landscapes.esp", "2.0.0", >=) and active("Unique Landscapes.esp") and not file("ULE KvatchRebuilt-CheydinhalFalls patch.esp")'
-      - <<: *patchIncluded
-        subs: [ 'Weather - All Natural' ]
-        condition: 'active("All Natural Base.esm") and not active("Kvatch Rebuilt Weather Patch.esp")'
       - *versionXofYorGreaterRequiredOBSEv21
     tag:
       - Actors.AIPackages
