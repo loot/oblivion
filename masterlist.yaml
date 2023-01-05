@@ -25872,17 +25872,43 @@ plugins:
         itm: 3
   ### OOO Extended ###
   - name: 'OOOExtended.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/47177/' ]
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/46199/'
+        name: 'OOO - Oscuro''s Oblivion Overhaul - Updated'
+      - link: 'https://www.nexusmods.com/oblivion/mods/47177/'
+        name: 'Oscuros Oblivion Overhaul Extended'
+    tag:
+      - C.Name
+      - Creatures.Blood
+      - Enchantments
+      - EnchantmentStats
+      - Invent.Change
+      - NPC.Eyes
+      - NPC.FaceGen
+      - R.AddSpells
+      - SpellStats
+      - Text
     dirty:
       - <<: *quickClean
         crc: 0x7E3B1AE5
-        util: '[TES4Edit v4.0.2i](https://www.nexusmods.com/oblivion/mods/11536)'
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 4
+      - <<: *quickClean
+        crc: 0x4FADAE9C
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 5
+      - <<: *quickClean
+        crc: 0x018AD890
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 5
   - name: 'OOOExtendedArcheryPatch.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/47177/' ]
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/47177/'
+        name: 'Oscuros Oblivion Overhaul Extended'
+    tag: [ Deactivate ]
     clean:
       - crc: 0xDB360623
-        util: 'TES4Edit v4.0.2i'
+        util: 'TES4Edit v4.0.4c'
   ### OOO 3rd Party Patches and Addons ###
   - name: 'Better Hunting for OOO.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/35223/' ]
