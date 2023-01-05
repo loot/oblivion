@@ -20592,7 +20592,6 @@ plugins:
     url:
       - link: 'https://www.moddb.com/mods/giskards-oblivion-mods/'
         name: 'Giskard''s Oblivion Mods'
-    req: [ 'DLCShiveringIsles.esp' ]
     tag:
       - Actors.ACBS
       - Actors.AIPackages
@@ -20600,6 +20599,7 @@ plugins:
       - C.Name
       - C.Owner
       - Graphics
+      - NPC.Hair
       - Relations.Add
       - Relations.Change
       - Scripts
@@ -20608,6 +20608,11 @@ plugins:
         crc: 0x8997D4F1
         util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 5109
+        udr: 390
+      - <<: *quickClean
+        crc: 0x63A03066
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 5105
         udr: 390
 
   - name: 'KvatchRising.esp'
