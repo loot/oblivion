@@ -16452,6 +16452,43 @@ plugins:
         util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 5
 
+  - name: 'Weapon Expansion Pack for Oblivion Nthusiasts.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/35560/'
+        name: 'Weapon Expansion Pack for Oblivion Nthusiasts'
+    req:
+      - name: 'DLCShiveringIsles.esp'
+        condition: 'version("Weapon Expansion Pack for Oblivion Nthusiasts.esp", "1.12", >=)'
+    msg:
+      - <<: *patchUnavailable
+        subs: [ 'OOO Shivering Isles' ]
+        condition: 'active("OOOShiveringIsles.esp") and version("Weapon Expansion Pack for Oblivion Nthusiasts.esp", "1.12", >=)'
+    tag:
+      - Delev
+      - Graphics
+      - Invent.Add
+      - Invent.Remove
+      - Names
+      - Relev
+      - Scripts
+      - Stats
+      - Text
+    clean:
+      - crc: 0xA349EA62
+        util: 'TES4Edit v4.0.4c'
+      - crc: 0xB370222C
+        util: 'TES4Edit v4.0.4c'
+      - crc: 0x95F052DB
+        util: 'TES4Edit v4.0.4c'
+      - crc: 0xF458D716
+        util: 'TES4Edit v4.0.4c'
+      - crc: 0x9306266E
+        util: 'TES4Edit v4.0.4c'
+      - crc: 0xF86766E3
+        util: 'TES4Edit v4.0.4c'
+      - crc: 0xC35D9987
+        util: 'TES4Edit v4.0.4c'
+
   - name: 'Weapons Of Morrowind( - Daedric Crescent)?\.esp'
     url:
       - 'https://www.nexusmods.com/oblivion/mods/45440/'
@@ -29303,32 +29340,6 @@ plugins:
   - name: 'Daggerfall NPCs.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/29161/' ]
     tag: [ Delev ]
-
-  - name: 'Weapon Expansion Pack for Oblivion Nthusiasts.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/35560/' ]
-    tag:
-      - Delev
-      - Graphics
-      - Invent.Add
-      - Invent.Remove
-      - Names
-      - Relev
-      - Scripts
-      - Stats
-      - Text
-    clean:
-      - crc: 0xA349EA62
-        util: 'TES4Edit v4.0.3h (Hotfix 1)'
-      - crc: 0xB370222C
-        util: 'TES4Edit v4.0.3h (Hotfix 1)'
-      - crc: 0xF458D716
-        util: 'TES4Edit v4.0.3h (Hotfix 1)'
-      - crc: 0x9306266E
-        util: 'TES4Edit v4.0.3h (Hotfix 1)'
-      - crc: 0xF86766E3
-        util: 'TES4Edit v4.0.3h (Hotfix 1)'
-      - crc: 0xC35D9987
-        util: 'TES4Edit v4.0.3h (Hotfix 1)'
 
   - name: 'Oblivifall - Something''s Not Right.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/27145/' ]
