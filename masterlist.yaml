@@ -20395,6 +20395,26 @@ plugins:
       - crc: 0x3DC7A6FB
         util: 'TES4Edit v4.0.4c'
 
+  - name: 'FrostcragAlchemySorter.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/13782/'
+        name: 'Frostcrag Alchemy Sorter'
+      - link: 'https://www.nexusmods.com/oblivion/mods/49969/'
+        name: 'Frostcrag Alchemy Sorter Updated'
+    msg:
+      - <<: *obsolete
+        type: error
+        subs: [ '[Frostcrag Alchemy Sorter Updated](https://www.nexusmods.com/oblivion/mods/49969)' ]
+        condition: 'not checksum("FrostcragAlchemySorter.esp", E855599E)'
+    dirty:
+      - <<: *quickClean
+        crc: 0x192067D2
+        util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
+    clean:
+      - crc: 0xE855599E
+        util: 'TES4Edit v4.0.4'
+
   - name: 'GhettoWaterfront(Light)?\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/49946/'
