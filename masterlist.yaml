@@ -20405,7 +20405,7 @@ plugins:
       - <<: *patchUpdateAvailable
         type: warn
         subs: [ '[Frostcrag Alchemy Sorter Updated](https://www.nexusmods.com/oblivion/mods/49969/)' ]
-        condition: 'checksum("FrostcragAlchemySorter.esp", 192067D2)'
+        condition: 'version("FrostcragAlchemySorter.esp", "1.0", <)'
     dirty:
       - <<: *quickClean
         crc: 0x192067D2
