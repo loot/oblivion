@@ -20402,10 +20402,10 @@ plugins:
       - link: 'https://www.nexusmods.com/oblivion/mods/49969/'
         name: 'Frostcrag Alchemy Sorter Updated'
     msg:
-      - <<: *obsolete
-        type: error
-        subs: [ '[Frostcrag Alchemy Sorter Updated](https://www.nexusmods.com/oblivion/mods/49969)' ]
-        condition: 'not checksum("FrostcragAlchemySorter.esp", E855599E)'
+      - <<: *patchUpdateAvailable
+        type: warn
+        subs: [ '[Frostcrag Alchemy Sorter Updated](https://www.nexusmods.com/oblivion/mods/49969/)' ]
+        condition: 'checksum("FrostcragAlchemySorter.esp", 192067D2)'
     dirty:
       - <<: *quickClean
         crc: 0x192067D2
