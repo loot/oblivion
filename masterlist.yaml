@@ -20453,6 +20453,10 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/33698/'
         name: 'DLC Frostcrag Cobl Addons'
+    msg:
+      - <<: *alreadyInX
+        subs: [ '[Frostcrag Spire Coblized](https://www.nexusmods.com/oblivion/mods/52608/)' ]
+        condition: 'active("DLCFrostcragCoblAlchemyTable.esp")'
     clean:
       - crc: 0xBF0955A6
         util: 'TES4Edit v4.0.4'
@@ -20460,9 +20464,18 @@ plugins:
   - name: 'DLCFrostcragCoblAlchemyTable.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/52608/'
-        name: 'Frostcrag Spire Cobl Alchemy Station'
+        name: 'Frostcrag Spire Coblized'
+    msg:
+      - <<: *obsolete
+        condition: 'version("DLCFrostcragCoblAlchemyTable.esp", "2.0", <)'
+      - <<: *includesX
+        subs: [ 'DLC Frostcrag Cobl Addons' ]
+        condition: 'version("DLCFrostcragCoblAlchemyTable.esp", "2.0" >=) and active("DLCFrostcragCoblAddons.esp")'
+      - <<: *includesX
+        subs: [ 'Frostcrag Alchemy Sorter' ]
+        condition: 'version("DLCFrostcragCoblAlchemyTable.esp", "2.0" >=) and active("FrostcragAlchemySorter.esp")'
     clean:
-      - crc: 0xB5C62DB4
+      - crc: 0x7CD9212C
         util: 'TES4Edit v4.0.4'
 
   - name: '(DLC|Kvatch Rebuilt \+ )?Frostcrag ?Reborn(Cobl| - Frostcrag Village Patch| De-Isolated Teleport Patch)?\.esp'
@@ -20511,6 +20524,9 @@ plugins:
         type: warn
         subs: [ '[Frostcrag Alchemy Sorter Updated](https://www.nexusmods.com/oblivion/mods/49969/)' ]
         condition: 'version("FrostcragAlchemySorter.esp", "1.0", <)'
+      - <<: *alreadyInX
+        subs: [ '[Frostcrag Spire Coblized](https://www.nexusmods.com/oblivion/mods/52608/)' ]
+        condition: 'active("DLCFrostcragCoblAlchemyTable.esp")'
     dirty:
       - <<: *quickClean
         crc: 0x192067D2
