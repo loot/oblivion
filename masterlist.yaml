@@ -20470,10 +20470,10 @@ plugins:
         condition: 'version("DLCFrostcragCoblAlchemyTable.esp", "2.0", <)'
       - <<: *includesX
         subs: [ 'DLC Frostcrag Cobl Addons' ]
-        condition: 'version("DLCFrostcragCoblAlchemyTable.esp", "2.0" >=) and active("DLCFrostcragCoblAddons.esp")'
+        condition: 'version("DLCFrostcragCoblAlchemyTable.esp", "2.0", >=) and active("DLCFrostcragCoblAddons.esp")'
       - <<: *includesX
         subs: [ 'Frostcrag Alchemy Sorter' ]
-        condition: 'version("DLCFrostcragCoblAlchemyTable.esp", "2.0" >=) and active("FrostcragAlchemySorter.esp")'
+        condition: 'version("DLCFrostcragCoblAlchemyTable.esp", "2.0", >=) and active("FrostcragAlchemySorter.esp")'
     clean:
       - crc: 0x7CD9212C
         util: 'TES4Edit v4.0.4'
