@@ -19546,18 +19546,21 @@ plugins:
 
   - name: 'Sutch Village.esp'
     url:
-      - 'https://www.afkmods.com/index.php?/files/file/256-sutch-village/'
-      - 'https://tesalliance.org/forums/index.php?/files/file/1046-sutch-village/'
+      - link: 'https://www.afkmods.com/index.php?/files/file/256-sutch-village/'
+        name: 'Sutch Village (AFK Mods)'
+      - link: 'https://tesalliance.org/forums/index.php?/files/file/1046-sutch-village/'
+        name: 'Sutch Village (TES Alliance)'
     after:
       - 'Unique Landscapes.esp'
       - 'xulBeachesOfCyrodiilLostCoast.esp'
+    msg: [ *versionXofYorGreaterRequiredOBSEv20 ]
     tag:
+      - Actors.Factions
       - C.Regions
       - C.Water
-      - Factions
     clean:
-      - crc: 0x6F4B21A9
-        util: 'TES4Edit v4.0.3'
+      - crc: 0x32CBF765
+        util: 'TES4Edit v4.0.4c'
 
   - name: '(TGNDNessaStore|TGND - Nessa Store).*\.esp'
     url:
