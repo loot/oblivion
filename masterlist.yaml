@@ -19759,8 +19759,10 @@ plugins:
 
   - name: 'Vergayun.esp'
     url:
-      - 'https://www.afkmods.com/index.php?/files/file/258-vergayun/'
-      - 'https://tesalliance.org/forums/index.php?/files/file/112-vergayun/'
+      - link: 'https://www.afkmods.com/index.php?/files/file/258-vergayun/'
+        name: 'Vergayun (AFK Mods)'
+      - link: 'https://tesalliance.org/forums/index.php?/files/file/112-vergayun/'
+        name: 'Vergayun (TES Alliance)'
     after:
       - 'Midland.esp'
       - 'road+bridges.esp'
@@ -19768,15 +19770,15 @@ plugins:
     inc:
       - name: 'Midland.esp'
         condition: 'not file("(ROC-)?Midland-Vergayun(-FAR)? patch.esp")'
-    tag:
-      - C.Regions
-      - Relations
     msg:
       - *alsoUseSilentVoice
       - *versionXofYorGreaterRequiredOBSEv20
+    tag:
+      - C.Regions
+      - Relations.Add
     clean:
-      - crc: 0x9FC729A3
-        util: 'TES4Edit v4.0.3'
+      - crc: 0xF5B19AAA
+        util: 'TES4Edit v4.0.4c'
 
   - name: 'Verwen Brewery( UL( Ancient Yews|_AY_AC) Compatable)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/19892/' ]
