@@ -18466,22 +18466,23 @@ plugins:
 
   - name: 'Frostcrag Village.esp'
     url:
-      - 'https://www.afkmods.com/index.php?/files/file/250-frostcrag-village/'
-      - 'https://tesalliance.org/forums/index.php?/files/file/828-frostcrag-village/'
+      - link: 'https://www.afkmods.com/index.php?/files/file/250-frostcrag-village/'
+        name: 'Frostcrag Village (AFK Mods)'
+      - link: 'https://tesalliance.org/forums/index.php?/files/file/828-frostcrag-village/'
+        name: 'Frostcrag Village (TES Alliance)'
     after:
       - 'Unique Landscapes.esp'
       - 'xulSnowdale.esp'
+    req: [ *SilentVoice ]
     inc:
       - name: 'DLCfrostcrag.esp'
         display: 'Frostcrag Reborn'
         condition: 'version("DLCfrostcrag.esp", "1.0", >=)'
-    req:
-      - *OBSE
-      - *SilentVoice
+    msg: [ *versionXofYorGreaterRequiredOBSEv19 ]
     tag: [ C.Regions ]
     clean:
       - crc: 0xAF477DE5
-        util: 'TES4Edit v4.0.3'
+        util: 'TES4Edit v4.0.4c'
 
   - name: 'Gaelendryl.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/6371/' ]
