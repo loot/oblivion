@@ -10830,6 +10830,26 @@ plugins:
       - crc: 0x23959D0C
         util: 'TES4Edit v4.0.4b'
 
+  - name: 'Capes4NPCs( - (Extraction|Placement))?\.es[mp]'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/45766/'
+        name: 'Capes For NPC''s'
+  - name: 'Capes4NPCs.esm'
+    clean:
+      - crc: 0x753E36CD
+        util: 'TES4Edit v4.0.4c'
+  - name: 'Capes4NPCs - (Extraction|Placement)\.esp'
+    group: *latePatchesGroup
+    msg: [ *requiresBashedPatch ]
+    tag: [ Filter ]
+  - name: 'Capes4NPCs - Placement.esp'
+    tag:
+      - Invent.Add
+      - NoMerge
+    clean:
+      - crc: 0x38976D13
+        util: 'TES4Edit v4.0.4c'
+
   - name: 'Casual Conjurers.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/45061/' ]
     tag:
@@ -31769,17 +31789,6 @@ plugins:
         util: '[TES4Edit v4.0.3b](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 4
 
-  - name: 'Capes4NPCs - Extraction.esp'
-    group: *latePatchesGroup
-    tag:
-      - Deactivate
-      - Filter
-  - name: 'Capes4NPCs - Placement.esp'
-    group: *latePatchesGroup
-    tag:
-      - Filter
-      - IIM
-      - Invent
   - name: 'Alternate Script Effect Icon.esp'
     tag: [ Graphics ]
   - name: 'ScriptEffectIconReplace.esp'
