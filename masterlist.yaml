@@ -26573,14 +26573,32 @@ plugins:
       - crc: 0xE4F0149C
         util: 'TES4Edit v4.0.4c'
 
+  - name: 'WAC - No Custom Races( CRR| GLAD)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/48276/'
+        name: 'Beards in Tamriel for WAC (No More Custom Races)'
   - name: 'WAC - No Custom Races.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/48276/' ]
     after:
       - 'WAC - TCOS.esp'
       - 'WAC - TCOS Shops.esp'
-    # doNotClean
     req: [ *Blockhead ]
     tag: [ NPC.Race ]
+    # Do not clean - ITMs are to reverse NPC race changes of `WAC - TCOS.esp`
+  - name: 'WAC - No Custom Races (CRR|GLAD)\.esp'
+    tag:
+      - Deactivate
+      - NoMerge
+      - NPC.Race
+  - name: 'WAC - No Custom Races CRR.esp'
+    clean:
+      - crc: 0x07BD6C81
+        util: 'TES4Edit v4.0.4c'
+  - name: 'WAC - No Custom Races GLAD.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x4E5250F7
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 5
 
 ###### Anything new can go after this (If you're not sure where to put it) ######
   - name: 'No Lights Flicker.esm'
