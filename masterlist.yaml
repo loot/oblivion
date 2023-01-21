@@ -21159,7 +21159,11 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/48143/'
         name: 'Street Vendors of Cyrodiil'
-    inc: [ *BetterCities ]
+    after: [ 'IC Circular Canal.esp' ]
+    inc:
+      - *BetterCities
+      - 'RedBag - Imperial City Pack.esp'
+      - 'RedBag''s Imperial City - 2020 Edition.esp'
     tag: [ Stats ]
     dirty:
       - <<: *quickClean
