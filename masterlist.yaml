@@ -1668,9 +1668,14 @@ plugins:
       - type: error
         content:
           - lang: en
-            text: 'Remove this plugin from your load order after DistantLOD has been generated with [TES4LODGen](https://www.nexusmods.com/oblivion/mods/15781).'
+            text: 'Remove this plugin from your load order after %1% has been generated with %2%.'
+          - lang: bg
+            text: 'Премахнете тази приставка от Вашия ред за зареждане след създаването на "%1%" с %2%.'
           - lang: de
-            text: 'Entfernen Sie dieses Plugin von Ihrer Ladereihenfolge nachdem DistantLOD generiert wurde mit [TES4LODGen](https://www.nexusmods.com/oblivion/mods/15781).'
+            text: 'Entfernen Sie dieses Plugin von Ihrer Ladereihenfolge nachdem %1% generiert wurde mit %2%.'
+        subs:
+          - 'DistantLOD'
+          - '[TES4LODGen](https://www.nexusmods.com/oblivion/mods/15781/)'
   - name: 'FRLODToggle(Basic|Full).esp'
     req:
       - name: 'DLCFrostcragReborn.esp'
@@ -11708,6 +11713,8 @@ plugins:
         content:
           - lang: en
             text: 'This mod must be activated before you speak to Haskill for the first time.'
+          - lang: bg
+            text: 'Тази модификация трябва да бъде активирана преди да говорите с Хаскил за първи път.'
     tag:
       - Actors.AIPackages
       - Actors.Stats
@@ -22314,6 +22321,8 @@ plugins:
         content:
           - lang: en
             text: 'This file is not required when using Wrye Bash''s Bashed Patch v309+.'
+          - lang: bg
+            text: 'Тази приставка не се изисква, когато използвате кръпката на "Bash" от "Wrye Bash" версия 309+.'
         condition: 'file("Bashed Patch.*\.esp")'
 
   - name: 'OCOv2 - (Filter|MOO) Patch( for Mods)?\.esp'
@@ -24825,6 +24834,8 @@ plugins:
         content:
           - lang: en
             text: 'This file is deprecated and should no longer be used.'
+          - lang: bg
+            text: 'Тази приставка е остаряла и не трябва да се използва.'
   ### FCOM - Patches ###
   - name: 'FCOM_Blood&Mud.esp'
     tag:
