@@ -20582,6 +20582,18 @@ plugins:
       - crc: 0x7F19A6E5
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
 
+  - name: 'DarelothFrontDoorFix.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/33119/'
+        name: 'Thieves Guild Front Door Fix'
+    inc: [ 'Apachii_Goddess_Store.esp' ]
+    dirty:
+      - <<: *quickClean
+        crc: 0xB16345E0
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 8
+        udr: 5
+
   - name: 'Dareloth House Small Expansion.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/52676/'
@@ -30327,9 +30339,6 @@ plugins:
   - name: 'CottageInColoviaV1.6.esp'
     inc: [ 'Waalx Animals & Creatures.esm' ]
 
-  - name: 'DarelothFrontDoorFix.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/33119/' ]
-    inc: [ 'Apachii_Goddess_Store.esp' ]
   - name: 'Dark Brotherhood Outpost v3.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/13277/' ]
     msg: [ *obsolete ]
