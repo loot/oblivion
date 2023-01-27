@@ -16562,20 +16562,33 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/49871/'
         name: 'Unique Artifacts for Unique People'
-  - name: 'Unique Artifacts for Unique People( \(No DLC\))?\.esp'
-    req: [ 'DLCShiveringIsles.esp' ]
-    msg:
-      - <<: *useOnlyOneX
-        subs: [ 'Unique Artifacts for Unique People ESP' ]
-        condition: 'many("Unique Artifacts for Unique People( \(No DLC\))?\.esp")'
   - name: 'Unique Artifacts for Unique People.esp'
+    msg:
+      - <<: *patchProvided
+        subs: [ 'Oscuro''s Oblivion Overhaul' ]
+        condition: 'active("Oscuro''s_Oblivion_Overhaul.esp") and not file("UAUP - OOO Patch.esp")'
     clean:
-      - crc: 0x2E0028CF
-        util: 'TES4Edit v4.0.4b'
-  - name: 'Unique Artifacts for Unique People (No DLC).esp'
+      - crc: 0xB44C3652
+        util: 'TES4Edit v4.0.4c'
+  - name: 'Unique Artifacts for Unique People - Distribution.esp'
+    group: *latePatchesGroup
+    msg: [ *requiresBashedPatch ]
     clean:
-      - crc: 0x6FB5EB2B
-        util: 'TES4Edit v4.0.4b'
+      - crc: 0x04CCC80A
+        util: 'TES4Edit v4.0.4c'
+  - name: 'UAUP - MOBS Patch.esp'
+    tag: [ -NoMerge ]
+    clean:
+      - crc: 0x7600A06B
+        util: 'TES4Edit v4.0.4c'
+  - name: 'UAUP - OMOBS Patch.esp'
+    clean:
+      - crc: 0xA404C78F
+        util: 'TES4Edit v4.0.4c'
+  - name: 'UAUP - OOO Patch.esp'
+    clean:
+      - crc: 0x690ACCA3
+        util: 'TES4Edit v4.0.4c'
 
   - name: '(Vvardenfell_Imports|OC\+Imports Patch)\.esp'
     url:
