@@ -9491,16 +9491,24 @@ plugins:
         util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
 
-  - name: 'BasicHarvest(Core|For.*)\.esp'
+  - name: 'BasicHarvest(FilterPatch|4MOO)\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/51833/'
         name: 'Basic harvest'
-  - name: 'BasicHarvestCore.esp'
-    clean:
-      - crc: 0xD26AA597
-        util: 'TES4Edit v4.0.4b'
-  - name: 'BasicHarvestFor.*\.esp'
+  - name: 'BasicHarvestFilterPatch.esp'
+    group: *latePatchesGroup
+    msg:
+      - <<: *patchIncluded
+        subs: [ 'Maskar''s Oblivion Overhaul' ]
+        condition: 'active("Maskar''s Oblivion Overhaul.esp") and not active("BasicHarvest4MOO.esp")'
+      - *requiresBashedPatch
+  - name: 'BasicHarvest4MOO.esp'
     tag: [ Scripts ]
+    clean:
+      - crc: 0x7F567E25
+        util: 'TES4Edit v4.0.4c'
+      - crc: 0x2B574DD9
+        util: 'TES4Edit v4.0.4c'
 
   - name: 'CLS-Craftybits\.es(m|p)'
     url:
