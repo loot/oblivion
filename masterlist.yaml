@@ -14642,11 +14642,13 @@ plugins:
     group: *mapGroup
 
   - name: 'WorldMapsForAllWorldspaces.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/48914/' ]
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/48914/'
+        name: 'World Maps For All Worldspaces'
     group: *mapGroup
     clean:
       - crc: 0x640D34C6
-        util: 'TES4Edit v4.0.4b'
+        util: 'TES4Edit v4.0.4c'
 
 ###### Items ######
   - name: '300_Artifacts.esp'
