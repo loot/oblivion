@@ -17722,6 +17722,18 @@ plugins:
         itm: 819
         udr: 1
 
+  - name: 'SewersForEveryCity.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/52693/'
+        name: 'Sewers For Every City'
+    msg:
+      - <<: *patchUnavailable
+        subs: [ 'A Brotherhood Renewed' ]
+        condition: 'active("BrotherhoodRenewed.esp")'
+    clean:
+      - crc: 0xD7787487
+        util: 'TES4Edit v4.0.4c'
+
   - name: 'ShadowfangKeep.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/31994/' ]
     req: [ *SilentVoice ]
