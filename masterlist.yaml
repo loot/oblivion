@@ -17772,6 +17772,16 @@ plugins:
         subs: [ 'Remove **00015639** from **Shivering Isles Root System.esp**.' ]
         condition: 'checksum("Shivering Isles Root System.esp", AF367043)'
 
+  - name: 'Skyrim Nord Tombs.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/38064/'
+        name: 'Skyrim Nord Tombs'
+    req: [ 'DLCShiveringIsles.esp' ]
+    msg: [ *requiresDisabledBorderRegions ]
+    clean:
+      - crc: 0xE57E7575
+        util: 'TES4Edit v4.0.4c'
+
   - name: 'Spire of Eternity.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/49763/' ]
     req: [ 'DLCShiveringIsles.esp' ]
