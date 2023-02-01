@@ -5449,11 +5449,11 @@ plugins:
         subs:
           - 'Oblivion Character Overhaul'
           - '[Extra NPCs - OCOv2 Patch](https://www.nexusmods.com/oblivion/mods/52012/)'
-        condition: 'active("Oblivion_Character_Overhaul.esp") and not file("Extra NPCs OCOv2 Patch.esp")'
+        condition: 'active("Oblivion_Character_Overhaul.esp") and not file("Extra NPCs OCOv2 Patch.esp") and not file("OCOv2 - Filter Patch for Mods.esp")'
     dirty:
       - <<: *quickClean
         crc: 0x811B025D
-        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 2
 
   - name: 'Aliyah.esp'
