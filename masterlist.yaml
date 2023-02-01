@@ -6008,14 +6008,14 @@ plugins:
         subs: [ '[Ruined-Tail''s Tale](https://www.nexusmods.com/oblivion/mods/3027/) v3.01+' ]
         condition: 'not file("RTT.esp") or version("RTT.esp", "3.01", <)'
   - name: 'RTT.esp'
-    msg:
-      - <<: *compatPatch
-        subs: [ '[Weye + Ruined Tail''s Tale Compatibility Patch](https://www.afkmods.com/index.php?/files/file/2536-weye-ruined-tails-tale-compatibility-patch/)' ]
-        condition: 'not active("RTT-Weye Relocation Patch.esp")'
     after:
       - 'Akaviri Imports.esp'
       - 'ClocksOfCyrodiil.esp'
       - 'MTC-WeyePatch.esp'
+    msg:
+      - <<: *compatPatch
+        subs: [ '[Weye + Ruined Tail''s Tale Compatibility Patch](https://www.afkmods.com/index.php?/files/file/2536-weye-ruined-tails-tale-compatibility-patch/)' ]
+        condition: 'not active("RTT-Weye Relocation Patch.esp")'
     dirty:
       - <<: *quickClean
         crc: 0x65F14171
