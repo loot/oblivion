@@ -20118,6 +20118,35 @@ plugins:
         itm: 111
         udr: 29
 
+  - name: 'AyleidRuinsOverhaul.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/50727/'
+        name: 'ARO - Ayleid Ruins Overhaul'
+    req: [ *MagicExtender ]
+    inc: [ 'WSL_Redone.esp' ]
+    tag:
+      - Actors.ACBS
+      - Actors.AIPackages
+      - Actors.CombatStyle
+      - Actors.RecordFlags
+      - Actors.Spells
+      - Actors.Stats
+      - C.Light
+      - C.Water
+      - EffectStats
+      - Graphics
+      - Invent.Add
+      - Invent.Remove
+      - Names
+      - NPC.Class
+      - NPC.FaceGen
+    dirty:
+      - <<: *quickClean
+        crc: 0x1D1BE339
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 128
+        udr: 1209
+
   - name: '(Better Abandoned House|Cheydinhal Land Texture Fix).*\.esp'
     url:
       - 'https://www.nexusmods.com/oblivion/mods/25319/'
