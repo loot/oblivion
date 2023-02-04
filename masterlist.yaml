@@ -22421,6 +22421,27 @@ plugins:
         itm: 7
         udr: 3
 
+  - name: 'BrinaCross(Consolidated|Villages)\.esp'
+    url:
+      - link: 'https://www.afkmods.com/index.php?/files/file/2354-brina-cross-consolidated/'
+        name: 'Brina Cross Consolidated'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Brina Cross Consolidated ESP' ]
+        condition: 'many("BrinaCross(Consolidated|Villages)\.esp")'
+  - name: 'BrinaCrossConsolidated.esp'
+    clean:
+      - crc: 0x65F783B6
+        util: 'TES4Edit v4.0.4c'
+  - name: 'BrinaCrossVillages.esp'
+    msg:
+      - <<: *useInstead
+        subs: [ '**BrinaCrossConsolidated.esp**' ]
+        condition: 'active("ImpeREAL Empire - Unique Forts.esp")'
+    clean:
+      - crc: 0x3BC56A2B
+        util: 'TES4Edit v4.0.4c'
+
   - name: '(Creatures Attack Reach Fix|NAO - Even Brighter Nights and Closer Fog|(NPCsTravel -|Oblivion Content Restoration Project) TtV patch|Sneak Tweak)\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/51657/'
