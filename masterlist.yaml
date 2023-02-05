@@ -20470,6 +20470,53 @@ plugins:
         itm: 21
         udr: 10
 
+  - name: '(BrinaCrossVillage( -- COBL)?|Brina Cross Village--Unique Forts Patch)\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/38270/'
+        name: 'Brina Cross Village'
+  - name: 'BrinaCrossVillage.esp'
+    after:
+      - 'ImpeREAL Empire - Unique Forts.esp'
+      - 'JDNT_Brina Cross.esp'
+    req: [ *SilentVoice ]
+    msg:
+      - <<: *patch3rdParty
+        subs:
+          - 'JDNT_Brina Cross'
+          - '[Brina Cross Consolidated](https://www.afkmods.com/index.php?/files/file/2354-brina-cross-consolidated/)'
+        condition: 'active("JDNT_Brina Cross.esp") and not active("BrinaCross(Consolidated|Villages)\.esp")'
+      - <<: *patchIncluded
+        subs: [ 'Cobl Glue' ]
+        condition: 'active("Cobl Glue.esp") and not active("BrinaCrossVillage -- COBL.esp")'
+      - <<: *patchIncluded
+        subs: [ 'ImpeREAL Empire - Unique Forts' ]
+        condition: 'active("ImpeREAL Empire - Unique Forts.esp") and not file("Brina Cross Village--Unique Forts Patch.esp") and not active("JDNT_Brina Cross.esp")'
+    tag:
+      - Actors.Factions
+      - C.Light
+      - C.Regions
+    clean:
+      - crc: 0x312BD509
+        util: 'TES4Edit v4.0.4c'
+  - name: 'BrinaCrossVillage -- COBL.esp'
+    tag:
+      - Invent.Add
+      - Invent.Remove
+    clean:
+      - crc: 0x249079E5
+        util: 'TES4Edit v4.0.4c'
+  - name: 'Brina Cross Village--Unique Forts Patch.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**BrinaCrossConsolidated.esp**' ]
+        condition: 'active("BrinaCrossConsolidated.esp")'
+      - <<: *useInstead
+        subs: [ '[Brina Cross Consolidated](https://www.afkmods.com/index.php?/files/file/2354-brina-cross-consolidated/) (**BrinaCrossConsolidated.esp**)' ]
+        condition: 'active("JDNT_Brina Cross.esp")'
+    clean:
+      - crc: 0x60EBABE6
+        util: 'TES4Edit v4.0.4c'
+
   - name: 'BrumaGuildReconstructed.esp'
     url:
       - link: 'https://www.afkmods.com/index.php?/files/file/264-bruma-guild-reconstructed/'
