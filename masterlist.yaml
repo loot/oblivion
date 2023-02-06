@@ -11882,6 +11882,25 @@ plugins:
       - crc: 0x8E6496F1
         util: 'TES4Edit v4.0.4b'
 
+  - name: 'RedBag - (Dangerous|Friendly) Animals\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/19392/'
+        name: 'RedBag - Friendly Animals'
+    tag: [ Actors.Stats ]
+  - name: 'RedBag - Dangerous Animals.esp'
+    clean:
+      - crc: 0xE30EEC00
+        util: 'TES4Edit v4.0.4c'
+  - name: 'RedBag - Friendly Animals.esp'
+    tag:
+      - Actors.AIData
+      - Actors.AIPackages
+    dirty:
+      - <<: *quickClean
+        crc: 0x541F5202
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
+
   - name: 'RescueMenien.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/48385/'
