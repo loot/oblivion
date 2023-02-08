@@ -12330,6 +12330,19 @@ plugins:
       - SpellStats
       - Text
 
+  - name: 'BladeOfTheHaunted.*\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/33089/'
+        name: 'The Blade of the Haunted - A Sword Quest'
+  - name: 'BladeOfTheHaunted.esp'
+    msg: [ *versionXofYorGreaterRequiredOBSEv20 ]
+    tag: [ C.Light ]
+    clean:
+      - crc: 0x5CECBD4A
+        util: 'TES4Edit v4.0.4c'
+      - crc: 0x94CCA513
+        util: 'TES4Edit v4.0.4c'
+
   - name: 'BossPhaitDismal.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/39191/'
@@ -30612,9 +30625,6 @@ plugins:
         itm: 253
         udr: 548
 
-  - name: 'BladeOfTheHaunted.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/33089/' ]
-    tag: [ Factions ]
   - name: 'Bjornheim.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/6480/' ]
     msg: [ *corrupt ]
