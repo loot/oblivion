@@ -13775,6 +13775,23 @@ plugins:
       - crc: 0xB6D06CD5
         util: 'TES4Edit v4.0.4b'
 
+  - name: 'Skip Intro and Random Start.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/52710/'
+        name: 'Skip Intro and Random Start'
+    req: [ *OBSE ]
+    inc:
+      - 'Alternative Beginnings.esp'
+      - 'Alternative Start by Robert Evrae.esp'
+      - 'AltStart.esp'
+      - 'AltStartwChangedMessages.esp'
+      - 'PSMainQuestDelayer.esp'
+      - 'ShiveringIslesStart.esp'
+    msg: [ *alsoUseEngineBugFixes ]
+    clean:
+      - crc: 0x1EF70B2F
+        util: 'TES4Edit v4.0.4c'
+
   - name: 'SM Plugin Refurbish.*\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/11474/'
