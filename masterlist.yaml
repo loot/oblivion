@@ -142,11 +142,6 @@ prelude:
       type: say
       content: 'It appears you have **%1%** installed. Remember to run **%2%** every time you have installed or uninstalled %3%, or a %3%-based mod.'
 
-    - &sortMasters
-      type: say
-      content: 'Plugin''s Masters require sorting. %1%'
-      subs: [ '[xEdit - Sort Masters](https://tes5edit.github.io/docs/7-mod-cleaning-and-error-checking.html#SortingMasterFileLoadOrders)' ]
-
     - &useBashTweakInstead
       type: say
       content: 'A Bashed Patch tweak can be used instead of this plugin. %1%'
@@ -13792,8 +13787,6 @@ plugins:
       - <<: *patchIncluded
         subs: [ 'Knights of the Nine - Improved Infamy System' ]
         condition: 'active("Knights Infamy.esp") and not file("SM Plugin Refurbish Lite Knights Infamy.esp")'
-      - <<: *sortMasters
-        condition: 'checksum("SM Plugin Refurbish Lite.esp", F05C7945)'
     tag: [ Actors.RecordFlags ]
   - name: 'SM Plugin Refurbish Lite Knights Infamy.esp'
     dirty:
@@ -13806,30 +13799,16 @@ plugins:
       - <<: *useOnlyOneX
         subs: [ 'SM Plugin Refurbish Lite Level ESP' ]
         condition: 'many("SM Plugin Refurbish Lite (Levels|OBSE)\.esp")'
-  - name: 'SM Plugin Refurbish Lite Levels.esp'
-    msg:
-      - <<: *sortMasters
-        condition: 'checksum("SM Plugin Refurbish Lite Levels.esp", EACD3F91)'
   - name: 'SM Plugin Refurbish Lite OBSE.esp'
     req: [ *OBSE ]
-    msg:
-      - <<: *sortMasters
-        condition: 'checksum("SM Plugin Refurbish Lite OBSE.esp", 8E025A00)'
   # SM DLC Plugin Refurbish - Legacy Files #
   - name: 'SM Plugin Refurbish Merged.esp'
     after: [ 'Knights - Unofficial Patch.esp' ]
     req: [ 'DLCShiveringIsles.esp' ]
     inc: [ 'SM Plugin Refurbish Lite.esp' ]
-    msg:
-      - <<: *sortMasters
-        condition: 'checksum("SM Plugin Refurbish Merged.esp", 0DE2D83B) or checksum("SM Plugin Refurbish Merged.esp", 80603180)'
     dirty:
       - <<: *quickClean
         crc: 0x0DE2D83B
-        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 7
-      - <<: *quickClean
-        crc: 0x0DE42256
         util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 7
   - name: 'SM Plugin Refurbish - (Battlehorn|Frostcrag|HorseArmor|Knights|MehrunesRazor|Orrery|SI|ThievesDen|VileLair)\.esp'
