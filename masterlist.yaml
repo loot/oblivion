@@ -6318,6 +6318,18 @@ plugins:
       - crc: 0x78F282BA
         util: 'TES4Edit v4.0.4c'
 
+  - name: 'Firefly101 Daedra Attacks.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/36106/'
+        name: 'Firefly101 Daedra Attacks'
+    msg:
+      - <<: *wildEdits
+        subs: [ 'Remove **0003554E** from **Firefly101 Daedra Attacks.esp**.' ]
+        condition: 'checksum("Firefly101 Daedra Attacks.esp", CCE816C9)'
+    tag:
+      - Delev
+      - Relev
+
   - name: 'GrayPrinceFights(Upgraded)?\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/51188/'
