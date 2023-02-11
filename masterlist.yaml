@@ -12899,7 +12899,10 @@ plugins:
       - link: 'https://www.nexusmods.com/oblivion/mods/33626/'
         name: 'The Golden Crest - A Major Pirate Quest'
   - name: 'GoldenCrest.esp'
-    req: [ 'DLCShiveringIsles.esp' ]
+    req:
+      - <<: *SilentVoice
+        condition: 'not file("OBSE/Plugins/voicefile_redirector.dll") and not file("Sound/Voice/GoldenCrest.esp")'
+      - 'DLCShiveringIsles.esp'
     msg:
       - <<: *patchProvided
         subs: [ 'Fighter''s Stronghold' ]
