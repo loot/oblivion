@@ -11002,6 +11002,23 @@ plugins:
       - <<: *useBashTweakInstead
         subs: [ 'Tweak Settings -> Level Difference: Creature Max [Unlimited]' ]
 
+  - name: 'Daedra worshippers( - TTV)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/52403/'
+        name: 'Better Daedra Worshippers'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Better Daedra Worshippers ESP' ]
+        condition: 'many("Daedra worshippers( - TTV)?\.esp")'
+  - name: 'Daedra worshippers.esp'
+    clean:
+      - crc: 0xBF81709A
+        util: 'TES4Edit v4.0.4c'
+  - name: 'Daedra worshippers - TTV.esp'
+    clean:
+      - crc: 0x5DF7E390
+        util: 'TES4Edit v4.0.4c'
+
   - name: 'Ebony Modryn Oreyn.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/21597/'
