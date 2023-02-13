@@ -2012,6 +2012,26 @@ plugins:
       - crc: 0xF2E03702
         util: 'TES4Edit v4.0.4c'
 
+  - name: 'Enhanced Water v[12]\.[015] [HN]D\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/8011/'
+        name: 'Enhanced Water v20'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Enhanced Water ESP' ]
+        condition: 'many("Enhanced Water v[12]\.[015] [HN]D\.esp")'
+    tag: [ C.Water ]
+  - name: 'Enhanced Water v2.0 HD.esp'
+    clean:
+      - crc: 0xF3DEA9CC
+        util: 'TES4Edit v4.0.4c'
+  - name: 'Enhanced Water v2.0 ND.esp'
+    clean:
+      - crc: 0xE4412792
+        util: 'TES4Edit v4.0.4c'
+  - name: 'Enhanced Water v1\.[015] [HN]D\.esp'
+    msg: [ *obsolete ]
+
   - name: '\[GFX\]_Initial_Glow-(all|creatures|self)\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/5138/'
@@ -27528,17 +27548,6 @@ plugins:
     msg:
       - <<: *useBashTweakInstead
         subs: [ 'Tweak Assorted -> Disable Wind' ]
-  - name: 'Enhanced Water v[1].[015] (ND|HD)\.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/8011/' ]
-    msg: [ *obsolete ]
-  - name: 'Enhanced Water v[12].[015] (ND|HD)\.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/8011/' ]
-    msg:
-      - <<: *useOnlyOneX
-        subs: [ 'Enhanced Water' ]
-        condition: 'many("Enhanced Water v[12].[015] (ND|HD)\.esp")'
-  - name: 'Enhanced Water.*\.esp'
-    tag: [ C.Water ]
   - name: 'Realistic Water.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/37794/' ]
     dirty:
