@@ -18370,6 +18370,23 @@ plugins:
       - <<: *useINITweakInstead
         subs: [ '[bBorderRegionsEnabled=0](http://wiki.tesnexus.com/index.php/Removing_In-Game_Borders)' ]
 
+  - name: 'Chapels( )?of( )?Cyrodiil( KOTN Patch)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/49982/'
+        name: 'Chapels of Cyrodiil'
+  - name: 'ChapelsofCyrodiil.esp'
+    msg:
+      - <<: *patchProvided
+        subs: [ 'Knights of the Nine' ]
+        condition: 'active("Knights.esp") and not file("Chapels of Cyrodiil KOTN Patch.esp")'
+    clean:
+      - crc: 0x31F29594
+        util: 'TES4Edit v4.0.4c'
+  - name: 'Chapels of Cyrodiil KOTN Patch.esp'
+    clean:
+      - crc: 0x644405B5
+        util: 'TES4Edit v4.0.4c'
+
   - name: 'Cheydinhal Petshop.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/2054/' ]
     msg:
