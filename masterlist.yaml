@@ -13459,9 +13459,6 @@ plugins:
       - <<: *patchProvided
         subs: [ 'Oscuro''s Oblivion Overhaul' ]
         condition: 'active("Oscuro''s_Oblivion_Overhaul.esm") and not active("MannimarcoRevisitedOOO.esp")'
-      - <<: *patchUpdateAvailable
-        subs: [ '[Mannimarco Revisited Rebalance](https://www.nexusmods.com/oblivion/mods/51515/)' ]
-        condition: 'not file("Mannimarco Revisited Rebalance.esp")'
       - *requiresDisabledBorderRegions
     tag:
       - Actors.ACBS
