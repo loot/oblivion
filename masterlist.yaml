@@ -5427,12 +5427,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/52010/'
         name: 'Oblivion Character Overhaul - Advanced Edition'
-    msg:
-      - <<: *includesX
-        type: error
-        subs: [ '[Oblivion Character Overhaul V2 - DLC Faces](https://www.nexusmods.com/oblivion/mods/48557/)' ]
-        condition: 'file("OCO DLC Faces.esp")'
-      - *optional
+    msg: [ *optional ]
     tag: [ Deactivate ]
     clean:
       - crc: 0x3051185B
@@ -5446,6 +5441,11 @@ plugins:
         name: 'Oblivion Character Overhaul V2 - DLC Faces'
       - link: 'https://www.nexusmods.com/oblivion/mods/52000/'
         name: 'Oblivion Character Overhaul V2 - DLC Faces - Version FR'
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**Oblivion_Character_Overhaul_Faces.esp**' ]
+        condition: 'file("Oblivion_Character_Overhaul_Faces.esp")'
+    tag: [ Deactivate ]
     clean:
       - crc: 0xD2AB79E8
         util: 'TES4Edit v4.0.4b'
