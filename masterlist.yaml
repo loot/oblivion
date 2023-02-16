@@ -20297,7 +20297,7 @@ plugins:
       - crc: 0x47658B0E
         util: 'TES4Edit v4.0.4c'
 
-  - name: '(.*AFK_Weye.*|RTT-Weye Relocation Patch)\.esp'
+  - name: '.*AFK_Weye.*\.esp'
     url:
       - link: 'https://www.afkmods.com/index.php?/files/file/561-afk_weye/'
         name: 'AFK_Weye (AFK Mods)'
@@ -20338,6 +20338,12 @@ plugins:
     clean:
       - crc: 0x71BB35CC
         util: 'TES4Edit v4.0.4b'
+  - name: 'Rumare-AFK_Weye Patch.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x54B21628
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1
 
   - name: 'Arena District Alive(-JQ-FGU)?\.esp'
     url:
@@ -22911,6 +22917,10 @@ plugins:
     url:
       - link: 'https://www.afkmods.com/index.php?/files/file/2536-weye-ruined-tails-tale-compatibility-patch/'
         name: 'Weye + Ruined Tail''s Tale Compatibility Patch'
+      - link: 'https://www.afkmods.com/index.php?/files/file/561-afk_weye/'
+        name: 'AFK_Weye (AFK Mods)'
+      - link: 'https://www.nexusmods.com/oblivion/mods/22828/'
+        name: 'AFK_Weye (Nexus Mods)'
     clean:
       - crc: 0x0E1A32EB
         util: 'TES4Edit v4.0.4c'
