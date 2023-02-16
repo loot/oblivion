@@ -5432,10 +5432,6 @@ plugins:
         type: error
         subs: [ '[Oblivion Character Overhaul V2 - DLC Faces](https://www.nexusmods.com/oblivion/mods/48557/)' ]
         condition: 'file("OCO DLC Faces.esp")'
-      - <<: *includesX
-        type: error
-        subs: [ '[OCOv2 - Elven NPCs Eyes Fix Filter Patch](https://www.nexusmods.com/oblivion/mods/51972/)' ]
-        condition: 'file("OCO Elf Eyes Fix.esp")'
       - *optional
     tag: [ Deactivate ]
     clean:
@@ -5455,6 +5451,18 @@ plugins:
         util: 'TES4Edit v4.0.4b'
       - crc: 0xD1717698
         util: 'TES4Edit v4.0.4b'
+
+  - name: 'OCO Elf Eyes Fix.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/51972/'
+        name: 'OCOv2 - Elven NPCs Eyes Fix Filter Patch'
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**Oblivion_Character_Overhaul_Faces.esp**' ]
+        condition: 'file("Oblivion_Character_Overhaul_Faces.esp")'
+    clean:
+      - crc: 0x659C22E5
+        util: 'TES4Edit v4.0.4c'
 
   - name: 'OCO Unused Eyes and DLC Eyes Incorporated.esp'
     url:
