@@ -1340,7 +1340,9 @@ plugins:
         util: 'TES4Edit v4.0.3f'
 
   - name: 'Nehrim Fast Travel.esp'
-    url: [ 'https://www.nexusmods.com/nehrim/mods/3/' ]
+    url:
+      - link: 'https://www.nexusmods.com/nehrim/mods/3/'
+        name: 'Fast travel enabler Steam edition'
     msg:
       - <<: *wildEdits
         condition: 'checksum("Nehrim Fast Travel.esp", 4360FE9B) or checksum("Nehrim Fast Travel.esp", 5422CBE5)'
