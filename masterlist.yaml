@@ -1346,6 +1346,7 @@ plugins:
     group: *latePatchesGroup
     msg:
       - <<: *wildEdits
+        subs: [ 'Remove anything that isn''t a WRLD record from **Nehrim Fast Travel.esp**.' ]
         condition: 'checksum("Nehrim Fast Travel.esp", 4360FE9B) or checksum("Nehrim Fast Travel.esp", 5422CBE5)'
     dirty:
       - <<: *quickClean
