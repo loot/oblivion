@@ -13801,6 +13801,15 @@ plugins:
       - crc: 0xBBE3D1F1
         util: 'TES4Edit v4.0.3'
 
+  - name: 'ReplayableRandomQuests.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/51245/'
+        name: 'Repeatable Oblivion quests'
+    req: [ 'DLCShiveringIsles.esp' ]
+    msg:
+      - <<: *wildEditsRestoreNames
+        condition: 'checksum("ReplayableRandomQuests.esp", FCEEC9DD)'
+
   - name: 'Return Of Shadows.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/29087/' ]
     dirty:
