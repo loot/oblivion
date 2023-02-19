@@ -10591,6 +10591,32 @@ plugins:
       - crc: 0x645C4580
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
 
+  - name: 'elPatrixF_SummonWorkshop(_ShiveringIsles)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/41434/'
+        name: 'elPatrixF Summoners Workshop'
+  - name: 'elPatrixF_SummonWorkshop.esp'
+    req: [ *MagicExtender ]
+    msg:
+      - <<: *patchProvided
+        subs: [ 'Shivering Isles' ]
+        condition: 'active("DLCShiveringIsles.esp") and not active("elPatrixF_SummonWorkshop_ShiveringIsles.esp")'
+    dirty:
+      - <<: *quickClean
+        crc: 0x01280C83
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
+        udr: 1
+  - name: 'elPatrixF_SummonWorkshop_ShiveringIsles.esp'
+    req: [ 'DLCShiveringIsles.esp' ]
+    tag:
+      - Actors.Factions
+      - Actors.Spells
+      - Invent.Add
+    clean:
+      - crc: 0x70CB14EA
+        util: 'TES4Edit v4.0.4c'
+
   - name: 'FearsomeMagicka.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/30973/' ]
     dirty:
@@ -32052,9 +32078,6 @@ plugins:
   - name: 'Duke Patricks - Nosferatu Class Vampires.esp'
     url: [ 'http://tesalliance.org/forums/index.php?/files/file/668-duke-patricks-nosferatu-class-vampires/' ]
     tag: [ Sound ]
-
-  - name: 'elPatrixF_SummonWorkshop_ShiveringIsles.esp'
-    req: [ 'DLCShiveringIsles.esp' ]
 
   - name: 'IshMountedCombatSpellsOnSelf.esp'
     req: [ *OBSE ]
