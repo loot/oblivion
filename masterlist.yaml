@@ -18055,9 +18055,11 @@ plugins:
       - link: 'https://www.nexusmods.com/oblivion/mods/52693/'
         name: 'Sewers For Every City'
     msg:
-      - <<: *patchUnavailable
-        subs: [ 'A Brotherhood Renewed' ]
-        condition: 'active("BrotherhoodRenewed.esp")'
+      - <<: *patch3rdParty
+        subs:
+          - 'A Brotherhood Renewed'
+          - '[A Brotherhood Renewed - Sewers For Every City Patch](https://www.nexusmods.com/oblivion/mods/52753/)'
+        condition: 'active("BrotherhoodRenewed.esp") and not file("BrotherhoodRenewed - SewersForEveryCity Patch.esp")'
     clean:
       - crc: 0xD7787487
         util: 'TES4Edit v4.0.4c'
