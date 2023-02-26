@@ -8384,6 +8384,9 @@ plugins:
       - <<: *patchProvided
         subs: [ 'Knights of the Nine' ]
         condition: 'active("Knights.esp") and active("Knights - Unofficial Patch.esp") and not file("Oblivion Content Restoration Project -- Knights.esp")'
+      - <<: *wildEdits
+        subs: [ '[Cleaning instructions](https://macsplody.github.io/xGuides/#-oblivion-content-restoration-project-)' ]
+        condition: 'checksum("Oblivion Content Restoration Project.esp", 72C879EB)'
     tag:
       - Actors.ACBS
       - Actors.AIData
@@ -8403,13 +8406,10 @@ plugins:
       - NPC.Race
       - Scripts
       - Stats
-    clean:
-      - crc: 0x72C879EB
-        util: 'TES4Edit v4.0.4b'
   - name: 'Oblivion Content Restoration Project -- Knights.esp'
     clean:
       - crc: 0x0DFADC22
-        util: 'TES4Edit v4.0.4b'
+        util: 'TES4Edit v4.0.4c'
 
   - name: 'Oblivion Uncut.esp'
     url:
