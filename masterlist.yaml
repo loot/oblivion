@@ -4301,6 +4301,9 @@ plugins:
       - link: 'https://www.nexusmods.com/oblivion/mods/8011/'
         name: 'Enhanced Water v20'
     msg:
+      - <<: *alreadyInX
+        subs: [ '**Enhanced Water v2.0 HDMI.esp**' ]
+        condition: 'active("Enhanced Water v2.0 HDMI.esp")'
       - <<: *useOnlyOneX
         subs: [ 'Enhanced Water ESP' ]
         condition: 'many("Enhanced Water v[12]\.[015] [HN]D\.esp")'
@@ -4316,11 +4319,25 @@ plugins:
   - name: 'Enhanced Water v1\.[015] [HN]D\.esp'
     msg: [ *obsolete ]
 
+  - name: 'Enhanced Water v2.0 HDMI.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/23064/'
+        name: 'Enhanced Water v20 HDMI'
+    req: [ 'DLCShiveringIsles.esp' ]
+    tag: [ C.Water ]
+    clean:
+      - crc: 0xDF786CBE
+        util: 'TES4Edit v4.0.4c'
+
   - name: 'Enhanced Water v2.0 HD - SI Addon.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/17345/'
         name: 'Enhanced Water v20 HD - SI Addon'
     req: [ 'DLCShiveringIsles.esp' ]
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**Enhanced Water v2.0 HDMI.esp**' ]
+        condition: 'active("Enhanced Water v2.0 HDMI.esp")'
     clean:
       - crc: 0x6B98FCDB
         util: 'TES4Edit v4.0.4c'
