@@ -2718,22 +2718,36 @@ plugins:
       - crc: 0x2202A024
         util: 'TES4Edit v4.0.4c'
 
-  - name: 'Artifacts Redone.esp'
+  - name: 'Artifacts Redone.*\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/49277/'
         name: 'Artifacts Redone'
+  - name: 'Artifacts Redone.esp'
     after:
       - 'EVE_StockEquipmentReplacer.esp'
       - 'EVE_StockEquipmentReplacer4FCOM.esp'
       - 'EVE_StockEquipmentReplacer4MMM.esp'
       - 'EVE_StockEquipmentReplacer for OOO.esp'
-    req: [ 'DLCShiveringIsles.esp' ]
-    tag:
-      - Deactivate
-      - NoMerge
     clean:
-      - crc: 0x1060FAFE
-        util: 'TES4Edit v4.0.4b'
+      - crc: 0x170DED35
+        util: 'TES4Edit v4.0.4c'
+  - name: 'Artifacts Redone - (KOTN Ayleid Weapons|Mankar Camoran''s Staff|Morag Tong Armor)\.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**Artifacts Redone.esp**' ]
+        condition: 'file("Artifacts Redone.esp")'
+  - name: 'Artifacts Redone - KOTN Ayleid Weapons.esp'
+    clean:
+      - crc: 0xB3D79689
+        util: 'TES4Edit v4.0.4c'
+  - name: 'Artifacts Redone - Mankar Camoran''s Staff.esp'
+    clean:
+      - crc: 0xE75F40AD
+        util: 'TES4Edit v4.0.4c'
+  - name: 'Artifacts Redone - Morag Tong Armor.esp'
+    clean:
+      - crc: 0x14C7A560
+        util: 'TES4Edit v4.0.4c'
 
   - name: 'Badass Female Madness Boots.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/48279/' ]
