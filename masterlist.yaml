@@ -22368,6 +22368,20 @@ plugins:
         itm: 19
         udr: 13
 
+  - name: 'EMLeyawiinhouse(COBLaddon)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/45716/'
+        name: 'Leyawiin Lake House'
+  - name: 'EMLeyawiinhouse.esp'
+    inc: [ 'Molapi.esp' ]
+    msg:
+      - <<: *patchProvided
+        subs: [ 'Cobl' ]
+        condition: 'active("Cobl Main.esm") and not active("EMLeyawiinhouseCOBLaddon.esp")'
+    clean:
+      - crc: 0xBB7F24A5
+        util: 'TES4Edit v4.0.4c'
+
   - name: 'EM_RedRoseManor.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/37842/' ]
     clean:
