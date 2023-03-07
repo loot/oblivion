@@ -20171,6 +20171,31 @@ plugins:
       - crc: 0xA73D91C6
         util: 'TES4Edit v4.0.4b'
 
+  - name: 'Skingrad Market( - MoC)? 1\.0\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/20684/'
+        name: 'Skingrad Market'
+    req:
+      - *SilentVoice
+      - 'DLCShiveringIsles.esp'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Skingrad Market ESP' ]
+        condition: 'many("Skingrad Market( - MoC)? 1\.0\.esp")'
+    tag: [ Actors.AIPackages ]
+  - name: 'Skingrad Market 1.0.esp'
+    clean:
+      - crc: 0xDC055652
+        util: 'TES4Edit v4.0.4c'
+      - crc: 0x31D1416F
+        util: 'TES4Edit v4.0.4c'
+  - name: 'Skingrad Market - MoC 1.0.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x1CE4DC1B
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
+
   - name: 'SkyrimObservatory.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/36128/' ]
     req:
@@ -31342,12 +31367,6 @@ plugins:
     url: [ 'https://tesalliance.org/forums/index.php?/files/file/438-secluded-glade/' ]
     tag: [ Invent ]
 
-  - name: 'Skingrad Market 1.0.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/20684/' ]
-    req:
-      - *Cobl
-      - *SilentVoice
-      - 'DLCShiveringIsles.esp'
   - name: 'The Hoser Hut Bar Fights.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/39399/' ]
     tag:
