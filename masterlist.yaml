@@ -7952,7 +7952,11 @@ plugins:
       - *AddActorValues
       - *MenuQue
     inc: [ 'Simple Horse Utilities.esp' ]
-    msg: [ *verGreatReq_xOBSEv22_8 ]
+    msg:
+      - <<: *alsoUseX
+        subs: [ '[LINK](https://www.nexusmods.com/oblivion/mods/50144/)' ]
+        condition: 'not active("LINK.esp")'
+      - *verGreatReq_xOBSEv22_8
     clean:
       - crc: 0x20E0B7E4
         util: 'TES4Edit v4.0.4c'
