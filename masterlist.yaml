@@ -6258,12 +6258,18 @@ plugins:
         name: 'Tavern Goers 2 - Redux'
   - name: 'Tavern Goers 2 - Redux.esp'
     clean:
+      - crc: 0x99EF2F3F
+        util: 'TES4Edit v4.0.4c'
       - crc: 0xC6E7A66B
         util: 'TES4Edit v4.0.4b'
       - crc: 0x2991EF39
         util: 'TES4Edit v4.0.4b'
   - name: 'Tavern Goers 2 - Redux SI.esp'
     req: [ 'DLCShiveringIsles.esp' ]
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**Tavern Goers 2 - Redux.esp**' ]
+        condition: 'version("Tavern Goers 2 - Redux.esp", "4.0", >=)'
     clean:
       - crc: 0x1226299E
         util: 'TES4Edit v4.0.4b'
