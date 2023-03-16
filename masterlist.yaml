@@ -7944,6 +7944,23 @@ plugins:
         util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 21
 
+  - name: 'Horse Gameplay Overhaul.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/52797/'
+        name: 'Horse Gameplay Overhaul'
+    req:
+      - *AddActorValues
+      - *MenuQue
+    inc: [ 'Simple Horse Utilities.esp' ]
+    msg:
+      - <<: *alsoUseX
+        subs: [ '[LINK](https://www.nexusmods.com/oblivion/mods/50144/)' ]
+        condition: 'not active("LINK.esp")'
+      - *verGreatReq_xOBSEv22_8
+    clean:
+      - crc: 0x20E0B7E4
+        util: 'TES4Edit v4.0.4c'
+
   - name: 'HorseTurnFixed.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/48212/'
