@@ -12047,19 +12047,21 @@ plugins:
         util: 'TES4Edit v4.0.4b'
 
   - name: 'LessStaticNPCs.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/49618/' ]
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/49618/'
+        name: 'Less Static NPCs'
     tag:
       - Actors.AIPackages
-      - Factions
+      - Actors.Factions
       - Invent.Add
     dirty:
       - <<: *quickClean
-        crc: 0x30AD1E8B
-        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 3
+        crc: 0xF60D9392
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 5
       - <<: *quickClean
         crc: 0x1EEFDA76
-        util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 7
 
   - name: 'Locked Doors and Knocking v1.02.esp'
