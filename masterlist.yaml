@@ -20667,6 +20667,27 @@ plugins:
         util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
 
+  - name: '((Ardah|Dungeons of Tamriel|Halcyon Island) - )?Anvil Docks Extended( Patch)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/52813/'
+        name: 'Anvil Docks Extended'
+  - name: 'Anvil Docks Extended.esp'
+    req:
+      - *OBSE
+      - 'DLCShiveringIsles.esp'
+    tag:
+      - Actors.ACBS
+      - Actors.AIPackages
+      - Actors.Factions
+      - Graphics
+      - Invent.Add
+      - Invent.Remove
+      - Scripts
+      - Sound
+    clean:
+      - crc: 0x8B056624
+        util: 'TES4Edit v4.0.4c'
+
   - name: 'Arena District Alive(-JQ-FGU)?\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/33804/'
