@@ -1927,11 +1927,17 @@ plugins:
         util: 'TES4Edit v4.0.4c'
 
   - name: 'WaterFPS.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/49347/' ]
-    tag: [ C.Water ]
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/49347/'
+        name: 'Water FPS Boost'
+    group: *veryEarlyGroup
+    tag:
+      - C.Water
+      - Deactivate
+      - NoMerge
     clean:
       - crc: 0xE21FB9CE
-        util: 'TES4Edit v4.0.3'
+        util: 'TES4Edit v4.0.4c'
 
 ###### AudioVisual ######
   - name: 'Better Rainbows.esp'
