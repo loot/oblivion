@@ -22340,6 +22340,60 @@ plugins:
         itm: 50
         udr: 14
 
+  - name: '(Better Benirus Manor( - (AN|Benirus Lair|RL|SYS) Patch)?|Benirus Lair)\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/18054/'
+        name: 'Better Benirus Manor'
+  - name: 'Better Benirus Manor.esp'
+    after: [ 'Ghorak''s House.esp' ]
+    tag:
+      - C.MiscFlags
+      - Text
+    clean:
+      - crc: 0xA38612BE
+        util: 'TES4Edit v4.0.4c'
+      - crc: 0x4E5C9E75
+        util: 'TES4Edit v4.0.4c'
+      - crc: 0x9E2B7DA7
+        util: 'TES4Edit v4.0.4c'
+      - crc: 0xFD938E3A
+        util: 'TES4Edit v4.0.4c'
+      - crc: 0xC1508F07
+        util: 'TES4Edit v4.0.4c'
+      - crc: 0xF9232DA4
+        util: 'TES4Edit v4.0.4c'
+      - crc: 0x11EB73B9
+        util: 'TES4Edit v4.0.4c'
+      - crc: 0xB8FD36F2
+        util: 'TES4Edit v4.0.4c'
+  - name: 'Better Benirus Manor - AN Patch.esp'
+    clean:
+      - crc: 0x562D6638
+        util: 'TES4Edit v4.0.4c'
+      - crc: 0xD1FCD8C2
+        util: 'TES4Edit v4.0.4c'
+  - name: 'Better Benirus Manor - Benirus Lair Patch.esp'
+    tag: [ C.Light ]
+    clean:
+      - crc: 0xAF3E43D7
+        util: 'TES4Edit v4.0.4c'
+  - name: 'Better Benirus Manor - RL Patch.esp'
+    clean:
+      - crc: 0xA911CE11
+        util: 'TES4Edit v4.0.4c'
+  - name: 'Better Benirus Manor - SYS Patch.esp'
+    tag:
+      - Deactivate
+      - NoMerge
+      - Scripts
+    clean:
+      - crc: 0x9097BE63
+        util: 'TES4Edit v4.0.4c'
+  - name: 'Benirus Lair.esp'
+    clean:
+      - crc: 0x6A501F2C
+        util: 'TES4Edit v4.0.4c'
+
   - name: 'BuyUmbacanoManor.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/8028/' ]
     tag:
@@ -31182,11 +31236,6 @@ plugins:
         util: '[TES4Edit v4.0.3f](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 35
         udr: 138
-
-  - name: 'Better Benirus Manor.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/18054/' ]
-    after: [ 'Ghorak''s House.esp' ]
-    tag: [ C.Light ]
 
   - name: 'Big Business.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/8236/' ]
