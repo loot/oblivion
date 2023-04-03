@@ -22177,6 +22177,29 @@ plugins:
       - crc: 0xA13857D5
         util: 'TES4Edit v4.0.4b'
 
+  - name: 'The Ruins of Miscarcand.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/24471/'
+        name: 'The Ruins of Miscarcand'
+      - link: 'https://www.nexusmods.com/oblivion/mods/42713/'
+        name: 'Ruins of Miscarcand Updated'
+      - link: 'https://www.nexusmods.com/oblivion/mods/49845/'
+        name: 'Ruins of Miscarcand REDUX'
+    req: [ 'DLCShiveringIsles.esp' ]
+    inc: [ 'Miscarcand Expanded.esp' ]
+    tag: [ C.Water ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x9B8C026E
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 16
+        udr: 1910
+    clean:
+      - crc: 0xBEF5DA88
+        util: 'TES4Edit v4.0.4c'
+      - crc: 0xE8CBA61B
+        util: 'TES4Edit v4.0.4c'
+
   - name: 'Tiber Septim Hotel.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/43340/'
@@ -31890,17 +31913,6 @@ plugins:
       - <<: *obsolete
         condition: 'file("xulLushWoodlands.esp")'
 
-  - name: 'The Ruins of Miscarcand.esp'
-    url:
-      - 'https://www.nexusmods.com/oblivion/mods/24471/'
-      - 'https://www.nexusmods.com/oblivion/mods/42713/'
-      - 'https://www.nexusmods.com/oblivion/mods/49845/'
-    inc: [ 'Miscarcand Expanded.esp' ]
-    clean:
-      - crc: 0xBEF5DA88
-        util: 'TES4Edit v4.0.3'
-      - crc: 0xE8CBA61B
-        util: 'TES4Edit v4.0.3'
   - name: 'Miscarcand Expanded.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/14337/' ]
     inc: [ 'The Ruins of Miscarcand.esp' ]
