@@ -10224,6 +10224,13 @@ plugins:
     clean:
       - crc: 0x67026148
         util: 'TES4Edit v4.0.4c'
+  - name: 'thievery - EE patch.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/52785/'
+        name: 'Thievery in the Imperial City - Tweaks and Fixes'
+    clean:
+      - crc: 0x6C1DCF93
+        util: 'TES4Edit v4.0.4c'
 
   - name: 'FG_Merchant Inventory Realism V 1_5.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/5561/' ]
@@ -13420,15 +13427,29 @@ plugins:
       - link: 'https://www.nexusmods.com/oblivion/mods/5156/'
         name: 'Thievery in the Imperial City'
   - name: 'Jog_X_Mod.esm'
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**thievery.esp**' ]
+        condition: 'version("thievery.esp", "2.0", >=)'
     clean:
       - crc: 0xC7C58B41
         util: 'TES4Edit v4.0.4c'
   - name: 'thievery.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/52785/'
+        name: 'Thievery in the Imperial City - Tweaks and Fixes'
+    msg:
+      - <<: *patchUpdateAvailable
+        subs: [ '[Thievery in the Imperial City - Tweaks and Fixes](https://www.nexusmods.com/oblivion/mods/52785/)' ]
+        condition: 'not version("thievery.esp", "2.0", >=)'
     dirty:
       - <<: *quickClean
         crc: 0xD5951BC9
         util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 4
+    clean:
+      - crc: 0xB4F9632A
+        util: 'TES4Edit v4.0.4c'
 
   - name: 'JolardHome.esp'
     url:
