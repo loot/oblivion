@@ -17613,14 +17613,13 @@ plugins:
         itm: 300
         udr: 7
 
-  - name: 'POTSB\.es(m|p)'
+  - name: 'POTSB\.es[mp]'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/42395/'
         name: 'Path of the Skull Bearer: The Truth of Corruption'
     req:
       - *SilentVoice
       - *SoundCommands
-      - 'DLCShiveringIsles.esp'
     msg:
       - <<: *requiresResources
         subs: [ '[Path of the Skull Bearer](https://www.nexusmods.com/oblivion/mods/39923/)' ]
@@ -17628,15 +17627,16 @@ plugins:
   - name: 'POTSB.esm'
     clean:
       - crc: 0x7156DEC3
-        util: 'TES4Edit v4.0.4b'
+        util: 'TES4Edit v4.0.4c'
   - name: 'POTSB.esp'
+    req: [ 'DLCShiveringIsles.esp' ]
     tag:
       - C.Music
       - C.Name
       - Invent.Add
     clean:
       - crc: 0xED92FC41
-        util: 'TES4Edit v4.0.4b'
+        util: 'TES4Edit v4.0.4c'
 
   - name: 'Sacred Duty( PL)?\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/38287/' ]
