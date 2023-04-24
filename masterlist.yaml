@@ -17620,7 +17620,6 @@ plugins:
     req:
       - *SilentVoice
       - *SoundCommands
-      - 'DLCShiveringIsles.esp'
     msg:
       - <<: *requiresResources
         subs: [ '[Path of the Skull Bearer](https://www.nexusmods.com/oblivion/mods/39923/)' ]
@@ -17630,6 +17629,7 @@ plugins:
       - crc: 0x7156DEC3
         util: 'TES4Edit v4.0.4b'
   - name: 'POTSB.esp'
+    req: [ 'DLCShiveringIsles.esp' ]
     tag:
       - C.Music
       - C.Name
