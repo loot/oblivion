@@ -6539,6 +6539,12 @@ plugins:
         name: 'More Mythic Dawn Agents'
       - link: 'https://www.nexusmods.com/oblivion/mods/52833/'
         name: 'Collection of Cleaned - Updated - Fixed - UOP Compatible Mods'
+    msg:
+      - <<: *patchUpdateAvailable
+        subs: [ '[Collection of Cleaned - Updated - Fixed - UOP Compatible Mods](https://www.nexusmods.com/oblivion/mods/52833/) (**More Mythic Dawn Agents - Cleaned**)' ]
+        condition: 'not version("More Mythic Dawn Agents.esp", "2.0", >=)'
+      - <<: *wildEdits
+        condition: 'checksum("More Mythic Dawn Agents.esp", 50BB5C55) or checksum("More Mythic Dawn Agents.esp", 1D8D11FD)'
     dirty:
       - <<: *quickClean
         crc: 0x50BB5C55
