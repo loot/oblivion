@@ -21930,6 +21930,39 @@ plugins:
         itm: 12
         udr: 1499
 
+  - name: 'Living Imperial Palace (Classic|Limited)( AN)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/49546/'
+        name: 'Living Imperial Palace'
+    inc: [ 'Palace Improvement.esp' ]
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Living Imperial Palace ESP' ]
+        condition: 'many("Living Imperial Palace (Classic|Limited)( AN)?\.esp")'
+      - <<: *wildEdits
+        subs: [ 'Restore the worldspace name in the record **0004A250** from **Oblivion.esm**.' ]
+        condition: 'checksum("Living Imperial Palace Classic.esp", 982351AC) or checksum("Living Imperial Palace Limited.esp", 729181CB) or checksum("Living Imperial Palace Classic AN.esp", EB372FE4) or checksum("Living Imperial Palace Limited AN.esp", 1A6D1868)'
+    tag:
+      - -Actors.AIPackages
+      - Actors.Factions
+      - Actors.Stats
+      - C.Name
+      - C.Owner
+      - NPC.FaceGen
+      - Relations.Add
+  - name: 'Living Imperial Palace (Classic|Limited)\.esp'
+    msg:
+      - <<: *useVersion
+        subs: [ 'Weather - All Natural' ]
+        condition: 'active("All Natural Base.esm")'
+  - name: 'Living Imperial Palace Limited( AN)?\.esp'
+    tag:
+      - Actors.RecordFlags
+      - Names
+      - NPC.Hair
+  - name: 'Living Imperial Palace (Classic|Limited) AN\.esp'
+    req: [ 'All Natural Base.esm' ]
+
   - name: 'More Magical Arcane University( -)?( No Tomes)?( Less)?\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/50001/'
