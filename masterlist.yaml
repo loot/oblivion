@@ -21141,7 +21141,12 @@ plugins:
         udr: 8
 
   - name: 'Better Dungeons.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/40392/' ]
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/40392/'
+        name: 'Better dungeons'
+      - link: 'https://www.nexusmods.com/oblivion/mods/52833/'
+        name: 'Collection of Cleaned - Updated - Fixed - UOP Compatible Mods'
+    after: [ 'Bounty Quests.esp' ]
     tag:
       - Actors.Skeleton
       - Actors.Spells
@@ -21161,6 +21166,9 @@ plugins:
         util: '[TES4Edit v4.0.3j (RC2 for 4.0.4)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 68
         udr: 4164
+    clean:
+      - crc: 0xDA41B0C3
+        util: 'TES4Edit v4.0.4c'
 
   - name: 'BravilDeuglified.esp'
     url:
