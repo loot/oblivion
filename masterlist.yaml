@@ -10278,6 +10278,24 @@ plugins:
         util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 4
 
+  - name: 'ImperialStockExchange6.0.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/50854/'
+        name: 'Imperial Stock Exchange'
+    tag:
+      - Actors.ACBS
+      - Actors.AIData
+      - Actors.Stats
+      - C.Owner
+      - Invent.Add
+      - Scripts
+    dirty:
+      - <<: *quickClean
+        crc: 0x3B552552
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 26
+        udr: 5
+
   - name: '(MOBS|MOBS SI|OMOBS|OMOBS_SI|(DLC|BattleHorn|Knights|Lair|Mehrunes|ThievesDen|VileLair)_MOBS)\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/28537/'
@@ -10401,24 +10419,6 @@ plugins:
       - <<: *useOnlyOneX
         subs: [ 'Sigil Stone Selector ESP' ]
         condition: 'many("SigilStoneSelector(-SSEE(-MM|-OOO)?)?\.esp")'
-
-  - name: 'StockExchange.esp'
-    url:
-      - link: 'https://www.nexusmods.com/oblivion/mods/50854/'
-        name: 'Imperial Stock Exchange'
-    tag:
-      - Actors.ACBS
-      - Actors.AIData
-      - Actors.Stats
-      - C.Owner
-      - Invent.Add
-      - Scripts
-    dirty:
-      - <<: *quickClean
-        crc: 0xB800C458
-        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 26
-        udr: 5
 
   - name: 'VanillaMerchantsChestsRevealed.esp'
     url:
