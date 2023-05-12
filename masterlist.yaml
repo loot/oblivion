@@ -21942,8 +21942,12 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/49546/'
         name: 'Living Imperial Palace'
+    req: [ 'DLCShiveringIsles.esp' ]
     inc: [ 'Palace Improvement.esp' ]
     msg:
+      - <<: *patchUpdateAvailable
+        subs: [ '[Collection of Cleaned - Updated - Fixed - UOP Compatible Mods](https://www.nexusmods.com/oblivion/mods/52833/) (**Living Imperial Palace script and wild edit fix**)' ]
+        condition: 'file("Bashed Patch.*\.esp") and not file("Living Imperial Palace script and wild edit fix.esp")'
       - <<: *useOnlyOneX
         subs: [ 'Living Imperial Palace ESP' ]
         condition: 'many("Living Imperial Palace (Classic|Limited)( AN)?\.esp")'
