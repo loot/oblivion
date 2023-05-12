@@ -20218,13 +20218,15 @@ plugins:
       - crc: 0xF1054CD5
         util: 'TES4Edit v4.0.4c'
 
-  - name: 'Region Revive - Lake Rumare.esp'
+  - name: '(Region Revive - Lake Rumare|(RR - LTPD|Region_Revive_-_Lake_Rumare_FuseSnailRacing_)Patch)\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/22751/'
         name: 'Region Revive - Lake Rumare'
       - link: 'https://www.nexusmods.com/oblivion/mods/48347/'
-        name: 'Region Revive-Lake Rumare updated'
+        name: 'Region Revive - Lake Rumare Updated'
+  - name: 'Region Revive - Lake Rumare.esp'
     after:
+      - 'Add some flavor - city gates.esp'
       - 'AdenseEpicDungeon.esp'
       - 'Akaviri Imports.esp'
       - 'ClocksOfCyrodiil.esp'
@@ -20245,12 +20247,8 @@ plugins:
         util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
     clean:
-      - crc: 0x4790A566
+      - crc: 0x530CFD19
         util: 'TES4Edit v4.0.4c'
-  - name: '(RR - LTPD|Region_Revive_-_Lake_Rumare_FuseSnailRacing_)Patch\.esp'
-    url:
-      - link: 'https://www.nexusmods.com/oblivion/mods/22751/'
-        name: 'Region Revive - Lake Rumare'
   - name: 'Region_Revive_-_Lake_Rumare_FuseSnailRacing_Patch.esp'
     clean:
       - crc: 0x27D7EC76
@@ -20265,6 +20263,15 @@ plugins:
       - 'xulImperialIsle.esp'
     clean:
       - crc: 0x079FCA14
+        util: 'TES4Edit v4.0.4c'
+      - crc: 0x107F2103
+        util: 'TES4Edit v4.0.4c'
+  - name: 'RRLR-OOO patch.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/48347/'
+        name: 'Region Revive - Lake Rumare Updated'
+    clean:
+      - crc: 0x7753652F
         util: 'TES4Edit v4.0.4c'
 
   - name: 'SacredOak_Settlement.esp'
