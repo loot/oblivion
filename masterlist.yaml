@@ -23138,6 +23138,27 @@ plugins:
       - crc: 0xBB8F4E3F
         util: 'TES4Edit v4.0.4c'
 
+  - name: 'Shetcombe Farm.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/41889/'
+        name: 'Khettienna''s Shetcombe Farm'
+    req: [ *OBSE ]
+    msg:
+      - <<: *patch3rdParty
+        subs:
+          - 'Integration - The Stranded Light'
+          - '[The One Stop Patch Shop](https://www.afkmods.com/index.php?/files/file/2351-the-one-stop-patch-shop/)  (**Shetcombe Farm-Integration Patch**)'
+        condition: 'active("bgIntegration(Integrated)?EV\.esp") and not active("ShetcombeFarm-Integration Patch.esp")'
+    tag:
+      - C.MiscFlags
+      - C.Name
+      - C.Owner
+    dirty:
+      - <<: *quickClean
+        crc: 0x44BF464C
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1
+
   - name: 'Sunburn.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/29296/'
