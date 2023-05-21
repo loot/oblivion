@@ -18300,6 +18300,20 @@ plugins:
       - crc: 0xA75C78EC
         util: 'TES4Edit v4.0.4c'
 
+  - name: 'kvAnalenDaelkhun01.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/46770/'
+        name: 'Analen Daelkhun'
+    req:
+      - *MenuQue
+      - 'DLCShiveringIsles.esp'
+    msg: [ *verGreatReqOBSEv21 ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x7CD1BFFE
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 11
+
   - name: 'Mad Mike''s Crypts of Cyrodiil.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/15060/'
