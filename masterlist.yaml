@@ -5455,7 +5455,7 @@ plugins:
   - name: 'Oblivion_Character_Overhaul.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/44676/'
-        name: 'Oblivion Character Overhaul v2'
+        name: 'Oblivion Character Overhaul version 2'
       - link: 'https://www.nexusmods.com/oblivion/mods/45288/'
         name: 'Oblivion Character Overhaul v2 and Comprehensive Cosmetic Compilation Merge.'
       - link: 'https://www.nexusmods.com/oblivion/mods/48136/'
@@ -5501,30 +5501,11 @@ plugins:
       - Stats
     msg:
       - <<: *alsoUseX
-        type: warn
         subs: [ '[OCOv2 - Elven NPCs Eyes Fix Filter Patch](https://www.nexusmods.com/oblivion/mods/51972/)' ]
         condition: 'file("Bashed Patch.*\.esp") and not file("OCO Elf Eyes Fix.esp") and not file("Oblivion_Character_Overhaul_Faces.esp")'
       - <<: *compatPatch
         subs: [ '[OCOv2 - Filter Patch for Mods](https://www.nexusmods.com/oblivion/mods/51379/)' ]
-        condition: 'file("Bashed Patch.*\.esp") and not file("OCOv2 - (Filter|MOO) Patch( for Mods)?\.esp")'
-      - <<: *includesX
-        type: error
-        subs: [ '[OCOv2 - Bashed Patch Eyes Fix](https://www.nexusmods.com/oblivion/mods/49988/)' ]
-        condition: 'version("Oblivion_Character_Overhaul.esp", "2.10", ==) and file("OCO_Eyes_Fix.esp")'
-      - <<: *includesX
-        type: error
-        subs: [ '[OCOv2 Nord and Redguard Eyes Fix](https://www.nexusmods.com/oblivion/mods/52041/)' ]
-        condition: 'version("Oblivion_Character_Overhaul.esp", "2.10", ==) and file("OCO Nord and Redguards Eyes Fix.esp")'
-      - <<: *includesX
-        type: error
-        subs: [ '[Properly Named Eyes for OCOv2](https://www.nexusmods.com/oblivion/mods/51976/)' ]
-        condition: 'version("Oblivion_Character_Overhaul.esp", "2.10", ==) and file("Properly Named OCO Eyes.esp")'
-      - <<: *patch3rdParty
-        type: warn
-        subs:
-          - 'Wrye Bash''s Bashed Patch'
-          - '[OCOv2 - Bashed Patch Eyes Fix](https://www.nexusmods.com/oblivion/mods/49988/)'
-        condition: 'version("Oblivion_Character_Overhaul.esp", "2.0", >=) and file("Bashed Patch.*\.esp") and not file("OCO_Eyes_Fix.esp") and not version("Oblivion_Character_Overhaul.esp", "2.10", ==)'
+        condition: 'file("Bashed Patch.*\.esp") and not file("(OOOShiveringIsles - )?OCOv2 (- )?(Filter|MOO|Restoration|The Heart of the Dead) Patch( for Mods)?\.esp")'
       - <<: *patchUpdateAvailable
         subs: [ '[Oblivion Character Overhaul - Advanced Edition](https://www.nexusmods.com/oblivion/mods/52010/)' ]
         condition: 'file("Bashed Patch.*\.esp") and not version("Oblivion_Character_Overhaul.esp", "2.03", >=)'
@@ -5533,7 +5514,7 @@ plugins:
         condition: 'not version("Oblivion_Character_Overhaul.esp", "2.03", >=) and not checksum("Oblivion_Character_Overhaul.esp", EBF6CC01)'
       - <<: *requiresResources
         subs: [ '[Oblivion Character Overhaul v2](https://www.nexusmods.com/oblivion/mods/44676/)' ]
-        condition: 'not file("Meshes/characters/nuska/nuArgonianEyeLeft.nif")'
+        condition: 'not file("Meshes/characters/nuska/nuArgonianEyeLeft.nif") and not file("Oblivion_Character_Overhaul.bsa")'
       - <<: *wildEdits
         subs: [ 'Remove **0001D9D8**, **000234B7**, & **00034E7E** from **Oblivion_Character_Overhaul.esp**.' ]
         condition: 'checksum("Oblivion_Character_Overhaul.esp", AE4A35D7) or checksum("Oblivion_Character_Overhaul.esp", EBF6CC01) or checksum("Oblivion_Character_Overhaul.esp", 5B7D8F89) or checksum("Oblivion_Character_Overhaul.esp", 4AC090F3)'
@@ -5549,10 +5530,10 @@ plugins:
     clean:
       - crc: 0x6DD624F3
         util: 'TES4Edit v4.0.4b'
-      - crc: 0xBBBB4799
-        util: 'TES4Edit v4.0.4b'
-      - crc: 0x315D5283
-        util: 'TES4Edit v4.0.4b'
+      - crc: 0xF55A6C87
+        util: 'TES4Edit v4.0.4c'
+      - crc: 0xC79FDDF0
+        util: 'TES4Edit v4.0.4c'
       - crc: 0xACA90497
         util: 'TES4Edit v4.0.4b'
       - crc: 0x33D6EFA6
@@ -5578,12 +5559,11 @@ plugins:
       - link: 'https://www.nexusmods.com/oblivion/mods/52010/'
         name: 'Oblivion Character Overhaul - Advanced Edition'
     msg: [ *optional ]
-    tag: [ Deactivate ]
     clean:
-      - crc: 0x3051185B
-        util: 'TES4Edit v4.0.4b'
-      - crc: 0xBFEDA949
-        util: 'TES4Edit v4.0.4b'
+      - crc: 0x540925BD
+        util: 'TES4Edit v4.0.4c'
+      - crc: 0x2CC77B2F
+        util: 'TES4Edit v4.0.4c'
 
   - name: 'OCO DLC Faces.esp'
     url:
