@@ -5646,6 +5646,18 @@ plugins:
       - crc: 0x9A1134FC
         util: 'TES4Edit v4.0.4c'
 
+  - name: 'Properly Named OCO Eyes.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/51976/'
+        name: 'Properly Named Eyes for OCOv2'
+    msg:
+      - <<: *alreadyInX
+        subs: [ '[Oblivion Character Overhaul - Advanced Edition](https://www.nexusmods.com/oblivion/mods/52010/) **Oblivion_Character_Overhaul.esp**' ]
+        condition: 'version("Oblivion_Character_Overhaul.esp", "2.10", ==)'
+    clean:
+      - crc: 0x9F03BA34
+        util: 'TES4Edit v4.0.4c'
+
   - name: 'SPTDiverseGuards-.*\.es[mp]'
     url:
       - link: 'https://www.afkmods.com/index.php?/files/file/2417-diverse-guards/'
