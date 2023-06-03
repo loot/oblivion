@@ -5594,6 +5594,18 @@ plugins:
       - crc: 0x659C22E5
         util: 'TES4Edit v4.0.4c'
 
+  - name: 'OCO Nord and Redguards Eyes Fix.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/52041/'
+        name: 'OCOv2 Nord and Redguard Eyes Fix'
+    msg:
+      - <<: *alreadyInX
+        subs: [ '[Oblivion Character Overhaul - Advanced Edition](https://www.nexusmods.com/oblivion/mods/52010/) **Oblivion_Character_Overhaul.esp**' ]
+        condition: 'version("Oblivion_Character_Overhaul.esp", "2.10", ==)'
+    clean:
+      - crc: 0xBB151516
+        util: 'TES4Edit v4.0.4c'
+
   - name: 'OCO Unused Eyes and DLC Eyes Incorporated.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/52052/'
