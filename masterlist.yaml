@@ -20325,6 +20325,7 @@ plugins:
       - 'Akaviri Imports.esp'
       - 'ClocksOfCyrodiil.esp'
       - 'FuseSnailRacing.esp'
+      - 'Legions of Cyrodiil.esp'
       - 'MTC-WeyePatch.esp'
       - 'RTT.esp'
       - 'RTT-Weye Relocation Patch.esp'
@@ -20332,16 +20333,18 @@ plugins:
     msg:
       - <<: *patchUpdateAvailable
         type: warn
-        subs: [ '[Region Revive-Lake Rumare updated](https://www.nexusmods.com/oblivion/mods/48347/)' ]
-        condition: 'version("Region Revive - Lake Rumare.esp", "1.3", ==)'
-    tag: [ C.Water ]
+        subs: [ '[Region Revive - Lake Rumare Updated](https://www.nexusmods.com/oblivion/mods/48347/)' ]
+        condition: 'version("Region Revive - Lake Rumare.esp", "1.3", <=)'
+    tag:
+      - name: C.Water
+        condition: 'version("Region Revive - Lake Rumare.esp", "1.3", <=)'
     dirty:
       - <<: *quickClean
         crc: 0x4D8FA617
         util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
     clean:
-      - crc: 0x530CFD19
+      - crc: 0x2C749A23
         util: 'TES4Edit v4.0.4c'
   - name: 'Region_Revive_-_Lake_Rumare_FuseSnailRacing_Patch.esp'
     clean:
