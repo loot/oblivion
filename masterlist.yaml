@@ -12888,13 +12888,9 @@ plugins:
       - link: 'https://www.nexusmods.com/oblivion/mods/52365/'
         name: 'Into The Void'
     req: [ 'DLCShiveringIsles.esp' ]
-    msg:
-      - <<: *requiresResources
-        subs: [ '[Diverse Liches (Modders Resource)](https://www.nexusmods.com/oblivion/mods/51265/)' ]
-        condition: 'not file("Meshes/Creatures/Lich/ExpandedLich_00_Flesh_BodyFull.nif") or not file("Textures/Creatures/Lich/Argonian.dds")'
     tag: [ C.Music ]
     clean:
-      - crc: 0x6F2454D4
+      - crc: 0x0CC14E07
         util: 'TES4Edit v4.0.4c'
 
   - name: 'Castlevania.esp'
