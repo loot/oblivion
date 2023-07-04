@@ -5071,6 +5071,21 @@ plugins:
       - crc: 0x2709712A
         util: 'TES4Edit v4.0.4b'
 
+  - name: 'OCO2 - redguard patch.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/49859/'
+        name: 'Redguardians - WIP'
+    msg:
+      - <<: *wildEdits
+        subs: [ 'Remove **0003DB2F** & **0002E5DB** from **OCO2 - redguard patch.esp**.' ]
+        condition: 'checksum("OCO2 - redguard patch.esp", 25DC06E8)'
+    tag:
+      - Deactivate
+      - NoMerge
+      - -NPC.Eyes
+      - -NPC.Hair
+      - -R.Head
+
   - name: 'RTFemaleReplacerV12.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/15624/'
