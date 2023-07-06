@@ -21846,7 +21846,7 @@ plugins:
     msg:
       - <<: *compatPatch
         subs: [ '[The Hesu Mod Collection - Hesu Mods Patches](https://www.afkmods.com/index.php?/files/file/2344-the-hesu-mod-collection/)' ]
-        condition: 'not file(".*((AppleHotSprings|DiveRock|Fairmere|GnollMountain|GreatForestGorge|HellLands|KoyoTown|PoisonSwamp|Seaside|Shipton|SkyrimTemple|SmokeTown|ValenwoodMine|WolfsBorough|WRR).*( Patch)|MTCExpanded\+HesuPoisonSwamp|TOS\+Hesu Poison Swamp|ValenwoodMine\+DaedricShrineRuins)\.esp")'
+        condition: 'not file(".*((AppleHotSprings|DiveRock|Fairmere|GnollMountain|GreatForestGorge|HellLands|KoyoTown|PoisonSwamp|Seaside|Shipton|SkyrimTemple|SmokeTown|ValenwoodMine|WolfsBorough|WRR).* Patch|MTCExpanded\+HesuPoisonSwamp|TOS\+Hesu Poison Swamp|ValenwoodMine\+DaedricShrineRuins)\.esp")'
   - name: 'HESU AppleHotSprings.esp'
     after: [ 'Reaper''s Bleaker''s Way Village Revamp.esp' ]
     msg:
@@ -21896,6 +21896,12 @@ plugins:
     url:
       - link: 'https://www.afkmods.com/index.php?/files/file/2344-the-hesu-mod-collection/'
         name: 'The Hesu Mod Collection'
+  ### Hesu Original Japanese Plugins ###
+  - name: 'HESU((4 (Garagara|NomutonMura|SkyrimSinden))|(5 (AppleOnsen|DiveRock|EUdaBear|GFbedtown|GreenRoad|IsobeGyoson|JigokuDani|KoYoTown|PoisonNuma|SmokeTown|UraraMura|ValenwoodMine))|6 Patch Nomuton Isobe)\.esp'
+    url:
+      - link: 'https://www.afkmods.com/index.php?/files/file/2344-the-hesu-mod-collection/'
+        name: 'The Hesu Mod Collection'
+    req: [ 'DLCShiveringIsles.esp' ]
 
   - name: 'Honor Thy Dead.esp'
     url:
