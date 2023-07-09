@@ -21880,6 +21880,14 @@ plugins:
     clean:
       - crc: 0x20D36A01
         util: 'TES4Edit v4.0.4c'
+  - name: 'HESU GreatForestGorge.esp'
+    clean:
+      - crc: 0xF1A41410
+        util: 'TES4Edit v4.0.4c'
+  - name: 'HESU HellLands.esp'
+    clean:
+      - crc: 0x4C47CEEF
+        util: 'TES4Edit v4.0.4c'
   - name: 'HESU KoyoTown.esp'
     after:
       - 'ClearwaterFarms.esp'
@@ -21887,9 +21895,42 @@ plugins:
     clean:
       - crc: 0x3B83AE35
         util: 'TES4Edit v4.0.4c'
+  - name: 'HESU PoisonSwamp.esp'
+    after:
+      - 'Dwarven Mines.esp'
+      - 'Random Ruins of the First Era.esp'
+    clean:
+      - crc: 0x79A50993
+        util: 'TES4Edit v4.0.4c'
+  - name: 'HESU SeasideSettlement.esp'
+    clean:
+      - crc: 0x44C6E68A
+        util: 'TES4Edit v4.0.4c'
   - name: 'HESU Shipton.esp'
     clean:
       - crc: 0x65969F4B
+        util: 'TES4Edit v4.0.4c'
+  - name: 'HESU SkyrimTemple.esp'
+    after: [ 'Dark Anchor Dolmens.esp' ]
+    clean:
+      - crc: 0xFB0F9854
+        util: 'TES4Edit v4.0.4c'
+  - name: 'HESU SmokeTown.esp'
+    after: [ '00SnowyRoadToBruma.esp' ]
+    clean:
+      - crc: 0x70097CAE
+        util: 'TES4Edit v4.0.4c'
+  - name: 'HESU ValenwoodMine.esp'
+    clean:
+      - crc: 0xDD5A6843
+        util: 'TES4Edit v4.0.4c'
+  - name: 'HESU WhiteRoseRiver.esp'
+    clean:
+      - crc: 0x2E817C6F
+        util: 'TES4Edit v4.0.4c'
+  - name: 'HESU WolfsBorough.esp'
+    clean:
+      - crc: 0x5E30E137
         util: 'TES4Edit v4.0.4c'
   ### Hesu Mods Patches ###
   - name: '(.*(AppleHotSprings|DiveRock|Fairmere|GnollMountain|GreatForestGorge|HellLands|KoyoTown|PoisonSwamp|Seaside|Shipton|SkyrimTemple|SmokeTown|ValenwoodMine|WolfsBorough|WRR).* Patch|MTCExpanded\+HesuPoisonSwamp|TOS\+Hesu Poison Swamp|ValenwoodMine\+DaedricShrineRuins)\.esp'
@@ -21897,7 +21938,7 @@ plugins:
       - link: 'https://www.afkmods.com/index.php?/files/file/2344-the-hesu-mod-collection/'
         name: 'The Hesu Mod Collection'
   ### Hesu Original Japanese Plugins ###
-  - name: 'HESU((4 (Garagara|NomutonMura|SkyrimSinden))|(5 (AppleOnsen|DiveRock|EUdaBear|GFbedtown|GreenRoad|IsobeGyoson|JigokuDani|KoYoTown|PoisonNuma|SmokeTown|UraraMura|ValenwoodMine))|6 Patch Nomuton Isobe)\.esp'
+  - name: 'HESU(4 (Garagara|NomutonMura|SkyrimSinden)|5 (AppleOnsen|DiveRock|EUdaBear|GFbedtown|GreenRoad|IsobeGyoson|JigokuDani|KoYoTown|PoisonNuma|SmokeTown|UraraMura|ValenwoodMine)|6 Patch Nomuton Isobe)\.esp'
     url:
       - link: 'https://www.afkmods.com/index.php?/files/file/2344-the-hesu-mod-collection/'
         name: 'The Hesu Mod Collection'
@@ -32204,6 +32245,7 @@ plugins:
 
   - name: 'Fort Akatosh Redux.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/21856/' ]
+    after: [ 'HESU SkyrimTemple.esp' ]
     tag: [ Relations ]
   - name: 'Cyrodiil Legion Addon.esp'
     tag: [ Names ]
