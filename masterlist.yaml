@@ -3867,6 +3867,33 @@ plugins:
       - Graphics
       - NoMerge
 
+  - name: '(Reworked Posts|(RoC|xulBravilBarrowfields) ?\+ ?RP Patch)\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/47223/'
+        name: 'Reworked Posts'
+  - name: 'Reworked Posts.esp'
+    after: [ 'AFK_Weye.esp' ]
+    msg:
+      - <<: *patchProvided
+        subs: [ 'Roads of Cyrodiil' ]
+        condition: 'active("Roads of Cyrodiil.esp") and not active("RoC+RP Patch.esp")'
+    clean:
+      - crc: 0x8DA5045A
+        util: 'TES4Edit v4.0.4c'
+  - name: 'RoC+RP Patch.esp'
+    clean:
+      - crc: 0xD82AEDE8
+        util: 'TES4Edit v4.0.4c'
+  - name: 'xulBravilBarrowfields + RP Patch.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0x5B1144C7
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        udr: 12
+    clean:
+      - crc: 0xA7DE35B8
+        util: 'TES4Edit v4.0.4c'
+
   - name: 'RustyItems.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/7190/'
