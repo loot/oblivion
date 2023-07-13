@@ -3872,8 +3872,12 @@ plugins:
       - link: 'https://www.nexusmods.com/oblivion/mods/47223/'
         name: 'Reworked Posts'
   - name: 'Reworked Posts.esp'
-    after: [ 'AFK_Weye.esp' ]
     msg:
+      - <<: *patch3rdParty
+        subs:
+          - 'AFK_Weye'
+          - '[Miscellaneous Patch Collection for Mods by Dispensation](https://www.nexusmods.com/oblivion/mods/52874/)'
+        condition: 'active("AFK_Weye.esp") and not file("AFK_Weye - Reworked Posts Patch.esp")'
       - <<: *patchProvided
         subs: [ 'Roads of Cyrodiil' ]
         condition: 'active("Roads of Cyrodiil.esp") and not active("RoC+RP Patch.esp")'
