@@ -27655,21 +27655,25 @@ plugins:
       - crc: 0xDDBB8479
         util: 'TES4Edit v4.0.2i'
   ### OOO Shivering Isles ###
-  - name: '(OOO(ShiveringIsles(_OCO_Patch)?|SI(ArcheryPatch|-EyeDisabler))|Mart''s Monster Mod - OOO Shivering Isles)\.esp'
+  - name: '((OOOShiveringIsles(_(ArcheryPatch|EyeDisabler|Francescos|OCO_Patch))?)|Mart''s Monster Mod - OOO Shivering Isles)\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/46508/'
         name: 'OOO Shivering Isles'
   - name: 'OOOShiveringIsles.esp'
+    after: [ 'Weapon Expansion Pack for Oblivion Nthusiasts.esp' ]
     req:
       - *OBSE
       - 'DLCShiveringIsles.esp'
     msg:
       - <<: *patchProvided
+        subs: [ 'Francescos Creatures and Items' ]
+        condition: 'active("Francesco''s Leveled Creatures-Items Mod.esm") and not file("OOOShiveringIsles_Francescos.esp")'
+      - <<: *patchProvided
         subs: [ 'Martigen''s Monster Mod' ]
         condition: 'active("Mart''s Monster Mod.esm") and not file("Mart''s Monster Mod - OOO Shivering Isles.esp")'
       - <<: *patchProvided
         subs: [ 'Oblivion Character Overhaul' ]
-        condition: 'active("Oblivion_Character_Overhaul.esp") and not file("OOOShiveringIsles_OCO_Patch.esp")'
+        condition: 'active("Oblivion_Character_Overhaul.esp") and not file("OOOShiveringIsles_OCO_Patch.esp") and not file("OOOShiveringIsles - OCOv2 Restoration Patch.esp")'
     tag:
       - Actors.RecordFlags
       - C.Name
@@ -27691,17 +27695,35 @@ plugins:
       - -Relations.Change
       - Sound
       - Text
-    dirty:
-      - <<: *quickClean
-        crc: 0x252B8019
-        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 53
+    clean:
+      - crc: 0xCC980166
+        util: 'TES4Edit v4.0.4c'
   - name: 'Mart''s Monster Mod - OOO Shivering Isles.esp'
+    inc: [ 'Mart''s Monster Mod - Shivering Isles.esp' ]
     dirty:
       - <<: *quickClean
-        crc: 0x0F329100
+        crc: 0x7CCDC750
         util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 2
+  - name: 'OOOShiveringIsles_ArcheryPatch.esp'
+    tag: [ Deactivate ]
+    clean:
+      - crc: 0xA84CE0FE
+        util: 'TES4Edit v4.0.4c'
+  - name: 'OOOShiveringIsles_EyeDisabler.esp'
+    tag:
+      - Deactivate
+      - NoMerge
+    clean:
+      - crc: 0xCF4AD6E8
+        util: 'TES4Edit v4.0.4c'
+  - name: 'OOOShiveringIsles_Francescos.esp'
+    tag:
+      - Graphics
+      - Stats
+    clean:
+      - crc: 0xAD74D567
+        util: 'TES4Edit v4.0.4c'
   - name: 'OOOShiveringIsles_OCO_Patch.esp'
     tag:
       - Deactivate
@@ -27710,19 +27732,7 @@ plugins:
       - NPC.FaceGen
       - R.Head
     clean:
-      - crc: 0x4A2AFB81
-        util: 'TES4Edit v4.0.4c'
-  - name: 'OOOSIArcheryPatch.esp'
-    tag: [ Deactivate ]
-    clean:
-      - crc: 0xC52A442B
-        util: 'TES4Edit v4.0.4c'
-  - name: 'OOOSI-EyeDisabler.esp'
-    tag:
-      - Deactivate
-      - NoMerge
-    clean:
-      - crc: 0xD9B26FFF
+      - crc: 0x4D0F3FCB
         util: 'TES4Edit v4.0.4c'
   ### OOO Creature Add-ons ###
   - name: 'OOOCreatureAddons.esp'
