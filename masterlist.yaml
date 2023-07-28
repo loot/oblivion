@@ -17408,11 +17408,7 @@ plugins:
         name: 'Weapon Expansion Pack for Oblivion Nthusiasts'
     req:
       - name: 'DLCShiveringIsles.esp'
-        condition: 'version("Weapon Expansion Pack for Oblivion Nthusiasts.esp", "1.12", >=)'
-    msg:
-      - <<: *patchUnavailable
-        subs: [ 'OOO Shivering Isles' ]
-        condition: 'active("OOOShiveringIsles.esp") and version("Weapon Expansion Pack for Oblivion Nthusiasts.esp", "1.12", >=)'
+        condition: 'checksum("Weapon Expansion Pack for Oblivion Nthusiasts.esp", DF24D165) or checksum("Weapon Expansion Pack for Oblivion Nthusiasts.esp", F458D716) or checksum("Weapon Expansion Pack for Oblivion Nthusiasts.esp", F86766E3)'
     tag:
       - Delev
       - Graphics
@@ -17424,11 +17420,9 @@ plugins:
       - Stats
       - Text
     clean:
-      - crc: 0xA349EA62
+      - crc: 0xDF24D165
         util: 'TES4Edit v4.0.4c'
       - crc: 0xB370222C
-        util: 'TES4Edit v4.0.4c'
-      - crc: 0x95F052DB
         util: 'TES4Edit v4.0.4c'
       - crc: 0xF458D716
         util: 'TES4Edit v4.0.4c'
