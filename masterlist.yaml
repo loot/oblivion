@@ -2215,6 +2215,15 @@ plugins:
         subs: [ 'shaderlist.txt' ]
         condition: *nehrimCond
 
+  - name: 'ORC.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/51927/'
+        name: 'Oblivion Reloaded Combined(ORC)'
+    req: [ *OBSE ]
+    clean:
+      - crc: 0xE8235F33
+        util: 'TES4Edit v4.0.4c'
+
   - name: 'Project Ambience.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/46520/'
