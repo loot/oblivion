@@ -27658,12 +27658,17 @@ plugins:
       - crc: 0xDDBB8479
         util: 'TES4Edit v4.0.2i'
   ### OOO Shivering Isles ###
-  - name: '(OOOShiveringIsles(_(ArcheryPatch|EyeDisabler|Francescos|OCO_Patch))?|Mart''s Monster Mod - OOO Shivering Isles)\.esp'
+  - name: '(OOOShiveringIsles(_(ArcheryPatch|EyeDisabler|Francescos|OCO_Patch|Optional_CrucibleEdits))?|Mart''s Monster Mod - OOO Shivering Isles)\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/46508/'
         name: 'OOO Shivering Isles'
   - name: 'OOOShiveringIsles.esp'
-    after: [ 'Weapon Expansion Pack for Oblivion Nthusiasts.esp' ]
+    after:
+      - 'Harvest [Flora] - Shivering Isles.esp'
+      - 'Oblivion Content Restoration Project.esp'
+      - 'SB_WeaponDropFix.esp'
+      - 'Shivering Isles Root System.esp'
+      - 'Weapon Expansion Pack for Oblivion Nthusiasts.esp'
     req:
       - *OBSE
       - 'DLCShiveringIsles.esp'
@@ -27699,15 +27704,13 @@ plugins:
       - Sound
       - Text
     clean:
-      - crc: 0xCC980166
+      - crc: 0x3FBCC09D
         util: 'TES4Edit v4.0.4c'
   - name: 'Mart''s Monster Mod - OOO Shivering Isles.esp'
     inc: [ 'Mart''s Monster Mod - Shivering Isles.esp' ]
-    dirty:
-      - <<: *quickClean
-        crc: 0x7CCDC750
-        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
-        itm: 2
+    clean:
+      - crc: 0x910BE8CE
+        util: 'TES4Edit v4.0.4c'
   - name: 'OOOShiveringIsles_ArcheryPatch.esp'
     tag: [ Deactivate ]
     clean:
@@ -27736,6 +27739,12 @@ plugins:
       - R.Head
     clean:
       - crc: 0x4D0F3FCB
+        util: 'TES4Edit v4.0.4c'
+  - name: 'OOOShiveringIsles_Optional_CrucibleEdits.esp'
+    inc: [ 'SICitiesExpanded.esp' ]
+    msg: [ *optional ]
+    clean:
+      - crc: 0xB017EFD4
         util: 'TES4Edit v4.0.4c'
   ### OOO Creature Add-ons ###
   - name: 'OOOCreatureAddons.esp'
