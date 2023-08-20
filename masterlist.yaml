@@ -3156,6 +3156,9 @@ plugins:
   - name: 'EGO - Potions and Poisons Replacer.esp'
     after: [ 'Av Latta Magicka - Potion Rebalance.esp' ]
     req: [ 'DLCShiveringIsles.esp' ]
+    inc:
+      - 'MeosPotionReplacer.esp'
+      - 'PotionReplacer.esp'
     msg:
       - <<: *patchIncluded
         subs: [ 'Thieves Den' ]
