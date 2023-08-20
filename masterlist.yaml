@@ -3144,6 +3144,33 @@ plugins:
       - crc: 0xD9492A87
         util: 'TES4Edit v4.0.4c'
 
+  - name: 'EGO - Potions and Poisons Replacer( - DLCThievesDen)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/53296/'
+        name: 'EGO - Potions and Poisons Replacer'
+    tag:
+      - Deactivate
+      - Graphics
+      - Names
+      - NoMerge
+  - name: 'EGO - Potions and Poisons Replacer.esp'
+    after: [ 'Av Latta Magicka - Potion Rebalance.esp' ]
+    req: [ 'DLCShiveringIsles.esp' ]
+    inc:
+      - 'MeosPotionReplacer.esp'
+      - 'PotionReplacer.esp'
+    msg:
+      - <<: *patchIncluded
+        subs: [ 'Thieves Den' ]
+        condition: 'active("DLCThievesDen.esp") and not file("EGO - Potions and Poisons Replacer - DLCThievesDen.esp")'
+    clean:
+      - crc: 0x2473AA72
+        util: 'TES4Edit v4.0.4c'
+  - name: 'EGO - Potions and Poisons Replacer - DLCThievesDen.esp'
+    clean:
+      - crc: 0x29384695
+        util: 'TES4Edit v4.0.4c'
+
   - name: 'EGO - Spell Tomes Replacer.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/53295/'
