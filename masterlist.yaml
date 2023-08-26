@@ -14582,15 +14582,27 @@ plugins:
         itm: 3
 
   - name: 'TheElderCouncil.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/22595/' ]
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/22595/'
+        name: 'Dragon Captions - The Elder Council'
+      - link: 'https://www.moddb.com/mods/giskards-oblivion-mods/'
+        name: 'Giskard''s Oblivion Mods'
     dirty:
+      # Version: 2.03
       - <<: *quickClean
         crc: 0xB1E9DDF0
-        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
         udr: 192
+      # Version: 2.03 COBL
       - <<: *quickClean
         crc: 0x684144E2
-        util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        udr: 192
+      # Version: 2.5
+      - <<: *quickClean
+        crc: 0x763FC748
+        util: '[TES4Edit v4.0.4c](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 273
         udr: 192
 
   - name: 'TheFirmament.esp'
