@@ -18561,9 +18561,6 @@ plugins:
       - <<: *obsolete
         subs: [ '[V2 Update](https://www.nexusmods.com/oblivion/mods/40378/)' ]
         condition: 'checksum("Mafreseli.esp", E7712B99) or checksum("Mafreseli.esp", 6CD2562A)'
-      - <<: *patchUnavailable
-        subs: [ 'The Ayleid Steps' ]
-        condition: 'active("The Ayleid Steps.esp")'
       - *requiresDisabledBorderRegions
     dirty:
       - <<: *quickClean
