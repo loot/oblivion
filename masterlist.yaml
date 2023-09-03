@@ -5614,6 +5614,8 @@ plugins:
       - 'MaleBodyReplacerV3.esp'
       - 'MaleBodyReplacerV4.esp'
       - 'MaleBodyReplacerV5.esp'
+      - name: 'Race Relations.esp'
+        condition: 'active("Bashed Patch.*\.esp")'
       - name: 'RacesOfCyrodiil.esp'
         condition: 'active("Bashed Patch.*\.esp")'
       - name: 'Trap.esp'
@@ -9771,6 +9773,15 @@ plugins:
     clean:
       - crc: 0xDCAE5992
         util: 'TES4Edit v4.0.4b'
+
+  - name: 'Race Relations.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/53278/'
+        name: 'Race Relations'
+    req: [ *OBSE ]
+    clean:
+      - crc: 0xD0BA53F2
+        util: 'TES4Edit v4.0.4c'
 
   - name: 'RacesOfCyrodiil.esp'
     url:
