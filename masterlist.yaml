@@ -287,8 +287,8 @@ common:
 
   - &SilentVoice
     name: 'OBSE/Plugins/Elys_USV.dll'
-    display: '[Elys Universal Silent Voice](https://www.nexusmods.com/oblivion/mods/16622) or [VoiceFile Redirector OBSE](https://github.com/ponyrider0/voicefile-redirector/releases)'
-    condition: 'not file("OBSE/Plugins/voicefile_redirector.dll")'
+    display: '[Elys Universal Silent Voice](https://www.nexusmods.com/oblivion/mods/16622), [Let People Speak - Voice Management Overhaul System](https://www.nexusmods.com/oblivion/mods/53348/) or [VoiceFile Redirector OBSE](https://github.com/ponyrider0/voicefile-redirector/releases)'
+    condition: 'not file("OBSE/Plugins/VoiceManagementOverhaul.dll") and not file("OBSE/Plugins/voicefile_redirector.dll")'
 
   - &SoundCommands
     name: 'OBSE/Plugins/SoundCommands.dll'
@@ -344,8 +344,8 @@ common:
     condition: 'not file("OBSE/Plugins/EngineBugFixes.dll")'
   - &alsoUseSilentVoice
     <<: *alsoUseX
-    subs: [ '[**Elys Universal Silent Voice**](https://www.nexusmods.com/oblivion/mods/16622/) or [**VoiceFile Redirector**](https://github.com/ponyrider0/voicefile-redirector/releases/)' ]
-    condition: 'not file("OBSE/Plugins/Elys_USV.dll") and not file("OBSE/Plugins/voicefile_redirector.dll")'
+    subs: [ '[**Elys Universal Silent Voice**](https://www.nexusmods.com/oblivion/mods/16622/), [**Let People Speak - Voice Management Overhaul System**](https://www.nexusmods.com/oblivion/mods/53348/) or [**VoiceFile Redirector**](https://github.com/ponyrider0/voicefile-redirector/releases/)' ]
+    condition: 'not file("OBSE/Plugins/Elys_USV.dll") and not file("OBSE/Plugins/VoiceManagementOverhaul.dll") and not file("OBSE/Plugins/voicefile_redirector.dll")'
 
   # &deleteOrDeactivateX
   - &deleteUseFransSeparateOptions
@@ -6609,7 +6609,7 @@ plugins:
   - name: 'Valtierro_B1.esp'
     msg:
       - <<: *alsoUseSilentVoice
-        condition: 'not file("OBSE/Plugins/Elys_USV.dll") and not file("OBSE/Plugins/voicefile_redirector.dll") and not file("Sound/Voice/Valtierro_B1.esp")'
+        condition: 'not file("OBSE/Plugins/Elys_USV.dll") and not file("OBSE/Plugins/voicefile_redirector.dll") and not file("OBSE/Plugins/VoiceManagementOverhaul.dll") and not file("Sound/Voice/Valtierro_B1.esp")'
     dirty:
       - <<: *quickClean
         crc: 0xE668AC07
@@ -6618,7 +6618,7 @@ plugins:
   - name: 'Valtierro_B1-NoCC.esp'
     msg:
       - <<: *alsoUseSilentVoice
-        condition: 'not file("OBSE/Plugins/Elys_USV.dll") and not file("OBSE/Plugins/voicefile_redirector.dll") and not file("Sound/Voice/Valtierro_B1-NoCC.esp")'
+        condition: 'not file("OBSE/Plugins/Elys_USV.dll") and not file("OBSE/Plugins/voicefile_redirector.dll") and not file("OBSE/Plugins/VoiceManagementOverhaul.dll") and not file("Sound/Voice/Valtierro_B1-NoCC.esp")'
     dirty:
       - <<: *quickClean
         crc: 0xE08D810E
@@ -6627,7 +6627,7 @@ plugins:
   - name: 'Valtierro_B1-NoCCRL.esp'
     msg:
       - <<: *alsoUseSilentVoice
-        condition: 'not file("OBSE/Plugins/Elys_USV.dll") and not file("OBSE/Plugins/voicefile_redirector.dll") and not file("Sound/Voice/Valtierro_B1-NoCCRL.esp")'
+        condition: 'not file("OBSE/Plugins/Elys_USV.dll") and not file("OBSE/Plugins/voicefile_redirector.dll") and not file("OBSE/Plugins/VoiceManagementOverhaul.dll") and not file("Sound/Voice/Valtierro_B1-NoCCRL.esp")'
     dirty:
       - <<: *quickClean
         crc: 0x9AD92010
@@ -8433,7 +8433,7 @@ plugins:
   - name: 'LTDVampireOverhaul.esp'
     msg:
       - <<: *alsoUseSilentVoice
-        condition: 'not file("OBSE/Plugins/Elys_USV.dll") and not file("OBSE/Plugins/voicefile_redirector.dll") and not file("Sound/Voice/LTDVampireOverhaul.esp")'
+        condition: 'not file("OBSE/Plugins/Elys_USV.dll") and not file("OBSE/Plugins/voicefile_redirector.dll") and not file("OBSE/Plugins/VoiceManagementOverhaul.dll") and not file("Sound/Voice/LTDVampireOverhaul.esp")'
       - *verGreatReqOBSEv14
     tag: [ Relations.Add ]
     dirty:
@@ -10480,7 +10480,7 @@ plugins:
     inc: [ 'Living Economy.esp' ]
     msg:
       - <<: *alsoUseSilentVoice
-        condition: 'not file("OBSE/Plugins/Elys_USV.dll") and not file("OBSE/Plugins/voicefile_redirector.dll") and not file("Sound/Voice/Enhanced Economy.esp")'
+        condition: 'not file("OBSE/Plugins/Elys_USV.dll") and not file("OBSE/Plugins/voicefile_redirector.dll") and not file("OBSE/Plugins/VoiceManagementOverhaul.dll") and not file("Sound/Voice/Enhanced Economy.esp")'
       - <<: *requiresX
         subs: [ '[MenuQue](https://www.nexusmods.com/oblivion/mods/32200/)' ]
         condition: 'not file("OBSE/Plugins/MenuQue.dll")'
@@ -14335,7 +14335,7 @@ plugins:
         name: 'TinyQuest - The Inventrix'
     msg:
       - <<: *alsoUseSilentVoice
-        condition: 'not file("OBSE/Plugins/Elys_USV.dll") and not file("OBSE/Plugins/voicefile_redirector.dll") and not file("Sound/Voice/qNS3-inventrix.esp")'
+        condition: 'not file("OBSE/Plugins/Elys_USV.dll") and not file("OBSE/Plugins/voicefile_redirector.dll") and not file("OBSE/Plugins/VoiceManagementOverhaul.dll") and not file("Sound/Voice/qNS3-inventrix.esp")'
     tag: [ Invent.Add ]
     dirty:
       - <<: *quickClean
@@ -18442,7 +18442,7 @@ plugins:
         name: 'Woodland Rangers Revised'
     msg:
       - <<: *alsoUseSilentVoice
-        condition: 'not file("OBSE/Plugins/Elys_USV.dll") and not file("OBSE/Plugins/voicefile_redirector.dll") and not file("Woodland Rangers - SilentVoices.bsa")'
+        condition: 'not file("OBSE/Plugins/Elys_USV.dll") and not file("OBSE/Plugins/voicefile_redirector.dll") and not file("OBSE/Plugins/VoiceManagementOverhaul.dll") and not file("Woodland Rangers - SilentVoices.bsa")'
       - <<: *obsolete
         subs: [ '[Woodland Rangers Revised](https://www.nexusmods.com/oblivion/mods/29386/)' ]
         condition: 'version("Woodland Rangers.esp", "1.5.3", <)'
@@ -18896,7 +18896,7 @@ plugins:
     req: [ 'DLCShiveringIsles.esp' ]
     msg:
       - <<: *alsoUseSilentVoice
-        condition: 'not file("OBSE/Plugins/Elys_USV.dll") and not file("OBSE/Plugins/voicefile_redirector.dll") and not file("Sound/Voice/GatewayRealm.esp")'
+        condition: 'not file("OBSE/Plugins/Elys_USV.dll") and not file("OBSE/Plugins/voicefile_redirector.dll") and not file("OBSE/Plugins/VoiceManagementOverhaul.dll") and not file("Sound/Voice/GatewayRealm.esp")'
       - <<: *useOnlyOneX
         subs: [ 'The Gateway Realm ESP' ]
         condition: 'many("GatewayRealm(UL)?\.esp")'
