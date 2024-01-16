@@ -16014,14 +16014,39 @@ plugins:
       - crc: 0xFF5B1C44
         util: 'TES4Edit v4.0.4b'
 
+  - name: 'Colorful Clothing - Collection( - Gloves Distribution)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/53708/'
+        name: 'Colorful Clothing - Collection'
+  - name: 'Colorful Clothing - Collection.esp'
+    tag:
+      - Delev
+      - Relev
+    clean:
+      - crc: 0x09077073
+        util: 'TES4Edit v4.1.5b EXTREMELY EXPERIMENTAL'
+  - name: 'Colorful Clothing - Collection - Gloves Distribution.esp'
+    tag: [ Invent.Add ]
+    clean:
+      - crc: 0x9AF66E04
+        util: 'TES4Edit v4.1.5b EXTREMELY EXPERIMENTAL'
+
   - name: 'Colorful Clothing - Gloves.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/50756/' ]
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'Colorful Clothing - Collection' ]
+        condition: 'active("Colorful Clothing - Collection.esp")'
     clean:
       - crc: 0xE6034B8A
         util: 'TES4Edit v4.0.4b'
 
   - name: 'Colorful Clothing - Middleclass.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/49215/' ]
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'Colorful Clothing - Collection' ]
+        condition: 'active("Colorful Clothing - Collection.esp")'
     tag:
       - Delev
       - -Relev
@@ -16031,6 +16056,10 @@ plugins:
 
   - name: 'Colorful Clothing - Upperclass.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/49093/' ]
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'Colorful Clothing - Collection' ]
+        condition: 'active("Colorful Clothing - Collection.esp")'
     tag: [ -Relev ]
     clean:
       - crc: 0x99647C39
