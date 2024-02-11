@@ -1699,6 +1699,10 @@ plugins:
         condition: 'many("(Imperial City|Market District) Landscape Fix\.esp")'
   - name: 'Imperial City Landscape Fix.esp'
     after: [ 'Region Revive - Lake Rumare.esp' ]
+    msg:
+      - <<: *useInstead
+        subs: [ 'Market District Landscape Fix.esp' ]
+        condition: 'active("xulImperialIsle.esp")'
     clean:
       - crc: 0xA8506AD1
         util: 'TES4Edit v4.0.4c'
