@@ -1699,6 +1699,10 @@ plugins:
         condition: 'many("(Imperial City|Market District) Landscape Fix\.esp")'
   - name: 'Imperial City Landscape Fix.esp'
     after: [ 'Region Revive - Lake Rumare.esp' ]
+    msg:
+      - <<: *useInstead
+        subs: [ 'Market District Landscape Fix.esp' ]
+        condition: 'active("xulImperialIsle.esp")'
     clean:
       - crc: 0xA8506AD1
         util: 'TES4Edit v4.0.4c'
@@ -25598,8 +25602,12 @@ plugins:
         util: 'TES4Edit v4.0.3'
   ### UL Imperial Isle ###
   - name: 'xulImperialIsle.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/9531/' ]
-    after: [ 'road+bridges.esp' ]
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/9531/'
+        name: 'Unique Landscapes - Imperial Isle'
+    after:
+      - 'road+bridges.esp'
+      - 'Add some flavor - city gates.esp'
     clean:
       - crc: 0x61026078
         util: 'TES4Edit v4.0.3'
