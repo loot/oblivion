@@ -26502,13 +26502,7 @@ plugins:
   - name: 'FCOM_NewItemsTemplate.esp'
     msg: [ *moddingPlugin ]
   - name: 'FCOM_VanillaItemReleveler.esp'
-    msg:
-      - type: warn
-        content:
-          - lang: en
-            text: 'This file is deprecated and should no longer be used.'
-          - lang: bg
-            text: 'Тази приставка е остаряла и не трябва да се използва.'
+    msg: [ *deprecated ]
   ### FCOM - Patches ###
   - name: 'FCOM_Blood&Mud.esp'
     tag:
