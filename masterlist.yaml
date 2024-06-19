@@ -1609,15 +1609,7 @@ plugins:
         name: 'LOD Togglers for Mods'
     group: *lodGroup
     msg:
-      - *patchOutdated
-      - type: error
-        content:
-          - lang: en
-            text: 'Remove this plugin from your load order after {0} has been generated with {1}.'
-          - lang: bg
-            text: 'Премахнете тази приставка от Вашия ред за зареждане след създаването на "{0}" с {1}.'
-          - lang: de
-            text: 'Entfernen Sie dieses Plugin von Ihrer Ladereihenfolge nachdem {0} generiert wurde mit {1}.'
+      - <<: *disableAfterGeneratingXwithY
         subs:
           - 'DistantLOD'
           - '[TES4LODGen](https://www.nexusmods.com/oblivion/mods/15781/)'
