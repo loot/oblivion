@@ -27497,11 +27497,7 @@ plugins:
       - crc: 0xEE8175FD
         util: 'TES4Edit v4.0.2'
   - name: 'Mart''s Monster Mod - Safer Roads.esp'
-    msg:
-      - <<: *alreadyInX
-        subs: [ 'MMM Spawn Rates Reduced' ]
-        condition: 'file("Mart''s Monster Mod - Spawn Rates - Reduced( Reduced| Vanilla)?\.esp")'
-      - *useVersionFCOM
+    msg: [ *useVersionFCOM ]
     tag:
       - -Delev
       - -Relev
