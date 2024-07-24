@@ -26100,6 +26100,11 @@ plugins:
     req:
       - name: 'Open Cities Classic.esp'
         display: '[Open Cities Classic (AFK Mods)](https://www.afkmods.com/index.php?/files/file/253-open-cities-classic/) or [Open Cities Classic (TES Alliance)](https://tesalliance.org/forums/index.php?/files/file/109-open-cities-classic/)'
+  - name: 'UL(E|S) OpenCitiesClassic-UniqueLandscapes patch.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'ULM OpenCitiesClassic-UniqueLandscapes patch.esp' ]
+        condition: 'active("ULM OpenCitiesClassic-UniqueLandscapes patch.esp") and version("Unique Landscapes.esp", "2.0.0", >=)'
   - name: 'ULE OpenCitiesClassic-ChorrolHinterland patch.esp'
     tag: [ C.Regions ]
   - name: 'ULE OpenCitiesClassic-SkingradOutskirts patch.esp'
