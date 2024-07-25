@@ -26106,10 +26106,20 @@ plugins:
         subs: [ 'ULM OpenCitiesClassic-UniqueLandscapes patch.esp' ]
         condition: 'active("ULM OpenCitiesClassic-UniqueLandscapes patch.esp") and version("Unique Landscapes.esp", "2.0.0", >=)'
   - name: 'ULE OpenCitiesClassic-ChorrolHinterland patch.esp'
-    tag: [ C.Regions ]
+    tag:
+      - C.Regions
+      - C.Water
   - name: 'ULE OpenCitiesClassic-SkingradOutskirts patch.esp'
     tag: [ C.Water ]
   - name: 'ULM OpenCitiesClassic-UniqueLandscapes patch.esp'
+    tag:
+      - C.Regions
+      - C.Water
+  - name: 'ULS OpenCitiesClassic-CheydinhalFalls patch.esp'
+    tag:
+      - C.Regions
+      - C.Water
+  - name: 'ULS OpenCitiesClassic-UniqueLandscapes merged patch.esp'
     tag:
       - C.Regions
       - C.Water
