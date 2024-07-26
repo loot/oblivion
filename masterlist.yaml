@@ -795,8 +795,12 @@ groups:
   - name: &latePatchesGroup Late Patches
     after: [ *imperialCityGroup ]
 
-  - name: &dynamicPatchesGroup Dynamic Patches
+  - name: &worldSettingsGroup Worldspace Settings
+    description: 'A group for modules that need to be loaded late to preserve worldspace settings.'
     after: [ *latePatchesGroup ]
+
+  - name: &dynamicPatchesGroup Dynamic Patches
+    after: [ *worldSettingsGroup ]
 
   - name: &lateChangesGroup Late Fixes & Changes
     description: 'A group for modules that need to be placed after dynamic patches such as Bashed Patch.'
