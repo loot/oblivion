@@ -811,7 +811,7 @@ groups:
 
   - name: &lodGroup LOD
     description: 'A group for modules that add or alter LOD.'
-    after: [ *mapGroup ]
+    after: [ *worldSettingsGroup ]
 
 plugins:
 ###### Official Game Files ######
@@ -13303,7 +13303,7 @@ plugins:
         itm: 7
   - name: 'DWIngameMap.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/37120/' ]
-    group: *mapGroup
+    group: *worldSettingsGroup
 
   - name: 'Dschinni.esp'
     url:
@@ -15430,11 +15430,11 @@ plugins:
 ###### Gameplay - User Interface - Maps ######
   - name: 'Ak- Morroblivion Maps HD.esp'
     url: [ 'https://morroblivion.com/forums/morroblivion/mods/2610/' ]
-    group: *mapGroup
+    group: *worldSettingsGroup
 
   - name: 'Colored Map for Elsweyr 1.1.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/25150/' ]
-    group: *mapGroup
+    group: *worldSettingsGroup
 
   - name: 'Dynamic Map.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/35969/' ]
@@ -15446,11 +15446,11 @@ plugins:
 
   - name: 'Elsweyr Color Map.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/28432/' ]
-    group: *mapGroup
+    group: *worldSettingsGroup
 
   - name: 'Hiboriamap.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/26570/' ]
-    group: *mapGroup
+    group: *worldSettingsGroup
 
   - name: 'Map Marker Overhaul( - SI additions)?\.esp'
     url:
@@ -15476,21 +15476,21 @@ plugins:
 
   - name: 'MergedMaps.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/26329/' ]
-    group: *mapGroup
+    group: *worldSettingsGroup
 
   - name: 'TamrielWorldspaceCompleteWorldMap.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/24044/' ]
-    group: *mapGroup
+    group: *worldSettingsGroup
 
   - name: 'TWMP_Tamriel_Ingame_ Map.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/27235/' ]
-    group: *mapGroup
+    group: *worldSettingsGroup
 
   - name: 'WorldMapsForAllWorldspaces.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/48914/'
         name: 'World Maps For All Worldspaces'
-    group: *mapGroup
+    group: *worldSettingsGroup
     clean:
       - crc: 0x640D34C6
         util: 'TES4Edit v4.0.4c'
@@ -25167,7 +25167,7 @@ plugins:
       - crc: 0x465A2C76
         util: 'TES4Edit v4.0.3'
   - name: 'Morrowind_ob - Morroblivion Maps.esp'
-    group: *mapGroup
+    group: *worldSettingsGroup
     req: [ 'Morrowind_ob.esp' ]
     dirty:
       - <<: *quickClean
@@ -25204,7 +25204,7 @@ plugins:
         util: '[TES4Edit v4.0.3](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 805
   - name: 'Morroblivion_Unofficial_Patch_defaultmap_fix.esp'
-    group: *mapGroup
+    group: *worldSettingsGroup
     after: [ 'Morrowind_ob - Morroblivion Maps.esp' ]
   - name: 'Morroblivion_Unofficial_Patch_Telvanni_ArchMagister_hotfix.esp'
     after: [ 'Morroblivion_Unofficial_Patch.esp' ]
