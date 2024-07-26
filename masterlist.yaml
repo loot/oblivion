@@ -4899,6 +4899,10 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/20338/'
         name: 'Ahtata argonian replacer HGEC'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'Ahtata Argonian Replacer ESP' ]
+        condition: 'many("Ahtata Arquamer (female got hair|spike4hair)\.esp")'
     tag:
       - Graphics
       - NPC.FaceGen
