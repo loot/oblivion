@@ -24147,11 +24147,6 @@ plugins:
   - name: 'Better Cities Full.esp'
     group: *citiesGroup
     after:
-      - '00RBScribeSupplies Intensive.esp'
-      - 'ClocksOfCyrodiil.esp'
-      - 'Slof''s Oblivion Goth Shop.esp'
-      - name: 'TR_Stirk.esp'
-        condition: 'not active("Stirk_Compatibility_Patch.esp")'
       # Afters for group, may not be required if main OC plugins are required.
       - 'Open Cities Bartholm.esp'
       - 'Open Cities New Sheoth.esp'
@@ -24193,17 +24188,10 @@ plugins:
   - name: 'Better Cities (BRUMA|LEYAWIIN)\.esp'
     after: [ 'Better Cities CHEYDINHAL.esp' ]
   - name: 'Better Cities ANVIL.esp'
-    after:
-      - 'ClocksOfCyrodiil.esp'
-      - name: 'TR_Stirk.esp'
-        condition: 'not active("Stirk_Compatibility_Patch.esp")'
     clean:
       - crc: 0xE391D0D4
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
   - name: 'Better Cities BRAVIL.esp'
-    after:
-      - '00RBScribeSupplies Intensive.esp'
-      - 'ClocksOfCyrodiil.esp'
     tag: [ C.Water ]
     msg:
       - <<: *includesX
@@ -24213,35 +24201,25 @@ plugins:
       - crc: 0x32CC5DAE
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
   - name: 'Better Cities BRUMA.esp'
-    after:
-      - 'Better Cities LEYAWIIN.esp'
-      - 'ClocksOfCyrodiil.esp'
+    after: [ 'Better Cities LEYAWIIN.esp' ]
     clean:
       - crc: 0x5B75A4D5
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
   - name: 'Better Cities CHEYDINHAL.esp'
-    after: [ 'ClocksOfCyrodiil.esp' ]
     clean:
       - crc: 0x80CE0E51
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
   - name: 'Better Cities CHORROL.esp'
-    after:
-      - 'ClocksOfCyrodiil.esp'
-      - 'Slof''s Oblivion Goth Shop.esp'
     dirty:
       - <<: *quickClean
         crc: 0x566A0E20
         util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
   - name: 'Better Cities LEYAWIIN.esp'
-    after: [ 'ClocksOfCyrodiil.esp' ]
     clean:
       - crc: 0xA3A5BB46
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
   - name: 'Better Cities SKINGRAD.esp'
-    after:
-      - 'ClocksOfCyrodiil.esp'
-      - 'Cyrodiil Rebuild.esp'
     dirty:
       - <<: *quickClean
         crc: 0x45E44430
@@ -24249,12 +24227,7 @@ plugins:
         itm: 29
   - name: 'Better Imperial City.esp'
     group: *imperialCityGroup
-    after:
-      - 'Better Cities - IC Imperial Isle.esp'
-      - 'ClocksOfCyrodiil.esp'
-      - 'ICEXPAND.esp'
-      - 'Sounds of Cyrodiil.esp'
-      - 'The Mystery of the Dulan Cult.esp'
+    after: [ 'Better Cities - IC Imperial Isle.esp' ]
     inc: [ 'Open Cities Outer Districts.esp' ]
     clean:
       - crc: 0xBA85C1FF
@@ -24740,23 +24713,13 @@ plugins:
       - name: 'Better Cities Full.esp'
         display: 'Better Cities Full or Separate City ESPs'
         condition: 'not file("Better Cities (ANVIL|BRAVIL|BRUMA|CHEYDINHAL|CHORROL|LEYAWIIN|SKINGRAD)\.esp")'
-    clean:
-      - crc: 0x5C553011
-        util: 'TES4Edit v4.0.3h (Hotfix 1)'
   - name: 'Better Cities - Open Cities Reborn.esp'
     group: *citiesGroup
-    after:
-      - 'Slof''s Oblivion Goth Shop.esp'
-      - name: 'TR_Stirk.esp'
-        condition: 'not active("Stirk_Compatibility_Patch.esp")'
     tag: [ C.Regions ]
     msg:
       - <<: *patchIncluded
         subs: [ 'Open Cities Reborn Blood&Mud Additions' ]
         condition: 'active("Open Cities Reborn B&M Additions.esp") and not file("Better Cities - Open Cities Reborn B&M Compatibility.esp")'
-    clean:
-      - crc: 0xF0DD7E0D
-        util: 'TES4Edit v4.0.3h (Hotfix 1)'
   - name: 'Better Cities - Open Cities Reborn B&M Compatibility.esp'
     req: [ 'Better Cities - Open Cities Reborn.esp' ]
 
