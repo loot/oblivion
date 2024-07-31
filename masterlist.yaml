@@ -24327,15 +24327,6 @@ plugins:
     clean:
       - crc: 0x9766EE6B
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
-  - name: 'Better Cities - Leyawiin Flooded.esp'
-    after: [ 'Better Cities Full.esp' ]
-    req:
-      - name: 'Better Cities LEYAWIIN.esp'
-        display: 'Better Cities Full.esp or Better Cities LEYAWIIN.esp'
-        condition: 'not file("Better Cities Full.esp")'
-    clean:
-      - crc: 0x57D7201B
-        util: 'TES4Edit v4.0.3h (Hotfix 1)'
   - name: 'Better Imperial City FPS Patch.esp'
     clean:
       - crc: 0x596DF446
@@ -24698,6 +24689,12 @@ plugins:
         display: 'Better Imperial City.esp or Better Cities IC Arena.esp'
         condition: 'not file("Better Imperial City.esp")'
   ### Better Cities - Old version files ###
+  - name: 'Better Cities - Leyawiin Flooded.esp'
+    after: [ 'Better Cities Full.esp' ]
+    req:
+      - name: 'Better Cities LEYAWIIN.esp'
+        display: 'Better Cities Full.esp or Better Cities LEYAWIIN.esp'
+        condition: 'not file("Better Cities Full.esp")'
   - name: 'Better Cities - Knights of the Nine.esp'
     req: [ 'Better Cities - Open Better Cities.esp' ]
   - name: 'Better Cities - Open Better Cities.esp'
