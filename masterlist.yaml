@@ -24144,20 +24144,6 @@ plugins:
   - name: 'Better Cities .esp'
     group: *veryEarlyGroup
     after: [ 'DLCShiveringIsles.esp' ]
-  - name: 'Better Cities - Open Cities Reborn.esp'
-    group: *citiesGroup
-    after:
-      - 'Slof''s Oblivion Goth Shop.esp'
-      - name: 'TR_Stirk.esp'
-        condition: 'not active("Stirk_Compatibility_Patch.esp")'
-    tag: [ C.Regions ]
-    msg:
-      - <<: *patchIncluded
-        subs: [ 'Open Cities Reborn Blood&Mud Additions' ]
-        condition: 'active("Open Cities Reborn B&M Additions.esp") and not file("Better Cities - Open Cities Reborn B&M Compatibility.esp")'
-    clean:
-      - crc: 0xF0DD7E0D
-        util: 'TES4Edit v4.0.3h (Hotfix 1)'
   - name: 'Better Cities Full.esp'
     group: *citiesGroup
     after:
@@ -24377,24 +24363,6 @@ plugins:
     clean:
       - crc: 0x57D7201B
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
-  - name: 'Better Cities - Open Better Cities.esp'
-    after:
-      - 'Better Cities ANVIL.esp'
-      - 'Better Cities BRAVIL.esp'
-      - 'Better Cities BRUMA.esp'
-      - 'Better Cities CHEYDINHAL.esp'
-      - 'Better Cities CHORROL.esp'
-      - 'Better Cities LEYAWIIN.esp'
-      - 'Better Cities SKINGRAD.esp'
-    req:
-      - name: 'Better Cities Full.esp'
-        display: 'Better Cities Full or Separate City ESPs'
-        condition: 'not file("Better Cities (ANVIL|BRAVIL|BRUMA|CHEYDINHAL|CHORROL|LEYAWIIN|SKINGRAD)\.esp")'
-    clean:
-      - crc: 0x5C553011
-        util: 'TES4Edit v4.0.3h (Hotfix 1)'
-  - name: 'Better Cities - Open Cities Reborn B&M Compatibility.esp'
-    req: [ 'Better Cities - Open Cities Reborn.esp' ]
   - name: 'Better Imperial City FPS Patch.esp'
     clean:
       - crc: 0x596DF446
@@ -24759,6 +24727,38 @@ plugins:
   ### Better Cities - Old version files ###
   - name: 'Better Cities - Knights of the Nine.esp'
     req: [ 'Better Cities - Open Better Cities.esp' ]
+  - name: 'Better Cities - Open Better Cities.esp'
+    after:
+      - 'Better Cities ANVIL.esp'
+      - 'Better Cities BRAVIL.esp'
+      - 'Better Cities BRUMA.esp'
+      - 'Better Cities CHEYDINHAL.esp'
+      - 'Better Cities CHORROL.esp'
+      - 'Better Cities LEYAWIIN.esp'
+      - 'Better Cities SKINGRAD.esp'
+    req:
+      - name: 'Better Cities Full.esp'
+        display: 'Better Cities Full or Separate City ESPs'
+        condition: 'not file("Better Cities (ANVIL|BRAVIL|BRUMA|CHEYDINHAL|CHORROL|LEYAWIIN|SKINGRAD)\.esp")'
+    clean:
+      - crc: 0x5C553011
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
+  - name: 'Better Cities - Open Cities Reborn.esp'
+    group: *citiesGroup
+    after:
+      - 'Slof''s Oblivion Goth Shop.esp'
+      - name: 'TR_Stirk.esp'
+        condition: 'not active("Stirk_Compatibility_Patch.esp")'
+    tag: [ C.Regions ]
+    msg:
+      - <<: *patchIncluded
+        subs: [ 'Open Cities Reborn Blood&Mud Additions' ]
+        condition: 'active("Open Cities Reborn B&M Additions.esp") and not file("Better Cities - Open Cities Reborn B&M Compatibility.esp")'
+    clean:
+      - crc: 0xF0DD7E0D
+        util: 'TES4Edit v4.0.3h (Hotfix 1)'
+  - name: 'Better Cities - Open Cities Reborn B&M Compatibility.esp'
+    req: [ 'Better Cities - Open Cities Reborn.esp' ]
 
   ### Better Cities - 3RD Party Patches ###
   - name: 'BC Skingrad Reduced - [DE]V\.esp'
