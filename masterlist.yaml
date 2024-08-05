@@ -24859,11 +24859,15 @@ plugins:
 
 ###### Elsweyr Anequina ######
   - name: 'ElsweyrAnequina.*\.esp'
-    url: [ 'https://www.afkmods.com/index.php?/files/file/2170-elsweyr-anequina/' ]
+    url:
+      - link: 'https://www.afkmods.com/index.php?/files/file/2170-elsweyr-anequina/'
+        name: 'Elsweyr the Deserts of Anequina (AFK Mods)'
   - name: 'ElsweyrAnequina.esp'
     url:
-      - 'https://www.nexusmods.com/oblivion/mods/25023/'
-      - 'https://www.afkmods.com/index.php?/files/file/2172-elsweyr-anequina-valenwood-improved-patch/'
+      - link: 'https://www.nexusmods.com/oblivion/mods/25023/'
+        name: 'Elsweyr the Deserts of Anequina (Nexus Mods)'
+      - link: 'https://www.afkmods.com/index.php?/files/file/2172-elsweyr-anequina-valenwood-improved-patch/'
+        name: 'Elsweyr Anequina - Valenwood Improved Patch (AFK Mods)'
     after: [ 'Valenwood Improved.esp' ]
     msg:
       - <<: *alsoUseX
