@@ -1661,12 +1661,15 @@ plugins:
         util: 'TES4Edit v4.1.5g'
   - name: 'TamRes.esp'
     group: *earlyLoadersGroup
-    after: [ 'DLCShiveringIsles.esp' ]
+    after:
+      - 'DLCShiveringIsles.esp'
+      - 'Tamriel.esp'
 
   - name: 'Tamriel.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/27235/'
         name: 'Under the sign of the dragon - Tamriel Heightmaps'
+    group: *earlyLoadersGroup
 
 ###### Fixes ######
   - name: 'Auto Update Leveled Items And Spells - Script Patch.esp'
