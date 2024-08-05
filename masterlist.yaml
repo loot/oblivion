@@ -1650,8 +1650,15 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/24822/'
         name: 'Under the sign of the dragon - Tamriel Resource Pack'
+  - name: 'TamRes.esm'
+    clean:
+      - crc: 0xC5208AB0
+        util: 'TES4Edit v4.1.5g'
   - name: 'TamRes_LandscapeResource.esm'
     after: [ 'TamRes.esm' ]
+    clean:
+      - crc: 0xE771F12A
+        util: 'TES4Edit v4.1.5g'
   - name: 'TamRes.esp'
     group: *earlyLoadersGroup
     after: [ 'DLCShiveringIsles.esp' ]
