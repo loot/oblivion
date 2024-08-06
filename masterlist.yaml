@@ -19010,6 +19010,13 @@ plugins:
         subs: [ 'TWMP_HighRock.esp' ]
         condition: 'active("TWMP_HighRock.esp") and version("TWMP_HighRock.esp", "2.0", >=)'
 
+  - name: 'TWMP_Locations.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0xEF4C9111
+        util: '[TES4Edit v4.1.5g](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 41
+
   - name: 'TWMP SI.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/46694/'
