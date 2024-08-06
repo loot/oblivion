@@ -19004,6 +19004,11 @@ plugins:
         crc: 0x87714FD7
         util: '[TES4Edit v4.1.5g](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 461
+  - name: 'TWMP_MapMarkers_HighRock.esp'
+    msg:
+      - <<: *alreadyInX
+        subs: [ 'TWMP_HighRock.esp' ]
+        condition: 'active("TWMP_HighRock.esp") and version("TWMP_HighRock.esp", "2.0", >=)'
 
   - name: 'TWMP SI.esp'
     url:
