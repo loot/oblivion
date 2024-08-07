@@ -24938,7 +24938,9 @@ plugins:
         name: 'Elsweyr the Deserts of Anequina (Nexus Mods)'
       - link: 'https://www.afkmods.com/index.php?/files/file/2172-elsweyr-anequina-valenwood-improved-patch/'
         name: 'Elsweyr Anequina - Valenwood Improved Patch (AFK Mods)'
-    after: [ 'Valenwood Improved.esp' ]
+    after:
+      - 'TWMP_Locations.esp'
+      - 'Valenwood Improved.esp'
     msg:
       - <<: *alsoUseX
         subs: [ 'INI setting [`bBorderRegionsEnabled=0`](https://wiki.nexusmods.com/index.php/Removing_In-Game_Borders)' ]
