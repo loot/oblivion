@@ -32194,7 +32194,10 @@ plugins:
     url:
       - 'https://www.nexusmods.com/oblivion/mods/24580/'
       - 'https://www.nexusmods.com/oblivion/mods/35248/'
-    msg: [ *obsolete ]
+    msg:
+      - <<: *obsolete
+        subs: [ '[Five Blind Mice Update](https://www.nexusmods.com/oblivion/mods/35248/)' ]
+        condition: 'version("FiveBlindMiceBeta.esp", "1.3", <)'
 
   - name: '(Gweden(Brothel|Expansion)|FalkreathGS_RM)\.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/26346/' ]
