@@ -435,7 +435,7 @@ common:
   - &requiresBashedPatch
     <<: *requiresX
     type: error
-    subs: [ '[Wrye Bash](https://www.nexusmods.com/oblivion/mods/22368) Bashed Patch' ]
+    subs: [ '[Wrye Bash](https://www.nexusmods.com/site/mods/591/) Bashed Patch' ]
     condition: 'not file("Bashed Patch.*\.esp")'
   - &requiresDisabledBorderRegions
     <<: *requiresX
@@ -1311,12 +1311,12 @@ plugins:
 
 ###### Modding Tools - Generated Files ######
   - name: 'Bashed Patch.*\.esp'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/22368/' ]
+    url: [ 'https://www.nexusmods.com/site/mods/591/' ]
     group: *dynamicPatchesGroup
     after: [ 'TES4Merged.esp' ]
   # Wrye Bash - Oblivion.esm swapping
   - name: 'Oblivion_(1.1|1.1b|SI|GOTY non-SI|GBR SI)\.esm'
-    url: [ 'https://www.nexusmods.com/oblivion/mods/22368/' ]
+    url: [ 'https://www.nexusmods.com/site/mods/591/' ]
     msg: [ *moddingPlugin ]
 
   - name: 'TES4Merged.esp'
