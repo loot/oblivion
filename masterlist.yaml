@@ -820,7 +820,18 @@ plugins:
         condition: 'active("Oblivion.esm") and active("Nehrim.esm")'
   - name: 'DLCShiveringIsles.esp'
     group: *dlcGroup
-    after: [ 'Unofficial Oblivion Patch.esp' ]
+    after:
+      - name: 'DLCBattlehornCastle.esp'
+        condition: &isOblivionRemastered 'file("../../../../Binaries/Win64/OblivionRemastered-Win64-Shipping.exe") or file("../../../../Binaries/WinGDK/OblivionRemastered-WinGDK-Shipping.exe")'
+      - name: 'DLCFrostcrag.esp'
+        condition: *isOblivionRemastered
+      - name: 'DLCHorseArmor.esp'
+        condition: *isOblivionRemastered
+      - name: 'DLCMehrunesRazor.esp'
+        condition: *isOblivionRemastered
+      - name: 'DLCOrrery.esp'
+        condition: *isOblivionRemastered
+      - 'Unofficial Oblivion Patch.esp'
     dirty:
       - <<: *quickClean
         crc: 0xDAF51407
@@ -832,7 +843,12 @@ plugins:
   - name: 'DLCHorseArmor.esp'
     group: *dlcGroup
     after:
-      - 'DLCShiveringIsles.esp'
+      - name: 'DLCBattlehornCastle.esp'
+        condition: *isOblivionRemastered
+      - name: 'DLCFrostcrag.esp'
+        condition: *isOblivionRemastered
+      - name: 'DLCShiveringIsles.esp'
+        condition: &isOblivion 'file("../Oblivion.exe") and not file("../NehrimLauncher.exe")'
       - 'Unofficial Oblivion Patch.esp'
     tag:
       - Actors.ACBS
@@ -853,8 +869,15 @@ plugins:
   - name: 'DLCOrrery.esp'
     group: *dlcGroup
     after:
-      - 'DLCShiveringIsles.esp'
+      - name: 'DLCBattlehornCastle.esp'
+        condition: *isOblivionRemastered
+      - name: 'DLCFrostcrag.esp'
+        condition: *isOblivionRemastered
+      - name: 'DLCShiveringIsles.esp'
+        condition: *isOblivion
       - 'DLCHorseArmor.esp'
+      - name: 'DLCMehrunesRazor.esp'
+        condition: *isOblivionRemastered
       - 'Unofficial Oblivion Patch.esp'
     tag:
       - Actors.AIPackages
@@ -877,9 +900,19 @@ plugins:
   - name: 'DLCVileLair.esp'
     group: *dlcGroup
     after:
+      - name: 'DLCBattlehornCastle.esp'
+        condition: *isOblivionRemastered
+      - name: 'DLCFrostcrag.esp'
+        condition: *isOblivionRemastered
       - 'DLCShiveringIsles.esp'
       - 'DLCHorseArmor.esp'
+      - name: 'DLCMehrunesRazor.esp'
+        condition: *isOblivionRemastered
       - 'DLCOrrery.esp'
+      - name: 'DLCSpellTomes.esp'
+        condition: *isOblivionRemastered
+      - name: 'DLCThievesDen.esp'
+        condition: *isOblivionRemastered
       - 'Unofficial Oblivion Patch.esp'
     inc:
       - 'KumikoManor.esp'
@@ -902,10 +935,17 @@ plugins:
   - name: 'DLCMehrunesRazor.esp'
     group: *dlcGroup
     after:
-      - 'DLCShiveringIsles.esp'
+      - name: 'DLCBattlehornCastle.esp'
+        condition: *isOblivionRemastered
+      - name: 'DLCFrostcrag.esp'
+        condition: *isOblivionRemastered
+      - name: 'DLCShiveringIsles.esp'
+        condition: *isOblivion
       - 'DLCHorseArmor.esp'
-      - 'DLCOrrery.esp'
-      - 'DLCVileLair.esp'
+      - name: 'DLCOrrery.esp'
+        condition: *isOblivion
+      - name: 'DLCVileLair.esp'
+        condition: *isOblivion
       - 'Unofficial Oblivion Patch.esp'
     tag:
       - Actors.ACBS
@@ -927,10 +967,15 @@ plugins:
   - name: 'DLCSpellTomes.esp'
     group: *dlcGroup
     after:
+      - name: 'DLCBattlehornCastle.esp'
+        condition: *isOblivionRemastered
+      - name: 'DLCFrostcrag.esp'
+        condition: *isOblivionRemastered
       - 'DLCShiveringIsles.esp'
       - 'DLCHorseArmor.esp'
       - 'DLCOrrery.esp'
-      - 'DLCVileLair.esp'
+      - name: 'DLCVileLair.esp'
+        condition: *isOblivion
       - 'DLCMehrunesRazor.esp'
       - 'Unofficial Oblivion Patch.esp'
     tag:
@@ -951,10 +996,15 @@ plugins:
   - name: 'DLCThievesDen.esp'
     group: *dlcGroup
     after:
+      - name: 'DLCBattlehornCastle.esp'
+        condition: *isOblivionRemastered
+      - name: 'DLCFrostcrag.esp'
+        condition: *isOblivionRemastered
       - 'DLCShiveringIsles.esp'
       - 'DLCHorseArmor.esp'
       - 'DLCOrrery.esp'
-      - 'DLCVileLair.esp'
+      - name: 'DLCVileLair.esp'
+        condition: *isOblivion
       - 'DLCMehrunesRazor.esp'
       - 'DLCSpellTomes.esp'
       - 'Unofficial Oblivion Patch.esp'
@@ -987,13 +1037,20 @@ plugins:
   - name: 'DLCBattlehornCastle.esp'
     group: *dlcGroup
     after:
-      - 'DLCShiveringIsles.esp'
-      - 'DLCHorseArmor.esp'
-      - 'DLCOrrery.esp'
-      - 'DLCVileLair.esp'
-      - 'DLCMehrunesRazor.esp'
-      - 'DLCSpellTomes.esp'
-      - 'DLCThievesDen.esp'
+      - name: 'DLCShiveringIsles.esp'
+        condition: *isOblivion
+      - name: 'DLCHorseArmor.esp'
+        condition: *isOblivion
+      - name: 'DLCOrrery.esp'
+        condition: *isOblivion
+      - name: 'DLCVileLair.esp'
+        condition: *isOblivion
+      - name: 'DLCMehrunesRazor.esp'
+        condition: *isOblivion
+      - name: 'DLCSpellTomes.esp'
+        condition: *isOblivion
+      - name: 'DLCThievesDen.esp'
+        condition: *isOblivion
       - 'Unofficial Oblivion Patch.esp'
     tag: [ Sound ]
     dirty:
@@ -1011,13 +1068,20 @@ plugins:
         name: 'Frostcrag Reborn'
     group: *dlcGroup
     after:
-      - 'DLCShiveringIsles.esp'
-      - 'DLCHorseArmor.esp'
-      - 'DLCOrrery.esp'
-      - 'DLCVileLair.esp'
-      - 'DLCMehrunesRazor.esp'
-      - 'DLCSpellTomes.esp'
-      - 'DLCThievesDen.esp'
+      - name: 'DLCShiveringIsles.esp'
+        condition: *isOblivion
+      - name: 'DLCHorseArmor.esp'
+        condition: *isOblivion
+      - name: 'DLCOrrery.esp'
+        condition: *isOblivion
+      - name: 'DLCVileLair.esp'
+        condition: *isOblivion
+      - name: 'DLCMehrunesRazor.esp'
+        condition: *isOblivion
+      - name: 'DLCSpellTomes.esp'
+        condition: *isOblivion
+      - name: 'DLCThievesDen.esp'
+        condition: *isOblivion
       - 'DLCBattlehornCastle.esp'
       - 'Unofficial Oblivion Patch.esp'
     msg:
