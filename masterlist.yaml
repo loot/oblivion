@@ -249,6 +249,12 @@ common:
   - &FCOMCond
     active("FCOM_Convergence.esm")
 
+  - &isOblivion
+    file("../Oblivion.exe") and not file("../NehrimLauncher.exe")
+
+  - &isOblivionRemastered
+    file("../../../../Binaries/Win64/OblivionRemastered-Win64-Shipping.exe") or file("../../../../Binaries/WinGDK/OblivionRemastered-WinGDK-Shipping.exe")
+
   - &nehrimCond
     active("Nehrim.esm")
 
@@ -822,7 +828,7 @@ plugins:
     group: *dlcGroup
     after:
       - name: 'DLCBattlehornCastle.esp'
-        condition: &isOblivionRemastered 'file("../../../../Binaries/Win64/OblivionRemastered-Win64-Shipping.exe") or file("../../../../Binaries/WinGDK/OblivionRemastered-WinGDK-Shipping.exe")'
+        condition: *isOblivionRemastered
       - name: 'DLCFrostcrag.esp'
         condition: *isOblivionRemastered
       - name: 'DLCHorseArmor.esp'
@@ -848,7 +854,7 @@ plugins:
       - name: 'DLCFrostcrag.esp'
         condition: *isOblivionRemastered
       - name: 'DLCShiveringIsles.esp'
-        condition: &isOblivion 'file("../Oblivion.exe") and not file("../NehrimLauncher.exe")'
+        condition: *isOblivion
       - 'Unofficial Oblivion Patch.esp'
     tag:
       - Actors.ACBS
