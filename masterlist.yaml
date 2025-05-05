@@ -770,12 +770,15 @@ groups:
       - *veryEarlyGroup
       - *unofficialPatchesGroup
 
+  - name: &postDLCPatches Post DLC Patches
+    after: [ *dlcGroup ]
+
   - name: &underridesGroup Underrides
     after: [ *veryEarlyGroup ]
 
   - name: &earlyLoadersGroup Early Loaders
     description: 'A group for modules that should load early just after the DLC and Unofficial patches.'
-    after: [ *dlcGroup ]
+    after: [ *postDLCPatches ]
 
   - name: default
     after:
