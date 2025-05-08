@@ -763,14 +763,14 @@ groups:
     description: 'A group for modules that should load early before the DLC and Unofficial patches.'
     after: [ *gameMasterGroup ]
 
-  - name: &unofficialPatchesGroup Unofficial Patches
+  - name: &preDLCPatchesGroup Pre DLC Patches
 
   - name: &dlcGroup DLC
     after:
       - *veryEarlyGroup
-      - *unofficialPatchesGroup
+      - *preDLCPatchesGroup
 
-  - name: &postDLCPatches Post DLC Patches
+  - name: &postDLCPatchesGroup Post DLC Patches
     after: [ *dlcGroup ]
 
   - name: &underridesGroup Underrides
@@ -778,7 +778,7 @@ groups:
 
   - name: &earlyLoadersGroup Early Loaders
     description: 'A group for modules that should load early just after the DLC and Unofficial patches.'
-    after: [ *postDLCPatches ]
+    after: [ *postDLCPatchesGroup ]
 
   - name: default
     after:
@@ -1195,12 +1195,12 @@ plugins:
       - crc: 0x91B3F8CD
         util: 'TES4Edit v4.1.5b EXTREMELY EXPERIMENTAL'
   - name: 'Oblivion Citadel Door Fix.esp'
-    group: *unofficialPatchesGroup
+    group: *preDLCPatchesGroup
     clean:
       - crc: 0x0EC729FF
         util: 'TES4Edit v4.1.5b EXTREMELY EXPERIMENTAL'
   - name: 'UOP Vampire Aging & Face Fix.esp'
-    group: *unofficialPatchesGroup
+    group: *preDLCPatchesGroup
     msg:
       - <<: *useBashTweakInstead
         subs: [ 'Tweak Settings -> UOP Vampire Aging And Face Fix' ]
@@ -1214,7 +1214,7 @@ plugins:
         name: 'Unofficial Shivering Isles Patch (AFK Mods)'
       - link: 'https://www.nexusmods.com/oblivion/mods/10739/'
         name: 'Unofficial Shivering Isles Patch (Nexus Mods)'
-    group: *unofficialPatchesGroup
+    group: *preDLCPatchesGroup
     after:
       - 'Hidden Treasures.esp'
       - 'Rooftop Rewards cleaned.esp'
@@ -1231,7 +1231,7 @@ plugins:
         name: 'Unofficial Oblivion DLC Patches (AFK Mods)'
       - link: 'https://www.nexusmods.com/oblivion/mods/9969/'
         name: 'Unofficial Oblivion DLC Patches (Nexus Mods)'
-    group: *unofficialPatchesGroup
+    group: *preDLCPatchesGroup
   - name: 'DLCHorseArmor - Unofficial Patch.esp'
     clean:
       - crc: 0x5AC9073B
@@ -1280,7 +1280,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivionremastered/mods/477/'
         name: 'Unofficial Oblivion Remastered Patch (Nexus Mods)'
-    group: *postDLCPatches
+    group: *postDLCPatchesGroup
     after:
       - 'AltarESPMain.esp'
       - 'AltarESPLocal.esp'
@@ -1318,7 +1318,7 @@ plugins:
 
   - name: 'Unofficial Nehrim Fixes.esp'
     url: [ 'https://www.nexusmods.com/nehrim/mods/38/' ]
-    group: *unofficialPatchesGroup
+    group: *preDLCPatchesGroup
     after: [ 'Translation.esp' ]
     tag:
       - Actors.ACBS
