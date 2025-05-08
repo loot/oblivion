@@ -770,7 +770,7 @@ groups:
       - *veryEarlyGroup
       - *preDLCPatchesGroup
 
-  - name: &postDLCPatches Post DLC Patches
+  - name: &postDLCPatchesGroup Post DLC Patches
     after: [ *dlcGroup ]
 
   - name: &underridesGroup Underrides
@@ -778,7 +778,7 @@ groups:
 
   - name: &earlyLoadersGroup Early Loaders
     description: 'A group for modules that should load early just after the DLC and Unofficial patches.'
-    after: [ *postDLCPatches ]
+    after: [ *postDLCPatchesGroup ]
 
   - name: default
     after:
@@ -1280,7 +1280,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivionremastered/mods/477/'
         name: 'Unofficial Oblivion Remastered Patch (Nexus Mods)'
-    group: *postDLCPatches
+    group: *postDLCPatchesGroup
     after:
       - 'AltarESPMain.esp'
       - 'AltarESPLocal.esp'
