@@ -249,8 +249,11 @@ common:
   - &FCOMCond
     active("FCOM_Convergence.esm")
 
-  - &isOblivion
-    file("../Oblivion.exe") and not file("../NehrimLauncher.exe")
+  - &isOblivion >-
+      not (
+        file("../../../../Binaries/Win64/OblivionRemastered-Win64-Shipping.exe") or
+        file("../../../../Binaries/WinGDK/OblivionRemastered-WinGDK-Shipping.exe")
+      ) and not file("../NehrimLauncher.exe")
 
   - &isOblivionRemastered
     file("../../../../Binaries/Win64/OblivionRemastered-Win64-Shipping.exe") or file("../../../../Binaries/WinGDK/OblivionRemastered-WinGDK-Shipping.exe")
