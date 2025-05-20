@@ -17634,7 +17634,11 @@ plugins:
     msg:
       - <<: *useInstead
         subs: [ '[Uncapped Skeleton Key OBSE](https://www.nexusmods.com/oblivion/mods/49131/)' ]
-        condition: 'file("../obse_1_2_416.dll")'
+        condition: 'file("../obse_1_2_416.dll") and not
+                    (
+                      file("../../../../Binaries/Win64/OblivionRemastered-Win64-Shipping.exe") or
+                      file("../../../../Binaries/WinGDK/OblivionRemastered-WinGDK-Shipping.exe")
+                    )'
     clean:
       - crc: 0x77BDA142
         util: 'TES4Edit v4.0.4'
