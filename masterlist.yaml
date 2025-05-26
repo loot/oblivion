@@ -831,7 +831,7 @@ groups:
     after: [ *lateLoadersGroup ]
 
   - name: &bashFilterPatchesGroup Bash Filter Patches
-    after: [ *lateLoadersGroup ]
+    after: [ *latePatchesGroup ]
 
   - name: &worldSettingsGroup Worldspace Settings
     description: 'A group for modules that need to be loaded late to preserve worldspace settings.'
