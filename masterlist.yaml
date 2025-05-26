@@ -795,13 +795,13 @@ groups:
       - *earlyLoadersGroup
       - *underridesGroup
 
-  - name: &overridesGroup Overrides
-    description: 'A group for modules that should load after most other mods.'
+  - name: &lowPriorityGroup Low Priority Overrides
+    description: 'A group for modules that must load after most other mods.'
     after: [ default ]
 
   - name: &landscapeGroup Landscape
     description: 'A group for plugins that modify landscapes to fix issues and/or improve visuals.'
-    after: [ *overridesGroup ]
+    after: [ *lowPriorityGroup ]
 
   - name: &citiesGroup Cities
     description: 'A group for modules that alter Cities and need to be loaded late.'
