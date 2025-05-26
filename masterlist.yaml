@@ -813,9 +813,12 @@ groups:
     description: 'A group for modules that alter Cities and need to be loaded late.'
     after: [ *landscapeGroup ]
 
+  - name: &highPriorityGroup High Priority Overrides
+    after: [ *citiesGroup ]
+
   - name: &imperialCityGroup Imperial City
     description: 'A group for modules that alter the Imperial City and need to be loaded late.'
-    after: [ *citiesGroup ]
+    after: [ *highPriorityGroup ]
 
   - name: &latePatchesGroup Late Patches
     after: [ *imperialCityGroup ]
