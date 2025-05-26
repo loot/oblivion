@@ -802,9 +802,12 @@ groups:
   - name: &mediumPriorityGroup Medium Priority Overrides
     after: [ *lowPriorityGroup ]
 
+  - name: &coreGroup Core Mods
+    after: [ *mediumPriorityGroup ]
+
   - name: &landscapeGroup Landscape
     description: 'A group for plugins that modify landscapes to fix issues and/or improve visuals.'
-    after: [ *mediumPriorityGroup ]
+    after: [ *coreGroup ]
 
   - name: &citiesGroup Cities
     description: 'A group for modules that alter Cities and need to be loaded late.'
