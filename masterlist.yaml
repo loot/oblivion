@@ -799,9 +799,12 @@ groups:
     description: 'A group for modules that must load after most other mods.'
     after: [ default ]
 
+  - name: &mediumPriorityGroup Medium Priority Overrides
+    after: [ *lowPriorityGroup ]
+
   - name: &landscapeGroup Landscape
     description: 'A group for plugins that modify landscapes to fix issues and/or improve visuals.'
-    after: [ *lowPriorityGroup ]
+    after: [ *mediumPriorityGroup ]
 
   - name: &citiesGroup Cities
     description: 'A group for modules that alter Cities and need to be loaded late.'
