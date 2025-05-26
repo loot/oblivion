@@ -820,8 +820,11 @@ groups:
     description: 'A group for modules that alter the Imperial City and need to be loaded late.'
     after: [ *highPriorityGroup ]
 
-  - name: &latePatchesGroup Late Patches
+  - name: &lateLoadersGroup Late Loaders
     after: [ *imperialCityGroup ]
+
+  - name: &latePatchesGroup Late Patches
+    after: [ *lateLoadersGroup ]
 
   - name: &worldSettingsGroup Worldspace Settings
     description: 'A group for modules that need to be loaded late to preserve worldspace settings.'
