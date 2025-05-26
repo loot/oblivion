@@ -816,12 +816,12 @@ groups:
   - name: &highPriorityGroup High Priority Overrides
     after: [ *citiesGroup ]
 
-  - name: &imperialCityGroup Imperial City
-    description: 'A group for modules that alter the Imperial City and need to be loaded late.'
+  - name: &bcImperialCityGroup Better Cities Imperial City
+    description: 'A group for Better Cities Imperial City, loads late due to WRLD changes.'
     after: [ *highPriorityGroup ]
 
   - name: &lateLoadersGroup Late Loaders
-    after: [ *imperialCityGroup ]
+    after: [ *bcImperialCityGroup ]
 
   - name: &latePatchesGroup Late Patches
     after: [ *lateLoadersGroup ]
@@ -24575,14 +24575,14 @@ plugins:
         util: '[TES4Edit v4.0.3h (Hotfix 1)](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 29
   - name: 'Better Imperial City.esp'
-    group: *imperialCityGroup
+    group: *bcImperialCityGroup
     after: [ 'Better Cities - IC Imperial Isle.esp' ]
     inc: [ 'Open Cities Outer Districts.esp' ]
     clean:
       - crc: 0xBA85C1FF
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
   - name: 'Better Cities IC (Arboretum|Arcane University|Arena|Elven Gardens|Green Emperor Way|Market|Prison|Talos Plaza|Temple|Waterfront)\.esp'
-    group: *imperialCityGroup
+    group: *bcImperialCityGroup
     after: [ 'Better Cities - IC Imperial Isle.esp' ]
     msg:
       - <<: *alreadyInX
@@ -24672,7 +24672,7 @@ plugins:
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
   ### Better Cities - Optional Files ###
   - name: 'Better Cities - IC Imperial Isle.esp'
-    group: *imperialCityGroup
+    group: *bcImperialCityGroup
     clean:
       - crc: 0x9766EE6B
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
