@@ -805,13 +805,13 @@ groups:
   - name: &coreGroup Core Mods
     after: [ *mediumPriorityGroup ]
 
-  - name: &landscapeGroup Landscape
-    description: 'A group for plugins that modify landscapes to fix issues and/or improve visuals.'
+  - name: &uniquelandscapeGroup Unique Landscapes
+    description: 'A group for Unique Landscape main files.'
     after: [ *coreGroup ]
 
   - name: &openCitiesGroup Open Cities
     description: 'A group for Open Cities.'
-    after: [ *landscapeGroup ]
+    after: [ *uniquelandscapeGroup ]
 
   - name: &betterCitiesGroup Better Cities
     description: 'A group for Better Cities Full & Sepearte city modules.'
@@ -25723,7 +25723,7 @@ plugins:
         name: 'Unique Landscapes Compilation'
   - name: 'Unique Landscapes.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/19370/' ]
-    group: *landscapeGroup
+    group: *uniquelandscapeGroup
     after: [ 'Blood&Mud.esp' ]
     tag:
       - C.Music
@@ -25740,7 +25740,7 @@ plugins:
         itm: 27
   # Afters for Landscape Group
   - name: 'xul(darkforest|StendarrValley|TheHeath|EntiusGorge|FallenleafEverglade|ColovianHighlands_EV|ChorrolHinterland|BeachesOfCyrodiilLostCoast|BravilBarrowfields|LushWoodlands|AncientYews|AncientRedwoods|CloudtopMountains|ArriusCreek|RollingHills_EV|PantherRiver|RiverEthe|BrenaRiverRavine|ImperialIsle|BlackwoodForest|CheydinhalFalls|AspenWood|Snowdale|CliffsOfAnvil|SilverfishRiverValley|JerallGlacier|TheEasternPeaks|SkingradOutskirts)\.esp'
-    group: *landscapeGroup
+    group: *uniquelandscapeGroup
     after: [ 'Unique Landscapes.esp' ]
   - name: 'xul(StendarrValley|TheHeath|EntiusGorge|FallenleafEverglade|ColovianHighlands_EV|ChorrolHinterland|BeachesOfCyrodiilLostCoast|BravilBarrowfields|LushWoodlands|AncientYews|AncientRedwoods|CloudtopMountains|ArriusCreek|RollingHills_EV|PantherRiver|RiverEthe|BrenaRiverRavine|ImperialIsle|BlackwoodForest|CheydinhalFalls|AspenWood|Snowdale|CliffsOfAnvil|SilverfishRiverValley|JerallGlacier|TheEasternPeaks|SkingradOutskirts)\.esp'
     after: [ 'xuldarkforest.esp' ]
