@@ -817,8 +817,12 @@ groups:
     description: 'A group for Open Cities.'
     after: [ *landscapeGroup ]
 
-  - name: &highPriorityGroup High Priority Overrides
+  - name: &betterCitiesGroup Better Cities
+    description: 'A group for Better Cities Full & Sepearte city modules.'
     after: [ *openCitiesGroup ]
+
+  - name: &highPriorityGroup High Priority Overrides
+    after: [ *betterCitiesGroup ]
 
   - name: &bcImperialCityGroup Better Cities Imperial City
     description: 'A group for Better Cities Imperial City, loads late due to WRLD changes.'
