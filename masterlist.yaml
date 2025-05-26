@@ -826,9 +826,12 @@ groups:
   - name: &latePatchesGroup Late Patches
     after: [ *lateLoadersGroup ]
 
+  - name: &bashFilterPatchesGroup Bash Filter Patches
+    after: [ *lateLoadersGroup ]
+
   - name: &worldSettingsGroup Worldspace Settings
     description: 'A group for modules that need to be loaded late to preserve worldspace settings.'
-    after: [ *latePatchesGroup ]
+    after: [ *bashFilterPatchesGroup ]
 
   - name: &conflictResPatchGroup Conflict Resolution Patches
     description: 'A group for patches that resolve conflicts.'
