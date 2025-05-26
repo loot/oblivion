@@ -813,8 +813,12 @@ groups:
     description: 'A group for modules that alter Cities and need to be loaded late.'
     after: [ *landscapeGroup ]
 
+  - name: &openCitiesGroup Open Cities
+    description: 'A group for Open Cities.'
+    after: [ *landscapeGroup ]
+
   - name: &highPriorityGroup High Priority Overrides
-    after: [ *citiesGroup ]
+    after: [ *openCitiesGroup ]
 
   - name: &bcImperialCityGroup Better Cities Imperial City
     description: 'A group for Better Cities Imperial City, loads late due to WRLD changes.'
