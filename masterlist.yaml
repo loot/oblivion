@@ -24502,7 +24502,7 @@ plugins:
     group: *veryEarlyGroup
     after: [ 'DLCShiveringIsles.esp' ]
   - name: 'Better Cities Full.esp'
-    group: *citiesGroup
+    group: *betterCitiesGroup
     after:
       # Afters for group, may not be required if main OC plugins are required.
       - 'Open Cities Bartholm.esp'
@@ -24520,7 +24520,7 @@ plugins:
       - crc: 0x63B84BD4
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
   - name: 'Better Cities (ANVIL|BRAVIL|BRUMA|CHEYDINHAL|CHORROL|LEYAWIIN|SKINGRAD)\.esp'
-    group: *citiesGroup
+    group: *betterCitiesGroup
     after:
       # Afters for group, may not be required if main OC plugins are required.
       - 'Open Cities Bartholm.esp'
@@ -25068,7 +25068,7 @@ plugins:
         display: 'Better Cities Full or Separate City ESPs'
         condition: 'not file("Better Cities (ANVIL|BRAVIL|BRUMA|CHEYDINHAL|CHORROL|LEYAWIIN|SKINGRAD)\.esp")'
   - name: 'Better Cities - Open Cities Reborn.esp'
-    group: *citiesGroup
+    group: *betterCitiesGroup
     tag: [ C.Regions ]
     msg:
       - <<: *patchIncluded
