@@ -1570,7 +1570,7 @@ plugins:
       - crc: 0xFEB841DF
         util: 'TES4Edit v4.0.3'
   - name: 'Cobl Filter Late MERGE ONLY.esp'
-    group: *latePatchesGroup
+    group: *bashFilterPatchesGroup
     msg: [ *requiresBashedPatch ]
     tag: [ Deactivate ]
   - name: 'Cobl Glue.esp'
@@ -1795,7 +1795,7 @@ plugins:
       - crc: 0xE604721D
         util: 'TES4Edit v4.0.4c'
   - name: 'SafeCloningFunction - Filter.esp'
-    group: *latePatchesGroup
+    group: *bashFilterPatchesGroup
     msg: [ *requiresBashedPatch ]
 
   - name: 'OMPexample.esp'
@@ -4739,7 +4739,7 @@ plugins:
         util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 1
   - name: 'All Natural - Indoor Weather Filter For Mods.esp'
-    group: *latePatchesGroup
+    group: *bashFilterPatchesGroup
     msg: [ *requiresBashedPatch ]
 
   - name: 'All Natural - Kvatch Road Patch.esp'
@@ -4780,7 +4780,7 @@ plugins:
         util: 'TES4Edit v4.0.4b'
   - name: 'Cava Obscura - Filter Patch For Mods.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/35099/' ]
-    group: *latePatchesGroup
+    group: *bashFilterPatchesGroup
 
   - name: 'Illumination(Within|Without)\.esp'
     url: [ 'http://www.nexusmods.com/oblivion/mods/3700/' ]
@@ -7388,7 +7388,7 @@ plugins:
         subs: [ 'Tamriel Travellers Leveling System ESP' ]
         condition: 'many("TamrielTravellersItems(NPC|Unscaled|Vendor)\.esp")'
   - name: 'TamrielTravellersItemsNPC.esp'
-    group: *latePatchesGroup
+    group: *bashFilterPatchesGroup
     tag:
       - Deactivate
       - Delev
@@ -7398,7 +7398,7 @@ plugins:
   - name: 'TamrielTravellersItemsUnscaled.esp'
     inc: [ 'FCOM_Convergence.esm' ]
   - name: 'TamrielTravellersItemsVendor.esp'
-    group: *latePatchesGroup
+    group: *bashFilterPatchesGroup
     tag:
       - Deactivate
       - Delev
@@ -9429,7 +9429,7 @@ plugins:
       - Invent.Add
       - Invent.Remove
   - name: 'TIE Weapon + Armor Filter.esp'
-    group: *latePatchesGroup
+    group: *bashFilterPatchesGroup
     msg: [ *requiresBashedPatch ]
 
   - name: 'TRN One of the Gang.esp'
@@ -10211,7 +10211,7 @@ plugins:
       - link: 'https://www.nexusmods.com/oblivion/mods/51833/'
         name: 'Basic harvest'
   - name: 'BasicHarvestFilterPatch.esp'
-    group: *latePatchesGroup
+    group: *bashFilterPatchesGroup
     msg:
       - <<: *patchIncluded
         subs: [ 'Maskar''s Oblivion Overhaul' ]
@@ -10709,7 +10709,7 @@ plugins:
   - name: 'OMOBS Optional Combat Settings.esp'
     inc: [ 'Oscuro''s_Oblivion_Overhaul.esm' ]
   - name: 'DLC_MOBS.esp'
-    group: *latePatchesGroup
+    group: *bashFilterPatchesGroup
     clean:
       - crc: 0xF6F8A6C0
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
@@ -11487,7 +11487,7 @@ plugins:
   - name: 'PMSneakySummons-ForVanilla.esp'
     inc: [ 'PMSneakySummonCompatibility.esp' ]
   - name: 'PMSneakySummonCompatibility.esp'
-    group: *latePatchesGroup
+    group: *bashFilterPatchesGroup
     msg: [ *requiresBashedPatch ]
     tag:
       - Deactivate
@@ -11677,7 +11677,7 @@ plugins:
       - crc: 0x753E36CD
         util: 'TES4Edit v4.0.4c'
   - name: 'Capes4NPCs - (Extraction|Placement)\.esp'
-    group: *latePatchesGroup
+    group: *bashFilterPatchesGroup
     msg: [ *requiresBashedPatch ]
     tag: [ Filter ]
   - name: 'Capes4NPCs - Placement.esp'
@@ -13067,7 +13067,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/25946/'
         name: 'Bash-able Quest Delayers'
-    group: *latePatchesGroup
+    group: *bashFilterPatchesGroup
     msg:
       - *requiresBashedPatch
       - *verGreatReqOBSEv18
@@ -16212,7 +16212,7 @@ plugins:
       - crc: 0x40C0C774
         util: 'TES4Edit v4.0.4c'
   - name: 'Circlets of Cyrodiil - Distribution.esp'
-    group: *latePatchesGroup
+    group: *bashFilterPatchesGroup
     msg: [ *requiresBashedPatch ]
     clean:
       - crc: 0xFC5F283E
@@ -17718,7 +17718,7 @@ plugins:
       - crc: 0xE4496C0B
         util: 'TES4Edit v4.0.4c'
   - name: 'Unique Artifacts for Unique People - Distribution.esp'
-    group: *latePatchesGroup
+    group: *bashFilterPatchesGroup
     msg: [ *requiresBashedPatch ]
     clean:
       - crc: 0x462C4FD5
@@ -24145,7 +24145,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/52535/'
         name: 'All Natural - Indoor Weather Filter for Extra Mods'
-    group: *latePatchesGroup
+    group: *bashFilterPatchesGroup
     msg: [ *requiresBashedPatch ]
 
   - name: 'Aylied Steps - AN Real Lights patch.esp'
@@ -24224,7 +24224,7 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/52809/'
         name: 'Colorful Clothing - Gloves - Distribution'
-    group: *latePatchesGroup
+    group: *bashFilterPatchesGroup
     msg: [ *requiresBashedPatch ]
     clean:
       - crc: 0xEB3CB636
@@ -24257,10 +24257,10 @@ plugins:
       - crc: 0x977DBF07
         util: 'TES4Edit v4.0.4c'
   - name: 'DispMiscPatch_OCRAFT - Filter Patch for Mods.esp'
-    group: *latePatchesGroup
+    group: *bashFilterPatchesGroup
     msg: [ *requiresBashedPatch ]
   - name: 'DispMiscPatch_RadiantAI NPCs Alive Cyrodiil - OCRAFT Int Patch.esp'
-    group: *latePatchesGroup
+    group: *bashFilterPatchesGroup
     clean:
       - crc: 0x349E9E07
         util: 'TES4Edit v4.0.4c'
@@ -24364,7 +24364,7 @@ plugins:
       - link: 'https://www.nexusmods.com/oblivion/mods/51379/'
         name: 'OCOv2 - Filter Patch for Mods'
   - name: 'OCOv2 - Filter Patch for Mods.esp'
-    group: *latePatchesGroup
+    group: *bashFilterPatchesGroup
     msg:
       - <<: *patchProvided
         subs: [ 'Maskar''s Oblivion Overhaul' ]
@@ -25378,7 +25378,7 @@ plugins:
     msg: [ *requiresBashedPatch ]
     tag: [ Deactivate ]
   - name: 'Item interchange - Extraction.esp'
-    group: *latePatchesGroup
+    group: *bashFilterPatchesGroup
     inc:
       - 'Francesco''s Optional Files.esp'
       - 'Francesco''s Optional Files 1.esp'
@@ -36238,7 +36238,7 @@ plugins:
 
   - name: 'CoreRandmonClothing4Npcs.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/27474/' ]
-    group: *latePatchesGroup
+    group: *bashFilterPatchesGroup
     msg: [ *requiresBashedPatch ]
     tag:
       - Deactivate
@@ -36247,21 +36247,21 @@ plugins:
       - Invent
   - name: 'OOO Harvest Containers Filter patch for mods.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/35127/' ]
-    group: *latePatchesGroup
+    group: *bashFilterPatchesGroup
     msg: [ *requiresBashedPatch ]
     tag:
       - Deactivate
       - Filter
   - name: 'Harvest Containers Filter patch for mods.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/35155/' ]
-    group: *latePatchesGroup
+    group: *bashFilterPatchesGroup
     msg: [ *requiresBashedPatch ]
     tag:
       - Deactivate
       - Filter
   - name: 'Storms & Sound - Filter Patch.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/38379/' ]
-    group: *latePatchesGroup
+    group: *bashFilterPatchesGroup
     msg: [ *requiresBashedPatch ]
     tag: [ Filter ]
   - name: 'Creeper.esp'
