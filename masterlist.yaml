@@ -1851,18 +1851,15 @@ plugins:
 
   - name: 'kuerteeCleanUp.esp'
     url:
-      - 'https://www.nexusmods.com/oblivion/mods/24606/'
-      - 'https://www.nexusmods.com/oblivion/mods/49874/'
+      - link: 'https://www.nexusmods.com/oblivion/mods/24606/'
+        name: 'Clean up'
     group: *lateChangesGroup
     req: [ *OBSE ]
     msg:
       - *alsoUseEngineBugFixes
       - <<: *alsoUseX
-        subs: [ '[Floating weapons Fix (Enemies keep weapons in inventory)](https://www.nexusmods.com/oblivion/mods/46674)' ]
+        subs: [ '[Floating weapons Fix (Enemies keep weapons in inventory)](https://www.nexusmods.com/oblivion/mods/46674/)' ]
         condition: 'not file("Enemy Weapons dont drop.esp")'
-      - <<: *obsolete
-        subs: [ '[Clean Up Cleaned Up](https://www.nexusmods.com/oblivion/mods/49874)' ]
-        condition: 'version("kuerteeCleanUp.esp", "0.61", <)'
 
   - name: '(Imperial City|Market District) Landscape Fix\.esp'
     url:
