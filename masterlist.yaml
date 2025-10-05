@@ -10039,6 +10039,17 @@ plugins:
         util: 'TES4Edit v4.0.3h (Hotfix 1)'
 
 ###### Gameplay - Combat ######
+  - name: 'CombatReshoveled.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/54863/'
+        name: 'Combat Reshoveled'
+    after:
+      - name: 'bgIntegrationIntegratedEV.esp'
+        condition: 'file("Bashed Patch.*\.esp")'
+    clean:
+      - crc: 0x12798B2D
+        util: 'TES4Edit v4.1.5o'
+
   - name: '((DeadlyReflex|Deadly Reflex)( [\d])? - (Combat Moves|Timed Block)|DRSplatter|Mounted_Spellcasting_Deadly_Reflex_Compatible|HorseCombatMaster).*\.es(m|p)'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/8273/'
