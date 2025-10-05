@@ -5742,11 +5742,11 @@ plugins:
       - 'MaleBodyReplacerV4.esp'
       - 'MaleBodyReplacerV5.esp'
       - name: 'Race Relations.esp'
-        condition: 'active("Bashed Patch.*\.esp")'
+        condition: 'file("Bashed Patch.*\.esp")'
       - name: 'RacesOfCyrodiil.esp'
-        condition: 'active("Bashed Patch.*\.esp")'
+        condition: 'file("Bashed Patch.*\.esp")'
       - name: 'Trap.esp'
-        condition: 'active("Bashed Patch.*\.esp")'
+        condition: 'file("Bashed Patch.*\.esp")'
     req:
       - <<: *Blockhead
         condition: 'version("Oblivion_Character_Overhaul.esp", "2.0", >=)'
