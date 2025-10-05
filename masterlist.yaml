@@ -5737,6 +5737,8 @@ plugins:
       - link: 'https://www.nexusmods.com/oblivion/mods/52010/'
         name: 'Oblivion Character Overhaul - Advanced Edition'
     after:
+      - name: 'bgIntegrationIntegratedEV.esp'
+        condition: 'file("Bashed Patch.*\.esp")'
       - 'Francesco''s Optional Leveled Guards.esp'
       - 'MaleBodyReplacerV3.esp'
       - 'MaleBodyReplacerV4.esp'
@@ -5744,6 +5746,8 @@ plugins:
       - name: 'Race Relations.esp'
         condition: 'file("Bashed Patch.*\.esp")'
       - name: 'RacesOfCyrodiil.esp'
+        condition: 'file("Bashed Patch.*\.esp")'
+      - name: 'RacesReshoveled.esp'
         condition: 'file("Bashed Patch.*\.esp")'
       - name: 'Trap.esp'
         condition: 'file("Bashed Patch.*\.esp")'
