@@ -12434,8 +12434,21 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/51175/'
         name: 'Extended Dialogue'
+      - link: 'https://www.nexusmods.com/oblivion/mods/54198/'
+        name: 'Star''s Extended Dialogue'
+    after:
+      - 'DialogTweaks.esp'
+      - 'dtaaDialogueTweaks.esp'
+      - 'Oblivion Uncut.esp'
     msg: [ *verGreatReq_xOBSEv21_8 ]
+    dirty:
+      # Star's v1.0
+      - <<: *quickClean
+        crc: 0xED35D2A0
+        util: '[TES4Edit v4.1.5o](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 44
     clean:
+      # Original v1.4
       - crc: 0xC2B84402
         util: 'TES4Edit v4.0.4c'
 
