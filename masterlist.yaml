@@ -12412,6 +12412,10 @@ plugins:
     after:
       - name: 'Extended Dialogue.esp'
         condition: 'file("DiseaseDlgRestoredStarsExtendedDlgPatch.esp")'
+    msg:
+      - <<: *patchProvided
+        subs: [ 'Star''s Extended Dialogue' ]
+        condition: 'active("Extended Dialogue.esp") and file("ini/Extended Dialogue.ini") and not file("DiseaseDlgRestoredStarsExtendedDlgPatch.esp")'
 
   - name: 'DremoraFemales.esp'
     url:
