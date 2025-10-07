@@ -12409,6 +12409,9 @@ plugins:
       - link: 'https://www.nexusmods.com/oblivion/mods/55577/'
         name: 'Disease Dialogue Restored'
   - name: 'DiseaseDialogueRestored.esp'
+    after:
+      - name: 'Extended Dialogue.esp'
+        condition: 'file("DiseaseDlgRestoredStarsExtendedDlgPatch.esp")'
 
   - name: 'DremoraFemales.esp'
     url:
