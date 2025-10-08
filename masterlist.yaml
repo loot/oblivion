@@ -7224,6 +7224,28 @@ plugins:
         util: '[TES4Edit v4.0.4b](https://www.nexusmods.com/oblivion/mods/11536)'
         itm: 10
 
+  - name: 'LivingOblivion(Master|Dungeons|Overworlds)\.es[mp]'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/55176/'
+        name: 'Living Oblivion'
+  - name: 'LivingOblivionMaster.esm'
+    clean:
+      - crc: 0x4BD1E387
+        util: 'TES4Edit v4.1.5o'
+  - name: 'LivingOblivion(Dungeons|Overworlds)\.esp'
+    group: *earlyLoadersGroup
+  - name: 'LivingOblivionDungeons.esp'
+    tag: [ Relations.Add ]
+    clean:
+      - crc: 0x92A376AA
+        util: 'TES4Edit v4.1.5o'
+  - name: 'LivingOblivionOverworlds.esp'
+    dirty:
+      - <<: *quickClean
+        crc: 0xABCBA2E5
+        util: '[TES4Edit v4.1.5o](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 2
+
   - name: 'Mentioned and Unused NPCs.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/51869/'
