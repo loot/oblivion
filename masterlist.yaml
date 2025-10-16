@@ -14310,6 +14310,10 @@ plugins:
         util: 'TES4Edit v4.0.4b'
   - name: 'MannimarcoRevisitedOOO.esp'
     req: [ 'Oscuro''s_Oblivion_Overhaul.esp' ]
+    msg:
+      - <<: *alreadyInX
+        subs: [ '**MannimarcoRevisited - OOO Enhanced Adaptation.esp**' ]
+        condition: 'active("MannimarcoRevisited - OOO Enhanced Adaptation.esp")'
     tag:
       - Enchantments
       - Graphics
