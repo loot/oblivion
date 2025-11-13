@@ -4712,7 +4712,9 @@ plugins:
       - <<: *patchIncluded
         subs: [ 'Kvatch Rebuilt' ]
         condition: 'active("Kvatch Rebuilt.esp") and not active("Kvatch Rebuilt Weather Patch.esp")'
-    tag: [ Graphics ]
+    tag:
+      - C.Climate
+      - Graphics
     clean:
       - crc: 0xD73B9606
         util: 'TES4Edit v4.0.4'
