@@ -4699,6 +4699,9 @@ plugins:
       - crc: 0x3A0B767A
         util: 'TES4Edit v4.0.4'
   - name: 'All Natural.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/53700/'
+        name: 'AllNATO - NAO with All Natural Interior Weathers'
     after:
       - 'The Throne Of The Emperor.esp'
       - 'Throne room.esp'
@@ -4709,10 +4712,19 @@ plugins:
       - <<: *patchIncluded
         subs: [ 'Kvatch Rebuilt' ]
         condition: 'active("Kvatch Rebuilt.esp") and not active("Kvatch Rebuilt Weather Patch.esp")'
-    tag: [ Graphics ]
+    tag:
+      - C.Climate
+      - Graphics
+    dirty:
+      # AllNATO
+      - <<: *quickClean
+        crc: 0x6F868E43
+        util: '[TES4Edit v4.1.5p 32bit fix version](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 13
     clean:
+      # Original
       - crc: 0xD73B9606
-        util: 'TES4Edit v4.0.4'
+        util: 'TES4Edit v4.1.5p 32bit fix version'
   - name: 'All Natural - SI.esp'
     after: [ 'All Natural.esp' ]
     req: [ 'DLCShiveringIsles.esp' ]
