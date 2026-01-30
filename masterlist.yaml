@@ -6064,7 +6064,7 @@ plugins:
     msg:
       - <<: *useOnlyOneX
         subs: [ 'Customization for Vilja' ]
-        condition: 'many("1em_Vilja_as_(Argonian|(Blood|Chocolate|Moonshadow|Nec_Mystic_High)_Elf(_MU|_Stranger|\-Remake)?|High_Imperial|Tabaxi|Vampire(_Reloaded)?|Custom| Synx)(_by_(Xtudo|4GVN|Gonzoguns))?\.esp")'
+        condition: 'many("1em_Vilja_as_(Argonian|(Blood|Chocolate|Moonshadow|Nec_Mystic_High)_Elf(_MU|_Stranger|-Remake)?|High_Imperial|Tabaxi|Vampire(_Reloaded)?|Custom| Synx)(_by_(Xtudo|4GVN|Gonzoguns))?\.esp")'
   - name: '1em_Vilja_as_Custom_by_Gonzoguns.esp'
     msg:
       - <<: *requiresResources
@@ -15201,7 +15201,7 @@ plugins:
     msg:
       - <<: *useOnlyOneX
         subs: [ 'Intelligence Overhaul ESP' ]
-        condition: 'many("(OOO\-)?Intelligence Overhaul( BJ| \(No Book Changes\)|\-RR| BJ\-RR)?\.esp")'
+        condition: 'many("(OOO-)?Intelligence Overhaul( BJ| \(No Book Changes\)|-RR| BJ-RR)?\.esp")'
       - *verGreatReqOBSEv11
   - name: 'Intelligence Overhaul( BJ)?\.esp'
     tag: [ Scripts ]
@@ -15235,7 +15235,7 @@ plugins:
     msg:
       - <<: *useOnlyOneX
         subs: [ 'Intelligence Overhaul ESP' ]
-        condition: 'many("(OOO\-)?Intelligence Overhaul( BJ| \(No Book Changes\)|\-RR| BJ\-RR)?\.esp")'
+        condition: 'many("(OOO-)?Intelligence Overhaul( BJ| \(No Book Changes\)|-RR| BJ-RR)?\.esp")'
       - *verGreatReqOBSEv11
     tag: [ Scripts ]
   - name: 'Intelligence Overhaul-RR.esp'
@@ -15351,7 +15351,7 @@ plugins:
         condition: 'not file("textures/menus/icons/pa/bjob") or not file("meshes/pa/bjob")'
       - <<: *useOnlyOneX
         subs: [ 'Intelligence Overhaul ESP' ]
-        condition: 'many("(OOO\-)?Intelligence Overhaul( BJ| \(No Book Changes\)|\-RR| BJ\-RR)?\.esp")'
+        condition: 'many("(OOO-)?Intelligence Overhaul( BJ| \(No Book Changes\)|-RR| BJ-RR)?\.esp")'
       - *verGreatReqOBSEv11
     tag:
       - Graphics
