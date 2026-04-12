@@ -918,20 +918,21 @@ plugins:
       - Actors.AIPackages
       - C.Light
       - Sound
-    # dirty:
-    #   - <<: *quickClean
-    #     crc: 0x5BC59DB4
-    #     util: '[TES4Edit v4.1.5n](https://www.nexusmods.com/oblivion/mods/11536)'
-    #     itm: 11
-    #     udr: 2
-    #   - <<: *quickClean
-    #     crc: 0x5EF0D503
-    #     util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
-    #     itm: 11
-    #     udr: 2
-    # clean:
-    #   - crc: 0x351A3894
-    #     util: 'TES4Edit v4.0.4'
+    dirty:
+      - <<: *quickClean
+        crc: 0x5BC59DB4
+        util: '[TES4Edit v4.1.5n](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 11
+        udr: 2
+        condition: *isOblivion
+      - <<: *quickClean
+        crc: 0x5EF0D503
+        util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 11
+        udr: 2
+    clean:
+      - crc: 0x351A3894
+        util: 'TES4Edit v4.0.4'
   - name: 'DLCVileLair.esp'
     group: *dlcGroup
     after:
@@ -953,20 +954,21 @@ plugins:
       - 'KumikoManor.esp'
       - 'Kumiko Manor 2.1 Rus.esp'
     tag: [ Sound ]
-    # dirty:
-    #   - <<: *quickClean
-    #     crc: 0x74D2CA6F
-    #     util: '[TES4Edit v4.1.5n](https://www.nexusmods.com/oblivion/mods/11536)'
-    #     itm: 26
-    #     udr: 1
-    #   - <<: *quickClean
-    #     crc: 0x2C59F2F0
-    #     util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
-    #     itm: 28
-    #     udr: 1
-    # clean:
-    #   - crc: 0x8748A782
-    #     util: 'TES4Edit v4.0.4'
+    dirty:
+      - <<: *quickClean
+        crc: 0x74D2CA6F
+        util: '[TES4Edit v4.1.5n](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 26
+        udr: 1
+        condition: *isOblivion
+      - <<: *quickClean
+        crc: 0x2C59F2F0
+        util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 28
+        udr: 1
+    clean:
+      - crc: 0x8748A782
+        util: 'TES4Edit v4.0.4'
   - name: 'DLCMehrunesRazor.esp'
     group: *dlcGroup
     after:
@@ -985,20 +987,21 @@ plugins:
     tag:
       - Actors.ACBS
       - Factions
-    # dirty:
-    #   - <<: *quickClean
-    #     crc: 0xCB413740
-    #     util: '[TES4Edit v4.1.5n](https://www.nexusmods.com/oblivion/mods/11536)'
-    #     itm: 21
-    #     udr: 15
-    #   - <<: *quickClean
-    #     crc: 0x78FDD06E
-    #     util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
-    #     itm: 23
-    #     udr: 15
-    # clean:
-    #   - crc: 0x43BCF3D9
-    #     util: 'TES4Edit v4.0.4'
+    dirty:
+      - <<: *quickClean
+        crc: 0xCB413740
+        util: '[TES4Edit v4.1.5n](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 21
+        udr: 15
+        condition: *isOblivion
+      - <<: *quickClean
+        crc: 0x78FDD06E
+        util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 23
+        udr: 15
+    clean:
+      - crc: 0x43BCF3D9
+        util: 'TES4Edit v4.0.4'
   - name: 'DLCSpellTomes.esp'
     group: *dlcGroup
     after:
@@ -1016,18 +1019,19 @@ plugins:
     tag:
       - Actors.Stats
       - Relev
-    # dirty:
-    #   - <<: *quickClean
-    #     crc: 0x312156F8
-    #     util: '[TES4Edit v4.1.5n](https://www.nexusmods.com/oblivion/mods/11536)'
-    #     itm: 40
-    #   - <<: *quickClean
-    #     crc: 0x4ABF2393
-    #     util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
-    #     itm: 44
-    # clean:
-    #   - crc: 0x02FA9682
-    #     util: 'TES4Edit v4.0.4'
+    dirty:
+      - <<: *quickClean
+        crc: 0x312156F8
+        util: '[TES4Edit v4.1.5n](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 40
+        condition: *isOblivion
+      - <<: *quickClean
+        crc: 0x4ABF2393
+        util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 44
+    clean:
+      - crc: 0x02FA9682
+        util: 'TES4Edit v4.0.4'
   - name: 'DLCThievesDen.esp'
     group: *dlcGroup
     after:
@@ -1055,20 +1059,21 @@ plugins:
       - C.Owner
       - C.Water
       - Names
-    # dirty:
-    #   - <<: *quickClean
-    #     crc: 0x05DB8CCC
-    #     util: '[TES4Edit v4.1.5n](https://www.nexusmods.com/oblivion/mods/11536)'
-    #     itm: 5
-    #     udr: 135
-    #   - <<: *quickClean
-    #     crc: 0x7BF882E1
-    #     util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
-    #     itm: 5
-    #     udr: 135
-    # clean:
-    #   - crc: 0x7F76D2D3
-    #     util: 'TES4Edit v4.0.4'
+    dirty:
+      - <<: *quickClean
+        crc: 0x05DB8CCC
+        util: '[TES4Edit v4.1.5n](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 5
+        udr: 135
+        condition: *isOblivion
+      - <<: *quickClean
+        crc: 0x7BF882E1
+        util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 5
+        udr: 135
+    clean:
+      - crc: 0x7F76D2D3
+        util: 'TES4Edit v4.0.4'
   - name: 'DLCBattlehornCastle.esp'
     group: *dlcGroup
     after:
@@ -1088,15 +1093,16 @@ plugins:
         condition: *isOblivion
       - 'Unofficial Oblivion Patch.esp'
     tag: [ Sound ]
-    # dirty:
-    #   - <<: *quickClean
-    #     crc: 0x7048C609
-    #     util: '[TES4Edit v4.1.5n](https://www.nexusmods.com/oblivion/mods/11536)'
-    #     itm: 13
-    #     udr: 72
-    # clean:
-    #   - crc: 0xAA810FEF
-    #     util: 'TES4Edit v4.0.4'
+    dirty:
+      - <<: *quickClean
+        crc: 0x7048C609
+        util: '[TES4Edit v4.1.5n](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 13
+        udr: 72
+        condition: *isOblivion
+    clean:
+      - crc: 0xAA810FEF
+        util: 'TES4Edit v4.0.4'
   - name: 'DLCFrostcrag.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/9769/'
@@ -1130,20 +1136,21 @@ plugins:
       - C.Regions
       - Factions
       - Sound
-    # dirty:
-    #   - <<: *quickClean
-    #     crc: 0x2A7665FB
-    #     util: '[TES4Edit v4.1.5n](https://www.nexusmods.com/oblivion/mods/11536)'
-    #     itm: 73
-    #     udr: 94
-    #   - <<: *quickClean
-    #     crc: 0x8C95F38D
-    #     util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
-    #     itm: 74
-    #     udr: 94
-    # clean:
-    #   - crc: 0xF595C8AD
-    #     util: 'TES4Edit v4.0.4'
+    dirty:
+      - <<: *quickClean
+        crc: 0x2A7665FB
+        util: '[TES4Edit v4.1.5n](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 73
+        udr: 94
+        condition: *isOblivion
+      - <<: *quickClean
+        crc: 0x8C95F38D
+        util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 74
+        udr: 94
+    clean:
+      - crc: 0xF595C8AD
+        util: 'TES4Edit v4.0.4'
   - name: 'Knights.esp'
     group: *dlcGroup
     after:
@@ -1166,20 +1173,21 @@ plugins:
       - Invent.Add
       - Invent.Remove
       - Names
-    # dirty:
-    #   - <<: *quickClean
-    #     crc: 0xF1F478FA
-    #     util: '[TES4Edit v4.1.5n](https://www.nexusmods.com/oblivion/mods/11536)'
-    #     itm: 121
-    #     udr: 255
-    #   - <<: *quickClean
-    #     crc: 0x71480B94
-    #     util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
-    #     itm: 115
-    #     udr: 255
-    # clean:
-    #   - crc: 0xCF02E476
-    #     util: 'TES4Edit v4.0.4'
+    dirty:
+      - <<: *quickClean
+        crc: 0xF1F478FA
+        util: '[TES4Edit v4.1.5n](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 121
+        udr: 255
+        condition: *isOblivion
+      - <<: *quickClean
+        crc: 0x71480B94
+        util: '[TES4Edit v4.0.4](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 115
+        udr: 255
+    clean:
+      - crc: 0xCF02E476
+        util: 'TES4Edit v4.0.4'
   # Oblivion Remastered
   - name: 'AltarESPMain.esp'
     group: *dlcGroup
