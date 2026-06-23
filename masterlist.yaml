@@ -23094,6 +23094,17 @@ plugins:
       - crc: 0x7E676D2D
         util: 'TES4Edit v4.0.4'
 
+  - name: 'SICitiesExpanded( COM ver)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/51075/'
+        name: 'SI Cities Expanded'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'SI Cities Expanded ESP' ]
+        condition: 'many("SICitiesExpanded( COM ver)?\.esp")'
+  - name: 'SICitiesExpanded COM ver.esp'
+    after: [ 'CitadelOfMadnessRebirth.esp' ]
+
   - name: 'SkingradDeuglified.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/52456/'
