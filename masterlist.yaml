@@ -12510,9 +12510,12 @@ plugins:
       - Invent.Remove
       - Relations.Add
       - Relations.Remove
-    clean:
-      - crc: 0x77437CCA
-        util: 'TES4Edit v4.0.4c'
+    dirty:
+      # REVIVED v2.2.1
+      - <<: *quickClean
+        crc: 0x399FE5A2
+        util: '[TES4Edit v4.1.5q](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1
 
   - name: 'GentlemanBurzGroKhash.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/49207/' ]
