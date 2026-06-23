@@ -12493,19 +12493,15 @@ plugins:
         itm: 36
         udr: 20
 
-  - name: 'Faction Relations( - No UOP)?\.esp'
+  - name: 'Faction Relations( - KOTNIIS Patch)?\.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/50868/'
         name: 'Faction Relations'
+  - name: 'Faction Relations.esp'
     msg:
-      - <<: *patch3rdParty
-        subs:
-          - 'Knights of the Nine - Improved Infamy System'
-          - '[Faction Relations - Knights of the Nine Improved Infamy System Patch](https://www.nexusmods.com/oblivion/mods/52023/)'
-        condition: 'active("Knights Infamy.esp") and not file("Faction Relations - Improved Knights Infamy Patch.esp")'
-      - <<: *useOnlyOneX
-        subs: [ 'Faction Relations ESP' ]
-        condition: 'many("Faction Relations( - No UOP)?\.esp")'
+      - <<: *patchProvided
+        subs: [ 'Knights of the Nine - Improved Infamy System' ]
+        condition: 'active("Knights Infamy.esp") and not file("Faction Relations - KOTNIIS Patch.esp")'
     tag:
       - Actors.Anims
       - Actors.Factions
@@ -12514,14 +12510,12 @@ plugins:
       - Invent.Remove
       - Relations.Add
       - Relations.Remove
-  - name: 'Faction Relations.esp'
-    clean:
-      - crc: 0x77437CCA
-        util: 'TES4Edit v4.0.4c'
-  - name: 'Faction Relations - No UOP.esp'
-    clean:
-      - crc: 0x8A9A9B6F
-        util: 'TES4Edit v4.0.4c'
+    dirty:
+      # REVIVED v2.2.1
+      - <<: *quickClean
+        crc: 0x399FE5A2
+        util: '[TES4Edit v4.1.5q](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1
 
   - name: 'GentlemanBurzGroKhash.esp'
     url: [ 'https://www.nexusmods.com/oblivion/mods/49207/' ]
