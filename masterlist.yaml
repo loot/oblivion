@@ -12499,11 +12499,9 @@ plugins:
         name: 'Faction Relations'
   - name: 'Faction Relations.esp'
     msg:
-      - <<: *patch3rdParty
-        subs:
-          - 'Knights of the Nine - Improved Infamy System'
-          - '[Faction Relations - Knights of the Nine Improved Infamy System Patch](https://www.nexusmods.com/oblivion/mods/52023/)'
-        condition: 'active("Knights Infamy.esp") and not file("Faction Relations - Improved Knights Infamy Patch.esp")'
+      - <<: *patchProvided
+        subs: [ 'Knights of the Nine - Improved Infamy System' ]
+        condition: 'active("Knights Infamy.esp") and not file("Faction Relations - KOTNIIS Patch.esp")'
     tag:
       - Actors.Anims
       - Actors.Factions
