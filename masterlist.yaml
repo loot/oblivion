@@ -23098,6 +23098,10 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/51075/'
         name: 'SI Cities Expanded'
+    msg:
+      - <<: *useOnlyOneX
+        subs: [ 'SI Cities Expanded ESP' ]
+        condition: 'many("SICitiesExpanded( COM ver)?\.esp")'
   - name: 'SICitiesExpanded COM ver.esp'
     after: [ 'CitadelOfMadnessRebirth.esp' ]
 
