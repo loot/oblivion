@@ -15478,7 +15478,7 @@ plugins:
     msg:
       - <<: *compatIssuesWithX
         subs: [ '[Real Time Lockpicking](https://www.nexusmods.com/oblivion/mods/38801/) **MigLockpicking.esp**' ]
-        condition: 'active("MigLockpicking.esp") and checksum("MigLockpicking.esp", 734BB0A2)'
+        condition: 'active("MigLockpicking.esp") and checksum("MigLockpicking.esp", 734BB0A2) and not file("DispMiscPatch_MigLockpicking - Ultimate Leveling XP Patch.esp")'
       - *verGreatReqOBSEv21
     clean:
       - crc: 0xE6FF01E8
