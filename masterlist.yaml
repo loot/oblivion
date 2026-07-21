@@ -11730,6 +11730,27 @@ plugins:
         udr: 1
 
 ###### Gameplay - NPC Balance & Distribution ######
+  - name: 'Balanced Creatures( - DLC)?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/49194/'
+        name: 'Balanced Creature Stats - Fixed Level Scaling'
+    tag:
+      - Deactivate
+      - Filter
+      - NoMerge
+  - name: 'Balanced Creatures.esp'
+    after:
+      - name: 'EnhancedGoblinWar.esp'
+        condition: 'file("Bashed Patch.*\.esp")'
+    clean:
+      - crc: 0x8D50EB4A
+        util: 'TES4Edit v4.1.5q'
+  - name: 'Balanced Creatures - DLC.esp'
+    tag: [ -Invent.Remove ]
+    clean:
+      - crc: 0xB0557D0E
+        util: 'TES4Edit v4.1.5q'
+
   - name: 'Battlemages Revised.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/48755/'
