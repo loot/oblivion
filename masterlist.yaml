@@ -11764,6 +11764,30 @@ plugins:
       - crc: 0xB0557D0E
         util: 'TES4Edit v4.1.5q'
 
+  - name: 'Balanced NPC Level Cap( - (DLC Patches|Hooded Outlaws Patch))?\.esp'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/50094/'
+        name: 'Balanced NPC Level Cap - Logical Levels for All NPCs'
+    tag:
+      - Deactivate
+      - NoMerge
+  - name: 'Balanced NPC Level Cap.esp'
+    tag: [ Filter ]
+    dirty:
+      - <<: *quickClean
+        crc: 0x5BF8B266
+        util: '[TES4Edit v4.1.5q](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 1
+  - name: 'Balanced NPC Level Cap - DLC Patches.esp'
+    tag: [ Filter ]
+    clean:
+      - crc: 0xB6CB7CC7
+        util: 'TES4Edit v4.1.5q'
+  - name: 'Balanced NPC Level Cap - Hooded Outlaws Patch.esp'
+    clean:
+      - crc: 0xD0D4DA3D
+        util: 'TES4Edit v4.1.5q'
+
   - name: 'Battlemages Revised.esp'
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/48755/'
