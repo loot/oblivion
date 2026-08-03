@@ -1447,6 +1447,18 @@ plugins:
     url: [ 'https://www.nexusmods.com/site/mods/591/' ]
     group: *dynamicPatchesGroup
     after: [ 'TES4Merged.esp' ]
+
+  - name: 'MergedLOD\.es[mp]'
+    url:
+      - link: 'https://www.nexusmods.com/oblivion/mods/54553/'
+        name: 'slowLODGen - Object LOD Generator'
+  - name: 'MergedLOD.esp'
+    group: *dynamicPatchesGroup
+    req: [ 'MergedLOD.esm' ]
+    clean:
+      - crc: 0xBDC84FB4
+        util: 'TES4Edit v4.1.5q'
+
   # Wrye Bash - Oblivion.esm swapping
   - name: 'Oblivion_(1.1|1.1b|SI|GOTY non-SI|GBR SI)\.esm'
     url: [ 'https://www.nexusmods.com/site/mods/591/' ]
