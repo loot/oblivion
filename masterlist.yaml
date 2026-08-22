@@ -14768,9 +14768,12 @@ plugins:
     url:
       - link: 'https://www.nexusmods.com/oblivion/mods/49611/'
         name: 'Rebalanced and Unleveled Quest Gold Rewards'
+    after: [ 'DLCVileLair - Tweaks.esp' ]
     req: [ 'DLCShiveringIsles.esp' ]
     tag: [ Invent.Change ]
     clean:
+      - crc: 0x0BCDAC26
+        util: 'TES4Edit v4.1.5q'
       - crc: 0x1C96711C
         util: 'TES4Edit v4.0.4b'
       - crc: 0x5B5AD0A7
