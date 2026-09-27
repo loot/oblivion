@@ -15933,9 +15933,12 @@ plugins:
       - link: 'https://www.nexusmods.com/oblivion/mods/48914/'
         name: 'World Maps For All Worldspaces'
     group: *worldSettingsGroup
-    clean:
-      - crc: 0x640D34C6
-        util: 'TES4Edit v4.0.4c'
+    dirty:
+      # V5
+      - <<: *quickClean
+        crc: 0xE6822ABA
+        util: '[TES4Edit v4.1.5q](https://www.nexusmods.com/oblivion/mods/11536)'
+        itm: 35
 
 ###### Items ######
   - name: '300_Artifacts.esp'
