@@ -637,6 +637,12 @@ common:
       - '0021'
       - '[OBSE](https://obse.silverlock.org)'
     condition: 'file("../Oblivion.exe") and not version("../obse_1_2_416.dll", >=, "0.0.21.0")'
+  - &verGreatReq_xOBSEv21_5
+    <<: *versionXofYorGreaterRequired
+    subs:
+      - '21.5'
+      - '[xOBSE](https://github.com/llde/xOBSE/)'
+    condition: 'file("../Oblivion.exe") and not version("../obse_1_2_416.dll", >=, "0.0.21.5")'
   - &verGreatReq_xOBSEv21_8
     <<: *versionXofYorGreaterRequired
     subs:
@@ -661,6 +667,48 @@ common:
       - '22.8'
       - '[xOBSE](https://github.com/llde/xOBSE/)'
     condition: 'file("../Oblivion.exe") and not version("../obse_1_2_416.dll", >=, "0.22.8.0")'
+  - &verGreatReq_xOBSEv22_9
+    <<: *versionXofYorGreaterRequired
+    subs:
+      - '22.9'
+      - '[xOBSE](https://github.com/llde/xOBSE/)'
+    condition: 'file("../Oblivion.exe") and not version("../obse_1_2_416.dll", >=, "0.22.9.0")'
+  - &verGreatReq_xOBSEv22_10
+    <<: *versionXofYorGreaterRequired
+    subs:
+      - '22.10'
+      - '[xOBSE](https://github.com/llde/xOBSE/)'
+    condition: 'file("../Oblivion.exe") and not version("../obse_1_2_416.dll", >=, "0.22.10.0")'
+  - &verGreatReq_xOBSEv22_11
+    <<: *versionXofYorGreaterRequired
+    subs:
+      - '22.11'
+      - '[xOBSE](https://github.com/llde/xOBSE/)'
+    condition: 'file("../Oblivion.exe") and not version("../obse_1_2_416.dll", >=, "0.22.11.0")'
+  - &verGreatReq_xOBSEv22_12
+    <<: *versionXofYorGreaterRequired
+    subs:
+      - '22.12'
+      - '[xOBSE](https://github.com/llde/xOBSE/)'
+    condition: 'file("../Oblivion.exe") and not version("../obse_1_2_416.dll", >=, "0.22.12.0")'
+  - &verGreatReq_xOBSEv22_12_1
+    <<: *versionXofYorGreaterRequired
+    subs:
+      - '22.12.1
+      - '[xOBSE](https://github.com/llde/xOBSE/)'
+    condition: 'file("../Oblivion.exe") and not version("../obse_1_2_416.dll", >=, "0.22.12.1")'
+  - &verGreatReq_xOBSEv22_13
+    <<: *versionXofYorGreaterRequired
+    subs:
+      - '22.13'
+      - '[xOBSE](https://github.com/llde/xOBSE/)'
+    condition: 'file("../Oblivion.exe") and not version("../obse_1_2_416.dll", >=, "0.22.13.0")'
+  - &verGreatReq_xOBSEv22_14
+    <<: *versionXofYorGreaterRequired
+    subs:
+      - '22.14'
+      - '[xOBSE](https://github.com/llde/xOBSE/)'
+    condition: 'file("../Oblivion.exe") and not version("../obse_1_2_416.dll", >=, "0.22.14.0")'
 
   # &wildEdits
   - &wildEditsRestoreNames
